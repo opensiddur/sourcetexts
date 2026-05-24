@@ -1,0 +1,1016 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright C.V.Kimball 2013 -->
+<Tanach>
+<teiHeader>
+  <fileDesc>
+    <titleStmt>
+      <title level="s" type="uniform">Tanach</title>
+      <title level="s" type="uniformhebrew">תנ״ך</title>
+      <title level="s" type="main">Unicode/XML Leningrad Codex</title>
+      <title level="a" type="filename">TanachHeader</title>
+      <editor>Shemu'el ben Ya'akov</editor>
+      <editor>Aharon ben-Mosheh ben-Asher</editor>
+      <respStmt>
+        <resp>Publisher:</resp>
+        <name>Christopher V. Kimball</name>
+        <name type="email">mail@cvkimball.com</name>
+      </respStmt>
+    </titleStmt>
+    <editionStmt>
+      <edition>Unicode/XML Leningrad Codex (UXLC)
+        <version>UXLC 2.3</version>
+        <date>1 Apr 2025</date>
+        <build>27.4</build>
+        <buildDateTime>31 March 2025  06:24</buildDateTime>
+      </edition>
+<respStmt>
+<resp>WLC2XML[8 Jul 2024] - Transcription from Michigan-Claremont encoding to Unicode with XML markings. See details in notes.</resp>
+<resp>ScanReplace/EditWLC[30 Dec 2020] - Edits/removes transcription notes; removes MDs.</resp>
+<resp>ScanReplace/InsertCGJs[29 Dec 2020] - Places CGJ in Jerusalem VUV words and leading metegs.</resp>
+<resp>ScanReplace/YBYAH[29 Sep 2021] - Replaces 198 YBYs in Sifrei Emet with AHs.</resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2020.02.19 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2020.10.19 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2021.04.01 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2021.10.19 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2022.04.01 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2022.07.04 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2022.10.19 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2022.12.07 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2023.04.01 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2023.07.04 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2023.10.19 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2024.04.01 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2024.10.19 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2025.04.01 . </resp>
+<resp>ScanReplace/RemoveNewlines[18 May 2024] - Removes newlines (\n) from w, q, k tags.</resp>
+</respStmt>
+    </editionStmt>
+    <extent>27908</extent>
+    <publicationStmt>
+      <distributor>Via web site:
+        <name>Christopher V. Kimball</name>
+        <name type="url">https://tanach.us/Tanach.xml</name>
+        <name type="email">mail@cvkimball.com</name>
+      </distributor>
+      <availability status="free">Freely available</availability>
+    </publicationStmt>
+    <notesStmt>
+      <note>The original text file wlc420_ps.txt was provided by the Groves Center. 
+The file has the MD5 hash: d31a 6a6e 9afa bf82 272c 2efb 0522 a12e 
+and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to the noted character (Lev 11:42.4, Judg 18:30.11, Isa 9.6.1, Ps 80:14.3, Job 38:13.5, Job 38:15.2) to produce the file wlc420_ps_td.txt for conversion to Unicode and XML by the program WLC2XML. The only other changes to the Groves Center text are: The book names in English and Hebrew of the Jewish Publication Society Tanach and book abbreviations from the New Revised Standard Version have been added. MC code 32 added as atnah hafukh by Steve Salisbury, 30 Sep 2021. The atnah hafukh codepoint, x05a2, has been added to the character table; it does not appear in WLC 4.20. </note>
+    </notesStmt>
+    <sourceDesc>
+      <biblItem>
+        <title>Hebrew Bible</title>
+        <title>Leningrad Codex</title>
+        <editor>Shemu'el ben Ya'akov</editor>
+        <editor>Aharon ben-Mosheh ben-Asher</editor>
+        <edition>Original document</edition>
+        <imprint>
+          <publisher>Russian National Library (Saltykov-Shchedrin)</publisher>
+          <pubPlace>St. Petersburg (Leningrad)</pubPlace>
+          <date>1008</date>
+        </imprint>
+        <idno type="Accession">Firkovich B 19 A</idno>
+      </biblItem>
+      <biblItem>
+        <title>The Leningrad Codex - A Facsimile Edition</title>
+        <editor>Freedman, David Noel</editor>
+        <editor>Beck, Astrid B.</editor>
+        <edition>First</edition>
+        <imprint>
+          <publisher>Wm. B. Eerdmans Publishing Co.</publisher>
+          <pubPlace>Grand Rapids, MI</pubPlace>
+          <date>1998</date>
+        </imprint>
+        <idno type="IBSN">0-8028-3786-7</idno>
+      </biblItem>
+      <biblItem>
+        <title>The Westminster Leningrad Codex</title>
+        <editor>Salisbury, Stephen K.</editor>
+        <edition>WLC 4.20</edition>
+        <imprint>
+          <publisher>The J. Alan Groves Center for Advanced Biblical Research ("Groves Center").</publisher>
+          <pubPlace>2960 Church Rd.</pubPlace>
+          <pubPlace>Glenside, PA 19038</pubPlace>
+          <date>25 January 2016</date>
+        </imprint>
+        <idno type="Unknown"/>
+      </biblItem>
+    </sourceDesc>
+  </fileDesc>
+  <encodingDesc>
+  </encodingDesc>
+  <profileDesc>
+    <creation>From WLC 4.20 provided by the Groves Center.</creation>
+    <date>25 Jan 2016</date>
+    <langUsage>
+      <language ident="HE">Hebrew</language>
+    </langUsage>
+  </profileDesc>
+</teiHeader>
+<tanach>
+<coding>
+  <char>
+    <value>֑</value>
+    <hexvalue>0591</hexvalue>
+    <name>Etnaḥta</name>
+    <hebrewname>אֶתְנַחְתָּ֑א</hebrewname>
+    <type>Accent</type>
+    <accenttype>D-1</accenttype>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>֒</value>
+    <hexvalue>0592</hexvalue>
+    <name>Segol</name>
+    <hebrewname>סֶגוֹל֒ </hebrewname>
+    <type>Accent</type>
+    <accenttype>D-2</accenttype>
+    <equivalents>Segolta</equivalents>
+    <notes>Postpositive. This is the ACCENT Segol, not to be confused with the vowel (POINT) Segol.</notes>
+  </char>
+  <char>
+    <value>֓</value>
+    <hexvalue>0593</hexvalue>
+    <name>Shalshelet</name>
+    <hebrewname>שַׁלְשֶׁ֓לֶת</hebrewname>
+    <type>Accent</type>
+    <accenttype>D-2</accenttype>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>֔</value>
+    <hexvalue>0594</hexvalue>
+    <name>Zaqef Qatan</name>
+    <hebrewname>זָקֵף־קָט֔וֹן</hebrewname>
+    <type>Accent</type>
+    <accenttype>D-2</accenttype>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>֕</value>
+    <hexvalue>0595</hexvalue>
+    <name>Zaqef Gadol</name>
+    <hebrewname>זָקֵף־גָּד֕וֹל</hebrewname>
+    <type>Accent</type>
+    <accenttype>D-2</accenttype>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>֖</value>
+    <hexvalue>0596</hexvalue>
+    <name>Tipeḥa</name>
+    <hebrewname>טִפְּחָ֖א</hebrewname>
+    <type>Accent</type>
+    <accenttype>D-2</accenttype>
+    <equivalents>Tarḥa</equivalents>
+    <notes> </notes>
+  </char>
+  <char>
+    <value>֗</value>
+    <hexvalue>0597</hexvalue>
+    <name>Revia</name>
+    <hebrewname>רְבִ֗יעַ</hebrewname>
+    <type>Accent</type>
+    <accenttype>D-3</accenttype>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>֘</value>
+    <hexvalue>0598</hexvalue>
+    <name>Zarqa</name>
+    <hebrewname>זַרְקָא֮</hebrewname>
+    <type>Accent</type>
+    <accenttype>D-3</accenttype>
+    <equivalents>Tsinorit</equivalents>
+    <notes>This Unicode character is used for a Zarqa appearing directly above a letter, a 'stress helper' Zarqa. A true Zarqa is postpositive and is shown by a Unicode Zinor. (!) The Hebrew name shows a Unicode Zinor.</notes>
+  </char>
+  <char>
+    <value>֙</value>
+    <hexvalue>0599</hexvalue>
+    <name>Pashta</name>
+    <hebrewname>פַּשְׁטָא֙</hebrewname>
+    <type>Accent</type>
+    <accenttype>D-3</accenttype>
+    <equivalents/>
+    <notes>Postpositive.</notes>
+  </char>
+  <char>
+    <value>֚</value>
+    <hexvalue>059a</hexvalue>
+    <name>Yetiv</name>
+    <hebrewname>יְ‏֚תִיב</hebrewname>
+    <type>Accent</type>
+    <accenttype>D-3</accenttype>
+    <equivalents/>
+    <notes>Prepositive.</notes>
+  </char>
+  <char>
+    <value>֛</value>
+    <hexvalue>059b</hexvalue>
+    <name>Tevir</name>
+    <hebrewname>תְּבִ֛יר</hebrewname>
+    <type>Accent</type>
+    <accenttype>D-3</accenttype>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>֜</value>
+    <hexvalue>059c</hexvalue>
+    <name>Geresh</name>
+    <hebrewname>גֶּ֜רֶשׁ</hebrewname>
+    <type>Accent</type>
+    <accenttype>D-4</accenttype>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>֝</value>
+    <hexvalue>059d</hexvalue>
+    <name>Geresh Muqdam</name>
+    <hebrewname>גֵּרֵשׁ־מֻ֝קְדָּם</hebrewname>
+    <type>Accent</type>
+    <accenttype/>
+    <equivalents/>
+    <notes>Occurs only in the Sifrei Emet. Prepositive.</notes>
+  </char>
+  <char>
+    <value>֞</value>
+    <hexvalue>059e</hexvalue>
+    <name>Gershayim</name>
+    <hebrewname>גֵּרְשַׁיִ֞ם</hebrewname>
+    <type>Accent</type>
+    <accenttype>D-4</accenttype>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>֟</value>
+    <hexvalue>059f</hexvalue>
+    <name>Qarney Para</name>
+    <hebrewname>קַרְנֵי־פָרָ֟ה</hebrewname>
+    <type>Accent</type>
+    <accenttype>D-4</accenttype>
+    <equivalents>Pazer gadol</equivalents>
+    <notes/>
+  </char>
+  <char>
+    <value>֠</value>
+    <hexvalue>05a0</hexvalue>
+    <name>Telisha Gedola</name>
+    <hebrewname>תְּלִישָׁה־גְּ֠דוֹלָ֠ה</hebrewname>
+    <type>Accent</type>
+    <accenttype>D-4</accenttype>
+    <equivalents/>
+    <notes>Prepositive.</notes>
+  </char>
+  <char>
+    <value>֡</value>
+    <hexvalue>05a1</hexvalue>
+    <name>Pazer</name>
+    <hebrewname>פָּזֵ֡ר</hebrewname>
+    <type>Accent</type>
+    <accenttype>D-4</accenttype>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>֢</value>
+    <hexvalue>05a2</hexvalue>
+    <name>Atnaḥ Hafukh</name>
+    <hebrewname>אַתְנָח־הָפ֢וּךְ</hebrewname>
+    <type>Accent</type>
+    <accenttype>Sifrei Emet only</accenttype>
+    <equivalents/>
+    <notes>The accent should appear as an inverted Etnaḥta.</notes>
+  </char>
+  <char>
+    <value>֣</value>
+    <hexvalue>05a3</hexvalue>
+    <name>Munaḥ</name>
+    <hebrewname>מוּנַ֣ח</hebrewname>
+    <type>Accent</type>
+    <accenttype>C</accenttype>
+    <equivalents/>
+    <notes>In a word with a Munaḥ ending with a Unicode Paseq, the Unicode Paseq is often interpreted as a Legarmeh accent (D-4).</notes>
+  </char>
+  <char>
+    <value>֤</value>
+    <hexvalue>05a4</hexvalue>
+    <name>Mahapakh</name>
+    <hebrewname>מַהְפַּ֤ךְ</hebrewname>
+    <type>Accent</type>
+    <accenttype>C</accenttype>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>֥</value>
+    <hexvalue>05a5</hexvalue>
+    <name>Merkha</name>
+    <hebrewname>מֵרְכָ֥א</hebrewname>
+    <type>Accent</type>
+    <accenttype>C</accenttype>
+    <equivalents>Yored</equivalents>
+    <notes> </notes>
+  </char>
+  <char>
+    <value>֦</value>
+    <hexvalue>05a6</hexvalue>
+    <name>Merkha Kefula</name>
+    <hebrewname>מֵרְכָא־כְפוּלָ֦ה</hebrewname>
+    <type>Accent</type>
+    <accenttype>C</accenttype>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>֧</value>
+    <hexvalue>05a7</hexvalue>
+    <name>Darga</name>
+    <hebrewname>דַּרְגָ֧א</hebrewname>
+    <type>Accent</type>
+    <accenttype>C</accenttype>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>֨</value>
+    <hexvalue>05a8</hexvalue>
+    <name>Qadma</name>
+    <hebrewname>קַדְמָ֨א</hebrewname>
+    <type>Accent</type>
+    <accenttype>C</accenttype>
+    <equivalents/>
+    <notes>Easily confused with Pashta, which is postpositive.</notes>
+  </char>
+  <char>
+    <value>֩</value>
+    <hexvalue>05a9</hexvalue>
+    <name>Telisha Qetana</name>
+    <hebrewname>תְּלִישָׁה־קְטַנָה֩</hebrewname>
+    <type>Accent</type>
+    <accenttype>C</accenttype>
+    <equivalents/>
+    <notes>Postpositive.</notes>
+  </char>
+  <char>
+    <value>֪</value>
+    <hexvalue>05aa</hexvalue>
+    <name>Yeraḥ Ben Yomo</name>
+    <hebrewname>יֶרַח־בֶּן־יוֹמ֪וֹ</hebrewname>
+    <type>Accent</type>
+    <accenttype>C</accenttype>
+    <equivalents>Galgal</equivalents>
+    <notes>The name means "new moon"; the accent should appear as a semi-circular cup. Displayed as an Unicode Atnah Hafukh, x05a2, with most fonts.</notes>
+  </char>
+  <char>
+    <value>֫</value>
+    <hexvalue>05ab</hexvalue>
+    <name>Ole</name>
+    <hebrewname>עוֹלֶ֫ה</hebrewname>
+    <type>Accent</type>
+    <accenttype>Sifrei Emet only</accenttype>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>֬</value>
+    <hexvalue>05ac</hexvalue>
+    <name>Iluy</name>
+    <hebrewname>עִלּ֬וּי</hebrewname>
+    <type>Accent</type>
+    <accenttype>Sifrei Emet only</accenttype>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>֭</value>
+    <hexvalue>05ad</hexvalue>
+    <name>Deḥi</name>
+    <hebrewname>דֶּ֭חִי</hebrewname>
+    <type>Accent</type>
+    <accenttype>Sifrei Emet only</accenttype>
+    <equivalents/>
+    <notes>Prepositive.</notes>
+  </char>
+  <char>
+    <value>֮</value>
+    <hexvalue>05ae</hexvalue>
+    <name>Zinor</name>
+    <hebrewname>צִינּוֹר֮</hebrewname>
+    <type>Accent</type>
+    <accenttype>D-3</accenttype>
+    <equivalents>Zarqa</equivalents>
+    <notes>This character is used for real (postpositive) Zarqa as opposed to 'stress helper' Zarqa which is implemented as a Unicode Zarqa. The transliterated name should really be Tsinor.</notes>
+  </char>
+  <char>
+    <value>ְ</value>
+    <hexvalue>05b0</hexvalue>
+    <name>Sheva</name>
+    <hebrewname>שְׁוָא</hebrewname>
+    <type>Point</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ֱ</value>
+    <hexvalue>05b1</hexvalue>
+    <name>Ḥataf Segol</name>
+    <hebrewname>חֲטַף סֶגוֹל</hebrewname>
+    <type>Point</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ֲ</value>
+    <hexvalue>05b2</hexvalue>
+    <name>Ḥataf Pataḥ</name>
+    <hebrewname>חֲטַף פַּתָּח</hebrewname>
+    <type>Point</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ֳ</value>
+    <hexvalue>05b3</hexvalue>
+    <name>Ḥataf Qamats</name>
+    <hebrewname>חֲטַף קָמָץ</hebrewname>
+    <type>Point</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ִ</value>
+    <hexvalue>05b4</hexvalue>
+    <name>Ḥiriq</name>
+    <hebrewname>חִירִיק</hebrewname>
+    <type>Point</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ֵ</value>
+    <hexvalue>05b5</hexvalue>
+    <name>Tsere</name>
+    <hebrewname>צֵירֵי</hebrewname>
+    <type>Point</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ֶ</value>
+    <hexvalue>05b6</hexvalue>
+    <name>Segol</name>
+    <hebrewname>סֶגוֹל</hebrewname>
+    <type>Point</type>
+    <accenttype/>
+    <equivalents/>
+    <notes>This is the Vowel (POINT) Segol, not to be confused with the ACCENT Segol.</notes>
+  </char>
+  <char>
+    <value>ַ</value>
+    <hexvalue>05b7</hexvalue>
+    <name>Pataḥ</name>
+    <hebrewname>פַּתָּח</hebrewname>
+    <type>Point</type>
+    <accenttype/>
+    <equivalents> </equivalents>
+    <notes>Furtive pataḥ is not a distinct character.</notes>
+  </char>
+  <char>
+    <value>ָ</value>
+    <hexvalue>05b8</hexvalue>
+    <name>Qamats</name>
+    <hebrewname>קָמָץ</hebrewname>
+    <type>Point</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ֹ</value>
+    <hexvalue>05b9</hexvalue>
+    <name>Ḥolam (dot)</name>
+    <hebrewname>חוֹלָם</hebrewname>
+    <type>Point</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ֺ</value>
+    <hexvalue>05ba</hexvalue>
+    <name>Ḥolam ḥaser for vav (dot)</name>
+    <hebrewname>חוֹלָם חָסֵר בְּוָי״ו</hebrewname>
+    <type>Point</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ֻ</value>
+    <hexvalue>05bb</hexvalue>
+    <name>Qubuts</name>
+    <hebrewname>קֻבּוּץ</hebrewname>
+    <type>Point</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ּ</value>
+    <hexvalue>05bc</hexvalue>
+    <name>Dagesh</name>
+    <hebrewname>דָּגֵשׁ</hebrewname>
+    <type>Point</type>
+    <accenttype/>
+    <equivalents>Mapiq, Shuruq dot</equivalents>
+    <notes>Falls within base letter.</notes>
+  </char>
+  <char>
+    <value>ֽ</value>
+    <hexvalue>05bd</hexvalue>
+    <name>Meteg</name>
+    <hebrewname>מֱתֶג</hebrewname>
+    <type>Point</type>
+    <accenttype/>
+    <equivalents>Siluq</equivalents>
+    <notes>Serves often as the Hebrew accent Siluq (D-1). A center meteg is preceded by a ZWJ (x200D) for positioning.</notes>
+  </char>
+  <char>
+    <value>־</value>
+    <hexvalue>05be</hexvalue>
+    <name>Maqaf</name>
+    <hebrewname>מַקֵּף</hebrewname>
+    <type>Point</type>
+    <accenttype/>
+    <equivalents> </equivalents>
+    <notes>The UXLC displays this accent in the Vowels content mode.</notes>
+  </char>
+  <char>
+    <value>ֿ</value>
+    <hexvalue>05bf</hexvalue>
+    <name>Rafe</name>
+    <hebrewname>רָפֶה</hebrewname>
+    <type>Point</type>
+    <accenttype/>
+    <equivalents/>
+    <notes>Indicates the absence of a dagesh. The UXLC shows only "important" rafes.</notes>
+  </char>
+  <char>
+    <value>׀</value>
+    <hexvalue>05c0</hexvalue>
+    <name>Paseq</name>
+    <hebrewname>פָּסֵק</hebrewname>
+    <type>Punctuation</type>
+    <accenttype/>
+    <equivalents/>
+    <notes>This character functions as a Legarmeh (D-4) in some contexts and as a true Paseq in others. Each Unicode Paseq is preceded by a Space (x0020) for positioning.</notes>
+  </char>
+  <char>
+    <value>ׁ</value>
+    <hexvalue>05c1</hexvalue>
+    <name>Shin Dot</name>
+    <hebrewname/>
+    <type>Point</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ׂ</value>
+    <hexvalue>05c2</hexvalue>
+    <name>Sin Dot</name>
+    <hebrewname/>
+    <type>Point</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>׃</value>
+    <hexvalue>05c3</hexvalue>
+    <name>Sof Pasuq</name>
+    <hebrewname>סוֹף פָּסוּק</hebrewname>
+    <type>Point</type>
+    <accenttype/>
+    <equivalents> </equivalents>
+    <notes>The UXLC displays this accent in the Vowels content mode.</notes>
+  </char>
+  <char>
+    <value>ׄ</value>
+    <hexvalue>05c4</hexvalue>
+    <name>Upper Dot</name>
+    <hebrewname/>
+    <type>Mark</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ׅ</value>
+    <hexvalue>05c5</hexvalue>
+    <name>Lower Dot</name>
+    <hebrewname/>
+    <type>Mark</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>א</value>
+    <hexvalue>05d0</hexvalue>
+    <name>Alef</name>
+    <hebrewname>אָלֶף</hebrewname>
+    <type>Letter</type>
+    <accenttype/>
+    <equivalents/>
+    <notes> </notes>
+  </char>
+  <char>
+    <value>ב</value>
+    <hexvalue>05d1</hexvalue>
+    <name>Bet</name>
+    <hebrewname>בֵּית</hebrewname>
+    <type>Letter</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ג</value>
+    <hexvalue>05d2</hexvalue>
+    <name>Gimel</name>
+    <hebrewname>גִימֵל</hebrewname>
+    <type>Letter</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ד</value>
+    <hexvalue>05d3</hexvalue>
+    <name>Dalet</name>
+    <hebrewname>דָלֶת</hebrewname>
+    <type>Letter</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ה</value>
+    <hexvalue>05d4</hexvalue>
+    <name>He</name>
+    <hebrewname>הֵא</hebrewname>
+    <type>Letter</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ו</value>
+    <hexvalue>05d5</hexvalue>
+    <name>Vav</name>
+    <hebrewname>וָו</hebrewname>
+    <type>Letter</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ז</value>
+    <hexvalue>05d6</hexvalue>
+    <name>Zayin</name>
+    <hebrewname>זַיִן</hebrewname>
+    <type>Letter</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ח</value>
+    <hexvalue>05d7</hexvalue>
+    <name>Ḥet</name>
+    <hebrewname>חֵית</hebrewname>
+    <type>Letter</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ט</value>
+    <hexvalue>05d8</hexvalue>
+    <name>Tet</name>
+    <hebrewname>טֵית</hebrewname>
+    <type>Letter</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>י</value>
+    <hexvalue>05d9</hexvalue>
+    <name>Yod</name>
+    <hebrewname>יוֹד</hebrewname>
+    <type>Letter</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ך</value>
+    <hexvalue>05da</hexvalue>
+    <name>Final Kaf</name>
+    <hebrewname>כַּף סוֹפִית</hebrewname>
+    <type>Letter</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>כ</value>
+    <hexvalue>05db</hexvalue>
+    <name>Kaf</name>
+    <hebrewname>כַּף</hebrewname>
+    <type>Letter</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ל</value>
+    <hexvalue>05dc</hexvalue>
+    <name>Lamed</name>
+    <hebrewname>לָמֶד</hebrewname>
+    <type>Letter</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ם</value>
+    <hexvalue>05dd</hexvalue>
+    <name>Final Mem</name>
+    <hebrewname>מֵם סוֹפִית</hebrewname>
+    <type>Letter</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>מ</value>
+    <hexvalue>05de</hexvalue>
+    <name>Mem</name>
+    <hebrewname>מֵם</hebrewname>
+    <type>Letter</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ן</value>
+    <hexvalue>05df</hexvalue>
+    <name>Final Nun</name>
+    <hebrewname>נוּן סוֹפִית</hebrewname>
+    <type>Letter</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>נ</value>
+    <hexvalue>05e0</hexvalue>
+    <name>Nun</name>
+    <hebrewname>נוּן</hebrewname>
+    <type>Letter</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ס</value>
+    <hexvalue>05e1</hexvalue>
+    <name>Samekh</name>
+    <hebrewname>סָמֶךְ</hebrewname>
+    <type>Letter</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ע</value>
+    <hexvalue>05e2</hexvalue>
+    <name>Ayin</name>
+    <hebrewname>עַיִן</hebrewname>
+    <type>Letter</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ף</value>
+    <hexvalue>05e3</hexvalue>
+    <name>Final Pe</name>
+    <hebrewname>פֵּה סוֹפִית</hebrewname>
+    <type>Letter</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>פ</value>
+    <hexvalue>05e4</hexvalue>
+    <name>Pe</name>
+    <hebrewname>פֵּה</hebrewname>
+    <type>Letter</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ץ</value>
+    <hexvalue>05e5</hexvalue>
+    <name>Final Tsadi</name>
+    <hebrewname>צַדִי סוֹפִית</hebrewname>
+    <type>Letter</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>צ</value>
+    <hexvalue>05e6</hexvalue>
+    <name>Tsadi</name>
+    <hebrewname>צַדִי</hebrewname>
+    <type>Letter</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ק</value>
+    <hexvalue>05e7</hexvalue>
+    <name>Qof</name>
+    <hebrewname>קוֹף</hebrewname>
+    <type>Letter</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ר</value>
+    <hexvalue>05e8</hexvalue>
+    <name>Resh</name>
+    <hebrewname>רֵישׁ</hebrewname>
+    <type>Letter</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ש</value>
+    <hexvalue>05e9</hexvalue>
+    <name>Shin</name>
+    <hebrewname>שִׁין</hebrewname>
+    <type>Letter</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <char>
+    <value>ת</value>
+    <hexvalue>05ea</hexvalue>
+    <name>Tav</name>
+    <hebrewname>תָו</hebrewname>
+    <type>Letter</type>
+    <accenttype/>
+    <equivalents/>
+    <notes/>
+  </char>
+  <specialchar>
+    <value>/</value>
+    <hexvalue>002f</hexvalue>
+    <name>Slash</name>
+    <hebrewname/>
+    <mccode>/</mccode>
+    <type>Special</type>
+    <accenttype/>
+    <equivalents> </equivalents>
+    <notes>Morphological divider. Appears as ' ¦ ' in odt and pdf files.</notes>
+    <group> </group>
+  </specialchar>
+  <specialchar>
+    <value> </value>
+    <hexvalue>0020</hexvalue>
+    <name>Space</name>
+    <hebrewname/>
+    <mccode> </mccode>
+    <type/>
+    <accenttype/>
+    <equivalents> </equivalents>
+    <notes>Space appears in an XML tag only before a Unicode Paseq.</notes>
+    <group> </group>
+  </specialchar>
+  <specialchar>
+    <value>͏</value>
+    <hexvalue>034f</hexvalue>
+    <name>Combining grapheme joiner (CGJ)</name>
+    <hebrewname/>
+    <mccode> </mccode>
+    <type/>
+    <accenttype/>
+    <equivalents> </equivalents>
+    <notes>Improves browser display of Decalogue/Reuven saga, Jerusalem, and leading Metegs.</notes>
+    <group> </group>
+  </specialchar>
+  <specialchar>
+    <value>‍</value>
+    <hexvalue>200d</hexvalue>
+    <name>Zero width joiner (ZWJ)</name>
+    <hebrewname/>
+    <mccode> </mccode>
+    <type/>
+    <accenttype/>
+    <equivalents> </equivalents>
+    <notes>Center Meteg is a ZWJ + Meteg.</notes>
+    <group> </group>
+  </specialchar>
+</coding>
+<notes>
+  <note>
+    <code>4</code>
+    <gccode>4</gccode>
+    <note>Puncta extraordinaria -- an x05c4 is used to mark such marks in the text when they are above the line and an x05c5 when they are below the line. </note>
+  </note>
+  <note>
+    <code>5</code>
+    <gccode>5</gccode>
+    <note>Large letter(s). Shown as large letters.</note>
+  </note>
+  <note>
+    <code>6</code>
+    <gccode>6</gccode>
+    <note>Small letter(s). Shown as small letters.</note>
+  </note>
+  <note>
+    <code>7</code>
+    <gccode>7</gccode>
+    <note>Suspended letter(s). Shown as suspended letters.</note>
+  </note>
+  <note>
+    <code>8</code>
+    <gccode>8</gccode>
+    <note>Inverted nun in the text.</note>
+  </note>
+  <note>
+    <code>c</code>
+    <gccode>c</gccode>
+    <note>Text is correct relative to LC. Usually this marks a peculiarity of the LC relative to the other Masoretic texts.</note>
+  </note>
+  <note>
+    <code>d</code>
+    <gccode>d</gccode>
+    <note>This tipeha is a dehi in other texts.</note>
+  </note>
+  <note>
+    <code>m</code>
+    <gccode>m</gccode>
+    <note>This meteg is a merkha in other texts.</note>
+  </note>
+  <note>
+    <code>q</code>
+    <gccode>q</gccode>
+    <note>UXLC differs from the conventional word for the qere.</note>
+  </note>
+  <note>
+    <code>t</code>
+    <gccode>t</gccode>
+    <note>Transcription uncertain. Examine the LC image for other possible readings.</note>
+  </note>
+  <note>
+    <code>X</code>
+    <gccode>X</gccode>
+    <note>This verse does NOT occur in the Leningrad Codex. Included for continuity of verse numbering.</note>
+  </note>
+  <note>
+    <code>y</code>
+    <gccode>y</gccode>
+    <note>Yatir: The preceding Hebrew letter is "superfluous".</note>
+  </note>
+</notes>
+</tanach>
+</Tanach>

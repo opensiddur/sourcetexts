@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright C.V.Kimball 2013 -->
+<Tanach xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../XSL/Tanach.xsd">
+<teiHeader>
+  <fileDesc>
+    <titleStmt>
+      <title level="s" type="uniform">Tanach</title>
+      <title level="s" type="uniformhebrew">תנ״ך</title>
+      <title level="s" type="main">Unicode/XML Leningrad Codex</title>
+      <title level="a" type="main">Obadiah</title>
+      <title level="a" type="mainhebrew">עבדיה</title>
+      <title level="a" type="filename">Obadiah</title>
+      <editor>Shemu'el ben Ya'akov</editor>
+      <editor>Aharon ben-Mosheh ben-Asher</editor>
+      <respStmt>
+        <resp>Publisher:</resp>
+        <name>Christopher V. Kimball</name>
+        <name type="email">mail@cvkimball.com</name>
+      </respStmt>
+    </titleStmt>
+    <editionStmt>
+      <edition>Unicode/XML Leningrad Codex (UXLC)
+        <version>UXLC 2.3</version>
+        <date>1 Apr 2025</date>
+        <build>27.4</build>
+        <buildDateTime>31 March 2025  06:24</buildDateTime>
+      </edition>
+<respStmt>
+<resp>WLC2XML[8 Jul 2024] - Transcription from Michigan-Claremont encoding to Unicode with XML markings. See details in notes.</resp>
+<resp>ScanReplace/EditWLC[30 Dec 2020] - Edits/removes transcription notes; removes MDs.</resp>
+<resp>ScanReplace/InsertCGJs[29 Dec 2020] - Places CGJ in Jerusalem VUV words and leading metegs.</resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2020.02.19 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2020.10.19 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2021.04.01 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2021.10.19 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2022.04.01 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2022.07.04 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2022.10.19 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2022.12.07 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2023.04.01 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2023.07.04 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2023.10.19 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2024.04.01 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2024.10.19 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2025.04.01 . </resp>
+<resp>ScanReplace/RemoveNewlines[18 May 2024] - Removes newlines (\n) from w, q, k tags.</resp>
+</respStmt>
+    </editionStmt>
+    <extent>18660</extent>
+    <publicationStmt>
+      <distributor>Via web site:
+        <name>Christopher V. Kimball</name>
+        <name type="url">https://tanach.us/Tanach.xml</name>
+        <name type="email">mail@cvkimball.com</name>
+      </distributor>
+      <availability status="free">Freely available</availability>
+    </publicationStmt>
+    <notesStmt>
+      <note>The original text file wlc420_ps.txt was provided by the Groves Center. 
+The file has the MD5 hash: d31a 6a6e 9afa bf82 272c 2efb 0522 a12e 
+and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to the noted character (Lev 11:42.4, Judg 18:30.11, Isa 9.6.1, Ps 80:14.3, Job 38:13.5, Job 38:15.2) to produce the file wlc420_ps_td.txt for conversion to Unicode and XML by the program WLC2XML. The only other changes to the Groves Center text are: The book names in English and Hebrew of the Jewish Publication Society Tanach and book abbreviations from the New Revised Standard Version have been added. MC code 32 added as atnah hafukh by Steve Salisbury, 30 Sep 2021. The atnah hafukh codepoint, x05a2, has been added to the character table; it does not appear in WLC 4.20. </note>
+    <correction>
+<citation>1:1.17</citation>
+<description>Word lacks accent, add note 'c'; MAM has a Tipeha (  ס֖  ) to the Lamed on this word.</description>
+<author>Ben Denckla</author>
+<filedate>2021.10.19</filedate>
+<date>2021.08.07</date>
+<n>15</n>
+</correction>
+<correction>
+<citation>1:3.6</citation>
+<description>Remove dagesh from samekh.</description>
+<author>Daniel Holman</author>
+<filedate>2023.04.01</filedate>
+<date>2022.12.12</date>
+<n>4</n>
+</correction>
+<correction>
+<citation>1:8.4</citation>
+<description>Remove maqaf from end of word.</description>
+<author>Daniel Holman</author>
+<filedate>2023.04.01</filedate>
+<date>2022.12.12</date>
+<n>5</n>
+</correction>
+<correction>
+<citation>1:12.9</citation>
+<description>Remove maqaf from end of word.</description>
+<author>Daniel Holman</author>
+<filedate>2023.04.01</filedate>
+<date>2022.12.12</date>
+<n>6</n>
+</correction>
+<correction>
+<citation>1:16.15</citation>
+<description>Move meteg from yod to he.</description>
+<author>Daniel Holman</author>
+<filedate>2023.04.01</filedate>
+<date>2022.12.12</date>
+<n>7</n>
+</correction>
+</notesStmt>
+    <sourceDesc>
+      <biblItem>
+        <title>Hebrew Bible</title>
+        <title>Leningrad Codex</title>
+        <editor>Shemu'el ben Ya'akov</editor>
+        <editor>Aharon ben-Mosheh ben-Asher</editor>
+        <edition>Original document</edition>
+        <imprint>
+          <publisher>Russian National Library (Saltykov-Shchedrin)</publisher>
+          <pubPlace>St. Petersburg (Leningrad)</pubPlace>
+          <date>1008</date>
+        </imprint>
+        <idno type="Accession">Firkovich B 19 A</idno>
+      </biblItem>
+      <biblItem>
+        <title>The Leningrad Codex - A Facsimile Edition</title>
+        <editor>Freedman, David Noel</editor>
+        <editor>Beck, Astrid B.</editor>
+        <edition>First</edition>
+        <imprint>
+          <publisher>Wm. B. Eerdmans Publishing Co.</publisher>
+          <pubPlace>Grand Rapids, MI</pubPlace>
+          <date>1998</date>
+        </imprint>
+        <idno type="IBSN">0-8028-3786-7</idno>
+      </biblItem>
+      <biblItem>
+        <title>The Westminster Leningrad Codex</title>
+        <editor>Salisbury, Stephen K.</editor>
+        <edition>WLC 4.20</edition>
+        <imprint>
+          <publisher>The J. Alan Groves Center for Advanced Biblical Research ("Groves Center").</publisher>
+          <pubPlace>2960 Church Rd.</pubPlace>
+          <pubPlace>Glenside, PA 19038</pubPlace>
+          <date>25 January 2016</date>
+        </imprint>
+        <idno type="Unknown"/>
+      </biblItem>
+    </sourceDesc>
+  </fileDesc>
+  <encodingDesc>
+  </encodingDesc>
+  <profileDesc>
+    <creation>From WLC 4.20 provided by the Groves Center.</creation>
+    <date>25 Jan 2016</date>
+    <langUsage>
+      <language ident="HE">Hebrew</language>
+    </langUsage>
+  </profileDesc>
+</teiHeader>
+<tanach>
+  <book>
+    <names>
+      <name>Obadiah</name>
+      <abbrev>Ob</abbrev>
+      <number>18</number>
+      <filename>Obadiah</filename>
+      <hebrewname>עבדיה</hebrewname>
+    </names>
+    <c n="1">
+      <v n="1">
+        <w>חֲז֖וֹן</w>
+        <w>עֹֽבַדְיָ֑ה</w>
+        <w>כֹּֽה־</w>
+        <w>אָמַר֩</w>
+        <w>אֲדֹנָ֨י</w>
+        <w>יְהוִ֜ה</w>
+        <w>לֶאֱד֗וֹם</w>
+        <w>שְׁמוּעָ֨ה</w>
+        <w>שָׁמַ֜עְנוּ</w>
+        <w>מֵאֵ֤ת</w>
+        <w>יְהוָה֙</w>
+        <w>וְצִיר֙</w>
+        <w>בַּגּוֹיִ֣ם</w>
+        <w>שֻׁלָּ֔ח</w>
+        <w>ק֛וּמוּ</w>
+        <w>וְנָק֥וּמָה</w>
+        <w>עָלֶיהָ<x>c</x></w>
+        <w>לַמִּלְחָמָֽה׃</w>
+      </v>
+      <v n="2">
+        <w>הִנֵּ֥ה</w>
+        <w>קָטֹ֛ן</w>
+        <w>נְתַתִּ֖יךָ</w>
+        <w>בַּגּוֹיִ֑ם</w>
+        <w>בָּז֥וּי</w>
+        <w>אַתָּ֖ה</w>
+        <w>מְאֹֽד׃</w>
+      </v>
+      <v n="3">
+        <w>זְד֤וֹן</w>
+        <w>לִבְּךָ֙</w>
+        <w>הִשִּׁיאֶ֔ךָ</w>
+        <w>שֹׁכְנִ֥י</w>
+        <w>בְחַגְוֵי־</w>
+        <w>סֶ֖לַע</w>
+        <w>מְר֣וֹם</w>
+        <w>שִׁבְתּ֑וֹ</w>
+        <w>אֹמֵ֣ר</w>
+        <w>בְּלִבּ֔וֹ</w>
+        <w>מִ֥י</w>
+        <w>יוֹרִדֵ֖נִי</w>
+        <w>אָֽרֶץ׃</w>
+      </v>
+      <v n="4">
+        <w>אִם־</w>
+        <w>תַּגְבִּ֣יהַּ</w>
+        <w>כַּנֶּ֔שֶׁר</w>
+        <w>וְאִם־</w>
+        <w>בֵּ֥ין</w>
+        <w>כּֽוֹכָבִ֖ים</w>
+        <w>שִׂ֣ים</w>
+        <w>קִנֶּ֑ךָ</w>
+        <w>מִשָּׁ֥ם</w>
+        <w>אוֹרִֽידְךָ֖</w>
+        <w>נְאֻם־</w>
+        <w>יְהוָֽה׃</w>
+      </v>
+      <v n="5">
+        <w>אִם־</w>
+        <w>גַּנָּבִ֤ים</w>
+        <w>בָּאֽוּ־</w>
+        <w>לְךָ֙</w>
+        <w>אִם־</w>
+        <w>שׁ֣וֹדְדֵי</w>
+        <w>לַ֔יְלָה</w>
+        <w>אֵ֣יךְ</w>
+        <w>נִדְמֵ֔יתָה</w>
+        <w>הֲל֥וֹא</w>
+        <w>יִגְנְב֖וּ</w>
+        <w>דַּיָּ֑ם</w>
+        <w>אִם־</w>
+        <w>בֹּֽצְרִים֙</w>
+        <w>בָּ֣אוּ</w>
+        <w>לָ֔ךְ</w>
+        <w>הֲל֖וֹא</w>
+        <w>יַשְׁאִ֥ירוּ</w>
+        <w>עֹלֵלֽוֹת׃</w>
+      </v>
+      <v n="6">
+        <w>אֵ֚יךְ</w>
+        <w>נֶחְפְּשׂ֣וּ</w>
+        <w>עֵשָׂ֔ו</w>
+        <w>נִבְע֖וּ</w>
+        <w>מַצְפֻּנָֽיו׃</w>
+      </v>
+      <v n="7">
+        <w>עַֽד־</w>
+        <w>הַגְּב֣וּל</w>
+        <w>שִׁלְּח֗וּךָ</w>
+        <w>כֹּ֚ל</w>
+        <w>אַנְשֵׁ֣י</w>
+        <w>בְרִיתֶ֔ךָ</w>
+        <w>הִשִּׁיא֛וּךָ</w>
+        <w>יָכְל֥וּ</w>
+        <w>לְךָ֖</w>
+        <w>אַנְשֵׁ֣י</w>
+        <w>שְׁלֹמֶ֑ךָ</w>
+        <w>לַחְמְךָ֗</w>
+        <w>יָשִׂ֤ימוּ</w>
+        <w>מָזוֹר֙</w>
+        <w>תַּחְתֶּ֔יךָ</w>
+        <w>אֵ֥ין</w>
+        <w>תְּבוּנָ֖ה</w>
+        <w>בּֽוֹ׃</w>
+      </v>
+      <v n="8">
+        <w>הֲל֛וֹא</w>
+        <w>בַּיּ֥וֹם</w>
+        <w>הַה֖וּא</w>
+        <w>נְאֻם</w>
+        <w>יְהוָ֑ה</w>
+        <w>וְהַאֲבַדְתִּ֤י</w>
+        <w>חֲכָמִים֙</w>
+        <w>מֵֽאֱד֔וֹם</w>
+        <w>וּתְבוּנָ֖ה</w>
+        <w>מֵהַ֥ר</w>
+        <w>עֵשָֽׂו׃</w>
+      </v>
+      <v n="9">
+        <w>וְחַתּ֥וּ</w>
+        <w>גִבּוֹרֶ֖יךָ</w>
+        <w>תֵּימָ֑ן</w>
+        <w>לְמַ֧עַן</w>
+        <w>יִכָּֽרֶת־</w>
+        <w>אִ֛ישׁ</w>
+        <w>מֵהַ֥ר</w>
+        <w>עֵשָׂ֖ו</w>
+        <w>מִקָּֽטֶל׃</w>
+      </v>
+      <v n="10">
+        <w>מֵחֲמַ֛ס</w>
+        <w>אָחִ֥יךָ</w>
+        <w>יַעֲקֹ֖ב</w>
+        <w>תְּכַסְּךָ֣</w>
+        <w>בוּשָׁ֑ה</w>
+        <w>וְנִכְרַ֖תָּ</w>
+        <w>לְעוֹלָֽם׃</w>
+      </v>
+      <v n="11">
+        <w>בְּיוֹם֙</w>
+        <w>עֲמָֽדְךָ֣</w>
+        <w>מִנֶּ֔גֶד</w>
+        <w>בְּי֛וֹם</w>
+        <w>שְׁב֥וֹת</w>
+        <w>זָרִ֖ים</w>
+        <w>חֵיל֑וֹ</w>
+        <w>וְנָכְרִ֞ים</w>
+        <w>בָּ֣אוּ</w>
+        <k>שערו</k>
+        <q>שְׁעָרָ֗יו</q>
+        <w>וְעַל־</w>
+        <w>יְרוּשָׁלִַ֙ם֙</w>
+        <w>יַדּ֣וּ</w>
+        <w>גוֹרָ֔ל</w>
+        <w>גַּם־</w>
+        <w>אַתָּ֖ה</w>
+        <w>כְּאַחַ֥ד</w>
+        <w>מֵהֶֽם׃</w>
+      </v>
+      <v n="12">
+        <w>וְאַל־</w>
+        <w>תֵּ֤רֶא</w>
+        <w>בְיוֹם־</w>
+        <w>אָחִ֙יךָ֙</w>
+        <w>בְּי֣וֹם</w>
+        <w>נָכְר֔וֹ</w>
+        <w>וְאַל־</w>
+        <w>תִּשְׂמַ֥ח</w>
+        <w>לִבְנֵֽי</w>
+        <w>יְהוּדָ֖ה</w>
+        <w>בְּי֣וֹם</w>
+        <w>אָבְדָ֑ם</w>
+        <w>וְאַל־</w>
+        <w>תַּגְדֵּ֥ל</w>
+        <w>פִּ֖יךָ</w>
+        <w>בְּי֥וֹם</w>
+        <w>צָרָֽה׃</w>
+      </v>
+      <v n="13">
+        <w>אַל־</w>
+        <w>תָּב֤וֹא</w>
+        <w>בְשַֽׁעַר־</w>
+        <w>עַמִּי֙</w>
+        <w>בְּי֣וֹם</w>
+        <w>אֵידָ֔ם</w>
+        <w>אַל־</w>
+        <w>תֵּ֧רֶא</w>
+        <w>גַם־</w>
+        <w>אַתָּ֛ה</w>
+        <w>בְּרָעָת֖וֹ</w>
+        <w>בְּי֣וֹם</w>
+        <w>אֵיד֑וֹ</w>
+        <w>וְאַל־</w>
+        <w>תִּשְׁלַ֥חְנָה</w>
+        <w>בְחֵיל֖וֹ</w>
+        <w>בְּי֥וֹם</w>
+        <w>אֵידֽוֹ׃</w>
+      </v>
+      <v n="14">
+        <w>וְאַֽל־</w>
+        <w>תַּעֲמֹד֙</w>
+        <w>עַל־</w>
+        <w>הַפֶּ֔רֶק</w>
+        <w>לְהַכְרִ֖ית</w>
+        <w>אֶת־</w>
+        <w>פְּלִיטָ֑יו</w>
+        <w>וְאַל־</w>
+        <w>תַּסְגֵּ֥ר</w>
+        <w>שְׂרִידָ֖יו</w>
+        <w>בְּי֥וֹם</w>
+        <w>צָרָֽה׃</w>
+      </v>
+      <v n="15">
+        <w>כִּֽי־</w>
+        <w>קָר֥וֹב</w>
+        <w>יוֹם־</w>
+        <w>יְהוָ֖ה</w>
+        <w>עַל־</w>
+        <w>כָּל־</w>
+        <w>הַגּוֹיִ֑ם</w>
+        <w>כַּאֲשֶׁ֤ר</w>
+        <w>עָשִׂ֙יתָ֙</w>
+        <w>יֵעָ֣שֶׂה</w>
+        <w>לָּ֔ךְ</w>
+        <w>גְּמֻלְךָ֖</w>
+        <w>יָשׁ֥וּב</w>
+        <w>בְּרֹאשֶֽׁךָ׃</w>
+      </v>
+      <v n="16">
+        <w>כִּ֗י</w>
+        <w>כַּֽאֲשֶׁ֤ר</w>
+        <w>שְׁתִיתֶם֙</w>
+        <w>עַל־</w>
+        <w>הַ֣ר</w>
+        <w>קָדְשִׁ֔י</w>
+        <w>יִשְׁתּ֥וּ</w>
+        <w>כָֽל־</w>
+        <w>הַגּוֹיִ֖ם</w>
+        <w>תָּמִ֑יד</w>
+        <w>וְשָׁת֣וּ</w>
+        <w>וְלָע֔וּ</w>
+        <w>וְהָי֖וּ</w>
+        <w>כְּל֥וֹא</w>
+        <w>הָֽיוּ׃</w>
+      </v>
+      <v n="17">
+        <w>וּבְהַ֥ר</w>
+        <w>צִיּ֛וֹן</w>
+        <w>תִּהְיֶ֥ה</w>
+        <w>פְלֵיטָ֖ה</w>
+        <w>וְהָ֣יָה</w>
+        <w>קֹ֑דֶשׁ</w>
+        <w>וְיָֽרְשׁוּ֙</w>
+        <w>בֵּ֣ית</w>
+        <w>יַֽעֲקֹ֔ב</w>
+        <w>אֵ֖ת</w>
+        <w>מוֹרָֽשֵׁיהֶם׃</w>
+      </v>
+      <v n="18">
+        <w>וְהָיָה֩</w>
+        <w>בֵית־</w>
+        <w>יַעֲקֹ֨ב</w>
+        <w>אֵ֜שׁ</w>
+        <w>וּבֵ֧ית</w>
+        <w>יוֹסֵ֣ף</w>
+        <w>לֶהָבָ֗ה</w>
+        <w>וּבֵ֤ית</w>
+        <w>עֵשָׂו֙</w>
+        <w>לְקַ֔שׁ</w>
+        <w>וְדָלְק֥וּ</w>
+        <w>בָהֶ֖ם</w>
+        <w>וַאֲכָל֑וּם</w>
+        <w>וְלֹֽא־</w>
+        <w>יִֽהְיֶ֤ה</w>
+        <w>שָׂרִיד֙</w>
+        <w>לְבֵ֣ית</w>
+        <w>עֵשָׂ֔ו</w>
+        <w>כִּ֥י</w>
+        <w>יְהוָ֖ה</w>
+        <w>דִּבֵּֽר׃</w>
+      </v>
+      <v n="19">
+        <w>וְיָרְשׁ֨וּ</w>
+        <w>הַנֶּ֜גֶב</w>
+        <w>אֶת־</w>
+        <w>הַ֣ר</w>
+        <w>עֵשָׂ֗ו</w>
+        <w>וְהַשְּׁפֵלָה֙</w>
+        <w>אֶת־</w>
+        <w>פְּלִשְׁתִּ֔ים</w>
+        <w>וְיָרְשׁוּ֙</w>
+        <w>אֶת־</w>
+        <w>שְׂדֵ֣ה</w>
+        <w>אֶפְרַ֔יִם</w>
+        <w>וְאֵ֖ת</w>
+        <w>שְׂדֵ֣ה</w>
+        <w>שֹׁמְר֑וֹן</w>
+        <w>וּבִנְיָמִ֖ן</w>
+        <w>אֶת־</w>
+        <w>הַגִּלְעָֽד׃</w>
+      </v>
+      <v n="20">
+        <w>וְגָלֻ֣ת</w>
+        <w>הַֽחֵל־</w>
+        <w>הַ֠זֶּה</w>
+        <w>לִבְנֵ֨י</w>
+        <w>יִשְׂרָאֵ֤ל</w>
+        <w>אֲשֶֽׁר־</w>
+        <w>כְּנַעֲנִים֙</w>
+        <w>עַד־</w>
+        <w>צָ֣רְפַ֔ת</w>
+        <w>וְגָלֻ֥ת</w>
+        <w>יְרוּשָׁלַ֖͏ִם</w>
+        <w>אֲשֶׁ֣ר</w>
+        <w>בִּסְפָרַ֑ד</w>
+        <w>יִֽרְשׁ֕וּ</w>
+        <w>אֵ֖ת</w>
+        <w>עָרֵ֥י</w>
+        <w>הַנֶּֽגֶב׃</w>
+      </v>
+      <v n="21">
+        <w>וְעָל֤וּ</w>
+        <w>מֽוֹשִׁעִים֙</w>
+        <w>בְּהַ֣ר</w>
+        <w>צִיּ֔וֹן</w>
+        <w>לִשְׁפֹּ֖ט</w>
+        <w>אֶת־</w>
+        <w>הַ֣ר</w>
+        <w>עֵשָׂ֑ו</w>
+        <w>וְהָיְתָ֥ה</w>
+        <w>לַֽיהוָ֖ה</w>
+        <w>הַמְּלוּכָֽה׃</w>
+      </v>
+      <vs>21</vs>
+    </c>
+    <vs>21</vs>
+    <cs>1</cs>
+  </book>
+</tanach>
+<notes>
+  <note>
+    <code>4</code>
+    <gccode>4</gccode>
+    <note>Puncta extraordinaria -- an x05c4 is used to mark such marks in the text when they are above the line and an x05c5 when they are below the line. </note>
+  </note>
+  <note>
+    <code>5</code>
+    <gccode>5</gccode>
+    <note>Large letter(s). Shown as large letters.</note>
+  </note>
+  <note>
+    <code>6</code>
+    <gccode>6</gccode>
+    <note>Small letter(s). Shown as small letters.</note>
+  </note>
+  <note>
+    <code>7</code>
+    <gccode>7</gccode>
+    <note>Suspended letter(s). Shown as suspended letters.</note>
+  </note>
+  <note>
+    <code>8</code>
+    <gccode>8</gccode>
+    <note>Inverted nun in the text.</note>
+  </note>
+  <note>
+    <code>c</code>
+    <gccode>c</gccode>
+    <note>Text is correct relative to LC. Usually this marks a peculiarity of the LC relative to the other Masoretic texts.</note>
+  </note>
+  <note>
+    <code>d</code>
+    <gccode>d</gccode>
+    <note>This tipeha is a dehi in other texts.</note>
+  </note>
+  <note>
+    <code>m</code>
+    <gccode>m</gccode>
+    <note>This meteg is a merkha in other texts.</note>
+  </note>
+  <note>
+    <code>q</code>
+    <gccode>q</gccode>
+    <note>UXLC differs from the conventional word for the qere.</note>
+  </note>
+  <note>
+    <code>t</code>
+    <gccode>t</gccode>
+    <note>Transcription uncertain. Examine the LC image for other possible readings.</note>
+  </note>
+  <note>
+    <code>X</code>
+    <gccode>X</gccode>
+    <note>This verse does NOT occur in the Leningrad Codex. Included for continuity of verse numbering.</note>
+  </note>
+  <note>
+    <code>y</code>
+    <gccode>y</gccode>
+    <note>Yatir: The preceding Hebrew letter is "superfluous".</note>
+  </note>
+</notes>
+</Tanach>
