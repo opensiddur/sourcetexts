@@ -20,7 +20,11 @@ end of **2058**.
 
 ## 2. The Wikisource additions — CC BY-SA 4.0 International
 
-Everything in this directory was retrieved from Hebrew Wikisource, whose text is licensed
+This covers `text/`, `credits/`, `source/`, `external/` and `en/` — everything retrieved
+from a Wikisource, Hebrew or English. It does **not** cover `ia/`, which has no wiki layer;
+see section 3.
+
+Everything so retrieved comes from Wikisource, whose text is licensed
 [Creative Commons Attribution-ShareAlike 4.0 International][ccbysa] (CC BY-SA 4.0). That is the
 license the site itself reports through its API (`meta=siteinfo&siprop=rightsinfo`), and it is
 the license contributors agree to under the [Wikimedia Terms of Use][tou].
@@ -30,6 +34,42 @@ This layer is not a formality. **The Wikisource edition is not a faithful reprod
 Hebrew, adds Eretz Yisrael customs, and makes textual corrections. Those are original editorial
 contributions by identifiable people, and they are what CC BY-SA covers — so the sections in
 `source/` and `external/` carry rights that the underlying 1949 text does not.
+
+## 3. The Internet Archive scan and its OCR — no additional rights
+
+`ia/` holds material from the Internet Archive item
+[`PhilipBirnbaumHaSiddurHaShalemTheDailyPrayerBook1949`][ia]: whole-book OCR derivatives
+under `ia/derivatives/`, the per-page text sliced out of them under `ia/ocr/`, and the
+item's own metadata in `ia/metadata.json`.
+
+**It is the same scan as the Commons file in section 1** — not a similar one. The Archive
+and Commons report the identical SHA-1 for the PDF,
+`4208e06b5b212b5dc1631a4f096c660e95119d48`, at 488,138,938 bytes. That identity is the
+whole basis for laying the Archive's OCR against the Wikisource transcription leaf by
+leaf, so it is recorded here rather than left as an assumption; `ia/metadata.json`
+preserves the Archive's own file list so the claim stays checkable.
+
+Two consequences:
+
+- **The 1949 layer is exactly as in section 1** — public domain in the United States by
+  non-renewal, and only there. The Archive states the same reason in its own `rights`
+  field, preserved in `ia/metadata.json`.
+- **The OCR adds nothing.** It is machine-generated from those page images, and the
+  Archive asserts no separate rights over it. There is no CC BY-SA layer on `ia/`, and no
+  contributors to attribute — which is precisely why `en/` exists alongside it.
+
+### What `ia/ocr/` actually contains
+
+Worth stating plainly, because the files look more finished than they are:
+
+- The OCR reads Hebrew as **Latin gibberish**. On a Hebrew page, what it produces is not
+  Hebrew in any usable sense.
+- Birnbaum set his English commentary as footnotes at the bottom of the Hebrew pages, and
+  that English *is* read correctly — but it arrives interleaved with the gibberish in OCR
+  reading order, with nothing marking where one ends and the other begins.
+- So an `ia/ocr/NNN.txt` file for a Hebrew page is a **provenance record, not prose**.
+  Separating the running head, body and footnote regions is a later stage's work, and
+  nothing should quote these files as text until it has run.
 
 ## What this means downstream
 
@@ -42,6 +82,10 @@ contributions by identifiable people, and they are what CC BY-SA covers — so t
   which is a different text.
 - **Do not assume worldwide public domain.** Only the 1949 layer is public domain, and only in
   the United States.
+- **Attribute the English contributors too.** `en/credits/NNN.txt` carries the same
+  obligation for the English Wikisource pages that `credits/` carries for the Hebrew.
+- **Do not quote `ia/ocr/` as text.** See section 3: on Hebrew pages it is unsegmented
+  OCR mixing real English footnotes with Hebrew misread as Latin.
 
 ## Provenance
 
@@ -50,14 +94,19 @@ contributions by identifiable people, and they are what CC BY-SA covers — so t
 | Work | `Philip Birnbaum - ha-Siddur ha-Shalem (The Daily Prayer Book,1949).pdf` |
 | Retrieved from | `he.wikisource.org` |
 | Scan hosted at | Wikimedia Commons, digitised from the Internet Archive and the Open Siddur Project |
+| Scan SHA-1 | `4208e06b5b212b5dc1631a4f096c660e95119d48` (488,138,938 bytes), identical on Commons and the Internet Archive |
+| English pages retrieved from | `en.wikisource.org`, same file, `Page:` namespace |
+| OCR retrieved from | `archive.org`, item `PhilipBirnbaumHaSiddurHaShalemTheDailyPrayerBook1949` |
 | Author | Philip (Paltiel) Birnbaum, 1904–1988 |
 | Publisher | Hebrew Publishing Company, New York, 1949 |
 
-`manifest.json` records the exact revision of every page retrieved, so any claim here can be
-checked against the wiki as it stood at download time.
+`manifest.json`, `en/manifest.json` and `ia/manifest.json` record the exact revision or
+checksum of everything retrieved, so any claim here can be checked against the sources as
+they stood at download time.
 
 This file records what the sources say about licensing; it is not legal advice.
 
+[ia]: https://archive.org/details/PhilipBirnbaumHaSiddurHaShalemTheDailyPrayerBook1949
 [commons]: https://commons.wikimedia.org/wiki/File:Philip_Birnbaum_-_ha-Siddur_ha-Shalem_(The_Daily_Prayer_Book,1949).pdf
 [ccbysa]: https://creativecommons.org/licenses/by-sa/4.0/
 [tou]: https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use
