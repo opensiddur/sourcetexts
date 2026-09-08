@@ -21,7 +21,8 @@ end of **2058**.
 ## 2. The Wikisource additions — CC BY-SA 4.0 International
 
 This covers `text/`, `credits/`, `source/`, `external/` and `en/` — everything retrieved
-from a Wikisource, Hebrew or English. It does **not** cover `ia/`, which has no wiki layer;
+from a Wikisource, Hebrew or English — and `scan_reading/transcription/`, which is a slice
+of `source/` kept beside the reading it was compared against (section 4). It does **not** cover `ia/`, which has no wiki layer;
 see section 3.
 
 Everything so retrieved comes from Wikisource, whose text is licensed
@@ -71,6 +72,23 @@ Worth stating plainly, because the files look more finished than they are:
   Separating the running head, body and footnote regions is a later stage's work, and
   nothing should quote these files as text until it has run.
 
+## 4. The reading made off the scan — section 1 text, our transcription
+
+`scan_reading/` holds what the printed page was read to say, page by page:
+`readings/{printed}.md` is the reading itself, and `hebrew/{printed}.txt` is the Hebrew
+lifted out of it. Both are transcriptions of the 1949 printing described in section 1, made
+by reading the scan rather than by copying any existing transcription of it, so the
+underlying text carries section 1's terms and nothing further attaches from section 2.
+
+`scan_reading/transcription/{printed}.txt` is the exception and is **not** ours: it is a
+slice of the Hebrew Wikisource text in `source/`, kept here so that the accuracy
+measurement in the opensiddur-ai repository can be rechecked against exactly the words it
+compared. It carries section 2's CC BY-SA 4.0 terms like the rest of `source/`.
+
+The distinction matters because the two are meant to be laid side by side. A reader
+comparing them is comparing a public-domain printing with a CC BY-SA edition of it, and the
+obligations differ across that line.
+
 ## What this means downstream
 
 - **Attribute the contributors.** The `credits/` files next to each page list the named
@@ -78,8 +96,11 @@ Worth stating plainly, because the files look more finished than they are:
   they belong in the TEI header as `tei:respStmt` entries.
 - **Share alike.** Work derived from this material must be released under CC BY-SA 4.0 or a
   compatible license.
-- **Do not describe the result as "Birnbaum 1949."** It is the Wikisource edition of Birnbaum,
-  which is a different text.
+- **Do not describe work built on the Wikisource layers as "Birnbaum 1949."** `source/`,
+  `external/` and `text/` are the Wikisource edition of Birnbaum, which is a different text.
+  `scan_reading/readings/` and `scan_reading/hebrew/` are the exception: they were read off
+  the 1949 page itself and do describe that printing, which is the whole reason they were
+  made.
 - **Do not assume worldwide public domain.** Only the 1949 layer is public domain, and only in
   the United States.
 - **Attribute the English contributors too.** `en/credits/NNN.txt` carries the same
