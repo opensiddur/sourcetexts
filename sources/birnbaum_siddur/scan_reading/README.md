@@ -8,7 +8,15 @@ repository: the TEI was authored from these files, not from any existing transcr
 readings/{printed}.md        what the page was read to say, in full
 hebrew/{printed}.txt         the Hebrew lifted out of that reading
 transcription/{printed}.txt  the Wikisource text for the same page, for comparison
+front/{section}.xml          the front matter, read straight into TEI
 ```
+
+The front matter is read straight into TEI rather than into markdown first. For the body the
+reading and the TEI are two artifacts, because the TEI is assembled from Python; in the front
+matter the fragment *is* the reading, and the importer splices it in unchanged, so a parallel
+prose copy would only drift away from it. The fragments cover scan leaves 1-25: the two title
+leaves, the copyright page, the dedication, the acknowledgments and Birnbaum's introduction.
+Both tables of contents are deferred.
 
 `{printed}` is the printed page number, not the scan leaf. The mapping to leaves, and the
 images themselves, live outside every repository — a leaf is re-fetchable from the Archive
