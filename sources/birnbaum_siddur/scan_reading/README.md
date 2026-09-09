@@ -16,7 +16,7 @@ and the enlarged bands are derived from it, so neither is worth keeping in git. 
 `opensiddur/importer/birnbaum_scan/pages.py` in the opensiddur-ai repository.
 
 `hebrew/` against `transcription/` is the diff that `specs/birnbaum_scan/accuracy.md`
-reports, with `specs/birnbaum_scan/verdicts/` recording which side each difference was
-decided for. Keeping the compared slice here is what lets that measurement be rechecked;
+reports in the opensiddur-ai repository, with `specs/birnbaum_scan/verdicts/` there
+recording which side each difference was decided for. Keeping the compared slice here is what lets that measurement be rechecked;
 `transcription/` is Wikisource text and carries its licence, while the reading is ours. See
 `../LICENSE.md`, sections 2 and 4.
