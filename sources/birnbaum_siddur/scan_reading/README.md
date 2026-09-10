@@ -23,6 +23,11 @@ images themselves, live outside every repository — a leaf is re-fetchable from
 and the enlarged bands are derived from it, so neither is worth keeping in git. See
 `opensiddur/importer/birnbaum_scan/pages.py` in the opensiddur-ai repository.
 
+A `transcription/` file is plain text and nothing else — no header, no comment — because
+`compare` tokenises whatever is in it and would count a comment line as a difference.
+Where the slice needed explaining, as page 1's did, the explanation is in that page's
+`readings/` file instead.
+
 `hebrew/` against `transcription/` is the diff that `specs/birnbaum_scan/accuracy.md`
 reports in the opensiddur-ai repository, with `specs/birnbaum_scan/verdicts/` there
 recording which side each difference was decided for. Keeping the compared slice here is what lets that measurement be rechecked;
