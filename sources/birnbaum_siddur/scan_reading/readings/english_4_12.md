@@ -85,3 +85,59 @@ numerals superscript. Chapter and verse take a colon.
 The series restarts at `1` on every page. That is a fact about the printed page, recorded
 in `@n`; a PDF repaginates, so the renderer draws its own series and does not try to
 reproduce the numbering.
+
+## Page 6 (faces 5)
+
+### Running head
+
+    6        Preliminary Morning Service
+
+**Italic**, where the Hebrew side sets its running head in plain type, and the page number
+sits at the outer *left* because this is a verso. Page 5 puts its number at the outer
+right. Neither side carries a running head on the page that opens the section.
+
+### The rubrics, again italic
+
+    When putting on the tallith:
+    Meditation before putting on the tefillin
+
+The second carries **no terminal colon**, matching the facing Hebrew page exactly. Whatever
+else inverts between the two sides, the wording does not: his rubric is the same words and
+the same punctuation on both pages, and only the type changes.
+
+### The source citation uses a colon here and a comma there
+
+    Psalm 36:8-11
+
+Centred above the passage with the book name in italic, and separating chapter from verse
+with a **colon**. Page 5 sets the same citation as `תהלים לו, ח–יא`, with a **comma**. The
+separator is a property of the language the citation is set in, not of the book, and both
+are his. An en dash joins the range on both sides.
+
+## Footnote apparatus: both blocks again
+
+As on page 4, and for the same reason — a commentary has run over from the facing Hebrew
+page — the foot carries two blocks divided by their own rule.
+
+### Upper block — commentary continued from page 5, and one new note
+
+The long tefillin note begun on page 5 finishes here. A second note follows it, keyed by
+the catchword הנני מכון, naming the meditation's source as the Siddur of Rabbi Isaiah
+Horowitz (1555–1630), the של"ה.
+
+**One sentence of that commentary decides an encoding question**: it says the tefillin are
+not worn on Sabbaths and festivals, and gives the reason. That is the only place in this
+unit where the restriction is stated — there is **no rubric** on pages 5–11 conditioning
+the tefillin passages on the day.
+
+So no `j:conditional` is owed for them. The passages stand unconditional, and the fact
+lives in the apparatus, which is where he put it. Encoding a condition here would be a
+claim the print does not make, and the reader of a compiled weekday service would not be
+able to tell the difference between what Birnbaum printed and what we inferred.
+
+### Lower block — the numbered citations
+
+    1 Deuteronomy 6:8.   2 Deuteronomy 6:4-9; 11:13-21; Exodus 13:1-10; 11-16.
+
+Two this page, run together on one line, book names italic, numerals superscript, and the
+series restarting from 1 as it does on every page.
