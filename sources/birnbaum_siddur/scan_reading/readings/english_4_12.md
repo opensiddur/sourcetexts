@@ -141,3 +141,93 @@ able to tell the difference between what Birnbaum printed and what we inferred.
 
 Two this page, run together on one line, book names italic, numerals superscript, and the
 series restarting from 1 as it does on every page.
+
+## Page 8 (faces 7)
+
+### Running head and opening
+
+    8        Preliminary Morning Service
+
+Opens **mid-sentence**, continuing the tefillin meditation begun on page 6, exactly as the
+facing Hebrew page 7 opens mid-sentence continuing from page 5. The two sides break at the
+same place, so the page turn is one event on both and the `tei:pb` sits inside the same
+`tei:p` on each side.
+
+### The rubrics, italic as always on this side
+
+    When placing the tefillin on the left arm:
+    When placing the tefillin on the forehead:
+    When winding the retsuah three times round the middle finger:
+
+Word for word the rubrics of page 7, which sets them roman. `tefillin` and `retsuah` are
+italic within these already-italic rubrics, so — as with `tallith` on pages 4 and 6 — the
+term is indistinguishable here and stands out on the Hebrew page. Both sides mark it
+`tei:foreign` and leave the realisation to typography.
+
+### No heading
+
+Neither page of this opening carries a heading: the tefillin section was headed on pages 5
+and 6, and this opening is its continuation. So the unit's headings do not fall on every
+opening, and a reader of the compiled text meets them where the print puts them.
+
+## Footnote apparatus: both blocks, and a short rule between them
+
+One commentary note, keyed `קני המנורה`, glossing the seven branches as the continents of
+the earth — self-contained, no run across the opening.
+
+Below it, **under a rule of its own that is visibly shorter than the block rule above it**,
+the numbered citations:
+
+    1 Psalm 145:16.   2 Hosea 2:21-22.
+
+That short rule is the arrangement page 4 and page 6 also show, and it is worth stating
+once: the commentary and the citations are two apparatuses, and the print separates them
+typographically rather than merely by position. Two `tei:note` types, as encoded.
+
+## Page 10 (faces 9)
+
+Running head, number at the outer left. No heading — this opening continues the tefillin
+parashiyoth begun on page 9.
+
+**The two Torah portions are parted the same way on both sides.** Page 9's reading flagged
+this as an open question, because the Wikisource text carries an editorial note observing
+that Birnbaum's English divides the portions where his Hebrew does not. On the page it is
+not so: the second portion begins here as a new indented paragraph with an opening
+quotation mark, **no heading and no blank line** — and page 9 sets its two portions as two
+paragraphs in exactly the same way.
+
+So there is no asymmetry to encode here, and nothing like Mah Tovu's. Both sides paragraph
+at the same point, and the parting needs no URN of its own to keep the columns together.
+
+The English also paragraphs the passage at its speech boundaries, which the Hebrew does
+too. The editorial note was about a different edition's practice, or about a distinction
+finer than the page shows.
+
+## Page 12 (faces 11)
+
+### The poems are headed here and not on the facing page
+
+    ADON OLAM
+    YIGDAL
+
+Centred, roman, letterspaced caps. **Page 11 heads neither.** The poems simply begin there,
+the first word doing the work.
+
+This is the sharpest form of the asymmetry running through the unit. Pages 3/4 and 5/6
+head their sections in *different languages*; here one side heads them and the other does
+not head them at all. A `tei:head` on the English side with no counterpart on the Hebrew —
+which the schema permits, and which the compiled Hebrew column will simply not show.
+
+### The poem has the same structure on both sides, set two different ways
+
+The Hebrew page sets each line of verse as two hemistichs side by side in two columns. This
+page sets each line as **two stacked lines in a single column**: twenty printed lines for
+Adon Olam's ten lines of verse, and the pairs correspond one for one.
+
+So the structure is not in dispute between the sides — Birnbaum's footnote says ten lines,
+and both sides give ten lines. What differs is only how each is set: two columns there, two
+stacked lines here.
+
+That settles the encoding: a `tei:lg` of ten `tei:l` on **both** sides, each `tei:l`
+holding the whole line. Splitting on the Hebrew page's column, or on this page's line
+break, would give twenty lines on one side and contradict the book about itself.
