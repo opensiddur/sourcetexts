@@ -231,3 +231,46 @@ stacked lines here.
 That settles the encoding: a `tei:lg` of ten `tei:l` on **both** sides, each `tei:l`
 holding the whole line. Splitting on the Hebrew page's column, or on this page's line
 break, would give twenty lines on one side and contradict the book about itself.
+
+## Verifying the English body text against the page
+
+The English of the tallith and tefillin sections was authored into TEI from the
+en.wikisource transcription. That is the wrong way round for this project — the page is
+the evidence and a transcription is a check — so the text was verified afterwards, and
+this records how, because an unverified claim is worth nothing.
+
+**A second witness, independent of Wikisource.** The Internet Archive OCR is generated
+from these page images and has no wiki layer. `LICENSE.md` §3 warns it is unusable on
+*Hebrew* pages, where it reads Hebrew as Latin gibberish; on English pages it reads
+correctly, so for this side it is exactly the independent check the Hebrew side gets from
+the Wikisource text.
+
+1,198 authored words were diffed against the OCR of scan pages 29-37. **966 matched
+directly (80.6%).** The rest split into three kinds, and none of them turned out to be an
+authoring error:
+
+- **OCR garbling a single word** — `tlioir` for *their*, `soil` for *God*, `faculfic` for
+  *faculties*, `arc` for *are*, `ful filled` for *fulfilled*. These confirm the authored
+  text rather than impeaching it.
+- **The alignment slipping.** One run matched the parashiyoth against page 12's
+  *footnotes* — the note on Adon Olam and Yigdal — because the OCR stream carries the
+  apparatus inline with the body. A diff artifact, not a difference.
+- **Long runs the OCR simply failed on.** Four of these, 15 to 85 words, and they are the
+  only ones that could have hidden a real error.
+
+**Every long run was checked on the image**, and all four are on the page as authored:
+
+| run | where | band |
+|---|---|---|
+| the *Supreme God* passage, 42 words | printed 8 | `8_2` |
+| the betrothal verses, 37 words | printed 8 | `8_3` |
+| Exodus 13:11-15, 15 and 85 words | printed 10 | `10_3` |
+| the passage's last sentence | printed 12 | `12_0` |
+
+Band `12_0` also confirms the slice boundary: ADON OLAM begins immediately after the
+sentence the parashiyoth end on, so nothing was taken from the next section.
+
+**What this does not establish.** The check is word-level and catches a wrong or missing
+word. It does not catch what a reading catches — where a rubric is italic and where roman,
+what the apparatus does, where a paragraph parts. Those were read off the images
+separately and are recorded above, page by page.
