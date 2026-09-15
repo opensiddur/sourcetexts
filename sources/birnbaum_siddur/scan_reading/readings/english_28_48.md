@@ -90,6 +90,17 @@ Confirmed at 7–12× on the image:
 Items 1–3 are on pages marked proofread at quality 4, which is the lesson printed page 2 and
 printed page 83 taught already.
 
+## Two flaws in the printing itself, elsewhere in the book
+
+Recorded here because both were found while checking this section's apparatus, and both
+would otherwise look like transcription errors:
+
+- **Printed 86's foot has a damaged glyph**: `wh.ch` for `which`, the `i` broken or
+  under-inked. The English Wikisource transcription silently reads `which`, which is the
+  right reading of the page.
+- **Printed 84 transliterates ayin with a turned comma**: `Ta‘anith 2a`, plain at 8×. The
+  same word on printed 27's foot is set the same way. The transcription uses a backtick.
+
 ## A slip of his own, on printed 34
 
 The second numbered citation reads
