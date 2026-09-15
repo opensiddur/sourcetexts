@@ -137,10 +137,15 @@ able to tell the difference between what Birnbaum printed and what we inferred.
 
 ### Lower block — the numbered citations
 
-    1 Deuteronomy 6:8.   2 Deuteronomy 6:4-9; 11:13-21; Exodus 13:1-10; 11-16.
+    1 Deuteronomy 6:8.   2 Deuteronomy 6:4–9; 11:13–21; Exodus 13:1–10; 11–16.
 
 Two this page, run together on one line, book names italic, numerals superscript, and the
 series restarting from 1 as it does on every page.
+
+**Every numeric range here takes an en dash, including the one with no chapter.** Checked at
+7×: `13:1–10; 11–16.`, and in the commentary block above it `Rabbi Isaiah Horowitz
+(1555–1630)`. So the rule is any number, dash, number — not verse ranges only — and it holds
+in the apparatus as it does in the running text. The transcription sets a hyphen throughout.
 
 ## Page 8 (faces 7)
 

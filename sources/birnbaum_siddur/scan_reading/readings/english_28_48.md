@@ -90,6 +90,30 @@ Confirmed at 7–12× on the image:
 Items 1–3 are on pages marked proofread at quality 4, which is the lesson printed page 2 and
 printed page 83 taught already.
 
+## A slip of his own, on printed 34
+
+The second numbered citation reads
+
+    2 Psalms 46:8; 84:13: 20:10; 32:7.
+
+with a **colon** after `84:13` where every other separator in the same note is a semicolon.
+Checked at 7×: the colon is on the page. The transcription reproduces it faithfully.
+
+Set as printed. It is recorded here so that it is not mistaken for a transcription error and
+quietly corrected — the book's own inconsistencies are part of what a diplomatic edition of
+it carries.
+
+## The numbered citations, counted
+
+The feet of printed 4, 6, 8, 10, 24, 26, 28, 34 and 48 were read, and their citation counts
+are 3, 2, 2, 0, 1, 1, 0, 4 and 0. Printed 10's foot is **blank**, which is worth stating
+because the page carries the tefillin parashiyoth and might be expected to cite them; the
+citation for those is on printed 6.
+
+That list is now a check rather than a note: `extract_notes.py` derives its own count from
+the transcription and fails if the two disagree. It has disagreed once — see the script's
+`EXPECTED_CITATIONS`.
+
 ## One convention the two languages do not share
 
 Chapter and verse take a **colon** in English (`Exodus 30:17–21`, `Psalm 141:2`) and a
