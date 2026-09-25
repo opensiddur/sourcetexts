@@ -36,7 +36,7 @@ From thy abode, our King, appear and reign over us, for we wait for thee. O when
 
 ### yismach
 
-יִשְׂמַח משֶׁה בְּמַתְּנַת חֶלְקוֹ, כִּי עֶבֶד נֶאֱמָן קָרָאתָ לּוֹ; כְּלִיל תִּפְאֶרֶת בְּרֹאשׁוֹ נָתַתָּ, בְּעָמְדוֹ לְפָנֶיךָ עַל הַר סִינָי. וּשְׁנֵי לוּחוֹת אֲבָנִים הוֹרִיד בְּיָדוֹ, וְכָתוּב בָּהֶם שְׁמִירַת שַׁבָּת, וְכֵן כָּתוּב בְּתוֹרָתֶךָ:
+יִשְׂמַח מֹשֶׁה בְּמַתְּנַת חֶלְקוֹ, כִּי עֶבֶד נֶאֱמָן קָרָאתָ לּוֹ; כְּלִיל תִּפְאֶרֶת בְּרֹאשׁוֹ נָתַתָּ, בְּעָמְדוֹ לְפָנֶיךָ עַל הַר סִינָי. וּשְׁנֵי לוּחוֹת אֲבָנִים הוֹרִיד בְּיָדוֹ, וְכָתוּב בָּהֶם שְׁמִירַת שַׁבָּת, וְכֵן כָּתוּב בְּתוֹרָתֶךָ:
 
 Moses was pleased with the gift bestowed on him, for thou didst call him a faithful servant. A glorious crown didst thou place on his head as he stood before thee on Mount Sinai. He brought down in his hand the two tablets of stone upon which was engraved the command to observe the Sabbath, as it is written in thy Torah:
 
@@ -79,7 +79,7 @@ Seven citations follow the existing shared passages. The meditation’s inner te
 - `urn:x-opensiddur:text:siddur:shabbat/shacharit/kaddish` is a sibling under the service, not an Amidah descendant. Its minyan gate does not depend on the Sabbath-Amidah condition. It is the later festival Amidah’s return address.
 - The Reader’s Kedushah and the silent Atah Qadosh are alternatives. Modim d’Rabbanan and the priestly blessing require a repetition with a minyan. Unknown settings retain the relevant instructions.
 - Four new paragraphs realize existing prayer-namespace URNs. Veshamru and the closing Kedushat Hayom paragraph are transclusions, not newly duplicated readings. The existing biblical and prayer correspondences of all common text remain unchanged.
-- Comparison with the local Wikisource foundation page followed direct reading. Enlargements corrected the initial reading of Sinai to סִינָי and of the tablets to full לוּחוֹת; משֶׁה follows the printed shared shin/holam dot. Meteg differences and punctuation are recorded independently of word identity. All four new Hebrew paragraphs then agree with the secondary transcription after normalization of meteg and qamats qatan.
+- Comparison with the local Wikisource foundation page followed direct reading. Enlargements corrected the initial reading of Sinai to סִינָי and of the tablets to full לוּחוֹת; מֹשֶׁה encodes both logical marks represented by the single printed dot: holam (U+05B9) on mem and shin dot (U+05C1) on shin. Meteg differences and punctuation are recorded independently of word identity. The secondary transcription omits the holam in Moses; the reading retains it as required by the combined-dot encoding policy. The remaining text agrees after normalization of meteg and qamats qatan.
 - The Amram Gaon note quotes תופיע ותושיענו ... בקרוב בימינו ובחיינו תשכן ...; both Hebrew fragments were checked against an enlarged scan.
 
 - Six shared Kedushah responses and the Modim d’Rabbanan and Ukhtov passages are extracted from their original conditional wrappers into reusable files. Their weekday callers retain the original conditions; the Sabbath caller supplies its own instructions without repeating the weekday rubric before each response. Text and URNs are unchanged.
