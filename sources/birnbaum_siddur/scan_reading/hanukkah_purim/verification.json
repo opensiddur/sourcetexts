@@ -1,0 +1,48 @@
+{
+  "schema_valid_files": 2242,
+  "registry_errors": 0,
+  "registry_warnings": 0,
+  "references_resolve": [
+    "birnbaum_ashkenaz_he_1949",
+    "birnbaum_ashkenaz_en_1949"
+  ],
+  "regression_tests": 346,
+  "regression_subtests": 2203,
+  "compiled_readback": "113 paired units match after removing whitespace and page markers",
+  "commentary_notes": 7,
+  "calendar_scenarios": [
+    {
+      "scenario": "hanukkah_first",
+      "gregorian": "2026-12-05",
+      "hebrew": "5787/9/25",
+      "selected": true,
+      "passed": true
+    },
+    {
+      "scenario": "hanukkah_second",
+      "gregorian": "2026-12-06",
+      "hebrew": "5787/9/26",
+      "selected": false,
+      "passed": true
+    },
+    {
+      "scenario": "purim_evening",
+      "gregorian": "2027-03-23",
+      "hebrew": "5787/13/14",
+      "selected": true,
+      "passed": true
+    },
+    {
+      "scenario": "purim_morning",
+      "gregorian": "2027-03-23",
+      "hebrew": "5787/13/14",
+      "selected": false,
+      "passed": true
+    }
+  ],
+  "proof_pages": {
+    "hanukkah_including_metadata": 12,
+    "purim_including_metadata": 4
+  },
+  "rendering": "Reviewed Hebrew direction, poetry, verse numbers, annotations and bookmark hierarchy. Existing metadata URL overflow warnings remain."
+}
