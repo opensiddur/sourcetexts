@@ -56,8 +56,9 @@ branch supplies text verified in this same source:
   opening stanza, as its opening words specify. The full refrain already printed
   before the Hebrew concluding cue remains printed text, not an editorial addition.
 - The documentary entrypoint preserves the final “Say …” instruction. The expanded
-  entrypoint follows it with external transclusions of `el_melekh_yoshev` and
-  `vayaavor`, without copying their text into the poem or silently replacing the rubric.
+  entrypoint replaces it with external transclusions of `el_melekh_yoshev` and
+  `vayaavor`, without copying their text into the poem. The source modules retain the printed
+  instruction; the expanded view omits it because the requested prayers are present.
 
 The dependency starts precisely at אֵל מֶלֶךְ / “Omnipotent King” on page 11.
 `vayaavor` starts at וַיַּעֲבֹר / “And the Eternal passed” on the same page and ends
@@ -95,3 +96,9 @@ of a narrow scan line. The title-page text is retained; its display typography i
 reset for the pilot. Expanded phrases are selected from choices, and the added
 prayers retain their own source-page links. See `scan_reading/accuracy.md` for
 pointing that still deserves a stronger independent reading.
+
+In expanded output, the opening instruction to repeat the refrain is also omitted:
+the refrain text is supplied in full. `asher:expansions/refrains_present` and
+`asher:expansions/prayers_present` separately govern the visibility of these printed
+instructions. Documentary settings declare both false; expanded settings declare
+both true. Other rubrics are retained.
