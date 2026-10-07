@@ -70,7 +70,7 @@ of that out-of-scope material is claimed.
 The page-15 English footnote “i.e. Appease thy anger and pardon our sins.” stays
 attached to “mighty deed” and must render once. Mixed-language Hebrew-page rubrics
 keep English text and explicit Hebrew foreign runs. Source verse stops are represented
-by middle dot / colon; typographical word spacing is normalized. Prose line-end
+by middle dot / U+05C3 sof pasuq (׃); typographical word spacing is normalized. Prose line-end
 hyphenation is joined; lexical “long-suffering” is retained. Double-yod divine names
 remain יְיָ; no substitution of the tetragrammaton is performed.
 
@@ -138,5 +138,11 @@ bilingual edition. This setting remains outside automatic release builds.
 
 Hebrew closing punctuation in the opening is attached to the preceding word in
 the normalized authoring readings and XML. Ordinary spaces before the verse-ending
-colons allowed TeX to wrap them onto a separate line. The initial scan readings
+marks allowed TeX to wrap them onto a separate line. The initial scan readings
 retain the original spacing; this correction changes typography only.
+
+The Hebrew two-dot verse stop is encoded as U+05C3 HEBREW PUNCTUATION SOF
+PASUQ (׃), attached to its preceding word, throughout the opening and existing
+pilot modules, including expanded refrains. U+003A COLON (:) remains in English
+punctuation and title-imprint punctuation. Earlier first-pass evidence is retained
+unchanged, including its provisional colon representation.
