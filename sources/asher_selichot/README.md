@@ -1,4 +1,4 @@
-# David Asher, Selichoth, 1912: scan-reading pilot
+# David Asher, Selichoth, 1912: first-day scan edition
 
 Source: https://archive.org/details/selichothdavidasher1912
 Issue: https://github.com/opensiddur/opensiddur-ai/issues/207
@@ -11,6 +11,11 @@ to Codex, rather than attributed to the source translator or an OCR provider.
 
 ## Coverage and evidence
 
+The current documentary entrypoint covers both title pages (n1/n2) and the entire
+first day: Hebrew n5–n51 and English n6–n52, ending at the midpage Kaddish rubric.
+The following table records the original isolated pilot ranges, which are reused
+at their source positions in that complete entrypoint.
+
 | IA leaf | Scan identity | Printed label | Pilot content |
 |---|---|---|---|
 | 2 | s3 | unnumbered | English title and imprint metadata |
@@ -19,7 +24,7 @@ to Codex, rather than attributed to the source translator or an OCR provider.
 | 31 / 32 | s32 / s33 | טו / 15 | במוצאי מנוחה, translation, rubrics and footnote |
 
 `ia/` retains metadata, scandata, machine page candidates and English OCR for the
-pilot pages. `page_corrections.json` records image-verified labels and reciprocal
+pilot and continuation pages. `page_corrections.json` records image-verified labels and reciprocal
 translation pairing; `pages.json` is derived from those and Archive scandata.
 Unverified printed labels and languages remain null. Leaf 30 is separately verified
 as English page 14 to demonstrate correction of Archive's mistaken page-1 label.
@@ -103,18 +108,35 @@ the refrain text is supplied in full. `asher:expansions/refrains_present` and
 instructions. Documentary settings declare both false; expanded settings declare
 both true. Other rubrics are retained.
 
-## Beginning the complete first-day section
+## Complete first-day section through n52
 
 `first-day-scope.json` records the verified section limits: Hebrew n5–n51 and
 English n6–n52, stopping after the Reader’s Kaddish instruction before the second-day
 heading in the middle of the final pages. The running heading on n51 is already
 “second day”; it must not be used to discard the first-day conclusion.
 
-This increment encodes both title pages (n1/n2) and the contiguous opening at
-n5–n8: Ashrei, Psalm 145, its concluding Psalm 115:18 quotation, the two biblical
-Kaddish-preface quotations, and Half Kaddish. `first_day.xml` is explicitly a partial
-entrypoint. Text from n9/n10 through the final n51/n52 boundary remains pending.
-The existing isolated piyyut and dependency modules do not bridge that gap.
+Both title pages (n1/n2) and the complete first day are encoded. The `first_day.xml`
+entrypoints transclude the opening, preface, printed El Melekh and Vayaavor ranges,
+the intervening selichot, Bemotzaei Menuhah, and closing prayers in source order.
+The existing pilot modules occur at their original positions; there are no gaps.
+The final first-day rubric is retained, without importing second-day material from
+the lower half of n51/n52. The full book remains a work in progress.
+
+`scan_reading/first-day/` preserves 66 primary reading units committed before English
+OCR comparison. `first-day-continuation.json` groups complete bilingual prayers,
+retaining each fragment’s original facsimile. Page-crossing paragraphs stay together;
+physical English page hyphenation is joined. Hebrew poems preserve verse stops and
+phrase dots, with prose English translations. `first-day-corrections.json` records
+image rechecks without overwriting the initial readings. Pointing still needs an
+independent Hebrew reading, especially the unusual piyyut and Aramaic vocabulary.
+
+The continuation retains the printed footnotes, including the Eve of New Year
+addition, Reader-alone direction, biblical references, and explanatory notes. The
+printed “Deut. xx. 4.” citation on page 16 is retained as printed. English OCR and
+its unresolved differences are saved separately; OCR is not evidence for Hebrew.
+The final page’s OCR includes the second day, which is excluded from authored text.
+No additional service expansion or editorial prayer text has been inserted into the
+complete documentary entrypoint. The isolated expanded pilot remains available.
 
 Primary readings were committed before English OCR was consulted; the immutable
 `*-first-pass.json` files preserve them. `first-day-opening.json` records six
@@ -133,7 +155,7 @@ no closing quote has been supplied. Physical prose wrapping and quotation glyph 
 are normalized. First-page printed numbers remain unknown; the contents and a later
 cross-reference disagree and neither supplies a visible printed numeral.
 
-Use `specs/asher_selichot/first-day.yaml` in the code worktree to render this partial
+Use `specs/asher_selichot/first-day.yaml` in the code worktree to render this complete first-day
 bilingual edition. This setting remains outside automatic release builds.
 
 Hebrew closing punctuation in the opening is attached to the preceding word in

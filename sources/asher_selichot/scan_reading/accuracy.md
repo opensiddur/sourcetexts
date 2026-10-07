@@ -22,3 +22,11 @@ Independent agreement cannot prove absence of shared errors. This is a small
 reviewable pilot, not a claim of whole-book transcription accuracy. All omitted
 neighboring material is outside the declared dependency slice and not silently
 excused as transclusion. English scan readings precede OCR comparison.
+
+The complete first-day continuation through n51/n52 is a primary scan reading.
+Selected difficult piyyut words were rechecked against images and corrections
+recorded in `first-day-corrections.json`; this is not an independent Hebrew reading.
+All Hebrew pointing and rare Aramaic vocabulary still need independent proofreading
+before publication. English OCR comparisons retain unresolved findings explicitly.
+Documentary XML verification establishes fidelity to the committed readings, rather
+than proving every reading correct against the scan.
