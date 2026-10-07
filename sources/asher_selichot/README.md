@@ -115,8 +115,10 @@ heading in the middle of the final pages. The running heading on n51 is already
 “second day”; it must not be used to discard the first-day conclusion.
 
 Both title pages (n1/n2) and the complete first day are encoded. The `index.xml`
-book entrypoints include the titles and transclude `first_day.xml`, which assembles the opening, preface, printed El Melekh and Vayaavor ranges,
-the intervening selichot, Bemotzaei Menuhah, and closing prayers in source order.
+book entrypoints include the titles and transclude `first_day.xml`, which directly
+references every independent prayer and piyyut in source order and retains printed
+rubrics. The named texts include Ashrei, Half Kaddish, El Melekh, Vayaavor, the
+first-day selichot, Bemotzaei Menuhah, and concluding prayers.
 Independent text modules occur at their original positions; there are no gaps.
 The final first-day rubric is retained, without importing second-day material from
 the lower half of n51/n52. The full book remains a work in progress.
@@ -183,8 +185,10 @@ words remain unchanged.
 
 ## Expanded complete first day
 
-`expanded.xml` in each project includes the title pages and transcludes
-`first_day_expanded.xml`, sharing all source modules with the documentary first day. Compile with the code companion’s
+`expanded.xml` in each project includes the title pages and transcludes the same
+`first_day.xml` used by the documentary book. The poem module supplies its concluding
+prayers in a conditional branch alongside the printed cue, so a separate expanded
+first-day assembly is unnecessary. Compile with the code companion’s
 `specs/asher_selichot/default.yaml`: it expands abbreviations and sets
 `asher:expansions` flags for supplied refrains, prayers and repetitions. These
 settings remain outside automatic release builds.
@@ -228,14 +232,17 @@ not change Birnbaum’s reusable source text or Asher’s documentary readings.
 
 This encoding is the foundation for the final book. `index.xml` is the documentary
 book entrypoint and `expanded.xml` the expanded entrypoint. Both contain the two
-title pages and reference their first-day assembly by URN. Coverage and pending
+title pages and reference the same first-day assembly by URN. Coverage and pending
 proofreading are edition metadata, rather than part of a text's identity.
 
 Each independent text has its own module, with the same filename and canonical
 URN in both language projects. Source attribution is retained in the publication
 URN's `@asher_selichot_he_1912` / `@asher_selichot_en_1912` suffix, header metadata
-and facsimile links. Assemblies named `first_day*` hold service order and printed
-rubrics; their transclusions use the source-independent canonical URNs.
+and facsimile links. `first_day.xml` holds the actual printed service order and rubrics; its direct
+transclusions use the source-independent canonical URNs. The opening, preface,
+before-piyyut and closing subdivisions were authoring batches, not printed service
+divisions, and their grouping files and URNs are removed. The generator also
+removes those obsolete files on regeneration after replacement XML validates.
 
 | File | Canonical identity (after `urn:x-opensiddur:text:`) |
 |---|---|
@@ -262,4 +269,4 @@ The old isolated excerpt entrypoints are replaced by the book entrypoints.
 `refrain-and-prayers.json` is the renamed active structured reading; immutable
 first-pass evidence remains intact. Splitting modules changes neither printed
 words nor the documentary/expanded decisions. Reverse verification follows the
-assemblies in source-page order and compares each module with its reading unit.
+single service assembly in source-page order and compares each module with its reading unit.
