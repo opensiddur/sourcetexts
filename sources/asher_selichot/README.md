@@ -270,3 +270,22 @@ The old isolated excerpt entrypoints are replaced by the book entrypoints.
 first-pass evidence remains intact. Splitting modules changes neither printed
 words nor the documentary/expanded decisions. Reverse verification follows the
 single service assembly in source-page order and compares each module with its reading unit.
+
+### Hebrew poetic structure
+
+`poetry-structure.json` records a separate image-based markup adjudication for
+12 previously paragraph-encoded poems and litanies: Ki al rahamekha, El erekh
+apayim, Ashamnu mikol am, Leenenu, El rahum, Anenu, Mi Sheanah, Rahmana,
+Mahi umasi, Makhnise rahamim, and the two Maran divishmaya poems. The source
+readings and English paragraph/litany forms remain unchanged. The specified
+printed phrase or verse stops delimit semantic poetic lines; this does not
+interpret every raised dot throughout the service as a verse break.
+
+Mi Sheanah (s46 / Archive n45, printed 22) has 20 lines, each with one terminal
+הוא יעננו refrain. Anenu has 35 terminal עננו refrains; Rahmana has four ענינא
+refrains before its changing petitions. XML uses `tei:lg`/`tei:l`, with responses
+marked `tei:seg type="refrain"` inside the line, preserving their printed pointing
+and attached sof pasuq. A line spanning two source pages remains one verse with
+an internal facsimile page break (e.g. גלה ממנו משוש in Ashamnu mikol am).
+The metadata records scan provenance, verse counts and refrain counts, so a
+word-identical paragraph or a missing/displaced refrain fails verification.
