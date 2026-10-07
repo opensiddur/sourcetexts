@@ -1,4 +1,4 @@
-# David Asher, Selichoth, 1912: first-day scan edition
+# David Asher, Selichoth, 1912: scan edition
 
 Source: https://archive.org/details/selichothdavidasher1912
 Issue: https://github.com/opensiddur/opensiddur-ai/issues/207
@@ -12,7 +12,7 @@ to Codex, rather than attributed to the source translator or an OCR provider.
 ## Coverage and evidence
 
 The current documentary entrypoint covers both title pages (n1/n2) and the entire
-first day: Hebrew n5–n51 and English n6–n52, ending at the midpage Kaddish rubric.
+first day: Hebrew n5–n51 and English n6–n52, ending at the midpage Kaddish rubric. The second day continues from the large heading on n51/n52 through the closing instruction in the middle of n59/n60, before the third-day heading.
 The following table records the refrain poem and referenced prayer ranges,
 which occur at their source positions in the complete entrypoint.
 
@@ -232,7 +232,7 @@ not change Birnbaum’s reusable source text or Asher’s documentary readings.
 
 This encoding is the foundation for the final book. `index.xml` is the documentary
 book entrypoint and `expanded.xml` the expanded entrypoint. Both contain the two
-title pages and reference the same first-day assembly by URN. Coverage and pending
+title pages and reference the same first- and second-day assemblies by URN. Coverage and pending
 proofreading are edition metadata, rather than part of a text's identity.
 
 Each independent text has its own module, with the same filename and canonical
@@ -289,3 +289,46 @@ and attached sof pasuq. A line spanning two source pages remains one verse with
 an internal facsimile page break (e.g. גלה ממנו משוש in Ashamnu mikol am).
 The metadata records scan provenance, verse counts and refrain counts, so a
 word-identical paragraph or a missing/displaced refrain fails verification.
+
+
+## Second day (Archive n51–n60)
+
+`second-day-scope.json` records the exact boundaries. Printed pages 25–29 pair
+Hebrew n51,53,55,57,59 with English n52,54,56,58,60. The running third-day
+heading on the final opening does not establish the service boundary.
+`scan_reading/second-day-initial.json` retains the first image reading;
+`scan_reading/second-day.json` is the adjudicated reading. The separate
+`second-day-proofreading.json` records image-pass corrections and Archive English
+OCR comparison provenance. Hebrew pointing still needs independent proofreading.
+The English singular “God of our Father!” is retained as printed.
+
+Four additional independent modules are shared by both language projects:
+`eiyyeh_qinatkha_ugevurotekha.xml`, `ein_qore_beshimkha.xml`,
+`avvitikha_qivitikha_meerets_merhaqim.xml`, and `yisrael_nosha.xml`. Each has a
+source-independent incipit URN. The invocation remains body text. Hebrew verse
+and English prose retain their separate structures. Israel Nosha has six named
+stanza milestones, four short refrain choices, and a final choice expanding the
+entire first stanza with its refrain. Seven English notes are encoded once each,
+including the two separate notes printed “The three patriarchs.”
+
+`second_day.xml` is the actual service assembly. Its printed day heading is above
+the Hebrew printed פזמון heading; no unprinted English pizmon heading is invented.
+The export settings generate a contents page through heading level two.
+Documentary output retains all instructions. Expanded output replaces them:
+
+- Opening: Ashrei, the Selichot Kaddish preface, Half Kaddish, Lekha Adonai,
+  Shomea tefillah and Selah lanu avinu (through כי רבו עוונינו), followed by
+  El erekh apayim and the preliminary Vayaavor ending ורב חסד לכל קראיך.
+- The repeated verses after the first piyyut use the bounded Keraham-av repeat
+  (`adonai_boqer_tishma_qoli/repeat`) and Daniel petition repeat
+  (`hateh_elohai_oznekha/repeat`), not adjacent material outside those ranges.
+- Three printed prayer-pair cues supply El Melekh yoshev and Vayaavor.
+- The conclusion supplies the existing first-day closing prayers from Zekhor
+  rahamekha, including its bounded Ashamnu repetitions, then the Full Kaddish
+  selected from Birnbaum by the default expanded settings. It declares
+  `first_day=false` and `aseret-ymei-tshuva=false` around that Kaddish instead of
+  copying the first-day calendar declaration. The declaration closes afterward.
+
+Supplied text is editorial expansion, not attributed to printing on n51–n60.
+Fulfilled instruction text and the now-unneeded refrain instruction are omitted
+from expanded output. The third day is not encoded in these entrypoints.
