@@ -4,7 +4,7 @@ The initial full-page Hebrew reading is retained in he-first-pass.json and
 he-prayers-first-pass.json. A blind second agent read only cached images, with no
 transcription or builder access; its result is he-independent.json. The primary
 reader checked differences against full pages, overlapping bands and focused crops.
-The corrected reading is pilot.json. he-adjudication.json records poem differences;
+The corrected reading is refrain-and-prayers.json. he-adjudication.json records poem differences;
 it is a record of corrections, not a claim that the initial reading was error-free.
 
 Image-confirmed corrections include the initial missing דרוש־נא, עדיך לחון and
@@ -19,7 +19,7 @@ no automated qamats-qatan settlement is applied. The broken type in נִסֶּי
 samekh in the enlarged crop. Divine-name double yod remains יְיָ, never expanded.
 
 Independent agreement cannot prove absence of shared errors. This is a small
-reviewable pilot, not a claim of whole-book transcription accuracy. All omitted
+reviewable first-day encoding, not a claim of whole-book transcription accuracy. All omitted
 neighboring material is outside the declared dependency slice and not silently
 excused as transclusion. English scan readings precede OCR comparison.
 

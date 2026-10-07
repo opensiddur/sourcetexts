@@ -13,10 +13,10 @@ to Codex, rather than attributed to the source translator or an OCR provider.
 
 The current documentary entrypoint covers both title pages (n1/n2) and the entire
 first day: Hebrew n5–n51 and English n6–n52, ending at the midpage Kaddish rubric.
-The following table records the original isolated pilot ranges, which are reused
-at their source positions in that complete entrypoint.
+The following table records the refrain poem and referenced prayer ranges,
+which occur at their source positions in the complete entrypoint.
 
-| IA leaf | Scan identity | Printed label | Pilot content |
+| IA leaf | Scan identity | Printed label | Content |
 |---|---|---|---|
 | 2 | s3 | unnumbered | English title and imprint metadata |
 | 23 / 24 | s24 / s25 | יא / 11 | אל מלך יושב; beginning of ויעבור |
@@ -24,7 +24,7 @@ at their source positions in that complete entrypoint.
 | 31 / 32 | s32 / s33 | טו / 15 | במוצאי מנוחה, translation, rubrics and footnote |
 
 `ia/` retains metadata, scandata, machine page candidates and English OCR for the
-pilot and continuation pages. `page_corrections.json` records image-verified labels and reciprocal
+encoded pages. `page_corrections.json` records image-verified labels and reciprocal
 translation pairing; `pages.json` is derived from those and Archive scandata.
 Unverified printed labels and languages remain null. Leaf 30 is separately verified
 as English page 14 to demonstrate correction of Archive's mistaken page-1 label.
@@ -34,7 +34,7 @@ Images, overlapping bands and large OCR derivatives live outside git under
 `output/asher_selichot/`. All links in the page map identify the exact source leaf.
 
 `scan_reading/` retains initial readings, the blind independent Hebrew reading,
-image adjudications, corrected structured reading (`pilot.json`), documentary
+image adjudications, corrected structured reading (`refrain-and-prayers.json`), documentary
 streams, English OCR comparisons and accuracy limits. English initial errors in
 “sitteth”, “unto” and a comma were corrected after returning to crops. The initial
 reading is retained so corrections do not disappear from the record.
@@ -91,16 +91,15 @@ python -m opensiddur.importer.asher_selichot.verify --source-root <sources> --pr
 ```
 
 `download --regenerate` rebuilds the page map from cached metadata and corrections
-without network requests. Pilot export settings are in the code repository under
-`specs/asher_selichot/`, outside automatic release settings. Both PDFs are pilot
-artifacts; this does not encode the whole volume.
+without network requests. Export settings are in the code repository under
+`specs/asher_selichot/`, outside automatic release settings. Both PDFs cover the complete first day; the rest of the volume remains pending.
 
-The service heading “Asher Selichoth: first-day piyyut pilot” is editorial. Verse
-lines represent the printed phrases and stops, rather than every physical wrap
-of a narrow scan line. The title-page text is retained; its display typography is
-reset for the pilot. Expanded phrases are selected from choices, and the added
-prayers retain their own source-page links. See `scan_reading/accuracy.md` for
-pointing that still deserves a stronger independent reading.
+Book entrypoints use the original title-page readings; no experimental heading is
+added to the service. Verse lines represent printed phrases and stops rather than
+physical wraps of narrow scan lines. Display typography is reset for the edition.
+Expanded phrases are selected from choices, and transcluded prayers retain their
+own source-page links. See `scan_reading/accuracy.md` for pointing that still needs
+independent review.
 
 In expanded output, the opening instruction to repeat the refrain is also omitted:
 the refrain text is supplied in full. `asher:expansions/refrains_present` and
@@ -115,10 +114,10 @@ English n6–n52, stopping after the Reader’s Kaddish instruction before the s
 heading in the middle of the final pages. The running heading on n51 is already
 “second day”; it must not be used to discard the first-day conclusion.
 
-Both title pages (n1/n2) and the complete first day are encoded. The `first_day.xml`
-entrypoints transclude the opening, preface, printed El Melekh and Vayaavor ranges,
+Both title pages (n1/n2) and the complete first day are encoded. The `index.xml`
+book entrypoints include the titles and transclude `first_day.xml`, which assembles the opening, preface, printed El Melekh and Vayaavor ranges,
 the intervening selichot, Bemotzaei Menuhah, and closing prayers in source order.
-The existing pilot modules occur at their original positions; there are no gaps.
+Independent text modules occur at their original positions; there are no gaps.
 The final first-day rubric is retained, without importing second-day material from
 the lower half of n51/n52. The full book remains a work in progress.
 
@@ -136,7 +135,7 @@ printed “Exod. xxiii. 19.” citation on page 8 is retained as printed. Englis
 its unresolved differences are saved separately; OCR is not evidence for Hebrew.
 The final page’s OCR includes the second day, which is excluded from authored text.
 No additional service expansion or editorial prayer text has been inserted into the
-complete documentary entrypoint. The isolated expanded pilot remains available.
+complete documentary entrypoint. The expanded book entrypoint shares the same text modules.
 
 Primary readings were committed before English OCR was consulted; the immutable
 `*-first-pass.json` files preserve them. `first-day-opening.json` records six
@@ -165,7 +164,7 @@ retain the original spacing; this correction changes typography only.
 
 The Hebrew two-dot verse stop is encoded as U+05C3 HEBREW PUNCTUATION SOF
 PASUQ (׃), attached to its preceding word, throughout the opening and existing
-pilot modules, including expanded refrains. U+003A COLON (:) remains in English
+reusable text modules, including expanded refrains. U+003A COLON (:) remains in English
 punctuation and title-imprint punctuation. Earlier first-pass evidence is retained
 unchanged, including its provisional colon representation.
 
@@ -178,14 +177,14 @@ in its translated prose paragraph. The three affected poems are identified by
 the distinctive incipits אין מי יקרא בצדק, אם עונינו רבו להגדיל, and
 תבא לפניך שועת חנון, recorded as `incipit_he` in the continuation metadata.
 These are incipit identifiers, not independently established formal titles or
-added printed headings. Existing alignment URNs remain stable. This structural
+added printed headings. Piyyut URNs and filenames use these distinctive incipits independently of this edition. This structural
 interpretation follows the user’s correction; the primary readings and their
 words remain unchanged.
 
 ## Expanded complete first day
 
-`first_day_expanded.xml` in each project shares all source modules with the
-complete documentary first day. Compile with the code companion’s
+`expanded.xml` in each project includes the title pages and transcludes
+`first_day_expanded.xml`, sharing all source modules with the documentary first day. Compile with the code companion’s
 `specs/asher_selichot/default.yaml`: it expands abbreviations and sets
 `asher:expansions` flags for supplied refrains, prayers and repetitions. These
 settings remain outside automatic release builds.
@@ -194,10 +193,10 @@ The following editorial transclusions replace the corresponding printed cues:
 
 | Instruction identity | Supplied range |
 |---|---|
-| `after_first_selihah_rubric`, `after_second_selihah_verses` | `first_day/morning_scriptural_petitions/repeat`: כרחם אב / “Like a father hath compassion” through ביום קראנו / “when we call”; then `first_day/daniel_petition/repeat`: כי לא על צדקתינו / “for we do not presume” through the end of the Daniel petition, including אדני שמעה / “O Lord! hear” |
+| `after_first_selihah_rubric`, `after_second_selihah_verses` | `prayer:adonai_boqer_tishma_qoli/repeat`: כרחם אב / “Like a father hath compassion” through ביום קראנו / “when we call”; then `prayer:hateh_elohai_oznekha/repeat`: כי לא על צדקתינו / “for we do not presume” through the end of the Daniel petition, including אדני שמעה / “O Lord! hear” |
 | `after_second_selihah_prayers`, `after_third_selihah_prayers` | Complete Asher `prayer:el_melekh_yoshev` and `prayer:vayaavor` |
 | Piyyut conclusion on n31/n32 | The same two prayers, after the poem |
-| `ashamnu_repeat`, `ashamnu_repeat_2` | Complete Asher `first_day/ashamnu`, ending ואנחנו הרשענו / “but we have done wickedly” |
+| `ashamnu_repeat`, `ashamnu_repeat_2` | Complete Asher `prayer:ashamnu`, ending ואנחנו הרשענו / “but we have done wickedly” |
 | `reader_kaddish` on n51/n52 | `prayer:kaddish/shalem`, from the secondary Birnbaum 1949 projects |
 
 The two bounded scriptural ranges start within their original prose paragraphs;
@@ -223,3 +222,44 @@ during the Ten Days of Repentance. This scope excludes Birnbaum’s date-depende
 extra לעילא and its explanatory rubric, even if the caller’s settings conflict.
 The declaration ends after the prayer and restores the caller’s context; it does
 not change Birnbaum’s reusable source text or Asher’s documentary readings.
+
+
+## Text identities and book assemblies
+
+This encoding is the foundation for the final book. `index.xml` is the documentary
+book entrypoint and `expanded.xml` the expanded entrypoint. Both contain the two
+title pages and reference their first-day assembly by URN. Coverage and pending
+proofreading are edition metadata, rather than part of a text's identity.
+
+Each independent text has its own module, with the same filename and canonical
+URN in both language projects. Source attribution is retained in the publication
+URN's `@asher_selichot_he_1912` / `@asher_selichot_en_1912` suffix, header metadata
+and facsimile links. Assemblies named `first_day*` hold service order and printed
+rubrics; their transclusions use the source-independent canonical URNs.
+
+| File | Canonical identity (after `urn:x-opensiddur:text:`) |
+|---|---|
+| `ashrei.xml` | `prayer:ashrei` |
+| `kaddish_chatzi.xml` | `prayer:kaddish/chatzi` |
+| `ein_mi_yiqra_betsedeq.xml` | `poem:ein_mi_yiqra_betsedeq` |
+| `im_avoneinu_rabu_lehagdil.xml` | `poem:im_avoneinu_rabu_lehagdil` |
+| `tavo_lefanekha_shavat_hinnun.xml` | `poem:tavo_lefanekha_shavat_hinnun` |
+| `bemotzaei_menuhah.xml` | `poem:bemotzaei_menuhah` |
+| `ashamnu.xml` | `prayer:ashamnu` |
+| `shema_qolenu.xml` | `prayer:shema_qolenu` |
+| `el_melekh_yoshev.xml` | `prayer:el_melekh_yoshev` |
+| `vayaavor.xml` | `prayer:vayaavor` |
+| `avinu_malkenu_chonenu.xml` | `prayer:avinu_malkenu/chonenu` (the single printed petition) |
+
+[text-modules.json](text-modules.json) records the complete mapping from existing
+reading IDs to the extracted modules. Existing registry names are reused for
+common prayers and their parts; other names are distinctive incipits, without
+asserting unverified formal titles. The preliminary Vayaavor is separately scoped
+as `prayer:vayaavor/selichot_preliminary` because its attached petitions differ
+from the later printed range. Biblical Psalm 6 uses `bible:psalms/6`.
+
+The old isolated excerpt entrypoints are replaced by the book entrypoints.
+`refrain-and-prayers.json` is the renamed active structured reading; immutable
+first-pass evidence remains intact. Splitting modules changes neither printed
+words nor the documentary/expanded decisions. Reverse verification follows the
+assemblies in source-page order and compares each module with its reading unit.
