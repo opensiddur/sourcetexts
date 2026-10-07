@@ -132,7 +132,7 @@ independent Hebrew reading, especially the unusual piyyut and Aramaic vocabulary
 
 The continuation retains the printed footnotes, including the Eve of New Year
 addition, Reader-alone direction, biblical references, and explanatory notes. The
-printed “Deut. xx. 4.” citation on page 16 is retained as printed. English OCR and
+printed “Exod. xxiii. 19.” citation on page 8 is retained as printed. English OCR and
 its unresolved differences are saved separately; OCR is not evidence for Hebrew.
 The final page’s OCR includes the second day, which is excluded from authored text.
 No additional service expansion or editorial prayer text has been inserted into the
