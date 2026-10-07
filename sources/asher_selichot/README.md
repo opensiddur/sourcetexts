@@ -181,3 +181,37 @@ These are incipit identifiers, not independently established formal titles or
 added printed headings. Existing alignment URNs remain stable. This structural
 interpretation follows the user’s correction; the primary readings and their
 words remain unchanged.
+
+## Expanded complete first day
+
+`first_day_expanded.xml` in each project shares all source modules with the
+complete documentary first day. Compile with the code companion’s
+`specs/asher_selichot/default.yaml`: it expands abbreviations and sets
+`asher:expansions` flags for supplied refrains, prayers and repetitions. These
+settings remain outside automatic release builds.
+
+The following editorial transclusions replace the corresponding printed cues:
+
+| Instruction identity | Supplied range |
+|---|---|
+| `after_first_selihah_rubric`, `after_second_selihah_verses` | `first_day/morning_scriptural_petitions/repeat`: כרחם אב / “Like a father hath compassion” through ביום קראנו / “when we call”; then `first_day/daniel_petition/repeat`: כי לא על צדקתינו / “for we do not presume” through the end of the Daniel petition, including אדני שמעה / “O Lord! hear” |
+| `after_second_selihah_prayers`, `after_third_selihah_prayers` | Complete Asher `prayer:el_melekh_yoshev` and `prayer:vayaavor` |
+| Piyyut conclusion on n31/n32 | The same two prayers, after the poem |
+| `ashamnu_repeat`, `ashamnu_repeat_2` | Complete Asher `first_day/ashamnu`, ending ואנחנו הרשענו / “but we have done wickedly” |
+| `reader_kaddish` on n51/n52 | `prayer:kaddish/shalem`, from the secondary Birnbaum 1949 projects |
+
+The two bounded scriptural ranges start within their original prose paragraphs;
+matching closing milestones prevent them from including unrelated text. The
+`repeat_start` fields record bilingual range starts without altering scan readings.
+The expanded view omits every fulfilled instruction while retaining general service
+rubrics. The documentary view retains all printed cues and omits supplied repetitions.
+
+Asher’s first-day leaves contain only the final Kaddish instruction, not the full
+prayer. The secondary-source Full Kaddish is an editorial addition, not an Asher
+reading. `default.yaml` prioritizes Asher, then Birnbaum Hebrew; the parallel column
+prioritizes Asher English, then Birnbaum English. The reusable Birnbaum wrapper
+includes Yitgadal, Yehe Shmeh, Yitbarakh, Titkabel, Yehe Shlama and Oseh Shalom,
+using existing Birnbaum text modules, with the complete-prayer source range on
+printed pages 135/136. Its internal references retain the Birnbaum edition even
+when a caller prioritizes another edition. No secondary wording is copied into
+Asher’s primary reading evidence.
