@@ -102,3 +102,36 @@ the refrain text is supplied in full. `asher:expansions/refrains_present` and
 `asher:expansions/prayers_present` separately govern the visibility of these printed
 instructions. Documentary settings declare both false; expanded settings declare
 both true. Other rubrics are retained.
+
+## Beginning the complete first-day section
+
+`first-day-scope.json` records the verified section limits: Hebrew n5–n51 and
+English n6–n52, stopping after the Reader’s Kaddish instruction before the second-day
+heading in the middle of the final pages. The running heading on n51 is already
+“second day”; it must not be used to discard the first-day conclusion.
+
+This increment encodes both title pages (n1/n2) and the contiguous opening at
+n5–n8: Ashrei, Psalm 145, its concluding Psalm 115:18 quotation, the two biblical
+Kaddish-preface quotations, and Half Kaddish. `first_day.xml` is explicitly a partial
+entrypoint. Text from n9/n10 through the final n51/n52 boundary remains pending.
+The existing isolated piyyut and dependency modules do not bridge that gap.
+
+Primary readings were committed before English OCR was consulted; the immutable
+`*-first-pass.json` files preserve them. `first-day-opening.json` records six
+image-adjudicated English corrections. `opening-ocr-comparison.json` preserves the
+initial discrepancy report, including findings still marked unresolved. The Hebrew
+opening is a primary scan reading; independent checking of pointing remains pending.
+`opening-documentary-streams.json` derives expected streams directly from these
+readings, independently of generated XML. Mixed-language rubrics retain their
+language boundaries. Psalm 145:9 crosses its facsimile page break inside the same
+printed prose paragraph. Shared verse URNs provide alignment without importing
+another edition’s words.
+
+The title-page readings include Asher’s author/translator credentials and the full
+imprints. The English scan appears to omit the closing quote after “Way of Faith.”;
+no closing quote has been supplied. Physical prose wrapping and quotation glyph shapes
+are normalized. First-page printed numbers remain unknown; the contents and a later
+cross-reference disagree and neither supplies a visible printed numeral.
+
+Use `specs/asher_selichot/first-day.yaml` in the code worktree to render this partial
+bilingual edition. This setting remains outside automatic release builds.
