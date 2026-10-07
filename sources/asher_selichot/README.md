@@ -135,3 +135,8 @@ cross-reference disagree and neither supplies a visible printed numeral.
 
 Use `specs/asher_selichot/first-day.yaml` in the code worktree to render this partial
 bilingual edition. This setting remains outside automatic release builds.
+
+Hebrew closing punctuation in the opening is attached to the preceding word in
+the normalized authoring readings and XML. Ordinary spaces before the verse-ending
+colons allowed TeX to wrap them onto a separate line. The initial scan readings
+retain the original spacing; this correction changes typography only.
