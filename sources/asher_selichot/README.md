@@ -215,3 +215,11 @@ using existing Birnbaum text modules, with the complete-prayer source range on
 printed pages 135/136. Its internal references retain the Birnbaum edition even
 when a caller prioritizes another edition. No secondary wording is copied into
 Asher’s primary reading evidence.
+
+The final Full Kaddish transclusion is scoped explicitly to first-day Selichot:
+`asher:selichot/first_day=true` and
+`opensiddur:holiday-aggregate/aseret-ymei-tshuva=false`. The first day is never
+during the Ten Days of Repentance. This scope excludes Birnbaum’s date-dependent
+extra לעילא and its explanatory rubric, even if the caller’s settings conflict.
+The declaration ends after the prayer and restores the caller’s context; it does
+not change Birnbaum’s reusable source text or Asher’s documentary readings.
