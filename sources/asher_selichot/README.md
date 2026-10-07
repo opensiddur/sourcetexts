@@ -168,3 +168,16 @@ PASUQ (׃), attached to its preceding word, throughout the opening and existing
 pilot modules, including expanded refrains. U+003A COLON (:) remains in English
 punctuation and title-imprint punctuation. Earlier first-pass evidence is retained
 unchanged, including its provisional colon representation.
+
+## Piyyut invocations and identification
+
+The recurring אלהינו ואלהי אבותינו and “Our God and the God of our fathers”
+belong to each piyyut’s opening text, rather than headings. The Hebrew invocation
+is an introductory line within the verse group; the English invocation remains
+in its translated prose paragraph. The three affected poems are identified by
+the distinctive incipits אין מי יקרא בצדק, אם עונינו רבו להגדיל, and
+תבא לפניך שועת חנון, recorded as `incipit_he` in the continuation metadata.
+These are incipit identifiers, not independently established formal titles or
+added printed headings. Existing alignment URNs remain stable. This structural
+interpretation follows the user’s correction; the primary readings and their
+words remain unchanged.
