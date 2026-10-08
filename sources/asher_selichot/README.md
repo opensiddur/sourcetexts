@@ -12,7 +12,7 @@ to Codex, rather than attributed to the source translator or an OCR provider.
 ## Coverage and evidence
 
 The current documentary entrypoint covers both title pages (n1/n2) and the entire
-first day: Hebrew n5–n51 and English n6–n52, ending at the midpage Kaddish rubric. The second day continues from the large heading on n51/n52 through the closing instruction in the middle of n59/n60, before the third-day heading.
+first day: Hebrew n5–n51 and English n6–n52, ending at the midpage Kaddish rubric. The second day continues from the large heading on n51/n52 through the closing instruction in the middle of n59/n60, before the third-day heading. The third day continues through n67/n68, ending before the fourth-day section heading.
 The following table records the refrain poem and referenced prayer ranges,
 which occur at their source positions in the complete entrypoint.
 
@@ -331,4 +331,49 @@ Documentary output retains all instructions. Expanded output replaces them:
 
 Supplied text is editorial expansion, not attributed to printing on n51–n60.
 Fulfilled instruction text and the now-unneeded refrain instruction are omitted
-from expanded output. The third day is not encoded in these entrypoints.
+from expanded output. The third day follows in the same entrypoints.
+
+
+## Third day (Archive n59–n68)
+
+The third day covers verified printed pages 29–33. Two Archive openings are
+swapped: printed 31 is n65/n66, while printed 32 is n63/n64. The logical
+Hebrew order is s60, s62, s66, s64, s68; English is s61, s63, s67, s65, s69.
+`third-day-scope.json` records the image-verified ordering and exact boundaries.
+The fourth-day running header on the final opening does not belong to the
+third-day body. Page corrections preserve real scan identities, verified
+printed labels and reciprocal translation pairs independently.
+
+`scan_reading/third-day-initial.json` is the immutable first image reading;
+`scan_reading/third-day.json` supplies the adjudicated text. The separate
+`third-day-proofreading.json` records the English OCR comparison and subsequent
+image corrections. This is a same-assistant image review; independent Hebrew
+consonant and pointing proofreading remains pending. Apparent unusual Hebrew
+wording is retained without conjectural emendation. Physical English wrapping
+is joined, including nine- / parts across printed 31–32.
+
+Three independent piyyutim have shared canonical URNs and separate modules:
+
+| File | Canonical URN |
+|---|---|
+| eqra_beshimkha_lehahaziq_bekha.xml | urn:x-opensiddur:text:poem:eqra_beshimkha_lehahaziq_bekha |
+| taarog_eilekha_kaayal.xml | urn:x-opensiddur:text:poem:taarog_eilekha_kaayal |
+| shahar_qamti.xml | urn:x-opensiddur:text:poem:shahar_qamti |
+
+The invocation remains body text. Shahar qamti has six named stanza milestones,
+four abbreviated refrains and a final cue supplying the complete opening with
+its refrain. Printed Hebrew verses and English prose remain distinct. Eight
+English footnotes occur at their verified anchors; the Palestine note follows
+“thy poor people.” The small repeated-verse rubric on printed 31 is Hebrew-only.
+
+`third_day.xml` is the service assembly, with a top-level day heading above
+its pizmon heading. The expanded view supplies the same bounded opening,
+repeated verses, three prayer pairs and concluding prayers described for day
+two, omitting fulfilled instructions. Its Full Kaddish comes from Birnbaum,
+selected by default settings; the scoped declaration sets `first_day=false`
+and `aseret-ymei-tshuva=false`, then restores caller context. These supplied
+passages are editorial additions, not readings of n59–n68.
+
+`heading-adjudication.json` corrects the first pizmon's English running header:
+“PROPITIATORY PRAYERS FOR THE FIRST DAY.” remains documentary metadata rather
+than a body heading or TOC caption. The actual Hebrew פזמון remains the heading.
