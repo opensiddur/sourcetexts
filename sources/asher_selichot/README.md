@@ -11,7 +11,9 @@ to Codex, rather than attributed to the source translator or an OCR provider.
 
 ## Coverage and evidence
 
-The current documentary entrypoint covers both title pages (n1/n2) and the entire
+The current documentary and expanded entrypoints cover both title pages and the first five complete days, through n83/n84, before the sixth-day body heading.
+
+The first-day documentary encoding covers both title pages (n1/n2) and the entire
 first day: Hebrew n5–n51 and English n6–n52, ending at the midpage Kaddish rubric. The second day continues from the large heading on n51/n52 through the closing instruction in the middle of n59/n60, before the third-day heading. The third day continues through n67/n68, ending before the fourth-day section heading.
 The following table records the refrain poem and referenced prayer ranges,
 which occur at their source positions in the complete entrypoint.
@@ -387,3 +389,20 @@ Complete from Archive n67/n68 to n75/n76, before the next day’s body heading. 
 - `beashmoret_haboqer.xml`: `urn:x-opensiddur:text:poem:beashmoret_haboqer`.
 
 The expanded service replaces fulfilled opening, repeated-verse, prayer-pair and closing cues with verified Asher ranges; it supplies the unprinted Full Kaddish from the Birnbaum default projects under a day-specific false first-day/Ten-Days scope. Short refrain choices expand only this edition’s printed full refrain; the final incipit cue supplies the verified first stanza and refrain. Documentary output retains each printed cue.
+
+## Fifth day
+
+Complete from Archive n75/n76 to n83/n84, before the next day’s body heading. Paired images establish printed order; `fifth-day-scope.json` records it. `scan_reading/fifth-day-initial.json` is immutable scan-first evidence; `fifth-day-proofreading.json` records the comparison and adjudications. This day preserves 8 English footnotes. Independent Hebrew proofreading remains pending.
+
+- `ein_kemidat_basar_midotekha.xml`: `urn:x-opensiddur:text:poem:ein_kemidat_basar_midotekha`.
+- `im_amri_eshkeha_mar_sihi.xml`: `urn:x-opensiddur:text:poem:im_amri_eshkeha_mar_sihi`.
+- `yehabbienu_tsel_yado.xml`: `urn:x-opensiddur:text:poem:yehabbienu_tsel_yado`.
+
+The expanded service replaces fulfilled opening, repeated-verse, prayer-pair and closing cues with verified Asher ranges; it supplies the unprinted Full Kaddish from the Birnbaum default projects under a day-specific false first-day/Ten-Days scope. Short refrain choices expand only this edition’s printed full refrain; the final incipit cue supplies the verified first stanza and refrain. Documentary output retains each printed cue.
+
+Day five prints two El Melekh/Vayaavor cues, after its first poem and after its
+pizmon. No third prayer pair is supplied. Yehabbienu tsel yado retains eight
+stanza alignments and the English extend-thy-grace sentence follows the ocean stanza’s short cue,
+unlike its Hebrew counterpart. Each language retains its printed cue position. The mixed קרן הפוך apparatus note on
+English page 38 has explicit Hebrew/English language boundaries. Physical
+`sacri-` / `fices` across pages 39–40 is joined with its source-page break intact.
