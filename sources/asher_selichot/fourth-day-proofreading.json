@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-07",
+  "initial_reading": "scan_reading/fourth-day-initial.json",
+  "adjudicated_reading": "scan_reading/fourth-day.json",
+  "primary": "Direct visual reading of paired Archive images before opening English OCR.",
+  "comparison": {
+    "type": "Archive English DJVU OCR",
+    "cache_sha256": "035949ca649cb233175c994a559eab6a94040df93c820c62102f1f4c119f4b25",
+    "pages": [
+      "ia/ocr/s69.txt",
+      "ia/ocr/s71.txt",
+      "ia/ocr/s73.txt",
+      "ia/ocr/s75.txt",
+      "ia/ocr/s77.txt"
+    ],
+    "scope": "English body, instructions and all eight footnotes; running headers and fifth-day continuation excluded.",
+    "disposition": "OCR letter errors, broken words and punctuation differences adjudicated from page images."
+  },
+  "image_rereading": "Same assistant; whole images and overlapping original-resolution Hebrew bands. This is not independent Hebrew proofreading.",
+  "changes": [
+    {
+      "scan": "s68",
+      "before": "בְּלֹא־זְכוּרֵיהֶם",
+      "after": "בְּלֹא־זְכוּרִיהֶם",
+      "basis": "Enlarged source-image rereading after initial scan-first reading; OCR used only to triage English differences."
+    },
+    {
+      "scan": "s71",
+      "before": "our prayer; O Creator",
+      "after": "our prayer, O Creator",
+      "basis": "Enlarged source-image rereading after initial scan-first reading; OCR used only to triage English differences."
+    },
+    {
+      "scan": "s71",
+      "before": "make widows:",
+      "after": "make widows;",
+      "basis": "Enlarged source-image rereading after initial scan-first reading; OCR used only to triage English differences."
+    },
+    {
+      "scan": "s74",
+      "before": "שִׁנּוּיוֹת",
+      "after": "שְׁנֵיהֶם",
+      "basis": "Enlarged source-image rereading after initial scan-first reading; OCR used only to triage English differences."
+    },
+    {
+      "scan": "s77",
+      "before": "frustratst",
+      "after": "frustrast",
+      "basis": "Enlarged source-image rereading after initial scan-first reading; OCR used only to triage English differences."
+    },
+    {
+      "scan": "s76/s77",
+      "basis": "Fourth stanza Hebrew continues at top of page 37 before its short מלכי cue. Final English stanza prints only the opening cue, without an additional full refrain. Heading precedes the Hebrew repetition rubric."
+    }
+  ],
+  "unresolved": [
+    "Independent Hebrew consonant/pointing review remains pending, particularly dense rhymed vocabulary and unusual readings in Aryeh bayaar damiti.",
+    "Printed English frustrast is retained rather than silently modernized."
+  ],
+  "structural_adjudications": [
+    "Hebrew fourth stanza crosses n73→n75 while its English stanza and short refrain end on n74.",
+    "English final stanza crosses n74→n76; its complete-opening abbreviation includes the verified first stanza and refrain.",
+    "Eight English footnotes belong to day four, including the three printed below the fifth-day opening on n76."
+  ]
+}

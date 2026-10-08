@@ -377,3 +377,13 @@ passages are editorial additions, not readings of n59–n68.
 `heading-adjudication.json` corrects the first pizmon's English running header:
 “PROPITIATORY PRAYERS FOR THE FIRST DAY.” remains documentary metadata rather
 than a body heading or TOC caption. The actual Hebrew פזמון remains the heading.
+
+## Fourth day
+
+Complete from Archive n67/n68 to n75/n76, before the next day’s body heading. Paired images establish printed order; `fourth-day-scope.json` records it. `scan_reading/fourth-day-initial.json` is immutable scan-first evidence; `fourth-day-proofreading.json` records the comparison and adjudications. This day preserves 8 English footnotes. Independent Hebrew proofreading remains pending.
+
+- `ayeh_kol_nifleotekha.xml`: `urn:x-opensiddur:text:poem:ayeh_kol_nifleotekha`.
+- `aryeh_bayaar_damiti.xml`: `urn:x-opensiddur:text:poem:aryeh_bayaar_damiti`.
+- `beashmoret_haboqer.xml`: `urn:x-opensiddur:text:poem:beashmoret_haboqer`.
+
+The expanded service replaces fulfilled opening, repeated-verse, prayer-pair and closing cues with verified Asher ranges; it supplies the unprinted Full Kaddish from the Birnbaum default projects under a day-specific false first-day/Ten-Days scope. Short refrain choices expand only this edition’s printed full refrain; the final incipit cue supplies the verified first stanza and refrain. Documentary output retains each printed cue.
