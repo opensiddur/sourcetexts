@@ -11,7 +11,7 @@ to Codex, rather than attributed to the source translator or an OCR provider.
 
 ## Coverage and evidence
 
-The current documentary and expanded entrypoints cover both title pages and the first six complete days, through n91/n92, before the seventh-day body heading.
+The current documentary and expanded entrypoints cover both title pages and the first seven complete days, through n99/n100, before the day-before-New-Year body heading.
 
 The first-day documentary encoding covers both title pages (n1/n2) and the entire
 first day: Hebrew n5–n51 and English n6–n52, ending at the midpage Kaddish rubric. The second day continues from the large heading on n51/n52 through the closing instruction in the middle of n59/n60, before the third-day heading. The third day continues through n67/n68, ending before the fourth-day section heading.
@@ -420,3 +420,15 @@ Complete from Archive n83/n84 to n91/n92, before the next day’s body heading. 
 The expanded service replaces fulfilled opening, repeated-verse, prayer-pair and closing cues with verified Asher ranges; it supplies the unprinted Full Kaddish from the Birnbaum default projects under a day-specific false first-day/Ten-Days scope. Short refrain choices expand only this edition’s printed full refrain; the final incipit cue supplies the verified first stanza and refrain. Documentary output retains each printed cue.
 
 The sixth-day final Hebrew `חוקר וכו׳` repeats its first stanza and full refrain in expanded output. The English prints no corresponding opening cue: neither documentary nor expanded English invents that repetition. Following common prayers remain aligned at their shared markers.
+
+## Seventh day
+
+Complete from Archive n91/n92 to n99/n100, before the next day’s body heading. Paired images establish printed order; `seventh-day-scope.json` records it. `scan_reading/seventh-day-initial.json` is immutable scan-first evidence; `seventh-day-proofreading.json` records the comparison and adjudications. This day preserves 8 English footnotes. Independent Hebrew proofreading remains pending.
+
+- `ein_teliyah_lerosh.xml`: `urn:x-opensiddur:text:poem:ein_teliyah_lerosh`.
+- `al_yimat_lefanekha.xml`: `urn:x-opensiddur:text:poem:al_yimat_lefanekha`.
+- `honenu_adonai_honenu.xml`: `urn:x-opensiddur:text:poem:honenu_adonai_honenu`.
+
+The expanded service replaces fulfilled opening, repeated-verse, prayer-pair and closing cues with verified Asher ranges; it supplies the unprinted Full Kaddish from the Birnbaum default projects under a day-specific false first-day/Ten-Days scope. Short refrain choices expand only this edition’s printed full refrain; the final incipit cue supplies the verified first stanza and refrain. Documentary output retains each printed cue.
+
+The seventh-day Hebrew repetition rubric names the refrain limits in reverse order (from נשענו till עזרנו). Documentary output retains that wording; the expanded choice uses the verified complete refrain עזרנו ... נשענו. English also prints `(Help us, &c.)` immediately after the opening full refrain: both its cue and its expansion remain at that printed position, with no corresponding Hebrew cue invented. The English printed page-47 numeral is not visible and remains unknown; page 47 and its Hebrew pairing are established separately. Both editions stop at the concluding Reader’s Kaddish cue before the large Erev Rosh Hashanah heading on n99/n100.
