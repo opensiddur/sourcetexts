@@ -11,7 +11,7 @@ to Codex, rather than attributed to the source translator or an OCR provider.
 
 ## Coverage and evidence
 
-The current documentary and expanded entrypoints cover both title pages and the first five complete days, through n83/n84, before the sixth-day body heading.
+The current documentary and expanded entrypoints cover both title pages and the first six complete days, through n91/n92, before the seventh-day body heading.
 
 The first-day documentary encoding covers both title pages (n1/n2) and the entire
 first day: Hebrew n5–n51 and English n6–n52, ending at the midpage Kaddish rubric. The second day continues from the large heading on n51/n52 through the closing instruction in the middle of n59/n60, before the third-day heading. The third day continues through n67/n68, ending before the fourth-day section heading.
@@ -406,3 +406,17 @@ stanza alignments and the English extend-thy-grace sentence follows the ocean st
 unlike its Hebrew counterpart. Each language retains its printed cue position. The mixed קרן הפוך apparatus note on
 English page 38 has explicit Hebrew/English language boundaries. Physical
 `sacri-` / `fices` across pages 39–40 is joined with its source-page break intact.
+
+Hebrew poetic phrase dots retain the printed gap using a nonbreaking space; the dot stays with the preceding word when a semantic verse line wraps. Sof pasuq remains attached directly to its word. This spacing normalization leaves documentary words and punctuation unchanged.
+
+## Sixth day
+
+Complete from Archive n83/n84 to n91/n92, before the next day’s body heading. Paired images establish printed order; `sixth-day-scope.json` records it. `scan_reading/sixth-day-initial.json` is immutable scan-first evidence; `sixth-day-proofreading.json` records the comparison and adjudications. This day preserves 6 English footnotes. Independent Hebrew proofreading remains pending.
+
+- `ani_yom_ira_eilekha_eqra.xml`: `urn:x-opensiddur:text:poem:ani_yom_ira_eilekha_eqra`.
+- `betulat_bat_yehudah.xml`: `urn:x-opensiddur:text:poem:betulat_bat_yehudah`.
+- `hoqer_hakol_vesoqer.xml`: `urn:x-opensiddur:text:poem:hoqer_hakol_vesoqer`.
+
+The expanded service replaces fulfilled opening, repeated-verse, prayer-pair and closing cues with verified Asher ranges; it supplies the unprinted Full Kaddish from the Birnbaum default projects under a day-specific false first-day/Ten-Days scope. Short refrain choices expand only this edition’s printed full refrain; the final incipit cue supplies the verified first stanza and refrain. Documentary output retains each printed cue.
+
+The sixth-day final Hebrew `חוקר וכו׳` repeats its first stanza and full refrain in expanded output. The English prints no corresponding opening cue: neither documentary nor expanded English invents that repetition. Following common prayers remain aligned at their shared markers.
