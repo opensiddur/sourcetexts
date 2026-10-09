@@ -550,3 +550,57 @@ contains the selected Ten Days doubling, so its “During the Ten Days … add�
 rubric is fulfilled and omitted. This does not remove the Reader performance cue
 or change Birnbaum's source encoding. Compiler PR #232 makes instruction selection
 apply to a rubric whose enclosing conditional has resolved true.
+
+## Second penitential day: n209–n232, printed 104–115
+
+The contiguous encoding now reaches the final conclusion cue on printed 115.
+`scan_reading/penitential-second-day.json` orders 40 bilingual units; its directory
+retains immutable initial captures and complete pre-OCR assemblies separately
+from working readings. Comparison, adjudication and proofreading records identify
+English Archive OCR provenance and hashes. Independent Hebrew proofreading is
+pending, particularly rare vocabulary and damaged pointing; same-reader crop
+review does not replace it. The 24 new page-map corrections record visible labels,
+languages and image-verified translation pairing independently of Archive metadata.
+
+Independent poems use these source-independent identities and matching XML stems:
+
+| Reading ID | XML stem / `poem:` identity |
+|---|---|
+| shiharnukha | shiharnukha_biqshanukha_yotser_harim |
+| elohai_boshti | elohai_boshti_venikhlamti_leharim_panai |
+| ashem_baalei | ashem_baalei_ashmah_haqarta_miqedem |
+| anahnu_hahomer | anahnu_hahomer_veatah_yotserenu |
+| orkha_vaamitkha | orkha_vaamitkha_shelah |
+| tohelet_yisrael | tohelet_yisrael_hesed_lo_neezav |
+| bein_keseh | bein_keseh_leasor |
+| el_har | el_har_hamor_givat_horiyah |
+| shaarei_shamayim | shaarei_shamayim_belulei_esh_umayim |
+
+The genuine service assembly is `penitential_second_day.xml`, identified by
+`siddur:selichot/penitential_second_day`. Its repeated prayer paragraphs retain
+their actual page breaks inline, without introducing duplicate canonical prayer
+modules. The invocation אלהינו ואלהי אבותינו belongs to its poem's verse body.
+
+The expanded opening supplies Ashrei, the Selichot Kaddish preface, Half Kaddish,
+Lekha Adonai hatsedaqah and Shomea tefillah. As with Gedaliah, the ambiguous Hebrew
+כי רבו endpoint is bounded by the explicit English “for it is great” and the
+following Selah lanu reprint: supply that following prayer once. The preliminary
+pair uses Ki al rahamekha, El erekh apayim and preliminary Vayaavor; seven later
+pairs use El melekh and Vayaavor. All four petition cues cite page 52 in both
+languages; their expansions use its bounded Rahamekha rabbim, Keraham av and
+Ki lo al tsidqotenu modules, paired inline at a shared milestone.
+
+The closing repetition supplies Zekhor rahamekha through Mahi umasi (גמירא בשביא,
+printed 23). The final continuation supplies Makhnise rahamim onward and Full
+Kaddish, without repeating Mahi. The unprinted Full Kaddish uses the configured
+Birnbaum fallback under first_day=false / Ten Days=true, restoring caller context
+afterward. Fulfilled “say,” “repeat,” and secondary “add” instructions are omitted.
+
+Bein keseh le'asor has seven shared units and its opening spans printed 111–112.
+Its complete opening is the verified refrain expansion. Seven Hebrew and six
+English abbreviation choices preserve the Hebrew-only internal cue between the
+surety and supplication passages. The final Hebrew cue includes וכו׳. Shaarei
+shamayim is verse with terminal ותעל תפלתם refrains; its English explanatory note
+calls the gates seven although the text enumerates eight. Preserve that edition
+wording and all 21 English notes, including explicit Hebrew spans in the body and
+apparatus. Dots and terminal stops use the documented nonbreaking normalization.
