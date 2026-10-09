@@ -432,3 +432,54 @@ Complete from Archive n91/n92 to n99/n100, before the next day’s body heading.
 The expanded service replaces fulfilled opening, repeated-verse, prayer-pair and closing cues with verified Asher ranges; it supplies the unprinted Full Kaddish from the Birnbaum default projects under a day-specific false first-day/Ten-Days scope. Short refrain choices expand only this edition’s printed full refrain; the final incipit cue supplies the verified first stanza and refrain. Documentary output retains each printed cue.
 
 The seventh-day Hebrew repetition rubric names the refrain limits in reverse order (from נשענו till עזרנו). Documentary output retains that wording; the expanded choice uses the verified complete refrain עזרנו ... נשענו. English also prints `(Help us, &c.)` immediately after the opening full refrain: both its cue and its expansion remain at that printed position, with no corresponding Hebrew cue invented. The English printed page-47 numeral is not visible and remains unknown; page 47 and its Hebrew pairing are established separately. Both editions stop at the concluding Reader’s Kaddish cue before the large Erev Rosh Hashanah heading on n99/n100.
+
+## Erev Rosh Hashanah (Archive n99–n184)
+
+The complete service runs from the large body heading on printed 49 through the
+Reader’s Kaddish cue on printed 91, before the Fast of Gedaliah. Both book views
+now include it. Its 113 scan-reading units retain immutable initial readings,
+English OCR comparisons, targeted image adjudications, and hashes of the working
+readings. Independent Hebrew proofreading remains pending; the Tamid poem’s 26
+numbered references remain printed markers because no explanatory text was located
+in this scan. OCR differences are recorded as findings, never silently adopted.
+
+Independent piyyutim use canonical incipit files/URNs listed in text-modules.json.
+The extended El rahum wording has its own variant module and preserves the shorter
+first-day reading. Hebrew poetry/litanies use verse lines and marked responses;
+English prose retains the edition’s structure. The common invocation is body text.
+
+Expanded instructions use each language’s printed target limits. Hebrew repeat
+cues add the printed-52 רחמיך רבים / אל תבוא range before the verified printed-9/10 repeats; most English cues explicitly cite
+those earlier ranges. The English printed-58 cue
+explicitly begins at “Thy mercy is great” on 52. After the first pizmon the Hebrew
+cue stops before the Daniel verses, which are printed in full on 71; English
+retains its own explicit repeat of those verses. Ark opening/closing instructions
+remain at their independently printed positions, including between El melekh and
+Vayaavor. Fulfilled repetition instructions disappear only in the expanded view.
+The two alternating Zekhor berit refrains and both final opening-stanza repetitions
+are supplied from this edition’s full printed occurrences.
+
+The final unprinted Full Kaddish uses the existing Birnbaum default fallback,
+scoped with first_day=false and Ten Days of Repentance=false. Supplied passages
+are editorial expansions, not printing on the cue’s source page. No Gedaliah
+service, release integration, or publication is included.
+
+The page-52 repetitions have bounded canonical prayer identities `prayer:keraham_av`
+and `prayer:selichot/ki_lo_al_tsidqotenu`. The latter begins at “for we do not
+presume” / כי לא על and ends at the Daniel petition’s end. The explicit English page-58 reference and its paired Hebrew cue use these
+reprinted readings. Other unpaginated Hebrew cues use the verified earlier
+ranges, matching the explicit English page-9/10 references.
+English cues that cite pages 9/10 retain those earlier readings: page 52 prints
+“Happy”, “Selah!”, and “thy own sake”, with different punctuation before “and
+grant”. These differences are not silently harmonized.
+
+Expanded repeat cues can list different petitions in Hebrew and English. Set
+them as one paired prose paragraph with inline transclusions and a shared
+alignment milestone for the cue; retain bounded prayer targets in the source
+modules. Separate external blocks for unequal target lists can shift later
+translations. Verify the compiled pairings and the page-52 translation wording
+before rendering, in addition to checking passage starts in the PDF.
+
+The poem identity and filename use `el_eloah_dalefah_eini`: אלוהַּ is
+transliterated eloah. The initial-capture file was renamed without changing
+its bytes; its historical internal label records the earlier naming mistake.
