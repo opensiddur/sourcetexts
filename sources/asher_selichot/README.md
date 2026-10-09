@@ -440,8 +440,8 @@ Reader’s Kaddish cue on printed 91, before the Fast of Gedaliah. Both book vie
 now include it. Its 113 scan-reading units retain immutable initial readings,
 English OCR comparisons, targeted image adjudications, and hashes of the working
 readings. Independent Hebrew proofreading remains pending; the Tamid poem’s 26
-numbered references remain printed markers because no explanatory text was located
-in this scan. OCR differences are recorded as findings, never silently adopted.
+superscripts remain unresolved printed note markers with no identified targets.
+Explanatory notes are not presumed to exist. OCR differences are recorded as findings, never silently adopted.
 
 Independent piyyutim use canonical incipit files/URNs listed in text-modules.json.
 The extended El rahum wording has its own variant module and preserves the shorter
@@ -483,3 +483,70 @@ before rendering, in addition to checking passage starts in the PDF.
 The poem identity and filename use `el_eloah_dalefah_eini`: אלוהַּ is
 transliterated eloah. The initial-capture file was renamed without changing
 its bytes; its historical internal label records the earlier naming mistake.
+
+## Tzom Gedaliah (n183–n208, printed 91–103)
+
+The complete service starts at the large heading below Erev's conclusion on
+n183/n184 and ends with the conclusion cue at the bottom of n207/n208.
+`scan_reading/tzom-gedaliah.json` lists its 38 reading units in printed order.
+`initial/` retains staged first captures, some ending mid-poem;
+`assembled-first-pass/` preserves the full scan-first assembly before English OCR.
+Working readings, OCR comparison, image adjudication and SHA-256 provenance remain
+separate. Same-reader crop reviews are not independent Hebrew proofreading; pointing
+review remains pending. Scan labels and verified language pairing are recorded
+separately from Archive's candidate labels.
+
+Each new independent piyyut is a reusable module with a source-independent incipit
+URN: Az terem nimtehu, Et Adonai behimamtseo, Avelah nafshi, Amanta meaz,
+Elohim ein biltekha, Tashuv terahamenu shuv, Horita derekh teshuvah,
+Im afes rova haqen and Torah haqedoshah. The invocation remains body verse.
+New scriptural prayer modules use their incipits; reprints of previously encoded
+prayers remain at their printed service positions without duplicate canonical
+identities. Hebrew is verse, English its printed prose. Cross-page words and verses
+retain their facsimile breaks; discretionary line-end hyphenation is normalized.
+
+Horita has eight shared stanza units and seven `abbr/expan` choices per language.
+Each expansion uses its full opening refrain from printed 99. The English cue
+between Reuben and Judah remains there; Hebrew places its cue after both examples.
+There is no added concluding opening-stanza repetition. Its Hebrew-only פזמון
+heading sits below the service heading, and both appear in the generated contents.
+
+Expanded instructions transclude verified Asher ranges and disappear when fulfilled:
+
+- Opening: Ashrei through Shomea tefillah’s final “for it is great” on page 7,
+  including the Kaddish preface and Half Kaddish. The following printed Selah
+  lanu is included once. The abbreviated Hebrew כי רבו citation is ambiguous;
+  this editorial boundary follows the explicit English cue and adjacent reprint.
+- Preliminary pair: Ki al rahamekha, El erekh apayim, preliminary Vayaavor.
+  The seven later pairs use El melekh yoshev and Vayaavor.
+- Four repeat cues: Hebrew includes the introductory page-52 petitions and their
+  bounded ranges; English cites the earlier page-9/10 ranges. Each unequal list
+  forms one shared paired prose block with inline transclusions.
+- Closing repetition: Zekhor rahamekha on 16 through Mahi umasi's final
+  גמירא בשביא on 23, including printed Ashamnu repetitions and intervening prayers.
+- Final continuation: Makhnise rahamim through the first-day closing prayers,
+  followed by Full Kaddish from Birnbaum, selected by the default export settings.
+  Its scoped settings are first_day=false and Ten Days of Repentance=true;
+  the caller's context is restored afterward. This supplied Kaddish is editorial,
+  not text printed on the Gedaliah leaves.
+
+The service index gate uses `opensiddur:holiday/tzom-gedalia`, with no visible
+instruction for an undecided occasion. The incomplete book stays outside releases.
+
+English printed 103 has a marginal Hebrew note, עשרה הרוגי מלכות, with no visible
+matching body marker. It is retained as a commentary note attached editorially to
+the final cue, and carried into the expanded view. Its original target is unknown.
+The printed “Horeb” footnote says “Zion”; preserve that wording without silently
+correcting it. English printed 92 has תשובה in its body and שתית in a note; both
+receive explicit Hebrew language spans.
+
+The 26 Tamid superscripts in the preceding Erev poem are unresolved printed note
+markers with no identified targets. They are not established references, and no
+explanatory notes are presumed to exist.
+
+Gedaliah's `standOff` supplies an explicitly empty editorial instruction override
+for `instruction:aseret_yemei_teshuvah/add`. The secondary Full Kaddish already
+contains the selected Ten Days doubling, so its “During the Ten Days … add”
+rubric is fulfilled and omitted. This does not remove the Reader performance cue
+or change Birnbaum's source encoding. Compiler PR #232 makes instruction selection
+apply to a rubric whose enclosing conditional has resolved true.
