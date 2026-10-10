@@ -604,3 +604,14 @@ shamayim is verse with terminal ותעל תפלתם refrains; its English explan
 calls the gates seven although the text enumerates eight. Preserve that edition
 wording and all 21 English notes, including explicit Hebrew spans in the body and
 apparatus. Dots and terminal stops use the documented nonbreaking normalization.
+
+### Half Kaddish during the Ten Days
+
+The printed page-3 Half Kaddish (Archive n7, scan s8) has one לְעֵלָּא; its
+scan-first reading remains unchanged. Following the user's 2026-10-09 correction,
+the shared module supplies a second לְעֵלָּא conditionally during the Ten Days of
+Repentance. This is a documented editorial seasonal addition, not text printed
+on that leaf. The existing מִן כָּל wording is retained. Earlier services explicitly
+use Ten Days=false; Gedaliah and the second penitential day's expanded openings
+use Ten Days=true. Scope endings restore the caller's settings. Documentary
+verification excludes this addition while checking the original printed reading.
