@@ -11,7 +11,7 @@ to Codex, rather than attributed to the source translator or an OCR provider.
 
 ## Coverage and evidence
 
-The current documentary and expanded entrypoints cover both title pages, the first seven days, Erev Rosh Hashanah, Tzom Gedaliah, penitential days two through five, and Erev Yom Kippur through n319/n320 (printed 159 upper), ending at the Reader’s Kaddish before the Second Fast body heading. Independent Hebrew proofreading remains pending.
+The current documentary and expanded entrypoints cover both title pages, the first seven days, Erev Rosh Hashanah, Tzom Gedaliah, penitential days two through five, Erev Yom Kippur, and the Monday fast through n335/n336 (printed 167 upper), ending before the Thursday/Fifth Fast body heading. Independent Hebrew proofreading remains pending.
 
 The first-day documentary encoding covers both title pages (n1/n2) and the entire
 first day: Hebrew n5–n51 and English n6–n52, ending at the midpage Kaddish rubric. The second day continues from the large heading on n51/n52 through the closing instruction in the middle of n59/n60, before the third-day heading. The third day continues through n67/n68, ending before the fourth-day section heading.
@@ -742,3 +742,48 @@ Fulfilled instructions disappear; no unrequested Makhnise rahamim conclusion is
 inserted. The opening Half Kaddish also uses the seasonal doubled leela editorial
 reading. Discretionary page-spanning English Par-/don and trans-/gression are joined;
 immutable captures retain the visible hyphens.
+
+## Monday fast (printed “Second Fast”) — n319–n336
+
+The large body heading on printed159 begins the Monday fast, Hebrew לשני;
+it is the first service of the Monday–Thursday–Monday series. English Second
+Fast names the weekday, not a penitential-day ordinal. The service ends above
+the Thursday/Fifth Fast body heading on printed167. Its final Ezekiel footnote
+belongs to Monday even though it is printed below Thursday's opening text.
+
+The bilingual service `monday_fast.xml` directly references three independent
+piyyutim with source-independent canonical poem URNs and matching filenames:
+`yisrael_ammekha_tehinnah_orkhim`, `elohim_beyisrael_gadol_nodata`, and
+`malakhei_rahamim_meshartei_elyon`. Hebrew is verse; English keeps printed prose.
+Malakhei rahamim has eight shared stanza units. Six short Hebrew אולי יחום cues
+and six English “Perchance, &c.” cues expand the verified opening refrain.
+Only Hebrew prints the final full refrain and a מלאכי opening-repeat cue.
+Do not supply unprinted English counterparts. Keep the printed פזמון below
+the service heading, and omit the fulfilled repetition instruction in expansion.
+
+Three prayer-pair cues expand El melekh and Vayaavor from this edition. The
+petition cue after Nissa levavenu follows Hebrew's printed-52 father/Daniel
+ranges, while English explicitly cites earlier pages9/10 and uses their bounded
+`adonai_boqer_tishma_qoli/repeat` and `hateh_elohai_oznekha/repeat` targets.
+The opening and concluding weekday Amidah/usual-service/Torah instructions remain
+in both views because those prescribed services are not supplied. There is no
+immediate Full Kaddish Titkabel expansion at this ending. The printed Reader
+label before Veal yeakkev has explicit English direction.
+
+The running-order gate combines native Monday (`hebrew-day=2`) with an explicit
+`asher:occasion/monday_fast=true` selector. This selector means the first Monday
+of the book's Monday–Thursday–Monday fast series; the calendar does not yet derive
+that series. Unknown occasion settings keep the section available in the book.
+
+Evidence is in `scan_reading/monday-fast.json`, immutable initial captures and
+assembled pre-OCR snapshots, and the Monday proofreading, OCR-comparison and
+adjudication records. Fifteen English notes retain their printed anchors and
+citations, including the apparent Isaiah vi.7 error for the quotation of56:7.
+English OCR is independent comparison evidence; Hebrew independent proofreading
+remains pending. Page-spanning omni-/potent and congre-/gation are joined.
+
+The conclusion has blank Hebrew Torah/haftarah page fields. English claims the
+readings occur at volume end, but image inspection of s408–s411 shows the volume
+ends with the circumcision pizmon, printed204, and contains no such final reading.
+Preserve the documentary claim and record it as unresolved; no dangling target
+URN is introduced for an absent passage.
