@@ -11,7 +11,7 @@ to Codex, rather than attributed to the source translator or an OCR provider.
 
 ## Coverage and evidence
 
-The current documentary and expanded entrypoints cover both title pages, the first seven days, Erev Rosh Hashanah, Tzom Gedaliah, penitential days two through five, Erev Yom Kippur, the Monday fast, Thursday fast, the last Monday fast, Tenth of Tevet, and Fast of Esther, Seventeenth of Tammuz, and Yom Kippur Katan through n407/n408 (printed203 upper), ending before the circumcision poem. Independent Hebrew proofreading remains pending.
+The current documentary and expanded entrypoints cover both title pages, the first seven days, Erev Rosh Hashanah, Tzom Gedaliah, penitential days two through five, Erev Yom Kippur, the Monday fast, Thursday fast, the last Monday fast, Tenth of Tevet, and Fast of Esther, Seventeenth of Tammuz, Yom Kippur Katan, and the final circumcision poem through n410 (printed204), the last page. Independent Hebrew proofreading remains pending.
 
 The first-day documentary encoding covers both title pages (n1/n2) and the entire
 first day: Hebrew n5–n51 and English n6–n52, ending at the midpage Kaddish rubric. The second day continues from the large heading on n51/n52 through the closing instruction in the middle of n59/n60, before the third-day heading. The third day continues through n67/n68, ending before the fourth-day section heading.
@@ -931,3 +931,31 @@ adjudication remain evidence. All Hebrew native-resolution bands were reviewed
 by the same reader; independent Hebrew proofreading remains pending. English
 full-page OCR s409 incidentally exposed the circumcision opening before its
 separate first capture; record that exposure in the final section's provenance.
+
+## Final circumcision recension, printed203 lower–204
+
+The final heading on n407/n408 starts a separate circumcision section, ending at
+n409/n410, the final printed page. Its reusable poem uses
+`urn:x-opensiddur:text:poem:zekhor_berit_avraham/circumcision_recension`; the
+common incipit already identifies the longer Erev Rosh Hashanah recension.
+Five paired stanza units retain Hebrew verse and English printed prose. Hebrew
+והשב and ושוב each expand to their different full refrain in this same recension.
+English prints neither short cue; its two omissions remain omissions. Only the
+fulfilled repetition rubric disappears in the expanded view. The circumcision
+performance instruction remains. The English top-level display title is an
+editorial label from the final-page running heading, not another printed body
+heading. An explicit circumcision selector supplies its calendar gate.
+
+The English superscript1 after flesh has no corresponding note on either final
+page. Preserve it without a target or invented apparatus. The Hebrew unplaced
+fragment `מִפִּי אוֹיְבֶךָ עַד בֵּינְךָ וּבֵין` beside the small והשב cue at the
+bottom of203 is retained in the reading's `unresolved_printed_material` field;
+it is excluded from the poem body pending independent identification. This is
+an unresolved documentary limitation, not a claim that the words are absent.
+The final pages contain no Torah/haftarah appendix requested by earlier rubrics.
+
+First captures and pre-OCR snapshots are immutable. English s409 OCR had already
+been exposed during the monthly-service comparison; this incidental exposure is
+recorded. s411 was image-read before its OCR comparison. Native Hebrew rereading
+by the same agent is not independent proofreading; independent proof remains
+pending. Comparison findings and adjudication are committed alongside readings.
