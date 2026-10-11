@@ -11,7 +11,7 @@ to Codex, rather than attributed to the source translator or an OCR provider.
 
 ## Coverage and evidence
 
-The current documentary and expanded entrypoints cover both title pages, the first seven days, Erev Rosh Hashanah, Tzom Gedaliah, penitential days two through five, Erev Yom Kippur, the Monday fast, Thursday fast, and the last Monday fast through n349/n350 (printed174 upper), ending before the Tenth of Tevet body heading. Independent Hebrew proofreading remains pending.
+The current documentary and expanded entrypoints cover both title pages, the first seven days, Erev Rosh Hashanah, Tzom Gedaliah, penitential days two through five, Erev Yom Kippur, the Monday fast, Thursday fast, the last Monday fast, and Tenth of Tevet through n357/n358 (printed178 upper), ending before the Fast of Esther body heading. Independent Hebrew proofreading remains pending.
 
 The first-day documentary encoding covers both title pages (n1/n2) and the entire
 first day: Hebrew n5–n51 and English n6–n52, ending at the midpage Kaddish rubric. The second day continues from the large heading on n51/n52 through the closing instruction in the middle of n59/n60, before the third-day heading. The third day continues through n67/n68, ending before the fourth-day section heading.
@@ -830,3 +830,20 @@ Kaddish insertion. Documentary English has one note; expanded English inherits
 fourteen additional Monday notes. Immutable captures, assembled pre-OCR snapshots,
 frozen English OCR inputs and image corrections accompany all fourteen units.
 Independent Hebrew proofreading remains pending.
+
+
+## Tenth of Tevet, n349–n358
+
+The service begins below the final Monday on printed174 and ends above the Fast
+of Esther on printed178. Its index gate uses the native asara-btevet holiday.
+Three independent poems are Ezkerah matsoq asher qeraani, Even haroshah leiyyim
+veleharishah, and Avotai ki vatehu beshem elohei tsuri. Avotai has fourteen shared
+stanza units, thirteen Hebrew short cues and twelve English short cues. Each
+cue expands its complete opening, as this edition instructs. No English cue is
+added to the last stanza. Internal source breaks are retained, including the
+English to-/wards word join. Ten English notes retain their anchors; expanded
+output inherits fourteen closing notes from Monday. The opening and conclusion
+repeat bounded Monday ranges; unsupplied weekday-service instructions remain,
+without adding Full Kaddish. Fifteen scan readings retain immutable first captures,
+assembled pre-OCR snapshots, frozen English OCR comparison inputs and image
+adjudication. Independent Hebrew proofreading remains pending.
