@@ -669,3 +669,33 @@ candidates and image adjudication accompany the readings. Hebrew awaits an
 independent reader. English printed 133 ends “ardent pass” and printed 134 begins
 “Support my soul”; no completion is visible. Preserve this apparent printing
 truncation in the documentary text and record its uncertainty separately.
+
+### Fifth penitential day
+
+Complete from the large heading on n281/n282 (printed 140) through the conclusion
+cue on n307/n308 (printed 153 upper). The Erev Yom Kippur heading and following
+text are outside this service. The ten independent poem modules use incipit
+filenames and canonical poem URNs: am_adonai_hizqu_venithazzaqah,
+atah_haroeh_beelbon_neelamim, oznekha_hatteh_vehaqshev_leheqer_ranen,
+teshuvah_hashuvah_qedumah_meaz_lehetiv, atah_helqi_vetsur_levavi,
+omets_yosif_tahor_yadayim, azon_tehin_vehasqat_atirah,
+ezkerah_elohim_veehemayah, ahavat_oz_vetoqef_hafekh, and
+miqveh_yisrael_moshio_beet_tsarah.
+
+Ezkerah has five shared semantic units. Its thirteen-attributes opening continues
+across printed 149–150, ending with “take us for thy heritage” / ונחלתנו. The
+single final cue in each language expands this complete opening. There are no
+other refrain choices and no printed repetition instruction. Keep the full
+printed opening as text and the Hebrew-only פזמון as a subordinate heading.
+Five paired petition expansions refer to the complete bounded printed-52 mercy,
+judgment, father and Daniel passages. Opening and conclusion boundaries follow
+the preceding penitential days; both supplied Kaddishes use scoped Ten Days
+context and the Birnbaum Full Kaddish fallback. Fulfilled cues disappear in the
+expanded view. The closing repetition ends at Mahi umasi before Miqveh Yisrael;
+the final continuation begins Makhnise rahamim.
+
+Source evidence retains immutable first captures and complete pre-OCR snapshots.
+English Archive OCR provides independent comparison candidates. Image adjudication
+retains the apparent “recited has thirteen attributes” printing error on 147,
+and its prayer-pair citation 12, 11. Mixed Hebrew/English footnotes retain their
+language direction. Independent Hebrew proofreading remains pending.
