@@ -11,7 +11,7 @@ to Codex, rather than attributed to the source translator or an OCR provider.
 
 ## Coverage and evidence
 
-The current documentary and expanded entrypoints cover both title pages, the first seven days, Erev Rosh Hashanah, Tzom Gedaliah, penitential days two through five, Erev Yom Kippur, the Monday fast, Thursday fast, the last Monday fast, Tenth of Tevet, and Fast of Esther, and Seventeenth of Tammuz through n375/n376 (printed187), ending before Yom Kippur Katan. Independent Hebrew proofreading remains pending.
+The current documentary and expanded entrypoints cover both title pages, the first seven days, Erev Rosh Hashanah, Tzom Gedaliah, penitential days two through five, Erev Yom Kippur, the Monday fast, Thursday fast, the last Monday fast, Tenth of Tevet, and Fast of Esther, Seventeenth of Tammuz, and Yom Kippur Katan through n407/n408 (printed203 upper), ending before the circumcision poem. Independent Hebrew proofreading remains pending.
 
 The first-day documentary encoding covers both title pages (n1/n2) and the entire
 first day: Hebrew n5–n51 and English n6–n52, ending at the midpage Kaddish rubric. The second day continues from the large heading on n51/n52 through the closing instruction in the middle of n59/n60, before the third-day heading. The third day continues through n67/n68, ending before the fourth-day section heading.
@@ -890,3 +890,44 @@ the adjudication explicitly documents that error. Esther's full-page OCR compari
 incidentally exposed the Tammuz introductory text on183 before its capture. New
 poem captures and assembled snapshots precede their English OCR comparisons;
 independent Hebrew proofreading remains pending.
+
+
+## Yom Kippur Katan, n377–n408
+
+The monthly service covers printed188–203 upper, before the circumcision heading.
+Its occasion is selected explicitly with asher:occasion/yom_kippur_katan; no
+weekday or monthly date is inferred from the inconsistent printed Psalm rubrics.
+Psalm102, Psalm20, Psalm8 and the independent prayers and poems have reusable
+source-independent identities and modules. Yom zeh has five shared stanza units,
+Bat ammi six, and Rahmana ten. The first two have four abbreviation choices per
+language; Rahmana has eight English cues and nine fully printed Hebrew responses.
+The bracketed responses in Masat kappai and Samar are full verse, including the
+response crossing printed193/194. The invocation is body text, never a heading.
+
+On printed193 Hebrew places the father/Daniel repeat cue before Samar. English
+interrupts the poem after “Remember the” and before “bull” on the next page.
+Preserve that interleaved rubric in its independent poem module; expand its
+bounded page9/10 targets at the same position. The Hebrew cue remains in service
+order. First Ashamnu repeat: Hebrew uses the page200 reprint; English explicitly
+cites18 and uses the original Ashamnu. The second repeat uses the reprint in both.
+The two English words divided by facsimile breaks, sup-/plications and Par-/don,
+are joined editorially while page evidence and frozen captures retain their breaks.
+
+Supply the opening unnamed Kaddish as Half Kaddish, retaining Reader. The closing
+Reader Kaddish cue is printed only in Hebrew; the expanded English counterpart
+is editorial. Supply Full Kaddish with first_day=false and Ten Days=false.
+Aleinu and Mourner Kaddish come from the Birnbaum fallback defaults, using its
+existing Aleinu service identity and the canonical Mourner Kaddish identity.
+Retain the Mourner role. Expanded views omit fulfilled inclusion instructions,
+but retain repetitions once/twice/seven times, Ark actions, Psalm-order choices,
+and unsupplied Torah/Haftara/Amidah instructions. The print claims Torah/Haftara
+readings at volume end, but the last leaves contain only the circumcision poem.
+
+Nine English notes retain printed anchors and wording. Enlarged s399 confirms
+“Jer. iii. 2.” despite the quoted verse normally being numbered3; preserve that
+citation. Enlarged s387 confirms “diminished from me”; initial “form” was a capture
+error. Initial and assembled pre-OCR readings, English OCR input hashes and image
+adjudication remain evidence. All Hebrew native-resolution bands were reviewed
+by the same reader; independent Hebrew proofreading remains pending. English
+full-page OCR s409 incidentally exposed the circumcision opening before its
+separate first capture; record that exposure in the final section's provenance.
