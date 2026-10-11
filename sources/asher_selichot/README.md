@@ -11,7 +11,7 @@ to Codex, rather than attributed to the source translator or an OCR provider.
 
 ## Coverage and evidence
 
-The current documentary and expanded entrypoints cover both title pages, the first seven days, Erev Rosh Hashanah, Tzom Gedaliah, penitential days two through five, Erev Yom Kippur, the Monday fast, and Thursday fast through n341/n342 (printed170), ending before the Last of the Three Fasts body heading. Independent Hebrew proofreading remains pending.
+The current documentary and expanded entrypoints cover both title pages, the first seven days, Erev Rosh Hashanah, Tzom Gedaliah, penitential days two through five, Erev Yom Kippur, the Monday fast, Thursday fast, and the last Monday fast through n349/n350 (printed174 upper), ending before the Tenth of Tevet body heading. Independent Hebrew proofreading remains pending.
 
 The first-day documentary encoding covers both title pages (n1/n2) and the entire
 first day: Hebrew n5–n51 and English n6–n52, ending at the midpage Kaddish rubric. The second day continues from the large heading on n51/n52 through the closing instruction in the middle of n59/n60, before the third-day heading. The third day continues through n67/n68, ending before the fourth-day section heading.
@@ -812,3 +812,21 @@ immutable first/assembled readings and image adjudications. The petition reading
 was renamed to `verses_after_hoshiah`; immutable evidence keeps its original
 identifier and bytes. Independent Hebrew proofreading remains pending. Occasion:
 `asher:occasion/thursday_fast=true` together with native Hebrew weekday5.
+
+
+## Last Monday fast, n343–n350
+
+The Last of the Three Fasts is the final Monday of BeHaB, gated on the explicit
+last_monday_fast occasion and native weekday two. Its three independent poems
+are Afafunu mayim, Ozon tahan vehasket atirah, and the fast-day recension of
+Ezkerah elohim veehemayah. The latter has a prose Thirteen Attributes opening
+and four verse stanza units, including a Hebrew verse crossing printed173/174.
+Only its concluding opening cue expands; no extra repeat instruction is printed.
+The Hebrew petition-repeat cue on printed172 has no English counterpart. Its
+expanded correspondence is paired with an empty English unit, preserving this
+asymmetry without adding unprinted English text. Opening and closing ranges
+repeat Monday; unsupplied weekday-service instructions remain, with no Full
+Kaddish insertion. Documentary English has one note; expanded English inherits
+fourteen additional Monday notes. Immutable captures, assembled pre-OCR snapshots,
+frozen English OCR inputs and image corrections accompany all fourteen units.
+Independent Hebrew proofreading remains pending.
