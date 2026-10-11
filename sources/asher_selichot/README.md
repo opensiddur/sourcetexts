@@ -11,7 +11,7 @@ to Codex, rather than attributed to the source translator or an OCR provider.
 
 ## Coverage and evidence
 
-The current documentary and expanded entrypoints cover both title pages, the first seven days, Erev Rosh Hashanah, Tzom Gedaliah, penitential days two through five, Erev Yom Kippur, and the Monday fast through n335/n336 (printed 167 upper), ending before the Thursday/Fifth Fast body heading. Independent Hebrew proofreading remains pending.
+The current documentary and expanded entrypoints cover both title pages, the first seven days, Erev Rosh Hashanah, Tzom Gedaliah, penitential days two through five, Erev Yom Kippur, the Monday fast, and Thursday fast through n341/n342 (printed170), ending before the Last of the Three Fasts body heading. Independent Hebrew proofreading remains pending.
 
 The first-day documentary encoding covers both title pages (n1/n2) and the entire
 first day: Hebrew n5–n51 and English n6–n52, ending at the midpage Kaddish rubric. The second day continues from the large heading on n51/n52 through the closing instruction in the middle of n59/n60, before the third-day heading. The third day continues through n67/n68, ending before the fourth-day section heading.
@@ -787,3 +787,28 @@ readings occur at volume end, but image inspection of s408–s411 shows the volu
 ends with the circumcision pizmon, printed204, and contains no such final reading.
 Preserve the documentary claim and record it as unresolved; no dangling target
 URN is introduced for an absent passage.
+
+### Thursday fast, n335–n342
+
+The Fifth Fast is Hebrew לחמישי, Thursday of the Monday–Thursday–Monday series.
+Its body starts below Monday's concluding rubric on printed167 and ends before
+Last of the Three Fasts on printed171. Fifteen bilingual units preserve three
+independent poems: `taanit_tsibbur_qaveu`, `anshei_amanah_avadu`, and the reprinted
+`yisrael_nosha_fast_day_recension`, canonically a variant of `poem:yisrael_nosha`.
+The pizmon has six shared stanzas and five choices per language (four short
+refrains and one complete-opening repeat); full printed hyphenation differs.
+
+Expanded opening supplies Monday's Selah lanu, El erekh and Vayaavor reprints.
+Three prayer-pair cues supply the edition's El melekh/Vayaavor; the petition cue
+uses printed52 Hebrew targets and printed9/10 English targets. The conclusion
+supplies Monday's ten bounded closing units, including its retained weekday,
+Torah and haftarah performance rubric. Its fourteen notes join the two Thursday
+notes in expanded output. No Full Kaddish is added. Both weekday Amidah rubrics
+remain because a whole Amidah is not supplied. The documentary final pair cue's
+“pp. 1, 12.” and the apparent “repeated y” printing are preserved.
+
+Evidence: `thursday-fast-proofreading.json`, frozen English OCR comparison,
+immutable first/assembled readings and image adjudications. The petition reading
+was renamed to `verses_after_hoshiah`; immutable evidence keeps its original
+identifier and bytes. Independent Hebrew proofreading remains pending. Occasion:
+`asher:occasion/thursday_fast=true` together with native Hebrew weekday5.
