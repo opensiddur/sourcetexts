@@ -11,7 +11,7 @@ to Codex, rather than attributed to the source translator or an OCR provider.
 
 ## Coverage and evidence
 
-The current documentary and expanded entrypoints cover both title pages, the first seven days, Erev Rosh Hashanah, Tzom Gedaliah, penitential days two through five, Erev Yom Kippur, the Monday fast, Thursday fast, the last Monday fast, Tenth of Tevet, and Fast of Esther through n367/n368 (printed183 upper), ending before the Fast of Tammuz body heading. Independent Hebrew proofreading remains pending.
+The current documentary and expanded entrypoints cover both title pages, the first seven days, Erev Rosh Hashanah, Tzom Gedaliah, penitential days two through five, Erev Yom Kippur, the Monday fast, Thursday fast, the last Monday fast, Tenth of Tevet, and Fast of Esther, and Seventeenth of Tammuz through n375/n376 (printed187), ending before Yom Kippur Katan. Independent Hebrew proofreading remains pending.
 
 The first-day documentary encoding covers both title pages (n1/n2) and the entire
 first day: Hebrew n5–n51 and English n6–n52, ending at the midpage Kaddish rubric. The second day continues from the large heading on n51/n52 through the closing instruction in the middle of n59/n60, before the third-day heading. The third day continues through n67/n68, ending before the fourth-day section heading.
@@ -866,3 +866,27 @@ note's inconsistent feet/yards figures and apparent citations remain as printed.
 Expanded English inherits fourteen Monday conclusion notes. Immutable initial
 and assembled pre-OCR captures, frozen English OCR inputs, corrections and hashes
 are retained. Independent Hebrew proofreading remains pending.
+
+
+## Seventeenth of Tammuz, n367–n376
+
+Complete from printed183 lower through187, with native tzom-tammuz gate. Fourteen
+bilingual units include Atanu lekhah yotser ruhot, Amar bekhi mippenei yad sheluhah,
+and Sheeh neessar as independent poems. Sheeh has four shared stanza units, a
+Hebrew final full-opening cue and one English short refrain cue. Preserve full
+refrain variants; there is no repetition rubric. English hea-/ven spans a page
+break and is joined without an editorial space. Opening and conclusion reuse
+bounded Monday ranges, retaining unsupplied weekday instructions without Full
+Kaddish. Expanded English inherits fourteen Monday notes in addition to thirteen
+actual Tammuz notes.
+
+English printed184 apparently interchanges superscripts2/3: the image-in-temple
+sentence bears3, the city-broken-up sentence2. The encoding follows the printed
+associations to apparatus3/2, despite their unexpected subject matter. Printed185
+has three markers (1 tongues,2 seventh heaven,3 for Tammuz) but no apparatus text.
+Preserve these as superscript markers, with no invented note targets. Provisional
+note guesses in the immutable first captures were removed from working readings;
+the adjudication explicitly documents that error. Esther's full-page OCR comparison
+incidentally exposed the Tammuz introductory text on183 before its capture. New
+poem captures and assembled snapshots precede their English OCR comparisons;
+independent Hebrew proofreading remains pending.
