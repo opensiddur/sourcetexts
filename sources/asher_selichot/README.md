@@ -642,3 +642,30 @@ Expansions use this edition's own opening and refrain. English printed citations
 `penitential-third-day*` records scan-first captures, a complete pre-OCR snapshot,
 English OCR candidates, provenance, hashes and adjudication. Independent Hebrew
 proofreading remains pending, particularly for pointing and rare vocabulary.
+
+### Fourth penitential day
+
+The complete service occupies n257–n282 (printed 128–140), beginning below the
+third-day conclusion and ending before the fifth-day body heading. Independent
+piyyutim use incipit filenames and canonical poem URNs: eshet_neurim_haahuvah,
+atah_elohai_malki_miqqedem, adonai_elohei_yisrael_atah_tsaddiq,
+eleikha_adonai_shivaati, elohim_adonai_heli_yotseri_umeholeli,
+amarnu_nigzarnu_lanu_veein_doresh, yoshev_beseter_elyon_magenni_vetsinnati,
+ezrahi_meever_hannahar, and melekh_melakhim_veram_al_ramim.
+
+Yoshev beseter pairs eight semantic stanzas. Six short cues in each language
+expand the opening's verified full refrain; the final cue in each language
+repeats the complete opening. The final full English refrain's distinct “given
+to me” wording and exclamation remain printed text. The printed-130 repeat
+starts with Enter not into judgment: the nested prayer range
+`selichot/rahamekha_rabbim/al_tavo` excludes the mercy verse already printed
+there. Remaining petition cues use the full printed-52 ranges. Opening,
+closing repetition and conclusion limits match the third penitential day;
+both supplied Kaddishes use scoped Ten Days context. Fulfilled cues are omitted
+in the expanded view. The secondary Full Kaddish remains attributed to Birnbaum.
+
+Immutable first captures, complete pre-OCR snapshots, independent English OCR
+candidates and image adjudication accompany the readings. Hebrew awaits an
+independent reader. English printed 133 ends “ardent pass” and printed 134 begins
+“Support my soul”; no completion is visible. Preserve this apparent printing
+truncation in the documentary text and record its uncertainty separately.
