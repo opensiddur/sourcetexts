@@ -11,7 +11,7 @@ to Codex, rather than attributed to the source translator or an OCR provider.
 
 ## Coverage and evidence
 
-The current documentary and expanded entrypoints cover both title pages and the first seven complete days, through n99/n100, before the day-before-New-Year body heading.
+The current documentary and expanded entrypoints cover both title pages, the first seven days, Erev Rosh Hashanah, Tzom Gedaliah, penitential days two through five, and Erev Yom Kippur through n319/n320 (printed 159 upper), ending at the Reader’s Kaddish before the Second Fast body heading. Independent Hebrew proofreading remains pending.
 
 The first-day documentary encoding covers both title pages (n1/n2) and the entire
 first day: Hebrew n5–n51 and English n6–n52, ending at the midpage Kaddish rubric. The second day continues from the large heading on n51/n52 through the closing instruction in the middle of n59/n60, before the third-day heading. The third day continues through n67/n68, ending before the fourth-day section heading.
@@ -699,3 +699,46 @@ English Archive OCR provides independent comparison candidates. Image adjudicati
 retains the apparent “recited has thirteen attributes” printing error on 147,
 and its prayer-pair citation 12, 11. Mixed Hebrew/English footnotes retain their
 language direction. Independent Hebrew proofreading remains pending.
+
+## Erev Yom Kippur — n307–n320
+
+Complete bilingual scan readings cover printed 153 lower through 159 upper,
+ending at the Reader’s Kaddish before the Second Fast body heading. The later
+running header on the closing page belongs to the following service. Evidence is
+in `scan_reading/erev-yom-kippur.json`, its named unit files, immutable `initial/`
+captures and complete `assembled-preocr/` snapshots. `erev-yom-kippur-proofreading.json`
+records hashes; `erev-yom-kippur-ocr-comparison.json` and
+`erev-yom-kippur-adjudication.json` record English OCR provenance and image review.
+Independent Hebrew proofreading remains pending.
+
+| Reading | Independent module / canonical identity |
+|---|---|
+| adon_befaqdekha | `adon_befaqdekha_enosh_labbeqarim.xml`, `poem:adon_befaqdekha_enosh_labbeqarim` |
+| adon_din | `adon_din_im_yeduqdaq.xml`, `poem:adon_din_im_yeduqdaq` |
+| yertseh_tsom | `yertseh_tsom_ammekha.xml`, `poem:yertseh_tsom_ammekha` |
+
+The `erev_yom_kippur.xml` service assembles these modules and the edition’s
+reprinted prayers. Yertseh has seven shared stanza units and full printed refrains;
+preserve their “this”/“that” and Hebrew orthographic variants. Only the final cue
+expands its complete first stanza. The Hebrew-only פזמון stays subordinate to the
+bilingual day heading. Common prayers retain their existing canonical identities
+when referenced; reprints retain their own source positions within the service.
+
+The opening instructions conflict: Hebrew specifies Ashrei through Shomea tefillah,
+while English starts “for thou hearest prayer,” citing page 2, and ends “for it is
+great,” citing page 7. The first phrase actually occurs at the end of Lekha Adonai
+on printed 4. Expanded output editorially follows the complete Hebrew preliminary
+range through Shomea tefillah, excluding the immediately following Selah lanu
+reprint. Both documentary cues remain; the unexplained raised mark after English
+7 is retained as `ᶜ` pending clarification. This resolution is editorial, not a
+claim that both cues prescribe identical ranges.
+
+Three normal prayer-pair cues transclude El melekh and Vayaavor; one petition cue
+uses the bounded printed-52 mercy/judgment, father/mercy and Daniel ranges. The
+preliminary pair and closing confession/petitions are printed here in full. The
+final cue supplies only canonical `prayer:kaddish/shalem` from Birnbaum via default
+settings, with first_day=false and Ten Days=true, retaining the Reader role.
+Fulfilled instructions disappear; no unrequested Makhnise rahamim conclusion is
+inserted. The opening Half Kaddish also uses the seasonal doubled leela editorial
+reading. Discretionary page-spanning English Par-/don and trans-/gression are joined;
+immutable captures retain the visible hyphens.
