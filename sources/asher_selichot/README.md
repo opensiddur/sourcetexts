@@ -11,7 +11,7 @@ to Codex, rather than attributed to the source translator or an OCR provider.
 
 ## Coverage and evidence
 
-The current documentary and expanded entrypoints cover both title pages, the first seven days, Erev Rosh Hashanah, Tzom Gedaliah, penitential days two through five, Erev Yom Kippur, the Monday fast, Thursday fast, the last Monday fast, and Tenth of Tevet through n357/n358 (printed178 upper), ending before the Fast of Esther body heading. Independent Hebrew proofreading remains pending.
+The current documentary and expanded entrypoints cover both title pages, the first seven days, Erev Rosh Hashanah, Tzom Gedaliah, penitential days two through five, Erev Yom Kippur, the Monday fast, Thursday fast, the last Monday fast, Tenth of Tevet, and Fast of Esther through n367/n368 (printed183 upper), ending before the Fast of Tammuz body heading. Independent Hebrew proofreading remains pending.
 
 The first-day documentary encoding covers both title pages (n1/n2) and the entire
 first day: Hebrew n5–n51 and English n6–n52, ending at the midpage Kaddish rubric. The second day continues from the large heading on n51/n52 through the closing instruction in the middle of n59/n60, before the third-day heading. The third day continues through n67/n68, ending before the fourth-day section heading.
@@ -847,3 +847,22 @@ repeat bounded Monday ranges; unsupplied weekday-service instructions remain,
 without adding Full Kaddish. Fifteen scan readings retain immutable first captures,
 assembled pre-OCR snapshots, frozen English OCR comparison inputs and image
 adjudication. Independent Hebrew proofreading remains pending.
+
+
+## Fast of Esther, n357–n368
+
+Complete from printed178 lower through183 upper, with native taanit-esther gate.
+Fourteen units include three independent poems: Adam bequm aleinu, Attah hael
+oseh felaot, and Bematei mispar hillinu fanekha. Bematei has eight shared stanza
+units; its seven Hebrew cues expand the complete opening. The English rubric
+mentions repetition but the English body prints no cues: expanded English retains
+one opening and receives no invented refrains. The languages cross source pages
+at different places; empty counterpart fragments must not rewind facsimile order.
+Only two El melekh/Vayaavor pairs are printed, after Adam and Attah. No pair is
+inserted after Bematei. Opening and conclusion repeat Monday ranges; unsupplied
+performance instructions remain and no Full Kaddish is added. Nineteen English
+notes retain exact anchors, including two mixed Hebrew/English notes. The gallows
+note's inconsistent feet/yards figures and apparent citations remain as printed.
+Expanded English inherits fourteen Monday conclusion notes. Immutable initial
+and assembled pre-OCR captures, frozen English OCR inputs, corrections and hashes
+are retained. Independent Hebrew proofreading remains pending.
