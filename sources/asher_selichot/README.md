@@ -615,3 +615,30 @@ on that leaf. The existing מִן כָּל wording is retained. Earlier services
 use Ten Days=false; Gedaliah and the second penitential day's expanded openings
 use Ten Days=true. Scope endings restore the caller's settings. Documentary
 verification excludes this addition while checking the original printed reading.
+
+### Third penitential day (n233–n258)
+
+The third day occupies printed 116–128, ending above the fourth-day heading on
+n257/n258. Nine independent poems use source-independent incipit URNs and files;
+אלהינו ואלהי אבותינו remains part of each introducing poem, where printed.
+The two service entrypoints share those modules and retain the top-level day
+heading above the pizmon heading.
+
+The opening repeats Ashrei through Shomea tefillah, before the following printed
+Selah lanu. Four petition cues repeat the bounded passages on printed 52 in both
+languages. Closing repetition includes Mahi umasi, then the separately printed
+Shevat hakisse; final continuation begins Makhnise rahamim. Expanded output omits
+fulfilled instructions and supplies Full Kaddish from the configured secondary
+edition, with first_day=false and Ten Days=true. The opening Half Kaddish also
+selects the documented seasonal addition.
+
+Shemaenu selihati has six shared semantic alignment units. Hebrew prints a cue
+between the lily and dove stanzas that English joins without a cue. It also ends
+with a cue to repeat the entire opening, absent in English. Hebrew therefore has
+six abbreviation choices, English four; full printed refrains remain full.
+Expansions use this edition's own opening and refrain. English printed citations
+“Gen. xxxviii. 17” and “Gen. ix. 9” remain documentary readings.
+
+`penitential-third-day*` records scan-first captures, a complete pre-OCR snapshot,
+English OCR candidates, provenance, hashes and adjudication. Independent Hebrew
+proofreading remains pending, particularly for pointing and rare vocabulary.
