@@ -947,11 +947,13 @@ editorial label from the final-page running heading, not another printed body
 heading. An explicit circumcision selector supplies its calendar gate.
 
 The English superscript1 after flesh has no corresponding note on either final
-page. Preserve it without a target or invented apparatus. The Hebrew unplaced
-fragment `מִפִּי אוֹיְבֶךָ עַד בֵּינְךָ וּבֵין` beside the small והשב cue at the
-bottom of203 is retained in the reading's `unresolved_printed_material` field;
-it is excluded from the poem body pending independent identification. This is
-an unresolved documentary limitation, not a claim that the words are absent.
+page. Preserve it without a target or invented apparatus. The Hebrew words after the small והשב cue at the bottom of203 begin the next
+stanza: `מִפִּי אוֹהֲבֶיךָ עֵד בֵּינְךָ וּבֵין`, continuing on204 with
+`יְדִידֶיךָ ·`. They belong to one verse across the page break. A user correction
+prompted image proofreading: the earlier working reading misread אוהביך/עד,
+omitted the opening and invented דם before ידידיך. The corrected working reading
+and XML restore the verse; immutable first/pre-OCR captures retain the error
+for provenance. The English translation’s “blood” remains as printed.
 The final pages contain no Torah/haftarah appendix requested by earlier rubrics.
 
 First captures and pre-OCR snapshots are immutable. English s409 OCR had already
