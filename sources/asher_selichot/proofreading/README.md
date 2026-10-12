@@ -20,6 +20,8 @@ elsewhere do not establish Hebrew correctness.
 
 | [005](image-pass-05/batch-005.json) | s26/n25–s32/n31 (printed12–15), Hebrew sides | 71 source edits; piyyut wording/pointing and poem pointing; 24-page bilingual inspection passes | s34/n33 |
 
+| [006](image-pass-06/batch-006.json) | s34/n33–s40/n39 (printed16–19), Hebrew sides | 34 replacement rules; scripture petitions, confession punctuation and verse break; 29-page excerpt passes | s42/n41 |
+
 The blind captures include English instructions on these Hebrew pages. Facing
 English pages, contents leaves and later Hebrew pages are not covered. This table
 is a coverage ledger, not a statement that the book is independently proofread.
