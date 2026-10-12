@@ -57,6 +57,13 @@ both accepted corrections and errors in the fresh captures. This is a same-model
 second pass, not independent-person proofreading. Exhaustive emphasis review and
 the exact s23 Reader-alone footnote anchor remain pending.
 
-The next English service is the second day, beginning in the lower portion of
-s53/n52 and ending in the upper portion of s61/n60. Later English pages have not
-been covered by this new image proofreading pass.
+[English batch002](english-pass-02/batch-002.json) covers the second day,
+s53/n52 lower–s61/n60 upper: ten corrections, ten schema-valid second-day XML
+files, seven printed English footnotes, and both documentary/expanded service PDFs
+verified with direction, alignment, contents, bookmarks and broken controls.
+The six pizmon stanza starts align at 0.0 pt in both views. This remains a
+same-model image rereading, not independent-person proofreading.
+
+The next English service is the third day, s61/n60 lower–s69/n68 upper; printed
+pages31 and32 are swapped in Archive order and must follow the image-verified
+printed sequence. Later English pages have not yet been completed by this pass.
