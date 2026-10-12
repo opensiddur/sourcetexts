@@ -71,5 +71,10 @@ punctuation of the closing petition. Ten XML files and both PDFs pass the source
 notes, alignment, direction, contents and boundary checks, including broken controls.
 The numeral-inclusive audit of batches001–002 found no additional corrections.
 
-The next English service is the fourth day, s69/n68 lower–s77/n76 upper.
+[English batch004](english-pass-04/batch-004.json) covers the fourth day,
+s69/n68 lower–s77/n76 upper: six punctuation corrections, ten schema-valid XML
+files, eight footnotes, and both PDFs verified. One damaged punctuation mark after
+“unintelligible” remains uncertain; the existing colon is retained.
+
+The next English service is the fifth day, s77/n76 lower–s85/n84 upper.
 Later English services remain pending in this same-model image proofreading pass.
