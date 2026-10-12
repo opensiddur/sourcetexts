@@ -37,6 +37,8 @@ elsewhere do not establish Hebrew correctness.
 
 | [015](image-pass-15/batch-015.json) | s184/n183 lower–s208/n207 (printed91 lower–103), Hebrew Tzom Gedaliah |107 replacement rules;16 modules;26-page documentary and53-page expanded service PDFs pass alignment, direction and broken controls; rare words and fine pointing pending | second penitential day |
 
+| [016](image-pass-16/batch-016.json) | s210/n209–s232/n231 (printed104–115), Hebrew second penitential day |92 replacements;10 modules; documentary and expanded service PDFs pass alignment, direction and broken controls; rare words and fine pointing pending | third penitential day |
+
 The blind captures include English instructions on these Hebrew pages. Facing
 English pages, contents leaves and later Hebrew pages are not covered. This table
 is a coverage ledger, not a statement that the book is independently proofread.
