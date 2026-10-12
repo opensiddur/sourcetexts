@@ -1,0 +1,44 @@
+{
+  "batch": "011",
+  "scope": [
+    "s76/n75 lower",
+    "s78/n77",
+    "s80/n79",
+    "s82/n81",
+    "s84/n83 upper"
+  ],
+  "method": "Image-only frozen captures compared with existing reading, then enlarged native crop adjudication. Same-model second pass with prior exposure; independent-person review pending.",
+  "readings": {
+    "image-pass-11/s76-blind.json": "df98e56c4ab83ba2948787ecdeb3c7b1c1d5a7f5d312d1155b3fd2eb78bfb2b4",
+    "image-pass-11/s78-blind.json": "730a65902aa9789ef46ca287ba2988e515802a2b5c756cee21720ea6d937b559",
+    "image-pass-11/s80-blind.json": "767cd9c538fa6d90f672eb2809d310f5a4d690228b68c681abb96ccae45cbef5",
+    "image-pass-11/s82-blind.json": "44ca5bed1bc7cdb94cef1c5cd65b7216b23b5b87a3dedca0d511e359a43c45f8",
+    "image-pass-11/s84-blind.json": "aaf72447f3fd97da6ed8ce5e2bee643e7e0e07b30227fa9648e172269c4a002c"
+  },
+  "image_sha256": {
+    "s76": "aff1b294e44ceaf9d59f50ba4b6483ea3bfff09d1654204e8bb512222db1f737",
+    "s78": "453daee6dd5af1537fda41ad1a3cd6d7cacb0448f95889d587561e332a6d90e2",
+    "s80": "1668c8bfa62732905599038eac75616be38123d3553cc1b25e37d94b87e70630",
+    "s82": "b45043007ba14cb481f5c9f088826bd92355506afe95a41cf2c200ccc4122a49",
+    "s84": "bc78c67332c8a34064a00a633ecef197322c8072b587171a03dbf6d3f78a7202"
+  },
+  "accepted_replacement_rules": 82,
+  "status": "Fifth-day Hebrew comparison and adjudication complete with uncertainties recorded; source/XML and both rendered views pass.",
+  "next_hebrew_scan": "s84/n83 lower: sixth day.",
+  "verification": {
+    "xml": "Four changed modules schema-valid; fifth-day documentary/source/expansion checks pass.",
+    "documentary": {
+      "pdf": "63 pages; contents generated; day bookmarks above pizmons; first-day prayers [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]; first pizmon [13.55, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]; second pizmon [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]; third pizmon [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]; later pizmons {'fourth': [0.0, 0.0, 0.0, 0.0, 0.0], 'fifth': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}; footnotes and expansion boundaries checked; controls=True",
+      "direction": "0 of 2216 Hebrew runs are set left to right\ncontrol: 2158 of 2216 flagged when every run is reversed",
+      "visual_inspection": "59,61,62"
+    },
+    "expanded": {
+      "pdf": "158 pages; contents generated; day bookmarks above pizmons; first-day prayers [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]; first pizmon [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]; second pizmon [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]; third pizmon [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]; later pizmons {'fourth': [0.0, 0.0, 0.0, 0.0, 0.0], 'fifth': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}; footnotes and expansion boundaries checked; controls=True",
+      "direction": "0 of 6579 Hebrew runs are set left to right\ncontrol: 6368 of 6579 flagged when every run is reversed",
+      "visual_inspection": "138,139,141,142,143,144,156,157"
+    },
+    "tests": "Last full post-merge suite: 3557 tests,12 skips,no failures. No executable code changes at this checkpoint. Fourth-day pushed CI tests, CodeQL, coverage and project validation all passed.",
+    "artifacts": "output/asher_selichot/proofreading/batch-011",
+    "limitations": "Same-model pass with prior exposure; independent-person Hebrew and facing-English review pending. Fine marks unresolved in adjudication. Previously recorded mixed-note paragraph-separation issue remains. Whole-book PDFs remain earlier snapshots."
+  }
+}

@@ -27,6 +27,8 @@ elsewhere do not establish Hebrew correctness.
 
 | [010](image-pass-10/batch-010.json) | s68/n67 lower–s76/n75 upper (printed 33–37), Hebrew fourth day | 92 replacement rules; four modules; 56-page documentary and 130-page expanded PDFs pass alignment, direction and broken controls | s76/n75 lower: fifth day |
 
+| [011](image-pass-11/batch-011.json) | s76/n75 lower–s84/n83 upper (printed 37–41), Hebrew fifth day | 82 replacement rules; four modules; 63-page documentary and 158-page expanded PDFs pass alignment, direction and broken controls | sixth day |
+
 The blind captures include English instructions on these Hebrew pages. Facing
 English pages, contents leaves and later Hebrew pages are not covered. This table
 is a coverage ledger, not a statement that the book is independently proofread.
