@@ -1,0 +1,38 @@
+{
+  "batch": "008",
+  "scope": [
+    "s52/n51 lower",
+    "s54/n53",
+    "s56/n55",
+    "s58/n57",
+    "s60/n59 upper"
+  ],
+  "method": "Image-only captures frozen before existing source comparison, then native crop adjudication. Same-model second pass with prior exposure, not independent-person proofreading.",
+  "readings": {
+    "image-pass-07/s52-blind.json": "3088a64343d17a4f1a8d01a62e809061dfa25fdf47c16194e43b3a90725f546b",
+    "image-pass-08/s54-blind.json": "5d5f7efefc6f8247657580a6636e17c3063aa1b169665a3a5a322a9e44cabe8a",
+    "image-pass-08/s56-blind.json": "be80209b7494375fe67020f4e697210e0830efe05ccf9689ced240f69324ee12",
+    "image-pass-08/s58-blind.json": "fc74a008d507b70deee3fc00eefa886f47f1a2c02cc11f36d6de0f63299fe2bf",
+    "image-pass-08/s60-blind.json": "21b9bb9c09797c79d75f3440dee25e3877e2ff2e568e06e73205427a47f36c14"
+  },
+  "image_sha256": {
+    "s52": "f67d659d12704917d7e513ae9038abb1e44ac96b6534ae488abb2d45a8d8164c",
+    "s54": "d8fcdaab85164c68afc03ed668e4f3ef4294c4933175d89d6921c41968ade751",
+    "s56": "dba744c0f70decda627b2b2a44d2d7d07b2846f3b18682a16e7da145c762c7e7",
+    "s58": "25f8824dea915e071a4fce94e3109c9eca9d9ce711b351cf91f4719f0b8c3044",
+    "s60": "81078d9585195b87ae9575fb800f5eac12096eb8bdbecb4ac378052348fc22ea"
+  },
+  "accepted_replacement_rules": 75,
+  "status": "Second-day Hebrew comparison complete with fine-mark uncertainty recorded; source/XML and both rendered views pass.",
+  "next_hebrew_scan": "s60/n59 lower: third day; frozen captures underway.",
+  "verification": {
+    "xml": "Four changed modules schema-valid; second-day documentary/source/expansion checks pass. All398 files passed full verification at checkpoint007.",
+    "documentary_pdf": "43 pages through second day; first prayers six zero-delta anchors; first pizmon maximum13.55pt; second pizmon six zero-delta anchors; contents, day hierarchy, notes, boundaries and broken controls pass.",
+    "expanded_pdf": "70 pages through second day; first prayers, first pizmon and second pizmon all zero-delta anchors; expansions, contents, day hierarchy, notes, boundaries and broken controls pass.",
+    "direction": "Documentary0/1466 reversed (control1431/1466); expanded0/2739 (control2663/2739).",
+    "visual_inspection": "Documentary37,39,41,42; expanded53,54,68: verse layout, stanza alignment, English footnotes, transcluded prayers and retained performance instructions.",
+    "tests": "Last full post-merge suite3557 tests,12 skips,no failures. This checkpoint changes source data and two declarative PDF anchor strings only.",
+    "artifacts": "Untracked output/asher_selichot/proofreading/batch-008/",
+    "limitations": "Same-model pass; independent-person Hebrew and facing-English review pending. Fine-point uncertainties retained in adjudication. Prior mixed-note paragraph-separation issue remains open. Whole-book PDFs remain earlier snapshots."
+  }
+}

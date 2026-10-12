@@ -21,6 +21,8 @@ elsewhere do not establish Hebrew correctness.
 | [006](image-pass-06/batch-006.json) | s34/n33–s40/n39 (printed16–19), Hebrew sides | 34 replacement rules; scripture petitions, confession punctuation and verse break; 29-page excerpt passes | s42/n41 |
 | [007](image-pass-07/batch-007.json) | s42/n41–s52/n51 upper (printed20–25), Hebrew first-day conclusion | 46 replacement rules; nine modules, verse stops and Aramaic corrections; full first-day PDFs checked below | s52/n51 lower: second day |
 
+| [008](image-pass-08/batch-008.json) | s52/n51 lower–s60/n59 upper (printed25–29), Hebrew second day | 75 replacement rules; four modules; 43-page documentary and70-page expanded PDFs pass alignment, direction and broken controls | s60/n59 lower: third day |
+
 The blind captures include English instructions on these Hebrew pages. Facing
 English pages, contents leaves and later Hebrew pages are not covered. This table
 is a coverage ledger, not a statement that the book is independently proofread.
