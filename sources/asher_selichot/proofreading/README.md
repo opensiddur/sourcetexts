@@ -33,6 +33,8 @@ elsewhere do not establish Hebrew correctness.
 
 | [013](image-pass-13/batch-013.json) | s92/n91 lower–s100/n99 upper (printed 45–49), Hebrew seventh day | 114 replacement rules; four modules; 77-page documentary and 218-page expanded PDFs pass alignment, direction and broken controls | Erev Rosh Hashanah |
 
+| [014](image-pass-14/batch-014.json) | s100/n99 lower–s184/n183 upper (printed49–91), Hebrew Erev Rosh Hashanah | 393 replacement rules plus native and boundary repairs; 22 modules; 140-page documentary and 303-page expanded PDFs pass alignment, direction and broken controls; fine pointing pending | Tzom Gedaliah |
+
 The blind captures include English instructions on these Hebrew pages. Facing
 English pages, contents leaves and later Hebrew pages are not covered. This table
 is a coverage ledger, not a statement that the book is independently proofread.
