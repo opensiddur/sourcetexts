@@ -81,5 +81,10 @@ s77/n76 lower–s85/n84 upper: five wording/punctuation corrections, ten XML fil
 validated, eight notes and both PDFs checked with eight aligned stanza starts.
 The damaged final letter of “Noachic” remains uncertain.
 
-The next English service is the sixth day, s85/n84 lower–s93/n92 upper.
+[English batch006](english-pass-06/batch-006.json) covers the sixth day,
+s85/n84 lower–s93/n92 upper. Seven corrections restore printed wording/punctuation and remove the unprinted English cue after “O God of the faithful.” Its empty Hebrew cue already represented no print; replacing that cue pair with empty full-text segments also removes unsupported expansion in both languages.
+Ten XML files validate; both PDFs pass stanza alignment, footnote occurrence,
+direction, contents, bookmarks and boundary checks with deliberately broken controls.
+
+Next: Seventh English s93/n92 lower–s101/n100 upper.
 Later English services remain pending in this same-model image proofreading pass.
