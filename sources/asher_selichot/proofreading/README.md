@@ -47,6 +47,8 @@ elsewhere do not establish Hebrew correctness.
 
 | [020](image-pass-20/batch-020.json) | s308/n307 lower–s320/n319 upper (printed 153 lower–159 upper), Hebrew Erev Yom Kippur | 74 replacement operations; 7 XML files; documentary and expanded service PDFs pass alignment, direction and broken controls; rare words and pointing pending | Monday / Second Fast |
 
+| [021](image-pass-21/batch-021.json) | s320/n319 lower–s336/n335 upper (printed 159 lower–167 upper), Hebrew Monday / Second Fast | 81 replacement operations; 5 XML files; documentary and expanded PDFs pass alignment, notes, direction and broken controls; rare words and pointing pending | Thursday / Fifth Fast |
+
 The blind captures include English instructions on these Hebrew pages. Facing
 English pages, contents leaves and later Hebrew pages are not covered. This table
 is a coverage ledger, not a statement that the book is independently proofread.
