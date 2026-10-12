@@ -76,5 +76,10 @@ s69/n68 lower–s77/n76 upper: six punctuation corrections, ten schema-valid XML
 files, eight footnotes, and both PDFs verified. One damaged punctuation mark after
 “unintelligible” remains uncertain; the existing colon is retained.
 
-The next English service is the fifth day, s77/n76 lower–s85/n84 upper.
+[English batch005](english-pass-05/batch-005.json) covers the fifth day,
+s77/n76 lower–s85/n84 upper: five wording/punctuation corrections, ten XML files
+validated, eight notes and both PDFs checked with eight aligned stanza starts.
+The damaged final letter of “Noachic” remains uncertain.
+
+The next English service is the sixth day, s85/n84 lower–s93/n92 upper.
 Later English services remain pending in this same-model image proofreading pass.
