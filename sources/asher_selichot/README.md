@@ -965,10 +965,12 @@ pending. Comparison findings and adjudication are committed alongside readings.
 
 ## Transcription proofreading pass
 
-[Proofreading coverage](proofreading/README.md) records the fresh image-only second
-pass, frozen captures, comparison hashes and adjudications. Batches001–003 cover
-the Hebrew title s2 and opening s6/s8/s10/s12/s14, with sixteen corrections.
-The next Hebrew page is s16/n15. This is a same-model
-second reading; independent-person Hebrew proofreading remains pending.
+[Proofreading coverage](proofreading/README.md) records the image-only second
+pass, frozen captures, comparison hashes and adjudications. Hebrew batches001–028
+reach the final Hebrew page, s410/n409, with rare words and comprehensive pointing
+still pending. English batch001 covers the English title and complete first day,
+s3/n2 and s7/n6–s53/n52 upper; subsequent English services are pending.
+These are same-model second readings with prior exposure, not independent-person
+proofreading. See each ledger for exact coverage and unresolved findings.
 
 Tammuz image proofreading corrects the reusable poem identities to `etonen_lekha_yotser_ruhot` (אתאונן לך יוצר רוחות) and `amerer_bivekhi_mippenei_yad_shalehah` (אמרר בבכי מפני יד שלחה). Historical reading IDs and immutable capture filenames remain unchanged for evidence traceability; current XML filenames and publication/alignment URNs use the corrected incipits.

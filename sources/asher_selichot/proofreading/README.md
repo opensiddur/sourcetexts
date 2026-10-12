@@ -45,3 +45,18 @@ elsewhere do not establish Hebrew correctness.
 The blind captures include English instructions on these Hebrew pages. The service-by-service Hebrew second image pass now reaches the final Hebrew page, n409. Facing
 English pages and contents leaves are not covered by this pass. This table
 is a coverage ledger, not a statement that the book is independently proofread.
+
+## English image proofreading
+
+[English batch001](english-pass-01/batch-001.json) rereads the English title
+s3/n2 and first day s7/n6–s53/n52 upper from the images, before opening the
+same-service existing readings, XML or OCR in this run. It covers body text,
+rubrics and footnotes; printed spellings and apparent edition errors are retained.
+The unchanged fresh captures, pre-edit snapshot and separate adjudication record
+both accepted corrections and errors in the fresh captures. This is a same-model
+second pass, not independent-person proofreading. Exhaustive emphasis review and
+the exact s23 Reader-alone footnote anchor remain pending.
+
+The next English service is the second day, beginning in the lower portion of
+s53/n52 and ending in the upper portion of s61/n60. Later English pages have not
+been covered by this new image proofreading pass.
