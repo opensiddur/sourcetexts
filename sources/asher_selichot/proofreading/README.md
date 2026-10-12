@@ -43,6 +43,8 @@ elsewhere do not establish Hebrew correctness.
 
 | [018](image-pass-18/batch-018.json) | s258/n257 lower–s282/n281 upper (printed128 lower–140 upper), Hebrew fourth penitential day |120 replacements;12 modules; documentary and expanded service PDFs pass alignment, direction and broken controls; rare words and fine pointing pending | fifth penitential day |
 
+| [019](image-pass-19/batch-019.json) | s282/n281 lower–s308/n307 upper (printed140 lower–153 upper), Hebrew fifth penitential day |177 replacement rules;13 modules; documentary and expanded service PDFs pass alignment, direction and broken controls; rare words and fine pointing pending | Erev Yom Kippur |
+
 The blind captures include English instructions on these Hebrew pages. Facing
 English pages, contents leaves and later Hebrew pages are not covered. This table
 is a coverage ledger, not a statement that the book is independently proofread.
