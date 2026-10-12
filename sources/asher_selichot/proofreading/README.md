@@ -17,10 +17,9 @@ elsewhere do not establish Hebrew correctness.
 | [002](image-pass-02/batch-002.json) | s10/n9 and s12/n11 (printed4/5), including mixed-language footnote | Eight source corrections; one rejected blind maqqef | s14/n13 |
 | [003](image-pass-03/batch-003.json) | s14/n13 (printed6) | Two spelling corrections: ישב and בזמירות | s16/n15 |
 | [004](image-pass-04/batch-004.json) | s16/n15–s24/n23 (printed7–11), Hebrew sides | 96 adjudicated comparison hunks; plural petitions, piyyutim, prayer pointing/stops; uncertain fine pointing recorded | s26/n25 |
-
 | [005](image-pass-05/batch-005.json) | s26/n25–s32/n31 (printed12–15), Hebrew sides | 71 source edits; piyyut wording/pointing and poem pointing; 24-page bilingual inspection passes | s34/n33 |
-
 | [006](image-pass-06/batch-006.json) | s34/n33–s40/n39 (printed16–19), Hebrew sides | 34 replacement rules; scripture petitions, confession punctuation and verse break; 29-page excerpt passes | s42/n41 |
+| [007](image-pass-07/batch-007.json) | s42/n41–s52/n51 upper (printed20–25), Hebrew first-day conclusion | 46 replacement rules; nine modules, verse stops and Aramaic corrections; full first-day PDFs checked below | s52/n51 lower: second day |
 
 The blind captures include English instructions on these Hebrew pages. Facing
 English pages, contents leaves and later Hebrew pages are not covered. This table
