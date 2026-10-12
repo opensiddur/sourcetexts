@@ -970,3 +970,5 @@ pass, frozen captures, comparison hashes and adjudications. Batches001–003 cov
 the Hebrew title s2 and opening s6/s8/s10/s12/s14, with sixteen corrections.
 The next Hebrew page is s16/n15. This is a same-model
 second reading; independent-person Hebrew proofreading remains pending.
+
+Tammuz image proofreading corrects the reusable poem identities to `etonen_lekha_yotser_ruhot` (אתאונן לך יוצר רוחות) and `amerer_bivekhi_mippenei_yad_shalehah` (אמרר בבכי מפני יד שלחה). Historical reading IDs and immutable capture filenames remain unchanged for evidence traceability; current XML filenames and publication/alignment URNs use the corrected incipits.
