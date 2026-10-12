@@ -59,6 +59,8 @@ elsewhere do not establish Hebrew correctness.
 
 | [026](image-pass-26/batch-026.json) | s368/n367 lower–s376/n375 (printed 183 lower–187), Hebrew Seventeenth of Tammuz | 53 replacement operations; 8 XML files; documentary and expanded PDFs pass alignment, notes, direction and broken controls; rare words and pointing pending | Yom Kippur Katan |
 
+| [027](image-pass-27/batch-027.json) | s378/n377–s408/n407 upper (printed 188–203 upper), Hebrew Yom Kippur Katan | 92 replacement operations; 13 XML files; documentary and expanded PDFs pass alignment, notes, direction and broken controls; rare words and pointing pending | Circumcision |
+
 The blind captures include English instructions on these Hebrew pages. Facing
 English pages, contents leaves and later Hebrew pages are not covered. This table
 is a coverage ledger, not a statement that the book is independently proofread.
