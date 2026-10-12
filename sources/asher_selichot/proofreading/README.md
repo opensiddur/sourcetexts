@@ -53,6 +53,8 @@ elsewhere do not establish Hebrew correctness.
 
 | [023](image-pass-23/batch-023.json) | s344/n343–s350/n349 upper (printed 171–174 upper), Hebrew Last Monday / Last of the Three Fasts | 35 replacement operations; 6 XML files; documentary and expanded PDFs pass alignment, notes, direction and broken controls; rare words and pointing pending | Tenth of Tevet |
 
+| [024](image-pass-24/batch-024.json) | s350/n349 lower–s358/n357 upper (printed 174 lower–178 upper), Hebrew Tenth of Tevet | 40 replacement operations; 5 XML files; documentary and expanded PDFs pass alignment, notes, direction and broken controls; rare words and pointing pending | Fast of Esther |
+
 The blind captures include English instructions on these Hebrew pages. Facing
 English pages, contents leaves and later Hebrew pages are not covered. This table
 is a coverage ledger, not a statement that the book is independently proofread.
