@@ -35,6 +35,8 @@ elsewhere do not establish Hebrew correctness.
 
 | [014](image-pass-14/batch-014.json) | s100/n99 lower–s184/n183 upper (printed49–91), Hebrew Erev Rosh Hashanah | 393 replacement rules plus native and boundary repairs; 22 modules; 140-page documentary and 303-page expanded PDFs pass alignment, direction and broken controls; fine pointing pending | Tzom Gedaliah |
 
+| [015](image-pass-15/batch-015.json) | s184/n183 lower–s208/n207 (printed91 lower–103), Hebrew Tzom Gedaliah |107 replacement rules;16 modules;26-page documentary and53-page expanded service PDFs pass alignment, direction and broken controls; rare words and fine pointing pending | second penitential day |
+
 The blind captures include English instructions on these Hebrew pages. Facing
 English pages, contents leaves and later Hebrew pages are not covered. This table
 is a coverage ledger, not a statement that the book is independently proofread.
