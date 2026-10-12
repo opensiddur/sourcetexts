@@ -1,0 +1,49 @@
+{
+  "batch": "002",
+  "scope": [
+    "s10/n9, printed 4",
+    "s12/n11, printed 5, including mixed-language footnote"
+  ],
+  "method": "Fresh image-only second pass frozen before comparison; not independent-person review",
+  "readings": {
+    "s12-blind.json": "b3570ae786fd848fe451e408645fe3b39d7712a7998335c0fe18d8a6466e1e69",
+    "s10-blind.json": "1c5d69a795d55cf220191bb0f44ea1a45c9adac370bc45ab035ce53655932809"
+  },
+  "status": "Adjudicated, corrected XML validated and reverse-verified; inspection PDF and broken controls pass.",
+  "accepted_encoding_corrections": 8,
+  "next_hebrew_scan": "s14/n13",
+  "image_sha256": {
+    "s10": "cbde450c1373e10161b0dd5c793dc14d669d364a359bf3bcc810ca5b079cebf8",
+    "s12": "90153c9c336e665c2ad7c0a4d3ece0517f814095d7cea353338a07233518e116"
+  },
+  "verification": {
+    "xml": "Two changed Hebrew modules validate; 96 bilingual continuation units plus six opening streams/title comparisons pass.",
+    "tests": "106 focused Asher unittest cases pass.",
+    "inspection_pdf": "output/asher_selichot/proofreading/batch-002/inspection.pdf; 12 pages, 3 LuaLaTeX passes; isolated reference database.",
+    "anchor_deltas_points": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "hebrew_direction": {
+      "reversed": 0,
+      "runs": 199,
+      "reversed_control_flagged": 197
+    },
+    "latin_apparatus_runs": 5,
+    "controls_rejected": [
+      "Latin Psalm citation direction",
+      "Latin note direction",
+      "English alignment",
+      "service boundary",
+      "stranded punctuation",
+      "colon substituted for sof pasuq",
+      "deleted corrected body line",
+      "deleted footnote",
+      "duplicated footnote"
+    ],
+    "visual_inspection": "Page11 body and bilingual mixed-language apparatus inspected; page12 confirms metadata follows the intended printed5 excerpt boundary.",
+    "limitations": "Facing English not independently proofread. Full-book PDFs remain older snapshots. Same-model second image pass, not independent-person review."
+  }
+}

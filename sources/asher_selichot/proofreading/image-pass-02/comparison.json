@@ -1,0 +1,79 @@
+{
+  "source_sha256": "a1af4667f03a870341dd9421ea1f4ad641f9486649fc4f8a14fe84fc92f537e8",
+  "comparison": "NFD Hebrew word and punctuation tokens; ignores wrapping/spaces, compares maqqef and stops. English rubric checked verbatim separately.",
+  "pages": {
+    "s10": {
+      "body": [
+        {
+          "operation": "replace",
+          "encoding": "וּמַה־נֹּאמַר",
+          "blind": "מַה־נֹּאמַר",
+          "left_context": "בֹּשֶׁת הַפָּנִים׃ מַה־נִּתְאוֹנֵן",
+          "right_context": "מַה־נְּדַבֵּר וּמַה־נִּצְטַדָּק׃ נַחְפְּשָׂה"
+        },
+        {
+          "operation": "replace",
+          "encoding": "כָּל־בָּשָׂר",
+          "blind": "כָל־בָּשָׂר",
+          "left_context": "כָּל־בָּשָׂר יָבֹאוּ׃ יָבֹא",
+          "right_context": "לְהִשְׁתַּחֲוֹת לְפָנֶיךָ יְיָ׃"
+        },
+        {
+          "operation": "replace",
+          "encoding": "חֲצֵרוֹתָיו",
+          "blind": "חֲצֵרֹתָיו",
+          "left_context": "בֹּאוּ שְׁעָרָיו בְּתוֹדָה",
+          "right_context": "בִּתְהִלָּה · הוֹדוּ־לוֹ"
+        },
+        {
+          "operation": "replace",
+          "encoding": "בָרְכוּ",
+          "blind": "בָּרְכוּ",
+          "left_context": "קָדְשְׁךָ בְּיִרְאָתֶךָ׃ הִנֵּה",
+          "right_context": "אֶת־יְיָ כָּל־עַבְדֵי יְיָ"
+        },
+        {
+          "operation": "replace",
+          "encoding": "בְּבֵית יְיָ",
+          "blind": "בְּבֵית־יְיָ",
+          "left_context": "כָּל־עַבְדֵי יְיָ הָעֹמְדִים",
+          "right_context": "בַּלֵּילוֹת׃ שְׂאוּ־יְדֵכֶם קֹדֶשׁ"
+        },
+        {
+          "operation": "delete",
+          "encoding": "·",
+          "blind": "",
+          "left_context": "בַּלֵּילוֹת׃ שְׂאוּ־יְדֵכֶם קֹדֶשׁ",
+          "right_context": "וּבָרְכוּ אֶת־יְיָ׃ רוֹמְמוּ"
+        },
+        {
+          "operation": "replace",
+          "encoding": "מִפָּנָיו",
+          "blind": "מִלְּפָנָיו",
+          "left_context": "בְּהַדְרַת קֹדֶשׁ חִילוּ",
+          "right_context": "כָּל־הָאָרֶץ׃ נִשְׁתַּחֲוֶה אֶל"
+        }
+      ]
+    },
+    "s12": {
+      "body": [
+        {
+          "operation": "insert",
+          "encoding": "",
+          "blind": "·",
+          "left_context": "יְמַלֵּל גְּבוּרוֹת יְיָ",
+          "right_context": "יַשְׁמִיעַ כָּל־תְּהִלָּתוֹ׃ לְךָ"
+        }
+      ],
+      "footnote": [
+        {
+          "operation": "replace",
+          "encoding": "יוֹדְעֵי",
+          "blind": "יֹדְעֵי",
+          "left_context": "הַשָּׁנָה אַשְׁרֵי הָעָם",
+          "right_context": "תְרוּעָה · יְיָ"
+        }
+      ]
+    }
+  }
+}
