@@ -15,6 +15,7 @@ elsewhere do not establish Hebrew correctness.
 |---|---|---|---|
 | [001](image-pass-01/batch-001.json) | Title s2/n1; opening s6/n5 and s8/n7 (printed3) | Six source corrections; one uncertain title ink mark; two rejected differences | s10/n9 |
 | [002](image-pass-02/batch-002.json) | s10/n9 and s12/n11 (printed4/5), including mixed-language footnote | Eight source corrections; one rejected blind maqqef | s14/n13 |
+| [003](image-pass-03/batch-003.json) | s14/n13 (printed6) | Two spelling corrections: ישב and בזמירות | s16/n15 |
 
 The blind captures include English instructions on these Hebrew pages. Facing
 English pages, contents leaves and later Hebrew pages are not covered. This table

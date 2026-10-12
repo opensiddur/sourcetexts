@@ -966,7 +966,7 @@ pending. Comparison findings and adjudication are committed alongside readings.
 ## Transcription proofreading pass
 
 [Proofreading coverage](proofreading/README.md) records the fresh image-only second
-pass, frozen captures, comparison hashes and adjudications. Batches001–002 cover
-the Hebrew title s2 and opening s6/s8/s10/s12, with fourteen corrections.
-The next Hebrew page is s14/n13. This is a same-model
+pass, frozen captures, comparison hashes and adjudications. Batches001–003 cover
+the Hebrew title s2 and opening s6/s8/s10/s12/s14, with sixteen corrections.
+The next Hebrew page is s16/n15. This is a same-model
 second reading; independent-person Hebrew proofreading remains pending.
