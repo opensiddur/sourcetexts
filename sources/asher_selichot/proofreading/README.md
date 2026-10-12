@@ -91,7 +91,18 @@ s93/n92 lower–s101/n100 upper. Two missing commas are restored in printed rubr
 Ten XML files validate; both PDFs pass stanza alignment, footnote occurrence,
 direction, contents, bookmarks and boundary checks with deliberately broken controls.
 
-Next: Erev Rosh Hashanah English s101/n100 lower–s185/n184 upper.
-Later English services remain pending in this same-model image proofreading pass.
+[English batch008](english-pass-08/batch-008.json) covers Erev Rosh Hashanah,
+s101/n100 lower–s185/n184 upper, printed 49–91. All 43 fresh page captures were
+frozen before comparison. Fifty token corrections restore printed wording,
+punctuation and citations, including “according as thy word,” “favorably,”
+“let nothing fall,” and “byeword.” Enlarged crops reject fresh misreadings of
+“they seek,” “Forgive them,” “an acceptable,” and “secresy”; immutable captures
+retain those mistakes with separate adjudication. Forty-four XML files validate;
+all 113 service units and notes reverse-compare, and all 12 bilingual petition
+expansions pass. Both service PDFs pass alignment, apparatus, direction, contents,
+bookmarks and boundary checks with deliberately broken controls. Tamid markers
+1–26 remain unresolved without invented references: no apparatus accompanies
+them on these source pages.
 
-Erev Rosh Hashanah fresh-image reading is in progress: [English batch008 progress](english-pass-08/progress.json) freezes15 English pages, s101/n100 lower through s129/n128 (printed63). Comparison, adjudication and service PDF verification remain pending for this service. Next fresh image: s131/n130. These provisional captures do not extend the completed English coverage beyond the seventh day.
+Next: Tzom Gedaliah English s185/n184 lower–s209/n208.
+Later English services remain pending in this same-model image proofreading pass.
