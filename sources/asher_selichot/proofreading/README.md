@@ -1,0 +1,20 @@
+# Asher transcription proofreading
+
+This pass starts with a fresh image transcription, frozen before opening the
+working reading or generated XML for that batch. Compare afterward and adjudicate
+against native scan crops. Keep the blind capture unchanged, including its own
+mistakes, and record both accepted and rejected differences. Image and reading
+hashes identify the inputs.
+
+This is a second image pass by the same model/reader, not a separate independent
+proofreader. Prior conversation exposure is disclosed in each batch manifest.
+Independent-person Hebrew proofreading remains pending. English OCR comparisons
+elsewhere do not establish Hebrew correctness.
+
+| Batch | Hebrew scope | Result | Next |
+|---|---|---|---|
+| [001](image-pass-01/batch-001.json) | Title s2/n1; opening s6/n5 and s8/n7 (printed3) | Six source corrections; one uncertain title ink mark; two rejected differences | s10/n9 |
+
+The blind captures include English instructions on these Hebrew pages. Facing
+English pages, contents leaves and later Hebrew pages are not covered. This table
+is a coverage ledger, not a statement that the book is independently proofread.

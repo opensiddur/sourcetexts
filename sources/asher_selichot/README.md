@@ -961,3 +961,11 @@ been exposed during the monthly-service comparison; this incidental exposure is
 recorded. s411 was image-read before its OCR comparison. Native Hebrew rereading
 by the same agent is not independent proofreading; independent proof remains
 pending. Comparison findings and adjudication are committed alongside readings.
+
+
+## Transcription proofreading pass
+
+[Proofreading coverage](proofreading/README.md) records the fresh image-only second
+pass, frozen captures, comparison hashes and adjudications. The first batch covers
+the Hebrew title s2 and opening s6/s8, with six corrections. This is a same-model
+second reading; independent-person Hebrew proofreading remains pending.
