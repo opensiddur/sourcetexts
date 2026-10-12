@@ -1,0 +1,62 @@
+{
+  "batch": "028",
+  "scope": "Circumcision Hebrew s408/n407 lower–s410/n409, printed203 lower–204;2 pages.",
+  "method": "Same-model second image pass with prior exposure; overlapping native-band captures frozen before same-page existing readings/XML. Primarily consonant-first; not independent-person proofreading.",
+  "readings": {
+    "s408-blind.json": "d1595a57c3254bf6fbb434f3b670dd7666fc1e59e0b33d67d1c72bdab33204a1",
+    "s410-blind.json": "de463a6e263a5041674d0c095262556d2c8e6ffcc218cea4dd785e0be5764e43"
+  },
+  "image_sha256": {
+    "s408": "268ebb9ec375ce36a6c11be4145eddbf3d09f15ef2dcc2209a566ee9ae5a0e88",
+    "s410": "1b080d84898ea7b51fb4c85cad9bb9ae2947e0e27dd7a3b358bfe2ea227843e3"
+  },
+  "comparison_sha256": "96a21f6639d3f30d8587ba753b57f90186ee5bc1da1a90546649fe2a8caad740",
+  "adjudication_sha256": "b4f2d175d5b8774e9b404b709020982f35ced4276e896a6f5f995ff033dc8731",
+  "accepted_replacement_rules": 5,
+  "confirmed_without_change": 0,
+  "changed_xml": [
+    "project/asher_selichot_he_1912/zekhor_berit_avraham_circumcision_recension.xml"
+  ],
+  "status": "Checkpoint complete with uncertainties recorded.",
+  "verification": {
+    "xml": "One XML file validates; three source-ordered bilingual units pass. Both eight-page PDFs preserve the cross-page verse, alternating Hebrew refrains, printed English omission and the unresolved English superscript, and exclude the preceding monthly service. All five stanza starts align at 0.0 pt. Direction and deliberately broken marker, stanza and restored-verse controls pass. All 154 shared scan and service assembly tests pass. The whole-book verification passes all 398 XML files and all service documentary comparisons and expansion boundaries. The full suite passes: 3,557 tests, with 12 skips (732.140 seconds). No generic executable logic changed.",
+    "documentary": {
+      "pdf": "Circumcision: five stanza baseline deltas [0.0, 0.0, 0.0, 0.0, 0.0]; alternating Hebrew refrains, English omission, unresolved marker and final boundary checked\nCircumcision: five stanza baseline deltas [0.0, 0.0, 0.0, 0.0, 0.0]; alternating Hebrew refrains, English omission, unresolved marker and final boundary checked\nCircumcision: missing-marker, shifted-stanza and missing-restored-verse controls rejected\n8 pages; contents and final top-level section bookmark checked; controls=True",
+      "direction": "0 of 41 Hebrew runs are set left to right\ncontrol: 38 of 41 flagged when every run is reversed",
+      "pdf_sha256": "9d65c9658a73f8c10df1be839bb898a01f2447430cb5b168e19d17331e37816c",
+      "visual_pages": [
+        7,
+        8
+      ]
+    },
+    "expanded": {
+      "pdf": "Circumcision: five stanza baseline deltas [0.0, 0.0, 0.0, 0.0, 0.0]; alternating Hebrew refrains, English omission, unresolved marker and final boundary checked\nCircumcision: five stanza baseline deltas [0.0, 0.0, 0.0, 0.0, 0.0]; alternating Hebrew refrains, English omission, unresolved marker and final boundary checked\nCircumcision: missing-marker, shifted-stanza and missing-restored-verse controls rejected\n8 pages; contents and final top-level section bookmark checked; controls=True",
+      "direction": "0 of 39 Hebrew runs are set left to right\ncontrol: 39 of 39 flagged when every run is reversed",
+      "pdf_sha256": "d89e472bcf5f9e900b44581c3dbe9f4cf912ca72029ac7f314d329e618619ddc",
+      "visual_pages": [
+        7,
+        8
+      ]
+    },
+    "tests": "................................................\n----------------------------------------------------------------------\nRan 48 tests in 0.241s\n\nOK\n..........................................................................................................\n----------------------------------------------------------------------\nRan 106 tests in 0.271s\n\nOK\nfifth penitential day PDF: apparatus, fulfilled cues and reference boundaries checked; 5 stanza start deltas [0.0, 0.0, 0.0, 0.0, 0.0]\nfifth penitential day PDF: apparatus, fulfilled cues and reference boundaries checked; 5 stanza start deltas [0.0, 0.0, 0.0, 0.0, 0.0]\nCompiled Gedaliah: four bilingual petition expansions, Ten Days Full Kaddish and omitted fulfilled rubric checked",
+    "full_suite": "Ran 3557 tests in 732.140s; OK (skipped=12)",
+    "full_suite_log_sha256": "f93398370a0788dd0beb4d871edff6a5b7e5c4654313a7aa249d4bc0b4956162",
+    "full_suite_environment": {
+      "TEXMFVAR": "/tmp/asher-tex-cache",
+      "TEXMFCACHE": "/tmp/asher-tex-cache",
+      "OPENSIDDUR_REQUIRE_JS": "1",
+      "OPENSIDDUR_NODE": "/tmp/node-v22.14.0-linux-x64/bin/node"
+    },
+    "initial_suite_attempt": {
+      "status": "Interrupted after rendering failures when invoked without configured TeX cache and Node environment; configured rerun is the reported result.",
+      "log_sha256": "782ff69468a25d6fcfac92b8ceea8b13decaf0d23a8553cb3cc52834de8779a7"
+    },
+    "whole_book_verification": "6 opening page/language streams match; both title pages and first-day entry boundaries checked\n96 continuation units match documentary readings; footnotes and final n51/n52 boundary checked\nSecond day: printed order, page streams, footnotes and source refrain choices per language checked\nThird day: printed order, page streams, footnotes and source refrain choices per language checked\nFourth day: printed order, page streams, footnotes and source refrain choices per language checked\nFifth day: printed order, page streams, footnotes and source refrain choices per language checked\nSixth day: printed order, page streams, footnotes and source refrain choices per language checked\nSeventh day: printed order, page streams, footnotes and source refrain choices per language checked\nErev Rosh Hashanah: 113 source-ordered units, documentary branches, notes and bilingual expansion targets checked\nGedaliah: 38 source-ordered bilingual units, 8 pizmon stanzas, 7 refrain choices per language, footnotes and Ten Days Kaddish checked\nsecond penitential day: 40 source-ordered bilingual units, 7 shared pizmon units, 7 Hebrew / 6 English refrain choices, footnotes and Ten Days Kaddish checked\nthird penitential day: 36 bilingual units; documentary branches, refrains, notes, source order and expansion ranges checked\nfourth penitential day: 36 bilingual units; documentary branches, refrains, notes, source order and expansion ranges checked\nfifth penitential day: 39 bilingual units; documentary branches, refrains, notes, source order and expansion ranges checked\nerev-yom-kippur penitential day: 22 bilingual units; documentary branches, refrains, notes, source order and expansion ranges checked\nmonday-fast penitential day: 26 bilingual units; documentary branches, refrains, notes, source order and expansion ranges checked\nthursday-fast penitential day: 15 bilingual units; documentary branches, refrains, notes, source order and expansion ranges checked\nlast-monday-fast penitential day: 14 bilingual units; documentary branches, refrains, notes, source order and expansion ranges checked\ntenth-tevet penitential day: 15 bilingual units; documentary branches, refrains, notes, source order and expansion ranges checked\nesther-fast penitential day: 14 bilingual units; documentary branches, refrains, notes, source order and expansion ranges checked\ntammuz-fast penitential day: 14 bilingual units; documentary branches, refrains, notes, source order and expansion ranges checked\nyom-kippur-katan penitential day: 61 bilingual units; documentary branches, refrains, notes, source order and expansion ranges checked\ncircumcision penitential day: 3 bilingual units; documentary branches, refrains, notes, source order and expansion ranges checked\n398 schema-valid files; 7 documentary page/language streams match; expansion targets and forms checked",
+    "whole_book_log_sha256": "7064b6a8def7c819f5876aa22dc24debef59ff14a75d160e118feb3b3f64a3b2",
+    "coverage_audit_sha256": "2a943b92ffb87cf00a4db64699d3bf817efdb268e439dacbd1bc85cef469c8ed",
+    "derived_refrain_consistency_sha256": "f3eaf1e3532b7fcce9f0d487717064df5224eb68bd9d22e073a07b37d16df74a",
+    "limitations": "Short printed חק and the glyphs in תפדם/תפרם require independent rechecking; other unresolved readings are in the per-page ledgers pending independent reading and comprehensive pointing. English review pending. Known mixed-note paragraph-separation issue remains. Whole-book PDFs remain earlier snapshots; current PDFs isolate the final circumcision poem."
+  },
+  "evidence_note": "Frozen fresh captures contain errors rejected during image adjudication. Fresh capture incorrectly supplied a complete refrain for a printed cue, omitted the cross-page stanza opening and misread several words; the frozen capture and explicit rejection reasons are preserved. Derived refrain metadata matches its image-corrected printed form.",
+  "next": "Service-by-service Hebrew second image pass reaches book end. Independent-person Hebrew, facing-English, comprehensive pointing and recorded uncertainties remain pending."
+}
