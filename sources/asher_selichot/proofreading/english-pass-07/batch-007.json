@@ -1,0 +1,102 @@
+{
+  "scope": "Seventh-day English s93/n92 lower–s101/n100 upper; 8 printed English notes.",
+  "scan_pages": [
+    93,
+    95,
+    97,
+    99,
+    101
+  ],
+  "method": "Fresh image readings frozen before existing seventh-day readings/XML/OCR opened. Same-model second pass with prior exposure; not independent-person proofreading.",
+  "accepted_replacement_rules": 2,
+  "captures": [
+    {
+      "file": "s101-blind.json",
+      "sha256": "ab4c15116441d83f413d51a956235b13cf813c1feecf9da08d972f282c1c8e1b"
+    },
+    {
+      "file": "s93-blind.json",
+      "sha256": "bccb1fff0f4b0284a355d08ac7bb75ecf7d4af3261c435400284c1ed95d54d4b"
+    },
+    {
+      "file": "s95-blind.json",
+      "sha256": "f1e40a6d9cb7aeb117ee9fe65794082dcb23f1459c62681b1a4ea380b4a7b51f"
+    },
+    {
+      "file": "s97-blind.json",
+      "sha256": "4f4704c88eaf6aeb52e1e1caa90c00a9823182a2f779d4e28b8f0ab5e188e35e"
+    },
+    {
+      "file": "s99-blind.json",
+      "sha256": "4501bcf81dcf09118f19c5376eef3a5f45ada0e54c6e026118ac5bee372f1caa"
+    }
+  ],
+  "comparison_inputs": [
+    "encoding-before.json",
+    "comparison-before.json"
+  ],
+  "comparison_after": "comparison-after.json",
+  "adjudication": "adjudication.json",
+  "adjudication_sha256": "7a31783cc7f90ba145dcb5ca35b15109fb8ec7c88826663e48b97b90a239c1bf",
+  "comparison_after_sha256": "cd933d97b39d62df09eb2eb1aad53c9d6e5a667b6cdf04940ee4d12231544354",
+  "limitations": [
+    "Physical wrapping normalized; exhaustive emphasis review pending.",
+    "s93 seventh-day opening previously visible during sixth-day boundary review; s101 Erev opening incidentally visible during seventh-day boundary review.",
+    "Fresh s97 label47 is a logical candidate only: no numeral visible; do not treat it as image-verified printed numeral."
+  ],
+  "status": "Checkpoint complete with exhaustive typography review pending.",
+  "next": "Erev Rosh Hashanah English s101/n100 lower–s185/n184 upper.",
+  "verification": {
+    "xml": "Validated 8 seventh-day XML files\nSeventh day: printed order, page streams, footnotes and source refrain choices per language checked",
+    "pdf": {
+      "documentary": {
+        "pages": 14,
+        "stanza_baseline_deltas": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controls": true,
+        "contents_and_bookmarks": true,
+        "pdf_sha256": "405780300babf2e56ef81a60a14da13bb039e22f8fd5e30a0bcc3f477c63b700",
+        "direction": "0 of 282 Hebrew runs are set left to right\ncontrol: 282 of 282 flagged when every run is reversed",
+        "visual_pages": [
+          8,
+          12,
+          14
+        ]
+      },
+      "expanded": {
+        "pages": 38,
+        "stanza_baseline_deltas": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controls": true,
+        "contents_and_bookmarks": true,
+        "pdf_sha256": "025451ac86a11b192c794f8151d727015b170b741ac0cee014e0224394659cb8",
+        "direction": "0 of 1326 Hebrew runs are set left to right\ncontrol: 1266 of 1326 flagged when every run is reversed",
+        "visual_pages": [
+          20,
+          21,
+          36,
+          38
+        ]
+      }
+    },
+    "full_suite": "No generic executable logic changed. Last full suite passed3557 tests with12 skips; not rerun for declarative text corrections."
+  }
+}

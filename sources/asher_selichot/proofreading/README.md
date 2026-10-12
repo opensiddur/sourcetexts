@@ -86,5 +86,10 @@ s85/n84 lower–s93/n92 upper. Seven corrections restore printed wording/punctua
 Ten XML files validate; both PDFs pass stanza alignment, footnote occurrence,
 direction, contents, bookmarks and boundary checks with deliberately broken controls.
 
-Next: Seventh English s93/n92 lower–s101/n100 upper.
+[English batch007](english-pass-07/batch-007.json) covers the seventh day,
+s93/n92 lower–s101/n100 upper. Two missing commas are restored in printed rubrics; the body, eight footnotes and printed refrain occurrences match the fresh reading. The fresh s97 label47 is only a candidate, since no numeral is visible.
+Ten XML files validate; both PDFs pass stanza alignment, footnote occurrence,
+direction, contents, bookmarks and boundary checks with deliberately broken controls.
+
+Next: Erev Rosh Hashanah English s101/n100 lower–s185/n184 upper.
 Later English services remain pending in this same-model image proofreading pass.
