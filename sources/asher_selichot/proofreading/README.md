@@ -93,3 +93,5 @@ direction, contents, bookmarks and boundary checks with deliberately broken cont
 
 Next: Erev Rosh Hashanah English s101/n100 lower–s185/n184 upper.
 Later English services remain pending in this same-model image proofreading pass.
+
+Erev Rosh Hashanah fresh-image reading is in progress: [English batch008 progress](english-pass-08/progress.json) freezes15 English pages, s101/n100 lower through s129/n128 (printed63). Comparison, adjudication and service PDF verification remain pending for this service. Next fresh image: s131/n130. These provisional captures do not extend the completed English coverage beyond the seventh day.
