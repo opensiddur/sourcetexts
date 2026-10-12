@@ -1,0 +1,94 @@
+{
+  "scope": "Third-day English s61/n60 lower–s69/n68 upper, printed29 lower–33 upper. Printed31=s67 and32=s65 are swapped in Archive order; image-verified printed order retained. Eight English footnotes.",
+  "scan_pages": [
+    61,
+    63,
+    67,
+    65,
+    69
+  ],
+  "method": "Fresh image readings frozen before existing third-day readings/XML/OCR opened. Same-model second pass with prior exposure; not independent-person proofreading.",
+  "accepted_replacement_rules": 4,
+  "captures": [
+    {
+      "file": "s61-blind.json",
+      "sha256": "bffd073f726b4f651d8cf6de6768bd8276f51acfe3f5497fcd030e5fb8982036"
+    },
+    {
+      "file": "s63-blind.json",
+      "sha256": "433ab23ce2540628e2f1ebb66894a101e0c0feefbc306d036ef8584122563bf9"
+    },
+    {
+      "file": "s65-blind.json",
+      "sha256": "0fe7967fd6b2a26da310f80350fca98f5a67eaa84e2c75434b25ac55bc6ce206"
+    },
+    {
+      "file": "s67-blind.json",
+      "sha256": "5230e763cd11480e60f3eb3d4a58df07986403ff1fcc1eab69c561f5936f01c3"
+    },
+    {
+      "file": "s69-blind.json",
+      "sha256": "c55ea9c1ae46018e00628af789cf8f87a6b24bdbf0e739c1a75926a0cd67fdf8"
+    }
+  ],
+  "comparison_inputs": [
+    "encoding-before.json",
+    "comparison-before.json"
+  ],
+  "comparison_after": "comparison-after.json",
+  "adjudication": "adjudication.json",
+  "adjudication_sha256": "0197a11da7e25dd8d928e4a855da7d1255cf9c2883ccb49b38d1b274d8d76a1d",
+  "comparison_after_sha256": "eb7bb08f413a663dce528e4d5e854c8925e96a6ed777095965e8f41b38b8db8d",
+  "limitations": [
+    "Physical wrapping normalized; exhaustive emphasis review pending.",
+    "s61 opening and s69 fourth-day material incidentally visible while reviewing service boundaries; printed31 and32 are swapped in Archive order."
+  ],
+  "status": "Checkpoint complete with exhaustive typography review pending.",
+  "next": "Fourth-day English s69/n68 lower–s77/n76 upper.",
+  "verification": {
+    "xml": "Validated 8 third-day XML files\nThird day: printed order, page streams, footnotes and source refrain choices per language checked",
+    "pdf": {
+      "documentary": {
+        "pages": 14,
+        "stanza_baseline_deltas": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controls": true,
+        "contents_and_bookmarks": true,
+        "pdf_sha256": "59c195e0495762836ed75ff8f2b1e4907c0a3b88f0b5acc706e219491a90a00e",
+        "direction": "0 of 263 Hebrew runs are set left to right\ncontrol: 262 of 263 flagged when every run is reversed",
+        "visual_pages": [
+          8,
+          12,
+          14
+        ]
+      },
+      "expanded": {
+        "pages": 37,
+        "stanza_baseline_deltas": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controls": true,
+        "contents_and_bookmarks": true,
+        "pdf_sha256": "b945b709d078ac90b0504069caf7ea90021c46ea71cc76fdce81e2d0137c4509",
+        "direction": "0 of 1302 Hebrew runs are set left to right\ncontrol: 1278 of 1302 flagged when every run is reversed",
+        "visual_pages": [
+          19,
+          35,
+          37
+        ]
+      }
+    },
+    "full_suite": "No executable logic changed; prior full suite passed3557 tests with12 skips; not rerun for declarative text corrections."
+  }
+}

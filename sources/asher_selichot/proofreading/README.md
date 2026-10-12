@@ -64,6 +64,12 @@ verified with direction, alignment, contents, bookmarks and broken controls.
 The six pizmon stanza starts align at 0.0 pt in both views. This remains a
 same-model image rereading, not independent-person proofreading.
 
-The next English service is the third day, s61/n60 lower–s69/n68 upper; printed
-pages31 and32 are swapped in Archive order and must follow the image-verified
-printed sequence. Later English pages have not yet been completed by this pass.
+[English batch003](english-pass-03/batch-003.json) covers the third day,
+s61/n60 lower–s69/n68 upper, following printed31/32 despite swapped Archive leaves.
+Four corrections preserve the printed “suppliant,” “hear,” “oppessors,” and the
+punctuation of the closing petition. Ten XML files and both PDFs pass the source,
+notes, alignment, direction, contents and boundary checks, including broken controls.
+The numeral-inclusive audit of batches001–002 found no additional corrections.
+
+The next English service is the fourth day, s69/n68 lower–s77/n76 upper.
+Later English services remain pending in this same-model image proofreading pass.
