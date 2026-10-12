@@ -41,6 +41,8 @@ elsewhere do not establish Hebrew correctness.
 
 | [017](image-pass-17/batch-017.json) | s234/n233–s258/n257 upper (printed116–128 upper), Hebrew third penitential day |191 replacements;12 modules; documentary and expanded service PDFs pass alignment, direction and broken controls; rare words and fine pointing pending | fourth penitential day |
 
+| [018](image-pass-18/batch-018.json) | s258/n257 lower–s282/n281 upper (printed128 lower–140 upper), Hebrew fourth penitential day |120 replacements;12 modules; documentary and expanded service PDFs pass alignment, direction and broken controls; rare words and fine pointing pending | fifth penitential day |
+
 The blind captures include English instructions on these Hebrew pages. Facing
 English pages, contents leaves and later Hebrew pages are not covered. This table
 is a coverage ledger, not a statement that the book is independently proofread.
