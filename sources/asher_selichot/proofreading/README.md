@@ -55,6 +55,8 @@ elsewhere do not establish Hebrew correctness.
 
 | [024](image-pass-24/batch-024.json) | s350/n349 lower–s358/n357 upper (printed 174 lower–178 upper), Hebrew Tenth of Tevet | 40 replacement operations; 5 XML files; documentary and expanded PDFs pass alignment, notes, direction and broken controls; rare words and pointing pending | Fast of Esther |
 
+| [025](image-pass-25/batch-025.json) | s358/n357 lower–s368/n367 upper (printed 178 lower–183 upper), Hebrew Fast of Esther | 57 replacement operations; 4 XML files; documentary and expanded PDFs pass alignment, notes, direction and broken controls; rare words and pointing pending | Seventeenth of Tammuz |
+
 The blind captures include English instructions on these Hebrew pages. Facing
 English pages, contents leaves and later Hebrew pages are not covered. This table
 is a coverage ledger, not a statement that the book is independently proofread.
