@@ -45,6 +45,8 @@ elsewhere do not establish Hebrew correctness.
 
 | [019](image-pass-19/batch-019.json) | s282/n281 lower–s308/n307 upper (printed140 lower–153 upper), Hebrew fifth penitential day |177 replacement rules;13 modules; documentary and expanded service PDFs pass alignment, direction and broken controls; rare words and fine pointing pending | Erev Yom Kippur |
 
+| [020](image-pass-20/batch-020.json) | s308/n307 lower–s320/n319 upper (printed 153 lower–159 upper), Hebrew Erev Yom Kippur | 74 replacement operations; 7 XML files; documentary and expanded service PDFs pass alignment, direction and broken controls; rare words and pointing pending | Monday / Second Fast |
+
 The blind captures include English instructions on these Hebrew pages. Facing
 English pages, contents leaves and later Hebrew pages are not covered. This table
 is a coverage ledger, not a statement that the book is independently proofread.
