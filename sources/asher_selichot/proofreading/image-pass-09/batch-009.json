@@ -1,0 +1,38 @@
+{
+  "batch": "009",
+  "scope": [
+    "s60/n59 lower",
+    "s62/n61",
+    "s66/n65",
+    "s64/n63",
+    "s68/n67 upper"
+  ],
+  "method": "Image-only captures frozen before existing source comparison, then native crop adjudication. Same-model second pass with prior exposure, not independent-person proofreading.",
+  "readings": {
+    "image-pass-09/s60-blind.json": "29368840cd72a1da3ff6ee0f96aa5b29d5e4beb377717e06b21d7905982ee801",
+    "image-pass-09/s62-blind.json": "d8b454beaf3a663ff1c4e72fb249f0ccc4d0f0efcafbd7329e3107c9f8d730d4",
+    "image-pass-09/s64-blind.json": "573dc95ce79b95ca2f15e9d4fa3da896468dcda20d6d27cebcfc99a4dcc28801",
+    "image-pass-09/s66-blind.json": "81b27ecdab70c42ffc39e3a8143e4f6e40dcafa1ca493f14c667ec3a34e63079",
+    "image-pass-09/s68-blind.json": "ea2bea4af3b065107652769e9b5d86084968d35c81c9f8120a9f576a84309c00"
+  },
+  "image_sha256": {
+    "s60": "81078d9585195b87ae9575fb800f5eac12096eb8bdbecb4ac378052348fc22ea",
+    "s62": "31e610d83155a0e038e2fdec06585ed44658a5dd162a785f5e832bba90d8277d",
+    "s66": "6ac7594bda44d8a6f34027d358698a466b665cc08af7aec1fc946a30e9ff06af",
+    "s64": "3679c27204e7b2c6cf282576ecbdc8a5c11da759425054143b84b1caa2edb5a6",
+    "s68": "65ad20d6c49242d146e508ba4048f3f5bb0ffd7ec31d1813cbe3f0de377cd2e0"
+  },
+  "accepted_replacement_rules": 88,
+  "status": "Third-day Hebrew comparison complete with fine-mark uncertainty recorded; source/XML and both rendered views pass.",
+  "next_hebrew_scan": "s68/n67 lower: fourth day; frozen captures and comparison complete, adjudication underway.",
+  "verification": {
+    "xml": "Four changed modules schema-valid; third-day documentary/source/expansion checks pass. All 398 files passed full verification at checkpoint 007.",
+    "documentary_pdf": "49 pages through third day; six third-day stanza anchors have zero delta. First prayers and second-day anchors also zero; first pizmon maximum 13.55pt. Contents, day hierarchy, notes, boundaries and broken controls pass.",
+    "expanded_pdf": "100 pages through third day; all checked prayer and stanza anchors have zero delta. Expansions, contents, day hierarchy, notes, boundaries and broken controls pass.",
+    "direction": "Documentary 0/1717 reversed (control 1676/1717); expanded 0/4030 (control 3915/4030).",
+    "visual_inspection": "Documentary 45,47,48; expanded 82,83,84,86,98: verse layout, stanza alignment, English footnotes, transcluded prayers and retained performance instructions.",
+    "tests": "Last full post-merge suite: 3557 tests,12 skips,no failures. This checkpoint changes source data and verification records only.",
+    "artifacts": "Untracked output/asher_selichot/proofreading/batch-009/",
+    "limitations": "Same-model pass; independent-person Hebrew and facing-English review pending. Fine-point uncertainties retained in adjudication. Prior mixed-note paragraph-separation issue remains open. Whole-book PDFs remain earlier snapshots."
+  }
+}
