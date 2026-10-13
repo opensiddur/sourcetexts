@@ -968,7 +968,7 @@ pending. Comparison findings and adjudication are committed alongside readings.
 [Proofreading coverage](proofreading/README.md) records the image-only second
 pass, frozen captures, comparison hashes and adjudications. Hebrew batches001–028
 reach the final Hebrew page, s410/n409, with rare words and comprehensive pointing
-still pending. English batches001–015 cover the title and services through Monday fast, s321/n320 lower–s337/n336 upper, printed159 lower–167 upper; subsequent English services are pending.
+still pending. English batches001–016 cover the title and services through Thursday fast, s337/n336 lower–s343/n342, printed167 lower–170; subsequent English services are pending.
 These are same-model second readings with prior exposure, not independent-person
 proofreading. See each ledger for exact coverage and unresolved findings.
 
