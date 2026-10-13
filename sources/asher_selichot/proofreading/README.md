@@ -138,4 +138,14 @@ This is same-model proofreading with prior exposure, sparse observations and OCR
 comparison, rather than a second full manual transcription or independent-person review.
 Exhaustive typography review remains pending. See the adjudication for uncertain readings.
 
-Next: Fourth penitential day, s259/n258 lower–s283/n282 upper.
+[English batch012](english-pass-12/batch-012.json) covers Fourth penitential day, s259/n258 lower–s283/n282 upper, printed128 lower–140 upper.
+13 image-first page observations were frozen before cached OCR comparison;
+14 image-adjudicated replacement rules changed 15 stored occurrences.
+Schema, source-order reverse comparison, compilation, both service PDFs, all printed
+English-page notes, contents/bookmarks, alignment and deliberately broken controls pass.
+Documentary: 25 pages; expanded: 53 pages.
+This is same-model proofreading with prior exposure, sparse observations and OCR-assisted
+comparison, rather than a second full manual transcription or independent-person review.
+Exhaustive typography review remains pending. See the adjudication for uncertain readings.
+
+Next: Fifth penitential day, s283/n282 lower–s309/n308 upper.
