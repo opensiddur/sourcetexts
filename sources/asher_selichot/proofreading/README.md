@@ -168,4 +168,14 @@ This is same-model proofreading with prior exposure, sparse observations and OCR
 comparison, rather than a second full manual transcription or independent-person review.
 Exhaustive typography review remains pending. See the adjudication for uncertain readings.
 
-Next: Monday fast, s321/n320 lower–s337/n336 upper.
+[English batch015](english-pass-15/batch-015.json) covers Monday fast, s321/n320 lower–s337/n336 upper, printed159 lower–167 upper.
+9 image-first page observations were frozen before cached OCR comparison;
+10 image-adjudicated replacement rules changed 12 stored occurrences.
+Schema, source-order reverse comparison, compilation, both service PDFs, all printed
+English-page notes, contents/bookmarks, alignment and deliberately broken controls pass.
+Documentary: 20 pages; expanded: 22 pages.
+This is same-model proofreading with prior exposure, sparse observations and OCR-assisted
+comparison, rather than a second full manual transcription or independent-person review.
+Exhaustive typography review remains pending. See the adjudication for uncertain readings.
+
+Next: Thursday fast, s337/n336 lower–s343/n342.

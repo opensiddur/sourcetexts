@@ -1,0 +1,51 @@
+{
+  "scope": "Monday fast, s321/n320 lower–s337/n336 upper, printed159 lower–167 upper",
+  "method": "Same-model image-first English proofreading with prior exposure. Whole pages visually read at viewer resolution before opening current same-service encoding/OCR. Page observations frozen; independent cached Archive English OCR provides comparison transcript afterward. Not a second full manual transcription or independent-person review. Targeted full-resolution crops adjudicate discrepancies; no automatic OCR replacement.",
+  "image_review_sha256": "0dd453dc76f86ae7eb49861159daaf6f8f0d07df045c1e8881bb0c2bf0281ebe",
+  "accepted_replacement_rules": 10,
+  "changed_stored_occurrences": 12,
+  "comparison_inputs": [
+    "encoding-before.json",
+    "comparison-before.json"
+  ],
+  "comparison_after": "comparison-after.json",
+  "adjudication": "adjudication.json",
+  "adjudication_sha256": "eace8266d600ffb20ccdccd9615a72933debc700b7040e82473f1af80145081b",
+  "comparison_after_sha256": "5edd80f1d601d0f1fc27b158502dea0f2e31d27de0416856ecc23b41acbe32c3",
+  "limitations": [
+    "Exhaustive typographic emphasis review and independent-person proofreading remain pending.",
+    "Sparse observations document reading rather than a full alternative transcription. OCR comparison can miss errors shared with the encoding.",
+    "Sparse image-review observations for s333/s335/s337 misdescribe the distribution of closing material. Actual scan: s333 ends Hear our voice, s335 contains confession and We have done wickedly, s337 upper contains righteous anointed, closing blessing and two performance rubrics. All are included by manifest source order. No shake-hem or Psalm51/25 cue appears on these English pages; that observation is withdrawn. The five s331 and eight s333 source citations, including printed Isaiah vi7, are preserved."
+  ],
+  "status": "Service checkpoint complete; independent-person and exhaustive typography review pending.",
+  "next": "Thursday fast, s337/n336 lower–s343/n342.",
+  "verification": {
+    "xml": "Validated 8 Monday fast XML files\nmonday-fast penitential day: 26 bilingual units; documentary branches, refrains, notes, source order and expansion ranges checked",
+    "compiled": "monday-fast penitential day: 26 bilingual units; documentary branches, refrains, notes, source order and expansion ranges checked\n{'action': 'project_synced', 'added': 3172, 'updated': 0, 'removed': 0, 'skipped': 0, 'files_added': 199, 'files_updated': 0, 'files_removed': 0}\n{'action': 'project_synced', 'added': 3160, 'updated': 0, 'removed': 0, 'skipped': 0, 'files_added': 199, 'files_updated': 0, 'files_removed': 0}\n{'action': 'project_synced', 'added': 10054, 'updated': 0, 'removed': 0, 'skipped': 0, 'files_added': 1291, 'files_updated': 0, 'files_removed': 0}\n{'action': 'project_synced', 'added': 10959, 'updated': 0, 'removed': 0, 'skipped': 0, 'files_added': 1331, 'files_updated': 0, 'files_removed': 0}\nCompiled documentary\nCompiled expanded\nBoth service entrypoints compiled; seasonal counts and expansion boundaries checked in service PDF verification.",
+    "pdf": {
+      "documentary": {
+        "english_note_occurrences_checked": true,
+        "mixed_notes_schema_and_reverse_verified": true,
+        "pages": 20,
+        "alignment_anchors": 8,
+        "controls": true,
+        "contents_and_bookmarks": true,
+        "printed_english_page_notes_reverse_verified": 15,
+        "pdf_sha256": "54f6a90d20f44abcdb0828b76723ca45834dbdc33082b18f00d08baf025e125a",
+        "direction": "0 of 482 Hebrew runs are set left to right\ncontrol: 478 of 482 flagged when every run is reversed"
+      },
+      "expanded": {
+        "english_note_occurrences_checked": true,
+        "mixed_notes_schema_and_reverse_verified": true,
+        "pages": 22,
+        "alignment_anchors": 8,
+        "controls": true,
+        "contents_and_bookmarks": true,
+        "printed_english_page_notes_reverse_verified": 15,
+        "pdf_sha256": "48013c980a42712eba5abde80de9dbc2053677dfc2184e69a1e18cdfdb2a7734",
+        "direction": "0 of 604 Hebrew runs are set left to right\ncontrol: 597 of 604 flagged when every run is reversed"
+      }
+    },
+    "full_suite": "No generic executable logic changed. Last local full suite:3557 passed,12 skipped."
+  }
+}
