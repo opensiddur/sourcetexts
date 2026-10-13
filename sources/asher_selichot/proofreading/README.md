@@ -118,5 +118,14 @@ editorial attachment remains disclosed. The capture helper’s generic native-ba
 method description is clarified in the adjudication; this batch’s first reading
 used whole-page viewer images, followed by native-resolution adjudication crops.
 
-Next: Second penitential day English s211/n210–s233/n232, printed 104–115.
-Later English services remain pending in this same-model image proofreading pass.
+[English batch010](english-pass-10/batch-010.json) covers Second penitential day, s211/n210–s233/n232, printed104–115.
+12 image-first page observations were frozen before cached OCR comparison;
+7 image-adjudicated replacement rules changed 9 stored occurrences.
+Schema, source-order reverse comparison, compilation, both service PDFs, all printed
+English-page notes, contents/bookmarks, alignment and deliberately broken controls pass.
+Documentary: 25 pages; expanded: 54 pages.
+This is same-model proofreading with prior exposure, sparse observations and OCR-assisted
+comparison, rather than a second full manual transcription or independent-person review.
+Exhaustive typography review remains pending. See the adjudication for uncertain readings.
+
+Next: Third penitential day, s235/n234–s259/n258 upper.
