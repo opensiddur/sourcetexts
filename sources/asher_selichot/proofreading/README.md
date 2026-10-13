@@ -104,5 +104,19 @@ bookmarks and boundary checks with deliberately broken controls. Tamid markers
 1–26 remain unresolved without invented references: no apparatus accompanies
 them on these source pages.
 
-Next: Tzom Gedaliah English s185/n184 lower–s209/n208.
+[English batch009](english-pass-09/batch-009.json) covers Tzom Gedaliah,
+s185/n184 lower–s209/n208, printed 91–103. Thirteen fresh whole-page readings
+were frozen before comparison; targeted full-resolution crops adjudicate differences.
+Ten corrections restore printed wording, quotation marks, notes and rubric punctuation,
+including “unto the earth” and the printed “How long will thou.” The printed
+“he-were” and “spreadedst” are retained. Thirty-two XML files validate, all 38
+service units and apparatus reverse-compare, and four bilingual petition expansions
+pass. Both PDFs pass eight stanza alignment starts, all 18 English notes and the
+Hebrew marginal note, direction, refrain expansions, seasonal Kaddish readings,
+contents and bookmarks, with deliberately broken controls. The marginal note’s
+editorial attachment remains disclosed. The capture helper’s generic native-band
+method description is clarified in the adjudication; this batch’s first reading
+used whole-page viewer images, followed by native-resolution adjudication crops.
+
+Next: Second penitential day English s211/n210–s233/n232, printed 104–115.
 Later English services remain pending in this same-model image proofreading pass.
