@@ -158,4 +158,14 @@ This is same-model proofreading with prior exposure, sparse observations and OCR
 comparison, rather than a second full manual transcription or independent-person review.
 Exhaustive typography review remains pending. See the adjudication for uncertain readings.
 
-Next: Erev Yom Kippur, s309/n308 lower–s321/n320 upper.
+[English batch014](english-pass-14/batch-014.json) covers Erev Yom Kippur, s309/n308 lower–s321/n320 upper, printed153 lower–159 upper.
+7 image-first page observations were frozen before cached OCR comparison;
+17 image-adjudicated replacement rules changed 20 stored occurrences.
+Schema, source-order reverse comparison, compilation, both service PDFs, all printed
+English-page notes, contents/bookmarks, alignment and deliberately broken controls pass.
+Documentary: 17 pages; expanded: 26 pages.
+This is same-model proofreading with prior exposure, sparse observations and OCR-assisted
+comparison, rather than a second full manual transcription or independent-person review.
+Exhaustive typography review remains pending. See the adjudication for uncertain readings.
+
+Next: Monday fast, s321/n320 lower–s337/n336 upper.
