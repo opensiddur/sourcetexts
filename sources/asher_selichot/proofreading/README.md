@@ -148,4 +148,14 @@ This is same-model proofreading with prior exposure, sparse observations and OCR
 comparison, rather than a second full manual transcription or independent-person review.
 Exhaustive typography review remains pending. See the adjudication for uncertain readings.
 
-Next: Fifth penitential day, s283/n282 lower–s309/n308 upper.
+[English batch013](english-pass-13/batch-013.json) covers Fifth penitential day, s283/n282 lower–s309/n308 upper, printed140 lower–153 upper.
+14 image-first page observations were frozen before cached OCR comparison;
+7 image-adjudicated replacement rules changed 7 stored occurrences.
+Schema, source-order reverse comparison, compilation, both service PDFs, all printed
+English-page notes, contents/bookmarks, alignment and deliberately broken controls pass.
+Documentary: 26 pages; expanded: 55 pages.
+This is same-model proofreading with prior exposure, sparse observations and OCR-assisted
+comparison, rather than a second full manual transcription or independent-person review.
+Exhaustive typography review remains pending. See the adjudication for uncertain readings.
+
+Next: Erev Yom Kippur, s309/n308 lower–s321/n320 upper.
