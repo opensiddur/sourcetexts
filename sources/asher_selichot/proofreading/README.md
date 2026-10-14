@@ -218,4 +218,14 @@ This is same-model proofreading with prior exposure, sparse observations and OCR
 comparison, rather than a second full manual transcription or independent-person review.
 Exhaustive typography review remains pending. See the adjudication for uncertain readings.
 
-Next: Seventeenth of Tammuz, s369 lower–377
+[English batch020](english-pass-20/batch-020.json) covers Seventeenth of Tammuz, s369 lower–377 (n368–376), printed 183 lower–187.
+5 image-first page observations were frozen before cached OCR comparison;
+8 image-adjudicated replacement rules changed 20 stored occurrences.
+Schema, source-order reverse comparison, compilation, both service PDFs, all printed
+English-page notes, contents/bookmarks, alignment and deliberately broken controls pass.
+Documentary: 14 pages; expanded: 23 pages.
+This is same-model proofreading with prior exposure, sparse observations and OCR-assisted
+comparison, rather than a second full manual transcription or independent-person review.
+Exhaustive typography review remains pending. See the adjudication for uncertain readings.
+
+Next: Yom Kippur Katan, s379–409 upper
