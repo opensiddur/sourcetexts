@@ -208,4 +208,14 @@ This is same-model proofreading with prior exposure, sparse observations and OCR
 comparison, rather than a second full manual transcription or independent-person review.
 Exhaustive typography review remains pending. See the adjudication for uncertain readings.
 
-Next: Fast of Esther, s359 lower–369 upper
+[English batch019](english-pass-19/batch-019.json) covers Fast of Esther, s359 lower–369 upper (n358–368), printed 178 lower–183 upper.
+6 image-first page observations were frozen before cached OCR comparison;
+9 image-adjudicated replacement rules changed 12 stored occurrences.
+Schema, source-order reverse comparison, compilation, both service PDFs, all printed
+English-page notes, contents/bookmarks, alignment and deliberately broken controls pass.
+Documentary: 16 pages; expanded: 24 pages.
+This is same-model proofreading with prior exposure, sparse observations and OCR-assisted
+comparison, rather than a second full manual transcription or independent-person review.
+Exhaustive typography review remains pending. See the adjudication for uncertain readings.
+
+Next: Seventeenth of Tammuz, s369 lower–377
