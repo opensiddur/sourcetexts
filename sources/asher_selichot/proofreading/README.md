@@ -228,4 +228,14 @@ This is same-model proofreading with prior exposure, sparse observations and OCR
 comparison, rather than a second full manual transcription or independent-person review.
 Exhaustive typography review remains pending. See the adjudication for uncertain readings.
 
-Next: Yom Kippur Katan, s379–409 upper
+[English batch021](english-pass-21/batch-021.json) covers Yom Kippur Katan, s379–409 upper (n378–408), printed 188–203 upper.
+16 image-first page observations were frozen before cached OCR comparison;
+13 image-adjudicated replacement rules changed 15 stored occurrences.
+Schema, source-order reverse comparison, compilation, both service PDFs, all printed
+English-page notes, contents/bookmarks, alignment and deliberately broken controls pass.
+Documentary: 30 pages; expanded: 40 pages.
+This is same-model proofreading with prior exposure, sparse observations and OCR-assisted
+comparison, rather than a second full manual transcription or independent-person review.
+Exhaustive typography review remains pending. See the adjudication for uncertain readings.
+
+Next: Circumcision, s409 lower–411, final page
