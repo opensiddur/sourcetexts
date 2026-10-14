@@ -188,4 +188,14 @@ This is same-model proofreading with prior exposure, sparse observations and OCR
 comparison, rather than a second full manual transcription or independent-person review.
 Exhaustive typography review remains pending. See the adjudication for uncertain readings.
 
-Next: Last Monday fast, s345/n344–s351/n350 upper.
+[English batch017](english-pass-17/batch-017.json) covers Last Monday fast, s345–351 upper (n344–350), printed 171–174 upper.
+4 image-first page observations were frozen before cached OCR comparison;
+6 image-adjudicated replacement rules changed 6 stored occurrences.
+Schema, source-order reverse comparison, compilation, both service PDFs, all printed
+English-page notes, contents/bookmarks, alignment and deliberately broken controls pass.
+Documentary: 12 pages; expanded: 21 pages.
+This is same-model proofreading with prior exposure, sparse observations and OCR-assisted
+comparison, rather than a second full manual transcription or independent-person review.
+Exhaustive typography review remains pending. See the adjudication for uncertain readings.
+
+Next: Tenth of Tevet, s351 lower–359 upper
