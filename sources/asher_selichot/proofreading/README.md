@@ -198,4 +198,14 @@ This is same-model proofreading with prior exposure, sparse observations and OCR
 comparison, rather than a second full manual transcription or independent-person review.
 Exhaustive typography review remains pending. See the adjudication for uncertain readings.
 
-Next: Tenth of Tevet, s351 lower–359 upper
+[English batch018](english-pass-18/batch-018.json) covers Tenth of Tevet, s351 lower–359 upper (n350–358), printed 174 lower–178 upper.
+5 image-first page observations were frozen before cached OCR comparison;
+10 image-adjudicated replacement rules changed 17 stored occurrences.
+Schema, source-order reverse comparison, compilation, both service PDFs, all printed
+English-page notes, contents/bookmarks, alignment and deliberately broken controls pass.
+Documentary: 15 pages; expanded: 25 pages.
+This is same-model proofreading with prior exposure, sparse observations and OCR-assisted
+comparison, rather than a second full manual transcription or independent-person review.
+Exhaustive typography review remains pending. See the adjudication for uncertain readings.
+
+Next: Fast of Esther, s359 lower–369 upper
