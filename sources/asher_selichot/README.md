@@ -965,11 +965,13 @@ pending. Comparison findings and adjudication are committed alongside readings.
 
 ## Transcription proofreading pass
 
-[Proofreading coverage](proofreading/README.md) records the image-only second
-pass, frozen captures, comparison hashes and adjudications. Hebrew batches001–028
+[Proofreading coverage](proofreading/README.md) records the image-first proofreading
+passes, frozen captures or page observations, comparison hashes and adjudications. Hebrew batches001–028
 reach the final Hebrew page, s410/n409, with rare words and comprehensive pointing
-still pending. English batches001–021 cover the title and services through Yom Kippur Katan, s379–409 upper (n378–408), printed 188–203 upper; subsequent English services are pending.
+still pending. English batches001–022 cover the title and every English service through the final page, s411/n410 (printed204).
 These are same-model second readings with prior exposure, not independent-person
-proofreading. See each ledger for exact coverage and unresolved findings.
+proofreading. Batches010–022 use frozen sparse image observations and independently cached Archive OCR comparison, with discrepancies adjudicated against page images and native-resolution crops; they are not second full manual transcriptions. Exhaustive typography review remains pending. See each ledger for exact coverage and unresolved findings.
 
 Tammuz image proofreading corrects the reusable poem identities to `etonen_lekha_yotser_ruhot` (אתאונן לך יוצר רוחות) and `amerer_bivekhi_mippenei_yad_shalehah` (אמרר בבכי מפני יד שלחה). Historical reading IDs and immutable capture filenames remain unchanged for evidence traceability; current XML filenames and publication/alignment URNs use the corrected incipits.
+
+English pass completion: Tevet retains its one printed unclosed refrain parenthesis while recognizing it for expansion. Tammuz preserves both full refrain variants (opening “on the day when the enemy…” and closing “on the day the enemy…”); the short cue expands to the opening form. Updated note anchors follow the corrected printed punctuation.

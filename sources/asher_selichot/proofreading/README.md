@@ -238,4 +238,16 @@ This is same-model proofreading with prior exposure, sparse observations and OCR
 comparison, rather than a second full manual transcription or independent-person review.
 Exhaustive typography review remains pending. See the adjudication for uncertain readings.
 
-Next: Circumcision, s409 lower–411, final page
+[English batch022](english-pass-22/batch-022.json) covers Circumcision, s409 lower–411 (n408–410), printed 203 lower–204; end of book.
+2 image-first page observations were frozen before cached OCR comparison;
+1 image-adjudicated replacement rules changed 2 stored occurrences.
+Schema, source-order reverse comparison, compilation, both service PDFs, all printed
+English-page notes, contents/bookmarks, alignment and deliberately broken controls pass.
+Documentary: 8 pages; expanded: 8 pages.
+This is same-model proofreading with prior exposure, sparse observations and OCR-assisted
+comparison, rather than a second full manual transcription or independent-person review.
+Exhaustive typography review remains pending. See the adjudication for uncertain readings.
+
+Next: English service pass complete; independent-person review, exhaustive typography and recorded uncertainties remain.
+
+The English pass reaches the final page, s411/n410 (printed204), in batch022. All service checkpoints have been validated and rendered in both views. The printed contents leaf s5/n4 also matches the22 covered services; its separate image review is recorded in `english-pass-22/contents-image-review.json`. A final whole-book check validates all 398 XML files, reverse-compares every service, and resolves both projects’ URN/transclusion references. Independent-person review, comprehensive typography, and the recorded uncertain readings/anchors remain pending. Whole-book PDFs remain earlier snapshots; service PDFs under `output/asher_selichot/proofreading/english-NNN/` reflect this pass.
