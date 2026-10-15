@@ -52,6 +52,7 @@ is a coverage ledger, not a statement that the book is independently proofread.
 s3/n2 and first day s7/n6–s53/n52 upper from the images, before opening the
 same-service existing readings, XML or OCR in this run. It covers body text,
 rubrics and footnotes; printed spellings and apparent edition errors are retained.
+Clear misprints are later marked, not changed, by `../scan_reading/corrections.json`.
 The unchanged fresh captures, pre-edit snapshot and separate adjudication record
 both accepted corrections and errors in the fresh captures. This is a same-model
 second pass, not independent-person proofreading. Exhaustive emphasis review and

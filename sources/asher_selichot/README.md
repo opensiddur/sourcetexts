@@ -880,9 +880,10 @@ bounded Monday ranges, retaining unsupplied weekday instructions without Full
 Kaddish. Expanded English inherits fourteen Monday notes in addition to thirteen
 actual Tammuz notes.
 
-English printed184 apparently interchanges superscripts2/3: the image-in-temple
-sentence bears3, the city-broken-up sentence2. The encoding follows the printed
-associations to apparatus3/2, despite their unexpected subject matter. Printed185
+English printed184 interchanges superscripts2/3: the image-in-temple sentence
+bears3, the city-broken-up sentence2. A note superscript only locates its note, so
+the encoding attaches each note by content: the Manasseh/Appostemus note (apparatus2)
+to the image, the second-temple note (apparatus3) to the breach. Printed185
 has three markers (1 tongues,2 seventh heaven,3 for Tammuz) but no apparatus text.
 Preserve these as superscript markers, with no invented note targets. Provisional
 note guesses in the immutable first captures were removed from working readings;
