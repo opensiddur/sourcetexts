@@ -1,0 +1,76 @@
+{
+  "method": "Fresh image readings frozen before existing fourth-day readings/XML/OCR opened. Same-model second pass with prior exposure; not independent-person proofreading.",
+  "before_sha256": "0930f708673a8473149d04071fcb4351790ad6920c9069b19eafe240bc04c0d8",
+  "after_sha256": "0d991ee8cb9d26d7e23d91e772397061fb9b0087865a8340f2eeb897ddecd16d",
+  "changes": [
+    {
+      "scan": "s69",
+      "path": "/units/3/fragments/0/en/text",
+      "old": "And the Lord said, I",
+      "new": "And the Lord said I"
+    },
+    {
+      "scan": "s69",
+      "path": "/units/5/fragments/0/en/text",
+      "old": "Our God, and the God of our fathers!",
+      "new": "Our God and the God of our fathers!"
+    },
+    {
+      "scan": "s73",
+      "path": "/units/9/fragments/0/en/text",
+      "old": "prosper our undertakings:",
+      "new": "prosper our undertakings;"
+    },
+    {
+      "scan": "s75",
+      "path": "/units/9/fragments/1/en/text",
+      "old": "mine eyes are raised heavenwards,",
+      "new": "mine eyes are raised heavenwards;"
+    },
+    {
+      "scan": "s75",
+      "path": "/units/9/fragments/1/en/text",
+      "old": "my prayer correct:",
+      "new": "my prayer correct;"
+    },
+    {
+      "scan": "s75",
+      "path": "/units/12/stanzas/1/fragments/0/en/text",
+      "old": "thine indignation, and anger",
+      "new": "thine indignation and anger"
+    }
+  ],
+  "rejected_differences": [
+    {
+      "scan": "s71",
+      "fresh": "false one:",
+      "retained": "false one;",
+      "reason": "Close crop confirms semicolon."
+    },
+    {
+      "scan": "s71",
+      "fresh": "frym",
+      "retained": "from",
+      "reason": "Close crop confirms damaged o in from, rather than y."
+    },
+    {
+      "scan": "s73",
+      "fresh": "unintelligible!",
+      "retained": "unintelligible:",
+      "reason": "Damaged vertical upper mark ambiguous; preserve existing colon with uncertainty rather than assert exclamation."
+    },
+    {
+      "scan": "s75/s77",
+      "fresh": "cue on s75",
+      "reason": "Comparator initially assigned cue to s77 from Hebrew-only last fragment; English last nonempty fragment s75. Existing XML omits the empty English page break and keeps the cue on s75; no source change needed."
+    }
+  ],
+  "edition_errors_retained": [
+    "s69 beneficence. and; s73 awkward lion comparison; s77 frustrast."
+  ],
+  "limitations": [
+    "Physical wrapping normalized; exhaustive emphasis review pending.",
+    "s69 fourth-day text incidentally visible during third-day boundary review; s77 fifth-day opening visible during fourth-day footnote review.",
+    "s73 punctuation after unintelligible remains uncertain."
+  ]
+}

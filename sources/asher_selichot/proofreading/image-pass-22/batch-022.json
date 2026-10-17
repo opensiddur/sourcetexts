@@ -1,0 +1,59 @@
+{
+  "batch": "022",
+  "scope": "Thursday / Fifth Fast Hebrew s336/n335 lower–s342/n341, printed167 lower–170;4 pages.",
+  "method": "Same-model second image pass with prior exposure; overlapping native-band captures frozen before same-page existing readings/XML. Primarily consonant-first; not independent-person proofreading.",
+  "readings": {
+    "s336-blind.json": "00c976de4a5d362e4a9ffd15ddff6bfb1a8c1356f90290eac03f469375123d4f",
+    "s338-blind.json": "cd175481dbfb266531b9da4b6d2853baae4763e3cdbc11a41a41cc9e5c68bf3d",
+    "s340-blind.json": "aea650ac270d522476514a1e684b4a89a30d6401216e0df6230b5cf841cfb15b",
+    "s342-blind.json": "69b8d7eb90555b9dc6612ae42470ed32b36f48c07bde7ebce48a889a49b4f57d"
+  },
+  "image_sha256": {
+    "s336": "824b19b6e706955a070654ec62bd07fde27c72535dd330f052447bdb961ca8cb",
+    "s338": "09a4eda12d3563a13342f0a0e398a11929be22c53ce76a035b119bc7d7456be5",
+    "s340": "e507e6e2b537f3b7f8647bbc5e928cf4a594dad9b9dcee863cfa8656f8a524d0",
+    "s342": "5e1aaf5d60f36aab10d19d5cff6f734b9e2516c6937cf68701b0c0c206801587"
+  },
+  "comparison_sha256": "ca17bee509007e849643611c4d20184334ae5ed80c6a1712b5103528829c4665",
+  "adjudication_sha256": "5bc391d9efaa8514344acccb3d124e9eb49bf52bfcbd48a5ba2dfefdd7d7f999",
+  "accepted_replacement_rules": 38,
+  "confirmed_without_change": 19,
+  "changed_xml": [
+    "project/asher_selichot_en_1912/yisrael_nosha_fast_day_recension.xml",
+    "project/asher_selichot_he_1912/anshei_amanah_avadu.xml",
+    "project/asher_selichot_he_1912/taanit_tsibbur_qaveu.xml",
+    "project/asher_selichot_he_1912/thursday_fast.xml",
+    "project/asher_selichot_he_1912/yisrael_nosha_fast_day_recension.xml"
+  ],
+  "status": "Checkpoint complete with uncertainties recorded.",
+  "verification": {
+    "xml": "Five XML files validate; 15 source-ordered bilingual units, six shared pizmon units, five abbreviation choices per language and expansion targets pass. Both PDFs preserve weekday performance instructions and omit unrequested Full Kaddish. Documentary output has two source footnotes; expanded output also carries 14 Monday notes. Six stanza starts align at 0.0 pt, direction and broken controls pass. All 154 shared scan and service assembly tests pass. No generic executable logic changed.",
+    "documentary": {
+      "pdf": "thursday-fast: 2 apparatus fingerprints; stanza start deltas [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]\nthursday-fast: 2 apparatus fingerprints; stanza start deltas [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]\nthursday-fast: missing-note and shifted-stanza controls rejected\n12 pages; contents and top-level day/subordinate pizmon bookmarks checked; controls=True",
+      "direction": "0 of 168 Hebrew runs are set left to right\ncontrol: 167 of 168 flagged when every run is reversed",
+      "pdf_sha256": "3f9dcc90784082a86878265cc2aeed8e928c40e72bd3b3aeb447740c3fcf0868",
+      "visual_pages": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    "expanded": {
+      "pdf": "thursday-fast: 10 apparatus fingerprints; stanza start deltas [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]\nthursday-fast: 10 apparatus fingerprints; stanza start deltas [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]\nthursday-fast: missing-note and shifted-stanza controls rejected\n21 pages; contents and top-level day/subordinate pizmon bookmarks checked; controls=True",
+      "direction": "0 of 545 Hebrew runs are set left to right\ncontrol: 540 of 545 flagged when every run is reversed",
+      "pdf_sha256": "4cc7a02d3d9bc8c0ff3c538db717d63add130c616ec00df7544439729a3d0546",
+      "visual_pages": [
+        9,
+        13,
+        14,
+        20
+      ]
+    },
+    "tests": "................................................\n----------------------------------------------------------------------\nRan 48 tests in 0.252s\n\nOK\n..........................................................................................................\n----------------------------------------------------------------------\nRan 106 tests in 0.260s\n\nOK\nfifth penitential day PDF: apparatus, fulfilled cues and reference boundaries checked; 5 stanza start deltas [0.0, 0.0, 0.0, 0.0, 0.0]\nfifth penitential day PDF: apparatus, fulfilled cues and reference boundaries checked; 5 stanza start deltas [0.0, 0.0, 0.0, 0.0, 0.0]\nCompiled Gedaliah: four bilingual petition expansions, Ten Days Full Kaddish and omitted fulfilled rubric checked",
+    "limitations": "Rare words including כבשית, צלחן, נשיה, חסיה and התו remain provisional pending independent reading and comprehensive pointing. English review pending. Known mixed-note paragraph-separation issue remains. Whole-book PDFs remain earlier snapshots; current PDFs isolate Thursday."
+  },
+  "evidence_note": "Frozen fresh captures contain errors rejected during image adjudication. Replacement count includes tentative-adjudication reversals, not 38 independently verified errors. Enlarged crops corrected fresh-reading mistakes and confirmed the apparent rare printed forms. Monday closing instructions and their documented absent appendix target remain inherited as printed.",
+  "next": "Last Monday / Last of the Three Fasts s344/n343–s350/n349 upper."
+}

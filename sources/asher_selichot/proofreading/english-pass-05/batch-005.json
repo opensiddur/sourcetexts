@@ -1,0 +1,99 @@
+{
+  "scope": "Fifth-day English s77/n76 lower–s85/n84 upper, printed37 lower–41 upper. Eight English footnotes.",
+  "scan_pages": [
+    77,
+    79,
+    81,
+    83,
+    85
+  ],
+  "method": "Fresh image readings frozen before existing fifth-day readings/XML/OCR opened. Same-model second pass with prior exposure; not independent-person proofreading.",
+  "accepted_replacement_rules": 5,
+  "captures": [
+    {
+      "file": "s77-blind.json",
+      "sha256": "eb2b45bae413d16f7739b546358fb12672e044036d2fd895a100ac15159dccb7"
+    },
+    {
+      "file": "s79-blind.json",
+      "sha256": "3edb0a3e9ad8e6cc1bb5203898725684efda04be39157c60bebd4e9150642ba5"
+    },
+    {
+      "file": "s81-blind.json",
+      "sha256": "7594b6947effd91bce0fb946bfb4bdb9dbbd75524db9a1fee4bc45da55dd24f9"
+    },
+    {
+      "file": "s83-blind.json",
+      "sha256": "2a8b99bed3d3434b485433df3eddd2ef11d921c4a6e032eb0a5b3e92c0c382c4"
+    },
+    {
+      "file": "s85-blind.json",
+      "sha256": "d6c81c50523fd2f4d8fa593e594bbc3b61711cb53d51d6424bf9be408d889e1b"
+    }
+  ],
+  "comparison_inputs": [
+    "encoding-before.json",
+    "comparison-before.json"
+  ],
+  "comparison_after": "comparison-after.json",
+  "adjudication": "adjudication.json",
+  "adjudication_sha256": "83eb224b69118b8d3b1b73e1da9f1ea48c1ec8da0b385fce6b0ce8efe5412824",
+  "comparison_after_sha256": "f3fd7b2740c526d0409e9f349eabd13668fde8651a7eba767e3d0b33ba0e2114",
+  "limitations": [
+    "Physical wrapping normalized; exhaustive emphasis review pending.",
+    "s77 fifth-day opening previously visible during fourth-day boundary/apparatus review; s85 sixth-day opening incidentally visible during boundary review.",
+    "Noachic final letter uncertain; printed book-note superscript appears1 where apparatus uses2."
+  ],
+  "status": "Checkpoint complete with exhaustive typography review pending.",
+  "next": "Sixth-day English s85/n84 lower–s93/n92 upper.",
+  "verification": {
+    "xml": "Validated 8 fifth-day XML files\nFifth day: printed order, page streams, footnotes and source refrain choices per language checked",
+    "pdf": {
+      "documentary": {
+        "pages": 14,
+        "stanza_baseline_deltas": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controls": true,
+        "contents_and_bookmarks": true,
+        "pdf_sha256": "f9f145c37539ba55116e02b98ec365ea775be6132819b890b17aa22f98279e06",
+        "direction": "0 of 263 Hebrew runs are set left to right\ncontrol: 263 of 263 flagged when every run is reversed",
+        "visual_pages": [
+          8,
+          11,
+          13
+        ]
+      },
+      "expanded": {
+        "pages": 36,
+        "stanza_baseline_deltas": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controls": true,
+        "contents_and_bookmarks": true,
+        "pdf_sha256": "4d861dac614ae1a9c8d6c75881e5931555dc156089e583beae0f8fef28a5e236",
+        "direction": "0 of 1270 Hebrew runs are set left to right\ncontrol: 1249 of 1270 flagged when every run is reversed",
+        "visual_pages": [
+          14,
+          18,
+          20
+        ]
+      }
+    },
+    "full_suite": "No executable logic changed; prior full suite passed3557 tests with12 skips; not rerun for declarative text corrections."
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "batch": "003",
+  "scope": [
+    "s14/n13, Hebrew printed 6"
+  ],
+  "method": "Fresh image-only second pass frozen before comparison; not independent-person review",
+  "readings": {
+    "s14-blind.json": "73d555edb780614b9bb51fa95cdd7a8af8418e10d7d02d5b72a657162c25819c"
+  },
+  "image_sha256": {
+    "s14": "3a8d9595b78f4640ec7f31955bb59bb1a2338df5d467eab3f50701db1b60ac56"
+  },
+  "accepted_encoding_corrections": 2,
+  "status": "Adjudicated; corrected module validated and reverse-verified; excerpt rendered and controls pass.",
+  "next_hebrew_scan": "s16/n15",
+  "verification": {
+    "xml": "Changed Hebrew shomea_tefillah module validates; 96 bilingual continuation units, six opening page/language streams and both titles match documentary evidence.",
+    "tests": "303 compiler/inline/range/reference tests pass after main merge; 106 existing Asher tests pass.",
+    "inspection_pdf": "output/asher_selichot/proofreading/batch-003/inspection.pdf; 13 pages, 3 LuaLaTeX passes, isolated reference database.",
+    "anchor_deltas_points": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "hebrew_direction": {
+      "reversed": 0,
+      "runs": 252,
+      "reversed_control_flagged": 250
+    },
+    "corrected_forms": "ישב הכרובים and בזמירות each occur once in PDF glyphs.",
+    "controls_rejected": [
+      "Latin Psalm citation direction",
+      "Latin note direction",
+      "English alignment",
+      "service boundary",
+      "stranded punctuation",
+      "colon substituted for sof pasuq"
+    ],
+    "visual_inspection": "Page11 corrected body forms inspected. The pre-existing mixed-language footnote shares an English continuation line with the Hebrew paragraph; paragraph separation remains to review despite passing glyph-direction checks.",
+    "limitations": "Same-model image pass, not independent-person review. Facing English not proofread. Whole-book PDFs not rerendered."
+  }
+}

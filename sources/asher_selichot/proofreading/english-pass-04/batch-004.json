@@ -1,0 +1,93 @@
+{
+  "scope": "Fourth-day English s69/n68 lower–s77/n76 upper, printed33 lower–37 upper. Eight English footnotes.",
+  "scan_pages": [
+    69,
+    71,
+    73,
+    75,
+    77
+  ],
+  "method": "Fresh image readings frozen before existing fourth-day readings/XML/OCR opened. Same-model second pass with prior exposure; not independent-person proofreading.",
+  "accepted_replacement_rules": 6,
+  "captures": [
+    {
+      "file": "s69-blind.json",
+      "sha256": "c13cf4d6de45835ee025d425049b0d3ca32b11b88ca591f7d50eacbed7652b34"
+    },
+    {
+      "file": "s71-blind.json",
+      "sha256": "3294668e017728856cbaf898aa8b8fd02dd37666ad965a3098b74b3c2e1b1d75"
+    },
+    {
+      "file": "s73-blind.json",
+      "sha256": "1b408ec601945bb31b3e11866fac0355a2fa1ca0869d01bc4a5c4d252ca4e279"
+    },
+    {
+      "file": "s75-blind.json",
+      "sha256": "99cba6f1eb449128a625f7dae438929ea2a56d9510116e5cb642e2cf8d8cd49e"
+    },
+    {
+      "file": "s77-blind.json",
+      "sha256": "8ecaa75817b2ceeb2b29f3139ac9cf84d5c114de18b08ed3843c8138d968882b"
+    }
+  ],
+  "comparison_inputs": [
+    "encoding-before.json",
+    "comparison-before.json"
+  ],
+  "comparison_after": "comparison-after.json",
+  "adjudication": "adjudication.json",
+  "adjudication_sha256": "2733b7ea441b58846910e91a552b133e0f38df5b4efbc41f540187669d9b7694",
+  "comparison_after_sha256": "683613411d2cb8bf361aa6d48aac62654041c7d851e1f555a22d79a65fa6a80b",
+  "limitations": [
+    "Physical wrapping normalized; exhaustive emphasis review pending.",
+    "s69 fourth-day text incidentally visible during third-day boundary review; s77 fifth-day opening visible during fourth-day footnote review.",
+    "s73 punctuation after unintelligible remains uncertain."
+  ],
+  "status": "Checkpoint complete with exhaustive typography review pending.",
+  "next": "Fifth-day English s77/n76 lower–s85/n84 upper.",
+  "verification": {
+    "xml": "Validated 8 fourth-day XML files\nFourth day: printed order, page streams, footnotes and source refrain choices per language checked",
+    "pdf": {
+      "documentary": {
+        "pages": 14,
+        "stanza_baseline_deltas": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controls": true,
+        "contents_and_bookmarks": true,
+        "pdf_sha256": "d34c075052b6578239cae59ba80de50c648a748b3d7435777040f6ffd80085bf",
+        "direction": "0 of 258 Hebrew runs are set left to right\ncontrol: 258 of 258 flagged when every run is reversed",
+        "visual_pages": [
+          9,
+          12,
+          13
+        ]
+      },
+      "expanded": {
+        "pages": 37,
+        "stanza_baseline_deltas": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controls": true,
+        "contents_and_bookmarks": true,
+        "pdf_sha256": "82d09ca4b90ac5604ef21996375a3e9b1ac65cbfc2e4e93e0830408718b753c3",
+        "direction": "0 of 1302 Hebrew runs are set left to right\ncontrol: 1277 of 1302 flagged when every run is reversed",
+        "visual_pages": [
+          20,
+          35,
+          36
+        ]
+      }
+    },
+    "full_suite": "No executable logic changed; prior full suite passed3557 tests with12 skips; not rerun for declarative text corrections."
+  }
+}

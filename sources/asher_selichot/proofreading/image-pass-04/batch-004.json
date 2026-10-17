@@ -1,0 +1,48 @@
+{
+  "batch": "004",
+  "scope": [
+    "s16/n15",
+    "s18/n17",
+    "s20/n19",
+    "s22/n21",
+    "s24/n23"
+  ],
+  "method": "Fresh image-only second pass frozen before comparison, followed by native-crop adjudication; same model with prior conversation/encoding exposure, not independent-person review.",
+  "readings": {
+    "s16-blind.json": "4f244eb71f55281c220c631e2bfeaa0d887a6c1a999a8c850aa9bc8c4e0b5286",
+    "s18-blind.json": "42571873e17282df82d68a47393f4134e5a5ecf0f977e966870d6e3124ab58b3",
+    "s20-blind.json": "7c9e7e4e79754fa1aa96e12d24a8cbc8cde868b0252dc3f47442348d257fb7bb",
+    "s22-blind.json": "e7fe683cdb95eaa25ee75a0e95f35e0702778a718cef35717c0e7a02875951af",
+    "s24-blind.json": "881bb39d9fa82e3de02ddbf4e0125369b4fd8681531609c4ca26f0935e853532"
+  },
+  "image_sha256": {
+    "s16": "237b26a8796876438c84545f87f3c28cf89c2d373672f3e8a9d4e205e38ffb78",
+    "s18": "a21854a314d25c2b8ed8f36eb9be2f1ee7337f9f3c6f7420c4998c545f24ce31",
+    "s20": "456735ba272d3b7c8c59bcf068f4f89e2158386f69e3a7109fbe5aa888434de3",
+    "s22": "1f803569585b89fb1098297572ba97c87209f32afe7dfb5df43ca2b5d59b582e",
+    "s24": "3190dd8230caa78c7c8ac699b0f6fb09786e77b7a7a8e8efb1b6858bebb55b21"
+  },
+  "accepted_comparison_hunks": 96,
+  "status": "Adjudicated; changed XML schema-valid; documentary readings reverse-verified; bilingual excerpt rendered and checked.",
+  "next_hebrew_scan": "s26/n25",
+  "verification": {
+    "xml": "All398 book files validated before the poetry-count check; after image-based count corrections, all96 continuation units plus six opening streams and titles match. Seven core documentary streams checked separately.",
+    "tests": "106 existing Asher unittest cases pass.",
+    "inspection_pdf": "output/asher_selichot/proofreading/batch-004/inspection.pdf;19 pages; three LuaLaTeX passes; isolated reference database.",
+    "render_checks": {
+      "pages": 19,
+      "opening_prefix_pages": 17,
+      "opening_anchor_deltas_points": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "opening_controls": "six deliberately broken controls rejected",
+      "hebrew_direction": "0/508; reversed control flags499/508",
+      "boundary": "Full excerpt intentionally exceeds the opening-only checker range; checker applied to opening prefix before El Melekh dependency."
+    },
+    "visual_inspection": "Rendered pages15,17,18 inspected: plural petitions, first piyyut continuation, El Melekh/Vayaavor, attached stops and English footnote.",
+    "limitations": "Whole-book PDFs not rerendered; facing English not independently proofread; fine pointing uncertainties in adjudication remain pending; existing mixed-language note paragraph separation remains pending."
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "batch": "001",
+  "scope": [
+    "s2",
+    "s6",
+    "s8"
+  ],
+  "method": "Fresh image-only transcription of full-resolution cached pages and overlapping crops, frozen before opening existing source readings/XML for this batch. Includes mixed-language rubrics on Hebrew pages. No OCR or external transcription consulted.",
+  "reader": "GPT-6, same model family as original transcription; not a separately blinded reader.",
+  "independence_limits": [
+    "Prior conversation exposed the Ashrei punctuation convention and selected unrelated later passages.",
+    "Same-reader prior authorship means this is independently derived image evidence, not independent-person proofreading.",
+    "English facing pages are outside this batch."
+  ],
+  "frozen_reading_sha256": {
+    "s8-blind.json": "83f7d5f00b24825f03cc00e0d62e1f7adf7765f8669f64bf0de599a4b007908c",
+    "s2-blind.json": "98ec4b7d4b67ede27d5c5abd208ff5830801dfbf87df544caea8e2d81315a0d3",
+    "s6-blind.json": "287a4c466e73570d212f7fe9f0b22256078edcc7d6accd53f4507da21b87160f"
+  },
+  "status": "Image transcription, comparison, adjudication, XML validation and excerpt PDF verification complete.",
+  "next_hebrew_scan": "s10",
+  "accepted_encoding_corrections": 6,
+  "verification": {
+    "changed_xml_schema_valid": 7,
+    "opening_page_language_streams": 6,
+    "inspection_pdf_pages": 10,
+    "bilingual_anchor_baseline_deltas_pt": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "hebrew_direction": {
+      "reversed": 0,
+      "runs": 86,
+      "reversed_control_flagged": 85
+    },
+    "broken_controls_rejected": [
+      "reversed Psalm citation",
+      "shifted English Kaddish",
+      "stranded sof pasuq",
+      "colon substituted for sof pasuq",
+      "deleted corrected Hebrew line"
+    ],
+    "apparatus_control": "Not applicable: the opening excerpt has no footnotes. The generic full-first-day control requires later apparatus; its note-direction control therefore cannot run on this excerpt.",
+    "pdf_artifact": "output/asher_selichot/proofreading/batch-001/opening.pdf",
+    "aggregate_pdf_status": "Earlier whole-book PDFs are pre-proofreading snapshots."
+  },
+  "corrected_source_sha256": {
+    "title-pages.json": "b34799589bad43fc27901d012c34c63af0673d38b8e7ae9399e675763c834169",
+    "first-day-opening.json": "8867424b8c8d6586aa8b676b6767c23c96610ab99b663b4d14c36950f519d717",
+    "opening-documentary-streams.json": "c366cfbd8152a1ed78f139f38f8e243cd26cae1b4c26aabb8a791d9b4429ed7b"
+  }
+}

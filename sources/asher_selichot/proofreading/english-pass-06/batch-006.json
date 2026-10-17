@@ -1,0 +1,92 @@
+{
+  "scope": "Sixth-day English s85/n84 lower–s93/n92 upper; 6 printed English notes.",
+  "scan_pages": [
+    85,
+    87,
+    89,
+    91,
+    93
+  ],
+  "method": "Fresh image readings frozen before existing sixth-day readings/XML/OCR opened. Same-model second pass with prior exposure; not independent-person proofreading.",
+  "accepted_replacement_rules": 7,
+  "captures": [
+    {
+      "file": "s85-blind.json",
+      "sha256": "c678ffb35f35da6830a393dae3602d612f0c6af1de9511efeee4c2bd95545c82"
+    },
+    {
+      "file": "s87-blind.json",
+      "sha256": "c6340b03122eb23db8f2f55dc1398c00dae6c60a58d2e61e775251042d68c33d"
+    },
+    {
+      "file": "s89-blind.json",
+      "sha256": "19452d8925ef9e4470b0dddb39479759ab1a117016dc1b6463abd1f0d5b3442e"
+    },
+    {
+      "file": "s91-blind.json",
+      "sha256": "c56060eb6a9285648f364d3c1dda22f7d32f6a6dfecafd476a7abfd359612251"
+    },
+    {
+      "file": "s93-blind.json",
+      "sha256": "68eefad906e9ac52847af9c5afc50023f7c9edbf31dfe4703a7d45d1a3b9c532"
+    }
+  ],
+  "comparison_inputs": [
+    "encoding-before.json",
+    "comparison-before.json"
+  ],
+  "comparison_after": "comparison-after.json",
+  "adjudication": "adjudication.json",
+  "adjudication_sha256": "d5a0f649ba3d986e7a4f805694e090ad681a73d4b24cfdaafb464c70e0059ad5",
+  "comparison_after_sha256": "0205783d5a7a05012126a7a590b63c791ba60da768584524db4adfc0731f0cf2",
+  "limitations": [
+    "Physical wrapping normalized; exhaustive emphasis review pending.",
+    "s85 sixth-day opening previously visible during fifth-day boundary review; s93 seventh-day opening incidentally visible during sixth-day boundary review."
+  ],
+  "status": "Checkpoint complete with exhaustive typography review pending.",
+  "next": "Seventh English s93/n92 lower–s101/n100 upper.",
+  "verification": {
+    "xml": "Validated 8 sixth-day XML files\nSixth day: printed order, page streams, footnotes and source refrain choices per language checked",
+    "pdf": {
+      "documentary": {
+        "pages": 13,
+        "stanza_baseline_deltas": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controls": true,
+        "contents_and_bookmarks": true,
+        "pdf_sha256": "1bb03703944d27ac29377e2860c5d8945213641126c684d15c8d69dbf1018666",
+        "direction": "0 of 259 Hebrew runs are set left to right\ncontrol: 259 of 259 flagged when every run is reversed",
+        "visual_pages": [
+          8,
+          11,
+          12
+        ]
+      },
+      "expanded": {
+        "pages": 37,
+        "stanza_baseline_deltas": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controls": true,
+        "contents_and_bookmarks": true,
+        "pdf_sha256": "c85f8be2c96b27772f2a1536afc2afe31a938e4eee64b42685e38cff48ebabe9",
+        "direction": "0 of 1303 Hebrew runs are set left to right\ncontrol: 1276 of 1303 flagged when every run is reversed",
+        "visual_pages": [
+          18,
+          19,
+          35
+        ]
+      }
+    },
+    "full_suite": "No generic executable logic changed. Last full suite passed3557 tests with12 skips; not rerun for declarative text corrections."
+  }
+}

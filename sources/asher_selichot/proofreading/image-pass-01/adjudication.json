@@ -1,0 +1,84 @@
+{
+  "scope": [
+    "s2",
+    "s6",
+    "s8"
+  ],
+  "method": "After freezing the fresh image-only readings, compare with pre-correction working readings, then return to native scan crops. This is same-reader adjudication.",
+  "decisions": [
+    {
+      "scan": "s2",
+      "encoding_before": "וואללענטיין",
+      "image_reading": "וואללענטין",
+      "decision": "correct_encoding",
+      "evidence": "Native imprint crop prints one yod between tet and final nun."
+    },
+    {
+      "scan": "s6",
+      "encoding_before": "אֱלֹהַי",
+      "image_reading": "אֱלוֹהַי",
+      "decision": "correct_encoding",
+      "evidence": "The scan prints a vav between lamed and he in the opening Psalm verse."
+    },
+    {
+      "scan": "s6",
+      "encoding_before": "נִפְלְאוֹתֶיךָ",
+      "image_reading": "נִפְלְאֹתֶיךָ",
+      "decision": "correct_encoding",
+      "evidence": "The scan prints alef immediately followed by tav, without a vav, in Psalm145:5."
+    },
+    {
+      "scan": "s8",
+      "encoding_before": "יְדַבֶּר־פִּי",
+      "image_reading": "יְדַבֶּר פִּי",
+      "decision": "correct_encoding",
+      "evidence": "A word space, not a maqqef, separates these words in Psalm145:21."
+    },
+    {
+      "scan": "s8",
+      "encoding_before": "זְכֹר־רַחֲמֶיךָ",
+      "image_reading": "זְכֹר רַחֲמֶיךָ",
+      "decision": "correct_encoding",
+      "evidence": "The Psalm25:6 preface has a word space, not a maqqef."
+    },
+    {
+      "scan": "s8",
+      "encoding_before": "דִּי בְרָא",
+      "image_reading": "דִּי־בְרָא",
+      "decision": "correct_encoding",
+      "evidence": "A short horizontal maqqef is visible between yod and bet in the first Kaddish paragraph."
+    },
+    {
+      "scan": "s8",
+      "encoding_before": "עוֹלָמִים",
+      "blind_reading": "עֹלָמִים",
+      "decision": "retain_encoding",
+      "evidence": "Enlarged kingdom line shows vav; the blind reading omitted it."
+    },
+    {
+      "scan": "s8",
+      "encoding_before": "רְצוֹן־יְרֵאָיו",
+      "blind_reading": "רְצוֹן־ יְרֵאָיו",
+      "decision": "retain_encoding",
+      "evidence": "Printed maqqef joins the words across a physical line wrap; the space in the blind capture reflects wrapping."
+    },
+    {
+      "scan": "s2",
+      "encoding_before": "עם העתקה חדשה בלשון אינגליש",
+      "blind_reading": "עם העתקה חדשה בלשון אינגליש.",
+      "decision": "unresolved_no_change",
+      "evidence": "The isolated oblique ink mark left of אינגליש may be punctuation or a print blemish. Do not assert a period without clearer evidence."
+    }
+  ],
+  "other_checks": [
+    "Hebrew title, subtitle, address and year agree apart from the surname difference and undecided terminal mark.",
+    "All three opening English rubrics and embedded Hebrew cues agree with the image-only capture.",
+    "Opening heading, Psalm citation, Ashrei prelude, remaining Psalm tokens, postlude, Kaddish preface/rubrics and all printed Kaddish tokens/pointing compared within scope.",
+    "Hebrew printed numeral ג confirmed on s8; the opening s6 has no numeral.",
+    "Psalm145:9 continuation is verified across s6→s8; no opening text is omitted."
+  ],
+  "unresolved": [
+    "Possible terminal mark after אינגליש on s2.",
+    "No independent-person proofreading claimed; English facing pages and the rest of the book remain outside this batch."
+  ]
+}
