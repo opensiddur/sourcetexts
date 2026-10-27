@@ -62,7 +62,7 @@ for that secondary comparison.
   are recorded in the bibliographic scopes.
 
 The importer sources are `build/hanukkah_purim.py`, `hanukkah_purim_data.py`, and
-`notes_hanukkah_purim.py` in opensiddur-ai. Both XML projects are generated from
+`notes_hanukkah_purim.py` in opensiddur-processor. Both XML projects are generated from
 those sources. The book’s index continues with `siddur:chanukah` and
 `siddur:purim`; the reusable Hashmonaim and poem files remain independently
 addressable.

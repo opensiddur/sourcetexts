@@ -82,7 +82,7 @@ underlying text carries section 1's terms and nothing further attaches from sect
 
 `scan_reading/transcription/{printed}.txt` is the exception and is **not** ours: it is a
 slice of the Hebrew Wikisource text in `source/`, kept here so that the accuracy
-measurement in the opensiddur-ai repository can be rechecked against exactly the words it
+measurement in the opensiddur-processor repository can be rechecked against exactly the words it
 compared. It carries section 2's CC BY-SA 4.0 terms like the rest of `source/`.
 
 The distinction matters because the two are meant to be laid side by side. A reader

@@ -24,5 +24,5 @@ a personal boolean with no default. Unspecified means MAYBE. Hoshanot has Hebrew
 text and English explanatory notes, not a printed English translation.
 
 The importer is `opensiddur.importer.birnbaum_scan.build.sukkot_rites` in the matching
-opensiddur-ai worktree. Build both projects with `build.build_he` and `build.build_en`;
+opensiddur-processor worktree. Build both projects with `build.build_he` and `build.build_en`;
 compile `sukkot_rites.xml` using `settings_sukkot_rites.yaml` for the bilingual proof.
