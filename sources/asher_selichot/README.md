@@ -1,7 +1,7 @@
 # David Asher, Selichoth, 1912: scan edition
 
 Source: https://archive.org/details/selichothdavidasher1912
-Issue: https://github.com/opensiddur/opensiddur-ai/issues/207
+Issue: https://github.com/opensiddur/opensiddur-processor/issues/207
 
 Vallentine & Sons, London, 1912–5672 reprint of David Asher's translation, first
 published in 1866. The scan is the source; OCR and independent readings are checks.
@@ -83,7 +83,7 @@ remain יְיָ; no substitution of the tetragrammaton is performed.
 
 ## Regeneration and checking
 
-From the matching opensiddur-ai worktree, pass this repository's `sources` directory
+From the matching opensiddur-processor worktree, pass this repository's `sources` directory
 and the companion opensiddur-projects worktree's `project` directory explicitly:
 
 ```bash
