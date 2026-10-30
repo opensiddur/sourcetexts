@@ -239,7 +239,7 @@ proofreading are edition metadata, rather than part of a text's identity.
 
 Each independent text has its own module, with the same filename and canonical
 URN in both language projects. Source attribution is retained in the publication
-URN's `@asher_selichot_he_1912` / `@asher_selichot_en_1912` suffix, header metadata
+URN's `@selichoth-asher-1912-he` / `@selichoth-asher-1912-en` suffix, header metadata
 and facsimile links. `first_day.xml` holds the actual printed service order and rubrics; its direct
 transclusions use the source-independent canonical URNs. The opening, preface,
 before-piyyut and closing subdivisions were authoring batches, not printed service

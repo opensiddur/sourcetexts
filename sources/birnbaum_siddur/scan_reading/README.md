@@ -1,7 +1,7 @@
 # The 1949 printing, read off its scan
 
 What the page says, written down page by page from the Internet Archive scan. The reading
-is the evidence behind `project/birnbaum_ashkenaz_{he,en}_1949/` in the opensiddur-projects
+is the evidence behind `project/hasiddur_hashalem-birnbaum-1949-{he,en}/` in the opensiddur-projects
 repository: the TEI was authored from these files, not from any existing transcription.
 
 ```
