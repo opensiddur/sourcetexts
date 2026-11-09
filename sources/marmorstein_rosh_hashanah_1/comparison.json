@@ -1365,5 +1365,130 @@
       "consonants:13:ב\"ר שמשון ז\"ל איש|..."
     ],
     "complete": false
+  },
+  "mah_tovu/he": {
+    "primary_sha256": "147800554d2f95b6d62cc6e2206aea2f95d5354fd87f749086b00a0521d16678",
+    "independent_sha256": "219880d3569f49608261a6e971f9e81eb30d6cb067b463d7b4bb53ce6a0e4d27",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": "enlarged image",
+    "differences": [
+      {
+        "bucket": "vowels",
+        "ours": "בְרֹב",
+        "theirs": "בְּרֹב",
+        "at": 7,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:7:בְרֹב|בְּרֹב"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'־'",
+        "at": 27,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after לִפְנֵי",
+        "key": "whitespace:27:' '|'־'"
+      }
+    ],
+    "decisions": {},
+    "unresolved": [
+      "vowels:7:בְרֹב|בְּרֹב",
+      "whitespace:27:' '|'־'"
+    ],
+    "complete": false
+  },
+  "ashrei/he": {
+    "primary_sha256": "c365c3e040abf81c1050682ac2d206729c366d2d465e78866fbbdb895f7d0a2e",
+    "independent_sha256": "4cd250e1da9e7c905d4474d708fc6210911773ce0086a5106b5711b6d2ce68fa",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": "enlarged image",
+    "differences": [
+      {
+        "bucket": "vowels",
+        "ours": "וַאֲבָרֲכָה",
+        "theirs": "וַאֲבָרְכָה",
+        "at": 19,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:19:וַאֲבָרֲכָה|וַאֲבָרְכָה"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "אֲבָרֲכֶךָּ",
+        "theirs": "אֲבָרְכֶךָּ",
+        "at": 25,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:25:אֲבָרֲכֶךָּ|אֲבָרְכֶךָּ"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "נִפְלְאוֹתֶיךָ",
+        "theirs": "נִפְלְאֹתֶיךָ",
+        "at": 47,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:47:נִפְלְאוֹתֶיךָ|נִפְלְאֹתֶיךָ"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "וּגְדוּלָּתְךָ",
+        "theirs": "וּגְדֻלָּתְךָ",
+        "at": 52,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:52:וּגְדוּלָּתְךָ|וּגְדֻלָּתְךָ"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "יְבָרֲכוּכָה:",
+        "theirs": "יְבָרְכוּכָה:",
+        "at": 79,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:79:יְבָרֲכוּכָה:|יְבָרְכוּכָה:"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "'־'",
+        "theirs": "' '",
+        "at": 107,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after עֵינֵי",
+        "key": "whitespace:107:'־'|' '"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "'־'",
+        "theirs": "' '",
+        "at": 157,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after יְדַבֶּר",
+        "key": "whitespace:157:'־'|' '"
+      }
+    ],
+    "decisions": {},
+    "unresolved": [
+      "vowels:19:וַאֲבָרֲכָה|וַאֲבָרְכָה",
+      "vowels:25:אֲבָרֲכֶךָּ|אֲבָרְכֶךָּ",
+      "consonants:47:נִפְלְאוֹתֶיךָ|נִפְלְאֹתֶיךָ",
+      "consonants:52:וּגְדוּלָּתְךָ|וּגְדֻלָּתְךָ",
+      "vowels:79:יְבָרֲכוּכָה:|יְבָרְכוּכָה:",
+      "whitespace:107:'־'|' '",
+      "whitespace:157:'־'|' '"
+    ],
+    "complete": false
   }
 }

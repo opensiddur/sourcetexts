@@ -152,3 +152,32 @@ human reading. No guesses were promoted to accepted transcription.
 All pilot gates are complete. Both final CI checks passed; the user resolved the
 calligraphic signature and confirmed electronic layout and links. The complete
 355-leaf volume remains in progress.
+
+
+## Full-volume work from the beginning
+
+The next batch starts at s7 (Archive n6, printed p. 1), after the completed six
+front leaves. First image readings and blind independent readings now cover
+s7–s14 (printed pp. 1–8): entrance prayers, weekday Minchah, eruv tavshilin,
+festival candle lighting, and the start of Kabbalat Shabbat. See
+`full_volume_work.json` for the exact intake and adjudication state. These
+opening pages are sequential; they are not Hebrew/English facing counterparts.
+
+Mah Tovu and Ashrei are accepted Hebrew-only excerpts using existing canonical
+identities. No English prayer words have been supplied. Ashrei's marginal קמה
+is a citation note anchored at Psalm 145:1, following its introductory verses.
+The remaining s7 prayers and the s8 Half Kaddish direction remain in intake;
+neither opening leaf is certified complete. The accepted pilot stays complete.
+
+`opening_comparison.json` retains comparisons for the raw eight-leaf batch.
+The additional enlarged-image readings and `opening_encoding_resolutions.json`
+record the accepted excerpts' audit. A tight image crop corrected the initial
+adjudication of the bet dagesh and maqaf in Mah Tovu; the superseded decision is
+preserved in `primary/opening_superseded_adjudication.json`.
+
+The expanded spine separates weekday Minchah from the first-day Rosh ha-Shanah
+morning service and keeps the daily psalm in a named appendix. Existing service
+and holiday settings delimit each section locally. Editorial rubrics explicitly
+label the gaps. The Kaddish/Amidah, speaker alternatives, page continuations and
+remaining entrance verses still need adjudication and assembly before these
+sections can be accepted as complete.

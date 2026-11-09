@@ -1773,5 +1773,191 @@
       "The original blind title reading and primary inspection agree on מוגה; the later enlarged reader’s tentative מונה is rejected against the printed gimel.",
       "The user confirms the complete signature, including the previously unread ז\"ל."
     ]
+  },
+  "mah_tovu/he": {
+    "primary_sha256": "147800554d2f95b6d62cc6e2206aea2f95d5354fd87f749086b00a0521d16678",
+    "independent_sha256": "219880d3569f49608261a6e971f9e81eb30d6cb067b463d7b4bb53ce6a0e4d27",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "s7 original image; exact pixel crop coordinates in adjudications.json",
+      "independent/opening_s7_s8_enlarged.json",
+      "independent/opening_encoding_review.json"
+    ],
+    "differences": [
+      {
+        "bucket": "vowels",
+        "ours": "בְרֹב",
+        "theirs": "בְּרֹב",
+        "at": 7,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:7:בְרֹב|בְּרֹב"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'־'",
+        "at": 27,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after לִפְנֵי",
+        "key": "whitespace:27:' '|'־'"
+      }
+    ],
+    "decisions": {
+      "vowels:7:בְרֹב|בְּרֹב": {
+        "accepted": "independent",
+        "evidence": "Independent encoding audit, then 6× crops of original s7 pixels: box (155,515,260,590) clearly shows the bet dagesh in בְּרֹב; box (710,740,860,810) clearly shows the maqaf after לִפְנֵי. The earlier lower-enlargement adjudication is superseded and preserved in primary/opening_superseded_adjudication.json."
+      },
+      "whitespace:27:' '|'־'": {
+        "accepted": "independent",
+        "evidence": "Independent encoding audit, then 6× crops of original s7 pixels: box (155,515,260,590) clearly shows the bet dagesh in בְּרֹב; box (710,740,860,810) clearly shows the maqaf after לִפְנֵי. The earlier lower-enlargement adjudication is superseded and preserved in primary/opening_superseded_adjudication.json."
+      }
+    },
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "219880d3569f49608261a6e971f9e81eb30d6cb067b463d7b4bb53ce6a0e4d27",
+    "pending_ambiguities": [],
+    "ambiguity_resolutions": [
+      "Tight 6× image crops resolve both the dagesh and maqaf in favor of the independent reader.",
+      "The four-verse varani scope follows its existing registry identity; Bible citations remain bounded source spans. The first-person Psalm 95:6 adaptation is explicitly typed adaptation."
+    ]
+  },
+  "ashrei/he": {
+    "primary_sha256": "c365c3e040abf81c1050682ac2d206729c366d2d465e78866fbbdb895f7d0a2e",
+    "independent_sha256": "4cd250e1da9e7c905d4474d708fc6210911773ce0086a5106b5711b6d2ce68fa",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n7.jpg",
+      "primary/opening_s7_s14.json",
+      "independent/opening_s7_s8_enlarged.json"
+    ],
+    "differences": [
+      {
+        "bucket": "vowels",
+        "ours": "וַאֲבָרֲכָה",
+        "theirs": "וַאֲבָרְכָה",
+        "at": 19,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:19:וַאֲבָרֲכָה|וַאֲבָרְכָה"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "אֲבָרֲכֶךָּ",
+        "theirs": "אֲבָרְכֶךָּ",
+        "at": 25,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:25:אֲבָרֲכֶךָּ|אֲבָרְכֶךָּ"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "נִפְלְאוֹתֶיךָ",
+        "theirs": "נִפְלְאֹתֶיךָ",
+        "at": 47,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:47:נִפְלְאוֹתֶיךָ|נִפְלְאֹתֶיךָ"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "וּגְדוּלָּתְךָ",
+        "theirs": "וּגְדֻלָּתְךָ",
+        "at": 52,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:52:וּגְדוּלָּתְךָ|וּגְדֻלָּתְךָ"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "יְבָרֲכוּכָה:",
+        "theirs": "יְבָרְכוּכָה:",
+        "at": 79,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:79:יְבָרֲכוּכָה:|יְבָרְכוּכָה:"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "'־'",
+        "theirs": "' '",
+        "at": 107,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after עֵינֵי",
+        "key": "whitespace:107:'־'|' '"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "'־'",
+        "theirs": "' '",
+        "at": 157,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after יְדַבֶּר",
+        "key": "whitespace:157:'־'|' '"
+      }
+    ],
+    "decisions": {
+      "vowels:19:וַאֲבָרֲכָה|וַאֲבָרְכָה": {
+        "accepted": "independent",
+        "evidence": "Enlarged s8 image confirms the independent reading at this exact occurrence: ordinary sheva under resh in the blessing forms; no vav in נִפְלְאֹתֶיךָ or וּגְדֻלָּתְךָ. These repair first-reader errors, not source typos."
+      },
+      "vowels:25:אֲבָרֲכֶךָּ|אֲבָרְכֶךָּ": {
+        "accepted": "independent",
+        "evidence": "Enlarged s8 image confirms the independent reading at this exact occurrence: ordinary sheva under resh in the blessing forms; no vav in נִפְלְאֹתֶיךָ or וּגְדֻלָּתְךָ. These repair first-reader errors, not source typos."
+      },
+      "consonants:47:נִפְלְאוֹתֶיךָ|נִפְלְאֹתֶיךָ": {
+        "accepted": "independent",
+        "evidence": "Enlarged s8 image confirms the independent reading at this exact occurrence: ordinary sheva under resh in the blessing forms; no vav in נִפְלְאֹתֶיךָ or וּגְדֻלָּתְךָ. These repair first-reader errors, not source typos."
+      },
+      "consonants:52:וּגְדוּלָּתְךָ|וּגְדֻלָּתְךָ": {
+        "accepted": "independent",
+        "evidence": "Enlarged s8 image confirms the independent reading at this exact occurrence: ordinary sheva under resh in the blessing forms; no vav in נִפְלְאֹתֶיךָ or וּגְדֻלָּתְךָ. These repair first-reader errors, not source typos."
+      },
+      "vowels:79:יְבָרֲכוּכָה:|יְבָרְכוּכָה:": {
+        "accepted": "independent",
+        "evidence": "Enlarged s8 image confirms the independent reading at this exact occurrence: ordinary sheva under resh in the blessing forms; no vav in נִפְלְאֹתֶיךָ or וּגְדֻלָּתְךָ. These repair first-reader errors, not source typos."
+      },
+      "whitespace:107:'־'|' '": {
+        "accepted": "independent",
+        "evidence": "The enlarged s8 image has a space, without maqaf, at this location (עֵינֵי כֹל / יְדַבֶּר פִּי)."
+      },
+      "whitespace:157:'־'|' '": {
+        "accepted": "independent",
+        "evidence": "The enlarged s8 image has a space, without maqaf, at this location (עֵינֵי כֹל / יְדַבֶּר פִּי)."
+      }
+    },
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "4cd250e1da9e7c905d4474d708fc6210911773ce0086a5106b5711b6d2ce68fa",
+    "pending_ambiguities": [],
+    "ambiguity_resolutions": [
+      "Checked the disputed letters, points and joins against the enlarged image. The shared-read s8 samekh in סֶּלָה has a visible dagesh; אֱלוֹהַי has a vav; גְּבוּרֹתָיו is defective after resh; the final kaf of אֲבָרְכֶךָּ has its printed dot. The unpointed marginal קמה is a citation, not prayer words."
+    ]
+  },
+  "citation/ashrei/he/0": {
+    "primary_sha256": "f208e354c9500c30c11f48cd10302f55d655eebb9ce697904c074b2fb2aff1f0",
+    "independent_sha256": "f208e354c9500c30c11f48cd10302f55d655eebb9ce697904c074b2fb2aff1f0",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "s8; primary and enlarged independent readings"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "f208e354c9500c30c11f48cd10302f55d655eebb9ce697904c074b2fb2aff1f0",
+    "pending_ambiguities": []
   }
 }

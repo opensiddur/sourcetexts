@@ -510,5 +510,59 @@
         "evidence": "The user supplied the exact calligraphic signature, including ז\"ל, and resolves the independent reader’s abstention. See human_pilot_confirmation.json and the enlarged original scan. Non-signature words were read independently in independent/front.json; paragraph grouping is whitespace-only."
       }
     }
+  },
+  "mah_tovu/he": {
+    "primary_sha256": "147800554d2f95b6d62cc6e2206aea2f95d5354fd87f749086b00a0521d16678",
+    "independent_sha256": "219880d3569f49608261a6e971f9e81eb30d6cb067b463d7b4bb53ce6a0e4d27",
+    "decisions": {
+      "vowels:7:בְרֹב|בְּרֹב": {
+        "accepted": "independent",
+        "evidence": "Independent encoding audit, then 6× crops of original s7 pixels: box (155,515,260,590) clearly shows the bet dagesh in בְּרֹב; box (710,740,860,810) clearly shows the maqaf after לִפְנֵי. The earlier lower-enlargement adjudication is superseded and preserved in primary/opening_superseded_adjudication.json."
+      },
+      "whitespace:27:' '|'־'": {
+        "accepted": "independent",
+        "evidence": "Independent encoding audit, then 6× crops of original s7 pixels: box (155,515,260,590) clearly shows the bet dagesh in בְּרֹב; box (710,740,860,810) clearly shows the maqaf after לִפְנֵי. The earlier lower-enlargement adjudication is superseded and preserved in primary/opening_superseded_adjudication.json."
+      }
+    },
+    "scan_evidence": [
+      "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n6.jpg"
+    ]
+  },
+  "ashrei/he": {
+    "primary_sha256": "c365c3e040abf81c1050682ac2d206729c366d2d465e78866fbbdb895f7d0a2e",
+    "independent_sha256": "4cd250e1da9e7c905d4474d708fc6210911773ce0086a5106b5711b6d2ce68fa",
+    "decisions": {
+      "vowels:19:וַאֲבָרֲכָה|וַאֲבָרְכָה": {
+        "accepted": "independent",
+        "evidence": "Enlarged s8 image confirms the independent reading at this exact occurrence: ordinary sheva under resh in the blessing forms; no vav in נִפְלְאֹתֶיךָ or וּגְדֻלָּתְךָ. These repair first-reader errors, not source typos."
+      },
+      "vowels:25:אֲבָרֲכֶךָּ|אֲבָרְכֶךָּ": {
+        "accepted": "independent",
+        "evidence": "Enlarged s8 image confirms the independent reading at this exact occurrence: ordinary sheva under resh in the blessing forms; no vav in נִפְלְאֹתֶיךָ or וּגְדֻלָּתְךָ. These repair first-reader errors, not source typos."
+      },
+      "consonants:47:נִפְלְאוֹתֶיךָ|נִפְלְאֹתֶיךָ": {
+        "accepted": "independent",
+        "evidence": "Enlarged s8 image confirms the independent reading at this exact occurrence: ordinary sheva under resh in the blessing forms; no vav in נִפְלְאֹתֶיךָ or וּגְדֻלָּתְךָ. These repair first-reader errors, not source typos."
+      },
+      "consonants:52:וּגְדוּלָּתְךָ|וּגְדֻלָּתְךָ": {
+        "accepted": "independent",
+        "evidence": "Enlarged s8 image confirms the independent reading at this exact occurrence: ordinary sheva under resh in the blessing forms; no vav in נִפְלְאֹתֶיךָ or וּגְדֻלָּתְךָ. These repair first-reader errors, not source typos."
+      },
+      "vowels:79:יְבָרֲכוּכָה:|יְבָרְכוּכָה:": {
+        "accepted": "independent",
+        "evidence": "Enlarged s8 image confirms the independent reading at this exact occurrence: ordinary sheva under resh in the blessing forms; no vav in נִפְלְאֹתֶיךָ or וּגְדֻלָּתְךָ. These repair first-reader errors, not source typos."
+      },
+      "whitespace:107:'־'|' '": {
+        "accepted": "independent",
+        "evidence": "The enlarged s8 image has a space, without maqaf, at this location (עֵינֵי כֹל / יְדַבֶּר פִּי)."
+      },
+      "whitespace:157:'־'|' '": {
+        "accepted": "independent",
+        "evidence": "The enlarged s8 image has a space, without maqaf, at this location (עֵינֵי כֹל / יְדַבֶּר פִּי)."
+      }
+    },
+    "scan_evidence": [
+      "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n7.jpg"
+    ]
   }
 }
