@@ -68,7 +68,7 @@ These were encoded in the first reading; the second reader had flagged uncertain
 The confirmations are recorded in `reviews.json`. All pilot witnesses now pass
 independent review with image adjudication and these human confirmations.
 Four front-matter leaves are marked complete, including the verified blank leaf.
-Four prayer leaves, s62–s65 (the facing Hebrew/English pages 16–17), are also
+Six prayer leaves, s60–s65 (the facing Hebrew/English pages 15–17), are also
 complete after independent coverage checks. The other prayer witnesses remain
 excerpts; images read or OCR available do not imply complete page coverage.
 
@@ -118,9 +118,9 @@ Hebrew chapter label and English reference are citation notes, outside prayer wo
 
 ## Obvious source errors
 
-`corrections.json` records four located occurrences: “convenant” → “covenant”
+`corrections.json` records five located occurrences: “convenant” → “covenant”
 (Chronicles 16:15 and 16:17), “withold” → “withhold” (Psalm 40:12), and
-“whem” → “whom” (Psalm 144:15). The builder uses the shared correction utility
+“whem” → “whom” (Psalm 144:15), and “paeons” → “paeans” (Barukh She-amar). The builder uses the shared correction utility
 to emit `tei:choice/tei:sic` and `tei:corr` before schema validation. Unique
 textual context prevents a correction from silently moving to another occurrence.
 
@@ -129,3 +129,9 @@ Normal exports select the corrected form by the repository default
 `readings.errors: corrected`; `readings.errors: printed` selects the source form.
 The defective printed Hebrew עֹמֶדֶת, archaic English and translation choices are
 retained without treating them as typographic errors.
+
+The pilot closeout also independently verifies full coverage of s60/s61 in
+`independent/pilot_pages_15_coverage.json`. The Hebrew Chronicles 16:16
+continuation stays in the same reference scope across s60/s62. Enlarged cover
+and title-page signature readings are preserved in `primary/calligraphy.json`
+and `independent/calligraphy.json`; exact lettering still awaits human adjudication.
