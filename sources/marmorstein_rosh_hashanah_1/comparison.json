@@ -841,15 +841,31 @@
     "complete": true
   },
   "front/s1": {
-    "primary_sha256": "99469e084e9dff24578934d6c47c7ea6d1a58f1ad3f25a86001ee7f2a539b5cb",
-    "independent_sha256": "99469e084e9dff24578934d6c47c7ea6d1a58f1ad3f25a86001ee7f2a539b5cb",
+    "primary_sha256": "4b09e140c864a0baf3b693084668506b76b10fbd2c6b8cae81e39851bbdfc212",
+    "independent_sha256": "6e9d8a9a8b362f2895e115eacb1fb75199348b658efb5bcc67fefbde7988c4ad",
     "primary_model": "Codex (GPT-6)",
     "independent_model": "claude-opus-5-5",
-    "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n0.jpg",
-    "differences": [],
+    "evidence": [
+      "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n0.jpg",
+      "human_pilot_confirmation.json"
+    ],
+    "differences": [
+      {
+        "bucket": "consonants",
+        "ours": "ב\"ר שמשון ז\"ל איש היידנהיים",
+        "theirs": "[unreadable Hebrew legend]",
+        "at": 5,
+        "size": 5,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:5:ב\"ר שמשון ז\"ל איש היידנהיים|[unreadable Hebrew legend]"
+      }
+    ],
     "decisions": {},
-    "unresolved": [],
-    "complete": true
+    "unresolved": [
+      "consonants:5:ב\"ר שמשון ז\"ל איש היידנהיים|[unreadable Hebrew legend]"
+    ],
+    "complete": false
   },
   "front/s3": {
     "primary_sha256": "67494ffb89ea59cd02dbd9afbf59a3810ac15b52255cf441e40e1ee34bafd89b",
@@ -1322,5 +1338,32 @@
     "decisions": {},
     "unresolved": [],
     "complete": true
+  },
+  "front/s2": {
+    "primary_sha256": "0c0367c7e3acaeb6489fe101de750df4afa1eea2081f224be5f098e5267153ef",
+    "independent_sha256": "143355ecc50174be48fb7446a61f1b326efeaa0f59d8d1d28323a20a0e2e7674",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n1.jpg",
+      "human_pilot_confirmation.json"
+    ],
+    "differences": [
+      {
+        "bucket": "consonants",
+        "ours": "ב\"ר שמשון ז\"ל איש",
+        "theirs": "...",
+        "at": 13,
+        "size": 4,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:13:ב\"ר שמשון ז\"ל איש|..."
+      }
+    ],
+    "decisions": {},
+    "unresolved": [
+      "consonants:13:ב\"ר שמשון ז\"ל איש|..."
+    ],
+    "complete": false
   }
 }

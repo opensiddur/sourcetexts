@@ -321,9 +321,14 @@
     ]
   },
   "front/s1": {
-    "primary_sha256": "99469e084e9dff24578934d6c47c7ea6d1a58f1ad3f25a86001ee7f2a539b5cb",
-    "independent_sha256": "99469e084e9dff24578934d6c47c7ea6d1a58f1ad3f25a86001ee7f2a539b5cb",
-    "decisions": {}
+    "primary_sha256": "4b09e140c864a0baf3b693084668506b76b10fbd2c6b8cae81e39851bbdfc212",
+    "independent_sha256": "6e9d8a9a8b362f2895e115eacb1fb75199348b658efb5bcc67fefbde7988c4ad",
+    "decisions": {
+      "consonants:5:ב\"ר שמשון ז\"ל איש היידנהיים|[unreadable Hebrew legend]": {
+        "accepted": "primary",
+        "evidence": "The user supplied the exact calligraphic signature, including ז\"ל, and resolves the independent reader’s abstention. See human_pilot_confirmation.json and the enlarged original scan. Non-signature words were read independently in independent/front.json; paragraph grouping is whitespace-only."
+      }
+    }
   },
   "front/s3": {
     "primary_sha256": "67494ffb89ea59cd02dbd9afbf59a3810ac15b52255cf441e40e1ee34bafd89b",
@@ -495,5 +500,15 @@
     "primary_sha256": "53609ad0ee459f9f1f1ca217914bd49fc409bfe32fde772bb92d0b83f89dd5ad",
     "independent_sha256": "53609ad0ee459f9f1f1ca217914bd49fc409bfe32fde772bb92d0b83f89dd5ad",
     "decisions": {}
+  },
+  "front/s2": {
+    "primary_sha256": "0c0367c7e3acaeb6489fe101de750df4afa1eea2081f224be5f098e5267153ef",
+    "independent_sha256": "143355ecc50174be48fb7446a61f1b326efeaa0f59d8d1d28323a20a0e2e7674",
+    "decisions": {
+      "consonants:13:ב\"ר שמשון ז\"ל איש|...": {
+        "accepted": "primary",
+        "evidence": "The user supplied the exact calligraphic signature, including ז\"ל, and resolves the independent reader’s abstention. See human_pilot_confirmation.json and the enlarged original scan. Non-signature words were read independently in independent/front.json; paragraph grouping is whitespace-only."
+      }
+    }
   }
 }

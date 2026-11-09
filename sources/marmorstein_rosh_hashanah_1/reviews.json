@@ -1077,18 +1077,45 @@
     "final_sha256": "0cc3e34011470b4deff36c8ac500f2d7ebf4a5ddbc859a190e86102c33fbe8bb"
   },
   "front/s1": {
-    "primary_sha256": "99469e084e9dff24578934d6c47c7ea6d1a58f1ad3f25a86001ee7f2a539b5cb",
-    "independent_sha256": "99469e084e9dff24578934d6c47c7ea6d1a58f1ad3f25a86001ee7f2a539b5cb",
+    "primary_sha256": "4b09e140c864a0baf3b693084668506b76b10fbd2c6b8cae81e39851bbdfc212",
+    "independent_sha256": "6e9d8a9a8b362f2895e115eacb1fb75199348b658efb5bcc67fefbde7988c4ad",
     "primary_model": "Codex (GPT-6)",
     "independent_model": "claude-opus-5-5",
-    "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n0.jpg",
-    "differences": [],
-    "decisions": {},
+    "evidence": [
+      "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n0.jpg",
+      "human_pilot_confirmation.json"
+    ],
+    "differences": [
+      {
+        "bucket": "consonants",
+        "ours": "ב\"ר שמשון ז\"ל איש היידנהיים",
+        "theirs": "[unreadable Hebrew legend]",
+        "at": 5,
+        "size": 5,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:5:ב\"ר שמשון ז\"ל איש היידנהיים|[unreadable Hebrew legend]"
+      }
+    ],
+    "decisions": {
+      "consonants:5:ב\"ר שמשון ז\"ל איש היידנהיים|[unreadable Hebrew legend]": {
+        "accepted": "primary",
+        "evidence": "The user supplied the exact calligraphic signature, including ז\"ל, and resolves the independent reader’s abstention. See human_pilot_confirmation.json and the enlarged original scan. Non-signature words were read independently in independent/front.json; paragraph grouping is whitespace-only."
+      }
+    },
     "unresolved": [],
-    "complete": false,
-    "final_sha256": "99469e084e9dff24578934d6c47c7ea6d1a58f1ad3f25a86001ee7f2a539b5cb",
-    "pending_ambiguities": [
-      "The publisher emblem includes calligraphic Hebrew lettering; image retained as evidence."
+    "complete": true,
+    "final_sha256": "4b09e140c864a0baf3b693084668506b76b10fbd2c6b8cae81e39851bbdfc212",
+    "pending_ambiguities": [],
+    "human_adjudication": {
+      "date": "2026-11-08",
+      "reviewer": "user",
+      "signature_verbatim": "וואלף ב\"ר שמשון ז\"ל איש היידנהיים",
+      "scope": "Exact signature on the Hebrew title page and repeated cover-emblem legend.",
+      "browser_confirmation_verbatim": "Looks good; links work"
+    },
+    "ambiguity_resolutions": [
+      "The user confirms the repeated Hebrew signature. The central WH monogram agrees with the original independent front reading and primary image inspection; the later reader’s caution about its ornamental H is retained in the raw evidence."
     ]
   },
   "front/s3": {
@@ -1703,5 +1730,48 @@
     "complete": true,
     "final_sha256": "108fe4d7c3122134943b41b8af301b69c2dab6b6af56643f0a7c2cb396830cce",
     "pending_ambiguities": []
+  },
+  "front/s2": {
+    "primary_sha256": "0c0367c7e3acaeb6489fe101de750df4afa1eea2081f224be5f098e5267153ef",
+    "independent_sha256": "143355ecc50174be48fb7446a61f1b326efeaa0f59d8d1d28323a20a0e2e7674",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n1.jpg",
+      "human_pilot_confirmation.json"
+    ],
+    "differences": [
+      {
+        "bucket": "consonants",
+        "ours": "ב\"ר שמשון ז\"ל איש",
+        "theirs": "...",
+        "at": 13,
+        "size": 4,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:13:ב\"ר שמשון ז\"ל איש|..."
+      }
+    ],
+    "decisions": {
+      "consonants:13:ב\"ר שמשון ז\"ל איש|...": {
+        "accepted": "primary",
+        "evidence": "The user supplied the exact calligraphic signature, including ז\"ל, and resolves the independent reader’s abstention. See human_pilot_confirmation.json and the enlarged original scan. Non-signature words were read independently in independent/front.json; paragraph grouping is whitespace-only."
+      }
+    },
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "0c0367c7e3acaeb6489fe101de750df4afa1eea2081f224be5f098e5267153ef",
+    "pending_ambiguities": [],
+    "human_adjudication": {
+      "date": "2026-11-08",
+      "reviewer": "user",
+      "signature_verbatim": "וואלף ב\"ר שמשון ז\"ל איש היידנהיים",
+      "scope": "Exact signature on the Hebrew title page and repeated cover-emblem legend.",
+      "browser_confirmation_verbatim": "Looks good; links work"
+    },
+    "ambiguity_resolutions": [
+      "The original blind title reading and primary inspection agree on מוגה; the later enlarged reader’s tentative מונה is rejected against the printed gimel.",
+      "The user confirms the complete signature, including the previously unread ז\"ל."
+    ]
   }
 }

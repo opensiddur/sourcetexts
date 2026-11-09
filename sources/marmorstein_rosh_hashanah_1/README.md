@@ -52,7 +52,8 @@ The pilot contains the three Torah blessings (printed pp. 4–5), Barukh She-ama
 unpaginated Hebrew-only daily-psalm appendix. It also encodes the page-8 direction
 to insert the Torah blessings from page 4. The English title page, copyright page, translator’s preface, and following blank
 leaf have also been independently read and accounted for. The cover emblem and
-calligraphic Hebrew arranger credit remain pending. The Hodu continuation and Psalm 19
+Hebrew title-page signature are now resolved by the user’s exact reading:
+וואלף ב"ר שמשון ז"ל איש היידנהיים. The Hodu continuation and Psalm 19
 are now also encoded in both languages. Psalm 34 and the other services remain
 to be transcribed.
 
@@ -67,7 +68,7 @@ On 2026-11-08 the user confirmed the dagesh in הבריות, no extra mark in ל
 These were encoded in the first reading; the second reader had flagged uncertainty.
 The confirmations are recorded in `reviews.json`. All pilot witnesses now pass
 independent review with image adjudication and these human confirmations.
-Four front-matter leaves are marked complete, including the verified blank leaf.
+Six front leaves, s1–s6, are complete, including both title pages and the verified blank leaf.
 Six prayer leaves, s60–s65 (the facing Hebrew/English pages 15–17), are also
 complete after independent coverage checks. The other prayer witnesses remain
 excerpts; images read or OCR available do not imply complete page coverage.
@@ -134,13 +135,16 @@ The pilot closeout also independently verifies full coverage of s60/s61 in
 `independent/pilot_pages_15_coverage.json`. The Hebrew Chronicles 16:16
 continuation stays in the same reference scope across s60/s62. Enlarged cover
 and title-page signature readings are preserved in `primary/calligraphy.json`
-and `independent/calligraphy.json`; exact lettering still awaits human adjudication.
+and `independent/calligraphy.json`; the exact reading is now settled in
+`human_pilot_confirmation.json`, including the previously unread ז"ל.
 
 ## Pilot closeout status
 
-`pilot_acceptance.json` separates completed prayer reviews and automated checks
-from the two remaining human checks: exact calligraphic lettering, and browser
-visual/interactive QA of the electronic exports. The full processor CI passes
+`pilot_acceptance.json` records completed prayer reviews, exact human adjudication
+of the calligraphic signature, and the user’s successful browser visual/interactive
+check. No human review gates remain. Final front-matter generation is revalidated
+automatically, with each CI result recorded against its actual commit. The full processor CI passes
 4,439 tests (93 skipped), with 93.55% coverage and a successful coverage upload.
 The independent enlarged-image reader could confidently identify only וואלף;
-the tentative remainder is evidence, not accepted transcription.
+that original uncertainty is retained as evidence alongside the subsequent exact
+human reading. No guesses were promoted to accepted transcription.
