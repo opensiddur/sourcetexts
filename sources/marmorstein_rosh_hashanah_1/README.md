@@ -166,8 +166,8 @@ opening pages are sequential; they are not Hebrew/English facing counterparts.
 Mah Tovu and Ashrei are accepted Hebrew-only excerpts using existing canonical
 identities. No English prayer words have been supplied. Ashrei's marginal קמה
 is a citation note anchored at Psalm 145:1, following its introductory verses.
-The remaining s7 prayers and the s8 Half Kaddish direction remain in intake;
-neither opening leaf is certified complete. The accepted pilot stays complete.
+The complete opening תפלה page and all printed Minchah material through s12
+are now independently reviewed, including the guideline audit. The accepted pilot stays complete.
 
 `opening_comparison.json` retains comparisons for the raw eight-leaf batch.
 The additional enlarged-image readings and `opening_encoding_resolutions.json`
@@ -177,7 +177,10 @@ preserved in `primary/opening_superseded_adjudication.json`.
 
 The expanded spine separates weekday Minchah from the first-day Rosh ha-Shanah
 morning service and keeps the daily psalm in a named appendix. Existing service
-and holiday settings delimit each section locally. Editorial rubrics explicitly
-label the gaps. The Kaddish/Amidah, speaker alternatives, page continuations and
-remaining entrance verses still need adjudication and assembly before these
-sections can be accepted as complete.
+and holiday settings delimit each section locally. The work-in-progress status is recorded in the gated editorial front and
+editionStmt. The printed weekday Amidah, Kedushah, both Modim columns,
+closing prayers and repetition directions are complete. The expanded service
+inserts canonical Kaddish references and the reader repetition locally;
+material from s13 onward still requires adjudication and assembly.
+
+Secondary review now includes the general encoding guidelines, the ODD and the URN scheme, as well as blind image reading, alignment and recitation order. Findings and follow-up are preserved in `independent/opening_minchah_guidelines*.json`. Both Modim witnesses deliberately preserve their own page-6 break at the same Archive leaf: the print has parallel columns whose continuations are separate source streams. Untranslated-page English directions are retained once, in their printed position in the Hebrew documentary project, rather than duplicated as a whole-book English parallel. Chapter numbers on excerpts provide context only; whole-chapter correspondences require a complete chapter. The opening collection has a distinct structural identity; its prayer and verse identities are reused.

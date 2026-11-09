@@ -1,0 +1,92 @@
+{
+  "source_readings": {
+    "modim_native_new_png": {
+      "lechatzrot": "לְחַצְרֹת: defective spelling. The holam dot sits between the resh and the tav, and there is no vav.",
+      "lishmor": "לִשְׁמֹר: defective spelling. Holam dot, no vav.",
+      "retzonekha": "רְצֹנֶךָ: defective spelling. Holam dot, no vav.",
+      "context_line_2": "קָדְשֶׁךָ לִשְׁמֹר חֻקֶּיךָ וְלַעֲשׂוֹת רְצֹנֶךָ. The vav in וְלַעֲשׂוֹת is clearly printed, so the three defective forms really are written without the vav and are not a rendering artifact.",
+      "file_match": "amidah_modim_derabbanan.xml:35 now has לְחַצְרֹת, לִשְׁמֹר and רְצֹנֶךָ. These match the scan."
+    },
+    "marmorstein_laYY_detail_png": {
+      "reading": "וְעָרְבָה לַייָ מִנְחַת: patah under the lamed, then two yods with one qamatz under the second yod. I can see no sheva under the first yod, although sheva dots are visible on the same line under the nun of מִנְחַת.",
+      "caveat": "This crop is soft and looks upscaled. A very faint sheva cannot be ruled out completely.",
+      "file_match": "amidah_yehi_ratzon.xml:34 has לַ<j:divineName>ייָ</j:divineName>. This matches what I read."
+    }
+  },
+  "guideline_adherence": {
+    "status": "Every specific fix listed for s7-s12 is confirmed in the files. Three small residual findings remain, plus one discrepancy between your description and the file. None of them affects how URNs resolve in s7-s12.",
+    "resolved": [
+      "Chapter milestones (entering_synagogue.xml:37-40; ashrei.xml:41-42): the incomplete chapters (psalms 5, 55, 17, 31, 28, 30, 38, 39, 122, 119, 26, 84, 144, 115) carry @n but no @corresp. Only psalms/145 carries a whole-chapter corresp (ashrei.xml:42), and it opens before 145/1 and is closed by a bare chapter terminator after 145/21, so it covers the complete chapter. Every verse, half-verse and verse-part corresp is fully qualified (psalms/5/8, 55/15/b, 39/13/shimah, and so on), and each sequence is explicitly terminated. refdb.milestone_terminates (refdb.py:176-177) lets a corresp-less milestone close only its own unit, so the bare chapter milestones never cut a verse scope short. There are no duplicate text corresp values. The second Ps 17:6 is an inline transclusion qualified with @prayerbook_for_the_new_year-heidenheim-1965-he.",
+      "Kedushah speaker labels (amidah_qedushah.xml:35): all seven ח׳/ק׳ labels are now literal note type=description rend=rashi xml:lang=he elements, each with choice/abbr/expan and corresp instruction:role/reader or role/congregation. Each one comes straight after its prayer-part milestone, which is first inside the part's scope. No j:transclude remains. Every role/reader note in the project is identical, so refdb's warning about different rubrics under one instruction URN does not apply. The documentary settings put heidenheim first in priority.instructions and set no readings.abbreviations, so the printed ח׳/ק׳ are kept there.",
+      "Gate declarations (expanded index.xml): the weekday Minchah gate (:91-107) fixes minha=true and shabbat=false, yom-tov=false, and all three are declared at :111-140. The morning gate (:287-300) fixes shaharit=true and rosh-hashana=1, and both are declared at :305-331. Each declare/endDeclare pair are siblings inside the gated div.",
+      "Dependency priority (undated.yaml:11-20): hasiddur_hashalem-birnbaum-1949-he comes before marmorstein-en for both transclusion and instructions. Marmorstein stays the parallel project. The expanded targets are bare canonical URNs: kaddish/chatzi (:156), kaddish/shalem (:278) and the bible/prayer URNs at :69-87. /tmp/mahzor-guideline-verification.json records both Kaddish targets as compiled from hasiddur_hashalem-birnbaum-1949-he (kaddish_chatzi.xml and kaddish_shalem.xml).",
+      "The status remark that was in the expanded body heading is now in a front div gated on paratext/include (:46-58). The header's editionStmt also states that the work is in progress.",
+      "The empty English placeholder div is gone from the marmorstein-en index.",
+      "Documentary transclusions in the heidenheim index (:133-178) all use canonical URNs qualified with @prayerbook_for_the_new_year-heidenheim-1965-he. The opening collection has its own identity, siddur:rosh_hashanah/entering_synagogue (entering_synagogue.xml:18, :33), and it reuses prayer:mah_tovu and the canonical bible URNs.",
+      "Modim column breaks: both columns carry pb n=6 pointing at n11. I accept your statement that this is documented in the README, but see limits.",
+      "Bilingual heads and rubrics in the expanded index are consistent with the plan you describe as accepted. Each minyan conditional has a single instruction note before its j:all (:144, :201, :266), which matches the ODD content model (note minOccurs=0, a single note, then featureVal) and the Schematron rule that the note must be type=instruction.",
+      "Gevurot (amidah_gevurot.xml:34-35) is split before מְכַלְכֵּל, as printed.",
+      "Front matter: the n0 cover is a div gated on paratext/include, and the two transcribed titlePage elements are each in their own title-page conditional with their pb outside the gate."
+    ],
+    "remaining_findings": [
+      {
+        "severity": "low",
+        "file": "machzor_expanded-opensiddur-he/index.xml",
+        "line": 304,
+        "rule": "Kinds of rubric. You said status remarks live in front/header.",
+        "evidence": "The body still has <tei:note type=\"description\" xml:lang=\"en\">Digitization of the remaining morning material is in progress.</tei:note> inside the Shaharit section. It is an editorial status remark, but it is typed as a rubric, so it will print in the service. This is outside s7-s12, but it contradicts the stated fix.",
+        "required_fix": "Delete it. The status is already in the front div and the editionStmt."
+      },
+      {
+        "severity": "low (scan not seen by me)",
+        "file": "prayerbook_for_the_new_year-heidenheim-1965-he/index.xml (same in the marmorstein-en index)",
+        "line": "101-114",
+        "rule": "Title pages: a copyright verso is encoded as a second tei:titlePage after its own pb and gated on paratext/title-page ('each transcribed tei:titlePage, a copyright verso included').",
+        "evidence": "The copyright and printer statement at n3 is a tei:div gated on paratext/include.",
+        "required_fix": "If n3 is the verso of the title leaf, encode it as a tei:titlePage under a title-page conditional."
+      },
+      {
+        "severity": "info (discrepancy)",
+        "file": "prayerbook_for_the_new_year-heidenheim-1965-he/index.xml",
+        "line": "59-100, 115-129",
+        "evidence": "You said the actual title pages are n2 and n4. In the file, the Hebrew titlePage follows pb n1.jpg and the English titlePage follows pb n2.jpg. n4.jpg is the Translator's Preface. Either your description or the facs mapping is wrong. I did not see n0-n4.",
+        "required_fix": "Check the facs leaf numbers for the front matter against the scan."
+      },
+      {
+        "severity": "info (not a defect)",
+        "file": "entering_synagogue.xml; ashrei.xml",
+        "evidence": "Under rule 3 and refdb, a chapter milestone with @n and no @corresp is a terminator, so the '@n context' has no processing meaning. Pairs such as <milestone unit=\"chapter\"/><milestone unit=\"chapter\" n=\"55\"/> are two terminators in a row that close nothing. They have no URN effect, so I accept them as the chosen design."
+      }
+    ]
+  },
+  "recitation_order": {
+    "status": "Correct for the s7-s12 structure. No remaining findings.",
+    "remaining_findings": [],
+    "verified": "Entering-synagogue verses follow the print order, including Ps 17:6 twice. In Minchah: Ashrei; Half Kaddish gated on minyan, with its heading inside the scope; silent Amidah (silent=true, repetition=false) with Qedushat Hashem, Hodaah, Shalom, Elohai Netzor and Yehi Ratzon; the minyan-gated repetition (silent=false, repetition=true) with Kedushah, then Modim and Modim derabbanan together under role/reader and role/congregation description notes, ending at Shalom with no personal prayers and no Birkat Kohanim; then Whole Kaddish gated on minyan. Erev Rosh Hashanah can never fall on Shabbat, so shabbat=false is always right."
+  },
+  "limits": [
+    "I ran no validator, refdb build, compiler, urn_registry --check or validate_urn_references. The Kaddish provenance comes from /tmp/mahzor-guideline-verification.json, which I read but did not regenerate.",
+    "sources/marmorstein_rosh_hashanah_1/README.md does not exist at that path under the marmorstein-projects worktree, so I could not confirm the documented Modim pb n=6 duplication.",
+    "I did not check the registration of siddur:rosh_hashanah/entering_synagogue, the instruction:role/* URNs or the amidah/qedushah/* parts in specs/urn_registry, and I did not re-read SIDDUR_URN_SCHEME.md.",
+    "I checked only the two scan crops supplied. I did not view the front-matter leaves n0-n4, so the title-page and copyright findings rest on the file's facs values and the guideline text.",
+    "The Yehi Ratzon reading comes from a soft, apparently upscaled crop."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "7e60e24d-9917-44c8-b2e1-13229c1d5a1c"
+  },
+  "file_sha256": {
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/entering_synagogue.xml": "c269d5eae8b5c4015f3d78114a46a87e267e308e31e0bc758c7892bc01ff83cc",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/ashrei.xml": "f71978414e028f97180e9488d4c53dfac4b15b852895072be1e323c242edc5de",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_qedushah.xml": "50b2a4c1f4289bc74e39b7116f166967c4af55b4735c67698e657c713b1dca16",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_modim_derabbanan.xml": "96ba99e8fe22b6858bcf2b0a9662dce873d9b43cacd560286876e862648e774c",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_yehi_ratzon.xml": "84ec1e22adfa05758aae77da886686fa8d613df1ef933c92a9ca1f7fd057646d",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_gevurot.xml": "b8ee4c86a9fd52da837398e2a7c1757ca7795478f434511e217b2386e07ea80e",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/index.xml": "a216bf2150bbf112a42e4c0d1a899950a10316ad63aa9e29cde7dcf3eefe830e",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/index.xml": "8e7e974eff79dd2cbd22464efa97e390f11967d6a6d9c1a9fe1412d2d0ea389f",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/machzor_expanded-opensiddur-he/index.xml": "c8f987e3c13c05e7552de123099568eb7afda0f6cc4cd53449f5065285bf5378",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/settings/machzor_expanded-opensiddur-he/undated.yaml": "7b3a8d8a7db14324495a50aa08a96d45bf448acbf4af5a81590956af89c96bfb"
+  },
+  "files_unchanged_during_review": true
+}

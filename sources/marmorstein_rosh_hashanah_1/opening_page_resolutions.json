@@ -1,0 +1,61 @@
+{
+  "source_scan": "s7",
+  "source_printed_page": "1",
+  "user_page_reference": "Internet Archive PDF page n5 (user-confirmed opening תפלה page); PDF-page and scan-leaf indices are distinct.",
+  "reader_pair": [
+    "Codex (GPT-6)",
+    "claude-opus-5-5 --effort medium"
+  ],
+  "crops_original_pixels": {
+    "top_avo": [
+      420,
+      260,
+      620,
+      335
+    ],
+    "bet_tzedeq": [
+      1020,
+      975,
+      1215,
+      1045
+    ],
+    "elohai": [
+      145,
+      1140,
+      265,
+      1215
+    ],
+    "beomrim": [
+      390,
+      1580,
+      590,
+      1645
+    ],
+    "mah_tovu_brv": [
+      155,
+      515,
+      260,
+      590
+    ],
+    "maqaf_lifnei": [
+      710,
+      740,
+      860,
+      810
+    ]
+  },
+  "scope": "Every word of opening page restored in printed order; paragraph structure retained; no new translation.",
+  "identity_decisions": [
+    {
+      "urn": "urn:x-opensiddur:text:bible:psalms/55/15/b",
+      "extent": "בבית אלהים נהלך ברגש",
+      "reason": "The general guidelines define this exact accentual half, already correctly represented in WLC. Reuse it. The MAM boundary previously skipped בבית because adjacent serialized lines lacked literal whitespace; the shared scanner fix and targeted regeneration correct its placement. No new named Psalm 55 identity is needed."
+    },
+    {
+      "urn": "urn:x-opensiddur:text:bible:psalms/39/13/shimah",
+      "extent": "שמעה תפלתי ... אל דמעתי אל תחרש",
+      "reason": "The source omits כי גר אנכי עמך תושב ככל אבותי. No existing project/alias identity was found for the printed opening clauses; do not advertise them as the entire verse."
+    }
+  ],
+  "citation_policy": "Bare Hebrew numerical chapter labels in this service denote Psalms; retain the printed label and link it to that Psalm, without added parentheses."
+}

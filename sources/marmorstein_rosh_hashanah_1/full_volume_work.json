@@ -35,7 +35,7 @@
     "independent": "independent/opening_s7_s14.json",
     "enlarged_independent": "independent/opening_s7_s8_enlarged.json",
     "comparison": "opening_comparison.json",
-    "status": "Image adjudication and canonical mapping in progress; not fully reviewed or accepted.",
+    "status": "Complete opening תפלה page and entire printed weekday Minchah accepted through s12 after blind readings, crop adjudications, independent guideline/alignment/order audits and export inspection.",
     "sections": [
       "Entering the synagogue",
       "Weekday Minchah",
@@ -44,21 +44,45 @@
       "Kabbalat Shabbat"
     ],
     "pending": [
-      "Adjudicate every comparison difference against images, including pointing and punctuation.",
-      "Separate speaker labels and Hebrew translation cues from prayer words; preserve citations as notes.",
-      "Keep the silent Amidah, reader repetition, Kedushah and Modim derabbanan in their correct recitation contexts.",
-      "Join page-spanning Al hatzaddikim, both Modim columns, Psalm 95 and Psalm 97 without merging their scopes.",
-      "Map reusable texts to existing canonical identities and record any genuinely missing subverse identities.",
-      "Add documentary order and locally scoped expanded service sections, then validate and inspect exports."
+      "Adjudicate s13-s14 eruv tavshilin, candle lighting and Kabbalat Shabbat, then continue in scan order."
     ],
     "accepted_excerpts": [
-      "mah_tovu/he",
+      "amidah_adonai_sefatai/he",
+      "amidah_avodah/he",
+      "amidah_avot/he",
+      "amidah_binah/he",
+      "amidah_david/he",
+      "amidah_elohai_netzor/he",
+      "amidah_geullah/he",
+      "amidah_gevurot/he",
+      "amidah_hodaah/he",
+      "amidah_minim/he",
+      "amidah_mishpat/he",
+      "amidah_modim_derabbanan/he",
+      "amidah_qedushah/he",
+      "amidah_qedushat_hashem/he",
+      "amidah_qibbutz_galuyot/he",
+      "amidah_refuah/he",
+      "amidah_selichah/he",
+      "amidah_shalom_rav/he",
+      "amidah_shanim/he",
+      "amidah_tefillah/he",
+      "amidah_teshuvah/he",
+      "amidah_tzaddiqim/he",
+      "amidah_yehi_ratzon/he",
+      "amidah_yerushalayim/he",
       "ashrei/he",
-      "citation/ashrei/he/0"
+      "citation/ashrei/he/0",
+      "entering_synagogue/he",
+      "instruction/entering_synagogue",
+      "instruction/half_kaddish",
+      "instruction/minchah_heading",
+      "instruction/reader_repeats",
+      "mah_tovu/he"
     ],
     "validation": {
-      "schema": "24 generated XML files pass RelaxNG and Schematron",
-      "tests": "82 importer/scan tests and 35 subtests pass",
+      "schema": "49 generated XML files plus both modified Psalms witnesses pass RelaxNG and Schematron",
+      "tests": "4467 tests and 6873 subtests pass (12 skipped); latest focused suite: 96 tests and 23 subtests pass.",
       "features": "All three projects pass registered feature checks",
       "naming": "All three projects pass naming checks",
       "compiled_settings": [
@@ -66,12 +90,35 @@
         "First-day Rosh ha-Shanah Shacharit",
         "Second-day Shacharit excludes the first-day morning section"
       ],
-      "exports": "Documentary and expanded print/electronic compilations and PDF/HTML exports pass; opening PDF pages visually inspected. The milestone-linked Psalm 145 citation follows its introductory verses.",
+      "exports": "Documentary and expanded PDF/HTML rebuilt; opening, Minchah, repetition and front matter visually inspected; duplicate English rubrics eliminated",
       "full_volume_complete": false
     },
-    "audit_resolutions": "opening_encoding_resolutions.json"
+    "audit_resolutions": "opening_encoding_resolutions.json",
+    "guideline_audit": "guideline_adherence_resolutions.json"
   },
   "next_primary_scan": 15,
-  "next_adjudication_scan": 7,
-  "images": "Cached outside Git; never use OCR to settle a reading."
+  "next_adjudication_scan": 13,
+  "images": "Cached outside Git; never use OCR to settle a reading.",
+  "secondary_review_requirements": {
+    "blind_scan_reading": true,
+    "guideline_adherence": true,
+    "guidelines": [
+      "AGENTS.md",
+      "schema/JLPTEI-3.md",
+      "schema/jlptei.odd.xml",
+      "specs/SIDDUR_URN_SCHEME.md"
+    ],
+    "checks": [
+      "canonical URN reuse and registry decisions",
+      "chapter, verse, subverse milestone scopes and exact terminators",
+      "paragraph and page boundaries independent of correspondence",
+      "citations in notes, with Psalm number-only references identified",
+      "Rashi-script rubrics and congregation/reader roles outside prayer words",
+      "abbr/expan and sic/corr fidelity",
+      "unique Archive facsimiles and distinct PDF/printed/leaf numbering",
+      "partial translations and omissions",
+      "locally scoped settings, transclusion dependencies and expanded recitation order"
+    ],
+    "evidence": "Preserve actual model/effort, reviewed file hashes, findings and follow-up resolutions. Unresolved findings prevent full-page acceptance."
+  }
 }

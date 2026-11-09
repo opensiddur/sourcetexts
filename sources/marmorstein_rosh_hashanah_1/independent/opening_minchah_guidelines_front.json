@@ -1,0 +1,62 @@
+{
+  "guideline_adherence": {
+    "status": "The front matter and status fixes pass on every point you asked me to confirm. Nothing left is a blocking defect. There are two low-severity findings (the copyright line breaks, and a stale README sentence) and two informational ones.",
+    "resolved": [
+      "Leaf mapping checked against the scans. s1.jpg is the half-title, s2.jpg the Hebrew title, s3.jpg the English title, s4.jpg the copyright verso and s5.jpg the Translator's Preface. In both documentary indexes the front pb@facs values are page/n0 through page/n4 in that order (heidenheim index.xml:42,61,83,103,115; marmorstein-en index.xml has the same lines). The earlier n2/n4 discrepancy came from the prompt, not the files.",
+      "No title or copyright words are missing. s1 has 'Prayerbook for Festivals', the WH monogram, the circular signature וואלף ב\"ר שמשון ז\"ל איש היידנהיים, and 'Volume I: First Day of the New Year'. s2 has מחזור ליום ראשון של ראש השנה, עם תרגום אנגלי, מוגה ומסודר מאת plus the signature, מתורגם ע״י רבקה מארמארשטיין, and הוצאת פנחס גאלדשמידט / באזעל / תשכ״ה לפ״ק. s3 has 'Prayerbook for the New Year', 'Arranged by Wolf Heidenheim', 'English Translation by Jenny Marmorstein', and 'Victor Goldschmidt Publishers' / 'Basle'. All seven printed lines of s4 are present word for word, including ©, '&', 'a. M.', the em dash and 'Rödelheim'. All three paragraphs of the s5 preface match the scan.",
+      "Front gates (JLPTEI-3.md, paratext section). Each of the four tei:titlePage elements (s1–s4) has its own j:conditional on opensiddur:paratext/title-page=true, with no instruction note. The copyright verso is now a second titlePage after its own pb, as the Title pages section requires. The preface div is gated on include. Every title-leaf pb sits outside its gate. Each conditional/endConditional pair is a sibling pair inside tei:front. The two documentary indexes have identical front sections.",
+      "Elements used in the front matter: titlePage, docTitle, titlePart (main/sub), byline, docImprint (publisher, pubPlace, docDate), foreign and lb. All of them are included in the ODD moduleRefs (core and textstructure, jlptei.odd.xml:133,137). A titlePage that contains only a docImprint meets the TEI content model, which requires at least one titlePage part. The Hebrew foreign span is kept on the s1 signature byline.",
+      "No status rubrics in the expanded service. The body of machzor_expanded index.xml (lines 60–352) has no progress or status note. The old line-304 remark is gone, and line 304 is now j:declare. The rubrics that remain are source or liturgical rubrics: :68 entering-synagogue description; :144/:201/:266 minyan condition notes; :243–244 Modim simultaneity descriptions; :247/:253 role descriptions; :331 German-rite directive. The status now appears only in the include-gated front div (:46–58, note at :56) and in the editionStmt (:12).",
+      "Modim page-6 break confirmed in the source README (marmorstein-sources .../README.md:185). It says: 'Both Modim witnesses deliberately preserve their own page-6 break at the same Archive leaf: the print has parallel columns whose continuations are separate source streams.' This closes the earlier review's limit about the README being missing."
+    ],
+    "remaining_findings": [
+      {
+        "severity": "low (your description does not match the file)",
+        "file": "heidenheim index.xml:112; marmorstein-en index.xml:112",
+        "evidence": "s4 prints 7 lines in 3 blocks: 'Copyright © by Victor Goldschmidt Publishers / Basle (Switzerland) 1965', then 'Successor of Dr. Felix Kauffmann, New York, / formerly I. Kauffmann & M. Lehrberger Publishers / Frankfort a. M. — Rödelheim', then 'Printed in Switzerland / by P. M. Goldschmidt, Lucerne'. The docImprint has only the 2 lb elements between blocks. It does not keep the original line breaks as you described.",
+        "required_fix": "Either add an lb at each of the 4 printed line breaks inside the blocks, or change the description to 'block breaks'. The guidelines do not require lb, so either option conforms."
+      },
+      {
+        "severity": "low (stale documentation)",
+        "file": "marmorstein-sources .../README.md:180-181",
+        "evidence": "The README still says 'Editorial rubrics explicitly label the gaps.' The in-service gap and status rubrics have been removed, and the status now lives only in front and header.",
+        "required_fix": "Update that sentence to say the work-in-progress status is recorded in the gated front div and the editionStmt."
+      },
+      {
+        "severity": "info",
+        "file": "both documentary indexes, lines 50-59",
+        "evidence": "On s1 the subtitle 'Volume I: …' is printed below the emblem. The encoding puts both titleParts in a single docTitle ahead of the two emblem bylines, so the order of elements differs from the print. Also, byline xml:lang=\"he\" wraps a foreign xml:lang=\"he\", which repeats the language. It is harmless and kept as you specified.",
+        "required_fix": "Optional: use docTitle(main), the bylines, then a second docTitle(sub) to follow the print order. TEI allows repeated docTitle."
+      },
+      {
+        "severity": "info",
+        "file": "both documentary indexes, lines 74-75",
+        "evidence": "The signature uses ASCII quotation marks (ב\"ר, ז\"ל), while the printed type next to it uses gershayim (ע״י, תשכ״ה, לפ״ק). This matches the human reading recorded in the README (:56), so I am not counting it as a defect."
+      }
+    ]
+  },
+  "limits": [
+    "I ran no validator, schematron, refdb build or compiler. Schema conformance here comes from reading the ODD moduleRefs and the TEI content models. I did not scan the whole ODD for elementSpec overrides of titlePage, byline or docImprint.",
+    "I viewed the scans at about 1208x2000 and used no enlarged crops. I did not re-read the calligraphic signature on s1 and s2 from the image. It is accepted as the human reading recorded in the README.",
+    "I did not reopen any body finding from /tmp/mahzor-final-guideline-review.json, and I did not re-check the facs or n values of body pages.",
+    "I did not modify any files."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "dd0eec28-f908-402d-85a6-73030797d666"
+  },
+  "file_sha256": {
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/entering_synagogue.xml": "c269d5eae8b5c4015f3d78114a46a87e267e308e31e0bc758c7892bc01ff83cc",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/ashrei.xml": "f71978414e028f97180e9488d4c53dfac4b15b852895072be1e323c242edc5de",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_qedushah.xml": "50b2a4c1f4289bc74e39b7116f166967c4af55b4735c67698e657c713b1dca16",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_modim_derabbanan.xml": "96ba99e8fe22b6858bcf2b0a9662dce873d9b43cacd560286876e862648e774c",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_yehi_ratzon.xml": "84ec1e22adfa05758aae77da886686fa8d613df1ef933c92a9ca1f7fd057646d",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_gevurot.xml": "b8ee4c86a9fd52da837398e2a7c1757ca7795478f434511e217b2386e07ea80e",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/index.xml": "5ca8d8142e726a134033fa794c71e50776dfc23aa9664f661b946041d41b2064",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/index.xml": "e7195042b1c4e6ee205fbdad48a468dea934c06c7816219826740f710d6970e9",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/machzor_expanded-opensiddur-he/index.xml": "a487828a6f39e16d30f5313dd890030ec3a8e9f8d1f229bc8f5f54ca1dffbd47",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/settings/machzor_expanded-opensiddur-he/undated.yaml": "7b3a8d8a7db14324495a50aa08a96d45bf448acbf4af5a81590956af89c96bfb"
+  },
+  "files_unchanged_during_review": true
+}
