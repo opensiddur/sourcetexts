@@ -1,19 +1,18 @@
 {
   "date": "2026-11-08",
   "scope": "Original digitization pilot and reviewed Hodu/Psalm 19 continuation; not full-volume acceptance.",
-  "status": "automated_revalidation",
+  "status": "complete",
   "prayer_transcription_and_alignment": "independently reviewed; no unresolved prayer reading disputes",
   "source_leaves_complete": 12,
   "processor_ci": {
-    "commit": "d95ec5b9824cf833526628804ec287fa6ad152e7",
+    "commit": "2e4c76d724fa2c05c82625266fe3f696ebb59dbd",
     "status": "passed",
-    "job": "https://github.com/opensiddur/opensiddur-processor/actions/runs/42562422102/job/128981537246",
-    "tests_run": 4439,
+    "job": "https://github.com/opensiddur/opensiddur-processor/actions/runs/42565589565/job/128991281780",
+    "tests_run": 4440,
     "skipped": 93,
-    "seconds": 546.357,
+    "seconds": 548.971,
     "coverage_percent": 93.55,
-    "coverage_upload": "passed",
-    "resolved_failure": "The preceding run had one stale test expecting numberlinefalse; integration and default-value expectations now match the line-tracking-preserving implementation."
+    "coverage_upload": "passed"
   },
   "electronic_exports": {
     "documentary": {
@@ -40,9 +39,9 @@
     }
   },
   "projects_ci": {
-    "commit": "0301db32e329c954a4e9d1d6de0e57dbe6da89e1",
+    "commit": "61330916ca6d3fb63a2f6e0ebea7f16d0961bbc4",
     "status": "passed",
-    "job": "https://github.com/opensiddur/opensiddur-projects/actions/runs/42563537989/job/128984971103"
+    "job": "https://github.com/opensiddur/opensiddur-projects/actions/runs/42565720489/job/128991679173"
   },
   "human_confirmation": {
     "date": "2026-11-08",
@@ -59,16 +58,33 @@
         "primary/calligraphy.json",
         "independent/calligraphy.json"
       ],
-      "reason": "Enlarged independent reading confidently identifies only וואלף; remaining calligraphy is not promoted to accepted transcription.",
-      "resolution": "Exact signature supplied by user."
+      "resolution": "Exact signature supplied by user.",
+      "original_reason": "Enlarged independent reading confidently identifies only וואלף; remaining calligraphy is not promoted to accepted transcription."
     },
     {
       "item": "Browser visual and interactive QA",
       "status": "resolved",
-      "reason": "Browser automation blocks local file URLs. Static checks confirm unique IDs, all citation popover targets and the documentary navigation targets; these do not certify browser appearance or interaction.",
-      "resolution": "User confirms: Looks good; links work."
+      "resolution": "User confirms: Looks good; links work.",
+      "original_reason": "Browser automation blocks local file URLs. Static checks confirm unique IDs, all citation popover targets and the documentary navigation targets; these do not certify browser appearance or interaction."
     }
   ],
   "remaining_human_checks": [],
-  "front_matter_pdf_review": "Resolved cover and Hebrew title page inspected after regeneration; full Hebrew signature is one directional span, and title/subtitle/bylines/place/date retain their roles."
+  "front_matter_pdf_review": "Resolved cover and Hebrew title page inspected after regeneration; full Hebrew signature is one directional span, and title/subtitle/bylines/place/date retain their roles.",
+  "previous_processor_ci": {
+    "commit": "d95ec5b9824cf833526628804ec287fa6ad152e7",
+    "status": "passed",
+    "job": "https://github.com/opensiddur/opensiddur-processor/actions/runs/42562422102/job/128981537246",
+    "tests_run": 4439,
+    "skipped": 93,
+    "seconds": 546.357,
+    "coverage_percent": 93.55,
+    "coverage_upload": "passed",
+    "resolved_failure": "The preceding run had one stale test expecting numberlinefalse; integration and default-value expectations now match the line-tracking-preserving implementation."
+  },
+  "previous_projects_ci": {
+    "commit": "0301db32e329c954a4e9d1d6de0e57dbe6da89e1",
+    "status": "passed",
+    "job": "https://github.com/opensiddur/opensiddur-projects/actions/runs/42563537989/job/128984971103"
+  },
+  "full_volume_complete": false
 }

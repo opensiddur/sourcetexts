@@ -1,6 +1,6 @@
 # Heidenheim–Marmorstein: first day of Rosh ha-Shanah, 1965
 
-**Status: reviewed installments and partial front matter, not a complete digitization.** This contribution belongs to
+**Status: pilot review complete; the full-volume digitization remains in progress.** This contribution belongs to
 [opensiddur-processor issue 214](https://github.com/opensiddur/opensiddur-processor/issues/214).
 The complete source is [this 355-leaf Archive item](https://archive.org/details/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965),
 [also described by Open Siddur](https://opensiddur.org/?p=69112).
@@ -143,8 +143,12 @@ and `independent/calligraphy.json`; the exact reading is now settled in
 `pilot_acceptance.json` records completed prayer reviews, exact human adjudication
 of the calligraphic signature, and the user’s successful browser visual/interactive
 check. No human review gates remain. Final front-matter generation is revalidated
-automatically, with each CI result recorded against its actual commit. The full processor CI passes
-4,439 tests (93 skipped), with 93.55% coverage and a successful coverage upload.
+automatically, with each CI result recorded against its actual commit. The final processor CI passes
+4,440 tests (93 skipped), with 93.55% coverage and a successful coverage upload.
 The independent enlarged-image reader could confidently identify only וואלף;
 that original uncertainty is retained as evidence alongside the subsequent exact
 human reading. No guesses were promoted to accepted transcription.
+
+All pilot gates are complete. Both final CI checks passed; the user resolved the
+calligraphic signature and confirmed electronic layout and links. The complete
+355-leaf volume remains in progress.
