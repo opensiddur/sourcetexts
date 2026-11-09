@@ -60,12 +60,19 @@
       "independent_review": "independent/qedushah_conditions.json",
       "runtime_verification": "qedushah_condition_verification.json",
       "validation": "49 XML files validate; 75 focused tests and 42 subtests pass; all nine compiler cases pass."
+    },
+    {
+      "date": "2026-11-09",
+      "instruction": "Correct Kedushah response abbreviations: קו״ח/קו׳ means קהל וחזן, not ק׳ = קהל.",
+      "adjudication": "qedushah_speaker_resolutions.json",
+      "independent_markup_review": "independent/qedushah_speaker_markup.json",
+      "implementation": "All three response notes use קו״ח, expansion קהל וחזן and existing role/reader_and_congregation. Reader-only notes stay ח׳. Review hashes now protect both abbreviation and expansion; explicit role maps reject unknown values and handle combined editorial roles."
     }
   ],
   "current_encoded_file_sha256": {
     "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/entering_synagogue.xml": "c269d5eae8b5c4015f3d78114a46a87e267e308e31e0bc758c7892bc01ff83cc",
     "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/ashrei.xml": "f71978414e028f97180e9488d4c53dfac4b15b852895072be1e323c242edc5de",
-    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_qedushah.xml": "7394a2862439fff10e4dda3d7baa7f194989e304701c90351245b191530a0fac",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_qedushah.xml": "1edbd0fd303b825c0f5d8af29f0467439427ed0774ec600a153ced8c57691f33",
     "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_modim_derabbanan.xml": "0a091ebec0e7ed9f7a95f0a9d8eaafcb330e4b749b2ba24f5fd0315c1ea22ace",
     "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_yehi_ratzon.xml": "84ec1e22adfa05758aae77da886686fa8d613df1ef933c92a9ca1f7fd057646d",
     "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_gevurot.xml": "b8ee4c86a9fd52da837398e2a7c1757ca7795478f434511e217b2386e07ea80e",
