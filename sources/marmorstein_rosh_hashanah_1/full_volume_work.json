@@ -2,105 +2,76 @@
   "scope": "Continue from the beginning, in scan order; pilot acceptance remains separate and complete.",
   "current_batch": {
     "scan_pages": [
-      7,
-      8,
-      9,
-      10,
-      11,
-      12,
       13,
-      14
+      14,
+      15,
+      16,
+      17
     ],
     "archive_leaves": [
-      6,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "printed_pages": [
       7,
       8,
       9,
       10,
-      11,
-      12,
-      13
+      11
     ],
-    "printed_pages": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8
-    ],
-    "primary": "primary/opening_s7_s14.json",
-    "independent": "independent/opening_s7_s14.json",
-    "enlarged_independent": "independent/opening_s7_s8_enlarged.json",
-    "comparison": "opening_comparison.json",
-    "status": "Complete opening תפלה page and entire printed weekday Minchah accepted through s12 after blind readings, crop adjudications, independent guideline/alignment/order audits and export inspection.",
-    "sections": [
-      "Entering the synagogue",
-      "Weekday Minchah",
-      "Eruv tavshilin",
-      "Festival candle lighting",
-      "Kabbalat Shabbat"
-    ],
-    "pending": [
-      "Adjudicate s13-s14 eruv tavshilin, candle lighting and Kabbalat Shabbat, then continue in scan order."
-    ],
+    "primary": "primary/preparations_kabbalat_s13_s17.json",
+    "independent": "independent/preparations_kabbalat_s13_s17.json",
+    "enlarged_independent": "independent/preparations_kabbalat_enlarged.json",
+    "comparison": "preparations_kabbalat_comparison.json",
+    "status": "Accepted after blind image readings, enlarged adjudication, human custom and repetition clarifications, frozen-file independent guideline/alignment/order review, runtime settings checks and rendered export inspection.",
+    "pending": [],
     "accepted_excerpts": [
-      "amidah_adonai_sefatai/he",
-      "amidah_avodah/he",
-      "amidah_avot/he",
-      "amidah_binah/he",
-      "amidah_david/he",
-      "amidah_elohai_netzor/he",
-      "amidah_geullah/he",
-      "amidah_gevurot/he",
-      "amidah_hodaah/he",
-      "amidah_minim/he",
-      "amidah_mishpat/he",
-      "amidah_modim_derabbanan/he",
-      "amidah_qedushah/he",
-      "amidah_qedushat_hashem/he",
-      "amidah_qibbutz_galuyot/he",
-      "amidah_refuah/he",
-      "amidah_selichah/he",
-      "amidah_shalom_rav/he",
-      "amidah_shanim/he",
-      "amidah_tefillah/he",
-      "amidah_teshuvah/he",
-      "amidah_tzaddiqim/he",
-      "amidah_yehi_ratzon/he",
-      "amidah_yerushalayim/he",
-      "ashrei/he",
-      "citation/ashrei/he/0",
-      "entering_synagogue/he",
-      "instruction/entering_synagogue",
-      "instruction/half_kaddish",
-      "instruction/minchah_heading",
-      "instruction/reader_repeats",
-      "mah_tovu/he"
+      "citation/psalm_29/he/0",
+      "citation/psalm_92/he/0",
+      "citation/psalm_93/he/0",
+      "citation/psalm_95/he/0",
+      "citation/psalm_96/he/0",
+      "citation/psalm_97/he/0",
+      "citation/psalm_98/he/0",
+      "citation/psalm_99/he/0",
+      "eruv_tavshilin/en",
+      "eruv_tavshilin/he",
+      "hadlaqat_ner_yom_tov/en",
+      "hadlaqat_ner_yom_tov/he",
+      "instruction/eruv_heading",
+      "instruction/eruv_preparation",
+      "instruction/festival_candles",
+      "instruction/qabbalat_heading",
+      "instruction/qabbalat_mourner_kaddish",
+      "lekhah_dodi/he",
+      "psalm_29/he",
+      "psalm_92/he",
+      "psalm_93/he",
+      "psalm_95/he",
+      "psalm_96/he",
+      "psalm_97/he",
+      "psalm_98/he",
+      "psalm_99/he"
     ],
+    "audit_resolutions": "preparations_kabbalat_resolutions.json",
+    "guideline_audit": "independent/preparations_kabbalat_followup2.json",
     "validation": {
-      "schema": "49 generated XML files plus both modified Psalms witnesses pass RelaxNG and Schematron",
-      "tests": "4467 tests and 6873 subtests pass (12 skipped); latest focused suite: 96 tests and 23 subtests pass.",
-      "features": "All three projects pass registered feature checks",
-      "naming": "All three projects pass naming checks",
-      "compiled_settings": [
-        "Elul29 afternoon with minyan: silence and reader repetition including Kedushah",
-        "Elul29 afternoon without minyan: silence without reader repetition/Kedushah",
-        "Elul28, Rosh ha-Shanah and Ten Days: preparatory Minchah excluded",
-        "Undated: outer choices retained, inner Kedushah guard resolved from local declarations"
-      ],
-      "exports": "Documentary and expanded PDF/HTML rebuilt; opening, Minchah, repetition and front matter visually inspected; duplicate English rubrics eliminated",
-      "full_volume_complete": false,
-      "qedushah_followup": "75 focused tests and 42 subtests pass; nine actual compiler cases pass; 49 generated XML files validate.",
-      "speaker_correction": "Human-corrected three Kedushah shared-response labels; 49 XML files validate, 77 tests and 44 subtests pass; independent markup review and follow-up fixes recorded."
-    },
-    "audit_resolutions": "opening_encoding_resolutions.json",
-    "guideline_audit": "guideline_adherence_resolutions.json"
+      "schema": "62 generated mahzor XML files and separate Birnbaum calendar extraction pass RelaxNG and Schematron",
+      "tests": "149 focused tests and 79 subtests pass",
+      "registry_features_names_references": "Pass for the three new projects and compatible Birnbaum dependency",
+      "runtime": "preparations_kabbalat_verification.json",
+      "exports": {
+        "pdf": "Documentary PDF pages11–14 and expanded pages7–11 rendered and visually inspected after all corrections. English alignment, cues/repetitions, verse citation order and missing English checked.",
+        "html": "Both HTML files built; local fragment targets resolve; expanded colophon retains CC0 and Birnbaum CC BY-SA 4.0. No new interactive browser review claimed."
+      },
+      "full_volume_complete": false
+    }
   },
-  "next_primary_scan": 15,
-  "next_adjudication_scan": 13,
+  "next_primary_scan": 18,
+  "next_adjudication_scan": 18,
   "images": "Cached outside Git; never use OCR to settle a reading.",
   "secondary_review_requirements": {
     "blind_scan_reading": true,
@@ -123,5 +94,106 @@
       "locally scoped settings, transclusion dependencies and expanded recitation order"
     ],
     "evidence": "Preserve actual model/effort, reviewed file hashes, findings and follow-up resolutions. Unresolved findings prevent full-page acceptance."
-  }
+  },
+  "completed_batches": [
+    {
+      "scan_pages": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "archive_leaves": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "printed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "primary": "primary/opening_s7_s14.json",
+      "independent": "independent/opening_s7_s14.json",
+      "enlarged_independent": "independent/opening_s7_s8_enlarged.json",
+      "comparison": "opening_comparison.json",
+      "status": "Complete opening תפלה page and entire printed weekday Minchah accepted through s12 after blind readings, crop adjudications, independent guideline/alignment/order audits and export inspection.",
+      "sections": [
+        "Entering the synagogue",
+        "Weekday Minchah",
+        "Eruv tavshilin",
+        "Festival candle lighting",
+        "Kabbalat Shabbat"
+      ],
+      "pending": [
+        "Adjudicate s13-s14 eruv tavshilin, candle lighting and Kabbalat Shabbat, then continue in scan order."
+      ],
+      "accepted_excerpts": [
+        "amidah_adonai_sefatai/he",
+        "amidah_avodah/he",
+        "amidah_avot/he",
+        "amidah_binah/he",
+        "amidah_david/he",
+        "amidah_elohai_netzor/he",
+        "amidah_geullah/he",
+        "amidah_gevurot/he",
+        "amidah_hodaah/he",
+        "amidah_minim/he",
+        "amidah_mishpat/he",
+        "amidah_modim_derabbanan/he",
+        "amidah_qedushah/he",
+        "amidah_qedushat_hashem/he",
+        "amidah_qibbutz_galuyot/he",
+        "amidah_refuah/he",
+        "amidah_selichah/he",
+        "amidah_shalom_rav/he",
+        "amidah_shanim/he",
+        "amidah_tefillah/he",
+        "amidah_teshuvah/he",
+        "amidah_tzaddiqim/he",
+        "amidah_yehi_ratzon/he",
+        "amidah_yerushalayim/he",
+        "ashrei/he",
+        "citation/ashrei/he/0",
+        "entering_synagogue/he",
+        "instruction/entering_synagogue",
+        "instruction/half_kaddish",
+        "instruction/minchah_heading",
+        "instruction/reader_repeats",
+        "mah_tovu/he"
+      ],
+      "validation": {
+        "schema": "49 generated XML files plus both modified Psalms witnesses pass RelaxNG and Schematron",
+        "tests": "4467 tests and 6873 subtests pass (12 skipped); latest focused suite: 96 tests and 23 subtests pass.",
+        "features": "All three projects pass registered feature checks",
+        "naming": "All three projects pass naming checks",
+        "compiled_settings": [
+          "Elul29 afternoon with minyan: silence and reader repetition including Kedushah",
+          "Elul29 afternoon without minyan: silence without reader repetition/Kedushah",
+          "Elul28, Rosh ha-Shanah and Ten Days: preparatory Minchah excluded",
+          "Undated: outer choices retained, inner Kedushah guard resolved from local declarations"
+        ],
+        "exports": "Documentary and expanded PDF/HTML rebuilt; opening, Minchah, repetition and front matter visually inspected; duplicate English rubrics eliminated",
+        "full_volume_complete": false,
+        "qedushah_followup": "75 focused tests and 42 subtests pass; nine actual compiler cases pass; 49 generated XML files validate.",
+        "speaker_correction": "Human-corrected three Kedushah shared-response labels; 49 XML files validate, 77 tests and 44 subtests pass; independent markup review and follow-up fixes recorded."
+      },
+      "audit_resolutions": "opening_encoding_resolutions.json",
+      "guideline_audit": "guideline_adherence_resolutions.json"
+    }
+  ]
 }

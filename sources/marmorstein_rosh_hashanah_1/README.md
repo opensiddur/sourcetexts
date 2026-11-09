@@ -19,7 +19,7 @@ identify their shared source as CC0 1.0 Universal; preserve those source records
 - `page_corrections.json`: image-verified labels, language assignments and reciprocal
   translation pairs. `pages.json` is derived; regenerate it rather than editing it.
 - `primary/*.json`: immutable initial Codex image readings, before the second
-  reader's answer was opened. Each file covers selected passages, not whole pages.
+  reader's answer was opened. Each file states its scope; raw readings alone do not certify complete page coverage.
 - `independent/pilot.json`, `independent/navigation.json`: Claude Opus 5.5 at medium
   effort, using read-only image access, with no primary transcription or OCR
   supplied. Preserve the reader's uncertainty statements. The reader sometimes
@@ -191,3 +191,21 @@ The Birnbaum Kedushah comparison (user-approved follow-up, 2026-11-09) adds a re
 The structural follow-up and its guideline adherence passed independent Claude Opus 5.5 review at medium effort; see `independent/qedushah_conditions.json`. Case settings and compiled-output hashes are preserved with the runtime verification.
 
 Kedushah speaker correction (2026-11-09): the three response labels mean **קהל וחזן**, not congregation alone. They are encoded as `קו״ח` in `abbr`, `קהל וחזן` in `expan`, and existing `instruction:role/reader_and_congregation`. The user supplied the decisive correction; the blind secondary reread still misread these tiny labels and is preserved honestly as a failed reading. Enlarged-image adjudication, superseded data and the separate markup audit are linked from `qedushah_speaker_resolutions.json`. This is a transcription correction, without sic/corr. Speaker abbreviations and expansions now both participate in the review hash, so either change requires renewed review.
+
+## Continued opening sequence
+
+The opening entrance prayers and weekday Minchah are complete through s12.
+The next accepted batch, s13–s17 (Archive n12–n16, printed pp. 7–11), contains
+bilingual eruv tavshilin and festival lights and complete Hebrew Kabbalat Shabbat.
+The user confirms this edition retains both the opening Psalms and Lekhah Dodi
+on RH-Shabbat, with inclusion controlled in the expanded structural spine.
+Ten literal refrain cues expand to eleven complete refrains, including the
+opening congregational response. Missing English remains absent.
+
+Blind readings, enlarged adjudications, superseded decisions, frozen-file
+guideline/alignment/order review and actual compiler settings checks are
+recorded in the preparations_kabbalat evidence files. All eight Psalm chapters
+have verified verse counts and order. There are now 23 fully transcribed and
+reviewed leaves, 32 independently read leaves, and 355 leaves in total.
+Continue in scan order at s18 (Archive n17, printed page 12); full-volume
+acceptance remains false.

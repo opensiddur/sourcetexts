@@ -4350,5 +4350,962 @@
     "unresolved": [],
     "complete": true,
     "final_sha256": "62c82369bcca5181dcd7f4b379ad29e79a30521c8b230c3c39c225d7a68871f2"
+  },
+  "eruv_tavshilin/he": {
+    "primary_sha256": "ffe1248a69a0705c60d449a68904f8490839e068b5b1ba83c4b97336f30c0092",
+    "independent_sha256": "dd6490274527774c13c684cccd848554a7cc8c5ec7c809c03df7d7cb063da311",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/preparations_kabbalat_s13_s17.json",
+      "independent/preparations_kabbalat_s13_s17.json",
+      "independent/preparations_kabbalat_enlarged.json",
+      "preparations_kabbalat_resolutions.json"
+    ],
+    "differences": [
+      {
+        "bucket": "vowels",
+        "ours": "יְהָא",
+        "theirs": "יְהֵא",
+        "at": 15,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:15:יְהָא|יְהֵא"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "שָׁרָא",
+        "theirs": "שְׁרֵא",
+        "at": 16,
+        "size": 2,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:16:שָׁרָא|שְׁרֵא"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "לְמֵיפָא",
+        "theirs": "לְמֵיפֵא",
+        "at": 18,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:18:לְמֵיפָא|לְמֵיפֵא"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "צָרְכָנָא",
+        "theirs": "צָרְכָּנָא",
+        "at": 25,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:25:צָרְכָנָא|צָרְכָּנָא"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "לָנָא",
+        "theirs": "לָנוּ",
+        "at": 29,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:29:לָנָא|לָנוּ"
+      }
+    ],
+    "decisions": {
+      "vowels:15:יְהָא|יְהֵא": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "vowels:16:שָׁרָא|שְׁרֵא": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "vowels:18:לְמֵיפָא|לְמֵיפֵא": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "vowels:25:צָרְכָנָא|צָרְכָּנָא": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "consonants:29:לָנָא|לָנוּ": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      }
+    },
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "138b1cf0a19345998ef270808093066f3ed43c2adab0e771b19cde7acfbb7fd2",
+    "pending_ambiguities": []
+  },
+  "eruv_tavshilin/en": {
+    "primary_sha256": "13c9b72975be1ce609a3719189f66ac6f256563bc0ba79e8009cc2221b3f09f4",
+    "independent_sha256": "13c9b72975be1ce609a3719189f66ac6f256563bc0ba79e8009cc2221b3f09f4",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/preparations_kabbalat_s13_s17.json",
+      "independent/preparations_kabbalat_s13_s17.json",
+      "independent/preparations_kabbalat_enlarged.json",
+      "preparations_kabbalat_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "13c9b72975be1ce609a3719189f66ac6f256563bc0ba79e8009cc2221b3f09f4",
+    "pending_ambiguities": []
+  },
+  "hadlaqat_ner_yom_tov/he": {
+    "primary_sha256": "762c17123117745ce2232f116129fd42cdabee6c33b70497ad64648f1225800d",
+    "independent_sha256": "762c17123117745ce2232f116129fd42cdabee6c33b70497ad64648f1225800d",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/preparations_kabbalat_s13_s17.json",
+      "independent/preparations_kabbalat_s13_s17.json",
+      "independent/preparations_kabbalat_enlarged.json",
+      "preparations_kabbalat_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "762c17123117745ce2232f116129fd42cdabee6c33b70497ad64648f1225800d",
+    "pending_ambiguities": []
+  },
+  "hadlaqat_ner_yom_tov/en": {
+    "primary_sha256": "56b2adc73ff246ef8b327d29e4fa91fd06d95c6c0dec1f2eb48cad721e28b1f6",
+    "independent_sha256": "56b2adc73ff246ef8b327d29e4fa91fd06d95c6c0dec1f2eb48cad721e28b1f6",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/preparations_kabbalat_s13_s17.json",
+      "independent/preparations_kabbalat_s13_s17.json",
+      "independent/preparations_kabbalat_enlarged.json",
+      "preparations_kabbalat_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "56b2adc73ff246ef8b327d29e4fa91fd06d95c6c0dec1f2eb48cad721e28b1f6",
+    "pending_ambiguities": []
+  },
+  "psalm_95/he": {
+    "primary_sha256": "aa49bfd1ceef858410a7f205414a52e88519e54beaaac7ae50a345cc9c2dc310",
+    "independent_sha256": "aa49bfd1ceef858410a7f205414a52e88519e54beaaac7ae50a345cc9c2dc310",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/preparations_kabbalat_s13_s17.json",
+      "independent/preparations_kabbalat_s13_s17.json",
+      "independent/preparations_kabbalat_enlarged.json",
+      "preparations_kabbalat_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "aa49bfd1ceef858410a7f205414a52e88519e54beaaac7ae50a345cc9c2dc310",
+    "pending_ambiguities": []
+  },
+  "citation/psalm_95/he/0": {
+    "primary_sha256": "061929c5f7f8d9e1442f17e45aedd37f9dcd3246e1ee8892cec2707358f8eedc",
+    "independent_sha256": "061929c5f7f8d9e1442f17e45aedd37f9dcd3246e1ee8892cec2707358f8eedc",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "s13",
+      "independent/preparations_kabbalat_s13_s17.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "061929c5f7f8d9e1442f17e45aedd37f9dcd3246e1ee8892cec2707358f8eedc"
+  },
+  "psalm_96/he": {
+    "primary_sha256": "a445a623f1b5bb83d5a111360cb6bc478b3bb491b65859b73d5a135b3951de68",
+    "independent_sha256": "97b8470b3104e4e2b6d85ccb8c5e710f22ffa72b7a306b1b62f49d9a37ae1a67",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/preparations_kabbalat_s13_s17.json",
+      "independent/preparations_kabbalat_s13_s17.json",
+      "independent/preparations_kabbalat_enlarged.json",
+      "preparations_kabbalat_resolutions.json"
+    ],
+    "differences": [
+      {
+        "bucket": "vowels",
+        "ours": "בָּרֲכוּ",
+        "theirs": "בָּרְכוּ",
+        "at": 14,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:14:בָּרֲכוּ|בָּרְכוּ"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "'־'",
+        "theirs": "' '",
+        "at": 74,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after שְׂאוּ",
+        "key": "whitespace:74:'־'|' '"
+      }
+    ],
+    "decisions": {
+      "vowels:14:בָּרֲכוּ|בָּרְכוּ": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "whitespace:74:'־'|' '": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      }
+    },
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "97b8470b3104e4e2b6d85ccb8c5e710f22ffa72b7a306b1b62f49d9a37ae1a67",
+    "pending_ambiguities": []
+  },
+  "citation/psalm_96/he/0": {
+    "primary_sha256": "05436c051368ffffa43b6a1c77fb2bc39e0fbd030d383dba6b5c3853a0fd94b7",
+    "independent_sha256": "05436c051368ffffa43b6a1c77fb2bc39e0fbd030d383dba6b5c3853a0fd94b7",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "s14",
+      "independent/preparations_kabbalat_s13_s17.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "05436c051368ffffa43b6a1c77fb2bc39e0fbd030d383dba6b5c3853a0fd94b7"
+  },
+  "psalm_97/he": {
+    "primary_sha256": "f99deeebf5ea80688a85c5bd42d0f1e4eba3e8fbff15b8dd6155e15a486577f8",
+    "independent_sha256": "971a8b167ae42434f20dc8d2b16470aef8e4f6816e390f858dbd70cc733bf9de",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/preparations_kabbalat_s13_s17.json",
+      "independent/preparations_kabbalat_s13_s17.json",
+      "independent/preparations_kabbalat_enlarged.json",
+      "preparations_kabbalat_resolutions.json"
+    ],
+    "differences": [
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'־'",
+        "at": 105,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after אוֹר",
+        "key": "whitespace:105:' '|'־'"
+      }
+    ],
+    "decisions": {
+      "whitespace:105:' '|'־'": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      }
+    },
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "971a8b167ae42434f20dc8d2b16470aef8e4f6816e390f858dbd70cc733bf9de",
+    "pending_ambiguities": []
+  },
+  "citation/psalm_97/he/0": {
+    "primary_sha256": "8b5edd234616c143f05cc9be8b3359b9cc014e36eccc98d8b2cb2539c4c2f4f4",
+    "independent_sha256": "8b5edd234616c143f05cc9be8b3359b9cc014e36eccc98d8b2cb2539c4c2f4f4",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "s14",
+      "independent/preparations_kabbalat_s13_s17.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "8b5edd234616c143f05cc9be8b3359b9cc014e36eccc98d8b2cb2539c4c2f4f4"
+  },
+  "psalm_98/he": {
+    "primary_sha256": "a3f8a7ca5e2fc7d21e5fae8e942c3d752bd03357f824b6eba53f01c42f8804f4",
+    "independent_sha256": "a3f8a7ca5e2fc7d21e5fae8e942c3d752bd03357f824b6eba53f01c42f8804f4",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/preparations_kabbalat_s13_s17.json",
+      "independent/preparations_kabbalat_s13_s17.json",
+      "independent/preparations_kabbalat_enlarged.json",
+      "preparations_kabbalat_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "a3f8a7ca5e2fc7d21e5fae8e942c3d752bd03357f824b6eba53f01c42f8804f4",
+    "pending_ambiguities": []
+  },
+  "citation/psalm_98/he/0": {
+    "primary_sha256": "1edbfc8df68d2e030af4fc0c23cfdc86e1fef466e5e95535f06589d303445aec",
+    "independent_sha256": "1edbfc8df68d2e030af4fc0c23cfdc86e1fef466e5e95535f06589d303445aec",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "s15",
+      "independent/preparations_kabbalat_s13_s17.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "1edbfc8df68d2e030af4fc0c23cfdc86e1fef466e5e95535f06589d303445aec"
+  },
+  "psalm_99/he": {
+    "primary_sha256": "2a3e81668a98f4e7ff61422bd48b0454561d1474ca806e7627f7f039362ff882",
+    "independent_sha256": "bfbdbca11ed9a8abbdf000f092b6544f634d90c4650c8f44e576f59435968fbb",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/preparations_kabbalat_s13_s17.json",
+      "independent/preparations_kabbalat_s13_s17.json",
+      "independent/preparations_kabbalat_enlarged.json",
+      "preparations_kabbalat_resolutions.json"
+    ],
+    "differences": [
+      {
+        "bucket": "consonants",
+        "ours": "קו״ח [קהל וחזן]",
+        "theirs": "ק׳ [קהל] יְיָ",
+        "at": 10,
+        "size": 3,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:10:קו״ח [קהל וחזן]|ק׳ [קהל] יְיָ"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "קו״ח [קהל וחזן]",
+        "theirs": "ח׳ [חזן]",
+        "at": 42,
+        "size": 3,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:42:קו״ח [קהל וחזן]|ח׳ [חזן]"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "ח׳ [חזן]",
+        "theirs": "ק׳ [קהל]",
+        "at": 53,
+        "size": 2,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:53:ח׳ [חזן]|ק׳ [קהל]"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "קֹרִאים",
+        "theirs": "קֹרְאִים",
+        "at": 61,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:61:קֹרִאים|קֹרְאִים"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "ק׳ [קהל]",
+        "theirs": "ח׳ [חזן]",
+        "at": 66,
+        "size": 2,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:66:ק׳ [קהל]|ח׳ [חזן]"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "ח׳ [חזן]",
+        "theirs": "ק׳ [קהל]",
+        "at": 77,
+        "size": 2,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:77:ח׳ [חזן]|ק׳ [קהל]"
+      }
+    ],
+    "decisions": {
+      "consonants:10:קו״ח [קהל וחזן]|ק׳ [קהל] יְיָ": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "consonants:42:קו״ח [קהל וחזן]|ח׳ [חזן]": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "consonants:53:ח׳ [חזן]|ק׳ [קהל]": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "vowels:61:קֹרִאים|קֹרְאִים": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "consonants:66:ק׳ [קהל]|ח׳ [חזן]": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "consonants:77:ח׳ [חזן]|ק׳ [קהל]": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      }
+    },
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "bfbdbca11ed9a8abbdf000f092b6544f634d90c4650c8f44e576f59435968fbb",
+    "pending_ambiguities": []
+  },
+  "citation/psalm_99/he/0": {
+    "primary_sha256": "134fa2256b66835b54634e151a3421b045a2e6a0d426806dfd9198f19d957d98",
+    "independent_sha256": "134fa2256b66835b54634e151a3421b045a2e6a0d426806dfd9198f19d957d98",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "s15",
+      "independent/preparations_kabbalat_s13_s17.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "134fa2256b66835b54634e151a3421b045a2e6a0d426806dfd9198f19d957d98"
+  },
+  "psalm_29/he": {
+    "primary_sha256": "2e2260f9cc48320bbeed3f2861018d34637bf7559ecc338c2fee77ae6c8edb2c",
+    "independent_sha256": "ed5d64dc81a44cbd840b4000b8b4dbd58800128b5cdcea3ac822778369cf01f9",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/preparations_kabbalat_s13_s17.json",
+      "independent/preparations_kabbalat_s13_s17.json",
+      "independent/preparations_kabbalat_enlarged.json",
+      "preparations_kabbalat_resolutions.json"
+    ],
+    "differences": [
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'־'",
+        "at": 20,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after בְּהַדְרַת",
+        "key": "whitespace:20:' '|'־'"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "וְשִׂרְיוֹן",
+        "theirs": "וְשִׂרְיֹן",
+        "at": 60,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:60:וְשִׂרְיוֹן|וְשִׂרְיֹן"
+      }
+    ],
+    "decisions": {
+      "whitespace:20:' '|'־'": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "consonants:60:וְשִׂרְיוֹן|וְשִׂרְיֹן": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      }
+    },
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "b7d6f5cb3e3b50477df91daf257ccae6a9ede330b57844ab09b3362fbac6ba40",
+    "pending_ambiguities": [],
+    "ambiguity_resolutions": [
+      "Tight source crop (480,340,1040,485) on s16 clearly shows the extra vav. The first primary was correct; the initial independent/adjudicated defective reading is superseded."
+    ]
+  },
+  "citation/psalm_29/he/0": {
+    "primary_sha256": "593478df3fbfd8db17369aa4af3529a7b7f4b0ceadd39f0f0597fb68a7b2f683",
+    "independent_sha256": "593478df3fbfd8db17369aa4af3529a7b7f4b0ceadd39f0f0597fb68a7b2f683",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "s15",
+      "independent/preparations_kabbalat_s13_s17.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "593478df3fbfd8db17369aa4af3529a7b7f4b0ceadd39f0f0597fb68a7b2f683"
+  },
+  "psalm_92/he": {
+    "primary_sha256": "31d67e7d41c1e9bacd8bbb15aa5ae2849584a8ca234625c2c27e443e095a488d",
+    "independent_sha256": "3b93575145b071956dcc9ec557d63ceeccf23843db593dff2dac3664b581a845",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/preparations_kabbalat_s13_s17.json",
+      "independent/preparations_kabbalat_s13_s17.json",
+      "independent/preparations_kabbalat_enlarged.json",
+      "preparations_kabbalat_resolutions.json"
+    ],
+    "differences": [
+      {
+        "bucket": "consonants",
+        "ours": "לְהוֹדוֹת",
+        "theirs": "לְהֹדוֹת",
+        "at": 5,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:5:לְהוֹדוֹת|לְהֹדוֹת"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "'־'",
+        "theirs": "' '",
+        "at": 36,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after אִישׁ",
+        "key": "whitespace:36:'־'|' '"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "'־'",
+        "theirs": "' '",
+        "at": 47,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after כְּמוֹ",
+        "key": "whitespace:47:'־'|' '"
+      }
+    ],
+    "decisions": {
+      "consonants:5:לְהוֹדוֹת|לְהֹדוֹת": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "whitespace:36:'־'|' '": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "whitespace:47:'־'|' '": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      }
+    },
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "3b93575145b071956dcc9ec557d63ceeccf23843db593dff2dac3664b581a845",
+    "pending_ambiguities": []
+  },
+  "citation/psalm_92/he/0": {
+    "primary_sha256": "65a0606cf4764f75a9e79322bcc04024694b9a57acb060a58fd3c3f76e7065fe",
+    "independent_sha256": "65a0606cf4764f75a9e79322bcc04024694b9a57acb060a58fd3c3f76e7065fe",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "s17",
+      "independent/preparations_kabbalat_s13_s17.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "65a0606cf4764f75a9e79322bcc04024694b9a57acb060a58fd3c3f76e7065fe"
+  },
+  "psalm_93/he": {
+    "primary_sha256": "e8ce5e779c226334dcd8d9d4589a13401fcc953b41200aa674e2f1f5d012773b",
+    "independent_sha256": "e8ce5e779c226334dcd8d9d4589a13401fcc953b41200aa674e2f1f5d012773b",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/preparations_kabbalat_s13_s17.json",
+      "independent/preparations_kabbalat_s13_s17.json",
+      "independent/preparations_kabbalat_enlarged.json",
+      "preparations_kabbalat_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "e8ce5e779c226334dcd8d9d4589a13401fcc953b41200aa674e2f1f5d012773b",
+    "pending_ambiguities": []
+  },
+  "citation/psalm_93/he/0": {
+    "primary_sha256": "ed5d366ebce1887d6071df1141870adac41ad01e62756528a507fdbacc296b38",
+    "independent_sha256": "ed5d366ebce1887d6071df1141870adac41ad01e62756528a507fdbacc296b38",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "s17",
+      "independent/preparations_kabbalat_s13_s17.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "ed5d366ebce1887d6071df1141870adac41ad01e62756528a507fdbacc296b38"
+  },
+  "lekhah_dodi/he": {
+    "primary_sha256": "a8829a470198681ced24ebbc82eb95712323b91d81f2fd22d0c6a9fcfc9e1298",
+    "independent_sha256": "df737ae744572b387ed1bd01d2326d393727a2355969ddb1c98fd251be17d387",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/preparations_kabbalat_s13_s17.json",
+      "independent/preparations_kabbalat_s13_s17.json",
+      "independent/preparations_kabbalat_enlarged.json",
+      "preparations_kabbalat_resolutions.json"
+    ],
+    "differences": [
+      {
+        "bucket": "consonants",
+        "ours": "רש״ץ",
+        "theirs": "הש״ץ",
+        "at": 0,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:0:רש״ץ|הש״ץ"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "ככניסתה. רל״ש המחבר",
+        "theirs": "בנעימה. ראשי החרוזים",
+        "at": 2,
+        "size": 3,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:2:ככניסתה. רל״ש המחבר|בנעימה. ראשי החרוזים"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "אֶחָד",
+        "theirs": "אֶחָד.",
+        "at": 24,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:24:אֶחָד|אֶחָד."
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "'־'",
+        "theirs": "' '",
+        "at": 58,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after בְּעֵמֶק",
+        "key": "whitespace:58:'־'|' '"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "קוּמִי",
+        "theirs": "קוּמִי.",
+        "at": 68,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:68:קוּמִי|קוּמִי."
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'־'",
+        "at": 73,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after עַל",
+        "key": "whitespace:73:' '|'־'"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'־'",
+        "at": 75,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after בֶּן",
+        "key": "whitespace:75:' '|'־'"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "הַלַּחְמִי",
+        "theirs": "הַלַּחְמִי.",
+        "at": 78,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:78:הַלַּחְמִי|הַלַּחְמִי."
+      },
+      {
+        "bucket": "consonants",
+        "ours": "הִתְעוֹרְרִי",
+        "theirs": "הִתְעוֹרְרִי.",
+        "at": 86,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:86:הִתְעוֹרְרִי|הִתְעוֹרְרִי."
+      },
+      {
+        "bucket": "consonants",
+        "ours": "דַּבֵּרִי",
+        "theirs": "דַּבֵּרִי.",
+        "at": 95,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:95:דַּבֵּרִי|דַּבֵּרִי."
+      },
+      {
+        "bucket": "consonants",
+        "ours": "תֵבוֹשִׁי",
+        "theirs": "תֵבֹשִׁי",
+        "at": 103,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:103:תֵבוֹשִׁי|תֵבֹשִׁי"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "תִכָּלְמִי",
+        "theirs": "תִכָּלְמִי.",
+        "at": 105,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:105:תִכָּלְמִי|תִכָּלְמִי."
+      },
+      {
+        "bucket": "consonants",
+        "ours": "עַמִּי",
+        "theirs": "עַמִּי.",
+        "at": 113,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:113:עַמִּי|עַמִּי."
+      },
+      {
+        "bucket": "consonants",
+        "ours": "שֹׁאסָיִךְ",
+        "theirs": "שֹׁאסָיִךְ.",
+        "at": 122,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:122:שֹׁאסָיִךְ|שֹׁאסָיִךְ."
+      },
+      {
+        "bucket": "consonants",
+        "ours": "אֱלֹהָיִךְ",
+        "theirs": "אֱלֹהָיִךְ.",
+        "at": 128,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:128:אֱלֹהָיִךְ|אֱלֹהָיִךְ."
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'־'",
+        "at": 142,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after יַד",
+        "key": "whitespace:142:' '|'־'"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'־'",
+        "at": 144,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after בֶּן",
+        "key": "whitespace:144:' '|'־'"
+      }
+    ],
+    "decisions": {
+      "consonants:0:רש״ץ|הש״ץ": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "consonants:2:ככניסתה. רל״ש המחבר|בנעימה. ראשי החרוזים": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "consonants:24:אֶחָד|אֶחָד.": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "whitespace:58:'־'|' '": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "consonants:68:קוּמִי|קוּמִי.": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "whitespace:73:' '|'־'": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "whitespace:75:' '|'־'": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "consonants:78:הַלַּחְמִי|הַלַּחְמִי.": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "consonants:86:הִתְעוֹרְרִי|הִתְעוֹרְרִי.": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "consonants:95:דַּבֵּרִי|דַּבֵּרִי.": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "consonants:103:תֵבוֹשִׁי|תֵבֹשִׁי": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "consonants:105:תִכָּלְמִי|תִכָּלְמִי.": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "consonants:113:עַמִּי|עַמִּי.": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "consonants:122:שֹׁאסָיִךְ|שֹׁאסָיִךְ.": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "consonants:128:אֱלֹהָיִךְ|אֱלֹהָיִךְ.": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "whitespace:142:' '|'־'": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      },
+      "whitespace:144:' '|'־'": {
+        "accepted": "independent",
+        "evidence": "Adjudicated against original and enlarged images; detailed verse-level decisions and manual placements retained in preparations_kabbalat_comparison.json."
+      }
+    },
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "938a3e3c22249b64f582e73c1b69442f9cb843520630864eb32906e916c4c298",
+    "pending_ambiguities": [],
+    "human_clarification": "The user confirms the first marginal לכה also requires the congregation to repeat the opening refrain.",
+    "ambiguity_resolutions": [
+      "Tight s17 opening crop (90,160,920,325) shows בן at line end without a maqaf; do not supply the customary connecting mark."
+    ],
+    "editorial_decisions": [
+      "Expanded הש״ץ as השליח ציבור while retaining the source abbreviation in choice/abbr; final markup independently re-audited."
+    ]
+  },
+  "instruction/eruv_heading": {
+    "primary_sha256": "16bf75661ba5f446bc5c4ad4e2c598bca98c398097c2a1d31131fadd2927e16b",
+    "independent_sha256": "16bf75661ba5f446bc5c4ad4e2c598bca98c398097c2a1d31131fadd2927e16b",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "s13",
+      "independent/preparations_kabbalat_s13_s17.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "16bf75661ba5f446bc5c4ad4e2c598bca98c398097c2a1d31131fadd2927e16b"
+  },
+  "instruction/eruv_preparation": {
+    "primary_sha256": "249ce445928c58f0f5d06398dbad97167cac8b527130c85ae9a344ab7669833a",
+    "independent_sha256": "249ce445928c58f0f5d06398dbad97167cac8b527130c85ae9a344ab7669833a",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "s13",
+      "independent/preparations_kabbalat_s13_s17.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "249ce445928c58f0f5d06398dbad97167cac8b527130c85ae9a344ab7669833a"
+  },
+  "instruction/festival_candles": {
+    "primary_sha256": "f18990f52b4eed311185d68870a6db985514fb1a98c2f0e96cd9fcb87fe547cf",
+    "independent_sha256": "f18990f52b4eed311185d68870a6db985514fb1a98c2f0e96cd9fcb87fe547cf",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "s13",
+      "independent/preparations_kabbalat_s13_s17.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "f18990f52b4eed311185d68870a6db985514fb1a98c2f0e96cd9fcb87fe547cf"
+  },
+  "instruction/qabbalat_heading": {
+    "primary_sha256": "28951d41aaa79a80d18808ed71487156979273c7e7857e5395f85cbc8c972bac",
+    "independent_sha256": "28951d41aaa79a80d18808ed71487156979273c7e7857e5395f85cbc8c972bac",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "s13",
+      "independent/preparations_kabbalat_s13_s17.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "28951d41aaa79a80d18808ed71487156979273c7e7857e5395f85cbc8c972bac"
+  },
+  "instruction/qabbalat_mourner_kaddish": {
+    "primary_sha256": "43acf52618c1410b436423b77cd333e95bea0600e76843d101fc241aa3bb5b6d",
+    "independent_sha256": "43acf52618c1410b436423b77cd333e95bea0600e76843d101fc241aa3bb5b6d",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "s17",
+      "independent/preparations_kabbalat_s13_s17.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "43acf52618c1410b436423b77cd333e95bea0600e76843d101fc241aa3bb5b6d"
   }
 }

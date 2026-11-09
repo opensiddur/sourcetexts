@@ -1,0 +1,143 @@
+{
+  "source_fidelity": {
+    "status": "pass_with_residual_defects",
+    "findings": [
+      "VERIFIED BY IMAGE (s13–s17 full pages, plus /tmp/kabbalat-s16-ps29.png and /tmp/kabbalat-s17-top.png): the eruv blessing, the Aramaic declaration (לָנָא after שְׁרֵא, final לָנוּ, כָּל־צָרְכָּנָא), the festival-light blessing (נֵר שֶׁל־יוֹם טוֹב) and the English eruv and light renderings match the scan. The English-column cues ברוך/ברן/ברוך are correctly left out of the English prayer words.",
+      "VERIFIED: Psalms 95, 96, 97, 98, 99, 29, 92 and 93 are complete and in printed order, with no omitted or duplicated verses. The page-spanning verses are handled correctly: 95:10 (אַרְבָּעִים שָׁנָה | אָקוּט), 97:9 (עַל־כָּל־ | אֱלֹהִים) and 29:2 (בְּהַדְרַת־ | קֹדֶשׁ). Each verse appears once, with the page break inside the verse.",
+      "VERIFIED: the speaker labels match the print. Every chapter alternates ח׳/ק׳ from verse 1 and ends with קו״ח: 95:11, 96:13, 97:12, 98:9, 99:9, 29:11. Psalms 92 and 93 have no labels, as printed. The labels in 99:2 and 99:5–8 happen to fall into the regular alternation. The adjudication's wording ('not assumed responsorial patterns') could suggest an irregularity, but there is none in the print.",
+      "VERIFIED: the full Name יהוה is used from Psalm 29 on and in Psalms 92 and 93, with prefixed forms printed without a yod vowel (לַיהוָה). Psalms 95–99 and the poem use יְיָ/לַייָ. This matches the adjudication and the print as far as the resolution allows.",
+      "VERIFIED: Lekhah Dodi has the opening refrain plus 9 stanzas, and 10 marginal לכה cues (one beside the opening refrain, one after each of stanzas 1–9). The two small notes הש״ץ מנגן בנעימה. and ראשי החרוזים שלמה הלוי. are printed on one line, as two separate items, above the refrain. Stanza 9 prints גַּם בְּשִׂמְחָה וּבְצָהֳלָה.",
+      "RESIDUAL DEFECT (medium): lekhah_dodi.xml line 44, stanza 8, reads בֶּן־פַּרְצִי. In the enlarged s17 crop, בֶּן ends the line and no maqaf is visible, while other line-final maqafs in this volume are clearly printed (97:9 עַל־כָּל־, 29:2 בְּהַדְרַת־, 95:3 עַל־). The enlarged independent reading itself warned that customary pointing may have filled gaps in this poem. The adjudication does not address this word. Re-check at higher resolution and, unless a maqaf is seen, encode בֶּן פַּרְצִי.",
+      "RESIDUAL UNCERTAINTY (medium): psalm_29.xml 29:6 is encoded as וְשִׂרְיֹן (yod, no vav). The adjudication calls this 'defective שרין', a spelling with no yod, which matches neither the file nor the usual text. At the enlarged-crop resolution the printed word looks to me like it may be plene וְשִׂרְיוֹן. The adjudication's wording is internally inconsistent here. Settle it with a higher-resolution look at this word; I did not change the text.",
+      "ACCEPTED, NOT INDEPENDENTLY RESOLVED: the pe vowel in לְמֵיפָא, the dagesh in צָרְכָּנָא, and the absence of a holam on the Tetragrammaton are the adjudicator's calls at the limit of legibility. Nothing I could see contradicts them, but I could not confirm them either.",
+      "The source has no English for Kabbalat Shabbat (pp. 8–11 are Hebrew only). Leaving it untranslated is faithful to the source."
+    ]
+  },
+  "alignment": {
+    "status": "pass",
+    "findings": [
+      "eruv_tavshilin: the Hebrew and English files carry the same prayer-part milestones (eruv_tavshilin/blessing, eruv_tavshilin/declaration). Both sequences are explicitly terminated. The div-level corresp matches.",
+      "hadlaqat_ner_yom_tov: the Hebrew and English files align by div corresp only. Each is one paragraph, so this is enough.",
+      "The English directions (the eruv explanation and 'The housewife kindles…') appear once, as xml:lang=en instructions in the Hebrew index (index.xml lines 168 and 170). They are absent from the English leaves and the English index, which matches the documentary-spine instruction.",
+      "Kabbalat Shabbat has no English counterpart. The English index (lines 133–136) carries only eruv and lights, so nothing is paired against untranslated text.",
+      "Minor (low): eruv_tavshilin.xml line 35 marks the whole declaration as xml:lang=arc, although the closing clause לָנוּ וּלְכָל־הַדָּרִים בָּעִיר הַזֹּאת is Hebrew. This is acceptable as the project-wide convention the user asked for. An optional refinement is a tei:seg xml:lang=he around that clause.",
+      "Minor (low): the English eruv leaf has its own pb n=7 inside the first paragraph, while in Hebrew the pb n=7 is in the index (line 166). Both are harmless for alignment but inconsistent in where the page break lives."
+    ]
+  },
+  "guideline_adherence": {
+    "status": "pass_with_defects",
+    "findings": [
+      {
+        "severity": "medium",
+        "file": "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/lekhah_dodi.xml",
+        "line": 43,
+        "rule": "tei:pb/@n records the printed page; every page transition must be encoded",
+        "evidence": "biblScope is pages 10–11 and psalm_92.xml has facs n16 (p.11), but no pb n=11 exists anywhere. Stanza 8 (יָמִין וּשְׂמֹאל) begins p.11 on s17. The page breaks for pp. 8, 9 and 10 sit inside psalm_95, psalm_97 and psalm_29; p.11 is missing.",
+        "required_fix": "Insert <tei:pb ed=\"1965\" n=\"11\" facs=\".../page/n16.jpg\"/> at the start of the stanza-8 paragraph, before or immediately after the stanza-8 milestone, then regenerate."
+      },
+      {
+        "severity": "low",
+        "file": "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_97.xml",
+        "line": 41,
+        "rule": "Words joined by maqaf are one unit; nothing may be placed between them",
+        "evidence": "עַל־כָּל־ <tei:pb .../>אֱלֹהִים: has whitespace after the maqaf. psalm_29.xml line 41 has the same pattern: בְּהַדְרַת־ <tei:pb/>קֹדֶשׁ. A renderer may split the maqaf unit.",
+        "required_fix": "Remove the space so the pb sits directly between the maqaf and the next word (…כָּל־<tei:pb/>אֱלֹהִים), in both files."
+      },
+      {
+        "severity": "low",
+        "file": "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/machzor_expanded-opensiddur-he/index.xml",
+        "line": 508,
+        "rule": "Rubric kinds and scopes; the adjudication says literary attribution stays separate from recitation directions",
+        "evidence": "<tei:note type=\"description\">הש״ץ מנגן בנעימה. ראשי החרוזים שלמה הלוי.</tei:note> merges the performance description and the acrostic attribution into one note. The source leaf (lekhah_dodi.xml lines 34–35) correctly keeps them as two notes.",
+        "required_fix": "Split into two notes, or transclude the leaf's own notes rather than restating them."
+      },
+      {
+        "severity": "low",
+        "file": "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/machzor_expanded-opensiddur-he/index.xml",
+        "line": 511,
+        "rule": "Descriptions say who recites; apply them consistently",
+        "evidence": "The opening refrain gets a reader (חזן) note and the opening response gets a congregation (קהל) note, which depends on the human clarification. Responses 1–9 (lines 526–610) have no role note. The source prints no role labels on the poem, only הש״ץ מנגן בנעימה.",
+        "required_fix": "Either label all ten cue-driven responses as congregation, or drop the editorial role notes and rely on the documented clarification. Record that the role assignment is editorial, from human clarification, not printed."
+      },
+      {
+        "severity": "low",
+        "file": "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/hasiddur_hashalem-birnbaum-1949-he/festival_candles_shabbat.xml",
+        "line": 9,
+        "rule": "respStmt credits the digital work actually done; resp key should describe it",
+        "evidence": "Codex is credited with resp key=\"trc\" (transcriptionist) for 'Encoded the calendar-specific extraction', but this file contains no transcribed words. Efraim Feinstein's credit 'Read from the 1949 scan and encoded by' (line 6–7) restates the parent file's credit for words that live only in the transcluded parent.",
+        "required_fix": "Use key=\"mrk\" (markup editor) for the Codex extraction credit. Keep the Feinstein credit only if the project convention is to repeat the parent's credit, and consider rewording it to say the transcription is in the transcluded parent. Licence (CC BY-SA 4.0), distributor, biblScope 585 and the pinned self-source match the unchanged parent festival_candles_text.xml: verified by reading."
+      },
+      {
+        "severity": "low",
+        "file": "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/hasiddur_hashalem-birnbaum-1949-he/festival_candles_shabbat.xml",
+        "line": 30,
+        "rule": "URN scope and hierarchy; do not duplicate canonical mappings",
+        "evidence": "The child identity hadlaqat_ner_yom_tov/shabbat wraps a transclusion whose div carries the parent identity hadlaqat_ner_yom_tov. The compiled tree nests the parent URN inside its own child. In an electronic edition where the Shabbat condition is undecided, both expanded branches (index.xml lines 420 and 444) will emit the corresp hadlaqat_ner_yom_tov.",
+        "required_fix": "Acceptable as the user's explicit design. Confirm by an actual electronic-destination compile that the refdb and parallel compiler do not warn or drop the second occurrence. If they do, use an inline transclusion or an exporter suppression of the nested corresp."
+      },
+      {
+        "severity": "info",
+        "file": "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/lekhah_dodi.xml",
+        "line": 36,
+        "rule": "Poetry hierarchy (tei:lg/tei:l) versus tei:p",
+        "evidence": "Each stanza is one tei:p, while the source prints each stanza as two hanging-indent lines. Milestone scopes and terminators are correct: the refrain is terminated before its cue, every stanza is terminated before its cue, and all 10 cue notes sit outside the correspondence scopes.",
+        "required_fix": "Optional: encode as tei:lg/tei:l to keep the printed lineation. Not a blocking issue."
+      },
+      {
+        "severity": "info",
+        "file": "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_95.xml",
+        "line": 41,
+        "rule": "Exact same-unit terminators, chapter/verse milestones, abbr/expan, rend, citation notes",
+        "evidence": "All eight chapters open with a chapter milestone (n and corresp) and verse milestones, and close with a bare verse terminator followed by a bare chapter terminator. Each paragraph follows the printed paragraph, independent of the verse milestones. Role labels are type=description notes with role URNs and tei:choice abbr/expan (ח׳/חזן, ק׳/קהל, קו״ח/קהל וחזן), so the reader can choose abbreviated or expanded. No @rend appears on any rubric. The citations are bare Hebrew numerals in standOff notes, with no added parentheses. Eruv prayer-parts and the poem's refrain/stanza sequences are explicitly terminated. All declare/endDeclare and conditional/endConditional pairs in the expanded index match: checked by static reading.",
+        "required_fix": "None."
+      }
+    ]
+  },
+  "expanded_order": {
+    "status": "pass_by_static_inference_with_open_ritual_policy",
+    "findings": [
+      "STATIC ORDER (verified by reading index.xml): entering the synagogue → Erev RH Minchah (gated Elul 29, not Shabbat or Yom Tov) → eruv (Elul 29 plus the derived eruv-tavshilin setting) → festival lights (RH day 1, Maariv; weekday branch shabbat=false → bare hadlaqat_ner_yom_tov; Shabbat branch → bare hadlaqat_ner_yom_tov/shabbat) → Kabbalat Shabbat (shabbat plus Maariv) → morning. Every declaration and condition before the morning section closes before line 655 (endDeclare/endConditional at lines 351/353, 449/451, 651/653).",
+      "Kabbalat sequence: Psalms 95, 96, 97, 98, 99, 29, then Lekhah Dodi, then Psalms 92 and 93, then a Mourner's Kaddish gated on minyan plus mourners present. This matches the printed order on s13–s17, including the printed קדיש יתום direction. The kaddish/yatom URN is in the registry (prayer.jsonl line 380).",
+      "Lekhah Dodi expansion: opening refrain, opening response, then stanza n followed by response n for n = 1–9. That is 11 transclusions of the bare poem:lekhah_dodi/refrain URN and 9 unique stanza URNs. The source keeps one refrain occurrence and 10 literal cues. The opening response depends on the human clarification (the opening לכה cue means a repeat), recorded in preparations_kabbalat_resolutions.json. It is not visible as a direction in the scan beyond the marginal cue.",
+      "The Shabbat lights branch resolves only to the new Birnbaum extraction, which pins its own parent with @hasiddur_hashalem-birnbaum-1949-he. No English is supplied for the combined blessing, which matches the expanded sourceDesc note at line 39. The weekday branch resolves to the preferred Marmorstein witness. Whether each bare URN resolves to the intended project is static inference only, from project priorities I did not inspect.",
+      "RITUAL-POLICY UNCERTAINTY (open; scope depends on a pending user clarification): when RH day 1 falls on Shabbat, many Ashkenazi communities, the German rite among them, begin Kabbalat Shabbat at Psalm 92 and omit Psalms 95–99, 29 and Lekhah Dodi. Birnbaum prints such an omission direction; these leaves print none. The current encoding keeps the full printed sequence on the explicit assumption the user stated, and correctly does not carry over Birnbaum's rule. Stanza 9 printing בְּשִׂמְחָה (a wording some editions keep for Yom Tov) is at most weak evidence and does not settle the question. Until the user answers, flag this section as an editorial assumption.",
+      "The Kabbalat gate (line 454) does not test rosh-hashana, unlike the lights gate. This is harmless in this volume, but the section would also show on any Shabbat-Maariv date if the expanded book were compiled with non-RH settings.",
+      "Static inference only: that 1 Tishrei Maariv on a Friday evening derives shabbat=true and rosh-hashana=1, that eruv-tavshilin derives true on Elul 29 only when RH falls on Thursday–Friday, and that opensiddur:service-context/mourners-present and opensiddur:quorum/minyan are registered features. None of this was checked against features.yaml or the calendar code."
+    ]
+  },
+  "limits": [
+    "I ran no runtime checks: no jing/Schematron validation, validate_features, validate_names, validate_urn_references, refdb sync, compile or HTML/PDF export. Every structural finding comes from reading the files.",
+    "I did not find the registry entry prayer:hadlaqat_ner_yom_tov/shabbat in specs/urn_registry/prayer.jsonl. The file is about 1,250+ lines, partly unsorted, and I could only read it in pages without search. It is absent from the sorted section (lines 1–430, where hadlaqat would fall between emet_veyatziv at line 358 and hael_betaatzumot at line 359) and from lines 1000–1249. The eruv_tavshilin entry was also not in its sorted position. Both may be in the parts I did not read (431–999 or after 1249). Their presence, status, parent and labels are unverified and should be checked with a grep.",
+    "I read schema/JLPTEI-3.md only through line 1087 of 2141. I did not read schema/jlptei.odd.xml, specs/SIDDUR_URN_SCHEME.md, or the later prose sections on kinds of rubric, the readings settings in detail, licence aggregation in the colophon, or reader-selectable styles. Judgements on those points rely on the parts I read plus AGENTS.md.",
+    "Fine pointing (holam on the Name, the למיפא vowel, the צרכנא dagesh, maqafs at line ends) was judged from the 1208×2000 page images and two enlarged crops. I did not inspect the other /tmp/kabbalat-*.png crops. The stanza-8 maqaf and the Psalm 29:6 spelling remain open.",
+    "I did not inspect the role-URN registry (instruction:role/reader, congregation, reader_and_congregation), the contributor registry for opensiddur.org/codex, specs/naming/spellings.yaml (e.g. hadlaqat, qabbalat), or features.yaml.",
+    "Licence aggregation is unverified: the expanded index declares CC0 but transcludes CC BY-SA 4.0 Birnbaum material (Kaddish texts and the Shabbat lights variant). That the compiled colophon carries the BY-SA licence and Birnbaum credits depends on exporter metadata.py, which I did not inspect or run.",
+    "Pre-existing, outside the new batch: the Hebrew index also has a pb n=8 at line 189 (facs n51) after Kabbalat Shabbat, apparently a second pagination sequence. I did not assess it.",
+    "Keeping the full printed Kabbalat sequence on RH-Shabbat is the user's stated current assumption pending their clarification. It is not evidence from the edition."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "64788c00-0a72-4cfe-be2b-5d61a8a3414f"
+  },
+  "file_sha256": {
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/eruv_tavshilin.xml": "edf028cbc4ecdf9f760daf5e90a944f9895bcc10cad29f39a97a957f74a883d3",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/hadlaqat_ner_yom_tov.xml": "3d95ab9593bf1bd36dafbe9081e95c76e56d04a388c2121eafde0394dd1affb3",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/lekhah_dodi.xml": "97515e38ae76e15c2b39fac074e589d4680540be225c805db4244a3db7004c65",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_95.xml": "34167ca9c405ed54b523dc3e21b5391f97edd6970621022bfd469f2cddd27d4d",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_96.xml": "042b78bde9bdd2aa34bc3a3852fd623c0aee2506976f45150c83570cb94b9d68",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_97.xml": "e9b7e1a37f7c5f0ec28fe9d38e2940f13db13bc82858d56606c83bf8ab34b5bd",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_98.xml": "de05e5bd546299b6109f615bf593680fb97d3ccb56d4eda40f789b9b1960384b",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_99.xml": "d708aba2fe1820fb53bc2f9172fb97c242c14abc87ab81c89fad0c527bc3a2d3",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_29.xml": "d3e76c5da7c5e67b2bfb6bc83440048a1726a2921825157b9d707c39c4480dbb",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_92.xml": "fd80fac4dc2088a3c7d29be4a0971e9c51921da89d9e52eaabaa14338d5d58b3",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_93.xml": "9c1c8545e25e8de4c3978ec5147aeac0e4fd1a7dac0fb9ffb881f65cb25c77f8",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/eruv_tavshilin.xml": "57351971581e9a7b16501d5eb9310cc4360c07c946a633ae3bee3c06e08d39cc",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/hadlaqat_ner_yom_tov.xml": "7cea3cb47056f9bbcc59d88d14880472c130a7789144a41260e853c08ac04c7d",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/index.xml": "5d586b6be18f8e35aa61b847a0a71c6d2ae98d634c78dae95a3aa6ce3b9dc8b3",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/index.xml": "efd53cdf3246f5abb37a05a3fb3a8c7adabe018da9357a1194ef83de9bc8c6cb",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/machzor_expanded-opensiddur-he/index.xml": "f56f85db4ad3e60ec7752de39a176d84b6aa2ce9871796a0b0b09b46b47915c5",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/hasiddur_hashalem-birnbaum-1949-he/festival_candles_shabbat.xml": "9b62d2f7365fa5697e5f3fc080fa4409fb3426d05c626c4a4b660d839ae1fb21"
+  },
+  "files_unchanged_during_review": false
+}
