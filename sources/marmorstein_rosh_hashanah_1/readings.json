@@ -3395,7 +3395,21 @@
             ]
           }
         ]
-      }
+      },
+      "conditions": [
+        {
+          "type": "opensiddur:recitation",
+          "features": {
+            "repetition": true
+          }
+        },
+        {
+          "type": "opensiddur:quorum",
+          "features": {
+            "minyan": true
+          }
+        }
+      ]
     }
   ],
   "source_order": [
@@ -3664,8 +3678,8 @@
     {
       "section": "weekday_minchah",
       "heads": {
-        "he": "תפילת מנחה לחול — הכנה ליום טוב",
-        "en": "Preparatory weekday Minchah"
+        "he": "מנחה לערב ראש השנה",
+        "en": "Erev Rosh ha-Shanah Minchah"
       },
       "conditions": [
         {
@@ -3678,7 +3692,15 @@
           "type": "opensiddur:holiday-aggregate",
           "features": {
             "shabbat": false,
-            "yom-tov": false
+            "yom-tov": false,
+            "aseret-ymei-tshuva": false
+          }
+        },
+        {
+          "type": "opensiddur:hebrew-date",
+          "features": {
+            "month": 6,
+            "day": 29
           }
         }
       ],
@@ -3822,6 +3844,12 @@
                 "silent": false,
                 "repetition": true
               }
+            },
+            {
+              "type": "opensiddur:quorum",
+              "features": {
+                "minyan": true
+              }
             }
           ],
           "order": [
@@ -3954,7 +3982,15 @@
           "type": "opensiddur:holiday-aggregate",
           "features": {
             "shabbat": false,
-            "yom-tov": false
+            "yom-tov": false,
+            "aseret-ymei-tshuva": false
+          }
+        },
+        {
+          "type": "opensiddur:hebrew-date",
+          "features": {
+            "month": 6,
+            "day": 29
           }
         }
       ]

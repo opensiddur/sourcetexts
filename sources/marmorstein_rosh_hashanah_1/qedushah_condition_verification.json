@@ -1,0 +1,556 @@
+{
+  "cases": [
+    {
+      "case": "unit-repetition-True-minyan-True",
+      "qedushah_occurrences": 1,
+      "expected": 1,
+      "passed": true,
+      "settings": {
+        "book": {
+          "file_name": "amidah_qedushah.xml",
+          "project": "prayerbook_for_the_new_year-heidenheim-1965-he"
+        },
+        "declarations": {
+          "opensiddur:quorum": {
+            "minyan": true
+          },
+          "opensiddur:recitation": {
+            "repetition": true
+          }
+        },
+        "priority": {
+          "instructions": [
+            "prayerbook_for_the_new_year-heidenheim-1965-he"
+          ],
+          "transclusion": [
+            "prayerbook_for_the_new_year-heidenheim-1965-he"
+          ]
+        }
+      },
+      "compiled_xml_sha256": "eddc6609d59759ffcbd2b263413533c6e69d64a19c85ada369a49042f10a735f"
+    },
+    {
+      "case": "unit-repetition-False-minyan-True",
+      "qedushah_occurrences": 0,
+      "expected": 0,
+      "passed": true,
+      "settings": {
+        "book": {
+          "file_name": "amidah_qedushah.xml",
+          "project": "prayerbook_for_the_new_year-heidenheim-1965-he"
+        },
+        "declarations": {
+          "opensiddur:quorum": {
+            "minyan": true
+          },
+          "opensiddur:recitation": {
+            "repetition": false
+          }
+        },
+        "priority": {
+          "instructions": [
+            "prayerbook_for_the_new_year-heidenheim-1965-he"
+          ],
+          "transclusion": [
+            "prayerbook_for_the_new_year-heidenheim-1965-he"
+          ]
+        }
+      },
+      "compiled_xml_sha256": "8e63de19521507fe2c2a8522b080b4a37e8a6e1360d82a4c5f88fbc6cc85e058"
+    },
+    {
+      "case": "unit-repetition-True-minyan-False",
+      "qedushah_occurrences": 0,
+      "expected": 0,
+      "passed": true,
+      "settings": {
+        "book": {
+          "file_name": "amidah_qedushah.xml",
+          "project": "prayerbook_for_the_new_year-heidenheim-1965-he"
+        },
+        "declarations": {
+          "opensiddur:quorum": {
+            "minyan": false
+          },
+          "opensiddur:recitation": {
+            "repetition": true
+          }
+        },
+        "priority": {
+          "instructions": [
+            "prayerbook_for_the_new_year-heidenheim-1965-he"
+          ],
+          "transclusion": [
+            "prayerbook_for_the_new_year-heidenheim-1965-he"
+          ]
+        }
+      },
+      "compiled_xml_sha256": "8e63de19521507fe2c2a8522b080b4a37e8a6e1360d82a4c5f88fbc6cc85e058"
+    },
+    {
+      "case": "erev-with-minyan",
+      "hebrew_date": {
+        "year": 5786,
+        "month": 6,
+        "day": 29
+      },
+      "minyan": true,
+      "qedushah_occurrences": 1,
+      "minchah_included": true,
+      "passed": true,
+      "settings": {
+        "annotations": [
+          "prayerbook_for_the_new_year-heidenheim-1965-he",
+          "prayerbook_for_the_new_year-marmorstein-1965-en"
+        ],
+        "book": {
+          "file_name": "index.xml",
+          "project": "machzor_expanded-opensiddur-he",
+          "title": "Prayerbook for the New Year — first day"
+        },
+        "declarations": {
+          "opensiddur:gregorian-date": {
+            "day": 11,
+            "month": 9,
+            "year": 2026
+          },
+          "opensiddur:location": {
+            "latitude": 31.778,
+            "longitude": 35.235,
+            "timezone": "Asia/Jerusalem"
+          },
+          "opensiddur:quorum": {
+            "minyan": true
+          },
+          "opensiddur:service-time": {
+            "minha": true,
+            "shaharit": false
+          },
+          "opensiddur:time": {
+            "hour": 15,
+            "minute": 0,
+            "second": 0
+          }
+        },
+        "description": "First-day Rosh ha-Shanah mahzor; digitization in progress.",
+        "parallel": {
+          "projects": [
+            "prayerbook_for_the_new_year-marmorstein-1965-en"
+          ]
+        },
+        "priority": {
+          "instructions": [
+            "machzor_expanded-opensiddur-he",
+            "prayerbook_for_the_new_year-heidenheim-1965-he",
+            "hasiddur_hashalem-birnbaum-1949-he",
+            "prayerbook_for_the_new_year-marmorstein-1965-en"
+          ],
+          "transclusion": [
+            "machzor_expanded-opensiddur-he",
+            "prayerbook_for_the_new_year-heidenheim-1965-he",
+            "hasiddur_hashalem-birnbaum-1949-he",
+            "prayerbook_for_the_new_year-marmorstein-1965-en"
+          ]
+        },
+        "readings": {
+          "abbreviations": "expanded"
+        },
+        "requires_processor": ">=0.8.0.dev0",
+        "typography": {
+          "instructions": {
+            "from": "both"
+          },
+          "line_numbers": {
+            "enabled": false
+          }
+        }
+      },
+      "compiled_xml_sha256": "0b27e88271da7ee1002a0f72765b45d21770178670fe42e8e3a29c5bd696119d"
+    },
+    {
+      "case": "erev-alone",
+      "hebrew_date": {
+        "year": 5786,
+        "month": 6,
+        "day": 29
+      },
+      "minyan": false,
+      "qedushah_occurrences": 0,
+      "minchah_included": true,
+      "passed": true,
+      "settings": {
+        "annotations": [
+          "prayerbook_for_the_new_year-heidenheim-1965-he",
+          "prayerbook_for_the_new_year-marmorstein-1965-en"
+        ],
+        "book": {
+          "file_name": "index.xml",
+          "project": "machzor_expanded-opensiddur-he",
+          "title": "Prayerbook for the New Year — first day"
+        },
+        "declarations": {
+          "opensiddur:gregorian-date": {
+            "day": 11,
+            "month": 9,
+            "year": 2026
+          },
+          "opensiddur:location": {
+            "latitude": 31.778,
+            "longitude": 35.235,
+            "timezone": "Asia/Jerusalem"
+          },
+          "opensiddur:quorum": {
+            "minyan": false
+          },
+          "opensiddur:service-time": {
+            "minha": true,
+            "shaharit": false
+          },
+          "opensiddur:time": {
+            "hour": 15,
+            "minute": 0,
+            "second": 0
+          }
+        },
+        "description": "First-day Rosh ha-Shanah mahzor; digitization in progress.",
+        "parallel": {
+          "projects": [
+            "prayerbook_for_the_new_year-marmorstein-1965-en"
+          ]
+        },
+        "priority": {
+          "instructions": [
+            "machzor_expanded-opensiddur-he",
+            "prayerbook_for_the_new_year-heidenheim-1965-he",
+            "hasiddur_hashalem-birnbaum-1949-he",
+            "prayerbook_for_the_new_year-marmorstein-1965-en"
+          ],
+          "transclusion": [
+            "machzor_expanded-opensiddur-he",
+            "prayerbook_for_the_new_year-heidenheim-1965-he",
+            "hasiddur_hashalem-birnbaum-1949-he",
+            "prayerbook_for_the_new_year-marmorstein-1965-en"
+          ]
+        },
+        "readings": {
+          "abbreviations": "expanded"
+        },
+        "requires_processor": ">=0.8.0.dev0",
+        "typography": {
+          "instructions": {
+            "from": "both"
+          },
+          "line_numbers": {
+            "enabled": false
+          }
+        }
+      },
+      "compiled_xml_sha256": "97c6d6a0760396bd1d3c85b42fee40450d0ca5709be3e1ed20691c3bc7cca929"
+    },
+    {
+      "case": "elul28",
+      "hebrew_date": {
+        "year": 5786,
+        "month": 6,
+        "day": 28
+      },
+      "minyan": true,
+      "qedushah_occurrences": 0,
+      "minchah_included": false,
+      "passed": true,
+      "settings": {
+        "annotations": [
+          "prayerbook_for_the_new_year-heidenheim-1965-he",
+          "prayerbook_for_the_new_year-marmorstein-1965-en"
+        ],
+        "book": {
+          "file_name": "index.xml",
+          "project": "machzor_expanded-opensiddur-he",
+          "title": "Prayerbook for the New Year — first day"
+        },
+        "declarations": {
+          "opensiddur:gregorian-date": {
+            "day": 10,
+            "month": 9,
+            "year": 2026
+          },
+          "opensiddur:location": {
+            "latitude": 31.778,
+            "longitude": 35.235,
+            "timezone": "Asia/Jerusalem"
+          },
+          "opensiddur:quorum": {
+            "minyan": true
+          },
+          "opensiddur:service-time": {
+            "minha": true,
+            "shaharit": false
+          },
+          "opensiddur:time": {
+            "hour": 15,
+            "minute": 0,
+            "second": 0
+          }
+        },
+        "description": "First-day Rosh ha-Shanah mahzor; digitization in progress.",
+        "parallel": {
+          "projects": [
+            "prayerbook_for_the_new_year-marmorstein-1965-en"
+          ]
+        },
+        "priority": {
+          "instructions": [
+            "machzor_expanded-opensiddur-he",
+            "prayerbook_for_the_new_year-heidenheim-1965-he",
+            "hasiddur_hashalem-birnbaum-1949-he",
+            "prayerbook_for_the_new_year-marmorstein-1965-en"
+          ],
+          "transclusion": [
+            "machzor_expanded-opensiddur-he",
+            "prayerbook_for_the_new_year-heidenheim-1965-he",
+            "hasiddur_hashalem-birnbaum-1949-he",
+            "prayerbook_for_the_new_year-marmorstein-1965-en"
+          ]
+        },
+        "readings": {
+          "abbreviations": "expanded"
+        },
+        "requires_processor": ">=0.8.0.dev0",
+        "typography": {
+          "instructions": {
+            "from": "both"
+          },
+          "line_numbers": {
+            "enabled": false
+          }
+        }
+      },
+      "compiled_xml_sha256": "9bf174a4956e37394c171a1500ad95429c5f0f25bfed8c7889b0a338083f3086"
+    },
+    {
+      "case": "ten-days",
+      "hebrew_date": {
+        "year": 5787,
+        "month": 7,
+        "day": 3
+      },
+      "minyan": true,
+      "qedushah_occurrences": 0,
+      "minchah_included": false,
+      "passed": true,
+      "settings": {
+        "annotations": [
+          "prayerbook_for_the_new_year-heidenheim-1965-he",
+          "prayerbook_for_the_new_year-marmorstein-1965-en"
+        ],
+        "book": {
+          "file_name": "index.xml",
+          "project": "machzor_expanded-opensiddur-he",
+          "title": "Prayerbook for the New Year — first day"
+        },
+        "declarations": {
+          "opensiddur:gregorian-date": {
+            "day": 14,
+            "month": 9,
+            "year": 2026
+          },
+          "opensiddur:location": {
+            "latitude": 31.778,
+            "longitude": 35.235,
+            "timezone": "Asia/Jerusalem"
+          },
+          "opensiddur:quorum": {
+            "minyan": true
+          },
+          "opensiddur:service-time": {
+            "minha": true,
+            "shaharit": false
+          },
+          "opensiddur:time": {
+            "hour": 15,
+            "minute": 0,
+            "second": 0
+          }
+        },
+        "description": "First-day Rosh ha-Shanah mahzor; digitization in progress.",
+        "parallel": {
+          "projects": [
+            "prayerbook_for_the_new_year-marmorstein-1965-en"
+          ]
+        },
+        "priority": {
+          "instructions": [
+            "machzor_expanded-opensiddur-he",
+            "prayerbook_for_the_new_year-heidenheim-1965-he",
+            "hasiddur_hashalem-birnbaum-1949-he",
+            "prayerbook_for_the_new_year-marmorstein-1965-en"
+          ],
+          "transclusion": [
+            "machzor_expanded-opensiddur-he",
+            "prayerbook_for_the_new_year-heidenheim-1965-he",
+            "hasiddur_hashalem-birnbaum-1949-he",
+            "prayerbook_for_the_new_year-marmorstein-1965-en"
+          ]
+        },
+        "readings": {
+          "abbreviations": "expanded"
+        },
+        "requires_processor": ">=0.8.0.dev0",
+        "typography": {
+          "instructions": {
+            "from": "both"
+          },
+          "line_numbers": {
+            "enabled": false
+          }
+        }
+      },
+      "compiled_xml_sha256": "9bf174a4956e37394c171a1500ad95429c5f0f25bfed8c7889b0a338083f3086"
+    },
+    {
+      "case": "rosh-hashanah",
+      "hebrew_date": {
+        "year": 5787,
+        "month": 7,
+        "day": 1
+      },
+      "minyan": true,
+      "qedushah_occurrences": 0,
+      "minchah_included": false,
+      "passed": true,
+      "settings": {
+        "annotations": [
+          "prayerbook_for_the_new_year-heidenheim-1965-he",
+          "prayerbook_for_the_new_year-marmorstein-1965-en"
+        ],
+        "book": {
+          "file_name": "index.xml",
+          "project": "machzor_expanded-opensiddur-he",
+          "title": "Prayerbook for the New Year — first day"
+        },
+        "declarations": {
+          "opensiddur:gregorian-date": {
+            "day": 12,
+            "month": 9,
+            "year": 2026
+          },
+          "opensiddur:location": {
+            "latitude": 31.778,
+            "longitude": 35.235,
+            "timezone": "Asia/Jerusalem"
+          },
+          "opensiddur:quorum": {
+            "minyan": true
+          },
+          "opensiddur:service-time": {
+            "minha": true,
+            "shaharit": false
+          },
+          "opensiddur:time": {
+            "hour": 15,
+            "minute": 0,
+            "second": 0
+          }
+        },
+        "description": "First-day Rosh ha-Shanah mahzor; digitization in progress.",
+        "parallel": {
+          "projects": [
+            "prayerbook_for_the_new_year-marmorstein-1965-en"
+          ]
+        },
+        "priority": {
+          "instructions": [
+            "machzor_expanded-opensiddur-he",
+            "prayerbook_for_the_new_year-heidenheim-1965-he",
+            "hasiddur_hashalem-birnbaum-1949-he",
+            "prayerbook_for_the_new_year-marmorstein-1965-en"
+          ],
+          "transclusion": [
+            "machzor_expanded-opensiddur-he",
+            "prayerbook_for_the_new_year-heidenheim-1965-he",
+            "hasiddur_hashalem-birnbaum-1949-he",
+            "prayerbook_for_the_new_year-marmorstein-1965-en"
+          ]
+        },
+        "readings": {
+          "abbreviations": "expanded"
+        },
+        "requires_processor": ">=0.8.0.dev0",
+        "typography": {
+          "instructions": {
+            "from": "both"
+          },
+          "line_numbers": {
+            "enabled": false
+          }
+        }
+      },
+      "compiled_xml_sha256": "9bf174a4956e37394c171a1500ad95429c5f0f25bfed8c7889b0a338083f3086"
+    },
+    {
+      "case": "undated",
+      "inner_qedushah_guard_resolved": true,
+      "outer_calendar_and_minyan_alternatives_retained": true,
+      "passed": true,
+      "settings": {
+        "annotations": [
+          "prayerbook_for_the_new_year-heidenheim-1965-he",
+          "prayerbook_for_the_new_year-marmorstein-1965-en"
+        ],
+        "book": {
+          "file_name": "index.xml",
+          "project": "machzor_expanded-opensiddur-he",
+          "title": "Prayerbook for the New Year — first day"
+        },
+        "description": "First-day Rosh ha-Shanah mahzor; digitization in progress.",
+        "parallel": {
+          "projects": [
+            "prayerbook_for_the_new_year-marmorstein-1965-en"
+          ]
+        },
+        "priority": {
+          "instructions": [
+            "machzor_expanded-opensiddur-he",
+            "prayerbook_for_the_new_year-heidenheim-1965-he",
+            "hasiddur_hashalem-birnbaum-1949-he",
+            "prayerbook_for_the_new_year-marmorstein-1965-en"
+          ],
+          "transclusion": [
+            "machzor_expanded-opensiddur-he",
+            "prayerbook_for_the_new_year-heidenheim-1965-he",
+            "hasiddur_hashalem-birnbaum-1949-he",
+            "prayerbook_for_the_new_year-marmorstein-1965-en"
+          ]
+        },
+        "readings": {
+          "abbreviations": "expanded"
+        },
+        "requires_processor": ">=0.8.0.dev0",
+        "typography": {
+          "instructions": {
+            "from": "both"
+          },
+          "line_numbers": {
+            "enabled": false
+          }
+        }
+      },
+      "compiled_xml_sha256": "f5601032e789876553db38603af142623af4111fc8cf4a401a774a8b73ca17fe"
+    }
+  ],
+  "calendar_case_context": {
+    "time": {
+      "hour": 15,
+      "minute": 0,
+      "second": 0
+    },
+    "location": {
+      "latitude": 31.778,
+      "longitude": 35.235,
+      "timezone": "Asia/Jerusalem"
+    },
+    "note": "Explicit afternoon time/location settles the Hebrew day; an unspecified time can legitimately retain the sunset-adjacent calendar alternatives."
+  },
+  "source_words_and_correspondences_unchanged": true,
+  "compiler_command": "python -m opensiddur.exporter.compiler --project-directory PROJECTS -s CASE_SETTINGS --destination print -o COMPILED_XML"
+}
