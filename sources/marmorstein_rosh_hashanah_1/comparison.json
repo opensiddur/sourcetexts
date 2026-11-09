@@ -907,5 +907,420 @@
     "decisions": {},
     "unresolved": [],
     "complete": true
+  },
+  "romemu/he": {
+    "primary_sha256": "df3554531d9edbaa2380eb22d2ed363153117b77c226bf3d85c318556f7f0114",
+    "independent_sha256": "0179c0f67a3848d59fe090ea9417c89b8317b0c24dcfc49c292c81596c1f06c7",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "s62",
+      "s63",
+      "s64",
+      "s65"
+    ],
+    "differences": [
+      {
+        "bucket": "whitespace",
+        "ours": "'־'",
+        "theirs": "' '",
+        "at": 12,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after לְהַר",
+        "key": "whitespace:12:'־'|' '"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "'־'",
+        "theirs": "' '",
+        "at": 14,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after כִּי",
+        "key": "whitespace:14:'־'|' '"
+      }
+    ],
+    "decisions": {},
+    "unresolved": [
+      "whitespace:12:'־'|' '",
+      "whitespace:14:'־'|' '"
+    ],
+    "complete": false
+  },
+  "romemu/en": {
+    "primary_sha256": "deeda652e55fe3ad77e41cb7bb2dcf1b53564ef47af6fd32e6910964cfab8098",
+    "independent_sha256": "deeda652e55fe3ad77e41cb7bb2dcf1b53564ef47af6fd32e6910964cfab8098",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "s62",
+      "s63",
+      "s64",
+      "s65"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true
+  },
+  "vehu_rachum/he": {
+    "primary_sha256": "f68633fc7c286b6959aa992b4cedc217a7c51a5433ba6f9e473ab27eae6b161c",
+    "independent_sha256": "4f3aa4a043253278d7aeb771e244680fd7ca01406271cc5aac7a29748e278266",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "s62",
+      "s63",
+      "s64",
+      "s65"
+    ],
+    "differences": [
+      {
+        "bucket": "whitespace",
+        "ours": "'־'",
+        "theirs": "' '",
+        "at": 0,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after וְהוּא",
+        "key": "whitespace:0:'־'|' '"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "'־'",
+        "theirs": "' '",
+        "at": 4,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after וְלֹא",
+        "key": "whitespace:4:'־'|' '"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "'־'",
+        "theirs": "' '",
+        "at": 23,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after זְכֹר",
+        "key": "whitespace:23:'־'|' '"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "נֹתֵן",
+        "theirs": "נוֹתֵן",
+        "at": 44,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:44:נֹתֵן|נוֹתֵן"
+      }
+    ],
+    "decisions": {},
+    "unresolved": [
+      "whitespace:0:'־'|' '",
+      "whitespace:4:'־'|' '",
+      "whitespace:23:'־'|' '",
+      "consonants:44:נֹתֵן|נוֹתֵן"
+    ],
+    "complete": false
+  },
+  "vehu_rachum/en": {
+    "primary_sha256": "1b4148018420a3c017c03358781ef99696781b43515167b9d0f42c8352e79a7c",
+    "independent_sha256": "5772383e3967a0e98940b2136ab9301bb15e87390cfbe3eb5bfde971d02491c3",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "s62",
+      "s63",
+      "s64",
+      "s65"
+    ],
+    "differences": [
+      {
+        "bucket": "consonants",
+        "ours": "withhold",
+        "theirs": "withold",
+        "at": 33,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:33:withhold|withold"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "Lord’s,",
+        "theirs": "Lord's,",
+        "at": 125,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:125:Lord’s,|Lord's,"
+      }
+    ],
+    "decisions": {},
+    "unresolved": [
+      "consonants:33:withhold|withold",
+      "consonants:125:Lord’s,|Lord's,"
+    ],
+    "complete": false
+  },
+  "hoshiah_et_ammekha/he": {
+    "primary_sha256": "1e5218fd5757a74de53f0bb775226bb3f916e138450e103d9e206f0ca3d583b5",
+    "independent_sha256": "6c3ec6e008ed0ff8335bd16d3aa5339bfadc667e7abab533e29d37454f1251d9",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "s62",
+      "s63",
+      "s64",
+      "s65"
+    ],
+    "differences": [
+      {
+        "bucket": "vowels",
+        "ours": "לָּנוּ",
+        "theirs": "לָנוּ",
+        "at": 39,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:39:לָּנוּ|לָנוּ"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "לּוֹ",
+        "theirs": "לוֹ",
+        "at": 55,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:55:לּוֹ|לוֹ"
+      }
+    ],
+    "decisions": {},
+    "unresolved": [
+      "vowels:39:לָּנוּ|לָנוּ",
+      "vowels:55:לּוֹ|לוֹ"
+    ],
+    "complete": false
+  },
+  "hoshiah_et_ammekha/en": {
+    "primary_sha256": "76e11bd51de3c495a1ca8b4949b25c804b4c1fde598ba4ac7d4b77ad1cf8e36a",
+    "independent_sha256": "4593a2821f7304fd25560e343a69c98b583c63dd00e33ab8853828db1485857b",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "s62",
+      "s63",
+      "s64",
+      "s65"
+    ],
+    "differences": [
+      {
+        "bucket": "consonants",
+        "ours": "whom",
+        "theirs": "whem",
+        "at": 110,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:110:whom|whem"
+      }
+    ],
+    "decisions": {},
+    "unresolved": [
+      "consonants:110:whom|whem"
+    ],
+    "complete": false
+  },
+  "psalm_19/he": {
+    "primary_sha256": "df652e877f439e74b7fba5901a7da61654474939e64d203f9cb73e886ec8b422",
+    "independent_sha256": "9d478307bcd4f53d619a44c925218dc7985b9c372849bd7847587624344ecc3d",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "s64",
+      "s65",
+      "s66",
+      "s67"
+    ],
+    "differences": [
+      {
+        "bucket": "vowels",
+        "ours": "יְהוָה",
+        "theirs": "יְהוָֹה",
+        "at": 55,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:55:יְהוָה|יְהוָֹה"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "יְהוָה",
+        "theirs": "יְהוָֹה",
+        "at": 60,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:60:יְהוָה|יְהוָֹה"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "יְהוָה",
+        "theirs": "יְהוָֹה",
+        "at": 65,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:65:יְהוָה|יְהוָֹה"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "יְהוָה",
+        "theirs": "יְהוָֹה",
+        "at": 70,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:70:יְהוָה|יְהוָֹה"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "יְהוָה",
+        "theirs": "יְהוָֹה",
+        "at": 75,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:75:יְהוָה|יְהוָֹה"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "עוֹמֶדֶת",
+        "theirs": "עֹמֶדֶת",
+        "at": 77,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:77:עוֹמֶדֶת|עֹמֶדֶת"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "יְהוָה",
+        "theirs": "יְהֹוָה",
+        "at": 80,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:80:יְהוָה|יְהֹוָה"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "יַחְדָּו:",
+        "theirs": "יַחְדָּו׃",
+        "at": 83,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:83:יַחְדָּו:|יַחְדָּו׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "צוּפִים:",
+        "theirs": "צוּפִים׃",
+        "at": 91,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:91:צוּפִים:|צוּפִים׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "רָב:",
+        "theirs": "רָב׃",
+        "at": 98,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:98:רָב:|רָב׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "נַקֵּנִי:",
+        "theirs": "נַקֵּנִי׃",
+        "at": 103,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:103:נַקֵּנִי:|נַקֵּנִי׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "רָב:",
+        "theirs": "רָב׃",
+        "at": 115,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:115:רָב:|רָב׃"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "יְהוָה",
+        "theirs": "יְהֹוָה",
+        "at": 123,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:123:יְהוָה|יְהֹוָה"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "וְגֹאֲלִי:",
+        "theirs": "וְגֹאֲלִי׃",
+        "at": 125,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:125:וְגֹאֲלִי:|וְגֹאֲלִי׃"
+      }
+    ],
+    "decisions": {},
+    "unresolved": [
+      "vowels:55:יְהוָה|יְהוָֹה",
+      "vowels:60:יְהוָה|יְהוָֹה",
+      "vowels:65:יְהוָה|יְהוָֹה",
+      "vowels:70:יְהוָה|יְהוָֹה",
+      "vowels:75:יְהוָה|יְהוָֹה",
+      "consonants:77:עוֹמֶדֶת|עֹמֶדֶת",
+      "vowels:80:יְהוָה|יְהֹוָה",
+      "consonants:83:יַחְדָּו:|יַחְדָּו׃",
+      "consonants:91:צוּפִים:|צוּפִים׃",
+      "consonants:98:רָב:|רָב׃",
+      "consonants:103:נַקֵּנִי:|נַקֵּנִי׃",
+      "consonants:115:רָב:|רָב׃",
+      "vowels:123:יְהוָה|יְהֹוָה",
+      "consonants:125:וְגֹאֲלִי:|וְגֹאֲלִי׃"
+    ],
+    "complete": false
+  },
+  "psalm_19/en": {
+    "primary_sha256": "53609ad0ee459f9f1f1ca217914bd49fc409bfe32fde772bb92d0b83f89dd5ad",
+    "independent_sha256": "53609ad0ee459f9f1f1ca217914bd49fc409bfe32fde772bb92d0b83f89dd5ad",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "s64",
+      "s65",
+      "s66",
+      "s67"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true
   }
 }

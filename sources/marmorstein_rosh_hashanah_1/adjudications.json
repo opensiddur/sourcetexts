@@ -246,8 +246,8 @@
         "evidence": "Compared both readings against the enlarged scan. The independent reading preserves the printed letters, pointing or punctuation at this location."
       },
       "consonants:394:salvation|salvation,": {
-        "accepted": "primary",
-        "evidence": "The scan has no comma after salvation at this point."
+        "accepted": "independent",
+        "evidence": "Reopened by the independent alignment audit. Enlarged Archive n62 at original pixels [160,1330,1240,1530] clearly shows a comma after salvation. The earlier absence decision was incorrect."
       }
     },
     "scan_evidence": [
@@ -348,6 +348,152 @@
   "front/s6": {
     "primary_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "independent_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "decisions": {}
+  },
+  "romemu/he": {
+    "primary_sha256": "df3554531d9edbaa2380eb22d2ed363153117b77c226bf3d85c318556f7f0114",
+    "independent_sha256": "0179c0f67a3848d59fe090ea9417c89b8317b0c24dcfc49c292c81596c1f06c7",
+    "decisions": {
+      "whitespace:12:'־'|' '": {
+        "accepted": "independent",
+        "evidence": "Enlarged Archive n61 lower lines show a space, without a maqaf, at this exact boundary. Preserve the printed punctuation."
+      },
+      "whitespace:14:'־'|' '": {
+        "accepted": "independent",
+        "evidence": "Enlarged Archive n61 lower lines show a space, without a maqaf, at this exact boundary. Preserve the printed punctuation."
+      }
+    }
+  },
+  "romemu/en": {
+    "primary_sha256": "deeda652e55fe3ad77e41cb7bb2dcf1b53564ef47af6fd32e6910964cfab8098",
+    "independent_sha256": "deeda652e55fe3ad77e41cb7bb2dcf1b53564ef47af6fd32e6910964cfab8098",
+    "decisions": {}
+  },
+  "vehu_rachum/he": {
+    "primary_sha256": "f68633fc7c286b6959aa992b4cedc217a7c51a5433ba6f9e473ab27eae6b161c",
+    "independent_sha256": "4f3aa4a043253278d7aeb771e244680fd7ca01406271cc5aac7a29748e278266",
+    "decisions": {
+      "whitespace:0:'־'|' '": {
+        "accepted": "independent",
+        "evidence": "Enlarged Archive n61 lower lines show a space, without a maqaf, at this exact boundary. Preserve the printed punctuation."
+      },
+      "whitespace:4:'־'|' '": {
+        "accepted": "independent",
+        "evidence": "Enlarged Archive n61 lower lines show a space, without a maqaf, at this exact boundary. Preserve the printed punctuation."
+      },
+      "whitespace:23:'־'|' '": {
+        "accepted": "independent",
+        "evidence": "Enlarged Archive n61 lower lines show a space, without a maqaf, at this exact boundary. Preserve the printed punctuation."
+      },
+      "consonants:44:נֹתֵן|נוֹתֵן": {
+        "accepted": "independent",
+        "evidence": "Enlarged Archive n63 second body line shows a full vav in נוֹתֵן, not defective נֹתֵן."
+      }
+    }
+  },
+  "vehu_rachum/en": {
+    "primary_sha256": "1b4148018420a3c017c03358781ef99696781b43515167b9d0f42c8352e79a7c",
+    "independent_sha256": "5772383e3967a0e98940b2136ab9301bb15e87390cfbe3eb5bfde971d02491c3",
+    "decisions": {
+      "consonants:33:withhold|withold": {
+        "accepted": "independent",
+        "evidence": "Enlarged Archive n62 line beginning Thou shows withold with one h. Preserve the printed misprint."
+      },
+      "consonants:125:Lord’s,|Lord's,": {
+        "accepted": "independent",
+        "evidence": "Archive n64 Salvation is the Lord's: the printed apostrophe is straight; retain the independent transcription character."
+      }
+    }
+  },
+  "hoshiah_et_ammekha/he": {
+    "primary_sha256": "1e5218fd5757a74de53f0bb775226bb3f916e138450e103d9e206f0ca3d583b5",
+    "independent_sha256": "6c3ec6e008ed0ff8335bd16d3aa5339bfadc667e7abab533e29d37454f1251d9",
+    "decisions": {
+      "vowels:39:לָּנוּ|לָנוּ": {
+        "accepted": "primary",
+        "evidence": "Enlarged Archive n63 image: the lamed in both לָּנוּ and לּוֹ has a visible interior dagesh; retain the first reading."
+      },
+      "vowels:55:לּוֹ|לוֹ": {
+        "accepted": "primary",
+        "evidence": "Enlarged Archive n63 image: the lamed in both לָּנוּ and לּוֹ has a visible interior dagesh; retain the first reading."
+      }
+    }
+  },
+  "hoshiah_et_ammekha/en": {
+    "primary_sha256": "76e11bd51de3c495a1ca8b4949b25c804b4c1fde598ba4ac7d4b77ad1cf8e36a",
+    "independent_sha256": "4593a2821f7304fd25560e343a69c98b583c63dd00e33ab8853828db1485857b",
+    "decisions": {
+      "consonants:110:whom|whem": {
+        "accepted": "independent",
+        "evidence": "Enlarged Archive n64 line beginning people to shows whem, with e, not whom. Preserve the printed misprint."
+      }
+    }
+  },
+  "psalm_19/he": {
+    "primary_sha256": "df652e877f439e74b7fba5901a7da61654474939e64d203f9cb73e886ec8b422",
+    "independent_sha256": "9d478307bcd4f53d619a44c925218dc7985b9c372849bd7847587624344ecc3d",
+    "decisions": {
+      "vowels:55:יְהוָה|יְהוָֹה": {
+        "accepted": "primary",
+        "evidence": "All seven full Divine Names were inspected in enlarged n63 (five) and n65 (two). Sheva and qamats are printed; no separate holam dot is present. The second reader explicitly marked its supplied holam uncertain."
+      },
+      "vowels:60:יְהוָה|יְהוָֹה": {
+        "accepted": "primary",
+        "evidence": "All seven full Divine Names were inspected in enlarged n63 (five) and n65 (two). Sheva and qamats are printed; no separate holam dot is present. The second reader explicitly marked its supplied holam uncertain."
+      },
+      "vowels:65:יְהוָה|יְהוָֹה": {
+        "accepted": "primary",
+        "evidence": "All seven full Divine Names were inspected in enlarged n63 (five) and n65 (two). Sheva and qamats are printed; no separate holam dot is present. The second reader explicitly marked its supplied holam uncertain."
+      },
+      "vowels:70:יְהוָה|יְהוָֹה": {
+        "accepted": "primary",
+        "evidence": "All seven full Divine Names were inspected in enlarged n63 (five) and n65 (two). Sheva and qamats are printed; no separate holam dot is present. The second reader explicitly marked its supplied holam uncertain."
+      },
+      "vowels:75:יְהוָה|יְהוָֹה": {
+        "accepted": "primary",
+        "evidence": "All seven full Divine Names were inspected in enlarged n63 (five) and n65 (two). Sheva and qamats are printed; no separate holam dot is present. The second reader explicitly marked its supplied holam uncertain."
+      },
+      "consonants:77:עוֹמֶדֶת|עֹמֶדֶת": {
+        "accepted": "independent",
+        "evidence": "Enlarged n65 first body word has holam on ayin and no vav: עֹמֶדֶת. Preserve the defective printed spelling."
+      },
+      "vowels:80:יְהוָה|יְהֹוָה": {
+        "accepted": "primary",
+        "evidence": "All seven full Divine Names were inspected in enlarged n63 (five) and n65 (two). Sheva and qamats are printed; no separate holam dot is present. The second reader explicitly marked its supplied holam uncertain."
+      },
+      "consonants:83:יַחְדָּו:|יַחְדָּו׃": {
+        "accepted": "primary",
+        "evidence": "The printed verse-end colon is represented consistently as ASCII colon throughout this edition. The independent reader explicitly permits this typographic representation instead of U+05C3."
+      },
+      "consonants:91:צוּפִים:|צוּפִים׃": {
+        "accepted": "primary",
+        "evidence": "The printed verse-end colon is represented consistently as ASCII colon throughout this edition. The independent reader explicitly permits this typographic representation instead of U+05C3."
+      },
+      "consonants:98:רָב:|רָב׃": {
+        "accepted": "primary",
+        "evidence": "The printed verse-end colon is represented consistently as ASCII colon throughout this edition. The independent reader explicitly permits this typographic representation instead of U+05C3."
+      },
+      "consonants:103:נַקֵּנִי:|נַקֵּנִי׃": {
+        "accepted": "primary",
+        "evidence": "The printed verse-end colon is represented consistently as ASCII colon throughout this edition. The independent reader explicitly permits this typographic representation instead of U+05C3."
+      },
+      "consonants:115:רָב:|רָב׃": {
+        "accepted": "primary",
+        "evidence": "The printed verse-end colon is represented consistently as ASCII colon throughout this edition. The independent reader explicitly permits this typographic representation instead of U+05C3."
+      },
+      "vowels:123:יְהוָה|יְהֹוָה": {
+        "accepted": "primary",
+        "evidence": "All seven full Divine Names were inspected in enlarged n63 (five) and n65 (two). Sheva and qamats are printed; no separate holam dot is present. The second reader explicitly marked its supplied holam uncertain."
+      },
+      "consonants:125:וְגֹאֲלִי:|וְגֹאֲלִי׃": {
+        "accepted": "primary",
+        "evidence": "The printed verse-end colon is represented consistently as ASCII colon throughout this edition. The independent reader explicitly permits this typographic representation instead of U+05C3."
+      }
+    }
+  },
+  "psalm_19/en": {
+    "primary_sha256": "53609ad0ee459f9f1f1ca217914bd49fc409bfe32fde772bb92d0b83f89dd5ad",
+    "independent_sha256": "53609ad0ee459f9f1f1ca217914bd49fc409bfe32fde772bb92d0b83f89dd5ad",
     "decisions": {}
   }
 }

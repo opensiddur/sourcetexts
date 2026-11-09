@@ -1,6 +1,6 @@
 # Heidenheim–Marmorstein: first day of Rosh ha-Shanah, 1965
 
-**Status: reviewed pilot and partial front matter, not a complete digitization.** This contribution belongs to
+**Status: reviewed installments and partial front matter, not a complete digitization.** This contribution belongs to
 [opensiddur-processor issue 214](https://github.com/opensiddur/opensiddur-processor/issues/214).
 The complete source is [this 355-leaf Archive item](https://archive.org/details/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965),
 [also described by Open Siddur](https://opensiddur.org/?p=69112).
@@ -52,8 +52,9 @@ The pilot contains the three Torah blessings (printed pp. 4–5), Barukh She-ama
 unpaginated Hebrew-only daily-psalm appendix. It also encodes the page-8 direction
 to insert the Torah blessings from page 4. The English title page, copyright page, translator’s preface, and following blank
 leaf have also been independently read and accounted for. The cover emblem and
-calligraphic Hebrew arranger credit remain pending. The remainder of Hodu, the
-surrounding page contents, and other services remain to be transcribed.
+calligraphic Hebrew arranger credit remain pending. The Hodu continuation and Psalm 19
+are now also encoded in both languages. Psalm 34 and the other services remain
+to be transcribed.
 
 English is present only where printed; Psalm 24 has no generated English file.
 Preserve misprints such as English “convenant” rather than replacing them silently.
@@ -66,7 +67,9 @@ These were encoded in the first reading; the second reader had flagged uncertain
 The confirmations are recorded in `reviews.json`. All pilot witnesses now pass
 independent review with image adjudication and these human confirmations.
 Four front-matter leaves are marked complete, including the verified blank leaf.
-The prayer witnesses cover excerpts and do not imply complete source-page coverage.
+Four prayer leaves, s62–s65 (the facing Hebrew/English pages 16–17), are also
+complete after independent coverage checks. The other prayer witnesses remain
+excerpts; images read or OCR available do not imply complete page coverage.
 
 ## Page directions and expansion
 
@@ -92,3 +95,22 @@ checks downloaded derivative size/hash, and writes unchanged metadata/OCR only w
 necessary. `download --regenerate` needs no network. `build` validates all XML before writing and requires current independent reviews
 for all encoded witnesses. `--draft` is available for explicitly unreviewed work. `verify --check`
 continues to fail until the whole volume is completely transcribed and reviewed.
+
+## Hodu and Psalm 19 continuation
+
+Romemu, Vehu Raḥum and Hoshiah et ammekha reuse the existing modules and their
+22 canonical segment identities; Psalm 19 adds 15 shared verse correspondences.
+Liturgical excerpt identities retain scripture sources separately. Both expanded
+and documentary sequences include the new material in its printed order.
+
+The same independent reader’s original s62–s65 image readings cover Hodu; new
+blind readings of s66–s67 complete Psalm 19. Alignment/order audits and their
+adjudications are in `independent/hodu_alignment.json` and
+`independent/psalm_19_alignment.json`. First readings and raw comparison snapshots
+remain immutable evidence, not the accepted build input.
+
+Image adjudication retains printed English “withold” and “whem”, Hebrew defective
+עֹמֶדֶת, and the visible pointing of the full Divine Name. The audit reopened an
+earlier Chronicles 16:35 punctuation decision: the enlarged scan shows a comma
+after “salvation”; the revised decision and its history are recorded. Psalm 19’s
+Hebrew chapter label and English reference are citation notes, outside prayer words.
