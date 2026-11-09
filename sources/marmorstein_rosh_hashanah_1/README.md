@@ -32,8 +32,13 @@ identify their shared source as CC0 1.0 Universal; preserve those source records
 - `adjudications.json`: decisions with reading hashes and scan evidence. Agreement
   between readers does not resolve a mark either reader explicitly found uncertain.
 - `readings.json`: current image-adjudicated source for the builder, including
-  explicit canonical URNs, page boundaries, source order and expanded order.
+  explicit canonical URNs, page boundaries, source order and expanded order. Printed
+  Hebrew linkage cues are excluded from accepted English prayer words; shared
+  canonical milestones provide alignment. Immutable readings retain the printed cues.
+  Biblical citations are separate metadata emitted as standoff citation notes.
 - `reviews.json`: per-witness review records bound to the current text hash.
+  Editorial exclusions record the five removed linkage cues, scan locations and
+  before/after hashes without changing the independent reading evidence.
 - `progress.json`: generated coverage report. An excerpt is never a completed leaf.
 
 All images, enlarged bands, full coordinate OCR, raw process logs and generated
