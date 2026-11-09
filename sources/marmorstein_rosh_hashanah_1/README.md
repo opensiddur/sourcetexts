@@ -57,7 +57,8 @@ are now also encoded in both languages. Psalm 34 and the other services remain
 to be transcribed.
 
 English is present only where printed; Psalm 24 has no generated English file.
-Preserve misprints such as English “convenant” rather than replacing them silently.
+Preserve misprints such as English “convenant” in `tei:sic`, paired with the
+editorial correction in `tei:corr`; never replace the printed reading silently.
 Reuse existing canonical prayer and scripture URNs; edition-specific spelling or
 pointing does not create a new identity.
 
@@ -109,8 +110,22 @@ adjudications are in `independent/hodu_alignment.json` and
 `independent/psalm_19_alignment.json`. First readings and raw comparison snapshots
 remain immutable evidence, not the accepted build input.
 
-Image adjudication retains printed English “withold” and “whem”, Hebrew defective
+Image adjudication records printed English “withold” and “whem”, Hebrew defective
 עֹמֶדֶת, and the visible pointing of the full Divine Name. The audit reopened an
 earlier Chronicles 16:35 punctuation decision: the enlarged scan shows a comma
 after “salvation”; the revised decision and its history are recorded. Psalm 19’s
 Hebrew chapter label and English reference are citation notes, outside prayer words.
+
+## Obvious source errors
+
+`corrections.json` records four located occurrences: “convenant” → “covenant”
+(Chronicles 16:15 and 16:17), “withold” → “withhold” (Psalm 40:12), and
+“whem” → “whom” (Psalm 144:15). The builder uses the shared correction utility
+to emit `tei:choice/tei:sic` and `tei:corr` before schema validation. Unique
+textual context prevents a correction from silently moving to another occurrence.
+
+Accepted source words and review hashes retain exactly what the images show.
+Normal exports select the corrected form by the repository default
+`readings.errors: corrected`; `readings.errors: printed` selects the source form.
+The defective printed Hebrew עֹמֶדֶת, archaic English and translation choices are
+retained without treating them as typographic errors.
