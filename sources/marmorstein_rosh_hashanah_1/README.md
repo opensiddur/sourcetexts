@@ -135,3 +135,12 @@ The pilot closeout also independently verifies full coverage of s60/s61 in
 continuation stays in the same reference scope across s60/s62. Enlarged cover
 and title-page signature readings are preserved in `primary/calligraphy.json`
 and `independent/calligraphy.json`; exact lettering still awaits human adjudication.
+
+## Pilot closeout status
+
+`pilot_acceptance.json` separates completed prayer reviews and automated checks
+from the two remaining human checks: exact calligraphic lettering, and browser
+visual/interactive QA of the electronic exports. The full processor CI passes
+4,439 tests (93 skipped), with 93.55% coverage and a successful coverage upload.
+The independent enlarged-image reader could confidently identify only וואלף;
+the tentative remainder is evidence, not accepted transcription.

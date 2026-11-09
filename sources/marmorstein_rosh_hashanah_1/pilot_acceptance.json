@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-08",
+  "scope": "Original digitization pilot and reviewed Hodu/Psalm 19 continuation; not full-volume acceptance.",
+  "status": "awaiting_human_review",
+  "prayer_transcription_and_alignment": "independently reviewed; no unresolved prayer reading disputes",
+  "source_leaves_complete": 10,
+  "processor_ci": {
+    "commit": "d95ec5b9824cf833526628804ec287fa6ad152e7",
+    "status": "passed",
+    "job": "https://github.com/opensiddur/opensiddur-processor/actions/runs/42562422102/job/128981537246",
+    "tests_run": 4439,
+    "skipped": 93,
+    "seconds": 546.357,
+    "coverage_percent": 93.55,
+    "coverage_upload": "passed",
+    "resolved_failure": "The preceding run had one stale test expecting numberlinefalse; integration and default-value expectations now match the line-tracking-preserving implementation."
+  },
+  "electronic_exports": {
+    "documentary": {
+      "sha256": "1836954b22c283387939ffbe03d2b81793541d30b3f3686116095a99b194a3ba",
+      "local_links_resolve": 2,
+      "citation_popovers_resolve": 3,
+      "unique_ids": true,
+      "visual_review": "pending human confirmation; local-file browser automation blocked"
+    },
+    "expanded": {
+      "sha256": "c89e2564b465da461b5affb63965c4889e532aac0720e96a113878f661a3a0b8",
+      "local_links_resolve": 0,
+      "citation_popovers_resolve": 3,
+      "unique_ids": true,
+      "visual_review": "pending human confirmation; local-file browser automation blocked"
+    }
+  },
+  "remaining_human_checks": [
+    {
+      "item": "Exact Hebrew lettering in the cover emblem and title-page signature",
+      "status": "pending human adjudication",
+      "evidence": [
+        "primary/calligraphy.json",
+        "independent/calligraphy.json"
+      ],
+      "reason": "Enlarged independent reading confidently identifies only וואלף; remaining calligraphy is not promoted to accepted transcription."
+    },
+    {
+      "item": "Browser visual and interactive QA",
+      "status": "pending user confirmation",
+      "reason": "Browser automation blocks local file URLs. Static checks confirm unique IDs, all citation popover targets and the documentary navigation targets; these do not certify browser appearance or interaction."
+    }
+  ]
+}
