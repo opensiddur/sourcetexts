@@ -2526,7 +2526,8 @@
       "primary/opening_s7_s14.json",
       "independent/opening_s7_s14.json",
       "independent/minchah_enlarged.json",
-      "minchah_resolutions.json"
+      "minchah_resolutions.json",
+      "amidah_teshuvah_expansion_binding.json"
     ],
     "differences": [
       {
@@ -2562,7 +2563,7 @@
     },
     "unresolved": [],
     "complete": true,
-    "final_sha256": "86ee70676b89fa0b0dfff648e4dc890f556d0f7a13eee510e399d6cabe29d23d",
+    "final_sha256": "e7e499d06d69f1902c814a60f8a366233abb1c1d61d3aa85a0e23334866bbfcb",
     "pending_ambiguities": [],
     "enlarged_adjudication": {
       "primary_sha256": "8b370b910a90b54c6c8420d60b24dea8c1c58ab1a50afb0b369ca6ea6b217e9d",
@@ -8085,5 +8086,1922 @@
       "s33/yehi_ratzon"
     ],
     "settlement": "Exact final payload accepted through independent enlarged/word/context adjudications, human fine-mark confirmation and two frozen-XML source/guideline/alignment/order audits. Initial blind hashes remain those of the actual distinct raw readings; final hash binds adjudicated words and instruction interpretations, not a false claim that the first readings matched. No binary verdict is fabricated where later reading differs from both initial readers."
+  },
+  "maariv_vayekhulu/he": {
+    "primary_sha256": "a2da5d66b8df83c9c425c09f55ffa3ef17fa408063ab7eaf1353d1b3370ce304",
+    "independent_sha256": "a2da5d66b8df83c9c425c09f55ffa3ef17fa408063ab7eaf1353d1b3370ce304",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s35/vayekhulu_role",
+      "s35/vayekhulu"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "ecb3011b97a528c88c0946cda5a2fbbbef724e6dfa0a27ca2dcd5df0b5369692",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "meein_sheva/he": {
+    "primary_sha256": "221f4eb143b1cde6323873f0e50b703a2b2c8fcab55bc0374c4ec658822be6ae",
+    "independent_sha256": "09482de76f3208b8937fde80290db25b39d668e5bbedb782fda54f9172784ead",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s35/avot_opening_role",
+      "s35/avot_opening",
+      "s35/magen_avot_role",
+      "s35/magen_avot",
+      "s35/closing_role",
+      "s35/closing"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "consonants",
+        "ours": "קוֹנֵה",
+        "theirs": "קֹנֵה",
+        "at": 19,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:19:קוֹנֵה|קֹנֵה"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "קו״ח",
+        "theirs": "קו״ה",
+        "at": 22,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:22:קו״ח|קו״ה"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "בְּכָל יוֹם",
+        "theirs": "בְּכָליוֹם",
+        "at": 49,
+        "size": 2,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:49:בְּכָל יוֹם|בְּכָליוֹם"
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "consonants:19:קוֹנֵה|קֹנֵה",
+      "consonants:22:קו״ח|קו״ה",
+      "consonants:49:בְּכָל יוֹם|בְּכָליוֹם"
+    ],
+    "final_sha256": "e2c6ecf12a42b06e70c70f1a38db5a891404fc3f47ed370bfef67f500146c729",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "bameh_madlikin/he": {
+    "primary_sha256": "67b0962e6d5226d270a8d1c0c3dda2ef98dee9d4a6a3c21e3aa460f36f2a9cd3",
+    "independent_sha256": "27f77a9695a68ff96c784460f995a42529251c47c427e8f1fd76c825874d78d4",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s35/mishnah_2_1_start",
+      "s34/mishnah1_end_and2",
+      "s34/mishnah_2_3",
+      "s34/mishnah_2_4",
+      "s34/mishnah_2_5",
+      "s34/mishnah_2_6",
+      "s34/mishnah_2_7"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "vowels",
+        "ours": "וּבַמֶּה",
+        "theirs": "וּבַמָּה",
+        "at": 2,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:2:וּבַמֶּה|וּבַמָּה"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "בְחוֹסֶן",
+        "theirs": "בְחֹסֶן",
+        "at": 10,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:10:בְחוֹסֶן|בְחֹסֶן"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "בְכָלָךְ,",
+        "theirs": "בְכַלָּךְ,",
+        "at": 12,
+        "size": 2,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:12:בְכָלָךְ,|בְכַלָּךְ,"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "בְשַׁעֲוָה",
+        "theirs": "בְשַׁעֲוָה,",
+        "at": 27,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:27:בְשַׁעֲוָה|בְשַׁעֲוָה,"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "שְׂרֵפָה",
+        "theirs": "שְׂרֵפָה,",
+        "at": 33,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:33:שְׂרֵפָה|שְׂרֵפָה,"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "בּוֹ.",
+        "theirs": "בּוֹ: ב",
+        "at": 53,
+        "size": 2,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:53:בּוֹ.|בּוֹ: ב"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "כְבוֹד",
+        "theirs": "כְּבוֹד",
+        "at": 67,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:67:כְבוֹד|כְּבוֹד"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "",
+        "theirs": "ג",
+        "at": 94,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:94:|ג"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "מִטַּמֵּא",
+        "theirs": "מְטַמֵּא",
+        "at": 108,
+        "size": 2,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:108:מִטַּמֵּא|מְטַמֵּא"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "הִבְהֲבָהּ.",
+        "theirs": "הִבְהֲבָהּ,",
+        "at": 117,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:117:הִבְהֲבָהּ.|הִבְהֲבָהּ,"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "בָּהּ.",
+        "theirs": "בָּהּ,",
+        "at": 125,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:125:בָּהּ.|בָּהּ,"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "הִיא",
+        "theirs": "הִיא,",
+        "at": 130,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:130:הִיא|הִיא,"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "",
+        "theirs": "ד",
+        "at": 133,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:133:|ד"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "יִקֹּב",
+        "theirs": "יִקּוֹב",
+        "at": 134,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:134:יִקֹּב|יִקּוֹב"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "וִימַלְאֶהָ",
+        "theirs": "וִימַלְּאֶנָּה",
+        "at": 139,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:139:וִימַלְאֶהָ|וִימַלְּאֶנָּה"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "וַאֲפִלּוּ",
+        "theirs": "וַאֲפִילוּ",
+        "at": 148,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:148:וַאֲפִלּוּ|וַאֲפִילוּ"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "בְתוֹכָהּ",
+        "theirs": "בְּתוֹכָהּ",
+        "at": 176,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:176:בְתוֹכָהּ|בְּתוֹכָהּ"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "",
+        "theirs": "ה",
+        "at": 183,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:183:|ה"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "בִּשְׁבִיל",
+        "theirs": "בִשְׁבִיל",
+        "at": 197,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:197:בִּשְׁבִיל|בִשְׁבִיל"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "שֶׁיִּישַׁן",
+        "theirs": "שֶׁיִּישַׁן,",
+        "at": 199,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:199:שֶׁיִּישַׁן|שֶׁיִּישַׁן,"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "עוֹשֶׂה",
+        "theirs": "עוֹשָׂה",
+        "at": 220,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:220:עוֹשֶׂה|עוֹשָׂה"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "פֶחָם:",
+        "theirs": "פֶּחָם:",
+        "at": 221,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:221:פֶחָם:|פֶּחָם:"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "",
+        "theirs": "ו",
+        "at": 222,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:222:|ו"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "",
+        "theirs": "ז",
+        "at": 236,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:236:|ז"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "חֲשֵׁכָה",
+        "theirs": "חֲשֵׁכָה,",
+        "at": 256,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:256:חֲשֵׁכָה|חֲשֵׁכָה,"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "הַוַּדַּאי",
+        "theirs": "הַוַּדַּאי,",
+        "at": 260,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:260:הַוַּדַּאי|הַוַּדַּאי,"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "הַדְּמַאי",
+        "theirs": "הַדְּמַאי,",
+        "at": 272,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:272:הַדְּמַאי|הַדְּמַאי,"
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "vowels:2:וּבַמֶּה|וּבַמָּה",
+      "consonants:10:בְחוֹסֶן|בְחֹסֶן",
+      "vowels:12:בְכָלָךְ,|בְכַלָּךְ,",
+      "consonants:27:בְשַׁעֲוָה|בְשַׁעֲוָה,",
+      "consonants:33:שְׂרֵפָה|שְׂרֵפָה,",
+      "consonants:53:בּוֹ.|בּוֹ: ב",
+      "vowels:67:כְבוֹד|כְּבוֹד",
+      "consonants:94:|ג",
+      "vowels:108:מִטַּמֵּא|מְטַמֵּא",
+      "consonants:117:הִבְהֲבָהּ.|הִבְהֲבָהּ,",
+      "consonants:125:בָּהּ.|בָּהּ,",
+      "consonants:130:הִיא|הִיא,",
+      "consonants:133:|ד",
+      "consonants:134:יִקֹּב|יִקּוֹב",
+      "consonants:139:וִימַלְאֶהָ|וִימַלְּאֶנָּה",
+      "consonants:148:וַאֲפִלּוּ|וַאֲפִילוּ",
+      "vowels:176:בְתוֹכָהּ|בְּתוֹכָהּ",
+      "consonants:183:|ה",
+      "vowels:197:בִּשְׁבִיל|בִשְׁבִיל",
+      "consonants:199:שֶׁיִּישַׁן|שֶׁיִּישַׁן,",
+      "vowels:220:עוֹשֶׂה|עוֹשָׂה",
+      "vowels:221:פֶחָם:|פֶּחָם:",
+      "consonants:222:|ו",
+      "consonants:236:|ז",
+      "consonants:256:חֲשֵׁכָה|חֲשֵׁכָה,",
+      "consonants:260:הַוַּדַּאי|הַוַּדַּאי,",
+      "consonants:272:הַדְּמַאי|הַדְּמַאי,"
+    ],
+    "final_sha256": "a225f040651cf9924ff9845d26d6834c6778a3f7ff0c09a5465ce469e61c578f",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "chayyav_adam_lemashmesh/he": {
+    "primary_sha256": "15edf8588ae63def8538d9a378b829e839e669e8f4865ca5e69836c5ef7248f7",
+    "independent_sha256": "15edf8588ae63def8538d9a378b829e839e669e8f4865ca5e69836c5ef7248f7",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s34/tanya"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "880fab36cdfd8fbb6d49ee8cdb4661f576bf657be71755e76ecee19beaa70950",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "amar_rabbi_elazar/he": {
+    "primary_sha256": "b82d1ee0a4b96a1ff50d2f948068458a46bef4abf9daf8b65661d38e814002c4",
+    "independent_sha256": "68cf01acb2f26063ae75f73214003cbdb59e3b3aa66f7d8dc0f4e1b5613d5c49",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s34/amar_rabbi_elazar"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "consonants",
+        "ours": "חֲנִינָא,",
+        "theirs": "חֲנִינָא.",
+        "at": 5,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:5:חֲנִינָא,|חֲנִינָא."
+      },
+      {
+        "bucket": "vowels",
+        "ours": "בָנָיִךְ",
+        "theirs": "בָּנָיִךְ",
+        "at": 21,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:21:בָנָיִךְ|בָּנָיִךְ"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "בוֹנָיִךְ:",
+        "theirs": "בּוֹנָיִךְ:",
+        "at": 23,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:23:בוֹנָיִךְ:|בּוֹנָיִךְ:"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'־'",
+        "at": 31,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after יְהִי",
+        "key": "whitespace:31:' '|'־'"
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "consonants:5:חֲנִינָא,|חֲנִינָא.",
+      "vowels:21:בָנָיִךְ|בָּנָיִךְ",
+      "vowels:23:בוֹנָיִךְ:|בּוֹנָיִךְ:",
+      "whitespace:31:' '|'־'"
+    ],
+    "final_sha256": "68cf01acb2f26063ae75f73214003cbdb59e3b3aa66f7d8dc0f4e1b5613d5c49",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "kiddush_vayekhulu/he": {
+    "primary_sha256": "6406da67e435f1b2d8b1942d98e32f607b6a9c29fa0179bddce5add67f177990",
+    "independent_sha256": "78f8fc5effcfaaf7a945f2d864c2c3660e148bad686220c3a6f9dfd2244535c0",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s36/kiddush_vayekhulu"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "consonants",
+        "ours": "אֹתוֹ",
+        "theirs": "אֹתוֹ.",
+        "at": 31,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:31:אֹתוֹ|אֹתוֹ."
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "consonants:31:אֹתוֹ|אֹתוֹ."
+    ],
+    "final_sha256": "2e3f28ca4c5dae2e60616ec4ce08d59cce455886ef53a34b8bcca9329e12fd71",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "kiddush_vayekhulu/en": {
+    "primary_sha256": "efb810557e336ae28d52be7803e8a874f512a44ecff57a3bcb30ab0ce13a508e",
+    "independent_sha256": "efb810557e336ae28d52be7803e8a874f512a44ecff57a3bcb30ab0ce13a508e",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s37/kiddush_vayekhulu"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "3a3cf60f7dbce1653553b8e00dc29d4100804e0ff5786aa76a0accebec7bcb96",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "kiddush_savri/he": {
+    "primary_sha256": "304bcfd7b742eb22c2e0ef93a45b6d56de8f95f5f89e9c88ba45270acb04f541",
+    "independent_sha256": "304bcfd7b742eb22c2e0ef93a45b6d56de8f95f5f89e9c88ba45270acb04f541",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s36/savri"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "304bcfd7b742eb22c2e0ef93a45b6d56de8f95f5f89e9c88ba45270acb04f541",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "new_year_greeting/he": {
+    "primary_sha256": "4a6f0ff7496a7ff8f1663059b1bc412f903987d7b07b00c3abe64f95fc9645d3",
+    "independent_sha256": "022692fb07e8c60b7efc8dc0157bd8ad1979e0c964dcd70924bea9d2c150c5fa",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s36/to_man",
+      "s36/greeting_man",
+      "s36/to_woman",
+      "s36/greeting_woman",
+      "s36/to_men",
+      "s36/greeting_men",
+      "s36/to_women",
+      "s36/greeting_women"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "vowels",
+        "ours": "תִּכָּתֵבְנָה:",
+        "theirs": "תִּכָּתַבְנָה:",
+        "at": 27,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:27:תִּכָּתֵבְנָה:|תִּכָּתַבְנָה:"
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "vowels:27:תִּכָּתֵבְנָה:|תִּכָּתַבְנָה:"
+    ],
+    "final_sha256": "4a6f0ff7496a7ff8f1663059b1bc412f903987d7b07b00c3abe64f95fc9645d3",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "new_year_greeting/en": {
+    "primary_sha256": "84cfe3c966f952976689b293e46ff1585dc713d4da2219751c7d252a0c80cb45",
+    "independent_sha256": "84cfe3c966f952976689b293e46ff1585dc713d4da2219751c7d252a0c80cb45",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s37/greeting_generic"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "84cfe3c966f952976689b293e46ff1585dc713d4da2219751c7d252a0c80cb45",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "aleinu/he": {
+    "primary_sha256": "6252df658c58d4ef0c4f29891fe47a8f19a90b2b91bb2bd16cb355d4268d7043",
+    "independent_sha256": "17e8042338b3ed968d927df210836dd27128e3bc15ed7a34ed67c0c6c5f71b8f",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s38/aleinu",
+      "s38/al_ken"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "consonants",
+        "ours": "וְגוֹרָלֵנוּ",
+        "theirs": "וְגֹרָלֵנוּ",
+        "at": 20,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:20:וְגוֹרָלֵנוּ|וְגֹרָלֵנוּ"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "כּוֹרְעִים",
+        "theirs": "כֹּרְעִים",
+        "at": 24,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:24:כּוֹרְעִים|כֹּרְעִים"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "מְרוֹמִים.",
+        "theirs": "מְרוֹמִים:",
+        "at": 46,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:46:מְרוֹמִים.|מְרוֹמִים:"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "לְךָ",
+        "theirs": "לְּךָ",
+        "at": 76,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:76:לְךָ|לְּךָ"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "בִשְׁמֶךָ",
+        "theirs": "בִשְׁמֶךָ.",
+        "at": 98,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:98:בִשְׁמֶךָ|בִשְׁמֶךָ."
+      },
+      {
+        "bucket": "consonants",
+        "ours": "לָשׁוֹן,",
+        "theirs": "לָשׁוֹן:",
+        "at": 116,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:116:לָשׁוֹן,|לָשׁוֹן:"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "וְתִמְלֹךְ",
+        "theirs": "וְתִמְלוֹךְ",
+        "at": 131,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:131:וְתִמְלֹךְ|וְתִמְלוֹךְ"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "תִּמְלֹךְ",
+        "theirs": "תִּמְלוֹךְ",
+        "at": 142,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:142:תִּמְלֹךְ|תִּמְלוֹךְ"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "בְּתוֹרָתֶךָ יְיָ",
+        "theirs": "בְּתוֹרָתֶךָ, יְהוָה",
+        "at": 145,
+        "size": 2,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:145:בְּתוֹרָתֶךָ יְיָ|בְּתוֹרָתֶךָ, יְהוָה"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "לְעוֹלָם",
+        "theirs": "לְעֹלָם",
+        "at": 148,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:148:לְעוֹלָם|לְעֹלָם"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "וְנֶאֱמַר",
+        "theirs": "וְנֶאֱמַר,",
+        "at": 150,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:150:וְנֶאֱמַר|וְנֶאֱמַר,"
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "consonants:20:וְגוֹרָלֵנוּ|וְגֹרָלֵנוּ",
+      "consonants:24:כּוֹרְעִים|כֹּרְעִים",
+      "consonants:46:מְרוֹמִים.|מְרוֹמִים:",
+      "vowels:76:לְךָ|לְּךָ",
+      "consonants:98:בִשְׁמֶךָ|בִשְׁמֶךָ.",
+      "consonants:116:לָשׁוֹן,|לָשׁוֹן:",
+      "consonants:131:וְתִמְלֹךְ|וְתִמְלוֹךְ",
+      "consonants:142:תִּמְלֹךְ|תִּמְלוֹךְ",
+      "consonants:145:בְּתוֹרָתֶךָ יְיָ|בְּתוֹרָתֶךָ, יְהוָה",
+      "consonants:148:לְעוֹלָם|לְעֹלָם",
+      "consonants:150:וְנֶאֱמַר|וְנֶאֱמַר,"
+    ],
+    "final_sha256": "3383111300b6f51f74df58d8c4b6d8cd7ca684fc61e7ca4d44fdf24c5e3b3bf9",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "borei_peri_hagafen/he": {
+    "primary_sha256": "e5b0766a0542969bf891434fbc6cbdba449fd1d6b95f0c5549c7b084753bf9f9",
+    "independent_sha256": "e5b0766a0542969bf891434fbc6cbdba449fd1d6b95f0c5549c7b084753bf9f9",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s36/bore_peri_hagafen"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "e5b0766a0542969bf891434fbc6cbdba449fd1d6b95f0c5549c7b084753bf9f9",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "borei_peri_hagafen/en": {
+    "primary_sha256": "cc298268a531511b1420247a6edf828248f0e0b5c8ad212c0d22be8830f4a75d",
+    "independent_sha256": "cc298268a531511b1420247a6edf828248f0e0b5c8ad212c0d22be8830f4a75d",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s37/bore_peri_hagafen"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "cc298268a531511b1420247a6edf828248f0e0b5c8ad212c0d22be8830f4a75d",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "kiddush_rosh_hashanah/he": {
+    "primary_sha256": "8aca41d13e5ea0127d91211c940fa444aa8d13ed90d41f2010ad359c35120b09",
+    "independent_sha256": "61586c10e422849bfa192c096ab9c9f9cabea0e9a321a785ee3b1b72a94e6f13",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s36/kiddush"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'־'",
+        "at": 16,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after וַתִּתֶּן",
+        "key": "whitespace:16:' '|'־'"
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "whitespace:16:' '|'־'"
+    ],
+    "final_sha256": "61586c10e422849bfa192c096ab9c9f9cabea0e9a321a785ee3b1b72a94e6f13",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "kiddush_rosh_hashanah/en": {
+    "primary_sha256": "587d919514707c3ccc7a65b2194d99fb5f8b16fc9a6afec73b83941bd13f6558",
+    "independent_sha256": "587d919514707c3ccc7a65b2194d99fb5f8b16fc9a6afec73b83941bd13f6558",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s37/kiddush"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "587d919514707c3ccc7a65b2194d99fb5f8b16fc9a6afec73b83941bd13f6558",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "shehecheyanu/he": {
+    "primary_sha256": "afaacb92dd152607ea47259ac55cadfd6eb588f4ca4d6e0a45fbccf068b674d0",
+    "independent_sha256": "f845b9cb479cd748272e2e929e8804d5d98d0db3058801224fa0350eda1aa59a",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s36/shehecheyanu"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "vowels",
+        "ours": "בא״י",
+        "theirs": "בָּא״י",
+        "at": 0,
+        "size": 2,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:0:בא״י|בָּא״י"
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "vowels:0:בא״י|בָּא״י"
+    ],
+    "final_sha256": "f33d8fb4b2442de76f8907bc58c47977fedf582f3f534cd0bda36c8c0202c4c0",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "shehecheyanu/en": {
+    "primary_sha256": "78ad777dfe3d5bfd603f4527994395e21344f41497d3b739531f00bd87cb823e",
+    "independent_sha256": "78ad777dfe3d5bfd603f4527994395e21344f41497d3b739531f00bd87cb823e",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s37/shehecheyanu"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "78ad777dfe3d5bfd603f4527994395e21344f41497d3b739531f00bd87cb823e",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "borei_peri_haetz/he": {
+    "primary_sha256": "fce9852f395baeef83c10599e89a5e8e814281bb23460fde31ad33ae5089cd5d",
+    "independent_sha256": "fce9852f395baeef83c10599e89a5e8e814281bb23460fde31ad33ae5089cd5d",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s36/bore_peri_haetz"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "fce9852f395baeef83c10599e89a5e8e814281bb23460fde31ad33ae5089cd5d",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "borei_peri_haetz/en": {
+    "primary_sha256": "8b609b0e0897f8c02b0dad71f5e17c0b678232dc8fd3c1c3c3b09fe91b6d7133",
+    "independent_sha256": "8b609b0e0897f8c02b0dad71f5e17c0b678232dc8fd3c1c3c3b09fe91b6d7133",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s37/bore_peri_haetz"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "8b609b0e0897f8c02b0dad71f5e17c0b678232dc8fd3c1c3c3b09fe91b6d7133",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "shetechaddesh_aleinu_shanah_tovah/he": {
+    "primary_sha256": "09a8f043a8377fcec5ce40fd3a6e2e3758dfb2540ae11346813755f63858aa20",
+    "independent_sha256": "09a8f043a8377fcec5ce40fd3a6e2e3758dfb2540ae11346813755f63858aa20",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s36/apple_yehi_ratzon"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "09a8f043a8377fcec5ce40fd3a6e2e3758dfb2540ae11346813755f63858aa20",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "shetechaddesh_aleinu_shanah_tovah/en": {
+    "primary_sha256": "63f67b23ab3d68920799abc0be23876f87c9e3ce493e8499cdc9407beabea050",
+    "independent_sha256": "89a2c58dfd55ee4abf0586ec2269b4a54535b143a221046222132ba36f0ab276",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s37/apple_yehi_ratzon"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "consonants",
+        "ours": "Thee,",
+        "theirs": "Thee",
+        "at": 5,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:5:Thee,|Thee"
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "consonants:5:Thee,|Thee"
+    ],
+    "final_sha256": "89a2c58dfd55ee4abf0586ec2269b4a54535b143a221046222132ba36f0ab276",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "instruction/close_if_shabbat": {
+    "primary_sha256": "cbcb15bb1278e4612ea2d6c7dbc88375891505e06c8adf3285d08b3c7cd8e7a5",
+    "independent_sha256": "916144710b1157d83f7d4844e700299cf2bc69fd8859d2eb8d1c1cbd072f9a23",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s35/if_shabbat"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "consonants",
+        "ours": "אם",
+        "theirs": "חַזָּן",
+        "at": 0,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:0:אם|חַזָּן"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "שבת:",
+        "theirs": "שַׁבָּת:",
+        "at": 1,
+        "size": 4,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:1:שבת:|שַׁבָּת:"
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "consonants:0:אם|חַזָּן",
+      "vowels:1:שבת:|שַׁבָּת:"
+    ],
+    "final_sha256": "ef3aca7302edbad78762952ae9b9f721614645abf81b213745cad1556e500f1c",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "instruction/close_kaddish_titqabbal": {
+    "primary_sha256": "d4aec43f88fcb904cab063b0f7cda227fd324c320c9f990e5022cffad6cca05c",
+    "independent_sha256": "d4aec43f88fcb904cab063b0f7cda227fd324c320c9f990e5022cffad6cca05c",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s35/kaddish_titqabbal"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "d4aec43f88fcb904cab063b0f7cda227fd324c320c9f990e5022cffad6cca05c",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "instruction/close_frankfurt_custom": {
+    "primary_sha256": "33aad76e6423f542a9198fa6f17fc6761eb6b9e9dfac4d0b8ed5f9791b1f3aab",
+    "independent_sha256": "1b2052f4213127dd6e3cd200bfb8afe3d6528c2603bda0037b236e126c64ff47",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s35/frankfurt_custom"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "consonants",
+        "ours": "פרנקפורט אם מיין",
+        "theirs": "פֿראַנקפֿורט מאַן",
+        "at": 1,
+        "size": 3,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:1:פרנקפורט אם מיין|פֿראַנקפֿורט מאַן"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "מען",
+        "theirs": "אָהן",
+        "at": 5,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:5:מען|אָהן"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "וויא אם",
+        "theirs": "ווען אויך",
+        "at": 8,
+        "size": 2,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:8:וויא אם|ווען אויך"
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "consonants:1:פרנקפורט אם מיין|פֿראַנקפֿורט מאַן",
+      "consonants:5:מען|אָהן",
+      "consonants:8:וויא אם|ווען אויך"
+    ],
+    "final_sha256": "6b73eaa21161751efae5958a3bdf3c957a42cba19db5c599078d665756cef968",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "instruction/close_closing": {
+    "primary_sha256": "6ef03131ab5468942db0d07c64e69ed45f0137d26f02258c2aeb920def6ccc82",
+    "independent_sha256": "de5e1473fd2bf26a4339625beb7562eeb1c285520110b3089064cc6a612d0d90",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s38/closing_direction"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "vowels",
+        "ours": "קדיש",
+        "theirs": "קַדִּישׁ",
+        "at": 0,
+        "size": 4,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:0:קדיש|קַדִּישׁ"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "יתום,",
+        "theirs": "יָתוֹם,",
+        "at": 1,
+        "size": 2,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:1:יתום,|יָתוֹם,"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "יגדל.",
+        "theirs": "יִגְדַּל.",
+        "at": 2,
+        "size": 4,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:2:יגדל.|יִגְדַּל."
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "vowels:0:קדיש|קַדִּישׁ",
+      "vowels:1:יתום,|יָתוֹם,",
+      "vowels:2:יגדל.|יִגְדַּל."
+    ],
+    "final_sha256": "de5e1473fd2bf26a4339625beb7562eeb1c285520110b3089064cc6a612d0d90",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "instruction/close_kiddush_heading_he": {
+    "primary_sha256": "84a86c474b4ee6479cd679de0590233d63240f7d62e098dad5f3fb5164280d80",
+    "independent_sha256": "84a86c474b4ee6479cd679de0590233d63240f7d62e098dad5f3fb5164280d80",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s36/kiddush_heading"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "84a86c474b4ee6479cd679de0590233d63240f7d62e098dad5f3fb5164280d80",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "instruction/close_intro_he": {
+    "primary_sha256": "646aa2f5a907dbd6a713cd42df359efdb19b7f5ec2e764662ba147b79bfe5637",
+    "independent_sha256": "646aa2f5a907dbd6a713cd42df359efdb19b7f5ec2e764662ba147b79bfe5637",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s36/kiddush_instruction"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "646aa2f5a907dbd6a713cd42df359efdb19b7f5ec2e764662ba147b79bfe5637",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "instruction/close_apple_he": {
+    "primary_sha256": "6e5bc193098f2521561096637f73f1c282b257456cfde2ea9eda3e65b3b3bbd6",
+    "independent_sha256": "6e5bc193098f2521561096637f73f1c282b257456cfde2ea9eda3e65b3b3bbd6",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s36/apple_instruction"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "6e5bc193098f2521561096637f73f1c282b257456cfde2ea9eda3e65b3b3bbd6",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "instruction/close_eating_he": {
+    "primary_sha256": "fe2cf5bcc601fc5775bb827855044bcf7d8eba427e7e2104cbeb2faf8a8c38b3",
+    "independent_sha256": "fe2cf5bcc601fc5775bb827855044bcf7d8eba427e7e2104cbeb2faf8a8c38b3",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s36/apple_eating"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "fe2cf5bcc601fc5775bb827855044bcf7d8eba427e7e2104cbeb2faf8a8c38b3",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "instruction/close_greeting_he": {
+    "primary_sha256": "e4e6037907130d011097d01723ac1c92e9d1b18f643601eb28fd7124f137f8c1",
+    "independent_sha256": "e4e6037907130d011097d01723ac1c92e9d1b18f643601eb28fd7124f137f8c1",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s36/greeting_instruction"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "e4e6037907130d011097d01723ac1c92e9d1b18f643601eb28fd7124f137f8c1",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "instruction/close_kiddush_heading_en": {
+    "primary_sha256": "68504172d408bcdd7df51fe21a421cde59eaaa0470203fb95dde540ec7eb356d",
+    "independent_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s37/kiddush_heading"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "consonants",
+        "ours": "Kiddush for the New Year",
+        "theirs": "",
+        "at": 0,
+        "size": 5,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:0:Kiddush for the New Year|"
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "consonants:0:Kiddush for the New Year|"
+    ],
+    "final_sha256": "68504172d408bcdd7df51fe21a421cde59eaaa0470203fb95dde540ec7eb356d",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "instruction/close_intro_en": {
+    "primary_sha256": "646aa2f5a907dbd6a713cd42df359efdb19b7f5ec2e764662ba147b79bfe5637",
+    "independent_sha256": "646aa2f5a907dbd6a713cd42df359efdb19b7f5ec2e764662ba147b79bfe5637",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s37/kiddush_instruction"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "646aa2f5a907dbd6a713cd42df359efdb19b7f5ec2e764662ba147b79bfe5637",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "instruction/close_apple_en": {
+    "primary_sha256": "927c9069cbebda0f0cba9458848b2a7fa6a310c43de28338b150c19701177156",
+    "independent_sha256": "927c9069cbebda0f0cba9458848b2a7fa6a310c43de28338b150c19701177156",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s37/apple_instruction"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "927c9069cbebda0f0cba9458848b2a7fa6a310c43de28338b150c19701177156",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "instruction/close_eating_en": {
+    "primary_sha256": "fe2cf5bcc601fc5775bb827855044bcf7d8eba427e7e2104cbeb2faf8a8c38b3",
+    "independent_sha256": "fe2cf5bcc601fc5775bb827855044bcf7d8eba427e7e2104cbeb2faf8a8c38b3",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s37/apple_eating"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "fe2cf5bcc601fc5775bb827855044bcf7d8eba427e7e2104cbeb2faf8a8c38b3",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "instruction/close_greeting_en": {
+    "primary_sha256": "e4e6037907130d011097d01723ac1c92e9d1b18f643601eb28fd7124f137f8c1",
+    "independent_sha256": "a7415971167399ec4936472dd43201a15c5142aae9cd9a2e4ec39cbb3bd04e87",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "maariv_close_s34_s38_comparison.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json",
+      "human_maariv_close_confirmation.json",
+      "original_pdf_page_identity.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s37/greeting_instruction"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "consonants",
+        "ours": "Year,",
+        "theirs": "Year",
+        "at": 6,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:6:Year,|Year"
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "consonants:6:Year,|Year"
+    ],
+    "final_sha256": "a7415971167399ec4936472dd43201a15c5142aae9cd9a2e4ec39cbb3bd04e87",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "instruction/close_home_hamotzi": {
+    "primary_sha256": "862f2c2c4575eded41d3f3804deb8be4d3d6ef121b5a1c47c5b9ee88d2c34cc1",
+    "independent_sha256": "862f2c2c4575eded41d3f3804deb8be4d3d6ef121b5a1c47c5b9ee88d2c34cc1",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "human_maariv_close_confirmation.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "pending_ambiguities": [],
+    "editorial_segmentation": "Verbatim source text split around inserted Hamotzi.",
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "862f2c2c4575eded41d3f3804deb8be4d3d6ef121b5a1c47c5b9ee88d2c34cc1",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "instruction/close_home_apple": {
+    "primary_sha256": "488b83a563a96c533847847c88ae99c76ae8e77b5130d2bf2c1db8cd3f086e37",
+    "independent_sha256": "488b83a563a96c533847847c88ae99c76ae8e77b5130d2bf2c1db8cd3f086e37",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38.json",
+      "independent/maariv_close_guideline_audit_round1.json",
+      "independent/maariv_close_guideline_audit_round2.json",
+      "independent/maariv_close_guideline_audit_round3.json",
+      "human_maariv_close_confirmation.json",
+      "primary/maariv_close_final_word.json",
+      "independent/maariv_close_final_word.json",
+      "maariv_close_s34_s38_resolutions.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "pending_ambiguities": [],
+    "editorial_segmentation": "Verbatim source text split around inserted Hamotzi.",
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "488b83a563a96c533847847c88ae99c76ae8e77b5130d2bf2c1db8cd3f086e37",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
   }
 }

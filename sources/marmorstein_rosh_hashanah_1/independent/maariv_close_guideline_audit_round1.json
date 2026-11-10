@@ -1,0 +1,272 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low (the runtime reasoning-effort setting for this invocation was low, about 10/100)",
+    "claimed_self_setting_in_request": "Claude Opus 5.5 at medium effort (requested setting, not the one observed at runtime)",
+    "method": "Read-only. All 25 frozen XMLs, JLPTEI-3.md, the comparison/human/binding JSONs and the s34–s38 bands plus final crops were read. No code was run and no file was changed. The ODD was not opened because the guideline text settled every point raised here."
+  },
+  "reviewed_xml_sha256": {
+    "status": "Taken from the frozen list as given. I did not recompute them, because recomputing needs code execution, which this review did not allow. The paths reviewed are exactly those in /tmp/close-guideline-audit-input/xml_hashes.json.",
+    "he/maariv_vayekhulu.xml": "a7da2fca195ff42dac0942e7637b21294df842bde9bbf4a5eabc9fd7f3ba420d",
+    "he/meein_sheva.xml": "d3fef62e9411d5b01d780ecfccac2af98ba030223351df9f332de9437a12c863",
+    "he/bameh_madlikin.xml": "578ddcd4fecdf59b071094b2d376fc79ecd7bc55f9358ab79068111465c751cf",
+    "he/chayyav_adam_lemashmesh.xml": "5f1711d65c129d3a99e4d2e2c135e8a537a3da6a74a2e0cf956e6b07dc5ed67f",
+    "he/amar_rabbi_elazar.xml": "328badf00ed0cf511a79ffd0116dfb9ef97c453014645c44dae3a3bd3f108dc1",
+    "he/kiddush_vayekhulu.xml": "96da075da394bdddf04da834a7f6f9f3b4199dc30ad31967174546c77596c729",
+    "he/kiddush_savri.xml": "b5f05d4fdf253ed91a1d646f6eca9fed58db1bc9e78d3876fc2e9585df1a66b7",
+    "he/borei_peri_hagafen.xml": "fc3a953ff91cfe4ed8af263b1030eb1477be41d255936ea608cb019606ae921a",
+    "he/kiddush_rosh_hashanah.xml": "d04016881ef3067ceec92884386c5e613db870096ba7c0f29b43400d9c4688b5",
+    "he/shehecheyanu.xml": "256bb612132e6c37a47b2ba24c08ff39094f456488312df1e498cad39e3a0ce2",
+    "he/borei_peri_haetz.xml": "a245ed7f92c6c764ff74f06f3c586a0216cab0c90da5267dc082dcad8190217f",
+    "he/shetechaddesh_aleinu_shanah_tovah.xml": "38ec0fe426394221cb79730f73fa070f308c57883936406f4cac37cfaadf9691",
+    "he/new_year_greeting.xml": "d6c447822603c14d239e48c3026a54ac8c6777c575f25fba602dba60c8440884",
+    "he/aleinu.xml": "30acb5f6cc55a6c089b83baecc19ace6dbd65ea58793e17b13d93870a64cfba5",
+    "en/kiddush_vayekhulu.xml": "5a0b87fc68e3bc2bffa9a9cfed86611dc0294cadbd6445a9f2cfd0e94c5dfcab",
+    "en/borei_peri_hagafen.xml": "e4f4ec6e407bb52cda2916ac99d155db5798484df61f795068788371c410d927",
+    "en/kiddush_rosh_hashanah.xml": "e1872d82edb38b850b27b7e4bae0b44620e08d0ac26b071292708423ba6df995",
+    "en/shehecheyanu.xml": "16131b20c590aa76fa8cf8665b24d86cc4c56484603fe84cd3fab8b93b3898fe",
+    "en/borei_peri_haetz.xml": "87de0f344bb0a2326b56ec7d56db61ca5839dad4a399f9e3c9157f3cccd089b4",
+    "en/shetechaddesh_aleinu_shanah_tovah.xml": "97337720786090fd2dcafa9e8b3a1e627ef6afb998c501b806a58d117b3d9881",
+    "en/new_year_greeting.xml": "315f9695d53999f76da7671098f1ab219cd26b74c41f72d59d565668d766858d",
+    "he/index.xml": "3ff08581b6a756d37eecda98ac44a85bbc2d0ae22f82152d7629f660505c534f",
+    "en/index.xml": "25dd36afad4ce0f3dbea3bdcf03e082855d9ca3fe7ae6f79ed67eb844aa1ba5d",
+    "machzor_expanded-opensiddur-he/index.xml": "80dded2fce7a8d8cbf357210d8d20323299d25d9c13700b6a7236eea0858fef2",
+    "he/amidah_teshuvah.xml": "2009105f9db05a8ca54bc748087ba172c7cb6859797030f04c031c7c42f98af9"
+  },
+  "source_findings": [
+    {
+      "id": "S1",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/maariv_vayekhulu.xml:34",
+      "exact_words": "<tei:abbr>חו״ק</tei:abbr><tei:expan>קהל וחזן</tei:expan>",
+      "evidence": "In s35 band0 and finalcrop-s35-0 the cue before ויכלו reads חו״ק, and both readers agree on it (comparison s35/vayekhulu_role). חו״ק stands for חזן וקהל. The expansion reverses the order. meein_sheva.xml correctly expands קו״ח as קהל וחזן.",
+      "severity": "medium",
+      "proposed_correction": "<tei:expan>חזן וקהל</tei:expan>. Keep the shared corresp role/reader_and_congregation if the project accepts it for both orders."
+    },
+    {
+      "id": "S2",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/aleinu.xml:35",
+      "exact_words": "<tei:seg source=\"…exodus/15/18\">, <j:divineName>יְהוָה</j:divineName> יִמְלֹךְ…</tei:seg> and <tei:seg source=\"…zechariah/14/9\">, וְהָיָה …</tei:seg>",
+      "evidence": "s38 band2 prints כַּכָּתוּב בְּתוֹרָתֶךָ, יְהוָה יִמְלֹךְ and וְנֶאֱמַר, וְהָיָה. The comma belongs to the citation formula, but in the XML it sits inside the semantic quotation span and inside the verse milestone scope. A transclusion of exodus/15/18 or zechariah/14/9 would therefore start with a comma.",
+      "severity": "medium",
+      "proposed_correction": "Move each comma after the formula word and before the chapter/verse milestones: …בְּתוֹרָתֶךָ, <milestone chapter/><milestone verse/><seg>יְהוָה…</seg> and …וְנֶאֱמַר, <milestone …/><seg>וְהָיָה…</seg>."
+    },
+    {
+      "id": "S3",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/index.xml:241",
+      "exact_words": "<tei:note type=\"instruction\" xml:lang=\"he\">אַם שַׁבָּת:</tei:note>",
+      "evidence": "finalcrop-s35-0 shows the rubric in the same Judeo-German face as the Frankfurt line (א looks like ח there, which is why the tight reader produced חַזָּן/חתן). The words are German 'am Schabbos', so the consonant reading אם is correct, but the language tag should not be he. Line 255 already tags the matching German note de-Hebr.",
+      "severity": "low",
+      "proposed_correction": "xml:lang=\"de-Hebr\". Keep the visible patah under א. Confirm the pointing of שבת against the crop."
+    }
+  ],
+  "guideline_findings": [
+    {
+      "id": "G1",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/meein_sheva.xml:34-46",
+      "exact_words": "<j:conditional xml:id=\"meein_sheva_condition\"> … aseret-ymei-tshuva true",
+      "evidence": "The whole canonical prayer:meein_sheva is gated on the Ten Days. The source prints a fixed הַמֶּלֶךְ הַקָּדוֹשׁ and has no rubric or brackets. Any reuse of this canonical identity outside the Ten Days evaluates false and transcludes nothing. That over-claims a calendar condition for the entire text, when only one wording marks the witness as a Ten Days witness. The expanded edition already declares aseret-ymei-tshuva true, so the gate adds nothing there.",
+      "severity": "medium",
+      "proposed_correction": "Remove the whole-file conditional and treat the file as a fixed Ten Days witness, as already done for the maḥzor Half Kaddish. If a condition is wanted, scope it to the המלך הקדוש wording only."
+    },
+    {
+      "id": "G2",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/bameh_madlikin.xml:34",
+      "exact_words": "…shabbat/2/2\"/>ב אֵין… ; …/2/3\"/>ג כָּל… ; ד, ה, ו, ז",
+      "evidence": "The small numerals ב–ז are printed as edition numbering (s34 bands 0–2). The XML puts them inside each mishnah's canonical scope as text to be recited, so a transclusion of shabbat/2/2 starts with 'ב'. 2:1 has no numeral, which is inconsistent.",
+      "severity": "low",
+      "proposed_correction": "Move each numeral out of the recited text, either before the milestone or as non-recited numbering such as tei:label or an edition-numbering milestone that the ODD permits."
+    },
+    {
+      "id": "G3",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/amar_rabbi_elazar.xml:34",
+      "exact_words": "amar_rabbi_elazar/isaiah_54_13, /psalms_119_165, /psalms_122_7, /psalms_122_8, /psalms_122_9, /psalms_29_11",
+      "evidence": "JLPTEI-3 §URN says sub-divisions are named by their transliterated first word or phrase. These part names are citations. If they are already registered identities, keep them; I could not verify the registry within this scope.",
+      "severity": "low",
+      "proposed_correction": "If they are not yet registered, rename them by first word (e.g. vekhol_banayikh, shalom_rav, yehi_shalom, lemaan_achai, lemaan_beit, adonai_oz). Otherwise record that they are legacy registered names."
+    },
+    {
+      "id": "G4",
+      "file": "prayerbook_for_the_new_year-marmorstein-1965-en/index.xml:188-199",
+      "exact_words": "<j:conditional xml:id=\"documentary_maariv_shabbat_close_en\">…</j:conditional><j:endConditional …/> (empty)",
+      "evidence": "This is an empty Shabbat conditional inside an empty div. No English exists for printed pp. 20–21, so nothing is gated. It is harmless, but it is a vestigial structure that a validator or reader may flag.",
+      "severity": "low",
+      "proposed_correction": "Remove it, or replace it with a comment-free empty div kept only if structural parity with HE is required."
+    },
+    {
+      "id": "G5",
+      "file": "he/kiddush_vayekhulu.xml:43, he/aleinu.xml:34-35, he/amar_rabbi_elazar.xml:34",
+      "exact_words": "<tei:milestone unit=\"chapter\" n=\"1\"/> (no corresp)",
+      "evidence": "Under JLPTEI-3 rule 3, a milestone with a unit and no corresp is a terminator. Here it is used as a numbered chapter opener for partial-chapter quotations. It resolves harmlessly because it only closes nothing, but its meaning is ambiguous. The pattern is project-wide, not new to this installment.",
+      "severity": "info",
+      "proposed_correction": "No change needed in this installment. Consider a project-wide convention note."
+    }
+  ],
+  "alignment_findings": [
+    {
+      "id": "A1",
+      "file": "he/kiddush_vayekhulu.xml ↔ en/kiddush_vayekhulu.xml",
+      "exact_words": "half-verse genesis/1/31/b; verses genesis/2/1–3",
+      "evidence": "Both sides mark only 1:31/b, never the whole of 1:31. On the HE side, בלחש sits before the milestone; בקול sits inside the tail between two quotation segs, outside both segs. EN '(On Sabbath)' is that file's own conditional note, as printed on s37. Genesis 2:1–3 carries chapter and verse milestones on both sides. The joins align.",
+      "severity": "none",
+      "proposed_correction": "None."
+    },
+    {
+      "id": "A2",
+      "file": "he/new_year_greeting.xml ↔ en/new_year_greeting.xml",
+      "exact_words": "four HE forms with English 'To a man' etc. vs one EN line",
+      "evidence": "The English labels are printed on the Hebrew page (s36 band3), and the EN page prints a single line (s37 band3). Alignment is at the div level only, which is correct.",
+      "severity": "none",
+      "proposed_correction": "None."
+    },
+    {
+      "id": "A3",
+      "file": "he/index.xml:262-272 vs en/index.xml:203-212",
+      "exact_words": "HE 'After tasting the bread, one dips' / 'New Year, friends' vs EN 'After tasting the bread one dips' / 'New Year friends'",
+      "evidence": "The differences are real. The HE index copies the rubric printed on s36, which has the commas; the EN index copies s37, which lacks them. Both are faithful.",
+      "severity": "none",
+      "proposed_correction": "None."
+    }
+  ],
+  "order_findings": [
+    {
+      "id": "O1",
+      "file": "machzor_expanded-opensiddur-he/index.xml:1108-1113",
+      "exact_words": "<tei:note type=\"description\" xml:lang=\"en\">At the meal, recite Hamotzi over the two loaves; taste the bread, then dip a piece of sweet apple in honey.</tei:note>",
+      "evidence": "This is invented English paraphrase, which the brief does not allow. It also puts the apple-dipping direction before the Hamotzi text, so it no longer introduces בורא פרי העץ, and it drops 'After Kiddush at the meal'. In the source (s36 band2), one instruction runs: 'After Kiddush at the meal, one recites המוציא over the two loaves. After tasting the bread, one dips a piece of sweet apple in honey and says:'.",
+      "severity": "medium",
+      "proposed_correction": "Replace it with the verbatim source instruction (type=instruction, with tei:foreign for המוציא), placed before the Birnbaum Hamotzi. Alternatively, place only its second sentence immediately before borei_peri_haetz. Do not write new English."
+    },
+    {
+      "id": "O2",
+      "file": "machzor_expanded-opensiddur-he/index.xml:975",
+      "exact_words": "<tei:note type=\"description\" xml:lang=\"en\">Bameh Madlikin: on Shabbat; the printed Frankfurt custom also includes it as on Shabbat.</tei:note>",
+      "evidence": "This is invented English. Because it is a description, it is also printed on every true evaluation, including an ordinary Shabbat. The source's own German rubric 'אין פֿראַנקפֿורט אַם מאַין בעטעט מאַן במה מדליקין וויא אַם שבת.' is dropped from the expanded edition, so its condition loses the printed wording.",
+      "severity": "medium",
+      "proposed_correction": "Remove the English note. Put the source German rubric (xml:lang de-Hebr) as the conditional's tei:note type=instruction, so it prints only while the condition is undecided. The j:all wrapping a single j:any is redundant and may be simplified."
+    },
+    {
+      "id": "O3",
+      "file": "machzor_expanded-opensiddur-he/index.xml:878-933, 1081-1103",
+      "exact_words": "section_maariv_shabbat_vayekhulu_condition / section_maariv_meein_sheva_condition / section_home_shabbat_vayekhulu_condition (no tei:note)",
+      "evidence": "These are reader-facing 'when' conditions inside a service, not running-order gates. When Shabbat is undecided (no date is declared), Vayekhulu, Meein Sheva and the home Vayekhulu print with no rubric or delimiters. The source supplies 'אַם שַׁבָּת:' (s35) and 'but on the Sabbath preceded by ויכלו' (s36). HE kiddush_vayekhulu.xml carries no note of its own, while the EN file does.",
+      "severity": "low-medium",
+      "proposed_correction": "Add the source rubric 'אַם שַׁבָּת:' (de-Hebr) as the conditional note for the synagogue Vayekhulu/Meein Sheva. For the home Vayekhulu, either rely on a verbatim copy of the s36 'At home too…' instruction or reuse 'אַם שַׁבָּת:'. Do not invent a new note."
+    },
+    {
+      "id": "O4",
+      "file": "machzor_expanded-opensiddur-he/index.xml:934-956, 982-991",
+      "exact_words": "kaddish/shalem@hasiddur_hashalem-birnbaum-1949-he; section_synagogue_kiddush",
+      "evidence": "The order is correct: Amidah → [Shabbat] Vayekhulu (no minyan needed) → [Shabbat+minyan] Meein Sheva → [minyan] Whole Kaddish on all night types → [Shabbat OR Frankfurt] Bameh + Tanya + Amar R. Elazar → synagogue Savri/wine/Kiddush/Shehecheyanu → Aleinu → [minyan+mourners] Mourner's Kaddish → Yigdal. Two source directions are not carried, though: 'קדיש תתקבל.' and the s36 'After the evening prayer but before עלינו…' Nothing is lost from the recited text, but the synagogue placement relies on an editorial heading alone.",
+      "severity": "low",
+      "proposed_correction": "Optionally add 'קדיש תתקבל.' as a description inside the minyan-gated div, and the verbatim s36 rubric before the synagogue Kiddush. No reordering is needed."
+    },
+    {
+      "id": "O5",
+      "file": "machzor_expanded-opensiddur-he/index.xml:1031-1122, 1123-1181",
+      "exact_words": "section_first_night_home_appendix_condition (rosh-hashana=1 ∧ maariv) / section_morning_condition (shaharit ∧ rosh-hashana=1)",
+      "evidence": "The appendix is a separate named division, gated and declared for first-night Maariv only. The morning section redeclares shaharit true and maariv false, so selecting the morning service does not pull in the appendix and morning navigation continues. No new home-context feature is introduced, and nothing is swallowed apart from O1.",
+      "severity": "none",
+      "proposed_correction": "None."
+    }
+  ],
+  "remaining_source_ambiguities": [
+    "Frankfurt line, פֿראַנקפֿורט: the human-corrected consonants are 'פרנקפורט', with no aleph. On frankfurt-confirmed.png and s35 band2/3 I see a letter with patah between ר and נ (Judeo-German אַ), and rafe bars on both פ. The XML keeps the aleph, which matches the image, not the human string. The human should reconfirm.",
+    "Frankfurt line: the inline במה מדליקין appears to carry pointing in print (בַּמֶּה מַדְלִיקִין?), but the XML has it unpointed. It is also not wrapped as Hebrew inside the de-Hebr note. Unresolved at this resolution.",
+    "'אַם שַׁבָּת:' (s35 top): the consonants are אם (German), not חתן or חזן. The exact pointing on שבת (patah or qamatz, and the dagesh) is not certain from the crop.",
+    "Mishnah 2:5 עוֹשָׂה פֶחָם: the qamatz under ש looks plausible in s34 band2. Whether פ carries a dagesh cannot be decided at this resolution. 2:4 בְתוֹכָהּ and 2:2 כְבוֹד also have an unresolved dagesh.",
+    "Mishnah 2:4 וִימַלְאֶנָּה and defective שְׁפֹפֶרֶת: the image supports the XML (no vav in שפפרת, the -ֶנָּה form). The primary reading's וִימַלְאֶהָ / שְׁפוֹפֶרֶת should not be followed.",
+    "Amar R. Elazar אַל תִּקְרָא בָנָיִךְ אֶלָּא בוֹנָיִךְ: whether ב is printed with a dagesh is unresolved (comparison vowels:21/23).",
+    "s35 'קו״ח' vs the independent reader's 'קו״ה': the crop finalcrop-s35-1 clearly shows קו״ח. Resolved; it is listed here only because the comparison file still shows it as unresolved.",
+    "Registry facts I could not check within scope: whether the opensiddur:service-context/mourners-present and opensiddur:rite/frankfurt features are registered, whether the amar_rabbi_elazar part URNs are existing registrations, and the licence and credit wording that the Birnbaum project requires."
+  ],
+  "verdict": "changes_requested: two medium source fixes (S1, S2), one medium encoding fix (G1) and two medium expanded-edition fixes for invented English and a misplaced instruction (O1, O2). The recitation order and conditional extent are otherwise correct. The page identity s35=p20 → s34=p21 → s36/s37=p22 HE/EN → s38=p23 is confirmed against the actual images.",
+  "checks": [
+    {
+      "check": "Physical page identity",
+      "result": "pass",
+      "note": "s35 is headed 20 and s34 is headed 21. s36 is the HE page 22 and s37 the EN page 22. s38 is headed 23. The facs URLs n34/n33/n35/n36/n37 match sN = n(N-1)."
+    },
+    {
+      "check": "No English for printed pp. 20, 21, 23",
+      "result": "pass",
+      "note": "No EN files exist for those pages. The EN index has no Bameh/Aleinu, apart from an empty vestigial div (G4)."
+    },
+    {
+      "check": "Page 20 content",
+      "result": "pass_with_findings",
+      "note": "Present: אם שבת, Vayekhulu, Meein Sheva in 3 parts with a fixed הַמֶּלֶךְ הַקָּדוֹשׁ, קדיש תתקבל, the Frankfurt German line, and the start of Bameh 2:1. See S1 and S3."
+    },
+    {
+      "check": "Page 21 content",
+      "result": "pass_with_findings",
+      "note": "Present: the end of Bameh 2:1 through 2:7, Tanya (unpointed small type, matching the source), and Amar R. Elazar. See G2."
+    },
+    {
+      "check": "Page 22 HE/EN",
+      "result": "pass",
+      "note": "The heading, English rubrics printed on the HE page, the בלחש/בקול cues, the parenthesised Shabbat insertions encoded as type=marked, the בא״י abbreviation and the four greeting forms all match."
+    },
+    {
+      "check": "Page 23 Aleinu",
+      "result": "pass_with_findings",
+      "note": "Wording matches, including the printed יְהוָה in Deut 4:39 and Ex 15:18. See S2 for the commas. The קַדִּישׁ יָתוֹם, יִגְדַּל. directive matches."
+    },
+    {
+      "check": "German Frankfurt rubric",
+      "result": "pass_with_ambiguity",
+      "note": "The consonants match the human reading for מאין/מאן/וויא/אם. The aleph in פראַנקפורט is visible but absent from the human string. The Hebrew title is retained inline. No custom has been dropped from the documentary index."
+    },
+    {
+      "check": "No rend on instructions",
+      "result": "pass"
+    },
+    {
+      "check": "Citations without parentheses / no invented citation notes",
+      "result": "pass",
+      "note": "No citation notes were added."
+    },
+    {
+      "check": "Bible milestones: whole verses chapter+verse; Gen 1:31 tail only half-verse b",
+      "result": "pass"
+    },
+    {
+      "check": "Whisper/aloud cues within the tail, outside the quotation seg",
+      "result": "pass"
+    },
+    {
+      "check": "Conditional vs description classification",
+      "result": "pass_with_findings",
+      "note": "See O1, O2 and O3."
+    },
+    {
+      "check": "Abbreviations as choice/abbr/expan",
+      "result": "pass_with_findings",
+      "note": "See S1."
+    },
+    {
+      "check": "One new Talmud passage identity (shabbat/12a/chayyav_adam_lemashmesh); canonical reuse elsewhere",
+      "result": "pass",
+      "note": "Aleinu reuses chol/shacharit/conclusion/aleinu despite being placed in Maariv, which is acceptable. G3 is a possible naming issue only."
+    },
+    {
+      "check": "Expanded order and conditional extent",
+      "result": "pass_with_findings",
+      "note": "The order is right, and the minyan/Shabbat/Frankfurt/mourner gates are right. The home appendix is separately gated and does not interfere with the morning service. Invented English is present (O1, O2)."
+    },
+    {
+      "check": "Birnbaum supplements credited (Kaddish, Yigdal, Hamotzi)",
+      "result": "pass_partial",
+      "note": "The sourceDesc names Birnbaum and explains these dependencies, and adds no English fallback. The Birnbaum licence text itself is not restated in the expanded header, so this needs verifying against the Birnbaum project's requirements."
+    },
+    {
+      "check": "Inherited Teshuvah expansion binding (unchanged witness)",
+      "result": "pass",
+      "note": "The binding's unchanged_independently_reviewed_xml_sha256 2009105f…a2f98af9 equals the frozen-list hash for amidah_teshuvah.xml (equality of the given values, not recomputed). The XML holds <abbr>בָּ״אַ״<divineName>יְ</divineName></abbr><expan>בָּרוּךְ אַתָּה יְיָ</expan>, which matches the binding's source_abbreviation and accepted_expansion. No word changes were observed."
+    }
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "be657c94-70df-4406-8bc0-680244f4a1b7"
+  }
+}

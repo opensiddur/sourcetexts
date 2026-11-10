@@ -1,0 +1,89 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "Observed at runtime: low. The setting in this session was about 10/100. The caller says the CLI asked for medium; I can't check that from inside the session, so treat 'medium' as the caller's claim. 'Low' is what I observed here, not something I can prove."
+  },
+  "findings": [],
+  "remaining_source_ambiguities": [
+    "Optional, does not block. At the end of the Frankfurt line ('…וויא אַם שבת.') both the HE index and the expanded index have שבת without vowels. In /tmp/frankfurt-confirmed.png I can't tell at this resolution whether that שבת has vowel marks; earlier marks on the same line (patah and rafe) are clear. The human answer covered only the top rubric אַם שַׁבָּת and the title בַּמֶּה מַדְלִיקִין inside the line, not this last word. If the user wants it settled, a sharper crop of this one word would do it. I am not reopening any item the human has decided."
+  ],
+  "verdict": "approved. All human decisions are applied correctly: the aleph with patah in פֿראַנקפֿורט; the corrected spellings מאַין and מאַן with their visible patah; the rafe marks; the pointed בַּמֶּה מַדְלִיקִין as tei:foreign xml:lang=he inside the de-Hebr note (HE index :255, expanded :962, where the rubric is the original printed wording, not an English paraphrase); top rubric אַם שַׁבָּת; and all five dageshes (כְּבוֹד, בְּתוֹכָהּ, פֶּחָם in bameh_madlikin.xml:34; בָּנָיִךְ and בּוֹנָיִךְ after אַל תִּקְרָא in amar_rabbi_elazar.xml:34). The Kiddush has been moved into separate HE and EN files. Order, instructions, headings, language and biblical scopes, and page images (facs) all match s36/s37. The Mishnah 2:5 sic/corr is justified and encoded correctly. I found no new issues. The DRAFT label may be removed only by an accepted build.",
+  "reviewed_xml_sha256": {
+    "status": "Copied from /tmp/close-audit3-hashes.json as given. I did not recompute them, because that would mean running code.",
+    "he/bameh_madlikin.xml": "e0dc2b85e34603a8bc79e32a61412ff6a45244d1b0749fc0acb4444d1570457b",
+    "he/amar_rabbi_elazar.xml": "10e52618349fdd6baf10b3bd7d49a4d4fca74b07ce76a56071dd9e6da15285e8",
+    "he/index.xml": "bc79344e4bdb78e2d02ed742d0965c738848fe225b8f48b33d3975b82699593b",
+    "en/index.xml": "269be0bbbf104f413594103ed32535be648e25fd80f1ca4afcaf09200000dd28",
+    "machzor_expanded-opensiddur-he/index.xml": "2d26a05f38b245b4a04d8da97aab6bdd652a323c8dccfc13eebd2fc70840e737",
+    "he/first_night_kiddush.xml": "79ca05a5867a85efc5198e7396d775cd1e17d5e606e5da5cfbdd58b7c103765b",
+    "en/first_night_kiddush.xml": "88cbeb8f1b36e8c1483adfaeab3b9849740e1a87b44aad00f34eac777c0d20ac",
+    "unchanged_note": "For files outside the changed list, the hashes I compared (maariv_vayekhulu 2a5b5449…, meein_sheva d3fef62e…, aleinu 267e831d…, amidah_teshuvah 2009105f…) match round 2. I also read the unchanged HE and EN kiddush_vayekhulu.xml files, because they hold the Genesis prefix."
+  },
+  "checks": [
+    {
+      "id": "sic_corr_mishnah_2_5",
+      "result": "pass",
+      "evidence": "tight-s34-4.png clearly shows a qamatz under the shin: 'מִפְּנֵי שֶׁהוּא עוֹשָׂה פֶּחָם'. The masculine subject שֶׁהוּא requires the masculine participle עוֹשֶׂה, which is the standard Mishnah reading. עוֹשָׂה would be the feminine participle, and a real feminine variant would also need שֶׁהִיא, which this page does not print. So this is an obvious typesetting error in the source, not a different textual tradition. bameh_madlikin.xml:34 has <tei:choice><tei:sic>עוֹשָׂה</tei:sic><tei:corr>עוֹשֶׂה</tei:corr></tei:choice>: the printed form is kept as sic and the fix goes in corr. That is correct. No other choice/sic/corr appears in the changed files."
+    },
+    {
+      "id": "human_dageshes",
+      "result": "pass",
+      "evidence": "All five appear exactly as the human decided. The original reading בָּנַיִךְ in Isaiah 54:13 is unchanged, and the end of the verse correctly has בָּנָיִךְ. פֶּחָם with dagesh also shows in the s34 crop."
+    },
+    {
+      "id": "frankfurt_rubric",
+      "result": "pass",
+      "evidence": "HE index :255 has xml:lang=de-Hebr with an embedded he foreign. Expanded :962 has a de-Hebr foreign with a nested he foreign. The letters match frankfurt-confirmed.png: אין פֿראַנקפֿורט אַם מאַין בעטעט מאַן … וויא אַם שבת. The one small open question about pointing is listed under remaining_source_ambiguities."
+    },
+    {
+      "id": "kiddush_extraction_architecture",
+      "result": "pass",
+      "evidence": "Both service files have the publication ID urn:x-opensiddur:text:siddur:rosh_hashanah/kiddush@<their own edition>, and their body div has corresp to that same canonical root. HE index :259 includes the HE file after amar_rabbi_elazar and before Aleinu. EN index :188 includes the EN file right after the Amidah. In the HE index this comes after all the HE-only material (Vayekhulu, Meein Sheva, Bameh). This fixes the problem where the EN heading appeared before the HE-only material. The expanded index has a single spine: its own synagogue-Kiddush div and home appendix, built from single prayers, with nothing duplicated."
+    },
+    {
+      "id": "order_and_instructions_HE",
+      "result": "pass",
+      "evidence": "Checked against s36 bands 0, 2 and 3. The order is: head סֵדֶר קִדּוּשׁ.; the English introduction, with no final period after ויכלו, as printed; the Vayekhulu Genesis prefix, conditional, with the בלחש and בקול rubrics kept in kiddush_vayekhulu.xml; Savri; wine blessing; Kiddush; Shehecheyanu; the Hamotzi/apple instruction (with the comma after 'bread' that the HE page prints); haetz; 'Then one eats…'; shetechaddesh; the greeting instruction (with the comma after 'New Year' that the HE page prints); and the greeting. Every printed instruction is there."
+    },
+    {
+      "id": "order_and_instructions_EN",
+      "result": "pass",
+      "evidence": "Checked against s37 bands 0, 2 and 3. The order is: head 'Kiddush for the New Year'; introduction; '(On Sabbath)' as the conditional instruction plus the Genesis prefix; wine; Kiddush; Shehecheyanu; the Hamotzi/apple instruction, with no comma after 'bread', as printed; haetz; 'Then one eats…'; Yehi ratzon; the greeting instruction, with no comma after 'New Year', as printed; and the greeting. The EN page has no Savri, and none is included, which is correct."
+    },
+    {
+      "id": "heading_semantics",
+      "result": "pass",
+      "evidence": "Each file has one tei:head as the first child of the service div, after a pb. HE has xml:lang=he and EN has xml:lang=en. Each matches its printed running head, and each matches its titleStmt title."
+    },
+    {
+      "id": "language_scopes",
+      "result": "pass",
+      "evidence": "The Kiddush instructions in the HE witness have xml:lang=en because the Hebrew page prints them in English. The Hebrew words inside them (עלינו, ויכלו, המוציא) are tei:foreign xml:lang=he. The Frankfurt and אַם שַׁבָּת rubrics are de-Hebr."
+    },
+    {
+      "id": "biblical_scopes",
+      "result": "pass",
+      "evidence": "In kiddush_vayekhulu (HE and EN), Genesis 1:31b is a half-verse with a chapter-1 milestone that has no corresp. The chapter-2 milestone has corresp genesis/2 only because verses 2:1, 2:2 and 2:3 are all present, which follows the stated rule. In amar_rabbi_elazar the chapter milestones for partial-verse excerpts have no corresp, which is the accepted pattern."
+    },
+    {
+      "id": "documentary_facs_and_pb",
+      "result": "pass",
+      "evidence": "The HE file has pb n=22 at n35.jpg, with all notes on n35. That page is s36 and shows 22 at the head. The EN file has pb n=22 at n36.jpg, with all notes on n36. That page is s37 and shows 22 at the head. bameh_madlikin uses div facs n34 (printed 20) and pb n=21 at n33. The human's PDF page-count adjudication says this is the order of the physical scans, and I did not reopen it."
+    },
+    {
+      "id": "no_prayer_wording_changes",
+      "result": "pass_by_inspection",
+      "evidence": "The service files contain only the head, instructions and transclusions. The prayer text stays in the unchanged leaf files, whose hashes are unchanged."
+    },
+    {
+      "id": "not_performed",
+      "result": "info",
+      "evidence": "I did not read JLPTEI-3.md, jlptei.odd.xml or corrections.json: none of the questions raised needed guideline text beyond round 2. I did not check RNG/Schematron validity myself. I recomputed no hashes and ran no code."
+    }
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "e2fe1645-fd6c-4122-be2b-8ffd984e26f8"
+  }
+}

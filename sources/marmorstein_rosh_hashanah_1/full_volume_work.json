@@ -2,58 +2,55 @@
   "scope": "Continue from the beginning, in scan order; pilot acceptance remains separate and complete.",
   "current_batch": {
     "scan_pages": [
-      26,
-      27,
-      28,
-      29,
-      30,
-      31,
-      32,
-      33
+      34,
+      35,
+      36,
+      37,
+      38
     ],
     "archive_leaves": [
-      25,
-      26,
-      27,
-      28,
-      29,
-      30,
-      31,
-      32
+      33,
+      34,
+      35,
+      36,
+      37
     ],
     "printed_pages": [
-      16,
-      17,
-      18,
-      19
+      20,
+      21,
+      22,
+      23
     ],
-    "status": "Accepted full evening Amidah s26–s33 after independent source/guideline/alignment/order review and human adjudication.",
+    "status": "Accepted evening conclusion and home customs s34–s38; no pending source/encoding/alignment/order disputes.",
     "primary": [
-      "primary/amidah_s26_s27.json",
-      "primary/amidah_s28_s33.json"
+      "primary/maariv_close_s34_s38.json"
     ],
     "independent": [
-      "independent/amidah_s26_s27.json",
-      "independent/amidah_s28_s33.json"
+      "independent/maariv_close_s34_s38.json",
+      "independent/maariv_close_s34_s38_enlarged.json",
+      "independent/maariv_close_s34_s38_tight.json"
     ],
-    "comparison": "amidah_s26_s33_comparison.json",
-    "audit_resolutions": "amidah_s26_s33_resolutions.json",
-    "guideline_audit": "independent/amidah_guideline_audit_round2.json",
-    "human_confirmation": "human_amidah_confirmation.json",
+    "comparison": "maariv_close_s34_s38_comparison.json",
+    "guideline_audit": "independent/maariv_close_guideline_audit_round3.json",
+    "human_confirmation": "human_maariv_close_confirmation.json",
+    "page_identity": "original_pdf_page_identity.json",
+    "pending": [],
     "validation": {
-      "schema": "125 files pass RelaxNG/Schematron",
-      "tests": "104 importer tests and41subtests pass",
-      "runtime": "Earlier eight compiler cases pass; seven new Amidah cases and six bilingual quote scope checks pass. Selected Sabbath clauses lose source parentheses; seal vav joins Yisrael. Literal (מלכנו) remains with no replacement English.",
-      "previous_accepted_text": "92 previous language files retain identical printed words and milestone corresp sequences after moving quotation boundaries; source markup placement changes only.",
-      "names_features_references_registry": "Pass; no new canonical identities.",
-      "exports": "amidah_export_verification.json",
-      "post_audit_changes": "amidah_post_audit_change_check.json",
-      "definite_sabbath_states": "shabbat_resolution_verification.json: weekday omissions, Shabbat unconditional words without brackets/when-rubrics, and undecided control pass in both print languages and both actual electronic exports; 208 exporter tests/122 subtests pass."
+      "schema": "148XMLfiles pass RNG/Schematron in guarded accepted build; all review hashes current.",
+      "tests": "112importer tests+41subtests",
+      "registry_features_names_references": "Pass",
+      "runtime": "maariv_close_runtime_verification.json",
+      "marked_html": "maariv_close_html_state_verification.json",
+      "selected_print_words": "maariv_close_print_word_verification.json",
+      "heading_alignment": "maariv_close_heading_alignment_verification.json",
+      "post_audit_changes": "maariv_close_post_audit_verification.json: all27frozen targets match after reversing only acceptance metadata and the explicit human-confirmed final word. All148files have no DRAFT metadata.",
+      "previous_accepted_units": "All122previously tracked language-module files are unchanged; only the three prior indices change."
     },
-    "pending": []
+    "audit_resolutions": "maariv_close_s34_s38_resolutions.json",
+    "units": "maariv_close_s34_s38_units.json"
   },
-  "next_primary_scan": 34,
-  "next_adjudication_scan": 34,
+  "next_primary_scan": 39,
+  "next_adjudication_scan": 39,
   "images": "Cached outside Git; never use OCR to settle a reading.",
   "secondary_review_requirements": {
     "blind_scan_reading": true,
@@ -318,6 +315,58 @@
         "ci": "Processor test/analysis jobs and paired projects validation passed for ff27fe0/e4465f6a before this documentation-only review-evidence update."
       },
       "final_settings_review": "independent/hashkivenu_documentary_settings_review.json"
+    },
+    {
+      "scan_pages": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      "archive_leaves": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "printed_pages": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "status": "Accepted full evening Amidah s26–s33 after independent source/guideline/alignment/order review and human adjudication.",
+      "primary": [
+        "primary/amidah_s26_s27.json",
+        "primary/amidah_s28_s33.json"
+      ],
+      "independent": [
+        "independent/amidah_s26_s27.json",
+        "independent/amidah_s28_s33.json"
+      ],
+      "comparison": "amidah_s26_s33_comparison.json",
+      "audit_resolutions": "amidah_s26_s33_resolutions.json",
+      "guideline_audit": "independent/amidah_guideline_audit_round2.json",
+      "human_confirmation": "human_amidah_confirmation.json",
+      "validation": {
+        "schema": "125 files pass RelaxNG/Schematron",
+        "tests": "104 importer tests and41subtests pass",
+        "runtime": "Earlier eight compiler cases pass; seven new Amidah cases and six bilingual quote scope checks pass. Selected Sabbath clauses lose source parentheses; seal vav joins Yisrael. Literal (מלכנו) remains with no replacement English.",
+        "previous_accepted_text": "92 previous language files retain identical printed words and milestone corresp sequences after moving quotation boundaries; source markup placement changes only.",
+        "names_features_references_registry": "Pass; no new canonical identities.",
+        "exports": "amidah_export_verification.json",
+        "post_audit_changes": "amidah_post_audit_change_check.json",
+        "definite_sabbath_states": "shabbat_resolution_verification.json: weekday omissions, Shabbat unconditional words without brackets/when-rubrics, and undecided control pass in both print languages and both actual electronic exports; 208 exporter tests/122 subtests pass."
+      },
+      "pending": []
     }
   ]
 }

@@ -304,3 +304,37 @@ markers. Fresh print compilation and the actual documentary/expanded HTML
 JavaScript payloads pass, as do 208 exporter tests and 122 subtests. This is
 recorded in shabbat_resolution_verification.json; no exporter or source-word
 changes were needed, and no new browser/PDF visual review is claimed.
+
+## Evening conclusion and home customs (s34–s38)
+
+Fourteen reusable units (21 language files) cover the evening conclusion,
+Sabbath passages, Mishnah Shabbat 2, study passages, Kiddush and home customs,
+greetings and Aleinu. The documentary Kiddush arrangement has two separate
+service files, keeping both headings together after Hebrew-only material.
+The expanded order has a named home appendix and preserves the Frankfurt
+custom, shared recitation and calendar/quorum choices. No absent translations
+are supplied. Birnbaum supplements retain credits and licences.
+
+Physical PDF page 35 (Archive n34) is printed p.20 and precedes physical page 34
+(printed p.21) in recitation order. The 355-page PDF was recounted; all 54 cached
+images match their ordinal PDF page by nearest-image comparison. Focal pages
+34–36 were rendered and visually checked. Archive recompression prevents
+exact RGB-byte equality. Unique Archive URLs remain the documentary anchors.
+
+Three independent source/guideline/alignment/order audits and all human
+adjudications are retained. Frankfurt’s pataḥ-alef, pointed small-type titles,
+all five disputed dageshes and the final pointed שבת are confirmed. The
+Mishnah pointing typo has sic/corr; raw readings preserve the print. Actual
+blind differences and superseded ambiguities remain available. CLI model
+metadata confirms Claude Opus 5.5; the medium invocation and differing effort
+self-reports remain recorded without claiming an observable internal setting.
+
+Accepted: 44 of 355 leaves; 53 independently read; 51 with excerpts; no pending
+unit reviews. Whole-volume/service acceptance remains false. Continue at
+scan 39 (Archive n38), the beginning of morning preparations.
+
+Validation: 148 XML files, 112 importer tests / 41 subtests, naming/features/registry/
+references; eight actual expanded print cases; exact selected Kiddush words
+in both languages and both occurrences for weekday/Shabbat; 20 documentary
+and 28 expanded marked Sabbath scopes for false/true/undecided states under
+production JavaScript. The documentary headings share one aligned row.
