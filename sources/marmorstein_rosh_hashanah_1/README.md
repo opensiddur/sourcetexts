@@ -234,7 +234,25 @@ checks, excerpt checks and integrated PDF/HTML previews pass. Exporter fix
 PR 298 is separate; merge it before dependent digitization changes.
 
 There are 29 fully accepted leaves and 40 independent image readings out of 355.
-Primary and blind independent readings of s24–s25 (Hashkivenu through Half
-Kaddish) are preserved but not accepted or generated. Continue adjudication
-at s24 (Archive n23), and primary reading at s26. Whole-volume and whole-service
-acceptance remain false.
+This earlier installment is followed by the accepted s24–s25 batch below.
+
+
+## Hashkivenu through Half Kaddish (s24–s25)
+
+Seven units in Hebrew and English cover printed p.15. Existing canonical URNs
+and exact Bible verse scopes are reused. Shabbat Veshamru and minyan Kaddish
+are scoped in service order; the fixed Ten Days witness cannot substitute its
+English into preparatory Elul29 Minchah. Birnbaum dependencies self-bind their
+components, preserving their existing calendar variants. The literal חזן role
+is outside the reusable first prayer-part scope. Missing translations remain absent.
+
+Blind readings, enlarged/word crops, the human-confirmed segol in בכסה and
+two independent source/guideline/alignment/order audits are retained. Final
+reviewer-requested documentary no-day settings were corrected in the generator,
+regression-tested and checked in serialized HTML locally. No further external
+review of that settings/code change is claimed. See hashkivenu_resolutions.json.
+
+The accepted build validates 95 XML files;102 focused tests and41subtests pass.
+Eight runtime cases and four Bible excerpt scope checks pass. There are now
+31 fully accepted leaves and40independent readings out of355. Continue at
+s26 (Archive n25); whole-volume and whole-service acceptance remain false.

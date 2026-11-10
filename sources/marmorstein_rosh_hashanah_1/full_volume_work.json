@@ -2,50 +2,32 @@
   "scope": "Continue from the beginning, in scan order; pilot acceptance remains separate and complete.",
   "current_batch": {
     "scan_pages": [
-      18,
-      19,
-      20,
-      21,
-      22,
-      23
+      24,
+      25
     ],
     "archive_leaves": [
-      17,
-      18,
-      19,
-      20,
-      21,
-      22
+      23,
+      24
     ],
     "printed_pages": [
-      12,
-      13,
-      14
+      15
     ],
-    "status": "Accepted readings and guideline/alignment/order review for s18–s23 after human adjudications, two frozen-file independent audits, final enlarged source-mark review and local runtime/export checks. Current volume/service incomplete.",
-    "primary": "primary/maariv_s18_s23.json",
-    "independent": [
-      "independent/maariv_s18_s22.json",
-      "independent/maariv_s23_and_rubrics.json"
-    ],
-    "comparison": "maariv_s18_s23_comparison.json",
-    "audit_resolutions": "maariv_s18_s23_resolutions.json",
+    "status": "Accepted s24–s25 after blind readings, enlarged adjudications, human-confirmed segol and independent source/guideline/alignment/order audits.",
+    "primary": "primary/maariv_s24_s25.json",
+    "independent": "independent/maariv_s24_s25.json",
+    "comparison": "hashkivenu_comparison.json",
+    "audit_resolutions": "hashkivenu_resolutions.json",
+    "guideline_audit": "independent/hashkivenu_final_audit_round2.json",
     "pending": [],
     "validation": {
-      "schema": "81 files pass RelaxNG/Schematron in guarded accepted build; all review hashes current.",
-      "focused_tests": "99 importer tests and41subtests pass; separate exporter fix360tests and199subtests pass.",
-      "runtime": "maariv_runtime_verification.json: five quorum/service cases, documentary compilation and eight excerpt checks passed after rubric corrections.",
-      "leaf_acceptance": "No new complete leaves; existing 23 retained",
-      "features_names_registry_references": "Three projects pass feature, naming and reference resolution checks; registry passes with zero errors/warnings; no new canonical identities registered.",
-      "chapter_resolution": "Direct resolver checks confirm these edition excerpts do not resolve as whole Deuteronomy6 or Chronicles1:16 chapters.",
-      "exports": "Accepted-installment PDF/HTML rebuilt after final source corrections. Integrated character/rubric layout and changed source-mark pages visually inspected; both HTML outputs retain c/rend-large and have no duplicate IDs or missing local link targets. See maariv_export_verification.json.",
-      "post_audit_changes": "maariv_post_audit_change_check.json: all81files match frozen reviewed XML after reversing only the independently adjudicated source-mark edits and acceptance-status metadata."
-    },
-    "guideline_audit": "independent/maariv_guideline_audit_round2.json",
-    "final_source_marks": "independent/maariv_final_marks.json"
+      "schema": "95 generated maḥzor files plus two self-bound Birnbaum Kaddish wrappers validate with RelaxNG/Schematron.",
+      "tests": "102 focused importer tests and41subtests pass.",
+      "features_names": "Three projects pass feature and naming checks.",
+      "runtime": "Eight actual compiler cases plus four pure-Bible scope checks pass, including preparatory English omission and ordinary-day Kaddish protection."
+    }
   },
   "next_primary_scan": 26,
-  "next_adjudication_scan": 24,
+  "next_adjudication_scan": 26,
   "images": "Cached outside Git; never use OCR to settle a reading.",
   "secondary_review_requirements": {
     "blind_scan_reading": true,
@@ -238,15 +220,50 @@
         },
         "full_volume_complete": false
       }
+    },
+    {
+      "scan_pages": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "archive_leaves": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "printed_pages": [
+        12,
+        13,
+        14
+      ],
+      "status": "Accepted readings and guideline/alignment/order review for s18–s23 after human adjudications, two frozen-file independent audits, final enlarged source-mark review and local runtime/export checks. Current volume/service incomplete.",
+      "primary": "primary/maariv_s18_s23.json",
+      "independent": [
+        "independent/maariv_s18_s22.json",
+        "independent/maariv_s23_and_rubrics.json"
+      ],
+      "comparison": "maariv_s18_s23_comparison.json",
+      "audit_resolutions": "maariv_s18_s23_resolutions.json",
+      "pending": [],
+      "validation": {
+        "schema": "81 files pass RelaxNG/Schematron in guarded accepted build; all review hashes current.",
+        "focused_tests": "99 importer tests and41subtests pass; separate exporter fix360tests and199subtests pass.",
+        "runtime": "maariv_runtime_verification.json: five quorum/service cases, documentary compilation and eight excerpt checks passed after rubric corrections.",
+        "leaf_acceptance": "No new complete leaves; existing 23 retained",
+        "features_names_registry_references": "Three projects pass feature, naming and reference resolution checks; registry passes with zero errors/warnings; no new canonical identities registered.",
+        "chapter_resolution": "Direct resolver checks confirm these edition excerpts do not resolve as whole Deuteronomy6 or Chronicles1:16 chapters.",
+        "exports": "Accepted-installment PDF/HTML rebuilt after final source corrections. Integrated character/rubric layout and changed source-mark pages visually inspected; both HTML outputs retain c/rend-large and have no duplicate IDs or missing local link targets. See maariv_export_verification.json.",
+        "post_audit_changes": "maariv_post_audit_change_check.json: all81files match frozen reviewed XML after reversing only the independently adjudicated source-mark edits and acceptance-status metadata."
+      },
+      "guideline_audit": "independent/maariv_guideline_audit_round2.json",
+      "final_source_marks": "independent/maariv_final_marks.json"
     }
-  ],
-  "queued_primary": {
-    "scans": [
-      24,
-      25
-    ],
-    "record": "primary/maariv_s24_s25.json",
-    "status": "Both blind readings preserved; enlarged adjudication, mapping, assembly and guideline/alignment/order review pending.",
-    "independent": "independent/maariv_s24_s25.json"
-  }
+  ]
 }

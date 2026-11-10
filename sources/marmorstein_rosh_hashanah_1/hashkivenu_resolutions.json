@@ -1,0 +1,43 @@
+{
+  "status": "Accepted s24–s25 after blind readings, enlarged adjudications, human-confirmed segol and independent source/guideline/alignment/order audits.",
+  "source_scans": [
+    "s24",
+    "s25"
+  ],
+  "human_confirmation": {
+    "reference": "psalms/81/4",
+    "question": "Kaf tsere or segol in בכסה?",
+    "answer": "segol",
+    "accepted": "בַּכֶּסֶה"
+  },
+  "image_adjudications": [
+    "Enlarged review restores final hiriq in defective Jerusalem; two qamatz אָתָּה forms and seal patah retained.",
+    "Source Rashi rubric is (אם שבת), not initial secondary (בשבת). Treat its apparent bet tail as script form, not inserted pointing.",
+    "Exact Kaddish spelling מן־כל, defective דקדשא and יתרמם follow word crops. Fully spelled חזן from next-role-tight.png; no invented abbreviation.",
+    "English Veshamru comma follows enlarged scan rather than primary semicolon. No English Hebrew linkage cues are included.",
+    "No Biblical citations are printed; add only canonical chapter/verse milestones, not invented source notes."
+  ],
+  "editorial_calendar_scope": "This witness prints fixed Ten Days wording. Keep it available in that calendar context; preparatory Elul29 uses explicitly bound compatible Birnbaum Hebrew. The guard also prevents importing this Ten Days English variant as an absent preparatory translation.",
+  "dependency_binding": "Preparatory Minchah uses explicitly bound compatible Birnbaum Kaddish. New printed maḥzor Kaddish and its English counterpart are scoped to Ten Days; first-night Maariv declares that context locally. Bind Birnbaum Chatzi/Yatom child transclusions to their own edition to avoid calendar-wording leakage.",
+  "pending": [],
+  "runtime": "hashkivenu_runtime_verification.json",
+  "local_validation": {
+    "schema": "95 generated maḥzor files plus two self-bound Birnbaum Kaddish wrappers validate with RelaxNG/Schematron.",
+    "tests": "102 focused importer tests and41subtests pass.",
+    "features_names": "Three projects pass feature and naming checks.",
+    "runtime": "Eight actual compiler cases plus four pure-Bible scope checks pass, including preparatory English omission and ordinary-day Kaddish protection."
+  },
+  "audit_round1": "independent/hashkivenu_final_audit_round1.json",
+  "audit_resolutions": [
+    "Move passage-level חזן before the yitgaddal milestone in the same paragraph; keep it outside adjacent reusable parts.",
+    "Documentary settings now use existing electronic.day=none, so the device clock does not hide fixed source wording by default. A reader choosing an adaptive date may intentionally filter calendar contexts.",
+    "Existing expanded priorities put the maḥzor ahead of Birnbaum; actual runtime checks confirm its festival seal/Kaddish. Keep the expanded spine’s canonical edition-independent references, rather than binding them to an edition.",
+    "Birnbaum kaddish/yitbarakh resolves to kaddish_derabbanan_yitbarakh.xml, which explicitly includes an aseret-ymei-tshuva conditional. Self-binding retains its Ten Days option; it does not freeze ordinary wording. The existing compatible dependency remains deliberate; no unprinted maḥzor Mourner’s Kaddish is invented.",
+    "Printed Adonai follows this project’s existing amidah_adonai_sefatai convention: preserved literally, with divineName markup reserved here for Tetragrammaton forms. No new convention or invented reading is introduced.",
+    "Numbered chapter context without corresp is intentional for excerpts; it does not claim full chapter identity.",
+    "Add missing spaces to metadata Bible titles.",
+    "Round2 confirmed source, guidelines, alignment and expanded order. Its sole remaining settings finding was implemented in the authoritative generator, tested for regeneration, loaded through SettingsYaml and verified in serialized HTML (.start.day = none); Kaddish text present. This final code/settings fix was locally verified, not independently re-reviewed. No settings/code transferred after automatic approval review rejected a further external transfer as outside previous authorization."
+  ],
+  "audit_round2": "independent/hashkivenu_final_audit_round2.json",
+  "exports": "hashkivenu_export_verification.json"
+}
