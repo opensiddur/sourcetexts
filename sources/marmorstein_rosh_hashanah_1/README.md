@@ -249,8 +249,9 @@ is outside the reusable first prayer-part scope. Missing translations remain abs
 Blind readings, enlarged/word crops, the human-confirmed segol in בכסה and
 two independent source/guideline/alignment/order audits are retained. Final
 reviewer-requested documentary no-day settings were corrected in the generator,
-regression-tested and checked in serialized HTML locally. No further external
-review of that settings/code change is claimed. See hashkivenu_resolutions.json.
+regression-tested and checked in serialized HTML locally. The subsequently
+authorized independent settings/code review passed with no required changes;
+reviewed file hashes stayed unchanged. See hashkivenu_resolutions.json.
 
 The accepted build validates 95 XML files;102 focused tests and41subtests pass.
 Eight runtime cases and four Bible excerpt scope checks pass. There are now
