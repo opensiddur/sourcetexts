@@ -209,3 +209,24 @@ have verified verse counts and order. There are now 23 fully transcribed and
 reviewed leaves, 32 independently read leaves, and 355 leaves in total.
 Continue in scan order at s18 (Archive n17, printed page 12); full-volume
 acceptance remains false.
+
+## First-night Maariv draft (s18–s23)
+
+Barekhu through Ga’al Yisrael is now assembled in 19 Hebrew/English files.
+The edition’s Shema cantillation, enlarged letters, Yiddish role labels,
+Rashi-script instructions, citations and page continuations are preserved.
+English linkage cues stay in raw evidence; missing English remains absent.
+Existing prayer and Biblical URNs are reused. The shared expanded sequence
+has local quorum/service settings and retains no required navigation.
+
+This batch remains provisional: small source marks require human adjudication,
+and independent guideline/alignment/order review awaits explicit approval to
+send the relevant repository content to Claude following an automatic review
+rejection. Raw readings, incomplete attempts and superseded crop decisions
+are retained; none is presented as acceptance. See
+`maariv_s18_s23_resolutions.json` for remaining questions and local validation.
+
+There are 38 independently read leaves and 23 fully accepted leaves out of355.
+Six new page labels (paired Hebrew/English pp.12–14) have been verified.
+Primary reading may continue at s24 (Archive n23); acceptance resumes at s18.
+The next service text is Hashkivenu. Full-volume acceptance remains false.

@@ -2,75 +2,74 @@
   "scope": "Continue from the beginning, in scan order; pilot acceptance remains separate and complete.",
   "current_batch": {
     "scan_pages": [
-      13,
-      14,
-      15,
-      16,
-      17
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
     ],
     "archive_leaves": [
-      12,
-      13,
-      14,
-      15,
-      16
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
     ],
     "printed_pages": [
-      7,
-      8,
-      9,
-      10,
-      11
+      12,
+      13,
+      14
     ],
-    "primary": "primary/preparations_kabbalat_s13_s17.json",
-    "independent": "independent/preparations_kabbalat_s13_s17.json",
-    "enlarged_independent": "independent/preparations_kabbalat_enlarged.json",
-    "comparison": "preparations_kabbalat_comparison.json",
-    "status": "Accepted after blind image readings, enlarged adjudication, human custom and repetition clarifications, frozen-file independent guideline/alignment/order review, runtime settings checks and rendered export inspection.",
-    "pending": [],
-    "accepted_excerpts": [
-      "citation/psalm_29/he/0",
-      "citation/psalm_92/he/0",
-      "citation/psalm_93/he/0",
-      "citation/psalm_95/he/0",
-      "citation/psalm_96/he/0",
-      "citation/psalm_97/he/0",
-      "citation/psalm_98/he/0",
-      "citation/psalm_99/he/0",
-      "eruv_tavshilin/en",
-      "eruv_tavshilin/he",
-      "hadlaqat_ner_yom_tov/en",
-      "hadlaqat_ner_yom_tov/he",
-      "instruction/eruv_heading",
-      "instruction/eruv_preparation",
-      "instruction/festival_candles",
-      "instruction/qabbalat_heading",
-      "instruction/qabbalat_mourner_kaddish",
-      "lekhah_dodi/he",
-      "psalm_29/he",
-      "psalm_92/he",
-      "psalm_93/he",
-      "psalm_95/he",
-      "psalm_96/he",
-      "psalm_97/he",
-      "psalm_98/he",
-      "psalm_99/he"
+    "status": "Draft Maariv installment s18–s23 through Ga’al Yisrael; source ambiguities and independent guideline/alignment/order review pending. Not accepted as complete leaves.",
+    "primary": "primary/maariv_s18_s23.json",
+    "independent": [
+      "independent/maariv_s18_s22.json",
+      "independent/maariv_s23_and_rubrics.json"
     ],
-    "audit_resolutions": "preparations_kabbalat_resolutions.json",
-    "guideline_audit": "independent/preparations_kabbalat_followup2.json",
-    "validation": {
-      "schema": "62 generated mahzor XML files and separate Birnbaum calendar extraction pass RelaxNG and Schematron",
-      "tests": "149 focused tests and 79 subtests pass",
-      "registry_features_names_references": "Pass for the three new projects and compatible Birnbaum dependency",
-      "runtime": "preparations_kabbalat_verification.json",
-      "exports": {
-        "pdf": "Documentary PDF pages11–14 and expanded pages7–11 rendered and visually inspected after all corrections. English alignment, cues/repetitions, verse citation order and missing English checked.",
-        "html": "Both HTML files built; local fragment targets resolve; expanded colophon retains CC0 and Birnbaum CC BY-SA 4.0. No new interactive browser review claimed."
+    "comparison": "maariv_s18_s23_comparison.json",
+    "audit_resolutions": "maariv_s18_s23_resolutions.json",
+    "pending": [
+      {
+        "reference": "deuteronomy/6/9",
+        "word": "בֵּיתֶ֖ךָ",
+        "question": "Is the mark beside the segol under ת a tipcha, or something shaped like a wedge?",
+        "evidence": "In the padded crop the stroke looks hooked or caret-like and is not clearly a slant. Tipcha is kept, since it is the only accent that fits before silluq after tevir and merkha. Confidence is low-medium."
       },
-      "full_volume_complete": false
+      {
+        "reference": "deuteronomy/11/21",
+        "word": "הָֽאֲדָמָ֔ה; יְהוָ֛ה",
+        "question": "Is the short free-standing vertical tick after each final ה a paseq or a print artifact?",
+        "evidence": "The tick appears again in detail-s20-2-r and s20-2-l, row 5. Other final ה's on the page have no tick. A paseq at these zaqef and tevir positions would be unusual, so I do not transcribe it."
+      },
+      {
+        "reference": "deuteronomy/11/14",
+        "word": "וְנָֽתַתִּ֥י",
+        "question": "Is the accent merkha or tevir?",
+        "evidence": "The hiriq dot next to a merkha stroke looks much like tevir (stroke plus dot). Under תִּ in 11:15 the tevir looks nearly the same."
+      },
+      {
+        "reference": "numbers/15/39; 15/40; 15/41",
+        "word": "עֵינֵיכֶ֔ם; לֵאלֹהֵיכֶֽם; אֱלֹהֵיכֶ֗ם (first)",
+        "question": "Is there a meteg under עֵ, לֵ or לֹ?",
+        "evidence": "None of the supplied tiles covers these lines. s20-3 ends at 15:39 וַֽעֲשִׂיתֶ֖ם אֹתָ֑ם, and s22 starts at the closing יְהוָ֥ה אֱלֹהֵיכֶֽם:. This is unresolved, not judged absent."
+      },
+      "Meteg/gaya on ע (עיניכם), ל (לאלהיכם) and א (first אלהיכם): each is a stroke only a few pixels tall touching the vowel. Please confirm on a higher-resolution crop (at least 3x) before treating any of them as certain. The silluq under the כ of לאלהיכם is clear.",
+      "The single dot above the כ in עיניכם and in the first אלהיכם, and the separate ⋮ above עיניכם: their meaning in this book's system (stress sign, pause sign, or reduced accent) can't be settled from these crops alone.",
+      "Independent guideline/alignment/order review awaits user approval after automatic approval review rejected the external repository-content transfer."
+    ],
+    "validation": {
+      "schema": "81 generated XML files pass RelaxNG and Schematron after current point corrections.",
+      "focused_tests": "98 tests and 41 subtests pass.",
+      "runtime": "maariv_runtime_verification.json",
+      "leaf_acceptance": "No new complete leaves; existing 23 retained",
+      "features_names_registry_references": "Three projects pass feature, naming and reference resolution checks; registry passes with zero errors/warnings; no new canonical identities registered.",
+      "chapter_resolution": "Direct resolver checks confirm these edition excerpts do not resolve as whole Deuteronomy6 or Chronicles1:16 chapters.",
+      "exports": "Draft documentary and expanded PDF/HTML built and the new bilingual pages visually inspected; latest point/spacing regeneration is being rendered. Source adjudication and secondary guideline review remain pending."
     }
   },
-  "next_primary_scan": 18,
+  "next_primary_scan": 24,
   "next_adjudication_scan": 18,
   "images": "Cached outside Git; never use OCR to settle a reading.",
   "secondary_review_requirements": {
@@ -194,6 +193,76 @@
       },
       "audit_resolutions": "opening_encoding_resolutions.json",
       "guideline_audit": "guideline_adherence_resolutions.json"
+    },
+    {
+      "scan_pages": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "archive_leaves": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "printed_pages": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "primary": "primary/preparations_kabbalat_s13_s17.json",
+      "independent": "independent/preparations_kabbalat_s13_s17.json",
+      "enlarged_independent": "independent/preparations_kabbalat_enlarged.json",
+      "comparison": "preparations_kabbalat_comparison.json",
+      "status": "Accepted after blind image readings, enlarged adjudication, human custom and repetition clarifications, frozen-file independent guideline/alignment/order review, runtime settings checks and rendered export inspection.",
+      "pending": [],
+      "accepted_excerpts": [
+        "citation/psalm_29/he/0",
+        "citation/psalm_92/he/0",
+        "citation/psalm_93/he/0",
+        "citation/psalm_95/he/0",
+        "citation/psalm_96/he/0",
+        "citation/psalm_97/he/0",
+        "citation/psalm_98/he/0",
+        "citation/psalm_99/he/0",
+        "eruv_tavshilin/en",
+        "eruv_tavshilin/he",
+        "hadlaqat_ner_yom_tov/en",
+        "hadlaqat_ner_yom_tov/he",
+        "instruction/eruv_heading",
+        "instruction/eruv_preparation",
+        "instruction/festival_candles",
+        "instruction/qabbalat_heading",
+        "instruction/qabbalat_mourner_kaddish",
+        "lekhah_dodi/he",
+        "psalm_29/he",
+        "psalm_92/he",
+        "psalm_93/he",
+        "psalm_95/he",
+        "psalm_96/he",
+        "psalm_97/he",
+        "psalm_98/he",
+        "psalm_99/he"
+      ],
+      "audit_resolutions": "preparations_kabbalat_resolutions.json",
+      "guideline_audit": "independent/preparations_kabbalat_followup2.json",
+      "validation": {
+        "schema": "62 generated mahzor XML files and separate Birnbaum calendar extraction pass RelaxNG and Schematron",
+        "tests": "149 focused tests and 79 subtests pass",
+        "registry_features_names_references": "Pass for the three new projects and compatible Birnbaum dependency",
+        "runtime": "preparations_kabbalat_verification.json",
+        "exports": {
+          "pdf": "Documentary PDF pages11–14 and expanded pages7–11 rendered and visually inspected after all corrections. English alignment, cues/repetitions, verse citation order and missing English checked.",
+          "html": "Both HTML files built; local fragment targets resolve; expanded colophon retains CC0 and Birnbaum CC BY-SA 4.0. No new interactive browser review claimed."
+        },
+        "full_volume_complete": false
+      }
     }
   ]
 }
