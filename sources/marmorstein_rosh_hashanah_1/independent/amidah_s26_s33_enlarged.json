@@ -1,0 +1,708 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "single pass over all enlarged bands plus the s29/s33 originals, read before opening the comparison file"
+  },
+  "method": "I read every enlarged band for s26, s27, s28, s30, s31 and s32, plus the full s29 and s33 originals, before opening /tmp/amidah-comparison.json. I settled each difference against the scan. The rule was: consonant and letter-count questions, sheva vs a full vowel, segol vs patah, maqaf vs space, and printed punctuation are decided when the band shows them clearly. Questions that hang on one dot or one tick (a lone dagesh, qamatz vs patah where the band is unclear, sheva under the tiny divine-name yod) are not guessed. For those the primary reading stays in the text only as a placeholder and is listed in pending_human. Pointing and spelling are not normalized to the usual prayer text. Conventions: Hebrew sof pasuq (U+05C3) and ':' count as the same glyph, and the assembled text always uses ASCII ':'. Curly apostrophes (’) are used throughout. Line-wrap hyphens and spacing are not word differences. The printed 'awe- inspiring' is one word. Printed errors stay in the raw text and are flagged for sic/corr markup later. Unpointed printed words and the Rashi labels are kept as printed. Page continuations stay as separate blocks.",
+  "pages": [
+    {
+      "scan": "s26",
+      "printed_page": 16,
+      "language": "he",
+      "texts": [
+        {
+          "key": "adonai_sefatai",
+          "text": "אֲדֹנָי שְׂפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶךָ:",
+          "uncertainties": []
+        },
+        {
+          "key": "avot_opening",
+          "text": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא אֵל עֶלְיוֹן גּוֹמֵל חֲסָדִים טוֹבִים וְקֹנֵה הַכֹּל וְזוֹכֵר חַסְדֵּי אָבוֹת וּמֵבִיא גוֹאֵל לִבְנֵי בְנֵיהֶם לְמַעַן שְׁמוֹ בְּאַהֲבָה:",
+          "uncertainties": [
+            "The dagesh in the dalet of חַסְדֵּי is beyond band resolution. The primary reading is a placeholder (see pending_human)."
+          ]
+        },
+        {
+          "key": "zokhrenu",
+          "text": "זָכְרֵנוּ לַחַיִּים. מֶלֶךְ חָפֵץ בַּחַיִּים. וְכָתְבֵנוּ בְּסֵפֶר הַחַיִּים. לְמַעַנְךָ אֱלֹהִים חַיִּים. מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן. בָּרוּךְ אַתָּה יְיָ מָגֵן אַבְרָהָם:",
+          "uncertainties": []
+        },
+        {
+          "key": "attah_gibbor",
+          "text": "אַתָּה גִּבּוֹר לְעוֹלָם אֲדֹנָי מְחַיֵּה מֵתִים אַתָּה רַב לְהוֹשִׁיעַ.",
+          "uncertainties": []
+        },
+        {
+          "key": "mekhalkel",
+          "text": "מְכַלְכֵּל חַיִּים בְּחֶסֶד מְחַיֵּה מֵתִים בְּרַחֲמִים רַבִּים סוֹמֵךְ נוֹפְלִים וְרוֹפֵא חוֹלִים וּמַתִּיר אֲסוּרִים וּמְקַיֵּם אֱמוּנָתוֹ לִישֵׁנֵי עָפָר. מִי כָמוֹךָ בַּעַל גְּבוּרוֹת וּמִי דוֹמֶה לָּךְ מֶלֶךְ מֵמִית וּמְחַיֶּה וּמַצְמִיחַ יְשׁוּעָה:",
+          "uncertainties": [
+            "A dagesh in the dalet of דוֹמֶה is possible but cannot be confirmed. The primary reading is a placeholder (see pending_human)."
+          ]
+        },
+        {
+          "key": "mi_khamokha",
+          "text": "מִי כָמוֹךָ אָב הָרַחֲמִים. זוֹכֵר יְצוּרָיו לַחַיִּים בְּרַחֲמִים.",
+          "uncertainties": [
+            "אָב vs אַב (qamatz or patah) cannot be told apart in the band. The primary reading is a placeholder (see pending_human)."
+          ]
+        },
+        {
+          "key": "neeman",
+          "text": "וְנֶאֱמָן אַתָּה לְהַחֲיוֹת מֵתִים. בָּרוּךְ אַתָּה יְיָ מְחַיֵּה הַמֵּתִים:",
+          "uncertainties": []
+        },
+        {
+          "key": "attah_qadosh",
+          "text": "אַתָּה קָדוֹשׁ וְשִׁמְךָ קָדוֹשׁ וּקְדוֹשִׁים בְּכָל־יוֹם יְהַלְלוּךָ סֶּלָה:",
+          "uncertainties": []
+        },
+        {
+          "key": "uvekhen_pachdekha",
+          "text": "וּבְכֵן תֵּן פַּחְדְּךָ יְיָ אֱלֹהֵינוּ עַל כָּל־מַעֲשֶׂיךָ וְאֵימָתְךָ עַל כָּל־מַה־שֶּׁבָּרָאתָ וְיִירָאוּךָ כָּל הַמַּעֲשִׂים וְיִשְׁתַּחֲווּ לְפָנֶיךָ כָּל־הַבְּרוּאִים וְיֵעָשׂוּ כֻלָּם אֲגֻדָּה אַחַת לַעֲשׂוֹת רְצוֹנְךָ בְּלֵבָב שָׁלֵם כְּמוֹ שֶׁיָּדַעְנוּ יְיָ אֱלֹהֵינוּ שֶׁהַשָּׁלְטָן לְפָנֶיךָ עֹז בְּיָדְךָ וּגְבוּרָה בִּימִינֶךָ וְשִׁמְךָ נוֹרָא עַל כָּל־מַה־שֶּׁבָּרָאתָ:",
+          "uncertainties": []
+        },
+        {
+          "key": "uvekhen_kavod_start",
+          "text": "וּבְכֵן תֵּן כָּבוֹד יְיָ לְעַמֶּךָ תְּהִלָּה לִירֵאֶיךָ וְתִקְוָה לְדוֹרְשֶׁיךָ וּפִתְחוֹן פֶּה לַמְיַחֲלִים לָךְ שִׂמְחָה לְאַרְצֶךָ",
+          "uncertainties": [
+            "Continues on s28 (uvekhen_kavod_continuation)."
+          ]
+        }
+      ],
+      "notes": [
+        "Maqafs as printed: בְּכָל־יוֹם, כָּל־מַעֲשֶׂיךָ, כָּל־מַה־שֶּׁבָּרָאתָ (twice), כָּל־הַבְּרוּאִים. There is no maqaf in כָּל הַמַּעֲשִׂים.",
+        "Every sof pasuq is given as ASCII ':'."
+      ]
+    },
+    {
+      "scan": "s27",
+      "printed_page": 16,
+      "language": "en",
+      "texts": [
+        {
+          "key": "adonai_sefatai",
+          "text": "Lord, open my lips and my mouth will tell of Thy fame.",
+          "uncertainties": []
+        },
+        {
+          "key": "avot_opening",
+          "text": "Blessed art Thou, O Lord our God and the God of our fathers, the God of Abraham, the God of Isaac and the God of Jacob, the great, mighty and awe-inspiring God, God the Most High, who performs acts of kindness and owns everything and remembers the good deeds of the fathers and will bring a redeemer for their children’s children for His Name’s sake in love.",
+          "uncertainties": []
+        },
+        {
+          "key": "zokhrenu",
+          "text": "Remember us for life, O King who delights in life, and inscribe us in the book of life for Thy sake, O living God. O King, helper and saviour and shield, blessed art Thou, O Lord, the shield of Abraham.",
+          "uncertainties": []
+        },
+        {
+          "key": "attah_gibbor",
+          "text": "Thou art for ever mighty, O Lord the reviver of the dead, Thou art great to save.",
+          "uncertainties": []
+        },
+        {
+          "key": "mekhalkel",
+          "text": "Sustaining life with kindness, reviving the dead with great compassion, supporting the falling and healing the sick and releasing captives and keeping His faith with those who sleep in the dust. Who is like Thee, Master of might, and who resembles Thee, O King, who slays and revives and causes salvation to spring forth.",
+          "uncertainties": []
+        },
+        {
+          "key": "mi_khamokha",
+          "text": "Who is like Thee, Father of compassion, who remembers His creatures for life in compassion.",
+          "uncertainties": []
+        },
+        {
+          "key": "neeman",
+          "text": "And Thou art faithful to revive the dead. Blessed art Thou, O Lord who revives the dead.",
+          "uncertainties": []
+        },
+        {
+          "key": "attah_qadosh",
+          "text": "Thou art holy and Thy Name is holy and holy ones praise Thee every day. Selah!",
+          "uncertainties": []
+        },
+        {
+          "key": "uvekhen_pachdekha",
+          "text": "And therefore put the fear of Thee, O Lord our God, upon all Thy works and awe of Thee upon all that Thou hast created, so that all works may fear Thee and all the created bow down before Thee and all of them may be made into one group for the performance of Thy will with a complete heart, since we know, O Lord our God, that dominion lies before Thee, that strength is in Thy hand and might in Thy right hand and that Thy Name inspires with awe all that Thou has created.",
+          "uncertainties": []
+        },
+        {
+          "key": "uvekhen_kavod_start",
+          "text": "And therefore grant honour, O Lord, to Thy people, fame to those who fear Thee and praise to those who seek Thee and confidence to those who wait for Thee, joy to Thy",
+          "uncertainties": [
+            "Continues on s29."
+          ]
+        }
+      ],
+      "notes": [
+        "'awe- inspiring' is printed with a stray space mid-line. It is one word, recorded as 'awe-inspiring'.",
+        "'Thou has created' (the final phrase of uvekhen_pachdekha) is an obvious printer's error. It is kept as printed, to be marked sic='has' / corr='hast'. The same paragraph prints 'Thou hast created' earlier.",
+        "No comma is printed after 'O Lord' in attah_gibbor or neeman."
+      ]
+    },
+    {
+      "scan": "s28",
+      "printed_page": 17,
+      "language": "he",
+      "texts": [
+        {
+          "key": "uvekhen_kavod_continuation",
+          "text": "וְשָׂשׂוֹן לְעִירֶךָ וּצְמִיחַת קֶרֶן לְדָוִד עַבְדֶּךָ וַעֲרִיכַת נֵר לְבֶן־יִשַׁי מְשִׁיחֶךָ בִּמְהֵרָה בְּיָמֵינוּ:",
+          "uncertainties": [
+            "Continues from s26."
+          ]
+        },
+        {
+          "key": "uvekhen_tzaddiqim",
+          "text": "וּבְכֵן צַדִּיקִים יִרְאוּ וְיִשְׂמָחוּ וִישָׁרִים יַעֲלֹזוּ וַחֲסִידִים בְּרִנָּה יָגִילוּ וְעוֹלָתָה תִּקְפָּץ־פִּיהָ. וְכָל־הָרִשְׁעָה כֻּלָּהּ כֶּעָשָׁן תִּכְלֶה כִּי תַעֲבִיר מֶמְשֶׁלֶת זָדוֹן מִן־הָאָרֶץ:",
+          "uncertainties": [
+            "The vowel under the kaf of כֶּעָשָׁן (segol or sheva) cannot be read. The primary reading is a placeholder (see pending_human)."
+          ]
+        },
+        {
+          "key": "vetimlokh",
+          "text": "וְתִמְלוֹךְ אַתָּה יְיָ לְבַדֶּךָ עַל כָּל־מַעֲשֶׂיךָ בְּהַר צִיּוֹן מִשְׁכַּן כְּבוֹדֶךָ וּבִירוּשָׁלַיִם עִיר קָדְשֶׁךָ. כַּכָּתוּב בְּדִבְרֵי קָדְשֶׁךָ יִמְלֹךְ יְהוָה לְעוֹלָם אֱלֹהַיִךְ צִיּוֹן לְדֹר וָדֹר הַלְלוּיָהּ:",
+          "uncertainties": []
+        },
+        {
+          "key": "qadosh_attah",
+          "text": "קָדוֹשׁ אַתָּה וְנוֹרָא שְׁמֶךָ וְאֵין אֱלוֹהַּ מִבַּלְעָדֶיךָ. כַּכָּתוּב וַיִּגְבַּהּ יְיָ צְבָאוֹת בַּמִּשְׁפָּט וְהָאֵל הַקָּדוֹשׁ נִקְדָּשׁ בִּצְדָקָה. בָּרוּךְ אַתָּה יְיָ הַמֶּלֶךְ הַקָּדוֹשׁ:",
+          "uncertainties": [
+            "The vowel under the dalet of נִקְדָּשׁ looks like a flat bar (patah), but the band cannot separate patah from qamatz with confidence. The primary reading is a placeholder (see pending_human)."
+          ]
+        },
+        {
+          "key": "attah_vechartanu",
+          "text": "אַתָּה בְחַרְתָּנוּ מִכָּל הָעַמִּים. אָהַבְתָּ אוֹתָנוּ וְרָצִיתָ בָּנוּ. וְרוֹמַמְתָּנוּ מִכָּל הַלְּשׁוֹנוֹת. וְקִדַּשְׁתָּנוּ בְּמִצְוֹתֶיךָ. וְקֵרַבְתָּנוּ מַלְכֵּנוּ לַעֲבוֹדָתֶךָ. וְשִׁמְךָ הַגָּדוֹל וְהַקָּדוֹשׁ עָלֵינוּ קָרָאתָ:",
+          "uncertainties": []
+        },
+        {
+          "key": "vattitten_lanu",
+          "text": "וַתִּתֶּן־לָנוּ יְיָ אֱלֹהֵינוּ בְּאַהֲבָה אֶת־יוֹם (הַשַּׁבָּת הַזֶּה וְאֶת־יוֹם) הַזִּכָּרוֹן הַזֶּה יוֹם (זִכְרוֹן) תְּרוּעָה (בְּאַהֲבָה) מִקְרָא קֹדֶשׁ זֵכֶר לִיצִיאַת מִצְרָיִם:",
+          "uncertainties": []
+        },
+        {
+          "key": "yaaleh_veyavo_start",
+          "text": "אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ. יַעֲלֶה וְיָבֹא וְיַגִּיעַ וְיֵרָאֶה וְיֵרָצֶה וְיִשָּׁמַע וְיִפָּקֵד וְיִזָּכֵר זִכְרוֹנֵנוּ וּפִקְדֹנֵנוּ וְזִכְרוֹן אֲבוֹתֵינוּ. וְזִכְרוֹן מָשִׁיחַ בֶּן־דָּוִד עַבְדֶּךָ. וְזִכְרוֹן יְרוּשָׁלַיִם עִיר קָדְשֶׁךָ. וְזִכְרוֹן כָּל־עַמְּךָ בֵּית יִשְׂרָאֵל לְפָנֶיךָ. לִפְלֵטָה וּלְטוֹבָה וּלְחֵן וּלְחֶסֶד וּלְרַחֲמִים וּלְחַיִּים וּלְשָׁלוֹם בְּיוֹם הַזִּכָּרוֹן הַזֶּה. זָכְרֵנוּ יְיָ אֱלֹהֵינוּ בּוֹ לְטוֹבָה וּפָקְדֵנוּ בוֹ לִבְרָכָה וְהוֹשִׁיעֵנוּ בוֹ לְחַיִּים. וּבִדְבַר יְשׁוּעָה וְרַחֲמִים. חוּס וְחָנֵּנוּ.",
+          "uncertainties": [
+            "Continues on s30.",
+            "וּפִקְדֹנֵנוּ is settled as defective (no vav). Whether the dalet has a dagesh is pending (see pending_human)."
+          ]
+        }
+      ],
+      "notes": [
+        "Both Jerusalem forms on this page are spelled in full with yod (בִּירוּשָׁלַיִם, יְרוּשָׁלַיִם), unlike the defective וִירוּשָׁלָםִ on s32.",
+        "A period is printed after וְחָנֵּנוּ at the foot of the page.",
+        "There is no maqaf after either מִכָּל in attah_vechartanu."
+      ]
+    },
+    {
+      "scan": "s29",
+      "printed_page": 17,
+      "language": "en",
+      "texts": [
+        {
+          "key": "uvekhen_kavod_continuation",
+          "text": "land, happiness to Thy city and a rise of fortune to David Thy servant and an array of light to the son of Jesse Thine anointed speedily and in our days.",
+          "uncertainties": [
+            "Continues from s27."
+          ]
+        },
+        {
+          "key": "uvekhen_tzaddiqim",
+          "text": "And thus may the righteous see and rejoice and the upright exult and the pious revel with joy. Vice shall close its mouth and all evil entirely disappear like smoke when Thou removest the dominion of arrogance from the earth.",
+          "uncertainties": []
+        },
+        {
+          "key": "vetimlokh",
+          "text": "And Thou, O Lord, shalt reign alone over all Thy works on Mount Zion, Thy glorious dwelling, and in Jerusalem, Thy Holy City, as it is written in Thy holy word, the Lord shall reign for ever, your God, O Zion, from generation to generation. Halleluyah!",
+          "uncertainties": []
+        },
+        {
+          "key": "qadosh_attah",
+          "text": "Holy art Thou and awe-inspiring is Thy Name and there is no God beside Thee, as it is written, exalted is the Lord of Hosts through judgment and the Holy God is sanctified through righteousness. Blessed art Thou, O Lord, the Holy King.",
+          "uncertainties": []
+        },
+        {
+          "key": "attah_vechartanu",
+          "text": "Thou hast chosen us from all peoples, loved us and found delight in us and exalted us above all tongues and sanctified us through Thy commandments, and brought us near, O our King, to Thy service and proclaimed Thy great and holy Name unto us.",
+          "uncertainties": []
+        },
+        {
+          "key": "vattitten_lanu",
+          "text": "Thou hast given us, O Lord our God, in love this day (of the Sabbath and this day) of remembrance, a day (of remembrance) of Teruah (in love) for a sacred convocation, a reminder of the exodus from Egypt.",
+          "uncertainties": []
+        },
+        {
+          "key": "yaaleh_veyavo_start",
+          "text": "Our God and God of our fathers, may there rise and come and arrive and appear and be favourably received and be heard and considered and remain in memory before Thee, our remembrance and our consideration and the memory of our fathers and the memory of the anointed, the son of David, Thy servant, and the memory of Jerusalem the Holy City, and the memory of all Thy people, the House of Israel, for deliverance and for happiness, for favour and for grace and for compassion, for life and for peace on this Day of Remembrance. Remember us, O Lord our God, on it for happiness, consider us on it for blessing and help us on it unto life, and through the word of salvation and compassion,",
+          "uncertainties": [
+            "Continues on s31."
+          ]
+        }
+      ],
+      "notes": [
+        "The line-break hyphens in Jeru-salem, convoca-tion and mem-ory are joined. They are not word differences."
+      ]
+    },
+    {
+      "scan": "s30",
+      "printed_page": 18,
+      "language": "he",
+      "texts": [
+        {
+          "key": "yaaleh_veyavo_end",
+          "text": "וְרַחֵם עָלֵינוּ וְהוֹשִׁיעֵנוּ. כִּי אֵלֶיךָ עֵינֵינוּ. כִּי אֵל מֶלֶךְ חַנּוּן וְרַחוּם אָתָּה:",
+          "uncertainties": [
+            "Continues from s28."
+          ]
+        },
+        {
+          "key": "melokh",
+          "text": "אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ. מְלוֹךְ עַל כָּל־הָעוֹלָם כֻּלּוֹ בִּכְבוֹדֶךָ וְהִנָּשֵׂא עַל כָּל־הָאָרֶץ בִּיקָרֶךָ וְהוֹפַע בַּהֲדַר גְּאוֹן עֻזֶּךָ עַל כָּל־יוֹשְׁבֵי תֵבֵל אַרְצֶךָ. וְיֵדַע כָּל־פָּעוּל כִּי אַתָּה פְעַלְתּוֹ וְיָבִין כָּל־יָצוּר כִּי אַתָּה יְצַרְתּוֹ וְיֹאמַר כֹּל אֲשֶׁר נְשָׁמָה בְּאַפּוֹ יְיָ אֱלֹהֵי יִשְׂרָאֵל מֶלֶךְ וּמַלְכוּתוֹ בַּכֹּל מָשָׁלָה (אם שבת. אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ רְצֵה בִמְנוּחָתֵנוּ) קַדְּשֵׁנוּ בְּמִצְוֹתֶיךָ וְתֵן חֶלְקֵנוּ בְּתוֹרָתֶךָ שַׂבְּעֵנוּ מִטּוּבֶךָ וְשַׂמְּחֵנוּ בִּישׁוּעָתֶךָ. (אם שבת. וְהַנְחִילֵנוּ יְיָ אֱלֹהֵינוּ בְּאַהֲבָה וּבְרָצוֹן שַׁבַּת קָדְשֶׁךָ וְיָנוּחוּ בָהּ יִשְׂרָאֵל מְקַדְּשֵׁי שְׁמֶךָ.) וְטַהֵר לִבֵּנוּ לְעָבְדְּךָ בֶּאֱמֶת כִּי אַתָּה אֱלֹהִים אֱמֶת וּדְבָרְךָ (מלכנו) אֱמֶת וְקַיָּם לָעַד. בָּרוּךְ אַתָּה יְיָ מֶלֶךְ עַל כָּל־הָאָרֶץ מְקַדֵּשׁ (הַשַּׁבָּת וְ) יִשְׂרָאֵל וְיוֹם הַזִּכָּרוֹן:",
+          "uncertainties": [
+            "Whether the bet of בְּאַפּוֹ has a dagesh is pending. The primary reading is a placeholder (see pending_human).",
+            "The Rashi-script labels read אם שבת. (the first letter has the Rashi alef shape, which looks like a ח). The letters are confirmed at band resolution only."
+          ]
+        },
+        {
+          "key": "retzeh",
+          "text": "רְצֵה יְיָ אֱלֹהֵינוּ בְּעַמְּךָ יִשְׂרָאֵל וּבִתְפִלָּתָם. וְהָשֵׁב אֶת־הָעֲבוֹדָה לִדְבִיר בֵּיתֶךָ וְאִשֵּׁי יִשְׂרָאֵל וּתְפִלָּתָם בְּאַהֲבָה תְקַבֵּל בְּרָצוֹן וּתְהִי לְרָצוֹן תָּמִיד עֲבוֹדַת יִשְׂרָאֵל עַמֶּךָ:",
+          "uncertainties": []
+        },
+        {
+          "key": "vetechezenah",
+          "text": "וְתֶחֱזֶינָה עֵינֵינוּ בְּשׁוּבְךָ לְצִיּוֹן בְּרַחֲמִים. בָּרוּךְ אַתָּה יְיָ הַמַּחֲזִיר שְׁכִינָתוֹ לְצִיּוֹן:",
+          "uncertainties": []
+        },
+        {
+          "key": "modim_start",
+          "text": "מוֹדִים אֲנַחְנוּ לָךְ שָׁאַתָּה הוּא יְיָ אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ לְעוֹלָם וָעֶד. צוּר חַיֵּינוּ מָגֵן יִשְׁעֵנוּ אַתָּה הוּא לְדוֹר וָדוֹר נוֹדֶה לְךָ וּנְסַפֵּר תְּהִלָּתֶךָ עַל חַיֵּינוּ הַמְּסוּרִים בְּיָדֶךָ וְעַל נִשְׁמוֹתֵינוּ הַפְּקוּדוֹת לָךְ וְעַל נִסֶּיךָ שֶׁבְּכָל־יוֹם עִמָּנוּ וְעַל נִפְלְאוֹתֶיךָ",
+          "uncertainties": [
+            "Continues on s32."
+          ]
+        }
+      ],
+      "notes": [
+        "(מלכנו) is printed unpointed in small type and is kept as printed. The English on s31 does not translate it.",
+        "(הַשַּׁבָּת וְ) is pointed small type and has no Rashi label.",
+        "No period is printed after מָשָׁלָה, and none before the closing parenthesis of the first Sabbath insert. The second insert ends 'שְׁמֶךָ.)'."
+      ]
+    },
+    {
+      "scan": "s31",
+      "printed_page": 18,
+      "language": "en",
+      "texts": [
+        {
+          "key": "yaaleh_veyavo_end",
+          "text": "spare us and be gracious unto us, have compassion upon us, and help us, for towards Thee our eyes are turned, for Thou O God, art a gracious and merciful King.",
+          "uncertainties": [
+            "Continues from s29."
+          ]
+        },
+        {
+          "key": "melokh",
+          "text": "Our God and God of our fathers, reign over the whole world in Thy glory and rise above the whole earth in Thy grandeur. Shine forth in the exalted beauty of Thy might upon all the inhabitants of the territory of Thine earth so that every creature may recognize that Thou hast created it and that every form may understand that Thou hast formed it and all with breath in the nostrils may say: The Lord, the God of Israel, is King and His Kingdom rules over all. (Our God and God of our fathers, take pleasure in our rest.) Sanctify us through Thy commandments and grant our portion in Thy Torah, satisfy us with Thy goodness and gladden us with Thy help (and grant us, O Lord our God, in love and favour, Thy holy Sabbath as a portion so that Israel, who sanctifies Thy Name, may rest on it) and purify our heart to serve Thee in truth for Thou, O Lord, art truth and Thy word is truth and endures for ever. Blessed art Thou, O Lord King over the whole earth, who sanctifies (the Sabbath and) Israel and the Day of Remembrance.",
+          "uncertainties": []
+        },
+        {
+          "key": "retzeh",
+          "text": "Take delight, O Lord our God, in Thy people Israel and in their prayer and restore the service to the sanctuary of Thy House and accept with love and favour the fire offerings of Israel and their prayer, and may the service of Thy people Israel be a perpetual delight.",
+          "uncertainties": []
+        },
+        {
+          "key": "vetechezenah",
+          "text": "And may our eyes behold when Thou returnest to Zion in compassion. Blessed art Thou, O Lord, who restores His majesty to Zion.",
+          "uncertainties": []
+        },
+        {
+          "key": "modim_start",
+          "text": "We thank Thee for Thou art the Lord our God and the God of our fathers for ever and ever. The Rock of our life, the Shield of our salvation art Thou from generation to generation. We thank Thee and tell of Thy fame for our life that is delivered in Thy hand and for our souls that are entrusted to Thee and for Thy miracles that are daily with",
+          "uncertainties": [
+            "Continues on s33."
+          ]
+        }
+      ],
+      "notes": [
+        "(מלכנו) from the Hebrew melokh is not translated. The English has nothing between 'Thy word' and 'is truth'.",
+        "'O Lord King' in melokh has no comma, while 'O Lord, who restores' in vetechezenah does. Both are as printed."
+      ]
+    },
+    {
+      "scan": "s32",
+      "printed_page": 19,
+      "language": "he",
+      "texts": [
+        {
+          "key": "modim_end",
+          "text": "וְטוֹבוֹתֶיךָ שֶׁבְּכָל־עֵת עֶרֶב וָבֹקֶר וְצָהֳרָיִם. הַטּוֹב כִּי לֹא־כָלוּ רַחֲמֶיךָ וְהַמְרַחֵם כִּי לֹא־תַמּוּ חֲסָדֶיךָ מֵעוֹלָם קִוִּינוּ לָךְ:",
+          "uncertainties": [
+            "Continues from s30."
+          ]
+        },
+        {
+          "key": "ve_al_kullam",
+          "text": "וְעַל כֻּלָּם יִתְבָּרַךְ וְיִתְרוֹמַם שִׁמְךָ מַלְכֵּנוּ תָּמִיד לְעוֹלָם וָעֶד:",
+          "uncertainties": []
+        },
+        {
+          "key": "ukhetov",
+          "text": "וּכְתוֹב לְחַיִּים טוֹבִים כָּל־בְּנֵי בְרִיתֶךָ:",
+          "uncertainties": []
+        },
+        {
+          "key": "vekhol_hachayyim",
+          "text": "וְכֹל הַחַיִּים יוֹדוּךָ סֶּלָה וִיהַלְלוּ אֶת־שִׁמְךָ בֶּאֱמֶת הָאֵל יְשׁוּעָתֵנוּ וְעֶזְרָתֵנוּ סֶלָה. בָּרוּךְ אַתָּה יְיָ הַטּוֹב שִׁמְךָ וּלְךָ נָאֶה לְהוֹדוֹת:",
+          "uncertainties": []
+        },
+        {
+          "key": "shalom_rav",
+          "text": "שָׁלוֹם רָב עַל־יִשְׂרָאֵל עַמְּךָ תָּשִׂים לְעוֹלָם כִּי אַתָּה הוּא מֶלֶךְ אָדוֹן לְכָל הַשָּׁלוֹם. וְטוֹב בְּעֵינֶיךָ לְבָרֵךְ אֶת־עַמְּךָ יִשְׂרָאֵל בְּכָל־עֵת וּבְכָל שָׁעָה בִּשְׁלוֹמֶךָ.",
+          "uncertainties": []
+        },
+        {
+          "key": "besefer_chayyim",
+          "text": "בְּסֵפֶר חַיִּים בְּרָכָה וְשָׁלוֹם וּפַרְנָסָה טוֹבָה נִזָּכֵר וְנִכָּתֵב לְפָנֶיךָ אֲנַחְנוּ וְכָל־עַמְּךָ בֵּית יִשְׂרָאֵל לְחַיִּים טוֹבִים וּלְשָׁלוֹם. בָּרוּךְ אַתָּה יְיָ עוֹשֵׂה הַשָּׁלוֹם:",
+          "uncertainties": []
+        },
+        {
+          "key": "elohai_netzor",
+          "text": "אֱלֹהַי. נְצוֹר לְשׁוֹנִי מֵרָע וּשְׂפָתַי מִדַּבֵּר מִרְמָה. וְלִמְקַלְלַי נַפְשִׁי תִדּוֹם וְנַפְשִׁי כֶּעָפָר לַכֹּל תִּהְיֶה: פְּתַח לִבִּי בְּתוֹרָתֶךָ וּבְמִצְוֹתֶיךָ תִּרְדּוֹף נַפְשִׁי. וְכָל הַחוֹשְׁבִים עָלַי רָעָה מְהֵרָה הָפֵר עֲצָתָם וְקַלְקֵל מַחֲשַׁבְתָּם. עֲשֵׂה לְמַעַן שְׁמֶךָ. עֲשֵׂה לְמַעַן יְמִינֶךָ. עֲשֵׂה לְמַעַן קְדֻשָּׁתֶךָ. עֲשֵׂה לְמַעַן תּוֹרָתֶךָ. לְמַעַן יֵחָלְצוּן יְדִידֶיךָ. הוֹשִׁיעָה יְמִינְךָ וַעֲנֵנִי: יִהְיוּ לְרָצוֹן אִמְרֵי־פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ יְיָ צוּרִי וְגֹאֲלִי: עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן:",
+          "uncertainties": []
+        },
+        {
+          "key": "yehi_ratzon",
+          "text": "יְהִי רָצוֹן לְפָנֶיךָ יְיָ אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ שֶׁיִּבָּנֶה בֵּית הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵינוּ וְתֵן חֶלְקֵנוּ בְּתוֹרָתֶךָ: וְשָׁם נַעֲבָדְךָ בְּיִרְאָה כִּימֵי עוֹלָם וּכְשָׁנִים קַדְמֹנִיּוֹת: וְעָרְבָה לַיְיָ מִנְחַת יְהוּדָה וִירוּשָׁלָםִ כִּימֵי עוֹלָם וּכְשָׁנִים קַדְמֹנִיּוֹת:",
+          "uncertainties": [
+            "The consonants of the divine name after the lamed are settled as לַ + יי. Whether the first yod has a sheva (לַיְיָ vs לַייָ) is beyond the resolution of the small type. The primary reading is a placeholder (see pending_human)."
+          ]
+        }
+      ],
+      "notes": [
+        "Spellings as printed: full in וּכְתוֹב and נְצוֹר; defective in וְגֹאֲלִי, קַדְמֹנִיּוֹת (both times), קְדֻשָּׁתֶךָ, עֹשֶׂה and וִירוּשָׁלָםִ.",
+        "Yehi Ratzon reads לְפָנֶיךָ, not מִלְּפָנֶיךָ.",
+        "No period is printed after מֵרָע. There is no maqaf in וְכָל הַחוֹשְׁבִים."
+      ]
+    },
+    {
+      "scan": "s33",
+      "printed_page": 19,
+      "language": "en",
+      "texts": [
+        {
+          "key": "modim_end",
+          "text": "us and for Thy wonders and benefits at all times, evening, morning and noon. O Thou who art good for Thy mercies never end, O Thou who showest mercy for Thy kindnesses never cease, ever have we trusted in Thee.",
+          "uncertainties": [
+            "Continues from s31."
+          ]
+        },
+        {
+          "key": "ve_al_kullam",
+          "text": "For all of them may Thy Name, O our King, be continually blessed and exalted for ever and ever.",
+          "uncertainties": []
+        },
+        {
+          "key": "ukhetov",
+          "text": "And inscribe for a good life all the children of Thy Covenant.",
+          "uncertainties": []
+        },
+        {
+          "key": "vekhol_hachayyim",
+          "text": "And all the living thank Thee, Selah, and praise Thy Name in truth, O God of our salvation and of our aid, Selah! Blessed art Thou, O Lord, All-benevolent, whose name is goodness and unto whom it is becoming to give thanks.",
+          "uncertainties": []
+        },
+        {
+          "key": "shalom_rav",
+          "text": "Bestow abundance of peace upon Thy people Israel for ever for Thou art King and Lord of all peace and it is good in Thine eyes to bless Thy people Israel at all times and at every hour with Thy peace.",
+          "uncertainties": []
+        },
+        {
+          "key": "besefer_chayyim",
+          "text": "In the book of life, blessing, peace and a good livelihood, may we be remembered and inscribed before Thee, we and all Thy people the house of Israel for a good life and for peace. Blessed art Thou, O Lord who makes peace.",
+          "uncertainties": []
+        },
+        {
+          "key": "elohai_netzor",
+          "text": "My God, guard my tongue from evil and my lips from speaking falsehood. Towards those who curse me, let my soul be silent and let my soul be as dust in relation to everything. Open my heart to Thy Torah and let my soul pursue Thy commandments and as for all those that devise evil against me, speedily frustrate their counsel and upset their plan. Do this for the sake of Thy Name, do this for the sake of Thy right hand, do this for the sake of Thy holiness, do this for the sake of Thy Torah so that those who love Thee may be delivered. Save with Thy right hand and respond to me. May the words of my mouth and the meditation of my heart find favour before Thee, O Lord, my Rock and my Redeemer. May He who makes peace in His heights, make peace for us and for all Israel, and say, Amen.",
+          "uncertainties": []
+        },
+        {
+          "key": "yehi_ratzon",
+          "text": "May it find favour before Thee, O Lord our God and God of our fathers, that the sanctuary be rebuilt speedily in our days, and grant our portion in Thy Torah. There we will serve Thee in awe as in the days of old and former years. And pleasant unto the Lord shall be the offering of Judah and Jerusalem as in the days of old and former years.",
+          "uncertainties": []
+        }
+      ],
+      "notes": [
+        "Both readings agree with the original page image. There were no disputes."
+      ]
+    }
+  ],
+  "adjudications": [
+    {
+      "scan": "s26",
+      "key": "all blocks",
+      "decision": "':' vs '׃' is the same glyph. Assembled text uses ASCII ':'.",
+      "evidence": "Convention set by the instructions. It applies to every consonants difference of the form X:|X׃ on s26."
+    },
+    {
+      "scan": "s26",
+      "key": "avot_opening",
+      "decision": "וְקֹנֵה (defective, no vav). This corrects both transcriptions, which read וְקוֹנֵה.",
+      "evidence": "band0 line 3: the word has four letters ו-ק-נ-ה, with no vav between qof and nun."
+    },
+    {
+      "scan": "s26",
+      "key": "avot_opening",
+      "decision": "חַסְדֵּי vs חַסְדֵי: pending. Primary kept as placeholder.",
+      "evidence": "band0: one dot inside the dalet, beyond band resolution."
+    },
+    {
+      "scan": "s26",
+      "key": "zokhrenu",
+      "decision": "לַחַיִּים (independent)",
+      "evidence": "band1 line 2: a horizontal patah stroke under the lamed, the same shape as in the next word בַּחַיִּים. It is not the two vertical dots of a sheva."
+    },
+    {
+      "scan": "s26",
+      "key": "mekhalkel",
+      "decision": "דוֹמֶה vs דּוֹמֶה: pending. Primary kept as placeholder.",
+      "evidence": "band1 next-to-last line: a mark near the dalet, but no clear dagesh dot inside the letter."
+    },
+    {
+      "scan": "s26",
+      "key": "mi_khamokha",
+      "decision": "לַחַיִּים (independent). אָב/אַב pending.",
+      "evidence": "band2 line 3: a patah stroke under the lamed of לַחַיִּים, not a sheva. The qamatz tick under the alef of אב cannot be confirmed or ruled out."
+    },
+    {
+      "scan": "s26",
+      "key": "uvekhen_pachdekha",
+      "decision": "אַחַת (independent)",
+      "evidence": "band2 last line and band3 line 1: flat patah bars under both alef and het. There are no three-dot segol and no qamatz tick."
+    },
+    {
+      "scan": "s26",
+      "key": "uvekhen_pachdekha",
+      "decision": "כָּל הַמַּעֲשִׂים with a space, no maqaf (independent)",
+      "evidence": "band2 line 8: a clear space after כל. The maqafs in כָּל־מַה־שֶּׁבָּרָאתָ and כָּל־הַבְּרוּאִים are clearly visible by comparison."
+    },
+    {
+      "scan": "s27",
+      "key": "avot_opening",
+      "decision": "'awe-inspiring' is one word. ’ apostrophes are used. Neither is a word dispute.",
+      "evidence": "band0: 'awe- inspiring' mid-line with a stray space. Treated as instructed."
+    },
+    {
+      "scan": "s27",
+      "key": "attah_gibbor",
+      "decision": "'dead,' (independent)",
+      "evidence": "band1 line 6: a comma follows 'dead', then lowercase-continuing 'Thou art great to save.' There is no comma after 'O Lord'."
+    },
+    {
+      "scan": "s27",
+      "key": "uvekhen_pachdekha",
+      "decision": "Keep 'Thou has created' in the raw text. Flag sic='has' corr='hast' for markup.",
+      "evidence": "band3 lines 4–5: 'all that Thou has created.' Earlier in the same paragraph (band2) it reads 'Thou hast created'."
+    },
+    {
+      "scan": "s28",
+      "key": "uvekhen_kavod_continuation",
+      "decision": "בְּיָמֵינוּ with dagesh (independent)",
+      "evidence": "band0 line 2: a dot is visible inside the bet, above the sheva."
+    },
+    {
+      "scan": "s28",
+      "key": "uvekhen_tzaddiqim",
+      "decision": "כֶּעָשָׁן vs כְּעָשָׁן: pending. Primary kept as placeholder.",
+      "evidence": "band0 last line and band1 line 1: the sign under the kaf cannot be resolved as two dots or three."
+    },
+    {
+      "scan": "s28",
+      "key": "vetimlokh",
+      "decision": "וּבִירוּשָׁלַיִם, full with yod (independent)",
+      "evidence": "band1 line 3: the word ends -ל-י-ם and is visibly longer than the defective וירושלם on s32 band3."
+    },
+    {
+      "scan": "s28",
+      "key": "qadosh_attah",
+      "decision": "נִקְדָּשׁ vs נִקְדַּשׁ: pending. Leans patah. Primary kept as placeholder.",
+      "evidence": "band1 line 6: the mark under the dalet looks like a flat bar, but the qamatz tick cannot be ruled out at this resolution."
+    },
+    {
+      "scan": "s28",
+      "key": "attah_vechartanu",
+      "decision": "מִכָּל הָעַמִּים and מִכָּל הַלְּשׁוֹנוֹת with spaces (independent)",
+      "evidence": "band1 lines 8–9: spaces, with no maqaf stroke after either מכל."
+    },
+    {
+      "scan": "s28",
+      "key": "vattitten_lanu",
+      "decision": "(זִכְרוֹן) is pointed (primary)",
+      "evidence": "band2 line 3: pointing marks are visible under and above the small-type word, matching the pointed (בְּאַהֲבָה) beside it."
+    },
+    {
+      "scan": "s28",
+      "key": "yaaleh_veyavo_start",
+      "decision": "וּפִקְדֹנֵנוּ, defective with no vav (independent's consonants). The dagesh in the dalet is pending. Placeholder has no dagesh.",
+      "evidence": "band2 line 6: letters ו-פ-ק-ד-נ-נ-ו, with no vav after the dalet."
+    },
+    {
+      "scan": "s28",
+      "key": "yaaleh_veyavo_start",
+      "decision": "יְרוּשָׁלַיִם, full (independent)",
+      "evidence": "band2 line 7: -שָׁלַיִם with yod, the same form as in vetimlokh."
+    },
+    {
+      "scan": "s28",
+      "key": "yaaleh_veyavo_start",
+      "decision": "A final period after וְחָנֵּנוּ (independent)",
+      "evidence": "band3 last line: a clear period follows וְחָנֵּנוּ."
+    },
+    {
+      "scan": "s30",
+      "key": "melokh",
+      "decision": "Keep the Rashi labels 'אם שבת.' in both inserts (primary). Independent's omission rejected.",
+      "evidence": "band1 lines 4 and 6: a small Rashi-script two-word label plus period inside each opening parenthesis. The Rashi alef has the ח-like shape and the final mem is square."
+    },
+    {
+      "scan": "s30",
+      "key": "melokh",
+      "decision": "No period after מָשָׁלָה, and 'בִמְנוּחָתֵנוּ)' with no period before the paren (independent on both points)",
+      "evidence": "band1 line 4: no period between מָשָׁלָה and '('. Line end ')' is not preceded by a period. The second insert does show 'שְׁמֶךָ.)'."
+    },
+    {
+      "scan": "s30",
+      "key": "melokh",
+      "decision": "כָּל־יָצוּר (independent)",
+      "evidence": "band0 last line and band1 line 2: a qamatz-shaped mark under the yod, not the vertical two-dot sheva."
+    },
+    {
+      "scan": "s30",
+      "key": "melokh",
+      "decision": "כֹּל אֲשֶׁר (independent)",
+      "evidence": "band1 line 3: no qamatz under the line-initial kaf. A dot sits at the top left (holam)."
+    },
+    {
+      "scan": "s30",
+      "key": "melokh",
+      "decision": "בְּאַפּוֹ vs בְאַפּוֹ: pending. Primary kept as placeholder.",
+      "evidence": "band1 line 3: the dagesh dot in the bet cannot be resolved."
+    },
+    {
+      "scan": "s31",
+      "key": "vetechezenah",
+      "decision": "'O Lord, who restores' with comma (independent)",
+      "evidence": "band2 line 7: a clear comma after 'Lord'. By contrast melokh 'O Lord King' (band1 last line) has none."
+    },
+    {
+      "scan": "s32",
+      "key": "ukhetov",
+      "decision": "וּכְתוֹב, full (independent)",
+      "evidence": "band0 line 4: a vav between tav and bet."
+    },
+    {
+      "scan": "s32",
+      "key": "elohai_netzor",
+      "decision": "נְצוֹר, full (independent)",
+      "evidence": "band1 last line and band2 line 2: a vav between tsade and resh."
+    },
+    {
+      "scan": "s32",
+      "key": "elohai_netzor",
+      "decision": "No period after מֵרָע (independent)",
+      "evidence": "band2 line 2: no point between מֵרָע and וּשְׂפָתַי. A period does follow מִרְמָה."
+    },
+    {
+      "scan": "s32",
+      "key": "elohai_netzor",
+      "decision": "וְכָל הַחוֹשְׁבִים with a space (independent)",
+      "evidence": "band2 line 4: no maqaf after וכל."
+    },
+    {
+      "scan": "s32",
+      "key": "elohai_netzor",
+      "decision": "וְגֹאֲלִי, defective (independent)",
+      "evidence": "band2 last line and band3 line 1: letters ו-ג-א-ל-י with no vav after gimel."
+    },
+    {
+      "scan": "s32",
+      "key": "yehi_ratzon",
+      "decision": "לְפָנֶיךָ, not מִלְּפָנֶיךָ (independent)",
+      "evidence": "band3 line 4: the word begins with lamed. No mem precedes it."
+    },
+    {
+      "scan": "s32",
+      "key": "yehi_ratzon",
+      "decision": "קַדְמֹנִיּוֹת, defective, both times (independent)",
+      "evidence": "band3 lines 5–6: ק-ד-מ-נ-י-ו-ת, with no vav after mem in either instance."
+    },
+    {
+      "scan": "s32",
+      "key": "yehi_ratzon",
+      "decision": "Prefix consonants are לַ + יי. Sheva under the first yod is pending. Primary לַיְיָ kept as placeholder.",
+      "evidence": "band3 line 6: small type. The patah under the lamed and the qamatz under the second yod are visible, but the presence of a sheva under the first yod is not resolvable."
+    }
+  ],
+  "pending_human": [
+    {
+      "scan": "s26",
+      "key": "avot_opening",
+      "word": "חַסְדֵּי / חַסְדֵי",
+      "issue": "Dagesh in dalet",
+      "placeholder": "primary"
+    },
+    {
+      "scan": "s26",
+      "key": "mekhalkel",
+      "word": "דוֹמֶה / דּוֹמֶה",
+      "issue": "Dagesh in dalet",
+      "placeholder": "primary"
+    },
+    {
+      "scan": "s26",
+      "key": "mi_khamokha",
+      "word": "אָב / אַב",
+      "issue": "Qamatz vs patah under the alef",
+      "placeholder": "primary"
+    },
+    {
+      "scan": "s28",
+      "key": "uvekhen_tzaddiqim",
+      "word": "כֶּעָשָׁן / כְּעָשָׁן",
+      "issue": "Segol vs sheva under the kaf",
+      "placeholder": "primary"
+    },
+    {
+      "scan": "s28",
+      "key": "qadosh_attah",
+      "word": "נִקְדָּשׁ / נִקְדַּשׁ",
+      "issue": "Qamatz vs patah under the dalet (leans patah)",
+      "placeholder": "primary"
+    },
+    {
+      "scan": "s28",
+      "key": "yaaleh_veyavo_start",
+      "word": "וּפִקְדֹנֵנוּ / וּפִקְדֹּנֵנוּ",
+      "issue": "Dagesh in dalet (defective spelling already settled)",
+      "placeholder": "no dagesh"
+    },
+    {
+      "scan": "s30",
+      "key": "melokh",
+      "word": "בְּאַפּוֹ / בְאַפּוֹ",
+      "issue": "Dagesh in bet",
+      "placeholder": "primary"
+    },
+    {
+      "scan": "s32",
+      "key": "yehi_ratzon",
+      "word": "לַיְיָ / לַייָ",
+      "issue": "Sheva under the first yod of the divine name",
+      "placeholder": "primary"
+    }
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "9114a62d-7ac6-41e7-b170-78d88b336abb"
+  }
+}

@@ -253,7 +253,45 @@ regression-tested and checked in serialized HTML locally. The subsequently
 authorized independent settings/code review passed with no required changes;
 reviewed file hashes stayed unchanged. See hashkivenu_resolutions.json.
 
-The accepted build validates 95 XML files;102 focused tests and41subtests pass.
+The accepted build validates 95 XML files;102 focused tests and 41subtests pass.
 Eight runtime cases and four Bible excerpt scope checks pass. There are now
-31 fully accepted leaves and40independent readings out of355. Continue at
+31 fully accepted leaves and40independent readings out of 355. Continue at
 s26 (Archive n25); whole-volume and whole-service acceptance remain false.
+
+
+## Full evening Amidah (s26–s33)
+
+The complete silent evening Amidah is accepted through the Temple prayer on
+printed p.19. Fifteen modules in each language reuse existing festival composite
+and prayer-part identities, keeping the earlier ordinary Minchah witnesses intact.
+The shared expanded spine includes the sequence once, with local silent and
+no-repetition settings. No evening Kedushah or substitute translation is supplied.
+
+Source-parenthesized Sabbath phrases use marked conditionals within the printed
+paragraphs. Their raw parentheses remain in readings.json; generated text uses
+the standard conditional delimiters, and selected clauses have none. The optional
+seal vav joins Israel. Rashi אם שבת. labels are instruction notes without rend.
+The unspecified (מלכנו) remains literal, with no supplied English. Six full
+scriptural quotations have chapter/verse milestones outside their source spans
+and explicit terminators; neither an excerpt nor a repeated verse claims a new
+canonical identity. Psalm 19:15 keeps its existing reference mapping and both
+printed occurrences remain aligned.
+
+Blind readings, enlarged and word-crop adjudications, human confirmations and
+two frozen-file independent source/guideline/alignment/order audits are retained.
+The original English “Thou has created” is encoded with sic/corr has/hast.
+Human-confirmed marks include the bet dagesh in באפו, no sheva in לַייָ, and
+dalet dagesh/holam plus first-nun meteg in וּפִקְדֹּנֵֽנוּ, with no fe/qof dagesh.
+The reviewer’s initial low effort self-label is retained alongside the actual
+medium CLI invocation; it has not been silently rewritten.
+
+The guarded build validates 125 XML files. 104 focused tests and 41subtests,
+names/features/registry/reference checks, seven new Amidah compiler cases and
+six bilingual quotation-scope checks pass. The earlier eight compiler cases
+also pass. All 92 earlier language files retain the same printed words and
+correspondence sequence after quotation-marker placement is corrected. Final
+acceptance changes only metadata in the frozen independently reviewed XML.
+
+There are now 39 fully accepted leaves, 48 independent readings and 48 verified
+page labels out of 355. Continue at scan page 34 (Archive n33). This is the full
+evening Amidah, not the complete evening service or the complete volume.

@@ -2,34 +2,57 @@
   "scope": "Continue from the beginning, in scan order; pilot acceptance remains separate and complete.",
   "current_batch": {
     "scan_pages": [
-      24,
-      25
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33
     ],
     "archive_leaves": [
-      23,
-      24
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
     ],
     "printed_pages": [
-      15
+      16,
+      17,
+      18,
+      19
     ],
-    "status": "Accepted s24–s25 after blind readings, enlarged adjudications, human-confirmed segol and independent source/guideline/alignment/order audits.",
-    "primary": "primary/maariv_s24_s25.json",
-    "independent": "independent/maariv_s24_s25.json",
-    "comparison": "hashkivenu_comparison.json",
-    "audit_resolutions": "hashkivenu_resolutions.json",
-    "guideline_audit": "independent/hashkivenu_final_audit_round2.json",
-    "pending": [],
+    "status": "Accepted full evening Amidah s26–s33 after independent source/guideline/alignment/order review and human adjudication.",
+    "primary": [
+      "primary/amidah_s26_s27.json",
+      "primary/amidah_s28_s33.json"
+    ],
+    "independent": [
+      "independent/amidah_s26_s27.json",
+      "independent/amidah_s28_s33.json"
+    ],
+    "comparison": "amidah_s26_s33_comparison.json",
+    "audit_resolutions": "amidah_s26_s33_resolutions.json",
+    "guideline_audit": "independent/amidah_guideline_audit_round2.json",
+    "human_confirmation": "human_amidah_confirmation.json",
     "validation": {
-      "schema": "95 generated maḥzor files plus two self-bound Birnbaum Kaddish wrappers validate with RelaxNG/Schematron.",
-      "tests": "102 focused importer tests and41subtests pass.",
-      "features_names": "Three projects pass feature and naming checks.",
-      "runtime": "Eight actual compiler cases plus four pure-Bible scope checks pass, including preparatory English omission and ordinary-day Kaddish protection.",
-      "ci": "Processor test/analysis jobs and paired projects validation passed for ff27fe0/e4465f6a before this documentation-only review-evidence update."
+      "schema": "125 files pass RelaxNG/Schematron",
+      "tests": "104 importer tests and41subtests pass",
+      "runtime": "Earlier eight compiler cases pass; seven new Amidah cases and six bilingual quote scope checks pass. Selected Sabbath clauses lose source parentheses; seal vav joins Yisrael. Literal (מלכנו) remains with no replacement English.",
+      "previous_accepted_text": "92 previous language files retain identical printed words and milestone corresp sequences after moving quotation boundaries; source markup placement changes only.",
+      "names_features_references_registry": "Pass; no new canonical identities.",
+      "exports": "amidah_export_verification.json",
+      "post_audit_changes": "amidah_post_audit_change_check.json"
     },
-    "final_settings_review": "independent/hashkivenu_documentary_settings_review.json"
+    "pending": []
   },
-  "next_primary_scan": 26,
-  "next_adjudication_scan": 26,
+  "next_primary_scan": 34,
+  "next_adjudication_scan": 34,
   "images": "Cached outside Git; never use OCR to settle a reading.",
   "secondary_review_requirements": {
     "blind_scan_reading": true,
@@ -266,6 +289,34 @@
       },
       "guideline_audit": "independent/maariv_guideline_audit_round2.json",
       "final_source_marks": "independent/maariv_final_marks.json"
+    },
+    {
+      "scan_pages": [
+        24,
+        25
+      ],
+      "archive_leaves": [
+        23,
+        24
+      ],
+      "printed_pages": [
+        15
+      ],
+      "status": "Accepted s24–s25 after blind readings, enlarged adjudications, human-confirmed segol and independent source/guideline/alignment/order audits.",
+      "primary": "primary/maariv_s24_s25.json",
+      "independent": "independent/maariv_s24_s25.json",
+      "comparison": "hashkivenu_comparison.json",
+      "audit_resolutions": "hashkivenu_resolutions.json",
+      "guideline_audit": "independent/hashkivenu_final_audit_round2.json",
+      "pending": [],
+      "validation": {
+        "schema": "95 generated maḥzor files plus two self-bound Birnbaum Kaddish wrappers validate with RelaxNG/Schematron.",
+        "tests": "102 focused importer tests and41subtests pass.",
+        "features_names": "Three projects pass feature and naming checks.",
+        "runtime": "Eight actual compiler cases plus four pure-Bible scope checks pass, including preparatory English omission and ordinary-day Kaddish protection.",
+        "ci": "Processor test/analysis jobs and paired projects validation passed for ff27fe0/e4465f6a before this documentation-only review-evidence update."
+      },
+      "final_settings_review": "independent/hashkivenu_documentary_settings_review.json"
     }
   ]
 }
