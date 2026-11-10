@@ -1,0 +1,1092 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "not observable from inside this session (the request header does not state it)"
+  },
+  "method": "Adjudication pass after reading both raw readings (primary: Codex/GPT-6; blind: claude-opus-5-5) and the comparison file. Every disputed or flagged mark was checked against the enlarged source bands /tmp/morning-s39..s43-band0..3.png (2420px originals, viewed at 2000px; multiply displayed coordinates by 1.21) and the attribution crop /tmp/morning-byline.png (2970px original, viewed at 2000px; multiply by 1.49). No standard siddur or Bible text was used to settle any reading. Block keys and block scopes follow the primary. The one exception is that the standalone word שְׁמָעָה at the bottom of s40 is split out of psalm_38_16 into its own block, psalm_39_13_shimah, because it is the first word of Ps 39:13, which continues at the top of s42. The initial hashes and differences in /tmp/morning-comparison.json stay as the historical record. This output does not claim the two raw readings agreed. Hebrew linkage cues at the start of English paragraphs are left out of the English text. Real Hebrew words inside English rubrics (טלית, ברכה, ציצת) are kept as printed. Meteg is encoded only where I verified it at the two s39 sites asked about; other possible meteg sites are listed under pending_human.",
+  "pages": [
+    {
+      "scan": "s39",
+      "printed_page": "1",
+      "language": "mul",
+      "blocks": [
+        {
+          "key": "tallit_heading",
+          "kind": "heading",
+          "language": "he",
+          "text": "סֵדֶר עֲֽטִיפַת הַטַּלִּית.",
+          "uncertainties": [
+            "The extra stroke at the ayin of עֲֽטִיפַת is a short vertical stroke at the lower right of the letter, separate from the hataf-patah. I encoded it as a meteg (U+05BD). It is the same stroke as on עֵֽדֶן (s39-band0, line 5). Confidence 0.75 that it is a meteg and not an ornament or ink mark."
+          ]
+        },
+        {
+          "key": "tallit_before",
+          "kind": "instruction",
+          "language": "en",
+          "text": "Before draping oneself in the טלית the following is said:",
+          "uncertainties": []
+        },
+        {
+          "key": "hinneni_tzitzit",
+          "kind": "prayer",
+          "language": "he",
+          "text": "הִנְנִי מִתְעַטֵּף בְּטַלִּית שֶׁל־צִיצִת כְּדֵי לְקַיֵּם מִצְוַת בּוֹרְאִי כַּכָּתוּב בַּתּוֹרָה וְעָשׂוּ לָהֶם צִיצִת עַל־כַּנְפֵי בִגְדֵיהֶם לְדֹרֹתָם. וּכְשֵׁם שֶׁאֲנִי מִתְכַּסֶּה בְטַלִּית בָּעוֹלָם הַזֶּה כֵּן תִּזְכֶּה נִשְׁמָתִי לְהִתְלַבֵּשׁ בְּטַלִּית נָאָה לָעוֹלָם הַבָּא בְּגַן עֵֽדֶן, אָמֵן:",
+          "uncertainties": [
+            "The source quotes only part of Num 15:38 (וְעָשׂוּ לָהֶם צִיצִת עַל־כַּנְפֵי בִגְדֵיהֶם לְדֹרֹתָם), with defective צִיצִת. This is not a full-verse quotation.",
+            "בַּתּוֹרָה: in the enlarged band (s39-band0, line 2, displayed x≈1290–1400, y≈580) the first letter shows no clear right-extending base, which is a closer match to the כ of כַּכָּתוּב. Kept as ב because both readers read ב, but see pending_human.",
+            "There is a small comma-like mark below the line between תִּזְכֶּה and נִשְׁמָתִי (s39-band0, displayed x≈1290, y≈840). It is not encoded. See pending_human.",
+            "Dagesh in the ב of בִגְדֵיהֶם (line start) and of בְטַלִּית (line 3) is not visible at this enlargement. Recorded without dagesh."
+          ]
+        },
+        {
+          "key": "tallit_standing",
+          "kind": "instruction",
+          "language": "en",
+          "text": "Then this ברכה is recited while standing:",
+          "uncertainties": []
+        },
+        {
+          "key": "tallit_blessing_he",
+          "kind": "prayer",
+          "language": "he",
+          "text": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהִתְעַטֵּף בַּצִּיצִת:",
+          "uncertainties": []
+        },
+        {
+          "key": "tallit_draping",
+          "kind": "instruction",
+          "language": "en",
+          "text": "One then drapes oneself in the טלית and says:",
+          "uncertainties": []
+        },
+        {
+          "key": "psalm_36_8",
+          "kind": "prayer",
+          "language": "he",
+          "text": "מַה־יָּקָר חַסְדְּךָ אֱלֹהִים וּבְנֵי אָדָם בְּצֵל כְּנָפֶיךָ יֶחֱסָיוּן:",
+          "uncertainties": []
+        },
+        {
+          "key": "psalm_36_9",
+          "kind": "prayer",
+          "language": "he",
+          "text": "יִרְוְיֻן מִדֶּשֶׁן בֵּיתֶךָ וְנַחַל עֲדָנֶיךָ תַשְׁקֵם:",
+          "uncertainties": []
+        },
+        {
+          "key": "psalm_36_10",
+          "kind": "prayer",
+          "language": "he",
+          "text": "כִּי עִמְּךָ מְקוֹר חַיִּים, בְּאוֹרְךָ נִרְאֶה־אוֹר:",
+          "uncertainties": []
+        },
+        {
+          "key": "psalm_36_11",
+          "kind": "prayer",
+          "language": "he",
+          "text": "מְשֹׁךְ חַסְדְּךָ לְיֹדְעֶיךָ וְצִדְקָתְךָ לְיִשְׁרֵי־לֵב:",
+          "uncertainties": []
+        },
+        {
+          "key": "yehi_ratzon_tzitzit",
+          "kind": "prayer",
+          "language": "he",
+          "text": "יְהִי רָצוֹן מִלְּפָנֶיךָ יְיָ אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ שֶׁתְּהֵי חֲשׁוּבָה מִצְוַת צִיצִת זוֹ כְּאִלּוּ קִיַּמְתִּיהָ בְּכָל־פְּרָטֶיהָ וְדִקְדּוּקֶיהָ וְכַוָּנוֹתֶיהָ ותרי״ג מִצְוֹת־הַתְּלוּיִם בָּהּ. אָמֵן:",
+          "uncertainties": [
+            "ותרי״ג is printed unpointed, with gershayim. It is the numeral abbreviation for 613. No expansion and no pointing are added to the text."
+          ]
+        },
+        {
+          "key": "tallit_after",
+          "kind": "instruction",
+          "language": "en",
+          "text": "One then removes the טלית from the face and drapes oneself in such a way that there should be one ציצת in front and one behind on each side.",
+          "uncertainties": []
+        },
+        {
+          "key": "tallit_blessing_en",
+          "kind": "prayer",
+          "language": "en",
+          "text": "Blessed art Thou, O Lord our God, King of the World, who has sanctified us with His commandments and ordered us to drape ourselves with show-fringes.",
+          "uncertainties": []
+        },
+        {
+          "key": "psalm_36_en",
+          "kind": "prayer",
+          "language": "en",
+          "text": "How precious is Thy grace, O God, and the children of man shelter in the shadow of Thy wings. They are refreshed by the felicity of Thy house and with the brook of Thy bliss dost Thou water them. For with Thee is the source of life, in Thy light do we behold light. Extend Thy grace to those who acknowledge Thee, and Thy charity to those who are of upright heart.",
+          "uncertainties": []
+        }
+      ],
+      "notes": [
+        "The page number 1 appears on both sides of the heading line.",
+        "The four Ps 36 verses are printed as separate lines. The first is flush and the next three are indented, which is consistent with the primary's per-verse blocks.",
+        "The English below the full-width rule is the page's actual translation. It covers only the berakhah and Mah yakar; Hineni and Yehi ratzon have no English on this page. The linkage cues ברוך and מה־יקר are left out of the English text."
+      ]
+    },
+    {
+      "scan": "s40",
+      "printed_page": "2",
+      "language": "he",
+      "blocks": [
+        {
+          "key": "prayers_heading",
+          "kind": "heading",
+          "language": "he",
+          "text": "תְּפִלּוֹת.",
+          "uncertainties": []
+        },
+        {
+          "key": "entering_instruction",
+          "kind": "instruction",
+          "language": "en",
+          "text": "On entering the Synagogue:",
+          "uncertainties": []
+        },
+        {
+          "key": "psalm_5_8",
+          "kind": "prayer",
+          "language": "he",
+          "text": "וַאֲנִי בְּרֹב חַסְדְּךָ אָבֹא בֵיתֶךָ אֶשְׁתַּחֲוֶה אֶל־הֵיכַל קָדְשְׁךָ בְּיִרְאָתֶךָ:",
+          "uncertainties": []
+        },
+        {
+          "key": "psalm_55_15_b",
+          "kind": "prayer",
+          "language": "he",
+          "text": "בְּבֵית אֱלֹהִים נְהַלֵּךְ בְּרָגֶשׁ:",
+          "uncertainties": []
+        },
+        {
+          "key": "mah_tovu",
+          "kind": "prayer",
+          "language": "he",
+          "text": "מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל: וַאֲנִי בְּרֹב חַסְדְּךָ אָבֹא בֵיתֶךָ אֶשְׁתַּחֲוֶה אֶל־הֵיכַל קָדְשְׁךָ בְּיִרְאָתֶךָ: יְיָ אָהַבְתִּי מְעוֹן בֵּיתֶךָ וּמְקוֹם מִשְׁכַּן כְּבוֹדֶךָ: וַאֲנִי אֶשְׁתַּחֲוֶה וְאֶכְרָעָה אֶבְרְכָה לִפְנֵי־יְיָ עֹשִׂי: וַאֲנִי תְפִלָּתִי־לְךָ יְיָ עֵת רָצוֹן אֱלֹהִים בְּרָב־חַסְדֶּךָ עֲנֵנִי בֶּאֱמֶת יִשְׁעֶךָ:",
+          "uncertainties": [
+            "Dagesh in the line-final בְּרֹב (s40-band1, line 1, far left, displayed x≈200–260, y≈40): a dot appears inside the ב. Confidence 0.7."
+          ]
+        },
+        {
+          "key": "shachar_attribution",
+          "kind": "description",
+          "language": "he",
+          "text": "בקשה לר׳ שלמה בן גבירול. ד׳ תנועות ויתד וג׳ תנועות.",
+          "uncertainties": [
+            "This line is set in Rashi script. First word: its first letter has the same form as the ב of בן in this line (both look like a square-script נ), so it is ב. The word is בקשה, confidence 0.8. The third letter does not exactly match the ש of שלמה at this resolution; see pending_human.",
+            "Metre numerals and abbreviation marks are still uncertain; see pending_human."
+          ]
+        },
+        {
+          "key": "shachar_avaqeshkha",
+          "kind": "prayer",
+          "language": "he",
+          "text": "שַׁחַר אֲבַקֶּשְׁךָ. צוּרִי וּמִשְׂגַּבִּי. אֶעְרוֹךְ לְפָנֶיךָ. שַׁחְרִי וְגַם־עַרְבִּי: לִפְנֵי גְדֻלָּתְךָ. אֶעְמֹד וְאֶבָּהֵל. כִּי־עֵינְךָ תִרְאֶה. כָּל־מַחְשְׁבוֹת לִבִּי: מַה־זֶּה אֲשֶׁר יוּכַל. הַלֵּב וְהַלָּשׁוֹן לַעֲשׂוֹת, וּמַה־כֹּחִי. רוּחִי בְּתוֹךְ קִרְבִּי: הִנֵּה לְךָ תִיטַב. זִמְרַת אֱנוֹשׁ, עַל־כֵּן אוֹדְךָ בְּעוֹד תִּהְיֶה. נִשְׁמַת אֱלוֹהַּ בִּי:",
+          "uncertainties": [
+            "Mappiq in אֱלוֹהַּ (s40-band2, line 4, displayed x≈1430, y≈380): not clearly visible. Kept as both readers had it. Confidence 0.6."
+          ]
+        },
+        {
+          "key": "before_morning",
+          "kind": "instruction",
+          "language": "en",
+          "text": "Before the morning prayer:",
+          "uncertainties": []
+        },
+        {
+          "key": "psalm_17_6",
+          "kind": "prayer",
+          "language": "he",
+          "text": "אֲנִי קְרָאתִיךָ כִּי־תַעֲנֵנִי אֵל הַט־אָזְנְךָ לִי שְׁמַע אִמְרָתִי:",
+          "uncertainties": [
+            "Dagesh in כִּי (s40-band2, line 1, displayed x≈1390, y≈650): a dot appears inside the כ. Confidence 0.6."
+          ]
+        },
+        {
+          "key": "psalm_17_15",
+          "kind": "prayer",
+          "language": "he",
+          "text": "אֲנִי בְּצֶדֶק אֶחֱזֶה פָנֶיךָ אֶשְׂבְּעָה בְהָקִיץ תְּמוּנָתֶךָ:",
+          "uncertainties": []
+        },
+        {
+          "key": "psalm_31_15",
+          "kind": "prayer",
+          "language": "he",
+          "text": "וַאֲנִי עָלֶיךָ בָטַחְתִּי יְיָ אָמַרְתִּי אֱלֹהַי אָתָּה:",
+          "uncertainties": []
+        },
+        {
+          "key": "psalm_28_2",
+          "kind": "prayer",
+          "language": "he",
+          "text": "שְׁמַע קוֹל תַּחֲנוּנַי בְּשַׁוְּעִי אֵלֶיךָ בְּנָשְׂאִי יָדַי אֶל־דְּבִיר קָדְשֶׁךָ:",
+          "uncertainties": []
+        },
+        {
+          "key": "psalm_30_3",
+          "kind": "prayer",
+          "language": "he",
+          "text": "יְיָ אֱלֹהָי שִׁוַּעְתִּי אֵלֶיךָ וַתִּרְפָּאֵנִי:",
+          "uncertainties": []
+        },
+        {
+          "key": "psalm_30_9",
+          "kind": "prayer",
+          "language": "he",
+          "text": "אֵלֶיךָ יְיָ אֶקְרָא וְאֶל־אֲדֹנָי אֶתְחַנָּן:",
+          "uncertainties": []
+        },
+        {
+          "key": "psalm_31_17",
+          "kind": "prayer",
+          "language": "he",
+          "text": "הָאִירָה פָנֶיךָ עַל־עַבְדֶּךָ הוֹשִׁיעֵנִי בְחַסְדֶּךָ:",
+          "uncertainties": []
+        },
+        {
+          "key": "psalm_38_16",
+          "kind": "prayer",
+          "language": "he",
+          "text": "כִּי־לְךָ יְיָ הוֹחָלְתִּי אַתָּה תַעֲנֶה אֲדֹנָי אֱלֹהָי:",
+          "uncertainties": [
+            "The vowel marks under this Divine Name are not the usual sheva+qamats shape. See pending_human (DivineName-points)."
+          ]
+        },
+        {
+          "key": "psalm_39_13_shimah",
+          "kind": "prayer",
+          "language": "he",
+          "text": "שְׁמָעָה",
+          "uncertainties": [
+            "This is the first word of Ps 39:13 and continues at the top of s42 (psalm_39_13_shimah_end). It was split out of the primary's psalm_38_16 scope."
+          ]
+        }
+      ],
+      "notes": [
+        "The page number 2 appears on both sides of the heading.",
+        "Ps 5:8 and 55:15b are set in a large display face. Ps 5:8 runs over two lines and 55:15b is a separate indented line.",
+        "A short centered rule separates the Shachar poem from 'Before the morning prayer:'."
+      ]
+    },
+    {
+      "scan": "s41",
+      "printed_page": "2",
+      "language": "en",
+      "blocks": [
+        {
+          "key": "prayers_heading",
+          "kind": "heading",
+          "language": "en",
+          "text": "Prayers",
+          "uncertainties": []
+        },
+        {
+          "key": "entering_instruction",
+          "kind": "instruction",
+          "language": "en",
+          "text": "On entering the Synagogue:",
+          "uncertainties": []
+        },
+        {
+          "key": "psalm_5_8",
+          "kind": "prayer",
+          "language": "en",
+          "text": "And I through the abundance of Thy grace enter Thy house and bow down before Thy holy place in awe of Thee.",
+          "uncertainties": []
+        },
+        {
+          "key": "psalm_55_15_b",
+          "kind": "prayer",
+          "language": "en",
+          "text": "In the house of God let us walk in throngs.",
+          "uncertainties": []
+        },
+        {
+          "key": "mah_tovu",
+          "kind": "prayer",
+          "language": "en",
+          "text": "How becoming are your tents, O Jacob, your dwellings, O Israel. And I through the abundance of Thy grace enter Thy house and bow down before Thy holy place in awe of Thee. O Lord, I love the site of Thy house, the place of the dwelling of Thy glory. I bow, throw myself down and kneel before the Lord, my Maker. And as for me, my prayer is to Thee, O Lord, at a time of favour. O God, in the abundance of Thy grace respond to me with the truth of Thy salvation.",
+          "uncertainties": []
+        },
+        {
+          "key": "shachar_avaqeshkha",
+          "kind": "prayer",
+          "language": "en",
+          "text": "In the morning I seek Thee, my rock and my fortress. I order my morning and also my evening prayer before Thee. Before Thy grandeur I stand and tremble, for Thine eye sees all the thoughts of my heart. What can heart and tongue accomplish, what can my strength, what can the spirit within me. Behold, man’s song pleases Thee. Therefore, I wish to thank Thee as long as God’s breath is in me.",
+          "uncertainties": []
+        },
+        {
+          "key": "before_morning",
+          "kind": "instruction",
+          "language": "en",
+          "text": "Before the morning prayer:",
+          "uncertainties": []
+        },
+        {
+          "key": "before_morning_verses",
+          "kind": "prayer",
+          "language": "en",
+          "text": "I call to Thee, for Thou dost respond to me, O God, incline Thine ear to me, hear my word. In righteousness may I behold Thy countenance, I am satisfied on waking with Thy likeness. I trust in Thee, O Lord, I say, Thou art my God. Hear the voice of my prayer when I implore Thee, when I raise my hands toward Thine inmost sanctuary. O Lord my God, I implore Thee and Thou healest me. Unto Thee, O Lord, do I call and my Master do I entreat. Let Thy countenance shine upon Thy servant, help me in Thy grace. For I wait for Thee, O Lord, Thou dost respond, O Lord my God.",
+          "uncertainties": []
+        }
+      ],
+      "notes": [
+        "'coun-/tenance' is hyphenated across a line break and rejoined here.",
+        "The apostrophes are typographic (’).",
+        "The linkage cues מה, שחר and אני are left out of the English text."
+      ]
+    },
+    {
+      "scan": "s42",
+      "printed_page": "3",
+      "language": "he",
+      "blocks": [
+        {
+          "key": "prayers_running_head",
+          "kind": "running_head",
+          "language": "he",
+          "text": "תְּפִלּוֹת",
+          "uncertainties": []
+        },
+        {
+          "key": "psalm_39_13_shimah_end",
+          "kind": "prayer",
+          "language": "he",
+          "text": "תְפִלָּתִי יְיָ וְשַׁוְעָתִי הַאֲזִינָה אֶל־דִּמְעָתִי אַל־תֶּחֱרַשׁ:",
+          "uncertainties": [
+            "The first ת has no visible dagesh (s42-band0, line 1, displayed x≈1720–1790, y≈370). Confidence 0.55.",
+            "The Divine Name points are unusual. See pending_human (DivineName-points)."
+          ]
+        },
+        {
+          "key": "psalm_30_11",
+          "kind": "prayer",
+          "language": "he",
+          "text": "שְׁמַע־יְיָ וְחָנֵּנִי יְיָ הֱיֵה עֹזֵר לִי:",
+          "uncertainties": [
+            "The second Divine Name, after וְחָנֵּנִי, has unusual points. See pending_human (DivineName-points)."
+          ]
+        },
+        {
+          "key": "psalm_122_1",
+          "kind": "prayer",
+          "language": "he",
+          "text": "שִׁיר הַמַּעֲלוֹת לְדָוִד שָׂמַחְתִּי בְּאֹמְרִים לִי בֵּית יְיָ נֵלֵךְ:",
+          "uncertainties": []
+        },
+        {
+          "key": "psalm_119_162",
+          "kind": "prayer",
+          "language": "he",
+          "text": "שָׂשׂ אָנֹכִי עַל־אִמְרָתֶךָ כְּמוֹצֵא שָׁלָל רָב:",
+          "uncertainties": []
+        },
+        {
+          "key": "psalm_5_3",
+          "kind": "prayer",
+          "language": "he",
+          "text": "הַקְשִׁיבָה לְקוֹל שַׁוְעִי מַלְכִּי וֵאלֹהָי כִּי־אֵלֶיךָ אֶתְפַּלָּל:",
+          "uncertainties": []
+        },
+        {
+          "key": "psalm_5_4",
+          "kind": "prayer",
+          "language": "he",
+          "text": "יְיָ בֹּקֶר תִּשְׁמַע קוֹלִי בֹּקֶר אֶעֱרָךְ־לְךָ וַאֲצַפֶּה:",
+          "uncertainties": [
+            "The line-initial Divine Name has unusual points. See pending_human (DivineName-points)."
+          ]
+        },
+        {
+          "key": "psalm_17_6_repeat",
+          "kind": "prayer",
+          "language": "he",
+          "text": "אֲנִי קְרָאתִיךָ כִּי־תַעֲנֵנִי אֵל הַט־אָזְנְךָ לִי שְׁמַע אִמְרָתִי:",
+          "uncertainties": [
+            "אֲנִי ends a line and קְרָאתִיךָ starts the next. There is no line-end maqaf. The dagesh in כִּי is read the same way as on s40, confidence 0.6."
+          ]
+        },
+        {
+          "key": "psalm_26_12",
+          "kind": "prayer",
+          "language": "he",
+          "text": "רַגְלִי עָמְדָה בְמִישׁוֹר בְּמַקְהֵלִים אֲבָרֵךְ יְיָ:",
+          "uncertainties": []
+        },
+        {
+          "key": "yigdal_description",
+          "kind": "description",
+          "language": "he",
+          "text": "שלשה עשר עקרים, בחרוזים מסדורים.",
+          "uncertainties": []
+        },
+        {
+          "key": "yigdal_1",
+          "kind": "prayer",
+          "language": "he",
+          "text": "יִגְדַּל אֱלֹהִים חַי וְיִשְׁתַּבַּח נִמְצָא וְאֵין עֵת אֶל־מְצִיאוּתוֹ:",
+          "uncertainties": []
+        },
+        {
+          "key": "yigdal_2",
+          "kind": "prayer",
+          "language": "he",
+          "text": "אֶחָד וְאֵין יָחִיד כְּיִחוּדוֹ נֶעְלָם וְגַם אֵין סוֹף לְאַחְדוּתוֹ:",
+          "uncertainties": [
+            "Compressed line. אֵין סוֹף has no maqaf; the words touch but there is no stroke. The dagesh in the ד of לְאַחְדוּתוֹ is uncertain; see pending_human."
+          ]
+        },
+        {
+          "key": "yigdal_3",
+          "kind": "prayer",
+          "language": "he",
+          "text": "אֵין לוֹ דְּמוּת הַגּוּף וְאֵינוֹ גוּף לֹא נַעֲרוֹךְ אֵלָיו קְדֻשָּׁתוֹ:",
+          "uncertainties": [
+            "A dot is visible in the ד of דְּמוּת (s42-band2, line 1, displayed x≈1640, y≈40). Confidence 0.65. The vav in נַעֲרוֹךְ is clearly present."
+          ]
+        },
+        {
+          "key": "yigdal_4",
+          "kind": "prayer",
+          "language": "he",
+          "text": "קַדְמוֹן לְכָל־דָּבָר אֲשֶׁר נִבְרָא רִאשׁוֹן וְאֵין רֵאשִׁית לְרֵאשִׁיתוֹ:",
+          "uncertainties": []
+        },
+        {
+          "key": "yigdal_5",
+          "kind": "prayer",
+          "language": "he",
+          "text": "הִנּוֹ אֲדוֹן עוֹלָם וְכָל־נוֹצָר יוֹרֶה גְדֻלָּתוֹ וּמַלְכוּתוֹ:",
+          "uncertainties": []
+        },
+        {
+          "key": "yigdal_6",
+          "kind": "prayer",
+          "language": "he",
+          "text": "שֶׁפַע נְבוּאָתוֹ נְתָנוֹ אֶל אַנְשֵׁי סְגֻלָּתוֹ וְתִפְאַרְתּוֹ:",
+          "uncertainties": [
+            "There is a small mark after אֶל in a wide gap (s42-band2, line 4, displayed x≈1050, y≈370). It is not clearly a maqaf. Recorded as a space, confidence 0.6."
+          ]
+        },
+        {
+          "key": "yigdal_7",
+          "kind": "prayer",
+          "language": "he",
+          "text": "לֹא קָם בְּיִשְׂרָאֵל כְּמשֶׁה עוֹד נָבִיא וּמַבִּיט אֶת־תְּמוּנָתוֹ:",
+          "uncertainties": [
+            "Compressed line. לֹא and קָם touch with no maqaf. No separate holam is visible on the מ of כְּמשֶׁה; it may be merged with the shin dot. See pending_human."
+          ]
+        },
+        {
+          "key": "yigdal_8",
+          "kind": "prayer",
+          "language": "he",
+          "text": "תּוֹרַת אֱמֶת נָתַן לְעַמּוֹ אֵל עַל־יַד נְבִיאוֹ נֶאֱמַן בֵּיתוֹ:",
+          "uncertainties": []
+        },
+        {
+          "key": "yigdal_9",
+          "kind": "prayer",
+          "language": "he",
+          "text": "לֹא יַחֲלִיף הָאֵל וְלֹא יָמִיר דָּתוֹ לְעוֹלָמִים לְזוּלָתוֹ:",
+          "uncertainties": []
+        },
+        {
+          "key": "yigdal_10",
+          "kind": "prayer",
+          "language": "he",
+          "text": "צוֹפֶה וְיוֹדֵעַ סְתָרֵינוּ מַבִּיט לְסוֹף דָּבָר בְּקַדְמָתוֹ:",
+          "uncertainties": [
+            "צוֹפֶה וְיוֹדֵעַ is letter-spaced for justification. לְסוֹף and דָּבָר touch with no maqaf stroke."
+          ]
+        },
+        {
+          "key": "yigdal_11",
+          "kind": "prayer",
+          "language": "he",
+          "text": "גּוֹמֵל לְאִישׁ חֶסֶד כְּמִפְעָלוֹ נוֹתֵן לְרָשָׁע רָע כְּרִשְׁעָתוֹ:",
+          "uncertainties": [
+            "The vowel under the ר of רָע looks like a flat bar (patah) in s42-band3, line 1, displayed x≈640, y≈40. Kept as qamats as both readers read it. See pending_human."
+          ]
+        },
+        {
+          "key": "yigdal_12",
+          "kind": "prayer",
+          "language": "he",
+          "text": "יִשְׁלַח לְקֵץ יָמִין מְשִׁיחֵנוּ לִפְדּוֹת מְחַכֵּי קֵץ יְשׁוּעָתוֹ:",
+          "uncertainties": []
+        },
+        {
+          "key": "yigdal_13",
+          "kind": "prayer",
+          "language": "he",
+          "text": "מֵתִים יְחַיֶּה אֵל בְּרֹב חַסְדּוֹ בָּרוּךְ עֲדֵי־עַד שֵׁם תְּהִלָּתוֹ:",
+          "uncertainties": []
+        }
+      ],
+      "notes": [
+        "The page number 3 appears on the outer (right) side only.",
+        "Short centered rules come after Ps 26:12 and after Yigdal 13.",
+        "Yigdal is printed with one principle per line (13 lines). This matches the primary's per-couplet blocks."
+      ]
+    },
+    {
+      "scan": "s43",
+      "printed_page": "3",
+      "language": "en",
+      "blocks": [
+        {
+          "key": "prayers_running_head",
+          "kind": "running_head",
+          "language": "en",
+          "text": "Prayers",
+          "uncertainties": []
+        },
+        {
+          "key": "psalm_39_13_shimah",
+          "kind": "prayer",
+          "language": "en",
+          "text": "Hear my prayer, O Lord, listen to my entreaty, at my tears do not be silent.",
+          "uncertainties": []
+        },
+        {
+          "key": "psalm_30_11",
+          "kind": "prayer",
+          "language": "en",
+          "text": "Hear, O Lord, and be gracious to me, O Lord, be my aid.",
+          "uncertainties": []
+        },
+        {
+          "key": "verses_second_paragraph",
+          "kind": "prayer",
+          "language": "en",
+          "text": "Song of the ascents by David: I am glad when they say to me: Let us go into the House of the Lord. I rejoice at Thy word as one who has found abundant booty. Lister to the sound of my cry, my King and my God, for to Thee do I pray. O Lord, in the morning listen to my voice, in the morning I address Thee and I have hope. I called to Thee for Thou dost respond to me. O God, incline Thine ear to me, hear my word. My foot has stood on level ground. In assemblies will I praise the Lord.",
+          "uncertainties": []
+        },
+        {
+          "key": "yigdal_heading",
+          "kind": "heading",
+          "language": "en",
+          "text": "The Thirteen Principles",
+          "uncertainties": []
+        },
+        {
+          "key": "yigdal_1",
+          "kind": "prayer",
+          "language": "en",
+          "text": "Exalted is the living God and praised. He exists and timeless is His existence.",
+          "uncertainties": []
+        },
+        {
+          "key": "yigdal_2",
+          "kind": "prayer",
+          "language": "en",
+          "text": "He is unique and there is nought unique like His uniqueness. He is hidden and infinite too is His unity.",
+          "uncertainties": []
+        },
+        {
+          "key": "yigdal_3",
+          "kind": "prayer",
+          "language": "en",
+          "text": "He has not the shape of a body nor is He a body. We cannot estimate His sanctity.",
+          "uncertainties": []
+        },
+        {
+          "key": "yigdal_4",
+          "kind": "prayer",
+          "language": "en",
+          "text": "He was there before anything that was created; He is the first and there was no beginning to His beginning.",
+          "uncertainties": []
+        },
+        {
+          "key": "yigdal_5",
+          "kind": "prayer",
+          "language": "en",
+          "text": "Behold He is the Master of the world and every creature indicates His grandeur and His rule.",
+          "uncertainties": []
+        },
+        {
+          "key": "yigdal_6",
+          "kind": "prayer",
+          "language": "en",
+          "text": "The wealth of His prophecy did He bestow upon men of His possession and His glory.",
+          "uncertainties": []
+        },
+        {
+          "key": "yigdal_7",
+          "kind": "prayer",
+          "language": "en",
+          "text": "No other prophet arose in Israel like Moses, who perceived His likeness.",
+          "uncertainties": []
+        },
+        {
+          "key": "yigdal_8",
+          "kind": "prayer",
+          "language": "en",
+          "text": "The true Torah has God given to His people through His prophet, the faithful one of His house.",
+          "uncertainties": []
+        },
+        {
+          "key": "yigdal_9",
+          "kind": "prayer",
+          "language": "en",
+          "text": "God will not alter nor will He change His law for another unto eternity.",
+          "uncertainties": []
+        },
+        {
+          "key": "yigdal_10",
+          "kind": "prayer",
+          "language": "en",
+          "text": "He observes and knows our secrets, perceiving even at its beginning the end of a matter.",
+          "uncertainties": []
+        },
+        {
+          "key": "yigdal_11",
+          "kind": "prayer",
+          "language": "en",
+          "text": "He treats man kindly according to his conduct and sends disaster to the wicked according to his wickedness.",
+          "uncertainties": []
+        },
+        {
+          "key": "yigdal_12",
+          "kind": "prayer",
+          "language": "en",
+          "text": "He will send our Messiah at the end of days to redeem those who wait for the finality of His salvation.",
+          "uncertainties": []
+        },
+        {
+          "key": "yigdal_13",
+          "kind": "prayer",
+          "language": "en",
+          "text": "God will revive the dead in the abundance of His grace. Blessed for ever and ever be His renowned Name.",
+          "uncertainties": []
+        }
+      ],
+      "notes": [
+        "'entreaty' (s43-band0, line 1, displayed x≈1250–1500, y≈365) and 'gracious' (line 2, x≈1300–1530, y≈432) have broken glyphs: the r in 'ent/eaty' and the r in 'g.acious' are partly lost. The visible remains fit r, and there is no evidence of a different letter. These are print or scan damage, not typos, and are transcribed as 'entreaty' and 'gracious'.",
+        "'Lister' (s43-band0, line 6, displayed x≈1660–1830, y≈710) is the source's typo for 'Listen'. It is kept as printed.",
+        "'crea-/ture' is rejoined. The linkage cues שיר and יגדל are left out of the English text."
+      ]
+    }
+  ],
+  "resolved_differences": [
+    {
+      "block": "s39/hinneni_tzitzit",
+      "diff": "consonants:2:בְּמִצְוַת צִיצִית|בְּטַלִּית שֶׁל צִיצִת",
+      "adjudicated": "בְּטַלִּית שֶׁל־צִיצִת",
+      "basis": "s39-band0, line 1. The maqaf is printed and צִיצִת is defective. The primary's reading was a normalization.",
+      "confidence": 0.97
+    },
+    {
+      "block": "s39/hinneni_tzitzit",
+      "diff": "vowels:20:בַּטַּלִּית|בְטַלִּית",
+      "adjudicated": "בְטַלִּית",
+      "basis": "s39-band0, line 3: sheva under ב, no patah, no dagesh in ט.",
+      "confidence": 0.9
+    },
+    {
+      "block": "s39/hinneni_tzitzit",
+      "diff": "consonants:24:תִּתְכַּסֶּה|תִּזְכֶּה",
+      "adjudicated": "תִּזְכֶּה",
+      "basis": "s39-band0, line 4: four letters ת-ז-כ-ה.",
+      "confidence": 0.97
+    },
+    {
+      "block": "s39/hinneni_tzitzit",
+      "diff": "vowels:29:לְעוֹלָם|לָעוֹלָם",
+      "adjudicated": "לָעוֹלָם",
+      "basis": "s39-band0, line 4, left end: qamats under ל.",
+      "confidence": 0.9
+    },
+    {
+      "block": "s39/yehi_ratzon_tzitzit",
+      "diff": "consonants:10:צִיצִית|צִיצִת",
+      "adjudicated": "צִיצִת",
+      "basis": "s39-band2, line 3: defective spelling.",
+      "confidence": 0.95
+    },
+    {
+      "block": "s39/yehi_ratzon_tzitzit",
+      "diff": "vowels:18:וְתַרְיַ״ג|ותרי״ג",
+      "adjudicated": "ותרי״ג",
+      "basis": "s39-band2, line 4: unpointed, with gershayim. The primary's pointing is not in the source.",
+      "confidence": 0.95
+    },
+    {
+      "block": "s39/yehi_ratzon_tzitzit",
+      "diff": "whitespace:19:' '|'־'",
+      "adjudicated": "מִצְוֹת־הַתְּלוּיִם",
+      "basis": "s39-band2, line 4: maqaf visible.",
+      "confidence": 0.95
+    },
+    {
+      "block": "s39/yehi_ratzon_tzitzit",
+      "diff": "(agreed) שֶׁתְּהֵי vs normalized שֶׁתְּהֵא",
+      "adjudicated": "שֶׁתְּהֵי",
+      "basis": "s39-band1, last line, and s39-band2, line 2: the word ends in a yod.",
+      "confidence": 0.93
+    },
+    {
+      "block": "s39/tallit_after",
+      "diff": "consonants:20:ציצית|ציצת",
+      "adjudicated": "ציצת",
+      "basis": "s39-band2, rubric line 2.",
+      "confidence": 0.95
+    },
+    {
+      "block": "s39/psalm_36_en",
+      "diff": "consonants:61:Thee|Thee,",
+      "adjudicated": "Thee,",
+      "basis": "s39-band3, line 6: comma printed.",
+      "confidence": 0.97
+    },
+    {
+      "block": "s39/psalm_36_he",
+      "diff": "whitespace:15:'־'|' ' (after כִּי)",
+      "adjudicated": "כִּי עִמְּךָ (space)",
+      "basis": "s39-band1: no maqaf stroke.",
+      "confidence": 0.9
+    },
+    {
+      "block": "s39/psalm_36_he",
+      "diff": "whitespace newline diffs 8/14/21",
+      "adjudicated": "Moot under primary per-verse block scope. Each verse is a separate printed line.",
+      "basis": "s39-band1",
+      "confidence": 0.95
+    },
+    {
+      "block": "s39/tallit_heading",
+      "diff": "(agreed text; blind flagged a mark) extra stroke at the ayin",
+      "adjudicated": "Meteg encoded: עֲֽטִיפַת",
+      "basis": "s39-band0, heading",
+      "confidence": 0.75
+    },
+    {
+      "block": "s40/entrance_prefix + s40/mah_tovu",
+      "diff": "consonants:אָבוֹא|אָבֹא (both blocks)",
+      "adjudicated": "אָבֹא",
+      "basis": "s40-band0, line 1, and s40-band1, line 2: no vav in either.",
+      "confidence": 0.93
+    },
+    {
+      "block": "s40/entrance_prefix",
+      "diff": "whitespace:9:' '|'\\n'",
+      "adjudicated": "Moot; split into primary blocks psalm_5_8 and psalm_55_15_b.",
+      "basis": "s40-band0",
+      "confidence": 0.95
+    },
+    {
+      "block": "s40/mah_tovu",
+      "diff": "vowels:7:בְרֹב|בְּרֹב",
+      "adjudicated": "בְּרֹב",
+      "basis": "s40-band1, line 1, left end: a dot is visible in the ב.",
+      "confidence": 0.7
+    },
+    {
+      "block": "s40/mah_tovu",
+      "diff": "whitespace:27:' '|'־' (after לִפְנֵי)",
+      "adjudicated": "לִפְנֵי־יְיָ",
+      "basis": "s40-band1, line 4: maqaf visible.",
+      "confidence": 0.9
+    },
+    {
+      "block": "s40/shachar_attribution",
+      "diff": "consonants:0:נקסם|בקשה",
+      "adjudicated": "בקשה",
+      "basis": "morning-byline.png, compared with letters from the same Rashi font in this line: the initial letter has the same form as the ב of בן.",
+      "confidence": 0.8
+    },
+    {
+      "block": "s40/shachar_avaqeshkha",
+      "diff": "consonants:4:אֶעֱרֹךְ|אֶעְרוֹךְ",
+      "adjudicated": "אֶעְרוֹךְ",
+      "basis": "s40-band1, Shachar line 1: vav present, sheva under ע.",
+      "confidence": 0.88
+    },
+    {
+      "block": "s40/shachar_avaqeshkha",
+      "diff": "consonants:11:אֶעֱמוֹד|אֶעְמֹד",
+      "adjudicated": "אֶעְמֹד",
+      "basis": "s40-band1, Shachar line 2: no vav.",
+      "confidence": 0.88
+    },
+    {
+      "block": "s40/shachar_avaqeshkha",
+      "diff": "consonants:25 לַעֲשׂוֹת.|לַעֲשׂוֹת,",
+      "adjudicated": "לַעֲשׂוֹת,",
+      "basis": "s40-band1, last line, and s40-band2, line 2: a comma is printed.",
+      "confidence": 0.9
+    },
+    {
+      "block": "s40/shachar_avaqeshkha",
+      "diff": "consonants:27 כֹּחַ רוּחִי.|כֹּחִי. רוּחִי",
+      "adjudicated": "וּמַה־כֹּחִי. רוּחִי",
+      "basis": "s40-band2, line 2: hiriq-yod ending on כֹּחִי, with the period after it.",
+      "confidence": 0.92
+    },
+    {
+      "block": "s40/shachar_avaqeshkha",
+      "diff": "consonants:35 אֱנוֹשׁ.|אֱנוֹשׁ,",
+      "adjudicated": "אֱנוֹשׁ,",
+      "basis": "s40-band2, line 3",
+      "confidence": 0.9
+    },
+    {
+      "block": "s40/shachar_avaqeshkha",
+      "diff": "consonants:38 אוֹדְךָ.|אוֹדְךָ",
+      "adjudicated": "אוֹדְךָ (no punctuation)",
+      "basis": "s40-band2, line 3",
+      "confidence": 0.88
+    },
+    {
+      "block": "s40/before_morning_verses",
+      "diff": "whitespace:0:'־'|' ' (after אֲנִי)",
+      "adjudicated": "אֲנִי קְרָאתִיךָ (space)",
+      "basis": "s40-band2, line 1",
+      "confidence": 0.85
+    },
+    {
+      "block": "s40/before_morning_verses",
+      "diff": "vowels:2:כִי|כִּי",
+      "adjudicated": "כִּי",
+      "basis": "s40-band2, line 1: a dot is visible in the כ.",
+      "confidence": 0.6
+    },
+    {
+      "block": "s40/before_morning_verses",
+      "diff": "consonants:58 אֱלֹהָי.|אֱלֹהָי:",
+      "adjudicated": "אֱלֹהָי:",
+      "basis": "s40-band3, last line: sof pasuq.",
+      "confidence": 0.93
+    },
+    {
+      "block": "s40/before_morning_verses",
+      "diff": "vowels:59 שִׁמְעָה|שְׁמָעָה",
+      "adjudicated": "שְׁמָעָה, moved to block psalm_39_13_shimah",
+      "basis": "s40-band3, last line, far left: sheva under ש and qamats under מ and ע.",
+      "confidence": 0.85
+    },
+    {
+      "block": "s41/mah_tovu",
+      "diff": "Israel!|Israel.",
+      "adjudicated": "Israel.",
+      "basis": "s41-band0, line 6",
+      "confidence": 0.95
+    },
+    {
+      "block": "s41/mah_tovu",
+      "diff": "Lord|Lord,",
+      "adjudicated": "Lord, my Maker",
+      "basis": "s41-band1, line 5",
+      "confidence": 0.95
+    },
+    {
+      "block": "s41/shachar_avaqeshkha",
+      "diff": "man’s/God’s vs man's/God's",
+      "adjudicated": "typographic ’",
+      "basis": "s41-band1, last line, and s41-band2, line 3: curly apostrophes.",
+      "confidence": 0.85
+    },
+    {
+      "block": "s41/before_morning_verses",
+      "diff": "Thy|Thine (inmost)",
+      "adjudicated": "Thine",
+      "basis": "s41-band2, line 6",
+      "confidence": 0.97
+    },
+    {
+      "block": "s42/before_morning_cont",
+      "diff": "vowels:0 תְפִלָּתִי|תְּפִלָּתִי",
+      "adjudicated": "תְפִלָּתִי",
+      "basis": "s42-band0, line 1: no dot is visible in the ת.",
+      "confidence": 0.55
+    },
+    {
+      "block": "s42/second_paragraph",
+      "diff": "whitespace:21 (after כִּי, Ps 5:3)",
+      "adjudicated": "כִּי־אֵלֶיךָ",
+      "basis": "s42-band0, line 5: maqaf visible.",
+      "confidence": 0.9
+    },
+    {
+      "block": "s42/second_paragraph",
+      "diff": "whitespace:32 (after אֲנִי, Ps 17:6 repeat)",
+      "adjudicated": "space (line break, no maqaf)",
+      "basis": "s42-band1, lines 2–3",
+      "confidence": 0.85
+    },
+    {
+      "block": "s42/second_paragraph",
+      "diff": "vowels:34 כִי|כִּי",
+      "adjudicated": "כִּי",
+      "basis": "s42-band1, line 3: same reading as on s40.",
+      "confidence": 0.6
+    },
+    {
+      "block": "s42/yigdal_description",
+      "diff": "מסודרים|מסדורים",
+      "adjudicated": "מסדורים",
+      "basis": "s42-band1, heading: letters מ-ס-ד-ו-ר-י-ם, with the vav after the ד.",
+      "confidence": 0.93
+    },
+    {
+      "block": "s42/yigdal",
+      "diff": "whitespace:15 אֵין־סוֹף|אֵין סוֹף",
+      "adjudicated": "אֵין סוֹף",
+      "basis": "s42-band1, line 9 (compressed): the words touch but there is no stroke.",
+      "confidence": 0.75
+    },
+    {
+      "block": "s42/yigdal",
+      "diff": "vowels:20 דְמוּת|דְּמוּת",
+      "adjudicated": "דְּמוּת",
+      "basis": "s42-band2, line 1",
+      "confidence": 0.65
+    },
+    {
+      "block": "s42/yigdal",
+      "diff": "whitespace:48 אֶל־אַנְשֵׁי|אֶל אַנְשֵׁי",
+      "adjudicated": "אֶל אַנְשֵׁי",
+      "basis": "s42-band2, line 4",
+      "confidence": 0.6
+    },
+    {
+      "block": "s42/yigdal",
+      "diff": "whitespace:52 לֹא־קָם|לֹא קָם",
+      "adjudicated": "לֹא קָם",
+      "basis": "s42-band2, line 5 (compressed): letters touch, no stroke.",
+      "confidence": 0.75
+    },
+    {
+      "block": "s42/yigdal",
+      "diff": "whitespace:83 לְסוֹף־דָּבָר|לְסוֹף דָּבָר",
+      "adjudicated": "לְסוֹף דָּבָר",
+      "basis": "s42-band2, line 8",
+      "confidence": 0.75
+    },
+    {
+      "block": "s42/yigdal",
+      "diff": "consonants:90 יִתֵּן|נוֹתֵן",
+      "adjudicated": "נוֹתֵן",
+      "basis": "s42-band2, line 9, and s42-band3, line 1: נ-ו-ת-ן.",
+      "confidence": 0.97
+    },
+    {
+      "block": "s42/yigdal",
+      "diff": "consonants:105 בְּרוֹב|בְּרֹב",
+      "adjudicated": "בְּרֹב",
+      "basis": "s42-band3, line 3: no vav.",
+      "confidence": 0.92
+    },
+    {
+      "block": "s42/yigdal",
+      "diff": "whitespace newline diffs 8,17,27,36,44,51,60,70,78,85,93,101",
+      "adjudicated": "Moot under the primary per-couplet blocks. Each principle is one printed line.",
+      "basis": "s42-band1..3",
+      "confidence": 0.97
+    },
+    {
+      "block": "s43/second_paragraph",
+      "diff": "Listen|Lister",
+      "adjudicated": "Lister (source typo, kept)",
+      "basis": "s43-band0, line 6: the final glyph is an r.",
+      "confidence": 0.95
+    },
+    {
+      "block": "s43/second_paragraph",
+      "diff": "me,|me.",
+      "adjudicated": "respond to me. O God,",
+      "basis": "s43-band0, last line: period.",
+      "confidence": 0.93
+    }
+  ],
+  "pending_human": [
+    {
+      "id": "attribution-numerals",
+      "block": "s40/shachar_attribution",
+      "question": "What are the metre numerals: ד׳ ... וד׳, ד׳ ... וג׳, or something else? Are the marks after לר and after the first numeral a geresh or a Rashi yod?",
+      "evidence": "morning-byline.png, displayed coords (original = ×1.49). First numeral at x≈1220–1260 and second numeral at x≈1040–1080, both at y≈60. In this font the two numeral glyphs do not look alike, which argues against both being ד, and the first does not match the final ד of ויתד. The mark after ר (x≈1600) and after the first numeral looks yod-like, while the mark after the second numeral looks like an apostrophe.",
+      "current_text": "ד׳ ... וג׳ ... לר׳",
+      "confidence": 0.55
+    },
+    {
+      "id": "attribution-third-letter",
+      "block": "s40/shachar_attribution",
+      "question": "Confirm that the third letter of the first word is a Rashi ש (בקשה).",
+      "evidence": "morning-byline.png, x≈1650–1680, y≈55. Compare with the ש of שלמה at x≈1500.",
+      "current_text": "בקשה",
+      "confidence": 0.8
+    },
+    {
+      "id": "DivineName-points",
+      "blocks": [
+        "s40/psalm_38_16",
+        "s42/psalm_39_13_shimah_end",
+        "s42/psalm_30_11 (2nd)",
+        "s42/psalm_5_4"
+      ],
+      "question": "These four יְיָ have a vowel group that is not the usual sheva+qamats: the mark under the first yod is larger, like a qamats or hataf. Is this a different pointing of the Divine Name in this edition, or a damaged sort?",
+      "evidence": "s40-band3, last line, x≈1700–1745, y≈420–460. s42-band0, line 1, x≈1640–1680, y≈370–410. s42-band0, line 2, second Name, x≈1570–1610, y≈480–520. s42-band1, line 2, start, x≈1750–1790, y≈150–190. Original coordinates = ×1.21.",
+      "current_text": "יְיָ (placeholder, not verified)",
+      "confidence": 0.4
+    },
+    {
+      "id": "batorah",
+      "block": "s39/hinneni_tzitzit",
+      "question": "Is the word בַּתּוֹרָה or כַּתּוֹרָה?",
+      "evidence": "s39-band0, line 2, x≈1290–1400, y≈575–600. Compare the base of ב in בּוֹרְאִי (same line, x≈1720) with the כ of כַּכָּתוּב (x≈1460).",
+      "current_text": "בַּתּוֹרָה",
+      "confidence": 0.55
+    },
+    {
+      "id": "tizkeh-mark",
+      "block": "s39/hinneni_tzitzit",
+      "question": "There is a comma-like mark below the baseline between תִּזְכֶּה and נִשְׁמָתִי. Is it a punctuation comma or a stray mark?",
+      "evidence": "s39-band0, x≈1285–1300, y≈830–850",
+      "current_text": "not encoded",
+      "confidence": 0.5
+    },
+    {
+      "id": "kemoshe-holam",
+      "block": "s42/yigdal_7",
+      "question": "Does כְּמשֶׁה have a separate holam (כְּמֹשֶׁה), or is a holam merged with the shin dot?",
+      "evidence": "s42-band2, line 5, x≈1240–1320, y≈470–500",
+      "current_text": "כְּמשֶׁה",
+      "confidence": 0.5
+    },
+    {
+      "id": "achduto-dagesh",
+      "block": "s42/yigdal_2",
+      "question": "Is there a dagesh in the ד of לְאַחְדוּתוֹ?",
+      "evidence": "s42-band1, line 9, x≈240–330, y≈850",
+      "current_text": "לְאַחְדוּתוֹ",
+      "confidence": 0.5
+    },
+    {
+      "id": "ra-vowel",
+      "block": "s42/yigdal_11",
+      "question": "Is the vowel under the ר of רָע a qamats or a patah? It looks like a flat bar at this enlargement.",
+      "evidence": "s42-band3, line 1, x≈620–660, y≈40–70",
+      "current_text": "רָע",
+      "confidence": 0.5
+    },
+    {
+      "id": "meteg-inventory",
+      "blocks": [
+        "s39/psalm_36_9 עֲדָנֶיךָ",
+        "s40/mah_tovu יַעֲקֹב",
+        "s42/yigdal_13 עֲדֵי־עַד",
+        "and other hataf words"
+      ],
+      "question": "Short vertical strokes like the verified heading and עֵֽדֶן meteg appear at other hataf/ayin sites. Neither reader encoded them. Should metegs be encoded throughout the text?",
+      "evidence": "s39-band1, line 6, x≈1050; s40-band1, line 1, x≈1450; s42-band3, line 3, x≈640",
+      "current_text": "not encoded except s39 heading and עֵֽדֶן",
+      "confidence": 0.5
+    }
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "cd32ed47-76e6-4c23-8edf-208672603bf5"
+  }
+}

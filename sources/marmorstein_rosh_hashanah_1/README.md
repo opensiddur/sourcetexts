@@ -1,6 +1,6 @@
 # Heidenheim–Marmorstein: first day of Rosh ha-Shanah, 1965
 
-**Status: pilot review complete; the full-volume digitization remains in progress.** This contribution belongs to
+**Status: 49 of 355 leaves accepted; the full-volume digitization remains in progress.** This contribution belongs to
 [opensiddur-processor issue 214](https://github.com/opensiddur/opensiddur-processor/issues/214).
 The complete source is [this 355-leaf Archive item](https://archive.org/details/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965),
 [also described by Open Siddur](https://opensiddur.org/?p=69112).
@@ -338,3 +338,46 @@ references; eight actual expanded print cases; exact selected Kiddush words
 in both languages and both occurrences for weekday/Shabbat; 20 documentary
 and 28 expanded marked Sabbath scopes for false/true/undecided states under
 production JavaScript. The documentary headings share one aligned row.
+
+## Morning preliminaries (s39–s43, accepted)
+
+Nine units (sixteen language files) and four documentary service files cover
+wrapping in the tallit, entrance prayers, Shaḥar Avaqeshkha, the preparatory
+Psalm anthology and Yigdal. The tallit page has actual partial English
+translations on the same physical leaf; its untranslated intention and final
+petition stay Hebrew-only. The English linkage words are omitted from prayer
+words. Source typos “Lister” and “מסדורים” retain separate sic/corr readings.
+
+Existing canonical identities are reused; five new records are structural
+contexts only. Identical Hebrew Mah Tovu reuses the earlier witness inline,
+with a new documentary context/facsimile and the actual first English witness.
+The second Psalm 17:6 is encoded directly with a unique occurrence milestone,
+preserving “I called” beside the source Hebrew. Actual compiled rows match all
+eighteen Psalm occurrences and complete Mah Tovu to their own source words.
+There are no duplicate-alignment warnings or parallel-compilation failures.
+The expanded sequence repeats the existing canonical Bible witness where
+required; earlier s7 pointing remains its intentional canonical lookup.
+
+Three independent source/guideline/alignment/order audits, enlarged and micro
+readings, actual blind differences/hashes and all human decisions are retained.
+The final audit approves the compiled row evidence. `morning_review_provenance.json`
+records actual model identifiers, the medium invocation and separate effort
+self-reports. No hidden effective effort is inferred. Attribution/metre,
+Divine Name pointing, smudges, metegs, dalet dagesh and shuruq are settled.
+
+Accepted: 49 of 355 leaves; 58 independently read; 58 verified labels; 56
+with excerpts; no pending unit reviews. Whole-volume/service acceptance is
+false. Continue at physical scan 44 (Archive n43), printed p.4.
+
+Validation: 168 schema-valid XML files; 115 importer tests and 41 subtests;
+feature/naming/registry/reference checks; nine compiled service/calendar/quorum
+and original/corrected-reading cases; production JavaScript checks of marked
+Sabbath scopes and morning-entry selection. All 23 final review targets differ
+only in acceptance metadata; all 145 prior non-index XML files are unchanged.
+
+Final exports: 42-page documentary PDF and 43-page expanded PDF, with matching
+HTML. Fourteen affected/credit pages rendered and visually inspected. Columns,
+verse/stanza alignment, complete repeated passages and credits are retained;
+internal HTML anchors and final PDF references resolve. No new live-browser
+review is claimed. Scan39–43 images match their physical pages in the original
+355-page PDF. See `morning_*verification.json` and `morning_pdf_page_identity.json`.

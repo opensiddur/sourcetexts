@@ -10003,5 +10003,1620 @@
     "superseded_first_reading_unresolved": [],
     "final_sha256": "488b83a563a96c533847847c88ae99c76ae8e77b5130d2bf2c1db8cd3f086e37",
     "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+  },
+  "tallith_hineni_mitattef/he": {
+    "primary_sha256": "58dfa99d0b6171fa99e0e3fb4eaf6bb179a364edd912b3e1e15c5422ced1d36d",
+    "independent_sha256": "768152427903fa6fe014cd157d22b279491ea34cdebfaa7399795e54ccfa6d9b",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/morning_s39_s43.json",
+      "independent/morning_s39_s43.json",
+      "morning_s39_s43_comparison.json",
+      "independent/morning_s39_s43_enlarged.json",
+      "independent/morning_s39_s43_micro.json",
+      "human_morning_s39_s43_confirmation.json",
+      "independent/morning_guideline_audit_round1.json",
+      "independent/morning_guideline_audit_round2.json",
+      "independent/morning_guideline_audit_round3.json",
+      "morning_s39_s43_resolutions.json",
+      "morning_alignment_verification.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s39/hinneni_tzitzit"
+    ],
+    "raw_scope_note": "Hashes preserve the actual coarse primary/blind blocks, including neighbouring words where the original block was larger than this unit. Final accepted-unit hash is recorded separately after adjudication.",
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "consonants",
+        "ours": "בְּמִצְוַת צִיצִית",
+        "theirs": "בְּטַלִּית שֶׁל צִיצִת",
+        "at": 2,
+        "size": 3,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:2:בְּמִצְוַת צִיצִית|בְּטַלִּית שֶׁל צִיצִת"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "בַּטַּלִּית",
+        "theirs": "בְטַלִּית",
+        "at": 20,
+        "size": 4,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:20:בַּטַּלִּית|בְטַלִּית"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "תִּתְכַּסֶּה",
+        "theirs": "תִּזְכֶּה",
+        "at": 24,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:24:תִּתְכַּסֶּה|תִּזְכֶּה"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "לְעוֹלָם",
+        "theirs": "לָעוֹלָם",
+        "at": 29,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:29:לְעוֹלָם|לָעוֹלָם"
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "consonants:2:בְּמִצְוַת צִיצִית|בְּטַלִּית שֶׁל צִיצִת",
+      "vowels:20:בַּטַּלִּית|בְטַלִּית",
+      "consonants:24:תִּתְכַּסֶּה|תִּזְכֶּה",
+      "vowels:29:לְעוֹלָם|לָעוֹלָם"
+    ],
+    "final_sha256": "0bc62fcd58b92452b57cc42618284d46f3ac5eac288c731c86495686f9120855",
+    "settlement": "Distinct actual primary/blind hashes and differences retained. Enlarged/micro image review, human mark/word adjudications and three independent source/guideline/alignment/order audits settle the final reading and encoding. Actual paired compiler rows verify all18Psalm occurrences and complete MahTovu; no initial disagreement is treated as blind agreement."
+  },
+  "tallith_lehitattef/he": {
+    "primary_sha256": "b8251c02c97b8a4f52d2dc32d1a413afdc3dec7e910fa85c26092a3b4ad92764",
+    "independent_sha256": "b8251c02c97b8a4f52d2dc32d1a413afdc3dec7e910fa85c26092a3b4ad92764",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/morning_s39_s43.json",
+      "independent/morning_s39_s43.json",
+      "morning_s39_s43_comparison.json",
+      "independent/morning_s39_s43_enlarged.json",
+      "independent/morning_s39_s43_micro.json",
+      "human_morning_s39_s43_confirmation.json",
+      "independent/morning_guideline_audit_round1.json",
+      "independent/morning_guideline_audit_round2.json",
+      "independent/morning_guideline_audit_round3.json",
+      "morning_s39_s43_resolutions.json",
+      "morning_alignment_verification.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s39/tallit_blessing_he"
+    ],
+    "raw_scope_note": "Hashes preserve the actual coarse primary/blind blocks, including neighbouring words where the original block was larger than this unit. Final accepted-unit hash is recorded separately after adjudication.",
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "b8251c02c97b8a4f52d2dc32d1a413afdc3dec7e910fa85c26092a3b4ad92764",
+    "settlement": "Distinct actual primary/blind hashes and differences retained. Enlarged/micro image review, human mark/word adjudications and three independent source/guideline/alignment/order audits settle the final reading and encoding. Actual paired compiler rows verify all18Psalm occurrences and complete MahTovu; no initial disagreement is treated as blind agreement."
+  },
+  "tallith_lehitattef/en": {
+    "primary_sha256": "5a85f5c0cd1872bcbb31c8e4ac0dd72a0c73193700c9f787075e1aa4d3d48b29",
+    "independent_sha256": "5a85f5c0cd1872bcbb31c8e4ac0dd72a0c73193700c9f787075e1aa4d3d48b29",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/morning_s39_s43.json",
+      "independent/morning_s39_s43.json",
+      "morning_s39_s43_comparison.json",
+      "independent/morning_s39_s43_enlarged.json",
+      "independent/morning_s39_s43_micro.json",
+      "human_morning_s39_s43_confirmation.json",
+      "independent/morning_guideline_audit_round1.json",
+      "independent/morning_guideline_audit_round2.json",
+      "independent/morning_guideline_audit_round3.json",
+      "morning_s39_s43_resolutions.json",
+      "morning_alignment_verification.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s39/tallit_blessing_en"
+    ],
+    "raw_scope_note": "Hashes preserve the actual coarse primary/blind blocks, including neighbouring words where the original block was larger than this unit. Final accepted-unit hash is recorded separately after adjudication.",
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "5a85f5c0cd1872bcbb31c8e4ac0dd72a0c73193700c9f787075e1aa4d3d48b29",
+    "settlement": "Distinct actual primary/blind hashes and differences retained. Enlarged/micro image review, human mark/word adjudications and three independent source/guideline/alignment/order audits settle the final reading and encoding. Actual paired compiler rows verify all18Psalm occurrences and complete MahTovu; no initial disagreement is treated as blind agreement."
+  },
+  "tallith_mah_yaqar/he": {
+    "primary_sha256": "52c31b6faeed8989ffa3b5e5dae023a2b2c656d469fc6b745b52cc07dfe1c0a2",
+    "independent_sha256": "ff8679d3948c4d5ff6c35950de08898633f02a302dde62ef993c0285377b3926",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/morning_s39_s43.json",
+      "independent/morning_s39_s43.json",
+      "morning_s39_s43_comparison.json",
+      "independent/morning_s39_s43_enlarged.json",
+      "independent/morning_s39_s43_micro.json",
+      "human_morning_s39_s43_confirmation.json",
+      "independent/morning_guideline_audit_round1.json",
+      "independent/morning_guideline_audit_round2.json",
+      "independent/morning_guideline_audit_round3.json",
+      "morning_s39_s43_resolutions.json",
+      "morning_alignment_verification.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s39/psalm_36_he"
+    ],
+    "raw_scope_note": "Hashes preserve the actual coarse primary/blind blocks, including neighbouring words where the original block was larger than this unit. Final accepted-unit hash is recorded separately after adjudication.",
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'\\n'",
+        "at": 8,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after יֶחֱסָיוּן:",
+        "key": "whitespace:8:' '|'\\n'"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'\\n'",
+        "at": 14,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after תַשְׁקֵם:",
+        "key": "whitespace:14:' '|'\\n'"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "'־'",
+        "theirs": "' '",
+        "at": 15,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after כִּי",
+        "key": "whitespace:15:'־'|' '"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'\\n'",
+        "at": 21,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after אוֹר:",
+        "key": "whitespace:21:' '|'\\n'"
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "whitespace:8:' '|'\\n'",
+      "whitespace:14:' '|'\\n'",
+      "whitespace:15:'־'|' '",
+      "whitespace:21:' '|'\\n'"
+    ],
+    "final_sha256": "ff8679d3948c4d5ff6c35950de08898633f02a302dde62ef993c0285377b3926",
+    "settlement": "Distinct actual primary/blind hashes and differences retained. Enlarged/micro image review, human mark/word adjudications and three independent source/guideline/alignment/order audits settle the final reading and encoding. Actual paired compiler rows verify all18Psalm occurrences and complete MahTovu; no initial disagreement is treated as blind agreement."
+  },
+  "tallith_mah_yaqar/en": {
+    "primary_sha256": "0971b6f09d8d3aac18f8aad074f28febabbb0c54cdc9f8d9114c3b458d5c3cfb",
+    "independent_sha256": "9b672e314daed47ef14f20a3227ed09e10a5bcae3d5979226a280efdde75797c",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/morning_s39_s43.json",
+      "independent/morning_s39_s43.json",
+      "morning_s39_s43_comparison.json",
+      "independent/morning_s39_s43_enlarged.json",
+      "independent/morning_s39_s43_micro.json",
+      "human_morning_s39_s43_confirmation.json",
+      "independent/morning_guideline_audit_round1.json",
+      "independent/morning_guideline_audit_round2.json",
+      "independent/morning_guideline_audit_round3.json",
+      "morning_s39_s43_resolutions.json",
+      "morning_alignment_verification.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s39/psalm_36_en"
+    ],
+    "raw_scope_note": "Hashes preserve the actual coarse primary/blind blocks, including neighbouring words where the original block was larger than this unit. Final accepted-unit hash is recorded separately after adjudication.",
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "consonants",
+        "ours": "Thee",
+        "theirs": "Thee,",
+        "at": 61,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:61:Thee|Thee,"
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "consonants:61:Thee|Thee,"
+    ],
+    "final_sha256": "9b672e314daed47ef14f20a3227ed09e10a5bcae3d5979226a280efdde75797c",
+    "settlement": "Distinct actual primary/blind hashes and differences retained. Enlarged/micro image review, human mark/word adjudications and three independent source/guideline/alignment/order audits settle the final reading and encoding. Actual paired compiler rows verify all18Psalm occurrences and complete MahTovu; no initial disagreement is treated as blind agreement."
+  },
+  "tallith_yehi_ratzon/he": {
+    "primary_sha256": "4eb780e15a303fce0cd87d58281ea28ef9edde7c5aeea1456e0eccc073467adf",
+    "independent_sha256": "3b3afb45ee3e9a9f75b6f493621ca33d8f567ed2a72f422230cc542ff71a82ed",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/morning_s39_s43.json",
+      "independent/morning_s39_s43.json",
+      "morning_s39_s43_comparison.json",
+      "independent/morning_s39_s43_enlarged.json",
+      "independent/morning_s39_s43_micro.json",
+      "human_morning_s39_s43_confirmation.json",
+      "independent/morning_guideline_audit_round1.json",
+      "independent/morning_guideline_audit_round2.json",
+      "independent/morning_guideline_audit_round3.json",
+      "morning_s39_s43_resolutions.json",
+      "morning_alignment_verification.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s39/yehi_ratzon_tzitzit"
+    ],
+    "raw_scope_note": "Hashes preserve the actual coarse primary/blind blocks, including neighbouring words where the original block was larger than this unit. Final accepted-unit hash is recorded separately after adjudication.",
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "consonants",
+        "ours": "צִיצִית",
+        "theirs": "צִיצִת",
+        "at": 10,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:10:צִיצִית|צִיצִת"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "וְתַרְיַ״ג",
+        "theirs": "ותרי״ג",
+        "at": 18,
+        "size": 4,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:18:וְתַרְיַ״ג|ותרי״ג"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'־'",
+        "at": 19,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after מִצְוֹת",
+        "key": "whitespace:19:' '|'־'"
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "consonants:10:צִיצִית|צִיצִת",
+      "vowels:18:וְתַרְיַ״ג|ותרי״ג",
+      "whitespace:19:' '|'־'"
+    ],
+    "final_sha256": "6f9108117616e81f7363b011706d91c71ae4292e57656f17e9bdd188c58cfc66",
+    "settlement": "Distinct actual primary/blind hashes and differences retained. Enlarged/micro image review, human mark/word adjudications and three independent source/guideline/alignment/order audits settle the final reading and encoding. Actual paired compiler rows verify all18Psalm occurrences and complete MahTovu; no initial disagreement is treated as blind agreement."
+  },
+  "morning_entrance_verses/he": {
+    "primary_sha256": "06ed5f2f3e85278497b2b2e02bc521e8b934dddba57f5a0e388c2f4ae23325b9",
+    "independent_sha256": "1141e6b75f50dcd1079deacd2a4947a941cb3ebfc62fae54e4d9f6429f41f1a1",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/morning_s39_s43.json",
+      "independent/morning_s39_s43.json",
+      "morning_s39_s43_comparison.json",
+      "independent/morning_s39_s43_enlarged.json",
+      "independent/morning_s39_s43_micro.json",
+      "human_morning_s39_s43_confirmation.json",
+      "independent/morning_guideline_audit_round1.json",
+      "independent/morning_guideline_audit_round2.json",
+      "independent/morning_guideline_audit_round3.json",
+      "morning_s39_s43_resolutions.json",
+      "morning_alignment_verification.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s40/entrance_prefix"
+    ],
+    "raw_scope_note": "Hashes preserve the actual coarse primary/blind blocks, including neighbouring words where the original block was larger than this unit. Final accepted-unit hash is recorded separately after adjudication.",
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "consonants",
+        "ours": "אָבוֹא",
+        "theirs": "אָבֹא",
+        "at": 3,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:3:אָבוֹא|אָבֹא"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'\\n'",
+        "at": 9,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after בְּיִרְאָתֶךָ:",
+        "key": "whitespace:9:' '|'\\n'"
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "consonants:3:אָבוֹא|אָבֹא",
+      "whitespace:9:' '|'\\n'"
+    ],
+    "final_sha256": "1141e6b75f50dcd1079deacd2a4947a941cb3ebfc62fae54e4d9f6429f41f1a1",
+    "settlement": "Distinct actual primary/blind hashes and differences retained. Enlarged/micro image review, human mark/word adjudications and three independent source/guideline/alignment/order audits settle the final reading and encoding. Actual paired compiler rows verify all18Psalm occurrences and complete MahTovu; no initial disagreement is treated as blind agreement."
+  },
+  "morning_entrance_verses/en": {
+    "primary_sha256": "1be2dc31835dbcd8a74419015c9a12372a2dc3d4b6e6c5d593d9836c95b9ac38",
+    "independent_sha256": "1be2dc31835dbcd8a74419015c9a12372a2dc3d4b6e6c5d593d9836c95b9ac38",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/morning_s39_s43.json",
+      "independent/morning_s39_s43.json",
+      "morning_s39_s43_comparison.json",
+      "independent/morning_s39_s43_enlarged.json",
+      "independent/morning_s39_s43_micro.json",
+      "human_morning_s39_s43_confirmation.json",
+      "independent/morning_guideline_audit_round1.json",
+      "independent/morning_guideline_audit_round2.json",
+      "independent/morning_guideline_audit_round3.json",
+      "morning_s39_s43_resolutions.json",
+      "morning_alignment_verification.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s41/psalm_5_8",
+      "s41/psalm_55_15_b"
+    ],
+    "raw_scope_note": "Hashes preserve the actual coarse primary/blind blocks, including neighbouring words where the original block was larger than this unit. Final accepted-unit hash is recorded separately after adjudication.",
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "1be2dc31835dbcd8a74419015c9a12372a2dc3d4b6e6c5d593d9836c95b9ac38",
+    "settlement": "Distinct actual primary/blind hashes and differences retained. Enlarged/micro image review, human mark/word adjudications and three independent source/guideline/alignment/order audits settle the final reading and encoding. Actual paired compiler rows verify all18Psalm occurrences and complete MahTovu; no initial disagreement is treated as blind agreement."
+  },
+  "morning_mah_tovu/he": {
+    "primary_sha256": "ec7fc8a41c7aa63bb69c23f783eefd8879531021e6fcf3f353eeda275e91b800",
+    "independent_sha256": "219880d3569f49608261a6e971f9e81eb30d6cb067b463d7b4bb53ce6a0e4d27",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/morning_s39_s43.json",
+      "independent/morning_s39_s43.json",
+      "morning_s39_s43_comparison.json",
+      "independent/morning_s39_s43_enlarged.json",
+      "independent/morning_s39_s43_micro.json",
+      "human_morning_s39_s43_confirmation.json",
+      "independent/morning_guideline_audit_round1.json",
+      "independent/morning_guideline_audit_round2.json",
+      "independent/morning_guideline_audit_round3.json",
+      "morning_s39_s43_resolutions.json",
+      "morning_alignment_verification.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s40/mah_tovu"
+    ],
+    "raw_scope_note": "Hashes preserve the actual coarse primary/blind blocks, including neighbouring words where the original block was larger than this unit. Final accepted-unit hash is recorded separately after adjudication.",
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "vowels",
+        "ours": "בְרֹב",
+        "theirs": "בְּרֹב",
+        "at": 7,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:7:בְרֹב|בְּרֹב"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "אָבוֹא",
+        "theirs": "אָבֹא",
+        "at": 9,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:9:אָבוֹא|אָבֹא"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'־'",
+        "at": 27,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after לִפְנֵי",
+        "key": "whitespace:27:' '|'־'"
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "vowels:7:בְרֹב|בְּרֹב",
+      "consonants:9:אָבוֹא|אָבֹא",
+      "whitespace:27:' '|'־'"
+    ],
+    "final_sha256": "219880d3569f49608261a6e971f9e81eb30d6cb067b463d7b4bb53ce6a0e4d27",
+    "settlement": "Distinct actual primary/blind hashes and differences retained. Enlarged/micro image review, human mark/word adjudications and three independent source/guideline/alignment/order audits settle the final reading and encoding. Actual paired compiler rows verify all18Psalm occurrences and complete MahTovu; no initial disagreement is treated as blind agreement."
+  },
+  "morning_mah_tovu/en": {
+    "primary_sha256": "ebd8c08c2499d48fbd006a2ebbb6dce6404ad918431a78845f0526741790ebc8",
+    "independent_sha256": "cf7d689e72576a9bd1f11ef05490e61b408d8d171ef5fbef69196e74741d085a",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/morning_s39_s43.json",
+      "independent/morning_s39_s43.json",
+      "morning_s39_s43_comparison.json",
+      "independent/morning_s39_s43_enlarged.json",
+      "independent/morning_s39_s43_micro.json",
+      "human_morning_s39_s43_confirmation.json",
+      "independent/morning_guideline_audit_round1.json",
+      "independent/morning_guideline_audit_round2.json",
+      "independent/morning_guideline_audit_round3.json",
+      "morning_s39_s43_resolutions.json",
+      "morning_alignment_verification.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s41/mah_tovu"
+    ],
+    "raw_scope_note": "Hashes preserve the actual coarse primary/blind blocks, including neighbouring words where the original block was larger than this unit. Final accepted-unit hash is recorded separately after adjudication.",
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "consonants",
+        "ours": "Israel!",
+        "theirs": "Israel.",
+        "at": 10,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:10:Israel!|Israel."
+      },
+      {
+        "bucket": "consonants",
+        "ours": "Lord",
+        "theirs": "Lord,",
+        "at": 59,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:59:Lord|Lord,"
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "consonants:10:Israel!|Israel.",
+      "consonants:59:Lord|Lord,"
+    ],
+    "final_sha256": "cf7d689e72576a9bd1f11ef05490e61b408d8d171ef5fbef69196e74741d085a",
+    "settlement": "Distinct actual primary/blind hashes and differences retained. Enlarged/micro image review, human mark/word adjudications and three independent source/guideline/alignment/order audits settle the final reading and encoding. Actual paired compiler rows verify all18Psalm occurrences and complete MahTovu; no initial disagreement is treated as blind agreement."
+  },
+  "shachar_avaqeshkha_gabirol/he": {
+    "primary_sha256": "58b7b9781d785f07b8ae2fdd9abf7cfb05fa26f8a0d8f85a8b8988f59398782d",
+    "independent_sha256": "94256e252f6a757ef87991b715fbfb8593dc965ef58f3e425ce352b630141dc3",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/morning_s39_s43.json",
+      "independent/morning_s39_s43.json",
+      "morning_s39_s43_comparison.json",
+      "independent/morning_s39_s43_enlarged.json",
+      "independent/morning_s39_s43_micro.json",
+      "human_morning_s39_s43_confirmation.json",
+      "independent/morning_guideline_audit_round1.json",
+      "independent/morning_guideline_audit_round2.json",
+      "independent/morning_guideline_audit_round3.json",
+      "morning_s39_s43_resolutions.json",
+      "morning_alignment_verification.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s40/shachar_attribution",
+      "s40/shachar_avaqeshkha"
+    ],
+    "raw_scope_note": "Hashes preserve the actual coarse primary/blind blocks, including neighbouring words where the original block was larger than this unit. Final accepted-unit hash is recorded separately after adjudication.",
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "consonants",
+        "ours": "נקסם",
+        "theirs": "בקשה",
+        "at": 0,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:0:נקסם|בקשה"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "וג׳",
+        "theirs": "וד׳",
+        "at": 8,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:8:וג׳|וד׳"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "אֶעֱרֹךְ",
+        "theirs": "אֶעְרוֹךְ",
+        "at": 14,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:14:אֶעֱרֹךְ|אֶעְרוֹךְ"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "אֶעֱמוֹד",
+        "theirs": "אֶעְמֹד",
+        "at": 21,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:21:אֶעֱמוֹד|אֶעְמֹד"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "לַעֲשׂוֹת.",
+        "theirs": "לַעֲשׂוֹת,",
+        "at": 35,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:35:לַעֲשׂוֹת.|לַעֲשׂוֹת,"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "כֹּחַ רוּחִי.",
+        "theirs": "כֹּחִי. רוּחִי",
+        "at": 37,
+        "size": 2,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:37:כֹּחַ רוּחִי.|כֹּחִי. רוּחִי"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "אֱנוֹשׁ.",
+        "theirs": "אֱנוֹשׁ,",
+        "at": 45,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:45:אֱנוֹשׁ.|אֱנוֹשׁ,"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "אוֹדְךָ.",
+        "theirs": "אוֹדְךָ",
+        "at": 48,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:48:אוֹדְךָ.|אוֹדְךָ"
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "consonants:0:נקסם|בקשה",
+      "consonants:8:וג׳|וד׳",
+      "consonants:14:אֶעֱרֹךְ|אֶעְרוֹךְ",
+      "consonants:21:אֶעֱמוֹד|אֶעְמֹד",
+      "consonants:35:לַעֲשׂוֹת.|לַעֲשׂוֹת,",
+      "consonants:37:כֹּחַ רוּחִי.|כֹּחִי. רוּחִי",
+      "consonants:45:אֱנוֹשׁ.|אֱנוֹשׁ,",
+      "consonants:48:אוֹדְךָ.|אוֹדְךָ"
+    ],
+    "final_sha256": "b5db50e8ef6846ee9632979c79119928ee2cbbba1b3da4b4467e2bdf79936f2a",
+    "settlement": "Distinct actual primary/blind hashes and differences retained. Enlarged/micro image review, human mark/word adjudications and three independent source/guideline/alignment/order audits settle the final reading and encoding. Actual paired compiler rows verify all18Psalm occurrences and complete MahTovu; no initial disagreement is treated as blind agreement."
+  },
+  "shachar_avaqeshkha_gabirol/en": {
+    "primary_sha256": "801b617d485ed77ecc2e298c4f190e657408ac5976efd533f9230aa699f14896",
+    "independent_sha256": "a955145bfafceea679f8fb306011d0f43fe1965bc27a24b8cb27a6e2241f5c9c",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/morning_s39_s43.json",
+      "independent/morning_s39_s43.json",
+      "morning_s39_s43_comparison.json",
+      "independent/morning_s39_s43_enlarged.json",
+      "independent/morning_s39_s43_micro.json",
+      "human_morning_s39_s43_confirmation.json",
+      "independent/morning_guideline_audit_round1.json",
+      "independent/morning_guideline_audit_round2.json",
+      "independent/morning_guideline_audit_round3.json",
+      "morning_s39_s43_resolutions.json",
+      "morning_alignment_verification.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s41/shachar_avaqeshkha"
+    ],
+    "raw_scope_note": "Hashes preserve the actual coarse primary/blind blocks, including neighbouring words where the original block was larger than this unit. Final accepted-unit hash is recorded separately after adjudication.",
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "consonants",
+        "ours": "man’s",
+        "theirs": "man's",
+        "at": 56,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:56:man’s|man's"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "God’s",
+        "theirs": "God's",
+        "at": 69,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:69:God’s|God's"
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "consonants:56:man’s|man's",
+      "consonants:69:God’s|God's"
+    ],
+    "final_sha256": "801b617d485ed77ecc2e298c4f190e657408ac5976efd533f9230aa699f14896",
+    "settlement": "Distinct actual primary/blind hashes and differences retained. Enlarged/micro image review, human mark/word adjudications and three independent source/guideline/alignment/order audits settle the final reading and encoding. Actual paired compiler rows verify all18Psalm occurrences and complete MahTovu; no initial disagreement is treated as blind agreement."
+  },
+  "morning_before_prayer/he": {
+    "primary_sha256": "9418dd8fca5231e3f442e80cd543bc3a672a29262ad4a3a00623dea8c4589cc8",
+    "independent_sha256": "d1de29631e0f474765b5a829aaeb01ba86a8545bf2aa0bc86af55358dfab852d",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/morning_s39_s43.json",
+      "independent/morning_s39_s43.json",
+      "morning_s39_s43_comparison.json",
+      "independent/morning_s39_s43_enlarged.json",
+      "independent/morning_s39_s43_micro.json",
+      "human_morning_s39_s43_confirmation.json",
+      "independent/morning_guideline_audit_round1.json",
+      "independent/morning_guideline_audit_round2.json",
+      "independent/morning_guideline_audit_round3.json",
+      "morning_s39_s43_resolutions.json",
+      "morning_alignment_verification.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s40/before_morning_verses",
+      "s42/before_morning_cont",
+      "s42/second_paragraph"
+    ],
+    "raw_scope_note": "Hashes preserve the actual coarse primary/blind blocks, including neighbouring words where the original block was larger than this unit. Final accepted-unit hash is recorded separately after adjudication.",
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "vowels",
+        "ours": "כִי",
+        "theirs": "כִּי",
+        "at": 2,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:2:כִי|כִּי"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "'־'",
+        "theirs": "' '",
+        "at": 0,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after אֲנִי",
+        "key": "whitespace:0:'־'|' '"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "אֱלֹהָי.",
+        "theirs": "אֱלֹהָי:",
+        "at": 58,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:58:אֱלֹהָי.|אֱלֹהָי:"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "שִׁמְעָה",
+        "theirs": "שְׁמָעָה",
+        "at": 59,
+        "size": 3,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:59:שִׁמְעָה|שְׁמָעָה"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "תְפִלָּתִי",
+        "theirs": "תְּפִלָּתִי",
+        "at": 60,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:60:תְפִלָּתִי|תְּפִלָּתִי"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "כִי",
+        "theirs": "כִּי",
+        "at": 109,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:109:כִי|כִּי"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'־'",
+        "at": 96,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after כִּי",
+        "key": "whitespace:96:' '|'־'"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "'־'",
+        "theirs": "' '",
+        "at": 107,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after אֲנִי",
+        "key": "whitespace:107:'־'|' '"
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "vowels:2:כִי|כִּי",
+      "whitespace:0:'־'|' '",
+      "consonants:58:אֱלֹהָי.|אֱלֹהָי:",
+      "vowels:59:שִׁמְעָה|שְׁמָעָה",
+      "vowels:60:תְפִלָּתִי|תְּפִלָּתִי",
+      "vowels:109:כִי|כִּי",
+      "whitespace:96:' '|'־'",
+      "whitespace:107:'־'|' '"
+    ],
+    "final_sha256": "e1e1c18a7cb05ce9d7c99c0822a4e077e19f26e402c83f6abcbaf5442172ff02",
+    "settlement": "Distinct actual primary/blind hashes and differences retained. Enlarged/micro image review, human mark/word adjudications and three independent source/guideline/alignment/order audits settle the final reading and encoding. Actual paired compiler rows verify all18Psalm occurrences and complete MahTovu; no initial disagreement is treated as blind agreement."
+  },
+  "morning_before_prayer/en": {
+    "primary_sha256": "8926b1279ca13a79234eaacf294fc3592f4f67d81051ec67d4b6bd8b1dddcdf5",
+    "independent_sha256": "cdff97a0e0732c6436f276b968cf8284246af019830bd9f80a74b66081837b03",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/morning_s39_s43.json",
+      "independent/morning_s39_s43.json",
+      "morning_s39_s43_comparison.json",
+      "independent/morning_s39_s43_enlarged.json",
+      "independent/morning_s39_s43_micro.json",
+      "human_morning_s39_s43_confirmation.json",
+      "independent/morning_guideline_audit_round1.json",
+      "independent/morning_guideline_audit_round2.json",
+      "independent/morning_guideline_audit_round3.json",
+      "morning_s39_s43_resolutions.json",
+      "morning_alignment_verification.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s41/before_morning_verses",
+      "s43/before_morning_cont",
+      "s43/second_paragraph"
+    ],
+    "raw_scope_note": "Hashes preserve the actual coarse primary/blind blocks, including neighbouring words where the original block was larger than this unit. Final accepted-unit hash is recorded separately after adjudication.",
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "consonants",
+        "ours": "Thy",
+        "theirs": "Thine",
+        "at": 63,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:63:Thy|Thine"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "Listen",
+        "theirs": "Lister",
+        "at": 180,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:180:Listen|Lister"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "me,",
+        "theirs": "me.",
+        "at": 226,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:226:me,|me."
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "consonants:63:Thy|Thine",
+      "consonants:180:Listen|Lister",
+      "consonants:226:me,|me."
+    ],
+    "final_sha256": "cdff97a0e0732c6436f276b968cf8284246af019830bd9f80a74b66081837b03",
+    "settlement": "Distinct actual primary/blind hashes and differences retained. Enlarged/micro image review, human mark/word adjudications and three independent source/guideline/alignment/order audits settle the final reading and encoding. Actual paired compiler rows verify all18Psalm occurrences and complete MahTovu; no initial disagreement is treated as blind agreement."
+  },
+  "yigdal/he": {
+    "primary_sha256": "aa73af0f5faa08760a80fb5d0e342492f4873b11c09548e29bbf599aa4413a0e",
+    "independent_sha256": "323f5bff3068b3c03cef2e51d84e8bbcb3ea60dc6eed954651692dbbabdfae6b",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/morning_s39_s43.json",
+      "independent/morning_s39_s43.json",
+      "morning_s39_s43_comparison.json",
+      "independent/morning_s39_s43_enlarged.json",
+      "independent/morning_s39_s43_micro.json",
+      "human_morning_s39_s43_confirmation.json",
+      "independent/morning_guideline_audit_round1.json",
+      "independent/morning_guideline_audit_round2.json",
+      "independent/morning_guideline_audit_round3.json",
+      "morning_s39_s43_resolutions.json",
+      "morning_alignment_verification.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s42/yigdal_description",
+      "s42/yigdal"
+    ],
+    "raw_scope_note": "Hashes preserve the actual coarse primary/blind blocks, including neighbouring words where the original block was larger than this unit. Final accepted-unit hash is recorded separately after adjudication.",
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "consonants",
+        "ours": "מסודרים.",
+        "theirs": "מסדורים.",
+        "at": 4,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:4:מסודרים.|מסדורים."
+      },
+      {
+        "bucket": "vowels",
+        "ours": "לְאַחְדּוּתוֹ:",
+        "theirs": "לְאַחְדוּתוֹ:",
+        "at": 22,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:22:לְאַחְדּוּתוֹ:|לְאַחְדוּתוֹ:"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "דְמוּת",
+        "theirs": "דְּמוּת",
+        "at": 25,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:25:דְמוּת|דְּמוּת"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "כְּמשֶׁה",
+        "theirs": "כְּמֹשֶׁה",
+        "at": 60,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:60:כְּמשֶׁה|כְּמֹשֶׁה"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'\\n'",
+        "at": 13,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after מְצִיאוּתוֹ:",
+        "key": "whitespace:13:' '|'\\n'"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "'־'",
+        "theirs": "' '",
+        "at": 20,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after אֵין",
+        "key": "whitespace:20:'־'|' '"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'\\n'",
+        "at": 22,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after לְאַחְדּוּתוֹ:",
+        "key": "whitespace:22:' '|'\\n'"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'\\n'",
+        "at": 32,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after קְדֻשָּׁתוֹ:",
+        "key": "whitespace:32:' '|'\\n'"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'\\n'",
+        "at": 41,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after לְרֵאשִׁיתוֹ:",
+        "key": "whitespace:41:' '|'\\n'"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'\\n'",
+        "at": 49,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after וּמַלְכוּתוֹ:",
+        "key": "whitespace:49:' '|'\\n'"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "'־'",
+        "theirs": "' '",
+        "at": 53,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after אֶל",
+        "key": "whitespace:53:'־'|' '"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'\\n'",
+        "at": 56,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after וְתִפְאַרְתּוֹ:",
+        "key": "whitespace:56:' '|'\\n'"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "'־'",
+        "theirs": "' '",
+        "at": 57,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after לֹא",
+        "key": "whitespace:57:'־'|' '"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'\\n'",
+        "at": 65,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after תְּמוּנָתוֹ:",
+        "key": "whitespace:65:' '|'\\n'"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'\\n'",
+        "at": 75,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after בֵּיתוֹ:",
+        "key": "whitespace:75:' '|'\\n'"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'\\n'",
+        "at": 83,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after לְזוּלָתוֹ:",
+        "key": "whitespace:83:' '|'\\n'"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "'־'",
+        "theirs": "' '",
+        "at": 88,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after לְסוֹף",
+        "key": "whitespace:88:'־'|' '"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'\\n'",
+        "at": 90,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after בְּקַדְמָתוֹ:",
+        "key": "whitespace:90:' '|'\\n'"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "יִתֵּן",
+        "theirs": "נוֹתֵן",
+        "at": 95,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:95:יִתֵּן|נוֹתֵן"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'\\n'",
+        "at": 98,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after כְּרִשְׁעָתוֹ:",
+        "key": "whitespace:98:' '|'\\n'"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'\\n'",
+        "at": 106,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after יְשׁוּעָתוֹ:",
+        "key": "whitespace:106:' '|'\\n'"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "בְּרוֹב",
+        "theirs": "בְּרֹב",
+        "at": 110,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:110:בְּרוֹב|בְּרֹב"
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "consonants:4:מסודרים.|מסדורים.",
+      "vowels:22:לְאַחְדּוּתוֹ:|לְאַחְדוּתוֹ:",
+      "vowels:25:דְמוּת|דְּמוּת",
+      "vowels:60:כְּמשֶׁה|כְּמֹשֶׁה",
+      "whitespace:13:' '|'\\n'",
+      "whitespace:20:'־'|' '",
+      "whitespace:22:' '|'\\n'",
+      "whitespace:32:' '|'\\n'",
+      "whitespace:41:' '|'\\n'",
+      "whitespace:49:' '|'\\n'",
+      "whitespace:53:'־'|' '",
+      "whitespace:56:' '|'\\n'",
+      "whitespace:57:'־'|' '",
+      "whitespace:65:' '|'\\n'",
+      "whitespace:75:' '|'\\n'",
+      "whitespace:83:' '|'\\n'",
+      "whitespace:88:'־'|' '",
+      "whitespace:90:' '|'\\n'",
+      "consonants:95:יִתֵּן|נוֹתֵן",
+      "whitespace:98:' '|'\\n'",
+      "whitespace:106:' '|'\\n'",
+      "consonants:110:בְּרוֹב|בְּרֹב"
+    ],
+    "final_sha256": "1b2f7187aa52535fc0f8f6e045a2266049f906f44877313d4375ac7e8c85e72e",
+    "settlement": "Distinct actual primary/blind hashes and differences retained. Enlarged/micro image review, human mark/word adjudications and three independent source/guideline/alignment/order audits settle the final reading and encoding. Actual paired compiler rows verify all18Psalm occurrences and complete MahTovu; no initial disagreement is treated as blind agreement."
+  },
+  "yigdal/en": {
+    "primary_sha256": "5eae5bd2fd8b77786a841df5b8a8ced0cf52e22ad705a89799dfd6ee3c3fa331",
+    "independent_sha256": "5eae5bd2fd8b77786a841df5b8a8ced0cf52e22ad705a89799dfd6ee3c3fa331",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/morning_s39_s43.json",
+      "independent/morning_s39_s43.json",
+      "morning_s39_s43_comparison.json",
+      "independent/morning_s39_s43_enlarged.json",
+      "independent/morning_s39_s43_micro.json",
+      "human_morning_s39_s43_confirmation.json",
+      "independent/morning_guideline_audit_round1.json",
+      "independent/morning_guideline_audit_round2.json",
+      "independent/morning_guideline_audit_round3.json",
+      "morning_s39_s43_resolutions.json",
+      "morning_alignment_verification.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s43/yigdal_heading",
+      "s43/yigdal_1",
+      "s43/yigdal_2",
+      "s43/yigdal_3",
+      "s43/yigdal_4",
+      "s43/yigdal_5",
+      "s43/yigdal_6",
+      "s43/yigdal_7",
+      "s43/yigdal_8",
+      "s43/yigdal_9",
+      "s43/yigdal_10",
+      "s43/yigdal_11",
+      "s43/yigdal_12",
+      "s43/yigdal_13"
+    ],
+    "raw_scope_note": "Hashes preserve the actual coarse primary/blind blocks, including neighbouring words where the original block was larger than this unit. Final accepted-unit hash is recorded separately after adjudication.",
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "5eae5bd2fd8b77786a841df5b8a8ced0cf52e22ad705a89799dfd6ee3c3fa331",
+    "settlement": "Distinct actual primary/blind hashes and differences retained. Enlarged/micro image review, human mark/word adjudications and three independent source/guideline/alignment/order audits settle the final reading and encoding. Actual paired compiler rows verify all18Psalm occurrences and complete MahTovu; no initial disagreement is treated as blind agreement."
+  },
+  "instruction/morning_tallit_heading": {
+    "primary_sha256": "94a2176856bec65d8ba719db31c74b8c48ddcd5c1acccace000ed94ca2dca35a",
+    "independent_sha256": "94a2176856bec65d8ba719db31c74b8c48ddcd5c1acccace000ed94ca2dca35a",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/morning_s39_s43.json",
+      "independent/morning_s39_s43.json",
+      "morning_s39_s43_comparison.json",
+      "independent/morning_s39_s43_enlarged.json",
+      "independent/morning_s39_s43_micro.json",
+      "human_morning_s39_s43_confirmation.json",
+      "independent/morning_guideline_audit_round1.json",
+      "independent/morning_guideline_audit_round2.json",
+      "independent/morning_guideline_audit_round3.json",
+      "morning_s39_s43_resolutions.json",
+      "morning_alignment_verification.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s39/tallit_heading"
+    ],
+    "raw_scope_note": "Hashes preserve the actual coarse primary/blind blocks, including neighbouring words where the original block was larger than this unit. Final accepted-unit hash is recorded separately after adjudication.",
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "1041ebdb2e6d288128526018a109223718efeb25241831f8f40062b9abcfe52b",
+    "settlement": "Distinct actual primary/blind hashes and differences retained. Enlarged/micro image review, human mark/word adjudications and three independent source/guideline/alignment/order audits settle the final reading and encoding. Actual paired compiler rows verify all18Psalm occurrences and complete MahTovu; no initial disagreement is treated as blind agreement."
+  },
+  "instruction/morning_tallit_before": {
+    "primary_sha256": "fa54b5a4af348d7488570674af3b408e6bb990020226759ba3e106626af7f6f2",
+    "independent_sha256": "fa54b5a4af348d7488570674af3b408e6bb990020226759ba3e106626af7f6f2",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/morning_s39_s43.json",
+      "independent/morning_s39_s43.json",
+      "morning_s39_s43_comparison.json",
+      "independent/morning_s39_s43_enlarged.json",
+      "independent/morning_s39_s43_micro.json",
+      "human_morning_s39_s43_confirmation.json",
+      "independent/morning_guideline_audit_round1.json",
+      "independent/morning_guideline_audit_round2.json",
+      "independent/morning_guideline_audit_round3.json",
+      "morning_s39_s43_resolutions.json",
+      "morning_alignment_verification.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s39/tallit_before"
+    ],
+    "raw_scope_note": "Hashes preserve the actual coarse primary/blind blocks, including neighbouring words where the original block was larger than this unit. Final accepted-unit hash is recorded separately after adjudication.",
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "fa54b5a4af348d7488570674af3b408e6bb990020226759ba3e106626af7f6f2",
+    "settlement": "Distinct actual primary/blind hashes and differences retained. Enlarged/micro image review, human mark/word adjudications and three independent source/guideline/alignment/order audits settle the final reading and encoding. Actual paired compiler rows verify all18Psalm occurrences and complete MahTovu; no initial disagreement is treated as blind agreement."
+  },
+  "instruction/morning_tallit_standing": {
+    "primary_sha256": "289c711b1bae861b308392412b7dca130e0a7db8d13b39d8bb4a0ebc3e8928b2",
+    "independent_sha256": "289c711b1bae861b308392412b7dca130e0a7db8d13b39d8bb4a0ebc3e8928b2",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/morning_s39_s43.json",
+      "independent/morning_s39_s43.json",
+      "morning_s39_s43_comparison.json",
+      "independent/morning_s39_s43_enlarged.json",
+      "independent/morning_s39_s43_micro.json",
+      "human_morning_s39_s43_confirmation.json",
+      "independent/morning_guideline_audit_round1.json",
+      "independent/morning_guideline_audit_round2.json",
+      "independent/morning_guideline_audit_round3.json",
+      "morning_s39_s43_resolutions.json",
+      "morning_alignment_verification.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s39/tallit_standing"
+    ],
+    "raw_scope_note": "Hashes preserve the actual coarse primary/blind blocks, including neighbouring words where the original block was larger than this unit. Final accepted-unit hash is recorded separately after adjudication.",
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "289c711b1bae861b308392412b7dca130e0a7db8d13b39d8bb4a0ebc3e8928b2",
+    "settlement": "Distinct actual primary/blind hashes and differences retained. Enlarged/micro image review, human mark/word adjudications and three independent source/guideline/alignment/order audits settle the final reading and encoding. Actual paired compiler rows verify all18Psalm occurrences and complete MahTovu; no initial disagreement is treated as blind agreement."
+  },
+  "instruction/morning_tallit_draping": {
+    "primary_sha256": "1f0d91d4c6887135cbcc1adf08ea443ef63f7b5641c55b2cf84fabd20ccd56b4",
+    "independent_sha256": "1f0d91d4c6887135cbcc1adf08ea443ef63f7b5641c55b2cf84fabd20ccd56b4",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/morning_s39_s43.json",
+      "independent/morning_s39_s43.json",
+      "morning_s39_s43_comparison.json",
+      "independent/morning_s39_s43_enlarged.json",
+      "independent/morning_s39_s43_micro.json",
+      "human_morning_s39_s43_confirmation.json",
+      "independent/morning_guideline_audit_round1.json",
+      "independent/morning_guideline_audit_round2.json",
+      "independent/morning_guideline_audit_round3.json",
+      "morning_s39_s43_resolutions.json",
+      "morning_alignment_verification.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s39/tallit_draping"
+    ],
+    "raw_scope_note": "Hashes preserve the actual coarse primary/blind blocks, including neighbouring words where the original block was larger than this unit. Final accepted-unit hash is recorded separately after adjudication.",
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "1f0d91d4c6887135cbcc1adf08ea443ef63f7b5641c55b2cf84fabd20ccd56b4",
+    "settlement": "Distinct actual primary/blind hashes and differences retained. Enlarged/micro image review, human mark/word adjudications and three independent source/guideline/alignment/order audits settle the final reading and encoding. Actual paired compiler rows verify all18Psalm occurrences and complete MahTovu; no initial disagreement is treated as blind agreement."
+  },
+  "instruction/morning_tallit_after": {
+    "primary_sha256": "587b906a51b8c5c923e7fc7f3d8092c03f7d1580b77adcdba8de4c68a134e524",
+    "independent_sha256": "39aa98ab08f798126e924ef4651105f065ce902f0baa002c1a0779713957a58c",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/morning_s39_s43.json",
+      "independent/morning_s39_s43.json",
+      "morning_s39_s43_comparison.json",
+      "independent/morning_s39_s43_enlarged.json",
+      "independent/morning_s39_s43_micro.json",
+      "human_morning_s39_s43_confirmation.json",
+      "independent/morning_guideline_audit_round1.json",
+      "independent/morning_guideline_audit_round2.json",
+      "independent/morning_guideline_audit_round3.json",
+      "morning_s39_s43_resolutions.json",
+      "morning_alignment_verification.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s39/tallit_after"
+    ],
+    "raw_scope_note": "Hashes preserve the actual coarse primary/blind blocks, including neighbouring words where the original block was larger than this unit. Final accepted-unit hash is recorded separately after adjudication.",
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "consonants",
+        "ours": "ציצית",
+        "theirs": "ציצת",
+        "at": 20,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:20:ציצית|ציצת"
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "consonants:20:ציצית|ציצת"
+    ],
+    "final_sha256": "39aa98ab08f798126e924ef4651105f065ce902f0baa002c1a0779713957a58c",
+    "settlement": "Distinct actual primary/blind hashes and differences retained. Enlarged/micro image review, human mark/word adjudications and three independent source/guideline/alignment/order audits settle the final reading and encoding. Actual paired compiler rows verify all18Psalm occurrences and complete MahTovu; no initial disagreement is treated as blind agreement."
+  },
+  "instruction/morning_prayers_heading_he": {
+    "primary_sha256": "9c7d69f6770f994fca3ebeb13e544019a6831f4d7ed3f2863aaa0887478cf75b",
+    "independent_sha256": "9c7d69f6770f994fca3ebeb13e544019a6831f4d7ed3f2863aaa0887478cf75b",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/morning_s39_s43.json",
+      "independent/morning_s39_s43.json",
+      "morning_s39_s43_comparison.json",
+      "independent/morning_s39_s43_enlarged.json",
+      "independent/morning_s39_s43_micro.json",
+      "human_morning_s39_s43_confirmation.json",
+      "independent/morning_guideline_audit_round1.json",
+      "independent/morning_guideline_audit_round2.json",
+      "independent/morning_guideline_audit_round3.json",
+      "morning_s39_s43_resolutions.json",
+      "morning_alignment_verification.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s40/prayers_heading"
+    ],
+    "raw_scope_note": "Hashes preserve the actual coarse primary/blind blocks, including neighbouring words where the original block was larger than this unit. Final accepted-unit hash is recorded separately after adjudication.",
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "9c7d69f6770f994fca3ebeb13e544019a6831f4d7ed3f2863aaa0887478cf75b",
+    "settlement": "Distinct actual primary/blind hashes and differences retained. Enlarged/micro image review, human mark/word adjudications and three independent source/guideline/alignment/order audits settle the final reading and encoding. Actual paired compiler rows verify all18Psalm occurrences and complete MahTovu; no initial disagreement is treated as blind agreement."
+  },
+  "instruction/morning_entering_he": {
+    "primary_sha256": "62c82369bcca5181dcd7f4b379ad29e79a30521c8b230c3c39c225d7a68871f2",
+    "independent_sha256": "62c82369bcca5181dcd7f4b379ad29e79a30521c8b230c3c39c225d7a68871f2",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/morning_s39_s43.json",
+      "independent/morning_s39_s43.json",
+      "morning_s39_s43_comparison.json",
+      "independent/morning_s39_s43_enlarged.json",
+      "independent/morning_s39_s43_micro.json",
+      "human_morning_s39_s43_confirmation.json",
+      "independent/morning_guideline_audit_round1.json",
+      "independent/morning_guideline_audit_round2.json",
+      "independent/morning_guideline_audit_round3.json",
+      "morning_s39_s43_resolutions.json",
+      "morning_alignment_verification.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s40/entering_instruction"
+    ],
+    "raw_scope_note": "Hashes preserve the actual coarse primary/blind blocks, including neighbouring words where the original block was larger than this unit. Final accepted-unit hash is recorded separately after adjudication.",
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "62c82369bcca5181dcd7f4b379ad29e79a30521c8b230c3c39c225d7a68871f2",
+    "settlement": "Distinct actual primary/blind hashes and differences retained. Enlarged/micro image review, human mark/word adjudications and three independent source/guideline/alignment/order audits settle the final reading and encoding. Actual paired compiler rows verify all18Psalm occurrences and complete MahTovu; no initial disagreement is treated as blind agreement."
+  },
+  "instruction/morning_entering_en": {
+    "primary_sha256": "62c82369bcca5181dcd7f4b379ad29e79a30521c8b230c3c39c225d7a68871f2",
+    "independent_sha256": "62c82369bcca5181dcd7f4b379ad29e79a30521c8b230c3c39c225d7a68871f2",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/morning_s39_s43.json",
+      "independent/morning_s39_s43.json",
+      "morning_s39_s43_comparison.json",
+      "independent/morning_s39_s43_enlarged.json",
+      "independent/morning_s39_s43_micro.json",
+      "human_morning_s39_s43_confirmation.json",
+      "independent/morning_guideline_audit_round1.json",
+      "independent/morning_guideline_audit_round2.json",
+      "independent/morning_guideline_audit_round3.json",
+      "morning_s39_s43_resolutions.json",
+      "morning_alignment_verification.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s41/entering_instruction"
+    ],
+    "raw_scope_note": "Hashes preserve the actual coarse primary/blind blocks, including neighbouring words where the original block was larger than this unit. Final accepted-unit hash is recorded separately after adjudication.",
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "62c82369bcca5181dcd7f4b379ad29e79a30521c8b230c3c39c225d7a68871f2",
+    "settlement": "Distinct actual primary/blind hashes and differences retained. Enlarged/micro image review, human mark/word adjudications and three independent source/guideline/alignment/order audits settle the final reading and encoding. Actual paired compiler rows verify all18Psalm occurrences and complete MahTovu; no initial disagreement is treated as blind agreement."
+  },
+  "instruction/morning_before_he": {
+    "primary_sha256": "68d4298c189d6ca95e479d2a93f9baed1f084a501ef8743e242ed3790a0be962",
+    "independent_sha256": "68d4298c189d6ca95e479d2a93f9baed1f084a501ef8743e242ed3790a0be962",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/morning_s39_s43.json",
+      "independent/morning_s39_s43.json",
+      "morning_s39_s43_comparison.json",
+      "independent/morning_s39_s43_enlarged.json",
+      "independent/morning_s39_s43_micro.json",
+      "human_morning_s39_s43_confirmation.json",
+      "independent/morning_guideline_audit_round1.json",
+      "independent/morning_guideline_audit_round2.json",
+      "independent/morning_guideline_audit_round3.json",
+      "morning_s39_s43_resolutions.json",
+      "morning_alignment_verification.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s40/before_morning"
+    ],
+    "raw_scope_note": "Hashes preserve the actual coarse primary/blind blocks, including neighbouring words where the original block was larger than this unit. Final accepted-unit hash is recorded separately after adjudication.",
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "68d4298c189d6ca95e479d2a93f9baed1f084a501ef8743e242ed3790a0be962",
+    "settlement": "Distinct actual primary/blind hashes and differences retained. Enlarged/micro image review, human mark/word adjudications and three independent source/guideline/alignment/order audits settle the final reading and encoding. Actual paired compiler rows verify all18Psalm occurrences and complete MahTovu; no initial disagreement is treated as blind agreement."
+  },
+  "instruction/morning_before_en": {
+    "primary_sha256": "68d4298c189d6ca95e479d2a93f9baed1f084a501ef8743e242ed3790a0be962",
+    "independent_sha256": "68d4298c189d6ca95e479d2a93f9baed1f084a501ef8743e242ed3790a0be962",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/morning_s39_s43.json",
+      "independent/morning_s39_s43.json",
+      "morning_s39_s43_comparison.json",
+      "independent/morning_s39_s43_enlarged.json",
+      "independent/morning_s39_s43_micro.json",
+      "human_morning_s39_s43_confirmation.json",
+      "independent/morning_guideline_audit_round1.json",
+      "independent/morning_guideline_audit_round2.json",
+      "independent/morning_guideline_audit_round3.json",
+      "morning_s39_s43_resolutions.json",
+      "morning_alignment_verification.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s41/before_morning"
+    ],
+    "raw_scope_note": "Hashes preserve the actual coarse primary/blind blocks, including neighbouring words where the original block was larger than this unit. Final accepted-unit hash is recorded separately after adjudication.",
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "68d4298c189d6ca95e479d2a93f9baed1f084a501ef8743e242ed3790a0be962",
+    "settlement": "Distinct actual primary/blind hashes and differences retained. Enlarged/micro image review, human mark/word adjudications and three independent source/guideline/alignment/order audits settle the final reading and encoding. Actual paired compiler rows verify all18Psalm occurrences and complete MahTovu; no initial disagreement is treated as blind agreement."
+  },
+  "instruction/morning_prayers_heading_en": {
+    "primary_sha256": "5799f08aa5686e58ea93dc22c86b7ee1f552f2e350a66828a8e71f7126574bc6",
+    "independent_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/morning_s39_s43.json",
+      "independent/morning_s39_s43.json",
+      "morning_s39_s43_comparison.json",
+      "independent/morning_s39_s43_enlarged.json",
+      "independent/morning_s39_s43_micro.json",
+      "human_morning_s39_s43_confirmation.json",
+      "independent/morning_guideline_audit_round1.json",
+      "independent/morning_guideline_audit_round2.json",
+      "independent/morning_guideline_audit_round3.json",
+      "morning_s39_s43_resolutions.json",
+      "morning_alignment_verification.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "raw_comparison_scopes": [
+      "s41/prayers_heading (blind omission; enlarged reading confirms)"
+    ],
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "consonants",
+        "ours": "Prayers",
+        "theirs": "",
+        "at": 0,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:0:Prayers|"
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "consonants:0:Prayers|"
+    ],
+    "final_sha256": "5799f08aa5686e58ea93dc22c86b7ee1f552f2e350a66828a8e71f7126574bc6",
+    "settlement": "Distinct actual primary/blind hashes and differences retained. Enlarged/micro image review, human mark/word adjudications and three independent source/guideline/alignment/order audits settle the final reading and encoding. Actual paired compiler rows verify all18Psalm occurrences and complete MahTovu; no initial disagreement is treated as blind agreement."
   }
 }

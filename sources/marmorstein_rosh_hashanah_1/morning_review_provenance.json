@@ -1,0 +1,110 @@
+{
+  "reviewer": "Claude Opus5.5 through CLI; configured medium reasoning",
+  "effort_limits": "Invocation configuration and self-reported effort are preserved separately; hidden effective reasoning is not independently observable.",
+  "blind_order": "Primary full-page readings saved before opening the independently produced blind reading. Later enlarged/micro/audit reviews saw the comparisons.",
+  "reviews": [
+    {
+      "file": "independent/morning_s39_s43.json",
+      "saved_result_sha256": "c9c19f6e4746a3b34f54c24d985102e0cdf8b79fd5d8e59014b48b638bf55543",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "3c00c878-1ba9-4c40-b7a2-266c219c71aa"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "effort": "medium (as stated in the CLI request; I can't observe the actual effort setting)"
+      },
+      "response_model_identifiers": [
+        "claude-opus-5-5"
+      ],
+      "raw_response_sha256": "dc767eb249443c6989bcaebc1b102f8e3f04611ef4996d78326dfbd48574af49"
+    },
+    {
+      "file": "independent/morning_s39_s43_enlarged.json",
+      "saved_result_sha256": "f553232835e779bc6d7b49e8628f42d123d0bf0d7df9e760f453e7629825ce7f",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "cd32ed47-76e6-4c23-8edf-208672603bf5"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "effort": "not observable from inside this session (the request header does not state it)"
+      },
+      "response_model_identifiers": [
+        "claude-opus-5-5"
+      ],
+      "raw_response_sha256": "5b92b8b175670bd71af9fe21f495a07c78c0fac62bc0cf21c70146f3f5d9828b"
+    },
+    {
+      "file": "independent/morning_s39_s43_micro.json",
+      "saved_result_sha256": "277553d83f35e94ead37aca3192a1a698b3bf5bea31a6c7e2e5e0096aa2fae53",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "4e083cb4-4e45-45f0-8e35-d89e1ce5bc4b"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "effort": "low"
+      },
+      "response_model_identifiers": [
+        "claude-opus-5-5"
+      ],
+      "raw_response_sha256": "38fbbe5d0c4d227fedce7961185f0ee9b31f69f31ce9a59c6c512b0d2368909a"
+    },
+    {
+      "file": "independent/morning_guideline_audit_round1.json",
+      "saved_result_sha256": "d96f82f9cb68bafbb2ec75ae102833d0929910ced86f9a88ccdc612453ca51c4",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "e781169d-1433-4db3-9afa-02a50251b8b9"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "effort": "not stated in this session"
+      },
+      "response_model_identifiers": [
+        "claude-opus-5-5"
+      ],
+      "raw_response_sha256": "585010ece677e403f2c409f988fa9cc2782cc2215a08ea39d49373a41155a29e"
+    },
+    {
+      "file": "independent/morning_guideline_audit_round2.json",
+      "saved_result_sha256": "c2f78a3010578e5feb2e8be591a3d0b9d915c19ef2f39d53afb722270ba0841b",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "060bc4cb-0e32-4320-a9aa-b74d150d4060"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "effort": "not stated in this session"
+      },
+      "response_model_identifiers": [
+        "claude-opus-5-5"
+      ],
+      "raw_response_sha256": "131d321651ec8405d97d3e03cb11787b956c8dd70ae0911d3337bde6b0389fee"
+    },
+    {
+      "file": "independent/morning_guideline_audit_round3.json",
+      "saved_result_sha256": "21377ebdbf4c5fc088e5097bdb7418308fff6abe3157c4c18da557a285c50630",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "7badaf96-fcca-4f5b-94c2-d2ec224ee4b9"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "role": "final follow-up independent audit (round 3)",
+        "scope_note": "I read the round 2 audit, the snapshot XML for the changed or relevant files, the compiled row evidence, both verification reports, readings.json (the morning units, expanded_order, source_order and documentary_instructions), the human confirmation file and the guideline. I did not read compiler source or settings. Hashes are copied from /tmp/morning-audit3-hashes.json; I did not recompute them."
+      },
+      "response_model_identifiers": [
+        "claude-opus-5-5"
+      ],
+      "raw_response_sha256": "5e67afaa8afb24c0681347317899e5797ac3a5cb39c0896fa18681cd936fa7f7"
+    }
+  ]
+}

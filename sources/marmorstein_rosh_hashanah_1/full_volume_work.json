@@ -2,56 +2,53 @@
   "scope": "Continue from the beginning, in scan order; pilot acceptance remains separate and complete.",
   "current_batch": {
     "scan_pages": [
-      34,
-      35,
-      36,
-      37,
-      38
+      39,
+      40,
+      41,
+      42,
+      43
     ],
     "archive_leaves": [
-      33,
-      34,
-      35,
-      36,
-      37
+      38,
+      39,
+      40,
+      41,
+      42
     ],
     "printed_pages": [
-      20,
-      21,
-      22,
-      23
+      1,
+      2,
+      3
     ],
-    "status": "Accepted evening conclusion and home customs s34–s38; no pending source/encoding/alignment/order disputes.",
+    "status": "Accepted tallit and morning preliminaries s39–s43; no unresolved source, encoding, alignment or order findings.",
     "primary": [
-      "primary/maariv_close_s34_s38.json"
+      "primary/morning_s39_s43.json"
     ],
     "independent": [
-      "independent/maariv_close_s34_s38.json",
-      "independent/maariv_close_s34_s38_enlarged.json",
-      "independent/maariv_close_s34_s38_tight.json"
+      "independent/morning_s39_s43.json",
+      "independent/morning_s39_s43_enlarged.json",
+      "independent/morning_s39_s43_micro.json"
     ],
-    "comparison": "maariv_close_s34_s38_comparison.json",
-    "guideline_audit": "independent/maariv_close_guideline_audit_round3.json",
-    "human_confirmation": "human_maariv_close_confirmation.json",
-    "page_identity": "original_pdf_page_identity.json",
+    "comparison": "morning_s39_s43_comparison.json",
+    "guideline_audit": "independent/morning_guideline_audit_round3.json",
+    "human_confirmation": "human_morning_s39_s43_confirmation.json",
+    "page_identity": "morning_pdf_page_identity.json",
+    "units": "morning_s39_s43_units.json",
     "pending": [],
     "validation": {
-      "schema": "148XMLfiles pass RNG/Schematron in guarded accepted build; all review hashes current.",
-      "tests": "112importer tests+41subtests",
-      "registry_features_names_references": "Pass",
-      "runtime": "maariv_close_runtime_verification.json",
-      "marked_html": "maariv_close_html_state_verification.json: all20documentary/28expanded actualfinalHTMLscopes pass false/true/unknown.",
-      "selected_print_words": "maariv_close_print_word_verification.json",
-      "heading_alignment": "maariv_close_heading_alignment_verification.json: actualaccepted documentaryprintXML aligns bothheadings afterHE-onlyBameh.",
-      "post_audit_changes": "maariv_close_post_audit_verification.json: all27frozen targets match after reversing only acceptance metadata and the explicit human-confirmed final word. All148files have no DRAFT metadata.",
-      "previous_accepted_units": "All122previously tracked language-module files are unchanged; only the three prior indices change.",
-      "exports": "maariv_close_export_verification.json:38-page documentaryPDF,37-page expandedPDF; bothfinalHTMLexports haveuniqueIDs andresolvinginternalanchors. FinalLaTeXpasses havenoundefinedreferences. AffectedPDFpages andcredits renderedandvisuallyinspected."
+      "schema": "168 XML files pass RelaxNG/Schematron in guarded accepted build; all review hashes current.",
+      "tests": "115 importer tests and 41 subtests pass.",
+      "registry_features_names_references": "Pass; five structural contexts, no new canonical prayers.",
+      "runtime": "morning_runtime_verification.json",
+      "marked_html": "morning_html_state_verification.json: 20documentary/28expanded actual final HTML Sabbath scopes pass false/true/undefined. morning_new_html_verification.json: no generic/morning entry overlap.",
+      "alignment": "morning_alignment_verification.json: all18Psalm occurrences and complete MahTovu match their own source words.",
+      "post_audit_changes": "morning_post_audit_verification.json: 23 reviewed targets match after reversing only acceptance metadata; all145previous non-index XML files remain unchanged.",
+      "exports": "morning_export_verification.json: 42-page documentary PDF and43-page expanded PDF.14rendered pages inspected; column alignment, source order, complete translations and credits verified. BothHTML exports haveunique IDs andresolving internal anchors. FinalLaTeXpasses havenoundefinedreferences; no new live-browser review claimed."
     },
-    "audit_resolutions": "maariv_close_s34_s38_resolutions.json",
-    "units": "maariv_close_s34_s38_units.json"
+    "audit_resolutions": "morning_s39_s43_resolutions.json"
   },
-  "next_primary_scan": 39,
-  "next_adjudication_scan": 39,
+  "next_primary_scan": 44,
+  "next_adjudication_scan": 44,
   "images": "Cached outside Git; never use OCR to settle a reading.",
   "secondary_review_requirements": {
     "blind_scan_reading": true,
@@ -368,6 +365,56 @@
         "definite_sabbath_states": "shabbat_resolution_verification.json: weekday omissions, Shabbat unconditional words without brackets/when-rubrics, and undecided control pass in both print languages and both actual electronic exports; 208 exporter tests/122 subtests pass."
       },
       "pending": []
+    },
+    {
+      "scan_pages": [
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "archive_leaves": [
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "printed_pages": [
+        20,
+        21,
+        22,
+        23
+      ],
+      "status": "Accepted evening conclusion and home customs s34–s38; no pending source/encoding/alignment/order disputes.",
+      "primary": [
+        "primary/maariv_close_s34_s38.json"
+      ],
+      "independent": [
+        "independent/maariv_close_s34_s38.json",
+        "independent/maariv_close_s34_s38_enlarged.json",
+        "independent/maariv_close_s34_s38_tight.json"
+      ],
+      "comparison": "maariv_close_s34_s38_comparison.json",
+      "guideline_audit": "independent/maariv_close_guideline_audit_round3.json",
+      "human_confirmation": "human_maariv_close_confirmation.json",
+      "page_identity": "original_pdf_page_identity.json",
+      "pending": [],
+      "validation": {
+        "schema": "148XMLfiles pass RNG/Schematron in guarded accepted build; all review hashes current.",
+        "tests": "112importer tests+41subtests",
+        "registry_features_names_references": "Pass",
+        "runtime": "maariv_close_runtime_verification.json",
+        "marked_html": "maariv_close_html_state_verification.json: all20documentary/28expanded actualfinalHTMLscopes pass false/true/unknown.",
+        "selected_print_words": "maariv_close_print_word_verification.json",
+        "heading_alignment": "maariv_close_heading_alignment_verification.json: actualaccepted documentaryprintXML aligns bothheadings afterHE-onlyBameh.",
+        "post_audit_changes": "maariv_close_post_audit_verification.json: all27frozen targets match after reversing only acceptance metadata and the explicit human-confirmed final word. All148files have no DRAFT metadata.",
+        "previous_accepted_units": "All122previously tracked language-module files are unchanged; only the three prior indices change.",
+        "exports": "maariv_close_export_verification.json:38-page documentaryPDF,37-page expandedPDF; bothfinalHTMLexports haveuniqueIDs andresolvinginternalanchors. FinalLaTeXpasses havenoundefinedreferences. AffectedPDFpages andcredits renderedandvisuallyinspected."
+      },
+      "audit_resolutions": "maariv_close_s34_s38_resolutions.json",
+      "units": "maariv_close_s34_s38_units.json"
     }
   ]
 }

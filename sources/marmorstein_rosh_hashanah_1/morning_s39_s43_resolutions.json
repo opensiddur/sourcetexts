@@ -1,0 +1,35 @@
+{
+  "status": "Accepted tallit and morning preliminaries s39–s43; no unresolved source, encoding, alignment or order findings.",
+  "review_rounds": [
+    "independent/morning_guideline_audit_round1.json",
+    "independent/morning_guideline_audit_round2.json",
+    "independent/morning_guideline_audit_round3.json"
+  ],
+  "raw_comparison": "morning_s39_s43_comparison.json",
+  "human_confirmations": "human_morning_s39_s43_confirmation.json",
+  "resolutions": {
+    "F1": "English Yigdal description no longer forces a false page break.",
+    "F2": "Identical Hebrew MahTovu reuses the earlier canonical witness INLINE in the context paragraph; all five clauses pair correctly with the first English edition witness. Actual complete row inspected and checked.",
+    "F3": "Composite Mah Tovu uses source annotations, not duplicated Biblical verse identities.",
+    "F4": "Second Psalm17:6 directly encoded in its printed parent paragraph with unique occurrence milestone and Bible source annotation. Removed unnecessary separate repeat module. Actual compiler strips all inline markers, so no reliance on an internal transcluded boundary.",
+    "F5": "Adapted first-person Psalm95:6 explicitly type=adaptation.",
+    "F6": "Descriptions of following words are description rubrics; actual actions retain instruction.",
+    "F7": "Both Yigdal descriptions are notes with actual wording.",
+    "F8": "Edition chapter numbers without corresp are retained; harmless bare terminators claim no complete chapters.",
+    "F9": "Service headers already identify source; exact source pages/facsimiles are carried by reusable units. A service-level biblScope is optional metadata enhancement.",
+    "human": "Attribution/metre, ordinary Divine Name, heading smudge, batorah bet, dalet dagesh and vav shuruq confirmed.",
+    "source_marks": "Human confirmations and independent round2 tight-image review settle the dalet/shuruq, סֵֽדֶר meteg, אל אנשי without maqaf, and speck near תזכה as a blemish. No source questions remain.",
+    "N1": "Existing earlier s7 Hebrew Bible witness remains canonical, including its pointing; expanded recitation intentionally reuses that edition witness. Actual context-aware documentary compilation pairs every later occurrence with its own English, without duplicate-key warnings or cross-position pairing. See morning_alignment_verification.json."
+  },
+  "validation": {
+    "schema": "168 XML files pass RelaxNG/Schematron in guarded accepted build; all review hashes current.",
+    "tests": "115 importer tests and 41 subtests pass.",
+    "registry_features_names_references": "Pass; five structural contexts, no new canonical prayers.",
+    "runtime": "morning_runtime_verification.json",
+    "marked_html": "morning_html_state_verification.json: 20documentary/28expanded actual final HTML Sabbath scopes pass false/true/undefined. morning_new_html_verification.json: no generic/morning entry overlap.",
+    "alignment": "morning_alignment_verification.json: all18Psalm occurrences and complete MahTovu match their own source words.",
+    "post_audit_changes": "morning_post_audit_verification.json: 23 reviewed targets match after reversing only acceptance metadata; all145previous non-index XML files remain unchanged.",
+    "exports": "morning_export_verification.json: 42-page documentary PDF and43-page expanded PDF.14rendered pages inspected; column alignment, source order, complete translations and credits verified. BothHTML exports haveunique IDs andresolving internal anchors. FinalLaTeXpasses havenoundefinedreferences; no new live-browser review claimed."
+  },
+  "pending_human": []
+}
