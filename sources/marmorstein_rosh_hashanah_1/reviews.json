@@ -693,8 +693,19 @@
     },
     "unresolved": [],
     "complete": true,
-    "final_sha256": "d061f5c9831ccef618cac06d28f34f254f8246b6b8df190402231087da2342c5",
-    "pending_ambiguities": []
+    "final_sha256": "7110c979ca66ac4b1c1bf6bc40433579b29b6f6c0dfc8eff2c16f0d744038aa6",
+    "pending_ambiguities": [],
+    "post_acceptance_corrections": [
+      {
+        "prior_final_sha256": "d061f5c9831ccef618cac06d28f34f254f8246b6b8df190402231087da2342c5",
+        "correction": "Remove our inserted vav before זַמְּרוּ־לוֹ in16:9; source prints no vav. This corrects transcription, not an original misprint; no sic/corr.",
+        "evidence": [
+          "independent/maariv_guideline_audit_round2.json",
+          "independent/maariv_final_marks.json"
+        ],
+        "primary_image": "Archive n59 / scan s60, enlarged word crop"
+      }
+    ]
   },
   "chronicles_1_16_8_to_36/en": {
     "primary_sha256": "5ccd93c8728da954fbc0d9198b20ef938496a8727aeaa53e37b3e686f7afe33c",
@@ -5316,7 +5327,12 @@
     "evidence": [
       "primary/maariv_s18_s23.json",
       "independent/maariv_s18_s22.json",
-      "independent/maariv_s23_and_rubrics.json"
+      "independent/maariv_s23_and_rubrics.json",
+      "independent/maariv_small_crop_adjudication.json",
+      "human_maariv_confirmation.json",
+      "independent/maariv_guideline_audit_round1.json",
+      "independent/maariv_guideline_audit_round2.json",
+      "independent/maariv_final_marks.json"
     ],
     "differences": [
       {
@@ -5330,14 +5346,17 @@
         "key": "consonants:46:לְעוֹלָם|לְעֹלָם"
       }
     ],
-    "decisions": {},
-    "unresolved": [
-      "consonants:46:לְעוֹלָם|לְעֹלָם"
-    ],
-    "complete": false,
-    "pending_ambiguities": [
-      "Provisional assembled text; see independent raw readings and Maariv adjudications. Final frozen-file source/guideline/alignment/order audit pending."
-    ]
+    "decisions": {
+      "consonants:46:לְעוֹלָם|לְעֹלָם": {
+        "accepted": "independent",
+        "evidence": "Accepted first-reading base; source-specific pointing/cantillation and human overrides subsequently adjudicated in maariv_s18_s23_resolutions.json and linked independent reports."
+      }
+    },
+    "unresolved": [],
+    "complete": true,
+    "pending_ambiguities": [],
+    "final_sha256": "15f5cf61be8d489cf3d3b67da41949a4c50b0547ab025a4ba258b3cbd9e1da38",
+    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks."
   },
   "barekhu/en": {
     "primary_sha256": "f456c459c2c0d11247174f6e1b46644d951e18ab86e696ed7bce5db7faba81df",
@@ -5347,7 +5366,12 @@
     "evidence": [
       "primary/maariv_s18_s23.json",
       "independent/maariv_s18_s22.json",
-      "independent/maariv_s23_and_rubrics.json"
+      "independent/maariv_s23_and_rubrics.json",
+      "independent/maariv_small_crop_adjudication.json",
+      "human_maariv_confirmation.json",
+      "independent/maariv_guideline_audit_round1.json",
+      "independent/maariv_guideline_audit_round2.json",
+      "independent/maariv_final_marks.json"
     ],
     "differences": [
       {
@@ -5361,14 +5385,17 @@
         "key": "consonants:16:ever.|ever"
       }
     ],
-    "decisions": {},
-    "unresolved": [
-      "consonants:16:ever.|ever"
-    ],
-    "complete": false,
-    "pending_ambiguities": [
-      "Provisional assembled text; see independent raw readings and Maariv adjudications. Final frozen-file source/guideline/alignment/order audit pending."
-    ]
+    "decisions": {
+      "consonants:16:ever.|ever": {
+        "accepted": "independent",
+        "evidence": "Accepted first-reading base; source-specific pointing/cantillation and human overrides subsequently adjudicated in maariv_s18_s23_resolutions.json and linked independent reports."
+      }
+    },
+    "unresolved": [],
+    "complete": true,
+    "pending_ambiguities": [],
+    "final_sha256": "4e4099ae99ad96189ef32e215bf5e365b5f929dcc6760ec922a1c1f4f51ff6d0",
+    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks."
   },
   "maariv_aravim/he": {
     "primary_sha256": "feb5dd9c9e101d6a6fb4a7727d4c924882e50d2c4fa0473753b333a94879b2a4",
@@ -5378,7 +5405,12 @@
     "evidence": [
       "primary/maariv_s18_s23.json",
       "independent/maariv_s18_s22.json",
-      "independent/maariv_s23_and_rubrics.json"
+      "independent/maariv_s23_and_rubrics.json",
+      "independent/maariv_small_crop_adjudication.json",
+      "human_maariv_confirmation.json",
+      "independent/maariv_guideline_audit_round1.json",
+      "independent/maariv_guideline_audit_round2.json",
+      "independent/maariv_final_marks.json"
     ],
     "differences": [
       {
@@ -5412,16 +5444,25 @@
         "key": "consonants:46:שְׁמוֹ|שְׁמוֹ."
       }
     ],
-    "decisions": {},
-    "unresolved": [
-      "consonants:11:פּוֹתֵחַ|פֹּתֵחַ",
-      "consonants:21:הַכּוֹכָבִים|הַכֹּכָבִים",
-      "consonants:46:שְׁמוֹ|שְׁמוֹ."
-    ],
-    "complete": false,
-    "pending_ambiguities": [
-      "Provisional assembled text; see independent raw readings and Maariv adjudications. Final frozen-file source/guideline/alignment/order audit pending."
-    ]
+    "decisions": {
+      "consonants:11:פּוֹתֵחַ|פֹּתֵחַ": {
+        "accepted": "independent",
+        "evidence": "Accepted first-reading base; source-specific pointing/cantillation and human overrides subsequently adjudicated in maariv_s18_s23_resolutions.json and linked independent reports."
+      },
+      "consonants:21:הַכּוֹכָבִים|הַכֹּכָבִים": {
+        "accepted": "independent",
+        "evidence": "Accepted first-reading base; source-specific pointing/cantillation and human overrides subsequently adjudicated in maariv_s18_s23_resolutions.json and linked independent reports."
+      },
+      "consonants:46:שְׁמוֹ|שְׁמוֹ.": {
+        "accepted": "independent",
+        "evidence": "Accepted first-reading base; source-specific pointing/cantillation and human overrides subsequently adjudicated in maariv_s18_s23_resolutions.json and linked independent reports."
+      }
+    },
+    "unresolved": [],
+    "complete": true,
+    "pending_ambiguities": [],
+    "final_sha256": "e14a28858761ef37e3f89dcb7f1cd6711a7182b029a88402dd308ee04f22225b",
+    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks."
   },
   "maariv_aravim/en": {
     "primary_sha256": "92068d5947f6556d43f0657047fa261356dd562586cccf66a13b0160b427fbba",
@@ -5431,15 +5472,20 @@
     "evidence": [
       "primary/maariv_s18_s23.json",
       "independent/maariv_s18_s22.json",
-      "independent/maariv_s23_and_rubrics.json"
+      "independent/maariv_s23_and_rubrics.json",
+      "independent/maariv_small_crop_adjudication.json",
+      "human_maariv_confirmation.json",
+      "independent/maariv_guideline_audit_round1.json",
+      "independent/maariv_guideline_audit_round2.json",
+      "independent/maariv_final_marks.json"
     ],
     "differences": [],
     "decisions": {},
     "unresolved": [],
-    "complete": false,
-    "pending_ambiguities": [
-      "Provisional assembled text; see independent raw readings and Maariv adjudications. Final frozen-file source/guideline/alignment/order audit pending."
-    ]
+    "complete": true,
+    "pending_ambiguities": [],
+    "final_sha256": "92068d5947f6556d43f0657047fa261356dd562586cccf66a13b0160b427fbba",
+    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks."
   },
   "ahavat_olam_arvit/he": {
     "primary_sha256": "7f35b45d93819d0387002db668e047632adaf94c3df0ab256c15e60253bd6ca4",
@@ -5449,7 +5495,12 @@
     "evidence": [
       "primary/maariv_s18_s23.json",
       "independent/maariv_s18_s22.json",
-      "independent/maariv_s23_and_rubrics.json"
+      "independent/maariv_s23_and_rubrics.json",
+      "independent/maariv_small_crop_adjudication.json",
+      "human_maariv_confirmation.json",
+      "independent/maariv_guideline_audit_round1.json",
+      "independent/maariv_guideline_audit_round2.json",
+      "independent/maariv_final_marks.json"
     ],
     "differences": [
       {
@@ -5473,15 +5524,21 @@
         "key": "consonants:19:בְּחֻקֶּיךָ.|בְּחֻקֶּיךָ,"
       }
     ],
-    "decisions": {},
-    "unresolved": [
-      "consonants:5:אָהָבְתָּ.|אָהָבְתָּ,",
-      "consonants:19:בְּחֻקֶּיךָ.|בְּחֻקֶּיךָ,"
-    ],
-    "complete": false,
-    "pending_ambiguities": [
-      "Provisional assembled text; see independent raw readings and Maariv adjudications. Final frozen-file source/guideline/alignment/order audit pending."
-    ]
+    "decisions": {
+      "consonants:5:אָהָבְתָּ.|אָהָבְתָּ,": {
+        "accepted": "independent",
+        "evidence": "Accepted first-reading base; source-specific pointing/cantillation and human overrides subsequently adjudicated in maariv_s18_s23_resolutions.json and linked independent reports."
+      },
+      "consonants:19:בְּחֻקֶּיךָ.|בְּחֻקֶּיךָ,": {
+        "accepted": "independent",
+        "evidence": "Accepted first-reading base; source-specific pointing/cantillation and human overrides subsequently adjudicated in maariv_s18_s23_resolutions.json and linked independent reports."
+      }
+    },
+    "unresolved": [],
+    "complete": true,
+    "pending_ambiguities": [],
+    "final_sha256": "e0811fec8f0c7dd7033b44ac8c7ec9d1dddcfd554a829880cca4c29d03042daf",
+    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks."
   },
   "ahavat_olam_arvit/en": {
     "primary_sha256": "908829a0704bb9fe88fcbfe28890ccea539833b3f28f9a23964e989374111b60",
@@ -5491,15 +5548,20 @@
     "evidence": [
       "primary/maariv_s18_s23.json",
       "independent/maariv_s18_s22.json",
-      "independent/maariv_s23_and_rubrics.json"
+      "independent/maariv_s23_and_rubrics.json",
+      "independent/maariv_small_crop_adjudication.json",
+      "human_maariv_confirmation.json",
+      "independent/maariv_guideline_audit_round1.json",
+      "independent/maariv_guideline_audit_round2.json",
+      "independent/maariv_final_marks.json"
     ],
     "differences": [],
     "decisions": {},
     "unresolved": [],
-    "complete": false,
-    "pending_ambiguities": [
-      "Provisional assembled text; see independent raw readings and Maariv adjudications. Final frozen-file source/guideline/alignment/order audit pending."
-    ]
+    "complete": true,
+    "pending_ambiguities": [],
+    "final_sha256": "908829a0704bb9fe88fcbfe28890ccea539833b3f28f9a23964e989374111b60",
+    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks."
   },
   "el_melekh_neeman/he": {
     "primary_sha256": "14e11dda71ef74bcc8ddd7512ec6f4186b3fe582c597ed0969d83f2cfb8e1010",
@@ -5509,15 +5571,20 @@
     "evidence": [
       "primary/maariv_s18_s23.json",
       "independent/maariv_s18_s22.json",
-      "independent/maariv_s23_and_rubrics.json"
+      "independent/maariv_s23_and_rubrics.json",
+      "independent/maariv_small_crop_adjudication.json",
+      "human_maariv_confirmation.json",
+      "independent/maariv_guideline_audit_round1.json",
+      "independent/maariv_guideline_audit_round2.json",
+      "independent/maariv_final_marks.json"
     ],
     "differences": [],
     "decisions": {},
     "unresolved": [],
-    "complete": false,
-    "pending_ambiguities": [
-      "Provisional assembled text; see independent raw readings and Maariv adjudications. Final frozen-file source/guideline/alignment/order audit pending."
-    ]
+    "complete": true,
+    "pending_ambiguities": [],
+    "final_sha256": "c07835ea7aa8750d97979a698d77f2807690c2332586347b1b5c6a283fc98537",
+    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks."
   },
   "shema_yisrael/he": {
     "primary_sha256": "0995c1c1e94d8842f7b97e23f35b0fa80130b9c9cf9ee46c9534f838e6d24a85",
@@ -5527,7 +5594,12 @@
     "evidence": [
       "primary/maariv_s18_s23.json",
       "independent/maariv_s18_s22.json",
-      "independent/maariv_s23_and_rubrics.json"
+      "independent/maariv_s23_and_rubrics.json",
+      "independent/maariv_small_crop_adjudication.json",
+      "human_maariv_confirmation.json",
+      "independent/maariv_guideline_audit_round1.json",
+      "independent/maariv_guideline_audit_round2.json",
+      "independent/maariv_final_marks.json"
     ],
     "differences": [
       {
@@ -5541,14 +5613,17 @@
         "key": "consonants:5:|׀"
       }
     ],
-    "decisions": {},
-    "unresolved": [
-      "consonants:5:|׀"
-    ],
-    "complete": false,
-    "pending_ambiguities": [
-      "Provisional assembled text; see independent raw readings and Maariv adjudications. Final frozen-file source/guideline/alignment/order audit pending."
-    ]
+    "decisions": {
+      "consonants:5:|׀": {
+        "accepted": "independent",
+        "evidence": "Accepted first-reading base; source-specific pointing/cantillation and human overrides subsequently adjudicated in maariv_s18_s23_resolutions.json and linked independent reports."
+      }
+    },
+    "unresolved": [],
+    "complete": true,
+    "pending_ambiguities": [],
+    "final_sha256": "8de68186b2030a71dd3f51d55a3fec63d267da5396636e430f2196f42042b64d",
+    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks."
   },
   "shema_yisrael/en": {
     "primary_sha256": "50873a78eee5e664693d7888aeff467beadae6d958a25f9029508da21dd7e607",
@@ -5558,15 +5633,20 @@
     "evidence": [
       "primary/maariv_s18_s23.json",
       "independent/maariv_s18_s22.json",
-      "independent/maariv_s23_and_rubrics.json"
+      "independent/maariv_s23_and_rubrics.json",
+      "independent/maariv_small_crop_adjudication.json",
+      "human_maariv_confirmation.json",
+      "independent/maariv_guideline_audit_round1.json",
+      "independent/maariv_guideline_audit_round2.json",
+      "independent/maariv_final_marks.json"
     ],
     "differences": [],
     "decisions": {},
     "unresolved": [],
-    "complete": false,
-    "pending_ambiguities": [
-      "Provisional assembled text; see independent raw readings and Maariv adjudications. Final frozen-file source/guideline/alignment/order audit pending."
-    ]
+    "complete": true,
+    "pending_ambiguities": [],
+    "final_sha256": "50873a78eee5e664693d7888aeff467beadae6d958a25f9029508da21dd7e607",
+    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks."
   },
   "citation/shema_yisrael/he/0": {
     "primary_sha256": "b0df51f8c817d4eacd45ea97fc737c1ebdc0c86387c973958481a9bf4a1309aa",
@@ -5604,15 +5684,20 @@
     "evidence": [
       "primary/maariv_s18_s23.json",
       "independent/maariv_s18_s22.json",
-      "independent/maariv_s23_and_rubrics.json"
+      "independent/maariv_s23_and_rubrics.json",
+      "independent/maariv_small_crop_adjudication.json",
+      "human_maariv_confirmation.json",
+      "independent/maariv_guideline_audit_round1.json",
+      "independent/maariv_guideline_audit_round2.json",
+      "independent/maariv_final_marks.json"
     ],
     "differences": [],
     "decisions": {},
     "unresolved": [],
-    "complete": false,
-    "pending_ambiguities": [
-      "Provisional assembled text; see independent raw readings and Maariv adjudications. Final frozen-file source/guideline/alignment/order audit pending."
-    ]
+    "complete": true,
+    "pending_ambiguities": [],
+    "final_sha256": "9eb8f9c02d660ef304689b91b4206be82ff37ebe3dda016bf9bc0d14f868e361",
+    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks."
   },
   "barukh_shem/en": {
     "primary_sha256": "ac6e9ea214c7a37a490b020a4cee756eccbf4e812d759fa3b92896ba020cb16a",
@@ -5622,15 +5707,20 @@
     "evidence": [
       "primary/maariv_s18_s23.json",
       "independent/maariv_s18_s22.json",
-      "independent/maariv_s23_and_rubrics.json"
+      "independent/maariv_s23_and_rubrics.json",
+      "independent/maariv_small_crop_adjudication.json",
+      "human_maariv_confirmation.json",
+      "independent/maariv_guideline_audit_round1.json",
+      "independent/maariv_guideline_audit_round2.json",
+      "independent/maariv_final_marks.json"
     ],
     "differences": [],
     "decisions": {},
     "unresolved": [],
-    "complete": false,
-    "pending_ambiguities": [
-      "Provisional assembled text; see independent raw readings and Maariv adjudications. Final frozen-file source/guideline/alignment/order audit pending."
-    ]
+    "complete": true,
+    "pending_ambiguities": [],
+    "final_sha256": "ac6e9ea214c7a37a490b020a4cee756eccbf4e812d759fa3b92896ba020cb16a",
+    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks."
   },
   "deuteronomy_6_5_to_9/he": {
     "primary_sha256": "bc2c371b9050fc58f159816e74830bbff8706266343f62c0b130fa26cd9c6432",
@@ -5640,15 +5730,20 @@
     "evidence": [
       "primary/maariv_s18_s23.json",
       "independent/maariv_s18_s22.json",
-      "independent/maariv_s23_and_rubrics.json"
+      "independent/maariv_s23_and_rubrics.json",
+      "independent/maariv_small_crop_adjudication.json",
+      "human_maariv_confirmation.json",
+      "independent/maariv_guideline_audit_round1.json",
+      "independent/maariv_guideline_audit_round2.json",
+      "independent/maariv_final_marks.json"
     ],
     "differences": [],
     "decisions": {},
     "unresolved": [],
-    "complete": false,
-    "pending_ambiguities": [
-      "Provisional assembled text; see independent raw readings and Maariv adjudications. Final frozen-file source/guideline/alignment/order audit pending."
-    ]
+    "complete": true,
+    "pending_ambiguities": [],
+    "final_sha256": "94d33afe2099329c0335ceb87d2ec06fa1dfc10574d60fad5324714122d2ae05",
+    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks."
   },
   "deuteronomy_6_5_to_9/en": {
     "primary_sha256": "5cf36b8bc62252df64ae9f215c9ce047c2ac8ae25eaa73beb22b8b7f7102f8ec",
@@ -5658,15 +5753,20 @@
     "evidence": [
       "primary/maariv_s18_s23.json",
       "independent/maariv_s18_s22.json",
-      "independent/maariv_s23_and_rubrics.json"
+      "independent/maariv_s23_and_rubrics.json",
+      "independent/maariv_small_crop_adjudication.json",
+      "human_maariv_confirmation.json",
+      "independent/maariv_guideline_audit_round1.json",
+      "independent/maariv_guideline_audit_round2.json",
+      "independent/maariv_final_marks.json"
     ],
     "differences": [],
     "decisions": {},
     "unresolved": [],
-    "complete": false,
-    "pending_ambiguities": [
-      "Provisional assembled text; see independent raw readings and Maariv adjudications. Final frozen-file source/guideline/alignment/order audit pending."
-    ]
+    "complete": true,
+    "pending_ambiguities": [],
+    "final_sha256": "5cf36b8bc62252df64ae9f215c9ce047c2ac8ae25eaa73beb22b8b7f7102f8ec",
+    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks."
   },
   "deuteronomy_11_13_to_21/he": {
     "primary_sha256": "27a325a2573b546829374dc7d0ebd5e905214f8596186ec3d469744e8f456fd3",
@@ -5676,15 +5776,20 @@
     "evidence": [
       "primary/maariv_s18_s23.json",
       "independent/maariv_s18_s22.json",
-      "independent/maariv_s23_and_rubrics.json"
+      "independent/maariv_s23_and_rubrics.json",
+      "independent/maariv_small_crop_adjudication.json",
+      "human_maariv_confirmation.json",
+      "independent/maariv_guideline_audit_round1.json",
+      "independent/maariv_guideline_audit_round2.json",
+      "independent/maariv_final_marks.json"
     ],
     "differences": [],
     "decisions": {},
     "unresolved": [],
-    "complete": false,
-    "pending_ambiguities": [
-      "Provisional assembled text; see independent raw readings and Maariv adjudications. Final frozen-file source/guideline/alignment/order audit pending."
-    ]
+    "complete": true,
+    "pending_ambiguities": [],
+    "final_sha256": "aa544b543c90f24c14c38e79ee8ff8fa7068e7dcb44e5caf86fa9cb843c9018d",
+    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks."
   },
   "deuteronomy_11_13_to_21/en": {
     "primary_sha256": "865f2cd74f26a5fd1a85b672727e5f122434a499d9959920d61f8d95793042da",
@@ -5694,15 +5799,20 @@
     "evidence": [
       "primary/maariv_s18_s23.json",
       "independent/maariv_s18_s22.json",
-      "independent/maariv_s23_and_rubrics.json"
+      "independent/maariv_s23_and_rubrics.json",
+      "independent/maariv_small_crop_adjudication.json",
+      "human_maariv_confirmation.json",
+      "independent/maariv_guideline_audit_round1.json",
+      "independent/maariv_guideline_audit_round2.json",
+      "independent/maariv_final_marks.json"
     ],
     "differences": [],
     "decisions": {},
     "unresolved": [],
-    "complete": false,
-    "pending_ambiguities": [
-      "Provisional assembled text; see independent raw readings and Maariv adjudications. Final frozen-file source/guideline/alignment/order audit pending."
-    ]
+    "complete": true,
+    "pending_ambiguities": [],
+    "final_sha256": "865f2cd74f26a5fd1a85b672727e5f122434a499d9959920d61f8d95793042da",
+    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks."
   },
   "citation/deuteronomy_11_13_to_21/he/0": {
     "primary_sha256": "ac01cecaceef3f4a0a9696eb6cecd0aa1983e8e18fed10711a409006e727f0ce",
@@ -5740,7 +5850,12 @@
     "evidence": [
       "primary/maariv_s18_s23.json",
       "independent/maariv_s18_s22.json",
-      "independent/maariv_s23_and_rubrics.json"
+      "independent/maariv_s23_and_rubrics.json",
+      "independent/maariv_small_crop_adjudication.json",
+      "human_maariv_confirmation.json",
+      "independent/maariv_guideline_audit_round1.json",
+      "independent/maariv_guideline_audit_round2.json",
+      "independent/maariv_final_marks.json"
     ],
     "differences": [
       {
@@ -5754,14 +5869,17 @@
         "key": "consonants:37:תָתוּרוּ|תָתֻרוּ"
       }
     ],
-    "decisions": {},
-    "unresolved": [
-      "consonants:37:תָתוּרוּ|תָתֻרוּ"
-    ],
-    "complete": false,
-    "pending_ambiguities": [
-      "Provisional assembled text; see independent raw readings and Maariv adjudications. Final frozen-file source/guideline/alignment/order audit pending."
-    ]
+    "decisions": {
+      "consonants:37:תָתוּרוּ|תָתֻרוּ": {
+        "accepted": "primary",
+        "evidence": "Accepted first-reading base; source-specific pointing/cantillation and human overrides subsequently adjudicated in maariv_s18_s23_resolutions.json and linked independent reports."
+      }
+    },
+    "unresolved": [],
+    "complete": true,
+    "pending_ambiguities": [],
+    "final_sha256": "eff5ff9d8f2c75af57f4cbced20e1e551fa5e1d622e0fff2bc0058b1d3262952",
+    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks."
   },
   "numbers_15_37_to_41/en": {
     "primary_sha256": "2c9ffaaba7e2196b1d74576a9b1a3fd31a62aa90f78a376be53e482fc925368c",
@@ -5771,15 +5889,20 @@
     "evidence": [
       "primary/maariv_s18_s23.json",
       "independent/maariv_s18_s22.json",
-      "independent/maariv_s23_and_rubrics.json"
+      "independent/maariv_s23_and_rubrics.json",
+      "independent/maariv_small_crop_adjudication.json",
+      "human_maariv_confirmation.json",
+      "independent/maariv_guideline_audit_round1.json",
+      "independent/maariv_guideline_audit_round2.json",
+      "independent/maariv_final_marks.json"
     ],
     "differences": [],
     "decisions": {},
     "unresolved": [],
-    "complete": false,
-    "pending_ambiguities": [
-      "Provisional assembled text; see independent raw readings and Maariv adjudications. Final frozen-file source/guideline/alignment/order audit pending."
-    ]
+    "complete": true,
+    "pending_ambiguities": [],
+    "final_sha256": "2c9ffaaba7e2196b1d74576a9b1a3fd31a62aa90f78a376be53e482fc925368c",
+    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks."
   },
   "citation/numbers_15_37_to_41/he/0": {
     "primary_sha256": "880e2814bf204cbfd665d457f63421fcaaef3bf98239094a1c50550aebd51980",
@@ -5817,7 +5940,12 @@
     "evidence": [
       "primary/maariv_s18_s23.json",
       "independent/maariv_s18_s22.json",
-      "independent/maariv_s23_and_rubrics.json"
+      "independent/maariv_s23_and_rubrics.json",
+      "independent/maariv_small_crop_adjudication.json",
+      "human_maariv_confirmation.json",
+      "independent/maariv_guideline_audit_round1.json",
+      "independent/maariv_guideline_audit_round2.json",
+      "independent/maariv_final_marks.json"
     ],
     "differences": [
       {
@@ -5931,24 +6059,57 @@
         "key": "vowels:144:וּגְאָלֹו|וּגְאָלוֹ"
       }
     ],
-    "decisions": {},
-    "unresolved": [
-      "consonants:31:נַפְשֵׁנוּ.|נַפְשֵׁנוּ",
-      "whitespace:34:' '|'־'",
-      "whitespace:38:' '|'־'",
-      "consonants:48:וְהַמַּדְרִיכֵנוּ|הַמַּדְרִיכֵנוּ",
-      "consonants:56:שׂוֹנְאֵינוּ:|שֹׂנְאֵינוּ:",
-      "vowels:98:בְרָצוֹן|בְּרָצוֹן",
-      "whitespace:102:'־'|' '",
-      "consonants:113:בָּאֵלִים|בָּאֵלִם",
-      "consonants:133:וְאָמְרוּ:|וְאָמְרוּ.",
-      "consonants:136:לְעוֹלָם|לְעֹלָם",
-      "vowels:144:וּגְאָלֹו|וּגְאָלוֹ"
-    ],
-    "complete": false,
-    "pending_ambiguities": [
-      "Provisional assembled text; see independent raw readings and Maariv adjudications. Final frozen-file source/guideline/alignment/order audit pending."
-    ]
+    "decisions": {
+      "consonants:31:נַפְשֵׁנוּ.|נַפְשֵׁנוּ": {
+        "accepted": "independent",
+        "evidence": "Accepted first-reading base; source-specific pointing/cantillation and human overrides subsequently adjudicated in maariv_s18_s23_resolutions.json and linked independent reports."
+      },
+      "whitespace:34:' '|'־'": {
+        "accepted": "independent",
+        "evidence": "Accepted first-reading base; source-specific pointing/cantillation and human overrides subsequently adjudicated in maariv_s18_s23_resolutions.json and linked independent reports."
+      },
+      "whitespace:38:' '|'־'": {
+        "accepted": "independent",
+        "evidence": "Accepted first-reading base; source-specific pointing/cantillation and human overrides subsequently adjudicated in maariv_s18_s23_resolutions.json and linked independent reports."
+      },
+      "consonants:48:וְהַמַּדְרִיכֵנוּ|הַמַּדְרִיכֵנוּ": {
+        "accepted": "independent",
+        "evidence": "Accepted first-reading base; source-specific pointing/cantillation and human overrides subsequently adjudicated in maariv_s18_s23_resolutions.json and linked independent reports."
+      },
+      "consonants:56:שׂוֹנְאֵינוּ:|שֹׂנְאֵינוּ:": {
+        "accepted": "independent",
+        "evidence": "Accepted first-reading base; source-specific pointing/cantillation and human overrides subsequently adjudicated in maariv_s18_s23_resolutions.json and linked independent reports."
+      },
+      "vowels:98:בְרָצוֹן|בְּרָצוֹן": {
+        "accepted": "independent",
+        "evidence": "Accepted first-reading base; source-specific pointing/cantillation and human overrides subsequently adjudicated in maariv_s18_s23_resolutions.json and linked independent reports."
+      },
+      "whitespace:102:'־'|' '": {
+        "accepted": "independent",
+        "evidence": "Accepted first-reading base; source-specific pointing/cantillation and human overrides subsequently adjudicated in maariv_s18_s23_resolutions.json and linked independent reports."
+      },
+      "consonants:113:בָּאֵלִים|בָּאֵלִם": {
+        "accepted": "independent",
+        "evidence": "Accepted first-reading base; source-specific pointing/cantillation and human overrides subsequently adjudicated in maariv_s18_s23_resolutions.json and linked independent reports."
+      },
+      "consonants:133:וְאָמְרוּ:|וְאָמְרוּ.": {
+        "accepted": "independent",
+        "evidence": "Accepted first-reading base; source-specific pointing/cantillation and human overrides subsequently adjudicated in maariv_s18_s23_resolutions.json and linked independent reports."
+      },
+      "consonants:136:לְעוֹלָם|לְעֹלָם": {
+        "accepted": "independent",
+        "evidence": "Accepted first-reading base; source-specific pointing/cantillation and human overrides subsequently adjudicated in maariv_s18_s23_resolutions.json and linked independent reports."
+      },
+      "vowels:144:וּגְאָלֹו|וּגְאָלוֹ": {
+        "accepted": "independent",
+        "evidence": "Accepted first-reading base; source-specific pointing/cantillation and human overrides subsequently adjudicated in maariv_s18_s23_resolutions.json and linked independent reports."
+      }
+    },
+    "unresolved": [],
+    "complete": true,
+    "pending_ambiguities": [],
+    "final_sha256": "a28235eab8c4835626ed42429fbee0c3f09fa893df9a08e1c22b5596849d9dd4",
+    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks."
   },
   "emet_veemunah/en": {
     "primary_sha256": "7bdbdb9355e6fcd4a3f46114656b2468dc59a96411cf026c09f90fdef50b47f3",
@@ -5958,15 +6119,20 @@
     "evidence": [
       "primary/maariv_s18_s23.json",
       "independent/maariv_s18_s22.json",
-      "independent/maariv_s23_and_rubrics.json"
+      "independent/maariv_s23_and_rubrics.json",
+      "independent/maariv_small_crop_adjudication.json",
+      "human_maariv_confirmation.json",
+      "independent/maariv_guideline_audit_round1.json",
+      "independent/maariv_guideline_audit_round2.json",
+      "independent/maariv_final_marks.json"
     ],
     "differences": [],
     "decisions": {},
     "unresolved": [],
-    "complete": false,
-    "pending_ambiguities": [
-      "Provisional assembled text; see independent raw readings and Maariv adjudications. Final frozen-file source/guideline/alignment/order audit pending."
-    ]
+    "complete": true,
+    "pending_ambiguities": [],
+    "final_sha256": "7bdbdb9355e6fcd4a3f46114656b2468dc59a96411cf026c09f90fdef50b47f3",
+    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks."
   },
   "instruction/maariv_heading_he": {
     "primary_sha256": "e3d4b719f3056092b2a64e6ff95d496e92e1926acd7bf8a1ddef6500832b79dc",
@@ -5974,17 +6140,21 @@
     "primary_model": "Codex (GPT-6)",
     "independent_model": "claude-opus-5-5",
     "evidence": [
+      "primary/maariv_s18_s23.json",
       "independent/maariv_s18_s22.json",
-      "independent/maariv_adjudication.json"
+      "independent/maariv_s23_and_rubrics.json",
+      "independent/maariv_small_crop_adjudication.json",
+      "human_maariv_confirmation.json",
+      "independent/maariv_guideline_audit_round1.json",
+      "independent/maariv_guideline_audit_round2.json",
+      "independent/maariv_final_marks.json"
     ],
     "differences": [],
     "decisions": {},
     "unresolved": [],
-    "complete": false,
+    "complete": true,
     "final_sha256": "e3d4b719f3056092b2a64e6ff95d496e92e1926acd7bf8a1ddef6500832b79dc",
-    "pending_ambiguities": [
-      "Final independent markup review pending"
-    ]
+    "pending_ambiguities": []
   },
   "instruction/maariv_heading_en": {
     "primary_sha256": "0f69d2a5a89dfec14745842e848adb05e8d3def591fbcd7cc3a8eeaf8f7abdb1",
@@ -5992,35 +6162,21 @@
     "primary_model": "Codex (GPT-6)",
     "independent_model": "claude-opus-5-5",
     "evidence": [
+      "primary/maariv_s18_s23.json",
       "independent/maariv_s18_s22.json",
-      "independent/maariv_adjudication.json"
+      "independent/maariv_s23_and_rubrics.json",
+      "independent/maariv_small_crop_adjudication.json",
+      "human_maariv_confirmation.json",
+      "independent/maariv_guideline_audit_round1.json",
+      "independent/maariv_guideline_audit_round2.json",
+      "independent/maariv_final_marks.json"
     ],
     "differences": [],
     "decisions": {},
     "unresolved": [],
-    "complete": false,
+    "complete": true,
     "final_sha256": "0f69d2a5a89dfec14745842e848adb05e8d3def591fbcd7cc3a8eeaf8f7abdb1",
-    "pending_ambiguities": [
-      "Final independent markup review pending"
-    ]
-  },
-  "instruction/shema_silently": {
-    "primary_sha256": "a75a8dad942f8dbe7ea8aac180f783555eb7c963a5d289ecc6e3c9b6a9df0c2c",
-    "independent_sha256": "a75a8dad942f8dbe7ea8aac180f783555eb7c963a5d289ecc6e3c9b6a9df0c2c",
-    "primary_model": "Codex (GPT-6)",
-    "independent_model": "claude-opus-5-5",
-    "evidence": [
-      "independent/maariv_s18_s22.json",
-      "independent/maariv_adjudication.json"
-    ],
-    "differences": [],
-    "decisions": {},
-    "unresolved": [],
-    "complete": false,
-    "final_sha256": "a75a8dad942f8dbe7ea8aac180f783555eb7c963a5d289ecc6e3c9b6a9df0c2c",
-    "pending_ambiguities": [
-      "Final independent markup review pending"
-    ]
+    "pending_ambiguities": []
   },
   "instruction/shema_emet_join": {
     "primary_sha256": "c3f54f9051d31b110ce18715d34f547a38595af8b41bfeeef09db37c3dab6c5f",
@@ -6028,16 +6184,20 @@
     "primary_model": "Codex (GPT-6)",
     "independent_model": "claude-opus-5-5",
     "evidence": [
+      "primary/maariv_s18_s23.json",
       "independent/maariv_s18_s22.json",
-      "independent/maariv_adjudication.json"
+      "independent/maariv_s23_and_rubrics.json",
+      "independent/maariv_small_crop_adjudication.json",
+      "human_maariv_confirmation.json",
+      "independent/maariv_guideline_audit_round1.json",
+      "independent/maariv_guideline_audit_round2.json",
+      "independent/maariv_final_marks.json"
     ],
     "differences": [],
     "decisions": {},
     "unresolved": [],
-    "complete": false,
+    "complete": true,
     "final_sha256": "c3f54f9051d31b110ce18715d34f547a38595af8b41bfeeef09db37c3dab6c5f",
-    "pending_ambiguities": [
-      "Final independent markup review pending"
-    ]
+    "pending_ambiguities": []
   }
 }

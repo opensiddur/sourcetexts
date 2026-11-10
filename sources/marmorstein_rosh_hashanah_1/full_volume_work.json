@@ -22,7 +22,7 @@
       13,
       14
     ],
-    "status": "Draft Maariv installment s18–s23 through Ga’al Yisrael; source ambiguities and independent guideline/alignment/order review pending. Not accepted as complete leaves.",
+    "status": "Accepted readings and guideline/alignment/order review for s18–s23 after human adjudications, two frozen-file independent audits, final enlarged source-mark review and local runtime/export checks. Current volume/service incomplete.",
     "primary": "primary/maariv_s18_s23.json",
     "independent": [
       "independent/maariv_s18_s22.json",
@@ -30,47 +30,22 @@
     ],
     "comparison": "maariv_s18_s23_comparison.json",
     "audit_resolutions": "maariv_s18_s23_resolutions.json",
-    "pending": [
-      {
-        "reference": "deuteronomy/6/9",
-        "word": "בֵּיתֶ֖ךָ",
-        "question": "Is the mark beside the segol under ת a tipcha, or something shaped like a wedge?",
-        "evidence": "In the padded crop the stroke looks hooked or caret-like and is not clearly a slant. Tipcha is kept, since it is the only accent that fits before silluq after tevir and merkha. Confidence is low-medium."
-      },
-      {
-        "reference": "deuteronomy/11/21",
-        "word": "הָֽאֲדָמָ֔ה; יְהוָ֛ה",
-        "question": "Is the short free-standing vertical tick after each final ה a paseq or a print artifact?",
-        "evidence": "The tick appears again in detail-s20-2-r and s20-2-l, row 5. Other final ה's on the page have no tick. A paseq at these zaqef and tevir positions would be unusual, so I do not transcribe it."
-      },
-      {
-        "reference": "deuteronomy/11/14",
-        "word": "וְנָֽתַתִּ֥י",
-        "question": "Is the accent merkha or tevir?",
-        "evidence": "The hiriq dot next to a merkha stroke looks much like tevir (stroke plus dot). Under תִּ in 11:15 the tevir looks nearly the same."
-      },
-      {
-        "reference": "numbers/15/39; 15/40; 15/41",
-        "word": "עֵינֵיכֶ֔ם; לֵאלֹהֵיכֶֽם; אֱלֹהֵיכֶ֗ם (first)",
-        "question": "Is there a meteg under עֵ, לֵ or לֹ?",
-        "evidence": "None of the supplied tiles covers these lines. s20-3 ends at 15:39 וַֽעֲשִׂיתֶ֖ם אֹתָ֑ם, and s22 starts at the closing יְהוָ֥ה אֱלֹהֵיכֶֽם:. This is unresolved, not judged absent."
-      },
-      "Meteg/gaya on ע (עיניכם), ל (לאלהיכם) and א (first אלהיכם): each is a stroke only a few pixels tall touching the vowel. Please confirm on a higher-resolution crop (at least 3x) before treating any of them as certain. The silluq under the כ of לאלהיכם is clear.",
-      "The single dot above the כ in עיניכם and in the first אלהיכם, and the separate ⋮ above עיניכם: their meaning in this book's system (stress sign, pause sign, or reduced accent) can't be settled from these crops alone.",
-      "Independent guideline/alignment/order review awaits user approval after automatic approval review rejected the external repository-content transfer."
-    ],
+    "pending": [],
     "validation": {
-      "schema": "81 generated XML files pass RelaxNG and Schematron after current point corrections.",
-      "focused_tests": "98 tests and 41 subtests pass.",
-      "runtime": "maariv_runtime_verification.json",
+      "schema": "81 files pass RelaxNG/Schematron in guarded accepted build; all review hashes current.",
+      "focused_tests": "99 importer tests and41subtests pass; separate exporter fix360tests and199subtests pass.",
+      "runtime": "maariv_runtime_verification.json: five quorum/service cases, documentary compilation and eight excerpt checks passed after rubric corrections.",
       "leaf_acceptance": "No new complete leaves; existing 23 retained",
       "features_names_registry_references": "Three projects pass feature, naming and reference resolution checks; registry passes with zero errors/warnings; no new canonical identities registered.",
       "chapter_resolution": "Direct resolver checks confirm these edition excerpts do not resolve as whole Deuteronomy6 or Chronicles1:16 chapters.",
-      "exports": "Current draft documentary and expanded PDF/HTML rebuilt. Documentary physical pages14–18 and expanded11–15 visually inspected. HTML local links resolve with no duplicate IDs. See maariv_export_verification.json. No acceptance of unresolved source marks or independent guideline/order review implied."
-    }
+      "exports": "Accepted-installment PDF/HTML rebuilt after final source corrections. Integrated character/rubric layout and changed source-mark pages visually inspected; both HTML outputs retain c/rend-large and have no duplicate IDs or missing local link targets. See maariv_export_verification.json.",
+      "post_audit_changes": "maariv_post_audit_change_check.json: all81files match frozen reviewed XML after reversing only the independently adjudicated source-mark edits and acceptance-status metadata."
+    },
+    "guideline_audit": "independent/maariv_guideline_audit_round2.json",
+    "final_source_marks": "independent/maariv_final_marks.json"
   },
-  "next_primary_scan": 24,
-  "next_adjudication_scan": 18,
+  "next_primary_scan": 26,
+  "next_adjudication_scan": 24,
   "images": "Cached outside Git; never use OCR to settle a reading.",
   "secondary_review_requirements": {
     "blind_scan_reading": true,
@@ -264,5 +239,14 @@
         "full_volume_complete": false
       }
     }
-  ]
+  ],
+  "queued_primary": {
+    "scans": [
+      24,
+      25
+    ],
+    "record": "primary/maariv_s24_s25.json",
+    "status": "Both blind readings preserved; enlarged adjudication, mapping, assembly and guideline/alignment/order review pending.",
+    "independent": "independent/maariv_s24_s25.json"
+  }
 }

@@ -210,23 +210,31 @@ reviewed leaves, 32 independently read leaves, and 355 leaves in total.
 Continue in scan order at s18 (Archive n17, printed page 12); full-volume
 acceptance remains false.
 
-## First-night Maariv draft (s18–s23)
+## First-night Maariv (s18–s23)
 
-Barekhu through Ga’al Yisrael is now assembled in 19 Hebrew/English files.
+Barekhu through Ga’al Yisrael is accepted in 19 Hebrew/English files.
 The edition’s Shema cantillation, enlarged letters, Yiddish role labels,
-Rashi-script instructions, citations and page continuations are preserved.
-English linkage cues stay in raw evidence; missing English remains absent.
-Existing prayer and Biblical URNs are reused. The shared expanded sequence
-has local quorum/service settings and retains no required navigation.
+Rashi-script rubrics, citation notes and page continuations are preserved.
+Existing prayer and Biblical URNs are reused. Missing English remains absent.
+The shared expanded order has local quorum/service settings and no required
+navigation. Exact excerpt publication URNs do not claim entire chapters.
 
-This batch remains provisional: small source marks require human adjudication,
-and independent guideline/alignment/order review awaits explicit approval to
-send the relevant repository content to Claude following an automatic review
-rejection. Raw readings, incomplete attempts and superseded crop decisions
-are retained; none is presented as acceptance. See
-`maariv_s18_s23_resolutions.json` for remaining questions and local validation.
+Two frozen-file independent guideline/alignment/order audits, enlarged source
+readings and the user’s source adjudications are retained. The first audit’s
+incorrect intrinsic/occurrence minyan finding was withdrawn; the entire
+canonical Barekhu meditation retains its existing shared extent. Single/double
+pashta distinctions and meteg positions follow this print. Our inserted vav
+in Chronicles16:9 has been removed as a transcription correction, with the
+prior accepted hash retained. Printed page8 at s52 is confirmed directly.
+Cross-module source paragraph continuity is recorded separately.
 
-There are 38 independently read leaves and 23 fully accepted leaves out of 355.
-Six new page labels (paired Hebrew/English pp.12–14) have been verified.
-Primary reading may continue at s24 (Archive n23); acceptance resumes at s18.
-The next service text is Hashkivenu. Full-volume acceptance remains false.
+The accepted build validates 81 XML files;99 importer tests / 41 subtests and the
+separate exporter character fix’s 360 tests / 199 subtests pass. Quorum/service
+checks, excerpt checks and integrated PDF/HTML previews pass. Exporter fix
+PR 298 is separate; merge it before dependent digitization changes.
+
+There are 29 fully accepted leaves and 40 independent image readings out of 355.
+Primary and blind independent readings of s24–s25 (Hashkivenu through Half
+Kaddish) are preserved but not accepted or generated. Continue adjudication
+at s24 (Archive n23), and primary reading at s26. Whole-volume and whole-service
+acceptance remain false.

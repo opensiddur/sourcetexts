@@ -842,7 +842,7 @@
               {
                 "scan": "s60",
                 "printed_page": "15",
-                "text": "שִׁירוּ לוֹ וְזַמְּרוּ־לוֹ שִׂיחוּ בְּכָל־נִפְלְאֹתָיו:",
+                "text": "שִׁירוּ לוֹ זַמְּרוּ־לוֹ שִׂיחוּ בְּכָל־נִפְלְאֹתָיו:",
                 "page_start": false
               }
             ],
@@ -5432,7 +5432,7 @@
               {
                 "scan": "s18",
                 "printed_page": "12",
-                "text": "אַהֲבַת עוֹלָם בֵּית יִשְׂרָאֵל עַמְּךָ אָהָבְתָּ, תּוֹרָה וּמִצְוֹת חֻקִּים וּמִשְׁפָּטִים אוֹתָנוּ לִמַּדְתָּ, עַל־כֵּן יְיָ אֱלֹהֵינוּ בְּשָׁכְבֵנוּ וּבְקוּמֵנוּ נָשִׂיחַ בְּחֻקֶּיךָ, וְנִשְׂמַח בְּדִבְרֵי תוֹרָתֶךָ וּבְמִצְוֹתֶיךָ לְעוֹלָם וָעֶד, כִּי הֵם חַיֵּינוּ וְאֹרֶךְ יָמֵינוּ וּבָהֶם נֶהְגֶּה יוֹמָם וָלָיְלָה. וְאַהֲבָתְךָ אַל־תָּסִיר מִמֶּנּוּ לְעוֹלָמִים.",
+                "text": "אַהֲבַת עוֹלָם בֵּית יִשְׂרָאֵל עַמְּךָ אָהָבְתָּ, תּוֹרָה וּמִצְוֹת חֻקִּים וּמִשְׁפָּטִים אוֹתָנוּ לִמַּדְתָּ, עַל־כֵּן יְיָ אֱלֹהֵינוּ בְּשָׁכְבֵנוּ וּבְקוּמֵנוּ נָשִׂיחַ בְּחֻקֶּיךָ, וְנִשְׂמַח בְּדִבְרֵי תוֹרָתֶךָ וּבְמִצְוֹתֶיךָ לְעוֹלָם וָעֶד, כִּי הֵם חַיֵּינוּ וְאֹרֶךְ יָמֵינוּ וּבָהֶם נֶהְגֶּה יוֹמָם וָלָֽיְלָה. וְאַהֲבָתְךָ אַל־תָּסִיר מִמֶּנּוּ לְעוֹלָמִים.",
                 "page_start": false
               }
             ],
@@ -5506,8 +5506,9 @@
         {
           "language": "he",
           "text": "יחיד אומר",
-          "type": "description",
-          "source_script": "rashi"
+          "type": "instruction",
+          "source_script": "rashi",
+          "placement": "condition"
         }
       ],
       "conditions": [
@@ -5617,7 +5618,18 @@
             "paragraph": 1
           }
         ]
-      }
+      },
+      "instructions": [
+        {
+          "text": "בלחש",
+          "language": "he",
+          "type": "description",
+          "witnesses": [
+            "he"
+          ],
+          "source_script": "rashi"
+        }
+      ]
     },
     {
       "stem": "deuteronomy_6_5_to_9",
@@ -5796,7 +5808,7 @@
               {
                 "scan": "s20",
                 "printed_page": "13",
-                "text": "וְנָֽתַתִּ֥י מְטַֽר־אַרְצְכֶ֛ם בְּעִתּ֖וֹ יוֹרֶ֣ה וּמַלְק֑וֹשׁ וְאָֽסַפְתָּ֣ דְגָנֶ֔ךָ וְתִירֹשְׁךָ֖ וְיִצְהָרֶֽךָ:",
+                "text": "וְנָֽתַתִּ֧י מְטַֽר־אַרְצְכֶ֛ם בְּעִתּ֖וֹ יוֹרֶ֣ה וּמַלְק֑וֹשׁ וְאָֽסַפְתָּ֣ דְגָנֶ֔ךָ וְתִירֹשְׁךָ֖ וְיִצְהָרֶֽךָ:",
                 "page_start": false
               }
             ]
@@ -5808,7 +5820,7 @@
               {
                 "scan": "s20",
                 "printed_page": "13",
-                "text": "וְנָתַתִּ֛י עֵ֥שֶׂב בְּשָׂדְךָ֖ לִבְהֶמְתֶּ֑ךָ וְאָֽכַלְתָּ֖ וְשָׂבָֽעְתָּ:",
+                "text": "וְנָֽתַתִּ֛י עֵ֥שֶׂב בְּשָׂדְךָ֖ לִבְהֶמְתֶּ֑ךָ וְאָֽכַלְתָּ֖ וְשָׂבָֽעְתָּ:",
                 "page_start": false
               }
             ]
@@ -5832,7 +5844,7 @@
               {
                 "scan": "s20",
                 "printed_page": "13",
-                "text": "וְחָרָ֨ה אַף־יְהוָ֜ה בָּכֶ֗ם וְעָצַ֤ר אֶת־הַשָּׁמַ֙יִם֙ וְלֹא־יִהְיֶ֣ה מָטָ֔ר וְהָ֣אֲדָמָ֔ה לֹ֥א תִתֵּ֖ן אֶת־יְבוּלָ֑הּ וַֽאֲבַדְתֶּ֣ם מְהֵרָ֗ה מֵעַל֙ הָאָ֣רֶץ הַטֹּבָ֔ה אֲשֶׁ֥ר יְהוָ֖ה נֹתֵ֥ן לָכֶֽם:",
+                "text": "וְחָרָ֨ה אַף־יְהוָ֜ה בָּכֶ֗ם וְעָצַ֤ר אֶת־הַשָּׁמַ֙יִם וְלֹא־יִהְיֶ֣ה מָטָ֔ר וְהָ֣אֲדָמָ֔ה לֹ֥א תִתֵּ֖ן אֶת־יְבוּלָ֑הּ וַֽאֲבַדְתֶּ֣ם מְהֵרָ֗ה מֵעַל֙ הָאָ֣רֶץ הַטֹּבָ֔ה אֲשֶׁ֥ר יְהוָ֖ה נֹתֵ֥ן לָכֶֽם:",
                 "page_start": false
               }
             ]
@@ -5856,7 +5868,7 @@
               {
                 "scan": "s20",
                 "printed_page": "13",
-                "text": "וְלִמַּדְתֶּ֥ם אֹתָ֛ם אֶת־בְּנֵיכֶ֖ם לְדַבֵּ֣ר בָּ֑ם בְּשִׁבְתְּךָ֤ בְּבֵיתֶ֙ךָ֙ וּבְלֶכְתְּךָ֣ בַדֶּ֔רֶךְ וּֽבְשָׁכְבְּךָ֖ וּבְקוּמֶֽךָ:",
+                "text": "וְלִמַּדְתֶּ֥ם אֹתָ֛ם אֶת־בְּנֵיכֶ֖ם לְדַבֵּ֣ר בָּ֑ם בְּשִׁבְתְּךָ֤ בְּבֵיתֶ֙ךָ וּבְלֶכְתְּךָ֣ בַדֶּ֔רֶךְ וּֽבְשָׁכְבְּךָ֖ וּבְקוּמֶֽךָ:",
                 "page_start": false
               }
             ]
@@ -6067,7 +6079,7 @@
               {
                 "scan": "s22",
                 "printed_page": "14",
-                "text": "וְלֹא תָת֜וּרוּ אַחֲרֵ֤י לְבַבְכֶם֙ וְאַחֲרֵ֣י עֵינֵיכֶ֔ם אֲשֶׁר־אַתֶּ֥ם זֹנִ֖ים אַחֲרֵיהֶֽם:",
+                "text": "וְלֹא תָת֜וּרוּ אַחֲרֵ֤י לְבַבְכֶם֙ וְאַחֲרֵ֣י עֵֽינֵיכֶ֔ם אֲשֶׁר־אַתֶּ֥ם זֹנִ֖ים אַחֲרֵיהֶֽם:",
                 "page_start": true
               }
             ]
@@ -6079,7 +6091,7 @@
               {
                 "scan": "s22",
                 "printed_page": "14",
-                "text": "לְמַ֣עַן תִּזְכְּר֔וּ וַֽעֲשִׂיתֶ֖ם אֶת־כָּל־מִצְוֹתָ֑י וִהְיִיתֶ֥ם קְדֹשִׁ֖ים לֵאלֹהֵיכֶֽם:",
+                "text": "לְמַ֣עַן תִּזְכְּר֔וּ וַֽעֲשִׂיתֶ֖ם אֶת־כָּל־מִצְוֹתָ֑י וִהְיִיתֶ֥ם קְדֹשִׁ֖ים לֵאלֹֽהֵיכֶֽם:",
                 "page_start": false
               }
             ]
@@ -6091,7 +6103,7 @@
               {
                 "scan": "s22",
                 "printed_page": "14",
-                "text": "אֲנִ֞י יְהוָ֣ה אֱלֹהֵיכֶ֗ם אֲשֶׁ֨ר הוֹצֵ֤אתִי אֶתְכֶם֙ מֵאֶ֣רֶץ מִצְרַ֔יִם לִהְי֥וֹת לָכֶ֖ם לֵאלֹהִ֑ים אֲנִ֖י יְהוָ֥ה אֱלֹהֵיכֶֽם:",
+                "text": "אֲנִ֞י יְהוָ֣ה אֱלֹֽהֵיכֶ֗ם אֲשֶׁ֨ר הוֹצֵ֤אתִי אֶתְכֶם֙ מֵאֶ֣רֶץ מִצְרַ֔יִם לִהְי֥וֹת לָכֶ֖ם לֵאלֹהִ֑ים אֲנִ֖י יְהוָ֥ה אֱלֹהֵיכֶֽם:",
                 "page_start": false
               }
             ]
@@ -6574,9 +6586,6 @@
         },
         {
           "unit": "shema_yisrael"
-        },
-        {
-          "instruction": "shema_silently"
         },
         {
           "unit": "barukh_shem"
@@ -7769,9 +7778,6 @@
           "unit": "shema_yisrael"
         },
         {
-          "instruction": "shema_silently"
-        },
-        {
           "unit": "barukh_shem"
         },
         {
@@ -7868,8 +7874,9 @@
     }
   ],
   "coverage_notes": [
-    "Accepted opening through s17; s18–s23 first-night Maariv installment is undergoing cantillation adjudication and independent guideline/alignment/order review. Ends at Ga’al Yisrael; Hashkivenu and following service remain to digitize. Full volume incomplete.",
-    "The English edition omits El melekh ne’eman and the sidebar’s Psalm113:2. Its Hebrew linkage cues are raw alignment evidence, not English prayer text. Source quotations and chapter/verse milestones retain Biblical identities independently of prayer-part scopes."
+    "Accepted opening through s23 (Archive n22, printed paired pages12–14), ending the current first-night Maariv installment at Ga’al Yisrael. Hashkivenu and following service remain to assemble. Full volume incomplete.",
+    "The English edition omits El melekh ne’eman and the Barekhu sidebar’s Psalm113:2. Hebrew linkage cues remain raw alignment evidence and are absent from English prayer text.",
+    "Exact Biblical quotations preserve source and independent chapter/verse scopes. Excerpts do not claim complete chapters; source paragraph continuation across reusable modules is recorded separately."
   ],
   "documentary_instructions": {
     "half_kaddish": {
@@ -7996,17 +8003,6 @@
       "type": "heading",
       "page_start": true
     },
-    "shema_silently": {
-      "scan": "s18",
-      "printed_page": "12",
-      "language": "he",
-      "witnesses": [
-        "he"
-      ],
-      "text": "בלחש",
-      "type": "instruction",
-      "page_start": false
-    },
     "shema_emet_join": {
       "scan": "s22",
       "printed_page": "14",
@@ -8033,6 +8029,22 @@
         "urn:x-opensiddur:text:prayer:kaddish/chatzi",
         "urn:x-opensiddur:text:prayer:kaddish/shalem"
       ]
+    }
+  ],
+  "documentary_paragraph_continuations": [
+    {
+      "language": "he",
+      "from_unit": "chronicles_1_16_8_to_36",
+      "to_unit": "romemu",
+      "source_evidence": "s62",
+      "description": "Printed paragraph continues after Chronicles16:36 into Romemu and further. Reusable modules are file-bounded excerpts; their XML paragraph closures do not identify a printed paragraph break. Preserve this continuation when assembling the full documentary paragraph."
+    },
+    {
+      "language": "en",
+      "from_unit": "chronicles_1_16_8_to_36",
+      "to_unit": "romemu",
+      "source_evidence": "s63",
+      "description": "Printed paragraph continues after Chronicles16:36 into Romemu and further. Reusable modules are file-bounded excerpts; their XML paragraph closures do not identify a printed paragraph break. Preserve this continuation when assembling the full documentary paragraph."
     }
   ]
 }
