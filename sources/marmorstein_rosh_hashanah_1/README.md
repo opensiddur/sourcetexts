@@ -295,3 +295,12 @@ acceptance changes only metadata in the frozen independently reviewed XML.
 There are now 39 fully accepted leaves, 48 independent readings and 48 verified
 page labels out of 355. Continue at scan page 34 (Archive n33). This is the full
 evening Amidah, not the complete evening service or the complete volume.
+
+
+A selected-day follow-up verifies every Sabbath insertion in Hebrew and English:
+definite weekday removes its words and markers; definite Shabbat includes its
+words without brackets or when-rubrics; an undecided setting retains the standard
+markers. Fresh print compilation and the actual documentary/expanded HTML
+JavaScript payloads pass, as do 208 exporter tests and 122 subtests. This is
+recorded in shabbat_resolution_verification.json; no exporter or source-word
+changes were needed, and no new browser/PDF visual review is claimed.
