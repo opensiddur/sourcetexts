@@ -1,0 +1,42 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low (visual inspection of the four supplied crops only)"
+  },
+  "readings": [
+    {
+      "scope": "/tmp/blessings-gviati-tight.png — gimel of גויתי",
+      "text": "גְּ (gimel + dagesh + sheva)",
+      "confidence": "high",
+      "visual_evidence": "There is one solid round dot inside the gimel's open interior, at about mid-height, between the main stroke and the foot. It is the same ink density and size as the other printed points. It sits apart from the sub-linear marks and is not a scan speck or part of the letter. Below the baseline under the gimel there is a vertical pair of dots (sheva). The marks under the rest of the word are a single dot under the vav, a qamatz under the yod and a single dot under the tav. They are separate from the gimel's marks and do not belong to it. Verdict: the interior circular mark is a printed dagesh."
+    },
+    {
+      "scope": "/tmp/blessings-vichunekkha-tight.png — final kaf of ויחנך",
+      "text": "ךָּ as printed: an interior dot plus a separate low qamatz (not a qamatz inside the kaf)",
+      "confidence": "medium-high",
+      "visual_evidence": "Mark 1: a single round dot inside the final kaf's body, at about mid-height, under the top bar and left of the descender. Mark 2: a separate triangular/T-shaped qamatz that sits low, below the baseline, at roughly the level of the bottom of the kaf's descender, just to its left. The two marks are clearly separate and stacked at different heights: the dot is mid-height inside the letter and the qamatz is at the very bottom, outside the letter's body. Nothing else is inside the kaf. Neighbours, for separation: the nun has its own interior dot plus three segol dots below it, and the chet has three diagonal dots below it (qubuts). Neither set reaches the kaf."
+    },
+    {
+      "scope": "/tmp/blessings-bekirbi1-tight.png — initial bet of the first בקרבי (after משמרה)",
+      "text": "בְּ (bet + dagesh + sheva)",
+      "confidence": "high",
+      "visual_evidence": "The whole bet outline is visible: the top bar, the right side and the base, with the base extending right past the upright. There is clear space on both sides of the word. One round dot sits inside the bet's enclosed area at about mid-height, so it is a dagesh. Directly below the bet's base is a vertical pair of dots (sheva). The marks to the left belong to the qof and resh, not the bet. The resh of the preceding משמרה has its own qamatz under it, well to the right, so it cannot be mistaken for the bet's mark."
+    },
+    {
+      "scope": "/tmp/blessings-micro-harayon.png — entire word והראיון (top line)",
+      "text": "Literal: וְ · הָ with a horizontal stroke attached to the left of the qamatz · ר with two vertically stacked dots under its left part · א with one dot at its upper left · י unpointed · וֹ · ן. Approximately וְהָ‑רְא•יוֹן",
+      "confidence": "medium (vav, heh-qamatz, holam: high; resh mark and alef dot: medium; the horizontal stroke: low as to its function)",
+      "visual_evidence": "Right to left. (1) Vav: a vertical pair of dots directly under it, well apart from everything else: sheva. (2) Heh: under the centre of the heh is a T-shaped qamatz. A short horizontal stroke runs off its left side at about the same height and reaches toward the gap between the heh and the resh. It looks attached to or touching the qamatz, so it may be a malformed qamatz, a patah fused with it, or a stray rule. It is reported as printed and not regularized. (3) Resh: under the left part of the resh are two dots stacked vertically, not side by side, so this is a sheva-type pair and not a tsere. They sit left of the heh's qamatz and stroke and are horizontally separate from them. (4) Alef: there is no mark under it. One dot sits at its upper left, near the top of the left arm. (5) Yod: no point. (6) Vav: a dot above at its top left: holam. (7) Final nun: no point."
+    }
+  ],
+  "remaining_ambiguities": [
+    "והראיון: the horizontal stroke left of the heh's qamatz. It is clearly a printed stroke, but at this resolution I can't tell whether it is part of a malformed qamatz/hataf, a separate patah, or a stray mark. The vertical dot pair under the resh could be read as the second half of a hataf with that stroke, but it looks horizontally separate, under the resh, and not joined to the heh's mark. A human with the physical page or a higher-resolution scan should decide what the stroke is.",
+    "והראיון: the single dot at the alef's upper left. Its position fits neither a sub-linear vowel nor a clear holam on the alef, and it could belong to the alef or be a stray mark. Human check recommended.",
+    "ויחנך: the reading is settled: an interior mid-height dot plus a separate low qamatz. The only open question is labelling. The interior dot looks like a dagesh by its form, but that label comes from its shape, not from grammar."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "d372b878-c08c-4f42-b554-53eda210e59c"
+  }
+}

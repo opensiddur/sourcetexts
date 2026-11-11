@@ -1,6 +1,6 @@
 # Heidenheim–Marmorstein: first day of Rosh ha-Shanah, 1965
 
-**Status: 49 of 355 leaves accepted; the full-volume digitization remains in progress.** This contribution belongs to
+**Status: 53 of 355 documentary leaves accepted; expanded integration of scans 44–47 is pending a custom-order decision. Full-volume digitization remains in progress.** This contribution belongs to
 [opensiddur-processor issue 214](https://github.com/opensiddur/opensiddur-processor/issues/214).
 The complete source is [this 355-leaf Archive item](https://archive.org/details/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965),
 [also described by Open Siddur](https://opensiddur.org/?p=69112).
@@ -381,3 +381,44 @@ verse/stanza alignment, complete repeated passages and credits are retained;
 internal HTML anchors and final PDF references resolve. No new live-browser
 review is claimed. Scan39–43 images match their physical pages in the original
 355-page PDF. See `morning_*verification.json` and `morning_pdf_page_identity.json`.
+
+## Opening morning blessings (s44–s47: documentary accepted)
+
+Six new reusable units (twelve language files) and paired service-order files
+complete printed pp.4–5: Adon Olam, washing the hands, Asher Yatzar, the three
+existing Torah blessings, Numbers 6:24–26, Elu Devarim and Elohai Neshamah.
+All prayer/poem/Bible identities already existed; one new service context is
+structural only. Hebrew Adon Olam has ten couplets; English has twelve source
+paragraphs within those same ten stanza scopes. Hebrew Elu Devarim remains
+one paragraph and its English keeps two. The existing Torah words stay intact;
+only the false mid-page opening pb in Laasoq is removed.
+
+Primary/blind full-page readings, enlarged/micro/tight checks and two independent
+documentary source/guideline/alignment/order audits approve the source. Raw
+hashes and initial differences remain. The user confirms וְהָרַאְיוֹן with pataḥ
+under resh and sheva under alef; it is preserved literally. Tight crops settle
+the gimel/final-kaf/initial-bet dageshes. Actual model identifiers, medium CLI
+configuration and differing effort self-reports are recorded separately.
+
+Accepted documentary coverage: 53 of 355 leaves; 58 independently read and
+image-verified labels; 56 leaves with excerpts; no pending source-unit reviews.
+Whole-volume/service acceptance remains false. The next source page is scan 48.
+
+**Expanded integration is pending.** The printed German-rite direction moves
+Elohai Neshamah after Asher Yatzar, and p.8 moves the Torah blessings later.
+The user has been asked whether Numbers 6:24–26 and Elu Devarim should travel
+with those blessings or keep their printed position. No answer has been assumed.
+The expanded index and previous 43-page preview remain unchanged. Implement
+and independently review the custom sequence after that clarification.
+
+Validation: 182 XML files pass the guarded schema build; 116 importer tests
+and 41 subtests pass; naming/features/registry checks and documentary links
+pass. Seventeen paired rows match exact source words, including all ten stanzas
+and three Numbers verses. Both page directions link to the correct-language
+Elohai Neshamah. The accepted documentary PDF is 44 pages; new pages 34–36
+are rendered and visually checked, and pixel-identical to the reviewed draft.
+HTML anchors and final PDF references resolve. Twenty documentary Sabbath
+scopes still behave correctly under production JavaScript. All 22 review files
+differ only in acceptance metadata; 163 prior non-index files are unchanged,
+and the two Laasoq files change only their false initial pb. No new browser
+review or expanded-order completion is claimed.

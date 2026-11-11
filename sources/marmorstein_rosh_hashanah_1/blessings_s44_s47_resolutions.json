@@ -1,0 +1,35 @@
+{
+  "status": "Documentary scans44–47 accepted; expanded integration remains pending.",
+  "review_rounds": [
+    "independent/blessings_guideline_audit_round1.json",
+    "independent/blessings_guideline_audit_round2.json"
+  ],
+  "human_confirmations": "human_blessings_s44_s47_confirmation.json",
+  "resolutions": {
+    "F1": "English EluDevarim has two real source paragraphs; Hebrew remains one. All original words, missing commas and final study of Torah retained.",
+    "F2": "Optional service-level biblScope omitted consistently with existing structural service files. Each reusable unit has exact page extent and facsimile.",
+    "human_harayon": "User confirms patah under resh, sheva under alef: וְהָרַאְיוֹן, retained literally with no speculative sic/corr.",
+    "tight_marks": "Complete crops settle gimel dagesh, final-kaf dagesh and both initial bet dageshes. Initial ambiguities and actual raw differences retained.",
+    "source_boundaries": "Remove only the false initial p4 break in existing Laasoq. Real p4 opens at service heading; real p5 starts Vehaarev. Mid-page nav has no pb.",
+    "canonical_reuse": "Six new units use existing canonical identities; one structural service context added, no new prayer identities.",
+    "english_cues": "Omit only Hebrew linkage words in accepted English prayer text; retain Hebrew prayer name in the ritual direction."
+  },
+  "pending": [
+    "User clarification of expanded study-passage placement.",
+    "Expanded-order implementation, independent review and exports."
+  ],
+  "acceptance": false,
+  "validation": {
+    "schema": "182 XML files pass RelaxNG/Schematron in guarded accepted build; all source review hashes current.",
+    "tests": "116 importer tests and 41 subtests pass.",
+    "features_names_registry": "Pass; one new structural context, no new canonical prayers.",
+    "documentary_alignment": "17new paired rows match exact HE/EN source words, including10Adon stanzas and3Numbers verses; shared headings together.",
+    "documentary_links": "Both mid-page links resolve to the correct-language ElohaiNeshamah; all HTML internal anchors resolve.",
+    "documentary_pdf": "44-page accepted documentary PDF; physical pages34–36 rendered, visually inspected and pixel-identical to reviewed draft. No clipping/overlap; no unresolved final PDF references. All HTML anchors and correct-language directions resolve.",
+    "post_audit_changes": "22review targets match after reversing only acceptance metadata;163previous non-index XML files unchanged,2Laasoq files differ only by removal of false initial pb. Expanded index and previous preview remain unchanged.",
+    "marked_html": "Final production JavaScript:20documentary and28retained-expanded Sabbath scopes pass false/true/undefined; no new expanded order is claimed.",
+    "page_identity": "blessings_pdf_page_identity.json: scans44–47match their ordinal pages in the355-page original PDF."
+  },
+  "documentary_acceptance": true,
+  "expanded_acceptance": false
+}

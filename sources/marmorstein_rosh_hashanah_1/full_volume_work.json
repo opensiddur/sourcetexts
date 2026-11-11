@@ -2,52 +2,55 @@
   "scope": "Continue from the beginning, in scan order; pilot acceptance remains separate and complete.",
   "current_batch": {
     "scan_pages": [
-      39,
-      40,
-      41,
-      42,
-      43
+      44,
+      45,
+      46,
+      47
     ],
     "archive_leaves": [
-      38,
-      39,
-      40,
-      41,
-      42
+      43,
+      44,
+      45,
+      46
     ],
     "printed_pages": [
-      1,
-      2,
-      3
+      4,
+      5
     ],
-    "status": "Accepted tallit and morning preliminaries s39–s43; no unresolved source, encoding, alignment or order findings.",
+    "status": "Documentary scans44–47 accepted; expanded integration remains pending.",
     "primary": [
-      "primary/morning_s39_s43.json"
+      "primary/blessings_s44_s47.json"
     ],
     "independent": [
-      "independent/morning_s39_s43.json",
-      "independent/morning_s39_s43_enlarged.json",
-      "independent/morning_s39_s43_micro.json"
+      "independent/blessings_s44_s47.json",
+      "independent/blessings_s44_s47_enlarged.json",
+      "independent/blessings_s44_s47_micro.json"
     ],
-    "comparison": "morning_s39_s43_comparison.json",
-    "guideline_audit": "independent/morning_guideline_audit_round3.json",
-    "human_confirmation": "human_morning_s39_s43_confirmation.json",
-    "page_identity": "morning_pdf_page_identity.json",
-    "units": "morning_s39_s43_units.json",
-    "pending": [],
+    "comparison": "blessings_s44_s47_comparison.json",
+    "units": "blessings_s44_s47_units.json",
+    "pending": [
+      "User clarification of expanded study-passage placement.",
+      "Expanded-order implementation, independent review and exports."
+    ],
+    "guideline_audit": "independent/blessings_guideline_audit_round2.json",
+    "human_confirmation": "human_blessings_s44_s47_confirmation.json",
+    "audit_resolutions": "blessings_s44_s47_resolutions.json",
     "validation": {
-      "schema": "168 XML files pass RelaxNG/Schematron in guarded accepted build; all review hashes current.",
-      "tests": "115 importer tests and 41 subtests pass.",
-      "registry_features_names_references": "Pass; five structural contexts, no new canonical prayers.",
-      "runtime": "morning_runtime_verification.json",
-      "marked_html": "morning_html_state_verification.json: 20documentary/28expanded actual final HTML Sabbath scopes pass false/true/undefined. morning_new_html_verification.json: no generic/morning entry overlap.",
-      "alignment": "morning_alignment_verification.json: all18Psalm occurrences and complete MahTovu match their own source words.",
-      "post_audit_changes": "morning_post_audit_verification.json: 23 reviewed targets match after reversing only acceptance metadata; all145previous non-index XML files remain unchanged.",
-      "exports": "morning_export_verification.json: 42-page documentary PDF and43-page expanded PDF.14rendered pages inspected; column alignment, source order, complete translations and credits verified. BothHTML exports haveunique IDs andresolving internal anchors. FinalLaTeXpasses havenoundefinedreferences; no new live-browser review claimed."
+      "schema": "182 XML files pass RelaxNG/Schematron in guarded accepted build; all source review hashes current.",
+      "tests": "116 importer tests and 41 subtests pass.",
+      "features_names_registry": "Pass; one new structural context, no new canonical prayers.",
+      "documentary_alignment": "17new paired rows match exact HE/EN source words, including10Adon stanzas and3Numbers verses; shared headings together.",
+      "documentary_links": "Both mid-page links resolve to the correct-language ElohaiNeshamah; all HTML internal anchors resolve.",
+      "documentary_pdf": "44-page accepted documentary PDF; physical pages34–36 rendered, visually inspected and pixel-identical to reviewed draft. No clipping/overlap; no unresolved final PDF references. All HTML anchors and correct-language directions resolve.",
+      "post_audit_changes": "22review targets match after reversing only acceptance metadata;163previous non-index XML files unchanged,2Laasoq files differ only by removal of false initial pb. Expanded index and previous preview remain unchanged.",
+      "marked_html": "Final production JavaScript:20documentary and28retained-expanded Sabbath scopes pass false/true/undefined; no new expanded order is claimed.",
+      "page_identity": "blessings_pdf_page_identity.json: scans44–47match their ordinal pages in the355-page original PDF."
     },
-    "audit_resolutions": "morning_s39_s43_resolutions.json"
+    "documentary_acceptance": true,
+    "expanded_acceptance": false,
+    "page_identity": "blessings_pdf_page_identity.json"
   },
-  "next_primary_scan": 44,
+  "next_primary_scan": 48,
   "next_adjudication_scan": 44,
   "images": "Cached outside Git; never use OCR to settle a reading.",
   "secondary_review_requirements": {
@@ -415,6 +418,54 @@
       },
       "audit_resolutions": "maariv_close_s34_s38_resolutions.json",
       "units": "maariv_close_s34_s38_units.json"
+    },
+    {
+      "scan_pages": [
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "archive_leaves": [
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "printed_pages": [
+        1,
+        2,
+        3
+      ],
+      "status": "Accepted tallit and morning preliminaries s39–s43; no unresolved source, encoding, alignment or order findings.",
+      "primary": [
+        "primary/morning_s39_s43.json"
+      ],
+      "independent": [
+        "independent/morning_s39_s43.json",
+        "independent/morning_s39_s43_enlarged.json",
+        "independent/morning_s39_s43_micro.json"
+      ],
+      "comparison": "morning_s39_s43_comparison.json",
+      "guideline_audit": "independent/morning_guideline_audit_round3.json",
+      "human_confirmation": "human_morning_s39_s43_confirmation.json",
+      "page_identity": "morning_pdf_page_identity.json",
+      "units": "morning_s39_s43_units.json",
+      "pending": [],
+      "validation": {
+        "schema": "168 XML files pass RelaxNG/Schematron in guarded accepted build; all review hashes current.",
+        "tests": "115 importer tests and 41 subtests pass.",
+        "registry_features_names_references": "Pass; five structural contexts, no new canonical prayers.",
+        "runtime": "morning_runtime_verification.json",
+        "marked_html": "morning_html_state_verification.json: 20documentary/28expanded actual final HTML Sabbath scopes pass false/true/undefined. morning_new_html_verification.json: no generic/morning entry overlap.",
+        "alignment": "morning_alignment_verification.json: all18Psalm occurrences and complete MahTovu match their own source words.",
+        "post_audit_changes": "morning_post_audit_verification.json: 23 reviewed targets match after reversing only acceptance metadata; all145previous non-index XML files remain unchanged.",
+        "exports": "morning_export_verification.json: 42-page documentary PDF and43-page expanded PDF.14rendered pages inspected; column alignment, source order, complete translations and credits verified. BothHTML exports haveunique IDs andresolving internal anchors. FinalLaTeXpasses havenoundefinedreferences; no new live-browser review claimed."
+      },
+      "audit_resolutions": "morning_s39_s43_resolutions.json"
     }
-  ]
+  ],
+  "next_scan_notes": "Scans48–49cached; no accepted transcription added. Candidate original English duplicate line on s49must be independently verified before any sic/corr decision."
 }
