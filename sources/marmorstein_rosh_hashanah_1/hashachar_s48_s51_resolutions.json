@@ -32,9 +32,7 @@
     "All new continued morning units precede the existing late German Torah-study insertion; the earlier explicit rite-dependent relocation remains unchanged."
   ],
   "pending_human_questions": [
-    "גבי/גב, whether רב is unpointed (XML currently has a provisional רַב, absent from either initial raw reading), and ששמחת בו maqaf.",
-    "Dageshes: both בן, בריתך, לו, ישועתנו, בזיון.",
-    "בסתר and מעיני vowels."
+    "Bet dagesh in בזיון only; crop shown to user."
   ],
   "validation": {
     "schema": "222 XML files pass RelaxNG and Schematron in draft build.",
@@ -44,7 +42,8 @@
     "runtime": "hashachar_runtime_verification.json: six expanded cases pass.",
     "independent_guideline_audit": "independent/hashachar_guideline_audit_round2.json: encoding approved, source/leaf acceptance false.",
     "exports": "hashachar_export_verification.json: 47-page documentary and50-page expanded draft previews; actual stranded condition label fixed using separate exporter PR299; accepted exports untouched.",
-    "html": "hashachar_html_verification.json and hashachar_html_german_order_verification.json: audience and German rite conditions, labels, IDs and links pass with production condition.js."
+    "html": "hashachar_html_verification.json and hashachar_html_german_order_verification.json: audience and German rite conditions, labels, IDs and links pass with production condition.js.",
+    "post_human_status": "Earlier runtime/alignment/HTML/PDF proofs describe the pre-human draft snapshot. Human corrections are now applied; final independent verification, updated hashes and exports will follow the remaining bizayon adjudication. Earlier accepted exports remain unchanged."
   },
   "audit_resolutions": {
     "F1": "Merged the expanded bilingual Leolam directive into one note with he/en foreign children; original documentary witnesses unchanged.",
@@ -59,5 +58,9 @@
     "Apply user adjudication of source questions.",
     "Independently verify adjudicated words and rebuild final accepted outputs.",
     "Accept four leaves only when source review and all final hashes are current."
+  ],
+  "human_confirmation": "human_hashachar_s48_s51_confirmation.json",
+  "pending": [
+    "Bet dagesh in בזיון; then independent verification of human adjudications and accepted rebuild."
   ]
 }
