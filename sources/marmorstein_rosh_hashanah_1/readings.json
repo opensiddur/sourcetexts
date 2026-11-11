@@ -1,6 +1,6 @@
 {
   "primary_model": "Codex (GPT-6)",
-  "status": "Documentary transcription reviewed through scan 47; expanded integration of scans 44–47 awaits custom-order clarification. Complete-volume work remains in progress.",
+  "status": "Documentary transcription reviewed through scan 47; expanded morning blessings integrated with explicit German/non-German rite conditions. Complete-volume work remains in progress.",
   "units": [
     {
       "stem": "entering_synagogue",
@@ -13778,7 +13778,126 @@
           ]
         },
         {
-          "navigation": "torah_blessings"
+          "section": "morning_opening_blessings",
+          "heads": {
+            "he": "תפלת שחרית",
+            "en": "Morning Prayer"
+          },
+          "order": [
+            {
+              "unit": "adon_olam"
+            },
+            {
+              "unit": "al_netilat_yadayim"
+            },
+            {
+              "unit": "asher_yatzar"
+            },
+            {
+              "section": "morning_neshamah_german",
+              "conditions": [
+                {
+                  "type": "opensiddur:rite",
+                  "features": {
+                    "german": true
+                  }
+                }
+              ],
+              "condition_rubrics": {
+                "he": "למנהג גרמניה אומרים כאן אלהי נשמה לאחר אשר יצר:",
+                "en": "In the German rite, אלהי נשמה follows Asher Yatzar here:"
+              },
+              "order": [
+                {
+                  "unit": "elohai_neshamah"
+                }
+              ]
+            },
+            {
+              "section": "morning_torah_other_rites",
+              "conditions": [
+                {
+                  "type": "opensiddur:rite",
+                  "features": {
+                    "german": false
+                  }
+                }
+              ],
+              "condition_rubrics": {
+                "he": "לשאר המנהגים אומרים כאן את ברכות התורה ואת קטעי הלימוד:",
+                "en": "In other rites, say the Torah blessings and study passages here:"
+              },
+              "order": [
+                {
+                  "unit": "birkhot_hatorah_laasoq"
+                },
+                {
+                  "unit": "birkhot_hatorah_vehaarev"
+                },
+                {
+                  "unit": "birkhot_hatorah_asher_bachar"
+                },
+                {
+                  "unit": "numbers_6_24_to_26"
+                },
+                {
+                  "unit": "ellu_devarim"
+                }
+              ]
+            },
+            {
+              "section": "morning_neshamah_other_rites",
+              "conditions": [
+                {
+                  "type": "opensiddur:rite",
+                  "features": {
+                    "german": false
+                  }
+                }
+              ],
+              "condition_rubrics": {
+                "he": "לשאר המנהגים אומרים אלהי נשמה לאחר ברכות התורה וקטעי הלימוד:",
+                "en": "In other rites, אלהי נשמה follows the Torah blessings and study passages:"
+              },
+              "order": [
+                {
+                  "unit": "elohai_neshamah"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section": "morning_torah_german_later",
+          "conditions": [
+            {
+              "type": "opensiddur:rite",
+              "features": {
+                "german": true
+              }
+            }
+          ],
+          "condition_rubrics": {
+            "he": "למנהג גרמניה אומרים כאן את ברכות התורה ואת קטעי הלימוד עד סוף אלו דברים:",
+            "en": "In the German rite, say the Torah blessings through the end of Elu Devarim at this later position:"
+          },
+          "order": [
+            {
+              "unit": "birkhot_hatorah_laasoq"
+            },
+            {
+              "unit": "birkhot_hatorah_vehaarev"
+            },
+            {
+              "unit": "birkhot_hatorah_asher_bachar"
+            },
+            {
+              "unit": "numbers_6_24_to_26"
+            },
+            {
+              "unit": "ellu_devarim"
+            }
+          ]
         },
         {
           "unit": "barukh_sheamar"
@@ -13832,7 +13951,7 @@
       ]
     }
   ],
-  "coverage_notes": "53 of 355 source leaves fully transcribed and independently reviewed, including opening source pages 1–47 plus six later pilot leaves. New documentary pages 44–47 are accepted. Their expanded placement is not implemented yet: user clarification of study passages with the later German Torah-blessing insertion remains pending. Existing expanded sequence is retained. Whole-volume/service acceptance remains false.",
+  "coverage_notes": "53 of 355 source leaves independently transcribed and reviewed. The expanded morning includes the complete Torah-blessings, Numbers 6:24–26 and Elu Devarim block, conditionally relocated for German rite. Every other rite keeps it between Asher Yatzar and Elohai Neshamah. Intervening scans 48–59 remain partial/untranscribed. The later p.8 structural anchor stays before Barukh She-amar. Whole-volume/service acceptance remains false.",
   "documentary_instructions": {
     "half_kaddish": {
       "scan": "s8",
@@ -14356,5 +14475,18 @@
       "source_evidence": "s63",
       "description": "Printed paragraph continues after Chronicles16:36 into Romemu and further. Reusable modules are file-bounded excerpts; their XML paragraph closures do not identify a printed paragraph break. Preserve this continuation when assembling the full documentary paragraph."
     }
-  ]
+  ],
+  "expanded_order_notes": [
+    {
+      "scope": "morning_blessings",
+      "setting_type": "opensiddur:rite",
+      "feature": "german",
+      "true": "After AsherYatzar comes ElohaiNeshamah. The complete Torah-blessings/Numbers6/EluDevarim block moves to the p8 insertion.",
+      "false": "The complete Torah-blessings/Numbers6/EluDevarim block remains between AsherYatzar and ElohaiNeshamah.",
+      "unknown": "Keep both explicitly labeled alternatives; do not infer German rite from broad Ashkenaz or Frankfurt flags.",
+      "authority": "Explicit user clarification in human_blessings_s44_s47_confirmation.json.",
+      "coverage_limit": "Intervening scans48–59 remain partial/untranscribed. The p8 insertion is the structural anchor between the opening blessings and BarukhSheamar; subsequent installments add material on both sides of it."
+    }
+  ],
+  "expanded_coverage_note": "This digitization is incomplete. The material between the opening blessings and the later Torah-study insertion has not yet been fully transcribed. In the German rite, the relocated block retains its position at printed p.8 before Barukh She-amar; subsequent installments will supply the intervening text."
 }

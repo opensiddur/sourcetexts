@@ -2,7 +2,7 @@
   "reviewer": "Claude Opus5.5; CLI configured medium reasoning",
   "effort_limits": "Actual invocation and self-report kept separately; hidden effective effort is not independently observable.",
   "blind_order": "Primary saved before opening independent blind full-page reading. Later enlarged/micro/tight/audit reviews saw comparison evidence.",
-  "scope": "Documentary source only; expanded custom-order review remains pending.",
+  "scope": "Documentary source approved in two audits; expanded rite-dependent order subsequently approved in two independent reviews with actual compiler/HTML evidence.",
   "reviews": [
     {
       "file": "independent/blessings_s44_s47.json",
@@ -106,6 +106,40 @@
         "claude-opus-5-5"
       ],
       "raw_response_sha256": "59621c5155528b3131581b6d6f7afc6f1f526f518dbe142ac714771cf572be1d"
+    },
+    {
+      "file": "independent/blessings_expanded_german_order_round1.json",
+      "saved_result_sha256": "fa9a368b708f5ed1118b2489824a42bda839946df284decd1f5e157afc88fdb2",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "4d98c7bc-4427-4d21-821e-639cc5eaee28"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "effort": "low"
+      },
+      "response_model_identifiers": [
+        "claude-opus-5-5"
+      ],
+      "raw_response_sha256": "06fcd1e1b14e44499f657631b312d8f6030f9c7d60893576a3a7a77490fd9997"
+    },
+    {
+      "file": "independent/blessings_expanded_german_order_round2.json",
+      "saved_result_sha256": "53dbe16af987ab515a52dbb937a8fde5d426ed2f3d0f8f0bb63d6f927e0c5e27",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "4c170d23-7dee-4106-9492-53c97fb500b2"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "role": "independent follow-up reviewer (read-only; no code/settings access)"
+      },
+      "response_model_identifiers": [
+        "claude-opus-5-5"
+      ],
+      "raw_response_sha256": "60129953c1adaf1e251d9871ea171b87346a896d0f4f693bcbaf6186b2134377"
     }
   ]
 }

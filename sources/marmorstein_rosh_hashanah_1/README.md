@@ -1,6 +1,6 @@
 # Heidenheim–Marmorstein: first day of Rosh ha-Shanah, 1965
 
-**Status: 53 of 355 documentary leaves accepted; expanded integration of scans 44–47 is pending a custom-order decision. Full-volume digitization remains in progress.** This contribution belongs to
+**Status: 53 of 355 leaves accepted, including the German-rite conditional expanded order through scan47. Full-volume digitization remains in progress.** This contribution belongs to
 [opensiddur-processor issue 214](https://github.com/opensiddur/opensiddur-processor/issues/214).
 The complete source is [this 355-leaf Archive item](https://archive.org/details/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965),
 [also described by Open Siddur](https://opensiddur.org/?p=69112).
@@ -404,12 +404,14 @@ Accepted documentary coverage: 53 of 355 leaves; 58 independently read and
 image-verified labels; 56 leaves with excerpts; no pending source-unit reviews.
 Whole-volume/service acceptance remains false. The next source page is scan 48.
 
-**Expanded integration is pending.** The printed German-rite direction moves
-Elohai Neshamah after Asher Yatzar, and p.8 moves the Torah blessings later.
-The user has been asked whether Numbers 6:24–26 and Elu Devarim should travel
-with those blessings or keep their printed position. No answer has been assumed.
-The expanded index and previous 43-page preview remain unchanged. Implement
-and independently review the custom sequence after that clarification.
+**Expanded integration is approved.** The explicit `opensiddur:rite/german`
+condition selects the order. German rite places Elohai Neshamah immediately
+after Asher Yatzar and relocates the whole block of three Torah blessings,
+Numbers 6:24–26 and Elu Devarim to the later p.8 insertion. Every other rite
+keeps that full block between Asher Yatzar and Elohai Neshamah. Known rites
+get each passage exactly once; undefined rite retains bilingual labeled
+alternatives. The user supplied the exact rule. Broad Ashkenaz is independent
+of the regional German feature; no generic variant switch is used.
 
 Validation: 182 XML files pass the guarded schema build; 116 importer tests
 and 41 subtests pass; naming/features/registry checks and documentary links
@@ -421,4 +423,32 @@ HTML anchors and final PDF references resolve. Twenty documentary Sabbath
 scopes still behave correctly under production JavaScript. All 22 review files
 differ only in acceptance metadata; 163 prior non-index files are unchanged,
 and the two Laasoq files change only their false initial pb. No new browser
-review or expanded-order completion is claimed.
+review is claimed. Subsequent expanded-order evidence is recorded below.
+
+## German-rite relocation in the expanded edition
+
+Two independent expanded-order reviews approve the implementation and actual
+compiled evidence. The review improvements add bilingual conditional labels
+and a coverage note in the expanded source bibliography. Source words and
+all 181 other XML files remain unchanged. The expanded index matches its
+final independent snapshot exactly. Reviewer limitations are preserved in the
+raw reports; no source/order ambiguity remains.
+
+Eight real compiler cases verify definite German/non-German choices,
+undefined rite and negative leakage into other services. Each complete
+five-unit block, Elohai Neshamah, all ten Adon Olam stanzas and all three
+Numbers verses are accounted for in both languages. Three production
+JavaScript DOM/CSS cases check actual visibility and order, including
+false-branch hiding, known-condition label hiding and undecided alternatives.
+The Shabbat and broad-rite cases establish independence of the German flag;
+they do not claim new Shabbat content. The Rosh-ha-Shanah Minchah case is
+a negative scope test, not a new test of the Elul29 service.
+
+211 targeted tests and 629 subtests pass; schema/features/names/references
+pass. The expanded PDF is now 46 pages with matching HTML. Physical pages
+34–38 and 45 were rendered and inspected for complete blocks, column layout,
+bilingual labels and coverage/credits; anchors and final PDF references
+resolve. The documentary 44-page PDF is unchanged. The undated expanded PDF
+shows labeled alternatives; explicit rite settings select one recitation order.
+No new live-browser review is claimed. Material on scans48–59 remains partial,
+including gaps around the p.8 anchor. Continue source transcription at scan48.

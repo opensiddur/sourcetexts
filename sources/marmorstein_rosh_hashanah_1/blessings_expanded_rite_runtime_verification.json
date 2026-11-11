@@ -1,0 +1,79 @@
+{
+  "status": "pass",
+  "setting": "opensiddur:rite/german",
+  "cases": [
+    {
+      "case": "german_weekday",
+      "german": true,
+      "pass": true,
+      "all9units_once_in_both_languages": true,
+      "whole5unit_block_keeps_order": true,
+      "neshamah_before_block": true,
+      "torah_block_in_later_section": true,
+      "continues_to_barukh_sheamar": true,
+      "no_required_navigation": true
+    },
+    {
+      "case": "other_ashkenaz",
+      "german": false,
+      "pass": true,
+      "all9units_once_in_both_languages": true,
+      "whole5unit_block_keeps_order": true,
+      "neshamah_before_block": false,
+      "torah_block_in_later_section": false,
+      "continues_to_barukh_sheamar": true,
+      "no_required_navigation": true
+    },
+    {
+      "case": "other_sepharad",
+      "german": false,
+      "pass": true,
+      "all9units_once_in_both_languages": true,
+      "whole5unit_block_keeps_order": true,
+      "neshamah_before_block": false,
+      "torah_block_in_later_section": false,
+      "continues_to_barukh_sheamar": true,
+      "no_required_navigation": true
+    },
+    {
+      "case": "german_shabbat",
+      "german": true,
+      "pass": true,
+      "all9units_once_in_both_languages": true,
+      "whole5unit_block_keeps_order": true,
+      "neshamah_before_block": true,
+      "torah_block_in_later_section": true,
+      "continues_to_barukh_sheamar": true,
+      "no_required_navigation": true
+    },
+    {
+      "case": "other_shabbat",
+      "german": false,
+      "pass": true,
+      "all9units_once_in_both_languages": true,
+      "whole5unit_block_keeps_order": true,
+      "neshamah_before_block": false,
+      "torah_block_in_later_section": false,
+      "continues_to_barukh_sheamar": true,
+      "no_required_navigation": true
+    },
+    {
+      "case": "undefined_german_with_broad_ashkenaz_selected",
+      "pass": true,
+      "both_alternatives_explicitly_labeled": true,
+      "broad_ashkenaz_does_not_infer_regional_choice": true
+    },
+    {
+      "case": "maariv",
+      "pass": true,
+      "no_morning_only_units_leak": true
+    },
+    {
+      "case": "minha",
+      "pass": true,
+      "no_morning_only_units_leak": true
+    }
+  ],
+  "coverage_limit": "Scans48\u201353notyetcomplete. Late block retains its printedp8structural anchor; intervening material is added in later installments.",
+  "method": "Real print compiler output with definite German/non-German/unknown rite settings, calendar and quorum cases. Both languages use the same spine."
+}

@@ -17,7 +17,7 @@
       4,
       5
     ],
-    "status": "Documentary scans44–47 accepted; expanded integration remains pending.",
+    "status": "Accepted scans44–47, including independently reviewed rite-dependent expanded order.",
     "primary": [
       "primary/blessings_s44_s47.json"
     ],
@@ -28,30 +28,32 @@
     ],
     "comparison": "blessings_s44_s47_comparison.json",
     "units": "blessings_s44_s47_units.json",
-    "pending": [
-      "User clarification of expanded study-passage placement.",
-      "Expanded-order implementation, independent review and exports."
-    ],
+    "pending": [],
     "guideline_audit": "independent/blessings_guideline_audit_round2.json",
     "human_confirmation": "human_blessings_s44_s47_confirmation.json",
     "audit_resolutions": "blessings_s44_s47_resolutions.json",
     "validation": {
       "schema": "182 XML files pass RelaxNG/Schematron in guarded accepted build; all source review hashes current.",
-      "tests": "116 importer tests and 41 subtests pass.",
+      "tests": "211 targeted tests and629subtests pass (116importer/scan plus95feature/condition tests).",
       "features_names_registry": "Pass; one new structural context, no new canonical prayers.",
       "documentary_alignment": "17new paired rows match exact HE/EN source words, including10Adon stanzas and3Numbers verses; shared headings together.",
       "documentary_links": "Both mid-page links resolve to the correct-language ElohaiNeshamah; all HTML internal anchors resolve.",
       "documentary_pdf": "44-page accepted documentary PDF; physical pages34–36 rendered, visually inspected and pixel-identical to reviewed draft. No clipping/overlap; no unresolved final PDF references. All HTML anchors and correct-language directions resolve.",
-      "post_audit_changes": "22review targets match after reversing only acceptance metadata;163previous non-index XML files unchanged,2Laasoq files differ only by removal of false initial pb. Expanded index and previous preview remain unchanged.",
-      "marked_html": "Final production JavaScript:20documentary and28retained-expanded Sabbath scopes pass false/true/undefined; no new expanded order is claimed.",
-      "page_identity": "blessings_pdf_page_identity.json: scans44–47match their ordinal pages in the355-page original PDF."
+      "post_audit_changes": "Documentary-stage proof before rite integration:22review targets differ only in acceptance metadata;163prior non-index XML files unchanged and2Laasoq files only remove false initial pb. The expanded index was unchanged at that stage; the subsequent expanded_post_review proof covers its rite-order update.",
+      "marked_html": "Current final production JavaScript:20documentary and28expanded Sabbath scopes pass false/true/undefined; expanded German-rite gates are separately checked in3DOM/CSS cases.",
+      "page_identity": "blessings_pdf_page_identity.json: scans44–47match their ordinal pages in the355-page original PDF.",
+      "expanded_runtime": "8real compiler cases:5definite morning choices, undefined rite, Maariv/Minchah negative leakage cases. All10Adonstanzas,3Numbersverses andcompleteEluDevarim checked. Shabbat/broad-rite cases establish independence, not new Shabbat content; RH1Minchah is a negative scope case.",
+      "expanded_html": "3production JavaScript DOM/CSS cases true/false/unknown; exactly1/1/2copies in correct order, allancestor gates, false-branch hiding, known-label hiding and4bilingual labels.",
+      "expanded_export": "46-page expanded PDF/HTML rebuilt,6rendered pages inspected; anchors/finalPDFreferences/credits pass. Documentary44-pagePDF unchanged. No new browser review claimed.",
+      "expanded_post_review": "Expandedindex matches final independent snapshot exactly;181other XML files unchanged."
     },
     "documentary_acceptance": true,
-    "expanded_acceptance": false,
-    "page_identity": "blessings_pdf_page_identity.json"
+    "expanded_acceptance": true,
+    "page_identity": "blessings_pdf_page_identity.json",
+    "expanded_order_review": "independent/blessings_expanded_german_order_round2.json"
   },
   "next_primary_scan": 48,
-  "next_adjudication_scan": 44,
+  "next_adjudication_scan": 48,
   "images": "Cached outside Git; never use OCR to settle a reading.",
   "secondary_review_requirements": {
     "blind_scan_reading": true,
