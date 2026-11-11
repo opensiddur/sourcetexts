@@ -471,3 +471,19 @@ The isolated exporter fix remains PR299, outside the digitization branch.
 
 Accepted coverage is57of355leaves. Continue at physical scan52 (Archive n51).
 The whole volume and full service are still incomplete.
+
+
+### Accepted continuation: physical PDF scans52–55
+
+Printed p8 is bilingual; pp9–10 contain Hebrew-only offerings. Five bilingual
+and six Hebrew-only modules reuse existing canonical identities. The morning
+Shema structural occurrence prevents substitution of the evening pointing.
+Numbers28:4 crosses the source page boundary; source citations are notes.
+
+All source questions are resolved, including the human-confirmed p8 dageshes
+and Numbers accents/meteg. Independent guideline, alignment and order review,
+four compiled service/rite cases, eight paired rows and electronic-link checks
+pass. The239accepted XML text trees match the reviewed draft exactly.
+Final accepted exports and hashes are in morning8_export_verification.json.
+Coverage is61of355leaves; continue at physical PDF scan56 (Archive n55).
+The whole volume and full service remain incomplete.

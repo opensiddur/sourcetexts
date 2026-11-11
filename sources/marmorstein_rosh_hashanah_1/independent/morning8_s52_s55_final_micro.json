@@ -1,0 +1,72 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "decisions": [
+    {
+      "key": "Num28:3 kvasim accent",
+      "reading": "כְּבָשִׂ֨ים",
+      "evidence": "There is one short slanted stroke above the word, over the shin/yod. It sits on a middle letter, not the final mem, and looks like qadma (azla). Below the word I see sheva under the kaf and qamats under the bet. No meteg is visible.",
+      "confidence": "medium"
+    },
+    {
+      "key": "Num28:3 bnei meteg",
+      "reading": "בְּנֵֽי־",
+      "evidence": "Under the nun there is a short vertical stroke just left of the tsere. Meteg: yes.",
+      "confidence": "high"
+    },
+    {
+      "key": "Num28:3 shana accent",
+      "reading": "שָׁנָ֛ה",
+      "evidence": "Under the nun there is qamats with a hooked mark like a '5' to its left. It looks like tevir. Nothing is printed above the word (the upper band is fully visible). No meteg is visible.",
+      "confidence": "medium"
+    },
+    {
+      "key": "Num28:3 temimim accent",
+      "reading": "תְּמִימִ֖ם",
+      "evidence": "Under the second mem there is a small slanted stroke just left of the hireq. It looks like tipcha (tarḥa). Nothing is above the word. No meteg is visible.",
+      "confidence": "medium-high"
+    },
+    {
+      "key": "Num28:3 haishe meteg",
+      "reading": "הָֽאִשֶּׁ֔ה",
+      "evidence": "Under the he there is a vertical stroke just left of the qamats. Meteg: yes. Above the shin there is a vertical colon over the shin dot, which reads as zaqef qatan with no stroke visible. Only the meteg was asked about.",
+      "confidence": "high (meteg); medium (zaqef)"
+    },
+    {
+      "key": "Num28:3 lihv meteg",
+      "reading": "לַֽיהוָ֑ה",
+      "evidence": "Under the lamed there is a vertical stroke just left of the pataḥ. Meteg: yes. Under the vav there is a caret-shaped mark next to the qamats, which is etnaḥta.",
+      "confidence": "high"
+    },
+    {
+      "key": "Num28:2 nihochi zaqef",
+      "reading": "נִיחֹ֔חִי",
+      "evidence": "Above the first ḥet there is a vertical colon between the two lines, separate from the marks under the line above. I see no vertical stroke next to it, so this is zaqef qatan, not gadol.",
+      "confidence": "medium"
+    },
+    {
+      "key": "Num28:2 tishmeru zaqef",
+      "reading": "תִּשְׁמְר֔וּ",
+      "evidence": "Above the mem/resh there is a vertical colon and no vertical stroke beside it, so zaqef qatan. The dots further up and to the right are the segol and other marks under the line above.",
+      "confidence": "medium"
+    },
+    {
+      "key": "Num28:6 nichoach zaqef",
+      "reading": "נִיחֹ֔חַ",
+      "evidence": "Above the first ḥet there is a vertical colon over the ḥolam dot and no vertical stroke, so zaqef qatan. Pataḥ is under the final ḥet. No meteg is visible.",
+      "confidence": "medium-high"
+    }
+  ],
+  "remaining_source_ambiguities": [
+    "Num28:2 nihochi meteg: under the nun there may be a short stroke next to the hireq, but it can't be clearly separated from the hireq at this resolution. Left unresolved; meteg not asserted.",
+    "Zaqef qatan vs. gadol (28:2 nihochi, 28:2 tishmeru, 28:6 nichoach): I see no vertical stroke in any of them, but the scan is soft. A faint stroke can't be fully ruled out.",
+    "Num28:3 shana: the mark is tevir-like, but the glyph is blurred into a '5' shape. The choice rests on its shape only."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "96e1d0ea-202f-4c8a-87a5-ff714185cd0f"
+  }
+}

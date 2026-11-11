@@ -1,0 +1,94 @@
+{
+  "status": "accepted",
+  "accepted": true,
+  "pending_human_questions": [],
+  "scope": {
+    "scan_pages": [
+      52,
+      53,
+      54,
+      55
+    ],
+    "printed_pages": [
+      8,
+      9,
+      10
+    ],
+    "bilingual": [
+      52,
+      53
+    ],
+    "hebrew_only": [
+      54,
+      55
+    ]
+  },
+  "source_reading_policy": "Printed accents are transcribed. Initial full-page readings omitted them; separate independently saved primary and blind accent readings, their actual differences and tight-image adjudication are retained. WLC consulted for collation only after primary/secondary accent inputs existed; never promoted over the scan.",
+  "adjudication": {
+    "settled": [
+      "Full scripture Divine Name keeps printed holam on he.",
+      "Qetoret source order is Exodus30:34–36, printed ונאמר, then30:7–8. No37–38.",
+      "Num28:4 source reads אחד (not האחד); verse continues across scans54–55.",
+      "Printed English Thou has is preserved in sic; corrected to Thou hast in corr.",
+      "Three visible metegs in Num28:3 (בני, האשה, ליהוה) incorporated from isolated images.",
+      "The micro-reader’s collateral dagesh on תמימם was not adopted: both initial readers and source image show no tav dagesh; only the accent is disputed.",
+      "וּלְפָאֶרְךָ final kaf qamatz, explicitly settled from tight-image reading (independent/morning8_s52_s55_tight.json), not from grammar.",
+      "תרים rather than תרום: consonants and resh hiriq settled from enlarged/tight images; only tav dagesh awaits human answer.",
+      "Printed mappiq in וְתַגְבִּיהַּ retained from enlarged-image adjudication.",
+      "Enlarged source adjudication controls maqafs: וְאֶת־הָאָרֶץ; כָּל־אֲשֶׁר בָּם (space before בם); וְקַיֶּם־לָנוּ; מַה־שֶּׁכָּתוּב (shin dagesh).",
+      "Qetoret preface reads עַל יְדֵי (not על־יד), has period after קַיָּם, and no colon after וְנֶאֱמַר; enlarged-image adjudication.",
+      "English Name’s uses typographic apostrophe in the adjudicated transcription; straight apostrophe in the raw blind reading is a glyph representation difference. Enlarged review and XML audit confirm the English wording."
+    ],
+    "provisional": [],
+    "human_biblical_answers": {
+      "source": "User response in chat, 2026-11-11; enlarged source snippets accompanied the question.",
+      "verbatim": "shana - darga; temimim - tevir; tishmru - zaqef gadol; nun has meteg and hiriq",
+      "applied": {
+        "Numbers28:3 שנה": "darga",
+        "Numbers28:3 תמימם": "tevir",
+        "Numbers28:2 תשמרו": "zaqef gadol",
+        "Numbers28:2 ניחוחי": "meteg beside hiriq under nun"
+      }
+    },
+    "image_question_correction": "User rejected earlier p8 snippets: \"these words arent in the images\". Replaced with isolated labeled word crops; no reading inferred from that response.",
+    "human_p8_answers": {
+      "scan": 52,
+      "printed_page": 8,
+      "verbatim": "dalet -yes; tav-yes",
+      "confirmed": {
+        "לבדך": "dalet dagesh present",
+        "תרים": "tav dagesh present"
+      },
+      "evidence": "Corrected enlarged isolated source snippets displayed in chat before user answered.",
+      "date": "2026-11-11"
+    }
+  },
+  "encoding": {
+    "canonical_identities": "All existing canonical prayer and Biblical identities reused; four structural occurrence/service contexts only.",
+    "biblical_scope": "Chapter/verse milestones, bounded quoted verse Zeph3:20, independent page break inside Num28:4, individual explicit bounds before ונאמר.",
+    "missing_english": "Hebrew-only service witness excludes English file and reference; no substitute translations.",
+    "german_order": "New p8 prayers precede the established later German Torah/study insertion. Hebrew-only offerings follow that insertion, before BarukhSheamar.",
+    "navigation": "Existing documentary p8 direction moved to actual end of p8. Only parenthetical page number is optional; custom wording retained. Expanded sequence has no page-turn instruction.",
+    "morning_shema_resolution": "Runtime showed bare Deut6:4 selected the earlier accented evening witness within this same preferred project. Expanded now targets the registered edition-independent morning service occurrence context, retaining canonical Deut6:4 verse correspondence within it. No new prayer identity.",
+    "split_citation": "Printed shared citation line שמות ל׳. ויקרא ו׳. deliberately split into two citation notes at their respective passages. Exact citation text retained; rendered location follows the cited unit rather than the source page header.",
+    "partial_chapters": "Retain established chapter/@n markers for partial-chapter context without @corresp: they do not claim transclusion of an entire chapter. Their lack of canonical scope is intentional; actual verses carry canonical corresp and explicit same-unit termination. This convention predates this batch and passes schema/URN checks. Repeated bounded chapter/verse groups around non-consecutive qetoret excerpts preserve explicit source boundaries.",
+    "expected_duplicate": "Morning and evening witnesses both contain canonical Deut6:4. First-match bare-verse resolution is expected; expanded selects the registered morning occurrence context."
+  },
+  "runtime_verification": {
+    "expanded": "Four German/other/unknown-rite and evening service cases pass. Six Hebrew-only units retain Hebrew and have no English witness. Correct source words and recitation placement verified.",
+    "alignment": "Eight new bilingual rows match exact source words after excluding citation notes; identical BarukhShem inline reuse checked separately.",
+    "references": "Registry, project naming, registered features and all URN targets pass."
+  },
+  "independent_xml_review": {
+    "file": "independent/morning8_guideline_audit.json",
+    "verdict": "No blocking encoding, alignment or order defects; two human dagesh questions pending.",
+    "configured_model": "claude-opus-5-5",
+    "configured_effort": "medium",
+    "actual_model_usage": [
+      "claude-opus-5-5"
+    ],
+    "limits": "Static generated-XML/evidence review. Independent runtime, validators and rendered-PDF checks recorded separately."
+  },
+  "remaining_work": [],
+  "pending": []
+}

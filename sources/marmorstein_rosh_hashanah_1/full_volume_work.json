@@ -2,51 +2,32 @@
   "scope": "Continue from the beginning, in scan order; pilot acceptance remains separate and complete.",
   "current_batch": {
     "scan_pages": [
-      48,
-      49,
-      50,
-      51
+      52,
+      53,
+      54,
+      55
     ],
     "archive_leaves": [
-      47,
-      48,
-      49,
-      50
+      51,
+      52,
+      53,
+      54
     ],
     "printed_pages": [
-      6,
-      7
+      8,
+      9,
+      10
     ],
-    "status": "Scans48–51 accepted; all human source readings independently verified and final exports inspected.",
-    "units": "hashachar_s48_s51_units.json",
-    "primary": [
-      "primary/hashachar_s48_s51.json"
-    ],
-    "independent": [
-      "independent/hashachar_s48_s51.json",
-      "independent/hashachar_s48_s51_enlarged.json"
-    ],
+    "status": "accepted; source, encoding and final exports verified",
+    "units": "morning8_s52_s55_units.json",
     "pending": [],
-    "validation": {
-      "schema": "222 XML files pass RelaxNG and Schematron in draft build.",
-      "targeted_tests": "214tests +635subtests pass; correction-selector scalar/tail guard additionally rechecked in23authoring tests +14subtests.",
-      "names_features_registry_references": "Pass; no new canonical identities.",
-      "alignment": "hashachar_alignment_verification.json: all21 new paired rows exactly match corrected source words.",
-      "runtime": "hashachar_runtime_verification.json: six expanded cases pass.",
-      "independent_guideline_audit": "Two encoding/guideline/alignment/order audits plus independent/hashachar_final_human_verification.json approve all final readings. Stated machine-check limitations resolved in hashachar_codepoint_verification.json and hashachar_post_review_verification.json.",
-      "exports": "hashachar_export_verification.json: accepted documentary and expanded PDFs/HTML regenerated, final layouts checked and stable accepted paths updated. Isolated exporter PR299 supplies the keep-with-next fix.",
-      "html": "Final production-JS audience/German conditions, labels, IDs and all internal anchors pass.",
-      "post_human_status": "Complete: human readings independently verified, codepoints/scopes checked, guarded222-filebuild passes, final accepted exports inspected."
-    },
-    "resolutions": "hashachar_s48_s51_resolutions.json",
     "documentary_acceptance": true,
     "expanded_acceptance": true,
-    "guideline_audit": "independent/hashachar_guideline_audit_round2.json",
-    "human_confirmation": "human_hashachar_s48_s51_confirmation.json",
-    "final_source_review": "independent/hashachar_final_human_verification.json"
+    "human_verification": "human_morning8_s52_s55_confirmation.json",
+    "export_verification": "morning8_export_verification.json"
   },
-  "next_primary_scan": 52,
-  "next_adjudication_scan": 52,
+  "next_primary_scan": 56,
+  "next_adjudication_scan": 56,
   "images": "Cached outside Git; never use OCR to settle a reading.",
   "secondary_review_requirements": {
     "blind_scan_reading": true,
@@ -512,7 +493,52 @@
       "expanded_acceptance": true,
       "page_identity": "blessings_pdf_page_identity.json",
       "expanded_order_review": "independent/blessings_expanded_german_order_round2.json"
+    },
+    {
+      "scan_pages": [
+        48,
+        49,
+        50,
+        51
+      ],
+      "archive_leaves": [
+        47,
+        48,
+        49,
+        50
+      ],
+      "printed_pages": [
+        6,
+        7
+      ],
+      "status": "Scans48–51 accepted; all human source readings independently verified and final exports inspected.",
+      "units": "hashachar_s48_s51_units.json",
+      "primary": [
+        "primary/hashachar_s48_s51.json"
+      ],
+      "independent": [
+        "independent/hashachar_s48_s51.json",
+        "independent/hashachar_s48_s51_enlarged.json"
+      ],
+      "pending": [],
+      "validation": {
+        "schema": "222 XML files pass RelaxNG and Schematron in draft build.",
+        "targeted_tests": "214tests +635subtests pass; correction-selector scalar/tail guard additionally rechecked in23authoring tests +14subtests.",
+        "names_features_registry_references": "Pass; no new canonical identities.",
+        "alignment": "hashachar_alignment_verification.json: all21 new paired rows exactly match corrected source words.",
+        "runtime": "hashachar_runtime_verification.json: six expanded cases pass.",
+        "independent_guideline_audit": "Two encoding/guideline/alignment/order audits plus independent/hashachar_final_human_verification.json approve all final readings. Stated machine-check limitations resolved in hashachar_codepoint_verification.json and hashachar_post_review_verification.json.",
+        "exports": "hashachar_export_verification.json: accepted documentary and expanded PDFs/HTML regenerated, final layouts checked and stable accepted paths updated. Isolated exporter PR299 supplies the keep-with-next fix.",
+        "html": "Final production-JS audience/German conditions, labels, IDs and all internal anchors pass.",
+        "post_human_status": "Complete: human readings independently verified, codepoints/scopes checked, guarded222-filebuild passes, final accepted exports inspected."
+      },
+      "resolutions": "hashachar_s48_s51_resolutions.json",
+      "documentary_acceptance": true,
+      "expanded_acceptance": true,
+      "guideline_audit": "independent/hashachar_guideline_audit_round2.json",
+      "human_confirmation": "human_hashachar_s48_s51_confirmation.json",
+      "final_source_review": "independent/hashachar_final_human_verification.json"
     }
   ],
-  "next_scan_notes": "Continue with physical scan52 (Archive n51); preceding pages48–51 source questions are resolved."
+  "next_scan_notes": "Continue at physical PDF scan56 (Archive n55); scans52–55 source readings are resolved."
 }
