@@ -1,6 +1,6 @@
 # Heidenheim–Marmorstein: first day of Rosh ha-Shanah, 1965
 
-**Status: 53 of 355 leaves accepted, including the German-rite conditional expanded order through scan47. Full-volume digitization remains in progress.** This contribution belongs to
+**Status: 57 of 355 leaves accepted, through physical scan51 plus six later pilot leaves. German-rite and audience conditions are verified; no source questions remain in accepted installments. Full-volume digitization remains in progress.** This contribution belongs to
 [opensiddur-processor issue 214](https://github.com/opensiddur/opensiddur-processor/issues/214).
 The complete source is [this 355-leaf Archive item](https://archive.org/details/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965),
 [also described by Open Siddur](https://opensiddur.org/?p=69112).
@@ -20,8 +20,8 @@ identify their shared source as CC0 1.0 Universal; preserve those source records
   translation pairs. `pages.json` is derived; regenerate it rather than editing it.
 - `primary/*.json`: immutable initial Codex image readings, before the second
   reader's answer was opened. Each file states its scope; raw readings alone do not certify complete page coverage.
-- `independent/pilot.json`, `independent/navigation.json`: Claude Opus 5.5 at medium
-  effort, using read-only image access, with no primary transcription or OCR
+- `independent/pilot.json`, `independent/navigation.json`: Claude Opus 5.5 with CLI configured for medium
+  effort (actual model self-reports are retained separately), using read-only image access, with no primary transcription or OCR
   supplied. Preserve the reader's uncertainty statements. The reader sometimes
   mistakes chapter labels for pagination; those are not promoted to verified labels.
 - `independent/selections.json`: the independently read spans corresponding to the
@@ -454,20 +454,20 @@ No new live-browser review is claimed. Material on scans48–59 remains partial,
 including gaps around the p.8 anchor. Continue source transcription at scan48.
 
 
-### Draft continuation: physical scan pages 48–51
+### Accepted continuation: physical scan pages 48–51
 
-Printed pages 6–7 are drafted through Aval Anachnu, with 20 new bilingual
-modules reusing existing canonical identities. The English duplicated women’s
-blessing and joined “everyday” are retained in `sic` with editorial `corr`.
-The continuous cross-page petition has separate existing shetargilenu and
-gomel_chasadim milestones. Service order selects audience alternatives with
-the existing person/gender symbols and retains the explicit German-rite order.
+Printed pages6–7 through Aval Anachnu are accepted. Twenty new bilingual
+modules reuse existing canonical identities. All human source-image questions
+are resolved and independently verified; raw initial readings and disagreements
+remain in the comparison/evidence record. Original English errors use sic/corr.
 
-This batch is **not accepted**: source questions shown to the user remain
-pending. See `hashachar_s48_s51_resolutions.json`, the raw primary/independent
-readings and comparison records. Accepted coverage remains 53 of 355 leaves.
-Temporary preview outputs do not replace the accepted documentary/expanded
-exports. The stranded full-width conditional label is fixed in separate exporter
-PR299; actual draft PDF geometry is verified. The feature branch does not
-include that exporter change. Draft previews have 47 documentary /50 expanded
-pages; the accepted exports remain unchanged.
+The source's continuous cross-page petition preserves the existing separate
+shetargilenu and gomel_chasadim extents. Audience alternatives use person/gender
+symbols; the expanded spine preserves the accepted German-rite relocation.
+All21new paired rows and six actual conditional/service cases pass. All222XML
+files validate, and names/features/registry/references pass. Final PDF/HTML
+exports are inspected and recorded in hashachar_export_verification.json.
+The isolated exporter fix remains PR299, outside the digitization branch.
+
+Accepted coverage is57of355leaves. Continue at physical scan52 (Archive n51).
+The whole volume and full service are still incomplete.

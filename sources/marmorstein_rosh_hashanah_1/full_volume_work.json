@@ -17,7 +17,7 @@
       6,
       7
     ],
-    "status": "Scans48–51 drafted; human adjudications applied, only bet dagesh in בזיון remains pending. Source/leaf acceptance still false.",
+    "status": "Scans48–51 accepted; all human source readings independently verified and final exports inspected.",
     "units": "hashachar_s48_s51_units.json",
     "primary": [
       "primary/hashachar_s48_s51.json"
@@ -26,27 +26,27 @@
       "independent/hashachar_s48_s51.json",
       "independent/hashachar_s48_s51_enlarged.json"
     ],
-    "pending": [
-      "Bet dagesh in בזיון; then independent confirmation and final accepted rebuild."
-    ],
+    "pending": [],
     "validation": {
       "schema": "222 XML files pass RelaxNG and Schematron in draft build.",
       "targeted_tests": "214tests +635subtests pass; correction-selector scalar/tail guard additionally rechecked in23authoring tests +14subtests.",
       "names_features_registry_references": "Pass; no new canonical identities.",
       "alignment": "hashachar_alignment_verification.json: all21 new paired rows exactly match corrected source words.",
       "runtime": "hashachar_runtime_verification.json: six expanded cases pass.",
-      "independent_guideline_audit": "independent/hashachar_guideline_audit_round2.json: encoding approved, source/leaf acceptance false.",
-      "exports": "hashachar_export_verification.json: 47-page documentary and50-page expanded draft previews; actual stranded condition label fixed using separate exporter PR299; accepted exports untouched.",
-      "html": "hashachar_html_verification.json and hashachar_html_german_order_verification.json: audience and German rite conditions, labels, IDs and links pass with production condition.js."
+      "independent_guideline_audit": "Two encoding/guideline/alignment/order audits plus independent/hashachar_final_human_verification.json approve all final readings. Stated machine-check limitations resolved in hashachar_codepoint_verification.json and hashachar_post_review_verification.json.",
+      "exports": "hashachar_export_verification.json: accepted documentary and expanded PDFs/HTML regenerated, final layouts checked and stable accepted paths updated. Isolated exporter PR299 supplies the keep-with-next fix.",
+      "html": "Final production-JS audience/German conditions, labels, IDs and all internal anchors pass.",
+      "post_human_status": "Complete: human readings independently verified, codepoints/scopes checked, guarded222-filebuild passes, final accepted exports inspected."
     },
     "resolutions": "hashachar_s48_s51_resolutions.json",
-    "documentary_acceptance": false,
-    "expanded_acceptance": false,
+    "documentary_acceptance": true,
+    "expanded_acceptance": true,
     "guideline_audit": "independent/hashachar_guideline_audit_round2.json",
-    "human_confirmation": "human_hashachar_s48_s51_confirmation.json"
+    "human_confirmation": "human_hashachar_s48_s51_confirmation.json",
+    "final_source_review": "independent/hashachar_final_human_verification.json"
   },
   "next_primary_scan": 52,
-  "next_adjudication_scan": 48,
+  "next_adjudication_scan": 52,
   "images": "Cached outside Git; never use OCR to settle a reading.",
   "secondary_review_requirements": {
     "blind_scan_reading": true,
@@ -514,5 +514,5 @@
       "expanded_order_review": "independent/blessings_expanded_german_order_round2.json"
     }
   ],
-  "next_scan_notes": "Scans48–51 draft, not accepted until all source/guideline findings resolved. Source duplicate represented by sic/corr."
+  "next_scan_notes": "Continue with physical scan52 (Archive n51); preceding pages48–51 source questions are resolved."
 }

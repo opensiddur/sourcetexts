@@ -1,6 +1,6 @@
 {
-  "status": "draft; human source adjudication pending",
-  "accepted": false,
+  "status": "Scans48–51 accepted; all human source readings independently verified and final exports inspected.",
+  "accepted": true,
   "scan_pages": [
     48,
     49,
@@ -31,19 +31,17 @@
     "Expanded bilingual Men/Women labels disappear when gender is known; unknown retains both alternatives.",
     "All new continued morning units precede the existing late German Torah-study insertion; the earlier explicit rite-dependent relocation remains unchanged."
   ],
-  "pending_human_questions": [
-    "Bet dagesh in בזיון only; crop shown to user."
-  ],
+  "pending_human_questions": [],
   "validation": {
     "schema": "222 XML files pass RelaxNG and Schematron in draft build.",
     "targeted_tests": "214tests +635subtests pass; correction-selector scalar/tail guard additionally rechecked in23authoring tests +14subtests.",
     "names_features_registry_references": "Pass; no new canonical identities.",
     "alignment": "hashachar_alignment_verification.json: all21 new paired rows exactly match corrected source words.",
     "runtime": "hashachar_runtime_verification.json: six expanded cases pass.",
-    "independent_guideline_audit": "independent/hashachar_guideline_audit_round2.json: encoding approved, source/leaf acceptance false.",
-    "exports": "hashachar_export_verification.json: 47-page documentary and50-page expanded draft previews; actual stranded condition label fixed using separate exporter PR299; accepted exports untouched.",
-    "html": "hashachar_html_verification.json and hashachar_html_german_order_verification.json: audience and German rite conditions, labels, IDs and links pass with production condition.js.",
-    "post_human_status": "Earlier runtime/alignment/HTML/PDF proofs describe the pre-human draft snapshot. Human corrections are now applied; final independent verification, updated hashes and exports will follow the remaining bizayon adjudication. Earlier accepted exports remain unchanged."
+    "independent_guideline_audit": "Two encoding/guideline/alignment/order audits plus independent/hashachar_final_human_verification.json approve all final readings. Stated machine-check limitations resolved in hashachar_codepoint_verification.json and hashachar_post_review_verification.json.",
+    "exports": "hashachar_export_verification.json: accepted documentary and expanded PDFs/HTML regenerated, final layouts checked and stable accepted paths updated. Isolated exporter PR299 supplies the keep-with-next fix.",
+    "html": "Final production-JS audience/German conditions, labels, IDs and all internal anchors pass.",
+    "post_human_status": "Complete: human readings independently verified, codepoints/scopes checked, guarded222-filebuild passes, final accepted exports inspected."
   },
   "audit_resolutions": {
     "F1": "Merged the expanded bilingual Leolam directive into one note with he/en foreign children; original documentary witnesses unchanged.",
@@ -54,13 +52,8 @@
     "F2_followup": "Marked only the actual initial difference keys touching declared disputed words pending. Other keys in mixed blocks now explicitly image-adjudicated; unchanged raw hashes/text/differences preserved."
   },
   "independent_guideline_review": "independent/hashachar_guideline_audit_round2.json: encoding approved; source and leaf acceptance remain false.",
-  "remaining_work": [
-    "Apply user adjudication of source questions.",
-    "Independently verify adjudicated words and rebuild final accepted outputs.",
-    "Accept four leaves only when source review and all final hashes are current."
-  ],
+  "remaining_work": [],
   "human_confirmation": "human_hashachar_s48_s51_confirmation.json",
-  "pending": [
-    "Bet dagesh in בזיון; then independent verification of human adjudications and accepted rebuild."
-  ]
+  "pending": [],
+  "final_source_review": "independent/hashachar_final_human_verification.json"
 }
