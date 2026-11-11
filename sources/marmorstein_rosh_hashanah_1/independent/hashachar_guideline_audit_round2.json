@@ -1,0 +1,113 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "self-report: low; the CLI-configured value is not visible to this reviewer, and the effective reasoning effort cannot be independently observed"
+  },
+  "encoding_findings": [
+    {
+      "id": "F1",
+      "status": "resolved",
+      "evidence": "index.xml:1339 now has one <tei:note type=\"instruction\"> with <tei:foreign xml:lang=\"he\"> and <tei:foreign xml:lang=\"en\"> children. This matches the bilingual rubric pattern at 1237/1253/1273/1296/1312/1346. The Hebrew wording still holds the provisional בַּסֵּתֶר, the same as the documentary witness, so no pending reading was silently settled. The documentary morning_blessings.xml files were not re-read: the user stated they are unchanged and this follow-up did not need them."
+    },
+    {
+      "id": "F2",
+      "status": "resolved_with_residual_nit",
+      "severity": "nit",
+      "kind": "evidence-trail (not encoding)",
+      "evidence": "Raw primary/independent text, their SHA-256s, the original differences (verdict 'unresolved') and first_reading_unresolved are all kept. Every block now has an adjudication object with a verdict, final_or_provisional_text, evidence and pending_human. complete:false appears only on blocks that carry a declared human scope (s48/hamaavir, s48/yehi_ratzon_1a, s50/yehi_ratzon_2, s50/leolam_direction, s50/ribbon_haolamim, s50/aval_anachnu). Every other block is complete:true and its keys carry image_adjudication decisions. These include עוטר without maqaf, running heads and page labels as paratext, the [continued…] markers, ASCII colon, man’s, and the English 'everyday' raw reading.",
+      "residual": "In the six mixed blocks, every difference key is marked accepted:'pending', including keys outside the declared human scopes that original F2 named as settled enlarged-pass choices: no period after הַמַּשְׁחִית (s50/yehi_ratzon_2), חַסְדֵּנוּ / גְּבוּרָתֵנוּ / כָל־הַגִּבּוֹרִים (s50/ribbon_haolamim), בְּכוֹרֶךָ (s50/aval_anachnu), the colon keys in those blocks and in s48/hamaavir and s50/leolam_direction, and the '[continues on p. 7]' marker in s48/yehi_ratzon_1a. The same colon and marker keys get image_adjudication in other blocks (for example s48/hannoten_lassekhvi and s49/yehi_ratzon_1a), so the record is internally inconsistent. The shared note also says 'All other enlarged-pass changes are recorded below', but nothing follows it. This is conservative, since nothing is falsely marked accepted. Even so, those specific choices still cannot be traced key by key.",
+      "action": "Optional before final acceptance: in the mixed blocks, set accepted:'image_adjudication' on the keys outside the human scopes, with a short per-key note. Keep accepted:'pending' only on the keys for the declared questions (בסתר, מעיני, both בן). Remove or fix the dangling 'recorded below' sentence. Do not change any pending human decision."
+    },
+    {
+      "id": "F3",
+      "status": "resolved (original requested action withdrawn)",
+      "evidence": "hashachar_review_provenance.json records for each of the four reviews: invocation (effort 'medium', session_id), self_report (effort 'low'), response_model_identifiers ['claude-opus-5-5'], raw_response_sha256 and saved_result_sha256. effort_limits says the effective effort cannot be observed. index.xml:35 now says 'CLI configured for medium reasoning', which states a fact and does not claim the effort actually used. My original 'reconcile' action was wrong: merging the two fields into one value would overwrite a recorded self-report. Keeping both separately is the correct fix."
+    },
+    {
+      "id": "F4",
+      "status": "resolved",
+      "evidence": "index.xml:36 states 'Current draft adds printed pages 6–7 through Aval Anachnu (physical scans 48–51); disputed source marks remain pending human adjudication. Later intervening pages remain incomplete.' index.xml:12 keeps the DRAFT edition statement. It makes no claim about later pages."
+    },
+    {
+      "id": "F5",
+      "status": "resolved (nit; limited evidence)",
+      "evidence": "hashachar-runtime-verification.json shows source_duplicate_suppressed:true in all 6 cases. Resolutions F5 states that the output shows one female blessing and no visible empty corrected paragraph. The provided verification files contain no PDF result and no whitespace-only paragraph assertion, so the PDF part of that claim rests on the producer's statement. No guideline requires a change."
+    }
+  ],
+  "pending_human_source_questions": [
+    {
+      "question": "גַּבֵּי / גַּב before הַמִּזְבֵּחַ (aval_anachnu)",
+      "xml_currently": "גַּבֵּי־ (provisional)",
+      "status": "pending_human",
+      "recorded_in": "s50/aval_anachnu pending_human 'גבי/גב'"
+    },
+    {
+      "question": "Maqaf in שֶׁשָּׂמַחְתָּ בּוֹ",
+      "xml_currently": "no maqaf (provisional)",
+      "status": "pending_human",
+      "recorded_in": "s50/aval_anachnu 'Maqaf ששמחת בו'"
+    },
+    {
+      "question": "רֹב / רַב (ribbon_kol_haolamim)",
+      "xml_currently": "רַב (patah), provisional",
+      "status": "pending_human",
+      "recorded_in": "s50/ribbon_haolamim 'Pointing רב'",
+      "note": "Both raw readings in the comparison say רֹב, while final_or_provisional_text says רַב. The difference can therefore be seen, but it is not stated in words. resolutions.json calls this 'unpointed רב', although the XML holds a pointed רַב. This is a wording point for the human question record, not an encoding defect."
+    },
+    {
+      "question": "Dagesh in both בֶן־בְּרִית / בֶּן־בְּרִית (shetatzileni)",
+      "xml_currently": "first without dagesh, second with (provisional)",
+      "status": "pending_human",
+      "recorded_in": "s50/yehi_ratzon_2 'Both בן dageshes'"
+    },
+    {
+      "question": "Dagesh in בְּרִיתֶךָ (aval_anachnu)",
+      "xml_currently": "with dagesh (provisional)",
+      "status": "pending_human",
+      "recorded_in": "s50/aval_anachnu 'Bet dagesh בריתך'"
+    },
+    {
+      "question": "Dagesh in לּוֹ, יְשׁוּעָתֵנוּ, בִזָּיוֹן",
+      "xml_currently": "לּוֹ with dagesh; יְשׁוּעָתֵנוּ and בִזָּיוֹן without (provisional)",
+      "status": "pending_human",
+      "recorded_in": "s50/aval_anachnu, s50/ribbon_haolamim, s48/yehi_ratzon_1a"
+    },
+    {
+      "question": "בַּסֵּתֶר / בְּסֵתֶר (לעולם directive)",
+      "xml_currently": "בַּסֵּתֶר in the documentary Hebrew and in the expanded index.xml:1339 (provisional)",
+      "status": "pending_human",
+      "recorded_in": "s50/leolam_direction 'Pointing בסתר'",
+      "note": "The text is copied inline in two files, so the decision has to be applied to both."
+    },
+    {
+      "question": "מֵעֵינָי / מֵעֵינַי (hamaavir_shenah)",
+      "xml_currently": "מֵעֵינָי (provisional)",
+      "status": "pending_human",
+      "recorded_in": "s48/hamaavir 'Nun vowel מעיני'"
+    }
+  ],
+  "checks": [
+    "Read the prior audit /tmp/hashachar-audit.json in full.",
+    "Read index.xml lines 1–80 (header: lines 12, 35, 36) and 1225–1364 (opening blessings, the hashachar continuation, the merged Leolam note at 1339, and the German later Torah block).",
+    "Read hashachar_s48_s51_comparison.json in full (2519 lines, 42 blocks), hashachar_s48_s51_resolutions.json and hashachar_review_provenance.json.",
+    "Read the runtime verification: 6 cases (German/other × male/female, Shabbat, unknown, maariv). All pass, with canonical_range_preserved and source_duplicate_suppressed true.",
+    "Read the alignment verification: 21 rows, including shetargilenu and gomel_chasadim as separate keys. All have exact_paired_words:true. This matches the '21 paired rows' claim in resolutions.json.",
+    "Read the HTML verification: documentary and expanded exports. Ids are unique, internal anchors resolve, and the male/female/null gender cases give one alternative when gender is known, both when unknown, and drop the labels when known.",
+    "Read the German-rite HTML verification. German: one active copy, Torah block not before Neshamah. Other rites: Torah block before Neshamah. Unknown: 2 labelled copies, nothing hidden. The HTML hash matches the expanded export.",
+    "Confirmed that no declared human-scope item is marked accepted. Each still has accepted:'pending' and complete:false, and none was settled from grammar.",
+    "Did not treat the pending provisional readings (including רַב) as new encoding defects.",
+    "Did not inspect any code or settings. Did not re-read the documentary XML modules or JLPTEI-3.md, because the scope of this follow-up didn't need them; the guideline points cited in the prior audit still apply.",
+    "NOT PERFORMED: recomputing SHA-256 values for the reviewed files. No hashing tool was used, so byte identity is not confirmed."
+  ],
+  "verdict": {
+    "encoding_approved": true,
+    "source_or_leaf_acceptance": false,
+    "whole_leaf_acceptance": false,
+    "summary": "ENCODING APPROVED. F1, F3, F4 and F5 are resolved. F2 is resolved except for a non-blocking nit: in the six blocks that carry human questions, settled keys outside those questions are also marked 'pending'. No encoding defects remain. Source and leaf acceptance stay false: the 8 human source questions above are still pending, their provisional XML values are not accepted, and SHA-256 values for the final files have not been recomputed."
+  },
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "d1003dfa-9457-41de-861b-d498d8c210ea"
+  }
+}

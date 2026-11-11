@@ -1,0 +1,37 @@
+{
+  "status": "pass",
+  "html_sha256": "7dc07a77288a75435ec6a988f769b76ff97d8357990f4209f308edb6cfaee25a",
+  "cases": [
+    {
+      "case": "german",
+      "pass": true,
+      "active_copies_per_unit": 1,
+      "all_ancestor_gates_evaluated": true,
+      "torah_block_before_neshamah": false,
+      "four_bilingual_conditional_labels": true,
+      "false_branches_hidden_by_css": true,
+      "condition_labels_hidden_when_rite_known": true
+    },
+    {
+      "case": "other",
+      "pass": true,
+      "active_copies_per_unit": 1,
+      "all_ancestor_gates_evaluated": true,
+      "torah_block_before_neshamah": true,
+      "four_bilingual_conditional_labels": true,
+      "false_branches_hidden_by_css": true,
+      "condition_labels_hidden_when_rite_known": true
+    },
+    {
+      "case": "unknown",
+      "pass": true,
+      "active_copies_per_unit": 2,
+      "all_ancestor_gates_evaluated": true,
+      "torah_block_before_neshamah": false,
+      "four_bilingual_conditional_labels": true,
+      "false_branches_hidden_by_css": false,
+      "condition_labels_hidden_when_rite_known": false
+    }
+  ],
+  "method": "Actual HTML DOM scope classes evaluated with production condition.js in Node. Known rites select exactly one whole block in the right position; undefined preserves labeled alternatives."
+}

@@ -1,0 +1,220 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "low",
+      "kind": "encoding",
+      "file": "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/machzor_expanded-opensiddur-he/index.xml",
+      "lines": "1339-1340",
+      "issue": "The expanded book encodes the Hebrew and English versions of the לעולם directive as two separate <tei:note type=\"instruction\"> elements, one xml:lang=\"he\" and one xml:lang=\"en\". Every other bilingual rubric in this file uses one note with <tei:foreign xml:lang=\"he\"> and <tei:foreign xml:lang=\"en\"> children (for example lines 1237, 1253, 1296, 1312). With two notes, both print one after the other as two independent directives, instead of reading as one rubric in two languages.",
+      "action": "Merge them into one instruction note with he and en tei:foreign children, matching the pattern used elsewhere in the file. Keep the Hebrew wording the same as the documentary note (see pending בסתר below)."
+    },
+    {
+      "id": "F2",
+      "severity": "low",
+      "kind": "evidence-trail",
+      "file": "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/hashachar_s48_s51_comparison.json",
+      "issue": "Every entry has \"decisions\": {} and \"complete\": false. The XML, however, already reflects choices made in the enlarged pass, none of which are among the declared pending human questions: עוטר ישראל with no maqaf; no period after הַמַּשְׁחִית; ASCII colon instead of sof pasuq; חַסְדֵּנוּ and גְּבוּרָתֵנוּ with dagesh; בְּכוֹרֶךָ; כָל־הַגִּבּוֹרִים with no dagesh; running heads, page numbers and [continued…] markers dropped. The only record of these is the narrative in independent/hashachar_s48_s51_enlarged.json.",
+      "action": "Record a verdict and note for each settled difference in comparison.json, pointing to the enlarged-pass decision, so the encoded text can be traced key by key. Leave only the declared human questions unresolved."
+    },
+    {
+      "id": "F3",
+      "severity": "low",
+      "kind": "metadata",
+      "files": [
+        "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/independent/hashachar_s48_s51.json",
+        "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/independent/hashachar_s48_s51_enlarged.json"
+      ],
+      "issue": "Both files say \"effort\": \"low\" at the top level but \"invocation.effort\": \"medium\". The expanded index sourceDesc (line 35) says the independent reader used medium reasoning.",
+      "action": "Reconcile the top-level effort field with the invocation record."
+    },
+    {
+      "id": "F4",
+      "severity": "nit",
+      "kind": "metadata",
+      "file": "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/machzor_expanded-opensiddur-he/index.xml",
+      "lines": "36",
+      "issue": "The note that the volume is incomplete is still accurate, but it doesn't say that this installment now covers the material from לשכוי through אבל אנחנו (printed p.7).",
+      "action": "Optionally state the current coverage endpoint (through Aval Anachnu, p.7) without claiming anything about the pages after it."
+    },
+    {
+      "id": "F5",
+      "severity": "nit",
+      "kind": "rendering",
+      "file": "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/birkhot_hashachar_sheasani_kirtzono.xml",
+      "lines": "35",
+      "issue": "In the corrected reading the second <tei:p> contains only an empty <tei:corr/> and a space. No source evidence is lost, but a renderer may output an empty paragraph.",
+      "action": "No change is required by the guidelines. Just check that the corrected-reading compiler drops whitespace-only paragraphs."
+    }
+  ],
+  "alignment_findings": [
+    {
+      "status": "ok",
+      "detail": "All 20 modules have Hebrew and English counterparts with the same publication URN or div @corresp. The source keys in units.json map one-to-one onto the files."
+    },
+    {
+      "status": "ok",
+      "detail": "shetargilenu-/gomel_chasadim (both languages): the shetargilenu prayer-part milestone opens the paragraph, and the gomel_chasadim milestone sits right after לְהִשְׁתַּעְבֶּד־לָךְ in Hebrew and after 'force our inclination to serve Thee;' in English, so both scopes cover matching extents. The bare prayer-part terminator closes gomel_chasadim in both. The pb n=7 sits before לְהִשְׁתַּעְבֶּד in Hebrew and before 'the good inclination' in English, which matches the printed breaks. The div has no @corresp, so the file does not falsely claim to be the whole shetargilenu."
+    },
+    {
+      "status": "ok",
+      "detail": "The duplicated English sheasani_kirtzono line is kept inside the same div URN as a choice with sic and an empty corr. The Hebrew has one paragraph. Alignment is at div level, so there is no drift."
+    },
+    {
+      "status": "ok",
+      "detail": "The לעולם directive sits at the same position in both documentary morning_blessings files, with facs n49 for Hebrew and n50 for English. The women's conditional note is xml:lang=\"en\" in both languages, which matches the English italics printed on the Hebrew page."
+    },
+    {
+      "status": "ok",
+      "detail": "The facs and pb page images are consistent: s48→n47, s49→n48, s50→n49, s51→n50. biblScope is 6–6 for the p.6 modules, 6–7 for shetargilenu, and 7–7 for the rest."
+    }
+  ],
+  "order_findings": [
+    {
+      "status": "ok",
+      "detail": "Both documentary morning_blessings files follow the printed order: Elohai Neshamah → lasekhvi, shelo_asani_goy, shelo_asani_aved, [men gate] shelo_asani_ishah, [women gate plus source note] sheasani_kirtzono, poqeach … hamaavir_shenah, shetargilenu-/gomel_chasadim, shetatzileni, לעולם directive, ribbon_kol_haolamim, aval_anachnu."
+    },
+    {
+      "status": "ok",
+      "detail": "Expanded: section_morning_hashachar_continuation comes after section_morning_opening_blessings, which holds the German Neshamah, the other-rite Torah block and the other-rite Neshamah, and before section_morning_torah_german_later. The German order is Asher Yatzar → Neshamah → hashachar … Aval Anachnu → Torah blessings, Num 6:24–26, Ellu Devarim. Other rites have the full Torah block between Asher Yatzar and Neshamah. Nothing is placed after Aval Anachnu beyond the existing later block, and the gender gates are independent of the rite and Shabbat conditions."
+    },
+    {
+      "status": "ok",
+      "detail": "Expanded gender alternatives use opensiddur:person/gender with symbol male/female. The condition-own bilingual labels (לאנשים/Men say:, לנשים/Women say:) print only when gender is undefined. The shared word modules are transcluded without gates. The range transclusion uses target shetargilenu and targetEnd gomel_chasadim. The new continuation needs no navigation refs."
+    }
+  ],
+  "remaining_source_ambiguities": [
+    {
+      "type": "pending_human",
+      "word": "גַּבֵּי / גַּב before הַמִּזְבֵּחַ (aval_anachnu)",
+      "xml_currently": "גַּבֵּי־ (primary reading)",
+      "note": "The enlarged reading says גַּב־. Not settled here."
+    },
+    {
+      "type": "pending_human",
+      "word": "שֶׁשָּׂמַחְתָּ בּוֹ: maqaf or not",
+      "xml_currently": "no maqaf (primary reading)",
+      "note": "The independent and enlarged readings both show a maqaf."
+    },
+    {
+      "type": "pending_human",
+      "word": "רֹב / רַב in כִּי … מַעֲשֵׂיהֶם (ribbon_kol_haolamim)",
+      "xml_currently": "רַב (patah)",
+      "note": "Flagged for provenance. All three raw readings (primary, independent, enlarged) say רֹב, so the encoded patah appears in none of them. The human question record should say explicitly that the XML currently holds רַב, so the provisional value isn't mistaken for consensus."
+    },
+    {
+      "type": "pending_human",
+      "word": "dagesh in בֶן־בְּרִית / בֶּן־בְּרִית (shetatzileni)",
+      "xml_currently": "first without dagesh, second with (primary pattern)",
+      "note": "The independent reading has the opposite pattern."
+    },
+    {
+      "type": "pending_human",
+      "word": "dagesh in בְּרִיתֶךָ (aval_anachnu)",
+      "xml_currently": "בְּרִיתֶךָ with dagesh (enlarged reading)",
+      "note": "Primary and independent both read בְרִיתֶךָ."
+    },
+    {
+      "type": "pending_human",
+      "word": "dagesh in לּוֹ, יְשׁוּעָתֵנוּ, בִזָּיוֹן",
+      "xml_currently": "לּוֹ with dagesh; יְשׁוּעָתֵנוּ and בִזָּיוֹן without",
+      "note": "Consensus readings, all low-confidence."
+    },
+    {
+      "type": "pending_human",
+      "word": "בַּסֵּתֶר / בְּסֵתֶר (לעולם directive)",
+      "xml_currently": "בַּסֵּתֶר in both the Hebrew documentary morning_blessings.xml and the expanded index.xml",
+      "note": "The text is copied inline in two files, so whatever is decided has to be applied to both."
+    },
+    {
+      "type": "pending_human",
+      "word": "מֵעֵינָי / מֵעֵינַי (hamaavir_shenah)",
+      "xml_currently": "מֵעֵינָי",
+      "note": "The enlarged reading has moderate-to-high confidence in qamats."
+    },
+    {
+      "type": "typographic_minor",
+      "word": "man’s / man's (English hamekhin)",
+      "xml_currently": "man’s (curly apostrophe)",
+      "note": "Typographic only and unresolved in comparison.json. Not a wording question."
+    }
+  ],
+  "checks": [
+    "Read JLPTEI-3.md lines 150–270 (URN scope, milestone and terminator rules) and 1940–2030 (condition notes, kinds of rubric, how undecided scopes are set off, running-order conditions).",
+    "Read the primary, independent, enlarged, comparison, units and corrections JSON files in full.",
+    "Read all 43 listed XML files in full: 21 Hebrew, 21 English and the expanded index.",
+    "Milestone scopes follow rules 2 and 3. shetargilenu ends at the gomel_chasadim milestone, and gomel_chasadim ends at the explicit bare prayer-part terminator. Unit names match exactly.",
+    "Publication URN birkhot_hashachar/shetargilenu-/gomel_chasadim uses the same range form as the existing numbers/6/24-/6/26.",
+    "Every Hebrew יְיָ is wrapped in j:divineName: 16 single blessings, 2 in shetargilenu, 1 in shetatzileni, 1 in ribbon. English 'Lord' is not marked up. I did not find a guideline requiring English divine-name markup in the sections I read, so this is not raised as a finding.",
+    "No citations are printed on these pages and none are encoded. No rend on instructions. Running heads, page numbers and the independent reader's [continues…] markers are left out of the prayer words.",
+    "The women's instruction is the conditional's own note and is English in both languages. No male instruction is invented in the documentary editions. The source text is not reworded.",
+    "The לעולם paragraph is encoded as tei:note type=\"instruction\" in both languages, as the user decided (a directive, not prayer words).",
+    "Corrections: the duplicate English female blessing (xpath tei:p[2]) and everyday → every day are encoded as choice/sic/corr and match corrections.json. The raw readings are untouched.",
+    "Primary JSON tags women_direction on s48 as language 'he' but the text is English. The XML correctly uses xml:lang=\"en\", as the enlarged pass decided.",
+    "Canonical identities: no new identities are created (units.json new_canonical_identities is []). ribbon_kol_haolamim is used and not ribbon_haolamim. shelo_asani_goy is reused for נכרי. I did not have the registry or Birnbaum files, so the identity and extent claims rely on the user's statement and were not independently re-verified.",
+    "NOT PERFORMED: comparing SHA-256 values against /tmp/hashachar-reviewed-xml-sha256.json. I have no hashing tool here, so I can't confirm the files I read are byte-identical to the listed hashes."
+  ],
+  "reviewed_files": [
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/schema/JLPTEI-3.md (lines 1-60, 150-269, 1500-1659, 1940-2029)",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/birkhot_hashachar_lasekhvi.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/birkhot_hashachar_shelo_asani_goy.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/birkhot_hashachar_shelo_asani_aved.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/birkhot_hashachar_shelo_asani_ishah.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/birkhot_hashachar_sheasani_kirtzono.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/birkhot_hashachar_poqeach_ivrim.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/birkhot_hashachar_malbish_arummim.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/birkhot_hashachar_mattir_asurim.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/birkhot_hashachar_zoqef_kefufim.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/birkhot_hashachar_roqa_haaretz.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/birkhot_hashachar_sheasah_li.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/birkhot_hashachar_hamekhin.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/birkhot_hashachar_ozer_yisrael.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/birkhot_hashachar_oter_yisrael.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/birkhot_hashachar_hanoten_layaef.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/birkhot_hashachar_hamaavir_shenah.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/birkhot_hashachar_shetargilenu.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/birkhot_hashachar_shetatzileni.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/ribbon_kol_haolamim.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/aval_anachnu.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/morning_blessings.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/birkhot_hashachar_lasekhvi.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/birkhot_hashachar_shelo_asani_goy.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/birkhot_hashachar_shelo_asani_aved.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/birkhot_hashachar_shelo_asani_ishah.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/birkhot_hashachar_sheasani_kirtzono.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/birkhot_hashachar_poqeach_ivrim.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/birkhot_hashachar_malbish_arummim.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/birkhot_hashachar_mattir_asurim.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/birkhot_hashachar_zoqef_kefufim.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/birkhot_hashachar_roqa_haaretz.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/birkhot_hashachar_sheasah_li.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/birkhot_hashachar_hamekhin.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/birkhot_hashachar_ozer_yisrael.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/birkhot_hashachar_oter_yisrael.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/birkhot_hashachar_hanoten_layaef.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/birkhot_hashachar_hamaavir_shenah.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/birkhot_hashachar_shetargilenu.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/birkhot_hashachar_shetatzileni.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/ribbon_kol_haolamim.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/aval_anachnu.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/morning_blessings.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/machzor_expanded-opensiddur-he/index.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/primary/hashachar_s48_s51.json",
+    "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/independent/hashachar_s48_s51.json",
+    "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/independent/hashachar_s48_s51_enlarged.json",
+    "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/hashachar_s48_s51_comparison.json",
+    "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/hashachar_s48_s51_units.json",
+    "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/corrections.json",
+    "/tmp/hashachar-reviewed-xml-sha256.json (read; hashes not recomputed)"
+  ],
+  "verdict": "NOT ACCEPTABLE YET: blocked on the pending human source questions. The encoding conforms to the guidelines: milestone scopes and terminators are correct, the Hebrew and English alignment is correct, the documentary and expanded recitation order is correct, the gender gates are correct, and the sic/corr corrections are correct. There are no blocking encoding defects. Before acceptance: (1) settle the pending human questions and apply each decision to every inline copy, including בסתר in both morning_blessings.xml and index.xml, and record that the XML's רַב appears in none of the raw readings; (2) fix F1 (merge the bilingual לעולם note) and F2 (record the enlarged-pass decisions in comparison.json); (3) recompute the SHA-256 values for the final files, which this review could not do.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "c9753b33-8fdd-4ccc-ae14-b35fe4ce5e11"
+  }
+}

@@ -452,3 +452,22 @@ resolve. The documentary 44-page PDF is unchanged. The undated expanded PDF
 shows labeled alternatives; explicit rite settings select one recitation order.
 No new live-browser review is claimed. Material on scans48–59 remains partial,
 including gaps around the p.8 anchor. Continue source transcription at scan48.
+
+
+### Draft continuation: physical scan pages 48–51
+
+Printed pages 6–7 are drafted through Aval Anachnu, with 20 new bilingual
+modules reusing existing canonical identities. The English duplicated women’s
+blessing and joined “everyday” are retained in `sic` with editorial `corr`.
+The continuous cross-page petition has separate existing shetargilenu and
+gomel_chasadim milestones. Service order selects audience alternatives with
+the existing person/gender symbols and retains the explicit German-rite order.
+
+This batch is **not accepted**: source questions shown to the user remain
+pending. See `hashachar_s48_s51_resolutions.json`, the raw primary/independent
+readings and comparison records. Accepted coverage remains 53 of 355 leaves.
+Temporary preview outputs do not replace the accepted documentary/expanded
+exports. The stranded full-width conditional label is fixed in separate exporter
+PR299; actual draft PDF geometry is verified. The feature branch does not
+include that exporter change. Draft previews have 47 documentary /50 expanded
+pages; the accepted exports remain unchanged.

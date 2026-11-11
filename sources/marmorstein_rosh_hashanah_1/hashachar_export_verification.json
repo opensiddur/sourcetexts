@@ -1,0 +1,42 @@
+{
+  "status": "draft previews verified; source acceptance remains false",
+  "exports": [
+    {
+      "mode": "documentary",
+      "pages": 47,
+      "pdf_sha256": "3edc55f16e56aed2a61411d6e8555cf3e056f89c49052e2822687d2691afc424",
+      "preview_path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/documentary-s48-s51-draft.pdf",
+      "rendered_pdf_pages": [
+        36,
+        37,
+        38,
+        39
+      ],
+      "visual_review": "Primary inspected new paired text, all continuations, corrected duplicate, spacing, condition labels and absence of clipping/overlaps. Documentary pages36–39 are pixel-identical after exporter fix.",
+      "corrected_female_blessing_occurrences": 1
+    },
+    {
+      "mode": "expanded",
+      "pages": 50,
+      "pdf_sha256": "ef18958acf63ac7ce907b216141643799456a4cb39f256d1d305892c32fc82c8",
+      "preview_path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/expanded-s48-s51-draft.pdf",
+      "rendered_pdf_pages": [
+        37,
+        38,
+        39,
+        40
+      ],
+      "visual_review": "Primary inspected new paired text, all continuations, corrected duplicate, spacing, condition labels and absence of clipping/overlaps. Documentary pages36–39 are pixel-identical after exporter fix.",
+      "corrected_female_blessing_occurrences": 1
+    }
+  ],
+  "exporter_fix": {
+    "pr": "https://github.com/opensiddur/opensiddur-processor/pull/299",
+    "commit": "e517de6",
+    "tests": "436 tests +160 subtests, including64-label real-PDF geometry and unprotected negative control.",
+    "real_page_evidence": "Before: Women say at bottom PDF37, blessing on38. Fixed: both on PDF38, verified by pdftotext bounding boxes and visual inspection.",
+    "feature_branch_does_not_contain_exporter_fix": true
+  },
+  "accepted_exports_replaced": false,
+  "no_live_browser_review_claimed": true
+}
