@@ -501,8 +501,9 @@ Independent guideline, alignment and order review is approved; all human Hebrew
 corrections have been independently verified. Three Shabbat branches, exact words
 for all13units, labels/acrostics and actual HTML conditions/links pass. Refreshed
 documentary draft PDF contains51pages and passes visual inspection after the
-human corrections. The54-page expanded PDF has Ana Be-khoach in its top margin
-on page45; it is retained only as a diagnostic until a separate exporter fix. See qorbanot_draft_export_verification.json.
+human corrections. The54-page expanded PDF also passes fresh visual and coordinate checks.
+The earlier top-margin diagnosis was a preview-reading mistake and is retracted;
+no exporter change was needed. See qorbanot_draft_export_verification.json.
 
 Scans56,58,59 and all13recited/study modules are accepted, bringing coverage
 to64of355. Scan57 remains source-glyph-uncertain solely for the German
