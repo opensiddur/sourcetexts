@@ -545,7 +545,7 @@ low-certainty German instruction glyph. Stable accepted previews remain
 unchanged; full-volume and complete-service acceptance remain false.
 
 
-### Draft continuation: physical PDF scans 70–73, Psalm 136 continuation 74–75
+### Initial draft review: physical PDF scans 70–73, Psalm 136 continuation 74–75
 
 Psalms 135 and 136 now have both edition witnesses, canonical chapter/verse
 milestones, source page boundaries, citation notes and shared expanded order.
@@ -579,3 +579,15 @@ whole-psalm word comparisons, four cross-page checks, codepoint checks and HTML
 link/identifier/refrain checks pass. Fresh PDF pages confirm that the 24 empty
 lines before verse 25 are gone. See psalms_s70_s75_export_verification.json for
 hashes, visual evidence, test results and explicit pending source status.
+
+
+### Accepted continuation after human adjudication, 2026-11-12
+
+The user confirms: “there is no meteg.” All six Halleluyah occurrences retain
+first-lamed hataf-pataḥ without meteg. Independent final XML review and explicit
+codepoint checks verify this; no prayer words changed. The earlier Ashrei,
+Qedushah and Vetimlokh reviews are restored, and full physical pages 70–73 are
+now accepted. Coverage is 72/355. Only Psalm 136 continuation is accepted on
+74/75; Psalm 33 is next. Source 57 retains its earlier low-certainty German
+glyph. The preceding draft review section preserves the superseded pending
+state. Existing inspected PDF/HTML drafts remain valid and unchanged.
