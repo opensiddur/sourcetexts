@@ -680,3 +680,19 @@ Refreshed draft previews are 69 pages documentary and 75 pages expanded.
 Both PDFs are rendered and visually inspected; both HTML books pass identifier,
 link and content checks. All 292 XML files and the targeted checks pass.
 Export evidence and artifact hashes are in psalms_s76_s87_export_verification.json.
+
+
+Human completion of the larger batch: all numbered questions 1–12 are now
+resolved. Exactly seven Hebrew words changed against the committed batch;
+English, page boundaries, correspondence scopes and order are unchanged.
+Independent follow-up verifies each mark and the two Jerusalem CGJ sequences.
+Snippet 10 retains qamatz and a following maqaf on כל; the added meteg belongs
+to the alef of הארץ. All ten full leaves 76–85 are accepted: total 84/355.
+The Psalm150/Barukh material on 86/87 is accepted, while the standing rubric
+and Vayvarekh David are next. Earlier scan57 remains low-certainty; the queued
+older scan8 vowel check remains separate. The whole volume is still a draft.
+
+The refreshed post-adjudication previews remain 69 pages documentary and
+75 pages expanded. Forty exact bilingual comparisons, reference/name/feature/
+registry checks, HTML links and the seven-word source-change check pass.
+Both PDFs are visually inspected after the final pointing corrections.
