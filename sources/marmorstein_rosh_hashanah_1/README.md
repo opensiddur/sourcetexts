@@ -593,7 +593,7 @@ glyph. The preceding draft review section preserves the superseded pending
 state. Existing inspected PDF/HTML drafts remain valid and unchanged.
 
 
-### Draft continuation: Psalm 33, physical scans 74–77
+### Initial draft review: Psalm 33, physical scans 74–77
 
 Both witnesses contain all 22 verses, in continuous source paragraphs. The
 canonical chapter and verse correspondences are reused from existing Bible
@@ -620,3 +620,20 @@ whole-chapter word comparisons, four verse-17 source-page checks, codepoint
 checks and electronic link/identifier checks pass. Fresh affected PDF pages
 are rendered and inspected. See psalm_33_s74_s77_export_verification.json for
 artifact hashes, evidence and the explicit pending source questions.
+
+
+### Accepted Psalm 33 after human adjudication, 2026-11-12
+
+The user settles all displayed questions. Rannenu has first-nun hataf-pataḥ
+without dagesh. The metegs are on tet in Heitivu, shin in Maasehu, and yod
+with its segol in Vayehi. The three holams, Kones kaf dagesh, defective
+Ledor/Vador spelling and Zamru-lo maqaf are confirmed. Independent final
+review and exact codepoint checks verify every ruling. Actual committed
+pre/post source comparison confirms only four Hebrew words changed; English,
+all other words and structural metadata are unchanged. Raw initial evidence
+and the superseded pending state above remain preserved.
+
+Full scans 74/75 are now accepted, bringing coverage to 74/355. Only Psalm 33
+continuation is accepted on 76/77; Psalms 92/93 are next. The earlier source 57
+German glyph remains separately low-certainty. Refreshed draft PDF/HTML exports
+contain the human corrections; complete volume/service acceptance is false.
