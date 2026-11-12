@@ -1,0 +1,81 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "human_hebrew_readings_applied": true,
+  "german_uncertainty_faithfully_encoded": true,
+  "encoding_alignment_order_approved": true,
+  "findings": [
+    {
+      "severity": "verified",
+      "file": "qorbanot_vearvah.xml:34",
+      "issue": "Mal 3:4 reads וִירוּשָׁלָֽיִם. It has the second yod between lamed and mem, qamats+meteg on the lamed, and hiriq on the second yod. This matches the human answer and the machine evidence (lamed_qamats_meteg, second_yod_hiriq)."
+    },
+    {
+      "severity": "verified",
+      "file": "anna_bekhoach.xml:80, :33",
+      "issue": "Stanza 6 has פְנֵה with no dagesh in the pe. The attribution note reads exactly 'תפלה רבי נחוניא בן הקנה.' in its own standOff commentary note, separate from the seven per-stanza acrostic notes (tei:seg type=acrostic)."
+    },
+    {
+      "severity": "verified",
+      "file": "qorbanot_musaf_shabbat.xml:41",
+      "issue": "Num 28:9 has סֹ֧לֶת with darga on the samekh and מִנְחָ֛ה with tevir on the chet. Verse milestones 9 and 10 carry canonical corresp, followed by bare verse and chapter terminators. The citation note במדבר כ״ח ט׳ is in the standOff."
+    },
+    {
+      "severity": "verified",
+      "file": "eizehu_meqoman.xml:39",
+      "issue": "Mishnah 1 now reads עַל־בֵּין with a maqaf, as the human answered. The earlier AI 'lamed overhang' retraction no longer applies. The rest is unchanged from the approved structure: 8 mishnah milestones with labels א–ח, each with a terminator; pb n=13 inside Mishnah 4; אֶחָת/אַחַת in sic/corr; the comma after כֵּיצַד."
+    },
+    {
+      "severity": "verified",
+      "file": "morning_qorbanot.xml:50",
+      "issue": "The German rubric is 'אַם <foreign he>שַׁבָּת</foreign> ווירד פֿאָלגענדע<c cert=low>ז</c> איינגעסאַלטעט:'. Checked letter by letter against the human verbatim answer: אַם (alef-patah, mem); שַׁבָּת (shin dot, patah, bet+dagesh, qamats, tav); ווירד; פֿאָלגענדע (fe+rafe, alef-qamats, lamed, gimel, ayin, nun, dalet, ayin); איינגעסאַלטעט with the confirmed samekh and alef-patah. Nothing is normalised to German spelling. Only the tentative final ז is inside tei:c cert=low, so the encoding claims no certainty for that glyph and full certainty for the rest. The note is xml:lang=de-Hebr and שַׁבָּת is xml:lang=he. As the condition's own rubric, the note is a child of j:conditional, and j:conditional and j:endConditional are siblings inside the div."
+    },
+    {
+      "severity": "info",
+      "file": "/tmp/qorbanot-human-codepoints.json:12",
+      "issue": "'german_two_letters_pending: true' is out of date. The human has since confirmed the samekh, so only one glyph (the final letter of פֿאָלגענדע־) is still uncertain. The XML is correct. Only this evidence file lags.",
+      "recommendation": "Regenerate it with something like german_final_glyph_pending: true, samekh_confirmed: true."
+    },
+    {
+      "severity": "info",
+      "file": "human_qorbanot_s56_s59_confirmation.json:6 vs :21",
+      "issue": "german_literal still holds the first-pass final ו, while german_provisional holds ז. The XML follows the later answer. Keeping both is a fair audit trail, but german_literal could be misread as current.",
+      "recommendation": "Optionally mark german_literal as superseded by german_followup_verbatim/german_provisional."
+    },
+    {
+      "severity": "info",
+      "file": "JLPTEI-3.md 'Special inline tags'",
+      "issue": "The guideline's listed form for a language change is tei:seg[@xml:lang]. tei:foreign is used here, the same pattern as the approved index rubric (index.xml:1394). The guideline documents tei:c only with @rend. @cert is TEI att.global, but JLPTEI-3 doesn't mention it. Neither blocks the semantic approval. I did not validate against the RNG.",
+      "recommendation": "Before export, confirm the schema accepts tei:foreign and tei:c/@cert, or switch to tei:seg xml:lang=he."
+    },
+    {
+      "severity": "limitation",
+      "file": "all",
+      "issue": "With only file-reading tools I checked these readings visually and could not dump codepoints. For mark order (qamats before meteg), U+05BE versus hyphen, and U+05BF rafe on פֿ, I relied on /tmp/qorbanot-human-codepoints.json (status pass, maqaf_u05be true) together with what the rendered text shows."
+    }
+  ],
+  "remaining_source_ambiguities": [
+    "Scan 57 German rubric: the final glyph of פֿאָלגענדע־ is hard to read. The human suggests ז, and the source-only glyph comparison prefers ז over ו but has its own low confidence and does not rule out a damaged or unusual letter. It is encoded as ז inside tei:c cert=low and is not settled. No human question is pending, and the installment stays DRAFT."
+  ],
+  "reviewed_files": [
+    "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/human_qorbanot_s56_s59_confirmation.json",
+    "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/independent/qorbanot_guideline_audit_round2.json",
+    "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/independent/qorbanot_german_glyph_comparison.json",
+    "/tmp/qorbanot-human-codepoints.json",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/qorbanot_vearvah.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/anna_bekhoach.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/qorbanot_musaf_shabbat.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/eizehu_meqoman.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/morning_qorbanot.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/machzor_expanded-opensiddur-he/index.xml (lines 1360-1429)",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/schema/JLPTEI-3.md (URN scope, terminators, sub-verse, inline tags, instructions, conditional notes, settings)"
+  ],
+  "verdict": "approved_human_readings_applied; DRAFT retained. All five authoritative human Hebrew readings are in the XML exactly as the human answered. The German rubric keeps every human-confirmed letter and vowel, including the confirmed samekh. Only the tentative final ז is marked cert=low, it is not normalised to German, and שַׁבָּת is xml:lang=he inside the de-Hebr note. The earlier encoding, alignment and order approvals still hold. In the expanded index (1392-1415), the local Shabbat conditional wraps the sibling declare/transclude/endDeclare, and order runs Ana → Barukh Shem → [Shabbat] Num 28:9-10 → Eizehu 1-8 → Middot → Yehi Ratzon → Barukh She-amar. The source project's instruction note is its own and the English rubric is only the index's own approved bilingual rubric. Acrostic notes are separate per stanza. All eight Mishnah labels and their terminators are present, and rule scopes are exact. There are no blocking findings. The installment stays DRAFT only because the final glyph of פֿאָלגענדע־ is still unreadable.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "d4325c75-9b0a-4c36-a0b6-ccefe19ad479"
+  }
+}

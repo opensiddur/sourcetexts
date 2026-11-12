@@ -1,0 +1,55 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "checks": [
+    "qorbanot_bar_kappara.xml:34: the quotation seg's source is now urn:x-opensiddur:text:bible:leviticus/2/11/b. In JLPTEI-3 'Sub-verse scope', b means the next word after the etnachta through the end of the verse. In Lev 2:11 the etnachta falls on חָמֵץ, so b is exactly 'כִּי כָל־שְׂאֹר … אִשֶּׁה לַיהוָה', the words quoted. The source goes on a bounded seg and not a corresp, so no canonical verse identity is claimed or duplicated. If a cited Tanakh project has no half-verses, the reference falls back to the whole verse and the compiler logs it, as the spec intends. My earlier finding is resolved.",
+    "machzor_expanded index.xml:1392-1415: the Shabbat conditional (shabbat=true) now wraps a tei:div. Inside it, j:declare section_morning_qorbanot_shabbat_settings (shabbat=true), the musaf/shabbat transclusion and the matching j:endDeclare are siblings, which meets the sibling rule for declare/endDeclare. j:conditional and j:endConditional are siblings in the outer div. The declaration has the same value as the gate, so the 'kind of day' gating on the declaration can't change the result. This follows 'Conditions on a running order'. The bilingual 'בשבת:'/'On Shabbat:' instruction note is right here: this is an in-section condition rubric under 'Kinds of rubric', not a whole-section gate. My earlier finding is resolved.",
+    "Partial chapter @n without @corresp: resolutions.json:30 and :38 now record it as a context-only number. That matches the schema. Under scope rule 3 a corresp-less chapter milestone is an unindexed terminator. 'Terminating a scope' says bare milestones close only their own unit, so these don't cut verse scopes. I accept this as a project convention. I did not reopen the earlier accepted modules to confirm they encode it the same way.",
+    "resolutions.json:19-20 and :39-40 now explicitly record the plene בּוֹטֵחַ (Ps 84:13) and the unprefixed החלבנה, with both raw readers' disagreement kept. The evidence-trail gap is closed.",
+    "German rubric: resolutions.json:5 and :42 record it as an open human question, with both readings kept and none accepted. The module is marked DRAFT, and stable exports are reported as not overwritten. I accept this as the correct holding state, not as a resolution.",
+    "eizehu_meqoman.xml:39 is otherwise unchanged from the structure I reviewed before. The 8 mishnah milestones each have a following label and terminator, pb n=13 falls inside Mishnah 4, and אֶחָת/אַחַת is in sic/corr. The XML currently has 'עַל בֵּין' (space) and 'כֵּיצַד,' (comma).",
+    "Order in the expanded index:1373-1421 is unchanged and correct: … Ana → Barukh Shem context → [Shabbat] Num 28:9-10 → Eizehu 1-8 → Middot lead-13 → Yehi Ratzon → Barukh She-amar."
+  ],
+  "findings": [
+    {
+      "severity": "retraction",
+      "file": "eizehu_meqoman.xml:39 ('עַל בֵּין')",
+      "issue": "My round-1 claim that the line 'clearly ends עַל־' was made at band resolution, and I withdraw it. In the isolated crop the margin to the left of the lamed is blank, so there is no detached maqaf. The lamed's horizontal waist stroke does run about 80px (crop scale) to the left of where the ascender meets it, at the top-of-letter height where a maqaf would sit, and it ends in a slight blob. That overhang is almost certainly what I read as a maqaf. This crop alone can't show whether it is the typeface's lamed form or a maqaf fused to the lamed by scan blur.",
+      "recommendation": "Keep the space provisionally. Do not require the maqaf. Send it to the human with this snippet plus a line-internal lamed from the same page (e.g. שֶׁלִּזְבָחִים or עַל־מִזְבַּח in Mishnah 1) for comparison. Add it to pending_human_questions in resolutions.json, which doesn't list it yet."
+    },
+    {
+      "severity": "retraction",
+      "file": "eizehu_meqoman.xml:39 ('כֵּיצַד,')",
+      "issue": "At isolated resolution the mark after כֵּיצַד is a comma with a tail that descends to the lower left. It is clearly different from the round/diamond points of the colon after קְרָנוֹת right before it. My round-1 'may be a period' came from band resolution and is wrong.",
+      "recommendation": "No change. The XML's comma is correct. Settled."
+    },
+    {
+      "severity": "info",
+      "file": "qorbanot_s56_s59_resolutions.json:41",
+      "issue": "The response line says the isolated crops 'show no separate maqaf after על'. That is literally true, but it implies the question is closed. As I read it, a fused maqaf is not excluded.",
+      "recommendation": "Reword it to record the al_bein question as pending human review, as above."
+    }
+  ],
+  "punctuation_readings": {
+    "al_bein": "No separate or detached maqaf is visible. The lamed's horizontal stroke overhangs left of its ascender, and that is the likely source of the earlier maqaf impression. Whether this overhang is the letter form or a fused maqaf is ambiguous in this crop. Human review is needed; keep the provisional space.",
+    "keitzad": "Comma. A clear descending comma that is distinct from the colon points nearby. Settled; the XML is correct."
+  },
+  "encoding_alignment_order_approved": true,
+  "source_acceptance_pending_human": true,
+  "remaining_source_ambiguities": [
+    "Hebrew-script German Shabbat rubric (scan 57): exact letters and marks. The primary's 'ווירד פָאלגענדע הינצוגעסעטצט' and the secondary 'פֿאָלגענדעס איינגעשאָלטעט' readings remain in disagreement. My round-1 objection, that the visible letters don't fit 'הינצוגעסעטצט', stands as an unresolved disagreement.",
+    "Mishnah 1 עַל־בֵּין vs עַל בֵּין: is the lamed's leftward overhang a fused maqaf or the letter form?",
+    "Jerusalem letters and pointing in Mal 3:4.",
+    "Pe dagesh in פנה.",
+    "Num 28:9 accents on סלת and מנחה.",
+    "Ana attribution: תפלה vs תפלת and the exact wording."
+  ],
+  "verdict": "approved_for_encoding_guideline_and_order; source_acceptance_pending_human. All round-1 encoding findings are fixed: Lev 2:11/b, the local shabbat declare, the documented partial-chapter @n, and the recorded בּוֹטֵחַ and החלבנה adjudications. I retract both of my round-1 punctuation objections. כיצד is a comma, settled. The al_bein maqaf is not 'clear' as I said before; it is genuinely ambiguous and goes to the human. Six source questions remain for human review. Until they are answered, the modules should stay DRAFT, and no stable export should take the German rubric.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "f9732b8b-dcee-4012-8ab1-6247fdb1bc18"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "status": "Human Hebrew readings independently verified; three pages accepted, one source glyph on scan57 uncertain.",
+  "accepted": false,
+  "pending_human_questions": [],
+  "evidence_policy": "Raw primary/blind, enlarged, micro and fresh isolated-word readings retained with actual disagreements. Later adjudications are not blind. Source images settle readings; reader agreement alone does not.",
+  "settled": [
+    "Native isolated rereading confirms שבעים שבעים, ששה עשר ששה עשר AND היטיב היטיב; prior deletion proposals rejected. They are present in the XML.",
+    "Fresh isolated reading confirms קֹדֶשׁ: dot above qof is holam, long lower stroke is qof descender; neighboring segol belongs to dalet. No hataf-qamats substitution.",
+    "Native tight images settle both שלמזבח occurrences with lamed and mem dageshes and patah under lamed.",
+    "Correctly extended הדשן crop shows qamats under dalet (הַדָּשֶׁן); earlier segol proposal rejected. This is a source reading, not a correction.",
+    "היסוד/באכילתן: fresh isolated-word reading confirms no yod dagesh in הַיְסוֹד and no bet dagesh in בַאֲכִילָתָן. Each occurrence checked independently.",
+    "שְׁיָרֵי is printed in all three occurrences; source בכלי uses hiriq under lamed; defective שפך and חצת retained at their actual places.",
+    "Printed אֶחָת retained in sic and corrected to intended אַחַת in corr; other spelling/vocalization variants kept as source words.",
+    "Primary omitted Num28:9–10 accents in first pass. Supplementary source adjudication restores printed accents, with two exact shapes awaiting human confirmation.",
+    "בּוֹטֵחַ is plene in Ps84:13; both initial readings omitted the vav, and native-image adjudication restores it.",
+    "החלבנה is printed without the prefixed vav in the first unpointed incense paragraph.",
+    "Human confirms וִירוּשָׁלָֽיִם: second yod, qamats+meteg on lamed and hiriq on second yod.",
+    "Human confirms pe WITHOUT dagesh in פְנֵה, darga on samekh in סֹ֧לֶת, tevir on chet in מִנְחָ֛ה, attribution as transcribed, and maqaf in עַל־בֵּין.",
+    "Samekh in איינגעסאַלטעט is authoritative. Final letter of פֿאָלגענדע־ remains uncertain; tentative ז is explicitly low-certainty, not normalized to modern German."
+  ],
+  "encoding": {
+    "urns": "Existing prayer/Bible/poem identities reused, including canonical poem:anna_bekhoach stanza extents and middot/lead plus thirteen existing rules. One structural BarukhShem occurrence context only.",
+    "page_break": "Eizehu Mishnah4 begins with ד הָעוֹלָה at end of scan57 and continues on scan58 within the same milestone scope.",
+    "acrostics": "Source side-column letters are separately targeted commentary notes with seg type=acrostic, not appended to recited prayer lines. Attribution is a source commentary note.",
+    "shabbat": "Gate lives in documentary/expanded service order; reusable Biblical word module remains ungated. Documentary retains German source instruction; expanded uses bilingual editorial condition labels.",
+    "bible": "Full quoted verses carry bounded chapter/verse milestones; BarKappara quotes only the final clause of Lev2:11, marked as a bounded source quotation without falsely claiming the complete verse.",
+    "barukh_shem": "New occurrence carries existing canonical correspondence and no unprinted בלחש. Earlier occurrence had that direction inside its reusable div. Source English is absent; no earlier translation is borrowed.",
+    "mishnah_labels": "Actual compiled documentary test caught missing first א when labels stood before canonical milestones. For this new module, each label is placed immediately after its own mishnah milestone; all eight numbers travel with their own canonical units. Earlier modules retain their reviewed label convention.",
+    "partial_chapters": "Chapter numbers on non-corresponding milestones follow the existing accepted partial-chapter convention: they give context without mapping the entire canonical chapter."
+  },
+  "guideline_audit": {
+    "file": "independent/qorbanot_guideline_audit_round1.json",
+    "status": "Approved through independent final human-correction verification; one German glyph remains source-uncertain.",
+    "responses": [
+      "Refined the bounded partial quotation source to Lev2:11/b, the exact second half after etnachta. It still does not falsely claim a full verse corresp.",
+      "Added local shabbat=true declaration inside the expanded optional sequence, matching the general running-order convention.",
+      "Partial chapter/@n without @corresp follows the established earlier source convention: context number only, no claim to an entire chapter witness.",
+      "Explicitly record plene בּוֹטֵחַ adjudicated from native source image, despite both initial readers omitting vav. Current XML is correct.",
+      "First החלבנה is unprefixed: source enlargement confirms no vav. Raw initial disagreement retained; final adjudication in this record.",
+      "Round1 reopens maqaf and כיצד punctuation at band resolution. Verified isolated crops show no separate maqaf after על and a descending comma after כיצד; follow-up reader must inspect those actual crops.",
+      "German primary and secondary letter readings remain in direct disagreement. Human snippet question is pending; no candidate is accepted or publishable. Current provisional text is marked DRAFT throughout, and stable accepted exports remain unchanged."
+    ],
+    "followup": "independent/qorbanot_guideline_audit_round2.json",
+    "punctuation_followup": "Human confirms maqaf after על: current text עַל־בֵּין. Comma after כיצד independently settled.",
+    "responses_note": "Historical responses to rounds1/2 are retained above. Human confirmations and final verification supersede provisional maqaf and German-question status.",
+    "human_final": "independent/qorbanot_human_final_verification.json"
+  },
+  "validation": {
+    "schema": "252 valid JLPTEI files; DRAFT",
+    "tests": "218 tests +636subtests pass",
+    "naming_features_registry_references": "pass",
+    "exact_words": "13sourceunits match current draft; eight labels and seven separate acrostic notes retained.",
+    "runtime": "Three compiled Shabbat branches and both actual HTML books pass; no live-browser claim.",
+    "exports": "qorbanot_draft_export_verification.json: refreshed after all human Hebrew corrections and tentative German ז."
+  },
+  "pending": [
+    "Final glyph of פֿאָלגענדע־ remains indistinct after human review and glyph comparison. Tentative ז encoded with cert=low. Samekh in איינגעסאַלטעט is confirmed."
+  ],
+  "human_confirmation": "human_qorbanot_s56_s59_confirmation.json",
+  "remaining_source_ambiguities": [
+    "Final glyph of פֿאָלגענדע־ remains indistinct after human review and glyph comparison. Tentative ז encoded with cert=low. Samekh in איינגעסאַלטעט is confirmed."
+  ],
+  "accepted_scan_pages": [
+    56,
+    58,
+    59
+  ],
+  "human_final_verification": "independent/qorbanot_human_final_verification.json"
+}

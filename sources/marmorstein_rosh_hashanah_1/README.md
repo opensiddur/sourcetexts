@@ -487,3 +487,28 @@ pass. The239accepted XML text trees match the reviewed draft exactly.
 Final accepted exports and hashes are in morning8_export_verification.json.
 Coverage is61of355leaves; continue at physical PDF scan56 (Archive n55).
 The whole volume and full service remain incomplete.
+
+
+### Draft continuation: physical PDF scans56–59
+
+Thirteen new Hebrew-only units fill the preparatory offerings/study sequence
+through printed p14. No English is invented. Ana’s source attribution and
+side-column acrostics are commentary. All eight Mishnah labels follow their
+own canonical milestones so the first label survives range transclusion.
+
+The generated252XML files validate.218targeted tests and636subtests pass.
+Independent guideline, alignment and order review is approved; all human Hebrew
+corrections have been independently verified. Three Shabbat branches, exact words
+for all13units, labels/acrostics and actual HTML conditions/links pass. Refreshed
+documentary draft PDF contains51pages and passes visual inspection after the
+human corrections. The54-page expanded PDF has Ana Be-khoach in its top margin
+on page45; it is retained only as a diagnostic until a separate exporter fix. See qorbanot_draft_export_verification.json.
+
+Scans56,58,59 and all13recited/study modules are accepted, bringing coverage
+to64of355. Scan57 remains source-glyph-uncertain solely for the German
+instruction’s final glyph in פֿאָלגענדע־. Tentative ז is encoded as tei:c
+cert="low"; the human-confirmed samekh in איינגעסאַלטעט is retained. There
+are no unanswered human questions. Raw disagreements and superseded erroneous
+proposals remain archived. Stable accepted PDFs/HTML were not overwritten.
+Prior pilot scans60–65 already cover the continuation; next new primary scan66.
+Whole-volume and complete-service acceptance remain false.
