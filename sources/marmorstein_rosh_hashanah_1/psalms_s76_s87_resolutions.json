@@ -1,0 +1,130 @@
+{
+  "status": "DRAFT: enlarged source adjudication complete except displayed human questions; final XML audit pending.",
+  "settled_patches": "psalms_s76_s87_source_patches.json",
+  "pending_human": [
+    {
+      "scan": "s78",
+      "key": "yehi_khevod/14",
+      "word": "אִוָּה(ּ)",
+      "question": "Mappiq dot in the final heh: present or absent?"
+    },
+    {
+      "scan": "s78",
+      "key": "yehi_khevod/16",
+      "word": "יַעֲזֹב / יַעֲזוֹב",
+      "question": "The band appears to show a vav after the zayin (plene), which all three transcriptions lack. Confirm the letter count."
+    },
+    {
+      "scan": "s78",
+      "key": "ashrei/ps144_15",
+      "word": "לּוֹ / לוֹ",
+      "question": "Dagesh in the lamed: present or absent?"
+    },
+    {
+      "scan": "s80",
+      "key": "ps146/6",
+      "word": "וְאֶת־כָּל",
+      "question": "Is the tick before the alef a damaged vav with sheva?"
+    },
+    {
+      "scan": "s82",
+      "key": "147:6",
+      "word": "עֲדֵי(־) אָ(ֽ)רֶץ",
+      "question": "Line-end maqaf after עֲדֵי, and a meteg beside the alef qamats?"
+    },
+    {
+      "scan": "s82",
+      "key": "147:9",
+      "word": "יִקְרָ(ֽ)אוּ",
+      "question": "A meteg beside the qamats under the resh?"
+    },
+    {
+      "scan": "s82",
+      "key": "147:15",
+      "word": "אָ(ֽ)רֶץ",
+      "question": "A meteg beside the qamats under the alef?"
+    },
+    {
+      "scan": "s84",
+      "key": "148:1",
+      "word": "ב(ּ)ַמְּרוֹמִים",
+      "question": "Dagesh in the initial bet?"
+    },
+    {
+      "scan": "s84",
+      "key": "149:7",
+      "word": "ב(ּ)ַגּוֹיִם",
+      "question": "Dagesh in the initial bet? I lean toward present."
+    },
+    {
+      "scan": "s86",
+      "key": "72:19",
+      "word": "אֶת־כ?ל(־)",
+      "question": "Holam or qamats on the kaf, and is there a line-end maqaf before הָאָרֶץ?"
+    }
+  ],
+  "editorial_decisions": [
+    "Printed nur is a typo for nor: retain in source evidence, encode sic/corr separately.",
+    "Unpointed כל in both150:6occurrences is preserved literally without supplying vowels. The secondary suggestion to correct missing pointing is not adopted: a legible unpointed word does not itself establish a textual mistake.",
+    "Jerusalem has CGJ between both lamed vowels; vowel choice on82remains pending.",
+    "Existing canonical Hebrew92/93/Ashrei retain their independently accepted earlier book printing. Native morning variants use structural occurrence correspondences and canonical source quotation links. Expanded canonical transclusions select the first Hebrew printing and the newly printed morning English; no translation is inserted into earlier documentary positions.",
+    "Expanded150:6is repeated in both languages from the already printed canonical verse. Documentary English has no invented second occurrence."
+  ],
+  "scope": "76–85full primary scope;86/87throughBarukhonly. NextVayvarekhDavidwithstandingrubric.",
+  "canonical_collision_resolution": {
+    "ashrei/144:15": "Both original Hebrew and new English use one contextual quoted_144_15 boundary, with canonical source link. Existing canonical144:15is already in Hoshiah et Ammekha. Original Hebrew words and physical source unchanged.",
+    "psalm146:10": "Native verse uses morning_psalm_146/10context; existing canonical verse remains in rh_vetimlokh. Whole146chapter remains a complete native chapter witness.",
+    "yehi/ex15:18": "New occurrence quote uses quoted_exodus_15_18; canonical verse remains in Emet veemunah.",
+    "baseline": "Other duplicate Bible mappings predate this batch and remain outside its acceptance claims; this change introduces none."
+  },
+  "guideline_round1_fixes": [
+    "Restore printed Psalm115:18citation קטו יח on s80, targeting morning_ashrei/24 and linking canonical Bible115/18. Blind first reading already recorded it; primary encoding had omitted it. Earlier s8has no115:18label and is unchanged.",
+    "Remove false openingpagebreak fromcanonicalEnglish92; source77begins withPsalm33. KeepcanonicalENAshrei page25breakinside145:5deliberately for expanded canonical-witness provenance. Native context has samephysicalboundaryatitsownprinting.",
+    "The two s78Ashrei clusters84:5and145:2remain plain sheva pending independent enlarged crop confirmation; do not generalize the separateHalleluyah ruling.",
+    "Round1broadclaim thatprojecthasnoduplicateBibleURNswasoverstated: automatedwholeprojectaudit foundpreexistingduplicates. NewEx15:18,146:10andnewAshrei144:15collisions are now explicitly fixed. Finalreviewmustauditactualfilesanddistinguishbaseline."
+  ],
+  "compiled_documentary_translation_fix": {
+    "finding": "Runtime compilation disproved the earlier index-only argument: filtering the English index does not stop the Hebrew transclusion from discovering a canonical English counterpart.",
+    "fix": "Earlier source positions now transclude three Hebrew-only occurrence contexts, with per-verse canonical source links, original readings and citation notes. Their roots have no English counterpart, so parallel compilation cannot insert later translations. Shared canonical HE+EN witnesses remain available for expanded recitation.",
+    "expanded_policy": "Expanded canonical reuse may use an English translation printed elsewhere in this same volume. Documentary order alone preserves local absence. No translation is invented.",
+    "source_review": "New earlier-context words exactly inherit independently accepted source readings; new context/citation routing needs separate XML/runtime audit.",
+    "psalm24": "Existing independently reviewed Hebrew-only appendix at scan351, after current unfilled main-text gap; expandednamedappendixunchanged. Not a new passage inserted into morningrecitation."
+  },
+  "guideline_round2_fixes": [
+    "Apply exactly the two enlarged-source lamed hataf-patah readings in new morning Ashrei84:5and145:2. No oldp2pointingchange.",
+    "Recordbaselinepotentialp2lamedpointingquestionforlaterfocusedreview, not silently normalize acceptedsource."
+  ],
+  "human_resolutions": [
+    {
+      "snippet": 11,
+      "scan": "s82",
+      "verse": "147:2",
+      "before": "בֹּנֵה יְרוּשָׁלַ͏ִם יְהֹוָה נִדְחֵי יִשְׂרָאֵל יְכַנֵּס:",
+      "after": "בֹּנֵה יְרוּשָׁלַֽ͏ִם יְהֹוָה נִדְחֵי יִשְׂרָאֵל יְכַנֵּס:",
+      "authority": "User: patah + meteg, needs cgj, then hiriq",
+      "status": "settled",
+      "other_jerusalem_occurrence": "147:12 remains pending; recropped snippet12 includes vowel row."
+    },
+    {
+      "scan": "s82",
+      "verse": "Psalm147:12",
+      "snippet": 12,
+      "user_answer": "patah-meteg (needs cgj) hiriq",
+      "lamed_codepoints": [
+        "U+05DC",
+        "U+05B7",
+        "U+05BD",
+        "U+034F",
+        "U+05B4"
+      ],
+      "evidence_image": "/tmp/mahzor-s76/snippet-12-complete-vowels.png",
+      "status": "settled",
+      "before": "שַׁבְּחִי יְרוּשָׁלַ͏ִם אֶת־יְהֹוָה הַלֲלִי אֱלֹהַיִךְ צִיּוֹן:",
+      "after": "שַׁבְּחִי יְרוּשָׁלַֽ͏ִם אֶת־יְהֹוָה הַלֲלִי אֱלֹהַיִךְ צִיּוֹן:"
+    }
+  ],
+  "jerusalem_147_status": "Both147:2and147:12 settled by user: lamed+patah+meteg+CGJ+hiriq. Other displayed questions remain pending.",
+  "naming_check_resolution": "Naming validator requires qabbalat, not kabbalat. Two newly introduced documentary-only context stems/URNs renamed mechanically to qabbalat_psalm_92/93; words, citations, order and scoping unchanged. Prior audit reports retain historical spellings.",
+  "export_verification": "psalms_s76_s87_export_verification.json",
+  "draft_exports_verified": true
+}

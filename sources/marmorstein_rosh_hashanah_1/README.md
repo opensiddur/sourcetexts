@@ -637,3 +637,46 @@ Full scans 74/75 are now accepted, bringing coverage to 74/355. Only Psalm 33
 continuation is accepted on 76/77; Psalms 92/93 are next. The earlier source 57
 German glyph remains separately low-certainty. Refreshed draft PDF/HTML exports
 contain the human corrections; complete volume/service acceptance is false.
+
+
+### Larger continuation: physical PDF scans 76–87
+
+Morning Psalms 92–93, Yehi Khevod, Ashrei, Psalms 146–150, the Hebrew
+150:6 repetition and closing Barukh verses are transcribed in both printed
+witnesses. Scans 76–85 have full transcription scope. Scans 86/87 stop before
+the standing rubric and Vayvarekh David, which are next. Raw first readings,
+two blind source reports, enlarged adjudication, three encoding review rounds,
+human decisions and actual model/configured/self-reported effort are retained.
+The source images and original CLI responses are cached outside Git.
+
+The native morning Hebrew printings of 92/93/Ashrei have structural occurrence
+milestones with canonical quotation sources. The first accepted Hebrew copies
+remain canonical; the newly printed morning English supplies their canonical
+translation. Earlier documentary Minchah and Qabbalat Shabbat occurrences have
+Hebrew-only context roots. Runtime checks confirm their English slots are empty:
+filtering the English index alone would not prevent the compiler from discovering
+a later translation. Expanded order may reuse a translation printed elsewhere in
+this volume through the canonical prayer identity. No translation is invented.
+
+Existing Birnbaum compilation/quotation URNs are reused. New identities are
+structural contexts only. Already mapped verses 144:15, 146:10 and Exodus15:18
+use quotation contexts; Psalm146's chapter scope still contains its last verse.
+Automated comparison establishes no newly introduced canonical Bible duplicates;
+preexisting duplicate mappings are recorded separately rather than certified away.
+The English typo nur/nor uses sic/corr. Printed unpointed כל is preserved. The
+later-page קטו יח citation is a note on the final Ashrei verse. Both human-settled
+Jerusalems in Psalm147 have lamed+patah+meteg+CGJ+hiriq, verified exactly.
+
+Independent final review approves source English, encoding, alignment, order and
+Hebrew apart from displayed questions 1–10. Snippets 11–12 are resolved. Six new
+full leaves (76,77,79,81,83,85) are accepted: total80/355. Other Hebrew leaves
+remain pending and 86/87 remain partial. The earlier scan57 German glyph and a
+separately queued check of old scan8 lamed vowels are not silently normalized.
+The complete volume and full service remain unaccepted. Both previews remain
+drafts; prior stable outputs are preserved. See psalms_s76_s87_resolutions.json,
+review_provenance, image_evidence, runtime_verification and export_verification.
+
+Refreshed draft previews are 69 pages documentary and 75 pages expanded.
+Both PDFs are rendered and visually inspected; both HTML books pass identifier,
+link and content checks. All 292 XML files and the targeted checks pass.
+Export evidence and artifact hashes are in psalms_s76_s87_export_verification.json.
