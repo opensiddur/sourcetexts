@@ -513,3 +513,33 @@ are no unanswered human questions. Raw disagreements and superseded erroneous
 proposals remain archived. Stable accepted PDFs/HTML were not overwritten.
 Prior pilot scans60–65 already cover the continuation; next new primary scan66.
 Whole-volume and complete-service acceptance remain false.
+
+
+### Continuation: physical PDF scans66–69, with Psalm91 continuation70–71
+
+Psalms34,90,91 have new Hebrew/English witnesses and canonical chapter/verse
+milestones. The Hebrew-only closing repetition of91:16 reuses the existing
+verse through a distinct structural occurrence; the user confirms identical
+pointing. English prints it once; no extra translation is supplied. The source
+prints the repeat in smaller type, running on after the first closing verse;
+this print detail is recorded separately from its structural occurrence.
+
+Hebrew34 retains verse-line layout; Hebrew90/91 and the English retain their
+printed running paragraphs. English34:18 and both witnesses of91:2 preserve
+their different source page breaks inside the same canonical verse. Citations
+are notes, with parentheses omitted from generated links. Raw primary/blind
+differences, enlarged adjudications, explicit retractions, human answers and
+actual reviewer provenance are preserved. Independent final review verifies
+every human correction and approves guideline adherence, alignment and order.
+
+259XML files validate; naming/features/registry/reference checks pass.53tests
+and9subtests pass. Twelve whole-psalm word comparisons, six cross-page verse
+checks, shared-order/Hebrew-only repetition checks and HTML identifier/link/
+corrected-form checks pass. Fresh55-page documentary and58-page expanded draft
+PDFs are rendered and visually inspected after the human changes. See
+psalms_s66_s71_export_verification.json.
+
+Scans66–69 are accepted, bringing coverage to68/355. Only the Psalm91 continuation
+on70/71 is reviewed; their Psalm135 text is next. Scan57 still has one explicit
+low-certainty German instruction glyph. Stable accepted previews remain
+unchanged; full-volume and complete-service acceptance remain false.
