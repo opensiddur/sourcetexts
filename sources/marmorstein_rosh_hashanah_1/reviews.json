@@ -1519,7 +1519,9 @@
     "independent_model": "claude-opus-5-5",
     "evidence": [
       "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n63.jpg",
-      "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n65.jpg"
+      "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n65.jpg",
+      "full_name_holam_s70_corrections.json",
+      "independent/psalms_s70_s75_final_review.json"
     ],
     "differences": [
       {
@@ -1723,13 +1725,24 @@
     },
     "unresolved": [],
     "complete": true,
-    "final_sha256": "7ea209c81d445d4a09f271ab70bbb42d3ca11c10359630b2645e4ff696bc2e70",
+    "final_sha256": "add9319b527b27ae98f2d8fce4a182959c28fac79900ea337176d2dc201f079a",
     "pending_ambiguities": [],
     "ambiguity_resolutions": [
       "Enlarged n63: לְלַיְלָה has no additional lamed dagesh.",
       "All seven full Divine Names retain only the visible sheva and qamats; no holam is supplied.",
       "Enlarged n65: עֹמֶדֶת is defective; no additional accent is present. צָדְקוּ יַחְדָּו, הַנֶּחֱמָדִים and וְגֹאֲלִי have no additional meteg or cantillation marks in this print.",
       "The other n65 ambiguities concern Psalm 34, outside this witness. They remain in the raw independent reading for that later review."
+    ],
+    "amendments": [
+      {
+        "previous_final_sha256": "7ea209c81d445d4a09f271ab70bbb42d3ca11c10359630b2645e4ff696bc2e70",
+        "new_final_sha256": "add9319b527b27ae98f2d8fce4a182959c28fac79900ea337176d2dc201f079a",
+        "reason": "Individually audited printed holams; three Halleluyah first-lamed hataf-patahs corrected as applicable.",
+        "evidence": [
+          "full_name_holam_s70_corrections.json",
+          "independent/psalms_s70_s75_final_review.json"
+        ]
+      }
     ]
   },
   "citation/psalm_19/he/0": {
@@ -1879,7 +1892,9 @@
     "independent_model": "claude-opus-5-5",
     "evidence": [
       "s8 original image",
-      "independent/opening_s7_s8_enlarged.json"
+      "independent/opening_s7_s8_enlarged.json",
+      "full_name_holam_s70_corrections.json",
+      "independent/psalms_s70_s75_final_review.json"
     ],
     "differences": [
       {
@@ -1984,9 +1999,22 @@
       }
     },
     "unresolved": [],
-    "complete": true,
-    "final_sha256": "4cd250e1da9e7c905d4474d708fc6210911773ce0086a5106b5711b6d2ce68fa",
-    "pending_ambiguities": []
+    "complete": false,
+    "final_sha256": "776c4a5df9101418b12509ed5d7dff2015d83b2335fdd82ebd4743daeda9a266",
+    "pending_ambiguities": [
+      "Displayed human question pending: possible additional mark below Halleluyah first-lamed hataf-patah. Earlier accepted unit explicitly reopened."
+    ],
+    "amendments": [
+      {
+        "previous_final_sha256": "4cd250e1da9e7c905d4474d708fc6210911773ce0086a5106b5711b6d2ce68fa",
+        "new_final_sha256": "776c4a5df9101418b12509ed5d7dff2015d83b2335fdd82ebd4743daeda9a266",
+        "reason": "Individually audited printed holams; three Halleluyah first-lamed hataf-patahs corrected as applicable.",
+        "evidence": [
+          "full_name_holam_s70_corrections.json",
+          "independent/psalms_s70_s75_final_review.json"
+        ]
+      }
+    ]
   },
   "citation/ashrei/he/0": {
     "primary_sha256": "f208e354c9500c30c11f48cd10302f55d655eebb9ce697904c074b2fb2aff1f0",
@@ -4177,7 +4205,9 @@
       "independent/opening_s7_s14.json",
       "independent/minchah_enlarged.json",
       "minchah_resolutions.json",
-      "qedushah_speaker_resolutions.json"
+      "qedushah_speaker_resolutions.json",
+      "full_name_holam_s70_corrections.json",
+      "independent/psalms_s70_s75_final_review.json"
     ],
     "differences": [
       {
@@ -4240,9 +4270,11 @@
       }
     },
     "unresolved": [],
-    "complete": true,
-    "final_sha256": "38be77194699211eac41aeff5f5354c36da0cf02d8ebc0b07be70d33f9641714",
-    "pending_ambiguities": [],
+    "complete": false,
+    "final_sha256": "aeb78fda336dc3399824decdebbac9810e2e56b144328d1334e0fd7293bebd55",
+    "pending_ambiguities": [
+      "Displayed human question pending: possible additional mark below Halleluyah first-lamed hataf-patah. Earlier accepted unit explicitly reopened."
+    ],
     "enlarged_adjudication": {
       "primary_sha256": "336be129ea7cec8e4332532f3edbef4ea6252d533e26dedcb92ecc43fa90e110",
       "independent_sha256": "66dd9af4feba00c890b52499eb278d820e6d5b25e1c424299138e4c8ae830037",
@@ -4335,6 +4367,17 @@
     "ambiguity_resolutions": [
       "The source has a full stop after יֹאמֵרוּ; the later reader’s colon is rejected. Speaker abbreviations are separate description notes, resolved by the user as חזן and קהל.",
       "User correction, 2026-11-09: response labels are קו״ח/קו׳, short for קהל וחזן, not ק׳. Enlarged s9 Kedushah crop adjudication encodes קו״ח at all three responses. The independent blind rereading remained uncertain and misread these tiny Rashi labels; the human correction overrides it. Review payload now includes every abbreviation and expansion."
+    ],
+    "amendments": [
+      {
+        "previous_final_sha256": "38be77194699211eac41aeff5f5354c36da0cf02d8ebc0b07be70d33f9641714",
+        "new_final_sha256": "aeb78fda336dc3399824decdebbac9810e2e56b144328d1334e0fd7293bebd55",
+        "reason": "Individually audited printed holams; three Halleluyah first-lamed hataf-patahs corrected as applicable.",
+        "evidence": [
+          "full_name_holam_s70_corrections.json",
+          "independent/psalms_s70_s75_final_review.json"
+        ]
+      }
     ]
   },
   "instruction/half_kaddish": {
@@ -4849,7 +4892,9 @@
       "primary/preparations_kabbalat_s13_s17.json",
       "independent/preparations_kabbalat_s13_s17.json",
       "independent/preparations_kabbalat_enlarged.json",
-      "preparations_kabbalat_resolutions.json"
+      "preparations_kabbalat_resolutions.json",
+      "full_name_holam_s70_corrections.json",
+      "independent/psalms_s70_s75_final_review.json"
     ],
     "differences": [
       {
@@ -4885,10 +4930,21 @@
     },
     "unresolved": [],
     "complete": true,
-    "final_sha256": "b7d6f5cb3e3b50477df91daf257ccae6a9ede330b57844ab09b3362fbac6ba40",
+    "final_sha256": "74aea0a762e8c9f05723118222e96773a8d393b9f1ccc002574eba42504a9405",
     "pending_ambiguities": [],
     "ambiguity_resolutions": [
       "Tight source crop (480,340,1040,485) on s16 clearly shows the extra vav. The first primary was correct; the initial independent/adjudicated defective reading is superseded."
+    ],
+    "amendments": [
+      {
+        "previous_final_sha256": "b7d6f5cb3e3b50477df91daf257ccae6a9ede330b57844ab09b3362fbac6ba40",
+        "new_final_sha256": "74aea0a762e8c9f05723118222e96773a8d393b9f1ccc002574eba42504a9405",
+        "reason": "Individually audited printed holams; three Halleluyah first-lamed hataf-patahs corrected as applicable.",
+        "evidence": [
+          "full_name_holam_s70_corrections.json",
+          "independent/psalms_s70_s75_final_review.json"
+        ]
+      }
     ]
   },
   "citation/psalm_29/he/0": {
@@ -4915,7 +4971,9 @@
       "primary/preparations_kabbalat_s13_s17.json",
       "independent/preparations_kabbalat_s13_s17.json",
       "independent/preparations_kabbalat_enlarged.json",
-      "preparations_kabbalat_resolutions.json"
+      "preparations_kabbalat_resolutions.json",
+      "full_name_holam_s70_corrections.json",
+      "independent/psalms_s70_s75_final_review.json"
     ],
     "differences": [
       {
@@ -4965,8 +5023,19 @@
     },
     "unresolved": [],
     "complete": true,
-    "final_sha256": "3b93575145b071956dcc9ec557d63ceeccf23843db593dff2dac3664b581a845",
-    "pending_ambiguities": []
+    "final_sha256": "9f9ac97ea6c92fc96b04149c7c64b55effc226896c6664cb014f7f3e0dddf0ae",
+    "pending_ambiguities": [],
+    "amendments": [
+      {
+        "previous_final_sha256": "3b93575145b071956dcc9ec557d63ceeccf23843db593dff2dac3664b581a845",
+        "new_final_sha256": "9f9ac97ea6c92fc96b04149c7c64b55effc226896c6664cb014f7f3e0dddf0ae",
+        "reason": "Individually audited printed holams; three Halleluyah first-lamed hataf-patahs corrected as applicable.",
+        "evidence": [
+          "full_name_holam_s70_corrections.json",
+          "independent/psalms_s70_s75_final_review.json"
+        ]
+      }
+    ]
   },
   "citation/psalm_92/he/0": {
     "primary_sha256": "65a0606cf4764f75a9e79322bcc04024694b9a57acb060a58fd3c3f76e7065fe",
@@ -4992,14 +5061,27 @@
       "primary/preparations_kabbalat_s13_s17.json",
       "independent/preparations_kabbalat_s13_s17.json",
       "independent/preparations_kabbalat_enlarged.json",
-      "preparations_kabbalat_resolutions.json"
+      "preparations_kabbalat_resolutions.json",
+      "full_name_holam_s70_corrections.json",
+      "independent/psalms_s70_s75_final_review.json"
     ],
     "differences": [],
     "decisions": {},
     "unresolved": [],
     "complete": true,
-    "final_sha256": "e8ce5e779c226334dcd8d9d4589a13401fcc953b41200aa674e2f1f5d012773b",
-    "pending_ambiguities": []
+    "final_sha256": "56e1c601f7e151f6e79354268597696946f7efb7f087d158b2213588d15fab06",
+    "pending_ambiguities": [],
+    "amendments": [
+      {
+        "previous_final_sha256": "e8ce5e779c226334dcd8d9d4589a13401fcc953b41200aa674e2f1f5d012773b",
+        "new_final_sha256": "56e1c601f7e151f6e79354268597696946f7efb7f087d158b2213588d15fab06",
+        "reason": "Individually audited printed holams; three Halleluyah first-lamed hataf-patahs corrected as applicable.",
+        "evidence": [
+          "full_name_holam_s70_corrections.json",
+          "independent/psalms_s70_s75_final_review.json"
+        ]
+      }
+    ]
   },
   "citation/psalm_93/he/0": {
     "primary_sha256": "ed5d366ebce1887d6071df1141870adac41ad01e62756528a507fdbacc296b38",
@@ -5636,7 +5718,9 @@
       "human_maariv_confirmation.json",
       "independent/maariv_guideline_audit_round1.json",
       "independent/maariv_guideline_audit_round2.json",
-      "independent/maariv_final_marks.json"
+      "independent/maariv_final_marks.json",
+      "full_name_holam_s70_corrections.json",
+      "independent/psalms_s70_s75_final_review.json"
     ],
     "differences": [
       {
@@ -5659,8 +5743,19 @@
     "unresolved": [],
     "complete": true,
     "pending_ambiguities": [],
-    "final_sha256": "8de68186b2030a71dd3f51d55a3fec63d267da5396636e430f2196f42042b64d",
-    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks."
+    "final_sha256": "edffe8010dc4c8d765adf2a953a45cb41b24225e14b27eb92ea7edce1fed7da5",
+    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks.",
+    "amendments": [
+      {
+        "previous_final_sha256": "8de68186b2030a71dd3f51d55a3fec63d267da5396636e430f2196f42042b64d",
+        "new_final_sha256": "edffe8010dc4c8d765adf2a953a45cb41b24225e14b27eb92ea7edce1fed7da5",
+        "reason": "Individually audited printed holams; three Halleluyah first-lamed hataf-patahs corrected as applicable.",
+        "evidence": [
+          "full_name_holam_s70_corrections.json",
+          "independent/psalms_s70_s75_final_review.json"
+        ]
+      }
+    ]
   },
   "shema_yisrael/en": {
     "primary_sha256": "50873a78eee5e664693d7888aeff467beadae6d958a25f9029508da21dd7e607",
@@ -5772,15 +5867,28 @@
       "human_maariv_confirmation.json",
       "independent/maariv_guideline_audit_round1.json",
       "independent/maariv_guideline_audit_round2.json",
-      "independent/maariv_final_marks.json"
+      "independent/maariv_final_marks.json",
+      "full_name_holam_s70_corrections.json",
+      "independent/psalms_s70_s75_final_review.json"
     ],
     "differences": [],
     "decisions": {},
     "unresolved": [],
     "complete": true,
     "pending_ambiguities": [],
-    "final_sha256": "94d33afe2099329c0335ceb87d2ec06fa1dfc10574d60fad5324714122d2ae05",
-    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks."
+    "final_sha256": "d25475a71acd5238c28badbf30d6e1f121816e7bd382de8e214a939749146a83",
+    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks.",
+    "amendments": [
+      {
+        "previous_final_sha256": "94d33afe2099329c0335ceb87d2ec06fa1dfc10574d60fad5324714122d2ae05",
+        "new_final_sha256": "d25475a71acd5238c28badbf30d6e1f121816e7bd382de8e214a939749146a83",
+        "reason": "Individually audited printed holams; three Halleluyah first-lamed hataf-patahs corrected as applicable.",
+        "evidence": [
+          "full_name_holam_s70_corrections.json",
+          "independent/psalms_s70_s75_final_review.json"
+        ]
+      }
+    ]
   },
   "deuteronomy_6_5_to_9/en": {
     "primary_sha256": "5cf36b8bc62252df64ae9f215c9ce047c2ac8ae25eaa73beb22b8b7f7102f8ec",
@@ -5818,15 +5926,28 @@
       "human_maariv_confirmation.json",
       "independent/maariv_guideline_audit_round1.json",
       "independent/maariv_guideline_audit_round2.json",
-      "independent/maariv_final_marks.json"
+      "independent/maariv_final_marks.json",
+      "full_name_holam_s70_corrections.json",
+      "independent/psalms_s70_s75_final_review.json"
     ],
     "differences": [],
     "decisions": {},
     "unresolved": [],
     "complete": true,
     "pending_ambiguities": [],
-    "final_sha256": "aa544b543c90f24c14c38e79ee8ff8fa7068e7dcb44e5caf86fa9cb843c9018d",
-    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks."
+    "final_sha256": "6a67e4c8599b46e763c249d2643879ba00b7dd34a315d42a2ee235a6676ab25e",
+    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks.",
+    "amendments": [
+      {
+        "previous_final_sha256": "aa544b543c90f24c14c38e79ee8ff8fa7068e7dcb44e5caf86fa9cb843c9018d",
+        "new_final_sha256": "6a67e4c8599b46e763c249d2643879ba00b7dd34a315d42a2ee235a6676ab25e",
+        "reason": "Individually audited printed holams; three Halleluyah first-lamed hataf-patahs corrected as applicable.",
+        "evidence": [
+          "full_name_holam_s70_corrections.json",
+          "independent/psalms_s70_s75_final_review.json"
+        ]
+      }
+    ]
   },
   "deuteronomy_11_13_to_21/en": {
     "primary_sha256": "865f2cd74f26a5fd1a85b672727e5f122434a499d9959920d61f8d95793042da",
@@ -5892,7 +6013,9 @@
       "human_maariv_confirmation.json",
       "independent/maariv_guideline_audit_round1.json",
       "independent/maariv_guideline_audit_round2.json",
-      "independent/maariv_final_marks.json"
+      "independent/maariv_final_marks.json",
+      "full_name_holam_s70_corrections.json",
+      "independent/psalms_s70_s75_final_review.json"
     ],
     "differences": [
       {
@@ -5915,8 +6038,19 @@
     "unresolved": [],
     "complete": true,
     "pending_ambiguities": [],
-    "final_sha256": "eff5ff9d8f2c75af57f4cbced20e1e551fa5e1d622e0fff2bc0058b1d3262952",
-    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks."
+    "final_sha256": "5ccb2d993db9ac53ba8e96acaa782441be5e525a163e2156c8a463c0eb53a17d",
+    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks.",
+    "amendments": [
+      {
+        "previous_final_sha256": "eff5ff9d8f2c75af57f4cbced20e1e551fa5e1d622e0fff2bc0058b1d3262952",
+        "new_final_sha256": "5ccb2d993db9ac53ba8e96acaa782441be5e525a163e2156c8a463c0eb53a17d",
+        "reason": "Individually audited printed holams; three Halleluyah first-lamed hataf-patahs corrected as applicable.",
+        "evidence": [
+          "full_name_holam_s70_corrections.json",
+          "independent/psalms_s70_s75_final_review.json"
+        ]
+      }
+    ]
   },
   "numbers_15_37_to_41/en": {
     "primary_sha256": "2c9ffaaba7e2196b1d74576a9b1a3fd31a62aa90f78a376be53e482fc925368c",
@@ -5982,7 +6116,9 @@
       "human_maariv_confirmation.json",
       "independent/maariv_guideline_audit_round1.json",
       "independent/maariv_guideline_audit_round2.json",
-      "independent/maariv_final_marks.json"
+      "independent/maariv_final_marks.json",
+      "full_name_holam_s70_corrections.json",
+      "independent/psalms_s70_s75_final_review.json"
     ],
     "differences": [
       {
@@ -6145,8 +6281,19 @@
     "unresolved": [],
     "complete": true,
     "pending_ambiguities": [],
-    "final_sha256": "a28235eab8c4835626ed42429fbee0c3f09fa893df9a08e1c22b5596849d9dd4",
-    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks."
+    "final_sha256": "b5fc8143d0985ea4013c4472727e82fc10a81ffc0582aabc728870c2449579b4",
+    "adjudication_layers": "First-reading comparison retained separately; final enlarged/human readings supersede disputed first-reading points. Final XML word/rubric scopes independently reviewed in round2; final small-crop pass resolves remaining source marks.",
+    "amendments": [
+      {
+        "previous_final_sha256": "a28235eab8c4835626ed42429fbee0c3f09fa893df9a08e1c22b5596849d9dd4",
+        "new_final_sha256": "b5fc8143d0985ea4013c4472727e82fc10a81ffc0582aabc728870c2449579b4",
+        "reason": "Individually audited printed holams; three Halleluyah first-lamed hataf-patahs corrected as applicable.",
+        "evidence": [
+          "full_name_holam_s70_corrections.json",
+          "independent/psalms_s70_s75_final_review.json"
+        ]
+      }
+    ]
   },
   "emet_veemunah/en": {
     "primary_sha256": "7bdbdb9355e6fcd4a3f46114656b2468dc59a96411cf026c09f90fdef50b47f3",
@@ -6368,17 +6515,30 @@
       "independent/hashkivenu_word_adjudication.json",
       "human_hashkivenu_confirmation.json",
       "independent/hashkivenu_final_audit_round1.json",
-      "independent/hashkivenu_final_audit_round2.json"
+      "independent/hashkivenu_final_audit_round2.json",
+      "full_name_holam_s70_corrections.json",
+      "independent/psalms_s70_s75_final_review.json"
     ],
     "decisions": {},
     "unresolved": [],
     "complete": true,
     "pending_ambiguities": [],
-    "final_sha256": "72812fef3cb27dc3e0183360def71a94f363780e5f193f2270c2f92326ca34a9",
+    "final_sha256": "59c4052d6458baf56bd8b4cd4fa11cd3dec1ceb76195d37e9d7e7b4fc6768425",
     "settlement": "Layered image adjudication supersedes binary first-reading differences. Exact generated source words passed final independent source audit; follow-up passed guideline/alignment/order checks. Raw readings and comparisons retained unchanged. See hashkivenu_resolutions.json.",
     "initial_comparison": "hashkivenu_comparison.json#veshamru/he",
     "superseded_first_reading_differences": [],
-    "differences": []
+    "differences": [],
+    "amendments": [
+      {
+        "previous_final_sha256": "72812fef3cb27dc3e0183360def71a94f363780e5f193f2270c2f92326ca34a9",
+        "new_final_sha256": "59c4052d6458baf56bd8b4cd4fa11cd3dec1ceb76195d37e9d7e7b4fc6768425",
+        "reason": "Individually audited printed holams; three Halleluyah first-lamed hataf-patahs corrected as applicable.",
+        "evidence": [
+          "full_name_holam_s70_corrections.json",
+          "independent/psalms_s70_s75_final_review.json"
+        ]
+      }
+    ]
   },
   "exodus_31_16_to_17/en": {
     "primary_sha256": "0dc9c2df42795f750e06d9d1317e6d5d1131011a4c014c25091a573a0b4bd291",
@@ -7392,12 +7552,14 @@
       "independent/amidah_context_adjudication.json",
       "human_amidah_confirmation.json",
       "independent/amidah_guideline_audit_round1.json",
-      "independent/amidah_guideline_audit_round2.json"
+      "independent/amidah_guideline_audit_round2.json",
+      "full_name_holam_s70_corrections.json",
+      "independent/psalms_s70_s75_final_review.json"
     ],
     "differences": [],
     "decisions": {},
     "unresolved": [],
-    "complete": true,
+    "complete": false,
     "superseded_first_reading_differences": [
       {
         "bucket": "consonants",
@@ -7410,12 +7572,25 @@
         "key": "consonants:11:וּבִירוּשָׁלַםִ|וּבִירוּשָׁלַיִם"
       }
     ],
-    "pending_ambiguities": [],
-    "final_sha256": "9596608745cced5f25c335872b6a35b856f33b2baee27f776edddd2c90693d2f",
+    "pending_ambiguities": [
+      "Displayed human question pending: possible additional mark below Halleluyah first-lamed hataf-patah. Earlier accepted unit explicitly reopened."
+    ],
+    "final_sha256": "dbd375e872c971da77fcdd93cda1550ba1fdd1f2f12c62fc0f0dce02eb1bc83b",
     "raw_comparison_scopes": [
       "s28/vetimlokh"
     ],
-    "settlement": "Exact final payload accepted through independent enlarged/word/context adjudications, human fine-mark confirmation and two frozen-XML source/guideline/alignment/order audits. Initial blind hashes remain those of the actual distinct raw readings; final hash binds adjudicated words and instruction interpretations, not a false claim that the first readings matched. No binary verdict is fabricated where later reading differs from both initial readers."
+    "settlement": "Exact final payload accepted through independent enlarged/word/context adjudications, human fine-mark confirmation and two frozen-XML source/guideline/alignment/order audits. Initial blind hashes remain those of the actual distinct raw readings; final hash binds adjudicated words and instruction interpretations, not a false claim that the first readings matched. No binary verdict is fabricated where later reading differs from both initial readers.",
+    "amendments": [
+      {
+        "previous_final_sha256": "9596608745cced5f25c335872b6a35b856f33b2baee27f776edddd2c90693d2f",
+        "new_final_sha256": "dbd375e872c971da77fcdd93cda1550ba1fdd1f2f12c62fc0f0dce02eb1bc83b",
+        "reason": "Individually audited printed holams; three Halleluyah first-lamed hataf-patahs corrected as applicable.",
+        "evidence": [
+          "full_name_holam_s70_corrections.json",
+          "independent/psalms_s70_s75_final_review.json"
+        ]
+      }
+    ]
   },
   "rh_vetimlokh/en": {
     "primary_sha256": "d89e8218b76cd7a6afaf5ba56e84e63218f4f0a72282e22af697f825ea9d18e1",
@@ -8896,7 +9071,9 @@
       "independent/maariv_close_guideline_audit_round3.json",
       "primary/maariv_close_final_word.json",
       "independent/maariv_close_final_word.json",
-      "maariv_close_s34_s38_resolutions.json"
+      "maariv_close_s34_s38_resolutions.json",
+      "full_name_holam_s70_corrections.json",
+      "independent/psalms_s70_s75_final_review.json"
     ],
     "differences": [],
     "decisions": {},
@@ -9032,8 +9209,19 @@
       "consonants:148:לְעוֹלָם|לְעֹלָם",
       "consonants:150:וְנֶאֱמַר|וְנֶאֱמַר,"
     ],
-    "final_sha256": "3383111300b6f51f74df58d8c4b6d8cd7ca684fc61e7ca4d44fdf24c5e3b3bf9",
-    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement."
+    "final_sha256": "a72d745d9bbec908189e07ae9a62c8094b554c88dfe69016a8b76e4f1b2d0c0a",
+    "settlement": "Actual distinct blind hashes retained. Enlarged source readings, human source adjudications and three independent source/guideline/alignment/order audits settle the final words and interpretations. The optional final-word item from round3 is human-confirmed; no disagreement is silently treated as initial blind agreement.",
+    "amendments": [
+      {
+        "previous_final_sha256": "3383111300b6f51f74df58d8c4b6d8cd7ca684fc61e7ca4d44fdf24c5e3b3bf9",
+        "new_final_sha256": "a72d745d9bbec908189e07ae9a62c8094b554c88dfe69016a8b76e4f1b2d0c0a",
+        "reason": "Individually audited printed holams; three Halleluyah first-lamed hataf-patahs corrected as applicable.",
+        "evidence": [
+          "full_name_holam_s70_corrections.json",
+          "independent/psalms_s70_s75_final_review.json"
+        ]
+      }
+    ]
   },
   "borei_peri_hagafen/he": {
     "primary_sha256": "e5b0766a0542969bf891434fbc6cbdba449fd1d6b95f0c5549c7b084753bf9f9",
@@ -16319,7 +16507,9 @@
       "human_psalms_s66_s71_confirmation.json",
       "independent/psalms_s66_s71_human_final.json",
       "independent/psalms_s66_s71_guideline_audit.json",
-      "psalms_s66_s71_human_codepoint_verification.json"
+      "psalms_s66_s71_human_codepoint_verification.json",
+      "full_name_holam_s70_corrections.json",
+      "independent/psalms_s70_s75_final_review.json"
     ],
     "differences": [],
     "decisions": {},
@@ -16781,10 +16971,21 @@
       "vowels:157:יְהוָה|יְהֹוָה",
       "consonants:164:בּוֹ:|בּוֹ׃"
     ],
-    "final_sha256": "0890adba3eb88cbd685360e176b27d44248e640230fd6b6f4baf531b1a0ad68b",
+    "final_sha256": "ed4f9c9c9b2ed5d32cb24d6b17bfc5d7268240dc58b4f832b13c16408946f5c5",
     "settlement": "Authoritative human adjudications applied and independently verified in generated XML; guideline/alignment/order approved. Original primary/blind hashes and actual first-pass differences retained separately.",
     "initial_comparison": "psalms_s66_s71_comparison.json",
-    "final_verification": "independent/psalms_s66_s71_human_final.json"
+    "final_verification": "independent/psalms_s66_s71_human_final.json",
+    "amendments": [
+      {
+        "previous_final_sha256": "0890adba3eb88cbd685360e176b27d44248e640230fd6b6f4baf531b1a0ad68b",
+        "new_final_sha256": "ed4f9c9c9b2ed5d32cb24d6b17bfc5d7268240dc58b4f832b13c16408946f5c5",
+        "reason": "Individually audited printed holams; three Halleluyah first-lamed hataf-patahs corrected as applicable.",
+        "evidence": [
+          "full_name_holam_s70_corrections.json",
+          "independent/psalms_s70_s75_final_review.json"
+        ]
+      }
+    ]
   },
   "psalm_34/en": {
     "primary_sha256": "867b70c49e7c17767c8fa551547e04c7aec6d61c12feaae1608147012980d785",
@@ -16828,7 +17029,9 @@
       "human_psalms_s66_s71_confirmation.json",
       "independent/psalms_s66_s71_human_final.json",
       "independent/psalms_s66_s71_guideline_audit.json",
-      "psalms_s66_s71_human_codepoint_verification.json"
+      "psalms_s66_s71_human_codepoint_verification.json",
+      "full_name_holam_s70_corrections.json",
+      "independent/psalms_s70_s75_final_review.json"
     ],
     "differences": [],
     "decisions": {},
@@ -17048,10 +17251,21 @@
       "consonants:127:בְּנֵיהֶם:|בְּנֵיהֶם׃",
       "consonants:139:כּוֹנְנֵהוּ:|כּוֹנְנֵהוּ׃"
     ],
-    "final_sha256": "24d3b115430ea55d94f0160e614734471618801a912dbc507853bdeb6b4bce71",
+    "final_sha256": "e952a37164a826609b2cfd0d964f567799e897fa22b3f1c870a4f8bbef056646",
     "settlement": "Authoritative human adjudications applied and independently verified in generated XML; guideline/alignment/order approved. Original primary/blind hashes and actual first-pass differences retained separately.",
     "initial_comparison": "psalms_s66_s71_comparison.json",
-    "final_verification": "independent/psalms_s66_s71_human_final.json"
+    "final_verification": "independent/psalms_s66_s71_human_final.json",
+    "amendments": [
+      {
+        "previous_final_sha256": "24d3b115430ea55d94f0160e614734471618801a912dbc507853bdeb6b4bce71",
+        "new_final_sha256": "e952a37164a826609b2cfd0d964f567799e897fa22b3f1c870a4f8bbef056646",
+        "reason": "Individually audited printed holams; three Halleluyah first-lamed hataf-patahs corrected as applicable.",
+        "evidence": [
+          "full_name_holam_s70_corrections.json",
+          "independent/psalms_s70_s75_final_review.json"
+        ]
+      }
+    ]
   },
   "psalm_90/en": {
     "primary_sha256": "242f575e4ef8172cd24409d97551e6665d9aa137d1842c1d6a275227e1c88840",
@@ -17119,7 +17333,9 @@
       "human_psalms_s66_s71_confirmation.json",
       "independent/psalms_s66_s71_human_final.json",
       "independent/psalms_s66_s71_guideline_audit.json",
-      "psalms_s66_s71_human_codepoint_verification.json"
+      "psalms_s66_s71_human_codepoint_verification.json",
+      "full_name_holam_s70_corrections.json",
+      "independent/psalms_s70_s75_final_review.json"
     ],
     "differences": [],
     "decisions": {},
@@ -17339,10 +17555,21 @@
       "consonants:106:וַאֲכַבְּדֵהוּ:|וַאֲכַבְּדֵהוּ׃",
       "consonants:111:בִּישׁוּעָתִי:|בִּישׁוּעָתִי׃"
     ],
-    "final_sha256": "9ee3c1d06d228145eed3cda8d34c52ba3e143e490d1dc104f14457d91f82e3a9",
+    "final_sha256": "c86b214cd662523ec94af4c60d63aa004428b11c082d0fefc5ea8fa8595242bc",
     "settlement": "Authoritative human adjudications applied and independently verified in generated XML; guideline/alignment/order approved. Original primary/blind hashes and actual first-pass differences retained separately.",
     "initial_comparison": "psalms_s66_s71_comparison.json",
-    "final_verification": "independent/psalms_s66_s71_human_final.json"
+    "final_verification": "independent/psalms_s66_s71_human_final.json",
+    "amendments": [
+      {
+        "previous_final_sha256": "9ee3c1d06d228145eed3cda8d34c52ba3e143e490d1dc104f14457d91f82e3a9",
+        "new_final_sha256": "c86b214cd662523ec94af4c60d63aa004428b11c082d0fefc5ea8fa8595242bc",
+        "reason": "Individually audited printed holams; three Halleluyah first-lamed hataf-patahs corrected as applicable.",
+        "evidence": [
+          "full_name_holam_s70_corrections.json",
+          "independent/psalms_s70_s75_final_review.json"
+        ]
+      }
+    ]
   },
   "psalm_91/en": {
     "primary_sha256": "5a25d6ea6a8f81b818e8950c17d662a530f034accd06ba72c3a392728bbe2704",
@@ -17580,5 +17807,931 @@
     "settlement": "Authoritative human adjudications applied and independently verified in generated XML; guideline/alignment/order approved. Original primary/blind hashes and actual first-pass differences retained separately.",
     "initial_comparison": "psalms_s66_s71_comparison.json",
     "final_verification": "independent/psalms_s66_s71_human_final.json"
+  },
+  "psalm_135/he": {
+    "primary_sha256": "ab8101accc2cd7626a52c5d4054cc144c825ce0cf72149842c51a35ae93caa66",
+    "independent_sha256": "dc32e88c90de76ed3cec741a511692540fbbe0d04e8bb141a57624a3001163ce",
+    "primary_model": "GPT-6 (Codex)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/psalms_s70_s75.json",
+      "independent/psalms_s70_s75.json",
+      "independent/psalms_s70_s75_isolated.json",
+      "human_psalms_s70_s75_confirmation.json",
+      "full_name_holam_s70_corrections.json",
+      "independent/psalms_s70_s75_final_review.json",
+      "independent/psalms_s70_s75_layout_final.json",
+      "psalms_s70_s75_human_codepoints.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": false,
+    "pending_ambiguities": [
+      "Displayed human question pending: possible extra mark under Halleluyah first-lamed hataf-patah."
+    ],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "vowels",
+        "ours": "יְהוָה",
+        "theirs": "יְהֹוָה",
+        "at": 4,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:4:יְהוָה|יְהֹוָה"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "יְהוָה:",
+        "theirs": "יְהֹוָה׃",
+        "at": 7,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:7:יְהוָה:|יְהֹוָה׃"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "יְהוָה",
+        "theirs": "יְהֹוָה",
+        "at": 10,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:10:יְהוָה|יְהֹוָה"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "אֱלֹהֵינוּ:",
+        "theirs": "אֱלֹהֵינוּ׃",
+        "at": 13,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:13:אֱלֹהֵינוּ:|אֱלֹהֵינוּ׃"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "יְהוָה",
+        "theirs": "יְהֹוָה",
+        "at": 17,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:17:יְהוָה|יְהֹוָה"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "נָעִים:",
+        "theirs": "נָעִים׃",
+        "at": 21,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:21:נָעִים:|נָעִים׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "לִסְגֻלָּתוֹ:",
+        "theirs": "לִסְגֻלָּתוֹ׃",
+        "at": 28,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:28:לִסְגֻלָּתוֹ:|לִסְגֻלָּתוֹ׃"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "יְהוָה",
+        "theirs": "יְהֹוָה",
+        "at": 34,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:34:יְהוָה|יְהֹוָה"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "אֱלֹהִים:",
+        "theirs": "אֱלֹהִים׃",
+        "at": 37,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:37:אֱלֹהִים:|אֱלֹהִים׃"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "יְהוָה",
+        "theirs": "יְהֹוָה",
+        "at": 41,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:41:יְהוָה|יְהֹוָה"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "תְּהֹמוֹת:",
+        "theirs": "תְּהֹמוֹת׃",
+        "at": 47,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:47:תְּהֹמוֹת:|תְּהֹמוֹת׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "מֵאוֹצְרוֹתָיו:",
+        "theirs": "מֵאוֹצְרוֹתָיו׃",
+        "at": 57,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:57:מֵאוֹצְרוֹתָיו:|מֵאוֹצְרוֹתָיו׃"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "בְכוֹרֵי",
+        "theirs": "בְּכוֹרֵי",
+        "at": 59,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:59:בְכוֹרֵי|בְּכוֹרֵי"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "בְּהֵמָה:",
+        "theirs": "בְּהֵמָה׃",
+        "at": 63,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:63:בְּהֵמָה:|בְּהֵמָה׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "אֹתוֹת",
+        "theirs": "אוֹתֹת",
+        "at": 65,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:65:אֹתוֹת|אוֹתֹת"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "עֲבָדָיו:",
+        "theirs": "עֲבָדָיו׃",
+        "at": 71,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:71:עֲבָדָיו:|עֲבָדָיו׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "עֲצוּמִים:",
+        "theirs": "עֲצוּמִים׃",
+        "at": 77,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:77:עֲצוּמִים:|עֲצוּמִים׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "כְּנָעַן:",
+        "theirs": "כְּנָעַן׃",
+        "at": 86,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:86:כְּנָעַן:|כְּנָעַן׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "עַמּוֹ:",
+        "theirs": "עַמּוֹ׃",
+        "at": 92,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:92:עַמּוֹ:|עַמּוֹ׃"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "יְהוָה",
+        "theirs": "יְהֹוָה",
+        "at": 93,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:93:יְהוָה|יְהֹוָה"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "יְהוָה",
+        "theirs": "יְהֹוָה",
+        "at": 96,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:96:יְהוָה|יְהֹוָה"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "וָדֹר:",
+        "theirs": "וָדֹר׃",
+        "at": 99,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:99:וָדֹר:|וָדֹר׃"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "יְהוָה",
+        "theirs": "יְהֹוָה",
+        "at": 102,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:102:יְהוָה|יְהֹוָה"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "יִתְנֶחָם:",
+        "theirs": "יִתְנֶחָם׃",
+        "at": 106,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:106:יִתְנֶחָם:|יִתְנֶחָם׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "אָדָם:",
+        "theirs": "אָדָם׃",
+        "at": 113,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:113:אָדָם:|אָדָם׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "יִרְאוּ:",
+        "theirs": "יִרְאוּ׃",
+        "at": 121,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:121:יִרְאוּ:|יִרְאוּ׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "בְּפִיהֶם:",
+        "theirs": "בְּפִיהֶם׃",
+        "at": 130,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:130:בְּפִיהֶם:|בְּפִיהֶם׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "בָּהֶם:",
+        "theirs": "בָּהֶם׃",
+        "at": 137,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:137:בָּהֶם:|בָּהֶם׃"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "יְהוָה",
+        "theirs": "יְהֹוָה",
+        "at": 142,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:142:יְהוָה|יְהֹוָה"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "יְהוָה:",
+        "theirs": "יְהֹוָה׃",
+        "at": 147,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:147:יְהוָה:|יְהֹוָה׃"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "יְהוָה",
+        "theirs": "יְהֹוָה",
+        "at": 152,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:152:יְהוָה|יְהֹוָה"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "יְהוָה",
+        "theirs": "יְהֹוָה",
+        "at": 154,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:154:יְהוָה|יְהֹוָה"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "יְהוָה:",
+        "theirs": "יְהֹוָה׃",
+        "at": 157,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:157:יְהוָה:|יְהֹוָה׃"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "יְהוָה",
+        "theirs": "יְהֹוָה",
+        "at": 159,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:159:יְהוָה|יְהֹוָה"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "יְרוּשָׁלִָם",
+        "theirs": "יְרוּשָׁלָםִ",
+        "at": 162,
+        "size": 2,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:162:יְרוּשָׁלִָם|יְרוּשָׁלָםִ"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "הַלְלוּיָהּ:",
+        "theirs": "הַלְלוּיָהּ׃",
+        "at": 163,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:163:הַלְלוּיָהּ:|הַלְלוּיָהּ׃"
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "vowels:4:יְהוָה|יְהֹוָה",
+      "consonants:7:יְהוָה:|יְהֹוָה׃",
+      "vowels:10:יְהוָה|יְהֹוָה",
+      "consonants:13:אֱלֹהֵינוּ:|אֱלֹהֵינוּ׃",
+      "vowels:17:יְהוָה|יְהֹוָה",
+      "consonants:21:נָעִים:|נָעִים׃",
+      "consonants:28:לִסְגֻלָּתוֹ:|לִסְגֻלָּתוֹ׃",
+      "vowels:34:יְהוָה|יְהֹוָה",
+      "consonants:37:אֱלֹהִים:|אֱלֹהִים׃",
+      "vowels:41:יְהוָה|יְהֹוָה",
+      "consonants:47:תְּהֹמוֹת:|תְּהֹמוֹת׃",
+      "consonants:57:מֵאוֹצְרוֹתָיו:|מֵאוֹצְרוֹתָיו׃",
+      "vowels:59:בְכוֹרֵי|בְּכוֹרֵי",
+      "consonants:63:בְּהֵמָה:|בְּהֵמָה׃",
+      "consonants:65:אֹתוֹת|אוֹתֹת",
+      "consonants:71:עֲבָדָיו:|עֲבָדָיו׃",
+      "consonants:77:עֲצוּמִים:|עֲצוּמִים׃",
+      "consonants:86:כְּנָעַן:|כְּנָעַן׃",
+      "consonants:92:עַמּוֹ:|עַמּוֹ׃",
+      "vowels:93:יְהוָה|יְהֹוָה",
+      "vowels:96:יְהוָה|יְהֹוָה",
+      "consonants:99:וָדֹר:|וָדֹר׃",
+      "vowels:102:יְהוָה|יְהֹוָה",
+      "consonants:106:יִתְנֶחָם:|יִתְנֶחָם׃",
+      "consonants:113:אָדָם:|אָדָם׃",
+      "consonants:121:יִרְאוּ:|יִרְאוּ׃",
+      "consonants:130:בְּפִיהֶם:|בְּפִיהֶם׃",
+      "consonants:137:בָּהֶם:|בָּהֶם׃",
+      "vowels:142:יְהוָה|יְהֹוָה",
+      "consonants:147:יְהוָה:|יְהֹוָה׃",
+      "vowels:152:יְהוָה|יְהֹוָה",
+      "vowels:154:יְהוָה|יְהֹוָה",
+      "consonants:157:יְהוָה:|יְהֹוָה׃",
+      "vowels:159:יְהוָה|יְהֹוָה",
+      "vowels:162:יְרוּשָׁלִָם|יְרוּשָׁלָםִ",
+      "consonants:163:הַלְלוּיָהּ:|הַלְלוּיָהּ׃"
+    ],
+    "final_sha256": "138f6f44dda8f4de01beb9766c1a4ac3bb48b8775a98ff0e92cc925b84a73b2a",
+    "settlement": "Human point adjudications applied; all other blind source uncertainties and guideline/alignment/order findings independently resolved. Raw first-pass disagreements retained separately; source mark question explicitly keeps HE135 pending.",
+    "initial_comparison": "psalms_s70_s75_comparison.json",
+    "final_verification": "independent/psalms_s70_s75_layout_final.json"
+  },
+  "psalm_135/en": {
+    "primary_sha256": "33f04ddfc784e2bc7bd320bcf0da54088e9cb85223004112896a64e6e8e12e2d",
+    "independent_sha256": "33f04ddfc784e2bc7bd320bcf0da54088e9cb85223004112896a64e6e8e12e2d",
+    "primary_model": "GPT-6 (Codex)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/psalms_s70_s75.json",
+      "independent/psalms_s70_s75.json",
+      "independent/psalms_s70_s75_isolated.json",
+      "human_psalms_s70_s75_confirmation.json",
+      "full_name_holam_s70_corrections.json",
+      "independent/psalms_s70_s75_final_review.json",
+      "independent/psalms_s70_s75_layout_final.json",
+      "psalms_s70_s75_human_codepoints.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "33f04ddfc784e2bc7bd320bcf0da54088e9cb85223004112896a64e6e8e12e2d",
+    "settlement": "Human point adjudications applied; all other blind source uncertainties and guideline/alignment/order findings independently resolved. Raw first-pass disagreements retained separately; source mark question explicitly keeps HE135 pending.",
+    "initial_comparison": "psalms_s70_s75_comparison.json",
+    "final_verification": "independent/psalms_s70_s75_layout_final.json"
+  },
+  "psalm_136/he": {
+    "primary_sha256": "7fada4bee765cdffa16267cb7ff63dff287f7e29ef26303cb8984728ca47376e",
+    "independent_sha256": "0fb3e4431a6df7cace02eb240e5ba639044e0fc8179975509129588a3284619c",
+    "primary_model": "GPT-6 (Codex)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/psalms_s70_s75.json",
+      "independent/psalms_s70_s75.json",
+      "independent/psalms_s70_s75_isolated.json",
+      "human_psalms_s70_s75_confirmation.json",
+      "full_name_holam_s70_corrections.json",
+      "independent/psalms_s70_s75_final_review.json",
+      "independent/psalms_s70_s75_layout_final.json",
+      "psalms_s70_s75_human_codepoints.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [
+      {
+        "bucket": "vowels",
+        "ours": "לַיהוָה",
+        "theirs": "לַיהֹוָה",
+        "at": 1,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:1:לַיהוָה|לַיהֹוָה"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "חַסְדּוֹ:",
+        "theirs": "חַסְדּוֹ׃",
+        "at": 6,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:6:חַסְדּוֹ:|חַסְדּוֹ׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "חַסְדּוֹ:",
+        "theirs": "חַסְדּוֹ׃",
+        "at": 12,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:12:חַסְדּוֹ:|חַסְדּוֹ׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "חַסְדּוֹ:",
+        "theirs": "חַסְדּוֹ׃",
+        "at": 18,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:18:חַסְדּוֹ:|חַסְדּוֹ׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "חַסְדּוֹ:",
+        "theirs": "חַסְדּוֹ׃",
+        "at": 25,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:25:חַסְדּוֹ:|חַסְדּוֹ׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "חַסְדּוֹ:",
+        "theirs": "חַסְדּוֹ׃",
+        "at": 31,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:31:חַסְדּוֹ:|חַסְדּוֹ׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "חַסְדּוֹ:",
+        "theirs": "חַסְדּוֹ׃",
+        "at": 38,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:38:חַסְדּוֹ:|חַסְדּוֹ׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "חַסְדּוֹ:",
+        "theirs": "חַסְדּוֹ׃",
+        "at": 44,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:44:חַסְדּוֹ:|חַסְדּוֹ׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "חַסְדּוֹ:",
+        "theirs": "חַסְדּוֹ׃",
+        "at": 51,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:51:חַסְדּוֹ:|חַסְדּוֹ׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "חַסְדּוֹ:",
+        "theirs": "חַסְדּוֹ׃",
+        "at": 59,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:59:חַסְדּוֹ:|חַסְדּוֹ׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "חַסְדּוֹ:",
+        "theirs": "חַסְדּוֹ׃",
+        "at": 65,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:65:חַסְדּוֹ:|חַסְדּוֹ׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "חַסְדּוֹ:",
+        "theirs": "חַסְדּוֹ׃",
+        "at": 71,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:71:חַסְדּוֹ:|חַסְדּוֹ׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "חַסְדּוֹ: לְגֹזֵר",
+        "theirs": "חַסְדּוֹ׃ לְגוֹזֵר",
+        "at": 78,
+        "size": 2,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:78:חַסְדּוֹ: לְגֹזֵר|חַסְדּוֹ׃ לְגוֹזֵר"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "חַסְדּוֹ:",
+        "theirs": "חַסְדּוֹ׃",
+        "at": 85,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:85:חַסְדּוֹ:|חַסְדּוֹ׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "חַסְדּוֹ:",
+        "theirs": "חַסְדּוֹ׃",
+        "at": 91,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:91:חַסְדּוֹ:|חַסְדּוֹ׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "חַסְדּוֹ:",
+        "theirs": "חַסְדּוֹ׃",
+        "at": 99,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:99:חַסְדּוֹ:|חַסְדּוֹ׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "חַסְדּוֹ:",
+        "theirs": "חַסְדּוֹ׃",
+        "at": 105,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:105:חַסְדּוֹ:|חַסְדּוֹ׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "חַסְדּוֹ:",
+        "theirs": "חַסְדּוֹ׃",
+        "at": 111,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:111:חַסְדּוֹ:|חַסְדּוֹ׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "חַסְדּוֹ:",
+        "theirs": "חַסְדּוֹ׃",
+        "at": 117,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:117:חַסְדּוֹ:|חַסְדּוֹ׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "חַסְדּוֹ:",
+        "theirs": "חַסְדּוֹ׃",
+        "at": 123,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:123:חַסְדּוֹ:|חַסְדּוֹ׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "חַסְדּוֹ:",
+        "theirs": "חַסְדּוֹ׃",
+        "at": 129,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:129:חַסְדּוֹ:|חַסְדּוֹ׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "חַסְדּוֹ:",
+        "theirs": "חַסְדּוֹ׃",
+        "at": 135,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:135:חַסְדּוֹ:|חַסְדּוֹ׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "חַסְדּוֹ:",
+        "theirs": "חַסְדּוֹ׃",
+        "at": 141,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:141:חַסְדּוֹ:|חַסְדּוֹ׃"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'־'",
+        "at": 143,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after זָכַר",
+        "key": "whitespace:143:' '|'־'"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "חַסְדּוֹ:",
+        "theirs": "חַסְדּוֹ׃",
+        "at": 147,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:147:חַסְדּוֹ:|חַסְדּוֹ׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "חַסְדּוֹ:",
+        "theirs": "חַסְדּוֹ׃",
+        "at": 152,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:152:חַסְדּוֹ:|חַסְדּוֹ׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "חַסְדּוֹ:",
+        "theirs": "חַסְדּוֹ׃",
+        "at": 159,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:159:חַסְדּוֹ:|חַסְדּוֹ׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "חַסְדּוֹ:",
+        "theirs": "חַסְדּוֹ׃",
+        "at": 165,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:165:חַסְדּוֹ:|חַסְדּוֹ׃"
+      }
+    ],
+    "superseded_first_reading_unresolved": [
+      "vowels:1:לַיהוָה|לַיהֹוָה",
+      "consonants:6:חַסְדּוֹ:|חַסְדּוֹ׃",
+      "consonants:12:חַסְדּוֹ:|חַסְדּוֹ׃",
+      "consonants:18:חַסְדּוֹ:|חַסְדּוֹ׃",
+      "consonants:25:חַסְדּוֹ:|חַסְדּוֹ׃",
+      "consonants:31:חַסְדּוֹ:|חַסְדּוֹ׃",
+      "consonants:38:חַסְדּוֹ:|חַסְדּוֹ׃",
+      "consonants:44:חַסְדּוֹ:|חַסְדּוֹ׃",
+      "consonants:51:חַסְדּוֹ:|חַסְדּוֹ׃",
+      "consonants:59:חַסְדּוֹ:|חַסְדּוֹ׃",
+      "consonants:65:חַסְדּוֹ:|חַסְדּוֹ׃",
+      "consonants:71:חַסְדּוֹ:|חַסְדּוֹ׃",
+      "consonants:78:חַסְדּוֹ: לְגֹזֵר|חַסְדּוֹ׃ לְגוֹזֵר",
+      "consonants:85:חַסְדּוֹ:|חַסְדּוֹ׃",
+      "consonants:91:חַסְדּוֹ:|חַסְדּוֹ׃",
+      "consonants:99:חַסְדּוֹ:|חַסְדּוֹ׃",
+      "consonants:105:חַסְדּוֹ:|חַסְדּוֹ׃",
+      "consonants:111:חַסְדּוֹ:|חַסְדּוֹ׃",
+      "consonants:117:חַסְדּוֹ:|חַסְדּוֹ׃",
+      "consonants:123:חַסְדּוֹ:|חַסְדּוֹ׃",
+      "consonants:129:חַסְדּוֹ:|חַסְדּוֹ׃",
+      "consonants:135:חַסְדּוֹ:|חַסְדּוֹ׃",
+      "consonants:141:חַסְדּוֹ:|חַסְדּוֹ׃",
+      "whitespace:143:' '|'־'",
+      "consonants:147:חַסְדּוֹ:|חַסְדּוֹ׃",
+      "consonants:152:חַסְדּוֹ:|חַסְדּוֹ׃",
+      "consonants:159:חַסְדּוֹ:|חַסְדּוֹ׃",
+      "consonants:165:חַסְדּוֹ:|חַסְדּוֹ׃"
+    ],
+    "final_sha256": "0c60fefccafd152a2e8d3c4610099a01e1841d69567bc3e6cdb388173ef2b0ec",
+    "settlement": "Human point adjudications applied; all other blind source uncertainties and guideline/alignment/order findings independently resolved. Raw first-pass disagreements retained separately; source mark question explicitly keeps HE135 pending.",
+    "initial_comparison": "psalms_s70_s75_comparison.json",
+    "final_verification": "independent/psalms_s70_s75_layout_final.json"
+  },
+  "psalm_136/en": {
+    "primary_sha256": "cf75844aecfd002912bf7f0e00760daf80f57acff33c489de10944b5e9eb738a",
+    "independent_sha256": "cf75844aecfd002912bf7f0e00760daf80f57acff33c489de10944b5e9eb738a",
+    "primary_model": "GPT-6 (Codex)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/psalms_s70_s75.json",
+      "independent/psalms_s70_s75.json",
+      "independent/psalms_s70_s75_isolated.json",
+      "human_psalms_s70_s75_confirmation.json",
+      "full_name_holam_s70_corrections.json",
+      "independent/psalms_s70_s75_final_review.json",
+      "independent/psalms_s70_s75_layout_final.json",
+      "psalms_s70_s75_human_codepoints.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "69257336abb60458d27ca695b195e206e03c4dfe1076151b7b42d1dea3b21f12",
+    "settlement": "Human point adjudications applied; all other blind source uncertainties and guideline/alignment/order findings independently resolved. Raw first-pass disagreements retained separately; source mark question explicitly keeps HE135 pending.",
+    "initial_comparison": "psalms_s70_s75_comparison.json",
+    "final_verification": "independent/psalms_s70_s75_layout_final.json"
+  },
+  "citation/psalm_135/he/0": {
+    "primary_sha256": "a8ad0f560c94e94ba0a4dd20e2f524f10fd0feb01371a500d8f6d0ffc7c4edb0",
+    "independent_sha256": "a8ad0f560c94e94ba0a4dd20e2f524f10fd0feb01371a500d8f6d0ffc7c4edb0",
+    "primary_model": "GPT-6 (Codex)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/psalms_s70_s75.json",
+      "independent/psalms_s70_s75.json",
+      "independent/psalms_s70_s75_isolated.json",
+      "human_psalms_s70_s75_confirmation.json",
+      "full_name_holam_s70_corrections.json",
+      "independent/psalms_s70_s75_final_review.json",
+      "independent/psalms_s70_s75_layout_final.json",
+      "psalms_s70_s75_human_codepoints.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "a8ad0f560c94e94ba0a4dd20e2f524f10fd0feb01371a500d8f6d0ffc7c4edb0",
+    "settlement": "Human point adjudications applied; all other blind source uncertainties and guideline/alignment/order findings independently resolved. Raw first-pass disagreements retained separately; source mark question explicitly keeps HE135 pending.",
+    "initial_comparison": "psalms_s70_s75_comparison.json",
+    "final_verification": "independent/psalms_s70_s75_layout_final.json"
+  },
+  "citation/psalm_135/en/0": {
+    "primary_sha256": "73cb25e36e436020abeabaf53e2ae89ca742b294d940ed1cb27042f380c51063",
+    "independent_sha256": "73cb25e36e436020abeabaf53e2ae89ca742b294d940ed1cb27042f380c51063",
+    "primary_model": "GPT-6 (Codex)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/psalms_s70_s75.json",
+      "independent/psalms_s70_s75.json",
+      "independent/psalms_s70_s75_isolated.json",
+      "human_psalms_s70_s75_confirmation.json",
+      "full_name_holam_s70_corrections.json",
+      "independent/psalms_s70_s75_final_review.json",
+      "independent/psalms_s70_s75_layout_final.json",
+      "psalms_s70_s75_human_codepoints.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "73cb25e36e436020abeabaf53e2ae89ca742b294d940ed1cb27042f380c51063",
+    "settlement": "Human point adjudications applied; all other blind source uncertainties and guideline/alignment/order findings independently resolved. Raw first-pass disagreements retained separately; source mark question explicitly keeps HE135 pending.",
+    "initial_comparison": "psalms_s70_s75_comparison.json",
+    "final_verification": "independent/psalms_s70_s75_layout_final.json"
+  },
+  "citation/psalm_136/he/0": {
+    "primary_sha256": "08e16ebdfff35aef499084c6491a2cdef30344acf477828abc9eebbcc725c6e2",
+    "independent_sha256": "08e16ebdfff35aef499084c6491a2cdef30344acf477828abc9eebbcc725c6e2",
+    "primary_model": "GPT-6 (Codex)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/psalms_s70_s75.json",
+      "independent/psalms_s70_s75.json",
+      "independent/psalms_s70_s75_isolated.json",
+      "human_psalms_s70_s75_confirmation.json",
+      "full_name_holam_s70_corrections.json",
+      "independent/psalms_s70_s75_final_review.json",
+      "independent/psalms_s70_s75_layout_final.json",
+      "psalms_s70_s75_human_codepoints.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "08e16ebdfff35aef499084c6491a2cdef30344acf477828abc9eebbcc725c6e2",
+    "settlement": "Human point adjudications applied; all other blind source uncertainties and guideline/alignment/order findings independently resolved. Raw first-pass disagreements retained separately; source mark question explicitly keeps HE135 pending.",
+    "initial_comparison": "psalms_s70_s75_comparison.json",
+    "final_verification": "independent/psalms_s70_s75_layout_final.json"
+  },
+  "citation/psalm_136/en/0": {
+    "primary_sha256": "6417cc1a1d48290117c193df31ebbec8ed6c2ccf78ac52d889d563bbc53c7097",
+    "independent_sha256": "6417cc1a1d48290117c193df31ebbec8ed6c2ccf78ac52d889d563bbc53c7097",
+    "primary_model": "GPT-6 (Codex)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/psalms_s70_s75.json",
+      "independent/psalms_s70_s75.json",
+      "independent/psalms_s70_s75_isolated.json",
+      "human_psalms_s70_s75_confirmation.json",
+      "full_name_holam_s70_corrections.json",
+      "independent/psalms_s70_s75_final_review.json",
+      "independent/psalms_s70_s75_layout_final.json",
+      "psalms_s70_s75_human_codepoints.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "pending_ambiguities": [],
+    "superseded_first_reading_differences": [],
+    "superseded_first_reading_unresolved": [],
+    "final_sha256": "6417cc1a1d48290117c193df31ebbec8ed6c2ccf78ac52d889d563bbc53c7097",
+    "settlement": "Human point adjudications applied; all other blind source uncertainties and guideline/alignment/order findings independently resolved. Raw first-pass disagreements retained separately; source mark question explicitly keeps HE135 pending.",
+    "initial_comparison": "psalms_s70_s75_comparison.json",
+    "final_verification": "independent/psalms_s70_s75_layout_final.json"
   }
 }

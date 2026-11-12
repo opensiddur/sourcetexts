@@ -1,0 +1,76 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "readings": [
+    {
+      "crop": "halleluyah.jpg",
+      "word": "הללויה (135:1, first word after קלה)",
+      "exact_reading": "הַלְלוּיָהּ? ה carries a horizontal patah-like stroke. No clear upright meteg can be seen. The first ל has a two-dot sheva with a further short horizontal stroke to its left, so it looks like a hataf-patah shape rather than a plain sheva (possibly הַלֲלוּיָהּ). The second ל has no vowel; the vav after it has shuruk; י has qamats; ה has mappiq.",
+      "confidence": "low",
+      "evidence": "Below הל there is a dash, a colon and a dash ('-:-'). The first dash sits under the left half of ה. The colon and second dash sit under the first ל. There is a faint lower dot near the colon, but at this resolution I can't tell whether it is ink, a meteg fragment or a JPEG artifact. The same '-:-' pattern appears on every הללויה/הללו in s70-b0 and in jerusalem.jpg, so it is a consistent printed form and not noise in one spot."
+    },
+    {
+      "crop": "divine_name.jpg (current, 135, scan70)",
+      "word": "Tetragrammaton after את־שם (line 1)",
+      "exact_reading": "יְהוָֹה: sheva under י, qamats under ו, and a separate dot above, just left of the vav head",
+      "confidence": "medium",
+      "evidence": "The dot is clearly separated from the vav's head stroke by white space. Letterheads in this font are solid and joined, with no free-floating serif dots. So I read it as a true holam, not part of the letter. The same detached dot shows on line 2's Name (יהוֹה, between חצרות and בית; its lower vowels are not visible in the crop) and on most Names in s70-b0."
+    },
+    {
+      "crop": "earlier-divine-name.jpg (earlier 34, scan66)",
+      "word": "Tetragrammaton in את־יהוה",
+      "exact_reading": "יְהוָֹה: sheva under י, qamats under ו, and a small detached dot above, between ה and the vav head",
+      "confidence": "medium-low",
+      "evidence": "A small dot is visible above, apart from the vav head. It is smaller and fainter than in the scan70 crop, so I'm less sure of it. It does not look like part of the letter's stroke. Read independently of the scan70 crop."
+    },
+    {
+      "crop": "bekhorei_otot.jpg",
+      "word": "בכורי",
+      "exact_reading": "בְּכוֹרֵי: bet with dagesh, vocal sheva, vav with holam, tsere under resh",
+      "confidence": "medium-high (dagesh); medium (holam dot)",
+      "evidence": "There is a clear dot inside the bet's bowl, and the two-dot sheva is under it. A dot sits on top of the vav."
+    },
+    {
+      "crop": "bekhorei_otot.jpg",
+      "word": "אותת (135:9)",
+      "exact_reading": "Consonants א-ו-ת-ת (written with a vav after the aleph, i.e. אותת and not אֹתֹת or אתות). There appears to be a dot on the vav (וֹ). I can't make out a second holam over the first ת.",
+      "confidence": "high (consonants); low (vowel points)",
+      "evidence": "Four separate letters, the second a narrow vav. The marks above the word are faint at this resolution."
+    },
+    {
+      "crop": "jerusalem.jpg",
+      "word": "ירושלם (135:21)",
+      "exact_reading": "יְרוּשָׁלִָם: consonants י-ר-ו-ש-ל-ם, with no yod between ל and ם. Qamats and hiriq are both under the ל.",
+      "confidence": "high (no yod); medium (vowel host)",
+      "evidence": "Final mem follows the lamed directly, with no narrow letter between them. Under the lamed there is a qamats with a dot just to its left (the hiriq), and nothing under the mem."
+    },
+    {
+      "crop": "gozer.jpg",
+      "word": "לגוזר (136:13)",
+      "exact_reading": "לגוֹזר: with a vav after the gimel, carrying a holam dot",
+      "confidence": "high",
+      "evidence": "A clear upright vav between ג and ז, with a dot at its top. The crop line shows no lower vowels for this word."
+    },
+    {
+      "crop": "zakharlanu.jpg",
+      "word": "זכר לנו (136:23)",
+      "exact_reading": "זָכַר־לָנוּ: maqaf present",
+      "confidence": "medium",
+      "evidence": "After the resh's leftward head there is a gap and then a separate short horizontal stroke at upper height, before the lamed's mast. It is not attached to the resh."
+    }
+  ],
+  "uncertainties": [
+    "halleluyah: whether the mark under the first ל is a plain sheva plus an unrelated dash or a hataf-patah, and whether there is a meteg. A higher-resolution crop of the original s70.jpg at 135:1 is needed.",
+    "Divine Name dots: both look detached, which suggests holam, but the earlier scan66 dot is faint. Human confirmation recommended.",
+    "אותת: whether there is a second holam (over the first ת) can't be determined at this resolution.",
+    "zakharlanu maqaf: the stroke is short and close to the resh head. The print could be a long resh head with ink spread. Medium confidence only."
+  ],
+  "retractions": [],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "9df87025-be9d-4c89-a2dc-c378537dfa26"
+  }
+}

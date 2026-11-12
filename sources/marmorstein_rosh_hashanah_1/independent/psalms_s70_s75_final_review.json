@@ -1,0 +1,74 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "human_readings_applied": true,
+  "earlier_corrections_verified": true,
+  "encoding_alignment_order_approved": false,
+  "remaining_blind_uncertainties_resolved": false,
+  "unresolved_readings": [
+    {
+      "word": "הַלֲלוּיָהּ (135:1; same form presumably 135:3, 135:21)",
+      "scan": "s70 (/tmp/psalms-s70/halleluyah.jpg); same mark in earlier-hallelu-s8.jpg and earlier-hallelu-s28.jpg",
+      "mark": "Under the first lamed the crops show a bar, two dots and a bar. In all three crops there is also a small dot just below the two dots. The human ruling covered the vowel (hataf-patah) but not this dot, which could be a meteg or part of one. The XML has no meteg. This is a specific, repeated printed mark, not general scan quality.",
+      "current_xml": "הַלֲלוּיָהּ"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "medium",
+      "file": "prayerbook_for_the_new_year-marmorstein-1965-en/psalm_136.xml (lines 54-55)",
+      "issue": "136:8 is encoded as two lines (lead, then refrain). The scan (s73-b3) prints 'The sun to rule by day' and 'for His grace endures for cver' on one line, as in 136:2 and 136:3. The resolutions file and the primary reading both list the English shared lines as 2, 3, 17, 18. On s73 the shared lines are actually 2, 3 and 8; 17 and 18 share lines on s75.",
+      "recommendation": "Put 136:8 on a single line: milestone, lead, then the refrain span. Correct the layout note in the resolutions and primary reading files. The verse URN scope does not change."
+    },
+    {
+      "severity": "medium",
+      "file": "sources/.../full_name_holam_s70_corrections.json, human_psalms_s70_s75_confirmation.json; HE psalm_135.xml, ashrei.xml, amidah_qedushah.xml, rh_vetimlokh.xml",
+      "issue": "The extra dot under the first lamed of Halleluyah (see unresolved_readings) appears in the same place in the s70, s8 and s28 crops. Neither human answer nor the ledger says whether it is a meteg.",
+      "recommendation": "Show the human one enlarged crop and ask only about that dot. Keep the current no-meteg encoding until they answer, and record the decision for all six Halleluyah occurrences."
+    },
+    {
+      "severity": "low",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/index.xml (line 283)",
+      "issue": "Psalm 24 is transcluded straight after 136:26 in the documentary order. Scan s74 goes from 136:26 directly to Psalm 33 (לג). The English index has no Psalm 24 here, and the expanded index puts Psalm 24 in a separate appendix outside the morning service.",
+      "recommendation": "Check where this volume actually prints Psalm 24. If it is not printed after 136:26, move it to its printed position or out of this sequence, so that Psalm 33 can follow 136 later."
+    },
+    {
+      "severity": "low",
+      "file": "HE/EN documentary index.xml (lines 280 / 205)",
+      "issue": "The 136:1–24 range uses target plus targetEnd. The same files use the documented form 'START-/END' inside target everywhere else (for example deuteronomy/6/5-/6/9). JLPTEI-3 only documents ranges written inside target for j:transclude. The expanded index uses targetEnd throughout, so the processor probably supports it.",
+      "recommendation": "Either use target='urn:x-opensiddur:text:bible:psalms/136/1-24@<project>' to match the other entries in these indexes, or confirm targetEnd is accepted by the validator and compiler. The scope is correct either way: Hebrew 1–24 stops at the 25 milestone, and English 1–24 stops at the 26 milestone."
+    },
+    {
+      "severity": "info",
+      "file": "HE psalm_135.xml (135:21)",
+      "issue": "יְרוּשָׁלָ͏ִם looks correct as displayed, but this review could only view the file. It could not confirm the codepoints are lamed, qamats, CGJ, hiriq in that order.",
+      "recommendation": "Run a one-off codepoint check on this word: U+05DC U+05B8 U+034F U+05B4."
+    },
+    {
+      "severity": "info",
+      "file": "source bands s70/s72/s74, s73/s75",
+      "issue": "Results for the remaining items on the blind-uncertainty list: (a) יָדַעְתִּי, מֵאוֹצְרוֹתָיו, מֵאָדָם, בַּלָּיְלָה (136:9), זָכַר (136:23): no vertical stroke separate from the vowel points is visible, so this is a resolution limit, not a dispute. (b) 135:17: no maqaf after אֵין at the line end (s72-b0, end of line 4); the XML matches. (c) 136:15 בְיַם: shewa only, no dagesh visible; matches. (d) 136:18 וַיַּהֲרֹג: holam on the resh is faint but consistent with a printed holam; keep it. (e) Holam on vav in the refrains (לְעוֹלָם, חַסְדּוֹ) and the leads: consistent and visible; the dagesh in the dalet of חַסְדּוֹ shows in every row. (f) English 136:8 'cver' (also 136:3 on s73-b2) is a damaged e; 'ever' is correct.",
+      "recommendation": "No change to the readings."
+    },
+    {
+      "severity": "info",
+      "file": "HE/EN psalm_135.xml, psalm_136.xml; HE/EN index.xml; machzor_expanded index.xml",
+      "issue": "Checks that passed: every verse has a canonical milestone, with a chapter milestone carrying corresp and bare verse/chapter terminators. 135 is continuous prose; 136 uses lines with inline refrain spans. The page break falls inside 135:12 in both languages and before 136:17 in both. English 25 has no milestone and no invented text; Hebrew 25 is present. English 26 covers both its lines, ending at the terminator. Documentary order 91, 91 repeat, 135, 136:1–24, 25, 26 uses project-qualified references in both indexes; the expanded index uses unqualified references, and the morning section continues after 136:26. No new prayer URNs. Citation notes קלה/קלו and 'Psalm 135.'/'Psalm 136.' link to the chapter URNs, with no parentheses and no Hebrew in English. Earlier corrections: all 89 ledger occurrences (88 changed, one s20 Elohim-type Name unchanged at Deut 11:17) match the generated XML. The prefixes לַ, בַּ, וַ, שֶׁ are kept, as are the cantillation in the Shema and Torah passages and the holam on the he. The s8 Ashrei, s9 Qedushah and s28 Vetimlokh Halleluyah forms match the ledger exactly.",
+      "recommendation": "None."
+    },
+    {
+      "severity": "low",
+      "file": "earlier files outside this installment (e.g. shema_yisrael.xml, deuteronomy_*.xml, numbers_15_37_to_41.xml, exodus_31_16_to_17.xml, ashrei.xml)",
+      "issue": "Outside this installment, these files have chapter milestones with n but no corresp, such as <tei:milestone unit=\"chapter\" n=\"6\"/>. Under URN-scope rule 3, a milestone with no corresp is a terminator, so these close a scope instead of opening a chapter.",
+      "recommendation": "Track separately: either add the canonical chapter corresp or remove these milestones. It does not affect certification of s70–s75."
+    }
+  ],
+  "verdict": "Not yet certified. Scope: scans s70–s73 in full, plus only the Psalm 136 continuation on s74–s75 (Psalm 33 excluded); this is not a certification of the whole volume. The human readings and all 89 ledger occurrences plus the three earlier Halleluyah corrections are correctly reflected in the generated Hebrew XML. Milestones, terminators, notes, the absent English 136:25 and the documentary and expanded recitation order meet JLPTEI. Before certifying: (1) put English 136:8 on one line, as the source prints it; (2) get a human ruling on the extra dot under the first lamed of Halleluyah (s70 135:1, and the s8/s28 crops). Also recommended: confirm where Psalm 24 is printed, relative to the documentary order after 136:26, and run the Jerusalem codepoint check. The earlier German glyph at 57 is still tracked separately.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "11c8fcc9-3ab8-4e96-bf68-2def4edf4f18"
+  }
+}

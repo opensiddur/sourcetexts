@@ -543,3 +543,39 @@ Scans66–69 are accepted, bringing coverage to68/355. Only the Psalm91 continua
 on70/71 is reviewed; their Psalm135 text is next. Scan57 still has one explicit
 low-certainty German instruction glyph. Stable accepted previews remain
 unchanged; full-volume and complete-service acceptance remain false.
+
+
+### Draft continuation: physical PDF scans 70–73, Psalm 136 continuation 74–75
+
+Psalms 135 and 136 now have both edition witnesses, canonical chapter/verse
+milestones, source page boundaries, citation notes and shared expanded order.
+Psalm 135 retains running paragraphs. Psalm 136 retains lead/response verse
+lines, including the five English verses whose responses share their line.
+English 136:25 is absent; canonical ranges 1–24 / Hebrew-only 25 / bilingual 26
+prevent drift and supply no substitute translation. All 26 Hebrew and 25
+English refrains remain inside their verse scopes.
+
+Human spelling and pointing replies are applied, including Jerusalem's lamed
+qamats–CGJ–hiriq. Enlarged source review restores 88 omitted holams in the full
+Divine Name; the separately pointed s20 occurrence remains unchanged. Initial
+readings, superseded judgments, rejected locator match, raw disagreements and
+actual model/effort provenance remain in the evidence. Independent review
+verifies these corrections and approves other source readings, guidelines,
+alignment and order. The English 136:8 line correction is independently verified.
+
+One displayed question remains: a small mark below Halleluyah's first-lamed
+hataf-patah. Hebrew Psalm 135 and three earlier Halleluyah units are explicitly
+reopened. Coverage is temporarily 65/355, down from the earlier 68 accepted
+leaves; this batch has no new full-page acceptance yet. The unrelated source57
+German glyph remains low-certainty. Psalm 33 on 74/75 is next.
+
+The empty-line exporter defect exposed by verse 25 is isolated in processor
+PR 300; the existing rubric PDF dependency remains PR 299. Content changes stay
+in the coordinated feature branch. Updated previews are draft artifacts.
+
+Final draft previews: 58-page documentary and 61-page expanded books. All 263
+XML files validate; naming/features/registry/reference checks pass. Eight exact
+whole-psalm word comparisons, four cross-page checks, codepoint checks and HTML
+link/identifier/refrain checks pass. Fresh PDF pages confirm that the 24 empty
+lines before verse 25 are gone. See psalms_s70_s75_export_verification.json for
+hashes, visual evidence, test results and explicit pending source status.
