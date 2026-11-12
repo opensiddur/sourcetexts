@@ -1,0 +1,77 @@
+{
+  "status": "DRAFT: inspected exports; displayed Hebrew source questions pending",
+  "complete_volume": false,
+  "current_batch_source_acceptance": false,
+  "accepted_leaves": 72,
+  "pending_human": [
+    "33:1 רַנְּנוּ — first-nun dagesh, and whether its vowel is sheva or hataf-patah",
+    "Meteg positions in 33:3 הֵיטִיבוּ, 33:4 מַעֲשֵׂהוּ and 33:9 וַיֶּהִי",
+    "Holam on 33:5 אֹהֵב and 33:7 כֹּנֵס / נֹתֵן; dagesh in the kaf of כֹּנֵס",
+    "33:11 לְדֹר וָדֹר — full spelling with vav (דוֹר) or short spelling (דֹר)",
+    "33:2 זַמְּרוּ־לוֹ — whether a separate maqaf is actually printed"
+  ],
+  "earlier_pending": "Source57German glyph remains separatelylowcertainty.",
+  "xml_files": 265,
+  "exports": [
+    {
+      "mode": "documentary",
+      "pdf": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/draft_s74_s77_documentary.pdf",
+      "html": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/draft_s74_s77_documentary.html",
+      "pages": 60,
+      "pdf_sha256": "6c39cc897a2f6955f45d012695082810f618d4ec8d3ff5fbf253a076bd5b201a",
+      "html_sha256": "2156575a04ff3aa1dd7c59db10c4e74afbee899e27ac471e3cc098370c97c73e"
+    },
+    {
+      "mode": "expanded",
+      "pdf": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/draft_s74_s77_expanded.pdf",
+      "html": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/draft_s74_s77_expanded.html",
+      "pages": 63,
+      "pdf_sha256": "3e2b24eb80b5d24d41ea5d50d23306a3d26d73e958333e61f3a2cc10f8fe8c76",
+      "html_sha256": "3bedfe319583c8fb58c2d6b7a704254ed326b8701b826c70ca44fd28b4371ca8"
+    }
+  ],
+  "visual_review": "Fresh documentary56–59and expanded59–62rendered and inspected:136→33transition,22aligned verses, chapter citation links, continuation/appendix boundary and metadata legible without overlap or clipping.",
+  "visual_evidence": [
+    {
+      "cache": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/review/psalm_33_s74_s77/final-doc-56.png",
+      "sha256": "ae457734442c29e93b751b616560a89433cd3fc2781d9c1a3e5b1af8b20e87ce"
+    },
+    {
+      "cache": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/review/psalm_33_s74_s77/final-doc-57.png",
+      "sha256": "f1861f4ce8d5c2504ee3f6d2aa8e2900b43d447a87a02c0c32d551dcdd23d133"
+    },
+    {
+      "cache": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/review/psalm_33_s74_s77/final-doc-58.png",
+      "sha256": "1b172757aefe3ac68172b03916189e6e8d6913149339b2ddc63d6e5c83d90f63"
+    },
+    {
+      "cache": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/review/psalm_33_s74_s77/final-doc-59.png",
+      "sha256": "05074c9957424ed30f3c08181eb5a1f811a472e945584cc6a22689346ac9f45d"
+    },
+    {
+      "cache": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/review/psalm_33_s74_s77/final-exp-59.png",
+      "sha256": "c7c4d1fc99cd361e1701193076045afd43309efa0da673cbf880daf01c04e75f"
+    },
+    {
+      "cache": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/review/psalm_33_s74_s77/final-exp-60.png",
+      "sha256": "83d1c12e588f6cf8bfec3b407986c221820501005e7e2c82627a495eeda3e356"
+    },
+    {
+      "cache": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/review/psalm_33_s74_s77/final-exp-61.png",
+      "sha256": "ed41475b0e6f9643ab6fcef7bc8dd6647df217d3f373adea6cfccdd8eb4f5288"
+    },
+    {
+      "cache": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/review/psalm_33_s74_s77/final-exp-62.png",
+      "sha256": "a59c08869d03c73b88afecc7dcc4645681a9946eb32a821151686058f162b98b"
+    }
+  ],
+  "runtime_review": "Both compiled books retain22shared33verse identities, exact current source words and correct13626→33order. Four whole-chapter word comparisons and four internal33:17sourcepage breaks pass. Chapter/verse termini exclude later92.",
+  "electronic_review": "Both books have unique IDs and resolved internal targets. Chapter33appears once in both languages; real compound hyphens and settled shin meteg preserved. Earlier26HE/25ENrefrains retained without filling136:25.",
+  "codepoint_review": "All13Names have holam on firsthe/qamats onvav; Shiru33:3shin hiriq+meteg+shin dot verified. Other displayed Hebrew points remain unaccepted.",
+  "validation": "265schema-valid XML files (initial full build plus schema validation of updated witnesses). Naming/features/registry/reference checks pass after synchronizing reference database. Existing importer/exporter code reused; no code behavior changed or implementation-mirroring tests added.",
+  "exporter_dependencies": [
+    "PR300/c2408c6for range compilation",
+    "PR299/e517de6for established conditional-rubric PDF behavior"
+  ],
+  "stable_outputs": "Earlier accepted/stable output paths remain unchanged; this installment is saved under separate draft_s74_s77paths. English header review flag cleared after source approval; prayer body identical to inspected compiled artifact."
+}

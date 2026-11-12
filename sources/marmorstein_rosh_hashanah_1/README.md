@@ -591,3 +591,32 @@ now accepted. Coverage is 72/355. Only Psalm 136 continuation is accepted on
 74/75; Psalm 33 is next. Source 57 retains its earlier low-certainty German
 glyph. The preceding draft review section preserves the superseded pending
 state. Existing inspected PDF/HTML drafts remain valid and unchanged.
+
+
+### Draft continuation: Psalm 33, physical scans 74–77
+
+Both witnesses contain all 22 verses, in continuous source paragraphs. The
+canonical chapter and verse correspondences are reused from existing Bible
+encodings; source order and the expanded morning spine place this chapter
+after 136:26. Both languages cross the physical page boundary inside 33:17.
+Hebrew לג and English Psalm 33 are linked citation notes, with no extra English
+linkage words or parenthetical wrappers in generated links.
+
+English matches the blind image reading exactly. All 13 full Divine Names have
+individually verified holams. Shiru 33:3 has a settled shin meteg. Raw primary,
+blind and enlarged readings retain disagreements, superseded judgments, actual
+model/effort provenance and corrected crop coordinates. Independent final
+review approves guidelines, alignment, order, English and other Hebrew readings.
+Displayed human questions remain for Rannenu, three meteg placements, three
+holams/Kones dagesh, Ledor/Vador spelling and Zamru-lo maqaf. Hebrew source
+acceptance is explicitly pending. Coverage stays 72/355. Prior Psalm 136 text
+plus this draft account for full 74/75; on 76/77 only Psalm 33 continuation is
+included. The later Psalms 92/93 are next. Source 57 retains its earlier
+low-certainty German glyph; the volume and complete service remain draft.
+
+Draft previews are 60 pages documentary and 63 pages expanded. All 265 XML
+files validate. Naming, feature, registry and reference checks pass. Four exact
+whole-chapter word comparisons, four verse-17 source-page checks, codepoint
+checks and electronic link/identifier checks pass. Fresh affected PDF pages
+are rendered and inspected. See psalm_33_s74_s77_export_verification.json for
+artifact hashes, evidence and the explicit pending source questions.
