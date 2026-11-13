@@ -720,3 +720,12 @@ leaves remain partial for acceptance purposes; total accepted remains93/355.
 The Ofan opening is confirmed as אִהֵל; its identity is khevodo_ihel.
 Next primary text: Ahavah Rabbah on108/109. Old scan57/90ambiguities remain
 separate; no missing translation is supplied.
+
+
+Psalm 24 placement correction: the Sunday psalm from physical PDF scan351
+remains in a named documentary שיר של יום appendix, with the source heading
+and descriptive Sunday rubric. Its pilot transclusion is removed from the
+incomplete expanded service: it does not follow Yotzer. The reusable Hebrew
+module remains available. Proper daily-psalm service placement is deferred
+until that section is assembled; no English is supplied. See
+psalm24_placement_resolution.json for independent source and guideline reviews.

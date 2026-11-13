@@ -25330,5 +25330,59 @@
     "pending_ambiguities": [
       "Source routing rubric review pending."
     ]
+  },
+  "instruction/daily_psalms_heading": {
+    "primary_sha256": "7ecfe2bdf00e70932f746fdb4105531480843433cc56ea35344620ab61720011",
+    "independent_sha256": "7ecfe2bdf00e70932f746fdb4105531480843433cc56ea35344620ab61720011",
+    "primary_model": "GPT-6 (Codex)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n350.jpg",
+      "primary/psalm24_appendix_initial.json",
+      "independent/psalm24_appendix_independent.json",
+      "independent/psalm24_appendix_independent-tight.json",
+      "psalm24_placement_resolution.json"
+    ],
+    "differences": [],
+    "decisions": {},
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "7ecfe2bdf00e70932f746fdb4105531480843433cc56ea35344620ab61720011",
+    "pending_ambiguities": []
+  },
+  "instruction/daily_psalm_sunday": {
+    "primary_sha256": "37328945f765117894cb48400c45a0e7015d1b8d07c296fc46e24d2659c53351",
+    "independent_sha256": "ceb23658a30ebfbff76d4fbf8501dd60ec2aaafee4da3c48bc0d3007c2899744",
+    "primary_model": "GPT-6 (Codex)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n350.jpg",
+      "primary/psalm24_appendix_initial.json",
+      "independent/psalm24_appendix_independent.json",
+      "independent/psalm24_appendix_independent-tight.json",
+      "psalm24_placement_resolution.json"
+    ],
+    "differences": [
+      {
+        "bucket": "consonants",
+        "ours": "הלוים",
+        "theirs": "הלויים",
+        "at": 4,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:4:הלוים|הלויים"
+      }
+    ],
+    "decisions": {
+      "consonants:4:הלוים|הלויים": {
+        "accepted": "independent",
+        "evidence": "The enlarged levites.png shows ה ל ו י י ם: one descending vav followed by two separate short yods. Initial primary spelling omitted one yod. Independent full-line and tight readings agree."
+      }
+    },
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "ceb23658a30ebfbff76d4fbf8501dd60ec2aaafee4da3c48bc0d3007c2899744",
+    "pending_ambiguities": []
   }
 }

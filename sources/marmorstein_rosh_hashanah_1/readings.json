@@ -27738,7 +27738,19 @@
       "unit": "yotzer_or_chadash"
     },
     {
-      "unit": "psalm_24"
+      "section": "daily_psalms_appendix",
+      "heading": "daily_psalms_heading",
+      "witnesses": [
+        "he"
+      ],
+      "order": [
+        {
+          "instruction": "daily_psalm_sunday"
+        },
+        {
+          "unit": "psalm_24"
+        }
+      ]
     }
   ],
   "navigation": {
@@ -30151,18 +30163,6 @@
           }
         }
       ]
-    },
-    {
-      "section": "supplementary_psalms",
-      "heads": {
-        "he": "נספח — שיר של יום",
-        "en": "Appendix — daily psalm"
-      },
-      "order": [
-        {
-          "unit": "psalm_24"
-        }
-      ]
     }
   ],
   "coverage_notes": "93/355 full leaves accepted: 1–56, 58–89, 91–95. The meteg in הלכו on scan 90 and an older German glyph on scan 57 remain pending. Scans 96/97 cover Yishtabbach only; half Kaddish is next.",
@@ -30758,6 +30758,26 @@
         "en"
       ],
       "page_start": true
+    },
+    "daily_psalms_heading": {
+      "scan": "s351",
+      "text": "שיר של יום.",
+      "language": "he",
+      "witnesses": [
+        "he"
+      ],
+      "page_start": true,
+      "type": "heading"
+    },
+    "daily_psalm_sunday": {
+      "scan": "s351",
+      "text": "היום ראשון בשבת שבו הלויים היו אומרים במקדש",
+      "language": "he",
+      "witnesses": [
+        "he"
+      ],
+      "page_start": false,
+      "type": "description"
     }
   },
   "dependencies": [
@@ -30798,7 +30818,16 @@
       "unknown": "Keep both explicitly labeled alternatives; do not infer German rite from broad Ashkenaz or Frankfurt flags.",
       "authority": "Explicit user clarification in human_blessings_s44_s47_confirmation.json.",
       "coverage_limit": "Intervening scans48–59 remain partial/untranscribed. The p8 insertion is the structural anchor between the opening blessings and BarukhSheamar; subsequent installments add material on both sides of it."
+    },
+    {
+      "scope": "daily_psalms_appendix",
+      "source_scan": 351,
+      "source_facs": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n350.jpg",
+      "source_day": "Sunday, explicit היום ראשון בשבת rubric",
+      "documentary": "Preserve original שיר של יום heading and Sunday rubric in a separate source appendix.",
+      "expanded": "Remove the pilot appendix from the incomplete recitation spine; no Psalm24 after Yotzer or outside service conditions.",
+      "future": "Assemble daily psalms at their proper service position with existing service/day-of-week settings; do not infer placement from appendix order."
     }
   ],
-  "expanded_coverage_note": "The shared morning sequence reaches Yishtabbach, with explicit canonical repetition ofExodus15:18 and no supplied English15:19. HalfKaddish and later material are next. Original standing instruction through afterBarkhu is retained. Psalm24remains the preexisting named appendix fromscan351, not a morning continuation."
+  "expanded_coverage_note": "The shared morning sequence currently reaches the Yotzer blessing before Ahavah Rabbah (scans108/109). Psalm24 is the Sunday daily psalm from the separate source supplement on physical PDF scan351, not a continuation after Yotzer. It remains available as a reusable Hebrew source module and in its named documentary appendix; the incomplete expanded service does not append it. Daily-psalm recitation placement is deferred until that service section is assembled. No absent English translation is supplied."
 }
