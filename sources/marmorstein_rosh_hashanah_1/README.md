@@ -753,3 +753,11 @@ anchor; that source parenthesis is not assigned a Shabbat condition. Explicit
 Shabbat clauses remove brackets when resolved and keep words only on Shabbat.
 Eight Shabbat/quorum/recitation combinations and68source-word/transclusion
 comparisons pass. Source typos retain sic/corr; citation parentheses are omitted.
+
+
+All seven human source questions for scans 108–125 were resolved on 2026-11-13
+and applied verbatim, including the Emet junction instruction, opening
+Mi Khamokha accents and holam, defective זִכְרֹנֵֽנוּ וּפִקְדֹּנֵֽנוּ, and
+Jerusalem with qamatz/meteg/CGJ/hiriq. Dagesh confirmations and meteg hosts are
+recorded individually. Other fine-mark adjudication and Hebrew review
+reconciliation remain pending; the accepted total remains 100/355.
