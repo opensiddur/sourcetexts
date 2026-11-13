@@ -1,0 +1,31 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "approved": true,
+  "issues": [
+    {
+      "severity": "low",
+      "location": "machzor_expanded-opensiddur-he/index.xml:1451",
+      "issue": "The end of the range is written in shorthand: `-/shacharit/pesuqei_dezimrah/az_yashir/quoted_exodus_15_18`. It leaves out `chol`, so it only works if the resolver reads it as replacing the last four path segments. That would give siddur:chol/shacharit/pesuqei_dezimrah/az_yashir/quoted_exodus_15_18, which is correct. A plain last-segment form (`-quoted_exodus_15_18`) or the `targetEnd` attribute used elsewhere in this file (e.g. lines 1337, 1346, 1416) would be clearer. I didn't check the importer, as instructed. Confirm from a build or render that the end resolves to the chol context and not to a non-existent siddur:shacharit/... path."
+    },
+    {
+      "severity": "low",
+      "location": "index.xml:1452 and both sources' line with the repeated_exodus_15_18 milestone",
+      "issue": "This was already there and isn't part of this change. Both source files have two segs with source=\"urn:x-opensiddur:text:bible:exodus/15/18\": the quoted one (with cantillation, יהֹוָ֥ה) and the repeated one (no cantillation, יְיָ). The explicit `bible:exodus/15/18` transclusion reuses the canonical identity. If identity is resolved by source and not by milestone context, it could pick either one. Check that the repeat renders the canonical 15:18 (or whichever version you intend) and isn't duplicated or pulled from the wrong seg."
+    }
+  ],
+  "observations": [
+    "Canonical identity reuse: both source openings now match exactly. The milestone has corresp=…/az_yashir/quoted_exodus_15_1 and n=1, and the Hebrew segs (all three lines) and the English seg all carry source=bible:exodus/15/1. The Hebrew and English idnos share the same base URN, siddur:chol/shacharit/pesuqei_dezimrah/az_yashir, so the contexts line up across languages.",
+    "Verse-level alignment boundary: the range now starts at the verse 1 milestone, not the enclosing div. Verse 1 is three seg lines in Hebrew and one seg in English, so verse milestones work as alignment units. Milestones for verses 2–10 and 12–17 (corresp bible:exodus/15/N) and the siddur-context milestones for 11 and 18 are identical in the two files and in the same order. Nothing in the structure would flatten them into one block any more.",
+    "End of range and repetition order: if the end means 'from the quoted_exodus_15_18 milestone to the next milestone', the range takes in the first 15:18 and stops at the repeated_exodus_15_18 milestone, so the in-source repeat is excluded and can't double up. Then come the explicit canonical 15:18 (line 1452), 15:19 (line 1453) and ki_ladonai (line 1454). That order matches the header note: an explicit canonical repeat of 15:18 and no English for 15:19.",
+    "Because the range starts at the verse milestone, it no longer includes the chapter milestone (n=15) before it, or the div's facs (page n87/n88 for page 29). The page break for page 30 is inside the range and is kept. If the rendered output needs the chapter label or the starting page facsimile, check whether this change dropped them.",
+    "No prayer words changed in the three files I reviewed (only the structure). As requested, I didn't reopen any source readings, and the earlier source uncertainty is still open."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "5cc804f2-ee2b-41c5-ab5d-c489a15b2df8"
+  }
+}
