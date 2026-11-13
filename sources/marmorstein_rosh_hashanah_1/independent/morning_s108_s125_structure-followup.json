@@ -1,0 +1,49 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "approved": true,
+  "findings": [
+    {
+      "severity": "info",
+      "location": "tests/importer/test_marmorstein_rosh_hashanah_1.py:954-964 (test_quote_context_cannot_truncate_its_enclosing_prayer_part); build.py:399-405",
+      "issue": "The new negative test covers only one case: a chapter_corresp at the same depth as the prayer-part. It does not cover a shallower context, and it does not cover a source_reference_corresp that is wrong while the chapter_corresp is valid. The code checks both keys with `<=`, so the logic is right. Only the test coverage is narrow.",
+      "recommendation": "Optional: add subTests for a shallower context and for a bad source_reference_corresp paired with a valid chapter_corresp. This does not block approval."
+    },
+    {
+      "severity": "info",
+      "location": "build.py:401-404 depth guard",
+      "issue": "The guard counts path components after the last ':'. It does not check whether the context sits under the active prayer-part, and it ignores namespace. A context in a sibling subtree passes if it is deeper, as in the real data, where emet_veyatziv/quotations/* sits under emet_veyatziv/ezrat and its siblings. Comparing other namespaces only rejects more cases than needed, so it is safe. This is correct if refdb's scope rule 2 is depth-based, which the prior review assumed. If rule 2 is prefix-based, sibling-subtree contexts would need their own check. No test covers a deeper context in a sibling subtree.",
+      "recommendation": "Confirm against UNIT_CONTAINED_BY / find_end_of_mapping in refdb. If that holds, add one positive test with a deeper context in a sibling subtree that matches the emet_veyatziv layout."
+    }
+  ],
+  "checks": [
+    "Emet directive: expanded index.xml:1508 now puts a Hebrew-only tei:note type=instruction between shema/numbers_15 (1507) and prayer:emet_veyatziv (1509). Its text matches the documentary index (heidenheim index.xml:338) character for character: 'יש לסמוך אלהיכם לאמת, לכן יתן רוח מעט כמו יתנו ה״א.'. No English and no new wording. The exact reading stays pending human snippet 1.",
+    "El Melekh Ne'eman: the expanded order (index.xml:1502) points to the canonical urn:x-opensiddur:text:prayer:shema/el_melekh_neeman. The existing el_melekh_neeman.xml is Hebrew-only. It has a quorum condition minyan=false, its condition instruction reads 'יחיד אומר' as printed, and it has no English. The documentary index keeps the printed morning directive 'יחיד אומר אל מלך נאמן.' in place (index.xml:332), so the morning witness loses nothing. Neither index references a duplicate shacharit_el_melekh_neeman.",
+    "(מלכנו) commentary: the standOff note now targets #malkeinu_alternative (qedushat_hayom.xml:32). A tei:anchor with that id sits right before the '(מלכנו)' seg inside the melokh prayer-part (line 42). The note keeps the 'הערת המהדיר' label and adds no condition. The anchor is an empty element, so it changes no words or scope.",
+    "Source attribution: every seg in vattitten_lanu carries source=prayer:amidah/vattitten_lanu_hashem, and every seg in melokh carries prayer:amidah/melokh_al_kol_haolam. That covers the marked Shabbat insertions, the unconditional continuations (הַזִּכָּרוֹן הַזֶּה…, קַדְּשֵׁנוּ…, וְטַהֵר…, אֱמֶת וְקַיָּם…, יִשְׂרָאֵל וְיוֹם הַזִּכָּרוֹן) and (מלכנו). attah_vechartanu and yaaleh_veyavo are each a single attributed seg.",
+    "Shabbat brackets are still j:conditional type=marked with shabbat=true. 'אם שבת' appears only as the instruction for the two רצה/והנחילנו conditionals. (מלכנו) stays unconditional and is not a Shabbat clause.",
+    "Citations: citation110.png shows 'דברים' followed by 'יא יג', and citation112.png shows 'במדבר' followed by 'טו לז'. Each gives an opening verse with no range endpoint. shacharit_deuteronomy_11_13_to_21.xml:34 now reads 'דברים יא יג' and targets bible:deuteronomy/11/13. shacharit_numbers_15_37_to_41.xml:34 reads 'במדבר טו לז' and targets bible:numbers/15/37. Label and target agree. Whether the marks are gershayim is a source-accuracy question and is out of scope here.",
+    "Body milestones in Deut 11 and Num 15 stay on local contexts (shema/deuteronomy_11/chapter, shema/numbers_15/chapter) with bare verse and chapter terminators. No milestone corresp uses bible:.",
+    "build.py:398-412: the depth guard runs only when a prayer-part is active and a segment has source_reference. It rejects only an explicit chapter_corresp or source_reference_corresp whose depth is the same as or shallower than the prayer-part. When source_reference_corresp is missing, the canonical source_reference fallback is unchanged. test_quoted_scripture_keeps_both_scopes_across_a_page_boundary still asserts it, and it is not treated as an identity conflict.",
+    "Numbered chapter context without a canonical mapping is still supported: test_reprinted_verses_keep_context_without_redefining_scripture and the chapter_corresp-optional branches at build.py:346-349 and 407-410 are unchanged. The declined generic requirements are recorded in the resolutions JSON with reasons. Under the user's stated policy I accept them and do not re-raise them as findings.",
+    "The reference_unit=verse branch (build.py:341-357) still closes an active prayer-part on purpose, because the verse's own corresp replaces it. The guard is correctly limited to the source_reference quote-inside-prayer-part path.",
+    "test_editorial_commentary_can_target_a_local_variant_anchor (966-981) tests the anchor and #target mechanism used by the (מלכנו) note.",
+    "selector-verification.json has 8 cases covering every combination of shabbat, minyan and repetition. All pass for Shabbat clauses, El Melekh Ne'eman alone only, no English fallback, the silent gate and no stray Psalm 24.",
+    "runtime-verification.json status is pass. Comparisons are per unit and per language word hashes, in documentary mode and onward."
+  ],
+  "limitations": [
+    "Only Read was used. No build, schema validation, refdb scope resolution or test run was executed. I checked that the new tests exist and are coherent, not that they pass.",
+    "opensiddur/exporter/refdb.py (UNIT_CONTAINED_BY, find_end_of_mapping) was not opened. The depth-guard assessment assumes the component-count scope rule.",
+    "I did not count the 17 new bilingual modules, and I did not confirm by directory listing that shacharit_el_melekh_neeman.xml is gone. I checked only that neither index references it.",
+    "The English XML files and the remaining Hebrew unit files were not reopened this round. Earlier accepted encodings were not re-reviewed.",
+    "runtime-verification.json compares whole-unit word hashes. It does not by itself show prayer-part scope extents inside units.",
+    "I judged the citation crops for structure (opening verse only, no range). Hebrew source accuracy, including the human 1–7 snippets, the Emet directive wording and the gershayim, was not assessed and stays pending."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "fb0a56ae-95a4-41e3-a4cd-15f7a87447d9"
+  }
+}

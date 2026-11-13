@@ -1,0 +1,52 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "decisions": [
+    {
+      "scan": "s108",
+      "ours": "אֱלֹהֵינוּ.",
+      "theirs": "אֱלֹהֵינוּ",
+      "verdict": "independent",
+      "exact_text": "אֱלֹהֵינוּ",
+      "evidence": "I checked this in s108-band1.png, line 1, and again on the full page s108.jpg, second line from the bottom. Between the final vav of אֱלֹהֵינוּ and the ח of חֶמְלָה there is only a word space, with no dot at the baseline or at mid-height. The first sentence-ending mark I can see is the sof-pasuq after עָלֵינוּ on the next line. The period in 'ours' isn't in the source.",
+      "confidence": "high"
+    }
+  ],
+  "remaining_uncertainties": [
+    {
+      "scan": "s108",
+      "key": "ahavah_rabbah_begin",
+      "word": "גְדוֹלָה",
+      "mark": "dagesh in gimel",
+      "evidence": "Neither the band nor the full page shows a clear dot inside the bowl of the gimel. There is a dot above, near the top of the gimel and vav, but it sits where the holam of דוֹ would go, so I can't call it a dagesh. Low confidence that the dagesh is absent. A crop of about 4x the native pixels (band x≈1000–1060 in original coordinates) is needed to settle it."
+    },
+    {
+      "scan": "s108",
+      "key": "ahavah_rabbah_begin",
+      "word": "בְךָ",
+      "mark": "dagesh in bet (word at the line end, last word on the page)",
+      "evidence": "The word at the left edge of line 2 has a dark, thick ink blob at the bet. At this resolution I can't tell a dagesh inside the bet from the heavy ink. The sheva below and the final-kaf qamatz are visible. Still unresolved, so it needs a high-zoom crop."
+    },
+    {
+      "scan": "s108",
+      "key": "ahavah_rabbah_begin",
+      "word": "וִיתֵרָה",
+      "mark": "hiriq under vav",
+      "evidence": "In both images there is a small dot at the baseline below the first vav, set apart from the tsere under the tav. It looks like a hiriq, so I read וִיתֵרָה, but the dot is faint. Medium confidence it is present. Hold it for confirmation at zoom rather than filling it in from the expected spelling."
+    }
+  ],
+  "additional_clear_corrections": [],
+  "notes": [
+    "Scope: on s108 I looked only at the Ahavah Rabbah opening at the bottom of the page: the two lines from אַהֲבָה רַבָּה to בְךָ. Everything above it (the end of the Yotzer, ending הַמְּאוֹרוֹת:) is out of scope.",
+    "s109: the packet lists no differences or uncertainties. The band holds the English translation only ('With great love hast Thou loved us…'). There is no Hebrew in this band to judge, and the archaic wording ('hast Thou') is printed as-is and should be kept that way.",
+    "None of the four questions already with the human (junction rubric on 112; MiKhamokha cantillation and Divine Name holam on 116; זכרוננו/ופקדננו on 120; Jerusalem lower points on 124) fall on s108 or s109. Nothing here is marked pending-human, and I didn't try to answer any of them.",
+    "Limitation: I could only view the images at the resolution they were displayed (about 0.9x of the original). I couldn't zoom or crop, so the three dagesh/hiriq questions stay open. A high-resolution crop of each word should settle them."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "4bc7eae9-424b-48c6-90b6-48ba10f8cbf7"
+  }
+}

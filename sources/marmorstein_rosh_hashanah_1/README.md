@@ -729,3 +729,27 @@ incomplete expanded service: it does not follow Yotzer. The reusable Hebrew
 module remains available. Proper daily-psalm service placement is deferred
 until that section is assembled; no English is supplied. See
 psalm24_placement_resolution.json for independent source and guideline reviews.
+
+
+Continuation from physical PDF scans108–125 adds17bilingual modules from
+Ahavah Rabbah through the complete silent Amidah, stopping before the reader's
+repetition on124/125. The expanded spine follows the same shared sequence.
+Existing canonical prayers and Biblical identities are reused; repeated source
+occurrences receive structural contexts. No absent English is supplied. The
+existing Hebrew-only ElMelekhNeeman is reused, with its no-minyan condition.
+
+Independent English comparison covers2,835words across17units plus3citations.
+Seven complete English leaves (111,113,115,117,119,121,123) are accepted, bringing
+the total to100/355. Hebrew is still draft: numbered human snippets1–7 and
+remaining fine marks await adjudication.108/109 and124/125 are partial leaves.
+Actual blind Claude Opus5.5 image readings, configured medium effort (self-report
+recorded separately), frozen primary readings, nonblind image follow-ups, and
+structural review/resolutions are retained as separate evidence. No blanket
+Hebrew/source acceptance follows from structural approval or exporter checks.
+
+The new verse/chapter contexts and bounded quotations preserve enclosing prayer
+scopes. Local editorial commentary on unspecified (מלכנו) targets the variant
+anchor; that source parenthesis is not assigned a Shabbat condition. Explicit
+Shabbat clauses remove brackets when resolved and keep words only on Shabbat.
+Eight Shabbat/quorum/recitation combinations and68source-word/transclusion
+comparisons pass. Source typos retain sic/corr; citation parentheses are omitted.
