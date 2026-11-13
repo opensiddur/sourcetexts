@@ -761,3 +761,38 @@ Mi Khamokha accents and holam, defective זִכְרֹנֵֽנוּ וּפִקְד
 Jerusalem with qamatz/meteg/CGJ/hiriq. Dagesh confirmations and meteg hosts are
 recorded individually. Other fine-mark adjudication and Hebrew review
 reconciliation remain pending; the accepted total remains 100/355.
+
+
+Continuation from physical PDF scans 124–145 adds 28 bilingual modules, from
+the reader's repetition below the rule on 124/125 through the complete Adirei
+Ayummah hymn on 144/145. It stops before ובכן דיין אמת אתה / Lael Orekh Din.
+The printed weekday/Shabbat layout is interleaved through source-layout ranges;
+the expanded sequence joins coherent prayers, selects one route and inserts
+canonical refrains at the five printed resume cues. The existing Etten Lefoali
+canonical identity is reused. No missing English is supplied.
+
+Actual blind readings cover all eleven facing pairs, with frozen primary
+readings and page comparisons retained separately. The prayer-text English
+corpus contains 3,106 words; local differences are recorded, not silently
+normalized. All new modules remain draft. Acceptance stays at 100/355: further Hebrew consonants/pointing,
+per-line speaker sigla and review reconciliation remain pending. All four human source answers are recorded.
+
+Successive independent guideline/alignment/order reviews and resolutions are
+retained. Final structural approval is for draft handling only. Five source
+incipit cues have their own local navigation scopes, separate from canonical
+stanzas. Documentary output includes each once; expanded output replaces them
+with the canonical refrains. Both parenthetical Kol Yoshvei passages use a Metz exclusion;
+the repeated omission is explicitly inferred from matching parentheses, per the
+human reading. The local melody description has no generic Reader identity and cannot replace unrelated role labels.
+
+Checks cover 447 XML files, 182 compiled unit/stanza language comparisons,
+eight Shabbat/quorum/recitation cases, and balanced source ranges. Literal URN
+links are fixed separately in processor PR301; the digitization branch contains
+only importer support, identities, source evidence and generated projects.
+
+Frankfurt and Metz use the existing open `opensiddur:rite` feature type, with
+local features `frankfurt_am_main` and `metz`. Eight regional/Shabbat cases pass.
+The explicit human Aafir opening is preserved over a later model disagreement.
+The source German transcription slip גזייך is corrected to גלייך against the
+image, while the printed דאַ: is retained. New draft exports and their hashes
+are recorded in `morning_s124_s145_validation.json`.
