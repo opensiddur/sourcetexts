@@ -164,6 +164,66 @@
       },
       "raw_response_sha256": "4f9d4f25fcd4382ea603647e53cef328346e4c5f950efa92d4e15642710fcdaf",
       "status": "Actual structural review; source words remain pending."
+    },
+    {
+      "file": "independent/morning_s96_s109_source-a.json",
+      "sha256": "ae92e020f1d706c7a69b859460721ce577c174371ca4597535a51ce01403c2d4",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "06a85128-5919-499e-8cc9-9817cabfcabd"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "effort": "low"
+      },
+      "raw_response_sha256": "4e0ea3ced64b29ec1c1703fb480805b67bc5ad04a4755eb7b657b67521e7d3d1",
+      "status": "Actual nonblind image-versus-XML review. Confirms human readings; remaining suggested corrections are unadjudicated candidates."
+    },
+    {
+      "file": "independent/morning_s96_s109_source-b.json",
+      "sha256": "745f98c543e165d0318592be40c71d3f926f7ac223f6e348e43668fb3149cee2",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "b6935996-0070-419d-b3e5-427066aa0c25"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "effort": "low"
+      },
+      "raw_response_sha256": "d64c54613174e95ceb0c1a943607c0807be4feef39a851b71db9d98c4d40d045",
+      "status": "Actual nonblind image-versus-XML review. Confirms human readings; remaining suggested corrections are unadjudicated candidates."
+    },
+    {
+      "file": "independent/morning_s96_s109_source-c.json",
+      "sha256": "7f898ecb4f398d024ad406fd1b2b20f09a62b468e076d1bc64f7f380d5320b93",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "bc81a605-fec9-465a-8c11-93e1ce2dacf5"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "effort": "low"
+      },
+      "raw_response_sha256": "50456a2fa557451069e770f3ca058306c03e21d5670d6a61020822891b915186",
+      "status": "Actual nonblind image-versus-XML review. Confirms human readings; remaining suggested corrections are unadjudicated candidates."
+    },
+    {
+      "file": "independent/morning_s96_s109_focus-108.json",
+      "sha256": "f95cce16cf7e11a0ac67c1785d96929d17bd4e5c8e97aa6b1b1fd0ceb7822c31",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "435e0c69-2511-4fc4-87db-879123e4d9a5"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "effort": "low"
+      },
+      "raw_response_sha256": "855cc2774eae913dd7778e1073de0e57c0084f13152de0b0574917f743b95684",
+      "status": "Focused crop review. Uncertainties retained; no source changes accepted from this report."
     }
   ],
   "blind_primary_frozen_sha256": "34f3705f18b42d7479c95b6df14fc75da896ef73c2370ca573292f3190bd4963",
@@ -173,6 +233,7 @@
   "interrupted_invocations": [
     "independent-b",
     "independent-b1",
-    "independent-b2"
+    "independent-b2",
+    "human_1_to_5/focus-96 (signal 15; no report)"
   ]
 }

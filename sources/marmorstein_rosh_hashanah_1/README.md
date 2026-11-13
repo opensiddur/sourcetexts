@@ -713,9 +713,10 @@ appendix on scan 351, outside this installment. Next: half Kaddish on 96/97.
 Draft continuation from physical PDF scan 96 through the Yotzer blessing on
 108/109 adds twenty bilingual modules. The two festival poems, weekday/Shabbat
 alternatives and conditional variant notes are encoded and structurally reviewed.
-This batch is NOT accepted: five numbered human source questions and remaining
-faint marks in the actual independent reports await adjudication. All fourteen
+All five numbered human source questions have been resolved and applied.
+This batch is NOT accepted: remaining source-image findings in the actual
+independent reports await adjudication. All fourteen
 leaves remain partial for acceptance purposes; total accepted remains93/355.
-The Ofan identity spelling is provisional pending its opening word's vowels.
+The Ofan opening is confirmed as אִהֵל; its identity is khevodo_ihel.
 Next primary text: Ahavah Rabbah on108/109. Old scan57/90ambiguities remain
 separate; no missing translation is supplied.
