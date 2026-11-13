@@ -696,3 +696,15 @@ The refreshed post-adjudication previews remain 69 pages documentary and
 75 pages expanded. Forty exact bilingual comparisons, reference/name/feature/
 registry checks, HTML links and the seven-word source-change check pass.
 Both PDFs are visually inspected after the final pointing corrections.
+
+
+Continuation from physical PDF scan 86 through Yishtabbach on 96/97 adds 13
+reusable source units and extends the shared expanded morning sequence. Both
+languages on 94/95 are columns on individual leaves. All 16 numbered human
+questions are recorded; 15 remains uncertain because the user could not settle
+the probable meteg in הלכו. That character is encoded with cert="low", and its
+verse and physical leaf 90 are not accepted. Nine new full leaves are accepted:
+total 93/355. The older German glyph on scan 57 remains low-certainty. New source
+printing errors use sic/corr. No English Exodus 15:19 has been supplied. The
+expanded closing 15:18 is an explicit canonical repeat. Psalm 24 is the existing
+appendix on scan 351, outside this installment. Next: half Kaddish on 96/97.
