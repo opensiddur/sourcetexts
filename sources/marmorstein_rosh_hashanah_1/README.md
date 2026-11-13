@@ -766,8 +766,9 @@ reconciliation remain pending; the accepted total remains 100/355.
 Continuation from physical PDF scans 124–145 adds 28 bilingual modules, from
 the reader's repetition below the rule on 124/125 through the complete Adirei
 Ayummah hymn on 144/145. It stops before ובכן דיין אמת אתה / Lael Orekh Din.
-The printed weekday/Shabbat layout is interleaved through source-layout ranges;
-the expanded sequence joins coherent prayers, selects one route and inserts
+The documentary sequence presents complete weekday and Shabbat alternatives,
+with a separate continuous file per piyyut and original page/facsimile markers
+inside each work. The expanded sequence selects one route and inserts
 canonical refrains at the five printed resume cues. The existing Etten Lefoali
 canonical identity is reused. No missing English is supplied.
 
@@ -796,3 +797,39 @@ The explicit human Aafir opening is preserved over a later model disagreement.
 The source German transcription slip גזייך is corrected to גלייך against the
 image, while the printed דאַ: is retained. New draft exports and their hashes
 are recorded in `morning_s124_s145_validation.json`.
+
+
+The user’s whole-work correction supersedes the earlier page-layout
+interleaving. `human_continuous_shabbat_weekday_piyyutim.json` retains the old
+and corrected order. `continuous_piyyutim_validation.json` records six bilingual
+whole-work comparisons and both known documentary Shabbat selections. The
+focused independent structural review approves the arrangement; source-reading
+and quotation-scope follow-ups remain separate and do not gain acceptance.
+
+Continuation through physical PDF scans144–161 adds 18 modules / 27 language
+witnesses, from Uvekhen Dayyan Emet Attah and Lael Orekh Din through the
+Torah-service prelude. Six consecutive Hebrew pages 150–155 have no English
+counterpart. Their missing translations stay absent. The actual blind pair
+readings, frozen primary and structural follow-up are archived under
+`independent/morning_s144_s161/`, with image and response hashes in
+`morning_s144_s161_review_provenance.json`. Human corrections and the unreadable
+Fürth abbreviation remain distinguished from model proposals.
+
+The next larger installment covers 22 leaves, PDF 162–183, from taking out the
+Torah through the haftarah blessings. It adds 22 bilingual modules / 44 witnesses,
+bringing the three book projects to 518 XML files. All prayer identities are reused;
+local occurrence and bounded quotation contexts distinguish repeated witnesses.
+A new instruction role denotes the person called up to the Torah, distinct from
+the cantor. The shared expanded order supplies five weekday or seven Shabbat
+aliyot with their blessings, Maftir, and the haftarah. It repeats the Thirteen
+Attributes and Vaani three times without their documentary ג״פ cues. Known
+Shabbat settings select the final blessing additions and join וְיִשְׂרָאֵל correctly.
+
+`torah_s162_s183_review_provenance.json` records eleven independent blind pair
+readings and eight fresh biblical-image readings for the faint cantillation.
+The first primary overview missed those signs; its frozen record is preserved,
+and the detailed candidates are explicitly draft. Consonants, pointing, qere
+notes, ritual order and source-to-TEI decisions have distinct evidence records.
+No source accuracy is accepted from passing compiler checks or structural review.
+Acceptance remains 100/355; additional fine readings and numbered human snippets
+remain open. Next new source: PDF 184, סדר התקיעות / Shofar service.

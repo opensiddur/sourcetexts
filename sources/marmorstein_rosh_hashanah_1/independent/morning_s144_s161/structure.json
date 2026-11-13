@@ -1,0 +1,129 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "approved": false,
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "high",
+      "category": "structure/pagination",
+      "summary": "None of the new units records a page break, so the Modim page-break design doesn't work.",
+      "evidence": "Every fragment in the new units (scans 144–161) has page_start:false. The generated Hebrew files lael_orekh_din.xml (pp. 58–59), repetition_qedushat_hayom.xml (pp. 64–65) and repetition_modim.xml (pp. 65–66) contain no tei:pb. The Hebrew index.xml has no pb between n=37 and the s351 appendix. repetition_modim.xml has the zero-text milestone modim/modim_end, but no pb n=\"66\" follows it. The XML also splits Modim into two tei:p elements, but the scan prints it as one running paragraph (…וְעַל | נִסֶּיךָ…).",
+      "action": "Set page_start on the first fragment of each new printed page (59–69) in both languages, and regenerate. In Modim, keep the 154 part and the 155 continuation in one documentary paragraph, with pb n=66 right after the modim_end milestone and before נִסֶּיךָ. Then check that the documentary range modim/modim → modim_end puts the pb in the second part."
+    },
+    {
+      "id": "F2",
+      "severity": "high",
+      "category": "source-reading dispute (scan 146, Silluq 'earth' part)",
+      "summary": "Some stored words in the Silluq disagree with my reading of the scan.",
+      "evidence": "Stored 'וְאָז יִפְצְחוּ רִנָּן נַעֲרָץ'; I read 'רֶנֶן בְּעֶרֶץ' on the scan. Stored 'וְיַפְחִיד הוֹרֵי יוֹשְׁבֵי הָאָרֶץ'; I read 'חוֹרֵי', and the English 'princes' supports that. Stored 'שׁוֹפְרוֹת עָרָץ'; I read 'עֶרֶץ'.",
+      "action": "Put these on the pending readings list for human adjudication. Correct them directly if they are confirmed as transcription errors (not printed typos). Do not guess from familiar liturgy."
+    },
+    {
+      "id": "F3",
+      "severity": "medium",
+      "category": "source-reading dispute / role label (scan 146)",
+      "summary": "A small role label before the second מה אדיר שמך seems to be missing.",
+      "evidence": "On the scan I see a small superscript ק׳ before the second 'מָה אַדִּיר שִׁמְךָ בְּכָל הָאָרֶץ'. The second Ps 8:10 fragment in readings.json has no speaker.",
+      "action": "Check against the image. If confirmed, add speaker {abbr:'ק׳', expan:'קהל', role:congregation} to that fragment."
+    },
+    {
+      "id": "F4",
+      "severity": "high",
+      "category": "source-reading dispute / note metadata (scan 156 footnote)",
+      "summary": "The stored Fürth petition-order footnote has clear misreadings, is tagged as Hebrew, and isn't marked as pending.",
+      "evidence": "Stored: 'פאן העבר מן ד״ח … אן פאלגענדע ה״לונג … כתבנו בספר חיים וכיות … הצמח לנו. חננו.' My reading of the scan: 'פֿאָן היער אָן ד״ה אבינו מלכנו אין פֿאָלגענדער ארדנונג געבעטעט … כתבנו בספר חיים, זכיות, פרנסה …'. The ending looks like an abbreviation, not 'חננו.'; I can't read it reliably. The note sits under citations.he with no language marker. Other Judeo-German notes use de-Hebr.",
+      "action": "Mark the note uncertain/pending until human snippet 1 settles it. Set its language to de-Hebr. Keep the target at avinu_malkenu/mena. Don't build a variant order from this text yet."
+    },
+    {
+      "id": "F5",
+      "severity": "medium",
+      "category": "quotation scope (partial verses)",
+      "summary": "Several partial verses are attributed and given local milestones as if they were whole verses.",
+      "evidence": "'מָה אַדִּיר שִׁמְךָ בְּכָל הָאָרֶץ' is attributed to bible:psalms/8/10, but that verse begins with יְהוָה אֲדֹנֵינוּ. In the Kedushah, 'וְקָרָא זֶה אֶל זֶה וְאָמַר' and 'קָדוֹשׁ…' are two separate quotations, each attributed to the whole of isaiah/6/3. 'בָּרוּךְ כְּבוֹד יְיָ מִמְּקוֹמוֹ' is attributed to the whole of ezekiel/3/12, but it is only the end of that verse.",
+      "action": "Use half-verse or declared verse-part URNs, adding entries to subverse.py where needed. Name the local verse milestones to match. Psalms 113:2 and 121:2 in the Kaddish, Ps 146:10, Isa 5:16 and Num 6:24–26 are whole verses and are fine."
+    },
+    {
+      "id": "F6",
+      "severity": "medium",
+      "category": "conditioned prayer words / whitespace",
+      "summary": "In the Qedushat ha-Yom closing blessing, the Shabbat insertion leaves a stray space after a prefix.",
+      "evidence": "repetition_qedushat_hayom.xml: 'מְקַדֵּשׁ  <conditional>הַשַּׁבָּת וְ <endConditional/> יִשְׂרָאֵל'. When the condition is true this renders 'הַשַּׁבָּת וְ יִשְׂרָאֵל', with the conjunction וְ cut off from ישראל. When false, it leaves double spaces.",
+      "action": "Remove the trailing and leading spaces so וְ attaches directly to the following word. The parenthesis handling itself is correct: the literal parentheses are gone, type=marked is used, the inclusion is shabbat=true, and (מַלְכֵּנוּ) stays literal."
+    },
+    {
+      "id": "F7",
+      "severity": "medium",
+      "category": "naming / condition URN",
+      "summary": "The variant name urn:x-opensiddur:condition:torah/ein_kamokha_prelude doesn't mirror any text URN.",
+      "evidence": "JLPTEI-3 says a variant URN mirrors the text URN of the passage that varies (for example condition:haggadah:maggid/…). The prelude transcludes prayer:ein_kamokha and prayer:av_harachamim/heitivah. 'torah' is neither a namespace nor a text path.",
+      "action": "Rename it to a mirrored form, for example urn:x-opensiddur:condition:prayer:ein_kamokha/prelude. Use the same name in the documentary and expanded projects and in features documentation. The open variant mechanism itself is used correctly."
+    },
+    {
+      "id": "F8",
+      "severity": "medium",
+      "category": "role notes (Lael Orekh Din)",
+      "summary": "Role labels appear on only three of the 22 lines, so the speaker for most lines is ambiguous.",
+      "evidence": "In lael_orekh_din.xml, only lines /1 (חזן.), /2 (קהל.) and /20 (קו״ח) carry role descriptions. On the scan, חזן and קהל are column headings for every row; קו״ח is a one-line exception (I read קו״ח, not צו״ח). Without any other label, /21–/22 read as if they continue קו״ח.",
+      "action": "Mark the alternating roles explicitly on each line (editorial, flagged as such), or restore the reader/congregation role after /20. Keep the printed labels in their printed positions."
+    },
+    {
+      "id": "F9",
+      "severity": "low",
+      "category": "note typing",
+      "summary": "Editorial remarks are stored the same way as native source footnotes.",
+      "evidence": "The English remarks about parenthetical הוא (uvekhen_lekha_taaleh_qedushah) and מלכנו (repetition_qedushat_hayom) are stored as citations with note_type 'commentary', the same as native source notes.",
+      "action": "Type them as editorial, so they can't be mistaken for source footnotes."
+    },
+    {
+      "id": "F10",
+      "severity": "low",
+      "category": "documentary layout (scan 160 Kaddish)",
+      "summary": "The congregation responses are printed on the same line as the preceding Amen, but are encoded as separate paragraphs.",
+      "evidence": "The scan prints קבל / יהי שם / עזרי run-in after …וְאִמְרוּ אָמֵן. The XML gives each its own tei:p. The source paragraph numbers also skip (2, 4, 6, 7…).",
+      "action": "Optional: keep each response in the same paragraph as the line it follows, or record the layout. The roles and the quotation milestones for Ps 113:2 and 121:2 are correct and terminated."
+    },
+    {
+      "id": "F11",
+      "severity": "low",
+      "category": "stale metadata",
+      "summary": "Two coverage notes in readings.json are out of date.",
+      "evidence": "coverage_notes says '93/355 … half Kaddish is next'. expanded_coverage_note says the expanded order 'reaches the end of the silent Amidah … repetition not yet included'. Both are contradicted by the current orders and by the 100/355 count.",
+      "action": "Update both notes to the current coverage (morning selection through the Torah prelude; scroll removal on 162/163 next)."
+    },
+    {
+      "id": "F12",
+      "severity": "low",
+      "category": "quoted verses (Silluq English)",
+      "summary": "Two phrases the English prints in quotation marks aren't encoded as quotations.",
+      "evidence": "“All the earth is full of His glory” and “sing to the Lord, all the earth” have no seg/source. The Hebrew counterparts are also unmarked.",
+      "action": "Optional: mark both as bounded partial-verse quotations, using verse-part scope."
+    }
+  ],
+  "checks": [
+    "Read the JLPTEI-3 sections on URN scope and terminators, sub-verse scope, conditional notes, settings (including the open opensiddur:variant), kinds of rubric, how an undecided scope is set off, and conditions on a running order.",
+    "Read the readings.json new units: uvekhen_dayyan_emet_attah, lael_orekh_din, uvekhen_lekha_taaleh_qedushah, melekh_bemishpat_yaamid_aretz, repetition_qedushah, repetition_qedushat_hashem, repetition_qedushat_hayom, repetition_avodah, repetition_modim, repetition_modim_derabbanan, repetition_hodaah_tail, repetition_birkat_kohanim, repetition_sim_shalom, the Hebrew Avinu Malkenu petitions 26–38 plus all English petitions and the footnote, and morning_full_kaddish.",
+    "Read the source_order tail (repetition through the daily-psalm appendix), the expanded_order tail, and the documentary_instructions for scans 144–161.",
+    "Read the generated Hebrew index.xml tail and these Hebrew files: lael_orekh_din, repetition_qedushat_hayom, repetition_modim, morning_full_kaddish. Read the English melekh_bemishpat_yaamid_aretz and the expanded index.xml tail.",
+    "Viewed scans s144, s146, s152, s154, s156 and s160.",
+    "Confirmed: s144 starts the new material only with וּבְכֵן דַּיַּן אֱמֶת אַתָּה; the ark open/close around Lael is in the right place; the ע״ס א״ב description is kept; the Silluq English stops at the merit part and its truncated note ends at 'are' with nothing added; the Hebrew mystical tail has no English pair; Kedushah through Sim Shalom is Hebrew-only and draws on no Birnbaum or silent-Amidah English.",
+    "Confirmed: the repetition units use contextual siddur:rosh_hashanah/shacharit/repetition/* URNs, with canonical prayer:amidah/* identities only in @source; Avinu Malkenu reuses existing petition identities for all 38 petitions in printed order.",
+    "Confirmed: in both orders the Sabbath omission of Avinu Malkenu also covers the ark open/close; the expanded Kaddish is gated on minyan=true; the expanded Torah prelude is gated on minyan plus the variant, so an unknown choice keeps it with a local label; the documentary prelude uses the source note as its conditional rubric; Psalm 24 is absent from the expanded order and stays in the documentary appendix.",
+    "Confirmed: the documentary order is Modim part 1 → Modim de-Rabbanan → Modim continuation → hodaah tail; the expanded order is the whole Modim → Modim de-Rabbanan → tail.",
+    "Confirmed: the Kaddish has a reader label on Yitgaddal and congregation labels on its three responses, matching s160; the quotations of Ps 113:2 and 121:2 have bounded chapter/verse milestones that are terminated."
+  ],
+  "limitations": [
+    "No validators, importer, exporter or compiler were run; there was no shell or search tool, only file reads. Resolved URN ranges, registry existence of the referenced prayer:amidah/* and kaddish/* identities, and schema validity were not tested.",
+    "Scans s145, s147–s151, s153, s155, s157–s159 and s161 were not viewed. The s149 English truncated note, the s150 merit/mystical boundary, the s155 Modim continuation and the s161 English instruction were checked only against the stored data, not the image.",
+    "The torah_ein_kamokha, torah_av_harachamim and morning_full_kaddish_preface units and their XML were not read, so their verse attributions and terminators are unreviewed. Of the new units, only these XML files were opened: lael_orekh_din, repetition_qedushat_hayom, repetition_modim, morning_full_kaddish, and the English melekh_bemishpat_yaamid_aretz.",
+    "Readings were spot-checked only. There was no full transcription comparison and no adjudication of vowel points, meteg or other fine marks; F2–F4 are reading disputes for human adjudication, not accepted corrections.",
+    "All content remains DRAFT; 100/355 accepted is taken from the request and not verified. No claim of source accuracy."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "4d0fe86a-aea1-4e0b-b131-ea2ffd934f8e"
+  }
+}
