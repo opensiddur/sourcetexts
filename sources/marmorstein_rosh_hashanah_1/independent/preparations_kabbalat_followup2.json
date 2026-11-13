@@ -1,0 +1,63 @@
+{
+  "source_fidelity": {
+    "status": "pass (unchanged; relying on the earlier pass in /tmp/mahzor-kabbalat-followup.json)",
+    "findings": [
+      "I did not re-audit the leaves. This closure step did not touch the source text. The combined-blessing leaf (prayer:hadlaqat_ner_yom_tov/shabbat) is still the only target of the Shabbat branch (index.xml:492; readings.json:6076). The ordinary leaf is still the only target of the weekday branch (index.xml:465; readings.json:6046). The runtime report has combined_words_present=true exactly where the Shabbat branch should be on (the undated and rh_shabbat_before_sunset cases) and false everywhere else.",
+      "The earlier optional items are still open and are not required: the trc resp still says 'transcluded' even though the text is now copied, there is no pb n=585 or facs, and there is no note naming the master copy. I did not re-check them in this review."
+    ]
+  },
+  "alignment": {
+    "status": "pass (unchanged; relying on the earlier pass)",
+    "findings": [
+      "The runtime still shows no English for the combined wording: english_ordinary_light=0 in rh_shabbat_before_sunset and in every Shabbat or off-occasion case. It is 1 only where the weekday branch or the undated build applies (undated, eruv_required, eruv_not_required, rh_weekday_night). Nothing pairs English text with prayer:hadlaqat_ner_yom_tov/shabbat."
+    ]
+  },
+  "guideline_adherence": {
+    "status": "pass",
+    "findings": [
+      {
+        "severity": "resolved",
+        "file": "specs/SIDDUR_URN_SCHEME.md",
+        "line": 120,
+        "evidence": "The bold rule now reads 'Never contains an occasion, service or rite, except to distinguish a complete wording variant as described below.' Lines 133–143 define the exception (the words must actually differ, the URN is registered as kind: variant, and calendar names, placement or edition alone are not enough). Lines 147–148 state that a kind: variant child is the documented exception to the nesting rule. This closes the earlier recommended finding."
+      },
+      {
+        "severity": "optional (cosmetic)",
+        "file": "specs/SIDDUR_URN_SCHEME.md",
+        "line": 154,
+        "evidence": "'This is the same rule as \"no occasion in the path\"' is unqualified. It is not contradictory, because the exemption appears six lines earlier, but '(subject to the wording-variant exception)' could be added. Line 140 is wrapped longer than the lines around it. Neither point is a defect."
+      }
+    ]
+  },
+  "expanded_order": {
+    "status": "pass: the required orphaned heading/instruction defect is closed; no required defect remains",
+    "findings": [
+      "The outer gate now equals the union of the two branch gates. readings.json:5900–5977, emitted at index.xml:356–417, is all(any(all(any(A,B)), C)), where A = Elul 29 ∧ ¬secular-day 6; B = rosh-hashana 1 ∧ shabbat=false ∧ maariv=true; C = Elul 29 ∧ secular-day 6 ∧ bayn-hashmashot=false. The weekday gate (readings.json:5986–6038; index.xml:425–462) is all(any(A,B)). The Shabbat gate (readings.json:6053–6068; index.xml:472–489) is all(C). The outer gate is logically identical to weekday ∨ Shabbat. The heading (index.xml:419–420) and the instruction (index.xml:421) therefore appear only when at least one blessing appears.",
+      "readings.json and index.xml agree term for term, including bayn-hashmashot=false at readings.json:5972/6065 and index.xml:410–412/485–487. The generated output matches its source.",
+      "The runtime report confirms the fix. rh_shabbat_night (2026-09-11 22:00, Maariv): heading=false, instruction=false, shabbat_light=false, english_ordinary_light=0, refrains=11, mourner_kaddish=true, so full Kabbalat remains. rh_shabbat_morning (2026-09-12, Shacharit): heading=false, instruction=false. rh_shabbat_twilight (2026-09-11 19:02:18, Minchah): heading=false, instruction=false, combined=false, so the twilight exclusion takes effect. rh_shabbat_before_sunset (15:00): heading, instruction and combined_words all true, english_ordinary_light=0. Weekday and undated cases: heading and instruction true. Ordinary Shabbat (2026-09-18) cases: heading and instruction false, with Kabbalat present.",
+      "RH1 weekday Shacharit and Minchah have no runtime case, but the logic covers them: A fails because the date is not Elul 29, B fails because maariv=false, and C fails because the date is not Elul 29. So the heading is absent. No gap.",
+      "Early Friday Maariv before sunset on Elul 29 (shabbat aggregate still false): C is true, while A and B are false, so the page shows the combined blessing only, with no ordinary blessing and no orphan. This is consistent with the confirmed design.",
+      "Optional (cosmetic): the outer gate's redundant nesting all(any(all(any(A,B)),C)) could be flattened to any(A,B,C). That would be easier to read but would not change behaviour. The current form comes mechanically from 'union of the two branch condition lists', which has the advantage of keeping the gate in sync with the branches if they change.",
+      "Info, not a defect: the weekday branch A has no bayn-hashmashot exclusion, so the ordinary blessing still appears at weekday Elul 29 twilight. On a festival that does not fall on Shabbat, kindling from an existing flame is permitted after sunset, so this is acceptable. Change it only if the editors want twilight treated the same on weekdays and Shabbat."
+    ]
+  },
+  "limits": [
+    "I read only index.xml:340–508, readings.json:5900–6099, SIDDUR_URN_SCHEME.md:115–162, the runtime report and the prior followup. I ran no compiler, validator or tests.",
+    "The runtime report carries no file hashes or timestamps, so I cannot prove it was generated from the current index.xml. Its results do match exactly what the current gate logic predicts.",
+    "The runtime records heading, instruction and combined-words presence as booleans only. It does not give the compiled word sequence, so the combined text's exact output rests on the earlier file-to-file check.",
+    "I assumed secular-day=6 means civil Friday and that bayn-hashmashot is computed from the declared time and location. The twilight case (19:02:18 Jerusalem, after sunset on 2026-09-11) returning false supports this, but I did not read features.yaml.",
+    "The rest of the scheme document, the registry checker's allowed kinds, reviews.json and all the unchanged leaves were out of scope and were not re-checked."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "3caf0c0b-fa12-4c2e-baeb-206ecd4a64a3"
+  },
+  "file_sha256": {
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/machzor_expanded-opensiddur-he/index.xml": "51a95e9ecaf9650cb61f55060ba6708cbddca665eab5a07b3016e7dd13b038d5",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/specs/SIDDUR_URN_SCHEME.md": "e97800b6ae06286a2ae3421f04ed9e9debd67c55861ad4c3a7316e6e097b9886",
+    "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/readings.json": "e04c8380d058a59b82347726314b26bf4801eefe25c03eee32713dec5a2f53e8",
+    "/tmp/mahzor-kabbalat-verification.json": "fcef40683632483e1d5223e1e96a0bb9c7240042e8355bb72b7483b688e3fcd4"
+  },
+  "files_unchanged_during_review": true
+}

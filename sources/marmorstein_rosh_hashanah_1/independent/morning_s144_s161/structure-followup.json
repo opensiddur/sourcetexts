@@ -1,0 +1,74 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "role": "independent read-only structural reviewer (focused follow-up to /tmp/mahzor-s144/structure.json)"
+  },
+  "approved": true,
+  "findings": [
+    {
+      "id": "N1",
+      "severity": "medium",
+      "category": "quotation scope: older partial verses in a whole work that is now active",
+      "summary": "The new rule that a local context never stands in for a whole canonical verse holds in the Qedushah and the Silluq. It does not yet hold in shemo_mefoarim.xml. That file is now transcluded as a complete work in the documentary Shabbat branch.",
+      "evidence": "In shemo_mefoarim.xml, each of these clauses carries a verse-level @source and a chapter/verse milestone only, with no half-verse or verse-part: אֶקְרָא לֵאלֹהִים עֶלְיוֹן → psalms/57/3 (only the first half); יְיָ מָלָךְ תָּגֵל הָאָרֶץ → psalms/97/1 (the Silluq now cites the same words correctly as 97/1/a); זֵכֶר עָשָׂה לְנִפְלְאוֹתָיו → psalms/111/4; יִזְכֹּר לְעוֹלָם בְּרִיתוֹ → psalms/111/5; מַלְכוּתְךָ מַלְכוּת כָּל עוֹלָמִים → psalms/145/13; מִי לֹא יִרָאֲךָ מֶלֶךְ הַגּוֹיִם → jeremiah/10/7; זְכוֹר עֲדָתְךָ קָנִיתָ קֶדֶם → psalms/74/2; זְכֹר יְיָ לִבְנֵי אֱדוֹם... → psalms/137/7; כִּי פָקַד יְיָ אֶת עַמּוֹ → ruth/1/6 (a clause from mid-verse); הַלְלוּהוּ בְּתֵקַע שׁוֹפָר → psalms/150/3. Separately, מֶלֶךְ עַל כָּל הָאָרֶץ אֱלֹהִים זַמְּרוּ מַשְׂכִּיל → psalms/47/8 differs from the verse (the verse has כִּי and lacks עַל) and is not marked as an adaptation. Exodus 15:18 and Job 23:13 are whole verses and are fine.",
+      "action": "Use the same pattern as F5: half-verse URNs where the etnachta fits, and declared VERSE_PARTS (with a part where the remainder starts) for Ruth 1:6 and any other mid-verse clause. Mark Ps 47:8 type=adaptation. This does not block draft approval of the new structure, but the F5 claim is overstated until this is fixed. I have not checked Adderet and Aafir for the same pattern."
+    },
+    {
+      "id": "N2",
+      "severity": "low",
+      "category": "pagination",
+      "summary": "In the Silluq, the native heading 'סלוק.' sits before the page-59 pb, so it is assigned to the previous page.",
+      "evidence": "melekh_bemishpat_yaamid_aretz.xml: <tei:note type=\"description\">סלוק.</tei:note> comes before <tei:p><tei:pb n=\"59\" .../>. The div @facs and biblScope both say page 59 (n145).",
+      "action": "Emit the first-page pb before the heading note, as avinu_malkenu.xml already does (pb before head)."
+    },
+    {
+      "id": "N3",
+      "severity": "low",
+      "category": "markup artifact (Modim)",
+      "summary": "An empty seg sits between the modim_end milestone and pb n=66.",
+      "evidence": "repetition_modim.xml: …<tei:milestone unit=\"prayer-part\" corresp=\"…/modim/modim_end\"/><tei:seg source=\"urn:x-opensiddur:text:prayer:amidah/hodaah/modim\"></tei:seg> <tei:pb n=\"66\"/>…",
+      "action": "Stop emitting the zero-length fragment, or confirm that the importer intends it and that the exporter ignores it. The page break, the scope of the single paragraph and the milestone order are otherwise correct."
+    },
+    {
+      "id": "N4",
+      "severity": "low",
+      "category": "labels when the rite is undefined (expanded Shemo Kol)",
+      "summary": "When the rite is unknown, the expanded Kol refrain can show two Metz labels.",
+      "evidence": "The expanded index wraps poem:shemo_mefoarim/kol_yoshvei in section_expanded_metz_kol_1 with the editorial label 'חוץ ממנהג מיץ / Outside the Metz custom'. That transcluded stanza already contains the native conditional note 'בק״ק מיץ אין אומרים' (shemo_mefoarim_segment_6). The second occurrence uses the canonical stanza again, so it will also bring the native note. Both labels disappear once the rite is known.",
+      "action": "Optional: drop the outer editorial note where the transcluded canonical stanza already has the native one. You described repeating the native label as deliberate; this concerns only the extra editorial label on top of it."
+    },
+    {
+      "id": "N5",
+      "severity": "low",
+      "category": "source dispute (Fürth note, not structural)",
+      "summary": "The stored German reading of the Fürth note is broadly consistent with the crop. One word and the fine marks are not independently settled.",
+      "evidence": "On question1-fuerth-note.png I read …פֿאָן היער אָן ד[?]… at the end of line 1. Stored 'דיא' is plausible, but the last letter and the mark after it are unclear at this resolution. The stored text drops the vowel points visible on פֿאָן, אָן and פֿאָלגענדער, which matches the 'fine marks unresolved' status. I cannot make out the final abbreviation either: א״ז״וו with ז at cert=low is honest, the separate editorial note is properly marked resp=Codex and xml:lang=en, and nothing invents חננו.",
+      "action": "Keep this on the pending source-reading list, separate from structural approval. Do not reopen the human corrections for s144, s148, s151 or s132."
+    }
+  ],
+  "checks": [
+    "Read the prior review (structure.json, F1–F12), human_morning_s144_s161_snippets_1_to_4.json, human_continuous_shabbat_weekday_piyyutim.json and human_s132_shemo_mefoarim_correction.json.",
+    "Viewed question1-fuerth-note.png. The printed incipits, in order, are: מנע מגפה, החזירנו, סלח ומחל, מחה והעבר, מחוק ברחמיך, קרע רוע, שלח רפואה, זכור כי, זכרנו, כתבנו בספר חיים, זכיות, פרנסה, מחילה וסליחה, גאולה וישועה, הצמח לנו, then an uncertain abbreviation.",
+    "Fürth order checked against the current avinu_malkenu.xml (HE documentary). The printed 10–24 are mena, shelach, hachazirenu, selach, mecheh, qera, mechoq, zekhor, zokhrenu, kotvenu_chayyim, zekhuyyot, parnasah, geullah, selichah, hatzmach. Mapping the footnote incipits onto these gives exactly 10, 12, 13, 14, 16, 15, 11, 17, 18, 19, 20, 21, 23, 22, 24. The expanded section_avinu_fuerth_order transcludes them in that order. section_avinu_printed_order keeps printed order under fuerth=false. Both are bracketed by common 1–9 (chatanu…kaleh_dever) and common 25–38 (harem_yisrael…chonnenu), so every route keeps all 38 petitions, each once, by existing canonical URNs. Both branches carry bilingual labels for the undefined case. No petition is omitted on the strength of the abbreviation. The explicit order is sound and is independent of the abbreviation dispute.",
+    "Native Fürth note in avinu_malkenu.xml: standOff note, xml:lang=de-Hebr, target avinu_malkenu/mena, tei:c cert=low on the disputed ז. A separate English editorial note (resp=Codex) says the abbreviation is uncertain. pb n=67 comes before the head and pb n=68 before kotvenu_zekhuyyot.",
+    "Documentary HE index.xml, current: one weekday conditional (shabbat=false, Hebrew editorial label resp=Codex) wraps whole works: the Metz-gated tair_vetaria, the whole adderet_mamlakhah, the Metz-gated tair repeat, melekh_memallet, melekh_zokher_achuz_qeren, the whole aafir_nezer, teshalesh_shofarot, and the melekh_zokher repeat. One Shabbat conditional, using the corrected native German note שְׁמוֹ מְפָאֲרִים, wraps the whole shemo_mefoarim → eten_lefoali_tsedeq_shimon → yishpot_repeat. No page-bottom stanza transclusions, part_N references or duplicate cue transclusions remain in the index.",
+    "shemo_mefoarim.xml: source pb n=52–55 kept. All five shorthand resume cues (adar→shemo, varasham→shomerei, zevach→shapru, yarum→shivtei, motot→shevutenu) are kept as navigation-milestone refs placed after the stanza terminators. The first kol_yoshvei has the native Metz note as its conditional rubric. The second is a local shabbat_refrains context with @source pointing to the canonical stanza and no label.",
+    "Expanded HE index.xml: the order is shared and continuous. In the Shabbat branch, full canonical refrains are supplied exactly at the five source cue points; the Metz-gated Kol appears twice; it ends with yishpot, vehu, eten and the yishpot repeat. The weekday branch matches the documentary weekday sequence. The Modim block, the Avinu Malkenu Sabbath gate, the minyan gate on the Kaddish, and the prelude gated on minyan plus variant condition:prayer:ein_kamokha/prelude all match the documentary and F7.",
+    "repetition_modim.xml: a single tei:p. The modim/modim milestone is followed by the 154 text, then the modim_end milestone, then pb n=66 (n154.jpg), then the continuation, then a terminator. The documentary index transcludes modim → modim_derabbanan → modim_end. The expanded index transcludes the whole Modim.",
+    "subverse.py: VERSE_PARTS declares isaiah 6:3 veqara/qadosh. The docstring says half-verse and verse-part are separate unit spaces and do not terminate each other.",
+    "repetition_qedushah.xml: veqara and qadosh use verse-part milestones with local names, @source isaiah/6/3/veqara and /qadosh, and a verse-part terminator before the verse and chapter terminators. Ezekiel 3:12b uses a half-verse milestone and terminator; by my reading of the accents the etnachta is on גָּדוֹל, so b = בָּרוּךְ…מִמְּקוֹמוֹ. Psalm 146:10 is a whole verse. The roles ח׳ and קו״ח are kept.",
+    "Silluq (melekh_bemishpat_yaamid_aretz.xml): Prov 29:4a, Ps 8:10b ×2, Isa 6:3b (type=adaptation), Ps 97:1a and Ps 96:1b. Each has a half-verse milestone and terminator inside verse/chapter, and the a/b sides match the etnachta positions as I read them. ק׳ congregation is present before the second Ps 8:10b. The human readings וְכַעֲלוֹת שׁוֹפַר מִדַּלֵּי and וְיֻקְדַּשׁ בְּאַחַת מִשָּׁלֹשׁ are present. נַעֲרָץ, עָרָץ and הוֹרֵי are kept as source disputes, not normalized, which I accept as non-structural."
+  ],
+  "limitations": [
+    "Read-only file review. I ran no validators, tests, importer, compiler or schema checks. The figures for tests (99+14 subtests), schema validity and the 158-witness and six complete-work comparisons are taken from the request and not verified.",
+    "test_partial_quotation_closes_subverse_before_unrelated_prayer_words was not read: I could not find the importer test file without a search tool (tests/test_importer.py does not exist). The source_reference_part importer code was also not read. I checked the emitted XML only.",
+    "Not read: the English documentary index, the English Avinu Malkenu and Silluq, lael_orekh_din (F8 roles), repetition_qedushat_hayom (F6 vav join), morning_full_kaddish (F10), the Kaddish/Torah-prelude units, adderet_mamlakhah.xml, aafir_nezer.xml (single Kalir attribution and single acrostic), repetition_tair_repeat, eten_lefoali, yishpot_repeat, the readings.json coverage notes (F11) and the context registry. Claims about these are unverified, except that the expanded index's encoding note reflects the coverage described in F11.",
+    "Lines 840–1299 of the expanded HE index were not read. Only the morning/repetition/Avinu/Kaddish/prelude tail was checked.",
+    "Scans other than the Fürth crop were not viewed in this pass. Fine marks, the final German abbreviation, and the disputes over נַעֲרָץ, עָרָץ and הוֹרֵי remain unresolved source-acceptance matters. Source acceptance stays at 100/355 (as stated in the request); this approval covers draft structure only, and all content remains DRAFT."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "5a1b5f0f-6b3c-4b96-aa9e-1bbd87729149"
+  }
+}

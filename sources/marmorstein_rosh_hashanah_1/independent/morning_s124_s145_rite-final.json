@@ -1,0 +1,55 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "mode": "read-only static review of the current generated XML; no builds, validators, resolvers, compiled comparisons or regional/calendar cases run by me; no source images viewed"
+  },
+  "approved": true,
+  "findings": [
+    {
+      "severity": "medium",
+      "location": "prayerbook_for_the_new_year-heidenheim-1965-he/index.xml:412 (inside documentary_metz_tair_vetaria_source_he :401-413); tair_vetaria.xml:34; adderet_mamlakhah.xml:34-36",
+      "issue": "My earlier recommendation was wrong, and the change made to follow it should be undone. 'חתום בראשי חרוזים אלעזר בירבי קליר' cannot describe Tair. tair_vetaria.xml is a single line (תָּעִיר וְתָרִיעַ … קָדוֹשׁ) with no acrostic, and it has no internal copy of the attribution. The first letters of the Adderet Mamlakhah tercets spell א-ל-ע-?-ר-ב-י-ר-ב-י-ק-י-ל-י-ר (אַדֶּרֶת, לְבֵל, עָלֶיהָ, [וַכְלִילֵי], רָחֲבָה, בְּעַתַּתָּהּ, יְסוֹדוֹת, רֹאשׁ, בְּעָרְמָה, יְרִיעוֹתַי, קַנְיָנוּת, יוֹזְמֵי, לְהָצוֹת, יָהֲרָה, רָם). That is אלעזר בירבי קליר, so the note describes Adderet. Adderet sits outside every Metz scope. With the note now inside the Metz Tair conditional, a metz=true documentary edition loses the attribution while still printing the poem it describes.",
+      "recommendation": "Move :412 out of the Metz conditional. Put it after :413's endConditional (or after :414's closing </tei:div>) and before the adderet_mamlakhah/part_1 transclusion at :415, still inside the weekday shabbat=false scope. That way it prints whenever Adderet prints and never on Shabbat. This is a description-note move only and changes no identity or prayer words."
+    },
+    {
+      "severity": "low",
+      "location": "prayerbook_for_the_new_year-heidenheim-1965-he/adderet_mamlakhah.xml:34 (end) / :35 (start): 'וַכְלִילֵי חָרְכָה'",
+      "issue": "This is outside structural scope and was noticed incidentally. The fourth tercet begins with ו, but the signed acrostic אלעזר calls for ז at this point. This may be a ז/ו misreading, or the printed text may really read this way.",
+      "recommendation": "Add this to the per-line image reconciliation queue for n131/n133. Do not change it without the image."
+    },
+    {
+      "severity": "info",
+      "location": "prayerbook_for_the_new_year-heidenheim-1965-he/index.xml:462 vs :402",
+      "issue": "The Tair rubric ends with a period. The Kol rubric 'בק״ק מיץ אין אומרים' has no terminal punctuation. This may match the print; I did not check.",
+      "recommendation": "Confirm against the n133 image during fine-mark reconciliation."
+    }
+  ],
+  "checks": [
+    "Re-read /tmp/mahzor-s124/rite-structure.json (my previous findings and checks).",
+    "Documentary Frankfurt, he index:373-388. The German direction (:375) is now the tei:note type=\"instruction\" child of documentary_repetition_attah_hu_frankfurt_source_he, ahead of j:all. That makes it a condition rubric printed only while frankfurt_am_main is undecided. Ark open, Attah Hu and ark close (:384-386) are inside the scope, which is balanced within its tei:div. The text keeps גלייך and ניכֿט unchanged. No free-standing copy remains.",
+    "The Shabbat German direction at he :389 is still unconditional, ahead of the weekday block. It reads 'אַם שַׁבָּת ווירד דאַ: …' and is unchanged.",
+    "Documentary first Tair, he index:390-417. The outer weekday shabbat=false scope (:391) contains the Metz scope documentary_metz_tair_vetaria_source_he (:400-414). The native rubric 'בק״ק מיץ אין אומרים חרוז תריע.' is that scope's tei:note child (:402), so it no longer prints on Shabbat. Inside the scope, the order is the Tair transclusion (:411), then the Kalir description (:412), then endConditional (:413). Nesting is weekday ⊃ Metz, and both are balanced.",
+    "Documentary second Tair, he :490-502. The metz=false scope has no rubric, inside weekday_3 after adderet part_3. This matches the stated design that the repeated omission is inferred. en :391-403 is parallel.",
+    "Documentary first Kol, he :460-473. The outer metz=false scope documentary_metz_kol_source_he has the native rubric 'בק״ק מיץ אין אומרים' as its condition note (:462) and wraps only the canonical kol_yoshvei transclusion (:471). It sits inside the shabbat=true scope documentary_repetition_shabbat_shivtei_he (:448-477). No unconditional Metz instruction remains. The transcluded stanza still has its own balanced inner metz=false type=\"marked\" conditional (he shemo_mefoarim.xml:44): the stanza milestone, then the conditional, the words, endConditional and the terminator, all within one tei:p.",
+    "Documentary second Kol, he :554 and en :450. The shabbat_refrains/kol_yoshvei transclusion has no outer index scope. The contextual stanza keeps its inner metz=false type=\"marked\" conditional around tei:seg source=poem:shemo_mefoarim/kol_yoshvei (he shemo_mefoarim.xml:52, en :47), balanced before the terminator.",
+    "English documentary, en index:282-294 (Frankfurt), :305-317 (Tair 1, inside weekday_1), :363-375 (Kol 1, inside shabbat_shivtei), :391-403 (Tair 2) and :450 (Kol 2). These are the same feature names, values, nesting and transclusion targets as he. The only difference is the absence of native rubric notes, which agrees with the earlier finding that the English pages print none. The en inner Kol 1 conditional (en shemo_mefoarim.xml:39) still has no @type, as before. The omission scopes are synchronized between he and en.",
+    "Expanded Frankfurt, machzor_expanded index:1601-1618. There is a single labeled frankfurt_am_main=false scope with the bilingual note 'חוץ מפרנקפורט אם מיין / Outside Frankfurt am Main'. The inner wrapper is now a plain tei:div (:1612-1616) with no conditional. The redundant wrapper has been removed and the scope is balanced.",
+    "Expanded Tair, :1631-1646 and :1648-1663. Both metz=false scopes carry the bilingual note 'חוץ ממנהג מיץ / Outside the Metz custom' and are nested inside the weekday scope (:1619-1671). The weekday order is Tair, Adderet (whole), Tair, Memallet, Zokher, Aafir (whole), Teshalesh, Zokher, which matches the documentary order.",
+    "Expanded Kol, :1689-1704 and :1717-1732. Each canonical poem:shemo_mefoarim/kol_yoshvei transclusion is in its own outer metz=false scope with the same bilingual note, inside the Shabbat scope (:1672-1739). Static truth-table reading: with metz=true, the outer scope fails and the stanza is dropped. With metz=false, both scopes pass and no label prints. With metz undecided, the outer rubric prints and the inner marked conditional sets the words off. Both scopes are balanced.",
+    "Expanded declare/settings, :1567-1581. section_morning_repetition_settings declares only recitation and quorum features, not frankfurt_am_main or metz. In the expanded book those stay undecided unless the reader sets them, so the 'whose custom' rubrics apply. This agrees with the claim that known settings suppress labels and undecided settings explain whose custom.",
+    "Aafir. aafir_nezer.xml:34 has the div-level 'ע״ס א״ב.' before the part_1 milestone, so it is reached only by the expanded whole-poem transclusion (:1666). The documentary index copy (he :536) precedes the part_1 transclusion inside weekday_4. Each order prints it exactly once, as stated.",
+    "Static spot check of canonical identity and prayer words: the stanza milestone corresp values, transclusion target URNs and the Kol words in he/en shemo_mefoarim.xml are as described in the previous review. I did not diff against the previous revision."
+  ],
+  "limitations": [
+    "Read-only static inspection. I ran no build, schema or validator check, range-balance tool, resolver, compiled 182-unit/stanza comparison, or regional/calendar case. The user says those passed before this rubric-only correction and are being rerun now. I am not claiming any of those results, and every balance statement comes from reading the XML.",
+    "I viewed no source images. I cannot confirm where the Kalir attribution and the Metz/Frankfurt rubrics sit on the printed pages (n131/n133), their punctuation, or the ז/ו reading at adderet_mamlakhah.xml:34-35. The Adderet attribution finding rests on the acrostic in the encoded text alone.",
+    "I did not read repetition_tair_repeat, attah_hu_eloheinu, eten, the shabbat_cues definitions beyond shemo_mefoarim.xml, features.yaml, or the expanded index outside lines 1500-1754. I did not re-read JLPTEI-3 this round. I relied on the sections cited in the previous review.",
+    "Source acceptance remains 100/355 as stated, which I have not verified. Per-line ח׳/ק׳ sigla and Hebrew fine-mark reconciliation are incomplete. All units are DRAFT, and no transcription or rite acceptance is given or implied.",
+    "This approval is a draft structural approval only: boundaries, condition nesting, omission scopes, rubric-to-condition attachment and bilingual scope parallelism. The Kalir-attribution placement (finding 1) should be corrected before this area is treated as structurally final."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "fe1b9a07-285a-4117-94d5-25525fb26e0c"
+  }
+}

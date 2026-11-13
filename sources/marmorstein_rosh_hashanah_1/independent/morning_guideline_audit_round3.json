@@ -1,0 +1,80 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "role": "final follow-up independent audit (round 3)",
+    "scope_note": "I read the round 2 audit, the snapshot XML for the changed or relevant files, the compiled row evidence, both verification reports, readings.json (the morning units, expanded_order, source_order and documentary_instructions), the human confirmation file and the guideline. I did not read compiler source or settings. Hashes are copied from /tmp/morning-audit3-hashes.json; I did not recompute them."
+  },
+  "findings": [],
+  "resolved_prior_findings": [
+    {
+      "id": "N1",
+      "status": "resolved (compiled and documented, as round 2 allowed)",
+      "basis": "The compiled rows (/tmp/morning-actual-aligned-rows.xml) show that every Bible key in morning_entrance_verses and morning_before_prayer pairs the morning Hebrew with the morning English in the same service context. None of them pairs with the s7 Hebrew. Clear evidence: the first Psalm 17:6 row (rows file lines 85 and 90) has the s40 Hebrew כִּי־תַעֲנֵנִי with a dagesh, not the s7 כִי־תַעֲנֵנִי (readings.json:67). So the documentary build uses the s40 witness and does not use a project-wide first-copy lookup. Round 2's parts (b) and (c) were inferred from the guideline. The compiled output shows they were wrong for documentary alignment. The guideline also supports the actual behaviour: lines 2102-2103 scope the dropped repeated corresp to 'within a document', and each morning file declares each key only once. Lines 302-307 say a second printing 'is not an error; but only the first copy can be reached by its URN'. That is the documented expanded-edition behaviour: unbound transclusions at expanded index.xml:1203-1223 resolve to the s7 witness and its pointing. The canonical_selection_note in /tmp/morning-alignment-verification.json and readings.json:10501 and :9943 record this decision. The guideline does not require choosing the later printing."
+    },
+    {
+      "id": "F4 (round 2 theory)",
+      "status": "superseded and resolved",
+      "basis": "Both repeat module files are gone (Read on he/ and en/morning_psalm_17_6_repeat.xml reports 'File does not exist'), and nothing in the snapshot transcludes them. The second Psalm 17:6 is now written directly in the second paragraph of each before_prayer file (he:35, en:35) as follows: one occurrence milestone with corresp .../morning_preliminaries/psalm_17_6_repeat, then seg source=psalms/17/6, then a bare occurrence terminator, then chapter 26 opens. This puts the milestone before the semantic span, as guideline 212-215 requires. Each side has the occurrence URN exactly once. The compiled row (rows file lines 263 and 268) pairs the s42 Hebrew with 'I called to Thee for Thou dost respond to me. O God, …'. The seg/@source survives in the compiled output, so the loss of the source annotation noted in round 2 is gone. The first 17:6 is still Biblical (verse milestone, present tense 'I call to Thee, …'). Both English tenses are kept."
+    },
+    {
+      "id": "F2 (Mah Tovu pairing)",
+      "status": "resolved",
+      "basis": "he/morning_mah_tovu.xml:33-39 now has the unique context div, an n39 facs div and an INLINE transclusion of prayer:mah_tovu@HE inside a p. The compiled row (rows file lines 51-67) is one paired row under the shared .../morning_preliminaries/mah_tovu context. The HE column has all five clauses: מַה־טֹּבוּ…יִשְׂרָאֵל: | וַאֲנִי בְּרֹב…בְּיִרְאָתֶךָ: | יְיָ אָהַבְתִּי…כְּבוֹדֶךָ: | וַאֲנִי אֶשְׁתַּחֲוֶה…עֹשִׂי: | וַאֲנִי תְפִלָּתִי…יִשְׁעֶךָ:. They match both the s40 reading (readings.json:9818-9869) and the s7 reading (readings.json:56) letter for letter, so the 'identical paragraph' premise holds. The EN column has all five clauses with the mah_tovu/mah_tovu and varani part milestones and five seg/@source annotations, with 95:6 as type=adaptation. The row is not empty and no s7 text is placed out of position."
+    }
+  ],
+  "remaining_source_ambiguities": [],
+  "alignment_findings": [
+    "Each key checked against the compiled rows and the source readings, word by word. Entrance: psalms/5/8 and 55/15/b. Before-prayer, in order: 17/6, 17/15, 31/15, 28/2, 30/3, 30/9, 31/17, 38/16, 39/13/shimah, 30/11, 122/1, 119/162, 5/3, 5/4, psalm_17_6_repeat, 26/12. Mah Tovu: one row. Every HE cell matches the s40/s42 fragment in readings.json:10109-10297, and every EN cell matches s41/s43 at readings.json:10311-10493. That covers all 18 Psalm occurrences plus Mah Tovu, which agrees with the booleans in /tmp/morning-alignment-verification.json.",
+    "Page breaks: the EN pb n=3 (facs n42) sits at the end of the 38:16 row, so English page 3 opens with 39:13 (readings.json:10408 page_start=true). The HE pb n=3 (facs n41) sits inside the 39:13 row between שִׁמְעָה and תְפִלָּתִי (readings.json:10205-10212). Both match the print.",
+    "Psalm 5:3 EN shows only corr 'Listen' in the selected-corrected compile. The source keeps sic 'Lister'/corr 'Listen' (en/morning_before_prayer.xml:35), and the runtime documentary_printed case reports both original errors as selectable.",
+    "Information only, no change needed: (a) In the compiled HE Mah Tovu cell, inline transclusion strips the canonical's internal part milestones and segs, while the EN cell keeps them. This asymmetry is expected, and the row joins on the outer context URN, so all five clauses form one row as intended. (b) Each file ends with an empty paired row (rows file 47-50, 68-71, 284-287), which is a harmless compiler artifact. (c) Opening chapter milestones with n and no corresp (for example chapter n=55, n=31) fall at the end of the previous row. This follows from the accepted F8 style and does not affect pairing."
+  ],
+  "order_findings": [
+    "Documentary: the morning_preliminaries hashes are unchanged (HE ba8c4241…, EN b694dce6…), and the sequence matches readings.json source_order:11313-11347: entering description → entrance → Mah Tovu → Shachar → before-prayer description → before_prayer → Yigdal. Inside before_prayer, the printed order now has the second 17:6 between 5:4 and 26:12 directly in the paragraph on both sides.",
+    "Expanded section_morning (index.xml:1184-1236, hash d3f94ed0… unchanged) follows readings.json morning order 13028-13196: 17:6 appears at lines 1208 and 1222, then Yigdal, the Torah-benedictions note and the Pesukei de-Zimrah items. The generic entrance keeps shaharit=false (readings.json:11521-11527). The runtime cases report entry_not_duplicated and no morning leak into Maariv, Minchah or ordinary Shabbat."
+  ],
+  "reviewed_files": {
+    "_note": "Hashes copied from /tmp/morning-audit3-hashes.json (23 entries); not recomputed.",
+    "read_in_full_this_round": [
+      "heidenheim-he/morning_before_prayer.xml 8d680fbe…",
+      "marmorstein-en/morning_before_prayer.xml d7ddb5cd…",
+      "heidenheim-he/morning_mah_tovu.xml 10de6091… (changed since round 2)",
+      "heidenheim-he/morning_entrance_verses.xml 90a4ab4f…"
+    ],
+    "read_partially": [
+      "heidenheim-he/index.xml a1022218… lines 30-159",
+      "marmorstein-en/index.xml 2786a409… lines 60-189",
+      "machzor_expanded-opensiddur-he/index.xml d3f94ed0… lines 1180-1239"
+    ],
+    "unchanged_since_round_2_not_re_read": "HE yigdal 420d4698…, HE tallith 6ea309ce…, HE morning_preliminaries ba8c4241…, EN morning_mah_tovu 22eb861b…, EN yigdal fffa2574…, EN morning_preliminaries b694dce6…, and the tallith/Shachar component files covered in audit 1. Their hashes match the earlier rounds. The compiled rows confirm the content of EN morning_mah_tovu and EN morning_entrance_verses.",
+    "confirmed_removed": [
+      "heidenheim-he/morning_psalm_17_6_repeat.xml",
+      "marmorstein-en/morning_psalm_17_6_repeat.xml"
+    ],
+    "compiled_evidence": [
+      "/tmp/morning-actual-aligned-rows.xml (all 288 lines)",
+      "/tmp/morning-alignment-verification.json (compiled_documentary_sha256 5a70ecfb…, reported, not recomputed)",
+      "/tmp/morning-runtime-verification.json"
+    ],
+    "source_evidence": [
+      "readings.json lines 1-80, 9790-10875, 10877-11415 (source_order), 11416-11529 (expanded entering_synagogue), 13008-13216 (morning order), 13586-13704 (morning rubrics)",
+      "human_morning_s39_s43_confirmation.json"
+    ],
+    "guideline": "JLPTEI-3.md lines 200-240 (seg/milestone placement, no duplicate canonical URN, terminators), 296-310 (one milestone per verse, first copy reachable), 2096-2111 (Alignment)",
+    "prior": "/tmp/morning-audit2.json"
+  },
+  "verdict": "approved. N1 is resolved: the compiled output shows that each morning Bible occurrence pairs in its own service context with the correct s40/s42 Hebrew and printed English, and the s7-first canonical choice for the expanded edition is documented and consistent with guideline 302-307. The F4 repeat module is removed and replaced by a direct occurrence encoding that keeps both English tenses and the Bible source annotation. The F2 Mah Tovu row is complete with all five clauses on both sides. All other round 2 approvals stand, there are no remaining source ambiguities, and I found no new transcription or encoding errors.",
+  "checks": [
+    "First Psalm 17:6 compiled HE = s40 כִּי־ with dagesh (rows file line 85), against s7 כִי־ (readings.json:67). This shows the documentary build uses the morning witness and not the s7 one.",
+    "Second Psalm 17:6 compiled HE = s42 reading (readings.json:10283), EN = past tense (readings.json:10479); the occurrence URN appears once per side.",
+    "Mah Tovu s40 HE = s7 HE letter for letter (readings.json:9818-9869 vs :56), so reusing the canonical inline does not change the printed text.",
+    "Human confirmations (Shachar attribution, standard יְיָ, עֲטִיפַת without meteg, בַּתּוֹרָה, לְאַחְדּוּתוֹ dalet dagesh and vav shuruq) are reflected in readings.json:10531 and were not reopened. The round 2 image checks (סֵֽדֶר meteg; no maqaf in אֶל אַנְשֵׁי, readings.json:10583) remain settled.",
+    "Not independently verified: the runtime fields evening_yigdal_uses_new_witness=false for ordinary_shabbat and minchah. Those cases are marked passed, and I take false to be the expected value because those services contain no evening Yigdal, but the report does not say so. Also not verified: that the registry note siddur.jsonl:1995 is up to date (carried over from round 2; outside the files I was given).",
+    "Not done: hash recomputation, schema/ODD validation, running the compiler myself, live-browser rendering. Reading code and settings was outside the scope."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "7badaf96-fcca-4f5b-94c2-d2ec224ee4b9"
+  }
+}

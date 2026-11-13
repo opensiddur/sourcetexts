@@ -1,0 +1,93 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "findings": [
+    {
+      "severity": "high",
+      "file": "morning_qorbanot.xml:50",
+      "issue": "The documentary Shabbat rubric uses the primary reader's text 'אם שבת ווירד פָאלגענדע הינצוגעסעטצט:', and the scan contradicts its last two words. In s57.jpg, /tmp/qorbanot-s57-b0.jpg and /tmp/qorbanot-yiddish-human.jpg the third word ends in a further letter after 'פ…גענדע', and the fourth word begins with an aleph-like glyph and double yod ('איינגע…') and ends '…לטעט:'. It has no tsadi, so it is not 'hinzugesetzt'. The independent reading 'פֿאָלגענדעס איינגעשאָלטעט' fits the visible letters much better.",
+      "recommendation": "Don't publish the primary's reading as the provisional text. The exact spelling and points stay pending for a human, but at minimum flag the current reading as rejected by the image. I am reading letter shapes here, not settling it from grammar."
+    },
+    {
+      "severity": "medium",
+      "file": "eizehu_meqoman.xml:39 (Mishnah 1)",
+      "issue": "The XML has 'הַזָּיָה עַל בֵּין' with a space. In /tmp/qorbanot-s57-b1.jpg (line 3) the line clearly ends 'עַל־' with a maqaf before the break to 'בֵּין'. The comparison left this unresolved (whitespace:21), and the XML follows the primary reader, which the image does not support.",
+      "recommendation": "Encode 'עַל־בֵּין'."
+    },
+    {
+      "severity": "medium",
+      "file": "qorbanot_bar_kappara.xml:34",
+      "issue": "The quotation seg has source='…bible:leviticus/2/11', which names the whole verse. The words quoted, 'כי כל שאור … אשה ליי', are exactly the second half of Lev 2:11 (the etnachta falls on חָמֵץ). The resolution says the span does not claim the complete verse, but the URN does claim it, even though the guideline's half-verse URN fits exactly.",
+      "recommendation": "Use source='urn:x-opensiddur:text:bible:leviticus/2/11/b'."
+    },
+    {
+      "severity": "low",
+      "file": "machzor_expanded-opensiddur-he/index.xml:1392-1407",
+      "issue": "The expanded Shabbat gate has no inner j:declare setting shabbat=true. Every other Shabbat-gated section in this index declares it, and the 'Conditions on a running order' section asks for it. It does no harm now, because the Numbers module has no conditions of its own.",
+      "recommendation": "Add the declare for consistency."
+    },
+    {
+      "severity": "low",
+      "file": "qorbanot_pesuqim.xml, qorbanot_attah_seter.xml, qorbanot_vearvah.xml, qorbanot_musaf_shabbat.xml",
+      "issue": "Chapter milestones carry @n but no @corresp (for example <milestone unit='chapter' n='46'/>). Under scope rule 3 these are terminators that open nothing, so @n has no reference meaning. They don't break verse scopes.",
+      "recommendation": "Follow whatever convention the earlier accepted modules (Ex 30, Lev 6) use. If @n is meant for display, document that."
+    }
+  ],
+  "alignment_findings": [
+    "The English index adds nothing for this batch: morning_blessings goes straight to barukh_sheamar, with no English and no borrowed Barukh Shem. That is correct.",
+    "Barukh Shem: the canonical prayer:shema/barukh_shem milestone also exists in earlier files in this project, so a bare URN reaches only the first one. Both service orders transclude the new siddur:rosh_hashanah/morning_qorbanot/barukh_shem context, so the evening בלחש cannot leak in. The new occurrence carries no בלחש."
+  ],
+  "order_findings": [
+    "Documentary and expanded orders match each other and the print: pittum → Rashbag → R. Natan → Bar Kappara → 3 psalm verses → Ps 32:7 → Mal 3:4 → Ana → Barukh Shem → [Shabbat] Num 28:9–10 → Eizehu 1–8 → Middot lead–13 → Yehi Ratzon, inside the shaharit section after the German later Torah block. Both indexes then continue to Barukh She-amar.",
+    "No Kaddish is invented at the end. Scan 59 ends with a rule line after Yehi Ratzon.",
+    "The Shabbat module itself is ungated. The documentary gate carries the German rubric as the conditional's own note. The expanded gate uses the bilingual 'בשבת:'/'On Shabbat:' labels."
+  ],
+  "source_findings": [
+    "Ps 84:13: the XML has plene 'בּוֹטֵחַ', and the scan (/tmp/qorbanot-s56-b2.jpg) clearly shows the vav, so the XML is right. But both raw readers wrote 'בֹּטֵחַ', the comparison shows no difference, and the resolutions file doesn't record the adjudication. This is an evidence-trail gap, not an XML defect.",
+    "Pittum 'החלבנה' with no vav is confirmed by s56 line 1. The XML is right; the comparison still lists it as unresolved.",
+    "Repeated words confirmed in s56: 'שבעים שבעים', 'ששה עשר ששה עשר', and 'היטיב היטיב' (the second at the end of the line before 'הדק'). All three are present in the XML. No deletion proposed.",
+    "Confirmed in s57/s58: 'שׁוֹפֵךְ' in Mishnah 1–2 and 'שֹׁפֵךְ' in Mishnah 3; 'אָשָׁם תָּלוּי'; 'עַד חֲצֹת' in Mishnah 5; 'אֶחָת' (correctly in sic); 'וּבִלְבָד'; 'הַיְסוֹד'; 'בַאֲכִילָתָן'; 'לִמְנוּיָו'; the 'ד הָעוֹלָה' label at the foot of s57 with the rest on s58.",
+    "Ana: the side-column groups, e.g. 'אבג״יתץ' with the gershayim after gimel, match the scan. The primary's 'אבגי״תץ' was wrong, and the XML follows the scan. Line 4 ends with ':' and the others with '.', as printed."
+  ],
+  "remaining_source_ambiguities": [
+    "The exact Hebrew-script German rubric (still pending human review). Only the XML's current reading is ruled out, as described under findings.",
+    "Jerusalem spelling and points in Mal 3:4 (the XML has 'וִירוּשָׁלָםִ'). Pending human review.",
+    "Pe dagesh in 'פְנֵה'. Pending human review.",
+    "Num 28:9 accents on סלת and מנחה. Pending human review.",
+    "The small Ana attribution 'תפלה רבי נחוניא בן הקנה.' The scan glyph is unclear at this size (it could read as 'תפלת'). Pending human review.",
+    "Mishnah 3 'כֵּיצַד,' vs 'כֵּיצַד.': at band resolution the mark after the word looks like the point used after 'מִזְרָחִית.', so it may be a period. I can't settle this; it should go to the human-question list."
+  ],
+  "checks": [
+    "Eizehu: all 8 mishnah milestones are in one <p>, each label comes right after its own milestone, and each scope is closed before the next begins. A label cannot attach to the previous mishnah. The citation 'זבחים פ״ה.' is a standoff citation note, without parentheses.",
+    "Middot: lead and rules 1–13 match the stated extents. 1 and 2 are split at 'וּמִגְּזֵרָה'; 3 combines both binyan av statements; 12 combines 'מֵעִנְיָנוֹ… מִסּוֹפוֹ'. The closing terminator is present. Words checked against s59.",
+    "Ana: 7 stanza milestones on the canonical poem:anna_bekhoach, with a closing terminator. The acrostic groups are standoff commentary notes with seg type=acrostic, and nothing is appended to the recited lines. The attribution is a standoff note on the poem.",
+    "Full verses (Ps 46:8, 84:13, 20:10, 32:7; Mal 3:4; Num 28:9–10) each have a verse milestone with canonical @corresp and a closing terminator.",
+    "Num 28 citation 'במדבר כ״ח ט׳.' is a standoff citation note without parentheses, matching the print.",
+    "Shabbat truth behaviour: true means the passage is kept and the rubric dropped; false drops both; undefined keeps the passage with its rubric. This follows from the rubric being the conditional's own instruction note.",
+    "Page breaks: n=11 in pittum, 12 in musaf_shabbat, 13 inside Mishnah 4, 14 in middot, all matching the printed folios."
+  ],
+  "reviewed_files": [
+    "schema/JLPTEI-3.md (full)",
+    "all 14 Hebrew XML modules listed, plus both index.xml files",
+    "qorbanot_s56_s59_resolutions.json",
+    "qorbanot_s56_s59_comparison.json",
+    "s56–s59.jpg",
+    "/tmp/qorbanot-s56-b2.jpg",
+    "/tmp/qorbanot-s57-b0.jpg, -b1.jpg, -b2.jpg, -b3.jpg",
+    "/tmp/qorbanot-yiddish-human.jpg"
+  ],
+  "review_limits": [
+    "Not opened: the raw primary, independent, enlarged, micro and isolated JSON files.",
+    "Not opened: the remaining band crops, the isolated word crops, and the Jerusalem, peneh, accents and Ana-attribution human snippets.",
+    "Not opened: code and YAML/settings files, as instructed.",
+    "Not done: compilation or schema validation."
+  ],
+  "verdict": "changes_required — the structure, order, gating, URN reuse and Mishnah labels are sound. Before acceptance: fix the misread German rubric (its exact spelling can stay pending), restore the maqaf in 'עַל־בֵּין', point Bar Kappara's source at leviticus/2/11/b, and record the בּוֹטֵחַ adjudication in the evidence trail.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "56f323dc-6689-4226-a02a-154336d19769"
+  }
+}

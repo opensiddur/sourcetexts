@@ -1,0 +1,59 @@
+{
+  "status": "Scans48–51 accepted; all human source readings independently verified and final exports inspected.",
+  "accepted": true,
+  "scan_pages": [
+    48,
+    49,
+    50,
+    51
+  ],
+  "source_errors": [
+    {
+      "scan": 49,
+      "reading": "The full-size female blessing duplicates the small alternative.",
+      "encoding": "Second paragraph choice/sic with empty corr; original two paragraphs retained."
+    },
+    {
+      "scan": 51,
+      "reading": "everyday",
+      "encoding": "choice/sic everyday +corr every day"
+    }
+  ],
+  "canonical_scope_decisions": [
+    "All 20 new modules reuse existing canonical identities, no new registry identities.",
+    "Nokhri is the same canonical identity as shelo_asani_goy.",
+    "shetargilenu and gomel_chasadim have separate prayer-part milestones with existing Birnbaum extents, within one continuous cross-page paragraph.",
+    "The morning prayer is ribbon_kol_haolamim; ribbon_haolamim names another text."
+  ],
+  "conditional_decisions": [
+    "Audience alternatives use opensiddur:person/gender symbols male/female in structural service order.",
+    "Reusable prayer modules remain ungated. Source female instruction is the conditional own note in both witnesses.",
+    "Expanded bilingual Men/Women labels disappear when gender is known; unknown retains both alternatives.",
+    "All new continued morning units precede the existing late German Torah-study insertion; the earlier explicit rite-dependent relocation remains unchanged."
+  ],
+  "pending_human_questions": [],
+  "validation": {
+    "schema": "222 XML files pass RelaxNG and Schematron in draft build.",
+    "targeted_tests": "214tests +635subtests pass; correction-selector scalar/tail guard additionally rechecked in23authoring tests +14subtests.",
+    "names_features_registry_references": "Pass; no new canonical identities.",
+    "alignment": "hashachar_alignment_verification.json: all21 new paired rows exactly match corrected source words.",
+    "runtime": "hashachar_runtime_verification.json: six expanded cases pass.",
+    "independent_guideline_audit": "Two encoding/guideline/alignment/order audits plus independent/hashachar_final_human_verification.json approve all final readings. Stated machine-check limitations resolved in hashachar_codepoint_verification.json and hashachar_post_review_verification.json.",
+    "exports": "hashachar_export_verification.json: accepted documentary and expanded PDFs/HTML regenerated, final layouts checked and stable accepted paths updated. Isolated exporter PR299 supplies the keep-with-next fix.",
+    "html": "Final production-JS audience/German conditions, labels, IDs and all internal anchors pass.",
+    "post_human_status": "Complete: human readings independently verified, codepoints/scopes checked, guarded222-filebuild passes, final accepted exports inspected."
+  },
+  "audit_resolutions": {
+    "F1": "Merged the expanded bilingual Leolam directive into one note with he/en foreign children; original documentary witnesses unchanged.",
+    "F2": "Added key-by-key adjudication verdicts, provisional/final text, evidence and pending-human scopes; raw initial values/hashes/differences retained.",
+    "F3": "Do not falsify the model self-report. Configured CLI medium and model self-reported low are intentionally recorded separately; header now says CLI configured for medium. Hidden effective effort is not observable.",
+    "F4": "Expanded source metadata explicitly states current draft endpoint and pending human adjudication.",
+    "F5": "Actual PDF and electronic output show only one female blessing and no empty visible corrected paragraph.",
+    "F2_followup": "Marked only the actual initial difference keys touching declared disputed words pending. Other keys in mixed blocks now explicitly image-adjudicated; unchanged raw hashes/text/differences preserved."
+  },
+  "independent_guideline_review": "independent/hashachar_guideline_audit_round2.json: encoding approved; source and leaf acceptance remain false.",
+  "remaining_work": [],
+  "human_confirmation": "human_hashachar_s48_s51_confirmation.json",
+  "pending": [],
+  "final_source_review": "independent/hashachar_final_human_verification.json"
+}

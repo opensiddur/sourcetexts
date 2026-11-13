@@ -1,0 +1,35 @@
+{
+  "s60_body_complete": true,
+  "s61_body_complete": true,
+  "issues": [
+    {
+      "scan": "s60",
+      "description": "Minor metadata gap, not a missing-text problem. The last entry (chronicles_1/16/16) stops partway through the verse at the bottom of the leaf. Nothing in the packet marks it as partial or continued, so a downstream consumer could take it for a complete verse.",
+      "evidence": "The last body line of the leaf reads 'צִוָּה לְאֶלֶף דּוֹר: אֲשֶׁר כָּרַת אֶת־אַבְרָהָם וּשְׁבוּעָתוֹ' with no sof pasuq. The entry text ends at 'וּשְׁבוּעָתוֹ', which matches the print. The rest of the verse ('לְיִצְחָק:') must be on the next Hebrew leaf. The s61 English entry for the same verse is complete ('...and swore to Isaac.'), so the Hebrew and English halves of this verse end at different points."
+    }
+  ],
+  "notes": [
+    "s60: All 16 lines of the Barukh She'amar paragraph are covered by the 'barukh' and 'yachid' entries. The split between them falls at 'מַלְכֵּנוּ אֱלֹהֵינוּ | יָחִיד', in the middle of printed line 14. The paragraph ends at 'בַּתִּשְׁבָּחוֹת:'.",
+    "s60: The 7 lines of the Chronicles block are covered from 'הוֹדוּ לַייָ' (16:8) through 'וּשְׁבוּעָתוֹ' (16:16, partial). Every verse boundary (sof pasuq) on the leaf matches an entry boundary. No body text is left before the first entry or after the last.",
+    "s60: No citation is printed on the Hebrew leaf, so the empty 'citations' list is correct. The running header 'תְּפִלַּת שַׁחֲרִית' and the page numbers '15' are excluded, as specified.",
+    "s60: Readings I checked against the image all match: 'פּוֹדֶה וּמַצִּיל בָּרוּךְ שְׁמוֹ' (no stop after מציל), 'חֵי הָעוֹלָמִים', 'עֲדֵי־עַד', 'לַייָ'.",
+    "s61: The English paragraph is fully covered, from 'Blessed be He who spoke' to 'paeons of praise.' The split between entries ('our King, our God, | unique and everlasting') matches the Hebrew split. The Chronicles paragraph is fully covered from 'Thank the Lord' to 'swore to Isaac.'",
+    "s61: Words broken across lines ('cel-ebrated', 'genera-tions') are correctly joined in the accepted text.",
+    "s61: The printed Hebrew linkage cues 'ברוך' and 'הודו' at the start of each paragraph are left out of the accepted English. That follows your direction and is not a coverage gap.",
+    "s61: The printed citation '(Chron. I. 16, 8.)' is in the citation metadata with printed_page 15. The running header 'Morning Prayer' and the page numbers '15' are excluded.",
+    "s61: Two printed misprints are kept in the accepted raw text, as they should be: 'convenant' (should be 'covenant') and 'paeons' (likely 'paeans'). Both could get sic/corr entries.",
+    "s61: The English printed here has no rendering for some Hebrew phrases (for example 'בָּרוּךְ הוּא' and 'בָּרוּךְ עוֹשֶׂה בְרֵאשִׁית'). Since nothing is printed for them, that is not a coverage issue."
+  ],
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "5f36a904-6ef9-4e89-a946-db73bd90df42",
+    "scope": "Full-leaf coverage against images, following blind readings and transcription adjudication."
+  },
+  "audit_adjudications": [
+    {
+      "observation": "Minor metadata gap, not a missing-text problem. The last entry (chronicles_1/16/16) stops partway through the verse at the bottom of the leaf. Nothing in the packet marks it as partial or continued, so a downstream consumer could take it for a complete verse.",
+      "resolution": "The audit packet filtered fragments to the requested leaf. In accepted readings.json, Chronicles 16:16 has two fragments, s60 and s62; the latter begins לְיִצְחָק:. Generated TEI keeps both under the same milestone, with the page break between them. The English complete verse ends on s61. No source or alignment gap exists."
+    }
+  ]
+}

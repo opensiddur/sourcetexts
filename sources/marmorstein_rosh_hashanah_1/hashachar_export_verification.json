@@ -1,0 +1,31 @@
+{
+  "status": "accepted installment exports verified",
+  "source_acceptance": true,
+  "accepted_leaves": 57,
+  "complete_volume": false,
+  "exports": [
+    {
+      "mode": "documentary",
+      "pages": 47,
+      "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/documentary.pdf",
+      "pdf_sha256": "c88702f408f5d4a4c5e1c231f736aec4430102cffbc8b8269a27db0b9f4c2064",
+      "html_sha256": "c2f1b470fd310cc581342f5bd511d818b0cbe47d78d8051c6ea0697060d1996f"
+    },
+    {
+      "mode": "expanded",
+      "pages": 50,
+      "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/expanded.pdf",
+      "pdf_sha256": "1ed4faf2dc513180a28809b0c320be6bb2ca39d20ff8c05bccb7c2316155b7a8",
+      "html_sha256": "ada13791e25929eda19f2ad5adc1dbe5bb9af4ea543ee95092c4c7a75658683c"
+    }
+  ],
+  "exporter_fix": {
+    "pr": "https://github.com/opensiddur/opensiddur-processor/pull/299",
+    "commit": "e517de6",
+    "feature_branch_does_not_contain_exporter_fix": true
+  },
+  "visual_review": "Final affected documentary and expanded PDF pages rendered and visually checked after human corrections; parallel text, continued paragraphs, bilingual directive, conditional labels and complete source words present without clipping or overlaps. Women label stays with blessing.",
+  "html_review": "Production condition.js verifies audience and German-rite branches; IDs unique and internal anchors resolve. No new live-browser review claimed.",
+  "post_review": "222 XML text trees identical to the human-corrected reviewed draft; only accepted metadata changed. Codepoint/full-document checks resolve final-reader limitations L1/L2; all comparison pending keys resolved (N1).",
+  "final_pdf_checks": "Final LuaLaTeX passes have no undefined references; actual women label/blessing co-location verified by PDF bounding boxes."
+}

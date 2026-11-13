@@ -1,0 +1,53 @@
+{
+  "status": "Accepted full evening Amidah s26–s33 after independent source/guideline/alignment/order review and human adjudication.",
+  "scans": [
+    "s26",
+    "s27",
+    "s28",
+    "s29",
+    "s30",
+    "s31",
+    "s32",
+    "s33"
+  ],
+  "canonical_identity_policy": "All identities already registered. Reuse Birnbaum-compatible festival structural roots for composite blessings, prayer-part identities for their words, and explicit Biblical chapter/verse scopes for full quotes. Do not duplicate this edition’s ordinary Minchah whole-prayer identities.",
+  "source_reading_evidence": [
+    "primary/amidah_s26_s27.json",
+    "primary/amidah_s28_s33.json",
+    "independent/amidah_s26_s27.json",
+    "independent/amidah_s28_s33.json",
+    "amidah_s26_s33_comparison.json",
+    "independent/amidah_s26_s33_enlarged.json"
+  ],
+  "parenthetical_alternative": "The printed unpointed (מלכנו) has no specified condition and no English counterpart. Retain it literally as a labeled parenthetical alternative; do not supply English or invent a selection feature.",
+  "sabbath": "All vattitten-lanu parentheticals are Sabbath additions; two Melokh parenthetical clauses and the seal addition are Sabbath-only. Their literal אם שבת. rubrics are instructions, with no rend. All remain within source paragraphs; no ordinary-season variant is invented.",
+  "sic_corr": "s27 Thou has created → has/hast in sic/corr. Raw readings remain printed has.",
+  "pending": [],
+  "fine_mark_adjudication": [
+    "independent/amidah_word_adjudication.json",
+    "independent/amidah_context_adjudication.json"
+  ],
+  "reviewer_effort_record": "All Claude CLI invocations explicitly used --effort medium. The first word-review response self-labeled low; its response is preserved verbatim alongside the actual medium invocation rather than silently relabeled.",
+  "pending_human": [],
+  "audit_round1": "independent/amidah_guideline_audit_round1.json",
+  "audit_fixes": [
+    "Use j:conditional type=marked for the twelve source-parenthesized Sabbath clauses. Preserve original parentheses in readings.json; strip them only when generating semantic conditional content. Keep literal אם שבת. as instruction notes without rend.",
+    "Join the Hebrew Sabbath seal prefix וְ directly to ישראל when selected, without an inserted space.",
+    "Move chapter/verse markers outside source quotation spans, following the general authoring guidelines; no quotation text or reference extent changes.",
+    "Refdb and validate_urn_references pass. Actual resolver keeps the already indexed psalm_19.xml mapping for Ps19:15, with repeated quote in rh_elohai_netzor.xml not indexed a second time. Both occurrences in both languages remain in documentary compiled XML; full-Psalm19 alignment retains verse15. Ps51:17 resolves to the new RH opening verse without an earlier duplicate. See amidah_scope_verification.json."
+  ],
+  "human_confirmation": "human_amidah_confirmation.json",
+  "local_validation": {
+    "schema": "125 files pass RelaxNG/Schematron",
+    "tests": "104 importer tests and41subtests pass",
+    "runtime": "Earlier eight compiler cases pass; seven new Amidah cases and six bilingual quote scope checks pass. Selected Sabbath clauses lose source parentheses; seal vav joins Yisrael. Literal (מלכנו) remains with no replacement English.",
+    "previous_accepted_text": "92 previous language files retain identical printed words and milestone corresp sequences after moving quotation boundaries; source markup placement changes only.",
+    "names_features_references_registry": "Pass; no new canonical identities."
+  },
+  "audit_round2": "independent/amidah_guideline_audit_round2.json",
+  "runtime": "amidah_runtime_verification.json",
+  "scope_verification": "amidah_scope_verification.json",
+  "post_audit_check": "amidah_post_audit_change_check.json",
+  "exports": "amidah_export_verification.json",
+  "selected_sabbath_followup": "shabbat_resolution_verification.json"
+}

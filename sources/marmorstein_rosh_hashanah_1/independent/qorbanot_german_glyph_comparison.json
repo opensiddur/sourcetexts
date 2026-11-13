@@ -1,0 +1,31 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "reading": "אַם שַׁבָּת ווירד פֿאָלגענדע[?] איינגעסאַלטעט:",
+  "final_letter": "unreadable (if forced, ז over ו; not ס)",
+  "confidence": "low",
+  "shape_evidence": [
+    "The glyph is short and sits on the baseline at about x-height. It has a heavy blob at top right, narrows in the middle, and widens into a wedge-shaped foot at bottom left.",
+    "It has no closed round bowl, so it is not ס. The samekh in איינגעסאַלטעט on the same line is a clearly closed round letter, and this glyph looks nothing like it.",
+    "It is not a plain vertical stroke. The crops show a real leftward foot and an S-like tilt from upper right to lower left."
+  ],
+  "comparison_evidence": [
+    "Vavs in ווירד (same line, same typeface): straight, even-width vertical strokes with only a slight head and no foot. The uncertain glyph is wider, pinched in the middle, and has a foot, so it does not match these vavs well.",
+    "Zayin in החרוזים (scan16): a heavy head on top of a fairly straight stem, with no clear leftward foot. The uncertain glyph's heavy head fits a zayin better than a vav, but its leftward foot is not in the scan16 zayin. Scan16 may also be a different typeface or size, so it is only weak evidence.",
+    "Gimel in the same word (פֿאָלגענדע, 4th letter): has a leftward foot at the base, which is the closest shape match among nearby letters. But the gimel is taller with a straighter stem, and ג is not one of the candidates being judged here. I'm noting the resemblance only as shape evidence, not proposing it as the reading.",
+    "The blur and ink spread in the scan could make a zayin's head and the end of its stem look like this shape, or could hide a damaged or different letter."
+  ],
+  "unresolved": [
+    "ז vs ו: the shape leans toward ז (heavy head, wider body) more than ו, but the leftward foot is not in either clear exemplar.",
+    "The foot looks like the gimel in the same word, so there may be a damaged or atypical letter here that is none of ז/ו/ס.",
+    "A higher-resolution scan, or another example of zayin from the same Yiddish typeface (scan 57, not scan16), would be needed to settle it.",
+    "I did not use the likely German word (Folgendes) to choose the letter. ס is ruled out by its shape alone."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "7e61d394-f48a-4ae9-8572-852a761be78b"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "approved_for_draft": false,
+  "issues": [
+    {
+      "severity": "medium",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/yotzer_hameir.xml, yotzer_el_barukh.xml; prayerbook_for_the_new_year-marmorstein-1965-en/yotzer_hameir.xml, yotzer_el_barukh.xml; both index.xml",
+      "issue": "You said the weekday Hameir+El Barukh group now has editorial conditional rubrics. I can't find them. In all four modules, j:conditional (shabbat=false) holds only j:all/fs, with no tei:note. Neither index wraps or labels the weekday group. The only rubrics before Hameir are the printed routing notes: HE index:317 (yi) and EN index:238. Those are correctly in the index, as you said. So when Shabbat is unknown, the weekday branch shows with no label and only the Shabbat branch (Hakol) has one. I couldn't find a separate 'expanded index' file. I checked index.xml in both projects plus a few guessed paths in /tmp/mahzor-s96.",
+      "fix": "Add an editorial tei:note type=\"instruction\" as the first child of the shabbat=false j:conditional in Hameir and El Barukh, or of one wrapping conditional in the index, in both languages. Mark it as editorial, not printed. Or, if the change is in a generated expanded file somewhere else, give me its path and I'll re-check."
+    },
+    {
+      "severity": "low",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/el_adon.xml:43",
+      "issue": "The nested page-continuation rubric 'אַם שַׁבָּת.' has xml:lang=\"he\". The same Judeo-German/Yiddish string is tagged yi in yotzer_hakol_yodukha.xml:35 and index.xml:317, and de-Hebr in the evening section (index.xml:241). The label inside one block contradicts the others.",
+      "fix": "Use the same language tag as the Hakol rubric (yi), or pick one project-wide convention for 'אַם שַׁבָּת' and apply it everywhere."
+    },
+    {
+      "severity": "low",
+      "file": "HE and EN morning_numbers_14_17.xml:43",
+      "issue": "The moved 'Reader says / recites half Kaddish' role note comes after <milestone unit=\"chapter\" n=\"14\"/>, so the rubric sits inside the Numbers 14 chapter context. Nothing is lost, but the chapter milestone no longer marks where the Bible text starts.",
+      "fix": "Put the tei:note before the chapter milestone, as the first node inside tei:p, in both languages."
+    },
+    {
+      "severity": "low",
+      "file": "HE index.xml:316 + yotzer_hameir.xml:43; EN index.xml:237 + yotzer_hameir.xml:43",
+      "issue": "Whenever Hameir is shown, the index pb n=37 is followed straight away (only the routing note in between) by Hameir's own pb n=37, so the same page break appears twice. Hakol's own pb 37 is justified, because after El Barukh's page 38 the expanded order goes back to page 37. Hameir's pb adds nothing.",
+      "fix": "Optional: drop the leading pb from Hameir in both languages and keep the index pb, or accept the duplicate as harmless."
+    }
+  ],
+  "resolved": [
+    "Ofannim (khevodo_ahel), HE and EN: six stanza milestones. Stanza 5 opens unconditionally at the start of its tei:p, before the weekday (shabbat=false) and Shabbat (shabbat=true, type=\"marked\") branches. The final bare stanza terminator is present.",
+    "HE khevodo_ahel standOff note for /5 ('וי״א …') now has j:condition as its first child (shabbat=true).",
+    "Both languages mark the Shabbat variant with type=\"marked\". The made-up weekday rubric and the made-up EN Shabbat rubric are gone. The printed HE 'אם שבת' stays on the Shabbat branch.",
+    "HE Rashi role notes (ח׳ = reader, קו״ח = reader_and_congregation) are encoded where they occur in stanzas 1, 2, 4, 5 and 6. Their letter readings are still pending adjudication and I haven't certified them.",
+    "Kaddish intro: the English 'The Reader says half Kaddish.' printed on HE n95 is now before the Numbers 14:17 verse, with role/reader corresp. EN has its own printed intro in the same place. The HE חזן label stays at the start of the Kaddish yitgaddal prayer-part.",
+    "Hakol (HE n101 / EN n102) has its own pb n=37 and its own printed Shabbat rubric as the conditional's first-child note.",
+    "El Adon, HE and EN: the repeated Shabbat heading at the page 38 continuation is a nested conditional rubric inside the outer shabbat=true conditional. So the rubric is redundant, and hidden, when Shabbat is known to be true.",
+    "The documentary routing rubrics are in the index right before Hameir: HE yi note at n101, EN note at n102. They are not in the transcluded module, and I'm not counting them as missing.",
+    "Prior issue 1 accepted: Ps 104:24 in Hameir is the first canonical mapping, so the bible URN corresp is allowed.",
+    "Prior issue 2 accepted: chapter milestone with @n, then verse, then bare verse and chapter terminators, follows the established pattern. In lael_asher_shavat, 92:1 and 92:2 share a boundary with a redundant terminator and reopen, which loses no text.",
+    "Prior issue 3 accepted: the partial Isaiah 6:3, Ezekiel 3:12 and Ps 92:1/92:2 use only occurrence-context URNs, with seg type=\"quotation\" and a canonical source. No new full-verse Bible corresp is claimed. Consistent in both languages.",
+    "Prior issue 4 accepted: Az Yashir range syntax is out of scope and unchanged."
+  ],
+  "observations": [
+    "The HE and EN module sets match one-to-one across all 20 stems. In each pair, conditional IDs, conditions, stanza/prayer-part/verse milestones and quorum conditionals are the same. Page facs alternate correctly (HE odd n95–n107, EN even n96–n108), and printed page numbers agree.",
+    "The EN El Adon nested rubric opens mid-clause ('merit and equity are | On Sabbath. | before His throne'), at the EN page break. The HE one opens at a line boundary. Both are faithful to where the page breaks fall. Because the outer condition is the same, this only affects display when Shabbat is unknown.",
+    "EN khevodo_ahel has no counterpart to the HE standOff note 'וי״א …' and no role notes. That's fine if the EN page prints neither. Worth checking in the human pass.",
+    "Titbarakh ends mid-sentence ('…crown' / 'וּמַמְלִיכִים') and continues into et_shem in both languages, so the split is aligned.",
+    "Source wording I noticed but haven't judged (left for humans 1–5): EN Barekhu 'Blessed be Him, His Name is exalted above and ever.'; HE khevodo_ahel stanza 1 opening; the ייָ vs יְיָ divine-name forms after a prefix in Hakol and La'el Asher Shavat. The EN sic/corr pairs in lael_asher_shavat and melekh_azur_gevurah are well formed.",
+    "This is structural draft review only, not source acceptance."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "3db2c450-2187-41b0-9128-92b08f0dd30b"
+  }
+}

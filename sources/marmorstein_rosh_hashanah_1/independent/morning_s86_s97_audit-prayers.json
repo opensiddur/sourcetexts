@@ -1,0 +1,36 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "approved": false,
+  "issues": [
+    {
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/nishmat.xml; prayerbook_for_the_new_year-marmorstein-1965-en/nishmat.xml",
+      "location": "div/p: the Psalm 35:10 and Psalm 103:1 quotations",
+      "problem": "Both biblical quotations are marked only by verse milestones whose corresp is the Bible's own canonical URN (bible:psalms/35/10 and bible:psalms/103/1). Neither is wrapped in a seg with a source attribute. This is inconsistent with shokhen_ad.xml in the same batch, which puts a prayer-scoped milestone before a seg whose source is the Bible URN. The guidelines say to put source on a bounded seg, and not to duplicate a canonical URN just because the text is printed again elsewhere. Using the Bible text URN as corresp claims that this printing is the Tanach unit, rather than citing it.",
+      "required_fix": "Wrap each complete verse, and nothing of its framing, in a tei:seg whose source is the Bible URN. In the HE file, the seg runs from כָּל עַצְמוֹתַי through מִגּוֹזְלוֹ: and from לְדָוִד through קָדְשׁוֹ:. In the EN file it covers the matching spans, with the sic/corr choice inside the Psalm 103:1 seg. Keep the verse milestone and its terminator only if it carries a prayer-scoped identity that already exists (as shokhen_ad/psalms_33_1 does). If no such identity exists, drop the bible-URN corresp milestones and rely on seg/@source. Do not create a new identity."
+    },
+    {
+      "file": "all twelve files (page sequence n91–n96)",
+      "location": "tei:pb and div/@facs",
+      "problem": "The page and image mapping in the XML does not match the brief. HE nishmat page 31 points to n91 and EN page 31 to n92, and page 32 in both points to n93. hael_betaatzumot, shokhen_ad, befi_yesharim and uvemaqhalot all give page 33 in their headers and point to n94, but none of them, in either language, has a tei:pb n=\"33\". That leaves source page 33 without a page break. Yishtabbach page 34 points to n95 in HE but n96 in EN. The brief says Nishmat is on 92/93 and continues on bilingual 94, and that 95 is a separate bilingual page, not a facing pair. If so, the EN yishtabbach image (n96) and the Nishmat image indexes are wrong.",
+      "required_fix": "Check the leaf-to-page mapping against the images in the separate image review, then make pb/@facs and div/@facs agree with it in both languages. Put tei:pb ed=\"1965\" n=\"33\" (with the correct facs) at the start of hael_betaatzumot in both HE and EN. If n95 holds both languages of page 34, change the EN yishtabbach pb and div facs to n95."
+    }
+  ],
+  "observations": [
+    "The scope fix works as intended. Psalm 35:10 is closed by a bare verse terminator and then a chapter terminator before מִי יִדְמֶה / 'Who is like Thee'. Psalm 103:1 opens after כָּאָמוּר / 'as it is said:', and the nishmat/al_ken prayer-part is closed before the first quotation.",
+    "The chapter milestones that have n but no corresp (n=35, n=103, n=33) are themselves terminators under rule 3. They open no chapter scope and close nothing, because no chapter milestone comes before them. They do no harm, since the verse URNs are fully qualified, but they are redundant. Consider removing them.",
+    "Between the Psalm 35:10 terminator and Psalm 103:1, the מִי יִדְמֶה passage is in no prayer-part. That is acceptable as long as no existing identity covers it.",
+    "The EN sic/corr for the missing closing quote after 'Name.' records the printed and corrected readings correctly.",
+    "hael_betaatzumot keeps the printed large הַמֶּֽלֶךְ / 'O King seated…' as recitation text in its own paragraph, in both languages, not as a heading. That is correct.",
+    "befi_yesharim has HE as an lg of four l elements and EN as a single paragraph, as specified. uvemaqhalot and yishtabbach are plain paragraphs and look fine.",
+    "Pointing such as ייָ vs יְיָ (nishmat וַייָ, shokhen_ad בַּייָ), the meteg on שָׁמָֽיִם and הַמֶּֽלֶךְ, and other doubtful Hebrew marks are not certified here. They are left to the image review and the pending user questions.",
+    "There are stray double spaces before some milestones (after מִגּוֹזְלוֹ: and כָּאָמוּר, and in the EN equivalents). This is cosmetic only."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "7ea69c4a-1688-45ff-9402-7e2d90fd0ec2"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "self-report: low (configured value not visible to reviewer)"
+  },
+  "checks": [
+    "Read human_hashachar_s48_s51_confirmation.json: 7 changes, 4 confirmed-unchanged items, pending:[]. Policy is a direct transcription correction, not sic/corr.",
+    "Read independent/hashachar_guideline_audit_round2.json: encoding_approved:true. The 8 pending human questions listed there are all answered by the confirmation file.",
+    "aval_anachnu.xml:34 has 'בְּנֵי בְרִיתֶךָ' (no dagesh on the bet of בריתך), 'לּוֹ' (lamed dagesh kept), 'גַּב־הַמִּזְבֵּחַ' (maqaf, no גבי) and 'שֶׁשָּׂמַחְתָּ־בּוֹ' (maqaf). Matches the human reading.",
+    "ribbon_kol_haolamim.xml:34 has 'כִּי רֹב' (holam, not רַב) and 'מַה־יְּשׁוּעָתֵנוּ' (yod dagesh). Matches.",
+    "birkhot_hashachar_shetatzileni.xml:34 has 'בֶן־בְּרִית' twice, with no dagesh on the bet of בן either time. Matches.",
+    "birkhot_hashachar_hamaavir_shenah.xml:34 has 'מֵעֵינָי' (qamats under nun). Matches.",
+    "birkhot_hashachar_shetargilenu.xml:34 has 'בִזָּיוֹן' (no dagesh on bet, dagesh on zayin). Matches. The milestone structure (shetargilenu / gomel_chasadim / closing milestone) and the pb n=7 placement are as previously approved.",
+    "morning_blessings.xml:88 has the documentary note type=instruction xml:lang=he with 'בְּסֵתֶר'. Transclusion order at lines 85–90 is hamaavir → shetargilenu-/gomel_chasadim → shetatzileni → Leolam note → ribbon → aval_anachnu, as previously approved. The men's and women's conditionals are unchanged.",
+    "machzor_expanded index.xml:1339 has the bilingual note with Hebrew 'בְּסֵתֶר'. The English wording is unchanged ('fear God in private'). The structure (one note, he/en foreign children) and the order at 1336–1341 match the approved state. The Torah, Neshamah and rite conditionals at 1235–1363 are unchanged.",
+    "No ASCII hyphen appears in place of a maqaf in any changed word. The maqaf is visibly the Hebrew mark, distinct from the ASCII '-' in the idno 'shetargilenu-/gomel_chasadim'.",
+    "No old reading (גַּבֵּי, בְּנֵי בְּרִיתֶךָ, כִּי רַב, מַה־יְשׁוּעָתֵנוּ, בֶּן־בְּרִית, בַּסֵּתֶר, ששמחת without maqaf) remains in any of the 7 files read."
+  ],
+  "findings": [
+    {
+      "id": "L1",
+      "severity": "limitation",
+      "text": "I verified by reading rendered characters only. No codepoint dump or SHA-256 was computed, so I have not machine-confirmed the order of combining marks (for example dagesh before vowel) or the exact maqaf codepoint (expected U+05BE). Run a codepoint/normalization check in the final export step."
+    },
+    {
+      "id": "L2",
+      "severity": "limitation",
+      "text": "I read only index.xml lines 1220–1369. I had no full-text search tool, so I cannot rule out a stale 'בַּסֵּתֶר' copy elsewhere in index.xml or in other project files. None is expected, because the prior audit placed the only expanded copy at line 1339."
+    },
+    {
+      "id": "N1",
+      "severity": "nit (carried over, non-blocking)",
+      "text": "The round-2 F2 residual applies to the comparison JSON's accepted:'pending' keys. Now that every human question is answered, those keys and pending_human entries should be updated to point to human_hashachar_s48_s51_confirmation.json. I did not re-read the comparison JSON."
+    }
+  ],
+  "remaining_source_ambiguities": [],
+  "source_readings_approved": true,
+  "encoding_alignment_order_approved": true,
+  "verdict": "APPROVED. All 10 human-adjudicated readings appear exactly in every required place, including בְּסֵתֶר in both the documentary note and the expanded bilingual note. The changes are character-level only and leave intact the approved structure, milestones, transclusion order, conditionals and bilingual note pattern. The DRAFT metadata is not treated as a dispute. Leaf acceptance can proceed after the final exports, together with a codepoint/hash check (L1, L2).",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "0da98d53-ffbf-4f02-a23d-c0c8cc85e2b8"
+  }
+}

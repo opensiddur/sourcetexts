@@ -1,0 +1,77 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "readings": [
+    {
+      "key": "s40-lastword",
+      "text": "שִׁמְעָה",
+      "decision": "שִׁמְעָה, not שְׁמָעָה",
+      "evidence": "micro-40-shimah.png: there is one dot under the shin, which is hiriq. A shva would be two stacked dots. The shin dot is at the upper right. Under the mem there are two stacked dots, which is shva, not a qamats T-shape. Under the ayin there is a clear qamats T-shape. The final he has no mark.",
+      "unresolved": []
+    },
+    {
+      "key": "s42-yigdal2-dalet",
+      "text": "לְאַחְדוּתוֹ",
+      "decision": "Not settled. At the available resolution I can't see a dot that clearly belongs to the dalet, as opposed to the shuruk in the following vav. I am not adding a dagesh just because the standard text has לְאַחְדּוּתוֹ. The rest of the pointing (shva on lamed, patah on alef, shva on het, shuruk, holam on the final vav) is as written.",
+      "evidence": "micro-42-yigdal2.png, which is downscaled 1.14x. In כְּיִחוּדוֹ on the same line, the shuruk dot sits on the left side of the vav. In לְאַחְדוּתוֹ, any dot between the dalet and the vav could be that shuruk, so it isn't a separate mark inside the dalet. I can't make out a dot inside the dalet itself.",
+      "unresolved": [
+        "dalet dagesh: needs a full-resolution crop (no downscaling) of the word"
+      ]
+    },
+    {
+      "key": "s42-yigdal7-moshe",
+      "text": "כְּמֹשֶׁה",
+      "decision": "One printed dot at the top left of the mem, where it touches the upper right of the shin, serves as both the holam on the mem and the shin dot. This is a normal shared-dot ligature in the font, not a mistake in the source. Encode both marks: holam on the mem and shin dot on the shin.",
+      "evidence": "micro-42-yigdal7.png: there is only one dot above the mem–shin join and no second dot. The segol under the shin and the shva under the kaf are clear.",
+      "unresolved": []
+    },
+    {
+      "key": "s42-yigdal11-ra",
+      "text": "רַע",
+      "decision": "רַע (patah), as printed",
+      "evidence": "micro-42-yigdal11.png and morning-s42-band3.png: under the resh there is a flat bar with no downstroke. On the same line, the qamats in לְרָשָׁע and כְּרִשְׁעָתוֹ have a clear T-shape, so the two vowels look different.",
+      "unresolved": []
+    },
+    {
+      "key": "s39-eden",
+      "text": "עֵֽדֶן",
+      "decision": "Tsere with a printed meteg. The mark is two tsere dots with a short upright stroke centered between them. This is a different shape from the smudge confirmed in the heading, which sits off to the side of a hataf-patah.",
+      "evidence": "micro-39-eden.png and morning-s39-band0.png: under the ayin, the pattern is dot, stroke, dot, centered under the letter, with the stroke not attached to the ayin's tail. The deciding comparison is סֵ֫דֶר in the heading (micro-39-title.png). It has the same dot-stroke-dot pattern under the samekh, and samekh has no descender, so the stroke can't be part of a letter there. In the heading, the stroke by the ayin of עֲטִיפַת is off to one side of the hataf-patah bar and dots and is shaped differently, which fits the smudge ruling.",
+      "unresolved": [
+        "Medium confidence only. If the project policy keeps meteg only when it is clearly separate from the letter, check at full resolution that the stroke is detached from the ayin."
+      ]
+    },
+    {
+      "key": "s39-adanecha",
+      "text": "עֲדָנֶיךָ",
+      "decision": "No meteg added",
+      "evidence": "morning-s39-band1.png: the only marks I can see under the ayin are the patah bar and the two shva dots of the hataf-patah. Nothing separate at this resolution can be told apart from the hataf parts or the ayin's tail.",
+      "unresolved": []
+    },
+    {
+      "key": "s40-yaakov",
+      "text": "יַעֲקֹב",
+      "decision": "No meteg added",
+      "evidence": "morning-s40-band1.png, first line: there is a patah under the yod and a hataf-patah under the ayin. A low bar near the yod is the patah itself. I can't see a separate vertical stroke.",
+      "unresolved": []
+    },
+    {
+      "key": "s42-adei-ad",
+      "text": "עֲדֵי־עַד",
+      "decision": "No meteg added",
+      "evidence": "morning-s42-band3.png, last line: the mark under the first ayin looks like the hataf-patah plus the ayin's descender, much like the heading case. I can't separate out a distinct meteg stroke.",
+      "unresolved": []
+    }
+  ],
+  "remaining_source_items": [
+    "s42 Yigdal line 2, לְאַחְדוּתוֹ: is there a dagesh in the dalet? Needs a full-resolution crop.",
+    "s39 עֵֽדֶן: is the meteg stroke detached from the ayin's tail? Only needed if the evidence above isn't enough."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "4e083cb4-4e45-45f0-8e35-d89e1ce5bc4b"
+  }
+}

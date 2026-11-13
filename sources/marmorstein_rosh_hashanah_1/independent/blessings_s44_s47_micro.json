@@ -1,0 +1,48 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "readings": [
+    {
+      "scope": "Adon Olam final line, gimel of גויתי (/tmp/blessings-micro-gviati.png)",
+      "text": "dagesh present in gimel (גְּ)",
+      "confidence": "medium",
+      "visual_evidence": "There is a small dark dot inside the gimel's body, at mid-height and separate from the vertical sheva pair below the letter. The crop is low-resolution and the dot is close to the stroke, so it could be a print speck. It is not clipped."
+    },
+    {
+      "scope": "Numbers 6:25, final kaf of ויחנך (/tmp/blessings-micro-vichunekkha.png)",
+      "text": "a mark sits inside the final kaf at mid-height; I can't tell if it is a dagesh dot or the kamatz printed inside the letter",
+      "confidence": "low",
+      "visual_evidence": "There is a small dark mark inside the bowl of the final kaf. A wedge or triangle accent sits below the baseline at the kaf/sof-pasuq end. At this resolution I can't separate a round dot from the small T-shape of a kamatz printed inside a final kaf. Not clipped."
+    },
+    {
+      "scope": "EluDevarim, vowel under resh of והראיון (/tmp/blessings-micro-harayon.png)",
+      "text": "sheva (two dots stacked vertically) under resh, not tsere",
+      "confidence": "medium",
+      "visual_evidence": "Under the resh are two dots stacked vertically. They are not side by side, so the mark is not a tsere. The heh has a kamatz (T-shape) with a horizontal bar next to it, which makes the vowel-letter alignment around heh/resh a bit crowded. The vav's sheva is clearly separate, at the right of the word."
+    },
+    {
+      "scope": "First בקרבי, after משמרה (/tmp/blessings-micro-bekirbi.png, line 1)",
+      "text": "dot inside initial bet (בְּ)",
+      "confidence": "medium-low",
+      "visual_evidence": "The word is at the crop edge. The initial bet looks complete, and a dot appears inside its body above the sheva. The glyph is very close to the frame, though, so a small edge clip can't be ruled out. Note: the word cut off at the start of line 3 of this crop is the second בקרבי, not this one."
+    },
+    {
+      "scope": "Second בקרבי, after שהנשמה (/tmp/blessings-micro-bekirbi2.png; context /tmp/blessings-micro-betsline.png)",
+      "text": "dot inside initial bet (בְּ)",
+      "confidence": "medium-high",
+      "visual_evidence": "In the close crop the whole initial bet is visible, with a distinct dot inside its body above the vertical sheva dots below it. The wider line confirms the order כל זמן שהנשמה בקרבי מודה. Not clipped in bekirbi2."
+    }
+  ],
+  "remaining_ambiguities": [
+    "Q2: the mark inside the final kaf of ויחנך could be a dagesh or the kamatz drawn inside the letter. This needs a higher-resolution crop of just that glyph.",
+    "Q1: the gimel dot in גויתי is visible but close to the stroke. A higher-resolution crop would rule out a print speck.",
+    "Q4: the first בקרבי is right at the crop edge. A crop with margin around the initial bet would confirm the dot isn't an artifact and the letter isn't partly clipped."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "fd62864f-1eec-4a8d-b530-e5741cc41d3a"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "not stated in this session"
+  },
+  "findings": [
+    {
+      "id": "N1",
+      "severity": "medium",
+      "status": "new; present in the first snapshot and missed by audit 1",
+      "file": "heidenheim-he/morning_entrance_verses.xml:34-35 and heidenheim-he/morning_before_prayer.xml:34-35, compared with heidenheim-he/entering_synagogue.xml:37-40",
+      "issue": "Every Bible URN in the Hebrew morning Psalm collections is already declared earlier in the same project, in entering_synagogue.xml on page 1 (s7), and the HE index transcludes that file first (heidenheim-he/index.xml:133). The 17 URNs are 5/8, 55/15/b, 17/6, 17/15, 31/15, 28/2, 30/3, 30/9, 31/17, 38/16, 39/13/shimah, 30/11, 122/1, 119/162, 5/3, 5/4 and 26/12. This has three consequences. (a) The premise 'the first occurrence remains the canonical Bible verse witness' is false for Hebrew. The canonical HE witness of psalms/17/6 is page 1, not the first verse in before_prayer. The unbound transclusions in the expanded edition (index.xml:1203-1223, including both 17/6 transclusions) resolve to the page-1 text, and that text differs here: s7 has כִי־תַעֲנֵנִי and s40 has כִּי־תַעֲנֵנִי. So the expanded morning section prints the page-1 pointing, not the page-2 pointing. (b) English has no entering_synagogue; the EN index body starts with eruv_tavshilin at en/index.xml:134. In the paired documentary build, the English morning verses are therefore the first English copies, while the Hebrew first copies are on page 1, before the Minchah section. Under the Alignment rules, the repeated Hebrew corresps in the morning files are dropped. The join then pairs the English morning verses with the Hebrew page-1 verses, in a different place and order, and the Hebrew morning collections lose their internal row boundaries. (c) The F2 fix has the same cross-position effect at stream level. The HE stream contains prayer:mah_tovu and its parts at s7 and again through the morning transclusion; EN contains them only in the morning. The outer context divs (.../morning_preliminaries/mah_tovu, /entrance, /before_prayer) are unique on both sides and still join. Guideline lines 214-215 say: 'Do not duplicate a canonical URN merely because the text is printed again elsewhere.' Lines 302-307 and 2100-2103 say only the first copy is kept. I derived (b) and (c) from the guideline text. I did not read or run the compiler.",
+      "fix": "Recommended: apply the F4 pattern to the morning Psalm collections on both sides. Give each verse a unique unit=occurrence milestone (for example .../morning_preliminaries/before_prayer/<name>), keep its Biblical identity in seg/@source, and close with an occurrence terminator, so HE and EN join on occurrence URNs that appear exactly once. Point the expanded morning section at those occurrence URNs if it should print the s40 readings. Either way, run the paired documentary compile and check the duplicate-corresp warnings for these URNs and for prayer:mah_tovu, as guideline lines 209-210 require. If the misplaced pairing is judged acceptable, record that decision in the registry note."
+    }
+  ],
+  "remaining_source_ambiguities": [],
+  "alignment_findings": [
+    "F1 resolved. en/yigdal.xml has no pb and its rubric is a note. English page 3 starts at en/morning_before_prayer.xml:34, inside 38:16 before 39:13, and Hebrew page 3 starts inside 39:13 (שִׁמְעָה | תְפִלָּתִי). Maariv no longer picks up an English page break from Yigdal.",
+    "F2 resolved for reference uniqueness. he/morning_mah_tovu.xml now holds only the unique context div, a facs n39 wrapper and the transclusion of prayer:mah_tovu@HE, so the project index has one declaration. The part extents in old he/mah_tovu.xml:34 and new en/morning_mah_tovu.xml:35 are identical: mah_tovu covers Num 24:5; varani covers Ps 5:8, 26:8, 95:6 (adaptation) and 69:14; then a bare prayer-part terminator. Both sides use seg/@source only. EN declares the identity once in its project. See N1(c) for the stream-level pairing.",
+    "F3/F5 resolved. The composite no longer has verse milestones on either side, so psalms/5/8 is not repeated between the morning entrance and Mah Tovu in the morning stream. 95:6 is type=adaptation on both sides. Within the morning files the remaining 5/8 duplication is with s7; see N1.",
+    "F4 resolved within before_prayer. Each side has one occurrence milestone with corresp .../psalm_17_6_repeat, seg source=psalms/17/6 and a bare occurrence terminator. There is no outer div corresp and nothing references itself: the parent transcludes the URN, the file declares it once, and the file's idno matches. HE and EN carry the same occurrence URN, so the second 'I called … O God' reading gets its own row. 'occurrence' is not in the guideline's unit list, so its scope uses the rule-2 fallback, but the explicit terminator makes that moot. Side effect: inline transclusion drops the seg, so the Biblical source annotation is absent in the compiled before_prayer stream. That is consistent with not claiming the verse there. In the documentary build, psalms/17/6 still occurs in HE s7 (see N1).",
+    "F6 resolved. 'On entering the Synagogue:', 'Before the morning prayer:', 'Before draping…' and 'Then this ברכה is recited while standing:' are type=description in he/tallith.xml, he/ and en/morning_preliminaries.xml and the expanded index (lines 1188, 1190, 1202, 1207). That matches the generic entrance (line 77). 'One then drapes oneself … and says:' and 'One then removes the טלית…' remain instructions. The first is borderline under 'Kinds of rubric' because it also introduces the following text, but the draping is an action the text does not contain, so instruction is defensible.",
+    "F7 resolved. HE and EN Yigdal headings are both tei:note type=description, first in the poem div. The HE note keeps sic מסדורים / corr מסודרים.",
+    "Yigdal stanzas: yigdal_daniel/1-13 on both sides with a final terminator; unchanged."
+  ],
+  "order_findings": [
+    "Documentary HE (he/morning_preliminaries.xml): pb 2 → head → entering description → entrance → Mah Tovu context → Shachar → before-prayer description → before_prayer (which inline-transcludes the repeat between 5:4 and 26:12) → Yigdal. EN has the same sequence (en/morning_preliminaries.xml:32-41). This matches the printed order.",
+    "Expanded section_morning (index.xml:1184-1236): tallit → Prayers → 5:8, 55:15b, Mah Tovu, Shachar, then the before-prayer verses with 17:6 transcluded twice (lines 1208 and 1222) → Yigdal → Torah benedictions. The order is correct; see N1 for which witness these unbound URNs resolve to.",
+    "The generic entrance is still guarded with shaharit=false (index.xml:65-73)."
+  ],
+  "reviewed_files": {
+    "_note": "Hash values are copied from /tmp/morning-audit2-hashes.json and identify the snapshot. I did not recompute them.",
+    "read_in_full_this_round (changed hashes)": [
+      "heidenheim-he/morning_mah_tovu.xml d2d67529…",
+      "heidenheim-he/morning_psalm_17_6_repeat.xml ad4564c0…",
+      "heidenheim-he/yigdal.xml 420d4698…",
+      "heidenheim-he/tallith.xml 6ea309ce…",
+      "heidenheim-he/morning_preliminaries.xml ba8c4241…",
+      "marmorstein-en/morning_mah_tovu.xml 22eb861b…",
+      "marmorstein-en/morning_psalm_17_6_repeat.xml 97ec60cf…",
+      "marmorstein-en/yigdal.xml fffa2574…",
+      "marmorstein-en/morning_preliminaries.xml b694dce6…",
+      "machzor_expanded-opensiddur-he/index.xml d3f94ed0… (lines 55-89 and 1170-1249 only)"
+    ],
+    "re_read_this_round (unchanged hashes)": [
+      "heidenheim-he/morning_before_prayer.xml body",
+      "marmorstein-en/morning_before_prayer.xml body",
+      "heidenheim-he/morning_entrance_verses.xml body",
+      "marmorstein-en/tallith.xml body",
+      "heidenheim-he/index.xml lines 30-149",
+      "marmorstein-en/index.xml lines 60-179"
+    ],
+    "unchanged_since_audit_1_not_re_read": "HE tallith_hineni_mitattef, tallith_lehitattef, tallith_mah_yaqar, tallith_yehi_ratzon, shachar_avaqeshkha_gabirol; EN tallith_lehitattef, tallith_mah_yaqar, morning_entrance_verses, shachar_avaqeshkha_gabirol. Their hashes match audit 1, where each was read in full.",
+    "outside_frozen_list": [
+      "heidenheim-he/mah_tovu.xml (canonical HE witness; body read in full)",
+      "heidenheim-he/entering_synagogue.xml (body; basis for N1)",
+      "marmorstein-en/entering_synagogue.xml does not exist"
+    ],
+    "guideline": "JLPTEI-3.md: URN scope and terminators (171-240), versification rules (300-311), sub-verse scope (313-379), header and biblScope (473-561), inclusions (861-899), Kinds of rubric (1952-1990), Alignment (2096-2111)",
+    "images": [
+      "/tmp/morning-el-anshei-tight.png",
+      "/tmp/morning-seder.png"
+    ],
+    "evidence": [
+      "human_morning_s39_s43_confirmation.json",
+      "independent/morning_s39_s43_micro.json",
+      "readings.json, primary/, independent/ and independent/…_enlarged.json were not re-read this round; nothing in the corrections depended on them"
+    ]
+  },
+  "verdict": "changes_requested on one item. F1–F9 are resolved or accepted, the two image checks are settled, and I found no transcription errors. The remaining item is N1: a project-level duplicate of the Bible URNs (and of prayer:mah_tovu at stream level) between page 1 (s7) and the page-2 morning collections. It makes the expanded edition resolve to the page-1 readings and is likely to mispair the HE/EN documentary parallel. Fix it, or compile and document the result.",
+  "checks": [
+    "Image /tmp/morning-el-anshei-tight.png: there is no maqaf, so the space in he/yigdal.xml:41 is correct. The gap between אֶל and אַנְשֵׁי is empty at maqaf height. The only stroke near it is a short slanted mark at mid letter height, attached to the right side of the aleph of אַנְשֵׁי, with the patach directly under that aleph. It is the aleph's upper-right arm, the same shape as on the aleph of אֶל, not a free horizontal bar centred in the gap. Confidence about 0.8. This withdraws audit 1's remark about a 'short stroke after אֶל'; that stroke belongs to the next word.",
+    "Image /tmp/morning-seder.png: confirmed סֵֽדֶר. Under the samekh are two tsere dots with a short separate vertical stroke between them and slightly lower. Samekh has no descender, so the stroke is a meteg, not part of the letter. Segol under the dalet. The XML head (he/tallith.xml:34) has the meteg. Optional: the header title at he/tallith.xml:5 still reads סֵדֶר without the meteg. That is harmless metadata, not a transcription error.",
+    "לְאַחְדּוּתוֹ: dalet dagesh and vav shuruq are both present at he/yigdal.xml:37, matching the human confirmation. Not reopened.",
+    "The תזכה / נשמתי speck stays settled as a blemish; no punctuation was added.",
+    "F8, per the guideline text: rule 3 makes any milestone with a unit and no corresp a terminator, whatever its n. Chapter milestones with n and no corresp therefore open nothing and claim no chapter, and the bare chapter milestone after each closes nothing. The 'neither corresp nor n' sentence (lines 233-236) is about half-verse and verse-part terminators, not chapters. This matches the existing s7 encoding. It is optional style cleanup, not a source or schema error. I did not consult the ODD, so schema acceptance is from the guideline text only.",
+    "F9: he/tallith.xml and he/ and en/morning_preliminaries.xml still lack a biblScope. The header template shows one on each document's bibl, but this is a metadata enhancement, not a transcription omission. Accepted as optional.",
+    "he/morning_mah_tovu.xml: the transcluded canonical div carries its own facs n6 inside the n39 context wrapper. That is expected for a reused witness and needs no change.",
+    "I did not verify that the registry note siddur.jsonl:1995 no longer gives 'local pointing' as the reason for a second Mah Tovu copy. If it still does, it is stale after F2.",
+    "Not done: hash recomputation, schema validation, compiler or parallel runs. Code and settings access were out of scope."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "060bc4cb-0e32-4320-a9aa-b74d150d4060"
+  }
+}

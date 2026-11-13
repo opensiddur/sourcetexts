@@ -1,0 +1,83 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low (as configured for this session); full read of the generated XML, JLPTEI-3.md, the resolutions, primary, independent and isolated JSON, plus visual checks of scans s66 and s70"
+  },
+  "encoding_alignment_order_approved": true,
+  "source_acceptance_pending_human": true,
+  "findings": [
+    {
+      "severity": "none (verified)",
+      "file": "HE psalm_34.xml, psalm_90.xml, psalm_91.xml; EN psalm_34.xml, psalm_90.xml, psalm_91.xml",
+      "issue": "Bible encoding passes. Each psalm has a chapter milestone with @n and canonical @corresp. Every verse has one milestone with canonical @n and @corresp (34:1–23, 90:1–17, 91:1–16) and none is repeated. Every scope is closed by a bare verse terminator followed by a bare chapter terminator. No @corresp carries an @project suffix. The Hebrew and English use the same verse URNs, so they align verse by verse.",
+      "recommendation": "No change."
+    },
+    {
+      "severity": "none (verified)",
+      "file": "HE psalm_34.xml; HE psalm_90.xml / psalm_91.xml; EN psalm_34/90/91.xml",
+      "issue": "Layout matches the source. Scan s66 shows Hebrew Psalm 34 set one verse per line, with 34:1 wrapping and indented; this is encoded as tei:lg/tei:l. Hebrew 90 and 91 are running paragraphs (s70 confirms this for 91), each encoded as one tei:p. The English is continuous paragraphs, as the primary and independent readings record. The verse milestones are independent of the p/l structure, as the schema requires.",
+      "recommendation": "No change."
+    },
+    {
+      "severity": "none (verified)",
+      "file": "EN psalm_34.xml, HE psalm_91.xml, EN psalm_91.xml, HE psalm_34.xml",
+      "issue": "Page boundaries are correct. In the English, pb n=19 (n68 = s69) falls inside 34:18 between 'the Lord' and 'listens'. In the Hebrew, pb n=20 (n69 = s70) falls inside 91:2 after אֹמַר לַיהוָה. In the English, pb n=20 (n70 = s71) falls inside 91:2 between 'I say to' and 'the Lord'. In the Hebrew, pb n=19 (n67 = s68) falls at the start of 34:18, which matches the independent reading that no verse is split there. The div @facs values follow s(N) = n(N−1) consistently, and the biblScope page ranges are correct.",
+      "recommendation": "No change."
+    },
+    {
+      "severity": "none (verified)",
+      "file": "all six psalm files (standOff)",
+      "issue": "Each citation is a standoff note of type 'citation' targeting verse 1, with a tei:ref to the chapter URN. The Hebrew labels are לד / צ / צא; the English labels are 'Psalm 34.' etc. without the printed parentheses, as allowed. No citation text is in the prayer text, and there are no Hebrew linkage or catchword cues in the English.",
+      "recommendation": "No change."
+    },
+    {
+      "severity": "none (verified)",
+      "file": "HE psalm_91_repeat.xml; HE psalm_91.xml; EN index.xml",
+      "issue": "The source repetition is encoded correctly. The second Hebrew 91:16 is a separate structural occurrence (div corresp urn:x-opensiddur:text:siddur:rosh_hashanah/psalm_91_repeat). It reuses the canonical verse by inline transclusion of psalms/91/16@prayerbook_for_the_new_year-heidenheim-1965-he, whose scope is bounded by the verse terminator. There is no second psalms/91/16 milestone. The English prints the verse once and has no repeat, which matches s71. The reuse is provisional, as the source notes say.",
+      "recommendation": "No change. Keep the provisional status until a human confirms the pointing matches point for point (see human_dependencies)."
+    },
+    {
+      "severity": "optional (preference, not blocking)",
+      "file": "HE psalm_91_repeat.xml",
+      "issue": "On s70 the repeat is set in smaller type and runs on in the same line straight after the first 91:16; it is not a separate block. The encoding puts it in its own tei:div/tei:p and records nothing about the smaller type. That is acceptable for a separate structural occurrence, but it loses two print details.",
+      "recommendation": "Optionally wrap the transclusion in <tei:hi rend=\"small\">, and/or add an encoding note saying the repeat runs on inline in the print. No text change."
+    },
+    {
+      "severity": "none (verified)",
+      "file": "HE psalm_34/90/91.xml; EN psalm_90.xml",
+      "issue": "The text follows the adjudicated source. Where the XML differs from the raw primary reading, each difference matches a settled resolution: defective עַצְמֹתָיו, פֹּדֶה and יֹשֵׁב; plene שְׁמוֹנִים; the maqaf in בְּכָל־דְּרָכֶיךָ; Tetragrammaton without holam; no meteg added; English 'fleeting' and the comma after 'eighty years'. All other Hebrew and English text matches the primary reading. No translation was supplied and no ritual condition was added.",
+      "recommendation": "No change. The pending pointing items are listed below and were not adjudicated here."
+    },
+    {
+      "severity": "none (verified)",
+      "file": "HE index.xml, EN index.xml, machzor_expanded-opensiddur-he/index.xml",
+      "issue": "Order is correct: 19 → 34 → 90 → 91 in all three running orders, then the Hebrew-only psalm_91_repeat in the Hebrew and expanded indexes. In the expanded index, the morning endDeclare and endConditional come after the repeat transclusion, so the new psalms are inside the shaharit / rosh-hashana=1 gate. No new conditions were added.",
+      "recommendation": "No change."
+    },
+    {
+      "severity": "advisory (outside this installment, not blocking)",
+      "file": "HE index.xml line 279; HE psalm_24.xml",
+      "issue": "The Hebrew project index transcludes psalms/24, a שיר של יום from scan n350, straight after psalm_91_repeat with no heading or division between them. That makes Psalm 24 look like it follows 91 in the running order. The expanded index handles it properly, in a separate appendix div. psalm_24.xml also has no pb @n and no biblScope pages. This predates the installment and does not affect the 19→91→repeat order under review.",
+      "recommendation": "When Psalm 135 and the rest of this section are added, put them before psalms/24, or move psalms/24 into its own division matching its source position."
+    },
+    {
+      "severity": "advisory (outside this installment)",
+      "file": "s70/s71",
+      "issue": "Psalm 135 begins on s70 right after the repeat (marginal קלה) and on s71 after 91:16. It is correctly left out of this installment.",
+      "recommendation": "Future work, as scoped."
+    }
+  ],
+  "human_dependencies": [
+    "34:1 vowel under resh in ויגרשהו (sheva vs hataf-patah); 34:2 vowel under resh in אברכה (sheva / hataf-patah / qamats)",
+    "90:16 dagesh in pe and vowel under ayin in פעלך (qamats vs hataf-qamats); 90:10 dagesh in bet of בהם; 90:1 dagesh in lamed of לנו",
+    "34:19 whether יושיע has a meteg",
+    "91:16 whether both printed occurrences on s70 have the same pointing point for point (the second is in smaller type); until confirmed, reusing canonical 91:16 for the repeat stays provisional",
+    "Final source acceptance of s66–s69 in full and the Psalm 91 continuation on s70–s71"
+  ],
+  "verdict": "No blocking errors found. JLPTEI conformance, Hebrew/English alignment, structural fidelity and the expanded running order are approved. The layout is faithful: Hebrew Psalm 34 as verse lines, Hebrew 90/91 as running paragraphs, the English as continuous paragraphs. Chapter and verse correspondences are canonical, scopes are closed by terminators, and page breaks sit correctly inside English 34:18 and inside 91:2 in both languages. Citation notes are standoff without parentheses. The repetition appears twice in the Hebrew and once in the English, with no duplicate canonical 91:16. The order 19→34→90→91→Hebrew repeat holds, and the morning gate encloses the new psalms. The only suggestions are optional: mark the repeat's small type and inline run-on, and, as a separate pre-existing matter, separate psalms/24 in the Hebrew index. Source acceptance is not certified: the listed pointing questions and the point-for-point identity of the two 91:16 occurrences still need human adjudication, and none of them was decided here from standard pointing.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "9010fbd9-41be-4f95-97d1-f84958d287eb"
+  }
+}

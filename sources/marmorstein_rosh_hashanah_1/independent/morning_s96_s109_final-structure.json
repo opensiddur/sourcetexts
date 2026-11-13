@@ -1,0 +1,60 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+  },
+  "approved_for_draft": true,
+  "issues": [
+    {
+      "severity": "low",
+      "location": "machzor_expanded-opensiddur-he/index.xml:1464 (morning_kaddish module, via the morning sequence)",
+      "finding": "The Kaddish intro sits after an unqualified chapter-context milestone and before the occurrence-verse milestone. No words are lost and the identity scope is unchanged. I'm keeping it as a harmless observation. I did not re-open the module in this pass; this relies on the earlier finding."
+    },
+    {
+      "severity": "low",
+      "location": "index.xml:1469-1485 (section_yotzer_weekday)",
+      "finding": "There is no inner j:declare for shabbat=false. Sibling Shabbat-conditioned blocks such as section_maariv_veshamru and section_morning_qorbanot_shabbat do declare their settings. The outer condition already filters correctly, so this is only a style inconsistency. The rubric 'ביום חול' / 'On a weekday' also has no trailing colon, unlike its siblings ('בשבת:' / 'On Shabbat:'). That is cosmetic."
+    },
+    {
+      "severity": "low",
+      "location": "/tmp/mahzor-s96/calendar-verification.json",
+      "finding": "The evidence file contains only pass/fail booleans: two checks, shabbat false and shabbat true, all true, status 'pass'. It has no compiled text excerpts and no per-language breakdown. It supports the claims but doesn't show them. Optional: save short output excerpts so an audit can see the chosen variant words directly."
+    }
+  ],
+  "resolved": [
+    {
+      "id": "audit-followup medium finding (weekday Yotzer opening not calendar-gated)",
+      "evidence": "index.xml:1469-1485. Hameir (yotzer_or/hameir) and El Barukh (yotzer_or/el_barukh) are now inside section_yotzer_weekday, gated by j:conditional holiday-aggregate shabbat=false. The rubric is an editorial instruction in both languages: <foreign xml:lang='he'>ביום חול</foreign> and <foreign xml:lang='en'>On a weekday</foreign>. The conditional and endConditional are matched and well nested inside section_morning, before hakol_yodukha (line 1486)."
+    },
+    {
+      "id": "Calendar behaviour from the compiler",
+      "evidence": "calendar-verification.json: for both shabbat=false and shabbat=true, stanza5_both_languages, correct_variant_words, alternate_note_only_on_shabbat and exclusive_opening are all true, and the overall status is pass. So both languages stay in the shared stanza 5, the correct words are chosen, the Shabbat note is absent on weekdays, and the two openings never appear together."
+    },
+    {
+      "id": "Hakol / El Adon / Ofan routing",
+      "evidence": "In the index, hakol_yodukha, el_adon and lael_asher_shavat (lines 1486-1488) have no condition, so the Shabbat/weekday split depends on conditions inside those modules. exclusive_opening=true in both calendar states confirms that this works. The use of de-Hebr in the source modules' nested rubrics is taken from your description. I did not open those modules (out of scope). The index's own standalone documentary-style rubrics already use de-Hebr (lines 891, 915, 973, 1098), which matches."
+    },
+    {
+      "id": "Repeated Hameir page 37 pb",
+      "evidence": "Accepted as described. Readers who open the module directly still get the facsimile page, and the duplicate index metadata does not affect what is rendered."
+    },
+    {
+      "id": "Index identity",
+      "evidence": "The file at the stated path has the idno urn:x-opensiddur:text:siddur:machzor_expanded@machzor_expanded-opensiddur-he. It is the expanded arrangement, not either documentary index. The edition statement still says 'DRAFT: independent adjudication pending'."
+    }
+  ],
+  "remaining_source_review": [
+    "human1",
+    "human2",
+    "human3",
+    "human4",
+    "human5",
+    "Faint marks still to be checked in the actual readers",
+    "No source words are accepted at this stage. The draft is approved for structure only."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "3deb6d0d-d843-479d-bc54-43af0b624b7c"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low (single visual pass per crop; no re-reads, no pixel measurement)"
+  },
+  "readings": [
+    {
+      "file": "shiru.jpg",
+      "word": "שִׁירוּ",
+      "reading": "שִׁ + meteg, י, ר, וּ",
+      "evidence": "Under shin there is a hiriq dot with a short vertical stroke to its left, at about the same baseline. That is the normal meteg position. The vav has a dot to its left at mid-height (shuruq). The shin dot sits upper-right and runs into the tall right arm, but it is probably present. This matches the previous crop and the same word in zamru-correct.jpg, which also shows the stroke to the left of the dot."
+    },
+    {
+      "file": "heitivu-tight.jpg",
+      "word": "הֵיטִיבוּ (with נַגֵּן beside it)",
+      "reading": "הֵ, י, טִ + short stroke below, י, ב, וּ",
+      "evidence": "There are two dots under he (tsere) and a hiriq dot under tet. A short, nearly vertical stroke sits below the hiriq, slightly offset from it, not clearly level with it and to its left. At this resolution I can't tell whether it is a meteg or a slightly slanted conjunctive accent. נַגֵּן shows patah under nun and dots under gimel. I didn't assess it further."
+    },
+    {
+      "file": "maasehu-tight.jpg",
+      "word": "וְכָל־מַעֲשֵׂהוּ׃",
+      "reading": "וְ, כָ, ל, maqaf, מַ, עֲ, שֵׂ, ה, וּ, sof pasuq",
+      "evidence": "Under the vav is a shva. Under the kaf is a qamats (T shape). A high maqaf links lamed to mem. Mem has a single patah bar. Ayin has a dash with a colon next to it (hataf patah). The shin has two dots (tsere). I see no vertical stroke right next to the mem's patah. There is a separate vertical stroke further left, under the shin/he junction. I can't place it firmly on either letter."
+    },
+    {
+      "file": "ohev-tight.jpg",
+      "word": "WRONG CROP: shows בֶּאֱמוּנָה, not אֹהֵב",
+      "reading": "בֶּ, אֱ, מ, וּ, נָ, ה (cut off)",
+      "evidence": "Bet has a dagesh and segol. Alef has a cluster of dots (hataf segol). The vav has a dot at mid-height (shuruq). Nun has a qamats. The he is cut off at the left edge. The alef holam of אֹהֵב cannot be evaluated from this file."
+    },
+    {
+      "file": "kones-tight.jpg",
+      "word": "כֹּנֵס",
+      "reading": "כֹּ(?), נֵ, ס, plus a truncated stroke below",
+      "evidence": "A single dot sits at the top, over the junction of kaf's upper-left and nun's top. That is consistent with a holam on kaf, but the crop is too tight to rule out placement over nun. There are two dots under nun (tsere). The last letter has a closed, rounded bottom, so samekh rather than final mem. A dot that may be a dagesh in kaf is uncertain. A stroke below the letters is cut off by the crop edge, so I can't identify it."
+    },
+    {
+      "file": "noten-tight.jpg",
+      "word": "נֹתֵן (between …יָּם and בְּאוֹצָרוֹ…)",
+      "reading": "נ(holam?), תֵ, ן",
+      "evidence": "There are two dots under tav (tsere). I can't clearly separate a holam dot above the nun/tav from the letters' top serifs. Neighbours: בְּ has a shva, and אוֹ and רוֹ have holam dots on the vav."
+    },
+    {
+      "file": "vayehi-tight.jpg",
+      "word": "וַיֶּהִי (after אָמַר)",
+      "reading": "וַ, יֶּ(?), ה + dot, י, plus a vertical stroke between",
+      "evidence": "Below the word, right to left: a patah bar under vav, a dot cluster under yod (segol, or shva plus a stray dot, unclear), then a short vertical stroke, then a single dot under he (hiriq). The stroke falls between the yod's vowel and the he's hiriq, so it could be a meteg on yod (left of its vowel) or a mark tied to he. Unresolved. A dagesh inside yod is probable but not certain. אָמַר has qamats under alef and patah under mem."
+    },
+    {
+      "file": "ledor-tight.jpg",
+      "word": "לְד(ו)ֹר וָד(ו)ֹר׃",
+      "reading": "Probably plene דוֹר in both words, not holam on dalet",
+      "evidence": "In each word, a narrow upright with a dot at its top-left seems to stand between dalet and resh. That reads as vav-holam, not a dot over the dalet. Confidence is medium: the resh and dalet shapes are similar at this scale. There is a shva under the lamed of לְ, a qamats under the vav of וָ, and a sof pasuq at the end. On the right, לִבּוֹ has a holam on its vav."
+    },
+    {
+      "file": "zamru-correct.jpg",
+      "word": "זַמְּרוּ[־?]לוֹ׃ שִׁירוּ",
+      "reading": "זַ, מְּ, ר, וּ, then לוֹ and sof pasuq. No separate maqaf stroke is visible.",
+      "evidence": "Between the vav of זמרו and the lamed, the only marks are the shuruq dot at mid-height (left of the vav) and the lamed itself: its ascender plus its top bar at the x-height line. I see no separate short horizontal stroke at the top line that can be told apart from the lamed's top bar. The two words are set very close together with no normal word space, which is what a maqaf join looks like, but there is no separate stroke. The holam on לוֹ is a dot above the vav. שִׁירוּ again shows hiriq with a stroke to its left under shin."
+    }
+  ],
+  "uncertainties": [
+    "ohev-tight.jpg is the wrong crop (it shows בֶּאֱמוּנָה), so the alef holam of אֹהֵב is unchecked.",
+    "heitivu: the stroke under tet sits below and offset from the hiriq. Meteg or slanted accent can't be decided.",
+    "maasehu: no meteg next to mem's patah. A separate vertical stroke under the shin/he junction belongs to an unclear letter.",
+    "kones: the top dot is at the kaf/nun junction, probably holam on kaf but not certain. The dagesh is uncertain, and the stroke below is cut off.",
+    "noten: a holam over nun can't be separated from the letter serifs.",
+    "vayehi: the vertical stroke sits between yod's vowel and he's hiriq, so it's unclear which letter it belongs to. The yod's vowel could be segol or shva plus a dot.",
+    "ledor: plene דוֹר (vav-holam) vs. holam on dalet is only medium confidence.",
+    "zamru: whether a maqaf is present before לו is unresolved. Tight spacing suggests a join, but no stroke separate from the lamed's top bar is visible."
+  ],
+  "verdict": "Resolved: the shiru hiriq+meteg (in 2 crops), maasehu (no meteg next to mem's patah), and the main letters of every word. Probable: kaf holam in kones and plene דוֹר in ledor/vador. Unresolved: the heitivu and vayehi strokes, the noten holam, and the zamru maqaf. The ohev check needs a corrected crop of אֹהֵב. The unresolved items need a higher-resolution scan or a human check. Rannenu was not looked at again.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "6e703f94-16d2-4a30-9384-e2e9f4621059"
+  }
+}

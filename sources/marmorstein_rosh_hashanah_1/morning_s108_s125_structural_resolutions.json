@@ -1,0 +1,27 @@
+{
+  "status": "Structural findings addressed or explicitly adjudicated; source accuracy remains pending.",
+  "changes": [
+    "Preserve source Emet junction instruction in the expanded sequence; exact source wording settled by human snippet1 and applied to both sequences.",
+    "Reuse existing Hebrew-only ElMelekhNeeman unit, including printed יחיד אומר condition rubric; remove duplicate extraction.",
+    "Editorial מלכנו commentary now targets a local anchor at the variant, not the whole day blessing.",
+    "Continue canonical prayer source attribution across marked and unconditional segments.",
+    "Actual enlarged Hebrew marginal citations give opening verses, not the fabricated range endpoints; corrected labels to דברים יא יג / במדבר טו לז.",
+    "Code rejects explicit quote contexts at equal or shallower depth than an active prayer-part; negative regression test added."
+  ],
+  "declined_generic_requirements": [
+    {
+      "finding": "Require source_reference_corresp / chapter_corresp for every source_reference, or remove canonical verse corresp.",
+      "decision": "Not adopted. A first occurrence of a Biblical verse may legitimately establish its canonical correspondence. Existing accepted first mappings use this supported API. All repeated quotations in this installment supply explicit context correspondences. No new canonical chapter overclaim is introduced."
+    },
+    {
+      "finding": "A chapter with n but no corresp is always an erroneous bare terminator.",
+      "decision": "Not adopted as a global restriction. Numbered chapter context without a canonical whole-chapter mapping is existing deliberate excerpt behavior. Explicit bare same-unit terminators close scopes; all current repeated excerpts additionally have addressable chapter contexts. Existing first-verse behavior and tests retained."
+    }
+  ],
+  "source_pending": [],
+  "final_structural_review": "independent/morning_s108_s125_structure-followup.json",
+  "final_structural_approved": true,
+  "followup_info_resolution": "Confirmed refdb.milestone_terminates lines182–184 uses component count fallback, not URI prefix, when prayer-part has no containment table. Deeper sibling-subtree quotes are therefore contained. Optional additional coverage recommendations do not block actual68whole-unit and8selector checks; Hebrew source acceptance remains pending.",
+  "human_adjudication": "human_morning_s108_s125_snippets_1_to_7.json",
+  "other_source_pending": "Further fine-mark adjudication and full Hebrew review reconciliation."
+}

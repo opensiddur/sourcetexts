@@ -1,0 +1,44 @@
+{
+  "guideline_adherence": {
+    "status": "pass",
+    "findings": [
+      "Three reader-and-congregation labels, at qadosh, barukh_kevod and yimlokh (amidah_qedushah.xml:49), are each encoded as <tei:note type=\"description\" corresp=\"urn:x-opensiddur:instruction:role/reader_and_congregation\" xml:lang=\"he\"><tei:choice><tei:abbr>קו״ח</tei:abbr><tei:expan>קהל וחזן</tei:expan></tei:choice></tei:note>.",
+      "Four reader labels, at neqaddesh, leummatam, uvedivrei and ledor_vador, are still ח׳ expanded to חזן with corresp role/reader.",
+      "Both role URNs are canonical in instruction.jsonl:99-100. No reader_and_congregation label uses role/congregation.",
+      "The labels follow the 'Kinds of rubric' guidance: a label naming who says the passage is a description, placed first inside the passage it belongs to. Each note comes right after its prayer-part milestone. The previous part ends at that milestone, so the label is not left inside the part before it.",
+      "The labels follow the abbreviations guidance: the printed form is kept in tei:abbr and the editorial expansion in tei:expan, so readings.abbreviations can pick either.",
+      "No @rend appears anywhere in the file. Divine names stay in j:divineName.",
+      "The repetition and minyan guard is unchanged: the j:conditional requires both opensiddur:recitation/repetition=true and opensiddur:quorum/minyan=true under j:all. It closes with a matching j:endConditional. The heading note 'קדושה לש״ץ בחזרת התפלה.' is correctly a description, because it says both when and what.",
+      "The milestone sequence still ends with a bare prayer-part terminator after hael_haqadosh."
+    ]
+  },
+  "review_protection": {
+    "status": "pass_with_gaps",
+    "findings": [
+      "unit_review_text (build.py:237-245) adds abbr + ' [' + expan + ']' for each speaker segment. Both fields therefore feed the reviewed payload. The role is derived only from expan, so the role is covered too.",
+      "require_review runs before any document is built. With a changed abbr or expan, a non-draft build stops with 'Independent review pending or stale' and writes nothing.",
+      "The test at test_marmorstein_rosh_hashanah_1.py:112-145 uses speaker {abbr:'קו״ח', expan:'קהל וחזן'} and checks that it builds to role/reader_and_congregation. It then changes abbr to 'קו׳' and expan to 'קהל' one at a time. Each change must raise 'stale' and leave the output file byte-for-byte unchanged.",
+      "An unknown expansion cannot quietly become congregation. build.py:192-193 looks the expansion up in a dict with no default, so anything other than חזן, קהל or קהל וחזן fails with a KeyError. This applies in --draft mode too.",
+      "Gap: no test covers an unknown expansion. The 'קהל' subtest fails on staleness before the mapping is reached, and 'קהל' is a valid key anyway. I suggest a draft-mode test with an unmapped expansion, and replacing the bare KeyError with a ValueError that says what went wrong.",
+      "Gap: nothing checks that abbr and expan agree (for example ח׳ with קהל וחזן would build). Only human review catches that.",
+      "Related, but outside this file's code path: expanded_order (build.py:288) writes 'חזן' if role == 'reader' and 'קהל' otherwise. A section-level role of reader_and_congregation would show the text קהל while its corresp says reader_and_congregation. That is exactly a quiet fallback to congregation and should be an explicit mapping."
+    ]
+  },
+  "limits": [
+    "I only read the files; I did not run the tests or a build. Nothing here confirms that the test passes or that this XML is current build output.",
+    "I did not read opensiddur/importer/scan/review.py. I assumed review_is_current compares a hash of the reviewed payload, as reading_hash in the test suggests.",
+    "I did not open readings.json or reviews.json for this edition, so I have not checked that the amidah_qedushah review entry covers the new abbr and expan payload.",
+    "I had no earlier version of the XML to compare against. 'No prayer-word change' is based on reading the current text only, not a diff.",
+    "I did not adjudicate the printed abbreviation marks, whether קו״ח or קו׳. That reading is the human correction and the primary enlarged-image adjudication. I did not open /tmp/mahzor-qedushah-label-reader.json, and it is not cited as confirmation.",
+    "The abbreviations guidance says to record the evidence for an expansion in the source README. I did not check that README."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "00a059a5-fbe9-41fc-8066-3b9bf79cf69c"
+  },
+  "file_sha256": {
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_qedushah.xml": "1edbd0fd303b825c0f5d8af29f0467439427ed0774ec600a153ced8c57691f33"
+  },
+  "files_unchanged_during_review": true
+}

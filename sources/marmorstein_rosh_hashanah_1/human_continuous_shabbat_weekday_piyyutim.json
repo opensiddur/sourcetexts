@@ -1,0 +1,496 @@
+{
+  "request": "User: bottom-of-page Shabbat and non-Shabbat material is continuous alternative piyyutim; present complete works, separate file per piyyut.",
+  "previous_documentary_order": [
+    {
+      "instruction": "repetition_german_shabbat"
+    },
+    {
+      "section": "repetition_documentary_weekday_1",
+      "heading": {},
+      "conditions": [
+        {
+          "type": "opensiddur:holiday-aggregate",
+          "features": {
+            "shabbat": false
+          }
+        }
+      ],
+      "order": [
+        {
+          "section": "metz_tair_vetaria_source",
+          "heading": {},
+          "conditions": [
+            {
+              "type": "opensiddur:rite",
+              "features": {
+                "metz": false
+              }
+            }
+          ],
+          "order": [
+            {
+              "unit": "tair_vetaria"
+            }
+          ],
+          "condition_instruction": {
+            "he": "repetition_metz"
+          }
+        },
+        {
+          "instruction": "repetition_kalir"
+        },
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/adderet_mamlakhah/part_1"
+          }
+        }
+      ]
+    },
+    {
+      "section": "repetition_shabbat_shemo",
+      "conditions": [
+        {
+          "type": "opensiddur:holiday-aggregate",
+          "features": {
+            "shabbat": true
+          }
+        }
+      ],
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/shemo"
+          }
+        },
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/shomerei"
+          }
+        },
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/shapru"
+          }
+        }
+      ],
+      "heading": {},
+      "condition_instruction": {
+        "he": "repetition_shabbat_shemo_heading_he",
+        "en": "repetition_shabbat_shemo_heading_en"
+      }
+    },
+    {
+      "section": "repetition_documentary_weekday_2",
+      "heading": {},
+      "conditions": [
+        {
+          "type": "opensiddur:holiday-aggregate",
+          "features": {
+            "shabbat": false
+          }
+        }
+      ],
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/adderet_mamlakhah/part_2"
+          }
+        }
+      ]
+    },
+    {
+      "section": "repetition_shabbat_shivtei",
+      "conditions": [
+        {
+          "type": "opensiddur:holiday-aggregate",
+          "features": {
+            "shabbat": true
+          }
+        }
+      ],
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/shivtei"
+          }
+        },
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/shevutenu"
+          }
+        },
+        {
+          "section": "metz_kol_source",
+          "heading": {},
+          "conditions": [
+            {
+              "type": "opensiddur:rite",
+              "features": {
+                "metz": false
+              }
+            }
+          ],
+          "condition_instruction": {
+            "he": "repetition_metz_kol"
+          },
+          "order": [
+            {
+              "reference": {
+                "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/kol_yoshvei"
+              }
+            }
+          ]
+        },
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/adar"
+          }
+        },
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/shabbat_cues/adar"
+          },
+          "witnesses": [
+            "he"
+          ]
+        },
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/dea"
+          }
+        }
+      ],
+      "heading": {},
+      "condition_instruction": {
+        "he": "repetition_shabbat_shivtei_heading_he",
+        "en": "repetition_shabbat_shivtei_heading_en"
+      }
+    },
+    {
+      "section": "repetition_documentary_weekday_3",
+      "heading": {},
+      "conditions": [
+        {
+          "type": "opensiddur:holiday-aggregate",
+          "features": {
+            "shabbat": false
+          }
+        }
+      ],
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/adderet_mamlakhah/part_3"
+          }
+        },
+        {
+          "section": "metz_repetition_tair_repeat_source",
+          "heading": {},
+          "conditions": [
+            {
+              "type": "opensiddur:rite",
+              "features": {
+                "metz": false
+              }
+            }
+          ],
+          "order": [
+            {
+              "unit": "repetition_tair_repeat"
+            }
+          ]
+        },
+        {
+          "unit": "melekh_memallet"
+        },
+        {
+          "unit": "melekh_zokher_achuz_qeren"
+        }
+      ]
+    },
+    {
+      "section": "repetition_shabbat_varasham",
+      "conditions": [
+        {
+          "type": "opensiddur:holiday-aggregate",
+          "features": {
+            "shabbat": true
+          }
+        }
+      ],
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/varasham"
+          }
+        },
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/shabbat_cues/varasham"
+          },
+          "witnesses": [
+            "he"
+          ]
+        },
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/zevach"
+          }
+        },
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/shabbat_cues/zevach"
+          },
+          "witnesses": [
+            "he"
+          ]
+        },
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/yarum"
+          }
+        },
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/shabbat_cues/yarum"
+          },
+          "witnesses": [
+            "he"
+          ]
+        }
+      ],
+      "heading": {},
+      "condition_instruction": {
+        "he": "repetition_shabbat_varasham_heading_he",
+        "en": "repetition_shabbat_varasham_heading_en"
+      }
+    },
+    {
+      "section": "repetition_documentary_weekday_4",
+      "heading": {},
+      "conditions": [
+        {
+          "type": "opensiddur:holiday-aggregate",
+          "features": {
+            "shabbat": false
+          }
+        }
+      ],
+      "order": [
+        {
+          "instruction": "repetition_aafir_acrostic"
+        },
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/aafir_nezer/part_1"
+          }
+        }
+      ]
+    },
+    {
+      "section": "repetition_shabbat_motot",
+      "conditions": [
+        {
+          "type": "opensiddur:holiday-aggregate",
+          "features": {
+            "shabbat": true
+          }
+        }
+      ],
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/motot"
+          }
+        },
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/shabbat_cues/motot"
+          },
+          "witnesses": [
+            "he"
+          ]
+        },
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/qiryat"
+          }
+        },
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/shabbat_refrains/kol_yoshvei"
+          }
+        },
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/yishpot"
+          }
+        },
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/vehu"
+          }
+        }
+      ],
+      "heading": {},
+      "condition_instruction": {
+        "he": "repetition_shabbat_motot_heading_he",
+        "en": "repetition_shabbat_motot_heading_en"
+      }
+    },
+    {
+      "section": "repetition_documentary_weekday_5",
+      "heading": {},
+      "conditions": [
+        {
+          "type": "opensiddur:holiday-aggregate",
+          "features": {
+            "shabbat": false
+          }
+        }
+      ],
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/aafir_nezer/part_2"
+          }
+        },
+        {
+          "unit": "teshalesh_shofarot"
+        },
+        {
+          "unit": "repetition_melekh_zokher_repeat"
+        }
+      ]
+    },
+    {
+      "section": "repetition_shabbat_etten",
+      "conditions": [
+        {
+          "type": "opensiddur:holiday-aggregate",
+          "features": {
+            "shabbat": true
+          }
+        }
+      ],
+      "order": [
+        {
+          "unit": "repetition_etten_lefoali"
+        },
+        {
+          "unit": "repetition_yishpot_repeat"
+        }
+      ],
+      "heading": {},
+      "condition_instruction": {
+        "he": "repetition_shabbat_etten_heading_he",
+        "en": "repetition_shabbat_etten_heading_en"
+      }
+    }
+  ],
+  "new_documentary_order": [
+    {
+      "section": "complete_weekday_piyyutim",
+      "heading": {},
+      "conditions": [
+        {
+          "type": "opensiddur:holiday-aggregate",
+          "features": {
+            "shabbat": false
+          }
+        }
+      ],
+      "condition_instruction": {
+        "he": "complete_weekday_he",
+        "en": "complete_weekday_en"
+      },
+      "order": [
+        {
+          "section": "complete_metz_tair_vetaria",
+          "heading": {},
+          "conditions": [
+            {
+              "type": "opensiddur:rite",
+              "features": {
+                "metz": false
+              }
+            }
+          ],
+          "order": [
+            {
+              "unit": "tair_vetaria"
+            }
+          ],
+          "condition_instruction": {
+            "he": "repetition_metz"
+          }
+        },
+        {
+          "unit": "adderet_mamlakhah"
+        },
+        {
+          "section": "complete_metz_repetition_tair_repeat",
+          "heading": {},
+          "conditions": [
+            {
+              "type": "opensiddur:rite",
+              "features": {
+                "metz": false
+              }
+            }
+          ],
+          "order": [
+            {
+              "unit": "repetition_tair_repeat"
+            }
+          ]
+        },
+        {
+          "unit": "melekh_memallet"
+        },
+        {
+          "unit": "melekh_zokher_achuz_qeren"
+        },
+        {
+          "unit": "aafir_nezer"
+        },
+        {
+          "unit": "teshalesh_shofarot"
+        },
+        {
+          "unit": "repetition_melekh_zokher_repeat"
+        }
+      ]
+    },
+    {
+      "section": "complete_shabbat_piyyutim",
+      "heading": {},
+      "conditions": [
+        {
+          "type": "opensiddur:holiday-aggregate",
+          "features": {
+            "shabbat": true
+          }
+        }
+      ],
+      "condition_instruction": {
+        "he": "repetition_german_shabbat",
+        "en": "repetition_shabbat_shemo_heading_en"
+      },
+      "order": [
+        {
+          "unit": "shemo_mefoarim"
+        },
+        {
+          "unit": "repetition_etten_lefoali"
+        },
+        {
+          "unit": "repetition_yishpot_repeat"
+        }
+      ]
+    }
+  ],
+  "decision": "Use complete existing poem witnesses in the documentary index. Preserve all source pagebreaks/facs in those files; no splitting at page-layout branches. Expanded recitation spine remains shared and continuous. Native source order and removed per-page repeat labels retained here as evidence.",
+  "native_metznote": "Native first Kol conditional rubric restored inside continuous work. When the rite is undefined it can recur with the repeated canonical refrain; it disappears for known inclusion/exclusion.",
+  "repeated_source_acrostics": "Whole Adderet now carries its Kalir attribution; whole Aafir already carries its own acrostic. Index-only copies used for partial transclusion are no longer emitted."
+}

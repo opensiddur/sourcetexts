@@ -1,0 +1,66 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "encoding_alignment_order_approved": true,
+  "english_source_reading_approved": true,
+  "other_hebrew_source_readings_approved_except_human_dependencies": true,
+  "pending_human": [
+    "33:1 רַנְּנוּ — first-nun dagesh, and whether its vowel is sheva or hataf-patah",
+    "Meteg positions in 33:3 הֵיטִיבוּ, 33:4 מַעֲשֵׂהוּ and 33:9 וַיֶּהִי",
+    "Holam on 33:5 אֹהֵב and 33:7 כֹּנֵס / נֹתֵן; dagesh in the kaf of כֹּנֵס",
+    "33:11 לְדֹר וָדֹר — full spelling with vav (דוֹר) or short spelling (דֹר)",
+    "33:2 זַמְּרוּ־לוֹ — whether a separate maqaf is actually printed"
+  ],
+  "findings": [
+    {
+      "severity": "info",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/psalm_33.xml; prayerbook_for_the_new_year-marmorstein-1965-en/psalm_33.xml",
+      "issue": "Checked and correct: one chapter milestone for psalms/33 with n=33. Twenty-two verse milestones, numbered 1–22 in order, each once, each with a canonical URN carrying no project suffix. Each language is one continuous paragraph, as the source prints it. Bare verse and chapter terminators close the chapter before anything that follows, so the scope cannot run into Psalm 92. Verse 17 is split by a page break inside the same verse in both languages (HE: וּבְרֹב | חֵילוֹ; EN: 'by the measure of its might' | 'it will not save.'), and neither side has a second milestone. Scan links: HE div n73 with page break n75, EN div n74 with page break n76, page break n=23 with ed=1965, page range 22–23. The source citations לג and 'Psalm 33.' are notes in standOff linked to the chapter URN, not text. English parentheses are dropped and there are no Hebrew cues in the English. The two editions share the same verse URNs, so the 22 verses align one-to-one.",
+      "recommendation": "None."
+    },
+    {
+      "severity": "info",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/psalm_33.xml",
+      "issue": "Hebrew matches the primary reading word for word, apart from the applied שִֽׁירוּ meteg. It also agrees with the full-page scan: no maqaf in עֲצַת גּוֹיִם (33:10), מִמְּכוֹן שִׁבְתּוֹ or אֶל כָּל (33:14); maqafs in אֶת־כָּל־בְּנֵי, אֶל־כָּל־מַעֲשֵׂיהֶם, בְּרָב־חָיִל, לֹא־יִנָּצֵל, בְּרָב־כֹּחַ, כִּי־בוֹ and יְהִי־חַסְדְּךָ; the line-end maqaf in כָּל־הָאָרֶץ (33:8). There are 13 Divine Names, each tagged as one, with holam on the first he and qamats on the vav. The prefixes בַּ/לַ/מֵ stay outside the tag, and the yod of the Name takes no sheva after בַּ or לַ.",
+      "recommendation": "None. Keep the five items listed under pending_human pending."
+    },
+    {
+      "severity": "info",
+      "file": "prayerbook_for_the_new_year-marmorstein-1965-en/psalm_33.xml",
+      "issue": "All 22 verses match the primary and blind readings and the s75/s77 scans exactly, including punctuation. The hyphens in 'ten-stringed' and 'store-chambers' fall mid-line, so they are real compound hyphens. Nothing has been supplied or substituted.",
+      "recommendation": "None."
+    },
+    {
+      "severity": "info",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/index.xml; prayerbook_for_the_new_year-marmorstein-1965-en/index.xml",
+      "issue": "Order is correct. Psalm 33 comes after 136:26 as one whole-chapter link with an edition-qualified target. In the Hebrew index, Psalm 24 (the later supplementary text on source page 351) follows immediately. That is right for now, but the source prints 92 and 93 between them, which aren't encoded yet. The missing 136:25 in the English is outside Psalm 33's scope and was already accepted.",
+      "recommendation": "When 92 and 93 are encoded, insert them between psalms/33 and psalms/24 in the Hebrew documentary index, and after 33 in the English one."
+    },
+    {
+      "severity": "info",
+      "file": "machzor_expanded-opensiddur-he/index.xml",
+      "issue": "The morning section continues 136:1–24, 136:25, 136:26, then psalms/33. All targets use the edition-independent Bible URN, and the link sits inside the existing morning declaration (the section_morning_settings / section_morning_condition pair). No new rite, weekday condition or prayer identity is added. Psalm 24 stays outside the morning section, in the supplementary appendix. The note in sourceDesc correctly says the sequence currently ends with Psalm 33 and that the volume is incomplete.",
+      "recommendation": "None now. Update the 'currently ends with Psalm 33' note when 92 and 93 are added."
+    },
+    {
+      "severity": "optional",
+      "file": "both psalm_33.xml",
+      "issue": "The note type 'citation' isn't among the annotation types JLPTEI-3.md lists. It is consistent with how the project encodes its other chapter citations, so this is a preference, not a violation.",
+      "recommendation": "Keep it for consistency, or register 'citation' as a note type in the spec at some point."
+    },
+    {
+      "severity": "optional",
+      "file": "both psalm_33.xml",
+      "issue": "There's no page break for printed page 22 at the start of the file, so page 22 shows only in the page range and the div's scan link. That's acceptable because Psalm 136 starts on the same page and presumably carries that page break.",
+      "recommendation": "No change needed. Optionally confirm that the 136 file carries the n=22 page break."
+    }
+  ],
+  "verdict": "Approved for structure, alignment and order. The English reading is approved. The other Hebrew readings are approved, except the five pending human questions, which are neither certified nor guessed. Shiru's meteg, the 13 Names with holam and the two glyph shapes are settled as you described. Source acceptance is withheld until the human questions are answered. Pages 76/77 stay only partly accepted, Psalms 92/93 are next, and the volume remains a draft.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "4d533cd9-4d2f-461f-b219-d82ce6db6525"
+  }
+}

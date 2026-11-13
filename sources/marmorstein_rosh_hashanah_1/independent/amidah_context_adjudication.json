@@ -1,0 +1,39 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+  },
+  "readings": [
+    {
+      "crop": "/tmp/amidah-tight-ufiqdonenu.png (checked against /tmp/amidah-tight-ufiqdonenu-context.png)",
+      "reading": "וּפִקְדֹנֵנוּ",
+      "mark": "dalet: a dot inside the letter at mid-height, read as dagesh (דּ). This is separate from the holam dot, which sits higher, at letter-top height, between the dalet and the first nun.",
+      "evidence": "The context image fixes this as the word right after זִכְרוֹנֵנוּ and before וְזִכְרוֹן on the יִפָּקֵד וְיִזָּכֵר line, so it is not the later ופקדנו בו לברכה. Reading every glyph: (1) vav with a shuruq dot; (2) pe with a hiriq dot below; (3) qof with a sheva below; (4) dalet with a dot inside it at mid-height; (5) a high dot for holam haser, with no vav letter (spelled defectively, not דוֹ); (6) first nun with tsere below; (7) second nun; (8) final vav with a shuruq dot. That gives 7 letters, ו-פ-ק-ד-נ-נ-ו, with both nuns present. A short vertical stroke under the word, near the qof/dalet, may be a meteg. I can't tell whether it marks a separate sign or is part of the qof's sheva.",
+      "confidence": "medium-high for the letters, both nuns and the defective holam; medium for the dalet dot being dagesh rather than a slipped holam, because the dot is clearly mid-height but the scan is soft; low for any dagesh in the pe or qof (not resolvable)"
+    },
+    {
+      "crop": "/tmp/amidah-tight-zokhrenu-life.png",
+      "reading": "לַחַיִּים (lamed vowel only; preceding word …כְרֵנוּ)",
+      "mark": "lamed: patah",
+      "evidence": "There is one horizontal bar under the lamed, with no second dot stacked on it, so it is a patah and not a sheva (sheva would be two vertical dots). The chet next to it carries the same kind of bar.",
+      "confidence": "high"
+    },
+    {
+      "crop": "/tmp/amidah-tight-mi-life.png",
+      "reading": "לַחַיִּים (lamed vowel only; context …צוּרָיו לַחַיִּים בְּרַ…)",
+      "mark": "lamed: patah",
+      "evidence": "There is one horizontal bar under the lamed. It looks the same as the bar under the chet and is clearly different from the two-dot sheva under the ב of the next word.",
+      "confidence": "high"
+    }
+  ],
+  "pending_human": [
+    "ufiqdonenu: please confirm at full resolution whether the mid-height dot in the dalet is a dagesh and not a holam placed low. I read it as dagesh, but at this scan quality the call is medium confidence.",
+    "ufiqdonenu: I can't tell from these crops whether the pe or the qof has a dagesh. I have left this open rather than infer it.",
+    "ufiqdonenu: I can't tell whether the short vertical stroke under the qof/dalet area is a meteg."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "59796283-94d7-4c0c-ae1d-158723d6c056"
+  }
+}

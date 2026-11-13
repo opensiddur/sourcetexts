@@ -1,0 +1,55 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "all_human_readings_applied": true,
+  "vayehi_meteg_on_yod_not_he": true,
+  "other_source_words_unchanged": true,
+  "encoding_alignment_order_approved": true,
+  "pending_human": [],
+  "findings": [
+    {
+      "severity": "info",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/psalm_33.xml:41",
+      "issue": "All four human answers are in the file, each on the right letter. 33:1 is רַנֲנוּ: the first nun has hataf-patah and no dagesh, and the second nun has shuruk. 33:3 is הֵיטִֽיבוּ, with the meteg on the tet beside its hiriq. 33:4 is וְכָל־מַעֲשֵֽׂהוּ, with the meteg on the shin beside its tsere; the letter carries its sin dot, which is the standard spelling for this word (the answer calls it 'shin'). 33:9 is וַיֶּֽהִי: the meteg is on the yod beside its segol and dagesh, and the he has only hiriq. In מַעֲשֵֽׂהוּ the marks are stored in standard Unicode order (tsere, then meteg, then sin dot). /tmp/psalms-s74/human-codepoints.json reports the same placements at codepoint level (status pass, no_vayehi_meteg_on_he true).",
+      "recommendation": "None."
+    },
+    {
+      "severity": "info",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/psalm_33.xml:41",
+      "issue": "The forms the human confirmed were already in the file and have not changed: זַמְּרוּ־לוֹ with a real maqaf (33:2); אֹהֵב (33:5); כֹּנֵס, with holam and a dagesh in the kaf, and נֹתֵן (33:7); and the short spelling לְדֹר וָדֹר (33:11). The earlier settled items are also unchanged. שִֽׁירוּ keeps its meteg on the shin. There are 13 Divine Names, in 33:1, 2, 4, 5, 6, 8, 10, 11, 12, 13, 18, 20 and 22. Each is a single tag with holam on the first he, and the prefixes בַּ/לַ/מֵ stay outside the tag. The other words agree with the standard text of the psalm, with every maqaf and missing maqaf the earlier review listed, and with the 136-page-break and line-end decisions already approved. Only the four words in the human answers differ from the earlier primary reading.",
+      "recommendation": "None."
+    },
+    {
+      "severity": "info",
+      "file": "both psalm_33.xml",
+      "issue": "Structure is intact in both languages. There is one chapter milestone, n=33. There are 22 verse milestones, 33/1–33/22, in order and each used once, with the same edition-independent URNs in Hebrew and English, so the verses pair one-to-one. The page break for page 23 falls inside verse 17 in both files: Hebrew וּבְרֹב | חֵילוֹ (scan n75), English 'by the measure of its might' | 'it will not save.' (scan n76). Neither side has a second verse 17 milestone. Each file ends with bare verse and chapter terminators. Nothing from Psalm 92 appears in either file. The English text is unchanged from the approved reading.",
+      "recommendation": "None."
+    },
+    {
+      "severity": "info",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/index.xml:280-284; prayerbook_for_the_new_year-marmorstein-1965-en/index.xml:205-207",
+      "issue": "Book order is correct. Hebrew: 136:1–24, then 136:25, 136:26, 33, and then the later supplementary Psalm 24. English: 136:1–24, then 136:26, then 33 (the missing 136:25 was accepted earlier). The English index has no Psalm 24 entry yet, so 33 is currently its last item. That is consistent with 24 coming later, but the requirement is met only because nothing follows 33, not because 24 is placed after it. The 92/93 links at HE index lines 182–183 belong to the Friday-night section and do not affect the sequence after 33.",
+      "recommendation": "When 92/93 (and the English supplementary 24, if it is printed) are encoded, insert them after psalms/33 as the earlier review recommended."
+    },
+    {
+      "severity": "info",
+      "file": "scope",
+      "issue": "Scan pages s74 and s75 are fully accepted, along with the 136 material accepted earlier. On s76 and s77 only the continuation of Psalm 33 is accepted; the rest of those pages, starting with Psalm 92, is not yet transcribed. The whole volume remains a draft because the transcription is incomplete and the earlier German glyph question on page 57 is still open. Psalm 33 has no open reading questions. The Hebrew file's edition statement still says 'independent adjudication pending'. That is accurate for the volume, but it no longer describes this chapter.",
+      "recommendation": "Optionally record in the source notes that all Psalm 33 adjudications are closed. Leave the volume's draft status as it is."
+    },
+    {
+      "severity": "info",
+      "file": "method",
+      "issue": "Limits of how this was checked, as distinct from any disagreement about readings. (1) This review only read files. It saw the rendered text, not a hex dump, so the exact codepoint order (for example dagesh before meteg in יֶּֽ) comes from human-codepoints.json, which agrees with what is visible. (2) No earlier copy of psalm_33.xml was available to compare against, so 'only four words changed' was checked by comparing every word with the earlier review's description and the standard text, not by a byte diff. (3) The scans were not consulted again; the human answers are taken as settled. None of these limits leaves a reading dispute open.",
+      "recommendation": "None."
+    }
+  ],
+  "verdict": "Approved. Every explicit human answer is applied on the correct letter: רַנֲנוּ (hataf-patah, no dagesh), הֵיטִֽיבוּ (meteg on the tet), מַעֲשֵֽׂהוּ (meteg on the shin), and וַיֶּֽהִי (meteg on the yod with its segol, none on the he). Only these four words differ from the earlier reading. The confirmed holams, the kaf dagesh, the short spelling לְדֹר וָדֹר, the maqaf in זַמְּרוּ־לוֹ, the meteg in שִֽׁירוּ and the 13 Names are unchanged. The 22 verses still line up between Hebrew and English. The page break inside verse 17, the terminators, and the 136:26→33 order in both books are correct, and no Psalm 92 text has leaked into 33. No human questions remain for Psalm 33. The volume stays a draft only because transcription is incomplete and the earlier page 57 German glyph question is still open.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "e74ed475-0c1d-4687-a27d-cc547be9b896"
+  }
+}

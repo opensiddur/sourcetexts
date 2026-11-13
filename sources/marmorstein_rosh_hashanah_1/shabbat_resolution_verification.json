@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-10",
+  "status": "pass",
+  "print": {
+    "weekday": {
+      "he": {
+        "six_sabbath_scopes_selected": false,
+        "complete_words_match_selected_source_reading": true,
+        "no_conditional_markers": true,
+        "no_brackets_or_condition_rubrics": true
+      },
+      "en": {
+        "six_sabbath_scopes_selected": false,
+        "complete_words_match_selected_source_reading": true,
+        "no_conditional_markers": true,
+        "no_brackets_or_condition_rubrics": true
+      }
+    },
+    "shabbat": {
+      "he": {
+        "six_sabbath_scopes_selected": true,
+        "complete_words_match_selected_source_reading": true,
+        "no_conditional_markers": true,
+        "no_brackets_or_condition_rubrics": true
+      },
+      "en": {
+        "six_sabbath_scopes_selected": true,
+        "complete_words_match_selected_source_reading": true,
+        "no_conditional_markers": true,
+        "no_brackets_or_condition_rubrics": true
+      }
+    }
+  },
+  "electronic": {
+    "documentary": {
+      "html_sha256": "0b5bbcd9219e7ae102a71c6341a7bfb12d8355fb588bbd657c44f83dee178336",
+      "checked_marked_sabbath_scopes": 12,
+      "cases": {
+        "weekday": {
+          "all_12_scopes_have_correct_state": true,
+          "pass": true,
+          "outcome": "words and markers hidden"
+        },
+        "shabbat": {
+          "all_12_scopes_have_correct_state": true,
+          "pass": true,
+          "outcome": "words included; brackets and when-rubrics hidden; ancestor scopes true"
+        },
+        "undecided": {
+          "all_12_scopes_have_correct_state": true,
+          "pass": true,
+          "outcome": "words and standard condition markers retained"
+        }
+      }
+    },
+    "expanded": {
+      "html_sha256": "21b6a632cd7a1e6afc2c3d79036aab2bb21e92d08cf2901bb2fbef0f82f23847",
+      "checked_marked_sabbath_scopes": 12,
+      "cases": {
+        "weekday": {
+          "all_12_scopes_have_correct_state": true,
+          "pass": true,
+          "outcome": "words and markers hidden"
+        },
+        "shabbat": {
+          "all_12_scopes_have_correct_state": true,
+          "pass": true,
+          "outcome": "words included; brackets and when-rubrics hidden; ancestor scopes true"
+        },
+        "undecided": {
+          "all_12_scopes_have_correct_state": true,
+          "pass": true,
+          "outcome": "words and standard condition markers retained"
+        }
+      }
+    }
+  },
+  "limits": "Fresh print compilation and actual exported HTML condition JavaScript/CSS evaluated under Node. No new browser visual or PDF render is claimed.",
+  "source_readings_sha256": "1259380feb1a44ade621f950b709cd05fcbe51cd65d79a606f03f16ab57f41c6",
+  "targeted_exporter_tests": "208 tests and 122 subtests pass: test_html_book.py, test_html_markers.py, test_conditional_markers.py",
+  "method": "Fresh known-false/known-true print compilations match complete selected source readings in both languages. Actual exported documentary/expanded HTML payloads evaluated with the production JavaScript under Node, verifying every marked Sabbath scope, all governing ancestors, text visibility, brackets and rubrics. Unknown-state control verified too."
+}

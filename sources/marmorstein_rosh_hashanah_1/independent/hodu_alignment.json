@@ -1,0 +1,39 @@
+{
+  "model": "claude-opus-5-5",
+  "effort": "low",
+  "alignment_complete": true,
+  "recitation_order_complete": true,
+  "s62_body_complete": true,
+  "s63_body_complete": true,
+  "issues": [],
+  "notes": [
+    "Order check: the three new units come right after Chronicles 16:36 (Hebrew and English on s62/s63), in print order. Romemu is Ps 99:5, 99:9. Vehu rachum is Ps 78:38, 40:12, 25:6, 68:35, 68:36, 94:1, 94:2, 3:9, 46:8, 84:13, 20:10. Hoshiah et ammekha is Ps 28:9, 33:20, 33:21, 33:22, 85:8, 44:27, 81:11, 144:15, 13:6. They stop just before the Hebrew 'יט' heading and the English '(Psalm 19.)' heading on s64/s65. Nothing is left out and nothing is repeated.",
+    "Every one of the 22 new correspondences has one Hebrew entry and one English entry with the same textual extent. The English is spread across s63 and s65 the same way the Hebrew is spread across s62 and s64.",
+    "Ps 68:35 is split across the page break correctly. The Hebrew is 'תְּנוּ עֹז' at the end of s62 plus 'לֵאלֹהִים ... בַּשְּׁחָקִים:' at the start of s64. The English is 'Ascribe might to God,' at the end of s63 plus 'over Israel is His supremacy ... skies.' at the start of s65.",
+    "Printed English misprints are kept as printed: 'withold' (s63, Ps 40:12) and 'whem' (s65, Ps 144:15). The line-break hyphen in 'compas-sionate' on s63 is correctly joined as 'compassionate'. All English matches the printed wording, with no added or borrowed text.",
+    "Biblical citations stay out of the body text. The only one in this range is '(Psalm 19.)' on s65, which belongs to the next section and is correctly excluded.",
+    "s62 body: from 'לְיִצְחָק:' (end of Chr 16:16) through 'תְּנוּ עֹז' (start of Ps 68:35), everything is covered by the Chronicles, Romemu and Vehu rachum units. s63 body: from 'He established it...' (16:17) through 'Ascribe might to God,' everything is covered. Only the running heads (page number and section title) are left out.",
+    "s64 and s65 are still incomplete as expected. The Psalm 19 Hebrew starts partway down s64 and its English starts partway down s65, after Ps 13:6.",
+    "Hoshiah et ammekha runs straight on from Ps 20:10 in the print, with no paragraph break. Making it a separate unit is an editing choice and does not affect alignment or order.",
+    "Small fidelity point in the Chronicles boundary unit (not one of the new units): s63 prints 'God of our salvation, and gather us' with a comma after 'salvation'. The packet's 16:35 English has no comma there. This does not affect alignment."
+  ],
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "bec1c123-d819-4fb3-afef-0122d94486df",
+    "scope": "Alignment and recitation sequence against images; transcription blind readings remain in independent/pilot.json."
+  },
+  "audit_adjudications": [
+    {
+      "observation": "Comma after salvation in Chronicles 16:35",
+      "resolution": "Accepted: enlarged n62 shows a comma after salvation; the previous decision favoring its absence is reversed.",
+      "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n62.jpg",
+      "crop_original_pixels": [
+        160,
+        1330,
+        1240,
+        1530
+      ]
+    }
+  ]
+}

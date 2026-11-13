@@ -1,0 +1,50 @@
+{
+  "alignment_complete": true,
+  "recitation_order_complete": true,
+  "s64_body_complete": true,
+  "s65_body_complete": true,
+  "issues": [
+    {
+      "description": "The candidate file holds two different Hebrew texts for verse 10. 'unit' has the adjudicated עֹמֶדֶת, but 'primary_unit' still has the original reading עוֹמֶדֶת, which the reviews and settlements decisions rejected. The scan supports 'unit'. If anything downstream reads 'primary_unit', it will output a word the scan does not support.",
+      "evidence": "s66 line 1 begins עֹמֶדֶת with a holam on the ayin and no vav. Candidate unit.languages.he[9].fragments[1].text = 'עֹמֶדֶת לָעַד…' and primary_unit.languages.he[9].fragments[1].text = 'עוֹמֶדֶת לָעַד…'. The decision key consonants:77 accepted 'independent'."
+    },
+    {
+      "description": "The file contradicts itself about the Hebrew review status. 'comparisons.psalm_19/he' says complete:false, has empty decisions, and lists all 14 differences as unresolved. 'reviews.psalm_19/he' and 'settlements.psalm_19/he' have decisions for all 14 keys, an empty unresolved list, and complete:true. The comparisons block looks like a stale pre-adjudication snapshot.",
+      "evidence": "comparisons.psalm_19/he.complete=false with 14 unresolved, versus reviews.psalm_19/he.complete=true with unresolved=[]. Both have the same primary_sha256 (df652e87…) and independent_sha256 (9d478307…)."
+    },
+    {
+      "description": "The image evidence cited in the reviews uses archive.org page names, not the scan IDs used elsewhere in the file. I assumed n63, n64, n65 and n66 are s64, s65, s66 and s67, because their text matches. I could not check that mapping from the images alone.",
+      "evidence": "reviews.psalm_19/he.evidence cites page/n63.jpg and page/n65.jpg; reviews.psalm_19/en cites n64 and n66. comparisons.*.evidence lists s64 to s67."
+    }
+  ],
+  "notes": [
+    "Unit start: on s64 the Hodu conclusion 'וַאֲנִי בְּחַסְדְּךָ … אָשִׁירָה לַייָ כִּי גָמַל עָלָי:' ends on its own line, and the next line begins with the marginal 'יט' followed by 'לַמְנַצֵּחַ'. On s65 the English Hodu ends 'I sing to the Lord for He has treated me well.' and the new paragraph begins '(Psalm 19.) For the conductor…'. The candidate begins at verse 1 in both languages, with nothing missing or repeated at the join.",
+    "Unit end: on s66 'יְהוָה צוּרִי וְגֹאֲלִי:' is followed by the marginal 'לד' and 'לְדָוִד בְּשַׁנּוֹתוֹ' (Psalm 34). On s67 'O Lord my Rock and my Redeemer.' is followed by '(Psalm 34.) By David…'. The candidate ends at verse 15 in both languages.",
+    "Verse 10 page break: the Hebrew s64 page ends with 'יִרְאַת יְהוָה טְהוֹרָה' and s66 starts with 'עֹמֶדֶת לָעַד'. The English s65 page ends with 'the judgments of' and s67 starts with 'the Lord are truth, together just,'. Both splits in the candidate match the scans exactly.",
+    "I checked all 15 Hebrew and 15 English verse extents in order against the scans. Each verse boundary falls at the printed sof-pasuq colon in Hebrew and at the matching phrase in English. I found no words omitted, repeated or out of order. The English verse 10 ends with a comma and verse 11 starts lowercase 'they', which is how the scan prints it.",
+    "The citations are handled correctly. Hebrew 'יט' on s64 and English '(Psalm 19.)' on s65 are kept in 'citations' and left out of the recited text. Running heads (תְּפִלַּת שַׁחֲרִית / Morning Prayer) and page numbers 17 and 18 are also left out, as they should be.",
+    "Remaining body: once Psalm 19 is added, s64 holds only the accepted Hodu text plus Psalm 19 verses 1 to 10a, so nothing is left unaccounted for. s65 holds the accepted English Hodu plus Psalm 19 verses 1 to 10a, also with nothing left over. Psalm 19 continues on s66 and s67, followed by Psalm 34, which belongs to a separate unit.",
+    "Word and pointing disagreements still open after the candidate's adjudications: in 'unit', none. My spot-checks of the visible pointing agree with the adjudicated text, including לְלַיְלָה without a dagesh, the defective עֹמֶדֶת, and גַּם־עַבְדְּךָ, אַל־יִמְשְׁלוּ־בִי and מִי־יָבִין. At this image resolution I can't positively confirm or rule out a faint holam on the seven full Divine Names. Nothing visible contradicts the adjudication of sheva and qamats only. The only disagreement left in the file is the stale עוֹמֶדֶת in primary_unit.",
+    "The adjudication writing the printed verse-end colon as an ASCII colon, not U+05C3, is a choice about how to encode the character. The words themselves are not in question."
+  ],
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "160ae107-960c-4606-a42f-f6e3557fd7d1",
+    "scope": "Alignment and recitation order of the Psalm 19 addition against images; blind readings stored separately."
+  },
+  "audit_adjudications": [
+    {
+      "observation": "The candidate file holds two different Hebrew texts for verse 10. 'unit' has the adjudicated עֹמֶדֶת, but 'primary_unit' still has the original reading עוֹמֶדֶת, which the reviews and settlements decisions rejected. The scan supports 'unit'. If anything downstream reads 'primary_unit', it will output a word the scan does not support.",
+      "resolution": "primary_unit is immutable first-reading evidence and is saved only under primary/psalm_19.json. The builder reads only the adjudicated unit in readings.json; it never reads primary/*.json."
+    },
+    {
+      "observation": "The file contradicts itself about the Hebrew review status. 'comparisons.psalm_19/he' says complete:false, has empty decisions, and lists all 14 differences as unresolved. 'reviews.psalm_19/he' and 'settlements.psalm_19/he' have decisions for all 14 keys, an empty unresolved list, and complete:true. The comparisons block looks like a stale pre-adjudication snapshot.",
+      "resolution": "comparison.json intentionally preserves the pre-adjudication comparison. Hash-bound decisions are in adjudications.json; the builder gates on current reviews.json. No pre-adjudication comparison is used as acceptance status."
+    },
+    {
+      "observation": "The image evidence cited in the reviews uses archive.org page names, not the scan IDs used elsewhere in the file. I assumed n63, n64, n65 and n66 are s64, s65, s66 and s67, because their text matches. I could not check that mapping from the images alone.",
+      "resolution": "Verified against scandata/page map: sN denotes one-based scan page, and Archive n(N-1) is its zero-based leaf URL. The map records s64=n63, s65=n64, s66=n65, s67=n66."
+    }
+  ]
+}

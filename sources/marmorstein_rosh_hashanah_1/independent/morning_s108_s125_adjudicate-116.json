@@ -1,0 +1,126 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "decisions": [
+    {
+      "scan": "s116",
+      "ours": "מִי־כָמֹכָה בָּאֵלִם יְהוָה מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא:",
+      "theirs": "מִֽי־כָמֹ֨כָה֙ בָּֽאֵלִם֙ יְהֹוָ֔ה מִ֥י כָּמֹ֖כָה נֶאְדָּ֣ר בַּקֹּ֑דֶשׁ נוֹרָ֥א תְהִלֹּ֖ת עֹ֥שֵׂה פֶֽלֶא:",
+      "verdict": "unresolved",
+      "exact_text": null,
+      "evidence": "Pending-human. The question about the opening cantillation and the Divine Name holam in Mi Khamokha (116) has already gone to the human, so I am not settling it. What the pixels show (s116 band1, mi116.png, full page): the line is printed with cantillation throughout, so OURS is wrong to leave it all out. There are visible marks under כמכה (a '>'-shaped stroke), under/over בָּאֵלִם, a cluster of dots above יהוה, and marks under מי, כמכה, נאדר, the etnach under בקדש, and marks under נורא, עשה and פלא. Whether THEIRS has the exact accent names and host letters right, including the holam over the ה of the Name, is the open human question.",
+      "confidence": "pending-human"
+    },
+    {
+      "scan": "s116",
+      "ours": "וְקוֹנֵה",
+      "theirs": "וְקֹנֵה",
+      "verdict": "independent",
+      "exact_text": "וְקֹנֵה",
+      "evidence": "s116 band2, line 3 (between טוֹבִים and הַכֹּל), checked on the full page: the word has only four letters, ו־ק־נ־ה. There is no vav between ק and נ, and a holam dot sits over the ק. This is a defective spelling and is kept literally. Compare plene וְזוֹכֵר on the same line, which does have a vav.",
+      "confidence": "high"
+    },
+    {
+      "scan": "s116",
+      "ours": "חַסְדֵּי",
+      "theirs": "חַסְדֵי",
+      "verdict": "unresolved",
+      "exact_text": null,
+      "evidence": "s116 band2, line 3, the last word at the left margin. The patah under ח, the shva under ס and the tsere under ד are visible. I can't confidently confirm or rule out a dagesh dot inside the ד at band or full-page resolution: there is a dark speck near the top of the ד's bowl, but I can't tell it apart from the letter's own stroke or ink spread. The grammatically expected dagesh can't be filled in from memory. A tight high-resolution crop of this one word is needed.",
+      "confidence": "low"
+    },
+    {
+      "scan": "s116",
+      "ours": "בְּכָל־יוֹם",
+      "theirs": "בְּכָל יוֹם",
+      "verdict": "independent",
+      "exact_text": "בְּכָל יוֹם",
+      "evidence": "s116 band3, last line, and the full page: there is a plain space between בְּכָל and יוֹם with no raised maqaf stroke. On the same page the maqafs in מִי־כָמֹכָה and עַל־שְׂפַת are clearly visible as raised bars, so a maqaf would have shown here if it were printed.",
+      "confidence": "high"
+    },
+    {
+      "scan": "s117",
+      "ours": "children’s",
+      "theirs": "children's",
+      "verdict": "primary",
+      "exact_text": "children’s",
+      "evidence": "s117 band2, 'for their children’s children': the apostrophe is the typeface's curly, comma-shaped right single quote (’), not a straight vertical tick. The straight ' in THEIRS is a normalization.",
+      "confidence": "high"
+    },
+    {
+      "scan": "s117",
+      "ours": "Name’s",
+      "theirs": "Name's",
+      "verdict": "primary",
+      "exact_text": "Name’s",
+      "evidence": "s117 band2, 'for His Name’s sake in love': the same curly typographic apostrophe (’). The straight ' in THEIRS is a normalization.",
+      "confidence": "high"
+    }
+  ],
+  "remaining_uncertainties": [
+    {
+      "scan": "s116",
+      "key": "mi_chamocha_exod_15_11",
+      "word": "whole line",
+      "mark": "cantillation set and holam on the Divine Name",
+      "evidence": "Pending-human. This was already sent to the human and is not decided here."
+    },
+    {
+      "scan": "s116",
+      "key": "amidah_avot",
+      "word": "חַסְדֵ(ּ)י",
+      "mark": "dagesh in ד",
+      "evidence": "There is a possible speck inside the ד at the left margin of band2 line 3, but it can't be told apart from the letter stroke. Needs a word-level crop."
+    },
+    {
+      "scan": "s116",
+      "key": "atah_kadosh",
+      "word": "סֶלָה",
+      "mark": "dot inside ס",
+      "evidence": "Band3, last word: there may be a speck inside the ס, but at this resolution it is consistent with ink noise. Keep it isolated and add no dagesh unless a crop shows a clear round dot."
+    },
+    {
+      "scan": "s116",
+      "key": "tzur_yisrael_goal_yisrael",
+      "word": "כִנְאֻמֶךָ / גֹּאֲלֵנוּ",
+      "mark": "dagesh in initial כ / ג",
+      "evidence": "Band1: the inner dots are not clearly visible at band resolution. Faint, so isolated."
+    },
+    {
+      "scan": "s116",
+      "key": "adonai_sefatai_ps_51_17",
+      "word": "יַגִּיד / תִּפְתָּח",
+      "mark": "dagesh in ג and the first ת",
+      "evidence": "The line is in small type. The vowels are visible, but the inner dots can't be resolved."
+    },
+    {
+      "scan": "s116",
+      "key": "gevurot_mechalkel",
+      "word": "לָּךְ",
+      "mark": "dagesh in ל",
+      "evidence": "Band3, line 4, first word: there is a dot-like mark near the ל, but its position (in the letter or above it) is ambiguous."
+    },
+    {
+      "scan": "s116",
+      "key": "amidah_avot",
+      "word": "גּוֹמֵל / גוֹאֵל / בְנֵיהֶם",
+      "mark": "dagesh",
+      "evidence": "Band2: the inner dots are faint or absent at band resolution. Faint, so isolated."
+    }
+  ],
+  "additional_clear_corrections": [],
+  "notes": [
+    "I treated the four questions already sent to the human as pending-human and did not settle them: the junction rubric on 112, the opening cantillation and Divine Name holam in Mi Khamokha on 116, the exact זכרוננו/ופקדננו on 120, and the lower points of Jerusalem on 124. Only the Mi Khamokha (116) question falls on these scans.",
+    "Mi Khamokha and יְיָ יִמְלֹךְ לְעֹלָם וָעֶד are whole verbal Biblical quotes and remain prayed text. No printed source references appear on s116 or s117.",
+    "The s117 English keeps 'Thou' and 'has redeemed' literally. There is no comma after 'O Lord' in atah_gibbor or in veneeman, which matches the print.",
+    "On s117 the wide space before 'Selah!' is visible in band3. It is only spacing.",
+    "s116 shows plene לְעוֹלָם in atah gibbor and defective לְעֹלָם in Shirah, confirmed on the full page."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "c363b654-ec61-47c2-82e8-0e40ed45e66e"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "encoding_alignment_order_approved": true,
+  "english_source_reading_approved": true,
+  "other_hebrew_readings_approved_except_human_dependencies": true,
+  "inherited_documentary_contexts_approved": true,
+  "findings": [
+    {
+      "severity": "info",
+      "file": "draft-expanded_print.xml (morning prayer:ashrei)",
+      "issue": "The expanded morning Ashrei shows the canonical p.2 Hebrew (ashrei.xml, facs n7): וַאֲהַלְלָה with plain sheva and יְיָ, not the s78 morning reading with hataf-patah and יְהֹוָה. That is what the stated policy calls for (first canonical Hebrew printing plus the newly printed English). It means the two new hataf readings appear only in the documentary book. If the separately queued p.2 lamed review changes ashrei.xml, the expanded book will pick up the change automatically.",
+      "fix": "None for this batch. Keep the p.2 lamed question queued."
+    }
+  ],
+  "remaining_human_questions": [
+    "s78 yehi_khevod/14 אִוָּה(ּ): mappiq",
+    "s78 yehi_khevod/16 יַעֲזֹב vs יַעֲזוֹב",
+    "s78 ashrei 144:15 לּוֹ vs לוֹ (also affects the identical p.2 reading)",
+    "s80 146:6 וְאֶת־כָּל: tick before the alef",
+    "s82 147:6 עֲדֵי(־) אָ(ֽ)רֶץ: line-end maqaf and meteg",
+    "s82 147:9 יִקְרָ(ֽ)אוּ: meteg",
+    "s82 147:15 אָ(ֽ)רֶץ: meteg",
+    "s84 148:1 ב(ּ)ַמְּרוֹמִים: dagesh",
+    "s84 149:7 ב(ּ)ַגּוֹיִם: dagesh",
+    "s86 72:19 אֶת־כ?ל(־): holam or qamats, and line-end maqaf",
+    "Separate focused review, not a batch defect: p.2 initial/canonical Ashrei 84:5 and 145:2 lamed pointing"
+  ],
+  "checks": [
+    "Hataf readings: morning_ashrei.xml line 47 has יְהַלֲלוּךָ and line 51 has וַאֲהַלֲלָה, with hataf-patah on the first lamed only. Nothing else in these lines changed against what audit2 recorded. The 115:18 citation note (קטו יח → morning_ashrei/24) is still present.",
+    "Human pointing: psalm_147.xml 147:2 בֹּנֵה יְרוּשָׁלַֽ͏ִם and 147:12 שַׁבְּחִי יְרוּשָׁלַֽ͏ִם both show lamed, patah, meteg, CGJ, hiriq, final mem, in that order. This matches the codepoints in snippets 11 and 12. The hiriq comes before the final mem, so it is not on the mem. The defective בֹּנֵה and the הַלֲלִי hataf are intact.",
+    "Inherited contexts in source: initial_ashrei.xml (p.2, n7), kabbalat_psalm_92.xml and kabbalat_psalm_93.xml (p.11, n16) each have a context-root div corresp, verse milestones under the context URN, a per-verse seg/@source pointing to the canonical Bible verse, and bare verse and chapter terminators. Each has its citation note: קמה → initial_ashrei/3, צב → kabbalat_psalm_92/1, צג → kabbalat_psalm_93/1. The words are the earlier accepted readings: יְהַלְלוּךָ and וַאֲהַלְלָה with sheva, לּוֹ, יְיָ in Ashrei, 92:4 עֲלֵי־עָשׂוֹר with maqaf, 92:9 לְעֹלָם.",
+    "Compiled documentary routing: in draft-documentary_print.xml, initial_ashrei (line 106–111) comes right after the Minchah head, followed by חצי קדיש. kabbalat_psalm_92 and kabbalat_psalm_93 (lines 196–206) come after Lekhah Dodi and before קדיש יתום. All three are wrapped in a p:parallel whose English parallelItem is empty and self-closing, so no English text leaks in. The compiled Hebrew matches the source files, and the citation notes are emitted.",
+    "Documentary indexes: the HE index transcludes initial_ashrei, kabbalat_psalm_92/93, the morning_* contexts, 146–150, psalm_150_repeat, barukh_adonai, then psalms/24. The EN index has no Minchah Ashrei or Kabbalat 92/93 entries and no 150 repeat, and it ends at barukh_adonai.",
+    "Compiled expanded routing: in draft-expanded_print.xml, the morning prayer:ashrei pairs HE ashrei.xml (n7) with EN ashrei.xml (n78) verse by verse, keeping the deliberate EN pb 25 inside 145:5. It ends with 115:18 in both languages and then 146. 149 and 150 are bilingual, with HE pb 28 and EN pb 28 inside 150:4. The 150:6 repeat is bilingual and keeps the unpointed כל. Barukh runs 89:53, then 135:21 under its context URN with CGJ and qamats ירושלָ͏ִם, then 72:18–19 in both languages. The morning section closes there, and Vayvarekh David is not present.",
+    "Appendix: the expanded supplementary_psalms div transcludes psalms/24 (facs n350, i.e. scan 351) in Hebrew only, after the morning section ends. That matches the stated reviewed appendix, so my audit2 info finding about Ps 24 is resolved.",
+    "Expanded index: Minchah uses prayer:ashrei, Kabbalat uses bible:psalms/92 and /93, and the morning section uses 33 → 92 → 93 → yehi_khevod → prayer:ashrei → 146–150 → 150/6 → barukh_adonai, all through project-less canonical roots. This matches the policy that canonical HE plus the newly printed EN may be reused at every canonical occurrence in the expanded book.",
+    "Rechecked this round: both audits, the resolutions file, snippets 11 and 12, the six listed HE source files, the three indexes, and the relevant parts of both compiled outputs. I did not re-read the unchanged batch files from the first audit."
+  ],
+  "limitations": [
+    "I used only the Read tool. Unicode order was checked by looking at the rendered combining sequence, not by dumping codepoints.",
+    "I did not open the morning Psalm 92 and 93 parts of draft-expanded_print.xml; the lines were too large to read within my remaining context. Expanded routing for 92 and 93 is confirmed from the expanded index plus the stated automated 40-unit bilingual comparison, not from my own reading of the compiled output. I did directly inspect the compiled Ashrei, 146 start, 149, 150, 150:6, Barukh and the appendix.",
+    "I did not check the canonical HE ashrei.xml, psalm_92.xml or psalm_93.xml source files this round. Their words come from the compiled output only.",
+    "I made no claim about project-wide Bible URN uniqueness against the baseline, as you instructed.",
+    "No new image inspection was done this round. The Jerusalem pointing rests on the human answers in snippets 11 and 12."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "a191c389-3020-4060-8052-93e19d6a9ce7"
+  }
+}

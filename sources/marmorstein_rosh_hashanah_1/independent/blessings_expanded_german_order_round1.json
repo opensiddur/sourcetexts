@@ -1,0 +1,162 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "findings": [
+    {
+      "severity": "low",
+      "location": "index.xml:1236, 1252, 1272, 1290",
+      "issue": "The four rite labels are English only (tei:foreign xml:lang='en', with only the Hebrew name אלהי נשמה embedded). The document is xml:lang='he', and the other labels on conditionals in this index give both Hebrew and English (e.g. :176, :233, :434, :481, :683, :809). When the rite is undefined, the Hebrew column gets an English-only label.",
+      "recommendation": "Add Hebrew wording next to the English in each label, matching the minyan, Shabbat and festival-light labels. Words, order and conditions stay as they are."
+    },
+    {
+      "severity": "low",
+      "location": "index.xml teiHeader / editionStmt; /tmp/german-order-runtime-verification.json:77",
+      "issue": "The coverage limit (scans 48–53 only partly transcribed; the late block sits on its p8 structural anchor directly before Barukh Sheamar) is written only in the runtime report. The index itself does not record it. The edition statement says only 'Digitization in progress'.",
+      "recommendation": "If the limit should stay with the edition, add a tei:note type='encoding' on the project bibl, or a line in the edition statement."
+    },
+    {
+      "severity": "info",
+      "location": "JLPTEI-3.md:1773-1775 vs index.xml:1234-1307",
+      "issue": "The guideline for rite variants says each should be its own tei:div 'with a tei:head naming the custom'. Here each variant's label is the conditional's own instruction, and there is no tei:head. This follows your instruction and the 'Kinds of rubric' rule (JLPTEI-3.md:1962-1965): the label prints only when the rite is undefined. A tei:head would print even when the rite is known.",
+      "recommendation": "No change needed. This records a conflict between two parts of the guidelines, not a defect."
+    }
+  ],
+  "order_findings": [
+    "Shared spine at index.xml:1231-1233 is Adon Olam → Al Netilat Yadayim → Asher Yatzar, with no condition.",
+    "German=true (index.xml:1234-1249): Elohai Neshamah directly follows Asher Yatzar. Compiled German file lines 113-116: Asher Yatzar ends 'רוֹפֵא כָל־בָּשָׂר וּמַפְלִיא לַעֲשׂוֹת' and Elohai Neshamah follows straight after.",
+    "German=true late block (index.xml:1288-1307) holds all five units in one conditional, in order: Laasoq, Vehaarev, Asher Bachar, Numbers 6:24–26, Ellu Devarim. Compiled German lines 116-124: Neshamah → Laasoq → Vehaarev → Asher Bachar → Numbers 6:24–26 → Ellu Devarim → Barukh Sheamar.",
+    "German=false (index.xml:1250-1285): the same five units sit in one conditional between Asher Yatzar and the German=false Neshamah. Compiled other_ashkenaz lines 114-123: Asher Yatzar → Laasoq … Ellu Devarim → Elohai Neshamah.",
+    "No unit is moved separately: the five-unit block is the same in both positions and is never split.",
+    "Each definite rite gets exactly one Neshamah and one block. The two Neshamah conditionals and the two block conditionals each test German=true / German=false on opensiddur:rite/german alone. They do not use ashkenaz, frankfurt, opensiddur:variant or any blanket rule.",
+    "The late block is a sibling after section_morning_opening_blessings, inside the morning conditional and declaration, before Barukh Sheamar. That is the stated p8 anchor. Nothing claims the intervening pages are covered, and no words are invented.",
+    "The former p8 navigation transclusion is gone. There is no tei:ref type='page' or navigation note anywhere in the morning section.",
+    "The Frankfurt rite condition for Bameh Madlikin in Maariv (index.xml:980-984) is a separate feature and does not interact with this change."
+  ],
+  "alignment_findings": [
+    "All block units are canonical URNs without a project suffix (prayer:birkhot_hatorah/laasoq|vehaarev|asher_bachar, bible:numbers/6/24 with targetEnd numbers/6/26, prayer:ellu_devarim, prayer:elohai_neshamah). The compiler resolves them to paired he (heidenheim-1965-he) and en (marmorstein-1965-en) items.",
+    "Numbers 6:24–26 has three verse milestones (24, 25, 26) in Hebrew and three in English, in both the compiled German file (line 122) and the other_ashkenaz file (line 120).",
+    "Adon Olam in the compiled German file (line 110) has 10 stanza milestones in each language: adon_olam, leet_naasah, veacharei, vehu_hayah, vehu_echad, beli_reshit, vehu_eli, vehu_nissi, beyado, veim_ruchi, each with a closing terminator.",
+    "In the definite-rite outputs each unit's @corresp appears once in the morning section, so the Hebrew/English join is clean.",
+    "In the undefined output, Neshamah and all five units appear twice, as the alternatives require, so their @corresp values repeat. Under JLPTEI-3.md:302-307 and :2105-2108 only the first copy can be reached by URN or page reference: the German Neshamah and the other-rites block. Expected, not a defect.",
+    "The original facs/pb page references in the transcluded texts are unchanged (n43–n46). I did not reopen the pointing."
+  ],
+  "remaining_ambiguities": [
+    "Shabbat cases (german_shabbat, other_shabbat), other_sepharad, and the Maariv/Minchah no-leakage cases are backed only by the runtime report. No compiled XML for them was supplied.",
+    "In the undefined file I confirmed the German=true Neshamah conditional with its label, then Neshamah, then the opening of the other-rites conditional with its label (lines 114-130). I did not read the rest of that file, including the German=false Neshamah, the late German block and its label. Those rely on the source structure plus the runtime report's 'both_alternatives_explicitly_labeled'.",
+    "In the undefined file, the compiler places j:conditional inside one fragment of the host div and its j:endConditional inside a later fragment, with the transclusion between them outside both. That is valid if the renderer treats them as milestones. Whether the closing mark lands correctly is a renderer question I did not check.",
+    "I counted the Adon Olam stanzas only in the German file, and confirmed the Numbers verses only in the German and other_ashkenaz files.",
+    "In other_ashkenaz I did not read past the start of Elohai Neshamah (line 123), so the step from Neshamah to Barukh Sheamar there comes from the runtime report.",
+    "readings.json (498 KB) was too large to read whole and I did not search it. Source words were taken as already approved, as instructed."
+  ],
+  "reviewed_files": [
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/machzor_expanded-opensiddur-he/index.xml (all 1329 lines)",
+    "/tmp/german-order-reviewed-xml-sha256.json (snapshot hash 242653ca…5b46 as supplied, not recomputed)",
+    "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/human_blessings_s44_s47_confirmation.json",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/schema/JLPTEI-3.md (all)",
+    "/tmp/german-order-runtime-verification.json",
+    "/tmp/next-case-german_order_german_weekday.xml (lines 1-98, 110-111, 113-125, 134-141)",
+    "/tmp/next-case-german_order_other_ashkenaz.xml (lines 114-115, 120, 122-123)",
+    "/tmp/next-case-german_order_unknown.xml (lines 114-133)",
+    "NOT read: /home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/readings.json (size limit)"
+  ],
+  "verdict": "approve_with_minor_findings",
+  "checks": [
+    {
+      "check": "Uses opensiddur:rite/german only; German=true and German=false are each an explicit condition",
+      "result": "pass",
+      "evidence": "index.xml:1238-1242, 1254-1258, 1274-1278, 1292-1296"
+    },
+    {
+      "check": "Broad ashkenaz does not choose the order",
+      "result": "pass",
+      "evidence": "No condition uses ashkenaz; runtime case 'undefined_german_with_broad_ashkenaz_selected'; JLPTEI-3.md:1788-1791"
+    },
+    {
+      "check": "Whole five-unit block moves as one unit, in order",
+      "result": "pass",
+      "evidence": "index.xml:1262-1266 = 1300-1304; compiled German 116-124, other_ashkenaz 114-122"
+    },
+    {
+      "check": "Duplicate occurrences only where the condition alternatives require them",
+      "result": "pass",
+      "evidence": "One Neshamah and one block per definite rite; both alternatives appear only in the undefined output"
+    },
+    {
+      "check": "German: Asher Yatzar (רופא כל בשר ומפליא לעשות) → Neshamah → five units → Barukh Sheamar",
+      "result": "pass",
+      "evidence": "compiled German 113-124"
+    },
+    {
+      "check": "Non-German: Asher Yatzar → five units → Neshamah",
+      "result": "pass",
+      "evidence": "compiled other_ashkenaz 114-123"
+    },
+    {
+      "check": "Undefined rite keeps labeled alternatives",
+      "result": "partial-pass",
+      "evidence": "The two conditionals I read keep their own labels (unknown 116-130); the rest relies on the runtime report"
+    },
+    {
+      "check": "Rubric kind: each label is its conditional's own instruction and disappears when the rite is known",
+      "result": "pass",
+      "evidence": "index.xml:1236/1252/1272/1290; no label in compiled German/other_ashkenaz output"
+    },
+    {
+      "check": "Labels in both languages",
+      "result": "minor-finding",
+      "evidence": "English-only labels in a Hebrew-primary index"
+    },
+    {
+      "check": "No new prayer identities; canonical URNs without project suffix",
+      "result": "pass",
+      "evidence": "All targets are existing prayer:/bible: URNs used elsewhere in the project"
+    },
+    {
+      "check": "No navigation; former p8 transclusion replaced",
+      "result": "pass",
+      "evidence": "No page ref or navigation element in section_morning"
+    },
+    {
+      "check": "Numbers 6:24–26 three verse milestones in each language",
+      "result": "pass (German, other_ashkenaz); not checked (unknown)",
+      "evidence": "German 122; other_ashkenaz 120"
+    },
+    {
+      "check": "Adon Olam 10 stanza identities",
+      "result": "pass (German); not checked (other, unknown)",
+      "evidence": "German 110"
+    },
+    {
+      "check": "Shabbat, quorum, Maariv/Minchah leakage",
+      "result": "report-only",
+      "evidence": "runtime-verification.json cases; no compiled XML supplied"
+    },
+    {
+      "check": "Morning service/calendar declarations and continued sequence intact",
+      "result": "pass",
+      "evidence": "index.xml:1139-1317; Barukh Sheamar → 1 Chron 16:8–36 → Romemu → Vehu Rachum → Hoshiah → Ps 19"
+    },
+    {
+      "check": "Existing rituals/actions and source credits intact",
+      "result": "pass",
+      "evidence": "Tallit and entrance rubrics, sourceDesc bibls and Birnbaum dependency note match between source and compiled header"
+    },
+    {
+      "check": "Coverage limit recorded",
+      "result": "minor-finding",
+      "evidence": "Only in the runtime report, not in index.xml"
+    },
+    {
+      "check": "Snapshot hash",
+      "result": "not recomputed",
+      "evidence": "Taken as supplied"
+    }
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "4d98c7bc-4427-4d21-821e-639cc5eaee28"
+  }
+}

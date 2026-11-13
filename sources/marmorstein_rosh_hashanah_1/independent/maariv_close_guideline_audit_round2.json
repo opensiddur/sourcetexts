@@ -1,0 +1,92 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "Observed at runtime: low. This invocation ran with a reasoning-effort setting of about 10/100. The caller says the CLI was configured for medium effort. I cannot verify that from inside the session, so medium should be taken as the caller's claim, not as a self-report.",
+    "method": "Read-only. I read round1report, the frozen hash list, all 6 changed XMLs (HE index lines 220–295, EN index lines 170–220 and expanded index lines 860–1160 only, which cover the changed regions), kaddish_chatzi.xml, the registry/validator JSON, and the 5 source bands. I ran no code and changed no files. I did not open JLPTEI-3.md or jlptei.odd.xml: no question raised in this round needed guideline text beyond what round 1 had already cited. For RNG/Schematron validity I rely on the validator results reported in /tmp/close-registry-verification.json and have not checked it myself."
+  },
+  "findings": [],
+  "reconsidered_findings": [
+    {
+      "id": "S1",
+      "status": "resolved",
+      "evidence": "maariv_vayekhulu.xml:34 now has <abbr>חו״ק</abbr><expan>חזן וקהל</expan>. s35 band0 prints חו״ק before ויכלו. Meein Sheva (קו״ח → קהל וחזן) is unchanged and correct."
+    },
+    {
+      "id": "S2",
+      "status": "resolved",
+      "evidence": "aleinu.xml:35 now has 'כַּכָּתוּב בְּתוֹרָתֶךָ, ' followed by the chapter/verse milestones and seg 'יְהוָה יִמְלֹךְ…', and 'וְנֶאֱמַר, ' inside the veneemar part, followed by the vehayah part and the milestones and seg 'וְהָיָה…'. Neither verse scope nor seg starts with a comma. The wording matches s38 band2."
+    },
+    {
+      "id": "S3",
+      "status": "resolved",
+      "evidence": "HE index.xml:241 now has xml:lang=\"de-Hebr\" on 'אַם שַׁבָּת:'. The exact pointing is still listed under remaining ambiguities."
+    },
+    {
+      "id": "G1",
+      "status": "withdrawn",
+      "corrected_reasoning": "My round-1 premise was factually wrong. kaddish_chatzi.xml:34-46, the accepted maḥzor Half Kaddish, has exactly the same whole-witness guard: j:conditional with aseret-ymei-tshuva = true around the entire text, ending in j:endConditional. So the 'already done for Half Kaddish' comparison supports the current Meein Sheva encoding. It does not argue against it. On the merits, the witness prints a fixed הַמֶּלֶךְ הַקָּדוֹשׁ with no rubric or alternative. A guard around that phrase alone would leave a defective text outside the Ten Days, and supplying הָאֵל would add wording this witness does not print, which breaks documentary-witness policy. The whole-witness guard correctly marks this edition's text as Ten-Days-only. Ordinary-Shabbat contexts reach Meein Sheva through edition-qualified dependencies on other witnesses. In the expanded edition the first-night declarations make the Ten Days true, and the occurrence condition adds Shabbat and minyan, so the authorized use case resolves. I found no schema or guideline violation and no failing authorized use case. My round-1 objection was a preference for a different edition design, not a requirement. meein_sheva.xml's frozen hash d3fef62e… is the same as in round 1, so the file is unchanged."
+    },
+    {
+      "id": "G2",
+      "status": "resolved",
+      "evidence": "bameh_madlikin.xml:34: each numeral ב–ז is now <tei:label> and sits before its mishnah milestone. The bare terminator <milestone unit=\"mishnah\"/> comes before the label, so the previous unit closes first. Everything stays in one tei:p, matching the single printed paragraph. A transclusion of shabbat/2/N (N≥2) now starts at the text, not at the numeral. 2:1 has no label, which matches the source, where 2:1 is unnumbered. Whether tei:label is allowed inside p here rests on the reported RNG/Schematron pass, which I did not check myself."
+    },
+    {
+      "id": "G3",
+      "status": "withdrawn",
+      "evidence": "close-registry-verification.json lists all six citation-shaped parts (isaiah_54_13, psalms_119_165, psalms_122_7/8/9, psalms_29_11) as canonical registered identities under berakhot/64a/amar_rabbi_elazar. Renaming canonical identities is out of scope. This is legacy naming, and nothing needs to change."
+    },
+    {
+      "id": "G4",
+      "status": "resolved",
+      "evidence": "EN index.xml:188-202: the empty documentary_maariv_shabbat_close_en conditional is gone. The Amidah div is followed directly by the Kiddush div."
+    },
+    {
+      "id": "G5",
+      "status": "accepted_as_is",
+      "evidence": "A numbered chapter milestone with no corresp is the accepted project-wide excerpt pattern. It does not claim the full chapter, and verse identity is carried by the verse milestones' corresp. No change is required."
+    },
+    {
+      "id": "O1",
+      "status": "resolved",
+      "evidence": "expanded index.xml:1115 'After Kiddush at the meal, one recites <foreign he>המוציא</foreign> over the two loaves.' comes before the Birnbaum Hamotzi. :1119 'After tasting the bread, one dips a piece of sweet apple in honey and says:' comes before borei_peri_haetz. Both are type=instruction. Taken together they match the s36 band2 wording verbatim, including the comma after 'bread' printed on the HE page. No new English has been added."
+    },
+    {
+      "id": "O2",
+      "status": "resolved",
+      "evidence": "expanded index.xml:962: the Bameh conditional's tei:note type=instruction now holds only the source German rubric, as <foreign de-Hebr>. The English description has been removed. The j:all wrapping a single j:any remains. That is redundant but valid, and no change is required."
+    },
+    {
+      "id": "O3",
+      "status": "resolved",
+      "evidence": "expanded index.xml:880, 904 and 1087: the synagogue Vayekhulu, Meein Sheva and home Vayekhulu conditionals now carry the source rubric 'אַם שַׁבָּת:' (de-Hebr) as instruction notes. Reusing the s35 rubric for the home Vayekhulu was an option round 1 allowed. No invented text has been added."
+    },
+    {
+      "id": "O4",
+      "status": "resolved",
+      "evidence": "expanded index.xml:954: 'קדיש תתקבל.' is inside the minyan-gated div, before kaddish/shalem@birnbaum, which matches s35 band3. :989: the verbatim s36 band0 Kiddush introduction comes before the synagogue Kiddush. The order is unchanged: Amidah → Vayekhulu → Meein Sheva → Kaddish → Bameh group → Kiddush → Aleinu → Mourner's Kaddish → Yigdal."
+    }
+  ],
+  "remaining_source_ambiguities": [
+    "Frankfurt German line, exact consonants. This is pending the human and is not approved as settled. s35 band3 shows a letter with patah between ר and נ in פֿראַנקפֿורט, as the XML has it, while the human string has no aleph.",
+    "Frankfurt line: in s35 band3 the inline במה מדליקין appears pointed (בַּמֶּה מַדְלִיקִין), but the XML in both the HE index and the expanded index is unpointed. This is pending the human together with the consonants.",
+    "The five faint dageshes (Mishnah 2:2 כְבוֹד, 2:4 בְתוֹכָהּ, 2:5 פֶחָם, Amar R. Elazar בָנָיִךְ, and the remaining one in the human queue) are pending the human and are not approved as settled.",
+    "Pointing of שַׁבָּת in 'אַם שַׁבָּת:' (s35 band0): a patah under א is visible. The vowel and dagesh on ב are not certain at this resolution."
+  ],
+  "verdict": "approved_pending_human_source_items. All round-1 changes requested (S1, S2, S3, G2, G4, O1–O4) are verified as fixed against the source bands. G1 and G3 are withdrawn, and G5 is accepted as is. I found no new issues. Approval does not extend to the Frankfurt German consonants and pointing or to the five faint dageshes, which stay pending human confirmation.",
+  "reviewed_xml_sha256": {
+    "status": "Taken from /tmp/close-audit2-hashes.json as given and not recomputed, because recomputing would need code execution. The comparisons below are between values given in the two hash lists.",
+    "he/maariv_vayekhulu.xml": "2a5b544991e9504df40f4030a848e88c694fac690756f987d42b675b74832f92",
+    "he/bameh_madlikin.xml": "6f6e4937f4c2560d2fe323682d442322d35ed1b5a44fa54ac1c244c09d2bf03c",
+    "he/aleinu.xml": "267e831d6ee1db48ae988163b366cb649f177f402c0d7fda04f91c2196a4ae16",
+    "he/index.xml": "64353ade40429cc8a9fdfa4e4c6652e6e985031069d8349d72b20bf0d4cc6116",
+    "en/index.xml": "36f7522699ee46a040c7921911f8be2d7b0440d772114ac8d5cca60d63e37cb6",
+    "machzor_expanded-opensiddur-he/index.xml": "7690d53f721660f09cc2bf8fa9ba45e7ca2caf04a259c8fb26b26ba30cbb292c",
+    "unchanged_note": "The other 20 files in the frozen list have the same values as the round-1 list, including meein_sheva d3fef62e… and amidah_teshuvah 2009105f…."
+  },
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "0485618b-b35b-4119-b65c-ce94c4a33470"
+  }
+}

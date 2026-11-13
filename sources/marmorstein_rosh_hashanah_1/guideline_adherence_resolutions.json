@@ -1,0 +1,84 @@
+{
+  "status": "accepted for opening prayer and complete printed Minchah, s7-s12; remaining volume not certified",
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "medium (actual CLI invocation)"
+  },
+  "reports": [
+    "independent/opening_minchah_guidelines.json",
+    "independent/opening_minchah_guidelines_followup.json",
+    "independent/opening_minchah_guidelines_final.json",
+    "independent/opening_minchah_guidelines_front.json"
+  ],
+  "reading_resolutions": "minchah_resolutions.json",
+  "guidelines": {
+    "AGENTS.md": "8604ed140e56efa30fcf00cc7c3ee5fe9dbc5922572cd242c8cb1644855576da",
+    "schema/JLPTEI-3.md": "6c0cc3cd0be63f37a4986847eb66067fdcea73ecdb1d8006471fe56ebc8a5131",
+    "schema/jlptei.odd.xml": "688bac1dd3d6a7eb8a1f43c057a1d5249a610659de45a27d0496d22b4874e016",
+    "specs/SIDDUR_URN_SCHEME.md": "a02a190c00846f0d3dfc6fe715e69bb207ba489926d71ea4b935edeb39f196da"
+  },
+  "final_reviewed_file_sha256": {
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/entering_synagogue.xml": "c269d5eae8b5c4015f3d78114a46a87e267e308e31e0bc758c7892bc01ff83cc",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/ashrei.xml": "f71978414e028f97180e9488d4c53dfac4b15b852895072be1e323c242edc5de",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_qedushah.xml": "50b2a4c1f4289bc74e39b7116f166967c4af55b4735c67698e657c713b1dca16",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_modim_derabbanan.xml": "96ba99e8fe22b6858bcf2b0a9662dce873d9b43cacd560286876e862648e774c",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_yehi_ratzon.xml": "84ec1e22adfa05758aae77da886686fa8d613df1ef933c92a9ca1f7fd057646d",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_gevurot.xml": "b8ee4c86a9fd52da837398e2a7c1757ca7795478f434511e217b2386e07ea80e",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/index.xml": "5ca8d8142e726a134033fa794c71e50776dfc23aa9664f661b946041d41b2064",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/index.xml": "e7195042b1c4e6ee205fbdad48a468dea934c06c7816219826740f710d6970e9",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/machzor_expanded-opensiddur-he/index.xml": "a487828a6f39e16d30f5313dd890030ec3a8e9f8d1f229bc8f5f54ca1dffbd47",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/settings/machzor_expanded-opensiddur-he/undated.yaml": "7b3a8d8a7db14324495a50aa08a96d45bf448acbf4af5a81590956af89c96bfb"
+  },
+  "resolutions": [
+    "Source words and pointing independently confirmed after crop adjudication; superseded hashes preserved. The final readers agree on the defective Modim spellings and no sheva in the prefixed Name.",
+    "Complete opening collection has its own structural identity. Every prayer/verse identity reuses the registry except the necessary shared Psalm39 incipit parts.",
+    "Partial chapter markers carry number context without claiming an entire Psalm; complete Psalm145 remains addressable. Bare same-unit terminators end verse, half-verse and verse-part scopes.",
+    "Rashi speaker notes retain literal choice/abbr/expan at every occurrence; all gate-fixed service and holiday features are declared locally.",
+    "Documentary targets select the source edition; expanded words stay canonical. Hebrew dependency priority precedes English. Compiled Half/Whole Kaddish provenance verified as Birnbaum Hebrew.",
+    "Both Modim page6 breaks deliberately identify their own column continuation; source README records this.",
+    "Half-title and copyright verso now titlePage/title-page gated. Verified front leaves n0..n4. Earlier n2/n4 title-leaf description was a review prompt mistake, not a source facs defect.",
+    "Status is only front/header. Empty English placeholder and duplicated unpaired English rubrics removed. Bilingual editorial rubrics are retained per the accepted plan, as one note before each condition expression.",
+    "Copyright lb elements separate the three printed blocks, rather than every printed line. This is the corrected description; line-for-line layout is not required by the guidelines.",
+    "The half-title uses conventional docTitle grouping of title/subtitle before the emblem bylines. Original source reading order is preserved in front.json; the reviewer classified this display normalization as optional, not a word omission or unresolved reading.",
+    "Human-confirmed signature punctuation remains exactly as supplied."
+  ],
+  "unresolved_required_findings": [],
+  "limits": [
+    "The accepted pilot remains separate. s13 onward is still intake or future work; full-volume acceptance remains false.",
+    "PDFs visually inspected; HTML compiled and link structure checked. No claim of a new interactive browser review."
+  ],
+  "user_directives": [
+    {
+      "date": "2026-11-09",
+      "instruction": "Do not encode rend attributes on instructions; styles follow reader selections. Printed script may identify source instructions.",
+      "implementation": "Removed rend emission from all source rubric and speaker notes. Source-script observations remain in readings.json, separate from presentation. Existing independent reports and their reviewed hashes remain historical evidence. Source words, role identities and correspondence scopes are unchanged."
+    },
+    {
+      "date": "2026-11-09",
+      "instruction": "Incorporate the agreed Birnbaum Kedushah comparison changes.",
+      "implementation": "Reusable Kedushah requires repetition and minyan. Expanded repetition declares minyan true locally. Preparatory Minchah is gated to Elul29 (month6/day29), with fixed calendar/ordinary-season context declared locally; source haEl seal retained.",
+      "independent_review": "independent/qedushah_conditions.json",
+      "runtime_verification": "qedushah_condition_verification.json",
+      "validation": "49 XML files validate; 75 focused tests and 42 subtests pass; all nine compiler cases pass."
+    },
+    {
+      "date": "2026-11-09",
+      "instruction": "Correct Kedushah response abbreviations: קו״ח/קו׳ means קהל וחזן, not ק׳ = קהל.",
+      "adjudication": "qedushah_speaker_resolutions.json",
+      "independent_markup_review": "independent/qedushah_speaker_markup.json",
+      "implementation": "All three response notes use קו״ח, expansion קהל וחזן and existing role/reader_and_congregation. Reader-only notes stay ח׳. Review hashes now protect both abbreviation and expansion; explicit role maps reject unknown values and handle combined editorial roles."
+    }
+  ],
+  "current_encoded_file_sha256": {
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/entering_synagogue.xml": "c269d5eae8b5c4015f3d78114a46a87e267e308e31e0bc758c7892bc01ff83cc",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/ashrei.xml": "f71978414e028f97180e9488d4c53dfac4b15b852895072be1e323c242edc5de",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_qedushah.xml": "1edbd0fd303b825c0f5d8af29f0467439427ed0774ec600a153ced8c57691f33",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_modim_derabbanan.xml": "0a091ebec0e7ed9f7a95f0a9d8eaafcb330e4b749b2ba24f5fd0315c1ea22ace",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_yehi_ratzon.xml": "84ec1e22adfa05758aae77da886686fa8d613df1ef933c92a9ca1f7fd057646d",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_gevurot.xml": "b8ee4c86a9fd52da837398e2a7c1757ca7795478f434511e217b2386e07ea80e",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/index.xml": "f37ea7b141b3cc6202a0e6c756b202f1f3dbe246e1d1d087a49ed6ae3aef95d9",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/index.xml": "e7195042b1c4e6ee205fbdad48a468dea934c06c7816219826740f710d6970e9",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/machzor_expanded-opensiddur-he/index.xml": "0f510eb445e636a0ccbae18ef446bb248787c11280434a5fad754ab58b3eb2e4",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/settings/machzor_expanded-opensiddur-he/undated.yaml": "7b3a8d8a7db14324495a50aa08a96d45bf448acbf4af5a81590956af89c96bfb"
+  }
+}

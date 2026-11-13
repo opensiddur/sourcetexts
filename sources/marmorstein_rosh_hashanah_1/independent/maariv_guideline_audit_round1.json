@@ -1,0 +1,209 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+  },
+  "source_fidelity": {
+    "status": "mostly faithful; two Numbers corrections needed, one mark pending human",
+    "findings": [
+      "Num 15:39, numbers_15_37_to_41.xml (he): the source prints a meteg under the ayin of עֵינֵיכֶם, but the XML has none. Above the khaf are two dots stacked vertically. That is zaqef qatan, not a single stress dot. The source reads עֵֽינֵיכֶ֔ם; the XML has עֵינֵיכֶ֔ם.",
+      "Num 15:41, first אלהיכם (he): there is a single dot above the khaf, which is revia; it is correctly encoded. A short vertical stroke stands just left of the hataf segol under the alef. I read it as meteg, giving אֱֽלֹהֵיכֶ֗ם. The XML has none.",
+      "Num 15:40 לאלהיכם (he): there is a vertical stroke inside the word that is not the silluq, so a meteg is present. At this crop scale I cannot tell whether it belongs to the first lamed (tsere) or the second lamed (holam). See pending_human.",
+      "Pronunciation rubric (index.xml line 199; expanded index line 790): the verb is printed as four Rashi-script glyphs, and the last one descends like a final pe. That rules out the five-letter לגרוס. The encoded לצרף is accepted. אכן is correct, because the first glyph is the Rashi alef, which looks like ח and has no lamed ascender. The defective רוח is retained, correctly, with no sic/corr.",
+      "s18 crop: the Barekhu column layout, the labels פֿאָרבעטער; / קו״ח / געמיינדע:, the יחיד אומר rubric, דברים ו ד., the enlarged ע and ד, and בלחש all match the XML. The emet_veemunah words I checked on the s22 detail crops (שֹׂנְאֵינוּ, אוֹתֹת, בְּעֶבְרָתוֹ, הָעֹשֶׂה־לָּנוּ, וְאֶת־שׂוֹנְאֵיהֶם) match.",
+      "English s19 and s23: Reader:/Congregation: (English labels the response 'Congregation:', so it faithfully differs from the Hebrew קו״ח), Barekhu, Maariv Aravim, the italic Shema, Barukh Shem, the start of Ve'ahavta, the end of Numbers 15:39–41 and the whole of Emet ve-Emunah all match the XML. The English Hebrew cue words (ברכו, אהבת, ואהבת, אמת, מי, מלכותך, ונאמר) are correctly left out. English prints no El melekh ne'eman, no Psalm 113:2, no 'silently' and no pronunciation rubric, and none is encoded."
+    ]
+  },
+  "remaining_source_marks": [
+    {
+      "reference": "numbers/15/39 עיניכם",
+      "accepted": "עֵֽינֵיכֶ֔ם",
+      "evidence": "/tmp/maariv-point-einekhem.png: tsere under ע with a separate plain vertical bar below and to its left. Two vertically stacked dots above כ. Segol under כ, tsere under נ.",
+      "confidence": "medium-high"
+    },
+    {
+      "reference": "numbers/15/41 first אלהיכם",
+      "accepted": "אֱֽלֹהֵיכֶ֗ם",
+      "evidence": "/tmp/maariv-point-eloheikhem.png: one dot above כ (revia). A vertical bar immediately left of the hataf segol under א. Holam on ל, tsere under ה, segol under כ.",
+      "confidence": "medium"
+    },
+    {
+      "reference": "numbers/15/40 לאלהיכם",
+      "accepted": "PENDING HUMAN: לֵֽאלֹהֵיכֶֽם (primary's reading) or לֵאלֹֽהֵיכֶֽם",
+      "evidence": "/tmp/maariv-point-leloheikhem.png: one free-standing bar in the middle of the word, near the second ל and the ה's tsere, besides the silluq area. At this resolution I cannot reliably assign it to the first ל. Context: this book's 11:13 is encoded אֱלֹֽהֵיכֶם֙, with the meteg under ל. That shows the printer does put meteg under the holam-lamed of this word, but it does not decide this case.",
+      "confidence": "low for placement; medium that a meteg exists"
+    },
+    {
+      "reference": "rubric verb",
+      "accepted": "לצרף",
+      "evidence": "/tmp/maariv-s22-top-r.png bottom line: four glyphs ending in a descending final pe. Not לגרוס.",
+      "confidence": "medium-high"
+    }
+  ],
+  "guideline_adherence": {
+    "status": "issues found",
+    "findings": [
+      "barekhu.xml (he): Psalm 113:2 (and ברוך שם) sit inside the scope of prayer-part barekhu/yitbarakh. The terminator comes only after Psalm 113:2. So any transclusion of barekhu/yitbarakh carries Psalm 113:2 with it (see expanded_order).",
+      "index.xml (he) line 194 and expanded index line 785: בלחש is encoded as tei:note type=instruction. It says how the next passage is said, which JLPTEI-3 'Kinds of rubric' classes as a description. It should be type=description, placed first inside the passage's scope.",
+      "el_melekh_neeman.xml: יחיד אומר is a when-rubric: it says the text is said by a person praying alone, i.e. without a minyan. Per 'Kinds of rubric' it should be the j:conditional's own tei:note type=instruction, not a description inside the scope. The inverse minyan=false condition itself is correct.",
+      "shema_yisrael.xml (he): the enlarged single letters ע and ד use tei:hi rend=large. JLPTEI-3 reserves tei:hi for words and assigns single characters to tei:c rend=large. I did not confirm in the ODD that tei:c is allowed here.",
+      "Header idno: numbers_15_37_to_41.xml, deuteronomy_6_5_to_9.xml and deuteronomy_11_13_to_21.xml, in both languages, give whole-chapter URNs (bible:numbers/15, deuteronomy/6, deuteronomy/11) for excerpts. The milestones themselves are correct: a numbered chapter without corresp, verse corresp, bare terminators. The header nonetheless over-claims and should name the verse range.",
+      "The three Shema Bible-paragraph files have no liturgical identity and no tei:seg source, while shema_yisrael uses seg source plus prayer:shema/*. Whether vehavta/vehayah/vayomer need prayer:shema/* context URNs should be decided against the registry. I did not check the registry.",
+      "Correct as encoded: quotations in emet_veemunah and barekhu carry tei:seg source with chapter/verse milestones nested inside prayer-part scope and terminated explicitly; citation notes carry no parentheses; the role notes have no rend and use the correct xml:lang (yi labels, he קו״ח with abbr/expan קהל וחזן); each verse has exactly one milestone across page breaks (Deut 6:6, 6:7 and Num 15:39 straddle pb); facs follow sN = IA n(N-1) (s18 n17, s19 n18, s20 n19, s21 n20, s22 n21, s23 n22); pb/@n holds the printed page labels 12–14."
+    ]
+  },
+  "alignment": {
+    "status": "pass",
+    "findings": [
+      "Each of the 20 Shema verses has exactly one milestone in Hebrew and one in English, with identical corresp: Deut 6:4–9 (6), 11:13–21 (9), Num 15:37–41 (5). English partial-verse continuations (11:13 comma, 11:20 comma, 6:7 across pb, 15:39 across pb) do not shift any boundary.",
+      "The prayer-part milestones for Barekhu (call/response/yitbarakh), Maariv Aravim (opening/seal) and Emet (opening, mosheh, mi_khamokhah, malkhutekha, yimlokh, seal) match across the two languages and are independent of the printed paragraphs. The untranslated Psalm 113:2 sits inside the shared yitbarakh segment and creates no drift."
+    ]
+  },
+  "expanded_order": {
+    "status": "one required change",
+    "findings": [
+      "The call → yitbarakh → response order follows the concurrent columns: the congregation column starts level with the call. This is a reasonable reading and not a Birnbaum import. But the source does not say 'during'. The column also runs alongside the response and the start of Maariv Aravim, so the order remains an interpretation.",
+      "Because barekhu/yitbarakh extends through Psalm 113:2, the expanded order puts Psalm 113:2 (and ברוך שם) inside the minyan gate and before the response. That conflicts with the requirement that Psalm 113:2 has no intrinsic minyan gate.",
+      "El melekh ne'eman is gated on the inverse condition: correct. The Maariv settings are declared and ended locally: correct. The morning section declares maariv false and selects existing morning material: correct. No three-word Shema repetition has been invented. The installment ends at גאל ישראל, Hashkivenu is absent, and the editions are marked DRAFT/in progress. Nothing here certifies the whole service as complete."
+    ]
+  },
+  "reference_scopes": {
+    "status": "mostly correct",
+    "findings": [
+      "The verse ranges deuteronomy/6/5-/6/9, 11/13-/11/21 and numbers/15/37-/15/41 (documentary) and target/targetEnd (expanded) are complete and terminated.",
+      "The barekhu/yitbarakh scope is too wide (see above). Only the header chapter idnos over-claim; the milestone scopes do not."
+    ]
+  },
+  "required_changes": [
+    "numbers_15_37_to_41.xml (he) 15:39: עֵינֵיכֶ֔ם → עֵֽינֵיכֶ֔ם",
+    "numbers_15_37_to_41.xml (he) 15:41 first: אֱלֹהֵיכֶ֗ם → אֱֽלֹהֵיכֶ֗ם",
+    "barekhu.xml (he): put a bare prayer-part terminator before Psalm 113:2 (and decide about ברוך שם). In the expanded index, transclude bible:psalms/113/2 outside section_maariv_barekhu_condition, so the gate covers only call/yitbarakh/response.",
+    "בלחש (index.xml he line 194; expanded line 785): change to type=description, placed first inside the barukh_shem scope.",
+    "el_melekh_neeman.xml: move יחיד אומר to be the j:conditional's tei:note type=instruction.",
+    "shema_yisrael.xml (he): tei:hi rend=large → tei:c rend=large for ע and ד, if the ODD allows it.",
+    "Header idno of the Deuteronomy/Numbers excerpt files (he and en): replace the chapter URN with the excerpt's actual identity."
+  ],
+  "pending_human": [
+    "Num 15:40 לאלהיכם: is the meteg under the first lamed (לֵֽ) or the second (לֹֽ)?",
+    "Optional spot-check of the 15:41 meteg under alef, which I accepted at medium confidence.",
+    "Confirm the expanded Barekhu order (meditation before the common response) as editorial policy.",
+    "Decide whether the Shema Bible paragraphs need prayer:shema/* context identities."
+  ],
+  "limits": [
+    "Read-only; no files edited.",
+    "Not opened: schema/jlptei.odd.xml, opensiddur/exporter/features.yaml, ahavat_olam_arvit.xml (he/en), chronicles_1_16_8_to_36.xml (he/en), maariv_s18_s23_comparison.json, primary/maariv_s18_s23.json, independent/maariv_s18_s22.json, independent/maariv_s23_and_rubrics.json, the s18-blessings, mezuzot and s22-2 detail crops, and pages s18, s20, s21, s22 as whole images. So I have not verified Ahavat Olam, the Hebrew words of Deut 6/11 and Numbers 15:37–39a, Chronicles, ODD constraints or the feature registry.",
+    "I did not re-check the human-adjudicated 6:9, 11:14 and 11:21 marks, and I accept them.",
+    "Meteg placement is judged by eye from ~2x crops, with no pixel measurement."
+  ],
+  "files_read": [
+    "/tmp/maariv-point-einekhem.png",
+    "/tmp/maariv-point-leloheikhem.png",
+    "/tmp/maariv-point-eloheikhem.png",
+    "/tmp/maariv-s22-top-r.png",
+    "/tmp/maariv-s22-top-l.png",
+    "/tmp/maariv-detail-s22-1-r.png",
+    "/tmp/maariv-detail-s22-1-l.png",
+    "/tmp/maariv-s18-rubrics.png",
+    "/tmp/maariv-s18-shema.png",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s19.jpg",
+    ".../pages/s23.jpg",
+    "marmorstein-processor/master/AGENTS.md",
+    "schema/JLPTEI-3.md (full)",
+    "specs/SIDDUR_URN_SCHEME.md",
+    "sources/.../maariv_s18_s23_resolutions.json",
+    "independent/maariv_numbers_points.json",
+    "independent/maariv_small_crop_adjudication.json",
+    "he: index.xml, barekhu.xml, maariv_aravim.xml, el_melekh_neeman.xml, shema_yisrael.xml, barukh_shem.xml, deuteronomy_6_5_to_9.xml, deuteronomy_11_13_to_21.xml, numbers_15_37_to_41.xml, emet_veemunah.xml",
+    "en: index.xml, barekhu.xml, maariv_aravim.xml, shema_yisrael.xml, barukh_shem.xml, deuteronomy_6_5_to_9.xml, deuteronomy_11_13_to_21.xml, numbers_15_37_to_41.xml, emet_veemunah.xml",
+    "machzor_expanded-opensiddur-he/index.xml"
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "e3155e33-57ff-4a38-9e2c-f72e104e880c"
+  },
+  "files_unchanged_during_review": true,
+  "reviewed_xml_sha256": {
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/emet_veemunah.xml": "573065d0b4d63c1250221136c5205d638ddf841adc1da5410527623276ec179d",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_avot.xml": "eb440f6bfcbbdb52cc440c616bae11a6eb21c06d332716b500555ea3540c1763",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_avodah.xml": "4308a110f885b281a648ee3abf73d33e4884496ebd98d9c4e59ff38af0ba2ee3",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/mah_tovu.xml": "21d0d75b7e273feafa047bb57f36d4617d2bbafa46da2bd9e4113d34c0f0cac5",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/deuteronomy_6_5_to_9.xml": "34f6d0ba8709a8bf1050b7c9636444bcf8ed647e68a976c337736fa222638962",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_shalom_rav.xml": "df779d25841eb644d901d29001416916c8513fdc1aeda6cb851d2da178ba5632",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_tefillah.xml": "00622cdfc90b4db24a03386bffbb7e22a9ec959cfc0d5667075da627d1777f56",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_19.xml": "459d3b171e108d73fbec1bd088eab606e94aec7c91b4b3a7665ec0488d49b1bb",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_shanim.xml": "1cc437dbe8a71a959f88f0b8824930a57958729d014b016d5c7f98001ca11023",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/hoshiah_et_ammekha.xml": "4122d39a4422a13aed2ca8ce149232a0e4f4683ab28b56989114beadd8af9c85",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/romemu.xml": "1773c5125008a7f7a2741bcccb93eacc082cdfdc6faeaa3625a2a8f13dba7db8",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/barukh_shem.xml": "096e750a9bb6857f96dbd813deee9a1a8d0c120ca6b057c11c5c7b4bca433d36",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_geullah.xml": "6ac7ce032072f3ad5f06e1d4d5e8b1cea86dbb6d94edbbe1fc371c27b37e409f",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/birkhot_hatorah_vehaarev.xml": "edaea099aaa3d3fed55038482f32656fd9502ac9531d3a328efd852869a33019",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/shema_yisrael.xml": "181bc7e587c1271d02cbec466a5dbe7621aa793acb7598a91c94371980597c39",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_95.xml": "d8970af098c970d1e9194db39ddb8c2cd946c0f1a0b91b795875cc70a7ddb728",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_96.xml": "05a95410a9acd2ec15553c1dd9eb0712dbd3fb4a5b250f1cbd3971b18bb7400c",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/deuteronomy_11_13_to_21.xml": "faedd8640137639123105860bdcd581a939648fab37a08ec6adc07f439a50b62",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_qedushat_hashem.xml": "5482810136b123f28194b3f2f59d7a06e03c07f88e192a4107dee60dd41e08f9",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_98.xml": "7350ce97a4aaf5f8a9f870093b14ff31a5a6028305c2146807ca629e62c320a0",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_selichah.xml": "8c3754613151fe8b9caa957378448daf25b4a3a2f78e8862b59a17f566c5adb2",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/vehu_rachum.xml": "ba171db3846cd3f9f9f72ba8ca628d16de16633082cd1efea53bd346ebf53870",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/entering_synagogue.xml": "c269d5eae8b5c4015f3d78114a46a87e267e308e31e0bc758c7892bc01ff83cc",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/eruv_tavshilin.xml": "edf028cbc4ecdf9f760daf5e90a944f9895bcc10cad29f39a97a957f74a883d3",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/barekhu.xml": "c3d13869480a72adf9e73d277850a8e578853799d5bf39ad3973a3b59ded086e",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_qibbutz_galuyot.xml": "c5493e191d512c932f954bfd735e9e5006636181407b04dd20f9e8c43b38673b",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_93.xml": "9c1c8545e25e8de4c3978ec5147aeac0e4fd1a7dac0fb9ffb881f65cb25c77f8",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_mishpat.xml": "d360a861be0892b540d905b1e6b2143c3f38ff65e4739e3255c0b82463668fe9",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/hadlaqat_ner_yom_tov.xml": "3d95ab9593bf1bd36dafbe9081e95c76e56d04a388c2121eafde0394dd1affb3",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/el_melekh_neeman.xml": "e8736ce9826c227be662e4ea6d5baeed6612af2ff34b22a00d3e890dcca05225",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_99.xml": "43317f2bb14601e63d8958d0f554f0b8a12f53746d43b743c36d74dcae8b6e98",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_92.xml": "fd80fac4dc2088a3c7d29be4a0971e9c51921da89d9e52eaabaa14338d5d58b3",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/ahavat_olam_arvit.xml": "756d26e58e57467b41e9f589c0108c42cbe81c2c4758b751f3f7a8e28ef338d2",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_adonai_sefatai.xml": "851cbd10f32fc750d700e2869810f6b80e6a8a943d41a870459d14ddea17aa9f",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/lekhah_dodi.xml": "bda78df6e80d8d750aef8253fb6a9625abcb7261986f47660b4403c240661344",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_hodaah.xml": "c62caefe02e20b6cc7a30fe4e3715e912259aaeebc48b89e8f6c70f1da125b56",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/birkhot_hatorah_laasoq.xml": "9a4df3febace6fc1f664f373fb5752b253921f49bcd40f5d95f280c706321079",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/ashrei.xml": "f71978414e028f97180e9488d4c53dfac4b15b852895072be1e323c242edc5de",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_yerushalayim.xml": "345df24f81fbfc8cb0235b20e39578395fc5d231a86ceb658accfd8fe0409679",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_teshuvah.xml": "2009105f9db05a8ca54bc748087ba172c7cb6859797030f04c031c7c42f98af9",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_david.xml": "d1f55c6492c3c651f882de5eccbdeda8cf077fe5ef3d6e00a5d6de5d4c521761",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_modim_derabbanan.xml": "0a091ebec0e7ed9f7a95f0a9d8eaafcb330e4b749b2ba24f5fd0315c1ea22ace",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/index.xml": "997251a3a85875f68e95b63ac46ad9844fa16fdd574383c24e856f5d1ba1b7f2",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_qedushah.xml": "6e85790faab5f540dee9a5867bdee552c65ff260d08c0263d3dfb8510d5ccf1b",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/chronicles_1_16_8_to_36.xml": "282df6bb10dd1a42f52a3352d592e97771d475502397aab77a28485a875c4400",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/maariv_aravim.xml": "1cf0914f79cfed7406e7565138c950cee99eade1508c5a025aa3c2b57ac4ba21",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_29.xml": "6947334e8bcad71f41d76d5286837973177179ee2b3d61780f2d9e61e37567fc",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_yehi_ratzon.xml": "84ec1e22adfa05758aae77da886686fa8d613df1ef933c92a9ca1f7fd057646d",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_97.xml": "03275932ed0c998a4b8e1fca99ff1c2b24003ed925c9c81bc82e5ec12b7e86c6",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_gevurot.xml": "b8ee4c86a9fd52da837398e2a7c1757ca7795478f434511e217b2386e07ea80e",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/numbers_15_37_to_41.xml": "865855240cc811ce8d7d2838a4a4b5209304e10f0c8706f25fbc9eac05306a38",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_refuah.xml": "1c0482dc4b955dcf942387498a7d2889b4684e6f5340aa3f4b016cb3a14b54d5",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/barukh_sheamar.xml": "4d4f95b038a49d43cfb3a7fa4e1305625d9d82eb23246622d2176486e491f13a",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/birkhot_hatorah_asher_bachar.xml": "98001923470844c7007539886e66d79025275b2b058b0301cb621ee909e55943",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_elohai_netzor.xml": "de3d795a86953b2b2cc5f4a1f4b7f2d638b369e7f4c99c3aaa10e4717d06300b",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_minim.xml": "00c67ef008f849799a36057105f29868a364020eada1888012a57d08ce14dd43",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_binah.xml": "b66d7a4b8b815293ca3331f01984e3fee6079c0ad4758cb89c6fa46b518489a7",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_24.xml": "d31790117f326af398738b1204716f9d1182af2d00dbf5500f5414323f950895",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_tzaddiqim.xml": "6af1e44b8286339fcdb88253ddd0d09a6e35a2f418a663b19c8b4f756ebc9eff",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/emet_veemunah.xml": "bf8df54076217fa1c545240ed662a208c94db05bad2a2b6d439020258702d123",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/deuteronomy_6_5_to_9.xml": "327b6f9ff88de43583c6f39a4af45f1673c2ab70328517373601323ee67a920f",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/psalm_19.xml": "f279d75439a54451ee9b817bd5d82e96d6719872fd817d464c9f7f59613f7ae1",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/hoshiah_et_ammekha.xml": "028fdbba2ea446bafe563c97ac6efe5707951346bc61102e87dec1b508fd8b9b",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/romemu.xml": "05d85b3eb73512f83df6c0e052fecb41a4407e5736dd3035ea3dc772c721a110",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/barukh_shem.xml": "2e45a85c8cf42c2547ffe5b80ce4560c53adbc6fbad3069427d94033eba99711",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/birkhot_hatorah_vehaarev.xml": "a9b8ebf805f0c28f2205c15edf529f1e570fc2720d86c6e0717e7040c1791d18",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/shema_yisrael.xml": "390b1b1edc9db75bb8cecee562fea6bf93d92171c9426c08677caf011612c5ed",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/deuteronomy_11_13_to_21.xml": "9ef68a0b843f0544b2e4fc03b39b943392e5c3c453eaa4a68dc3c28c64b05124",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/vehu_rachum.xml": "ee27f6544cb8dd4dd0ae84bc99b67f7066ff9b28c8ce565e84dd1693c32bc377",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/eruv_tavshilin.xml": "57351971581e9a7b16501d5eb9310cc4360c07c946a633ae3bee3c06e08d39cc",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/barekhu.xml": "820e2f08367f05e6cfda28c74a2af0aab2fefd13b706d8edd9e6edd75b255b9c",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/hadlaqat_ner_yom_tov.xml": "7cea3cb47056f9bbcc59d88d14880472c130a7789144a41260e853c08ac04c7d",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/ahavat_olam_arvit.xml": "69337e2e49885fb9a3ea90f95ea0db9c9a8c2c07ea695e45128354b43a5f7ad5",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/birkhot_hatorah_laasoq.xml": "6fd679c6824e4dab5197d44d7f8c1624226dfb7b23f448f0cede846fb74bbbeb",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/index.xml": "a046918bafd9747bc5ddb603d9921d24ef501a0d5c54eaff1eff45ddb150fcbc",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/chronicles_1_16_8_to_36.xml": "2d6a75dc3c6b557c0c9c0a77c1242c595cfd511efd4e901f1e7e7f02dc56d0d1",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/maariv_aravim.xml": "d6288c9aa2b1e093863dff3c09f4b07e48d9bb8ec4951c4987f188e4c2ee9b89",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/numbers_15_37_to_41.xml": "bef59398fef15ff4db3caa244a88149f355f92b46bea616d232f1c095e4cc776",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/barukh_sheamar.xml": "4e33840209c5282782ad4a1456bdf0661d2aa3460cd7e83a5ed2dab0529737cd",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/birkhot_hatorah_asher_bachar.xml": "c422c2f0c5666e6532022ca99134e209b7612f98bda8a165beff17432ebe4090",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/machzor_expanded-opensiddur-he/index.xml": "213ceab2be3f698b9eb816426351b3234145e727253a013875a8a934b5c621ed"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "approved": true,
+  "issues": [],
+  "observations": [
+    "I read all 13 XML files and the guidelines excerpt. I did not read code, YAML, readings JSON, primary sources or images.",
+    "Chapter and verse scope is correct in every file. Verse milestones are consecutive, so adjacent verses share boundaries. Every sequence ends with a verse terminator and then a chapter terminator, before the paragraph or line closes, which follows the rule that a closing tag is not a terminator. In ki_ladonai, each of Psalms 22, Obadiah 1 and Zechariah 14 is terminated separately before the next opens.",
+    "Partial chapters use a chapter milestone with n and no corresp, as stated. Under rule 3, a unit-bearing milestone with no corresp counts as a terminator. So the opening chapter milestones end nothing, open nothing and only display a number. Because explicit verse terminators are present, verse scope does not depend on them.",
+    "Hebrew and English use the same correspondences in every pair: vayevarekh_david, attah_hu, vayyosha, az_yashir, ki_ladonai and morning_song_shema. These include quoted_exodus_15_11, the quoted/repeated_exodus_15_18 pair and quoted_zechariah_14_9. No canonical Bible verse URN appears twice in a file.",
+    "The quotations in az_yashir 15:11 and 15:18 (both prints), ki_ladonai Zechariah 14:9 and morning_song_shema Deuteronomy 6:4 each place the occurrence milestone before a seg that carries the Bible source, as the guidelines require. In the Hebrew az_yashir, each quotation that runs across printed lines is split into one seg per tei:l, each with the same source. This keeps the line structure well-formed, but one quotation becomes several spans.",
+    "Hebrew az_yashir keeps the printed poetry layout with lg and l, and the page break to p.30 falls inside a line. English az_yashir is prose (tei:p), and its page break also falls mid-verse. Each attah_hu file has a page break to p.29 inside verse 8. Facsimile page numbers advance consistently (Hebrew n85/87/89, English n86/88/90).",
+    "Citation notes are standOff type=citation, and both the target and the ref point at the first verse represented: Chronicles 1 29:10, Nehemiah 9:6, Exodus 14:30 and, in the Hebrew only, Exodus 15:1. English az_yashir has no citation note, as stated. ki_ladonai (both languages), ki_va_sus and morning_song_shema also have none. Whether those pages print a citation is for the image review to confirm.",
+    "ki_va_sus is Hebrew-only. Its idno is exodus/15/19 with the edition suffix, and its div has no corresp, so the only correspondence is the verse milestone. It has no English counterpart, as stated.",
+    "morning_song_shema marks the existing prayer child URN .../morning_song_shema/1 with unit=verse and n=4. The quotation is attributed to Deuteronomy 6:4 through seg@source. The surrounding prose sits outside the verse scope.",
+    "Not certified, left to the image/pointing review: the spelling of the divine name, which differs between files (יְיָ, ייָ, יְהֹוָה, and יהֹוָ with no sheva after the prefix בַּֽ/לַֽ); cantillation accents; the paseq in az_yashir 15:18; the period inside ki_va_sus 15:19 after הַיָּ֑ם; the period after וּבְתוֹרָתְךָ; אַתָּ and the missing maqaf in אַתָּה הוּא (Nehemiah 9:6); and the trailing period on the Hebrew citations.",
+    "Minor: the English ki_ladonai title says 'sovereignty' while its text says 'dominion'. This affects metadata only."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "a8d9b29a-c04e-4ed9-bebd-2fad786de2dc"
+  }
+}

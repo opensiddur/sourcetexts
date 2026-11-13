@@ -1,0 +1,88 @@
+{
+  "model": "claude-opus-5-5",
+  "effort": "low",
+  "decisions": [
+    {
+      "word": "רב (כי רב מעשיהם)",
+      "reading": "רב, pointing not confirmed",
+      "evidence": "In rav2 the crop ends just below the baseline of כי רב, so any vowel under the resh is cut off. In the full s50-2 line 1 I can make out the dagesh in the kaf of כי, but at that resolution I can't clearly see a pataḥ under the resh of רב. The image doesn't contradict the primary's pataḥ, but it doesn't confirm it either.",
+      "confidence": "low"
+    },
+    {
+      "word": "על גב(י) המזבח",
+      "reading": "עַל גַּב־הַמִּזְבֵּחַ (no yod, with maqaf)",
+      "evidence": "The gav crop is mis-targeted: it shows שמאהבתך, not this phrase. In the full s50-2, line 6 starts עַל, then a short word with a pataḥ under it that's about two letters wide (gimel or nun shape plus bet), joined by a maqaf to הַמִּזְבֵּחַ. I see no yod between the bet and the maqaf, and no tsere under the bet. This disagrees with the primary's reading (yod, tsere/dagesh on the bet).",
+      "confidence": "medium"
+    },
+    {
+      "word": "ששמחת בו",
+      "reading": "שֶׁשָּׂמַחְתָּ־בּוֹ (with maqaf)",
+      "evidence": "In the full s50-2 line 7 there's a visible horizontal stroke at the top-line level between ששמחת and בו, the same shape as the other maqafs on the page (מן־הבהמה, אֶת־, גב־). This disagrees with the primary's 'no maqaf'.",
+      "confidence": "medium-high"
+    },
+    {
+      "word": "בסתר",
+      "reading": "בַּסֵּתֶר or בְּסֵתֶר, undetermined",
+      "evidence": "In the tight-leolam crop the bet has a dagesh, and the samekh seems to have tsere with a dagesh, which supports the primary on the samekh. The mark under the bet is small and blurred, and I can't tell a pataḥ from a sheva.",
+      "confidence": "low (bet vowel), medium (samekh tsere+dagesh)"
+    },
+    {
+      "word": "עמך בני בריתך",
+      "reading": "עַמְּךָ בְּנֵי בְרִיתֶךָ",
+      "evidence": "The beritekha crop and the full image both show it clearly. The second bet has no dagesh.",
+      "confidence": "high"
+    },
+    {
+      "word": "לו בהר",
+      "reading": "לוֹ בְּהַר",
+      "evidence": "The lo crop is clear: holam male on לו, dagesh and sheva under the bet, pataḥ under the he.",
+      "confidence": "high"
+    },
+    {
+      "word": "מה ישועתנו",
+      "reading": "מַה־יְּשׁוּעָתֵנוּ מַה",
+      "evidence": "The yeshuah2 crop shows a maqaf after מה, a dagesh in the yod, and qamats/tsere under ישועתנו.",
+      "confidence": "high"
+    },
+    {
+      "word": "מדין קשה ... בין",
+      "reading": "מִדִּין קָשֶׁה וּמִבַּעַל דִּין קָשֶׁה בֵּין שֶׁהוּא",
+      "evidence": "The ben2 crop is clear: tsere and dagesh in בֵּין.",
+      "confidence": "high"
+    },
+    {
+      "word": "מעפעפי",
+      "reading": "מֵעַפְעַפָּי",
+      "evidence": "The einai crop shows tsere under the mem, pataḥ/sheva under the next letters, a dagesh in the final pe, and qamats.",
+      "confidence": "medium-high"
+    },
+    {
+      "word": "בזיון",
+      "reading": "בִּזָּיוֹן (as printed: לִידֵי בִּזָּיוֹן)",
+      "evidence": "The bizayon2 crop shows a dagesh in the bet, qamats under the zayin, and a holam dot above. The hiriq under the bet looks merged with the qamats mark and isn't fully distinct.",
+      "confidence": "medium"
+    },
+    {
+      "word": "everyday / every day (s51)",
+      "reading": "unresolved, no assertion",
+      "evidence": "No s51 image was provided, and /tmp/hashachar-s51.png doesn't exist, so I couldn't look at that line. I withdraw my earlier 'everyday' claim as unverified.",
+      "confidence": "none"
+    }
+  ],
+  "remaining_source_ambiguities": [
+    "Pataḥ under the resh of רב: the rav2 crop cuts off below the baseline. A taller crop of s50-2 line 1 is needed.",
+    "Whether it's גב or גבי: the gav crop shows the wrong text (שמאהבתך). A dedicated tight crop of the start of s50-2 line 6 is needed to confirm there's no yod.",
+    "The vowel under the bet of בסתר (pataḥ vs sheva) can't be told apart at this resolution.",
+    "everyday vs every day on s51: I need the s51 source image path."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "ba0702b0-6e53-49b8-ab0f-8df066fa7c8a"
+  },
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "configured_effort": "medium"
+  }
+}
