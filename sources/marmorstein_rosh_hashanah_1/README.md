@@ -904,4 +904,4 @@ The final four human decisions74–77 settle Jerusalem’s qamatz–meteg–CGJ�
 
 The English reconstruction “of our” stays explicitly supplied; false “devises” emendation is removed. Optional מלכנו, של יעקב and כל use marked variant conditions, verified for true/false/unset and electronic delimiters. The repetition heading occurs once in the documentary spine. Printed Torah cantillation is reconciled from the source, and no unprinted accents are added to pointed-only passages.
 
-Final rendered export QA is in progress. The known parallel-compiler limitation drops three leading page markers (204HE205EN223EN) from compiled output; every source marker and facsimile URL remains in documentary XML. This is not a final release of the355-leaf volume.
+Final representative rendered export QA passes: documentary PDF: 172 pages; expanded PDF: 191 pages, all internal PDF destinations and electronic links resolve. Both PDFs settle in 3 LaTeX passes. The known parallel-compiler limitation drops three leading page markers (204HE205EN223EN) from compiled output; every source marker and facsimile URL remains in documentary XML. This is not a final release of the355-leaf volume.

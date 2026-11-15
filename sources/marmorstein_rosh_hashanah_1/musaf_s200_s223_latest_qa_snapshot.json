@@ -1,16 +1,71 @@
 {
-  "readings_sha256_at_export": "f53a7680d876f6baf49f83a405b62b9928cb6239ee6de9415633c4b2464e0295",
-  "note": "Checks were run after human63–70 and before the final three source204 metegs/page_start metadata cleanup; final exports must be refreshed after four source questions are settled.",
-  "word_comparisons": 162,
+  "status": "pass",
+  "source_readings_sha256": "610a684d028264c57ca866080bc8641f25eca495a2c1ef2eb91f314e87280723",
+  "importer_tests": 82,
+  "schema_validated_files": 646,
+  "compiled_word_comparisons": 162,
   "bounded_scripture_quotes": 106,
   "unique_source_page_markers": 24,
-  "compiled_page_markers": 21,
-  "conditional_cases": 8,
-  "html_internal_links_and_popovers": "pass, both exports",
-  "features": "pass, all three projects",
-  "names": "0 errors",
-  "urn_references": "pass, all three projects, SQLite backup of refreshed QA refdb",
-  "compiler_commit": "7c4132e",
-  "html_renderer_worktree": "urn-reference-links/master (separate exporter PR301)",
-  "final_pdf_review": "pending"
+  "compiled_page_markers_in_latest_installment": 21,
+  "conditional_combinations": 8,
+  "html_internal_links_and_popover_targets": "pass, both documentary and expanded",
+  "source_review_complete_for_installment": true,
+  "accepted_leaves_total": 124,
+  "accepted_installment_leaves": 24,
+  "pdf_visual_review": "pass, representative latest Musaf pages",
+  "source_review_commits": {
+    "processor": {
+      "commit": "edf284de43e33edc5ab0aba58f925e6488569f50",
+      "branch": "feat/marmorstein-rosh-hashanah-1"
+    },
+    "sources": {
+      "commit": "6daf881062b2dff0842f9a00519d985032e45a63",
+      "branch": "feat/marmorstein-rosh-hashanah-1"
+    },
+    "projects": {
+      "commit": "3c78f401496b4828be4ecd41e8da81eef4bc5502",
+      "branch": "feat/marmorstein-rosh-hashanah-1"
+    }
+  },
+  "pdf_checks": [
+    {
+      "mode": "documentary",
+      "pages": 172,
+      "internal_links_checked": 30,
+      "external_links": 80,
+      "named_destinations": 413,
+      "all_internal_destinations_resolve": true,
+      "latex_passes": 3,
+      "unresolved_printed_references": false
+    },
+    {
+      "mode": "expanded",
+      "pages": 191,
+      "internal_links_checked": 0,
+      "external_links": 91,
+      "named_destinations": 481,
+      "all_internal_destinations_resolve": true,
+      "latex_passes": 3,
+      "unresolved_printed_references": false
+    }
+  ],
+  "pdf_visual_pages": {
+    "documentary_pdf_pages": [
+      152,
+      155,
+      161,
+      165,
+      168,
+      169,
+      170
+    ],
+    "expanded_pdf_pages": [
+      174,
+      180,
+      182,
+      188
+    ],
+    "result": "Representative Musaf bilingual alignment, native heading, conditional layout, apparatus placement/order, and final corrected source regions are legible; no clipping/overlap observed."
+  },
+  "known_export_limit": "Parallel compilation still drops three leading facsimile pb markers in this installment; source XML retains all24."
 }
