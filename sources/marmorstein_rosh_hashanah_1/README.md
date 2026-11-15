@@ -833,3 +833,37 @@ notes, ritual order and source-to-TEI decisions have distinct evidence records.
 No source accuracy is accepted from passing compiler checks or structural review.
 Acceptance remains 100/355; additional fine readings and numbered human snippets
 remain open. Next new source: PDF 184, סדר התקיעות / Shofar service.
+
+PDF184–199 adds 27 modules / 47 language witnesses: the Shofar service,
+Shabbat communal prayers, Ashrei, Torah return and cantor prayers before Musaf.
+All sixteen leaves have actual blind image readings; nine completed reports
+(including separate replacements for interrupted reads of scans 196–197) and invocation,
+image and frozen-primary hashes are archived in `independent/shofar_s184_s199/`
+and `shofar_s184_s199_review_provenance.json`. The frozen primary and comparison
+retain its mistakes, including an English Psalm29:7 line wrongly supplied from
+memory and subsequently removed against the image and independent reader. No
+replacement translation is supplied. All six numbered human questions are
+resolved; other source fine readings remain explicitly draft.
+
+Scans 188–189 each contain both languages and carry consecutive printed labels 83
+and 84. Scans 190–191 both carry 85. The committed label corrections and regenerated
+page inventory record these image facts rather than assuming a language offset.
+The expanded sequence has 30 sound calls on weekdays, no Shofar on Shabbat,
+separate whole return psalms 29 and 24, and the same four cantor verses both before
+Hamelekh and before Musaf Kaddish. Ashrei remains available without a minyan.
+Quiet blower prayers and Harei Ani stay Hebrew-only. The human confirms that
+congregational אשרי העם וכו׳ means the printed Psalm 89:16 only, and the name in
+the quiet TaShaT prayer is וְישעיה״ה. The likely printed zarqa error over peh in
+פניך is retained without a conjectural correction.
+
+Moses/Menasseh is encoded as a bilingual `j:option` choice with the native נ״א
+annotation preserved and expanded as נוסח אחר. English by→be and Wis→His use
+sic/corr. The new draft has 565 book XML files; two supporting Hebrew Exodus witnesses
+receive exact 19:19 vayehi_qol/meod boundaries without Scripture word changes.
+Checks cover110 tests plus 22 subtests,98 compiled word comparisons,144 exact quotations,
+16 setting combinations and18 unique input source-witness page boundaries. Parallel
+collation omits four leading pb markers; the original XML boundaries and module
+facsimile provenance remain preserved. This compiler limitation is recorded,
+not described as page-complete output. Independent final approval covers draft
+structure only. Source acceptance stays 100/355, with 200 leaves independently read.
+The next new source begins on PDF 200: Musaf half-Kaddish and silent Amidah.
