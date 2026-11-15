@@ -1,0 +1,227 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low (reasoning effort setting 10)"
+  },
+  "scope": "current Hebrew source and encoding closure",
+  "pages": [
+    {
+      "scan": "s200",
+      "all_printed_text_checked": true,
+      "source_complete": false,
+      "printed_cantillation": {
+        "Numbers 14:17 (וְעַתָּה יִגְדַּל־נָא)": "absent",
+        "Psalms 25:6 (זְכֹר רַחֲמֶיךָ)": "absent",
+        "Psalms 51:17 (אֲדֹנָי שְׂפָתַי)": "absent",
+        "Exodus 19/20, Isaiah 27, Zechariah 9, Numbers 10": "not applicable"
+      },
+      "notes": [
+        "The three verse quotations have vowels only. I saw no accent marks.",
+        "The running head and page number 90 are not encoded as text. The tei:pb n=\"90\" covers them.",
+        "Human-resolved marks are encoded as resolved and I did not reopen them: חזן written in full, the yod in דִּי־בְרָא, no dagesh in כִרְעוּתֵהּ, דְכָל, בְנֵיהֶם or כָמוֹךָ, no meteg on זָכְרֵנוּ, and the meteg on the first מֶֽלֶךְ.",
+        "Confirmed as printed: וְקֹנֵה (spelled without vav), לְעָלַם, the comma after קָרִיב, the period after אָמֵן in the first Kaddish paragraph, and לָּךְ with dagesh.",
+        "Source not complete because of the corrections below (וְיִתְרֹמַם, the comma after בְּעָלְמָא, the period after עָפָר) and the open questions."
+      ]
+    },
+    {
+      "scan": "s202",
+      "all_printed_text_checked": true,
+      "source_complete": false,
+      "printed_cantillation": {
+        "Psalms 146:10 (יִמְלֹךְ)": "absent",
+        "Isaiah 5:16 (וַיִּגְבַּהּ)": "absent",
+        "Exodus 19/20, Isaiah 27, Zechariah 9, Numbers 10": "not applicable"
+      },
+      "notes": [
+        "Human-resolved marks are encoded as resolved: יְהֹוָה in Ps 146:10, הַלֲלוּיָהּ, no meteg in הָרַחֲמִים, סֶּֽלָה, יְהַלְלֽוּךָ, no meteg in וְאֵימָתְךָ, שֶׁיָּדַֽעְנוּ, the dagesh in בְּיָמֵינוּ, the mappiq in כֻּלָּהּ, the dagesh in צִיּוֹן, and וְקֵרַבְתָּֽנוּ.",
+        "In Isaiah 5:16 the Divine Name is printed יְיָ, not the full Tetragrammaton. The human ruling for יְהֹוָה covered only Ps 146:10 on this page.",
+        "Seven corrections are listed below, including the vowel of לַחַיִּים, אַחַת, the Divine Name in Isaiah 5:16, punctuation and maqaf."
+      ]
+    },
+    {
+      "scan": "s204",
+      "all_printed_text_checked": true,
+      "source_complete": false,
+      "printed_cantillation": {
+        "Numbers 28:9-10 (Sabbath passage in small type)": "absent",
+        "Numbers 29:1-2 (וּבַחֹדֶשׁ הַשְּׁבִיעִי ... פַּר בֶּן־)": "present",
+        "Exodus 19/20, Isaiah 27, Zechariah 9, Numbers 10": "not applicable"
+      },
+      "notes": [
+        "Numbers 29:1-2 has full printed cantillation and the current encoding carries it. Numbers 28:9-10 is set in smaller type inside parentheses with no accents, and is correctly encoded without them.",
+        "Human-resolved marks are encoded as resolved: לָֽנוּ, וְנִתְרַחַֽקְנוּ, אַם with patah in the Sabbath rubric, and no dagesh in כְבָשִׂים.",
+        "The bracketed Shabbat insertions (הַשַּׁבָּת הַזֶּה וְאֶת יוֹם / זִכְרוֹן / בְּאַהֲבָה / הַשַּׁבָּת הַזֶּה וְיוֹם) and the parenthesised Numbers 28:9-10 passage are encoded as j:conditional type=\"marked\". The printed brackets are left to the renderer, which matches how the project handles them elsewhere.",
+        "The page ends mid-verse at פַּר בֶּן־. It continues on s206, which is outside this scope.",
+        "Source not complete because of the open questions about meteg and munach below."
+      ]
+    }
+  ],
+  "corrections": [
+    {
+      "scan": "s200",
+      "stem": "musaf_half_kaddish",
+      "current": "וְיִתְרוֹמַם",
+      "replacement": "וְיִתְרֹמַם",
+      "reason": "The book spells it without the vav (holam dot only). The current text adds a vav from memory.",
+      "image_evidence": "s200-band1, last line, and s200-band2, line 1, third word from the left: ו־י־ת־ר־מ־ם with no vav between ר and מ."
+    },
+    {
+      "scan": "s200",
+      "stem": "musaf_half_kaddish",
+      "current": "דַּאֲמִירָן בְּעָלְמָא וְאִמְרוּ אָמֵן:",
+      "replacement": "דַּאֲמִירָן בְּעָלְמָא, וְאִמְרוּ אָמֵן:",
+      "reason": "There is a printed comma after בְּעָלְמָא, just as there is after קָרִיב, which the current text already keeps.",
+      "image_evidence": "s200-band2, line 4 (last Kaddish line): a comma is clearly visible after בְּעָלְמָא."
+    },
+    {
+      "scan": "s200",
+      "stem": "musaf_gevurot",
+      "current": "לִישֵׁנֵי עָפָר מִי כָמוֹךָ",
+      "replacement": "לִישֵׁנֵי עָפָר. מִי כָמוֹךָ",
+      "reason": "A period is printed after עָפָר.",
+      "image_evidence": "s200-band3, last line, and s200-band4, line 2: עָפָר. then מִי."
+    },
+    {
+      "scan": "s202",
+      "stem": "musaf_gevurot",
+      "current": "זוֹכֵר יְצוּרָיו לְחַיִּים בְּרַחֲמִים.",
+      "replacement": "זוֹכֵר יְצוּרָיו לַחַיִּים בְּרַחֲמִים.",
+      "reason": "The lamed has a patah (article), not a sheva.",
+      "image_evidence": "s202-band1, line 1, left half: a horizontal patah stroke under the ל of לַחַיִּים."
+    },
+    {
+      "scan": "s202",
+      "stem": "musaf_attah_qadosh",
+      "current": "וּקְדוֹשִׁים בְּכָל־יוֹם יְהַלְלֽוּךָ",
+      "replacement": "וּקְדוֹשִׁים בְּכָל יוֹם יְהַלְלֽוּךָ",
+      "reason": "No maqaf is printed between בְּכָל and יוֹם.",
+      "image_evidence": "s202-band1, line 3: there is a plain word space between בְּכָל and יוֹם, unlike the maqafs printed in כָּל־מַעֲשֶׂיךָ on the next line."
+    },
+    {
+      "scan": "s202",
+      "stem": "musaf_uvekhen_ten_pachdekha",
+      "current": "לְפָנֶיךָ כָּל הַבְּרוּאִים",
+      "replacement": "לְפָנֶיךָ כָּל־הַבְּרוּאִים",
+      "reason": "The line ends with כָּל followed by a maqaf, and the next line begins הַבְּרוּאִים. The maqaf was lost when the line was joined.",
+      "image_evidence": "s202-band1, line 5, left end: כָּל־ with a maqaf at the margin, then line 6 begins הַבְּרוּאִים."
+    },
+    {
+      "scan": "s202",
+      "stem": "musaf_uvekhen_ten_pachdekha",
+      "current": "אֲגֻדָּה אֶחָת",
+      "replacement": "אֲגֻדָּה אַחַת",
+      "reason": "Both א and ח have patah. There is no segol or qamatz.",
+      "image_evidence": "s202-band1, line 6, middle: אַחַת with horizontal patah strokes under both the alef and the het."
+    },
+    {
+      "scan": "s202",
+      "stem": "musaf_uvekhen_tzaddiqim",
+      "current": "כֻּלָּהּ כֶּעָשָׁן תִּכְלֶה",
+      "replacement": "כֻּלָּהּ כְּעָשָׁן תִּכְלֶה",
+      "reason": "The kaf has dagesh and a vertical two-dot sheva, not a segol.",
+      "image_evidence": "s202-band2, last line, and s202-band3, line 1, first word at the right margin: a vertical sheva under the כ."
+    },
+    {
+      "scan": "s202",
+      "stem": "musaf_vetimlokh",
+      "current": "כַּכָּתוּב בְּדִבְרֵי קָדְשֶׁךָ: ",
+      "replacement": "כַּכָּתוּב בְּדִבְרֵי קָדְשֶׁךָ ",
+      "reason": "No sof pasuq or colon is printed after קָדְשֶׁךָ, which ends the line. The quoted verse follows directly.",
+      "image_evidence": "s202-band3, line 3, left end: קָדְשֶׁךָ at the margin with no colon, unlike the ':' visible at the ends of the lines above and below."
+    },
+    {
+      "scan": "s202",
+      "stem": "musaf_qadosh_attah",
+      "current": "וַיִּגְבַּהּ יְהֹוָה צְבָאוֹת",
+      "replacement": "וַיִּגְבַּהּ יְיָ צְבָאוֹת",
+      "reason": "The Divine Name here is printed as the abbreviation יְיָ: two yods with sheva and qamatz. The full Tetragrammaton was supplied, probably by analogy with Ps 146:10, but the human ruling for יְהֹוָה applies only there.",
+      "image_evidence": "s202-band3, line 6: וַיִּגְבַּהּ then two small yods with vowels below them, then צְבָאוֹת. Compare the full יְהֹוָה in line 4 of the same band."
+    }
+  ],
+  "questions": [
+    {
+      "scan": "s200",
+      "stem": "musaf_half_kaddish",
+      "word": "לְעֵלָּא (both occurrences)",
+      "letter": "ע",
+      "question": "Is there a meteg beside the tsere under the ayin in each לְעֵלָּא? I see an extra short vertical stroke, but at this resolution it could be part of the tsere dots. The current text has no meteg.",
+      "image_location": "s200-band2, line 2, leftmost word, and line 3, first word on the right (וּלְעֵלָּא)."
+    },
+    {
+      "scan": "s200",
+      "stem": "musaf_half_kaddish",
+      "word": "רַחֲמֶיךָ / וַחֲסָדֶיךָ / הֵמָּה (Ps 25:6)",
+      "letter": "מ of רַחֲמֶיךָ, ד of וַחֲסָדֶיךָ, ה of הֵמָּה",
+      "question": "Is there a meteg under each of these letters? Each shows a possible small stroke next to the vowel. The source cannot settle this at the band resolution. The current text has none.",
+      "image_location": "s200-band1, line 4 (second centred verse line)."
+    },
+    {
+      "scan": "s200",
+      "stem": "musaf_avot",
+      "word": "מֶלֶךְ (in מֶלֶךְ עוֹזֵר)",
+      "letter": "מ",
+      "question": "This glyph looks the same as the first מֶֽלֶךְ (חָפֵץ), which the human ruled has a meteg. That ruling covered only the first occurrence. Does this second one also have a meteg? The current text has none.",
+      "image_location": "s200-band3, line 5, second word from the left."
+    },
+    {
+      "scan": "s200",
+      "stem": "musaf_gevurot",
+      "word": "מֶלֶךְ (in מֶלֶךְ מֵמִית)",
+      "letter": "מ",
+      "question": "Is there a meteg under the mem, as on the first מֶֽלֶךְ on this page? The current text has none.",
+      "image_location": "s200-band4, line 3, second word from the right."
+    },
+    {
+      "scan": "s200",
+      "stem": "musaf_gevurot",
+      "word": "דוֹמֶה",
+      "letter": "ד",
+      "question": "Is there a dagesh in the dalet (דּוֹמֶה)? There is a dot near the head of the letter, but it may be the holam of the following vav. The current text has no dagesh.",
+      "image_location": "s200-band4, line 2, leftmost word."
+    },
+    {
+      "scan": "s204",
+      "stem": "musaf_umippenei",
+      "word": "חֲטָאֵינוּ, גָּלִינוּ, מֵאַרְצֵנוּ, אַדְמָתֵנוּ, אֲנַחְנוּ, חוֹבוֹתֵינוּ, אֱלֹהֵינוּ, אֲבוֹתֵינוּ, עָלֵינוּ, אָבִינוּ, מַלְכֵּנוּ, לְפָנֶיךָ, רְצוֹנֶךָ, עַבְדֶּךָ, כְבוֹדֶךָ",
+      "letter": "the letter carrying the stressed vowel before the suffix (ט, ל, צ, ת, נ, ת, ה, ת, ל, ב, כ, נ, נ, ד, ד respectively)",
+      "question": "An earlier reading recorded a meteg on each of these. The current text has a meteg only on וְנִתְרַחַֽקְנוּ, which was human-ruled. At the band resolution I cannot tell whether these are true meteg strokes. Each needs a closer look before it is accepted or rejected.",
+      "image_location": "s204-band1, lines 4-7, and s204-band2, lines 1-8."
+    },
+    {
+      "scan": "s204",
+      "stem": "musaf_festival_offering",
+      "word": "לַיְיָ֔",
+      "letter": "ל",
+      "question": "Is a meteg printed under the lamed beside the patah, next to the zaqef on the Divine Name? An earlier reading had לַֽיְיָ֔. The current text has no meteg.",
+      "image_location": "s204-band4, line 3, third word from the left."
+    },
+    {
+      "scan": "s204",
+      "stem": "musaf_festival_offering",
+      "word": "תַעֲשׂ֑וּ",
+      "letter": "ת",
+      "question": "Is there a munach (or meteg) under the tav beside the patah, in addition to the etnachta under the shin? There is a mark there that could be an accent.",
+      "image_location": "s204-band4, line 2, middle (after לֹ֣א)."
+    },
+    {
+      "scan": "s204",
+      "stem": "musaf_sabbath_offering",
+      "word": "שבת (in the rubric)",
+      "letter": "ש and ב",
+      "question": "The current rubric reads אַם שבת: with שבת unpointed. The print looks like it may have a shin dot, patah and a dagesh in the bet (שַׁבָּת), but the small type is faint. Is שבת pointed in the source?",
+      "image_location": "s204-band3, centred rubric line above the Numbers 28:9 passage."
+    }
+  ],
+  "guideline_findings": [
+    "musaf_sabbath_offering.xml and musaf_festival_offering.xml: each verse has its own chapter milestone with its own corresp (…/numbers_28_9/numbers_28 and …/numbers_28_10/numbers_28, and likewise for numbers_29). The chapter scope is closed and reopened between consecutive verses of the same chapter. One chapter milestone with consecutive verse milestones, as the 'Prefer milestones' section recommends, would avoid two URNs for one quoted chapter. This is a recommendation, not a schema violation.",
+    "The printed parentheses around the Sabbath rubric (אַם שבת:) are not kept in the tei:note. The parentheses around the Shabbat text are covered by j:conditional type=\"marked\", but a pair around a rubric is not. Decide whether the note text should keep them.",
+    "musaf_qadosh_attah.xml, musaf_vattitten_lanu.xml and musaf_vetimlokh.xml: a seg ends in a trailing space and is followed by a literal space, or the next seg starts with a space. This produces doubled whitespace, for example after 'כַּכָּתוּב ' and before ' בָּרוּךְ'. This is a whitespace issue only.",
+    "No missing cantillation was found in scope. Numbers 29:1-2 is the only accented passage on these pages and is encoded with its accents. Exodus 19/20, Isaiah 27, Zechariah 9 and Numbers 10 do not appear on s200, s202 or s204."
+  ],
+  "approved": false,
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "d33fbc94-f1a5-422c-95fa-469959dbd761"
+  }
+}

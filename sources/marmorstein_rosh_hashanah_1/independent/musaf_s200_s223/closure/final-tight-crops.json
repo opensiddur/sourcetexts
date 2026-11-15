@@ -1,0 +1,156 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5 (Opus 5.5)",
+    "effort": "low (reasoning effort setting 10)"
+  },
+  "readings": [
+    {
+      "image": "snippet-204-final-1.png",
+      "word": "בחירתך",
+      "exact_pointed_text": "בְּחִירָתֶֽךָ",
+      "metegs": [
+        {
+          "host": "tav",
+          "present": true
+        }
+      ],
+      "other_findings": "Under the tav is a three-dot segol with a short vertical meteg just to its left. It is a segol, not a sheva or tsere. The resh has qamatz, the chet has hiriq, the bet has sheva, and the final kaf has qamatz written inside it. No dagesh dot is clearly visible inside the bet, so the dagesh in my text is assumed, not seen.",
+      "confidence": "high for segol + meteg on tav; medium for bet dagesh"
+    },
+    {
+      "image": "snippet-204-final-2.png",
+      "word": "יהי",
+      "exact_pointed_text": "יְהִי",
+      "metegs": [
+        {
+          "host": "he",
+          "present": false
+        }
+      ],
+      "other_findings": "The first yod has sheva and the he has a single hiriq dot. There is no vertical stroke beside the he hiriq. The vertical strokes further right belong to the word before (עֹשֶׂךָ). The diamond-shaped marks are the sof pasuq before יהי.",
+      "confidence": "high"
+    },
+    {
+      "image": "snippet-204-final-3.png",
+      "word": "ארץ",
+      "exact_pointed_text": "אָֽרֶץ",
+      "metegs": [
+        {
+          "host": "alef",
+          "present": true
+        }
+      ],
+      "other_findings": "The alef has a full qamatz (T shape), not a hataf, with a vertical meteg directly to its left. The resh has segol.",
+      "confidence": "high"
+    },
+    {
+      "image": "snippet-204-final-4.png",
+      "word": "לפניך (later)",
+      "exact_pointed_text": "לְפָנֶֽיךָ",
+      "metegs": [
+        {
+          "host": "nun",
+          "present": true
+        }
+      ],
+      "other_findings": "The nun has segol with a short vertical meteg on its left, between the nun and the yod. This stroke is separate from the long descender of the final kaf. The pe has qamatz, the lamed has sheva, and the final kaf has qamatz inside it.",
+      "confidence": "high"
+    },
+    {
+      "image": "snippet-204-final-5.png",
+      "word": "חובותינו (later)",
+      "exact_pointed_text": "חוֹבוֹתֵֽינוּ",
+      "metegs": [
+        {
+          "host": "tav",
+          "present": true
+        }
+      ],
+      "other_findings": "Under the tav is a tsere with a short vertical stroke beside it. The marks sit slightly left, under the tav/yod junction, which is typical of how this print shifts vowels left. Both vavs carry holam.",
+      "confidence": "medium (stroke is clearly present; its horizontal attribution to tav vs yod is the only doubt)"
+    },
+    {
+      "image": "snippet-204-final-6.png",
+      "word": "רצונך",
+      "exact_pointed_text": "רְצוֹנְךָ",
+      "metegs": [
+        {
+          "host": "nun",
+          "present": false
+        }
+      ],
+      "other_findings": "The nun has only two vertically stacked dots, which is a sheva, not a segol. There is no meteg. The source therefore reads רְצוֹנְךָ, not רְצוֹנֶךָ. The resh has sheva and the final kaf has qamatz inside it.",
+      "confidence": "high"
+    },
+    {
+      "image": "snippet-204-final-7.png",
+      "word": "עבדך",
+      "exact_pointed_text": "עַבְדְּךָ",
+      "metegs": [
+        {
+          "host": "dalet",
+          "present": false
+        }
+      ],
+      "other_findings": "The dalet has a dagesh dot inside it and two vertically stacked dots below, which is a sheva, not a segol. There is no meteg. The source therefore reads עַבְדְּךָ, not עַבְדֶּךָ. The bet has sheva and the ayin has patah. There may also be a small dot low inside the bet, which could be a stray dagesh or an ink speck.",
+      "confidence": "high for dalet sheva/no meteg; low on the bet inner dot"
+    },
+    {
+      "image": "snippet-72.png",
+      "word": "ומצות",
+      "exact_pointed_text": "וּמִצְווֹת",
+      "metegs": [],
+      "other_findings": "I count two vavs between the tsadi and the tav. The holam dot sits above the second vav, possibly between the two. The mem has hiriq and the tsadi has sheva. The first vav has a shuruk dot.",
+      "confidence": "medium-high (two vavs)"
+    },
+    {
+      "image": "snippet-73.png",
+      "word": "וירושלם",
+      "exact_pointed_text": "וִירוּשָׁלָם",
+      "metegs": [
+        {
+          "host": "lamed",
+          "present": false
+        },
+        {
+          "host": "vav/shin junction",
+          "present": "uncertain"
+        }
+      ],
+      "other_findings": "Spelling: there is no yod before the final mem; the lamed is followed directly by the closed final mem. The lamed has a qamatz (T shape with a visible vertical stem), not a patah. I see no hiriq dot under the lamed or between the lamed and the mem, and no meteg on the lamed. So I did not add the CGJ (U+034F) form. The shin has a qamatz-shaped mark. Near the vav/shin junction is a short vertical stroke with a dot just above it. It could be a meteg (or the shuruk dot plus a meteg), or the dot could be a hiriq. The hiriq under the first vav is assumed from the usual spelling, not clearly seen.",
+      "confidence": "high for no yod and qamatz under lamed; medium for no hiriq under lamed (crop is smaller than the others)"
+    }
+  ],
+  "questions": [
+    {
+      "image": "snippet-73.png",
+      "word": "וירושלם",
+      "letter": "lamed",
+      "question": "No hiriq is visible under the lamed (only the qamatz). Is a crop at higher magnification available to confirm that the hiriq is truly missing, rather than lost to resolution?"
+    },
+    {
+      "image": "snippet-73.png",
+      "word": "וירושלם",
+      "letter": "vav/shin",
+      "question": "Is the vertical stroke with a dot above it at the vav/shin junction a meteg (with the shuruk dot) or a hiriq? Which letter does it belong to?"
+    },
+    {
+      "image": "snippet-204-final-7.png",
+      "word": "עבדך",
+      "letter": "bet",
+      "question": "Is the faint dot low inside the bet a printed dagesh or ink noise?"
+    },
+    {
+      "image": "snippet-204-final-5.png",
+      "word": "חובותינו",
+      "letter": "tav",
+      "question": "The meteg sits at the tav/yod boundary. I read it as belonging to the tav; please confirm."
+    }
+  ],
+  "approved": false,
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "95ae0985-afb0-4590-9576-a0cbaae9fe17"
+  }
+}

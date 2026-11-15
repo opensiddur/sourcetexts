@@ -1,0 +1,149 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "approved": false,
+  "scope": "DRAFT structural guideline/alignment/order only",
+  "files_read": [
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/AGENTS.md",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/schema/JLPTEI-3.md",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/specs/SIDDUR_URN_SCHEME.md",
+    "/tmp/mahzor-s200/actual-xml-excerpts.xml",
+    "/tmp/mahzor-s200/identity-search.json",
+    "/tmp/mahzor-s200/source-patches.json",
+    "/tmp/mahzor-s200/quotation-decisions.json",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s206.jpg",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s222.jpg"
+  ],
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "high",
+      "location": "musaf_shofarot_verses.xml (he and en), quotation-decisions.json musaf_shofarot_verses exodus/20/15",
+      "problem": "וְכָל־הָעָם רֹאִים … מֵרָחֹק / 'And all the people were seeing…' is mapped to bible:exodus/20/15. Under the canonical versification in JLPTEI-3 (Exodus 20 has 26 verses), exodus/20/15 is לא תגנב. This verse is JPS 20:15, which is canonical exodus/20/18. Both the seg/@source and the local milestone name resolve to the wrong canonical witness.",
+      "fix": "Change source to urn:x-opensiddur:text:bible:exodus/20/18 and verse n=18, and rename the local quote milestone URNs (…/quotes/exodus_20_18/exodus_20/18) in both languages and in quotation-decisions.json. Re-check all Exodus 20 and Deuteronomy 5 references against opensiddur/common/versification.py."
+    },
+    {
+      "id": "F2",
+      "severity": "high",
+      "location": "musaf_shofarot_verses.xml (he and en): Zechariah 9:15 segment",
+      "problem": "Only the opening clause of Zech 9:15 (יְיָ צְבָאוֹת יָגֵן עֲלֵיהֶם / 'The Lord of Hosts will protect them') is printed, before the petition כֵּן תָּגֵן. It is milestoned as the full verse and has seg/@source bible:zechariah/9/15, so a partial verse falsely resolves as the whole canonical verse.",
+      "fix": "Declare a verse-part for the remainder (e.g. zechariah/9/15/veakhelu) in opensiddur/common/subverse.py, plus a part for the quoted opening if needed. Mark the quoted span with a verse-part milestone and seg/@source …/zechariah/9/15/<part>, or else drop the full-verse claim. Keep the following petition outside it, in both languages."
+    },
+    {
+      "id": "F3",
+      "severity": "high",
+      "location": "musaf_efed_meaz.xml he, p 2 (קֶרֶן כְּמַעֲשִׂים (אם שבת קֶרֶן נִזְכָּרִים) …); en p 2 ('blow (remember)')",
+      "problem": "The printed Shabbat alternate of the qeren line is plain text inside the poem, with the Hebrew cue אם שבת inline. The Shabbat word therefore always appears, and the weekday word does not drop out on Shabbat. The English parenthetical '(remember)' is the same unencoded alternate. This breaks the rule that Shabbat material disappears on a definite weekday and becomes unconditional when Shabbat is true.",
+      "fix": "Encode a pair: j:conditional type=\"marked\" with holiday-aggregate shabbat=false around the weekday word(s), and j:conditional type=\"marked\" with shabbat=true and tei:note type=\"instruction\" אם שבת around the Shabbat word(s). The cue moves out of the text into the conditional's note. Mirror it in English ('blow' / 'remember') without any Hebrew cue. The exact words remain a human question; the encoding does not depend on the answer."
+    },
+    {
+      "id": "F4",
+      "severity": "medium",
+      "location": "musaf_misod_chakhamim.xml he; musaf_shofarot_close.xml he; musaf_efed_meaz.xml he final p",
+      "problem": "Manuscript variants marked by a siglum ((כ״י פְּנֵי מַטֵּה…), (כ״י כְּמִצְוָה), (כ״י לְגוֹדֵד)) sit inside seg/@source prayer:… or in poem text. The variant and its siglum are recited as liturgy. They are citations or apparatus printed by the source, not words of the prayer.",
+      "fix": "Move each parenthetical variant out of the recited seg into a tei:note at the point where it is printed (or a standoff note anchored there). Wrap the siglum in tei:choice abbr/expan. Do not make it a conditional or a Shabbat addition. Leave the siglum reading (Misod, concluding variant) flagged for the human."
+    },
+    {
+      "id": "F5",
+      "severity": "medium",
+      "location": "musaf_malkhuyot_close.xml he: …מְקַדֵּשׁ [cond]הַשַּׁבָּת וְ[/cond] יִשְׂרָאֵל",
+      "problem": "Whitespace after j:endConditional and the leading space in ' יִשְׂרָאֵל' separate the prefix וְ from its word when Shabbat is true, giving 'וְ יִשְׂרָאֵל'.",
+      "fix": "Remove the whitespace between the conditional seg, j:endConditional and the next seg, and remove the leading space of the following seg. The trailing space after מְקַדֵּשׁ already covers the weekday reading."
+    },
+    {
+      "id": "F6",
+      "severity": "medium",
+      "location": "musaf_offering_formula.xml (…/offering_formula/other_rites) and musaf_offering_formula_frankfurt.xml (…/offering_formula/frankfurt), he and en; spine transclusion",
+      "problem": "The structure matches s206: a shared full-width line, then the right-column default, then the Frankfurt alternate in the left column with the confirmed direction בק״ק פפ״דמ ובנותי׳ אומרים and no English. The English default is correctly not reused for Frankfurt. However, two URN paths name a rite or 'other rites', against 'A URN … does not name … a rite'. The rite feature 'frankfurt_am_main' is not on the known list, and its registry status was not shown.",
+      "fix": "Rename by incipit, e.g. …/offering_formula/ushenei_seirim and …/offering_formula/useir_lekhapper, and update the spine and English milestones. Keep the rite gate as a condition only. Confirm opensiddur:rite/frankfurt_am_main is in features.yaml (validate_features). Keep the Frankfurt rubric as that conditional's own instruction note (shown only while undecided). Keep English with no counterpart."
+    },
+    {
+      "id": "F7",
+      "severity": "medium",
+      "location": "seg/@source URNs: musaf_aleinu, musaf_al_ken, musaf_vattitten_lanu, musaf_umippenei, plus the new prayer:amidah/* names",
+      "problem": "Canonical reuse is inconsistent. Aleinu cites prayer:aleinu, which identity-search shows as the corresp of an opensiddur.org post project (aleinu-1966-he, parts /1–/7). Al ken cites Birnbaum's siddur:chol/shacharit/conclusion/aleinu/al_ken, and Birnbaum's sibling …/aleinu/aleinu exists. Vattitten mints prayer:amidah/vattitten_lanu_hashem although identity-search found the RH-specific siddur:rosh_hashanah/text/vattitten_lanu. Umippenei cites the festival (regalim) URN for the RH wording (מוּסְפֵי יוֹם הַזִּכָּרוֹן). Many other new prayer: names (melokh_al_kol_haolam, qadosh_attah_venora, zokher_haberit, …) were not covered by identity-search and must be registered.",
+      "fix": "Cite Aleinu and Al ken from one consistent canonical pair, either the registered prayer: identity or Birnbaum's aleinu/aleinu with aleinu/al_ken. Reuse the existing RH Vattitten identity or record an alias. Give RH Umippenei its own registered identity, or a registered variant if the regalim text is meant to be the conditional parent. Run urn_registry --check and validate_urn_references."
+    },
+    {
+      "id": "F8",
+      "severity": "medium",
+      "location": "expanded spine, section_musaf_repetition_s220: tei:note פותחים הארון / סוגרים הארון / פותחים הארון",
+      "problem": "The Ark actions are kept and in order (s222 shows פותחים הארון after the piyyut, before זכרנו). But they are Hebrew-only notes in the compilation spine rather than in the source files. They carry no page attribution and get no English counterpart even where the English page prints one.",
+      "fix": "Move each directive into the source file at its printed position as tei:note type=\"instruction\" (e.g. at the start of musaf_repetition_avot_close.xml for s222). Add an English instruction only where the English page prints one."
+    },
+    {
+      "id": "F9",
+      "severity": "medium",
+      "location": "musaf_half_kaddish.xml he: <tei:note type=\"instruction\" xml:lang=\"en\">The Reader says half Kaddish.</tei:note>",
+      "problem": "The Hebrew-column file carries a copy of the English rubric. It would print twice in parallel output and print in English in a Hebrew-only build.",
+      "fix": "Remove it from the Hebrew file unless the Hebrew page prints a rubric. If it does, transcribe that Hebrew rubric. Keep the English note in the English file only."
+    },
+    {
+      "id": "F10",
+      "severity": "low",
+      "location": "en: musaf_half_kaddish.xml ('and and Thy kindnesses'; 'His Grant Name'); musaf_uvekhen_ten_pachdekha.xml ('Thou has created'); musaf_zikhronot_verses.xml Jer 2:2 (two opening quote marks, one closing); source-patches s211 'devises'→'devices'",
+      "problem": "Obvious English misprints are either transcribed silently or not marked. If the s211 patch corrected a printed 'devises' rather than an OCR error, the correction is silent.",
+      "fix": "Use <tei:choice><tei:sic>…</tei:sic><tei:corr>…</tei:corr></tei:choice> for 'and and'→'and', 'Grant'→'Great', 'has'→'hast', and the unmatched quote. Confirm whether the print reads 'devises'; if so, encode it as sic/corr."
+    },
+    {
+      "id": "F11",
+      "severity": "low",
+      "location": "musaf_efed_meaz.xml he: speaker labels",
+      "problem": "s222 prints abbreviated reader labels (ח׳ before קרן, חז before the last line). Only ק׳ is encoded as abbr/expan; the reader labels are written out as חזן, so the printed form is lost.",
+      "fix": "Encode each reader label as tei:choice abbr (as printed) / expan חזן, keeping the role corresp URNs."
+    },
+    {
+      "id": "F12",
+      "severity": "low",
+      "location": "musaf_efed_meaz.xml he: paragraphing and tei:pb",
+      "problem": "On s222 the qeren line continues the first paragraph mid-line, and the reader's last line continues the קהל paragraph mid-line: two printed paragraphs, encoded as four. The description note מיוסד ע״ס א״ב comes before the pb n=101, although it is printed on page 101.",
+      "fix": "Restore the printed two-paragraph structure, with speaker labels inline. Move the tei:pb ahead of the description note. Align the English by milestone, not by paragraph."
+    },
+    {
+      "id": "F13",
+      "severity": "low",
+      "location": "musaf_yismechu.xml and musaf_sabbath_offering.xml (he and en)",
+      "problem": "s206 prints Yismechu inside parentheses under (אם שבת:). The conditional has no type=\"marked\", and the instruction text includes the delimiters itself.",
+      "fix": "Set type=\"marked\" on the Yismechu conditional (and on Sabbath-offering if s204 also brackets it). Record the instruction text without the delimiters; the exporter supplies them."
+    },
+    {
+      "id": "F14",
+      "severity": "low",
+      "location": "musaf_avot vs musaf_repetition_avot_open/_close; musaf_zikhronot_blessing",
+      "problem": "The same Avot text is cited at different granularities. The silent Avot cites prayer:amidah/avot for the whole thing including Zokhrenu; the repetition cites amidah/avot/barukh_attah and amidah/avot/zokhrenu. prayer:zokher_haberit is top-level, while the sibling blessings sit under amidah/.",
+      "fix": "Cite the same sub-part URNs in both recitations (split the silent Avot's Zokhrenu paragraph to amidah/avot/zokhrenu). Nest the Zikhronot blessing consistently with the Malkhuyot and Shofarot blessings, following the registry."
+    },
+    {
+      "id": "F15",
+      "severity": "low",
+      "location": "musaf_efed_meaz.xml he/en",
+      "problem": "The alphabetic piyyut aligns as one row at efed_meaz/text. Stanzas have no shared milestones, and the acrostic is not marked.",
+      "fix": "Optional for this draft: add stanza milestones named by incipit (poem:efed_meaz/<incipit>) on both sides, and seg type=\"acrostic\" on the acrostic letters."
+    },
+    {
+      "id": "F16",
+      "severity": "low",
+      "location": "local quote URNs across verse files",
+      "problem": "Two local naming patterns coexist: …/quotes/<book_ch_v>/<book_ch>/<v> in the verse files and …/quotes/<incipit>/<book_ch>/<v> elsewhere. Each verse also opens its own chapter milestone with a distinct URN (Psalm 24 gets four chapter URNs). Alignment works, but the scheme is irregular.",
+      "fix": "Pick one local pattern and use it in both languages. Consider dropping the per-verse chapter milestones in favour of verse milestones alone."
+    }
+  ],
+  "notes": [
+    "Recitation order is correct. Silent Musaf has nine blessings: Avot, Gevurot, Kedushat HaShem (Atah Kadosh, the three Uvekhen paragraphs, Vetimlokh, Kadosh Atah), Malkhuyot (Atah Vechartanu through Melokh), Zikhronot, Shofarot, Retzeh, Modim, Sim Shalom. Elohai Netzor and Yehi Ratzon follow. The repetition currently stops after Avot (open Ark, Misod, close Ark, Efed Me'az, open Ark, Zokhrenu), as stated. A compile with minyan=true will show a truncated repetition until the rest is added.",
+    "Service context is local. The section's j:declare (musaf=true, shaharit=false) is a sibling of its j:endDeclare inside the section div. Because the section is not gated on service-time, a morning selection still includes Musaf. Half Kaddish and the repetition are gated on quorum/minyan with no rubric, which is correct as processor directions.",
+    "The Shabbat conditionals in Vattitten, Umippenei and Malkhuyot close (he/en) behave as required: dropped when shabbat=false, unconditional when true. Unlabelled printed parentheticals (מַלְכֵּנוּ), (כָּל), (שֶׁל יַעֲקֹב) were correctly not turned into Shabbat additions.",
+    "s206 layout: the full-width line ending כְּנִסְכּוֹ, the right-column default (וּשְׁנֵי שְׂעִירִים … אִשֶּׁה לַיְיָ), the left-column Frankfurt alternate under the confirmed direction, then (אם שבת:) and the parenthesised Yismechu, then Aleinu. The encoded split and order match this. English correctly has no Frankfurt counterpart.",
+    "Scripture boundaries elsewhere are correct: liturgical introductions (כַּכָּתוּב…, וְנֶאֱמַר, כָּאָמוּר) and the petitions that follow sit outside the verse milestones. Verses split across page breaks keep one milestone. Psalm and Jeremiah verse numbers use Hebrew numbering. F1 and F2 are the exceptions.",
+    "Not adjudicated: fine readings such as וְקוֹנֵה in the repetition Avot vs וְקֹנֵה in the silent Avot (patched on s200, different page), the piyyut's opening and qeren words, the concluding variant (the encoded תַּעֲזִיב לְעוֹרֵר does not obviously match the s222 image; human question), the Misod siglum, and whether the Hebrew tei:head in musaf_half_kaddish is a section title or the running head.",
+    "The s206 Frankfurt direction was not re-read; the human's transcription בק״ק פפ״דמ ובנותי׳ אומרים is taken as given. Its expansion בקהלה קדושה may deserve a second look against project convention.",
+    "Not verified: the features.yaml registry entries, urn_registry, and refdb resolution, because only Read access was used. Run validate_features, validate_urn_references and urn_registry --check before acceptance.",
+    "SIDDUR_URN_SCHEME says role labels are instruction notes, while JLPTEI-3 classes 'who says it' as a description. The draft uses description; no change is requested."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "99e65a22-f18e-495e-8389-76ca7d63faec"
+  }
+}

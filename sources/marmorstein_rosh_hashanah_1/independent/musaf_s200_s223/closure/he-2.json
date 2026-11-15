@@ -1,0 +1,256 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "scope": "current Hebrew source and encoding closure",
+  "pages": [
+    {
+      "scan": "s206",
+      "all_printed_text_checked": true,
+      "source_complete": false,
+      "printed_cantillation": {
+        "Numbers 29:2 continuation (בָּקָר … תְּמִימִם)": "present",
+        "Deuteronomy 4:39 (וְיָדַעְתָּ הַיּוֹם …)": "absent",
+        "Exodus 19/20, Isaiah 27, Zechariah 9, Numbers 10": "not applicable (not printed on this page)"
+      },
+      "notes": [
+        "Line 1 (Numbers 29:2 end) prints full te'amim, including an atnach on the second אֶחָד and a silluq on תְּמִימִֽם. The current text carries te'amim here, consistent with the print. At this resolution I cannot check the exact identity of each conjunctive accent.",
+        "Deuteronomy 4:39 inside Aleinu is printed pointed only, with no te'amim. The current text matches.",
+        "Human resolutions applied and not re-asked: the Frankfurt rubric wording (בק״ק פפ״דמ ובנותי׳ אומרים.), the dagesh in בְּמַלְכוּתְךָ, defective שֹׁמְרֵי, and no dagesh in לְךָ after נקוה.",
+        "The Shabbat rubric and Yismechu are each printed inside parentheses. The XML encodes them as j:conditional type=\"marked\", which is acceptable.",
+        "The running header (תְּפִלַּת מוּסַף לְיוֹם רִאשׁוֹן שֶׁל רֹאשׁ הַשָּׁנָה, 93) is not encoded as text, which is expected."
+      ]
+    },
+    {
+      "scan": "s208",
+      "all_printed_text_checked": true,
+      "source_complete": false,
+      "printed_cantillation": {
+        "Exodus 15:18": "absent",
+        "Numbers 23:21": "absent",
+        "Deuteronomy 33:5": "absent",
+        "Psalms 22:29": "absent",
+        "Psalms 93:1": "absent",
+        "Psalms 24:7-10": "absent",
+        "Isaiah 44:6": "absent",
+        "Obadiah 1:21": "absent",
+        "Zechariah 14:9": "absent",
+        "Deuteronomy 6:4": "absent",
+        "Exodus 19/20, Isaiah 27, Zechariah 9, Numbers 10": "not applicable (not printed on this page)"
+      },
+      "notes": [
+        "Every Malkhuyot verse on this page is printed with vowels only. The current text correctly has no te'amim.",
+        "Exodus 15:18 prints the full Name with a holam dot (יְהֹוָה). The current text matches. The PDF202 human ruling was not used as authority here; this reading comes from this page's image.",
+        "Spellings confirmed as printed: לְעֹלָם (defective), וְיָבוֹא twice (plene), מוֹשִׁיעִים (plene), and no maqaf in בַּל תִּמּוֹט, אֶת הַר, כָּל הָאָרֶץ (Zechariah) or עַל כָּל.",
+        "Possible metegs flagged by the earlier reading (בֶּרֶךְ, לְפָנֶיךָ, אֱלֹהֵינוּ, וְיִפּוֹלוּ, יִתֵּנוּ, מַלְכוּתֶךָ, עֲבָדֶיךָ, לְמֶלֶךְ, הָאָרֶץ, and the endings in -ךָ of Melokh): in the enlarged bands I cannot tell any of them apart from the vowel signs. The current text has none, and I propose none. The two specific marks I could not settle are listed under questions."
+      ]
+    },
+    {
+      "scan": "s210",
+      "all_printed_text_checked": true,
+      "source_complete": false,
+      "printed_cantillation": {
+        "No scripture passage on this page": "not applicable",
+        "Exodus 19/20, Isaiah 27, Zechariah 9, Numbers 10": "not applicable (not printed on this page)"
+      },
+      "notes": [
+        "The first Shabbat insertion is printed as 'מָשָׁלָה: אַם שַׁבָּת. אֱלֹהֵינוּ … בִמְנוּחָתֵנוּ)' with no visible opening parenthesis. The second is printed '(אַם שַׁבָּת. וְהַנְחִילֵנוּ … שְׁמֶךָ.)'. In both, the opening parenthesis (where printed) stands before the rubric, not before the prayer text. The marked conditional in the XML is acceptable. The literal '(' at the start of the first insertion's text in the JSON preview is not printed there.",
+        "(הַשַּׁבָּת וְ) is printed pointed and has no rubric. The current text and its join_next match.",
+        "(מלכנו) is printed in small type with no pointing. See the correction and the guideline finding.",
+        "Zikhronot continues onto s212 after כִּי דוֹרְשֶׁיךָ. That part is outside this scope."
+      ]
+    }
+  ],
+  "corrections": [
+    {
+      "scan": "s206",
+      "stem": "musaf_aleinu",
+      "current": "וְגֹרָלֵנוּ כְּכָל־הֲמוֹנָם.",
+      "replacement": "וְגֹרָלֵנוּ כְּכָל הֲמוֹנָם.",
+      "reason": "There is no maqaf between כְּכָל and הֲמוֹנָם. The print sets them as two words with a space, and this font's maqaf is plainly visible elsewhere on the page (אֶל־לְבָבֶךָ, וְעַל־הָאָרֶץ).",
+      "image_evidence": "s206-band2.png, Aleinu line 3, right of centre: 'וְגֹרָלֵנוּ כְּכָל הֲמוֹנָם.'"
+    },
+    {
+      "scan": "s206",
+      "stem": "musaf_aleinu",
+      "current": "הוּא אֱלֹהֵינוּ אֵין עוֹד. אֱמֶת מַלְכֵּנוּ אֶפֶס זוּלָתוֹ. כַּכָּתוּב בְּתוֹרָתוֹ. ",
+      "replacement": "הוּא אֱלֹהֵינוּ, אֵין עוֹד. אֱמֶת מַלְכֵּנוּ, אֶפֶס זוּלָתוֹ. כַּכָּתוּב בְּתוֹרָתוֹ, ",
+      "reason": "Small comma-like dividers are printed after אֱלֹהֵינוּ, after מַלְכֵּנוּ and after בְּתוֹרָתוֹ. The current text has no punctuation after the first two and a full stop after the third. The full stops after עוֹד and זוּלָתוֹ are correct.",
+      "image_evidence": "s206-band3.png, lines 4-5: 'אֱלֹהֵינוּ, אֵין עוֹד. אֱמֶת מַלְכֵּנוּ, אֶפֶס זוּלָתוֹ. כַּכָּתוּב / בְּתוֹרָתוֹ, וְיָדַעְתָּ'"
+    },
+    {
+      "scan": "s206",
+      "stem": "musaf_al_ken",
+      "current": "עַל־כֵּן נְקַוֶּה־לְךָ",
+      "replacement": "עַל־כֵּן נְקַוֶּה לְךָ",
+      "reason": "No maqaf is printed between נְקַוֶּה and לְךָ, while the maqaf in עַל־כֵּן on the same line is clear. The human ruling covered only the dagesh in the lamed, which stays absent.",
+      "image_evidence": "s206-band3.png, first line of the עַל־כֵּן paragraph"
+    },
+    {
+      "scan": "s206",
+      "stem": "musaf_offering_formula",
+      "current": "וּשְׁנֵי־שְׂעִירִים לְכַפֵּר.",
+      "replacement": "וּשְׁנֵי שְׂעִירִים לְכַפֵּר.",
+      "reason": "No maqaf is printed. The two words are set very close in the narrow right column, but there is no raised stroke, unlike the maqaf in בְּנֵי־שָׁנָה on line 1.",
+      "image_evidence": "s206-band1.png, first line of the right-hand column under the three full-width lines"
+    },
+    {
+      "scan": "s206",
+      "stem": "musaf_yismechu",
+      "current": "אם שבת:",
+      "replacement": "אַם שַׁבָּת:",
+      "reason": "The rubric is printed pointed, in parentheses: '(אַם שַׁבָּת:)'. It has a patah under the first letter, a patah under shin and a dagesh with qamats in bet. The instruction note drops the printed pointing. The consonants are unchanged. The PDF204 ruling is not extended to this page; the pointing is read here.",
+      "image_evidence": "s206-band1.png bottom centre and s206-band2.png top centre: small centred rubric above Yismechu"
+    },
+    {
+      "scan": "s210",
+      "stem": "musaf_malkhuyot_close",
+      "current": "אם שבת.",
+      "replacement": "אַם שַׁבָּת.",
+      "reason": "Both printed occurrences (before אֱלֹהֵינוּ … רְצֵה and before וְהַנְחִילֵנוּ) are pointed. The two condition_instruction notes are unpointed. Apply the change to both.",
+      "image_evidence": "s210-band1.png, line 2 (after מָשָׁלָה:) and line 4 (after בִּישׁוּעָתֶךָ.)"
+    },
+    {
+      "scan": "s208",
+      "stem": "musaf_al_ken",
+      "current": "יִכְרְעוּ וְיִפּוֹלוּ:",
+      "replacement": "יִכְרְעוּ וְיִפּוֹלוּ.",
+      "reason": "The print has a full stop after וְיִפּוֹלוּ, not a sof pasuq colon.",
+      "image_evidence": "s208-band1.png, start of line 2: 'וְיִפּוֹלוּ. וְלִכְבוֹד'"
+    },
+    {
+      "scan": "s208",
+      "stem": "musaf_malkhuyot_verses",
+      "current": "כַּכָּתוּב בְּתוֹרָתֶךָ:",
+      "replacement": "כַּכָּתוּב בְּתוֹרָתֶךָ.",
+      "reason": "The print has a full stop after בְּתוֹרָתֶךָ before Exodus 15:18, not a colon.",
+      "image_evidence": "s208-band1.png, line 6: 'כַּכָּתוּב בְּתוֹרָתֶךָ. יְהֹוָה יִמְלֹךְ'"
+    },
+    {
+      "scan": "s208",
+      "stem": "musaf_malkhuyot_close",
+      "current": "וְיָבִין כָּל־יְצוּר",
+      "replacement": "וְיָבִין כָּל־יָצוּר",
+      "reason": "The vowel under the yod is printed as a qamats (T-shaped), not a sheva. The earlier independent reading also had יָצוּר.",
+      "image_evidence": "s208-band4.png, last line, centre: 'כָּל־יָצוּר'"
+    },
+    {
+      "scan": "s210",
+      "stem": "musaf_malkhuyot_close",
+      "current": "וּדְבָרְךָ (מַלְכֵּנוּ)",
+      "replacement": "וּדְבָרְךָ (מלכנו)",
+      "reason": "The parenthesised word is printed in small type with no pointing at all. The current text and its reading 'וּדְבָרְךָ מַלְכֵּנוּ' (j:option in the XML) add pointing from memory. The reading should likewise become 'וּדְבָרְךָ מלכנו'. See guideline_findings for the structure.",
+      "image_evidence": "s210-band1.png, line 6: 'וּדְבָרְךָ (מלכנו) אֱמֶת'"
+    },
+    {
+      "scan": "s210",
+      "stem": "musaf_zikhronot_open",
+      "current": "יֵאָמֵר אֵיזוֹ לַחֶרֶב. וְאֵיזוֹ לַשָּׁלוֹם. אֵיזוֹ לָרָעָב. וְאֵיזוֹ לַשָּׂבַע.",
+      "replacement": "יֵאָמֵר אֵי־זוֹ לַחֶרֶב. וְאֵי־זוֹ לַשָּׁלוֹם. אֵי־זוֹ לָרָעָב. וְאֵי־זוֹ לַשָּׂבַע.",
+      "reason": "All four are printed as two words joined by a clear raised maqaf (אֵי־זוֹ), not as one word.",
+      "image_evidence": "s210-band3.png, lines 5-6"
+    },
+    {
+      "scan": "s210",
+      "stem": "musaf_zikhronot_open",
+      "current": "לְהַזְכִּירָם לְחַיִּים וְלַמָּוֶת:",
+      "replacement": "לְהַזְכִּירָם לַחַיִּים וְלַמָּוֶת:",
+      "reason": "The lamed of לַחַיִּים is printed with a patah (horizontal bar), not a sheva. The earlier independent reading agrees.",
+      "image_evidence": "s210-band3.png, line 6, left of centre"
+    },
+    {
+      "scan": "s210",
+      "stem": "musaf_zikhronot_open",
+      "current": "מִי לֹא נִפְקַד כְּהַיּוֹם הַזֶּה.",
+      "replacement": "מִי לֹא נִפְקָד כְּהַיּוֹם הַזֶּה.",
+      "reason": "The qof carries a qamats (T-shaped), not a patah.",
+      "image_evidence": "s210-band3.png, line 7, right side"
+    },
+    {
+      "scan": "s210",
+      "stem": "musaf_zikhronot_open",
+      "current": "לֹא נִכְחַד מִמֶּךָ.",
+      "replacement": "לֹא נִכְחָד מִמֶּךָ.",
+      "reason": "The het at the end of the line carries a qamats (T-shaped), not a patah. It matches the qamats in נִפְקָד above.",
+      "image_evidence": "s210-band2.png, line 4, far left end of line"
+    }
+  ],
+  "questions": [
+    {
+      "scan": "s206",
+      "stem": "musaf_useir_lekhapper",
+      "word": "וּשְׂעִיר (both occurrences: לְכַפֵּר and לְחַטָּאת)",
+      "letter": "vav and sin",
+      "question": "Is the vav printed with a shuruq (dot inside it) or a sheva below it? Is the vowel under the sin a sheva or a qamats? Current: וּשְׂעִיר. The earlier independent reading had וְשָׂעִיר. In the enlarged band I see a mark below the vav and a T-like mark below the sin, which favours וְשָׂעִיר, but the letter-spaced small type does not let me rule out וּשְׂעִיר.",
+      "image_location": "s206-band1.png, left column, line 1 (letter-spaced) and line 4"
+    },
+    {
+      "scan": "s206",
+      "stem": "musaf_yismechu",
+      "word": "בְרֵאשִׁית",
+      "letter": "bet",
+      "question": "Is there a dagesh in the bet? Current has none. The small-type glyph is ambiguous. Human ruling 23 settled only בְּמַלְכוּתְךָ.",
+      "image_location": "s206-band2.png, last line of the small-type Yismechu block, left end before ':)'"
+    },
+    {
+      "scan": "s208",
+      "stem": "musaf_malkhuyot_close",
+      "word": "פְעַלְתּוֹ",
+      "letter": "pe",
+      "question": "Is there a dagesh in the pe? Current has none. The glyph may show an inner dot, but at this size I cannot distinguish it from the closed pe form.",
+      "image_location": "s208-band4.png, last line, right of centre (כִּי אַתָּה פְעַלְתּוֹ)"
+    },
+    {
+      "scan": "s208",
+      "stem": "musaf_malkhuyot_verses",
+      "word": "יַחַד (Deuteronomy 33:5)",
+      "letter": "yod",
+      "question": "A short vertical stroke sits beside the patah under the yod. Is it a meteg that should be encoded (יַֽחַד), or print noise? Current has no mark.",
+      "image_location": "s208-band1.png, second-to-last line, centre (עָם יַחַד שִׁבְטֵי)"
+    },
+    {
+      "scan": "s208",
+      "stem": "musaf_malkhuyot_verses",
+      "word": "קָדְשְׁךָ",
+      "letter": "qof",
+      "question": "Is there a meteg beside the qamats under the qof (קָֽדְשְׁךָ)? Current has none. Both bands are inconclusive.",
+      "image_location": "s208-band1.png / s208-band2.png, right-hand end of the line 'וּבְדִבְרֵי קָדְשְׁךָ'"
+    },
+    {
+      "scan": "s210",
+      "stem": "musaf_malkhuyot_close",
+      "word": "כָּל (first word on the page, כָּל אֲשֶׁר נְשָׁמָה)",
+      "letter": "kaf",
+      "question": "I see no vowel under the kaf, and any holam or dagesh is too faint to confirm. Is the print כל (unpointed), כֹּל, or כָּל as currently encoded?",
+      "image_location": "s210-band1.png, line 1, far right"
+    },
+    {
+      "scan": "s210",
+      "stem": "musaf_zikhronot_open",
+      "word": "וָנָפֶשׁ",
+      "letter": "nun",
+      "question": "Is the vowel under the nun a qamats (current: וָנָפֶשׁ) or a segol (וָנֶפֶשׁ)? The mark is small and smudged.",
+      "image_location": "s210-band2.png, last-but-one line, right end (רוּחַ וָנָפֶשׁ)"
+    },
+    {
+      "scan": "s210",
+      "stem": "musaf_zikhronot_open",
+      "word": "הוֹדַעְתָּ",
+      "letter": "dalet",
+      "question": "Is the vowel under the dalet a patah (current) or a qamats (הוֹדָעְתָּ, as the earlier reading had)? The mark looks T-like but may be a patah run into a meteg.",
+      "image_location": "s210-band3.png, line 2, centre (כָּזֹאת הוֹדַעְתָּ.)"
+    }
+  ],
+  "guideline_findings": [
+    "musaf_malkhuyot_close (s210): the parenthesised (מלכנו) marks a word some say and others omit. Per JLPTEI-3 §Bible/alternates ('Text that some communities add and others omit is a condition, not an alternate'), it should be a j:conditional on an opensiddur:variant condition URN (for example urn:x-opensiddur:condition:prayer:amidah/melokh_al_kol_haolam/malkenu), keeping the printed unpointed word. It should not be a tei:choice of j:option 'וּדְבָרְךָ' / 'וּדְבָרְךָ מַלְכֵּנוּ', which also repeats וּדְבָרְךָ inside both options.",
+    "Instruction notes (musaf_yismechu, and the two in musaf_malkhuyot_close) must transcribe the rubric as printed, pointing included. See the corrections. The placement as the j:conditional's own tei:note is correct per §Instructions.",
+    "The rite alternative is structured correctly: musaf_offering_formula/ushenei_seirim is conditioned frankfurt_am_main=false, and musaf_useir_lekhapper is conditioned true with its printed abbreviated rubric. No structural change needed."
+  ],
+  "approved": false,
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "085aca4f-c382-4922-9740-14f7984468c4"
+  }
+}

@@ -1,6 +1,6 @@
 # Heidenheim–Marmorstein: first day of Rosh ha-Shanah, 1965
 
-**Status: 57 of 355 leaves accepted, through physical scan51 plus six later pilot leaves. German-rite and audience conditions are verified; no source questions remain in accepted installments. Full-volume digitization remains in progress.** This contribution belongs to
+**Status: 124 of 355 leaves accepted; 224 independently image-read. Draft transcription now reaches physical PDF scan 223, through Avot in the Musaf repetition. The next source page is 224. Full-volume digitization and fine-reading adjudication remain in progress.** This contribution belongs to
 [opensiddur-processor issue 214](https://github.com/opensiddur/opensiddur-processor/issues/214).
 The complete source is [this 355-leaf Archive item](https://archive.org/details/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965),
 [also described by Open Siddur](https://opensiddur.org/?p=69112).
@@ -867,3 +867,41 @@ facsimile provenance remain preserved. This compiler limitation is recorded,
 not described as page-complete output. Independent final approval covers draft
 structure only. Source acceptance stays 100/355, with 200 leaves independently read.
 The next new source begins on PDF 200: Musaf half-Kaddish and silent Amidah.
+
+
+## Musaf draft, PDF scans 200–223
+
+This 24-leaf installment adds the complete quiet Musaf Amidah and repetition through
+Avot, including the complete alphabetic Uppad meaz, in 41 modules / 81 language
+witnesses. The human-confirmed Frankfurt direction selects the left offering
+formula exclusively; its absent English counterpart is not filled. Source Shabbat
+additions and the piyyut’s weekday/Shabbat wording are actual conditions. The
+reader label remains outside both alternatives. Ark actions stay with native text.
+
+Frozen primary readings, twelve actual blind paired image-reader responses, an
+enlarged piyyut rereading, all displayed human resolutions and guideline/alignment/
+order audits are archived under `primary/musaf_s200_s223_initial.json` and
+`independent/musaf_s200_s223/`. Provenance records both the configured medium
+effort and the reviewer’s own reported effort. Fresh findings and subsequent
+resolutions are kept. Historical candidate readings remain available; final source acceptance is recorded separately.
+
+The human corrected the provisional piyyut identity to `poem:uppad_meaz`, and
+confirmed the Misod, Lindan and commanded-offering variants. Sigla are apparatus,
+with selectable readings and precise note anchors. Obvious printed English typos
+use sic/corr. Canonical Exodus20:18 and the exact Zechariah9:15 opening scope are
+verified against the general encoding guidelines.
+
+The current source page-break evidence covers every one of the 24 new leaves.
+Parallel compilation omits three leading markers (s204 Hebrew, s205 English and
+s223 English); source XML and module facsimile provenance remain. This compiler
+limitation prevents a page-complete compiled-output claim; it does not remove the source XML boundaries.
+
+## Current installment: final review closure
+
+All24 source leaves in scans200–223 are independently reviewed and adjudicated:41 Hebrew and40 English witnesses, with exact current payloads bound to the blind readings, independent image audits, guideline review, and human decisions. The volume now has124of355 accepted leaves and224 independently read leaves. The remaining volume and older review backlog are not implied complete.
+
+The final four human decisions74–77 settle Jerusalem’s qamatz–meteg–CGJ–hiriq, dalet sheva/no bet dagesh in עבדך, nun sheva in רצונך, and tav meteg in the later חובותינו. No source reading is unresolved in this installment. See `musaf_s200_s223_source_acceptance.json` and the individual adjudication records.
+
+The English reconstruction “of our” stays explicitly supplied; false “devises” emendation is removed. Optional מלכנו, של יעקב and כל use marked variant conditions, verified for true/false/unset and electronic delimiters. The repetition heading occurs once in the documentary spine. Printed Torah cantillation is reconciled from the source, and no unprinted accents are added to pointed-only passages.
+
+Final rendered export QA is in progress. The known parallel-compiler limitation drops three leading page markers (204HE205EN223EN) from compiled output; every source marker and facsimile URL remains in documentary XML. This is not a final release of the355-leaf volume.

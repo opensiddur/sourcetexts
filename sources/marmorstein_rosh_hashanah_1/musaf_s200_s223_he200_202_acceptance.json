@@ -1,0 +1,98 @@
+{
+  "status": "Scans200and202 Hebrew source review closed after adjudication; no other Hebrew leaf accepted in this record.",
+  "accepted_pages": [
+    "s200",
+    "s202"
+  ],
+  "accepted_unit_witnesses": 11,
+  "accepted_review_records": [
+    "musaf_half_kaddish/he",
+    "musaf_adonai_sefatai/he",
+    "musaf_avot/he",
+    "musaf_gevurot/he",
+    "musaf_attah_qadosh/he",
+    "musaf_uvekhen_ten_pachdekha/he",
+    "musaf_uvekhen_ten_kavod/he",
+    "musaf_uvekhen_tzaddiqim/he",
+    "musaf_vetimlokh/he",
+    "musaf_qadosh_attah/he",
+    "musaf_attah_vechartanu/he",
+    "instruction/musaf_service_heading_he"
+  ],
+  "initial_blind_evidence": [
+    "primary/musaf_s200_s223_initial.json",
+    "independent/musaf_s200_s223/independent-200.json",
+    "independent/musaf_s200_s223/independent-202.json"
+  ],
+  "current_full_page_audit": "independent/musaf_s200_s223/closure/he-1.json",
+  "tight_crop_audit": "independent/musaf_s200_s223/closure/detail200.json",
+  "source_corrections": [
+    "independent/musaf_s200_s223/closure/he-1-resolutions.json",
+    "independent/musaf_s200_s223/closure/closure-resolutions.json"
+  ],
+  "question_dispositions": [
+    {
+      "question": {
+        "scan": "s200",
+        "stem": "musaf_half_kaddish",
+        "word": "לְעֵלָּא (both occurrences)",
+        "letter": "ע",
+        "question": "Is there a meteg beside the tsere under the ayin in each לְעֵלָּא? I see an extra short vertical stroke, but at this resolution it could be part of the tsere dots. The current text has no meteg.",
+        "image_location": "s200-band2, line 2, leftmost word, and line 3, first word on the right (וּלְעֵלָּא)."
+      },
+      "resolution": "Both ayin metegs explicitly confirmed by human snippet25; overrides detail-reader doubt about second occurrence."
+    },
+    {
+      "question": {
+        "scan": "s200",
+        "stem": "musaf_half_kaddish",
+        "word": "רַחֲמֶיךָ / וַחֲסָדֶיךָ / הֵמָּה (Ps 25:6)",
+        "letter": "מ of רַחֲמֶיךָ, ד of וַחֲסָדֶיךָ, ה of הֵמָּה",
+        "question": "Is there a meteg under each of these letters? Each shows a possible small stroke next to the vowel. The source cannot settle this at the band resolution. The current text has none.",
+        "image_location": "s200-band1, line 4 (second centred verse line)."
+      },
+      "resolution": "Mem/dalet/initial-he metegs confirmed in detail200.json and primary closeups, applied at these three words."
+    },
+    {
+      "question": {
+        "scan": "s200",
+        "stem": "musaf_avot",
+        "word": "מֶלֶךְ (in מֶלֶךְ עוֹזֵר)",
+        "letter": "מ",
+        "question": "This glyph looks the same as the first מֶֽלֶךְ (חָפֵץ), which the human ruled has a meteg. That ruling covered only the first occurrence. Does this second one also have a meteg? The current text has none.",
+        "image_location": "s200-band3, line 5, second word from the left."
+      },
+      "resolution": "Mem meteg confirmed in detail200.json and primary closeup, applied before עוזר."
+    },
+    {
+      "question": {
+        "scan": "s200",
+        "stem": "musaf_gevurot",
+        "word": "מֶלֶךְ (in מֶלֶךְ מֵמִית)",
+        "letter": "מ",
+        "question": "Is there a meteg under the mem, as on the first מֶֽלֶךְ on this page? The current text has none.",
+        "image_location": "s200-band4, line 3, second word from the right."
+      },
+      "resolution": "Mem meteg confirmed in detail200.json and primary closeup, applied before ממית."
+    },
+    {
+      "question": {
+        "scan": "s200",
+        "stem": "musaf_gevurot",
+        "word": "דוֹמֶה",
+        "letter": "ד",
+        "question": "Is there a dagesh in the dalet (דּוֹמֶה)? There is a dot near the head of the letter, but it may be the holam of the following vav. The current text has no dagesh.",
+        "image_location": "s200-band4, line 2, leftmost word."
+      },
+      "resolution": "Dalet dagesh confirmed at high confidence by detail200.json and primary enlargement; holam already present in full-page primary/independent readings, not supplied from the clipped crop."
+    }
+  ],
+  "human_adjudications": [
+    "musaf_s200_s223_snippets_1_8_adjudication.json",
+    "musaf_s200_s223_snippets_9_16_adjudication.json",
+    "musaf_s200_s223_snippets_17_24_adjudication.json",
+    "musaf_s200_s223_snippets_25_32_adjudication.json"
+  ],
+  "heading": "The exact source heading agrees in both blind readings; printed running page-number labels excluded.",
+  "total_accepted_leaves": 114
+}
