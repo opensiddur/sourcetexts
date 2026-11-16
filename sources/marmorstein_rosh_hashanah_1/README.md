@@ -946,3 +946,11 @@ reconciliation. Current registry/importer/subverse checks pass169tests and
 shared speaker rows for the four accepted piyyutim.
 The volume still has131 unencoded leaves. No complete-volume or updated-PDF
 acceptance is claimed.
+
+The morning Amidah final review accepts Adonai Sefatai; its other seven
+Hebrew witnesses retain explicit source and guideline findings. Eight missing
+continuation-page markers across four bilingual modules are restored, with three
+clear printed Hebrew paragraph joins. Actual parallel compilation preserves all
+eight markers and passes eight source-word comparisons. No fine-point acceptance
+is inferred from those mechanical checks. Questions70–75 remain the only batch
+currently presented for human adjudication.
