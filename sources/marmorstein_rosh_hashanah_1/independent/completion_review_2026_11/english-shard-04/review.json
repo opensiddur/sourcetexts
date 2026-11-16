@@ -1,0 +1,117 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Read every line of current.json, current-xml.xml, page-audits.json, english-rest-resolutions.json and guideline-excerpts.md. Looked at the full-page English source images s137, s141, s143, s145 and s147 at the displayed resolution (1208x2000 from 1368x2264) and compared every English word and punctuation mark in the 8 witnesses against them. Made no enlarged crops: no reading was ambiguous enough to need one. Did not open the full report files at the page-audits paths, because the excerpts plus the images were enough. Did not open english-routing-proof.xml, any sSTART-END overlap image, or any Hebrew source image for Hebrew verification. Ran no validators, tests or renderers."
+  },
+  "scope": [
+    "repetition_yishpot_repeat",
+    "uvekhen_namlikhekha",
+    "hashem_melekh",
+    "adirei_ayummah",
+    "repetition_tair_repeat",
+    "repetition_melekh_zokher_repeat",
+    "uvekhen_dayyan_emet_attah",
+    "lael_orekh_din"
+  ],
+  "witnesses": [
+    {
+      "stem": "repetition_yishpot_repeat",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "uvekhen_namlikhekha",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "hashem_melekh",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "adirei_ayummah",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "repetition_tair_repeat",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "repetition_melekh_zokher_repeat",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "uvekhen_dayyan_emet_attah",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        {
+          "severity": "info",
+          "location": "current.json uvekhen_dayyan_emet_attah title.en (also lael_orekh_din title.en)",
+          "problem": "The en title metadata is a transliteration ('Uvekhen Dayyan Emet Attah', 'Lael Orekh Din'). The other six witnesses in this shard repeat the Hebrew incipit as their en title. This is only an inconsistency in the metadata. It does not touch the source text or the emitted XML body.",
+          "fix": "Optional: make the title convention consistent across the project. This does not block source or encoding approval."
+        }
+      ],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "lael_orekh_din",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        {
+          "severity": "info",
+          "location": "en lael_orekh_din.xml, every tei:l, tei:note type=description",
+          "problem": "The English page prints no Reader/Congregation labels. Every English speaker note is editorial and correctly carries resp=codex, with role corresp URNs that mirror the Hebrew. This follows the guideline that a description goes first inside the passage's scope, right after the stanza milestone. Recorded so nobody reads these labels as printed source text.",
+          "fix": "None required."
+        }
+      ],
+      "remaining_source_questions": []
+    }
+  ],
+  "verified": [
+    "s137, page 54: the tair line 'Thou dost rise and let the trumpet sound to destroy every evil doer, and Thou art sanctified by those who know how to sound the Teruah, Holy One.' matches the print exactly.",
+    "s137 audit note: the closing '!' belongs to a different witness, the first מלך line ('O awe-inspiring and Holy One!', lowercase awe). It is not in scope and does not conflict with repetition_melekh_zokher_repeat.",
+    "s141, page 56: the melekh_zokher repeat reads '… today, O Awe-inspiring and Holy One.' with capital A and a final period. This matches the current text.",
+    "s141, page 56: 'He judges the world in justice and nations in righteousness, God is holy.' matches. The 'right-eousness' line-end hyphen is correctly joined.",
+    "s143, page 57: 'Therefore will we crown Thee.' and 'The Lord is King, the Lord has reigned, The Lord will reign for ever and ever.' match, including the capital 'The' printed at the start of the second line.",
+    "s143–s145, pages 57–58: all 24 adirei_ayummah stanzas match word for word. Line-end hyphens 'alle-giance', 'a-loud', 'bril-liance', 'won-ders' and 're-late' are correctly joined. '(Israel)', 'Hayoth' and every colon after 'aloud' match. The full refrain follows exactly stanzas 3, 6, 9, 12, 15, 18, 21 and 24. The English page break before stanza 15 matches the print.",
+    "s145, page 58: 'And thus Thou art the true judge.' matches.",
+    "s145–s147, pages 58–59: all 22 lael_orekh_din lines match. The print sets them in two columns: left is odd-numbered (reader), right is even-numbered (congregation). The encoding interleaves them row by row, which matches the Hebrew alphabetic sequence. Page 59 begins at stanza 13 ('Who forgives sins'), matching the print. Commas after 'Him' in stanzas 9 and 21 match. Stanza 19 really is printed 'judgment.' with a period, and that is kept as printed. It is not proposed as a sic/corr misprint.",
+    "The ledger correction for lael_orekh_din/22 (final ',' changed to '.') is applied in both current.json and the XML. The s147 image confirms 'judg-ment.'. The single source finding from page-audits is therefore resolved, and no other audit finding is open for these 8 witnesses.",
+    "Each of the three repetition witnesses opens with a prayer-part milestone carrying the local corresp, placed before a seg/@source holding the canonical poem URN, and closes with a bare prayer-part terminator. This follows the guideline: milestone before the semantic span, and no duplicated canonical URN for repeated text.",
+    "uvekhen_namlikhekha, hashem_melekh and uvekhen_dayyan_emet_attah each have one prayer-part milestone whose corresp matches the Hebrew, plus a terminator. For hashem_melekh and the adirei/lael stanzas, the English and Hebrew stanza and prayer-part corresp URNs are identical one-to-one, so the alignment join works at every unit.",
+    "adirei_ayummah and lael_orekh_din use stanza milestones and close the stanza sequence with a terminator. lael also terminates every line, which is harmless under rule 3 because the next stanza milestone opens immediately.",
+    "The Hebrew-only descriptions (ש״ץ מנגן. והקהל חוזר., ע״ס א״ב משולש., ע״ס א״ב.) are correctly left out of the English witnesses. The English pages print no corresponding direction.",
+    "English pb/@n and facs match the printed English folios 54, 56, 57, 58 and 59. The facs numbers run consistently from n136 for s137 through n146 for s147.",
+    "original_source_typo_corrections is empty for this shard, and I found no printed misprint in these 8 witnesses that would need sic/corr."
+  ],
+  "limits": [
+    "No Hebrew source or fine-mark acceptance is given or implied. The Hebrew XML was read only to check that correspondence and boundaries line up.",
+    "repetition_yishpot_repeat follows the 'On Sabbath.' Etten block on s141, inside the Sabbath alternative. Its Sabbath conditionality is governed in the source-order/arrangement layer (complete_shabbat_piyyutim), which is not in the files provided. I relied on the stated prior resolution and did not re-verify that arrangement.",
+    "The 'On Sabbath.' headings on s137 and s141 appear in documentary_instructions as raw page furniture, which matches the stated resolution. They are outside these 8 witnesses and were not re-adjudicated.",
+    "The full-page reports at the page-audits paths were not opened. Their summarised findings, plus my own comparison against the images, were enough for this scope.",
+    "This is a source and markup audit only. No schema validation, URN-resolution tooling, test suite or PDF/HTML rendering was run."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "fa00b18c-2c7a-4cb6-b582-1d5936729a3f"
+  }
+}

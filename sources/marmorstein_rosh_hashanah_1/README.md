@@ -891,12 +891,11 @@ with selectable readings and precise note anchors. Obvious printed English typos
 use sic/corr. Canonical Exodus20:18 and the exact Zechariah9:15 opening scope are
 verified against the general encoding guidelines.
 
-The current source page-break evidence covers every one of the 24 new leaves.
-Parallel compilation omits three leading markers (s204 Hebrew, s205 English and
-s223 English); source XML and module facsimile provenance remain. This compiler
-limitation prevents a page-complete compiled-output claim; it does not remove the source XML boundaries.
+Historical pre-PR301 QA preserved all source page markers but omitted three
+leading markers in parallel output. Merged exporter PR301 fixes that limitation;
+the current compiler preserves those markers.
 
-## Current installment: final review closure
+## Scans 200–223 review closure (historical checkpoint)
 
 All24 source leaves in scans200–223 are independently reviewed and adjudicated:41 Hebrew and40 English witnesses, with exact current payloads bound to the blind readings, independent image audits, guideline review, and human decisions. The volume now has124of355 accepted leaves and224 independently read leaves. The remaining volume and older review backlog are not implied complete.
 
@@ -904,20 +903,41 @@ The final four human decisions74–77 settle Jerusalem’s qamatz–meteg–CGJ�
 
 The English reconstruction “of our” stays explicitly supplied; false “devises” emendation is removed. Optional מלכנו, של יעקב and כל use marked variant conditions, verified for true/false/unset and electronic delimiters. The repetition heading occurs once in the documentary spine. Printed Torah cantillation is reconciled from the source, and no unprinted accents are added to pointed-only passages.
 
-Final representative rendered export QA passes: documentary PDF: 172 pages; expanded PDF: 191 pages, all internal PDF destinations and electronic links resolve. Both PDFs settle in 3 LaTeX passes. The known parallel-compiler limitation drops three leading page markers (204HE205EN223EN) from compiled output; every source marker and facsimile URL remains in documentary XML. This is not a final release of the355-leaf volume.
+Final representative rendered export QA passes: documentary PDF: 172 pages; expanded PDF: 191 pages, all internal PDF destinations and electronic links resolve. Both PDFs settle in 3 LaTeX passes. That preview predates merged exporter PR301, which now preserves the three formerly omitted leading markers. This is not a final release of the355-leaf volume.
 
 ## Encoded-material completion review (2026-11-15)
 
-Acceptance now covers 133 of the 224 encoded leaves (355 total). Final human
+Acceptance now covers 169 of the 224 encoded leaves (355 total). Final human
 adjudication closes scans57 and90. Current source-image and guideline review
 closes English scans97,99,101,103,105,107,109. The other encoded leaves remain
 under review. Source and expanded-order corrections are recorded separately
 from acceptance; schema validation does not certify source wording.
 
 New actual reports and frozen review inputs are in
-`independent/completion_review_2026_11/`. The two
+`independent/completion_review_2026_11/`. The
 `completion_review_2026_11_*_acceptance.json` records identify exact accepted
 scopes. Earlier reports retain their original uncertainties as history.
 The scan124 piyyut has substantive transcription discrepancies still being
 reconciled; no source acceptance is claimed for it. Existing preview PDFs
 predate the new completion-review corrections.
+
+English completion-review checkpoint: all 81 English prayer-text witnesses in
+scans125–199 have explicit scoped source/guideline approvals. Forty-one English
+documentary/editorial rubric records are also approved. Five bounded Hebrew
+Yotzer modules and scan96 are newly accepted. No approval extends to unreviewed
+Hebrew counterparts. The incomplete printed translator note on149 stays
+incomplete; obvious printed “by” for “be” on165 is preserved with sic/corr.
+
+Reusable Torah speaker/action descriptions now accompany their modules. Printed
+English Shabbat alternatives retain their parentheses without added English
+labels. Documentary Shabbat community prayers now have their printed conditional
+rubric, with the source page boundary before it. Documentary Shofar recitation
+is gated to weekdays, following the original omission direction. Actual compiler
+checks cover both languages and unknown/false/true Shabbat selection. The five
+Yotzer source/guideline approvals do not settle other Hebrew piyyutim.
+
+The current human questions are numbered13–20; enlarged source snippets are
+recorded in the review manifest. Previous human answers7–12 have been applied.
+The 55 remaining encoded leaves require further Hebrew source reconciliation.
+The volume still has131 unencoded leaves. No complete-volume or updated-PDF
+acceptance is claimed.

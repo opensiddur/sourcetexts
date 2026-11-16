@@ -1,0 +1,72 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "I looked directly at four images: s163-part1, s133-part2, s188-part3 and s189-part3. I read the resolutions file, all of english-rest-changes.xml and all of english-rest-current-audits.json. I spot-read parts of english-rest-current.json (it is too large to read whole): torah_vayehi_binsoa, torah_ribbono_malle_mishalot, torah_berikh_shemeh, shofar_psalm_47, shofar_blessing, shofar_shehecheyanu and shofar_ashrei_haam. I read only the opening section of JLPTEI-3.md."
+  },
+  "scope": "The current encoded English witnesses on s124–s199 in english-rest-current.json, plus the corrections and the source-direction change in english-rest-changes.xml and english-rest-resolutions.json. Hebrew source acceptance is not claimed or assessed.",
+  "english_source_closure_approved": false,
+  "alignment_guidelines_approved": false,
+  "findings": [
+    {
+      "severity": "blocker",
+      "scan": "s163",
+      "unit": "torah_vayehi_binsoa (corresp urn:x-opensiddur:text:bible:numbers/10/35)",
+      "problem": "The primary's rejection is wrong. On s163-part1, line 2 of the English, the print clearly reads 'Arise, O Lord, that Thine enemies may be scattered'. There is a comma after 'Arise'. The current payload reads 'Arise O Lord, that Thine enemies' with no comma. So the second reviewer's finding was correct, and the current text does not match the scan.",
+      "fix": "Change the transcription to 'Arise, O Lord, that Thine enemies …'. In english-rest-resolutions.json, remove the s163 entry from rejected_or_already_encoded_findings and record the change as an accepted transcription correction. This corrects the transcription only, not the original source."
+    },
+    {
+      "severity": "blocker",
+      "scan": "s188",
+      "unit": "shofar_blessing (urn:x-opensiddur:text:prayer:lishmoa_qol_shofar/text)",
+      "problem": "The s182-189 audit found this with high certainty, but it is not among the accepted corrections and not among the rejected findings. On s188-part3 the print reads 'King of the World who has sanctified us', with no comma at the line end after 'World'. The current payload reads 'King of the World, who has sanctified us'. The Shehecheyanu line right below does print 'World, who', so its current text is correct.",
+      "fix": "Remove the comma after 'World' in shofar_blessing. Leave shofar_shehecheyanu as it is. Record the change in the resolutions file."
+    },
+    {
+      "severity": "major",
+      "scan": "s189",
+      "unit": "English italic direction after shofar_ashrei_haam",
+      "problem": "On s189-part3 an italic English direction is printed below the English column: 'אשרי (p. 87) is now said.' It is not in the shofar_ashrei_haam payload, which has only the Hebrew instruction 'ואח״כ יאמר בקול רם.'. It is also not in english-rest-changes.xml or the resolutions file. The audit raised this omission and nobody answered it. It may already be encoded in navigation or the documentary index, as the s183 direction is, but I was shown no proof of that.",
+      "fix": "Show where it is encoded, for example as a documentary-index instruction with a page reference qualified by edition to torah_ashrei, like the s183 one. If it is not encoded anywhere, add it in the same way. Do not put it into the spoken prayer text."
+    },
+    {
+      "severity": "minor",
+      "scan": "s182",
+      "unit": "possible English italic rubric",
+      "problem": "In its coverage_limits, the s182-189 audit refers to 'three missing English italic rubrics (s182, s183, s189)'. Only s183 has been answered. The audit's page records do not describe any s182 English rubric, and I did not look at the s182 image.",
+      "fix": "Check whether an English rubric is printed on s182. If it is, show where it is encoded."
+    }
+  ],
+  "remaining_source_questions": [
+    "s182: is there an English italic rubric that the s182-189 audit counted as missing, and if so, where is it encoded?",
+    "s189: where is 'אשרי (p. 87) is now said.' encoded, if anywhere?",
+    "Six accepted corrections rest on the earlier audits plus the primary's check; I did not look at those images in this pass: s131 'generation, Halleluyah', s147 'judgment.', s161 'world and say' and 'among', s163 'intelligence, to grasp', s165 'Sanctuary;' and 'Lord, our God,'. The same applies to s167 'rejoice,', s195 'kingdom and' and 'Hymn by David I exalt', and s197 'Lord strong'. Each audit gives high certainty and the current XML matches every one of them. I found no contrary evidence, but I did not re-verify them visually."
+  ],
+  "resolved_reported_omissions": [
+    "s133: the restored direction 'On Sabbath we say שמו מפארים etc., as below.' I checked it against s133-part2. The wording, the italics, the Hebrew span and 'etc., as below.' match the print exactly. It is centred after 'Living, enduring, awe-inspiring, lofty and holy.' and before the תעיר paragraph. Below the page rule the print separately carries the heading 'On Sabbath.' before שמו. Using the full direction as the single conditional rubric and keeping 'On Sabbath.' only as raw page furniture follows the print and does not invent a second spoken rubric.",
+    "s183: 'After the Haphtora the Shofar is blown. But when … יקום פורקן (p. 85)' is in the documentary index with an optional page reference qualified by edition. As the audit noted, the print has no final period after '(p. 85)', and the encoding has none either.",
+    "s197: 'On the Sabbath:' and 'On weekdays:' are in source_order as condition_rubrics, with holiday-aggregate shabbat true and false."
+  ],
+  "verified": [
+    "I checked s163-part1 directly. It shows 'Arise, O Lord,' with a comma after 'Arise', which contradicts the primary.",
+    "s133-part2: the restored instruction text and its placement match the print.",
+    "s188-part3: 'King of the World who' has no comma (shofar_blessing), while 'King of the World, who' has one (Shehecheyanu).",
+    "s189-part3: the English direction 'אשרי (p. 87) is now said.' is printed, and the English Ashrei ha-am text matches the payload.",
+    "Each of the 11 accepted corrections appears in the current XML bodies exactly as listed in the resolutions file.",
+    "Wis/His on s195 is encoded as choice/sic=Wis, corr=His, so the printed reading is kept.",
+    "Psalm 29 English verse 7 is absent from the print, according to the s190-197 audit. It is left out of the encoding with no substitute.",
+    "s147 lael_orekh_din/22 now ends with a period, matching the audit's reading of the print."
+  ],
+  "limits": [
+    "I did not re-examine every image in s124–s199. Apart from the four images listed, I relied on the earlier full-page audits. Those audits say they were read at the supplied resolution without zoom.",
+    "I read only parts of english-rest-current.json, so I cannot say on my own that no other unit departs from its audit.",
+    "I did not review JLPTEI-3.md beyond its opening (namespaces, projects, URNs, transliteration). I did not check the guidelines on notes and citations, conditional rubrics, occurrence scopes, incomplete translations or alignment against these witnesses. So I am not approving the alignment and guidelines, and I am not raising any guideline finding either way.",
+    "Hebrew source acceptance is not claimed. The audits list many open Hebrew findings and unresolved fine marks.",
+    "Schema validation is not treated as proof of the source.",
+    "Witnesses not closed: torah_vayehi_binsoa (s163) and shofar_blessing (s188) because of the confirmed mismatches above; shofar_ashrei_haam and its documentary context (s189) until the direction's encoding is shown; and anything on s182 until that is checked."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "9d46603e-9da0-42f9-83f2-bef67d287a7a"
+  }
+}

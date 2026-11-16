@@ -1,0 +1,94 @@
+<navigation_and_scope>
+  <file project="prayerbook_for_the_new_year-heidenheim-1965-he"><tei:div xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:j="http://jewishliturgy.org/ns/jlptei/2">
+          <j:conditional xml:id="documentary_shofar_weekday_he">
+            <j:all>
+              <tei:fs type="opensiddur:holiday-aggregate">
+                <tei:f name="shabbat">
+                  <tei:binary value="false"/>
+                </tei:f>
+              </tei:fs>
+            </j:all>
+          </j:conditional>
+          <j:transclude type="external" target="urn:x-opensiddur:text:prayer:ribbon_haolamim_banekha@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+          <j:transclude type="external" target="urn:x-opensiddur:text:prayer:yehi_ratzon_elohei_hamishpat@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+          <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/shofar/qera_satan@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+          <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/shofar/alah_elohim@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+          <j:transclude type="external" target="urn:x-opensiddur:text:bible:psalms/47@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+          <j:transclude type="external" target="urn:x-opensiddur:text:prayer:harei_ani_mukhan_litqoa@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+          <j:transclude type="external" target="urn:x-opensiddur:text:prayer:lishmoa_qol_shofar@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+          <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/shofar/shehecheyanu@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+          <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/shofar/tashrat@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+          <tei:note type="instruction" facs="https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n187.jpg" xml:lang="he">שֵׁב.</tei:note>
+          <j:transclude type="external" target="urn:x-opensiddur:text:prayer:shofar_yehi_ratzon_qashraq@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+          <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/shofar/tashat@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+          <tei:note type="instruction" facs="https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n188.jpg" xml:lang="he">שֵׁב.</tei:note>
+          <j:transclude type="external" target="urn:x-opensiddur:text:prayer:shofar_yehi_ratzon_tashat@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+          <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/shofar/tarat@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+          <j:transclude type="external" target="urn:x-opensiddur:text:prayer:shofar_uvkhen_yehi_ratzon@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+          <tei:note type="instruction" facs="https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n188.jpg" xml:lang="he">ויאמר מזמור קמ״ט הללוייה שירו ל<j:divineName>יי</j:divineName> שיר חדש <tei:choice><tei:abbr>וכו׳</tei:abbr><tei:expan>וכולי</tei:expan></tei:choice>.</tei:note>
+          <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/shofar/ashrei_haam@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+          <tei:note type="instruction" xml:lang="en" facs="https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n188.jpg"><tei:foreign xml:lang="he">אשרי</tei:foreign> <tei:seg type="optional-page-reference">(p. <tei:ref type="page" target="urn:x-opensiddur:text:siddur:rosh_hashanah/torah/ashrei@prayerbook_for_the_new_year-heidenheim-1965-he"/>)</tei:seg> is now said.</tei:note>
+          <j:endConditional target="#documentary_shofar_weekday_he"/>
+        </tei:div>
+        <tei:div xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:j="http://jewishliturgy.org/ns/jlptei/2">
+          <tei:pb ed="1965" facs="https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n189.jpg" n="85"/>
+          <j:conditional xml:id="documentary_shabbat_community_prayers_he">
+            <tei:note type="instruction" xml:lang="en">On Sabbath the following prayer is recited before <tei:foreign xml:lang="he">אשרי</tei:foreign></tei:note>
+            <j:all>
+              <tei:fs type="opensiddur:holiday-aggregate">
+                <tei:f name="shabbat">
+                  <tei:binary value="true"/>
+                </tei:f>
+              </tei:fs>
+            </j:all>
+          </j:conditional>
+          <j:transclude type="external" target="urn:x-opensiddur:text:prayer:yequm_purqan/scholars@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+          <j:transclude type="external" target="urn:x-opensiddur:text:prayer:yequm_purqan/congregation@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+          <j:transclude type="external" target="urn:x-opensiddur:text:prayer:mi_sheberakh/kol_haqahal@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+          <j:transclude type="external" target="urn:x-opensiddur:text:prayer:hanoten_teshuah@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+          <j:endConditional target="#documentary_shabbat_community_prayers_he"/>
+        </tei:div>
+        <tei:note xmlns:tei="http://www.tei-c.org/ns/1.0" type="instruction" xml:lang="en" facs="https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n181.jpg">On Sabbath the following passages are omitted<tei:seg type="optional-page-reference"> and the Service continues with <tei:foreign xml:lang="he">יקום פרקן</tei:foreign> (p. <tei:ref type="page" target="urn:x-opensiddur:text:prayer:yequm_purqan/scholars@prayerbook_for_the_new_year-heidenheim-1965-he"/>)</tei:seg>.</tei:note>
+        </file>
+  <file project="prayerbook_for_the_new_year-marmorstein-1965-en"><tei:div xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:j="http://jewishliturgy.org/ns/jlptei/2">
+          <j:conditional xml:id="documentary_shofar_weekday_en">
+            <j:all>
+              <tei:fs type="opensiddur:holiday-aggregate">
+                <tei:f name="shabbat">
+                  <tei:binary value="false"/>
+                </tei:f>
+              </tei:fs>
+            </j:all>
+          </j:conditional>
+          <j:transclude type="external" target="urn:x-opensiddur:text:prayer:ribbon_haolamim_banekha@prayerbook_for_the_new_year-marmorstein-1965-en"/>
+          <j:transclude type="external" target="urn:x-opensiddur:text:prayer:yehi_ratzon_elohei_hamishpat@prayerbook_for_the_new_year-marmorstein-1965-en"/>
+          <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/shofar/qera_satan@prayerbook_for_the_new_year-marmorstein-1965-en"/>
+          <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/shofar/alah_elohim@prayerbook_for_the_new_year-marmorstein-1965-en"/>
+          <j:transclude type="external" target="urn:x-opensiddur:text:bible:psalms/47@prayerbook_for_the_new_year-marmorstein-1965-en"/>
+          <j:transclude type="external" target="urn:x-opensiddur:text:prayer:lishmoa_qol_shofar@prayerbook_for_the_new_year-marmorstein-1965-en"/>
+          <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/shofar/shehecheyanu@prayerbook_for_the_new_year-marmorstein-1965-en"/>
+          <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/shofar/ashrei_haam@prayerbook_for_the_new_year-marmorstein-1965-en"/>
+          <tei:note type="instruction" xml:lang="en" facs="https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n188.jpg"><tei:foreign xml:lang="he">אשרי</tei:foreign> <tei:seg type="optional-page-reference">(p. <tei:ref type="page" target="urn:x-opensiddur:text:siddur:rosh_hashanah/torah/ashrei@prayerbook_for_the_new_year-marmorstein-1965-en"/>)</tei:seg> is now said.</tei:note>
+          <j:endConditional target="#documentary_shofar_weekday_en"/>
+        </tei:div>
+        <tei:div xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:j="http://jewishliturgy.org/ns/jlptei/2">
+          <tei:pb ed="1965" facs="https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n190.jpg" n="85"/>
+          <j:conditional xml:id="documentary_shabbat_community_prayers_en">
+            <tei:note type="instruction" xml:lang="en">On Sabbath the following prayer is recited before <tei:foreign xml:lang="he">אשרי</tei:foreign></tei:note>
+            <j:all>
+              <tei:fs type="opensiddur:holiday-aggregate">
+                <tei:f name="shabbat">
+                  <tei:binary value="true"/>
+                </tei:f>
+              </tei:fs>
+            </j:all>
+          </j:conditional>
+          <j:transclude type="external" target="urn:x-opensiddur:text:prayer:yequm_purqan/scholars@prayerbook_for_the_new_year-marmorstein-1965-en"/>
+          <j:transclude type="external" target="urn:x-opensiddur:text:prayer:yequm_purqan/congregation@prayerbook_for_the_new_year-marmorstein-1965-en"/>
+          <j:transclude type="external" target="urn:x-opensiddur:text:prayer:mi_sheberakh/kol_haqahal@prayerbook_for_the_new_year-marmorstein-1965-en"/>
+          <j:transclude type="external" target="urn:x-opensiddur:text:prayer:hanoten_teshuah@prayerbook_for_the_new_year-marmorstein-1965-en"/>
+          <j:endConditional target="#documentary_shabbat_community_prayers_en"/>
+        </tei:div>
+        <tei:note xmlns:tei="http://www.tei-c.org/ns/1.0" type="instruction" xml:lang="en" facs="https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n182.jpg">After the Haphtora the Shofar is blown.<tei:seg type="optional-page-reference"> But when the first day of the festival falls on a Sabbath, then one continues immediately with <tei:foreign xml:lang="he">יקום פורקן</tei:foreign> (p. <tei:ref type="page" target="urn:x-opensiddur:text:prayer:yequm_purqan/scholars@prayerbook_for_the_new_year-marmorstein-1965-en"/>)</tei:seg></tei:note>
+        </file>
+</navigation_and_scope>

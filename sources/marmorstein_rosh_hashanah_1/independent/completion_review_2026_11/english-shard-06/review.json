@@ -1,0 +1,151 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "One pass at low reasoning effort. I read all of current.json, current-xml.xml, page-audits.json, english-rest-resolutions.json, english-routing-proof.xml and guideline-excerpts.md. I viewed the full English page scans s163, s165 and s167 at about 1208x2000 and did not make enlarged crops. I did not open the full report files referenced in page-audits, any Hebrew source images, the source_order or documentary-index XML, or the corrections.json file. I ran no validators, tests or renderers."
+  },
+  "scope": "English source accuracy and English encoding/guideline adherence, including shared correspondence boundaries, for these 8 witnesses: torah_shelosh_esreh_middot, torah_ribbono_malle_mishalot, torah_berikh_shemeh, torah_shema, torah_echad_eloheinu, torah_gaddelu, torah_lekha_adonai, torah_al_hakol. Hebrew source acceptance is not covered.",
+  "witnesses": [
+    {
+      "stem": "torah_shelosh_esreh_middot",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        {
+          "severity": "cosmetic",
+          "location": "en torah_shelosh_esreh_middot.xml, seg source=exodus/34/7/notzer_chesed",
+          "problem": "The bounded seg includes a trailing space ('sin, '), and there is a further space outside it. The Hebrew seg has the same pattern. This does not affect the scope or the alignment.",
+          "fix": "Optional: move the trailing space outside the seg."
+        }
+      ],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "torah_ribbono_malle_mishalot",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "torah_berikh_shemeh",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        {
+          "severity": "medium",
+          "location": "documentary_instructions.torah_s162_frankfurt_165 (s165, printed p.71, the italic rubric just above this witness; it is outside the witness file)",
+          "problem": "The current text reads 'neither בריך שמיה nor'. The scan shows בריך שמה, without yod, in both the rubric and this witness's opening cue. The page audits for s164 and s165 flagged this at high certainty. The resolution ledger neither accepts nor rejects it, so it is an unresolved English-direction transcription error. It does not affect this witness's own text.",
+          "fix": "Change the Hebrew name in the English rubric to 'בריך שמה' in the documentary index, with the same change for the s164 occurrence, and record it in the ledger as a transcription correction, not a printed typo."
+        },
+        {
+          "severity": "cosmetic",
+          "location": "en torah_berikh_shemeh.xml, prayer-part boundary berikh/velehevei",
+          "problem": "'happy life ' + milestone + ' and may I' produces a double space. The boundary itself correctly matches the Hebrew break 'בטיבותא, | ולהוי'.",
+          "fix": "Optional: drop one of the spaces."
+        }
+      ],
+      "remaining_source_questions": [
+        "The scan clearly prints 'blessed by Thy crown and Thy place' (the source for בריך כתרך is 'be'). The current text reproduces the print exactly. If the project treats 'by' as a clear misprint, it would need a new sic/corr entry; none exists, and I am not proposing one. Otherwise, leave it as printed."
+      ]
+    },
+    {
+      "stem": "torah_shema",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": [
+        "The Frankfurt rubric on s165 says when this passage, berikh_shemeh and (by implication) echad_eloheinu are omitted. Under the 'Kinds of rubric' section of the guidelines, that is condition-type wording. I was not given the documentary-index or source_order XML, so I could not check whether it is encoded as a j:conditional's own rubric or as a plain directive."
+      ]
+    },
+    {
+      "stem": "torah_echad_eloheinu",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": [
+        "The parenthesised '(and awe-inspiring)', which matches the Hebrew '(ונורא)', is kept as literal printed parentheses rather than as j:conditional type=\"marked\". That matches the print, and I am not raising it as a defect. Converting it is a project-level policy choice."
+      ]
+    },
+    {
+      "stem": "torah_gaddelu",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        {
+          "severity": "low",
+          "location": "documentary_instructions.torah_s162_gadlu_rubric_165 ('The reader, holding the scroll of the Torah in front of him, says:')",
+          "problem": "The text matches the scan exactly. The payload types it as 'instruction'. Under the 'Kinds of rubric' section, a rubric that says who says the following passage, or how, is a description. I could not see the documentary-index XML to check its placement.",
+          "fix": "Either encode it as tei:note type=\"description\" at the start of the passage's scope, or record the repository convention that justifies 'instruction'."
+        }
+      ],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "torah_lekha_adonai",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": false,
+      "issues": [
+        {
+          "severity": "medium",
+          "location": "en torah_lekha_adonai.xml: three tei:p (lekha / romemu_hadom / romemu_har); s165 printed p.71",
+          "problem": "The English scan prints 'Thine, O Lord … above all. Exalt the Lord, our God, … Holy is He. Exalt the Lord your God, … the Lord our God.' as one continuous paragraph. The encoding splits it into three tei:p. The guideline section 'Prefer milestones for repeating reference units' says reference boundaries are independent of the printed tei:p and that the printed structure should be kept even when the facing text breaks differently. The correspondence boundaries themselves are correct and shared with the Hebrew.",
+          "fix": "Merge the English into a single tei:p, keeping the three prayer-part milestones and the chapter/verse milestones with their terminators. Do not change the Hebrew paragraphing on the basis of this review."
+        },
+        {
+          "severity": "low",
+          "location": "documentary_instructions.torah_s162_lekha_rubric_165 ('The congregation responds:')",
+          "problem": "The text matches the scan. It is a speaker rubric, which the guidelines classify as a description, but it is typed 'instruction'. I could not check its placement.",
+          "fix": "Encode it as type=\"description\" first inside the passage scope, or document the convention."
+        }
+      ],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "torah_al_hakol",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        {
+          "severity": "low",
+          "location": "en torah_al_hakol.xml: 'as it is written: ‘ <milestone…>Sing', 'And it was said: ‘ <milestone…>And', and '…spoken</seg>…<milestone unit=\"chapter\"/> ’.'",
+          "problem": "Spaces in the mixed content around the milestones put a space between each quotation mark and the quoted word ('‘ Sing', '‘ And', 'spoken ’.'). The scan has no such spaces ('‘Sing', '‘And', 'spoken’.'). The words and punctuation are otherwise exact. I have not checked whether the renderer collapses these spaces.",
+          "fix": "Remove the spaces between ‘ and the milestones, and between the closing chapter terminator and ’, so the quotation marks sit directly against the quoted text."
+        },
+        {
+          "severity": "low",
+          "location": "documentary_instructions.torah_s162_al_hakkol_rubric_165",
+          "problem": "The text matches the scan. The rubric combines an action with a statement of who says the passage ('the congregation says:'), and the guidelines treat a rubric that names who says a passage as a description. It is typed 'instruction', and I could not check its placement.",
+          "fix": "Use type=\"description\", or document the convention."
+        }
+      ],
+      "remaining_source_questions": [
+        "The print opens a quotation mark before 'Sing to God' and never closes it, so the quotation marks are unbalanced. The current text reproduces this faithfully. The guidelines list an unmatched quotation mark as a misprint candidate for sic/corr, but original_source_typo_corrections has no entry. Whether to add one is an editorial decision; I am not requiring it."
+      ]
+    }
+  ],
+  "verified": [
+    "The English text of all 8 witnesses matches, word for word and in punctuation, the scans s163 (printed p.70), s165 (p.71) and s167 (p.72) at the resolution I viewed.",
+    "All three page-audit findings in scope are now in the current payload and XML: 'intelligence, to grasp' (ribbono), 'Thy Sanctuary;' (berikh_shemeh) and 'Exalt the Lord, our God,' (lekha_adonai). Each matches its ledger entry and the scan.",
+    "The s165 audit's flag on the Frankfurt rubric (בריך שמה) is confirmed on the scan and is still unresolved in the current documentary payload.",
+    "Thirteen Attributes: verse-part milestones adonai_adonai (34:6), notzer_chesed and venakeh (34:7) carry named n values and local corresp. Each has bare verse-part, verse and chapter terminators in the right order, as the 'Terminating a scope' and 'Sub-verse scope' sections require. The English and Hebrew milestone URNs match exactly.",
+    "al_hakol: the Isaiah 52:8 half-verse b milestone has n=\"b\" and a local corresp. Its bare half-verse terminator comes before the verse and chapter terminators. The English 'eye to eye shall they behold…' and the Hebrew 'כי עין בעין…' share the same boundaries.",
+    "In all 8 witnesses, every prayer-part, chapter and verse milestone corresp in the English file is identical to the Hebrew file, so the two align at every shared boundary. Every opened scope is explicitly terminated before the div ends.",
+    "Repeated-Scripture occurrence milestones use local corresp, and each bounded seg carries the canonical bible source. This follows the stated repository convention.",
+    "The page break pb n=72 in al_hakol falls between 'God' and 'of all souls', matching the scan.",
+    "The Hebrew-only items (the 'תפלה משערי ציון' instruction and the 'ג״פ' refs) have no English counterpart in the print and correctly do not appear in the English files.",
+    "The English texts of the documentary rubrics 'The reader, holding the scroll…', 'The congregation responds:' (both occurrences), 'While the reader carries a Torah scroll to the reading desk, the congregation says:' and 'The Torah scroll is laid on the reading desk and unrolled. The reader then calls upon the Cohen, saying:' match the scans."
+  ],
+  "limits": [
+    "I did not review Hebrew text, fine marks or Hebrew images. No Hebrew approval is implied.",
+    "I viewed the scans at reduced size without enlarged crops. Every point in scope was clear enough at that size, but I have not certified details finer than that, such as hyphen or dash forms or quotation-mark glyph shapes.",
+    "I did not see the documentary-index or source_order XML that holds the rubrics. Their type and placement, and whether the Frankfurt rubric is encoded as a condition, are unverified.",
+    "I did not open the full page-audit report files. I relied on the extracted findings in page-audits.json.",
+    "I did not run validators, the test suite or a renderer, so whitespace-collapsing behaviour and resolved URN ranges in compiled output are unverified.",
+    "I did not open corrections.json. I took original_source_typo_corrections in current.json, which is empty for this shard, at face value."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "1b32ece0-d053-4bcf-826c-2a709422b8b7"
+  }
+}
