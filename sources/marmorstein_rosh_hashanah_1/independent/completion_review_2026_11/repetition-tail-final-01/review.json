@@ -1,0 +1,108 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Low reasoning effort, but every Hebrew word was compared against an image. I read all of current.json, current.review.xml (and the raw XML it shows; no display wrap mattered), page-audits.json and guideline-excerpts.md. I compared each fragment word by word with the enlarged rows s152 rows 1-8 (rows 1-5 are Kedushah, out of scope), s153 rows 1-8, s154 rows 1-8 and s155 rows 1-5. The ninth row of each page is blank. s155 rows 6-9 start after this scope ends (Elohenu ve'elohei avotenu / Birkat Kohanim / Sim shalom); I confirmed the hodaah tail ends at להודות: in row 4 and did not read rows 6-9 further. I did not open the native sN.jpg pages, the independent/primary blind readings or the English bodies. Fine pointing is limited by the scan resolution. The page-audit findings were not dismissed: each one was checked again against the current exact text, and none of them has been applied."
+  },
+  "witnesses": [
+    {
+      "stem": "repetition_qedushat_hashem",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "citations_source_approved": true,
+      "issues": [
+        "s152-row6, Uvekhen pachdekha line 2 start: printed כָּל־מַה־שֶּׁבָּרָאתָ with a maqaf after מַה. Current has 'כָּל־מַה שֶּׁבָּרָאתָ'. Earlier audit finding confirmed, still not applied.",
+        "s152-row7, last line of Uvekhen pachdekha: printed כָּל־מַה־שֶּׁבָּרָאתָ: with a maqaf after מַה. Current has 'כָּל־מַה שֶּׁבָּרָאתָ:'. Confirmed, not applied.",
+        "s152-row6, end of line 2: a maqaf after כָּל at the line end ('לְפָנֶיךָ כָּל־' / 'הַבְּרוּאִים'). Current has 'כָּל הַבְּרוּאִים'. Confirmed, not applied.",
+        "s153-row2, Uvekhen tzaddiqim line 2: printed תִּקְפָּץ־פִּיהָ. with a maqaf. Current has 'תִּקְפָּץ פִּיהָ.'. Confirmed, not applied.",
+        "s153-row3/row4, Isaiah 5:16 line: the verse ends בִּצְדָקָה. with a printed period, followed by a new line בָּרוּךְ אַתָּה. Current has 'בִּצְדָקָה:' (sof pasuq/colon). The punctuation should follow the print, not the masoretic text."
+      ],
+      "unresolved": [
+        "s152-row6, Uvekhen pachdekha line 3, the word after אֲגֻדָּה: current אֶחָת (segol, then qamatz). In the image both marks look like flat pataḥ bars (אַחַת), matching the earlier audit's lean. I am not certifying it at this resolution, but the current pointing should not be accepted until a better image or a human check settles it.",
+        "s153-row3/row4, Isaiah 5:16: the mark under ד in current נִקְדָּשׁ looks like a flat pataḥ (נִקְדַּשׁ) beside the qamatz shapes in בִּצְדָקָה. It is not certified. Do not normalize from the masoretic text in either direction."
+      ],
+      "verified": [
+        "Every other consonant, word and word order across all four prayer parts (Uvekhen pachdekha, Uvekhen kavod, Uvekhen tzaddiqim, Vetimlokh plus Psalm 146:10, Qadosh attah plus Isaiah 5:16, the חתימה) matches s152-row6 to row8 and s153-row1 to row4. This includes לְבֶן־יִשַׁי, מִן־הָאָרֶץ, כָּל־הָרִשְׁעָה, כָּל־מַעֲשֶׂיךָ (twice) and בְּדִבְרֵי קָדְשֶׁךָ.",
+        "s153-row3: the Psalm quotation is printed with the full name יְהוָה, and current matches. The Isaiah quotation prints יְיָ, and current matches.",
+        "Psalm 146:10 and Isaiah 5:16 are both quoted in full. The chapter/verse milestones use local corresp, with a canonical seg/@source on a bounded seg (the tested repository convention). The verse and chapter terminators come right after each quotation.",
+        "There are prayer-part milestones for each part and a final terminator. pb n=63 (n151.jpg) and n=64 (n152.jpg) plus the div facs give the page provenance.",
+        "No rubric, speaker or English direction is printed in this unit, and none is encoded."
+      ]
+    },
+    {
+      "stem": "repetition_qedushat_hayom",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": false,
+      "citations_source_approved": true,
+      "issues": [
+        "s153-row7/row8, end of the line: printed חוּס וְחָנֵּנוּ. with a period. Current has 'חוּס וְחָנֵּנוּ וְרַחֵם'. Earlier audit finding confirmed, not applied.",
+        "s154-row4, line 3: (מלכנו) is printed in small, unpointed type. Current body has '(מַלְכֵּנוּ)' with pointing that is not printed. Earlier audit finding confirmed, not applied. (The English commentary note already quotes it unpointed.)",
+        "Guidelines: the standoff commentary note about (מלכנו) targets the whole-unit URN (…/qedushat_hayom), so it will be set at the opening of אַתָּה בְחַרְתָּנוּ, far from the word it explains. Per the Annotations section, it should target an anchor at (מלכנו), or a short range around it."
+      ],
+      "unresolved": [
+        "s154-row4: the parenthetical (מלכנו) has no printed condition. It is encoded as literal parentheses in running text, with no structure. This may be acceptable as documentary text given the missing rubric, but the project should decide this explicitly. Not approved by implication.",
+        "s154-row2/row3: in current בִמְנוּחָתֵנוּ (no dagesh) and בִּיקָרֶךָ, the dagesh in the small or dense ב is not legible enough to certify either way."
+      ],
+      "verified": [
+        "s153-row4/row5: אַתָּה בְחַרְתָּנוּ … עָלֵינוּ קָרָאתָ: matches, including the periods after each clause.",
+        "s153-row5: וַתִּתֶּן־לָנוּ … אֶת־יוֹם (הַשַּׁבָּת הַזֶּה וְאֶת יוֹם) הַזִּכָּרוֹן הַזֶּה. יוֹם (זִכְרוֹן) תְּרוּעָה (בְּאַהֲבָה) מִקְרָא קֹדֶשׁ זֵכֶר לִיצִיאַת מִצְרָיִם: matches. The three parenthesized items carry no printed rubric, and they are encoded as j:conditional type=marked with shabbat=true and no instruction note, which is correct.",
+        "s153-row6 to row8: Yaaleh veyavo matches word for word, apart from the missing period above. This includes בֶּן־דָּוִד, כָּל־עַמְּךָ, בּוֹ לְטוֹבָה / בוֹ לִבְרָכָה / בוֹ לְחַיִּים and אָתָּה:.",
+        "s154-row2/row3: Melokh matches, including כָּל־הָעוֹלָם, כָּל־הָאָרֶץ, כָּל־יוֹשְׁבֵי, כָּל־פָּעוּל, כָּל־יְצוּר, כָּל אֲשֶׁר (no maqaf) and בַּכֹּל מָשָׁלָה:.",
+        "s154-row3/row4: the two Shabbat insertions are printed inside a parenthesis that opens with the small rubric 'אם שבת.'. They are encoded as j:conditional type=marked with tei:note type=instruction xml:lang=he 'אם שבת.' as the condition's own rubric, which is correct per Kinds of rubric. The insertion texts, including שַׁבַּת קָדְשֶׁךָ … מְקַדְּשֵׁי שְׁמֶךָ.), match.",
+        "s154-row4: וְטַהֵר לִבֵּנוּ … מְקַדֵּשׁ (הַשַּׁבָּת וְ)יִשְׂרָאֵל וְיוֹם הַזִּכָּרוֹן: matches. The bracketed (הַשַּׁבָּת וְ) is marked, has no rubric, and is joined directly to יִשְׂרָאֵל.",
+        "pb n=64 (n152.jpg) and n=65 (n153.jpg) give the provenance. The prayer-part milestones and the final terminator are present.",
+        "Citation content: the English note's factual claim (no printed condition on מלכנו) matches the print. It only has the targeting problem listed under issues."
+      ]
+    },
+    {
+      "stem": "repetition_modim",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": false,
+      "citations_source_approved": true,
+      "issues": [
+        "s155-row2, line 1 end: printed וְטוֹבוֹתֶיךָ שֶׁבְּכָל־ / עֵת with a maqaf at the line end. Current has 'שֶׁבְּכָל עֵת'. The first שֶׁבְּכָל יוֹם has no maqaf, which current correctly reflects. Earlier audit finding confirmed, not applied.",
+        "Guidelines: the second prayer-part milestone (…/modim/modim_end) is followed by an empty <tei:seg source=\"…amidah/hodaah/modim\"/>. Under URN scope rule 1, a URI on an element with no content references nothing. The milestone also splits the prayer in the middle of a phrase, between וְעַל (s154) and נִסֶּיךָ (s155). As a result, …/modim/modim resolves to text that ends on a dangling וְעַל. The empty seg should be removed. The split is only justified if the English body carries the same …/modim_end boundary for alignment. Otherwise there should be a single milestone across the page break."
+      ],
+      "unresolved": [
+        "s154-row8, right column line 1: in current נוֹדֶה לְּךָ, the dagesh in ל is not legible at this resolution. It is not certified either way."
+      ],
+      "verified": [
+        "s154-row6 to row8, right column only (the reader's Modim): מוֹדִים אֲנַחְנוּ לָךְ שָׁאַתָּה הוּא יְיָ אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ לְעוֹלָם וָעֶד. צוּר חַיֵּינוּ מָגֵן יִשְׁעֵנוּ אַתָּה הוּא לְדוֹר וָדוֹר. נוֹדֶה … הַפְּקוּדוֹת לָךְ וְעַל matches in consonants, order and punctuation.",
+        "s155-row2: נִסֶּיךָ שֶׁבְּכָל יוֹם עִמָּנוּ … לֹא־כָלוּ … לֹא־תַמּוּ … קִוִּינוּ לָךְ: matches, apart from the maqaf above.",
+        "The left-column 'מודים דרבנן.' block on s154 is correctly not included in this unit. No speaker rubric is printed over the right column, and none is encoded.",
+        "pb n=65 (n153.jpg) and n=66 (n154.jpg) are present, and the closing terminator is present.",
+        "No citations or notes are printed for this unit."
+      ]
+    },
+    {
+      "stem": "repetition_hodaah_tail",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "citations_source_approved": true,
+      "issues": [
+        "s155-row3, line 'וְכֹל הַחַיִּים יוֹדוּךָ סֶלָה': the first סלה shows no dagesh in ס, and its glyph matches the second סֶלָה on s155-row4 line 1. Current has 'סֶּלָה' with a dagesh. This looks like a transcription error and should be corrected directly to סֶלָה (medium certainty; no visible dot). The earlier audit left this unresolved."
+      ],
+      "unresolved": [
+        "Not a Hebrew-source question: the local corresp slug …/tail/veall_kullam is spelled differently from the source URN …/hodaah/veal_kullam. That is acceptable if the English body uses the identical local URN. I did not check the English file."
+      ],
+      "verified": [
+        "s155-row2: וְעַל־כֻּלָּם יִתְבָּרַךְ וְיִתְרוֹמָם שִׁמְךָ מַלְכֵּנוּ תָּמִיד לְעוֹלָם וָעֶד: matches.",
+        "s155-row3: וּכְתוֹב לְחַיִּים טוֹבִים כָּל־בְּנֵי בְרִיתֶךָ: matches. It is a separate centred line, encoded as its own prayer part.",
+        "s155-row3/row4: וְכֹל הַחַיִּים יוֹדוּךָ … וִיהַלְלוּ אֶת־שִׁמְךָ בֶּאֱמֶת הָאֵל יְשׁוּעָתֵנוּ וְעֶזְרָתֵנוּ סֶלָה. בָּרוּךְ אַתָּה יְיָ הַטּוֹב שִׁמְךָ וּלְךָ נָאֶה לְהוֹדוֹת: matches, apart from the dagesh above. The unit ends here, and the next paragraph (אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ בָּרְכֵנוּ) is outside it.",
+        "Each prayer part has a milestone and a terminator. Its seg/@source points to the canonical hodaah parts. pb n=66 (n154.jpg) is present.",
+        "No rubric or citation is printed, and none is encoded."
+      ]
+    }
+  ],
+  "limits": [
+    "Scope is only these four units on s152-s155. Kedushah (s152 rows 1-5), Retzeh, Modim deRabbanan, Birkat Kohanim, Sim Shalom and all English bodies are not reviewed or approved.",
+    "Fine marks are not certified: the dagesh in small ב/ל/כ, meteg, and the vowel shape under ד in נקדש and under א/ח in אחת are at the edge of legibility in the supplied enlargements. I did not open the native sN.jpg pages or any higher-resolution scans.",
+    "I did not consult the original independent/primary blind readings. No new blind read is claimed.",
+    "Every unit-specific finding in page-audits.json (seven source findings and three unresolved items) was checked again against the current text. All seven source findings are still present in current.json and the XML, so none has been applied.",
+    "I did not verify alignment with the English bodies (the …/modim_end split and the veall_kullam slug), because the English files were not read."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "203d7b5f-a5aa-40d9-84c5-122749b84e4c"
+  }
+}
