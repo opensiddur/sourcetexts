@@ -1,0 +1,45 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Low and scoped to haftarah_before_blessing on s174 (printed page 76). I read current.json, current.review.xml, guideline-excerpts.md and human_completion_review_2026_11_76_80.json in full. I also read the earlier haftarah-blessing-accent-pass/review.json in full. I did not open hebrew-final-candidates-03/review.json this time, so I used it only as the earlier pass quotes it. I looked at human-80b.png, human-80.png, human-76.png through human-79.png and s174-row5.png. I did not open s174-row4.png or the native s174.jpg this time. I had no shell, so I checked the codepoints by reading the rendered strings mark by mark against the placement record, not with a byte dump."
+  },
+  "hebrew_source_approved": false,
+  "encoding_guidelines_approved": true,
+  "english_alignment_unchanged": true,
+  "exact_human_hosts_match": true,
+  "haemet_he_meteg": {
+    "present": true,
+    "confidence": "high",
+    "source_evidence": "In human-80b.png, which is a crop and enlargement of source item 80 on s174 row 5, word 25 הָאֱמֶת shows two separate marks under the initial he. The qamatz is the T-shaped mark under the right half of the he. To its left, still within the he's width, is a separate short vertical stroke. That stroke stands clear of the qamatz, and it lies to the right of the alef's hataf-segol cluster (three dots plus a colon pair), so it belongs to the he and not the alef. It has the same shape as the vertical stroke under the tsade of וָצֶֽדֶק in the same crop. It is also not the tipcha: the tipcha is the separate curved stroke under the mem beside the segol. The same qamatz-plus-vertical-stroke pair can be seen at smaller size in human-80.png and s174-row5.png. I decided this from the print alone, not from grammar or from parallel words like הָֽעוֹלָם. The human did not answer this question: the human's answer for 80 covered only the mem tipcha."
+  },
+  "required_source_corrections": [
+    "s174, printed page 76, word 25: change הָאֱמֶ֖ת to הָֽאֱמֶ֖ת by adding U+05BD HEBREW POINT METEG after the U+05B8 qamatz on the initial ה. The resulting sequence is ה U+05B8 U+05BD א U+05B1 מ U+05B6 U+0596 ת. Encode it the same way as the human-confirmed meteg in הָֽעוֹלָם. Make the same change to the text string in current.json, the haftarah_before_blessing.xml file in the Hebrew project, and the placement record. Once added, the record holds 30 marks: 26 accents, 3 metegs and 1 silluq. Hebrew source approval depends on this one correction and should be given only after it is made."
+  ],
+  "issues": [
+    "The current word 25 הָאֱמֶ֖ת has no meteg on the he, but the enlarged source shows a separate one. This is the only difference I found between the source and the current text."
+  ],
+  "unresolved": [],
+  "verified": [
+    "All 26 words, in order, are the same in current.json and the Hebrew XML: בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר בָּחַר בִּנְבִיאִים טוֹבִים וְרָצָה בְדִבְרֵיהֶם הַנֶּאֱמָרִים בֶּאֱמֶת בָּרוּךְ אַתָּה יְיָ הַבּוֹחֵר בַּתּוֹרָה וּבְמֹשֶׁה עַבְדּוֹ וּבְיִשְׂרָאֵל עַמּוֹ וּבִנְבִיאֵי הָאֱמֶת וָצֶדֶק: — the consonants and vowels have not changed from what earlier reviews approved.",
+    "Initial bet of בְדִבְרֵיהֶ֖ם has no dagesh, as the human confirmed. The first אֱלֹהֵינוּ keeps its alef hataf-segol.",
+    "All 29 current placements match the human-answer record and current.json mark for mark: w1 resh qadma U+05A8; w2 tav mahpakh; w3 second yod pashta, inside j:divineName; w4 he pashta and final shuruq vav pashta (vav, not yod); w5 mem munach; w6 he meteg U+05BD and lamed zaqef qatan; w7 shin mahpakh; w8 resh pashta; w9 alef munach; w10 bet zaqef qatan; w11 tsade merkha; w12 he tipcha; w13 resh munach; w14 alef meteg U+05BD and mem etnahta; w15 resh qadma U+05A8; w16 tav azla U+059C; w17 second yod revia, inside j:divineName; w18 het mahpakh; w19 final he pashta; w20 shin munach; w21 dalet zaqef qatan; w22 alef munach; w23 mem zaqef qatan; w24 alef merkha; w25 mem tipcha; w26 tsade silluq U+05BD.",
+    "Totals: 26 Unicode accents, 2 human-confirmed metegs (הָֽעוֹלָם, בֶּאֱֽמֶת) and 1 silluq, for 29 placements.",
+    "Answers 78 and 79 are mapped by the host letter and word recorded in the human record. The order the user listed them in does not shift the hosts: tav of the second אַתָּה is azla; resh of the second בָּרוּךְ is qadma; mem of בֶּאֱמֶת is etnahta; resh of הַנֶּאֱמָרִים is munach; second yod of the second יְיָ is revia; mem of עַמּוֹ is zaqef; alef of וּבְיִשְׂרָאֵל is munach; shin of וּבְמֹשֶׁה is munach; alef of וּבִנְבִיאֵי is merkha.",
+    "Azla is encoded as U+059C GERESH, kept separate from qadma U+05A8, as in the earlier human azla decision. The human-identified alef meteg in בֶּאֱֽמֶת is present.",
+    "The silluq on word 26 uses U+05BD. It works as the closing accent of the blessing. It adds no verse boundary and no half-verse.",
+    "Marks I can see in human-76 through human-80 agree with the recorded hosts: the strokes above both resh letters of בָּרוּךְ, the azla over the second אַתָּה, revia dots on the second יְיָ, the etnahta under the mem of בֶּאֱמֶת, the zaqef over עַמּוֹ, and the silluq under the tsade.",
+    "Guidelines: there is one prayer-part milestone (…/asher_bachar/text) and one bare prayer-part terminator. No Bible chapter, verse or half-verse milestone was added. Both יְיָ forms keep all their points and accents inside j:divineName. pb n=76 is unchanged. The printed final colon is kept. There is no tei:sic or tei:corr: the missing accents were a transcription omission, not a misprint.",
+    "English: the s175 text matches word for word in current.json before and after, and in the English XML. It uses the same prayer-part corresp and terminator. No English translation was added."
+  ],
+  "limits": [
+    "I checked codepoints visually against the rendered strings and the placement record's codepoint fields. I did not run a programmatic Unicode dump or NFC/ordering check. In my visual reading, the existing meteg sequences have the vowel before the meteg (qamatz then meteg in הָֽעוֹלָם; hataf segol then meteg in בֶּאֱֽמֶת).",
+    "I did not reopen any mark the human already answered for items 76–80. I used the earlier independent readings only where the human record also names them.",
+    "This session I did not open the native s174.jpg, s174-row4.png or hebrew-final-candidates-03/review.json. The meteg decision rests on human-80b.png, with human-80.png and s174-row5.png agreeing.",
+    "I made no edits. The required correction still needs to be applied."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "6c72ed05-6b44-4b8a-a6ea-b79f7b0ce6f6"
+  }
+}

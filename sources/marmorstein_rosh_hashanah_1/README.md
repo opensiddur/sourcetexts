@@ -907,7 +907,7 @@ Final representative rendered export QA passes: documentary PDF: 172 pages; expa
 
 ## Encoded-material completion review (2026-11-15)
 
-Acceptance now covers 172 of the 224 encoded leaves (355 total). Final human
+Acceptance now covers 174 of the 224 encoded leaves (355 total). Final human
 adjudication closes scans57 and90. Current source-image and guideline review
 closes English scans97,99,101,103,105,107,109. The other encoded leaves remain
 under review. Source and expanded-order corrections are recorded separately
@@ -938,9 +938,9 @@ is gated to weekdays, following the original omission direction. Actual compiler
 checks cover both languages and unknown/false/true Shabbat selection. The five
 Yotzer source/guideline approvals do not settle other Hebrew piyyutim.
 
-Human answers7–69 are applied, including the repeated13–20 question. Current
-questions70–75 have enlarged, clearly numbered source snippets recorded in the
-review manifest. The52 remaining encoded leaves require further Hebrew source
+Human answers7–80 and the explicit80he-meteg follow-up are applied, including
+the repeated13–20 question. Current questions81–88 have enlarged, clearly numbered source snippets recorded in the
+review manifest. The50 remaining encoded leaves require further Hebrew source
 reconciliation. Current registry/importer/subverse checks pass169tests and
 38subtests; actual parallel compilation verifies8word comparisons and3new
 shared speaker rows for the four accepted piyyutim.
@@ -952,5 +952,17 @@ Hebrew witnesses retain explicit source and guideline findings. Eight missing
 continuation-page markers across four bilingual modules are restored, with three
 clear printed Hebrew paragraph joins. Actual parallel compilation preserves all
 eight markers and passes eight source-word comparisons. No fine-point acceptance
-is inferred from those mechanical checks. Questions70–75 remain the only batch
+is inferred from those mechanical checks. Questions81–88 remain the only batch
 currently presented for human adjudication.
+
+Latest source closure: scans126and128 are fully accepted. Six Hebrew witnesses
+affected by human70–75 have actual final source/guideline/alignment approval;
+two shared reader boundaries remain outside both Shabbat alternatives. Existing
+canonical identities are retained. Four actual bilingual word comparisons and
+twelve branch/alignment cases pass. The printed Taalat Zu acrostic description
+now belongs to its reusable poem and transcludes once after its unique scan128pb.
+
+The blessing before haftarah has its full source cantillation:26accents,3metegs
+and1silluq, with all30hosts checked against the human answers and independent
+review. Two actual bilingual source-word comparisons pass. Its acceptance does
+not complete other texts on174. Total acceptance174/224encoded leaves;50remain.

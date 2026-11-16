@@ -1,0 +1,134 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "I couldn't see the configured effort setting. The actual effort was moderate and limited to the stated scope. I read in full current.json, current.review.xml, guideline-excerpts.md, human_completion_review_2026_11_70_75.json and the three prior review.json reports (short-repetition-s126-s130, hebrew-final-candidates-02 and -03). I looked once, without further magnification, at s126-variants, s128-variants, s126-row6, s126-row7, s126-row8, s160-row1, s160-row2, s189-row5 and s189-row6, and at the native pages s126.jpg and s128.jpg. I did NOT open the native s160.jpg or s189.jpg; the earlier report says s160.jpg has less detail than the rows. I did NOT open the original independent JSONs (independent-126, -128, -160, -188); I relied on the prior reports' quotations of them. I had no shell, so I compared Unicode strings by eye and not codepoint by codepoint. Human marks 70–75 were applied as given and not re-read."
+  },
+  "witnesses": [
+    {
+      "stem": "naalah_vedin",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_guidelines_approved": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "The Hebrew matches the exact human 70 words: נַעֲלָה (no nun meteg), בַדִּין (no bet dagesh), עֲלוֹת, בַּשּׁוֹפָר, אֲרַצֶּֽנוּ, בְּמָגִנַּת and אֶתְרוֹעָֽעָה. The printed yods in גֵּיא and כְּרִיעָה are present (s126-variants, native s126).",
+        "No punctuation follows אֲפַתֶּנּוּ on s126. The line ends there and the next line opens with '(נ״א'. The final colon is present.",
+        "Order of part_1: the milestone comes first, then the ק׳/קהל description, then the text. The part_1→part_2 boundary falls after לְרוֹעֲעָה. Part_2's milestone is followed by the ח׳/חזן description. Both come before the weekday j:conditional and outside both day branches, so they stay whatever day is selected. On s126 (and s128) the printed ח׳ sits directly before בשופר.",
+        "Day branches: shabbat=false gives the unmarked בַּשּׁוֹפָר. shabbat=true gives @type=marked בְּזִכְרוֹן שׁוֹפָר, with its own instruction note אם שבת. The printed parentheses come from the marked type, not from literal text. When the day is unknown both branches survive; a known day selects one. Nothing is repeated, and the text after the branches stays in part_2.",
+        "Variant: the tei:choice holds two j:option elements (printed אֲפַתֶּנּוּ first, then אֲרַצֶּֽנוּ), which fits the 'alternate wordings, exactly one read' rule. The tei:anchor naalah_variant comes right after the choice. The standoff commentary 'נ״א אֲרַצֶּֽנוּ' targets that anchor, not the whole final clause. Everything is in one tei:p, as printed.",
+        "Identity: the existing canonical poem URN urn:x-opensiddur:text:poem:naalah_vedin is kept. part_1 and part_2 are occurrence URNs under the siddur path only. Nothing in the guidelines requires a new canonical identity for an edition's vocalization difference ('Do not duplicate a canonical URN merely because the text is printed again elsewhere'). title.he is now נַעֲלָה בַדִּין, matching the source.",
+        "The scope terminator <tei:milestone unit=\"prayer-part\"/> closes the last part. pb n=49 / facs n125 matches scan s126.",
+        "English: the part_1 and part_2 URNs match the Hebrew exactly. Part_2 begins at 'But with ', outside the conditionals. There are no Hebrew role labels or linkage words in the English. The English words are unchanged from the accepted text, including '(the Sanctuary)'. The English Shabbat branch is marked and, as printed, has no English rubric. pb n=49 / facs n126."
+      ]
+    },
+    {
+      "stem": "melekh_bedin",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_guidelines_approved": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "The Hebrew uses the human 71 shared readings: בַדִּין (no bet dagesh), עֲלוֹת, בַּשּׁוֹפָר, אֲרַצֶּֽנוּ and אֶתְרוֹעָֽעָה. It also has the separately supplied תֶֽחִי. גֵּיא and כְּרִיעָה have their printed yods (s128-variants, native s128).",
+        "The confirmed source colon follows אֲפַתֶּנּוּ. It sits after the tei:choice and before the anchor melekh_bedin_variant, as printed: 'אֲפַתֶּנּוּ: (נ״א אֲרַצֶּֽנוּ)'.",
+        "The ק׳ description comes after the part_1 milestone. The part_2 milestone and the ח׳ description come before both day branches and outside them; native s128 prints ח׳ before בשופר. The branches are encoded as in naalah_vedin, with a marked Shabbat branch and the rubric אם שבת. The scope terminator is present.",
+        "The existing canonical URN urn:x-opensiddur:text:poem:melekh_bedin is kept. title.he is מֶלֶךְ בַדִּין. pb n=50 / facs n127 matches s128.",
+        "English: the part_1 and part_2 URNs match the Hebrew. Part_2 begins at 'but with ', outside the branches. There are no role labels, and the English words are unchanged. pb n=50 / facs n128."
+      ]
+    },
+    {
+      "stem": "repetition_attah_gibbor",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_guidelines_approved": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "גִּבּוֹר has the gimel dagesh (human 72, applied on s126 only). The rest matches s126-row7: אַתָּה … לְעוֹלָם אֲדֹנָי מְחַיֵּה מֵתִים אַתָּה רַב לְהוֹשִׁיעַ, with a final period.",
+        "The prayer-part milestone comes before the seg@source urn:x-opensiddur:text:prayer:amidah/gevurot/attah_gibbor, which is the order for a passage that has both a correspondence and a source. The terminator is present.",
+        "The Hebrew and English share the URN …/gevurot/open/text and the same seg source. pb n=49 / facs n125 (Hebrew) and n126 (English)."
+      ]
+    },
+    {
+      "stem": "repetition_mekhalkel",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_guidelines_approved": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "לָּךְ has the lamed dagesh (human 73). The full sequence, from מְכַלְכֵּל through יְשׁוּעָה:, matches s126-row7 and row8, including the period after עָפָר and the final colon.",
+        "The milestone comes before the seg@source amidah/gevurot/mekhalkel_chayyim, and the terminator is present. The printed 'סוגרים הארון.' at the end of the line is correctly left outside this unit.",
+        "The Hebrew and English share the URN …/gevurot/mekhalkel/text and the same source. pb/facs is n125 for the Hebrew and n126 for the English."
+      ]
+    },
+    {
+      "stem": "morning_full_kaddish_preface",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_guidelines_approved": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "Human 74 settles the last open point: the apparent strokes above רחמיך and וחסדיך belong to the line above. No accent was added.",
+        "Numbers 14:17 matches s160-row1 and row2: וְעַתָּה יִגְדַּל־נָא כֹּחַ אֲדֹנָי כַּאֲשֶׁר דִּבַּרְתָּ לֵאמֹר:, with its printed maqaf.",
+        "Psalms 25:6 matches: זְכֹר רַחֲמֶיךָ יְיָ וַחֲסָדֶיךָ כִּי מֵעוֹלָם הֵמָּה:, with a printed space after זְכֹר and no maqaf. יְיָ is in j:divineName.",
+        "Each verse is complete. Each has local chapter and verse milestones (quotations/numbers_14/17 and quotations/psalms_25/6) and a bounded seg@source carrying the canonical Bible URN. Terminators close in order: verse, then chapter. No canonical Bible URN is repeated. The prayer-part 'text' terminator closes after the last verse.",
+        "The Hebrew and English carry the same set of correspondence URNs, so they align. pb n=69 / facs n159 (Hebrew) and n160 (English). No speaker rubric is printed for this unit."
+      ]
+    },
+    {
+      "stem": "shofar_uvkhen_yehi_ratzon",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_guidelines_approved": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "Human 75 is applied: there is no maqaf in יְהִי רָצוֹן, the vav has tsere in וֵאלֹהֵי, and כִסֵּא has no kaf dagesh.",
+        "The printed qof spelling אֱלֹקֵינוּ is kept. It is visible in s189-row6 and matches the original blind reading as quoted in the prior report. It is a printed form, not a misprint, so there is no sic/corr.",
+        "The rest matches s189-row6 word for word, through לְכַפֵּר עַל כָּל חַטֹּאתֵינוּ:, with no maqaf in כָּל הַמַּלְאָכִים or עַל כָּל.",
+        "The rubric 'בעוד שהצבור אומרים אשרי העם וכו׳ יאמר התוקע בלחש.' matches the source. It says who says the passage and how, so it is encoded as type=description, first in the canonical div and before the prayer-part milestone. וכו׳ is encoded as abbr/expan (וכולי).",
+        "There is one prayer-part with a terminator. The div facs n188 matches s189. page_start is false, which is correct.",
+        "No English is printed, and none was invented. The English-alignment flag is true only because there is nothing to align."
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "key": "repetition_open_126",
+      "source_approved": true,
+      "guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "key": "repetition_close_126",
+      "source_approved": true,
+      "guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    }
+  ],
+  "limits": [
+    "Ark instructions, checked: 'פותחים הארון.' is printed in small type on s126 (row6, native page) after Naalah's final colon and before זָכְרֵנוּ. 'סוגרים הארון.' is printed at the left end of Mekhalkel's last line. The documentary context places them as tei:note type=instruction, xml:lang=he, facs n125: open after the Naalah transclusion and before avot/ending (Zokhrenu); close after the gevurot/mekhalkel transclusion and before the description ע״ס תשר״ק. (facs n127, printed at the top of s128) and taalat_zu. Both are directives, which matches the 'The Ark is opened' example. instruction:corresp is optional ('may'), so no new instruction URN is needed. I did not check s127 for an English ark direction.",
+    "Only these 6 witnesses and 2 instructions are approved. Nothing else on s126, s128, s160 or s189 is approved by implication: not AtChil, Zokhrenu, avot/ending, ע״ס תשר״ק., Taalat Zu, the Kaddish, Tarat or the other yehi ratzon prayers. My only check on the description ע״ס תשר״ק. and on taalat_zu was their position in the context.",
+    "Possible new inconsistency, in the decision note only (not a source conflict, not a request to reopen): decision 70 in human_completion_review_2026_11_70_75.json says 'second ayin qamatz/meteg' for אֶתְרוֹעָֽעָה. The supplied word and the current text look identical, and in both the meteg follows the qamats of the first ayin (רוֹעָֽ before עָה). The current text follows the human's exact word. Only the note's wording may be wrong. I could not confirm the codepoints without a shell.",
+    "Non-blocking: the נ״א note keeps the raw abbreviation with no abbr/expan. The guidelines allow abbr/expan but don't require it. Doubled spaces around the conditionals and a display line break before endConditional are whitespace only.",
+    "Non-blocking policy point, outside this review's guideline excerpts: אֲדֹנָי (Num 14:17, attah gibbor) and אֱלֹקֵינוּ are not in j:divineName, though יְיָ is. Nothing in the supplied guideline excerpts requires either way.",
+    "English words were not re-read. They rely on the earlier English final acceptance; I checked only the shared boundaries and URN matches.",
+    "I did not open native s160.jpg, native s189.jpg or the original independent JSONs. My source checks for s160 and s189 come from the enlarged crops, the exact human answers 74–75 and the earlier reports' quotations of the independent readings."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "361b92e3-95df-458f-a6da-23497ed28c78"
+  }
+}
