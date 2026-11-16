@@ -996,3 +996,23 @@ The earlier174/224 checkpoint and its then-open81–88 batch are historical.
 Existing PDF/electronic previews predate these corrections and do not certify
 the current encoded volume. The 131 unencoded leaves remain outside this
 completion-review scope.
+
+
+### Completion review checkpoint: 180 accepted encoded leaves
+
+Exact human106–113 readings are applied, with nine occurrence-specific metegs.
+Nodeh Lkha, first Selah and Lanu retain their confirmed dageshes; Byadekha
+retains segol and gains its dalet meteg. The HaEl stroke is the alef-lamed
+ligature and adds no mark. Nothing propagates to other occurrences.
+
+An actual final source/guideline review explicitly approves silent Hodaah
+and Sim Shalom, with unchanged English alignment and no unresolved findings.
+Frozen whole payloads match current data and human-after records; NFC and
+four actual bilingual compiler comparisons pass. The separately reviewed
+Malkeinu commentary now has its acceptance record, completing scan154.
+Acceptance is180/224encoded leaves;44remain. Scan122stillrequiresElohaiNetzor.
+All646generatedXMLfilesvalidate. The isolated compilerfixPR309remains a
+dependency of final parallel export acceptance. Current questions114–124
+concern distinct Shema occurrences on scans110and112, with numbered enlarged
+source snippets. All previous questions7–113and80/95bfollowups are settled.
+Final PDF/electronic visual review remains pending.
