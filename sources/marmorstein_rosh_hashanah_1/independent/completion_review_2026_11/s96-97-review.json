@@ -1,0 +1,140 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Low-to-moderate. I read all six split images (s96 parts 1–3, s97 parts 1–3) and the full s96.jpg once for context. I compared the dossier units yishtabbach through or_olam against the print, and read the human decisions file. I did not open the independent blind-response JSONs (no glob tool), did not re-read the full s97.jpg, and did not do a mark-by-mark magnified check of every vowel, dagesh, meteg or accent."
+  },
+  "pages": [
+    {
+      "scan": "s96",
+      "complete_body_accounted": true,
+      "source_findings": [
+        {
+          "unit": "morning_kaddish",
+          "language": "he (arc), paragraph 3",
+          "printed": "וּלְעֵלָּא מִן־כָּל־בִּרְכָתָא",
+          "current": "וּלְעֵלָּא מִכָּל־בִּרְכָתָא",
+          "correction": "וּלְעֵלָּא מִן־כָּל־בִּרְכָתָא",
+          "reason": "The print clearly shows a separate word מִן with a final nun, a maqaf, then כָּל־. The current text merges these into מִכָּל, which looks like normalization from another rite. This is an actual substantive textual error, not a pointing detail.",
+          "certainty": "high",
+          "location": "s96 part2, Kaddish 3rd line of יתברך (line starting וּלְעֵלָּא)"
+        },
+        {
+          "unit": "morning_kaddish",
+          "language": "he (arc), paragraph 1",
+          "printed": "וּבִזְמַן קָרִיב, וְאִמְרוּ אָמֵן.",
+          "current": "וּבִזְמַן קָרִיב. וְאִמְרוּ אָמֵן.",
+          "correction": "וּבִזְמַן קָרִיב, וְאִמְרוּ אָמֵן.",
+          "reason": "The mark after קָרִיב is printed as a comma, not a period. The line-final period after אָמֵן is correct.",
+          "certainty": "high",
+          "location": "s96 part2, Kaddish line 3 (דְכָל־בֵּית־יִשְׂרָאֵל …)"
+        },
+        {
+          "unit": "morning_kaddish",
+          "language": "he (arc), paragraph 3",
+          "printed": "דַּאֲמִירָן בְּעָלְמָא, וְאִמְרוּ אָמֵן:",
+          "current": "דַּאֲמִירָן בְּעָלְמָא. וְאִמְרוּ אָמֵן:",
+          "correction": "דַּאֲמִירָן בְּעָלְמָא, וְאִמְרוּ אָמֵן:",
+          "reason": "The mark after בְּעָלְמָא is printed as a comma, not a period.",
+          "certainty": "high",
+          "location": "s96 part2, last line of Kaddish"
+        }
+      ],
+      "unresolved": [
+        {
+          "unit": "morning_kaddish",
+          "word": "כִרְעוּתֵהּ",
+          "mark": "possible dagesh in initial kaf",
+          "location": "s96 part2, Kaddish line 2, first word",
+          "reason": "At this resolution I cannot tell whether the kaf has a dagesh. The current text has none. I neither confirm nor reject it."
+        },
+        {
+          "unit": "morning_kaddish",
+          "word": "חזן (speaker siglum)",
+          "mark": "letter form of the small siglum",
+          "location": "s96 part2, right margin before יִתְגַּדַּל",
+          "reason": "The small siglum looks like חז plus a final letter, possibly a ligature. I cannot confirm from the image whether it reads exactly חזן or is an abbreviation with a mark."
+        },
+        {
+          "unit": "morning_barekhu",
+          "word": "לְעוֹלָם (response, paragraph 2) and לְעוֹלָם (בָּרוּךְ שֵׁם line)",
+          "mark": "whether the word is spelled with a vav and holam male (לְעוֹלָם) or with a holam and no vav (לְעֹלָם)",
+          "location": "s96 part2/3, response line under קו״ח; left column, line starting בָּרוּךְ שֵׁם",
+          "reason": "Both words are set in compressed small type, and the vav seems to be missing or merged. The current text has לְעוֹלָם in both places. I could not confirm or reject this."
+        },
+        {
+          "unit": "yishtabbach",
+          "word": "בַּתִּשְׁבָּחוֹת",
+          "mark": "dagesh in the bet and in the tav",
+          "location": "s96 part1, line 6, first word",
+          "reason": "The initial letter's dagesh and the tav's dagesh are not clearly resolved in the scan."
+        },
+        {
+          "unit": "morning_barekhu",
+          "word": "רִאשׁוֹן",
+          "mark": "hiriq under the resh",
+          "location": "s96 part3, left column line starting ראשון",
+          "reason": "The hiriq is not clearly visible in the small-type column."
+        }
+      ],
+      "citation_and_instruction_findings": [
+        {
+          "unit": "morning_numbers_14_17",
+          "finding": "The Hebrew-page instruction is printed as 'The Reader says half Kaddish.', which matches the current he-witness instruction. It is printed before וְעַתָּה. No change needed."
+        },
+        {
+          "unit": "morning_barekhu",
+          "finding": "The speaker labels are printed as פֿאָרבעטער: (with rafe on the pe), געמיינדע: and קו״ח (small, above the response). These match the current text."
+        },
+        {
+          "unit": "header",
+          "finding": "The running header reads 34 · יוֹצֵר לְיוֹם רִאשׁוֹן שֶׁל רֹאשׁ הַשָּׁנָה · 34. It is not body text and I made no finding on it."
+        }
+      ]
+    },
+    {
+      "scan": "s97",
+      "complete_body_accounted": true,
+      "source_findings": [
+        {
+          "unit": "morning_barekhu",
+          "language": "en, paragraph 3 (Congregation)",
+          "printed": "of the Supreme King of Kings, the Holy One blessed be He. He is the first",
+          "current": "of the Supreme King of Kings, the Holy One, blessed be He. He is the first",
+          "correction": "of the Supreme King of Kings, the Holy One blessed be He. He is the first",
+          "reason": "There is no comma after 'Holy One' in the print. This contrasts with the Kaddish paragraph on the same page, which does print 'the Holy One, blessed be He;'.",
+          "certainty": "high",
+          "location": "s97 part2/3, right column, line 4"
+        }
+      ],
+      "unresolved": [],
+      "citation_and_instruction_findings": [
+        {
+          "unit": "morning_numbers_14_17",
+          "finding": "The English-page instruction is printed as 'The reader recites half Kaddish.' (lowercase 'reader'), which matches the current en-witness instruction."
+        },
+        {
+          "unit": "morning_numbers_14_17 / morning_psalm_25_6",
+          "finding": "The print runs both verses together in one English block ('…as Thou hast said: Remember Thy mercy…'). The current text splits them into two units with the same wording. That is acceptable structurally, and there is no text change."
+        },
+        {
+          "unit": "morning_barekhu",
+          "finding": "The printed English 'Blessed be Him, His Name is exalted above and ever.' is reproduced faithfully. It is a garbled translation of בשכמל״ו, not a typesetting typo, so I propose no sic/corr. An editorial note is optional."
+        },
+        {
+          "unit": "morning_barekhu",
+          "finding": "'eter-nity' is hyphenated only because of the line break. The current 'eternity' is correct."
+        },
+        {
+          "unit": "general",
+          "finding": "The Hebrew linkage cues (ישתבח, ועתה, יתגדל, ברכו, אור) were deliberately left out, as instructed. They are not substantive omissions."
+        }
+      ]
+    }
+  ],
+  "coverage_limits": "I judged scans 96–97 only. I did not consult the independent blind-response JSONs. The human decisions file has no entries for s96–97, so nothing from it was reopened. I compared vowels, dagesh, meteg and accents at the resolution of the split images and did not magnify them mark by mark. Only the items listed under unresolved are explicitly flagged, but any other fine marks are not certified beyond what I visibly compared. I cannot recommend accepting the s96 source text until the three Kaddish corrections are applied and the unresolved items are settled. I recommend accepting s97 once the one comma correction is applied.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "cc9cd33b-01e0-4692-a742-78bd9d55e3a9"
+  }
+}

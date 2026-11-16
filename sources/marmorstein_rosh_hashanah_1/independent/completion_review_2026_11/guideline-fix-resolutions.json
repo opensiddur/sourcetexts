@@ -1,0 +1,135 @@
+{
+  "prior_review": "s96-109-guideline-review.json",
+  "fixes": {
+    "quotation_source_changes": [
+      {
+        "unit": "yotzer_barukh_kevod",
+        "language": "he",
+        "source_before": "urn:x-opensiddur:text:bible:ezekiel/3/12",
+        "source_after": "urn:x-opensiddur:text:bible:ezekiel/3/12/b"
+      },
+      {
+        "unit": "yotzer_barukh_kevod",
+        "language": "en",
+        "source_before": "urn:x-opensiddur:text:bible:ezekiel/3/12",
+        "source_after": "urn:x-opensiddur:text:bible:ezekiel/3/12/b"
+      },
+      {
+        "unit": "yotzer_qadosh",
+        "language": "he",
+        "source_before": "urn:x-opensiddur:text:bible:isaiah/6/3",
+        "source_after": "urn:x-opensiddur:text:bible:isaiah/6/3/qadosh"
+      },
+      {
+        "unit": "yotzer_qadosh",
+        "language": "en",
+        "source_before": "urn:x-opensiddur:text:bible:isaiah/6/3",
+        "source_after": "urn:x-opensiddur:text:bible:isaiah/6/3/qadosh"
+      },
+      {
+        "unit": "lael_asher_shavat",
+        "language": "he",
+        "source_before": "urn:x-opensiddur:text:bible:psalms/92/2",
+        "source_after": "urn:x-opensiddur:text:bible:psalms/92/2/a"
+      },
+      {
+        "unit": "lael_asher_shavat",
+        "language": "en",
+        "source_before": "urn:x-opensiddur:text:bible:psalms/92/2",
+        "source_after": "urn:x-opensiddur:text:bible:psalms/92/2/a"
+      }
+    ],
+    "expanded_changes": [
+      "Group the Shabbat Yotzer alternative under one bilingual condition rubric, with a matching local declaration.",
+      "Declare shabbat=false inside the weekday Yotzer group.",
+      "Use the existing frankfurt_am_main rite key for the Frankfurt Bameh Madlikin inclusion."
+    ],
+    "documentary_instruction_policy": "Keep the printed continuation rubric in documentary El Adon. Local declarations settle its nested condition in expanded output, avoiding mid-verse navigation without deleting documentary evidence."
+  },
+  "decisions": [
+    {
+      "finding": "Delete documentary El Adon continuation rubric",
+      "disposition": "Preserve its actual source wording and original page location in documentary. Outer shared expanded Shabbat group declares shabbat=true, which settles and hides the nested source routing rubric even when the outer day is unspecified. Actual compiler checks verify no el_adon_segment_2 conditional survives. This fixes expanded presentation without deleting source evidence."
+    },
+    {
+      "finding": "Verse unit must use Bible namespace",
+      "disposition": "No change. Existing importer convention and tests explicitly permit occurrence-context verse milestones when a canonical quotation was already mapped elsewhere. See test_repeated_scripture_has_addressable_chapter_and_verse_context in importer tests and existing context registry. Both languages use identical unit and correspondence; canonical Bible reference stays in bounded seg/source. Existing approved source/group reviews already documented this convention."
+    },
+    {
+      "finding": "Psalms104:24 possible duplicate",
+      "disposition": "Canonical mapping unique in each documentary project; verified by XPath. Keep the existing identity."
+    },
+    {
+      "finding": "Bare chapter context markers, whitespace",
+      "disposition": "Keep established chapter-context/terminator authoring convention. No source or alignment bug demonstrated."
+    },
+    {
+      "finding": "Frankfurt rite inconsistency",
+      "disposition": "Use frankfurt_am_main consistently in expanded Bameh Madlikin, matching existing later Frankfurt rules. Actual compiler check confirms weekday Frankfurt includes Bameh while weekday non-Frankfurt omits it."
+    }
+  ],
+  "tests": {
+    "status": "pass",
+    "checks": [
+      {
+        "shabbat": null,
+        "frankfurt_am_main": false,
+        "hameir_present": true,
+        "hakol_present": true,
+        "el_adon_present": true,
+        "continued_page_rubric_settled": true,
+        "hameir_excerpt": "הַמֵּאִיר לָאָרֶץ וְלַדָּרִים עָלֶיהָ בְּרַחֲמִים. וּבְטוּבוֹ מְחַדֵּשׁ בְּכָל־יוֹם תָּמִיד מַעֲשֵׂה בְרֵאשִׁית: \n        \n        He who lights the earth and t",
+        "hakol_excerpt": "הַכֹּל יוֹדוּךָ וְהַכֹּל יְשַׁבְּחוּךָ. וְהַכֹּל יֹאמְרוּ אֵין קָדוֹשׁ כַּייָ: הַכֹּל יְרוֹמְמוּךָ סֶּלָה יוֹצֵר הַכֹּל. הָאֵל הַפּוֹתֵחַ בְּכָל־יוֹם דַּלְתוֹת ",
+        "bameh_excerpt": "בַּמֶּה מַדְלִיקִין וּבַמָּה אֵין מַדְלִיקִין, אֵין מַדְלִיקִין לֹא בְלֶכֶשׁ וְלֹא בְחֹסֶן וְלֹא בְכַלָּךְ, וְלֹא בִפְתִילַת הָאִידָן וְלֹא בִפְתִילַת הַמִּדְבָ"
+      },
+      {
+        "shabbat": false,
+        "frankfurt_am_main": false,
+        "hameir_present": true,
+        "hakol_present": false,
+        "el_adon_present": false,
+        "continued_page_rubric_settled": true,
+        "hameir_excerpt": "הַמֵּאִיר לָאָרֶץ וְלַדָּרִים עָלֶיהָ בְּרַחֲמִים. וּבְטוּבוֹ מְחַדֵּשׁ בְּכָל־יוֹם תָּמִיד מַעֲשֵׂה בְרֵאשִׁית: \n        \n        He who lights the earth and t",
+        "hakol_excerpt": "",
+        "bameh_excerpt": ""
+      },
+      {
+        "shabbat": true,
+        "frankfurt_am_main": false,
+        "hameir_present": false,
+        "hakol_present": true,
+        "el_adon_present": true,
+        "continued_page_rubric_settled": true,
+        "hameir_excerpt": "",
+        "hakol_excerpt": "הַכֹּל יוֹדוּךָ וְהַכֹּל יְשַׁבְּחוּךָ. וְהַכֹּל יֹאמְרוּ אֵין קָדוֹשׁ כַּייָ: הַכֹּל יְרוֹמְמוּךָ סֶּלָה יוֹצֵר הַכֹּל. הָאֵל הַפּוֹתֵחַ בְּכָל־יוֹם דַּלְתוֹת ",
+        "bameh_excerpt": "בַּמֶּה מַדְלִיקִין וּבַמָּה אֵין מַדְלִיקִין, אֵין מַדְלִיקִין לֹא בְלֶכֶשׁ וְלֹא בְחֹסֶן וְלֹא בְכַלָּךְ, וְלֹא בִפְתִילַת הָאִידָן וְלֹא בִפְתִילַת הַמִּדְבָ"
+      },
+      {
+        "shabbat": false,
+        "frankfurt_am_main": true,
+        "hameir_present": true,
+        "hakol_present": false,
+        "el_adon_present": false,
+        "continued_page_rubric_settled": true,
+        "hameir_excerpt": "הַמֵּאִיר לָאָרֶץ וְלַדָּרִים עָלֶיהָ בְּרַחֲמִים. וּבְטוּבוֹ מְחַדֵּשׁ בְּכָל־יוֹם תָּמִיד מַעֲשֵׂה בְרֵאשִׁית: \n        \n        He who lights the earth and t",
+        "hakol_excerpt": "",
+        "bameh_excerpt": "בַּמֶּה מַדְלִיקִין וּבַמָּה אֵין מַדְלִיקִין, אֵין מַדְלִיקִין לֹא בְלֶכֶשׁ וְלֹא בְחֹסֶן וְלֹא בְכַלָּךְ, וְלֹא בִפְתִילַת הָאִידָן וְלֹא בִפְתִילַת הַמִּדְבָ"
+      }
+    ]
+  },
+  "limits": "Source fine-mark review remains separate. Earlier source payload and snapshots preserved.",
+  "psalm104_24_unique_mapping": {
+    "he": [
+      [
+        "yotzer_hameir.xml",
+        "/tei:TEI/tei:text/tei:body/tei:div/tei:p/tei:milestone[2]"
+      ]
+    ],
+    "en": [
+      [
+        "yotzer_hameir.xml",
+        "/tei:TEI/tei:text/tei:body/tei:div/tei:p/tei:milestone[2]"
+      ]
+    ]
+  }
+}

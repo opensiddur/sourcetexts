@@ -905,3 +905,19 @@ The final four human decisions74–77 settle Jerusalem’s qamatz–meteg–CGJ�
 The English reconstruction “of our” stays explicitly supplied; false “devises” emendation is removed. Optional מלכנו, של יעקב and כל use marked variant conditions, verified for true/false/unset and electronic delimiters. The repetition heading occurs once in the documentary spine. Printed Torah cantillation is reconciled from the source, and no unprinted accents are added to pointed-only passages.
 
 Final representative rendered export QA passes: documentary PDF: 172 pages; expanded PDF: 191 pages, all internal PDF destinations and electronic links resolve. Both PDFs settle in 3 LaTeX passes. The known parallel-compiler limitation drops three leading page markers (204HE205EN223EN) from compiled output; every source marker and facsimile URL remains in documentary XML. This is not a final release of the355-leaf volume.
+
+## Encoded-material completion review (2026-11-15)
+
+Acceptance now covers 133 of the 224 encoded leaves (355 total). Final human
+adjudication closes scans57 and90. Current source-image and guideline review
+closes English scans97,99,101,103,105,107,109. The other encoded leaves remain
+under review. Source and expanded-order corrections are recorded separately
+from acceptance; schema validation does not certify source wording.
+
+New actual reports and frozen review inputs are in
+`independent/completion_review_2026_11/`. The two
+`completion_review_2026_11_*_acceptance.json` records identify exact accepted
+scopes. Earlier reports retain their original uncertainties as history.
+The scan124 piyyut has substantive transcription discrepancies still being
+reconciled; no source acceptance is claimed for it. Existing preview PDFs
+predate the new completion-review corrections.

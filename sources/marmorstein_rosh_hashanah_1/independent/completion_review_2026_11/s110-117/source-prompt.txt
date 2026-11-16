@@ -1,0 +1,16 @@
+You are the required independent second reader conducting final SOURCE-IMAGE ADJUDICATION of already blind-read encoded maḥzor pages. Initial independent blind responses remain in the source repository; this pass compares current source fragments and existing human decisions to images, not a new blind reading. Read all listed overlapping image thirds carefully and compare every printed Hebrew/English word, punctuation, Rashi-script rubric, speaker siglum, citation, vowels/pointing/cantillation and printed reading order against the scoped current dossier. The dossier excludes fragments on other pages, so continuation at edges isn't an omission. Some pages already accepted are excluded from this scope; don't reopen those. English Hebrew incipit linkage cues are intentionally omitted, citations are notes without parentheses, original typos already in source_typo_corrections are emitted sic/corr downstream: do not propose them as missing markup. Use EXACT original scan readings, don't normalize from scripture or another rite. Previously human-settled marks/words are authoritative for their exact occurrences; record actual contrary evidence if any, don't reopen merely because uncertain. Read any human decision file listed. For real uncertain fine marks, inspect original images further if useful and identify exact word/letter and location; don't certify marks you cannot read. Distinguish a true unresolved textual reading from harmless print noise, cosmetic layout, and contextual reconstruction already recorded. Return JSON only {reviewer:{model,actual_effort},pages:[{scan,complete_body_accounted:boolean,source_findings:[{unit,language,printed,current,correction,reason,certainty,location}],unresolved:[{unit,word,mark,location,reason}],citation_and_instruction_findings:[]}],coverage_limits}. Include every scoped page. Do not claim acceptance where readings remain unsettled. Current dossier: /tmp/mahzor-backlog/s110-117/current-readings.json
+Previously recorded human decisions:
+/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/human_morning_s108_s125_snippets_1_to_7.json
+Images:
+/tmp/mahzor-backlog/s110-117/s110-part1.png
+/tmp/mahzor-backlog/s110-117/s110-part2.png
+/tmp/mahzor-backlog/s110-117/s110-part3.png
+/tmp/mahzor-backlog/s110-117/s112-part1.png
+/tmp/mahzor-backlog/s110-117/s112-part2.png
+/tmp/mahzor-backlog/s110-117/s112-part3.png
+/tmp/mahzor-backlog/s110-117/s114-part1.png
+/tmp/mahzor-backlog/s110-117/s114-part2.png
+/tmp/mahzor-backlog/s110-117/s114-part3.png
+/tmp/mahzor-backlog/s110-117/s116-part1.png
+/tmp/mahzor-backlog/s110-117/s116-part2.png
+/tmp/mahzor-backlog/s110-117/s116-part3.png

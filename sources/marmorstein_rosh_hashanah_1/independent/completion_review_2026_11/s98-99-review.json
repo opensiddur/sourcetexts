@@ -1,0 +1,123 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "low-moderate: all six thirds plus the full s98 original were read once and compared against current-readings.json units melekh_azur_gevurah (he s98, en s99). The human decisions file was checked. The blind JSONs in independent/ were not opened."
+  },
+  "pages": [
+    {
+      "scan": "s98",
+      "complete_body_accounted": true,
+      "source_findings": [
+        {
+          "unit": "melekh_azur_gevurah",
+          "language": "he",
+          "printed": "לִשְׁפּוֹט",
+          "current": "כִּי בָא לִשְׁפֹּט אֶת־הָאָרֶץ:",
+          "correction": "כִּי בָא לִשְׁפּוֹט אֶת־הָאָרֶץ:",
+          "reason": "The last word of the line before 'אֶת־הָאָרֶץ' has a full vav between pe and tet (ל-ש-פ-ו-ט) in part3 and in the full original. The current reading drops the vav and uses a defective holam. This is a plene spelling in the source, not a typo, so no sic/corr is needed. The dagesh in pe is not confirmed at this resolution. If it can't be confirmed, use 'לִשְׁפוֹט' with the dagesh flagged.",
+          "certainty": "high for the vav; medium for the dagesh in pe",
+          "location": "s98 part3, line 4 (end, left margin), stanza 12"
+        }
+      ],
+      "unresolved": [
+        {
+          "unit": "melekh_azur_gevurah",
+          "word": "הִתְאַזַּר (×2)",
+          "mark": "vowel under zayin: patah vs qamats; hiriq under he",
+          "location": "s98 part1 last centered line (stanza 4), and part2 line 2 (stanza 6)",
+          "reason": "At this resolution the mark under ז could be a patah or a qamats, and the hiriq under ה is not clearly visible."
+        },
+        {
+          "unit": "melekh_azur_gevurah",
+          "word": "כַשַּׂלְמָה",
+          "mark": "possible dagesh in initial kaf",
+          "location": "s98 part2 line 1 (stanza 5)",
+          "reason": "I can't tell whether there is a dot inside the kaf, so the reading without dagesh is not certified."
+        },
+        {
+          "unit": "melekh_azur_gevurah",
+          "word": "כָאוֹרָה",
+          "mark": "possible dagesh in initial kaf",
+          "location": "s98 part2 line 2 (stanza 5)",
+          "reason": "The inside of the kaf is unclear."
+        },
+        {
+          "unit": "melekh_azur_gevurah",
+          "word": "בָא",
+          "mark": "possible dagesh in bet",
+          "location": "s98 part3 line 4 (stanza 12)",
+          "reason": "The qamats is visible. A dot inside the bet can't be ruled out."
+        },
+        {
+          "unit": "melekh_azur_gevurah",
+          "word": "לָנֶצַח",
+          "mark": "vowel under lamed: qamats vs shva",
+          "location": "s98 part2 last line / part3 line 1 (stanza 10)",
+          "reason": "The mark under ל is small and could be read either way."
+        }
+      ],
+      "citation_and_instruction_findings": [
+        {
+          "unit": "melekh_azur_gevurah",
+          "item": "header note",
+          "status": "Matches the printed text. The human decision (answer 1) also covers it: 'ע״ס א״ב אחרי תבת מלך בראש החרוזים, ובחלק השני מד׳ חרוזים הראשונים חתום שם המחבר גדליה.'"
+        },
+        {
+          "unit": "melekh_azur_gevurah",
+          "item": "קַנֹּא קִנֵּא גָּאֹה גָאָה",
+          "status": "Human decision (answer 5). Not reopened, because the image doesn't clearly contradict it."
+        },
+        {
+          "unit": "(page header)",
+          "item": "35 / יוֹצֵר לְיוֹם רִאשׁוֹן שֶׁל רֹאשׁ הַשָּׁנָה / 35",
+          "status": "This is a running header, not body text, and it is not carried in the units. The printed page number '35' matches."
+        },
+        {
+          "unit": "melekh_azur_gevurah",
+          "item": "line order / stanza layout",
+          "status": "The order matches the dossier: stanzas 1–3 run on, stanza 4 is set as two centred lines ending 'קָדוֹשׁ:', stanzas 5–13 run on, and the page ends at 'מֶלֶךְ' (stanza 14 continues on s100). The comma after 'מֶלֶךְ' in stanza 12 is present in print."
+        }
+      ]
+    },
+    {
+      "scan": "s99",
+      "complete_body_accounted": true,
+      "source_findings": [
+        {
+          "unit": "melekh_azur_gevurah",
+          "language": "en",
+          "printed": "God, who is adored in the council of the holy, is holy.",
+          "current": "The King with ten vestments has girded Himself among holy ones, God who is adored in the council of the holy, is holy.",
+          "correction": "The King with ten vestments has girded Himself among holy ones, God, who is adored in the council of the holy, is holy.",
+          "reason": "The print has a comma after 'God' in the indented stanza 4 paragraph. The current reading leaves it out.",
+          "certainty": "high",
+          "location": "s99 part1, indented paragraph, line 2"
+        }
+      ],
+      "unresolved": [],
+      "citation_and_instruction_findings": [
+        {
+          "unit": "melekh_azur_gevurah",
+          "item": "Hebrew cue 'מלך' at the start of the paragraphs",
+          "status": "This is a linkage cue that was deliberately left out. It is not missing substantive text."
+        },
+        {
+          "unit": "(page header)",
+          "item": "35 / Morning Prayer for the New Year / 35",
+          "status": "This is a running header and is not carried in the units. The page number matches."
+        },
+        {
+          "unit": "melekh_azur_gevurah",
+          "item": "the rest of the English (stanzas 1–3 and 5–13, ending 'The')",
+          "status": "Checked word by word, including 'enflamed', 'The King — all', 'Thine, O Lord, is righteousness.', the line-break hyphens 'Him-/self' and 'right-/eousness', and the final 'The' that continues on s101. No other differences."
+        }
+      ]
+    }
+  ],
+  "coverage_limits": "Only s98 and s99 were judged. The s98 Hebrew can't be accepted as source-verified yet: there is one vav correction and five open dot/vowel questions (listed under unresolved) that a closer look or a human needs to settle. Dagesh and holam dots at this scan resolution were read only where clearly visible, and nothing unclear was certified. Shva/meteg detail on every word was not certified one by one beyond what is reported. The s99 English is clean apart from the comma finding. The blind JSONs in independent/ were not opened, so this review is checked against the dossier and the human decisions only, not against the original blind responses.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "7804e976-dd0d-454d-b087-c1bd06a33dcc"
+  }
+}

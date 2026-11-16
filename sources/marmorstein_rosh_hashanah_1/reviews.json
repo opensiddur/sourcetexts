@@ -16462,7 +16462,8 @@
     "independent_model": "claude-opus-5-5",
     "evidence": [
       "primary/qorbanot_s56_s59.json",
-      "independent/qorbanot_s56_s59.json"
+      "independent/qorbanot_s56_s59.json",
+      "completion_review_2026_11_early_acceptance.json"
     ],
     "differences": [
       {
@@ -16497,16 +16498,21 @@
       }
     ],
     "decisions": {},
-    "unresolved": [
+    "unresolved": [],
+    "complete": true,
+    "pending_ambiguities": [],
+    "encoding_alignment_order_review": "independent/qorbanot_guideline_audit_round2.json",
+    "historical_pending_ambiguities": [
+      "One source glyph remains indistinct after human review; tentative ז has cert=low. No further human question pending."
+    ],
+    "historical_unresolved": [
       "vowels:0:אם|אַם",
       "vowels:1:שבת|שַׁבָּת",
       "consonants:3:פָאלגענדע הינצוגעסעטצט:|פֿאָלגענדעס איינגעשאָלטעט:"
     ],
-    "complete": false,
-    "pending_ambiguities": [
-      "One source glyph remains indistinct after human review; tentative ז has cert=low. No further human question pending."
-    ],
-    "encoding_alignment_order_review": "independent/qorbanot_guideline_audit_round2.json"
+    "final_sha256": "a5d954fcf16fd69055a9b075eb204571f2eea3197b84857f3992c08251d99fbb",
+    "final_verification": "completion_review_2026_11_early_acceptance.json",
+    "settlement": "Existing independent blind readings, source/encoding/alignment audits and earlier human corrections retained. The last uncertain source glyph/mark was expressly adjudicated by the user on2026-11-15 after enlarged source snippets. No further reading dispute remains for this record."
   },
   "psalm_34/he": {
     "primary_sha256": "f2adaafeb4d4c90cd276d2727b4498f4245b65ce9213ba8c9ea3fcdefe564951",
@@ -23664,12 +23670,13 @@
       "human_morning_s86_s97_snippets_1_to_12.json",
       "human_morning_s86_s97_snippets_13_to_16.json",
       "independent/morning_s86_s97_final-audit.json",
-      "independent/morning_s86_s97_delta-audit.json"
+      "independent/morning_s86_s97_delta-audit.json",
+      "completion_review_2026_11_early_acceptance.json"
     ],
     "differences": [],
     "decisions": {},
     "unresolved": [],
-    "complete": false,
+    "complete": true,
     "initial_differences": [
       {
         "bucket": "vowels",
@@ -23872,12 +23879,14 @@
       "vowels:17:בְּת֥וֹךְ|בְּתוֹךְ",
       "vowels:18:הַיָּֽם:|הַיָּם:"
     ],
-    "pending_ambiguities": [
+    "pending_ambiguities": [],
+    "final_sha256": "39b1c493157902c9644f0320905f01d18507f0979cb92ab8627df941fc76605d",
+    "final_verification": "completion_review_2026_11_early_acceptance.json",
+    "settlement": "Existing independent blind readings, source/encoding/alignment audits and earlier human corrections retained. The last uncertain source glyph/mark was expressly adjudicated by the user on2026-11-15 after enlarged source snippets. No further reading dispute remains for this record.",
+    "historical_pending_ambiguities": [
       "Snippet15: probable meteg beside first he in הלכו; user cannot confirm. Encoded as tei:c cert=low. Original PDF has same native1368x2264resolution; no full-source acceptance."
     ],
-    "final_sha256": "a95a386aff2b8d227df0612da72f8154f7f6ca494f96255676b08ce2b71abcbf",
-    "final_verification": "independent/morning_s86_s97_delta-audit.json",
-    "settlement": "Actual first/blind readings preserved. Source spellings, pointing and printed layout adjudicated against enlarged scan pixels, independent accent/word reports and explicit human decisions. Initial differences are not silently discarded: source patches, human raw replies and review provenance provide the resolutions. Structural guideline/alignment/order reviews approved. Human15is expressly unresolved; probable point remains cert=low."
+    "historical_unresolved": []
   },
   "ki_ladonai/he": {
     "primary_sha256": "02db34be2a20774ef01a3a8a3efc677174422c9507a98beb4f839ed3693ac308",
@@ -24834,16 +24843,22 @@
     ]
   },
   "morning_numbers_14_17/en": {
-    "complete": false,
+    "complete": true,
     "primary_model": "GPT-6 (Codex)",
     "independent_model": "claude-opus-5-5",
-    "evidence": [
-      "primary/morning_s96_s109_initial.json",
-      "morning_s96_s109_review_provenance.json"
+    "primary_sha256": "0929b7652a6018102d88e1b03165e7dc7292782dbc4b2c982c53eb08c03a2873",
+    "independent_sha256": "b1bfaa28c4e6eae60b04229c65c7cfc4021919cf921aeb3822c6d30dd8562d50",
+    "reading_hash_scope": "Actual original primary English page blocks and actual blind independent page bundles; not fabricated unit-specific readings. Exact final unit/instruction payload separately bound.",
+    "final_sha256": "60b31286d5fbf2f96c71fa010c066e178665d0ea55a3c74bd24863454bb79ef2",
+    "source_scans": [
+      "s97"
     ],
-    "pending_ambiguities": [
-      "Source adjudication and final guideline/alignment/order review pending; no acceptance implied."
-    ]
+    "configured_effort": "medium",
+    "self_reported_effort": "Actual per-review effort preserved in each source and guideline response.",
+    "evidence": "completion_review_2026_11_yotzer_english_acceptance.json",
+    "unresolved": [],
+    "pending_ambiguities": [],
+    "settlement": "Original blind source reading, current full-page English comparisons, corrected English commas on97/99/103, source typo corrections already represented sic/corr (prophesy/prophecy and Name./Name,), and independent guideline/alignment/order follow-up. The tick between fear/the on107 is non-text printing noise, not an unsettled reading. Source correspondence/quotation improvements validated and conditional behavior checked in actual compilations."
   },
   "morning_psalm_25_6/he": {
     "complete": false,
@@ -24858,16 +24873,22 @@
     ]
   },
   "morning_psalm_25_6/en": {
-    "complete": false,
+    "complete": true,
     "primary_model": "GPT-6 (Codex)",
     "independent_model": "claude-opus-5-5",
-    "evidence": [
-      "primary/morning_s96_s109_initial.json",
-      "morning_s96_s109_review_provenance.json"
+    "primary_sha256": "0929b7652a6018102d88e1b03165e7dc7292782dbc4b2c982c53eb08c03a2873",
+    "independent_sha256": "b1bfaa28c4e6eae60b04229c65c7cfc4021919cf921aeb3822c6d30dd8562d50",
+    "reading_hash_scope": "Actual original primary English page blocks and actual blind independent page bundles; not fabricated unit-specific readings. Exact final unit/instruction payload separately bound.",
+    "final_sha256": "a0da7bcc69a29e2770b7f71fb06c9abc9a87ac18affc778a94967501d258843c",
+    "source_scans": [
+      "s97"
     ],
-    "pending_ambiguities": [
-      "Source adjudication and final guideline/alignment/order review pending; no acceptance implied."
-    ]
+    "configured_effort": "medium",
+    "self_reported_effort": "Actual per-review effort preserved in each source and guideline response.",
+    "evidence": "completion_review_2026_11_yotzer_english_acceptance.json",
+    "unresolved": [],
+    "pending_ambiguities": [],
+    "settlement": "Original blind source reading, current full-page English comparisons, corrected English commas on97/99/103, source typo corrections already represented sic/corr (prophesy/prophecy and Name./Name,), and independent guideline/alignment/order follow-up. The tick between fear/the on107 is non-text printing noise, not an unsettled reading. Source correspondence/quotation improvements validated and conditional behavior checked in actual compilations."
   },
   "morning_kaddish/he": {
     "complete": false,
@@ -24882,16 +24903,22 @@
     ]
   },
   "morning_kaddish/en": {
-    "complete": false,
+    "complete": true,
     "primary_model": "GPT-6 (Codex)",
     "independent_model": "claude-opus-5-5",
-    "evidence": [
-      "primary/morning_s96_s109_initial.json",
-      "morning_s96_s109_review_provenance.json"
+    "primary_sha256": "0929b7652a6018102d88e1b03165e7dc7292782dbc4b2c982c53eb08c03a2873",
+    "independent_sha256": "b1bfaa28c4e6eae60b04229c65c7cfc4021919cf921aeb3822c6d30dd8562d50",
+    "reading_hash_scope": "Actual original primary English page blocks and actual blind independent page bundles; not fabricated unit-specific readings. Exact final unit/instruction payload separately bound.",
+    "final_sha256": "4124cd5dec4106eca540740baec4665ac39c4db4af79487321ea306f9a568e93",
+    "source_scans": [
+      "s97"
     ],
-    "pending_ambiguities": [
-      "Source adjudication and final guideline/alignment/order review pending; no acceptance implied."
-    ]
+    "configured_effort": "medium",
+    "self_reported_effort": "Actual per-review effort preserved in each source and guideline response.",
+    "evidence": "completion_review_2026_11_yotzer_english_acceptance.json",
+    "unresolved": [],
+    "pending_ambiguities": [],
+    "settlement": "Original blind source reading, current full-page English comparisons, corrected English commas on97/99/103, source typo corrections already represented sic/corr (prophesy/prophecy and Name./Name,), and independent guideline/alignment/order follow-up. The tick between fear/the on107 is non-text printing noise, not an unsettled reading. Source correspondence/quotation improvements validated and conditional behavior checked in actual compilations."
   },
   "morning_barekhu/he": {
     "complete": false,
@@ -24906,16 +24933,22 @@
     ]
   },
   "morning_barekhu/en": {
-    "complete": false,
+    "complete": true,
     "primary_model": "GPT-6 (Codex)",
     "independent_model": "claude-opus-5-5",
-    "evidence": [
-      "primary/morning_s96_s109_initial.json",
-      "morning_s96_s109_review_provenance.json"
+    "primary_sha256": "0929b7652a6018102d88e1b03165e7dc7292782dbc4b2c982c53eb08c03a2873",
+    "independent_sha256": "b1bfaa28c4e6eae60b04229c65c7cfc4021919cf921aeb3822c6d30dd8562d50",
+    "reading_hash_scope": "Actual original primary English page blocks and actual blind independent page bundles; not fabricated unit-specific readings. Exact final unit/instruction payload separately bound.",
+    "final_sha256": "e579a8c1e4e206cfc644da955e3584651dd0ca5135946690e2303cfab35a3def",
+    "source_scans": [
+      "s97"
     ],
-    "pending_ambiguities": [
-      "Source adjudication and final guideline/alignment/order review pending; no acceptance implied."
-    ]
+    "configured_effort": "medium",
+    "self_reported_effort": "Actual per-review effort preserved in each source and guideline response.",
+    "evidence": "completion_review_2026_11_yotzer_english_acceptance.json",
+    "unresolved": [],
+    "pending_ambiguities": [],
+    "settlement": "Original blind source reading, current full-page English comparisons, corrected English commas on97/99/103, source typo corrections already represented sic/corr (prophesy/prophecy and Name./Name,), and independent guideline/alignment/order follow-up. The tick between fear/the on107 is non-text printing noise, not an unsettled reading. Source correspondence/quotation improvements validated and conditional behavior checked in actual compilations."
   },
   "yotzer_opening/he": {
     "complete": false,
@@ -24930,16 +24963,22 @@
     ]
   },
   "yotzer_opening/en": {
-    "complete": false,
+    "complete": true,
     "primary_model": "GPT-6 (Codex)",
     "independent_model": "claude-opus-5-5",
-    "evidence": [
-      "primary/morning_s96_s109_initial.json",
-      "morning_s96_s109_review_provenance.json"
+    "primary_sha256": "0929b7652a6018102d88e1b03165e7dc7292782dbc4b2c982c53eb08c03a2873",
+    "independent_sha256": "b1bfaa28c4e6eae60b04229c65c7cfc4021919cf921aeb3822c6d30dd8562d50",
+    "reading_hash_scope": "Actual original primary English page blocks and actual blind independent page bundles; not fabricated unit-specific readings. Exact final unit/instruction payload separately bound.",
+    "final_sha256": "212f914fd171277c7134908be6e5d3f57e6ce070217a9850ef4c7a0e65468336",
+    "source_scans": [
+      "s97"
     ],
-    "pending_ambiguities": [
-      "Source adjudication and final guideline/alignment/order review pending; no acceptance implied."
-    ]
+    "configured_effort": "medium",
+    "self_reported_effort": "Actual per-review effort preserved in each source and guideline response.",
+    "evidence": "completion_review_2026_11_yotzer_english_acceptance.json",
+    "unresolved": [],
+    "pending_ambiguities": [],
+    "settlement": "Original blind source reading, current full-page English comparisons, corrected English commas on97/99/103, source typo corrections already represented sic/corr (prophesy/prophecy and Name./Name,), and independent guideline/alignment/order follow-up. The tick between fear/the on107 is non-text printing noise, not an unsettled reading. Source correspondence/quotation improvements validated and conditional behavior checked in actual compilations."
   },
   "or_olam/he": {
     "complete": false,
@@ -24954,16 +24993,22 @@
     ]
   },
   "or_olam/en": {
-    "complete": false,
+    "complete": true,
     "primary_model": "GPT-6 (Codex)",
     "independent_model": "claude-opus-5-5",
-    "evidence": [
-      "primary/morning_s96_s109_initial.json",
-      "morning_s96_s109_review_provenance.json"
+    "primary_sha256": "0929b7652a6018102d88e1b03165e7dc7292782dbc4b2c982c53eb08c03a2873",
+    "independent_sha256": "b1bfaa28c4e6eae60b04229c65c7cfc4021919cf921aeb3822c6d30dd8562d50",
+    "reading_hash_scope": "Actual original primary English page blocks and actual blind independent page bundles; not fabricated unit-specific readings. Exact final unit/instruction payload separately bound.",
+    "final_sha256": "c2fea32f9c6fb48767455983b17c14df458887708cac308c4f179a6b18593fce",
+    "source_scans": [
+      "s97"
     ],
-    "pending_ambiguities": [
-      "Source adjudication and final guideline/alignment/order review pending; no acceptance implied."
-    ]
+    "configured_effort": "medium",
+    "self_reported_effort": "Actual per-review effort preserved in each source and guideline response.",
+    "evidence": "completion_review_2026_11_yotzer_english_acceptance.json",
+    "unresolved": [],
+    "pending_ambiguities": [],
+    "settlement": "Original blind source reading, current full-page English comparisons, corrected English commas on97/99/103, source typo corrections already represented sic/corr (prophesy/prophecy and Name./Name,), and independent guideline/alignment/order follow-up. The tick between fear/the on107 is non-text printing noise, not an unsettled reading. Source correspondence/quotation improvements validated and conditional behavior checked in actual compilations."
   },
   "melekh_azur_gevurah/he": {
     "complete": false,
@@ -24984,16 +25029,23 @@
     ]
   },
   "melekh_azur_gevurah/en": {
-    "complete": false,
+    "complete": true,
     "primary_model": "GPT-6 (Codex)",
     "independent_model": "claude-opus-5-5",
-    "evidence": [
-      "primary/morning_s96_s109_initial.json",
-      "morning_s96_s109_review_provenance.json"
+    "primary_sha256": "d36d44130d6156f721985fdabd0b6c0c8e5a2a237d513972d55b463a7bac99d1",
+    "independent_sha256": "dea85ea20c42f147e253be7dfbe310ee5cbdfb32a72e2850c3742b7ce6b7955f",
+    "reading_hash_scope": "Actual original primary English page blocks and actual blind independent page bundles; not fabricated unit-specific readings. Exact final unit/instruction payload separately bound.",
+    "final_sha256": "de6dd3b171b3ea5d62bd2d7280aaae135614c81a8fcd97c7ba75d3e82ae45e0d",
+    "source_scans": [
+      "s101",
+      "s99"
     ],
-    "pending_ambiguities": [
-      "Source adjudication and final guideline/alignment/order review pending; no acceptance implied."
-    ]
+    "configured_effort": "medium",
+    "self_reported_effort": "Actual per-review effort preserved in each source and guideline response.",
+    "evidence": "completion_review_2026_11_yotzer_english_acceptance.json",
+    "unresolved": [],
+    "pending_ambiguities": [],
+    "settlement": "Original blind source reading, current full-page English comparisons, corrected English commas on97/99/103, source typo corrections already represented sic/corr (prophesy/prophecy and Name./Name,), and independent guideline/alignment/order follow-up. The tick between fear/the on107 is non-text printing noise, not an unsettled reading. Source correspondence/quotation improvements validated and conditional behavior checked in actual compilations."
   },
   "yotzer_hameir/he": {
     "complete": false,
@@ -25008,16 +25060,23 @@
     ]
   },
   "yotzer_hameir/en": {
-    "complete": false,
+    "complete": true,
     "primary_model": "GPT-6 (Codex)",
     "independent_model": "claude-opus-5-5",
-    "evidence": [
-      "primary/morning_s96_s109_initial.json",
-      "morning_s96_s109_review_provenance.json"
+    "primary_sha256": "4416cbcd6a0b60fe890cbb970c3dad26d28201cf618bf5ab09ddfd5eab6b0a81",
+    "independent_sha256": "bab1dff64400404a62f8e2f2df01674be2056e39fb9ec95c984173876897ea7d",
+    "reading_hash_scope": "Actual original primary English page blocks and actual blind independent page bundles; not fabricated unit-specific readings. Exact final unit/instruction payload separately bound.",
+    "final_sha256": "bb2b751a26a4c6accde81d52cbeb1d6897e73656169816a2ee43ca5e88d1b7b6",
+    "source_scans": [
+      "s103",
+      "s105"
     ],
-    "pending_ambiguities": [
-      "Source adjudication and final guideline/alignment/order review pending; no acceptance implied."
-    ]
+    "configured_effort": "medium",
+    "self_reported_effort": "Actual per-review effort preserved in each source and guideline response.",
+    "evidence": "completion_review_2026_11_yotzer_english_acceptance.json",
+    "unresolved": [],
+    "pending_ambiguities": [],
+    "settlement": "Original blind source reading, current full-page English comparisons, corrected English commas on97/99/103, source typo corrections already represented sic/corr (prophesy/prophecy and Name./Name,), and independent guideline/alignment/order follow-up. The tick between fear/the on107 is non-text printing noise, not an unsettled reading. Source correspondence/quotation improvements validated and conditional behavior checked in actual compilations."
   },
   "yotzer_el_barukh/he": {
     "complete": false,
@@ -25032,16 +25091,22 @@
     ]
   },
   "yotzer_el_barukh/en": {
-    "complete": false,
+    "complete": true,
     "primary_model": "GPT-6 (Codex)",
     "independent_model": "claude-opus-5-5",
-    "evidence": [
-      "primary/morning_s96_s109_initial.json",
-      "morning_s96_s109_review_provenance.json"
+    "primary_sha256": "875eb3824e05e6fc8e2278a9200fb37f553e6fed884c6d131c137011f3f2f3ca",
+    "independent_sha256": "ce82ebe4b0d90d7a06511c990d0594cd9d987cc7bf3de10aa41f561cd3649005",
+    "reading_hash_scope": "Actual original primary English page blocks and actual blind independent page bundles; not fabricated unit-specific readings. Exact final unit/instruction payload separately bound.",
+    "final_sha256": "7722ad47b4a044b3dd4d9ed79b0c4c9b7bc268d8ecb26e5c2bab39b65247cc98",
+    "source_scans": [
+      "s105"
     ],
-    "pending_ambiguities": [
-      "Source adjudication and final guideline/alignment/order review pending; no acceptance implied."
-    ]
+    "configured_effort": "medium",
+    "self_reported_effort": "Actual per-review effort preserved in each source and guideline response.",
+    "evidence": "completion_review_2026_11_yotzer_english_acceptance.json",
+    "unresolved": [],
+    "pending_ambiguities": [],
+    "settlement": "Original blind source reading, current full-page English comparisons, corrected English commas on97/99/103, source typo corrections already represented sic/corr (prophesy/prophecy and Name./Name,), and independent guideline/alignment/order follow-up. The tick between fear/the on107 is non-text printing noise, not an unsettled reading. Source correspondence/quotation improvements validated and conditional behavior checked in actual compilations."
   },
   "yotzer_hakol_yodukha/he": {
     "complete": false,
@@ -25056,16 +25121,22 @@
     ]
   },
   "yotzer_hakol_yodukha/en": {
-    "complete": false,
+    "complete": true,
     "primary_model": "GPT-6 (Codex)",
     "independent_model": "claude-opus-5-5",
-    "evidence": [
-      "primary/morning_s96_s109_initial.json",
-      "morning_s96_s109_review_provenance.json"
+    "primary_sha256": "9076f33373b0b959f0d226e99d1f97feb68f2eceb3b4742e7df877c1faf41731",
+    "independent_sha256": "b404acc9d28da66d169add68da9e4d382329c05bd238229f47acd9d6b327ddb5",
+    "reading_hash_scope": "Actual original primary English page blocks and actual blind independent page bundles; not fabricated unit-specific readings. Exact final unit/instruction payload separately bound.",
+    "final_sha256": "ff48a691481a871642f410dc7c4e8ea5fb5178ddf256874df91fb0fc95cddc2b",
+    "source_scans": [
+      "s103"
     ],
-    "pending_ambiguities": [
-      "Source adjudication and final guideline/alignment/order review pending; no acceptance implied."
-    ]
+    "configured_effort": "medium",
+    "self_reported_effort": "Actual per-review effort preserved in each source and guideline response.",
+    "evidence": "completion_review_2026_11_yotzer_english_acceptance.json",
+    "unresolved": [],
+    "pending_ambiguities": [],
+    "settlement": "Original blind source reading, current full-page English comparisons, corrected English commas on97/99/103, source typo corrections already represented sic/corr (prophesy/prophecy and Name./Name,), and independent guideline/alignment/order follow-up. The tick between fear/the on107 is non-text printing noise, not an unsettled reading. Source correspondence/quotation improvements validated and conditional behavior checked in actual compilations."
   },
   "el_adon/he": {
     "complete": false,
@@ -25080,16 +25151,23 @@
     ]
   },
   "el_adon/en": {
-    "complete": false,
+    "complete": true,
     "primary_model": "GPT-6 (Codex)",
     "independent_model": "claude-opus-5-5",
-    "evidence": [
-      "primary/morning_s96_s109_initial.json",
-      "morning_s96_s109_review_provenance.json"
+    "primary_sha256": "4416cbcd6a0b60fe890cbb970c3dad26d28201cf618bf5ab09ddfd5eab6b0a81",
+    "independent_sha256": "bab1dff64400404a62f8e2f2df01674be2056e39fb9ec95c984173876897ea7d",
+    "reading_hash_scope": "Actual original primary English page blocks and actual blind independent page bundles; not fabricated unit-specific readings. Exact final unit/instruction payload separately bound.",
+    "final_sha256": "a8fea9a6a232979d34e3660bdc075a436ae401ecbe1c580506ba029fae14147e",
+    "source_scans": [
+      "s103",
+      "s105"
     ],
-    "pending_ambiguities": [
-      "Source adjudication and final guideline/alignment/order review pending; no acceptance implied."
-    ]
+    "configured_effort": "medium",
+    "self_reported_effort": "Actual per-review effort preserved in each source and guideline response.",
+    "evidence": "completion_review_2026_11_yotzer_english_acceptance.json",
+    "unresolved": [],
+    "pending_ambiguities": [],
+    "settlement": "Original blind source reading, current full-page English comparisons, corrected English commas on97/99/103, source typo corrections already represented sic/corr (prophesy/prophecy and Name./Name,), and independent guideline/alignment/order follow-up. The tick between fear/the on107 is non-text printing noise, not an unsettled reading. Source correspondence/quotation improvements validated and conditional behavior checked in actual compilations."
   },
   "lael_asher_shavat/he": {
     "complete": false,
@@ -25104,16 +25182,22 @@
     ]
   },
   "lael_asher_shavat/en": {
-    "complete": false,
+    "complete": true,
     "primary_model": "GPT-6 (Codex)",
     "independent_model": "claude-opus-5-5",
-    "evidence": [
-      "primary/morning_s96_s109_initial.json",
-      "morning_s96_s109_review_provenance.json"
+    "primary_sha256": "875eb3824e05e6fc8e2278a9200fb37f553e6fed884c6d131c137011f3f2f3ca",
+    "independent_sha256": "ce82ebe4b0d90d7a06511c990d0594cd9d987cc7bf3de10aa41f561cd3649005",
+    "reading_hash_scope": "Actual original primary English page blocks and actual blind independent page bundles; not fabricated unit-specific readings. Exact final unit/instruction payload separately bound.",
+    "final_sha256": "9be051980e0ad8a5fd50788b6afda58fb9362c0dbdb7666186fe4cfa7517216c",
+    "source_scans": [
+      "s105"
     ],
-    "pending_ambiguities": [
-      "Source adjudication and final guideline/alignment/order review pending; no acceptance implied."
-    ]
+    "configured_effort": "medium",
+    "self_reported_effort": "Actual per-review effort preserved in each source and guideline response.",
+    "evidence": "completion_review_2026_11_yotzer_english_acceptance.json",
+    "unresolved": [],
+    "pending_ambiguities": [],
+    "settlement": "Original blind source reading, current full-page English comparisons, corrected English commas on97/99/103, source typo corrections already represented sic/corr (prophesy/prophecy and Name./Name,), and independent guideline/alignment/order follow-up. The tick between fear/the on107 is non-text printing noise, not an unsettled reading. Source correspondence/quotation improvements validated and conditional behavior checked in actual compilations."
   },
   "yotzer_titbarakh/he": {
     "complete": false,
@@ -25128,16 +25212,22 @@
     ]
   },
   "yotzer_titbarakh/en": {
-    "complete": false,
+    "complete": true,
     "primary_model": "GPT-6 (Codex)",
     "independent_model": "claude-opus-5-5",
-    "evidence": [
-      "primary/morning_s96_s109_initial.json",
-      "morning_s96_s109_review_provenance.json"
+    "primary_sha256": "447bf8e0b3dbc972b2dd0a0f7a1db8286185f5231441adfebf9b38ca920fe0bd",
+    "independent_sha256": "8e7ef0d7045a9dc7c153a885afc6ca8c652c0ca5fb410c64d86857aad0ef96dd",
+    "reading_hash_scope": "Actual original primary English page blocks and actual blind independent page bundles; not fabricated unit-specific readings. Exact final unit/instruction payload separately bound.",
+    "final_sha256": "04efc323e6aebd0465c2f4e2771a5e1dc073c358697ef930e639e354aeff7c50",
+    "source_scans": [
+      "s107"
     ],
-    "pending_ambiguities": [
-      "Source adjudication and final guideline/alignment/order review pending; no acceptance implied."
-    ]
+    "configured_effort": "medium",
+    "self_reported_effort": "Actual per-review effort preserved in each source and guideline response.",
+    "evidence": "completion_review_2026_11_yotzer_english_acceptance.json",
+    "unresolved": [],
+    "pending_ambiguities": [],
+    "settlement": "Original blind source reading, current full-page English comparisons, corrected English commas on97/99/103, source typo corrections already represented sic/corr (prophesy/prophecy and Name./Name,), and independent guideline/alignment/order follow-up. The tick between fear/the on107 is non-text printing noise, not an unsettled reading. Source correspondence/quotation improvements validated and conditional behavior checked in actual compilations."
   },
   "yotzer_et_shem/he": {
     "complete": false,
@@ -25152,16 +25242,22 @@
     ]
   },
   "yotzer_et_shem/en": {
-    "complete": false,
+    "complete": true,
     "primary_model": "GPT-6 (Codex)",
     "independent_model": "claude-opus-5-5",
-    "evidence": [
-      "primary/morning_s96_s109_initial.json",
-      "morning_s96_s109_review_provenance.json"
+    "primary_sha256": "447bf8e0b3dbc972b2dd0a0f7a1db8286185f5231441adfebf9b38ca920fe0bd",
+    "independent_sha256": "8e7ef0d7045a9dc7c153a885afc6ca8c652c0ca5fb410c64d86857aad0ef96dd",
+    "reading_hash_scope": "Actual original primary English page blocks and actual blind independent page bundles; not fabricated unit-specific readings. Exact final unit/instruction payload separately bound.",
+    "final_sha256": "ed5ef921f2cda26c7d9e1f57d2e3b89aa527dee8105da85b96cee1675089ca30",
+    "source_scans": [
+      "s107"
     ],
-    "pending_ambiguities": [
-      "Source adjudication and final guideline/alignment/order review pending; no acceptance implied."
-    ]
+    "configured_effort": "medium",
+    "self_reported_effort": "Actual per-review effort preserved in each source and guideline response.",
+    "evidence": "completion_review_2026_11_yotzer_english_acceptance.json",
+    "unresolved": [],
+    "pending_ambiguities": [],
+    "settlement": "Original blind source reading, current full-page English comparisons, corrected English commas on97/99/103, source typo corrections already represented sic/corr (prophesy/prophecy and Name./Name,), and independent guideline/alignment/order follow-up. The tick between fear/the on107 is non-text printing noise, not an unsettled reading. Source correspondence/quotation improvements validated and conditional behavior checked in actual compilations."
   },
   "yotzer_qadosh/he": {
     "complete": false,
@@ -25176,16 +25272,22 @@
     ]
   },
   "yotzer_qadosh/en": {
-    "complete": false,
+    "complete": true,
     "primary_model": "GPT-6 (Codex)",
     "independent_model": "claude-opus-5-5",
-    "evidence": [
-      "primary/morning_s96_s109_initial.json",
-      "morning_s96_s109_review_provenance.json"
+    "primary_sha256": "447bf8e0b3dbc972b2dd0a0f7a1db8286185f5231441adfebf9b38ca920fe0bd",
+    "independent_sha256": "8e7ef0d7045a9dc7c153a885afc6ca8c652c0ca5fb410c64d86857aad0ef96dd",
+    "reading_hash_scope": "Actual original primary English page blocks and actual blind independent page bundles; not fabricated unit-specific readings. Exact final unit/instruction payload separately bound.",
+    "final_sha256": "5130744a8a7ece27fb29cf673026971938ef566bd0c560b1c6d4001c52d2e1d7",
+    "source_scans": [
+      "s107"
     ],
-    "pending_ambiguities": [
-      "Source adjudication and final guideline/alignment/order review pending; no acceptance implied."
-    ]
+    "configured_effort": "medium",
+    "self_reported_effort": "Actual per-review effort preserved in each source and guideline response.",
+    "evidence": "completion_review_2026_11_yotzer_english_acceptance.json",
+    "unresolved": [],
+    "pending_ambiguities": [],
+    "settlement": "Original blind source reading, current full-page English comparisons, corrected English commas on97/99/103, source typo corrections already represented sic/corr (prophesy/prophecy and Name./Name,), and independent guideline/alignment/order follow-up. The tick between fear/the on107 is non-text printing noise, not an unsettled reading. Source correspondence/quotation improvements validated and conditional behavior checked in actual compilations."
   },
   "khevodo_ihel/he": {
     "complete": false,
@@ -25212,16 +25314,23 @@
     ]
   },
   "khevodo_ihel/en": {
-    "complete": false,
+    "complete": true,
     "primary_model": "GPT-6 (Codex)",
     "independent_model": "claude-opus-5-5",
-    "evidence": [
-      "primary/morning_s96_s109_initial.json",
-      "morning_s96_s109_review_provenance.json"
+    "primary_sha256": "cefe7954a665349dc13753ca79f3ed14c359facce44233eb4d20ae19b464f32f",
+    "independent_sha256": "e85bc46670b8baa04ac58bd575fe0d79766e6c693f761385c5eb734cbb0a360b",
+    "reading_hash_scope": "Actual original primary English page blocks and actual blind independent page bundles; not fabricated unit-specific readings. Exact final unit/instruction payload separately bound.",
+    "final_sha256": "4aba7be0f0065eaa98186a888a0b2a11de609e33487dcf1c42a390f7dd3c105b",
+    "source_scans": [
+      "s107",
+      "s109"
     ],
-    "pending_ambiguities": [
-      "Source adjudication and final guideline/alignment/order review pending; no acceptance implied."
-    ]
+    "configured_effort": "medium",
+    "self_reported_effort": "Actual per-review effort preserved in each source and guideline response.",
+    "evidence": "completion_review_2026_11_yotzer_english_acceptance.json",
+    "unresolved": [],
+    "pending_ambiguities": [],
+    "settlement": "Original blind source reading, current full-page English comparisons, corrected English commas on97/99/103, source typo corrections already represented sic/corr (prophesy/prophecy and Name./Name,), and independent guideline/alignment/order follow-up. The tick between fear/the on107 is non-text printing noise, not an unsettled reading. Source correspondence/quotation improvements validated and conditional behavior checked in actual compilations."
   },
   "yotzer_vehaofannim/he": {
     "complete": false,
@@ -25236,16 +25345,22 @@
     ]
   },
   "yotzer_vehaofannim/en": {
-    "complete": false,
+    "complete": true,
     "primary_model": "GPT-6 (Codex)",
     "independent_model": "claude-opus-5-5",
-    "evidence": [
-      "primary/morning_s96_s109_initial.json",
-      "morning_s96_s109_review_provenance.json"
+    "primary_sha256": "039482c0837b91191c2471f72263278945317743e9012e6d2c12270b1014ff5c",
+    "independent_sha256": "343a6e083199f9ff772cf144c3895c88a7cffa6b4cb8e93790ee28c8be38df5d",
+    "reading_hash_scope": "Actual original primary English page blocks and actual blind independent page bundles; not fabricated unit-specific readings. Exact final unit/instruction payload separately bound.",
+    "final_sha256": "7f5d8e887044b5f4548a6b26357839fe99969efd3238c03094c18a8294c4eddc",
+    "source_scans": [
+      "s109"
     ],
-    "pending_ambiguities": [
-      "Source adjudication and final guideline/alignment/order review pending; no acceptance implied."
-    ]
+    "configured_effort": "medium",
+    "self_reported_effort": "Actual per-review effort preserved in each source and guideline response.",
+    "evidence": "completion_review_2026_11_yotzer_english_acceptance.json",
+    "unresolved": [],
+    "pending_ambiguities": [],
+    "settlement": "Original blind source reading, current full-page English comparisons, corrected English commas on97/99/103, source typo corrections already represented sic/corr (prophesy/prophecy and Name./Name,), and independent guideline/alignment/order follow-up. The tick between fear/the on107 is non-text printing noise, not an unsettled reading. Source correspondence/quotation improvements validated and conditional behavior checked in actual compilations."
   },
   "yotzer_barukh_kevod/he": {
     "complete": false,
@@ -25260,16 +25375,22 @@
     ]
   },
   "yotzer_barukh_kevod/en": {
-    "complete": false,
+    "complete": true,
     "primary_model": "GPT-6 (Codex)",
     "independent_model": "claude-opus-5-5",
-    "evidence": [
-      "primary/morning_s96_s109_initial.json",
-      "morning_s96_s109_review_provenance.json"
+    "primary_sha256": "039482c0837b91191c2471f72263278945317743e9012e6d2c12270b1014ff5c",
+    "independent_sha256": "343a6e083199f9ff772cf144c3895c88a7cffa6b4cb8e93790ee28c8be38df5d",
+    "reading_hash_scope": "Actual original primary English page blocks and actual blind independent page bundles; not fabricated unit-specific readings. Exact final unit/instruction payload separately bound.",
+    "final_sha256": "741ba6ea19ebeb5a0acea01d8b3993c5229264987bea4b600ee09d1658e7b37d",
+    "source_scans": [
+      "s109"
     ],
-    "pending_ambiguities": [
-      "Source adjudication and final guideline/alignment/order review pending; no acceptance implied."
-    ]
+    "configured_effort": "medium",
+    "self_reported_effort": "Actual per-review effort preserved in each source and guideline response.",
+    "evidence": "completion_review_2026_11_yotzer_english_acceptance.json",
+    "unresolved": [],
+    "pending_ambiguities": [],
+    "settlement": "Original blind source reading, current full-page English comparisons, corrected English commas on97/99/103, source typo corrections already represented sic/corr (prophesy/prophecy and Name./Name,), and independent guideline/alignment/order follow-up. The tick between fear/the on107 is non-text printing noise, not an unsettled reading. Source correspondence/quotation improvements validated and conditional behavior checked in actual compilations."
   },
   "yotzer_lael_barukh/he": {
     "complete": false,
@@ -25284,16 +25405,22 @@
     ]
   },
   "yotzer_lael_barukh/en": {
-    "complete": false,
+    "complete": true,
     "primary_model": "GPT-6 (Codex)",
     "independent_model": "claude-opus-5-5",
-    "evidence": [
-      "primary/morning_s96_s109_initial.json",
-      "morning_s96_s109_review_provenance.json"
+    "primary_sha256": "039482c0837b91191c2471f72263278945317743e9012e6d2c12270b1014ff5c",
+    "independent_sha256": "343a6e083199f9ff772cf144c3895c88a7cffa6b4cb8e93790ee28c8be38df5d",
+    "reading_hash_scope": "Actual original primary English page blocks and actual blind independent page bundles; not fabricated unit-specific readings. Exact final unit/instruction payload separately bound.",
+    "final_sha256": "86a70302d0078598bd1df2253fef0763b5b5c4c215adfd7525c38d9583ea1bce",
+    "source_scans": [
+      "s109"
     ],
-    "pending_ambiguities": [
-      "Source adjudication and final guideline/alignment/order review pending; no acceptance implied."
-    ]
+    "configured_effort": "medium",
+    "self_reported_effort": "Actual per-review effort preserved in each source and guideline response.",
+    "evidence": "completion_review_2026_11_yotzer_english_acceptance.json",
+    "unresolved": [],
+    "pending_ambiguities": [],
+    "settlement": "Original blind source reading, current full-page English comparisons, corrected English commas on97/99/103, source typo corrections already represented sic/corr (prophesy/prophecy and Name./Name,), and independent guideline/alignment/order follow-up. The tick between fear/the on107 is non-text printing noise, not an unsettled reading. Source correspondence/quotation improvements validated and conditional behavior checked in actual compilations."
   },
   "yotzer_or_chadash/he": {
     "complete": false,
@@ -25308,16 +25435,22 @@
     ]
   },
   "yotzer_or_chadash/en": {
-    "complete": false,
+    "complete": true,
     "primary_model": "GPT-6 (Codex)",
     "independent_model": "claude-opus-5-5",
-    "evidence": [
-      "primary/morning_s96_s109_initial.json",
-      "morning_s96_s109_review_provenance.json"
+    "primary_sha256": "039482c0837b91191c2471f72263278945317743e9012e6d2c12270b1014ff5c",
+    "independent_sha256": "343a6e083199f9ff772cf144c3895c88a7cffa6b4cb8e93790ee28c8be38df5d",
+    "reading_hash_scope": "Actual original primary English page blocks and actual blind independent page bundles; not fabricated unit-specific readings. Exact final unit/instruction payload separately bound.",
+    "final_sha256": "865f83eb929d0a99426daee4e263982a2e914a60be8f74917a2e70272b9d8ba5",
+    "source_scans": [
+      "s109"
     ],
-    "pending_ambiguities": [
-      "Source adjudication and final guideline/alignment/order review pending; no acceptance implied."
-    ]
+    "configured_effort": "medium",
+    "self_reported_effort": "Actual per-review effort preserved in each source and guideline response.",
+    "evidence": "completion_review_2026_11_yotzer_english_acceptance.json",
+    "unresolved": [],
+    "pending_ambiguities": [],
+    "settlement": "Original blind source reading, current full-page English comparisons, corrected English commas on97/99/103, source typo corrections already represented sic/corr (prophesy/prophecy and Name./Name,), and independent guideline/alignment/order follow-up. The tick between fear/the on107 is non-text printing noise, not an unsettled reading. Source correspondence/quotation improvements validated and conditional behavior checked in actual compilations."
   },
   "instruction/yotzer_shabbat_below_he": {
     "complete": false,
@@ -25326,10 +25459,22 @@
     ]
   },
   "instruction/yotzer_shabbat_below_en": {
-    "complete": false,
-    "pending_ambiguities": [
-      "Source routing rubric review pending."
-    ]
+    "complete": true,
+    "primary_model": "GPT-6 (Codex)",
+    "independent_model": "claude-opus-5-5",
+    "primary_sha256": "9076f33373b0b959f0d226e99d1f97feb68f2eceb3b4742e7df877c1faf41731",
+    "independent_sha256": "b404acc9d28da66d169add68da9e4d382329c05bd238229f47acd9d6b327ddb5",
+    "reading_hash_scope": "Actual original primary English page blocks and actual blind independent page bundles; not fabricated unit-specific readings. Exact final unit/instruction payload separately bound.",
+    "final_sha256": "e3d5f6630b50c9023e6c7055fe8c0e98fe17233e7fd0e5545a02d4bc2f6d40c0",
+    "source_scans": [
+      "s103"
+    ],
+    "configured_effort": "medium",
+    "self_reported_effort": "Actual per-review effort preserved in each source and guideline response.",
+    "evidence": "completion_review_2026_11_yotzer_english_acceptance.json",
+    "unresolved": [],
+    "pending_ambiguities": [],
+    "settlement": "Original blind source reading, current full-page English comparisons, corrected English commas on97/99/103, source typo corrections already represented sic/corr (prophesy/prophecy and Name./Name,), and independent guideline/alignment/order follow-up. The tick between fear/the on107 is non-text printing noise, not an unsettled reading. Source correspondence/quotation improvements validated and conditional behavior checked in actual compilations."
   },
   "instruction/daily_psalms_heading": {
     "primary_sha256": "7ecfe2bdf00e70932f746fdb4105531480843433cc56ea35344620ab61720011",
