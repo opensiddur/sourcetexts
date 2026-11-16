@@ -1,0 +1,200 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Low to moderate. I viewed all 36 supplied enlarged row images once each at their given resolution, plus the native s174.jpg, which is lower resolution than the rows. I read current.json, current.review.xml, page-audits.json and guideline-excerpts.md in full. I compared against independent-174.json, independent-182.json and independent-188.json (the 188 file also covers s189), plus human_torah_s178_s182_adjudication.json, shofar_s184_s199_human_adjudication.json, shofar_s184_s199_human_alternate_name.json and shofar_s184_s199_human_final_adjudication.json. I did no further magnification and made no new blind reading. I did not open current.raw.xml or its hashes. The display wraps in current.review.xml all fall between attributes, so none of them is material."
+  },
+  "witnesses": [
+    {
+      "stem": "torah_vezot_hatorah",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "citations_source_approved": false,
+      "issues": [],
+      "unresolved": [
+        {
+          "location": "s174-row3.png, Hebrew line 1, after יְיָ",
+          "word": "עַל־פִּי יְיָ בְּיַד־מֹשֶׁה:",
+          "question": "The text is right, but the reference `bible:numbers/9/23/al_pi` with `verse-part n=\"al_pi\"` needs a declaration in opensiddur/common/subverse.py. That declaration must start the part at the fourth (last) עַל־פִּי of Numbers 9:23, not at the first word of the verse. I could not check subverse.py. Unless the part is declared at that position, the canonical reference doesn't mean the quoted words. The same phrase also ends Numbers 4:37, 4:45, 4:49 and 10:13. Choosing 9:23 is a convention and I accept it."
+        }
+      ],
+      "verified": [
+        "s174-row3.png, Hebrew lines 1–4. Every consonant, vowel, dagesh, maqaf and colon matches the source: וְזֹאת הַתּוֹרָה אֲשֶׁר־שָׂם מֹשֶׁה לִפְנֵי בְּנֵי יִשְׂרָאֵל עַל־פִּי יְיָ בְּיַד־מֹשֶׁה: עֵץ־חַיִּים הִיא לַמַּחֲזִיקִים בָּהּ וְתוֹמְכֶיהָ מְאֻשָּׁר: דְּרָכֶיהָ דַרְכֵי־נֹעַם וְכָל־ / נְתִיבֹתֶיהָ שָׁלוֹם: אֹרֶךְ יָמִים בִּימִינָהּ בִּשְׂמֹאלָהּ עֹשֶׁר וְכָבוֹד: יְיָ חָפֵץ / לְמַעַן צִדְקוֹ יַגְדִּיל תּוֹרָה וְיַאְדִּיר:",
+        "There is no colon after יִשְׂרָאֵל; the source runs straight into עַל־פִּי. The current text has none either.",
+        "Spellings: וְתוֹמְכֶיהָ is plene and נְתִיבֹתֶיהָ is defective, as printed. The divine name is printed as יְיָ.",
+        "I see no clear cantillation on this small-type passage. That fits independent-174, which records te'amim only on Numbers 29, the haftarah blessing and 1 Samuel 1.",
+        "Order is Deut 4:44, the Num 9:23 part, then Prov 3:18, 3:17, 3:16 and Isa 42:21, matching the printed order. Each quotation is wrapped in a bounded seg with a canonical Bible reference. Each chapter and verse milestone, and the verse-part, is closed in the right unit order (verse-part, then verse, then chapter). Local quotation URNs follow the repeated-quotation convention.",
+        "The Hebrew and English (s175) carry identical prayer-part, chapter, verse and verse-part URNs, so alignment holds. Provenance is `pb n=76` with facs n173 on the Hebrew and n174 on the English.",
+        "The preceding Rashi rubric (…ואומרין:) is correctly left outside this unit. Running headers are not encoded."
+      ]
+    },
+    {
+      "stem": "haftarah_before_blessing",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "citations_source_approved": true,
+      "issues": [
+        {
+          "location": "s174-row4.png and s174-row5.png: the whole large-type blessing, from בָּרוּךְ to וָצֶדֶק:",
+          "problem": "The printed blessing has full cantillation (haftarah-blessing trope). The current Hebrew has vowels only, with no accents and no silluq. Strokes I can actually see: a mahpakh-shaped '<' under the shin of אֲשֶׁר and again under הַבּוֹחֵר; a pashta-type stroke above the final letter of בָּחַר and of בַּתּוֹרָה; zaqef dots above טוֹבִים, הָעוֹלָם, עַבְדּוֹ and עַמּוֹ; a stroke above the resh of both בָּרוּךְ; a stroke above the tav of the second אַתָּה; sublinear accents under וְרָצָה, בְדִבְרֵיהֶם, הַנֶּאֱמָרִים, בֶּאֱמֶת (where independent-174 also notes accent strokes hard to separate from meteg), וּבְמֹשֶׁה, וּבְיִשְׂרָאֵל, וּבִנְבִיאֵי and הָאֱמֶת; and a silluq stroke under the tsade of וָצֶדֶק. Independent-174 says the same: 'it carries accent-like marks (te'amim) as well as vowels. Those marks are not transcribed.' I found no human adjudication that drops them.",
+          "required": "Do a human or high-resolution accent pass and encode the printed te'amim, and meteg where distinct. At my resolution I can't name every sign with certainty, so I am not supplying a reading."
+        }
+      ],
+      "unresolved": [
+        {
+          "location": "s174-row4.png, line 2, last word",
+          "word": "בְדִבְרֵיהֶם",
+          "question": "Is there a dagesh in the first bet? It isn't clear at this resolution. The current text has none. Check it during the accent pass."
+        }
+      ],
+      "verified": [
+        "Consonants, vowels and maqaf (there are none) match the source word for word: בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר / בָּחַר בִּנְבִיאִים טוֹבִים וְרָצָה בְדִבְרֵיהֶם / הַנֶּאֱמָרִים בֶּאֱמֶת בָּרוּךְ אַתָּה יְיָ הַבּוֹחֵר / בַּתּוֹרָה וּבְמֹשֶׁה עַבְדּוֹ וּבְיִשְׂרָאֵל עַמּוֹ וּבִנְבִיאֵי / הָאֱמֶת וָצֶדֶק:",
+        "As printed, there is no punctuation between בֶּאֱמֶת and the second בָּרוּךְ. There is a final colon.",
+        "The Rashi rubric before it (…יברך המפטיר ברכה זו:) and the heading הפטרה ליום א׳ של ראש השנה. are correctly outside this unit.",
+        "Structure: one p and one prayer-part with a terminator. The divine name is marked. Hebrew and English (s175) share the prayer-part URN. Provenance is pb/facs n173 on the Hebrew and n174 on the English."
+      ]
+    },
+    {
+      "stem": "haftarah_after_blessings",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "s182-row2.png to s182-row6.png. All four paragraphs match the source consonant by consonant and point by point, including the maqafs כָּל־הָעוֹלָמִים, בְּכָל־הַדּוֹרוֹת, שֶׁכָּל־דְּבָרָיו, לֹא־יָשׁוּב, בְּכָל־דְּבָרָיו, עַל־צִיּוֹן, עַל־כִּסְאוֹ, לֹא־יֵשֵׁב, אֶת־כְּבוֹדוֹ and שֶׁלֹּא־יִכְבֶּה.",
+        "The pausal form וְרַחֲמָן אָתָּה. has qamats under the alef, as printed. The periods after אָתָּה, בְּיָמֵינוּ, לִבֵּנוּ, כְּבוֹדוֹ and וָעֶד, and the colons that close each paragraph, all match.",
+        "The human decision in human_torah_s178_s182_adjudication.json is applied and not reopened: בְּיָמֵינוּ has a bet dagesh, בְשֵׁם has none, and לּוֹ has a lamed dagesh.",
+        "No cantillation is printed on these blessings, and the current text has none.",
+        "Four indented paragraphs match the four p elements. The final בָּרוּךְ אַתָּה יְיָ מָגֵן דָּוִד: is set on its own line, but it is within paragraph 4 and correctly not split off. The 1 Sam 2:10 end, the qere note, the rubric המפטיר יברך ברכות אחרונות. and על התורה are correctly outside this unit.",
+        "The four prayer-part URNs (tzur, neeman, rachem, sammechenu) are each closed and are identical in the Hebrew (facs n181) and English (s183, facs n182). Provenance is pb n=80."
+      ]
+    },
+    {
+      "stem": "shofar_shehecheyanu",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": false,
+      "citations_source_approved": true,
+      "issues": [
+        {
+          "location": "s188-row4.png, Rashi line above the second large בָּרוּךְ",
+          "source": "ביום שני אין אומרים שהחינו אלא כשחל יום ראשון בשבת.",
+          "problem": "This rubric says when the blessing is said, so under 'Kinds of rubric' it is a condition. Conditions belong as the `tei:note type=\"instruction\"` inside a `j:conditional` that wraps the blessing. Here it is a free-standing `tei:note type=\"instruction\"` before the p, with no `j:conditional`. If it stays as it is, it prints in every setting, including a dated edition where the condition is decided.",
+          "required": "Wrap the blessing in a `j:conditional`, with this note as its rubric and an appropriate condition. If the repository has a tested exception for this day-one volume, cite it."
+        }
+      ],
+      "unresolved": [],
+      "verified": [
+        "s188-row4.png and s188-row5.png. The source matches word for word: בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם / שֶׁהֶחֱיָנוּ וְקִיְּמָנוּ וְהִגִּיעָנוּ לַזְּמַן הַזֶּה: including the dagesh in קִיְּ, גִּ and זְּ and the final colon.",
+        "The rubric text is exact, with its final period, and matches independent-188.",
+        "The English (s188, lower half) has no rubric, and correctly none was added. Hebrew and English share the prayer-part URN …/shofar/shehecheyanu/text. Provenance is the module facs n187, and page_start is false, which is right because the page begins earlier."
+      ]
+    },
+    {
+      "stem": "shofar_tashrat",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [
+        {
+          "location": "s188-row6.png, centred directly under the third row of sounds, just above the horizontal rule",
+          "word": "שֵׁב.",
+          "question": "Printed body text: pointed, with shin-dot, tsere and a period. Independent-188 records it as 'shev_after_tashrat'. It is not in this unit, and nothing in current.json or page-audits.json shows where it is encoded. If no adjacent module carries it, this printed word is lost. Before approving this unit's boundary, confirm where it is encoded, or add it as a rubric at the end of this unit. My Hebrew-source approval is withheld only for this reason."
+        }
+      ],
+      "verified": [
+        "s188-row5.png. The Rashi rubric is exact: ויקרא המקריא את התקיעות כסדרן אחת לאחת והתוקע יתקע. It is a directive, so `type=\"instruction\"` is right.",
+        "s188-row5.png and s188-row6.png. There are three rows, each reading תקיעה שברים תרועה תקיעה, unpointed with no punctuation. These match the three p elements, each holding one instruction note. Sound names are directives, so instruction notes are right.",
+        "Hebrew only; there is no English to align. Provenance is the module facs n187."
+      ]
+    },
+    {
+      "stem": "shofar_tashat",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [
+        {
+          "location": "s189-row3.png, centred under the third row תקיעה שברים תקיעה, above the rubric וישב התוקע ויאמר בלחש.",
+          "word": "שֵׁב.",
+          "question": "This is the same printed pointed word, with a period, as on s188. Independent-188 records it as 'shev_after_tashat'. It is not in this unit, and I can't see where it is encoded. Confirm that it is encoded in an adjacent module, or add it. My approval is withheld only for this reason."
+        }
+      ],
+      "verified": [
+        "s189-row2.png and s189-row3.png. There are three rows, each reading תקיעה שברים תקיעה, unpointed with no punctuation. These match the three p elements, each holding one instruction note.",
+        "The yehi ratzon prayers before and after (קשר״ק / תש״ת) are correctly outside this unit. Provenance is the module facs n188."
+      ]
+    },
+    {
+      "stem": "shofar_tarat",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "s189-row5.png and s189-row6.png. Rows 1 and 2 read תקיעה תרועה תקיעה. Row 3 reads תקיעה תרועה תקיעה גדולה: with the large final colon. All are unpointed and match exactly.",
+        "No שֵׁב. is printed after this group. The Rashi rubric that follows (בעוד…) is correctly outside this unit.",
+        "Three p elements, each holding one instruction note. Provenance is the module facs n188."
+      ]
+    },
+    {
+      "stem": "shofar_uvkhen_yehi_ratzon",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": false,
+      "citations_source_approved": true,
+      "issues": [
+        {
+          "location": "s189-row6.png, Hebrew prayer line 1, after יְיָ",
+          "printed": "אֱלֹקֵינוּ",
+          "current": "אֱלֹהֵינוּ",
+          "problem": "The printed word is spelled with qof, not he. I see a qof descender in the row image. Independent-188 independently read 'אֱלֹקֵינוּ' and noted it 'differs from the other prayers'. I found no human adjudication normalizing it. This is a printed spelling, not a misprint, so keep it as printed.",
+          "certainty": "medium-high; please confirm on the original",
+          "required": "Change to אֱלֹקֵינוּ. Then decide, as a separate policy question, whether this substitute form gets the same `j:divineName` treatment that יְיָ has."
+        },
+        {
+          "location": "s189-row6.png, the Rashi line above the prayer",
+          "source": "בעוד שהצבור אומרים אשרי העם וכו׳ יאמר התוקע בלחש.",
+          "problem": "This rubric says who says the following passage (התוקע) and how (בלחש). Under 'Kinds of rubric', speaker and manner rubrics, including ones that also say when, are descriptions, like the 'In silent devotion:' example. It is encoded as `type=\"instruction\"`. It belongs as `type=\"description\"`, first inside the passage's scope. The abbr/expan וכו׳/וכולי and the human-decided extent (Psalm 89:16 only) are fine and not reopened.",
+          "required": "Change it to `type=\"description\"`, unless a tested repository convention says otherwise."
+        }
+      ],
+      "unresolved": [
+        {
+          "location": "s189-row6.png, prayer line 1, between יְהִי and רָצוֹן",
+          "word": "יְהִי־רָצוֹן",
+          "question": "The current text has a maqaf. I can't clearly see a printed maqaf. Independent-188 also flagged a maqaf or mark here as unclear."
+        },
+        {
+          "location": "s189-row6.png, prayer line 1",
+          "word": "וֵאלֹהֵי",
+          "question": "The stroke under the vav looks to me like a single horizontal line (patah, וַאלֹהֵי) rather than tsere. The page audit raised the same tsere/patah question for the yehi ratzon units on this page. Not certified."
+        },
+        {
+          "location": "s189-row6.png, prayer line 3, first word",
+          "word": "כִסֵּא",
+          "question": "The current text has no dagesh in the kaf. Independent-188 read כִּסֵּא with a dagesh. I can't resolve it at this resolution."
+        }
+      ],
+      "verified": [
+        "Everything else matches the source: וּבְכֵן … לְפָנֶיךָ יְיָ … אֲבוֹתֵינוּ שֶׁיַּעֲלוּ כָּל הַמַּלְאָכִים / הַמְמֻנִּים עַל הַשּׁוֹפָר וְעַל הַתְּקִיעָה וְעַל הַשְּׁבָרִים וְעַל הַתְּרוּעָה לִפְנֵי / … כְבוֹדֶךָ וְיַמְלִיצוּ טוֹב בַּעֲדֵינוּ לְכַפֵּר עַל כָּל חַטֹּאתֵינוּ: with no maqaf in כָּל הַמַּלְאָכִים or עַל כָּל, the yod in בַּעֲדֵינוּ, and a final colon.",
+        "Rubric consonants are exact, with the geresh in וכו׳ and a final period.",
+        "Hebrew only, with no invented English. Provenance is the module facs n188. A single prayer-part with a terminator."
+      ]
+    }
+  ],
+  "limits": [
+    "This review approves only these eight units. The rest of s174, s182, s188 and s189 is not approved by implication, including Numbers 29, 1 Samuel 1–2, על התורה, Psalm 47, הרי אני, the shofar blessing, the yehi ratzon prayers, אשרי העם and every documentary rubric.",
+    "Resolution: I viewed the supplied rows once each with no further magnification, and native s174.jpg is lower resolution than the rows. I can't certify fine meteg or dagesh beyond what is listed. Where I report a mark, it is a stroke I actually saw. I did not fill anything in from expected forms.",
+    "I did not check opensiddur/common/subverse.py, so the numbers/9/23/al_pi declaration is unverified. I also did not check running-order files for a j:conditional at the point where shofar_shehecheyanu is transcluded.",
+    "I did not open current.raw.xml or its hashes. I relied on current.review.xml, whose wraps all fall between attributes and don't affect any source text.",
+    "I could not find where the two printed שֵׁב. lines are encoded. My Hebrew-source approval for shofar_tashrat and shofar_tashat is withheld for that boundary question alone. Their own sound rows and rubric are verified.",
+    "I could not find the human_morning_s144_s161 snippets or a separate human_final_adjudication file at the root path I tried. I used shofar_s184_s199_human_final_adjudication.json instead. No exact human decision was reopened."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "cd833a9f-239a-424c-8f5a-dd0f476ef3e7"
+  }
+}

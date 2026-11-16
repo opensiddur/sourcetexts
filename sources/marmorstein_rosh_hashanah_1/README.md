@@ -907,7 +907,7 @@ Final representative rendered export QA passes: documentary PDF: 172 pages; expa
 
 ## Encoded-material completion review (2026-11-15)
 
-Acceptance now covers 169 of the 224 encoded leaves (355 total). Final human
+Acceptance now covers 172 of the 224 encoded leaves (355 total). Final human
 adjudication closes scans57 and90. Current source-image and guideline review
 closes English scans97,99,101,103,105,107,109. The other encoded leaves remain
 under review. Source and expanded-order corrections are recorded separately
@@ -917,8 +917,10 @@ New actual reports and frozen review inputs are in
 `independent/completion_review_2026_11/`. The
 `completion_review_2026_11_*_acceptance.json` records identify exact accepted
 scopes. Earlier reports retain their original uncertainties as history.
-The scan124 piyyut has substantive transcription discrepancies still being
-reconciled; no source acceptance is claimed for it. Existing preview PDFs
+Melekh Azur Gevurah, At Chil Yom Pequddah, Taalat Zu and Even Chug now have
+complete reconciled Hebrew source and shared-alignment acceptance. Corrected
+At/Zu canonical spellings retain nine legacy aliases; no additional canonical
+prayer identities were invented. Existing preview PDFs
 predate the new completion-review corrections.
 
 English completion-review checkpoint: all 81 English prayer-text witnesses in
@@ -936,8 +938,11 @@ is gated to weekdays, following the original omission direction. Actual compiler
 checks cover both languages and unknown/false/true Shabbat selection. The five
 Yotzer source/guideline approvals do not settle other Hebrew piyyutim.
 
-The current human questions are numbered13–20; enlarged source snippets are
-recorded in the review manifest. Previous human answers7–12 have been applied.
-The 55 remaining encoded leaves require further Hebrew source reconciliation.
+Human answers7–69 are applied, including the repeated13–20 question. Current
+questions70–75 have enlarged, clearly numbered source snippets recorded in the
+review manifest. The52 remaining encoded leaves require further Hebrew source
+reconciliation. Current registry/importer/subverse checks pass169tests and
+38subtests; actual parallel compilation verifies8word comparisons and3new
+shared speaker rows for the four accepted piyyutim.
 The volume still has131 unencoded leaves. No complete-volume or updated-PDF
 acceptance is claimed.
