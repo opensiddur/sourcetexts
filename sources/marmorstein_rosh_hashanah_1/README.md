@@ -1134,3 +1134,14 @@ andaccepted. Currentquestions225–240concernKhevodoIhel;241–244concernHakol.
 The22Melekhrefrainoccurrences remain explicitlyqueued andarenot silently
 resolvedfromsimilarwords. Acceptedcoverage remains187of224encodedleaves.
 All646XMLvalidate;8quoteextent and30day/language/unitcasespassafteredits.
+
+
+After human225–244, ten exact metegs are encoded, eight negative readings
+retained, both240dageshes retained, and243recorded as a printingartifact.
+232usesLAMED,241CHETand244onlytheSECONDאפסALEF. ActualcompleteHakolsource
+review plus focused241–244closure now approve the Hebrew witness. Every
+readingkeyonPDF102iscurrent:188of224encodedleavesareaccepted,36encoded
+leavesremainunderreview. The remaining grouped question245shows all22
+MelekhrefrainMEMclusterswithnumberednativecrops;noneisdecidedbyinference
+fromotheroccurrences. Khevodoandotherbacklogsourceacceptanceremainpending.
+All646XMLvalidate;8quoteextentand30day/language/unitcasespassafteredits.
