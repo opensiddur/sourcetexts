@@ -1,0 +1,76 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Low. I read the following in full: guideline-excerpts.md, three-rubrics-final/current.json and current.xml, human-114-124-final/review.json, s124-structure-closure/review.json, project/prayerbook_for_the_new_year-heidenheim-1965-he/shacharit_numbers_15_37_to_41.xml, and human_morning_s108_s125_snippets_1_to_7.json. I read the first 60 lines of the primary morning_s124_s145_initial.json and of independent/morning_s124_s145_independent-124.json, which cover the s124 heading block in each. I viewed three-rubrics-final/heading.png (2130x315, shown at 2000x296) and the native s124.jpg (1368x2264, shown at 1208x2000). I did no cropping or enhancement and used no other tools. I did not look again at s110 or s112: source positions and wording for the two Shema instructions are taken from the approved human-114-124-final review and the human record. This is not a new blind reading. I ran no validator, URN resolver or codepoint comparison."
+  },
+  "instructions": [
+    {
+      "key": "shacharit_shema_alone",
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "Actual node in current.xml: <tei:note type=\"instruction\" facs=\".../page/n109.jpg\" xml:lang=\"he\">יחיד אומר אל מלך נאמן.</tei:note>. It has no @rend, no @corresp and no j:conditional wrapper.",
+        "Position in the supplied documentary context: it comes directly after <j:transclude target=\"urn:x-opensiddur:text:prayer:ahavah_rabbah@prayerbook_for_the_new_year-heidenheim-1965-he\"/> and directly before <j:transclude target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/shema_yisrael@...\"/>. That is between Ahavah Rabbah and the Shema, as the approved source reading places it (end of s110 row4 line 3, after בְּאַהֲבָה:).",
+        "It occurs once in the supplied context, with nothing else between the two transclusions.",
+        "The text matches current.json exactly, including the final period. The facs n109 matches scan s110, using the same n = s−1 offset as n111/s112 and n123/s124.",
+        "Classification: it tells an individual to say words (אל מלך נאמן) that the following text does not contain. That makes it a directive under JLPTEI-3 'Kinds of rubric', which calls for tei:note type=instruction at the point where it applies. It does not govern a printed passage, so no j:conditional is required. This agrees with the prior reviewer's classification.",
+        "Because it sits in the running order and not inside the Ahavah or Shema modules, no milestone scope from either module can run across it. Prior review: Ahavah ends with a bare prayer-part terminator and the Shema with bare verse/chapter terminators."
+      ]
+    },
+    {
+      "key": "shacharit_shema_emet_join",
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "Actual node in current.xml: <tei:note type=\"instruction\" facs=\".../page/n111.jpg\" xml:lang=\"he\">יש לצרף אלהיכם לאמת, אכן יתן רוח מעט שלא יבולע הא׳.</tei:note>. It has no @rend and no @corresp.",
+        "Text: on reading, it is identical to the human record (human_morning_s108_s125_snippets_1_to_7.json, answer 1, and changes[0].new): 'יש לצרף אלהיכם לאמת, אכן יתן רוח מעט שלא יבולע הא׳.' This includes the comma after לאמת, the geresh after הא and the final period. current.json carries the same string. The superseded wording 'יש לסמוך ... ה״א.' is not present.",
+        "Position in the supplied context: it comes directly after <j:transclude target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/shema/numbers_15@...\"/> and directly before <j:transclude target=\"urn:x-opensiddur:text:prayer:emet_veyatziv@...\"/>. It occurs once in the supplied context.",
+        "The Numbers 15 source file ends its scopes properly. The verse 41 seg (ending אֱלֹהֵיכֶֽם:) is followed by <tei:milestone unit=\"verse\"/> and then <tei:milestone unit=\"chapter\"/>, both bare and both inside the same tei:p, before </tei:div>. Each terminator matches the unit it closes (JLPTEI-3 rule 3, 'The unit must match exactly'). Nothing after 15:41 is inside the module, so neither the instruction nor Emet Veyatziv falls within any Numbers 15 scope.",
+        "The rest of the module's milestone structure was checked: chapter n=15 with corresp …/numbers_15/chapter, then verses 37–41, each with one milestone and one bounded seg@source=bible:numbers/15/N. No verse is repeated.",
+        "Classification: it tells the reader to join אלהיכם to אמת without a pause, which is how to perform text at a junction. It is not a name for the following passage and not a condition. As a directive at the point where it applies, type=instruction is correct under JLPTEI-3 'Kinds of rubric' and 'Instructions'.",
+        "The facs n111 matches scan s112, where the approved review places it (s112 row8 line 1, after יְהוָ֥ה אֱלֹהֵיכֶֽם:)."
+      ]
+    },
+    {
+      "key": "repetition_heading",
+      "source_approved": false,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "הַתְּפִלָּה, tav: at the resolution available in heading.png I cannot be sure that the dagesh dot inside the ת is a separate printed dot and not part of the glyph. The sheva under it is visible. The dagesh is not certified.",
+        "הַתְּפִלָּה, pe: I cannot be sure whether there is a hiriq dot under the פ, or that the pe has no dagesh. The pe's inner curl in this typeface is hard to tell apart from a dagesh at this resolution. The encoded פִ (hiriq, no dagesh) is not certified.",
+        "הַתְּפִלָּה, lamed: the qamatz under the ל is visible. I cannot be sure of the dagesh dot inside the lamed's bowl. The dagesh is not certified.",
+        "צִבּוּר, tsade: I cannot clearly see a hiriq dot under the צ in heading.png. The encoded hiriq is not certified.",
+        "The native s124.jpg at the resolution I had does not settle any of the four points above. The primary and independent files agree with the encoded string, but they are earlier readings, not a new blind read. The independent reader's only recorded pointing note is qamatz under ז and patah under ר. Neither reading settles these four marks, so I approve none of them."
+      ],
+      "verified": [
+        "Letters, checked against heading.png: ח ז ר ת / ה ת פ ל ה / ל ש ל י ח / צ ב ו ר, in four words. There is no extra or missing letter, and no mater lectionis that differs from the encoded form.",
+        "Seen in heading.png: hataf patah under the ח of חֲזָרַת, qamatz under ז, patah under ר, and no mark on the final ת.",
+        "Seen in heading.png: patah under the ה of הַתְּפִלָּה, sheva under the ת, qamatz under the ל, and no mark on the final ה.",
+        "Seen in heading.png: hiriq under the first ל of לִשְׁלִיחַ, a shin dot (upper right) and sheva under the ש, hiriq under the second ל, י with no mark, and a patah (genuvah) under the final ח.",
+        "Seen in heading.png: in צִבּוּר, a dagesh dot inside the ב, a shuruq dot at the ו, and no mark on the ר.",
+        "Punctuation: a single final point after צבור, printed as the typeface's diamond-shaped period, the same glyph used as the period throughout s124. There are no other punctuation marks. Encoded as '.'.",
+        "In s124.jpg this is the large heading below the rule. It is a different element from the running header at the top of the page, which has the same words and no period and is correctly not encoded.",
+        "Actual node in current.xml: <tei:note type=\"description\" facs=\".../page/n123.jpg\" xml:lang=\"he\">חֲזָרַת הַתְּפִלָּה לִשְׁלִיחַ צִבּוּר.</tei:note>. It has no @rend and no @corresp. Its content is exactly the heading and nothing else: no rubric, no Avot text, and not the running header. It matches current.json (type description, scan s124, printed page 48).",
+        "Position: it comes directly after <j:transclude target=\"…/silent_amidah/yehi_ratzon_temple@…\"/> and directly before <tei:note type=\"instruction\">פותחים הארון.</tei:note>. That matches the page order: Yehi Ratzon, rule, heading, the open-ark rubric at left, then בָּרוּךְ. It occurs once in the supplied context.",
+        "Classification and placement: it is a one-off tei:note type=description naming the passage that follows, which is the approved classification (s124-structure-closure). The node and its extent conform."
+      ]
+    }
+  ],
+  "limits": [
+    "Uniqueness and position were checked only in the documentary-order excerpt in current.xml. I did not open the full documentary index file, so I cannot rule out a duplicate elsewhere in it.",
+    "The match between the emet_join text and the human answer 1 is a visual comparison. I did not compare codepoints, for example to confirm the geresh is U+05F3 in both, or that no invisible characters are present.",
+    "I did not re-view s110 or s112. Wording and source positions for the two Shema instructions rest on the approved human-114-124-final review and the human record, as instructed.",
+    "repetition_heading: source_approved is false only because four specific marks are unresolved (dagesh in ת, hiriq and absence of dagesh at פ, dagesh in ל, hiriq under צ). All other letters, vowels, dagesh and punctuation listed under verified were seen. These four need a higher-resolution crop or a human decision.",
+    "I approve nothing outside these three rubrics. No Hebrew pointing elsewhere on s124 is reviewed, including the Avot module, Misod, the נ״א/כ״א variant abbreviation and the ark rubrics."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "be96e2fe-fe5e-4ae7-abe4-208100173082"
+  }
+}

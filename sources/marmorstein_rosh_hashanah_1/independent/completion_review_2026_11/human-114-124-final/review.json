@@ -1,0 +1,147 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Read all of current.json, current.review.xml and guideline-excerpts.md. Looked at the full pages s108, s110 and s112. Read the enlarged rows s108 row1, row8 and row9, all nine s110 rows and all nine s112 rows. I did not open s108 rows 2–7 (out-of-scope Yotzer). I did not open the prior review.json, the punctuation-corrections JSON, the human review JSONs, or the independent and primary blind files. The human decisions listed in the request were taken as given and checked only for whether the encoding matches them. I ran no tools other than file and image reads: no schema validation, no URN resolution, no script comparison."
+  },
+  "witnesses": [
+    {
+      "stem": "ahavah_rabbah",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "citations_source_approved": true,
+      "english_alignment_unchanged": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "Scope: the encoding begins at אַהֲבָה, at the start of the last-but-one line of s108 (row8 bottom / row9 line 1). The Yotzer text above, ending יוֹצֵר הַמְּאוֹרוֹת:, is not encoded.",
+        "s108 row9 line 1: אַהֲבָה רַבָּה אֲהַבְתָּנוּ יְיָ אֱלֹהֵינוּ חֶמְלָה גְדוֹלָה וִיתֵרָה matches. גְדוֹלָה has no dagesh in the gimel, as the human decided.",
+        "s108 row9 line 2: חָמַלְתָּ עָלֵינוּ: אָבִינוּ מַלְכֵּנוּ בַּעֲבוּר אֲבוֹתֵינוּ שֶׁבָּטְחוּ בְךָ matches. The colon after עָלֵינוּ is present. The final word בְךָ has no dagesh, as the human decided.",
+        "The page break n=41 comes between בְךָ and וַתְּלַמְּדֵם, matching s110 row1 line 1.",
+        "s110 rows 1–3: every word matches, from וַתְּלַמְּדֵם through ...לְאַרְצֵנוּ: including the maqaf in אֶת־כָּל־דִּבְרֵי and וְלֹא־נֵבוֹשׁ. בָטָחְנוּ at the end of row 3 line 1 has no colon after it (human decision). בִּישׁוּעָתֶךָ: has a dagesh in the bet.",
+        "s110 row4 line 1: אָֽתָּה has qamatz plus meteg under the alef and a dagesh in the tav. בָּחַרְתָּ has a dagesh in the bet. מִכָּל־עַם has its maqaf. וְקֵרַבְתָּנוּ לְשִׁמְךָ matches.",
+        "s110 row4 line 2: the period in בֶּאֱמֶת. is present in the image and in the encoding. Then לְהוֹדוֹת לְךָ וּלְיַחֶדְךָ בְּאַהֲבָה: בָּרוּךְ.",
+        "s110 row4 line 3: אַתָּה יְיָ הַבּוֹחֵר בְּעַמּוֹ יִשְׂרָאֵל בְּאַהֲבָה: matches.",
+        "The prayer-part milestones /ahavah and /vahavienu are placed at the right points. The sequence ends with a bare prayer-part terminator. The English uses the same two corresp URNs with the same extent (s109/s111 text and page break unchanged)."
+      ]
+    },
+    {
+      "stem": "shacharit_shema_yisrael",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "citations_source_approved": true,
+      "english_alignment_unchanged": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "s110 row5: the large ע at the end of שְׁמַע and the large ד in אֶחָֽד are encoded as tei:c rend=large. There is a meteg under the ח of אֶחָֽד. The paseq ׀ between יְהוָה and אֶחָֽד is visible as a small vertical stroke. The verse ends with a colon. The tipcha, etnachta and merkha accents are as encoded.",
+        "The Hebrew citation 'דברים ו ד.' sits in the right margin above the Shema line (s110 row4 bottom / row5 top). The printed period is preserved. Its target is Deut 6:4.",
+        "Milestones: a chapter milestone n=6 with the quoted_deuteronomy_6 URN, then verse 4, then a bounded seg with source deuteronomy/6/4, then a bare verse terminator and a bare chapter terminator.",
+        "The English corresp, chapter_corresp and source match the Hebrew. The English citation 'Deut. VI. 4' is a standOff note, and the guidelines do not require parentheses."
+      ]
+    },
+    {
+      "stem": "shacharit_barukh_shem",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "citations_source_approved": true,
+      "english_alignment_unchanged": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "s110 row5 line 2: בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד: matches.",
+        "The small marginal rubric בלחש, set to the right of the line, is encoded as tei:note type=description. It is the first thing inside the div, before the passage, which follows the guideline's 'In silent devotion' description pattern. It has no rend.",
+        "The prayer-part milestone /barukh_shem/text is followed by a seg with source prayer:shema/barukh_shem and then a terminator. The English matches.",
+        "No printed citation; none is encoded."
+      ]
+    },
+    {
+      "stem": "shacharit_deuteronomy_6_5_to_9",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "citations_source_approved": true,
+      "english_alignment_unchanged": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "6:5 (s110 row6 line 1): וְאָ֣הַבְתָּ֔ has its zaqef. Then אֵ֖ת, אֱלֹהֶ֑יךָ with etnachta, and the maqaf words בְּכָל־לְבָבְךָ֥ and וּבְכָל־נַפְשְׁךָ֖. The verse continues on line 2 with מְאֹדֶֽךָ: with a meteg.",
+        "6:6 (row6 line 2): וְהָי֞וּ has gershayim, visible. Then הָאֵ֗לֶּה (revia), אֲשֶׁ֨ר (qadma), אָנֹכִ֧י (darga), מְצַוְּךָ֛ (tevir), הַיּ֖וֹם, and עַל־לְבָבֶֽךָ: with the maqaf at the line end.",
+        "6:7 (row6 line 3 and row7 line 1): בְּשִׁבְתְּךָ֤ has a mahpach, visible as the '<' mark. בְּבֵיתֶ֙ךָ֙ has a double pashta. וּֽבְשָׁכְבְּךָ֖ has a meteg next to the shuruq (human decision). Then וּבְקוּמֶֽךָ:",
+        "6:8 (row7 lines 1–2): לְא֖וֹת, עַל־יָדֶ֑ךָ, and לְטֹטָפֹ֖ת, which is printed without a vav and differs from the 11:18 spelling. Then בֵּ֥ין עֵינֶֽיךָ:",
+        "6:9 (row7 lines 2–3): מְזֻז֥וֹת has a qubbutz under the first zayin. Then וּבִשְׁעָרֶֽיךָ:",
+        "Milestones: chapter 6 carries a corresp. Verses 5–9 each have one milestone and one bounded seg. A bare verse terminator and a bare chapter terminator close the sequence. The English has the same five verse URNs and the chapter_corresp."
+      ]
+    },
+    {
+      "stem": "shacharit_deuteronomy_11_13_to_21",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "citations_source_approved": true,
+      "english_alignment_unchanged": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "Citation: 'דברים' with 'יא יג' printed below it, in the right margin at the 11:13 line (s110 row8). There is no period, matching the encoded 'דברים יא יג'. Its target is Deut 11:13.",
+        "11:13 (s110 row8): אִם־שָׁמֹ֤עַ has a mahpach. תִּשְׁמְעוּ֙ has a pashta. אֶל־מִצְוֹתַ֔י. Then אֲשֶׁ֧ר אָנֹכִ֛י מְצַוֶּ֥ה, and הַיּ֑וֹם with etnachta. לְאַהֲבָ֞ה has gershayim. אֱלֹֽהֵיכֶם֙ has a meteg under the lamed (human decision) and a pashta. וּלְעָבְד֔וֹ. Then בְּכָל־לְבַבְכֶ֖ם וּבְכָל־נַפְשְׁכֶֽם:",
+        "11:14 (row8 line 3 and row9): וְנָֽתַתִּ֧י and מְטַֽר־ each have a meteg (human decision). יוֹרֶ֣ה has a munach. וּמַלְק֑וֹשׁ. וְאָֽסַפְתָּ֣ has a meteg under the alef (human decision). Then דְגָנֶ֔ךָ וְתִירֹשְׁךָ֖ וְיִצְהָרֶֽךָ:",
+        "11:15: וְנָֽתַתִּ֛י, with a meteg under the nun (human decision), and עֵ֥שֶׂב end s110. The page break n=42 follows, and בְּשָׂדְךָ֖ לִבְהֶמְתֶּ֑ךָ starts s112 row1. וְאָֽכַלְתָּ֖ has a meteg under the alef (human decision). וְשָׂבָֽעְתָּ: has a meteg under the bet. There is one verse milestone, with two segs, both with source 11/15, on either side of the page break.",
+        "11:16 (s112 row1): הִשָּׁמְר֣וּ לָכֶ֔ם, פֶּן־יִפְתֶּ֖ה, לְבַבְכֶ֑ם, וְסַרְתֶּ֗ם, וַעֲבַדְתֶּם֙, אֱלֹהִ֣ים אֲחֵרִ֔ים, and וְהִשְׁתַּחֲוִיתֶ֖ם לָהֶֽם:",
+        "11:17 (row2): וְחָרָ֨ה has a qadma. אַף־יְהוָ֜ה has a geresh. בָּכֶ֗ם. Then אֶת־הַשָּׁמַ֙יִם֙ with a double pashta, וְלֹא־יִהְיֶ֣ה, and מָטָ֔ר. וְהָ֣אֲדָמָ֔ה has a munach under the he, not a meteg (human decision). אֶת־יְבוּלָ֑הּ. Then מְהֵרָ֗ה, מֵעַל֙, הָאָ֣רֶץ, הַטֹּבָ֔ה, and נֹתֵ֥ן לָכֶֽם:",
+        "11:18 (rows 2–3): וְשַׂמְתֶּם֙ אֶת־דְּבָרַ֣י אֵ֔לֶּה, then עַל־לְבַבְכֶ֖ם וְעַל־נַפְשְׁכֶ֑ם. וּקְשַׁרְתֶּ֨ם, אֹתָ֤ם with a mahpach, and לְאוֹת֙. עַל־יֶדְכֶ֔ם, with its maqaf at the line end. לְטוֹטָפֹ֖ת with a vav, as printed. Then עֵינֵיכֶֽם:",
+        "11:19 (row3 and row4 line 1): וְלִמַּדְתֶּ֥ם אֹתָ֛ם אֶת־בְּנֵיכֶ֖ם, with the maqaf at the line end. לְדַבֵּ֣ר בָּ֑ם. Then the double pashta in בְּבֵיתֶ֙ךָ֙. וּֽבְשָׁכְבְּךָ֖ has a meteg next to the shuruq (human decision). Then וּבְקוּמֶֽךָ:",
+        "11:20 (row4): עַל־מְזוּז֥וֹת with a shuruq, as printed, which differs from the qubbutz in 6:9. Then בֵּיתֶ֖ךָ וּבִשְׁעָרֶֽיךָ:",
+        "11:21 (rows 4–5): לְמַ֨עַן has a qadma. יִרְבּ֤וּ has a mahpach. יְמֵיכֶם֙, וִימֵ֣י, בְנֵיכֶ֔ם. עַ֚ל־הָֽאֲדָמָ֔ה has a yetiv, the restored maqaf, and a meteg under the he (human decision). Then נִשְׁבַּ֧ע יְהוָ֛ה לַאֲבֹתֵיכֶ֖ם לָתֵ֣ת לָהֶ֑ם כִּימֵ֥י הַשָּׁמַ֖יִם עַל־הָאָֽרֶץ:",
+        "Milestones: chapter 11 carries a corresp. Verses 13–21 each have exactly one milestone. Bare verse and chapter terminators close the sequence. The English corresps match, including the 11:15 English split at the s111/s113 page break."
+      ]
+    },
+    {
+      "stem": "shacharit_numbers_15_37_to_41",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "citations_source_approved": true,
+      "english_alignment_unchanged": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "Citation: 'במדבר' with 'טו לז' printed below it, in the right margin at the 15:37 line (s112 row5). There is no period, matching the encoded 'במדבר טו לז'. Its target is Num 15:37.",
+        "15:37 (row5): וַיֹּ֥אמֶר יְהוָ֖ה אֶל־מֹשֶׁ֥ה לֵּאמֹֽר:, with a meteg under the mem of לֵּאמֹֽר.",
+        "15:38 (rows 5–6): דַּבֵּ֞ר has gershayim. אֶל־בְּנֵ֤י and יִשְׂרָאֵל֙ with a pashta. וְאָֽמַרְתָּ֣ has a meteg under the alef (human decision). Then אֲלֵהֶ֔ם וְעָשׂ֨וּ לָהֶ֥ם צִיצִ֛ת עַל־כַּנְפֵ֥י בִגְדֵיהֶ֖ם לְדֹרֹתָ֑ם, and וְנָ֥תְנוּ עַל־צִיצִ֥ת הַכָּנָ֖ף פְּתִ֥יל תְּכֵֽלֶת:",
+        "15:39 (rows 6–7): לָכֶם֮ has a zarqa, visible above the final mem. לְצִיצִת֒ has a segolta, three dots, visible. Then וּרְאִיתֶ֣ם אֹת֗וֹ וּזְכַרְתֶּם֙ אֶת־כָּל־מִצְוֹ֣ת יְהוָ֔ה וַעֲשִׂיתֶ֖ם אֹתָ֑ם. תָת֜וּרוּ has a geresh. Then אַחֲרֵ֤י לְבַבְכֶם֙ וְאַחֲרֵ֣י עֵינֵיכֶ֔ם, אֲשֶׁר־אַתֶּ֥ם, and זֹנִ֖ים אַחֲרֵיהֶֽם:",
+        "15:40 (row7): לְמַ֣עַן תִּזְכְּר֔וּ וַעֲשִׂיתֶ֖ם אֶת־כָּל־מִצְוֹתָ֑י וִהְיִיתֶ֥ם קְדֹשִׁ֖ים. לֵאלֹֽהֵיכֶֽם: has two metegs, under the second lamed and under the kaf (human decision).",
+        "15:41 (rows 7–8): אֲנִ֞י has gershayim. אֱלֹֽהֵיכֶ֗ם has a meteg under the lamed (human decision) and a revia. Then אֲשֶׁ֨ר הוֹצֵ֤אתִי אֶתְכֶם֙ מֵאֶ֣רֶץ מִצְרַ֔יִם לִהְי֥וֹת לָכֶ֖ם, and לֵאלֹהִ֑ים with etnachta. The verse ends אֲנִ֖י יְהוָ֥ה אֱלֹהֵיכֶֽם: (s112 row8 line 1).",
+        "Scope ends after אֱלֹהֵיכֶֽם: The join instruction follows on the same line. The אֱמֶת וְיַצִּיב paragraph below it is not encoded.",
+        "Milestones: chapter 15 carries a corresp. Verses 37–41 each have one milestone and one seg. Bare verse and chapter terminators close the sequence. The English verse URNs match."
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "key": "shacharit_shema_alone",
+      "source_approved": true,
+      "encoding_guidelines_approved": false,
+      "issues": [],
+      "unresolved": [
+        "The text 'יחיד אומר אל מלך נאמן.', with its final period, matches the small type at the end of s110 row4 line 3, after בְּאַהֲבָה:. However, this node does not appear anywhere in current.review.xml. I therefore cannot see whether it is a tei:note type=instruction (it is a directive), where it sits between the end of Ahavah and the Shema, or whether it has a rend. current.json gives no type for it. The encoding needs to be shown before it can be approved."
+      ]
+    },
+    {
+      "key": "shacharit_shema_emet_join",
+      "source_approved": true,
+      "encoding_guidelines_approved": false,
+      "issues": [],
+      "unresolved": [
+        "The text 'יש לצרף אלהיכם לאמת, אכן יתן רוח מעט שלא יבולע הא׳.' matches the small type after יְהוָ֥ה אֱלֹהֵיכֶֽם: on s112 row8 line 1. The comma after לאמת, the geresh in הא׳ and the final period are all present. As with the other instruction, this node is not in current.review.xml, so I cannot see its type (it should be instruction), its placement after the Num 15:41 terminators, or whether it has a rend. current.json gives no type for it."
+      ]
+    }
+  ],
+  "limits": [
+    "s108 rows 2–7 (Yotzer, out of scope) were not opened. I saw that material only on the full page.",
+    "I did not read the English pages s109, s111 or s113. I judged English alignment only by comparing corresp, source and fragment extent in current.json and current.review.xml. The English Num 15:39 has a choice element, sic 'astray' / corr 'astray.', in the review XML. I did not check it against the s113 image.",
+    "I did not open the prior review.json, the punctuation-corrections JSON, the human decision JSONs, or the independent and primary blind files. The human decisions were applied as stated in the request. They were not re-adjudicated or propagated to other occurrences.",
+    "I did not try to settle details that are too small to resolve reliably in the enlarged rows and that are not covered by human decisions, in particular whether the lamed of לֵּאמֹֽר (Num 15:37) has a dagesh. I report no error there."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "06332828-83c3-47ca-9bff-4db7483570d4"
+  }
+}

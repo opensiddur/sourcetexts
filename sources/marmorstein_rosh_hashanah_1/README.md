@@ -1016,3 +1016,38 @@ dependency of final parallel export acceptance. Current questions114–124
 concern distinct Shema occurrences on scans110and112, with numbered enlarged
 source snippets. All previous questions7–113and80/95bfollowups are settled.
 Final PDF/electronic visual review remains pending.
+
+
+### Completion review checkpoint: 183 accepted encoded leaves
+
+Acceptance now covers183of224encoded leaves;41remain. Allhumanquestions
+7–135plus80/95bfollowups are settled and applied; nohumanquestionisopen.
+ElohaiNetzor, sixShema-sectionHebrewwitnesses, YehiRatzonTemple,
+repetitionAvotOpen andMisodChakhamim bodies now have source/guideline
+acceptance. Their citations and sixdocumentaryrubrics are accepted separately.
+Scans110,122and124becamecomplete. Scan112stillrequiresEmetVeyatziv.
+
+Human114–124adds sixoccurrence-specificmetegsandtheBachartaBETdagesh,
+retainsBatachnuwithoutcolonandVehaadamah11:17withmunach. Human125–129
+settlesfinalQadmoniyyotwithholamhaser,ChasdeiDALETdagesh,FiPEdagesh,
+BeyameinuBETwithoutdageshandGomelGIMELdagesh. Human130/131confirms
+LeimorLAMEDdageshandthisMisodvariant'sנ״א. Human132–135confirms
+allfourremainingheadingmarks. Twoactualsourcepunctuationomissions are
+restored: Deut11:21Al–HaadamahmaqafandMisod'sfinalcolon. Exactprior
+Jerusalem124qamatz+meteg+CGJ+hiriqretainedwithoutreopening.
+
+Actualcurrent-source andguideline reports remain unaltered, including
+negativeverdicts and explicitlimits. Acceptance records adjudicate each
+actualfindingandbindfrozenwholepayloads. The two markholds in positive
+reports(LeimorandMisodsiglum)were explicitlywithheld untilhuman130/131.
+Originalrepetitionprimary/blindfilesareselectedforAvot/Misod/header,
+ratherthantheearlierreaderpairwhosepage124scopeendsbeforetherepetition.
+
+TwelveactualShema bilingualcomparisons andeighttailcomparisons pass.
+Fiveactualexpandedrepetition/minyancases keepbothprayersandarkactions
+together,onceeach; knownfalseflags suppress theentirescope. The separate
+exporterfixPR309commit93f33b1 remains a finalparallel-exportdependency.
+The acceptedpointedheadingandthesixunpointedinstructions/descriptions
+haveactualsourceandguidelineclosure. EmetVeyatzivand8Yotzerwitnesses
+areunderfreshboundedreview. ExistingPDF/HTMLpreviews remain stale;
+finalvisualacceptance has not been claimed.

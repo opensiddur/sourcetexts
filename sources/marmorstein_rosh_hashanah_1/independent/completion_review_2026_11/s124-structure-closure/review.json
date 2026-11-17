@@ -1,0 +1,113 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "low. I read every file the brief named: current.json, current.review.xml, guideline-excerpts.md, the prior review.json, the punctuation-correction record and the human s108–s125 adjudication record. I also read the opening s124 blocks of the primary morning_s124_s145_initial.json and of independent/morning_s124_s145_independent-124.json. I viewed s124-row6.png and the native s124.jpg at the resolution I was given, with no cropping or enhancement. I did not open independent/morning_s108_s125_independent-124.json, because the Yehi Ratzon question it covers is closed by the human record."
+  },
+  "witnesses": [
+    {
+      "stem": "shacharit_yehi_ratzon_temple",
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "issues": [],
+      "unresolved_structural_questions": [],
+      "verified": [
+        "Milestone order in the Hebrew div (n123/s124): prayer-part corresp …/yehi_ratzon_temple/text, then the bounded seg@source=prayer:amidah/yehi_ratzon, then chapter n=3 (…/quoted_malachi_3_4), then verse n=4 (…/quoted_malachi_3_4/4), then the bounded seg@source=bible:malachi/3/4, then a bare verse terminator, a bare chapter terminator and a bare prayer-part terminator. Each terminator has the same unit as the scope it closes (JLPTEI-3 'URN scope' rule 3; 'The unit must match exactly'). The chapter and verse milestones do not end the prayer-part, which is correct under rule 2 and UNIT_CONTAINED_BY.",
+        "Malachi 3:4 is quoted whole. It gets one chapter and one verse milestone, and the source quotation sits in a tei:seg ('A tei:seg remains appropriate for a bounded quotation carrying source'). No sub-verse milestone is needed.",
+        "The English div (n124/s125) has the same three corresp keys in the same order, with the same terminators. Alignment joins on exact URN equality (JLPTEI-3 'Alignment'). The English text is unchanged.",
+        "On the native s124.jpg, this small-type paragraph comes after Netzor/עֹשֶׂה שָׁלוֹם and before the rule and the repetition heading. That matches source_order: elohai_netzor, then yehi_ratzon_temple, then repetition_heading.",
+        "The Jerusalem word is closed by the human adjudication in human_morning_s108_s125_snippets_1_to_7.json (answer 4; changes stem shacharit_yehi_ratzon_temple, s124: lamed qamatz + meteg + U+034F CGJ + hiriq). current.json and the XML both carry that form (וִירוּשָׁלָֽ͏ִם). I did not reopen it. I give no certification of other fine glyphs here."
+      ]
+    },
+    {
+      "stem": "misod_chakhamim",
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "issues": [],
+      "unresolved_structural_questions": [],
+      "verified": [
+        "Punctuation against the source: s124-row6.png and the native s124.jpg both show …וַאֲדוֹנֵי הָאֲדוֹנִים (variant note): with the colon after the closing parenthesis. The colon belongs to the main text. The current main body ends הָאֲדוֹנִים: and the note text has no colon, so the note has not absorbed the main-text punctuation. This matches the 'after' state and source_checks.misod in completion_review_2026_11_shema_misod_punctuation_corrections.json.",
+        "Whitespace: the pre-anchor fragment in current.json no longer has a trailing space (…וּלְחַנֵּן\"). The XML has a single space before tei:anchor (וּלְחַנֵּן <tei:anchor xml:id=\"misod_variant\"/>פְּנֵי). The double space the prior review noted is gone.",
+        "פִי is not in parentheses in the scan (row6.png, line 2, rightmost word). The current text has no parentheses around it, and none should be added. The '(פִי)' in the prior review was that reader's own notation, not the print.",
+        "Note structure: the tei:note is type=commentary inside tei:standOff type=notes, outside tei:text, with target=#misod_variant. That id resolves to the single tei:anchor directly before פְּנֵי (JLPTEI-3 'Comments and Notes': 'A target attribute references the point in the text where the note applies'). targetEnd is optional in the guidelines ('may also be used'). The prior reader explicitly accepted a single anchor and only recommended an end anchor, so its absence is not a violation. No j:condition is needed because the note applies wherever the module is transcluded.",
+        "The note text is נ״א פני ממ״ה מלא רחמים, with the typographic parentheses dropped. The prior reader accepted dropping them, and the guidelines do not require keeping them.",
+        "The anchor is a point in the text, not a milestone. It adds no URN and does not affect the prayer-part scope (JLPTEI-3 rule 4). The prayer-part …misod_chakhamim/text opens before מִסּוֹד and is closed by a bare prayer-part terminator after the colon.",
+        "The English shares the single key …misod_chakhamim/text, and its extent covers the whole Hebrew. The English text is unchanged.",
+        "The reusable module (urn:…prayer:misod_chakhamim) contains no ark directive. That is correct: the open-ark and close-ark directives belong to this service order and are encoded in the running order on either side of the transclusion (see the instructions below). They should not be moved into the canonical prayer."
+      ]
+    },
+    {
+      "stem": "repetition_avot_open",
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "issues": [],
+      "unresolved_structural_questions": [],
+      "verified": [
+        "The prior review's issue (ark-opening rubric not encoded) and its two unresolved items (missing minyan/repetition condition, missing heading) all came from not seeing the running order. They are answered by context that exists. The documentary order context has, in sequence: the description note חֲזָרַת הַתְּפִלָּה לִשְׁלִיחַ צִבּוּר., the instruction note פותחים הארון., a transclusion of …/repetition/avot/open, a transclusion of prayer:misod_chakhamim, the instruction note סוגרים הארון., the description note ע״ס א״ב., and a transclusion of poem:at_chil_yom_pequddah. That is the order printed on s124.",
+        "Full repetition scope in the expanded spine: div xml:id=section_morning_repetition holds j:conditional section_morning_repetition_condition, a j:all of recitation.repetition=true and quorum.minyan=true. This is the outermost place the condition can be stated, with no instruction note, as JLPTEI-3 'Conditions on a running order' requires. Inside it, j:declare section_morning_repetition_settings fixes repetition=true, silent=false and minyan=true, as required when a condition fixes a feature to a single value. That is followed by the bilingual tei:head (he חזרת התפלה לשליח צבור / en Repetition of the Amidah), then the instruction פותחים הארון., the transclusion of avot/open, the transclusion of misod_chakhamim, and the instruction סוגרים הארון.",
+        "Scopes are properly closed. j:endDeclare target=#section_morning_repetition_settings is the last child of the inner div, and j:endConditional target=#section_morning_repetition_condition follows that div. The same holds for the nested scopes: section_repetition_attah_hu_custom_condition, section_morning_repetition_weekday_poems_condition, section_metz_tair_vetaria_expanded_1/2_condition, section_morning_repetition_shabbat_poems_condition and section_expanded_metz_kol_1/2_condition each have an endConditional naming their own id. All ids are local and unique in the excerpt.",
+        "The ark directives are directives under JLPTEI-3 'Kinds of rubric' ('The Ark is opened' is the example given): tei:note type=instruction placed where the action applies and printed wherever that place is reached. Each artifact encodes them once, in the right place: open before Avot, close after Misod. They are not encoded inside the module. No @rend is needed.",
+        "The heading is encoded once in each artifact: as tei:note type=description in the documentary index, and as tei:head inside the conditioned div in the spine, after the j:conditional. That matches the rule that a description goes 'first inside the passage's scope, after the j:conditional'. The running header at the top of the page (no period) is page furniture and is correctly not encoded.",
+        "Module internals: pb ed=1965 n=48 (n123/s124 in Hebrew, n124/s125 in English), then prayer-part …/avot/open/text, then the bounded seg@source=prayer:amidah/avot/barukh_attah, then a bare prayer-part terminator. There is no Bible quotation, so no verse milestones are needed. The English key and extent match, and the English is unchanged."
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "key": "repetition_heading",
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "s124.jpg: the large heading below the rule reads חֲזָרַת הַתְּפִלָּה לִשְׁלִיחַ צִבּוּר. with a final period. That matches at the word and punctuation level. The primary and independent readers agree. The vowel points of the heading are not certified here.",
+        "type=description is correct: the heading says what the passage is. In the spine it is a bilingual tei:head within the conditioned scope. I found no duplicate within either artifact."
+      ]
+    },
+    {
+      "key": "repetition_open_124",
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "s124.jpg: a small unpointed rubric on the far left, just above the first line of בָּרוּךְ. After ה it has an ascender glyph, then ר, ו and ן. That is the shape of הארון in this small type. The primary's החלון would need a ל in the third position, which is not there. Reading: פותחים הארון.",
+        "type=instruction (a directive). It is placed in the service order directly before the avot/open transclusion, once."
+      ]
+    },
+    {
+      "key": "repetition_close_124",
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "s124-row6.png, line 4, far left: סוגרים הארון. The first letter is a ס with a broken-looking stroke, not a ק. The ארון shape is the same as in the opening rubric. The final period is present.",
+        "type=instruction (a directive). It is placed after the misod_chakhamim transclusion and before ע״ס א״ב. / at_chil, once."
+      ]
+    },
+    {
+      "key": "repetition_et_acrostic",
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "s124-row6.png, bottom center: ע״ס א״ב. with gershayim in both abbreviations and a final period. It matches.",
+        "type=description: it says what the following passage is (an alphabetical acrostic). It comes directly before the at_chil_yom_pequddah transclusion in the documentary order. The expanded generic spine does not carry it. That is consistent with keeping edition-specific descriptions in the documentary index, and it does not affect the three reviewed units. The ק׳ speaker siglum before אֵת and the at_chil piyyut itself are outside this review's scope."
+      ]
+    }
+  ],
+  "limits": [
+    "Variant-note abbreviation: the note encodes נ״א. The scan clearly shows a letter, gershayim and then א. At this resolution I cannot certify whether the small first letter is נ or כ. The readers disagree: the primary has מ״מ, the independent has כ״א, and the current text has נ״א. נ״א (nusach acher, 'another version') is the conventional abbreviation for a variant reading, but I am not using convention to decide what is printed. This is a fine glyph question about the note text, not a structural problem.",
+    "Note target: confirmed as the single point before פְּנֵי. The print places the parenthetical after הָאֲדוֹנִים. Anchoring at the head of the replaced span is allowed, and no targetEnd is required.",
+    "I treated the documentary order context and the expanded spine as separate artifacts, each encoding the heading and ark directives once. Nothing here shows whether a build compiles both into one output. I did not test that.",
+    "This review is structural and guideline-level only. It does not accept Hebrew pointing or approve any new source reading. The five pending glyph questions on s125–s129 were neither reviewed nor approved.",
+    "Not structural, so not counted as an issue: the en title in current.json for repetition_avot_open and misod_chakhamim is in Hebrew.",
+    "I ran no validator, compiler or URN resolver. All scope, declaration and alignment checks were done by reading the files."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "4f226e65-004d-4b17-bab5-b81903249332"
+  }
+}
