@@ -1,0 +1,50 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "low"
+  },
+  "witnesses": [
+    {
+      "stem": "emet_veyatziv",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "Prior issue 1 (period after גאלת) is closed. The current ezrat text in current.json and in the review XML reads 'וּבְכוֹרְךָ גָּאָלְתָּ וְיַם־סוּף' with no period. s114-row6 line 3 shows no punctuation between גאלת and וים־סוף. This matches the 'after' state in completion_review_2026_11_emet_clear_corrections.json.",
+        "Prior issue 2 (קַיָּמֶת) is closed. The current text has 'לָעַד קַיֶּמֶת:' with a segol under the yod. In s114-row1 line 2, the mark under the yod of קימת is the three-dot segol, not a qamatz. This matches the clear-corrections 'after' state.",
+        "Prior issue 3 (Exod 15:11 accents incomplete) is closed by human 136–138. The current verse in both current.json and the XML seg is 'מִֽי־כָמֹ֤כָה בָּֽאֵלִם֙ יְהֹ֔וָה מִ֥י כָּמֹ֖כָה נֶאְדָּ֣ר בַּקֹּ֑דֶשׁ נוֹרָ֥א תְהִלֹּ֖ת עֹ֥שֵׂה פֶֽלֶא:'. Each mark sits on the host the human named: first מי has meteg on the mem; בָּֽאֵלִם has meteg on the bet; second מִ֥י has merkha on the mem; כָּמֹ֖כָה has tipcha on the mem; נֶאְדָּ֣ר has munach on the dalet; בַּקֹּ֑דֶשׁ has etnahta on the qof; נוֹרָ֥א has merkha on the resh; תְהִלֹּ֖ת has tipcha on the lamed; עֹ֥שֵׂה has merkha on the ayin; פֶֽלֶא has silluq on the pe. This matches the human file's 'after' text and its accent_host_additions list. s116-row1 shows marks in these positions.",
+        "The three earlier opening accents are unchanged: mahpakh on the mem of כָמֹ֤כָה, pashta on the final mem of בָּֽאֵלִם֙, and zaqef qatan with the holam of יְהֹ֔וָה. They are still inside j:divineName.",
+        "Prior unresolved items 1–9 (the accents of Exod 15:11) are closed by the exact human hosts above.",
+        "Unresolved item: הָרָגְתָּ. Closed by human 139 (qamatz + meteg). The current text is הָרָֽגְתָּ, with the meteg on this occurrence only.",
+        "Unresolved item: גָאָלְתָּ dagesh. Closed by human 140. The current text is גָּאָלְתָּ.",
+        "Unresolved item: גָדוֹל dagesh. Closed by human 141. The current al_zot text is גָּדוֹל.",
+        "Unresolved item: וּמַגְבִּיהַ mappiq. Closed by human 142. The current text is וּמַגְבִּיהַּ.",
+        "Unresolved item: גּוֹאֵל in 'מֶלֶךְ גּוֹאֵל וּמוֹשִׁיעַ'. Closed by human 143. The gimel dagesh and the alef tsere are both confirmed and kept as encoded. The apparent damage is an alef-lamed ligature with no extra mark, so no sic/corr is needed. The current text is unchanged.",
+        "Unresolved item: dagesh in the dalets of וְעַל־דּוֹרוֹתֵינוּ and כָּל־דּוֹרוֹת. Closed by human 144. Both dageshes are confirmed and kept.",
+        "Unresolved item: כִנְאֻמֶךָ and גֹּאֲלֵנוּ. Closed by human 145 and 146. The kaf of כִנְאֻמֶךָ has no dagesh, and the gimel of גֹּאֲלֵנוּ has a dagesh. The current text is unchanged.",
+        "The current Hebrew in current.json and the review XML is the human file's 'after' text, which is the clear-corrections 'after' text plus the human 136–142 changes. I found no other change to any word. Words outside these items were source-checked in the prior report and keep that status. I did not re-read them.",
+        "The English in current.json is identical to the 'before' English in both records. The XML keeps the existing tei:choice sic/corr for has→hast and Praiscs→Praises. I did not retranslate.",
+        "Every יְיָ (5) and the single יְהֹ֔וָה are wrapped in j:divineName in the XML.",
+        "Bounded quotations: Ps 106:11, Exod 15:11, Exod 15:18 and Isa 47:4 are each opened by a chapter milestone and then a verse milestone, both with corresp. Each is followed by a tei:seg@source holding the canonical Bible URN and exactly the whole verse text. Each closes with a bare verse terminator and then a bare chapter terminator, before the next unrelated text or prayer-part milestone. So no verse or chapter scope over-claims. בָּרוּךְ אַתָּה…גָּאַל יִשְׂרָאֵל falls outside the Isaiah scope. The final bare prayer-part terminator closes tzur_yisrael in both languages.",
+        "Prayer-part scopes: ezrat contains the Ps 106 quotation, mi_khamokhah contains Exod 15:11, adonai_yimlokh contains Exod 15:18, and tzur_yisrael contains Isa 47:4 and the chatimah. These extents are identical in Hebrew and English.",
+        "The Hebrew and English carry the same corresp-bearing milestones in the same order with the same terminators: 9 prayer-part milestones (emet, al_harishonim, ezrat, al_zot, mosheh, mi_khamokhah, shirah, adonai_yimlokh, tzur_yisrael) and 4 quotation contexts (quoted_psalms_106_11, quoted_exodus_15_11, quoted_exodus_15_18, quoted_isaiah_47_4), each with a chapter and a verse corresp. The quotation corresps are unchanged from the prior state, and no new URN appears.",
+        "The page breaks (pb n=43 before יִשְׁעֵנוּ, pb n=44 at the head of Mi khamokha, n114/n116 on the English side) and the 6 Hebrew paragraph breaks are unchanged from the prior verified state. The unit ends before אֲדֹנָי שְׂפָתַי."
+      ]
+    }
+  ],
+  "limits": [
+    "This is an adjudication by reading files and viewing the s114 row1/row6/row8 and s116 row1/row2/row3 images. I ran no schema validation, compiler, URN resolver, validate_urn_references or codepoint dump. Accent and meteg codepoints were checked by reading the file text and comparing it with the codepoints in the human record, not byte by byte.",
+    "The request said 12 shared part/quote corresps per language. I count 9 prayer-part milestones and 4 quotation contexts. Counting each quotation's chapter and verse milestone separately gives 17 corresp milestones per language. The sets are identical in both languages, so this does not block approval, but I could not reproduce the count of 12.",
+    "I did not open the canonical registry. The statement that the quotation contexts have status=context and that canonical Bible identity rests on seg@source is taken from the request. The XML is consistent with it: seg@source carries the bible URNs, and the milestone corresps are emet_veyatziv/quotations/... paths.",
+    "Human 136–146 is accepted as authoritative for the exact hosts and marks. I did not reopen them from the lower-resolution images.",
+    "Scope is Emet Veyatziv only. The Shema instructions, Yotzer and the Amidah were not reviewed."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "e587b26c-4b8f-4191-b0a6-cf08bff7a295"
+  }
+}

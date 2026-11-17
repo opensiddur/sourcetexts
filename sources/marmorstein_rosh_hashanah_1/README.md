@@ -1051,3 +1051,64 @@ The acceptedpointedheadingandthesixunpointedinstructions/descriptions
 haveactualsourceandguidelineclosure. EmetVeyatzivand8Yotzerwitnesses
 areunderfreshboundedreview. ExistingPDF/HTMLpreviews remain stale;
 finalvisualacceptance has not been claimed.
+
+
+### Completion review checkpoint: 186 accepted encoded leaves
+
+Acceptance now covers186of224encoded leaves;38remain. EmetVeyatziv has
+actualfinalsource/guidelineapproval with no openfindings after human136–146.
+The missingExodus15:11cantillation now preservesall11accent/silluqhosts
+and2metegs;13orderedhosts areverifiedprogrammatically. HaragtaRESHmeteg,
+Gaalta/GadolGIMELdageshesandUmagbiahmappiqareapplied. Goel's apparent
+damage is an ALEF-LAMEDligature,confirmedbyhuman;letters/pointsretained.
+KayyemetYODsegolandtheabsenceofGaalta-periodmatchthescan. Actualpaired
+compilation preservesbothlanguages;17correspmarkers match, comprising
+9prayerpartsand4chapter/versepairs. Twelve was the inputsegmentcount,
+not the numberofmilestonecorrespondences. Scans112/114/116 arecomplete.
+
+FiveEnglishYotzerwitnesses have freshstructural/alignmentapproval with
+unchangedsourcewords. Three scopehashes were temporarily stale while their
+quotation/condition boundaries changed; theirprevioussourceapproval is
+retainedwithactualnewguidelineclosure. This restoresEnglishpagevalidity,
+withoutcountingthosepagesasnewsourceacceptance. Native103/105confirm
+page-openingdirectivesandmid-sentencecontinuedShabbatrubricplacement.
+
+Twohalfversequotations now carry explicitnestedchapter/verse/halfverse
+markers andmatchingterminators, withtheexistingcanonicalhalfverseURI
+onboundedsource. Sixdeeperoccurrencecontextsare registered;theexisting
+quote targets andcanonicalidentitiesare unchanged. ExactPs92:2/aand
+Ezek3:12/b resolve inWLCandMiqra,withoutcoarsening. EightactualHE/EN
+quote-rangechecks and30day/languagecases preserveexactextentsandwords.
+
+The importer now supports an optionalsegment condition_end_corresp that
+ends the condition after the segment with that existingcorresp. The ElAdon
+continuedShabbatrubric covers allremainingstanzas inbothlanguages; its
+endpoint is existingstanza6. Nestedscopes retain their own ends. Missing,
+backward,ambiguousandcrossingendpoints are rejected;thereviewhashrecords
+the endpoint. Two regressiontests exercise reference/page boundaries and
+invalidscopes. All171tests and41subtests pass. This is importer/source work;
+the separate exporterfix remains PR309.
+
+Exacthuman147–158 adds14occurrence-specificmetegs, joinsandpoints
+שֶׁלַּיּוֹם,corrects the specifiedShabbatBETtopatah,andaddsKolKAFdagesh.
+The raisedmarkbyMale is a printingartifact. FourclearElAdontranscription
+errors arecorrected: defectiveSovvim/Tovim, Zivamcolon, and noVayizrach
+maqaf. A proposedNotnimLoMaqaf remains withheldpendinghuman171. Hebrew
+Yotzeracceptance is stillpending, includingadditionalfaintmarkfindings in
+the actualthree-sourcefollowup. No genericglyphapproval is inferred.
+
+Allpresentedquestions7–158and80/95bfollowups are settled. Current159–171
+have enlargednumberedsnippets. TwoalreadyencodedTorahBiblewitnesses are
+under boundedsource/guidelinereview; nonewinstallment has started. Existing
+PDF/electronicpreviews remain stale; finalvisualacceptance is pending.
+
+
+The continued-page marker is now emitted before the segment condition and
+its own rubric, so that the rubric inherits the new source page rather than
+the preceding page. The regression checks this order. After rebuilding the
+reference database,12actualstanza/day/languagecases preserveElAdonstanza2
+and3word extents with balancedconditionalmarkers, including starts/ends
+inside the extended source condition. The8quoteand30day/languagecases
+also pass after this marker-order correction. CachedYotzerimages match the
+Archive-scandataoriginalpixel dimensions(1368×2264),so no additional image
+detail was inferred from enlargement. Further faint marks remain pending.
