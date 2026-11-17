@@ -6432,7 +6432,8 @@
     "commit": "93f33b1",
     "tests": "206 passed,16subtests passed",
     "actual_volume_cases": "4Hebrew-only modules preserve exact source words without unrelatedEnglish;2realModimcontextURMs preserve completeclausesandpage155marker.",
-    "limit": "Runtime proof uses isolated exporter fix. Main digitization branch does not yet contain that unmerged dependency."
+    "limit": "Merged exporter behavior verified directly on current branch; no isolated external exporter checkout required.",
+    "status": "PR309 merged; upstream squash commit08a956b is included in current digitization processor branch"
   },
   "latest_emet_yotzer_checks": {
     "emet": "Actualfinalsource/guidelineclosure;2actualbilingualwordcomparisons;13orderedaccent/meteg/silluqhostsand17matchingcorrespsperlanguage.",
@@ -6442,5 +6443,11 @@
   },
   "preview_limit": "Existing172/191-pagePDFs predate these completion-review corrections; no refreshed PDF visual QA or release acceptance claimed.",
   "human_open_questions": "No presented human questions open. All7–171 plus80/95b follow-ups settled/applied. OtherYotzerfine-mark findings remain under review; Torah2witnesssource/guideline review underway.",
-  "scope": "English prayer/rubric and navigation acceptance does not certify Hebrew source counterparts. XML hashes were captured after regeneration, including mechanical review-status metadata changes."
+  "scope": "English prayer/rubric and navigation acceptance does not certify Hebrew source counterparts. XML hashes were captured after regeneration, including mechanical review-status metadata changes.",
+  "branch_update_20261117": {
+    "upstream": "All3branches include their fetched upstream defaults; bundled submodules synchronized to paired digitization commits.",
+    "integration_tests": "423passed,57subtests passed",
+    "source_review": "Previous completed report archived; new Claude Opus5.5 medium adjudication restarted. No presented human question open.",
+    "evidence": "completion_review_2026_11_restart_20261117.json"
+  }
 }
