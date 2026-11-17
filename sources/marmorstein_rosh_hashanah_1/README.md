@@ -1124,3 +1124,13 @@ answer is reopened. Twelve exact meteg clusters and four negative readings were
 verified; all646generatedXMLvalidate, and8quotation extents,30day/language/unit
 cases and12conditional stanza cases pass. Evidence and frozen review inputs
 are committed in the source project's completion_review_2026_11 records.
+
+
+After human211–224, Hakol's11confirmedmetegs andLAMEDsheva are encoded;
+222remainswithoutmeteg and224retainsLAMEDdagesh. Its actualindependent
+source review confirms those decisions but records4newdistinct uncertainties
+(now241–244). EtShem'salreadysettled160a–cfindings are independentlyclosed
+andaccepted. Currentquestions225–240concernKhevodoIhel;241–244concernHakol.
+The22Melekhrefrainoccurrences remain explicitlyqueued andarenot silently
+resolvedfromsimilarwords. Acceptedcoverage remains187of224encodedleaves.
+All646XMLvalidate;8quoteextent and30day/language/unitcasespassafteredits.
