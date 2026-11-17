@@ -1,6 +1,6 @@
 {
-  "status": "Partial encoded-backlog checkpoint;38 encoded leaves still pending, not complete acceptance.",
-  "accepted_leaves": 186,
+  "status": "Partialencoded-backlog checkpoint;37encodedleavesstillpending,notcompleteacceptance.",
+  "accepted_leaves": 187,
   "encoded_leaves": 224,
   "total_volume_leaves": 355,
   "accepted_unit_witnesses": {
@@ -6423,6 +6423,18 @@
       "final_xml_sha256": "7353f14ca60404e92737c98baf47954a0f67b47222e4303eb0af4f08b5b15369",
       "final_reading_sha256": "6c1ae954fcfe57076a969d3ecbc8dcac6e3fbc426f6dedb77375d6ee840dd3df",
       "review_evidence": "completion_review_2026_11_el_barukh_sin_host_acceptance.json"
+    },
+    "el_adon/he": {
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/el_adon.xml",
+      "final_xml_sha256": "b9a5bfa1ebd5f8497a4c76b2207f6e2bdc33a11de5411df325ab7ce33a729021",
+      "final_reading_sha256": "4177b99830321f8d67df0ca5754c78723383310c63f94229080be8e8871ba28d",
+      "review_evidence": "completion_review_2026_11_el_adon_lael195_210_acceptance.json"
+    },
+    "lael_asher_shavat/he": {
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/lael_asher_shavat.xml",
+      "final_xml_sha256": "4f50ac23e0941362400db2bc62bb254a05d56e84f2f8c60affaf6effd5543a79",
+      "final_reading_sha256": "12a85e2cffe1718f5e37c9e1bb64ee0a8c2fed58a7f06a2ed4938633ed718baa",
+      "review_evidence": "completion_review_2026_11_el_adon_lael195_210_acceptance.json"
     }
   },
   "index_xml_sha256": {
@@ -6460,7 +6472,7 @@
     "source_limit": "Human7–171settled;otherYotzersourcefindingsandfinalclosurepending;structural/Englishapprovaldoesnotcertifythosewords."
   },
   "preview_limit": "Existing172/191-pagePDFs predate these completion-review corrections; no refreshed PDF visual QA or release acceptance claimed.",
-  "human_open_questions": "195–209ElAdon and210LaelMimmaal open with inspected source crops. All7–194 and80/95bfollow-upssettled/applied.",
+  "human_open_questions": "211–224HakolYodukhaopenwithinspectedsourcecrops. All7–210and80/95bfollowupssettled/applied.",
   "scope": "English prayer/rubric and navigation acceptance does not certify Hebrew source counterparts. XML hashes were captured after regeneration, including mechanical review-status metadata changes.",
   "branch_update_20261117": {
     "upstream": "All3branches include their fetched upstream defaults; bundled submodules synchronized to paired digitization commits.",
@@ -6468,7 +6480,7 @@
     "source_review": "Restarted Claude Opus5.5 medium pass completed and archived. All4guideline/alignment verdicts approved;BarukhKevodHebrew and openingdirective approved;3otherHebrew witnesses retain explicit source uncertainties. No presented human question open; acceptance unchanged.",
     "evidence": "completion_review_2026_11_restart_20261117.json"
   },
-  "latest_source_closure": "HameirHebrewandElBarukhHebrew nowaccepted afterexacthuman172–194andactualindependentreviewchain. BarukhKevodandopeningdirectivepreviouslyaccepted. Wholepagecount186/224;neighboringElAdon/Hakol/Laelremainpending.",
+  "latest_source_closure": "Hameir,ElBarukh,ElAdon,Lael,BarukhKevod Hebrew andopeningdirectiveaccepted. Source104complete;102pendingHakol. Otherencodedreviewbacklogremains.",
   "human172_194": {
     "changes": "19exactmeteg additions;172SIN label corrected;175/176/190ALEF hosts;181/193RESH hosts with noPE meteg;4negative readings unchanged.",
     "encoding_verification": "completion_review_2026_11_human172_194_xml_verification_v2.json",
@@ -6476,5 +6488,13 @@
     "schema": "All646generatedXMLvalidate:3initialbodyedits,2subsequentSINhostcorrectionsandacceptedmetadatachangeschecked;byteidenticalfilesreusepriorvalidation.",
     "actual_compiler": "8exactHE/ENquotationextentchecks and30actualday/language/unitcasespassagainaftercorrectSINhosts;proofarchived.",
     "independent_closure": "Actual complete source/guideline review approvesHameir;actualfocusedsourcecropreviewverifies180/194correctSINhostsandapprovesElBarukh, preservingpriorfullcomparison. LaelhasONLYMimmaalquestion210remaining. Noearlierhumandecisionreopened."
+  },
+  "human195_210": {
+    "status": "12precisehostmetegsadded;4negativesretained;exactcombiningclustersverified.",
+    "independent_closure": "ActualcompleteElAdon/Laelsource/guideline/alignmentapprovalwithnounresolvedfinding;bothaccepted.",
+    "page_completion": "AllreadingkeysforPDF104nowcurrent;187/224encodedleavesaccepted.",
+    "schema": "All646XMLvalidate;2bodyeditsand2acceptedstatusheaderschecked,unchangedfilesbyteidentical.",
+    "actual_compiler": "8HE/ENquoteextents,30day/language/unitcasesand12stanza/day/languagerangecasespassed.",
+    "English_unchanged": true
   }
 }
