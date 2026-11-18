@@ -1,0 +1,78 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Closure review only; no new reading of the source. Read in full: exact-delta-and-heading-proof.json, piyyutim-final263/current.json, current.raw.xml (all 180 lines: the 6 unit files plus the documentary and expanded Shabbat routing divs), guideline-excerpts.md, shemo-roles-after260/review.json, piyyutim-after260/review.json, piyyutim-after260-first/review.json and shemo-after260-runtime-verification.json. Read human_completion_review_2026_11_261_263.json lines 1-2042: the exact answers, the changes list, the complete 'before' records for aafir_nezer and shemo_mefoarim (Hebrew, English and citations) and the start of 'after'. Spot-read the frozen payloads: shemo-roles-after260/current.json lines 1-120 (the whole teshalesh unit and the start of Shemo) and piyyutim-after260/current.json lines 1-60. I compared the current units with the 'before' records field by field, by reading them. I did not compute the sha256 values, view any image or run any compiler."
+  },
+  "witnesses": [
+    {
+      "stem": "aafir_nezer",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "Both frozen reviews (piyyutim-after260-first and piyyutim-after260) withheld Hebrew source approval only because of 261. They named the same word: s138 row2, line 2, first word, before בְּהַלֵּל. Both independently read it as ו־ת־ק־ו־ה־ו, with patah on the first vav and no ayin. That contradicted the encoded וּתְקוֹעֵהוּ. Both gave encoding guidelines, English and citations a positive result.",
+        "Human 261 = 'וַתְּקֽוּהוּ'. It appears exactly once: in current.json he paragraph 1 fragment 2, and in current.raw.xml part_1 before בְּהַלֵּל. The string matches the human answer exactly: patah on the vav, dagesh and sheva on the tav, meteg after the qof, shuruk. וּתְקוֹעֵהוּ no longer appears anywhere. This resolves the original source dispute; it does not stay open as a question.",
+        "Every other field is identical to the human-record 'before' state: title, the empty part_1 opener, all the other words of the s138 and s140 text, the description 'החזן בנגון.', the unit description 'ע״ס א״ב.', and pb 55/56 split at לְמַעֲבִיר | עֶבְרָה with part_2. That includes the opening marks the human confirmed earlier, אַאֽפִּיר נֶֽזֶר, and human 252 בְּהַלֵּל and 253 נָכְחָם. None was reopened.",
+        "The English part_1 and part_2 are character-identical to the 'before' record. The HE and EN prayer-part URNs are shared, with a bare terminator."
+      ]
+    },
+    {
+      "stem": "shemo_mefoarim",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "The frozen full four-region review (shemo-roles-after260/review.json) found no issues. It gave encoding guidelines, English and citations a positive result, and approved all 25 quotation scopes. Its only word reading still open was 262: the yod of יְקִירְךָ, s138 motot, in the Reader line before ק׳ כְּנַֽמְתָּ.",
+        "Human 262 = patah. Current text (json he paragraph 12, and raw.xml motot): 'וּבֵין יַקִירְךָ קַרְסֹל'. Only the initial sheva became patah. The qof has no dagesh, so the earlier reviewer's candidate יַקִּירְךָ was correctly not taken over. יְקִירְךָ no longer appears.",
+        "Every other Hebrew fragment, speaker, repeat cue, condition, quotation and anchor in paragraphs 1-16 is identical to the human-record 'before' state. The English paragraphs 1-16 and the citations block are identical too.",
+        "Role cues in raw.xml: 7 חו״ק (reader_and_congregation, expan חזן וקהל) plus 36 ח׳/ק׳ (adar 6, dea 4, varasham 2, zevach 6, yarum 6, motot 6, qiryat 6). These agree with the positions the frozen review checked, and the ק׳ comes before כְּנַֽמְתָּ. Every role note sits outside the quotation milestones and segs.",
+        "The 25 quotation contexts in raw.xml each have chapter and verse milestones with bare terminators, and canonical bible URNs appear only on seg/@source. The colon of varasham_18, the period in yarum_7 'וָעֶד.' and the colon in qiryat_25 'לְעוֹלָם:' are all present. The runtime file reports 50 bilingual bounded quote extents (25×2), 6 whole-piyyut rite cases and 6 expanded refrain cases, all passing. Its own stated limit applies: no source or guideline acceptance is inferred from those tests.",
+        "kol_yoshvei: the first occurrence is a marked metz=false conditional carrying the printed instruction בק״ק מיץ אין אומרים. The s138 repeat is marked, has no instruction, and uses seg/@source to point at the first occurrence instead of duplicating its URN."
+      ]
+    },
+    {
+      "stem": "teshalesh_shofarot",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "The whole unit in current.json (HE text, speaker קו״ח / קהל וחזן, speaker_before_reference, part_1 corresp, EN text) is character-identical to the frozen shemo-roles-after260/current.json unit. The proof correctly records changed_occurrences 0.",
+        "The frozen review has all four flags positive, issues [] and unresolved []. Per the registry note it cites (instruction.jsonl line 100), the canonical joint role reader_and_congregation is order-neutral. The printed order קו״ח is kept in tei:abbr, and the expansion קהל וחזן follows that order. No new role identity is needed. This also closes the earlier objection about the corresp order in piyyutim-after260-first."
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "stem": "shemo_mefoarim",
+      "index": 0,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    }
+  ],
+  "source_heading_accounting_approved": true,
+  "heading_accounting_explanation": "The frozen Shemo review's open item was the small centred day heading repeated at the top of each s132/s134/s136/s138 region. It was a page-heading scope question, not a poem word; that review compared every poem word and found nothing else. The proof preserves the ten superseded records in full: he 'אם שבת.' on s132/s134/s136/s138/s140, and en 'On Sabbath.' on s133-s141 with printed pages 52-56. Each says that its faint pointing and language are not accepted or normalized. None of the ten keys occurs in current.json, the six unit files, or either routing div in current.raw.xml. That agrees with both earlier reviews, which found them absent and unreferenced. The user asked for continuous, separate weekday and Shabbat works. That whole continuous Shabbat work (shemo_mefoarim, eten_lefoali_tsedeq_shimon, yishpot_repeat) is governed by one higher-level j:conditional (holiday-aggregate shabbat=true). Its own instruction is the full printed German rubric from s132 p.52: 'אַם שַׁבָּת ווירד דאַ: אונטענסטעהענדע שְׁמוֹ מְפָאֲרִים געבעטעט.' (xml:lang de-Hebr). The expanded order has a matching higher-level Shabbat guard. This follows the guideline that a section's condition is stated once, at the outermost point, so the source's day label is carried by that condition. Repeating per-page day labels inside a continuous poem would interrupt it, and marking their faint raw pointing as accepted would certify a reading nobody verified. Human 263 confirmed the samekh in אונטענסטעהענדע, so the rendered rubric has no letter question left. The earlier review had approved that rubric's source and guidelines apart from this samekh.",
+  "limits": [
+    "Coverage: approvals rest on (a) the frozen complete source reviews and (b) the human-only delta 261/262/263 checked against the files. I did not view any image this pass, and I did not re-read words that had already been adjudicated.",
+    "I did not recompute the sha256 values in the proof. I established payload identity by reading the human-record 'before' states (Aafir and Shemo, every field) and the frozen teshalesh unit field by field. I only spot-read the frozen current.json files themselves; I took their equality with the human-record 'before' state from the record and the opening lines I checked.",
+    "I did not read the source records that first designated the ten keys superseded, or the spine index.xml files themselves. 'All ten preserved identically' and 'none referenced before or after' rest on the proof, the earlier reviews' absence checks, and the routing included in current.raw.xml.",
+    "Documentary only: the raw texts of the superseded heading records ('אם שבת.') differ from what earlier image reviewers glimpsed ('מִן שַׁבָּת.', 'מין/לחן שבת.'). They are unrendered and explicitly not accepted, so this changes nothing in the edition. It is noted so that no one later treats those raw strings as verified.",
+    "Classification note on the higher-level rubric, outside the three witness payloads and not blocking: it says both when and what ('the following שְׁמוֹ מְפָאֲרִים is said'). The guideline's Kinds of rubric section says such a rubric is a description. It is encoded as the condition's own instruction, which earlier reviews approved. Both placements satisfy heading accounting. They differ only in whether the rubric still prints when the date is known to be Shabbat. This is left to the user's decision and is not raised as an issue.",
+    "No final PDF or HTML visual approval is claimed. The runtime results are the provided verification file, not my own run."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "c1cd12e4-8458-4756-a7dd-d0037b33e592"
+  }
+}

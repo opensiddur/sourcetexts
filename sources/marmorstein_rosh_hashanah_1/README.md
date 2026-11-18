@@ -1156,3 +1156,6 @@ leavesareaccepted;34encodedleavesremainunderreview. Allpresentedquestions
 through245aresettled. A new8-witnesssource/guidelinebatchonPDF132–140is
 running,withthecontinuousShabbatalternativeandactualroutingcontextincluded.
 SourceimagesremainoutsideGit;finalPDF/HTMLvisualacceptanceisstillpending.
+
+
+Completion review after human readings 246–263 accepts eight additional Hebrew units, the source variant note, and the rendered directives for the continuous weekday/Shabbat alternatives. The corrected block now has explicit internal speaker alternation and 25 bounded bilingual scripture quotation contexts; canonical text identities are reused. All presented questions through263 are settled. The actual compiler passes50 bilingual quotation-extent checks and12 rite/refrain cases, and all646 generated XML files validate. Current acceptance is193 of224 encoded leaves;31 encoded leaves and final PDF/HTML visual acceptance remain. The next seven-unit review around scans136–144 is being triaged. Historical repeated page labels remain preserved, unaccepted as raw pointing, in superseded records.

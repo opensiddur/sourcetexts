@@ -1,0 +1,366 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Low-to-moderate. I read all of current.json, current.review.xml, routing-context.json (source_order and expanded_order around index 109–115 and morning_repetition) and guideline-excerpts.md. I looked at s132, s134, s136, s138 and s140 full-page and at every enlarged row, except s136-row4, which I only saw as a full-page view because it repeats the end of row3 and the start of row5. The four human-review JSONs were opened: 21_30 and 31_35 in full, 7_12 and 13_20 only for their first 80 lines. All the decisions I read were about scans s98, s100 and s124–s130, so none bear on s132–s140; I did not check the rest of 7_12 and 13_20 for s132–s140 records. I did not open the blind independent files (-132 … -140) or primary/morning_s124_s145_initial.json. I did not open the full spine index.xml files. No schema, compiler, refdb or validation tool was run."
+  },
+  "witnesses": [
+    {
+      "stem": "attah_hu_eloheinu",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": false,
+      "english_alignment_unchanged": false,
+      "citations_source_approved": true,
+      "issues": [
+        "The printed description 'ע״ס א״ב.' on s132 (row1, second rubric line, centred-left above the left column, beside 'פותחים הארון.') is the acrostic label of אתה הוא אלהינו, which is alphabetic: א ג ה ז ט כ מ ס פ ק ש ת. It is not encoded on this unit. The key repetition_aafir_acrostic points to a different, separate printing on s138 that belongs to aafir_nezer. A description note needs adding at the head of attah_hu_eloheinu, keyed to scan s132."
+      ],
+      "unresolved": [
+        "English: I found no 'after' record for this unit to compare against. The current EN words in current.json and current.review.xml agree with each other, and the stanza URNs 1–12 are shared with HE. Whether they are unchanged from the accepted version is not verified."
+      ],
+      "verified": [
+        "All 12 two-column lines on s132 (rows 1–4) match the print word for word: consonants, the visible vowels I checked, the ':' line ends and the '.' half-line separators. This includes נֶאְפָּד, פְּעֻלָּתוֹ, בֶּאֱמֶת and וּמִתְנַשֵּׂא.",
+        "The final line 'חַי וְקַיָּם נוֹרָא בַמָּרוֹם וְקָדוֹשׁ:' matches.",
+        "Ark directives 'פותחים הארון.' and 'סוגרים הארון.' are present and placed inside the Frankfurt-excluded section, around this piyyut only.",
+        "Stanza milestones are 1–12 with a terminator, and the pb n=52 facs n131 is correct."
+      ]
+    },
+    {
+      "stem": "tair_vetaria",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": false,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [
+        "English: no 'after' record was available to compare against. The current EN is internally consistent and shares the part_1 URN with HE."
+      ],
+      "verified": [
+        "s132 row5: 'חו״ק תָּעִיר וְתָרִיעַ. לְהַכְרִית כָּל־מֵרֵעַ. וְתִקָּדֵשׁ בְּיוֹדְעֵי לְהָרִיעַ. קָדוֹשׁ:' matches, including the maqaf in כָּל־מֵרֵעַ.",
+        "The speaker abbreviation חו״ק is expanded as חזן וקהל and placed before the milestone.",
+        "The Metz condition ('בק״ק מיץ אין אומרים חרוז תריע.') is applied locally, in both the source-order and expanded orders."
+      ]
+    },
+    {
+      "stem": "adderet_mamlakhah",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": false,
+      "english_alignment_unchanged": false,
+      "citations_source_approved": true,
+      "issues": [
+        "s132 row6 line 1: the current text has 'עַד מָה הֻשְׁלָכָה'. The print has 'עַל מָה' (second letter lamed).",
+        "s132 row6/7 line-end: the current text has 'וַכְלִילֵי'. The print has 'זְבוּלִי' (ז־ב־ו־ל־י). This is the ז of the acrostic אלעזר and matches the English 'my sanctuary'.",
+        "s134 row1 line 2: current 'וְקַשְׁתָּהּ דָּרְכָה'; print 'וְקֶשֶׁת דָּרְכָה'.",
+        "s134 row1 line 2 end: current 'בְּעַתַּתָּהּ'; the print has four consonants, ב־ע־ת־ה ('בְּעַתָּה'), with no second tav.",
+        "s134 row2 line 2: current 'וְעַד יְסוֹד עֵירֹמָה'; print 'עָרְמָה' (ע־ר־מ־ה, no yod).",
+        "s134 row2 line 3: current 'וַתְּהִי רָמָה'; print 'וְיָדֶיהָ רָמָה'.",
+        "s134 row2 line 3: current 'בְּעָרְמָה מַעֲרִימָה'; print 'בָּעֲרָה מֵעָרְמָה'.",
+        "s134 row3 line 1: current 'וְעַד שַׁחַק רָמָה'; print 'רוֹמָה'.",
+        "s134 row3 line 1: current 'וְתָאֱפוֹד'; print 'וְתֶאְפּוֹד'. The consonants are the same; the pointing under tav, alef and pe differs.",
+        "s134 row3 line 2: current 'קַנְיָנוּת רָפְדָה'; print 'קְצִינוּת רָפְדָה'.",
+        "s134 row3 line 3: current 'וְאֶת הִקְפִּידָה'; print 'וְזֹאת הִקְפִּידָה'.",
+        "s134 row3 line 3: current 'יוֹזְמֵי וּפִרְדָּה'; print 'יָזְמָה וּמָרְדָה'.",
+        "s136 row1 line 1: current 'לְזוּ חָרְדָה'; print 'לְזָר חָרְדָה'.",
+        "s136 row1 line 1: current 'לְהָצוֹת בְּנֵי מֶלֶךְ'; print 'לְחָצָה בְּנֵי מֶלֶךְ'.",
+        "s136 row2 line 2: current 'תַּעֲבִירֶנָּה מִמֶּלֶךְ'; print 'תַּגְעִילֶנָּה מִמֶּלֶךְ'.",
+        "Encoding: the printed speaker cue 'ח׳' (חזן) before 'רָם עַל כָּל־מֶלֶךְ' on s136 row2 line 1 is missing. Only the opening 'ק׳' is encoded."
+      ],
+      "unresolved": [
+        "s132 row6 line 1, word 3 'הֻשְׁלָכָה': the mark under the initial he looks like qamats rather than qubbutz in the scan. Host: he (U+05D4), first letter of the word.",
+        "s134 row1 line 2 'בְּעַתָּה': the vowel under ayin is not legible enough to decide.",
+        "s134 row2 line 1 'יְסוֹדוֹת עֵרְמָה' (encoded עִרְמָה): the vowel under ayin looks like tsere or segol, not hiriq. Host: ayin, first letter of the last word on the line.",
+        "s134 row3 line 1 'גָּרְדָה' (last word of the line): the vowel under gimel may be tsere rather than qamats.",
+        "s134 row3 line 2 'שָׁדְדָה': the vowel under shin may be hiriq, with a possible dagesh in the first dalet. Host: the second word of the line.",
+        "s136 row1 line 2 'מִי לִי בָרָק מֶלֶךְ': the print shows shewa under bet, and the vowel under resh is unclear. Host: bet and resh, fourth word of line 2."
+      ],
+      "verified": [
+        "The 'חתום בראשי חרוזים אלעזר בירבי קליר.' description is present.",
+        "Page breaks are 52/53/54, with part_1/2/3 split at 'זְבוּלִי | חָרְכָה' and 'עֲבוֹד | לְזָר'. The split points match the print, apart from the word errors listed above.",
+        "The remaining words I compared match: מַמְלָכָה, וְעוֹד לֹא מָלְכָה, לְבֵל הִמְלִיכָה, וְאַחֲרָיו הָלְכָה, שֶׁלֹּא כַהֲלָכָה, עָלֶיהָ הַמְלָכָה, גְּבֶרֶת מַמְלָכָה, עַד תּוֹפִיעַ מְלוּכָה, מִתְמִימַי פָּרְכָה, וְנִתַּן לָהּ אַרְכָּה, רָחֲבָה וְאָרְכָה, וְעֹל הֶאֱרִיכָה, וְהִנֵּה דְרוּכָה, וְעַד עַתָּה מוֹלְכָה, עֵרָה וְהֶחֱרִימָה, רֹאשׁ הֵרִימָה, וְסוֹד הֶעֱרִימָה, וְחָרְשָׁה וְשִׂדְּדָה, וּמַלְכוּת אָפְדָה, וְחִלְּלָה מְלוּכָה, וּפָצָה לְעֵין מֶלֶךְ, יָהֲרָה בְּכֵס מֶלֶךְ, זוּלָתִי אֵין מֶלֶךְ, אֲנִי וְאַפְסִי מֶלֶךְ, רָם עַל כָּל־מֶלֶךְ, וּלְךָ תָּשִׁיב מְלוּכָה.",
+        "English: there is no 'after' record to compare against. The EN text is consistent between the JSON and the XML."
+      ]
+    },
+    {
+      "stem": "melekh_memallet",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": false,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [
+        "English: no 'after' record was available to compare against."
+      ],
+      "verified": [
+        "s136 rows 2–3: 'חו״ק מֶלֶךְ מְמַלֵּט מֵרָעָה. לְיוֹדְעֵי תְרוּעָה. הָאֵל קָדוֹשׁ:' matches.",
+        "The speaker and the pb n=54 are correct."
+      ]
+    },
+    {
+      "stem": "melekh_zokher_achuz_qeren",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": false,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [
+        "English: no 'after' record was available to compare against."
+      ],
+      "verified": [
+        "s136 row3: 'חו״ק מֶלֶךְ זוֹכֵר אֲחוּז קֶרֶן. לְתוֹקְעֵי לְךָ הַיּוֹם בְּקֶרֶן. נוֹרָא וְקָדוֹשׁ:' matches.",
+        "The small-type repeat on s140 is a separate routing unit (repetition_melekh_zokher_repeat) and is out of scope."
+      ]
+    },
+    {
+      "stem": "aafir_nezer",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": false,
+      "english_alignment_unchanged": false,
+      "citations_source_approved": true,
+      "issues": [
+        "s138 row1 line 1, word 1 (also in the title): current 'אַאֽפִּיר'; the print reads 'אַאְפִּיד', ending in dalet. No meteg is visible.",
+        "s138 row1 line 1: current 'בְּשִׁלּוּשׁ קְדֻשַּׁת הַיוֹם'; print 'קְדֻשָּׁה בַּיּוֹם'.",
+        "s138 row1/2: current 'דִּדּוּהוּ בְבֵית'; print 'דַּהֲרוּהוּ בְּבֵית'.",
+        "s138 row2 line 1: current 'חוּג הוֹגֶה הֶמְלָה'; print 'הוֹגֵי הֶגֶה הֲמֻלָּה'. The print has no חוּג; the acrostic letter is ה.",
+        "s138 row2 line 2: current 'וּתְקוֹעֵהוּ בְּהִלּוּל'; the print has consonants ו־ת־ק־ו־ה־ו with no ayin, and 'בְּהַלֵּל'.",
+        "s138 row2 line 2: current 'חֲדִישׁוּהוּ'; print 'חַדְּשׁוּהוּ' (no yod).",
+        "s138 row2 line 3: current 'טוֹב עוֹמֵס טָרַח'; print 'טוֹב, עוֹמֵס טֹרַח'. The print has a comma after טוֹב and holam on tet.",
+        "s138 row2 line 3: current 'יְיַחֲדוּהוּ'; print 'יַחֲדוּהוּ' (single yod).",
+        "s138 row2 line 3: current 'יֶרַח'; the print points the word with qamats under yod ('יָרֵחַ').",
+        "s138 row3 line 1: current 'מְשָׁרְתָיו'; print 'מְשָׁרְתֵי'.",
+        "s138 row3 line 2: current 'סַעֲרָה'; print 'סְעָרָה'.",
+        "s140 row1 line 1: current 'צִלְצְלוּ'; print 'צַלְצְלוּ'.",
+        "s140 row1 line 1: current 'פְּלִיאָים'; print 'פְּלִיאִים' (a single dot under alef).",
+        "s140 row1 line 2: current 'שְׁמֹעַ קוֹל שׁוֹפָר'; print 'שְׁמַע קוֹל שׁוֹפָר'.",
+        "Title: the stored title 'אַאֽפִּיר נֶֽזֶר' carries the same consonant error and invented metegs. The canonical URN can stay; this is display text."
+      ],
+      "unresolved": [
+        "s138 row1 line 1 'נֶֽזֶר': the vowel under nun may be tsere rather than segol. No clear meteg is visible.",
+        "s138 row1 line 1 'אַאְפִּיד': the mark under the second alef is not clearly legible.",
+        "s138 row2 line 2: the vowels of the word with consonants ותקוהו are uncertain.",
+        "s138 row3 line 2 'נִכְחָם': the vowel under nun appears to be qamats or segol, not hiriq. Host: nun, first word of the line."
+      ],
+      "verified": [
+        "'ע״ס א״ב.' is printed on s138 row1 and is correctly attached here as a description.",
+        "'החזן בנגון.' is printed and is encoded as a description inside the scope.",
+        "The pb 55/56 split at 'לְמַעֲבִיר | עֶבְרָה' matches.",
+        "The remaining words I compared match: אָיוֹם, גִּבּוֹרֵי כֹחַ גְּדֻלָּה, דִּיגְלָה, וּמִלָּה, זוֹכֵר לָעַד זָכִיּוֹת, זֶמֶר חַיּוֹת, כּוֹבֵשׁ כָּל־כְּעָסִים, לְבַל אַף לְהָשִׂים, בְּחִיל מוֹרָא, הַלְלוּ נוֹרָא, שַׂרְפֵי סְבִיב, עֱנוּ לְמַעֲבִיר עֶבְרָה, פִּצְחוּ פֶה, הַכֹּל צוֹפֶה, קְהִלּוֹת עַם קְדוֹשִׁים, רוֹמְמוּהוּ רְבָבוֹת רוֹעֲשִׁים, תַּאֲזִין וְאַשְׁמָה תוּפָר."
+      ]
+    },
+    {
+      "stem": "teshalesh_shofarot",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": false,
+      "english_alignment_unchanged": false,
+      "citations_source_approved": true,
+      "issues": [
+        "s140 row2: the printed speaker cue is 'קו״ח', i.e. קהל וחזן (congregation, then reader). Current has 'חו״ק' / חזן וקהל with role reader_and_congregation. The abbreviation, the expansion and the role corresp all need to follow the print."
+      ],
+      "unresolved": [],
+      "verified": [
+        "The text 'תְּשַׁלֵּשׁ שׁוֹפָרוֹת בְּהַר הַקֹּדֶשׁ. וַאֲשַׁלֵּשׁ קְדֻשָּׁה בַּקֹּדֶשׁ:' matches s140 row2."
+      ]
+    },
+    {
+      "stem": "shemo_mefoarim",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": false,
+      "english_alignment_unchanged": false,
+      "citations_source_approved": false,
+      "issues": [
+        "shemo (s132 row7): current 'וְנַעֲרִיץ'; print 'וְנַעֲרָץ' (no yod).",
+        "shemo (s132 row7 line 2): current 'כּוּלּוֹ'; print 'כֻּלּוֹ' (qubbutz, no vav).",
+        "shomerei (s132 row8 line 1): current 'מִצְווֹתָיו'; print 'מִצְוֹתָיו' (one vav). The same applies to the repeat-cue text after varasham on s136 row5, 'שׁוֹמְרֵי מִצְוֹתָיו.'.",
+        "shomerei (s132 row8 line 2): current 'בְּטֹהַר וְיִתְרוֹן'; print 'בְּהַכְשֵׁר וְיִתְרוֹן'.",
+        "shomerei (s132 row8 line 2): current 'וַיִּכָּתֵב בְּסֵפֶר זִכָּרוֹן'; print 'וַיִּכָּתֵב סֵפֶר זִכָּרוֹן', without the prefixed bet.",
+        "shapru (s132 row8 line 3): current 'מַעֲשִׂים'; print 'מַעֲשֵׂיכֶם'.",
+        "shivtei (s134 row4): current 'עֲלֵה וּמְשׁוֹל'; print 'עֲלֵה וְהַמְשֵׁל'.",
+        "shivtei (s134 row4): current 'כְּהִתְוִיז לְנַשֵּׁל'; print 'בְּהַתִּיזְךָ לְנַשֵּׁל'. The consonants differ: ב־ה־ת־י־ז־ך in the print versus כ־ה־ת־ו־י־ז in the current text.",
+        "adar (s134 row6): current 'שׁוּעַ אֶעֶרְכָה'; print 'שׁוּעַ אֶעֱרוֹךְ'.",
+        "adar (s134 row7): current 'מִשְּׁמֵי עָרִיץ'; print 'מִשְּׁמֵי עֶרֶץ'.",
+        "adar (s134 row7): current 'לִשְׁפֹּט'; print 'לִשְׁפּוֹט' (plene).",
+        "dea (s134 row8): current 'דַּע יִשְׁמוּ'; print 'דֵּעַ יָשִׂימוּ'.",
+        "dea (s134 row8): current 'הִצִּיב וְיָדָה'; print 'הִצִּיב וְיָרָה' (resh).",
+        "dea (s134 row9): current 'יִזְכֹּר לְעוֹלָם בְּרִיתוֹ:', cited as Psalms 111:5. The print has 'זָכַר לְעוֹלָם בְּרִיתוֹ:', which is the wording of Psalms 105:8. The text, the seg/@source and the source_reference all need correcting to 105:8. The local quotation URN 'dea_5/chapter/5' should be changed only if the registry allows; no new identity is needed.",
+        "varasham (s136 row4/5): current 'לִפְקוֹד זִכְרוֹנִי'; print 'לִזְכּוֹר זִכְרוֹנִי'.",
+        "zevach (s136 row5/6): current 'חִנֵּם חֲנִיטָיו'; print 'חִכֵּם חֲנִיטָיו'. This matches the English 'He taught'.",
+        "zevach (s136 row6): current 'טִבְעוֹן'; print 'טִבְעוֹ'.",
+        "zevach (s136 row6): current 'יְבֹאָכֶם'; print 'יְבוֹאֲכֶם'.",
+        "yarum (s136 row7): current 'פִּי כָל־אֻמִּים'; print 'בְּפִי כָל־אֻמִּים'.",
+        "yarum (s136 row8): current 'שְׁכִינָה לְהוֹעֵד'; print 'שִׁבְנְךָ לְהִוָּעֵד'. This matches the English 'Thy dwelling place'.",
+        "yarum (s136 row8): current 'וְרִבְבוֹת בְּנִימוֹ'; print 'וּרְבָבוֹת בְּפִימוֹ'.",
+        "yarum (s136 row8): the Exodus 15:18 quotation ends with a period in print, 'לְעֹלָם וָעֶד.', not a colon.",
+        "motot (s138 row4): current 'מוֹטַת'; print 'מֹטַת' (no vav).",
+        "motot (s138 row4): current 'שְׁבֹר'; print 'שַׁבֵּר'.",
+        "motot (s138 row4): current 'וּדְחוּיֶיךָ'; print 'זְרוּיֶיךָ'.",
+        "motot (s138 row4): current 'נַחֲמוּ בְּכִפְלַיִם'; print 'יְנַחֲמוּ בְּכִפְלַיִם'.",
+        "motot (s138 row5): current 'יְרוּשָׁלָיִם'; the print has no second yod (י־ר־ו־ש־ל־ם).",
+        "motot (s138 row5): current 'סְלִיל'; print 'סְלוּל'.",
+        "motot (s138 row5): current 'לְצַעַד'; print 'לִצְעוֹד'.",
+        "motot (s138 row5): current 'יְקִירָה'; print 'יְקִירְךָ'.",
+        "motot (s138 row5): current 'יִמְעַד'; print 'יִמְעוֹד'.",
+        "qiryat (s138 row7): current 'לְהַשְׁפִּיר'; print 'לְהַשְׁפַּר' (no yod).",
+        "qiryat (s138 row6): current 'מְשׂוֹשׂ'; the print shows qamats under mem ('מָשׂוֹשׂ').",
+        "Encoding: the print alternates speaker cues ח׳ and ק׳ before each half of the stanzas adar, dea, varasham, zevach, yarum, motot and qiryat (s134 rows 6–9, s136 rows 4–9, s138 rows 4–7). None of them are encoded. Each needs a role description note with abbr/expan, as the human adjudication #19 established for ח׳ = חזן.",
+        "Encoding: several biblical quotations printed as ק׳ refrains are unmarked, while comparable refrains in adar through qiryat are marked. These are: shomerei 'וַיַּקְשֵׁב … סֵפֶר זִכָּרוֹן' (Malachi 3:16, partial); shapru 'וְתִיטַב לַיְיָ מִשּׁוֹר פָּר' (Psalms 69:32, partial); shivtei 'כִּי לַיְיָ הַמְּלוּכָה וּמוֹשֵׁל' (Psalms 22:29, partial); shevutenu 'כִּי זָכַר אֶת דְּבַר קָדְשׁוֹ' (Psalms 105:42, partial); varasham 'לְזִכָּרוֹן בְּהֵיכַל יְיָ' (Zechariah 6:14, partial); zevach 'אַחַר נֶאֱחַז בַּסְּבַךְ בְּקַרְנָיו' (Genesis 22:13, partial), 'זִכְרוֹן תְּרוּעָה מִקְרָא קֹדֶשׁ' (Leviticus 23:24, partial) and 'יוֹם תְּרוּעָה יִהְיֶה לָכֶם' (Numbers 29:1, partial); motot 'זָכוֹר אֶזְכְּרֶנּוּ עוֹד' (Jeremiah 31:19, partial); kol_yoshvei 'וְהָיָה יְיָ לְמֶלֶךְ עַל כָּל הָאָרֶץ' (Zechariah 14:9, partial). Each should get bounded chapter/verse milestones and a seg/@source, as the marked ones have."
+      ],
+      "unresolved": [
+        "shapru (s132 row8 line 3, end) 'תוּפָר': the vowel under pe may be patah. Host: pe in 'לֹא תוּפַר'.",
+        "yarum (s136 row8) 'וְעֹז הַגּוֹיִם': the vowel under the conjunctive vav appears to be qamats ('וָעֹז').",
+        "yarum (s136 row8) variant '(נ״א מַלְכוּת)': the print is pointed, at least on מַלְכוּת, but the encoded note 'נ״א מלכות' is unpointed. The printed parentheses are also not reproduced in the note body, which is acceptable under the citation rule.",
+        "motot (s138 row5) 'כִּנְאֻמַּת': whether mem carries a dagesh is unclear.",
+        "motot (s138 row5) 'יְרוּשָׁלָם': the exact final pointing is unclear.",
+        "qiryat (s138 row7) 'צָפֶר': the print appears to read 'צְפַר' or 'צֶפֶר'; the vowels under tsade and pe are unclear.",
+        "vehu (s138 row8) 'בְאֶחָד': there may be a dagesh in bet ('בְּאֶחָד').",
+        "English: no 'after' record was available to compare against. The current EN in the JSON and the XML is mutually consistent. Shared stanza URNs and the shabbat_refrains/kol_yoshvei occurrence URN are used in parallel."
+      ],
+      "verified": [
+        "The order of the separated lower-section Shabbat text is continuous and not interleaved with the upper piyyutim: shemo, shomerei, shapru (s132); shivtei, shevutenu, kol_yoshvei, adar, dea (s134); varasham, zevach, yarum (s136); motot, qiryat, kol_yoshvei, yishpot, vehu (s138).",
+        "shevutenu (s134 row5) matches exactly.",
+        "kol_yoshvei (s134) is printed in parentheses with the inline rubric 'בק״ק מיץ אין אומרים'. It is encoded as a marked conditional with metz=false and that instruction. The s138 repeat is printed in parentheses with no rubric and is correctly encoded without an instruction. It reuses the canonical URN via seg/@source and has its own occurrence URN, so no duplicate canonical identity is created.",
+        "yishpot and vehu (s138 row8) match apart from the בְאֶחָד dagesh question. The speaker חו״ק is present on both.",
+        "The repeat cues are printed as 'שְׁמוֹ מְפָאֲרִים.' after adar, 'שׁוֹמְרֵי מִצְוֹתָיו.' after varasham, 'שַׁפְּרוּ.' after zevach, 'שִׁבְטֵי.' after yarum and 'שְׁבוּתֵנוּ.' after motot. They are encoded as navigation refs to the existing stanza URNs; the only problem is the cue spelling noted above.",
+        "Page breaks n=52/53/54/55 sit at the lower-section starts and share the facs of the upper text.",
+        "The '(נ״א מלכות)' anchor falls immediately after 'כָּבוֹד', where the print places it."
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "key": "repetition_german_frankfurt",
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "key": "repetition_open_132",
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "key": "repetition_close_132",
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "key": "repetition_german_shabbat",
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "s132 row4/5: 'אונטענסטעהענדע': the letter after 'טענ' appears to be samekh, as encoded; I could not tell for certain."
+      ]
+    },
+    {
+      "key": "repetition_metz",
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "key": "repetition_kalir",
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "key": "repetition_shabbat_shemo_heading_he",
+      "source_approved": false,
+      "encoding_guidelines_approved": false,
+      "issues": [
+        "The printed heading on s132 row7 is centred above the lower section. It is the German-in-Hebrew-letters 'Am Schabbat', parallel to repetition_german_shabbat, so language 'he' looks wrong; it should probably be 'de-Hebr'.",
+        "The entry has no type. It also does not appear in current.review.xml, so it is not clear where, or whether, it is placed."
+      ],
+      "unresolved": [
+        "s132 row7: the heading appears pointed ('אַם שַׁבָּת.'), with patah under alef and pointing on שבת. The current text 'אם שבת.' is unpointed. The wording itself agrees with the source; the earlier typo has been corrected."
+      ]
+    },
+    {
+      "key": "repetition_shabbat_shivtei_heading_he",
+      "source_approved": false,
+      "encoding_guidelines_approved": false,
+      "issues": [
+        "Same language-tag, missing-type and placement questions as the s132 heading. The heading is printed on s134 row4."
+      ],
+      "unresolved": [
+        "s134 row4: pointing on 'אַם שַׁבָּת.' appears to be present; the current text is unpointed."
+      ]
+    },
+    {
+      "key": "repetition_shabbat_varasham_heading_he",
+      "source_approved": false,
+      "encoding_guidelines_approved": false,
+      "issues": [
+        "Same language-tag, missing-type and placement questions. The heading is printed on s136 row4."
+      ],
+      "unresolved": [
+        "s136 row4: pointing appears to be present; the current text is unpointed."
+      ]
+    },
+    {
+      "key": "repetition_shabbat_motot_heading_he",
+      "source_approved": false,
+      "encoding_guidelines_approved": false,
+      "issues": [
+        "Same language-tag, missing-type and placement questions. The heading is printed on s138 row3."
+      ],
+      "unresolved": [
+        "s138 row3: pointing appears to be present; the current text is unpointed."
+      ]
+    },
+    {
+      "key": "repetition_shabbat_etten_heading_he",
+      "source_approved": false,
+      "encoding_guidelines_approved": false,
+      "issues": [
+        "This heading (s140 row3) governs repetition_etten_lefoali, which is out of scope here. Same language-tag and pointing questions."
+      ],
+      "unresolved": [
+        "s140 row3: pointing appears to be present; the current text is unpointed."
+      ]
+    },
+    {
+      "key": "repetition_aafir_acrostic",
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        "This is correct for s138. The separate 'ע״ס א״ב.' printed on s132 (row1) is a second printing of the same wording that belongs to attah_hu_eloheinu, and it has no key or encoding."
+      ],
+      "unresolved": []
+    },
+    {
+      "key": "repetition_metz_kol",
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "key": "complete_weekday_he",
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "This rubric is explicitly editorial (resp codex, editorial=true) and is not printed. It is approved only as an editorial label for the shabbat=false condition, not as a transcription of the source."
+      ]
+    }
+  ],
+  "limits": [
+    "I judged the scans by eye. Several vowel and dagesh questions could not be settled at this resolution; they are listed under unresolved with host and position rather than approved.",
+    "I found no 'after' records of the accepted English for these eight units. english_alignment_unchanged is therefore false for all of them because it could not be confirmed, not because any English change was found. The EN in current.json and current.review.xml is mutually consistent.",
+    "The blind independent files (-132 … -140) and the primary initial JSON were not consulted. All findings come from direct comparison with the native scans.",
+    "The four human-review JSONs were opened, but 7_12 and 13_20 only for their first 80 lines. All decisions I read are for scans s98, s100 and s124–s130, so none closed any question on s132–s140; the rest of those two files was not checked.",
+    "I did not open the full spine index.xml files. Routing was judged from routing-context.json only.",
+    "Bible verse identifications for the unmarked quotations come from my own knowledge and were not checked against a Tanakh project. The dea correction (Psalms 105:8, not 111:5) rests on the printed wording 'זָכַר'.",
+    "No schema, compiler, refdb or URN-reference validation tools were run."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "72b147b5-9979-441f-8cc7-ea398742a558"
+  }
+}
