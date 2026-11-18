@@ -1145,3 +1145,14 @@ leavesremainunderreview. The remaining grouped question245shows all22
 MelekhrefrainMEMclusterswithnumberednativecrops;noneisdecidedbyinference
 fromotheroccurrences. Khevodoandotherbacklogsourceacceptanceremainpending.
 All646XMLvalidate;8quoteextentand30day/language/unitcasespassafteredits.
+
+
+After human245, KhevodoIhel has15markedMEMrefrains (2,3,4,8,9,10,14–22)
+and7explicitlyunmarkedones (1,5,6,7,11,12,13). ActualXMLtokenorder and6
+bilingualdaycasesverifytheentiremixedpatternandsharedQOFcontinuation.
+Completeindependentsource/guideline/alignmentreviewapproves the poem and
+bothcommentarynotes. EveryreadingkeyonPDF106/108iscurrent:190of224encoded
+leavesareaccepted;34encodedleavesremainunderreview. Allpresentedquestions
+through245aresettled. A new8-witnesssource/guidelinebatchonPDF132–140is
+running,withthecontinuousShabbatalternativeandactualroutingcontextincluded.
+SourceimagesremainoutsideGit;finalPDF/HTMLvisualacceptanceisstillpending.
