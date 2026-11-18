@@ -1,6 +1,6 @@
 # Heidenheim–Marmorstein: first day of Rosh ha-Shanah, 1965
 
-**Status: 124 of 355 leaves accepted; 224 independently image-read. Draft transcription now reaches physical PDF scan 223, through Avot in the Musaf repetition. The next source page is 224. Full-volume digitization and fine-reading adjudication remain in progress.** This contribution belongs to
+**Status: all 224 currently encoded leaves are accepted after independent source/guideline/alignment review; no pending unit reviews or unanswered human reading questions through 287. Full-volume digitization remains incomplete:131 of 355 leaves are unencoded. Encoded material reaches physical PDF scan 223, through Avot in the Musaf repetition, plus the previously encoded Hebrew-only appendix; next source scan 224. Final PDF display verification is being closed in a separate exporter fix.** This contribution belongs to
 [opensiddur-processor issue 214](https://github.com/opensiddur/opensiddur-processor/issues/214).
 The complete source is [this 355-leaf Archive item](https://archive.org/details/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965),
 [also described by Open Siddur](https://opensiddur.org/?p=69112).
@@ -45,7 +45,7 @@ All images, enlarged bands, full coordinate OCR, raw process logs and generated
 PDF/HTML previews remain outside Git in `output/marmorstein_rosh_hashanah_1/`.
 The decoder preserves printed Divine Name spellings and their logical points.
 
-## Pilot coverage
+## Pilot coverage (historical)
 
 The pilot contains the three Torah blessings (printed pp. 4–5), Barukh She-amar
 (p. 15), I Chronicles 16:8–36 from Hodu (pp. 15–16), and Psalm 24 from the
@@ -54,8 +54,7 @@ to insert the Torah blessings from page 4. The English title page, copyright pag
 leaf have also been independently read and accounted for. The cover emblem and
 Hebrew title-page signature are now resolved by the user’s exact reading:
 וואלף ב"ר שמשון ז"ל איש היידנהיים. The Hodu continuation and Psalm 19
-are now also encoded in both languages. Psalm 34 and the other services remain
-to be transcribed.
+are now also encoded in both languages. Psalm 34 and the other services were not yet transcribed at that stage; their later encoded installments are included in the current status above.
 
 English is present only where printed; Psalm 24 has no generated English file.
 Preserve misprints such as English “convenant” in `tei:sic`, paired with the
