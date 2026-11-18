@@ -1,0 +1,116 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Low reasoning effort. Read the manifest, then all 8 crops listed in it before any prior report or transcription. Then read review.json in full and current.json lines 1–1363 (out of 2405), which covers Gen 21, Num 29 and 1 Sam 1:1–2:1, so every target verse. Did not read current.json past line 1363, the XML, or the full scans. Made no extra crops and ran no tools."
+  },
+  "readings": [
+    {
+      "name": "vatashq",
+      "exact_source_reading": "וַתַּ֖שְׁקְ (s170, Gen 21:19)",
+      "marks": {
+        "final_qof_sheva": "present: two stacked dots directly under the qof body, just right of and separate from the qof's descender",
+        "shin_sheva": "present",
+        "tav": "patach and dagesh, with the tipcha stroke under it"
+      },
+      "confident": true,
+      "unresolved": [
+        "A lone dot at the very bottom edge of the crop, under the shin column, below its sheva. It is probably part of the next printed line. It doesn't affect the qof sheva and I assigned it to no letter."
+      ]
+    },
+    {
+      "name": "vayyiqach",
+      "exact_source_reading": "וַיִּֽקַּח־ (s170, Gen 21:14). Under the yod there is a meteg; under the qof there is none.",
+      "marks": {
+        "yod_meteg": "present: a short vertical stroke just right of the hiriq dot, both under the yod",
+        "qof_meteg": "absent: the qof has only its patach. The long vertical to its left is the qof's own descender, not a meteg",
+        "vav": "patach"
+      },
+      "confident": true,
+      "unresolved": [
+        "The yod is narrow, so this meteg stands between the yod and the vav. I assign it to the yod because it sits right next to the hiriq and because the layout in vattiqach is the same."
+      ]
+    },
+    {
+      "name": "vattiqach",
+      "exact_source_reading": "וַתִּֽקַּח־ל֥וֹ (s170, Gen 21:21). The meteg is under the tav (this word has no yod); under the qof there is none.",
+      "marks": {
+        "tav_meteg": "present: a vertical stroke just right of the hiriq, both within the width of the tav",
+        "qof_meteg": "absent: patach only. The vertical below and left of it is the qof's descender",
+        "vav": "patach"
+      },
+      "confident": true,
+      "unresolved": []
+    },
+    {
+      "name": "et",
+      "exact_source_reading": "אֶת־ (s168, Gen 21:3, at the end of the line)",
+      "marks": {
+        "alef_meteg": "absent: segol only under the alef, no vertical stroke",
+        "maqqef": "present"
+      },
+      "confident": true,
+      "unresolved": []
+    },
+    {
+      "name": "hannolad",
+      "exact_source_reading": "הַנּֽוֹל… (s168, Gen 21:3). The end of the word was not needed.",
+      "marks": {
+        "nun_meteg": "present: a vertical stroke under the left part of the nun's base, before the vav",
+        "nun_dagesh": "present",
+        "he": "patach"
+      },
+      "confident": true,
+      "unresolved": []
+    },
+    {
+      "name": "naot",
+      "exact_source_reading": "נָע֔וֹת (s176, 1 Sam 1:13). The nun is plain.",
+      "marks": {
+        "nun_dagesh": "absent: no dot inside the nun",
+        "nun_vowel": "qamats",
+        "accent": "zaqef qatan over the ayin"
+      },
+      "confident": true,
+      "unresolved": []
+    },
+    {
+      "name": "vekhi",
+      "exact_source_reading": "וְכִֽעֲסַ֤תָּה (s176, 1 Sam 1:6)",
+      "marks": {
+        "kaf_meteg": "present: a vertical stroke left of the hiriq under the kaf, before the ayin's hataf patach",
+        "vav": "sheva"
+      },
+      "confident": true,
+      "unresolved": []
+    },
+    {
+      "name": "petucha-aliyah",
+      "exact_source_reading": "מִצְרָֽיִם׃ פ ד. (בשבת ו.)",
+      "marks": {
+        "rtl_order": "After the sof pasuq: פ first, then ד., then the parenthetical"
+      },
+      "confident": true,
+      "unresolved": []
+    }
+  ],
+  "comparison_to_current_json": [
+    "Gen 21:19 וַתַּ֖שְׁקְ: the encoding agrees with the source.",
+    "Gen 21:14 וַיִּֽקַּֽח: the encoding has an extra meteg after the qof. Correct reading: וַיִּֽקַּח־.",
+    "Gen 21:21 וַתִּֽקַּֽח: the encoding has an extra meteg after the qof. Correct reading: וַתִּֽקַּח־.",
+    "Gen 21:3 אֶֽת־: the encoding has a meteg the source doesn't print. Correct reading: אֶת־.",
+    "Gen 21:3 הַנּֽוֹלַד: the encoding agrees on the nun meteg.",
+    "1 Sam 1:13 נָּע֔וֹת: the encoding has a dagesh the source doesn't print. Correct reading: נָע֔וֹת.",
+    "1 Sam 1:6 וְכִֽעֲסַ֤תָּה: the encoding agrees.",
+    "Note 'ד. פ (בשבת ו.)': the encoding's order is reversed; the source order is פ then ד. This is the same finding as in review.json."
+  ],
+  "limits": [
+    "This covers only the marks named above. I make no claim about any other mark, word, verse, whole unit, schema, export or approval.",
+    "I didn't check where the notes sit in the structure. In current.json the 'ד. פ' note is on the 21:22 entry, and the other aliyah notes follow the same pattern. I didn't check how the renderer reads that, so I make no claim about it.",
+    "These readings come from single native 5× crops of a halftone scan. Every decision here was clear at that size. Another copy of the print could still differ."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "44098aa1-f7c3-4dbf-a904-a2c20d605e6b"
+  }
+}

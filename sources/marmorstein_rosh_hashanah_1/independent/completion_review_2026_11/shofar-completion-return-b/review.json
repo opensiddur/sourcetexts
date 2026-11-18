@@ -1,0 +1,219 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "medium: read all frozen inputs (current.json in full, current.review.xml, routing-context.json in full, human-authorities.json (empty []), english-preservation-proof.json, guideline-excerpts.md), all six enlarged bands, and native scans s196–s199. Did not open the two project spine index.xml files or the accepted English review payloads named in the preservation proof."
+  },
+  "witnesses": [
+    {
+      "stem": "torah_return_psalm_24",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [
+        "s196 (printed p.88), left column 'On weekdays', Ps 24:6, 4th line of s196-band2 left column: the scan reads דֹּרְשָׁו (shin-qamatz followed directly by vav, no yod). It is encoded as דֹּרְשָׁיו in seg source=…psalms/24/6 (current.json torah_return_psalm_24 he[5]; review.xml line 13). This is a transcription error, not a printer mistake, so do not use sic/corr. Correction: זֶה דּוֹר דֹּרְשָׁו מְבַקְשֵׁי פָנֶיךָ יַעֲקֹב סֶלָה: (needs a second-eye confirmation at higher resolution because the yod/vav join is small)."
+      ],
+      "unresolved": [
+        "s196 Ps 24:10, last two lines of s196-band2 left column: encoded מִי הוּא־זֶה. At this resolution I cannot tell whether a maqqef joins הוּא and זֶה in the tightly set line.",
+        "s196 Ps 24:1 הָאָרֶץ / לַיהוָה: possible small marks above or below that I cannot resolve (meteg or ole?). Encoding has none. Not approved in either direction."
+      ],
+      "verified": [
+        "Reading order 24:1–10 in the left column, under the printed citation כ״ד. and the English rubric 'On weekdays:'",
+        "Unambiguous consonants, vowels, maqqefs and sof-pasuq/period punctuation for 24:1–5 and 24:7–9 match: לְדָוִד מִזְמוֹר. / עַל־יַמִּים / וְעַל־נְהָרוֹת / מִי־יַעֲלֶה בְהַר־יְהוָה וּמִי־יָקוּם / וּבַר־לֵבָב / לֹא־נָשָׂא לַשָּׁוְא נַפְשִׁי / וְהִנָּשְׂאוּ / וְיָבוֹא (v7) vs וְיָבֹא (v9) / עִזּוּז. Tetragrammaton יְהוָה, and לַיהוָה with no vowel on yod, both match the print.",
+        "The divine name is in j:divineName. Chapter milestone, verse milestones 1–10, then verse and chapter terminators before the end of the div.",
+        "EN s197 prints '(Psalm 24)' and the English for verses 1–10. Shared URNs psalms_24/1–10 sit on both sides with no gaps. English bodies match the accepted text as received.",
+        "Facs n195 (HE) / n196 (EN) = leaf scan−1 for s196/s197"
+      ]
+    },
+    {
+      "stem": "torah_return_psalm_29",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "s196 right column 'On the Sabbath:', under citation כ״ט.: 29:1–11 read word by word. The encoding matches the print, including מִזְמוֹר לְדָוִד. (with period), לַיהוָה ×4, בְּהַדְרַת־קֹדֶשׁ (maqqef at line end), קוֹל יְהוָה עַל־הַמָּיִם אֵל־הַכָּבוֹד (no maqqef after קוֹל in v3), קוֹל־יְהוָה in v4 and v7, וַיְשַׁבֵּר, אֶת־אַרְזֵי, כְּמוֹ־עֵגֶל, וְשִׂרְיֹן, בֶן־רְאֵמִים, וַיֶּחֱשֹׂף, לַמַּבּוּל, אֶת־עַמּוֹ בַשָּׁלוֹם:",
+        "Chapter and verse milestones 1–11, then terminators",
+        "EN s197 prints '(Psalm 29)'. The English goes straight from 'young unicorns' to 'makes the wilderness tremble', so verse 7 is missing from the printed English. The encoding correctly leaves EN psalms_29/7 absent: no substitute translation, and HE 7 shares a row with EN 6. EN 29:10 'The Lord was enthroned as King for eternity.' matches the print.",
+        "Routing: Ps 29 is under shabbat=true and Ps 24 under shabbat=false. The documentary order 29-then-24 follows the source's right-to-left columns, and in the expanded order the section has a minyan guard."
+      ]
+    },
+    {
+      "stem": "torah_uvenuchoh",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [
+        "s196 (p.88), s196-band3 line 4, Prov 4:2: the print has a maqqef, אַל־תַּעֲזֹבוּ. The encoding has a space: אַל תַּעֲזֹבוּ (current.json torah_uvenuchoh he[4]; review.xml line 75 seg source=…proverbs/4/2). Correction: כִּי לֶקַח טוֹב נָתַתִּי לָכֶם תּוֹרָתִי אַל־תַּעֲזֹבוּ:",
+        "s196, s196-band3 line 4, Prov 3:18: the print has a space, עֵץ חַיִּים, with no maqqef (native s196 agrees). The encoding has עֵץ־חַיִּים (he[5]; review.xml line 75 seg source=…proverbs/3/18). Correction: עֵץ חַיִּים הִיא לַמַּחֲזִיקִים בָּהּ וְתֹמְכֶיהָ מְאֻשָּׁר:"
+      ],
+      "unresolved": [],
+      "verified": [
+        "Everything else in the band3 lines matches the print: וּבְנֻחֹה יֹאמַר שׁוּבָה יְיָ רִבְבוֹת אַלְפֵי יִשְׂרָאֵל: / קוּמָה יְיָ לִמְנוּחָתֶךָ אַתָּה וַאֲרוֹן עֻזֶּךָ: / כֹּהֲנֶיךָ יִלְבְּשׁוּ־צֶדֶק וַחֲסִידֶיךָ יְרַנֵּנוּ: / בַּעֲבוּר דָּוִד עַבְדֶּךָ אַל־תָּשֵׁב פְּנֵי מְשִׁיחֶךָ: / דְּרָכֶיהָ דַרְכֵי־נֹעַם וְכָל־נְתִיבוֹתֶיהָ שָׁלוֹם: / הֲשִׁיבֵנוּ יְיָ אֵלֶיךָ וְנָשׁוּבָה חַדֵּשׁ יָמֵינוּ כְּקֶדֶם:",
+        "Printed order Num 10:36 → Ps 132:8–10 → Prov 4:2 → Prov 3:18 → Prov 3:17 → Lam 5:21 is kept. Every book or chapter switch is closed with verse and chapter terminators.",
+        "The canonical unit URN chol/shacharit/torah/uvenuchoh is reused, and the occurrence milestones are distinguished under rosh_hashanah/torah/return/uvenuchoh. No new prayer identity is created.",
+        "EN s197: the cue word ובנחה is not encoded as text, which is correct. The eight English verse bodies match the print and the shared URNs."
+      ]
+    },
+    {
+      "stem": "cantor_el_melekh_neeman",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [
+        "s198 (p.89), s198-band1 line 8: encoded שֶׁתִּתֵּן (tsere under the second tav). The mark in the scan may be a segol (שֶׁתִּתֶּן). I can't resolve it at band resolution, so I am not approving this word. Everything else read is listed under verified."
+      ],
+      "verified": [
+        "Head תְּפִלָּה לִשְׁלִיחַ צִבּוּר. and the small-type instruction לאמרה בכונה וברתת ובחרדה קודם התפלה. match the print.",
+        "Body matches word by word, including שַׁוְעָתִי, וּבְאִמּוּץ הַלֵּב., the periods after וְחַנּוּן. and יִשְׂרָאֵל., כְבוֹדֶךָ, שֶׁחָתַרְתָּ לִתְפִלַּת מֹשֶׁה (נ״א מְנַשֶּׁה)., שׁוֹלְחַי, וְגוֹאֲלִי. אָמֵן סֶלָה:, אָיוֹם, יִחַר גְּרוֹנִי, וְחָזָק, וַיְהִי קוֹל הַשּׁוֹפָר הוֹלֵךְ וְחָזֵק: אָמֵן סֶלָה:",
+        "Menasseh siglum: encoded as an honest alternative, j:option מֹשֶׁה / מְנַשֶּׁה, plus a commentary note with abbr נ״א / expan נוסח אחר. No sic/corr. Follows the Menasseh authority.",
+        "Ps 19:15 is a whole-verse quotation with chapter and verse milestones and terminators. Exod 19:19 is a verse-part vayehi_qol with a bare verse-part terminator before the verse and chapter terminators. The prayer-part milestone is closed by a terminator.",
+        "EN s199: 'Moses (Menasseh)' is encoded as a parallel j:option. The English has no printed instruction, so none is encoded. Shared URNs: /text, yihyu/15, vayehi_qol/19/vayehi_qol."
+      ]
+    },
+    {
+      "stem": "cantor_hineni",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [
+        "s198 (p.89), s198-band2 line 4 (start of the line), prayer-part /2: the print reads יְיָ יְיָ. אֵל רַחוּם וְחַנּוּן. אֱלֹהִים. — with a period after the second יְיָ and a period, not a comma, after וְחַנּוּן. The encoding has יְיָ יְיָ אֵל רַחוּם וְחַנּוּן, אֱלֹהִים. (current.json cantor_hineni he[1]; review.xml line 124). Correction: …וֵאלֹהֵי יַעֲקֹב. יְיָ יְיָ. אֵל רַחוּם וְחַנּוּן. אֱלֹהִים. שַׁדַּי אָיוֹם וְנוֹרָא.…"
+      ],
+      "unresolved": [
+        "s198-band2 line 5: encoded שׁוֹלְחָי (qamatz). The prayer just above, el melekh, is encoded שׁוֹלְחַי (patah). I can't tell from the scan which vowel this occurrence has."
+      ],
+      "verified": [
+        "Instruction תפלה אחרת לש״ץ. matches the print, with לש״ץ encoded as abbr/expan לשליח צבור.",
+        "The rest of parts /1–/5 matches word by word, including מִמַּעַשׂ וְנִרְעָשׁ וְנִפְחָד, כְדַי וְהָגוּן לְכָךְ:, אֲבַקֶּשְׁךָ, בַּעֲוֹנוֹתַי, יִכָּלְמוּ, וּמְעֹרָב בְּדַעַת, יַשְׂטִינֵנוּ., the periods after אַהֲבָה. and בְאַהֲבָה., הֲפֹךְ, the paragraph break before וִיהִי רָצוֹן, and אֶהְיֶה אֲשֶׁר אֶהְיֶה. Alef-lamed ligatures are transcribed as ordinary letters.",
+        "English parts /1–/5 sit on the shared URNs. The English cue words הנני/ויהי are not encoded as text."
+      ]
+    },
+    {
+      "stem": "cantor_four_verses",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "Instruction text matches the human authority exactly: קבלה מר״ת לומר ד׳ פסוקים אלו, קודם שמתחיל הש״ץ המלך וקודם הקדיש: with abbr/expan for מר״ת, ד׳ and הש״ץ, and no rend.",
+        "Four lines, one verse each, match: יָדַעְתִּי יְיָ כִּי צֶדֶק מִשְׁפָּטֶיךָ וֶאֱמוּנָה עִנִּיתָנִי: / הַקְשִׁיבָה לִּי וַעֲנֵנִי אָרִיד בְּשִׂיחִי וְאָהִימָה: / וְנַפְשִׁי תָּגִיל בַּיְיָ תָּשִׂישׂ בִּישׁוּעָתוֹ: / הַנּוֹתֵן תְּשׁוּעָה לַמְּלָכִים הַפּוֹצֶה אֶת דָּוִד עַבְדּוֹ מֵחֶרֶב רָעָה: (printed with a space, no maqqef, in אֶת דָּוִד, and kept that way).",
+        "Each Psalm switch is closed with verse and chapter terminators at the head of the next paragraph, and the last verse is terminated.",
+        "Routing: one canonical unit, transcluded twice in the expanded order: before hael_betaatzumot/hamelekh (minyan guard, role reader) and in musaf_cantor_prelude before musaf_half_kaddish. This matches 'קודם … המלך וקודם הקדיש' without creating a new identity.",
+        "EN s199: the four English lines match, and ידעתי is a cue word only."
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "stem": "torah_return_psalm_24",
+      "language": "he",
+      "index": 0,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_return_psalm_24",
+      "language": "en",
+      "index": 0,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_return_psalm_29",
+      "language": "he",
+      "index": 0,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_return_psalm_29",
+      "language": "en",
+      "index": 0,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "cantor_el_melekh_neeman",
+      "language": "he",
+      "index": 0,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    }
+  ],
+  "instructions": {
+    "torah_uvenuchoh[0] 'When the scroll of the Torah is returned to the Holy Ark:' (en, witnesses he+en, description)": {
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    "cantor_el_melekh_neeman[0] 'לאמרה בכונה וברתת ובחרדה קודם התפלה.'": {
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    "cantor_hineni[0] 'תפלה אחרת לש״ץ.'": {
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    "cantor_four_verses[0] 'קבלה מר״ת לומר ד׳ פסוקים אלו, קודם שמתחיל הש״ץ המלך וקודם הקדיש:'": {
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    "top-level instructions {}": {
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "The top-level instructions object is empty, so there was nothing to review."
+      ]
+    }
+  },
+  "source_images_fully_read": [
+    "/tmp/mahzor-backlog/shofar-completion-return-b/s196-band1.png",
+    "/tmp/mahzor-backlog/shofar-completion-return-b/s196-band2.png",
+    "/tmp/mahzor-backlog/shofar-completion-return-b/s196-band3.png",
+    "/tmp/mahzor-backlog/shofar-completion-return-b/s198-band1.png",
+    "/tmp/mahzor-backlog/shofar-completion-return-b/s198-band2.png",
+    "/tmp/mahzor-backlog/shofar-completion-return-b/s198-band3.png",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s196.jpg",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s197.jpg",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s198.jpg",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s199.jpg"
+  ],
+  "limits": [
+    "Band resolution is about 2000 px across. It is enough for letters, maqqefs, punctuation and most vowels, but not for every meteg, ole or dagesh. Marks I could not resolve are listed as unresolved, not approved. The native jpgs are lower resolution than the bands.",
+    "The Ps 24:6 דֹּרְשָׁו reading is my best reading of a small yod/vav join. It should be confirmed at higher magnification before the edit is applied.",
+    "human-authorities.json in this batch is an empty array. I applied the authorities exactly as stated in the task text (the source198 direction wording and the Menasseh נ״א handling). The source189 Ps 89:16-only scope is checked only through the routing reference shofar/ashrei_haam/psalms_89/16, which is correctly limited to verse 16.",
+    "I did not open the two project spine index.xml files. Routing was checked against routing-context.json's source_order and expanded_order only: the Shabbat/weekday Psalm guards, the minyan guards, the reader role, the four verses before Hamelekh and before the Musaf half-Kaddish, the weekday-only shofar section with the congregation response and the blower's quiet prayer, and no Birnbaum omissions.",
+    "I did not open the accepted English review payloads named in english-preservation-proof.json. English was checked against the s197/s199 print for extent, shared URNs and gaps (EN Ps 29:7 is absent in print and left absent). I did not retranslate."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "9c8cca63-882c-425c-96a1-01e107dd560f"
+  }
+}
