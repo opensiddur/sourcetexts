@@ -1,6 +1,6 @@
 # Heidenheim–Marmorstein: first day of Rosh ha-Shanah, 1965
 
-**Status: all 224 currently encoded leaves are accepted after independent source/guideline/alignment review; no pending unit reviews or unanswered human reading questions through 287. Full-volume digitization remains incomplete:131 of 355 leaves are unencoded. Encoded material reaches physical PDF scan 223, through Avot in the Musaf repetition, plus the previously encoded Hebrew-only appendix; next source scan 224. Final PDF display verification is being closed in a separate exporter fix.** This contribution belongs to
+**Status: all 224 currently encoded leaves are accepted after independent source/guideline/alignment review; no pending unit reviews or unanswered human reading questions through 287. Full-volume digitization remains incomplete: 131 of 355 leaves are unencoded. Encoded material reaches physical PDF scan 223, through Avot in the Musaf repetition, plus the previously encoded Hebrew-only appendix; next source scan 224. Representative PDF layout and complete link checks pass using [separate exporter PR310](https://github.com/opensiddur/opensiddur-processor/pull/310); all three electronic exports pass browser checks.** This contribution belongs to
 [opensiddur-processor issue 214](https://github.com/opensiddur/opensiddur-processor/issues/214).
 The complete source is [this 355-leaf Archive item](https://archive.org/details/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965),
 [also described by Open Siddur](https://opensiddur.org/?p=69112).

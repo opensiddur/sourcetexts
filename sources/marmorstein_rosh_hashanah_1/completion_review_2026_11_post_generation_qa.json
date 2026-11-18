@@ -1,5 +1,5 @@
 {
-  "status": "Every currently encoded leaf and witness accepted:224of224. Full355-leaf volume incomplete;131leaves remain unencoded. Final PDF layout verification in progress on separate exporter-fix branch.",
+  "status": "All 224 encoded leaves and 634 current witnesses accepted; no unanswered human questions through287. Representative export QA passed using separate exporter PR310. Full volume incomplete:131 unencoded leaves.",
   "accepted_leaves": 224,
   "encoded_leaves": 224,
   "total_volume_leaves": 355,
@@ -8870,9 +8870,10 @@
     "limits": "Acceptance covers all encoded documentary readings, notes, instructions, alignment and recitation scopes, not the unencoded remainder or a complete nine-volume mahzor."
   },
   "export_review": {
-    "status": "HTML actual headless Chrome checks pass; regenerated PDF visual inspection found conditional-rubric clipping and overlapping adjacent note marks, being corrected in separate exporter worktree. No final PDF visual approval yet.",
-    "fix_branch": "codex/fix-pdf-rubrics-and-adjacent-notes",
-    "exporter_worktree": "/home/efeins/.codex/worktrees/conditional-rubric-keep/master",
+    "status": "Passed representative PDF visual inspection and complete PDF destination checks; all three HTML browser checks pass. PDFs use separate unmerged exporter PR310, commit ebaf6c5.",
+    "evidence": "completion_review_2026_11_final_export_qa.json",
+    "renderer_pr": "https://github.com/opensiddur/opensiddur-processor/pull/310",
+    "renderer_commit": "ebaf6c5",
     "temporary_preview_patches": false
   }
 }

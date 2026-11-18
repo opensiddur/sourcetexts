@@ -16,9 +16,10 @@
   "page149_accounting": "completion_review_2026_11_page149_reconciliation.json",
   "uncertain_source_reading_276": "Human-reviewed low-certainty zayin retained explicitly; acceptance does not claim this glyph certain.",
   "export_limits": {
-    "status": "HTML actual headless Chrome checks pass; regenerated PDF visual inspection found conditional-rubric clipping and overlapping adjacent note marks, being corrected in separate exporter worktree. No final PDF visual approval yet.",
-    "fix_branch": "codex/fix-pdf-rubrics-and-adjacent-notes",
-    "exporter_worktree": "/home/efeins/.codex/worktrees/conditional-rubric-keep/master",
+    "status": "Passed representative PDF visual inspection and complete PDF destination checks; all three HTML browser checks pass. PDFs use separate unmerged exporter PR310, commit ebaf6c5.",
+    "evidence": "completion_review_2026_11_final_export_qa.json",
+    "renderer_pr": "https://github.com/opensiddur/opensiddur-processor/pull/310",
+    "renderer_commit": "ebaf6c5",
     "temporary_preview_patches": false
   },
   "next_transcription_scan": 224
