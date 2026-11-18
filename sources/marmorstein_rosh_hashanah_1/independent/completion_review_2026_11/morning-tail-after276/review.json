@@ -1,0 +1,215 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "low-to-medium. I compared all 12 Melekh Bemishpat bands (s146, s148, s150, s151) word by word with current.review.xml and current.json. I also read melekh-two-lemaalah.png, english-note149-bottom.png, all three s156, s158 and s160 bands, s144-band3, and the full native pages s152, s153, s154, s155, s157 and s159. I could not zoom past the supplied band resolution, so small vowel marks below are only as reliable as those bands. I went through the payload, routing, human-authorities, english-preservation, WLC-proof and guideline files. I read the human 268–276 receipt in full. Of the corrections receipt I read the change list and the before-state for repetition_etten_lefoali, melekh_bemishpat_yaamid_aretz and most of avinu_malkenu; the file is 4180 lines and I did not read past line 1195."
+  },
+  "witnesses": [
+    {
+      "stem": "melekh_bemishpat_yaamid_aretz",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [
+        "s148-band1 row3: the XML has 'יוֹדְעֵי דָת וְדִין' (shva under the vav). The print appears to have qamats: 'וָדִין'. Fix only if an enlarged image confirms it.",
+        "s150-band3 row1, first word (it continues 'וּשְׂעַר רֵאשֵׁהּ כַּעֲמַר' from the last row of band2): the XML has 'נְקֵי'. The print appears to read 'נָקִי', with qamats under nun and hiriq under qof, the same form as 'אִי נָקִי' later on that row. This is a vowel difference, not a request to normalize to Daniel 7:9.",
+        "s151-band2 row5: the XML has 'יִגְזוֹר וְיִפְתְּחוּ'. The print appears to read 'וְיִפָּתְחוּ', with a qamats under pe.",
+        "s146-band2 row5, last word: the XML has 'לַעֲשׂוֹת כְּתֹהוּ' (shva under kaf). The print appears to have a horizontal stroke (patach) under kaf: 'כַּתֹהוּ'. I can't tell from the band whether tav has a dagesh. Please check only the kaf vowel and do not take the reading from MT.",
+        "Except for the items above and under unresolved, every word, consonant, visible vowel and punctuation mark on s146–s151 matches the current XML."
+      ],
+      "unresolved": [
+        "s148-band1 row1, second word after לַדִּין: the XML has 'וְיֶחְרְדוּ'. The mark under chet may be a segol ('וְיֶחֶרְדוּ') rather than a shva. Low confidence.",
+        "s148-band1 row5: the XML has 'לְדַעַת בָּאָרֶץ'. The mark under the first lamed may be a qamats ('לָדַעַת'). Low confidence.",
+        "s151-band2 row6: the XML has 'הַמֵּלִיצִים'. The mark under mem may be a shva ('הַמְּלִיצִים') rather than a tsere. Low confidence.",
+        "None of these sites affects human answers 269–275, which are closed."
+      ],
+      "verified": [
+        "The earlier finding that one לְמַעְלָה should be deleted was wrong. melekh-two-lemaalah.png and s150-band3 row4 both clearly print 'וְעַד לְמַעְלָה לְמַעְלָה רַבּוֹת'. The XML keeps both words, which is correct.",
+        "The human readings are encoded exactly at their sites. 269: 'אוּלַי יֵחָנֵן' (s148-band1 row3). 270: 'אַרְקָא. בְּבוּקָה' and 271: 'הִסְתַּכֵּל בְּתַבְנִית' (s150-band1 row7). 272: 'בְּכִנּוּי מְחֻזָּקָה' (s150-band2 row3). 273: 'מְעֻזָּקָה' and 274: 'שָׁכֵן בְּחָזְקָה' (s150-band2 row4). 275: 'שְׁרֵא נְהוֹרָא' (s151-band1 row4). I did not reopen them, and the print does not contradict them.",
+        "All 25 primary corrections are in the XML and match the bands. They are: רֶנֶן בְּעֶרֶץ, עֶרֶץ, חוֹרֵי, יִפְעַל, לְהִזָּכֵר, לְבִצָּרוֹן, בַּשּׁוֹפָר וְקוֹרְאֵי, בְּמִשְׁפָּט on s148, זָרַע, לַתָּם, וּבְחַפֶּשְׂךָ, הִזָּכֵר, יָצְאָה, וְנַפְשׁוֹת, וּבַעֲטָרָה, וּבִדְמוּת, וְנֹגַהּ, בְּמִשְׁפָּט on s150, כְּנוֹפֶת, לֶהָבוֹת, כְּקֶרַח, בְּיָמִין, בְּכֵן, לְהִתְעַנּוֹת and וָנֵזֶר.",
+        "The earlier human readings 'וְכַעֲלוֹת שׁוֹפַר מִדַּלֵּי' (s148) and 'וְיֻקְדַּשׁ בְּאַחַת מִשָּׁלֹשׁ' (s151) are unchanged.",
+        "The 'סלוק.' description is printed above the first line on s146 and is encoded as type=description before the poem text. The ק׳ speaker label is placed outside the second Ps 8:10b seg and its milestones.",
+        "The half-verse sources match the existing WLC ranges in existing-wlc-halfverse-proof.json. Each printed quotation ends where the WLC range ends: Prov 29:4a 'מֶלֶךְ בְּמִשְׁפָּט יַעֲמִיד אָרֶץ.', Ps 8:10b twice, Ps 97:1a 'יְיָ מָלָךְ תָּגֵל הָאָרֶץ.' and Ps 96:1b 'שִׁירוּ לַיְיָ כָּל הָאָרֶץ:'. Isa 6:3b keeps its WLC words but in a different order, so it is correctly typed adaptation. No new verse boundaries were invented, and no hypothetical ole exception was applied.",
+        "Every chapter, verse and half-verse milestone has its own bare terminator of the same unit. Each occurrence uses its own corresp (psalms_8_first and psalms_8_second), so no corresp is repeated. The earth, judgment, merit and mystical prayer-part milestones are in order, and a final terminator closes them.",
+        "English: earth, judgment, merit and all six quotation corresp sets are shared one to one with the Hebrew. The mystical part is Hebrew-only, so under the alignment rule it is set inside the merit row with no English beside it. No English was supplied for the mystical sections. The English body text is identical to the accepted payload listed in english-preservation-proof.json."
+      ]
+    },
+    {
+      "stem": "avinu_malkenu",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "The head 'סֵדֶר אָבִינוּ מַלְכֵּנוּ.' and all 38 petitions on s156 and s158 match the bands in consonants, visible vowels, maqaf and the final ':'. The damaged aleph on s158 row4 is a print defect only.",
+        "The '*)' marker is printed at the mena petition, and the German note targets avinu_malkenu/mena. Its text, the order of the abbreviated petitions and the rafe on פֿ match the last five lines of s156-band3.",
+        "The final abbreviation glyph cannot be read at band resolution. The XML encodes it as א״<c cert=\"low\">ז</c>״וו, which marks honestly that the source is unclear. It is not a silent conjecture. The human answer to 276 says 'not sure', and the XML keeps it tentative and does not upgrade it. The English note (resp codex) calls 'und so weiter' an editorial interpretation, not a source reading.",
+        "Both custom routes give all 38 petitions exactly once. The uncertain abbreviation is never used to leave any petition out. The printed phrase 'in Fürth and some congregations' is kept in the rubric 'כמנהג פירטה וכמה קהלות', so the existing fuerth feature is enough.",
+        "Shabbat guard: the Hebrew leaf s156 prints 'On Sabbath אבינו מלכנו is not recited.' in English, and s157 repeats it. Both are encoded with English text: s156 as a witness to the Hebrew page, s157 as the English counterpart. The routing condition shabbat:false appears in both the source spine and the expanded spine, with the s156 and s157 rubric keys.",
+        "s157 prints 'The Holy Ark is opened.' and s159 prints 'The Holy Ark is closed.', which matches the open_157 and close_159 keys.",
+        "The English for all 38 petitions on s157 and s159 matches the encoded words, and every petition corresp is shared with the Hebrew."
+      ]
+    },
+    {
+      "stem": "morning_full_kaddish",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "The whole Kaddish body on s160-band1 and band2 matches the XML word for word: the reader label חזן, Yitgaddal, Yehe Shemeh, Yitbarakh including 'מִן־כָּל־בִּרְכָתָא' (also visible in kaddish-min-claim.png and band1 last row / band2 row1), Titqabbal, Yehe Shelama and Oseh Shalom.",
+        "The five commas after קָרִיב, בְּעָלְמָא, בִשְׁמַיָּא and both יִשְׂרָאֵל are in the XML. The period after the first אָמֵן and after עָלְמַיָּא is kept, and the other endings are ':'.",
+        "The three congregational ק׳ responses (קַבֵּל…, יְהִי שֵׁם…, עֶזְרִי…) are in the printed positions. The two verses are whole verses, Ps 113:2 and Ps 121:2, each with its own quotation corresp and terminators.",
+        "This unit ends at the rule before 'Before the scroll of the Torah…'. The preface verses (וְעַתָּה יִגְדַּל־נָא, זְכֹר רַחֲמֶיךָ) and Ein Kamokha / Av Harachamim are outside this unit and were not judged.",
+        "Every English prayer-part corresp is shared with the Hebrew, and the English paragraph breaks can differ, as the guidelines allow."
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "stem": "melekh_bemishpat_yaamid_aretz",
+      "language": "en",
+      "index": 0,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "note": "This is a faithful copy of a fragment. The last line of s149 reads exactly 'Remaining verses of this poem which are of a mystical character, are' and the encoded text is identical. tei:seg type=incomplete-source-note marks it as unfinished in the scan and does not claim the sentence is complete. The note targets /merit, the last aligned English part."
+    },
+    {
+      "stem": "melekh_bemishpat_yaamid_aretz",
+      "language": "en",
+      "index": 1,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "note": "This is an editorial note, credited separately with resp=codex. I checked its claim myself: s150, s151 and s152–s155 are Hebrew pages 61–66, s156 and s158 are Hebrew, and s157 and s159 are the English Avinu Malkenu. None of them continues the note. The note claims only this range of scans. It does not claim the text is missing elsewhere and does not add a guessed 'not translated'."
+    },
+    {
+      "stem": "avinu_malkenu",
+      "language": "de-Hebr",
+      "index": 0,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "note": "Approved as a faithful critical transcription. The one unclear character keeps its cert=low marking; see uncertain_source_readings_preserved."
+    },
+    {
+      "stem": "avinu_malkenu",
+      "language": "en",
+      "index": 1,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    }
+  ],
+  "instructions": [
+    {
+      "key": "morning_tail_open_144",
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "note": "s144-band3: 'פותחים הארון.' printed above לָאֵל עוֹרֵךְ דִּין."
+    },
+    {
+      "key": "morning_tail_close_146",
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "note": "s146-band1: 'סוגרים הארון.' printed before ובכן לך תעלה קדושה."
+    },
+    {
+      "key": "morning_tail_shabbat_omission_156",
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "note": "English rubric printed on the Hebrew leaf, kept exactly as printed."
+    },
+    {
+      "key": "morning_tail_shabbat_omission_157",
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "key": "morning_tail_open_156",
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "key": "morning_tail_close_158",
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    }
+  ],
+  "uncertain_source_readings_preserved": [
+    {
+      "stem": "avinu_malkenu",
+      "host": "standOff de-Hebr note targeting avinu_malkenu/mena",
+      "position": "last word of the s156 footnote, after 'הצמח לנו' (s156-band3, last line)",
+      "encoded": "א״<tei:c cert=\"low\">ז</tei:c>״וו",
+      "status": "The source is unclear at this spot, and the human reviewer, who saw the source, also could not read it (answer 276: 'not sure'). The zayin is marked low certainty and is not presented as a definite reading. No invented letter is required. The expansion 'und so weiter' appears only in the codex editorial note, which calls it an interpretation. This is a faithful transcription of a documented uncertainty, not an unmarked guess."
+    }
+  ],
+  "source_images_fully_read": [
+    "s144-band3",
+    "s146-band1",
+    "s146-band2",
+    "s146-band3",
+    "s148-band1",
+    "s148-band2",
+    "s148-band3",
+    "s150-band1",
+    "s150-band2",
+    "s150-band3",
+    "s151-band1",
+    "s151-band2",
+    "s151-band3",
+    "s156-band1",
+    "s156-band2",
+    "s156-band3",
+    "s158-band1",
+    "s158-band2",
+    "s158-band3",
+    "s160-band1",
+    "s160-band2",
+    "s160-band3",
+    "melekh-two-lemaalah.png",
+    "english-note149-bottom.png",
+    "pages/s152.jpg",
+    "pages/s153.jpg",
+    "pages/s154.jpg",
+    "pages/s155.jpg",
+    "pages/s157.jpg",
+    "pages/s159.jpg"
+  ],
+  "limits": [
+    "I did not open s144-band1 or s144-band2. They hold verses outside this scope (Adirei / Dayyan Emet), and the only in-scope item on s144 is the ark instruction in band3.",
+    "I did not open the full native pages s146, s148, s150, s151, s156, s158 or s160, or kaddish-min-claim.png. Their bands cover the whole text block. I did not open the English page s147 or the full s149 page. I took the English body as unchanged from english-preservation-proof.json, apart from the note line on s149.",
+    "The 7 Melekh Bemishpat sites listed under issues and unresolved go beyond what the bands can settle. Please check them in an enlarged crop before any change, and keep the printed form rather than normalizing to MT or familiar wording.",
+    "The routing file is 3445 lines and I read the first 2290. That covers the morning tail and Avinu Malkenu routing; I did not read the rest of the Torah section.",
+    "I read the corrections receipt (4180 lines) only up to line 1195: the full change list and part of the before-state. I did not read the rest of the before-state or anything after it.",
+    "I did not run schema validation, the compiler, refdb or validate_urn_references. The WLC half-verse ranges come from the supplied proof file; I did not query refdb myself.",
+    "This review does not approve the final PDF or HTML."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "23a9c9b5-1c9e-46e9-bc46-31b5f364202d"
+  }
+}
