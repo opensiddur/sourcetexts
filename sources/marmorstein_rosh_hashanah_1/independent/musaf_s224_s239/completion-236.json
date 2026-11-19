@@ -1,0 +1,100 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "scan_pair": [
+    236,
+    237
+  ],
+  "source_approved": false,
+  "findings": [
+    {
+      "scan": "s236",
+      "key": "unetaneh",
+      "old": "(כ״י יַעַבְרוּן)",
+      "proposed": "(כ״א יַעַבְרוּן)",
+      "reason": "The small siglum in the source is כ״א, not כ״י. The same siglum appears again at line 14."
+    },
+    {
+      "scan": "s236",
+      "key": "unetaneh",
+      "old": "לְכָל בְּרִיָּה",
+      "proposed": "לְכָל בְּרִיָּה with a kamatz under the kaf: לְכָל",
+      "reason": "The enlarged band 1, line 6, shows a kamatz under the כ of לכל. The candidate has only the shva under the lamed and leaves the kaf without a vowel."
+    },
+    {
+      "scan": "s236",
+      "key": "unetaneh",
+      "old": "(וּמִי בְחַיָּה.)",
+      "proposed": "(וּמִי בַחַיָּה.)",
+      "reason": "The source has a patach under the bet, not a shva."
+    },
+    {
+      "scan": "s236",
+      "key": "unetaneh",
+      "old": "(וּמִי בַחֲנִיקָה וּמִי בִסְקִילָה.)",
+      "proposed": "(מִי בַחֲנִיקָה וּמִי בִסְקִילָה.)",
+      "reason": "In the source the parenthesis opens with מִי. There is no וּ before it. The candidate added a word."
+    },
+    {
+      "scan": "s236",
+      "key": "unetaneh",
+      "old": "מִי יָרוּם (כ״י יָרוּם.)",
+      "proposed": "מִי יָרוּם (כ״א יוֹרָם.)",
+      "reason": "The variant is a different word: יוֹרָם, with a vav and a kamatz under the resh. The candidate repeats the main-text word יָרוּם instead. The siglum is also כ״א, not כ״י."
+    },
+    {
+      "scan": "s236",
+      "key": "ki_khishimkha",
+      "old": "כִּי לֹא תַחְפֹּץ",
+      "proposed": "כִּי לֹא תַחְפּוֹץ",
+      "reason": "The source spells it in full with a vav: תַחְפּוֹץ. In print, לא runs directly into the next word, but they are still two words."
+    },
+    {
+      "scan": "s236",
+      "key": "ki_khishimkha",
+      "old": "אֱמֶת. כִּי",
+      "proposed": "אֱמֶת, כִּי",
+      "reason": "The source prints a comma after אֱמֶת, not a period."
+    }
+  ],
+  "uncertainties": [
+    {
+      "scan": "s236",
+      "key": "unetaneh",
+      "word": "יוֹרָם (variant)",
+      "question": "The dot on the vav could be a holam (יוֹרָם) or a shuruk (יוּרָם). I lean toward holam, but the print is small."
+    },
+    {
+      "scan": "s236",
+      "key": "unetaneh",
+      "word": "בְּעֵינֶיךָ",
+      "question": "There may be a dagesh in the bet. The candidate has one; the scan is ambiguous."
+    },
+    {
+      "scan": "s236",
+      "key": "ki_khishimkha",
+      "word": "לּוֹ",
+      "question": "The candidate puts a dagesh in the lamed after תְּחַכֶּה. I can't see one clearly in the scan. Please check before keeping it."
+    },
+    {
+      "scan": "s236",
+      "key": "teshuvah",
+      "word": "רוֹעַ",
+      "question": "The candidate writes it with a vav (holam male), and the large display type seems to agree. Please confirm the source isn't רֹעַ (holam haser)."
+    }
+  ],
+  "coverage_notes": [
+    "s236: The running head (מוסף ליום ראשון של ראש השנה, 108) was ignored. No other text appears below the last line (…וָדָם: אָדָם), and the page continues on the next scan.",
+    "s236: The חזן siglum sits inside the text, just before כְּבַקָּרַת רוֹעֶה on line 3. The ח׳ siglum sits just before אֱמֶת in the last section. The candidate stores both as separate speaker blocks with no position, so where they fall in the text is not encoded.",
+    "s236: The superscripts צום, קול, ממון stand over תשובה, תפלה, צדקה, in that order, and are encoded as one annotation block. The rubric 'קהל בעטעט ביז ושמנו קראת בשמך.' is transcribed correctly. There are no Rashi annotations on this page.",
+    "s236: The parenthesized (צוֹם), (וּמִי בַחַיָּה.), (וּמִי בַצָּמָא.) and the variant readings are all encoded, apart from the corrections listed above.",
+    "s237: All four English blocks match the source word for word, including the closing quote mark in “judgment’ for”. The printed Hebrew cues (בראש השנה, כי) are left out as instructed. The English has no equivalents for the parenthesized Hebrew additions (beasts, thirst, strangling, stoning) or for (צום), and the candidate correctly leaves them out. The running head was ignored, and the stray mark before “and how many” on line 3 of the berosh paragraph is a scan artifact."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "c29cf74a-ba12-489e-aef3-af4559398e28"
+  }
+}

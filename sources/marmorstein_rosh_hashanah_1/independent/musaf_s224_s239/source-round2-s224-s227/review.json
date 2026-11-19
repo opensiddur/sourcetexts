@@ -1,0 +1,109 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "source_approved": false,
+  "files_read": [
+    "/tmp/mahzor-s224/source-round2-s224-s227/candidate.json",
+    "/tmp/mahzor-s224/source-round2-s224-s227/human288_290.json",
+    "/tmp/mahzor-s224/source-round2-s224-s227/human291_298.json",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s224.jpg",
+    "/tmp/mahzor-s224/s224-detail0.png",
+    "/tmp/mahzor-s224/s224-detail1.png",
+    "/tmp/mahzor-s224/s224-detail2.png",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s225.jpg",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s226.jpg",
+    "/tmp/mahzor-s224/s226-detail0.png",
+    "/tmp/mahzor-s224/s226-detail1.png",
+    "/tmp/mahzor-s224/s226-detail2.png",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s227.jpg",
+    "/tmp/mahzor-s224/question296-full-vowels-v3.png"
+  ],
+  "findings": [
+    {
+      "scan": "s224",
+      "key": "olam",
+      "old": "(נ״א תְּעַטֵר)",
+      "proposed": "(נ״א תְּעַטֵר) with dagesh U+05BC added on the tav: ת+U+05BC+U+05B0 עַטֵר",
+      "reason": "Receipt 293 says the tav in תעטר has a dagesh and the tet does not. The candidate has sheva on the tav but no dagesh, so it contradicts the authoritative receipt."
+    },
+    {
+      "scan": "s224",
+      "key": "tifen_reader_1 / tifen_reader_2 / olam / admatam / dibberot (speaker cues)",
+      "old": "Two speaker blocks, both ח׳. The dibberot block has no speaker of its own and is placed at the end of the array. No ק׳ appears anywhere before עוֹלָם.",
+      "proposed": "Three cues in reading order: ח׳ before דִּבְּרוֹת, ק׳ before עוֹלָם, ח׳ before אֲסוּמָה",
+      "reason": "The scan and s224-detail2 show a separate small cue before עוֹלָם בְּבַקֶּרְךָ, at the start of a new paragraph. It has a descender and looks like ק׳. Small cues also appear before דִּבְּרוֹת (detail1) and before אֲסוּמָה (detail2). The candidate has only two cues, and its block order doesn't show which line each one introduces, so the cue before עולם is missing. The letter identity of these tiny cues should be confirmed against receipt 298's 'both_sigla: חו״ק' (see uncertainties)."
+    },
+    {
+      "scan": "s226",
+      "key": "af",
+      "old": "כַּסֵּא לְהַקְפּוֹרַת",
+      "proposed": "כֶּסֶא לְהַקְפּוֹרַת (dagesh in kaf retained; whether the samekh has a dagesh is still open, see uncertainties)",
+      "reason": "In s226-detail1 and the full scan, the marks under both kaf and samekh are three-dot segol clusters, not a patach bar or a two-dot tsere. Compare s224 tifen כִּסֵּא דִין in s224-detail1, where the two-dot tsere is clearly different. The candidate seems to have been normalized toward כִּסֵּא/כַּסֵּא. The source vowels are segol/segol, consistent with כֶּסֶא as in Psalm 81:4."
+    }
+  ],
+  "uncertainties": [
+    {
+      "scan": "s226",
+      "key": "af",
+      "word": "כֶּסֶא",
+      "question": "Is there a dagesh dot inside the samekh? At detail1 resolution the inside of the samekh can't be clearly read as either empty or dotted. Is the mark under the kaf definitely segol (three dots) and not patach plus a stray dot? It looks like segol."
+    },
+    {
+      "scan": "s224",
+      "key": "tifen",
+      "word": "אֹמֶר",
+      "question": "Receipt 288 records 'אֹמֶץ', but the candidate has אֹמֶר. In s224-detail0 the last letter of צָרַת אֹמֶר לֹא יָדוֹן has no descender below the baseline and matches the ר in וּמוּסָר; it doesn't look like a final tsadi. The English 'that sentence' also fits אֹמֶר. Does receipt 288 refer to this word or to a word outside this scope? If it refers to this word, the image appears to contradict it, and a human needs to check it again."
+    },
+    {
+      "scan": "s224",
+      "key": "tifen",
+      "word": "יַעֲשֶׂה",
+      "question": "Receipt 298 lists a meteg on the yod of 'yaas', and the candidate has no meteg. The other words in 298 (עומק, למענו, וכעס, מעס, חו״ק) don't appear on scans 224–227, so 298 may belong to another page. Does it apply to זְכוֹר לֹא יַעֲשֶׂה מִשְׁפָּט here? The scan shows a possible extra stroke under the yod but doesn't settle it."
+    },
+    {
+      "scan": "s224/s226",
+      "key": "tifen_reader_1, tifen_reader_2, mi_speaker, lehasir_reader",
+      "word": "ח׳",
+      "question": "Receipt 298 says 'both_sigla: חו״ק' (חזן וקהל). Which two cues does it mean? At page resolution, the small cues before דִּבְּרוֹת and אֲסוּמָה on s224 and before מִי כָמוֹךָ and לְהָסִיר on s226 each look like a single letter plus geresh. I can't tell from the supplied images whether any of them is actually חו״ק."
+    },
+    {
+      "scan": "s226",
+      "key": "lehasir",
+      "word": "וּלְיַעֲקֹב",
+      "question": "In s226-detail2 there may be a meteg beside the patach under the yod. Present or not? The candidate has no meteg anywhere in this scope."
+    },
+    {
+      "scan": "s224",
+      "key": "tifen",
+      "word": "מִנּוֹשָׁבֶת",
+      "question": "Is the vav holam male (dot above) or shuruk, and is there a dagesh in the nun? The detail0 resolution doesn't settle it, and the candidate reading is accepted only provisionally."
+    },
+    {
+      "scan": "s224",
+      "key": "tifen",
+      "word": "לְּךָ / מִלְּהִשָּׁפֵט / לַבְּרִית",
+      "question": "The candidate puts a dagesh in these lameds and the bet. In s224-detail1 I can't confirm or rule out a dot inside these letters. Please confirm."
+    },
+    {
+      "scan": "s224",
+      "key": "gevurot_open",
+      "word": "לָּךְ",
+      "question": "Is there a dagesh in the lamed of וּמִי דּוֹמֶה לָּךְ? I can't tell in s224-detail0."
+    }
+  ],
+  "coverage_notes": [
+    "s224: Every block, all body text and both small rubrics (סוגרים הארון., ע״ס תשר״ק.) are accounted for. Nothing below the last line (אֲטוּמִים ... (נ״א שָׁנָה):) was omitted. The running heading and page number are excluded.",
+    "s224: Checked against receipts. 289 (נ״א), 290 (לִיבוּב, no dagesh in either bet), 291 (גִּבּוֹר with dagesh, כָמוֹךָ without) and 292 (נוֹעָדִים with qamatz under the ayin, עָבְרוּ בְרִית without dagesh) are all honored. 293 is not; see findings.",
+    "s225: The English for the four blocks matches the scan word for word, including the parentheses and the line-break hyphens (judg-ment, Cove-nant, remem-berest), which are correctly rejoined. As instructed, the Hebrew linkage cues are omitted. No English text was left out.",
+    "s226: Every block is accounted for: פותחים הארון., ח׳ מי כמוך, סוגרים הארון., ע״ס א״ת ב״ש., ק׳ אף, the ח׳ לְהָסִיר stanza, יִמְלֹךְ and וְאַתָּה קָדוֹשׁ. Receipts 294 (שִׁמַּעְנוּךָ), 295 (וּנְקִימַת), 296 (תֻּעֲתָּעוּ, both tav dageshes; confirmed against the question296 crop), 297 (כָמוֹךָ, לְבָבֵיהֶם, קִרְבֵיהֶם without dagesh) and 298 (דִּין with dagesh) are honored. Only כסא is in dispute.",
+    "s227: The English for the four blocks matches the scan word for word. Nothing is missing.",
+    "Apart from the receipt-298 items listed under uncertainties, the candidate has no meteg marks anywhere. I can't verify meteg presence systematically at the supplied resolution."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "27d99df1-03f8-42ec-a14c-24198f4fb115"
+  }
+}
