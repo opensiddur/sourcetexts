@@ -1,0 +1,154 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "scope": "Round 3 canonical XML audit. I re-checked the round-2 blocking whitespace finding on he uvekhen_lekha_taaleh_qedushah and checked the two round-2 minor fixes. I read the actual XML of all 22 files (11 he, 11 en) in full. Code, exports, renderer output and portions 238–239 are excluded and not approved.",
+  "approved": true,
+  "files_read": [
+    "/tmp/mahzor-s224/canonical-xml-round2/review.json (all)",
+    "/tmp/mahzor-s224/canonical-xml-round3/actual-xml.txt (all 1148 lines, 22 files)",
+    "/tmp/mahzor-s224/canonical-xml-round3/data.json (lines 1-2128: all 11 units, wording_variants and the start of expanded_order)"
+  ],
+  "findings": [
+    {
+      "severity": "minor",
+      "location": "prayerbook_for_the_new_year-heidenheim-1965-he/repetition_veattah_qadosh.xml, tei:sourceDesc/tei:bibl (actual-xml.txt lines 347-348)",
+      "problem": "This is the p.51 Shacharit host file, not the canonical home. It has one pb n=51 and declares holy_one_dwellest=true, yet it now lists biblScope 51 and 103. The p.103 printing comes from musaf_repetition_veattah_qadosh (biblScope 103) and the home veattah_qadosh_el_na (51/103). The en counterpart host lists only 51. This looks like a side effect of the round-2 fix: data.json puts additional_printings he s226/103 on the repetition_veattah_qadosh stem, so the generator may write it to the host as well as the home. By contrast, the rh_gevurot additional printings appear only on gevurot_parts, not on the rh_gevurot host. No text is affected.",
+      "fix": "Remove <tei:biblScope unit=\"pages\" from=\"103\" to=\"103\"/> from the he repetition_veattah_qadosh host, or make the generator write additional_printings only to the canonical_home file. This does not block."
+    }
+  ],
+  "unit_verdicts": [
+    {
+      "stem": "rh_gevurot",
+      "lang": "he",
+      "approved": true
+    },
+    {
+      "stem": "rh_gevurot",
+      "lang": "en",
+      "approved": true
+    },
+    {
+      "stem": "rh_vetimlokh",
+      "lang": "he",
+      "approved": true
+    },
+    {
+      "stem": "rh_vetimlokh",
+      "lang": "en",
+      "approved": true
+    },
+    {
+      "stem": "repetition_veattah_qadosh",
+      "lang": "he",
+      "approved": true
+    },
+    {
+      "stem": "repetition_veattah_qadosh",
+      "lang": "en",
+      "approved": true
+    },
+    {
+      "stem": "uvekhen_lekha_taaleh_qedushah",
+      "lang": "he",
+      "approved": true
+    },
+    {
+      "stem": "uvekhen_lekha_taaleh_qedushah",
+      "lang": "en",
+      "approved": true
+    },
+    {
+      "stem": "musaf_repetition_gevurot_open",
+      "lang": "he",
+      "approved": true
+    },
+    {
+      "stem": "musaf_repetition_gevurot_open",
+      "lang": "en",
+      "approved": true
+    },
+    {
+      "stem": "musaf_repetition_gevurot_close",
+      "lang": "he",
+      "approved": true
+    },
+    {
+      "stem": "musaf_repetition_gevurot_close",
+      "lang": "en",
+      "approved": true
+    },
+    {
+      "stem": "musaf_repetition_yimlokh",
+      "lang": "he",
+      "approved": true
+    },
+    {
+      "stem": "musaf_repetition_yimlokh",
+      "lang": "en",
+      "approved": true
+    },
+    {
+      "stem": "musaf_repetition_veattah_qadosh",
+      "lang": "he",
+      "approved": true
+    },
+    {
+      "stem": "musaf_repetition_veattah_qadosh",
+      "lang": "en",
+      "approved": true
+    },
+    {
+      "stem": "musaf_uvekhen_lekha_taaleh_qedushah",
+      "lang": "he",
+      "approved": true
+    },
+    {
+      "stem": "musaf_uvekhen_lekha_taaleh_qedushah",
+      "lang": "en",
+      "approved": true
+    },
+    {
+      "stem": "gevurot_parts",
+      "lang": "he",
+      "approved": true
+    },
+    {
+      "stem": "gevurot_parts",
+      "lang": "en",
+      "approved": true
+    },
+    {
+      "stem": "veattah_qadosh_el_na",
+      "lang": "he",
+      "approved": true
+    },
+    {
+      "stem": "veattah_qadosh_el_na",
+      "lang": "en",
+      "approved": true
+    }
+  ],
+  "unread_inputs": [
+    "data.json lines 2129-5856 (the rest of expanded_order and later material). The 5 Musaf expanded contexts were not re-read this round. Their hu=false setting is taken from round 2.",
+    "The browser preview and LuaLaTeX output. I have not seen rendered output. The rendering claims for p.107, p.59 and p.51 are your evidence; my conclusion rests on XML/TEI whitespace semantics, not on those claims.",
+    "JLPTEI-3.md was not re-read for a whitespace or xml:space rule. I know of no project rule that makes the count of inter-element whitespace characters significant. If one exists, it would override the withdrawal below.",
+    "Round-1 review.json was not re-read this round. Index callers, the payloads beyond those sampled in round 2, schema logs and portions 238–239 remain as listed in round 2."
+  ],
+  "notes": [
+    "Round-2 blocking finding withdrawn. In `כִּי אַתָּה <j:conditional …/>הוּא<j:endConditional …/> אֱלֹהֵינוּ`, when hu=false, two whitespace characters touch in the character stream. In TEI mixed content with no xml:space=\"preserve\" (none appears anywhere in the 22 files), a run of whitespace means a single word boundary, not a count of printed spaces. HTML white-space:normal and normal TeX typesetting both collapse it to one interword space. So it is not a printed double space and not a word-boundary defect. My round-2 claim that it was 'the same defect' as the round-1 אֵל נָא item was wrong as a rendering claim.",
+    "The current placement is the only one that is correct in all three states without putting a space inside the scope. hu=true gives 'אַתָּה הוּא אֱלֹהֵינוּ'. hu=false gives 'אַתָּה אֱלֹהֵינוּ' after collapse. Undefined/marked gives 'אַתָּה (הוּא) אֱלֹהֵינוּ'. My round-2 fix (a space inside the scope) would make the marked rendering at p.59 '(הוּא )' or '( הוּא)', which is a real extra space inside the brackets. Dropping both outer spaces would join words when hu=true.",
+    "This is different from real punctuation spacing. A space before a comma or colon stays visible after whitespace collapse, so the en `</tei:seg>…<tei:milestone unit=\"chapter\"/>, O God.` fix (line 1143, no space before the comma) was a real correction and is correctly in place. In the he home, `<tei:milestone unit=\"chapter\"/> אֵל נָא:` (line 576) has a single space before a word, which is correct.",
+    "Requirement for downstream code (no change needed in the XML): any plain-text export, search index, payload comparison or check that reads this text must normalize whitespace the same way your source-equality check does. An xml:space=preserve or white-space:pre consumer would show the double space, but that would be a consumer bug, not an encoding defect.",
+    "Verified the round-2 minor fixes: he gevurot_parts lists biblScope 16/102/103 (lines 26-28). He veattah_qadosh_el_na lists 51/103 (lines 567-568). The en rh_vetimlokh tei:title is 'Thou shalt reign' (line 1031), and data.json rh_vetimlokh.title.en matches.",
+    "Checked the hu conditional and its note: the only j:conditional is type=\"marked\" on …/text/hu, with xml:id matching the endConditional target. The commentary note's j:condition tests hu=true, so it appears at p.59 (undefined) and is suppressed under the p.107 host's hu=false declaration (line 309; en line 891). This agrees with the preview you describe, but I did not verify that preview myself.",
+    "No other XML changes since round 2 affect text. Every other round-2 verified item still holds in the XML as supplied.",
+    "Code, exports, renderers and portions 238–239 are not approved by this review."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "12006951-83b7-461e-849a-f7e8ffeba249"
+  }
+}

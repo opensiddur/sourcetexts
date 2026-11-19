@@ -1,0 +1,9 @@
+Continue your independent code audit from round1 (included), now against complete frozen corrected code and source data. Read every supplied code file. All high/medium findings were addressed: whole-unit witness payload; plain host/home whitelists; unique actual generated corresp targets; all direct caller paths get local default selectors, without overriding already-declared later wordings; all option features explicit boolean, unused features rejected (union across languages intentional for shared bilingual scopes); orphan/duplicate overlays rejected; one overlay per segment prevents overlaps; formula joining honors punctuation and join_next; whole formula rejects nested same-unit prayer parts; stale home manifest cleanup and collisions guarded; corrections to gated outputs forbidden; verify validates equality; registry traversal now includes condition URNs; 104 importer tests and57 subtests pass. Current 676 documents schema-valid;38 actual compiler comparisons and32 structural checks pass. The canonical homes' publication idno is omitted for multi-part home; refdb does not index idno, only corresp. pb@ed='1965 context' is REQUIRED by specs/SIDDUR_URN_SCHEME.md, so do not repeat prior false concern. targetEnd must be unqualified per actual schema; start carries project. Check implementation and remaining defects. Approve only if no blocking issue. No literal/source or export acceptance by inference. Return JSON {reviewer:{model,effort},scope,approved,files_read:[],findings:[],unread_inputs:[],notes:[]}. Read only.
+Inputs:
+/tmp/mahzor-s224/canonical-code-round2/data.json
+/tmp/mahzor-s224/canonical-code-round2/payloads.json
+/tmp/mahzor-s224/canonical-code-round1/review.json
+/tmp/mahzor-s224/canonical-code-round2/realizations.py
+/tmp/mahzor-s224/canonical-code-round2/build.py
+/tmp/mahzor-s224/canonical-code-round2/verify.py
+/tmp/mahzor-s224/canonical-code-round2/tests.py

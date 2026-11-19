@@ -1,0 +1,71 @@
+{
+  "scope": "Export QA for all currently encoded material; no unencoded passage accepted.",
+  "export_qa_complete": true,
+  "artifact_directory": "/home/efeins/.codex/worktrees/marmorstein-processor/master/output/pdf/marmorstein_review_canonical",
+  "profiles": [
+    {
+      "profile": "documentary-hebrew",
+      "pages": 69,
+      "pdf_sha256": "a5ea6a9ad997180438cef7dfdbf73f754db0c1bc1d93103e6c073cfb06bec899",
+      "html_sha256": "878a7ab9d8a548198e8f3b4d5508f7d310b539d2a3c02d3586774f132ca74d77",
+      "pdf_links": 72,
+      "html_internal_links": 21,
+      "unresolved_destinations": []
+    },
+    {
+      "profile": "documentary",
+      "pages": 180,
+      "pdf_sha256": "a3ae85c825d4a50241808b73c43e9cbda3fbed8bb9f5be7f8e9c9705d35ce5af",
+      "html_sha256": "2bba74d349a6360f96cba22bf4f233ae7fb8f80d990d56584abbf676a7c3dad8",
+      "pdf_links": 110,
+      "html_internal_links": 25,
+      "unresolved_destinations": []
+    },
+    {
+      "profile": "expanded",
+      "pages": 202,
+      "pdf_sha256": "694870aa06e5f4044792db9cbcedc84008829dd04187dd33ffb6528b81707340",
+      "html_sha256": "8d99a50f34d33eb5fd1f09e690b1fd44adea646f1452753e88cc37d9c1c3c2e1",
+      "pdf_links": 91,
+      "html_internal_links": 0,
+      "unresolved_destinations": []
+    }
+  ],
+  "exporter_branch": "codex/mahzor-canonical-export-qa",
+  "exporter_commit": "be51321",
+  "separate_dependencies": [
+    "https://github.com/opensiddur/opensiddur-processor/pull/310",
+    "https://github.com/opensiddur/opensiddur-processor/pull/312",
+    "https://github.com/opensiddur/opensiddur-processor/pull/313"
+  ],
+  "merged_dependency": "https://github.com/opensiddur/opensiddur-processor/pull/311",
+  "visual_inspection": {
+    "pdf": [
+      "documentary-hebrew65: corrected local Hebrew role labels, pointed text and footnotes",
+      "documentary175: source abbreviations, parallel stanza alignment and variant apparatus",
+      "expanded200: continuous Unetaneh ending, parallel columns and apparatus"
+    ],
+    "html": [
+      "Updated documentary formula has Israel, O God. with no space before comma",
+      "Old Hu is marked and its source note opens by keyboard",
+      "Later Musaf formula omits Hu and its note",
+      "Expanded bilingual formula layout inspected; earlier day-switch/refrain checks preserved"
+    ],
+    "source_images_committed": false
+  },
+  "compiler_checks": {
+    "canonical": 38,
+    "structure": 32,
+    "optional_hu_states": 6
+  },
+  "local_rubric_tests": {
+    "compiler_tests": 119,
+    "compiler_subtests": 15,
+    "annotation_tests": 39,
+    "annotation_subtests": 23
+  },
+  "limitations": [
+    "Preview exports require the separate unmerged exporter PRs listed above.",
+    "PDF238239 remain partial; lower Kedushah is not encoded."
+  ]
+}

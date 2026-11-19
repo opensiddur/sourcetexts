@@ -7652,6 +7652,28 @@
             "corresp": "urn:x-opensiddur:text:prayer:amidah/gevurot/mechayyeh_hametim"
           }
         ]
+      },
+      "canonical_home": {
+        "file": "gevurot_parts",
+        "urn": "urn:x-opensiddur:text:prayer:amidah/gevurot/attah_gibbor",
+        "map_root": false,
+        "title": {
+          "he": "גבורות",
+          "en": "Divine might"
+        },
+        "omit_publication_urn": true
+      },
+      "additional_printings": {
+        "he": [
+          {
+            "scan": "s224",
+            "printed_page": "102"
+          },
+          {
+            "scan": "s226",
+            "printed_page": "103"
+          }
+        ]
       }
     },
     {
@@ -7815,7 +7837,7 @@
       "urn": "urn:x-opensiddur:text:prayer:amidah/vetimlokh_attah_hashem",
       "title": {
         "he": "ותמלוך אתה",
-        "en": "Evening Prayer for the New Year — Thou shalt reign"
+        "en": "Thou shalt reign"
       },
       "languages": {
         "he": [
@@ -30622,9 +30644,7 @@
                 "page_start": true
               }
             ],
-            "reference_unit": "verse",
-            "chapter_corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/veattah_qadosh/quotation/22",
-            "corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/veattah_qadosh/quotation/22/4",
+            "corresp": "urn:x-opensiddur:text:bible:psalms/22/4",
             "source": "urn:x-opensiddur:text:bible:psalms/22/4",
             "end_reference": true
           },
@@ -30651,9 +30671,7 @@
                 "page_start": true
               }
             ],
-            "reference_unit": "verse",
-            "chapter_corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/veattah_qadosh/quotation/22",
-            "corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/veattah_qadosh/quotation/22/4",
+            "corresp": "urn:x-opensiddur:text:bible:psalms/22/4",
             "source": "urn:x-opensiddur:text:bible:psalms/22/4",
             "end_reference": true
           },
@@ -30667,6 +30685,27 @@
                 "page_start": true
               }
             ]
+          }
+        ]
+      },
+      "canonical_home": {
+        "file": "veattah_qadosh_el_na",
+        "urn": "urn:x-opensiddur:text:prayer:veattah_qadosh_el_na",
+        "text_corresp": "urn:x-opensiddur:text:prayer:veattah_qadosh_el_na/text",
+        "title": {
+          "he": "ואתה קדוש — אל נא",
+          "en": "Thou art holy — O God"
+        },
+        "join_source_fragments": true
+      },
+      "title_languages": {
+        "en": "he"
+      },
+      "additional_printings": {
+        "he": [
+          {
+            "scan": "s226",
+            "printed_page": "103"
           }
         ]
       }
@@ -35382,10 +35421,22 @@
             "note_type": "commentary",
             "target": "urn:x-opensiddur:text:prayer:uvekhen_lekha_taaleh_qedushah/text",
             "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex",
-            "language": "en"
+            "language": "en",
+            "conditions": [
+              {
+                "type": "opensiddur:variant",
+                "features": {
+                  "urn:x-opensiddur:condition:prayer:uvekhen_lekha_taaleh_qedushah/text/hu": true
+                }
+              }
+            ]
           }
         ]
-      }
+      },
+      "title_languages": {
+        "en": "he"
+      },
+      "page_context": "rosh_hashanah/shacharit/repetition"
     },
     {
       "stem": "melekh_bemishpat_yaamid_aretz",
@@ -51924,10 +51975,8 @@
                 "page_start": true
               }
             ],
-            "corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition_gevurot_open/text",
-            "reference_unit": "prayer-part",
-            "source": "urn:x-opensiddur:text:prayer:amidah/gevurot",
-            "end_reference": true
+            "canonical": "urn:x-opensiddur:text:prayer:amidah/gevurot/attah_gibbor",
+            "canonical_end": "urn:x-opensiddur:text:prayer:amidah/gevurot/mekhalkel_chayyim"
           }
         ],
         "en": [
@@ -51941,9 +51990,7 @@
                 "page_start": true
               }
             ],
-            "corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition_gevurot_open/text",
-            "reference_unit": "prayer-part",
-            "source": "urn:x-opensiddur:text:prayer:amidah/gevurot"
+            "canonical": "urn:x-opensiddur:text:prayer:amidah/gevurot/attah_gibbor"
           },
           {
             "paragraph": 2,
@@ -51955,11 +52002,21 @@
                 "page_start": false
               }
             ],
-            "source": "urn:x-opensiddur:text:prayer:amidah/gevurot",
-            "end_reference": true
+            "canonical": "urn:x-opensiddur:text:prayer:amidah/gevurot/mekhalkel_chayyim"
           }
         ]
-      }
+      },
+      "wording_selection": [
+        {
+          "type": "opensiddur:variant",
+          "features": {
+            "urn:x-opensiddur:condition:prayer:amidah/gevurot/attah_gibbor/for_ever": false,
+            "urn:x-opensiddur:condition:prayer:amidah/gevurot/attah_gibbor/forever": true,
+            "urn:x-opensiddur:condition:prayer:amidah/gevurot/mekhalkel_chayyim/falling_and_healing": false,
+            "urn:x-opensiddur:condition:prayer:amidah/gevurot/mekhalkel_chayyim/falling_healing": true
+          }
+        }
+      ]
     },
     {
       "stem": "musaf_tefen_bemakhon",
@@ -52148,15 +52205,13 @@
                 "page_start": false
               }
             ],
-            "corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition_gevurot_close/text",
-            "reference_unit": "prayer-part",
-            "source": "urn:x-opensiddur:text:prayer:amidah/gevurot",
-            "end_reference": true,
             "speaker": {
               "abbr": "ח׳",
               "expan": "חזן"
             },
-            "speaker_before_reference": true
+            "speaker_before_reference": true,
+            "canonical": "urn:x-opensiddur:text:prayer:amidah/gevurot/mi_khamokha",
+            "canonical_end": "urn:x-opensiddur:text:prayer:amidah/gevurot/mechayyeh_hametim"
           }
         ],
         "en": [
@@ -52170,13 +52225,22 @@
                 "page_start": true
               }
             ],
-            "corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition_gevurot_close/text",
-            "reference_unit": "prayer-part",
-            "source": "urn:x-opensiddur:text:prayer:amidah/gevurot",
-            "end_reference": true
+            "canonical": "urn:x-opensiddur:text:prayer:amidah/gevurot/mi_khamokha",
+            "canonical_end": "urn:x-opensiddur:text:prayer:amidah/gevurot/mechayyeh_hametim"
           }
         ]
-      }
+      },
+      "wording_selection": [
+        {
+          "type": "opensiddur:variant",
+          "features": {
+            "urn:x-opensiddur:condition:prayer:amidah/gevurot/mi_khamokha/compassion_with_comma": false,
+            "urn:x-opensiddur:condition:prayer:amidah/gevurot/mi_khamokha/compassion_without_comma": true,
+            "urn:x-opensiddur:condition:prayer:amidah/gevurot/mechayyeh_hametim/and_thou_lord_without_comma": false,
+            "urn:x-opensiddur:condition:prayer:amidah/gevurot/mechayyeh_hametim/and_thou_lord_with_comma": true
+          }
+        }
+      ]
     },
     {
       "stem": "musaf_af_orach_mishpatekha_qivvinukha",
@@ -52294,14 +52358,7 @@
                 "page_start": false
               }
             ],
-            "corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition_yimlokh/text",
-            "reference_unit": "prayer-part",
-            "source": "urn:x-opensiddur:text:bible:psalms/146/10",
-            "end_reference": true,
-            "source_reference": "urn:x-opensiddur:text:bible:psalms/146/10",
-            "source_reference_corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition_yimlokh/text/quotation",
-            "chapter_corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition_yimlokh/text/quotation/chapter",
-            "source_reference_end": true
+            "canonical": "urn:x-opensiddur:text:bible:psalms/146/10"
           }
         ],
         "en": [
@@ -52315,17 +52372,21 @@
                 "page_start": false
               }
             ],
-            "corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition_yimlokh/text",
-            "reference_unit": "prayer-part",
-            "source": "urn:x-opensiddur:text:bible:psalms/146/10",
-            "end_reference": true,
-            "source_reference": "urn:x-opensiddur:text:bible:psalms/146/10",
-            "source_reference_corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition_yimlokh/text/quotation",
-            "chapter_corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition_yimlokh/text/quotation/chapter",
-            "source_reference_end": true
+            "canonical": "urn:x-opensiddur:text:bible:psalms/146/10"
           }
         ]
-      }
+      },
+      "wording_selection": [
+        {
+          "type": "opensiddur:variant",
+          "features": {
+            "urn:x-opensiddur:condition:bible:psalms/146/10/name_plene_hallaluyah_chataf": false,
+            "urn:x-opensiddur:condition:bible:psalms/146/10/name_abbreviated_halleluyah_sheva": true,
+            "urn:x-opensiddur:condition:bible:psalms/146/10/the_lord_shall_reign": false,
+            "urn:x-opensiddur:condition:bible:psalms/146/10/the_lord_will_reign": true
+          }
+        }
+      ]
     },
     {
       "stem": "musaf_repetition_veattah_qadosh",
@@ -52345,14 +52406,7 @@
                 "text": "וְאַתָּה קָדוֹשׁ יוֹשֵׁב תְּהִלּוֹת יִשְׂרָאֵל",
                 "page_start": false
               }
-            ],
-            "corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition_veattah_qadosh/text",
-            "reference_unit": "prayer-part",
-            "source": "urn:x-opensiddur:text:bible:psalms/22/4",
-            "source_reference": "urn:x-opensiddur:text:bible:psalms/22/4",
-            "source_reference_corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition_veattah_qadosh/text/quotation",
-            "chapter_corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition_veattah_qadosh/text/quotation/chapter",
-            "source_reference_end": true
+            ]
           },
           {
             "paragraph": 1,
@@ -52363,8 +52417,7 @@
                 "text": " אֵל נָא:",
                 "page_start": false
               }
-            ],
-            "end_reference": true
+            ]
           }
         ],
         "en": [
@@ -52377,14 +52430,7 @@
                 "text": "And Thou, O Holy One, art enthroned above the songs of praise of Israel",
                 "page_start": false
               }
-            ],
-            "corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition_veattah_qadosh/text",
-            "reference_unit": "prayer-part",
-            "source": "urn:x-opensiddur:text:bible:psalms/22/4",
-            "source_reference": "urn:x-opensiddur:text:bible:psalms/22/4",
-            "source_reference_corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition_veattah_qadosh/text/quotation",
-            "chapter_corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition_veattah_qadosh/text/quotation/chapter",
-            "source_reference_end": true
+            ]
           },
           {
             "paragraph": 1,
@@ -52395,11 +52441,20 @@
                 "text": ", O God.",
                 "page_start": false
               }
-            ],
-            "end_reference": true
+            ]
           }
         ]
-      }
+      },
+      "wording_selection": [
+        {
+          "type": "opensiddur:variant",
+          "features": {
+            "urn:x-opensiddur:condition:bible:psalms/22/4/holy_one_dwellest": false,
+            "urn:x-opensiddur:condition:bible:psalms/22/4/holy_one_art_enthroned": true
+          }
+        }
+      ],
+      "canonical_whole": "urn:x-opensiddur:text:prayer:veattah_qadosh_el_na/text"
     },
     {
       "stem": "musaf_el_emunah_beorkekha_din",
@@ -53355,16 +53410,13 @@
                 "page_start": false
               }
             ],
-            "corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition_uvekhen_lekha_taaleh_qedushah/text",
-            "reference_unit": "prayer-part",
-            "end_reference": true,
             "speaker": {
               "label": "חזן.",
               "role": "reader",
               "language": "he"
             },
             "speaker_before_reference": true,
-            "source": "urn:x-opensiddur:text:prayer:uvekhen_lekha_taaleh_qedushah"
+            "canonical": "urn:x-opensiddur:text:prayer:uvekhen_lekha_taaleh_qedushah/text"
           }
         ],
         "en": [
@@ -53378,13 +53430,20 @@
                 "page_start": false
               }
             ],
-            "corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition_uvekhen_lekha_taaleh_qedushah/text",
-            "reference_unit": "prayer-part",
-            "end_reference": true,
-            "source": "urn:x-opensiddur:text:prayer:uvekhen_lekha_taaleh_qedushah"
+            "canonical": "urn:x-opensiddur:text:prayer:uvekhen_lekha_taaleh_qedushah/text"
           }
         ]
-      }
+      },
+      "wording_selection": [
+        {
+          "type": "opensiddur:variant",
+          "features": {
+            "urn:x-opensiddur:condition:prayer:uvekhen_lekha_taaleh_qedushah/text/let_sanctification_arise": false,
+            "urn:x-opensiddur:condition:prayer:uvekhen_lekha_taaleh_qedushah/text/let_holiness_ascend": true,
+            "urn:x-opensiddur:condition:prayer:uvekhen_lekha_taaleh_qedushah/text/hu": false
+          }
+        }
+      ]
     },
     {
       "stem": "musaf_unetaneh_toqef",
@@ -60661,7 +60720,26 @@
                   "unit": "musaf_repetition_avot_close"
                 },
                 {
-                  "unit": "musaf_repetition_gevurot_open"
+                  "section": "musaf_repetition_gevurot_open_canonical",
+                  "declarations": [
+                    {
+                      "type": "opensiddur:variant",
+                      "features": {
+                        "urn:x-opensiddur:condition:prayer:amidah/gevurot/attah_gibbor/for_ever": false,
+                        "urn:x-opensiddur:condition:prayer:amidah/gevurot/attah_gibbor/forever": true,
+                        "urn:x-opensiddur:condition:prayer:amidah/gevurot/mekhalkel_chayyim/falling_and_healing": false,
+                        "urn:x-opensiddur:condition:prayer:amidah/gevurot/mekhalkel_chayyim/falling_healing": true
+                      }
+                    }
+                  ],
+                  "order": [
+                    {
+                      "reference": {
+                        "target": "urn:x-opensiddur:text:prayer:amidah/gevurot/attah_gibbor",
+                        "targetEnd": "urn:x-opensiddur:text:prayer:amidah/gevurot/mekhalkel_chayyim"
+                      }
+                    }
+                  ]
                 },
                 {
                   "instruction": "musaf_s224_close_ark_224"
@@ -60673,7 +60751,27 @@
                   "instruction": "musaf_s224_open_ark_226"
                 },
                 {
-                  "unit": "musaf_repetition_gevurot_close"
+                  "section": "musaf_repetition_gevurot_close_canonical",
+                  "declarations": [
+                    {
+                      "type": "opensiddur:variant",
+                      "features": {
+                        "urn:x-opensiddur:condition:prayer:amidah/gevurot/mi_khamokha/compassion_with_comma": false,
+                        "urn:x-opensiddur:condition:prayer:amidah/gevurot/mi_khamokha/compassion_without_comma": true,
+                        "urn:x-opensiddur:condition:prayer:amidah/gevurot/mechayyeh_hametim/and_thou_lord_without_comma": false,
+                        "urn:x-opensiddur:condition:prayer:amidah/gevurot/mechayyeh_hametim/and_thou_lord_with_comma": true
+                      }
+                    }
+                  ],
+                  "order": [
+                    {
+                      "reference": {
+                        "target": "urn:x-opensiddur:text:prayer:amidah/gevurot/mi_khamokha",
+                        "targetEnd": "urn:x-opensiddur:text:prayer:amidah/gevurot/mechayyeh_hametim"
+                      }
+                    }
+                  ],
+                  "role": "reader"
                 },
                 {
                   "instruction": "musaf_s224_close_ark_226"
@@ -60682,10 +60780,44 @@
                   "unit": "musaf_af_orach_mishpatekha_qivvinukha"
                 },
                 {
-                  "unit": "musaf_repetition_yimlokh"
+                  "section": "musaf_repetition_yimlokh_canonical",
+                  "declarations": [
+                    {
+                      "type": "opensiddur:variant",
+                      "features": {
+                        "urn:x-opensiddur:condition:bible:psalms/146/10/name_plene_hallaluyah_chataf": false,
+                        "urn:x-opensiddur:condition:bible:psalms/146/10/name_abbreviated_halleluyah_sheva": true,
+                        "urn:x-opensiddur:condition:bible:psalms/146/10/the_lord_shall_reign": false,
+                        "urn:x-opensiddur:condition:bible:psalms/146/10/the_lord_will_reign": true
+                      }
+                    }
+                  ],
+                  "order": [
+                    {
+                      "reference": {
+                        "target": "urn:x-opensiddur:text:bible:psalms/146/10"
+                      }
+                    }
+                  ]
                 },
                 {
-                  "unit": "musaf_repetition_veattah_qadosh"
+                  "section": "musaf_repetition_veattah_qadosh_canonical",
+                  "declarations": [
+                    {
+                      "type": "opensiddur:variant",
+                      "features": {
+                        "urn:x-opensiddur:condition:bible:psalms/22/4/holy_one_dwellest": false,
+                        "urn:x-opensiddur:condition:bible:psalms/22/4/holy_one_art_enthroned": true
+                      }
+                    }
+                  ],
+                  "order": [
+                    {
+                      "reference": {
+                        "target": "urn:x-opensiddur:text:prayer:veattah_qadosh_el_na/text"
+                      }
+                    }
+                  ]
                 },
                 {
                   "unit": "musaf_el_emunah_beorkekha_din"
@@ -60709,7 +60841,25 @@
                   "instruction": "musaf_s224_close_ark_234"
                 },
                 {
-                  "unit": "musaf_uvekhen_lekha_taaleh_qedushah"
+                  "section": "musaf_uvekhen_lekha_taaleh_qedushah_canonical",
+                  "declarations": [
+                    {
+                      "type": "opensiddur:variant",
+                      "features": {
+                        "urn:x-opensiddur:condition:prayer:uvekhen_lekha_taaleh_qedushah/text/let_sanctification_arise": false,
+                        "urn:x-opensiddur:condition:prayer:uvekhen_lekha_taaleh_qedushah/text/let_holiness_ascend": true,
+                        "urn:x-opensiddur:condition:prayer:uvekhen_lekha_taaleh_qedushah/text/hu": false
+                      }
+                    }
+                  ],
+                  "order": [
+                    {
+                      "reference": {
+                        "target": "urn:x-opensiddur:text:prayer:uvekhen_lekha_taaleh_qedushah/text"
+                      }
+                    }
+                  ],
+                  "role": "reader"
                 },
                 {
                   "unit": "musaf_unetaneh_toqef"
@@ -62558,5 +62708,259 @@
       },
       "reason": "Unused editorial candidate; no documentary or expanded route uses it. Preserve verbatim in history without claiming printed source text. Actual printed English repeat instruction supplies the active direction."
     }
-  }
+  },
+  "wording_variants": [
+    {
+      "id": "rh_gevurot_attah_gibbor_en",
+      "host": "rh_gevurot",
+      "lang": "en",
+      "identity": "urn:x-opensiddur:text:prayer:amidah/gevurot/attah_gibbor",
+      "printed": "Thou art for ever mighty, O Lord the reviver of the dead, Thou art great to save.",
+      "readings": [
+        {
+          "text": "Thou art for ever mighty, O Lord the reviver of the dead, Thou art great to save.",
+          "corresp": "urn:x-opensiddur:condition:prayer:amidah/gevurot/attah_gibbor/for_ever",
+          "facs": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n26.jpg"
+        },
+        {
+          "text": "Thou art forever mighty, O Lord the reviver of the dead, Thou art great to save.",
+          "corresp": "urn:x-opensiddur:condition:prayer:amidah/gevurot/attah_gibbor/forever",
+          "facs": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n224.jpg"
+        }
+      ],
+      "printings": [
+        {
+          "scan": "s27",
+          "printed_page": "16"
+        },
+        {
+          "scan": "s225",
+          "printed_page": "102"
+        }
+      ]
+    },
+    {
+      "id": "rh_gevurot_mekhalkel_chayyim_en",
+      "host": "rh_gevurot",
+      "lang": "en",
+      "identity": "urn:x-opensiddur:text:prayer:amidah/gevurot/mekhalkel_chayyim",
+      "printed": "Sustaining life with kindness, reviving the dead with great compassion, supporting the falling and healing the sick and releasing captives and keeping His faith with those who sleep in the dust. Who is like Thee, Master of might, and who resembles Thee, O King, who slays and revives and causes salvation to spring forth.",
+      "readings": [
+        {
+          "text": "Sustaining life with kindness, reviving the dead with great compassion, supporting the falling and healing the sick and releasing captives and keeping His faith with those who sleep in the dust. Who is like Thee, Master of might, and who resembles Thee, O King, who slays and revives and causes salvation to spring forth.",
+          "corresp": "urn:x-opensiddur:condition:prayer:amidah/gevurot/mekhalkel_chayyim/falling_and_healing",
+          "facs": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n26.jpg"
+        },
+        {
+          "text": "Sustaining life with kindness, reviving the dead with great compassion, supporting the falling, healing the sick, and releasing captives and keeping His faith with those who sleep in the dust. Who is like Thee, Master of might, and who resembles Thee, O King, who slays and revives and causes salvation to spring forth.",
+          "corresp": "urn:x-opensiddur:condition:prayer:amidah/gevurot/mekhalkel_chayyim/falling_healing",
+          "facs": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n224.jpg"
+        }
+      ],
+      "printings": [
+        {
+          "scan": "s27",
+          "printed_page": "16"
+        },
+        {
+          "scan": "s225",
+          "printed_page": "102"
+        }
+      ]
+    },
+    {
+      "id": "rh_gevurot_mi_khamokha_en",
+      "host": "rh_gevurot",
+      "lang": "en",
+      "identity": "urn:x-opensiddur:text:prayer:amidah/gevurot/mi_khamokha",
+      "printed": "Who is like Thee, Father of compassion, who remembers His creatures for life in compassion.",
+      "readings": [
+        {
+          "text": "Who is like Thee, Father of compassion, who remembers His creatures for life in compassion.",
+          "corresp": "urn:x-opensiddur:condition:prayer:amidah/gevurot/mi_khamokha/compassion_with_comma",
+          "facs": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n26.jpg"
+        },
+        {
+          "text": "Who is like Thee, Father of compassion who remembers His creatures for life in compassion;",
+          "corresp": "urn:x-opensiddur:condition:prayer:amidah/gevurot/mi_khamokha/compassion_without_comma",
+          "facs": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n226.jpg"
+        }
+      ],
+      "printings": [
+        {
+          "scan": "s27",
+          "printed_page": "16"
+        },
+        {
+          "scan": "s227",
+          "printed_page": "103"
+        }
+      ]
+    },
+    {
+      "id": "rh_gevurot_mechayyeh_hametim_en",
+      "host": "rh_gevurot",
+      "lang": "en",
+      "identity": "urn:x-opensiddur:text:prayer:amidah/gevurot/mechayyeh_hametim",
+      "printed": "And Thou art faithful to revive the dead. Blessed art Thou, O Lord who revives the dead.",
+      "readings": [
+        {
+          "text": "And Thou art faithful to revive the dead. Blessed art Thou, O Lord who revives the dead.",
+          "corresp": "urn:x-opensiddur:condition:prayer:amidah/gevurot/mechayyeh_hametim/and_thou_lord_without_comma",
+          "facs": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n26.jpg"
+        },
+        {
+          "text": "and Thou art faithful to revive the dead. Blessed art Thou, O Lord, who revives the dead.",
+          "corresp": "urn:x-opensiddur:condition:prayer:amidah/gevurot/mechayyeh_hametim/and_thou_lord_with_comma",
+          "facs": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n226.jpg"
+        }
+      ],
+      "printings": [
+        {
+          "scan": "s27",
+          "printed_page": "16"
+        },
+        {
+          "scan": "s227",
+          "printed_page": "103"
+        }
+      ]
+    },
+    {
+      "id": "rh_vetimlokh_10_he",
+      "host": "rh_vetimlokh",
+      "lang": "he",
+      "identity": "urn:x-opensiddur:text:bible:psalms/146/10",
+      "printed": "יִמְלֹךְ יְהֹוָה לְעוֹלָם אֱלֹהַיִךְ צִיּוֹן לְדֹר וָדֹר הַלֲלוּיָהּ:",
+      "readings": [
+        {
+          "text": "יִמְלֹךְ יְהֹוָה לְעוֹלָם אֱלֹהַיִךְ צִיּוֹן לְדֹר וָדֹר הַלֲלוּיָהּ:",
+          "corresp": "urn:x-opensiddur:condition:bible:psalms/146/10/name_plene_hallaluyah_chataf",
+          "facs": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n27.jpg"
+        },
+        {
+          "text": "יִמְלֹךְ יְיָ לְעוֹלָם אֱלֹהַיִךְ צִיּוֹן לְדֹר וָדֹר הַלְלוּיָהּ:",
+          "corresp": "urn:x-opensiddur:condition:bible:psalms/146/10/name_abbreviated_halleluyah_sheva",
+          "facs": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n225.jpg"
+        }
+      ],
+      "printings": [
+        {
+          "scan": "s28",
+          "printed_page": "17"
+        },
+        {
+          "scan": "s226",
+          "printed_page": "103"
+        }
+      ]
+    },
+    {
+      "id": "rh_vetimlokh_10_en",
+      "host": "rh_vetimlokh",
+      "lang": "en",
+      "identity": "urn:x-opensiddur:text:bible:psalms/146/10",
+      "printed": "the Lord shall reign for ever, your God, O Zion, from generation to generation. Halleluyah!",
+      "readings": [
+        {
+          "text": "the Lord shall reign for ever, your God, O Zion, from generation to generation. Halleluyah!",
+          "corresp": "urn:x-opensiddur:condition:bible:psalms/146/10/the_lord_shall_reign",
+          "facs": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n28.jpg"
+        },
+        {
+          "text": "The Lord will reign for ever, your God, O Zion, from generation to generation. Halleluyah.",
+          "corresp": "urn:x-opensiddur:condition:bible:psalms/146/10/the_lord_will_reign",
+          "facs": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n226.jpg"
+        }
+      ],
+      "printings": [
+        {
+          "scan": "s29",
+          "printed_page": "17"
+        },
+        {
+          "scan": "s227",
+          "printed_page": "103"
+        }
+      ]
+    },
+    {
+      "id": "repetition_veattah_qadosh_4_en",
+      "host": "repetition_veattah_qadosh",
+      "lang": "en",
+      "identity": "urn:x-opensiddur:text:bible:psalms/22/4",
+      "printed": "And Thou, Holy One, dwellest above the songs of praise of Israel",
+      "readings": [
+        {
+          "text": "And Thou, Holy One, dwellest above the songs of praise of Israel",
+          "corresp": "urn:x-opensiddur:condition:bible:psalms/22/4/holy_one_dwellest",
+          "facs": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n130.jpg"
+        },
+        {
+          "text": "And Thou, O Holy One, art enthroned above the songs of praise of Israel",
+          "corresp": "urn:x-opensiddur:condition:bible:psalms/22/4/holy_one_art_enthroned",
+          "facs": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n226.jpg"
+        }
+      ],
+      "printings": [
+        {
+          "scan": "s131",
+          "printed_page": "51"
+        },
+        {
+          "scan": "s227",
+          "printed_page": "103"
+        }
+      ]
+    },
+    {
+      "id": "uvekhen_lekha_taaleh_qedushah_text_he",
+      "host": "uvekhen_lekha_taaleh_qedushah",
+      "lang": "he",
+      "identity": "urn:x-opensiddur:text:prayer:uvekhen_lekha_taaleh_qedushah/text",
+      "printed": "(הוּא)",
+      "printings": [
+        {
+          "scan": "s146",
+          "printed_page": "59"
+        },
+        {
+          "scan": "s234",
+          "printed_page": "107"
+        }
+      ],
+      "kind": "optional",
+      "text": "הוּא",
+      "condition": "urn:x-opensiddur:condition:prayer:uvekhen_lekha_taaleh_qedushah/text/hu"
+    },
+    {
+      "id": "uvekhen_lekha_taaleh_qedushah_text_en",
+      "host": "uvekhen_lekha_taaleh_qedushah",
+      "lang": "en",
+      "identity": "urn:x-opensiddur:text:prayer:uvekhen_lekha_taaleh_qedushah/text",
+      "printed": "And thus let sanctification arise for Thee, For Thou art our God, O King.",
+      "readings": [
+        {
+          "text": "And thus let sanctification arise for Thee, For Thou art our God, O King.",
+          "corresp": "urn:x-opensiddur:condition:prayer:uvekhen_lekha_taaleh_qedushah/text/let_sanctification_arise",
+          "facs": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n146.jpg"
+        },
+        {
+          "text": "And therefore to Thee let holiness ascend for Thou art our God, O King.",
+          "corresp": "urn:x-opensiddur:condition:prayer:uvekhen_lekha_taaleh_qedushah/text/let_holiness_ascend",
+          "facs": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n234.jpg"
+        }
+      ],
+      "printings": [
+        {
+          "scan": "s147",
+          "printed_page": "59"
+        },
+        {
+          "scan": "s235",
+          "printed_page": "107"
+        }
+      ]
+    }
+  ]
 }

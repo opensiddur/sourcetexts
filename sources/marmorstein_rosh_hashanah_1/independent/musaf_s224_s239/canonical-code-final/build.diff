@@ -1,0 +1,26 @@
+--- 
++++ 
+@@ -1141,8 +1141,12 @@
+             for child in value:
+                 yield from urn_strings(child)
+         elif isinstance(value, str) and value.startswith('urn:x-opensiddur:'):
+-            yield value.partition('@')[0]
+-    for urn in set(urn_strings(readings.get('wording_variants', []))) | {
++            from opensiddur.exporter.urn import split_range
++            start, end = split_range(value.partition('@')[0]) or (value.partition('@')[0], None)
++            yield start
++            if end:
++                yield end
++    for urn in set(urn_strings(readings.get('wording_variants', []))) | set(urn_strings(readings.get('source_order', []))) | set(urn_strings(readings.get('expanded_order', []))) | {
+             urn for unit in readings['units'] for key in ('wording_selection','conditions','citations')
+             for urn in urn_strings(unit.get(key, []))}:
+         parsed = parse_urn(urn)
+@@ -1186,7 +1190,7 @@
+                                                 unit_review_text(unit, lang))
+                 realization_key = 'realization/'+unit['stem']+'/'+lang
+                 if realization_key in realization_payloads:
+-                    pending = pending or not review_is_current(reviews.get(realization_key, {}), realization_payloads[realization_key])
++                    pending = pending or any(not review_is_current(reviews.get(key, {}), payload) for key, payload in realization_payloads.items())
+                 context_unit, home_unit = prepare_documents(unit, readings)
+                 documents.append((project_directory/project/(unit['stem']+'.xml'),
+                                   unit_document(context_unit, lang, draft and pending)))
