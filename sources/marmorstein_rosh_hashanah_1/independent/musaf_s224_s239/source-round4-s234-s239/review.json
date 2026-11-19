@@ -1,0 +1,33 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "source_approved": true,
+  "scope": "Source fidelity234–239, selected ending only on238–239",
+  "files_read": [
+    "/tmp/mahzor-s224/source-round3-s234-s239/review.json",
+    "/tmp/mahzor-s224/human317_323.json",
+    "/tmp/mahzor-s224/source-round4-s234-s239/candidate.json",
+    "/tmp/mahzor-s224/source-round3-s234-s239/candidate.json",
+    "/tmp/mahzor-s224/s234-refrain-details-final.png",
+    "/tmp/mahzor-s224/s232-refrain-details-final.png",
+    "/tmp/mahzor-s224/s236-detail1.png"
+  ],
+  "findings": [],
+  "uncertainties": [],
+  "coverage_notes": [
+    "I compared the round3 and round4 candidates block by block. All Hebrew changes match the human317–323 receipt exactly: s234 melekh_9 keeps the holam in עֹז (317). melekh_10 has plain מֵי and בְּאַֽהַב, with alef patah and meteg (318). uvekhen_qedushah keeps תַעֲלֶה with no dagesh (319). On s236, all three sigla are now נ״א and the variant is (נ״א יוּרָם.) (320). Both occurrences keep בַּדִּין with bet (321), so my prior proposal of kaf is withdrawn. בְעֵינֶיךָ now has no dagesh, the samekh in יִתְיַסָּר has qamatz, and לּוֹ keeps its dagesh (322). On s238, כַּחֶֽרֶס has a het meteg, וְכֶעָנָן has no kaf meteg, and קֵצֶה has qof tsere, with the gloss now (נ״א קֵץ) (323). There are no other text changes in any block.",
+    "The prior confident finding on מי ברעש is resolved. In s236-detail1, the word after '(וּמִי בַצָּמָא.)' is bare מִי with no vav. The round4 candidate reads '(וּמִי בַצָּמָא.) מִי בָרַעַשׁ.', which matches. The detail crop also shows the יורם gloss with its period inside the parenthesis, which matches the candidate.",
+    "Meteg in the לַעֲדֵי refrains is resolved as no meteg. In all five enlarged s234 refrains (stanzas 8–12), the only marks under לַעֲדֵי are a patah under the lamed, a hataf-patah under the ayin and a tsere under the dalet. No separate vertical stroke appears beside any of them. The crop clearly shows the vertical stems of other qamatz marks on the same lines (for example the qamatz under the nun of בְּמַצְפּוּנָיו in stanza 11 and the qamatz before לָעַד in stanza 12). A meteg stroke would therefore be visible if it were printed. The seven s232 refrains show the same pattern with no meteg. The small vertical marks below some s232 lines are ascenders of lamed from the next line, not marks under לעדי. The candidate's metegless refrains are faithful.",
+    "Refrain speakers: printed ק׳ cues appear before לַעֲדֵי in stanzas 8–11 on s234, and none appears in stanza 12. The candidate's refrain_speaker metadata (ק׳ expanded as קהל) is on melekh_8 through melekh_11 and absent on melekh_12, which matches the print.",
+    "The English on s235, s237 and s239, the rubrics, the speaker labels (חזן., חזן, ח׳ ×2, קו״ח ×2) and the צום/קול/ממון superscripts are unchanged from round3 and were already verified in the prior full audit. On s238 the scope ends after the עֲשֵׂה לְמַעַן שְׁמֶךָ line, and on s239 it ends before 'According to the mystic utterance'.",
+    "I did not reopen the human-settled points (317–323) from the question images; the exact receipt is authoritative and the candidate matches it.",
+    "This approval covers the source inventory only. Synchronizing the alternative readings, j:option values and documentary notes with the נ״א sigla and readings is left to encoding review. This audit does not approve encoding or export."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "0892a492-6330-444f-aa70-368e2840f5a9"
+  }
+}
