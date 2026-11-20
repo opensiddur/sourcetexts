@@ -1,0 +1,136 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "source_approved": false,
+  "pages_read": [
+    "s246",
+    "s247",
+    "s248",
+    "s249"
+  ],
+  "findings": [
+    {
+      "scan": "s248",
+      "key": "od_yizkor_lanu",
+      "old": "(כ״א הַיּוֹם)",
+      "new": "(כ״א היום)",
+      "reason": "The variant is printed small and unpointed. The candidate's own note says it added the pointing on הַיּוֹם. Remove the added vowels and keep the variant as printed. The marker letter is a separate open question; see the uncertainties.",
+      "evidence_image": "/tmp/mahzor-s238/s248-band1.png"
+    },
+    {
+      "scan": "s248",
+      "key": "hehagui",
+      "old": "וּמַ״ שֶׁהָיָה",
+      "new": "וְמַ״ שֶׁהָיָה",
+      "reason": "The vav of the shortened response cue on this line has the same vertical two-dot sheva below it as the וְ״מַ cues on the other lines. There is no shuruk dot inside the vav. The gershayim do come after the מ, as the candidate has them. The print sets the cue tight against שֶׁהָיָה, and the parenthetical touches the words on both sides, but this is typesetting spacing. The candidate's spacing is acceptable.",
+      "evidence_image": "/tmp/mahzor-s238/s248-band2.png"
+    }
+  ],
+  "uncertainties": [
+    {
+      "scan": "s246",
+      "key": "ani_adonai_eloheichem / lehitvada_ulehigalot / yimloch_adonai_leolam",
+      "word": "קה״ח",
+      "question": "In all three places, the second letter of the small superscript role mark is broad and looks more like ר (קר״ח) than ה, and the left leg of ה cannot be seen. Is it קה״ח, or another letter such as קו״ח (קהל וחזן)? Check all three places the same way, because this will become a role description.",
+      "crop_box": [
+        840,
+        315,
+        905,
+        365
+      ]
+    },
+    {
+      "scan": "s246",
+      "key": "rubric_bisfard_ein_omrim",
+      "word": "בספר״ם",
+      "question": "The first word of the rubric is in Rashi script. As printed, the glyphs look like נפפר״ם. Is the Rashi reading בספר״ם, and is the last letter ם or ס? Rashi final mem and samekh look alike here: the ם at the end of 'אומרים' in the same line looks like ס. The expansion of the abbreviation is unknown, and the English page has no translation of this rubric to help.",
+      "crop_box": [
+        420,
+        400,
+        950,
+        445
+      ]
+    },
+    {
+      "scan": "s246/s248",
+      "key": "tehillot_kevodecha, ki_makdishecha, od_yizkor_lanu",
+      "word": "נ״א / כ״א",
+      "question": "There are four small Rashi-script variant markers: before גֵּעַשׁ, סוּרוּ מִנִּי, כערכך, and היום. All four use the same glyph. The candidate reads נ״א on s246 and כ״א on s248, which is inconsistent. The glyph looks like כ״ח, which fits Rashi נ״א (nusach acher). Decide on one reading and use it in all four places.",
+      "crop_box": [
+        250,
+        600,
+        345,
+        645
+      ]
+    },
+    {
+      "scan": "s246",
+      "key": "lehitvada_ulehigalot",
+      "word": "יִרְשׁוּ",
+      "question": "Under the yod there is a three-dot triangle, which looks like segol, together with a meteg. Is the print יֶֽרְשׁוּ (segol), or hiriq plus meteg with a stray dot? I did not substitute the expected יִרְשׁוּ from memory.",
+      "crop_box": [
+        700,
+        1190,
+        790,
+        1250
+      ]
+    },
+    {
+      "scan": "s246",
+      "key": "lehitvada_ulehigalot",
+      "word": "בְּחוּנָיו-",
+      "question": "There is a hyphen-like mark at mid-height between בחוניו and לפארו. It sits too low for a maqaf, so I take it as a print artifact. Please confirm before dropping it.",
+      "crop_box": [
+        770,
+        1195,
+        830,
+        1245
+      ]
+    },
+    {
+      "scan": "s248",
+      "key": "od_yizkor_lanu",
+      "word": "מַגִּיד",
+      "question": "The mark under the mem of מגיד (after מוּל) looks like a T-shaped qamats rather than a patah. Is the print מָגִּיד?",
+      "crop_box": [
+        690,
+        600,
+        765,
+        650
+      ]
+    },
+    {
+      "scan": "s248",
+      "key": "hasovel",
+      "word": "וּמַעְלִים",
+      "question": "Is the mark under the ע a plain sheva or a hataf patah (וּמַעֲלִים)?",
+      "crop_box": [
+        420,
+        1665,
+        520,
+        1715
+      ]
+    }
+  ],
+  "untranslated_extent_notes": [
+    "s246 rubric 'בספר״ם אין אומרים כאן אדיר אדירנו.' has no English counterpart on s247. It is a Hebrew-only direction and is in scope.",
+    "s248 rubric 'פותחים הארון. חזן. ע״ס א״ב כפול. קהל.' has no English counterpart on s249. 'חזן.' is printed above the right (first) column and 'קהל.' above the left (response) column. These role labels should become descriptions.",
+    "The role marks ח׳, ק׳ and קה״ח (or whatever that mark turns out to be) on s246 have no English equivalents. Under the role-prefix rule they become descriptions.",
+    "The Hebrew cue words printed beside the English text on s247 and s249 (אחד, אני, אדיר, תהלות, להתודע, ובדברי, ימלך, לדור, כי, האוחז) are linkage only. They are correctly left out of the English text."
+  ],
+  "notes": [
+    "I checked every word of the s247 and s249 English blocks against the print and found no differences. The speck in 'Jerusalem' on s247 is a scan artifact.",
+    "The key 'ki_maqdish' is used for both the s247 block and the s249 block. This is a cross-page continuation, so the linkage needs to treat it as one segment split over two pages.",
+    "s246 ends mid-sentence at 'שִׁמְךָ יְיָ', and s248 starts with 'אֱלֹהֵינוּ.' The continuation split is correct.",
+    "I confirmed these against the print: זְעוֹם (ז, not ו), סֹלּוּ, הַוַּדַּי (no alef), וְכֹלְלָם (two lameds), דָּבָר (two qamatses), חק (no holam visible), לַאֲדֹנֵינוּ (defective spelling) next to אֲדוֹנֵינוּ (plene), and the parenthetical (וְהֹוֶה). Variant parentheses are recorded as printed, apart from the pointing fix above.",
+    "Human items 324–329 (two German directions and four phrases) fall outside the assigned scans s246–s249, so I did not assess them here.",
+    "I did not try to settle minor meteg and accent marks the candidate already flagged, such as יַשְׁמִיעֵנוּ, גָּעֲשׁוּ and הַלְלוּיָהּ. Whether they are recorded is a policy decision. None of them changes a consonant or a vowel."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "8a6efd87-761d-45e8-9148-87c1e98b8473"
+  }
+}

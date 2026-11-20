@@ -1,0 +1,350 @@
+    if unit.get('publication_context'):
+        return unit['publication_context']
+    target = unit.get('start', unit['urn'])
+    if unit.get('end'):
+        if target.partition('/')[0] != unit['end'].partition('/')[0]:
+            raise ValueError('A documentary unit cannot span different works')
+        target += '-/'+unit['end'].partition('/')[2]
+    return target
+
+
+def unit_instructions(unit, lang):
+    return [note for note in unit.get('instructions', [])
+            if lang in note.get('witnesses', [lang])]
+
+
+def unit_document(unit, lang, draft):
+    project = PROJECTS[lang]
+    root, body = document(lang, project, unit['title'][lang], unit_urn(unit), draft=draft)
+    if unit.get('omit_publication_urn'):
+        idno = root.find(f'.//{{{TEI}}}publicationStmt/{{{TEI}}}idno')
+        idno.getparent().remove(idno)
+    title_language = unit.get('title_languages', {}).get(lang)
+    if title_language:
+        root.find(f'.//{{{TEI}}}titleStmt/{{{TEI}}}title').set(XML+'lang', title_language)
+    if unit.get('publication_context'):
+        body = element(body, 'div', corresp=unit['publication_context'])
+    biblical_root = ':bible:' in unit['urn']
+    reuse = unit.get('reuse', {}).get(lang)
+    div = element(body, 'div', **({'corresp': unit['urn']} if not reuse and unit.get('map_root', not biblical_root) else {}))
+    opening = unit['languages'][lang][0]['fragments'][0]
+    div.set('facs', page_image_url(IDENTIFIER, int(opening['scan'][1:])-1, size=''))
+    last = unit['languages'][lang][-1]['fragments'][-1]
+    if opening.get('printed_page') is not None and last.get('printed_page') is not None:
+        element(root.find(f'.//{{{TEI}}}sourceDesc/{{{TEI}}}bibl'), 'biblScope',
+                unit='pages', **{'from': opening['printed_page'], 'to': last['printed_page']})
+    pages = {(opening.get('printed_page'), last.get('printed_page'))}
+    for printing in unit.get('source_printings', {}).get(lang, []):
+        pair = (printing['printed_page'], printing['printed_page'])
+        if pair not in pages:
+            element(root.find(f'.//{{{TEI}}}sourceDesc/{{{TEI}}}bibl'), 'biblScope', unit='pages',
+                    **{'from': pair[0], 'to': pair[1]})
+            pages.add(pair)
+    if reuse:
+        # A documentary occurrence can reuse an identical earlier witness
+        # without registering the canonical prayer a second time.
+        element(element(div, 'p'), 'j:transclude', type='inline', target=reuse+'@'+project)
+        return root
+    wording = unit.get('wording_selection', [])
+    if wording:
+        declaration = element(div, 'j:declare')
+        declaration.set(XML+'id', unit['stem']+'_wording')
+        feature_structures(declaration, wording)
+    conditions = unit.get('conditions', [])
+    if unit.get('marked') and not conditions:
+        raise ValueError('Marked source unit requires a condition')
+    if conditions:
+        conditional = element(div, 'j:conditional', **({'type': 'marked'} if unit.get('marked') else {}))
+        conditional.set(XML+'id', unit['stem']+'_condition')
+        feature_structures(element(conditional, 'j:all'), conditions)
+    current_page = None
+    if unit.get('opening_page', {}).get(lang):
+        element(div, 'pb', ed='1965', n=opening['printed_page'],
+                facs=page_image_url(IDENTIFIER, int(opening['scan'][1:])-1, size=''))
+        current_page = opening['scan']
+    if unit.get('head', {}).get(lang):
+        opening = unit['languages'][lang][0]['fragments'][0]
+        if current_page != opening['scan'] and opening.get('page_start', True):
+            element(div, 'pb', ed='1965', n=opening['printed_page'],
+                    facs=page_image_url(IDENTIFIER, int(opening['scan'][1:])-1, size=''))
+        current_page = opening['scan']
+        element(div, 'head', unit['head'][lang]).set(XML+'lang', lang)
+    for instruction in unit_instructions(unit, lang):
+        if instruction.get('placement') == 'condition' and not conditions:
+            raise ValueError('A condition rubric requires a condition')
+        parent = conditional if instruction.get('placement') == 'condition' else div
+        note = element(parent, 'note', type=instruction.get('type', 'instruction'))
+        if parent is not div:
+            parent.remove(note)
+            parent.insert(len(parent)-1, note)
+        note.set(XML+'lang', instruction['language'])
+        rubric_words(note, instruction, instruction['language'])
+    citations = unit.get('citations', {}).get(lang, [])
+    if citations:
+        notes = element(root, 'standOff', type='notes')
+        root.remove(notes)
+        root.insert(list(root).index(body.getparent()), notes)
+        passage_scans = {fragment['scan'] for segment in unit['languages'][lang]
+                         for fragment in segment['fragments']}
+        for citation in citations:
+            if citation['scan'] not in passage_scans:
+                raise ValueError('Citation scan is outside the passage')
+            note = element(notes, 'note', type=citation.get('note_type', 'citation'),
+                           target=citation.get('target', unit.get('start', unit['urn'])))
+            if citation.get('language'):
+                note.set(XML+'lang', citation['language'])
+            if citation.get('resp'):
+                note.set('resp', citation['resp'])
+            if citation.get('conditions'):
+                condition = element(note, 'j:condition')
+                feature_structures(element(condition, 'j:all'), citation['conditions'])
+            citation_text = citation['text'].strip()
+            if citation_text.startswith('(') and citation_text.endswith(')'):
+                citation_text = citation_text[1:-1].strip()
+            paragraph = element(note, 'p')
+            if citation.get('reference'):
+                element(paragraph, 'ref', citation_text, target=citation['reference'])
+            elif citation.get('text_type'):
+                element(paragraph, 'seg', citation_text, type=citation['text_type'])
+            elif citation.get('uncertain_characters') or citation.get('abbreviations'):
+                rubric_words(paragraph, dict(citation, text=citation_text), lang)
+            else:
+                paragraph.text = citation_text
+    paragraph = None
+    current_paragraph = None
+    current_chapter = None
+    seen_chapters = set()
+    active_reference = None
+    active_reference_urn = None
+    line_group = None
+    poetry = unit.get('poetry', {}).get(lang, False)
+
+    def close_references():
+        nonlocal active_reference, active_reference_urn, current_chapter
+        if active_reference:
+            element(paragraph, 'milestone', unit=active_reference)
+                active_reference = None
+                active_reference_urn = None
+            if index == 0 and segment.get('corresp'):
+                urn = segment['corresp']
+                biblical = ':bible:' in urn
+                if biblical:
+                    parts = urn.split(':')[-1].split('/')
+                    chapter = urn.rsplit('/', len(parts)-2)[0]
+                    if chapter != current_chapter:
+                        close_references()
+                        attributes = {'unit': 'chapter', 'n': parts[1]}
+                        # Excerpted chapters supply context, not a substitute
+                        # witness for the whole chapter.
+                        if chapter not in seen_chapters and ((chapter == unit['urn'] and not unit.get('start')) or chapter in unit.get('complete_chapters', [])):
+                            attributes['corresp'] = chapter
+                            seen_chapters.add(chapter)
+                        element(paragraph, 'milestone', **attributes)
+                        current_chapter = chapter
+                    reference_unit = ('verse' if len(parts) == 3 else
+                                      'half-verse' if parts[-1] in ('a', 'b') else 'verse-part')
+                    attributes = {'n': parts[-1]}
+                else:
+                    reference_unit, attributes = segment.get('reference_unit', 'prayer-part'), {}
+                    quoted_source = segment.get('source', '')
+                    if reference_unit == 'verse' and ':bible:' in quoted_source:
+                        parts = quoted_source.rsplit(':', 1)[-1].split('/')
+                        chapter = quoted_source.rsplit('/', len(parts)-2)[0]
+                        if chapter != current_chapter:
+                            close_references()
+                            chapter_attributes = {'unit': 'chapter', 'n': parts[1]}
+                            if segment.get('chapter_corresp'):
+                                chapter_attributes['corresp'] = segment['chapter_corresp']
+                            element(paragraph, 'milestone', **chapter_attributes)
+                            current_chapter = chapter
+                        # The occurrence marker is a verse even when its bounded
+                        # source names a half-verse or named verse-part.
+                        attributes = {'n': parts[2]}
+                    elif current_chapter:
+                        close_references()
+                if active_reference and active_reference != reference_unit:
+                    element(paragraph, 'milestone', unit=active_reference)
+                reference_marker = element(paragraph, 'milestone', unit=reference_unit, corresp=urn, **attributes)
+                active_reference = reference_unit
+                active_reference_urn = urn
+            if index == 0 and segment.get('edition_label_in_reference'):
+                if not segment.get('edition_label') or not segment.get('corresp'):
+                    raise ValueError('A referenced edition label needs its text and correspondence')
+                element(paragraph, 'label', segment['edition_label'])
+                append_words(paragraph, ' ')
+            if index == 0 and segment.get('speaker'):
+                speaker = segment['speaker']
+                if 'label' in speaker:
+                    role = speaker['role']
+                    if role not in ROLE_LABELS:
+                        raise ValueError(f'Unknown speaker role: {role}')
+                else:
+                    expansion = speaker['expan']
+                    try:
+                        roles = {label: role for role, label in ROLE_LABELS.items()}
+                        roles['חזן וקהל'] = 'reader_and_congregation'
+                        role = roles[expansion]
+                    except KeyError:
+                        raise ValueError(f'Unknown speaker expansion: {expansion}') from None
+                identity = 'urn:x-opensiddur:instruction:role/'+role
+                description = element(paragraph, 'note', type='description', corresp=identity)
+                if speaker.get('resp'):
+                    description.set('resp', speaker['resp'])
+                description.set(XML+'lang', speaker.get('language', 'he'))
+                if 'label' in speaker:
+                    words(description, speaker['label'], speaker.get('language', 'he'))
+                else:
+                    choice = element(description, 'choice')
+                    element(choice, 'abbr', speaker['abbr'])
+                    element(choice, 'expan', speaker['expan'])
+                append_words(paragraph, ' ')
+                if segment.get('speaker_before_reference') and reference_marker is not None:
+                    paragraph.remove(description)
+                    paragraph.insert(paragraph.index(reference_marker), description)
+            if segment.get('canonical'):
+                close_references()
+                attributes = {'target': segment['canonical']+'@'+project}
+                if segment.get('canonical_end'):
+                    attributes['targetEnd'] = segment['canonical_end']
+                element(paragraph, 'j:transclude', type='inline', **attributes)
+                if not fragment.get('join_next'):
+                    append_words(paragraph, ' ')
+                continue
+            if segment.get('repeat'):
+                # Repeated recitation reuses the witness; it does not define a
+                # second element with the same canonical identity in one file.
+                close_references()
+                element(paragraph, 'j:transclude', type='inline', target=segment['repeat']+'@'+project)
+                append_words(paragraph, ' ')
+                continue
+            source_reference = segment.get('source_reference')
+            if source_reference and index == 0:
+                if active_reference == 'prayer-part' and active_reference_urn:
+                    enclosing_depth = active_reference_urn.rsplit(':', 1)[-1].count('/')
+                    for key in ('chapter_corresp', 'source_reference_corresp'):
+                        context = segment.get(key)
+                        if context and context.rsplit(':', 1)[-1].count('/') <= enclosing_depth:
+                            raise ValueError('Quote context must be deeper than its enclosing prayer-part: '+context)
+                book, chapter, verse = source_reference.rsplit(':', 1)[-1].split('/')
+                chapter_attributes = {'unit': 'chapter', 'n': chapter}
+                if segment.get('chapter_corresp'):
+                    chapter_attributes['corresp'] = segment['chapter_corresp']
+                element(paragraph, 'milestone', **chapter_attributes)
+                element(paragraph, 'milestone', unit='verse', n=verse,
+                        corresp=segment.get('source_reference_corresp', source_reference))
+                if part := segment.get('source_reference_part'):
+                    if (part['unit'] not in ('half-verse', 'verse-part') or
+                            (part['unit'] == 'half-verse' and part['n'] not in ('a', 'b'))):
+                        raise ValueError('Invalid quotation subverse boundary')
+                    parent_verse = segment.get('source_reference_corresp', source_reference)
+                    if part['corresp'] != parent_verse+'/'+part['n']:
+                        raise ValueError('Quotation subverse must belong to its verse context')
+                    element(paragraph, 'milestone', **part)
+            if index == 0 and segment.get('anchor'):
+                element(paragraph, 'anchor').set(XML+'id', segment['anchor'])
+            content = paragraph
+            if segment.get('source'):
+                attributes = {'source': segment['source']}
+                if segment.get('source_type'):
+                    attributes['type'] = segment['source_type']
+                content = element(paragraph, 'seg', **attributes)
+            if fragment.get('quotations') and any(fragment.get(key) for key in (
+                    'alternatives', 'qere_ketiv', 'expansion', 'abbreviations',
+                    'uncertain_characters', 'enlarged_letters')):
+                raise ValueError('Quotation spans cannot overlap other fragment interpretations')
+            if fragment.get('text_type'):
+                content = element(content, 'seg', type=fragment['text_type'])
+                if fragment.get('text_subtype'):
+                    content.set('subtype', fragment['text_subtype'])
+            if fragment.get('optional_spans'):
+                text = fragment['text']
+                for number, span in enumerate(fragment['optional_spans']):
+                    before, found, text = text.partition(span['printed'])
+                    if not found:
+                        raise ValueError('Optional word not found in its source fragment')
+                    words(content, before, text_language)
+                    identifier = unit['stem']+'_optional_'+str(segment_index)+'_'+str(index)+'_'+str(number)
+                    condition = element(content, 'j:conditional', type='marked')
+                    condition.set(XML+'id', identifier)
+                    feature_structures(element(condition, 'j:all'), [dict(type='opensiddur:variant', features={span['condition']: True})])
+                    words(content, span['text'], text_language)
+                    element(content, 'j:endConditional', target='#'+identifier)
+                words(content, text, text_language)
+            elif fragment.get('alternatives'):
+                if any(fragment.get(key) for key in ('qere_ketiv', 'expansion', 'abbreviations',
+                                                     'uncertain_characters', 'enlarged_letters')):
+                    raise ValueError('Alternatives cannot be combined with other fragment readings')
+                text = fragment['text']
+                for alternative in fragment['alternatives']:
+                    printed, readings = alternative['printed'], alternative['readings']
+                    if not printed or text.count(printed) != 1 or len(readings) < 2:
+                        raise ValueError('Alternatives require one printed span and at least two readings')
+                    before, text = text.split(printed, 1)
+                    words(content, before, text_language)
+                    choice = element(content, 'choice')
+                    if alternative.get('xml_id'):
+                        choice.set(XML+'id', alternative['xml_id'])
+                    for reading in readings:
+                        option = element(choice, 'j:option')
+                        if isinstance(reading, dict):
+                            for attribute in ('corresp','facs'):
+                                if reading.get(attribute):
+                                    option.set(attribute, reading[attribute])
+                            if reading.get('quotations'):
+                                if any(reading.get(key) for key in ('abbreviations', 'language_spans', 'uncertain_characters')):
+                                    raise ValueError('Quotation option cannot overlap other interpretations')
+                                quotation_words(option, reading['text'], reading['quotations'], text_language)
+                            else:
+                                rubric_words(option, reading, text_language)
+                        else:
+                            words(option, reading, text_language)
+                words(content, text, text_language)
+            elif fragment.get('qere_ketiv'):
+                if any(fragment.get(key) for key in ('expansion', 'abbreviations',
+                                                     'uncertain_characters', 'enlarged_letters')):
+                    raise ValueError('Qere/ketiv cannot be combined with other fragment readings')
+                text = fragment['text']
+                for reading in fragment['qere_ketiv']:
+                    written = reading['written']
+                    word_character = r'[א-ת\u0591-\u05bd\u05bf\u05c1\u05c2\u05c4\u05c5\u05c7\u034f\u200c\u200d]'
+                    matches = list(re.finditer(r'(?<!'+word_character+')'+re.escape(written)+
+                                               r'(?!'+word_character+')', text)) if written else []
+                    if len(matches) != 1:
+                        raise ValueError('Qere/ketiv must identify one printed span')
+                    match = matches[0]
+                    before, text = text[:match.start()], text[match.end():]
+                    words(content, before, text_language)
+                    choice = element(content, 'choice')
+                    words(element(choice, 'j:read'), reading['read'], text_language)
+                    words(element(choice, 'j:written'), written, text_language)
+                words(content, text, text_language)
+    by_stem = {unit['stem']: unit for unit in readings['units']}
+    expanded_order(div, order, readings, by_stem)
+    documents.append((project_directory/EXPANDED/'index.xml', root))
+    corrections = source/'corrections.json'
+    if corrections.exists():
+        by_path = {f'{path.parent.name}/{path.name}': root for path, root in documents}
+        correction_items = json.loads(corrections.read_text())['corrections']
+        guarded_stems = {key.split('/')[1] for key in realization_payloads}
+        guarded_stems.update(u['canonical_home']['file'] for u in readings['units'] if u.get('canonical_home'))
+        if any(Path(c['file']).stem in guarded_stems for c in correction_items):
+            raise ValueError('Canonical realization corrections must be part of its reviewed source data')
+        apply_corrections(by_path, correction_items)
+    # A language witness removed from the readings must not remain discoverable
+    # through refdb merely because an earlier build wrote its file.
+    obsolete = [project_directory/project/(unit['stem']+'.xml')
+                for lang, project in PROJECTS.items() for unit in readings['units']
+                if lang not in unit['languages']]
+    obsolete += [project_directory/project/(section['file']+'.xml')
+                 for lang, project in PROJECTS.items()
+                 for section in service_sections(readings.get('source_order', []))
+                 if lang not in section.get('witnesses', PROJECTS)]
+    from .realizations import validate_generated
+    validate_generated(documents, readings)
+    paths_to_write = [path for path, _ in documents]
+    if len(paths_to_write) != len(set(paths_to_write)):
+        raise ValueError('Generated canonical home collides with another project file')
+    home_manifest = source/'canonical_homes_manifest.json'
+    current_homes = sorted(str((project_directory/project/(unit['canonical_home']['file']+'.xml')).relative_to(project_directory))
+                           for project in PROJECTS.values() for unit in readings['units']
+                           if unit.get('canonical_home') and project.rsplit('-',1)[-1] in unit['languages'])

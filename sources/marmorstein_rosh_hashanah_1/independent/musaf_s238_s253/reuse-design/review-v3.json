@@ -1,0 +1,137 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "medium (one static design pass over the five inputs, including the full realizations.py, unit_document, unit_review_text, _locate and apply_corrections; no code run, no build or tests run, no source images examined)"
+  },
+  "design_approved": true,
+  "final_design": [
+    {
+      "id": "F0-scope",
+      "summary": "This approves only the design written below, together with the required changes R1–R14. It does not approve any implementation, accept any source words, approve any identity minted later, or approve any export. Every relaxation is opt-in, limited in scope, paired with a compensating check, and fails closed. Nothing targets a whole root. _range_segments still matches only segment identities and text_corresp. canonical_whole (one paragraph, one page) stays as it is. The caller rule of one plain fragment stays as it is. The prepare_documents home guard at realizations.py:232-238 stays as it is. C1 is dropped."
+    },
+    {
+      "id": "F1-qedushah-shared-parts",
+      "summary": "Add one new pure shared-parts unit (R1) that holds only the four existing part identities: qadosh, barukh, uvedivrei and ledor_vador. Its HE words are copied byte-for-byte from the old raw qedushah fragments. It carries no speaker, condition, instruction, head, root corresp or pb. In the old raw qedushah unit, each of those four segments loses its corresp and its source keys (corresp, source, source_reference, source_reference_corresp, chapter_corresp, reference_unit, end_reference) and gains canonical=<identity>. The old segment keeps its fragments, speaker, instructions and paragraph unchanged. The unit-level conditions, instructions, root corresp and the other parts stay as they are. The old file still renders each speaker note before the inline j:transclude (unit_document lines 295-329). validate_occurrences then checks mechanically that each copied part equals the old accepted literal reading. The new Musaf caller transcludes each shared part with its own single-identity transclusion and supplies its own speakers. Its parts that are not shared stay literal and carry no existing qedushah part corresp."
+    },
+    {
+      "id": "F2-pure-homes (Pachdekha, Tzaddiqim, Vetimlokh, QadoshAttah, Kavod)",
+      "summary": "Each host keeps the existing canonical_home mechanism with no new context controls. Each must already pass the guard at lines 232-238 unchanged; if one does not, its design must be revised (R2). Pachdekha and Tzaddiqim get the existing unit urn as a segment corresp, with home map_root=false. Vetimlokh and QadoshAttah get one identity per segment: the existing hamelekh_haqadosh, the existing Bible verse urn only if R10 confirms it is unique, and a minted invocation part only if nothing existing covers it. Callers use target..targetEnd. The contexts transclude the parts and never emit the canonical urn as root corresp or idno (R9)."
+    },
+    {
+      "id": "F3-kavod-literal-context",
+      "summary": "Uses C2, C3 (narrowed) and C4. The home holds both source fragments with page_start=false, so it contains no pb. The old context stays literal: raw fragments, its own pb at s28 (he) and s29 (en), segment corresp removed, map_root=false, wording_selection=[], and no overlays. New single-page callers transclude the identity. Pointing differences in the second fragment bind through the fragment-scoped overlays of C4. The identity is not split at the page break."
+    },
+    {
+      "id": "F4-pachdekha-correction",
+      "summary": "rh_pachdekha_hast moves to the EN Pachdekha home file and keeps its id. It gains an identity and attestations, which must be exactly {rh_uvekhen_ten_pachdekha s27, new caller s250}. The existing entries for 119 (morning_has_created) and 203 (musaf_has_hast) stay unchanged against their literal files. Those units must not map the Pachdekha identity, and R12 enforces this. A correction against any context or caller file of a guarded host is still rejected."
+    }
+  ],
+  "required_changes": [
+    {
+      "id": "R1 (new; replaces C1)",
+      "file": "realizations.py + unit schema",
+      "change": "Mark the pure shared-parts unit explicitly, for example with 'canonical_parts': true. It must not rely on implicit plain-unit behaviour. For this kind of unit: (a) every segment must have a key subset of PLAIN_SEGMENT_KEYS and a segment_identity, and every fragment must have a key subset of PLAIN_FRAGMENT_KEYS; (b) unit-level conditions, instructions, head, opening_page, marked, citations, poetry, canonical_home, text_corresp, canonical_whole and reuse are rejected; (c) map_root is forced false, so the generated div has no corresp, and there are no new whole-prayer identities; (d) page_start is forced false on every fragment, so no pb is generated (R7 checks this on output); (e) the unit generates no context document and is excluded from expanded_order and from any reading-order or occurrence inventory; (f) any j:transclude or canonical segment that targets it with canonical_end raises. The parts are not contiguous in the source, so a range like qadosh..barukh would silently drop the intervening text; (g) each segment in each language must be attested by at least one canonical occurrence whose literal fragment has been reviewed. The pure unit's fragment scan and printed_page must equal those of an attesting occurrence. A part with no witness raises."
+    },
+    {
+      "id": "R2 (preflight; no code relaxation)",
+      "file": "build check / test",
+      "change": "Before any data edit, assert the following and abort the design for any host that fails. All five canonical_home hosts already pass prepare_documents lines 232-238 with their current data. The four redirected qedushah segments each have exactly one fragment. A multi-fragment canonical segment would emit one transclusion per fragment (unit_document lines 202-332) and is rejected at validate_occurrences line 199. Those segments have no segment-level 'conditions', no fragment interpretations (alternatives, quotations, qere_ketiv, expansion, abbreviations, enlarged_letters, uncertain_characters), and no 'source_reference_part'. unit_review_text reads segment['source'] when source_reference_part is present (line 543), so moving the source keys would change or break the literal payload. No condition_end_corresp, repeat target, repeat_cue target or citation target names a redirected corresp: unit_document line 176 resolves condition endpoints through candidate.get('corresp') only and would raise."
+    },
+    {
+      "id": "R3 (old qedushah context)",
+      "file": "readings data",
+      "change": "Because the old raw qedushah unit now contains canonical segments, unit_document line 506 requires a siddur context. Add 'page_context' to the unit; it is ignored by unit_review_text. Add an explicit wording_selection for every overlay on the pure-parts host inside its redirected parts, choosing readings[0], the old printing. Without it, canonical_text at line 147 raises in validate_occurrences, because the automatic selection() applies only to canonical_home contexts."
+    },
+    {
+      "id": "C2 (kept)",
+      "file": "realizations.py:prepare_documents",
+      "change": "Allow canonical_home.context == 'literal' only if every language of the host has a fragment after the first with page_start true. The literal context is deepcopy(raw unit) with corresp, source_reference_corresp and other segment identity keys removed, map_root=false, wording_selection=[], and no overlays applied. The home is built as it is today."
+    },
+    {
+      "id": "C3 (narrowed)",
+      "file": "realizations.py:canonical_text",
+      "change": "Skip the 'crosses a printed source page' check only when the host is a canonical_home with context=='literal'. The previous draft skipped it for every home; this is narrower. The check stays unchanged for all other hosts and for the R1 pure-parts unit. The compensating zero-pb check is R7."
+    },
+    {
+      "id": "C4 (now required)",
+      "file": "realizations.py:prepare_unit, canonical_text, validate_occurrences",
+      "change": "Add an overlay key 'fragment' (int). It is required when the segment has more than one fragment and forbidden otherwise. The printed span must occur exactly once in that fragment and must not cross the join. Change prepare_unit's single-fragment requirement at line 62 to 'one segment', with the overlay applied to the indexed fragment only. canonical_text applies the overlay only to that fragment; the existing missing-span check stays for that fragment. Keep the rule of one overlay per segment, or extend it to one per fragment with no overlap."
+    },
+    {
+      "id": "C5 (kept, refined)",
+      "file": "build.py corrections + realizations.py canonical_corrections()",
+      "change": "Keep (a)–(f) from the previous review. Refinements: (b) bind the correction to its identity with a source-level check: before+sic+after occurs exactly once in the fragments of the home segment with that identity and nowhere else in that home language. Do not use an xpath scope: part identities are empty milestones, and _locate's xpath scope covers only descendants, so it cannot contain the text. _locate's file-wide exactly-once rule stays as the generated-side guard. (b′) Reject any overlap with a wording overlay span. _locate excludes only sic and corr (line 29), so it would match text inside j:option. (c) The attestation set must exactly equal the host plus every unit whose canonical range covers the identity in that language. For this batch that is {27, 250}. Each attestation's literal fragment contains before+sic+after exactly once, and its scan is one of that unit's scans. (d) Include the full correction items in the realization payloads of the home host and of every attester. review_payloads(readings, corrections) means a missing corrections.json changes the payloads. (e) Run the post-apply sic and corr projection proofs. (f) Confirmed by the supplied _locate: a missing or ambiguous context already raises, so no new code is needed. Keep a regression test."
+    },
+    {
+      "id": "C6 (kept, extended)",
+      "file": "realizations.py:validate_generated",
+      "change": "Each language project must have exactly one corresp element for each of the following: every home segment identity, every home text_corresp, the home urn when map_root is true, every R1 pure-parts identity, and every Bible urn used as a canonical target. Additionally, require exactly one tei:idno equal to each home urn per project, and no generated context whose div corresp equals a canonical urn."
+    },
+    {
+      "id": "C7 (now required)",
+      "file": "realizations.py:review_payloads",
+      "change": "For every caller, including the redirected old qedushah unit, add a source_fidelity record: target, target_end, effective settings, ids of corrections in range, and the sha256 of each normalized side of the equality check. Also give the R1 pure-parts unit its own realization payload. Today review_payloads (line 212) skips any unit that has no overlays, selection, home or canonical segments, so the words that actually render for both the old and new occurrences would not be bound to review."
+    },
+    {
+      "id": "R7 (compensating check for C3 and R1)",
+      "file": "realizations.py:validate_generated",
+      "change": "Every generated canonical home document and every pure-parts document must contain zero tei:pb, with an explicit error message. Every literal context must contain exactly its raw page breaks. Confirmed from unit_document lines 211-217: page_start=false emits no pb even when the scan changes. The check is still on actual generated output."
+    },
+    {
+      "id": "R9 (context identity)",
+      "file": "realizations.py:prepare_documents",
+      "change": "Today the context is deepcopy(unit) and inherits unit map_root, so the default emits div corresp=unit urn (unit_document line 34). This would duplicate the home's identity, or the urn in Pachdekha and Tzaddiqim. Force context['map_root']=False for every canonical_home context. Give the context its distinct structural urn through a new home_config key 'context_urn'. It must contain ':siddur:' and differ from the home urn. It is applied only to the context copy as publication_context, which also satisfies line 506. The raw unit is not edited, and the line-232 publication_context guard on raw units is not relaxed."
+    },
+    {
+      "id": "R10 (identity uniqueness before minting)",
+      "file": "process + C6",
+      "change": "A Bible verse urn may serve as a canonical segment identity only if it is the segment_identity of exactly one host segment per language across all units. Psalm 146:10, for example, is also quoted in qedushah. Otherwise use a quote-context source_reference_corresp under the host's prayer part, keeping chapter and verse milestones nested inside it, which the unit_document line 344 depth rule enforces. Mint an invocation part only after an exact registry, alias and project search finds nothing. Record each minted name for approval."
+    },
+    {
+      "id": "R12 (literal units stay unmapped)",
+      "file": "test / C6",
+      "change": "Units 119 and 203, and every other literal or context unit, must not emit a corresp equal to any home, pure-parts or attested identity. Their existing correction entries must still match exactly once."
+    },
+    {
+      "id": "R14 (literal byte-preservation gate)",
+      "file": "test with stored fixtures",
+      "change": "unit_review_text for all 660 existing units must be byte-identical before and after. So must every raw fragment's text, scan, printed_page, page_start and join_next. The only allowed raw-data edits are adding or removing corresp and source keys, adding canonical, adding page_context, and adding wording_selection, plus the new pure unit and new callers."
+    }
+  ],
+  "tests": [
+    "T1 Pure parts: the generated file has no pb, no div corresp, no speaker or description note, no conditional, and exactly one milestone corresp per identity. Using canonical_end against it raises. A segment with no attesting occurrence raises. Introducing a speaker, conditions or head raises.",
+    "T2 Old qedushah: the resolved output has, in order, the instruction note, the unit conditional, then for each of the four parts the speaker note followed by a single inline transclusion. The old speaker expansions and page breaks are unchanged. The other parts still carry their corresp. validate_occurrences proves the copied HE equals the old literal reading for each part.",
+    "T3 New Musaf caller: four single-part transclusions with its own speakers. None of the old host's speakers appear. Its parts that are not shared carry no existing qedushah part corresp.",
+    "T4 R2 preflight negatives: a redirected segment with two fragments, with segment conditions, with source_reference_part, or named by condition_end_corresp → raises before any output.",
+    "T5 Missing wording_selection on the old qedushah unit when the pure-parts host has an overlay → 'must declare every wording option'.",
+    "T6 Homes: each of the five passes the line-232 guard with no code change. The context has map_root false, a context_urn containing ':siddur:', and no idno or div corresp equal to the canonical urn (C6 duplicate check).",
+    "T7 Kavod: the home has zero pb. The literal context has exactly one pb in each language (s28 he, s29 en) and no identity corresp. A single-page caller passes. Using context:'literal' on a single-page host → raises. A non-home or non-literal-context host that crosses a page → still 'crosses a printed source page'. Injecting a pb into a home → R7 raises.",
+    "T8 C4: an overlay on fragment 1 applies only to fragment 1. A missing 'fragment' → raises. A span crossing the join → raises. A caller selecting the old wording against a new-pointing literal reading → 'differs from its image reading'.",
+    "T9 Vetimlokh/QadoshAttah: target..targetEnd passes. Transcluding the invocation alone gives the invocation without the verse. A Bible urn used as identity while another host quotes the same verse → raises (R10/C6).",
+    "T10 Correction positive: the home has choice/sic='has' and corr='hast'. The source-printed resolution of callers 27 and 250 equals their literal fragments. The source-corrected resolution contains 'hast'. The 119 and 203 entries still apply to their literal files.",
+    "T11 Correction negatives: an attestation is missing, an extra attestation is present, a witness printed 'hast', the correction targets a context or caller file, the correction overlaps an overlay span, or the context is absent or ambiguous → each raises. Leaving the entry pointing at the old 27 file → raises (no match).",
+    "T12 Binding: editing a correction's corr changes the payloads of host 27, caller 250 and the home. Deleting corrections.json changes them too. Editing a word in the pure unit changes its own realization payload and the source_fidelity hashes of the old qedushah unit and the Musaf caller.",
+    "T13 Post-apply proof: a correction that alters text outside its sic → raises.",
+    "T14 R14 fixture comparison over all 660 units plus the raw fragment fields."
+  ],
+  "open_questions": [
+    "Pure-parts EN provenance: which scan or occurrence attests each EN part? If the old host's EN for these four parts differs from the new EN, decide for each part between an EN overlay (old reading first, if the pure EN is copied from old) and leaving the old EN literal without that identity. Two different canonical EN texts for one identity are not allowed. This fails closed but must be decided before data entry.",
+    "Stem, file and context_urn names for the pure-parts unit and the five contexts (naming approval).",
+    "Does any existing check require each scan to belong to exactly one literal unit, or require every unit to appear in expanded_order? The pure unit reuses old scans and is excluded from order (R1e).",
+    "Does caller 250 print 'has'? If it prints 'hast', it cannot attest the correction and needs a wording overlay or must stay literal.",
+    "Confirm the R2 preflight results: the five hosts are already plain, and the four qedushah parts are single-fragment, unconditioned and without source_reference_part. If any fails, that host or part needs a design revision, not a guard relaxation."
+  ],
+  "notes": [
+    "Approval is limited to this design and R1–R14. design_approved=true is not acceptance of any source words, minted identity, implementation, review payload or export.",
+    "Dropping C1 is sound. The old raw unit keeps all occurrence controls, and the pure unit has none, so speakers and conditions cannot leak and no canonical_home guard is relaxed.",
+    "Source-fidelity crux: the pure unit has no image of its own. Its authority comes only from mechanically checked equality with reviewed literal occurrences (R1g, validate_occurrences, C7 hashes) and from its own realization payload. Without R1g and C7 its words would be unbound.",
+    "Correction attestations are now closed for this batch at {27, 250}, and 119 and 203 stay out of scope. C5c's exact-set rule keeps it that way if callers are added later.",
+    "Kavod's literal context is accepted as documentary reuse in the limited sense that the identity's single home has no pb. The old print's mid-phrase page break survives only in the literal file.",
+    "Existing code points this design depends on, all read from the supplied source: unit_document line 506 requires a siddur context when canonical segments exist; context map_root is inherited (line 34 with prepare_documents line 251); review_payloads skips plain units (line 212); _locate excludes only sic and corr (line 29); _locate xpath scope cannot cover milestone-delimited parts; prepare_unit rejects overlays on multi-fragment segments (line 62)."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "3ba5b180-7552-49e4-9706-e18fe694f4ba"
+  }
+}

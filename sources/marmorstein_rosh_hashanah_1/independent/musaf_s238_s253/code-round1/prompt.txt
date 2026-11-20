@@ -1,0 +1,6 @@
+Review importer code changes independently. These support the next maḥzor batch: reuse existing whole-prayer canonical roots, preserve source page boundaries at documentary occurrences, allow overlays on individual exact fragment spans across multi-page hosts, and bind the post-generation corrections.json file into canonical realization approvals. No source text is accepted by this code audit. Identify any correctness gaps, bypass of source-equality/review gates, accidental annotation/speaker leakage, overlapping/mixed overlays, ordering errors, inability to reproduce exact printed source, ambiguous root/range selection, or missing tests. Read full relevant implementations and supplied tests, including unchanged checks. The unchanged source inventory remains immutable; canonical projections are separately reviewed. Actual tests currently pass21tests+34subtests. Return JSON only {reviewer:{model,effort},approved:boolean,findings:[{file,line,severity,problem,required_fix}],notes:[]}. Do not approve with unresolved material findings. Inputs:
+/tmp/mahzor-s238/code-round1/realizations.py
+/tmp/mahzor-s238/code-round1/build.py
+/tmp/mahzor-s238/code-round1/verify.py
+/tmp/mahzor-s238/code-round1/test_marmorstein_realizations.py
+/tmp/mahzor-s238/code-round1/diff.patch
