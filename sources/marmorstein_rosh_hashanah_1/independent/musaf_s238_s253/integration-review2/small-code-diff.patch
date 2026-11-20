@@ -1,0 +1,29 @@
+--- approved-round5/build.py
++++ current/build.py
+@@ -134,6 +134,8 @@
+         return
+     if rubric.get('resp'):
+         parent.set('resp', rubric['resp'])
++    if rubric.get('corresp'):
++        parent.set('corresp', rubric['corresp'])
+     text = rubric['text']
+     if rubric.get('language_spans') and rubric.get('abbreviations'):
+         raise ValueError('Overlapping abbreviation and language-span interpretation is not supported')
+@@ -178,6 +180,8 @@
+ 
+ def instruction_review_text(instruction):
+     parts = [instruction['text']]
++    if instruction.get('corresp'):
++        parts.append('[correspondence '+instruction['corresp']+']')
+     parts.extend(a['abbr']+' ['+a['expan']+']' for a in instruction.get('abbreviations', []))
+     parts.extend(span['text']+' ['+span['language']+']'
+                  for span in instruction.get('language_spans', []))
+@@ -1277,7 +1281,7 @@
+         element(bibliography, 'note', dependency['reason'])
+     if readings.get('expanded_coverage_note'):
+         bibliography = root.find(f'.//{{{TEI}}}sourceDesc/{{{TEI}}}bibl')
+-        element(bibliography, 'note', readings['expanded_coverage_note'], type='encoding')
++        element(bibliography, 'note', readings['expanded_coverage_note'], type='encoding').set(XML+'lang', 'en')
+     add_front(root, [], expanded=True)
+     div = element(body, 'div', corresp=EXPANDED_URN)
+     element(div, 'head', 'מחזור אשכנז מורחב').set(XML+'lang', 'he')

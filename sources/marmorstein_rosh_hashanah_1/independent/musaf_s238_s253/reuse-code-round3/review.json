@@ -1,0 +1,104 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "medium: one static pass over the frozen round-3 copies, the round-2 review, the v3 design, the diff and build log, the payload-stability file, the inline-quotation and schema evidence, JLPTEI-3.md (lines 1-1084, covering URN scope, milestones, header, inline seg, transclusion) and MARMORSTEIN_ROSH_HASHANAH_1.md (lines 1-200). No tests, builds or compilers were run, so 136 tests / 109 subtests, 676 valid files and 14 schema-valid files are the author's claims. Two baseline hashes (entering_synagogue/he, mah_tovu/he) were checked by hand: the fixture and accepted-payload-stability.json agree."
+  },
+  "implementation_approved": true,
+  "inline_quote_encoding_approved": true,
+  "findings": [
+    {
+      "file": "test_marmorstein_baseline.py, test_marmorstein_realizations.py",
+      "location": "test_redirection_preflight_checks_controls_and_interpretations; test_redirected_old_qedushah_keeps_its_own_speakers_and_scope",
+      "severity": "low",
+      "problem": "Both tests read the live SOURCETEXTS readings.json and find the four Kedushah parts by segment corresp. The planned data edit turns those corresp values into canonical. After it, validate_redirection raises 'Redirection needs one source segment per identity', and the library fixture ends up with no segments, so validate_pure_parts raises 'require identified words'. So the preflight only works before the edit and turns CI red on the edit commit. Neither test protects anything afterwards.",
+      "required_fix": "Before committing any data edit, either run both tests against a frozen copy of the pre-edit data (a fixture next to marmorstein_accepted_660.json) or make them handle both states. Before the edit they would find parts by corresp. After it they would find canonical segments, apply the same no-controls and no-interpretation checks to them, check that the shared-parts library has byte-identical fragments, and check the T2 output order on the real edited unit."
+    },
+    {
+      "file": "realizations.py",
+      "location": "validate_occurrences.check_order; build.require_review by_identity (still open from previous finding 9)",
+      "severity": "low",
+      "problem": "Only {'unit': <pure stem>} is rejected at the data stage. These are not rejected: an order 'reference', a segment 'transclude' or 'repeat', or a repeat_cue target naming the pure unit urn or one of its part identities. validate_redirection does not look for incoming segment 'transclude' or order 'reference' targets either. Also, require_review builds by_identity from raw units with map_root defaulting to True, and the raw pure unit has no map_root key. So a documentary transclude of the pure urn passes the review check, even though the generated pure file emits no corresp for that urn.",
+      "required_fix": "Reject any reference, transclude, repeat or repeat_cue target equal to the pure urn. Decide explicitly whether a single-part reference to a pure identity is allowed. If it is, document it as a canonical caller. If not, reject it. Exclude canonical_parts units from by_identity. Add those targets to validate_redirection's scan of incoming references. Test each case."
+    },
+    {
+      "file": "canonical_corrections.py",
+      "location": "bind_corrections: touches() and check_spine",
+      "severity": "low",
+      "problem": "touches() only strips '@'. A spine reference written as a range string (START-END in target, with no targetEnd), which build.py passes through unchanged, is never in the identity set. It returns False, so a range covering a corrected identity skips the source_witness requirement. validate_generated already parses ranges with split_range, but this guard does not.",
+      "required_fix": "Normalize target and endpoint with opensiddur.exporter.urn.split_range before calling touches, and do the same for reuse, repeat and transclude values. Add a test where expanded_order has {'reference': {'target': P+'/before-/part'}} and no source_witness, which must raise."
+    },
+    {
+      "file": "build.py",
+      "location": "build(): accepted_literal_baseline gate",
+      "severity": "low",
+      "problem": "The build checks the baseline only when readings.json names it or a canonical_parts unit exists. Edits for Kavod, Pachdekha or the Kedushah redirect that come before the library is added would only be gated by the unit test, not by the build.",
+      "required_fix": "In the first data-edit commit, add 'accepted_literal_baseline' to readings.json. Preferably also make the build require it whenever any unit has canonical_home, canonical or page_context."
+    },
+    {
+      "file": "build.py",
+      "location": "quotation_words: inline_scope combined with source_reference_part",
+      "severity": "low",
+      "problem": "With inline_scope and a half-verse part, the part branch forbids chapter_corresp and source_reference_corresp, and inline mode drops n. The opening chapter and verse milestones inside the seg then have neither n nor corresp. Under JLPTEI-3 rule 3 they are only terminators and open nothing. The old mode has the same meaning (with n, they are still terminators), so this is not a regression. But it is noise and untested, and the n-less form cannot be told apart from the closing terminators. Nothing tests that a non-boolean inline_scope is rejected.",
+      "required_fix": "Reject inline_scope together with source_reference_part, or leave out the bare chapter and verse openers in that case. Add tests for that combination and for inline_scope='yes' raising 'explicitly boolean'."
+    },
+    {
+      "file": "specs/MARMORSTEIN_ROSH_HASHANAH_1.md, schema/JLPTEI-3.md",
+      "location": "importer spec line 68; JLPTEI-3 'Prefer milestones' (lines 217-219) and the verse/@n table (line 287)",
+      "severity": "low",
+      "problem": "The importer spec allows milestones inside seg type='quotation', but JLPTEI-3 still says to put the correspondence milestone before the semantic span. Neither document records that n is omitted. The stated reason ('not printed source labels') does not match JLPTEI-3: there, verse/@n is the canonical number, and display is controlled by the opensiddur:verse-numbering setting. The importer spec also says not to change encoding to hide a rendering problem.",
+      "required_fix": "Record the n omission and its exact scope (inline_scope only; corresp is always kept) next to line 68. Get the processor owner to confirm, or cross-reference the exception from JLPTEI-3. Check in the PDF/HTML outputs that verse-numbering behaves correctly with milestones that have no n."
+    }
+  ],
+  "previous_findings_closed": [
+    "1 (high) literal-context page_start default: prepare_documents now counts a break only when the scan changes and page_start is not False (realizations.py:352-356). New test 'same_scan_default' covers it.",
+    "2 (medium) pure-parts identity: prepare_unit forces map_root=False and omit_publication_urn=True. validate_generated rejects any idno or div@corresp in the pure file, and there is a per-project check for duplicate publication URNs. Tests cover 'publication' and 'root'. The pure unit's urn is never emitted.",
+    "3 (medium) circular literal pb check: the expected list is now built from raw fragments (scan change plus page_start → n, facs, text before the break) and compared with the generated pb n, facs and text before it. Tests cover remove, inject and move.",
+    "4 (medium) negative tests on generated output: home_pb, context_identity, context_other_identity, missing/duplicate idno and duplicate_publication, plus pure-file pb, note, head, conditional, declare, transclude, root, publication, targetEnd and range-string targets, are all tested.",
+    "5 (medium) correction overlap: the overlap check now covers the whole before+sic+after span. Tests cover before and after against both alternative and optional overlays.",
+    "6 (low) ambiguous locator: there are separate tests for 0 and 2 matches, each checking the exact 'Correction has_hast: N places match' message.",
+    "7 (medium) R12/T10: an unbound literal correction applies next to a bound home correction. A literal file that emits P/part is rejected with 'one generated home'. Resolved, literal and corrected sha256 values are checked against the actual texts.",
+    "8 (low) attester bypass: reuse, repeat and transclude pointing at a corrected identity are rejected. Spine references must name a source_witness from the attester set. Payloads include sha256 of both order lists plus documentary_instructions and navigation. One gap remains for range-string targets (see findings).",
+    "10 (low) context_urn: mitigated rather than removed. The fallback to the unit urn stays, but it only passes for units whose urn contains ':siddur:' (the two existing contexts). Context div@corresp is now checked against the global canonical set, and duplicate idno checks make context URNs unique. The diff confirms that the only change to the two existing contexts is that corresp moves to the wrapper div.",
+    "11 (low) invalid-target test: the require_review assertion that passed for the wrong reason is gone. A separate test now shows that a valid remap changes the occurrence receipt."
+  ],
+  "missing_design_requirements": [
+    "R1(e): only partly enforced (finding 2 above).",
+    "R2: validate_redirection does not look for incoming segment 'transclude' or order 'reference' targets, and it runs only as a test before the edit (findings 1 and 2).",
+    "T2 remainder: no assertion that the non-redirected Kedushah parts keep their corresp, and the real-data T2 test will break after the edit (finding 1).",
+    "Not code gaps: T6 (each of the five hosts passes the line-232 guard) and R12 for real units 119/203 can only be shown with real edited data (see integration_checks)."
+  ],
+  "integration_checks": [
+    "PENDING, needs real new data: after the edits, run the full build and confirm baseline validation passes with exactly 660 literal hashes and all protected raw fields unchanged. Every changed file should be explained by the whitelisted mapping fields alone.",
+    "PENDING: the generated pure-parts file in each language has zero pb, no body note, conditional, declare, transclude or head, no div@corresp, no publication idno, and exactly one prayer-part milestone@corresp for each of the four identities. No range targets it. Its publicationStmt (distributor and licence, no idno) validates against the schema.",
+    "PENDING: the old amidah_qedushah output keeps byte-identical pb n and facs. pb@ed changes to '1965 <page_context>', which R3 accepts. The four parts render as speaker note followed by inline j:transclude inside the unit conditional, and the other parts keep their corresp. Explicit wording_selection is present if any overlay applies inside the parts.",
+    "PENDING: EN provenance for the pure parts. Every EN part needs an attesting canonical occurrence, since the old Kedushah has no EN witness. Decide this before data entry.",
+    "PENDING: the Musaf caller has four single-part transclusions with its own speakers and none of the old speakers. Its non-shared parts carry no existing Kedushah part corresp.",
+    "PENDING: Kavod. The home has 0 pb. The literal context has exactly one pb per language at the raw position (he s28, en s29), passes validate_generated's raw-position check, and has no identity corresp. Every single-page caller resolves through the fragment-scoped overlay.",
+    "PENDING: the Pachdekha correction moves to the EN home file. Per the importer spec, its attestations must be exactly {(rh_uvekhen_ten_pachdekha, s27), (new EN caller stem, s251)}, not s250, which is the Hebrew opening. Confirm the s251 image prints 'has'. Entries 119 and 203 still apply exactly once to their literal files. Both projection proofs pass on the real files.",
+    "PENDING: per project, exactly one corresp for each home identity, pure-part identity and Bible canonical target. Exactly one idno per home urn, and none for the pure library. Units 119, 203 and every other literal unit emit no Pachdekha, pure-part or attested identity.",
+    "PENDING: processor and exporter end to end. Each single-part transclusion into the pure-parts file stops at the part boundary, a range is rejected, and the four new context files resolve their context_urn.",
+    "PENDING: inline quote. PDF/HTML visual check of the six compiler states that inline-quotation-check.json says still need human inspection, including verse-numbering behaviour when milestones have no n.",
+    "PENDING: renew the realization receipts only after mapping, order and correction acceptance, computed with the final corrections.json. Any change to expanded_order, source_order, navigation or documentary_instructions makes every realization receipt stale, by design.",
+    "DONE, as reported by the author and consistent with the supplied diff and log: the full build of the unedited data produced 676 files; 672 differ only in header policy; 4 add the wrapper div in the two canonical contexts, both languages; source words and pb are unchanged."
+  ],
+  "coverage": [
+    "realizations.py: read in full. Checked the pure-parts validation and forced settings, overlay_fragment, the C3 narrowing, the literal-context guard, the context_urn checks, the attestation loop, check_order, review_payloads (source_fidelity, order and navigation hashes, review_encoding opt-in, own-file corrections), and validate_generated (pure checks, home pb, raw-derived literal pb comparison, global context-identity check, idno counts, duplicate publication URNs, pure range rejection).",
+    "canonical_corrections.py: read in full. Checked exactly-once binding at source level, full-pattern overlap, exact attester set, reuse/repeat/transclude rejection, source_witness on spine references, corrected_text, and both projection proofs.",
+    "baseline.py: read in full. The protected hash covers every unit field except canonical_home, page_context and wording_selection, and every segment field except the corresp/source/canonical mapping keys. Fragment fields (text, scan, printed_page, page_start, join_next, interpretations) are fully protected, and literal hashes cover unit_review_text. Deleting a unit fails. The whitelist also allows canonical_home and canonical_end edits, which R14's text does not list; the realization payload binds them.",
+    "build.py: read in full. Checked the header (CC0 URL and name match the JLPTEI table; separate trc and mrk respStmts), omit_publication_urn, the publication_context wrapper, the inline_scope branch of quotation_words (old mode unchanged), the context_urn target in transclude_unit, pure-unit exclusion from the default orders, and the order of corrections, validate_generated and write.",
+    "Tests: read the realization, correction and baseline files in full, and the inline-quote and quotation tests in test_marmorstein_rosh_hashanah_1.py.",
+    "Evidence read: the diff (4 wrapper-div changes), the build log (676 validated), the payload-stability file (660 unchanged), inline-quotation-check (2 exact resolutions, 6 compiler states) and schema-revised (14 valid)."
+  ],
+  "notes": [
+    "Code approval means the realization, correction, baseline and inline-quote code is approved for integration work. It does not accept any source words, minted identity, generated output for the new batch, final batch order or export. Every integration check marked PENDING needs real edited data.",
+    "Finding 1 should be fixed before the data-edit commit, otherwise CI goes red. The other findings are low-severity, fail-closed edge cases.",
+    "Header: the licence matches the JLPTEI table exactly. The respStmt resp strings ('AI-assisted scan transcription', 'JLPTEI markup') are descriptive rather than the table's RESPONSIBILITY_STRING values, which JLPTEI-3's own 'Transcribed by' example allows. The distributor wraps a tei:ref, while the template shows plain text. Both are schema-valid according to the reported results.",
+    "The two existing canonical contexts now emit corresp=<unit urn> on the outer wrapper div and facs on an inner div with no corresp. The scope of the unit urn is unchanged. Their realization receipts go stale, as expected.",
+    "build.py marks every unit with a realization key as DRAFT-pending if any realization payload is stale. This behaviour existed before this round and only matters for draft labels."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "d19a472a-aabd-45f0-b3b0-9220e67a6257"
+  }
+}

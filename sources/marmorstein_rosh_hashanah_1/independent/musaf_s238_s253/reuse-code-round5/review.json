@@ -1,0 +1,32 @@
+{
+  "implementation_approved": true,
+  "deferred_page_boundary_approved": true,
+  "previous_findings_closed": [
+    "1 (medium) deferred_page_boundary guard: closed. build.py:351-387 now requires all of the following. The flag is exactly True. The continuation has no conditions and no condition scope is open. The continuation is on current_page with page_start False. The immediately preceding segment has conditions, is marked, and has no condition_end_corresp. The scan change happens inside that segment (transition > 0), and every fragment from the transition to the end of that segment is on the new scan. The on-page fragments seen so far in the unit equal exactly that tail, so a unit that starts mid-page or has an intervening segment fails. The transition fragment's printed_page equals the continuation's. No page_start True fragment exists on the page, and no earlier deferral exists on the page. Some cases are rejected implicitly. A preceding 'transclude' segment never advances current_page, so the scan check rejects it. A page that starts at a clause's first fragment fails transition > 0, but that case is already handled by the pre-conditional pb at line 388. I traced all five required negatives in test_page_start_inside_optional_clause_can_be_deferred_once (lines 864-877). mid_page fails because transition == 0 and on_page holds the unit's first fragment. intervening_unconditional fails because the preceding segment has no conditions. wrong_page fails the current-page check. wrong_label fails the printed_page match. non_true fails 'is not True'. The three earlier negatives (page_start True duplicate, conditioned continuation, repeated deferral) are kept. The positive case gives pb n=['1','2'], facs n1, and the pb comes after j:endConditional.",
+    "2 (low) review payload: closed. unit_review_text appends '[page boundary deferred after optional clause]' only when the flag is set (build.py:766-767), so existing hashes do not change. The test checks that removing the flag changes the review text (lines 860-863).",
+    "3 (low) fixture provenance: closed. test_frozen_qedushah_fixture_has_accepted_provenance asserts that snapshot({'units':[fixture_unit]})['amidah_qedushah'] equals the 660 fixture's amidah_qedushah entry.",
+    "4 (low) baseline gate: closed. build.py:1145-1149 now requires accepted_literal_baseline for any canonical_parts, canonical_home (with or without context_urn), canonical_whole, page_context, or segment canonical/canonical_end. test_build_requires_a_contained_baseline_for_canonical_integration covers both build negatives in the tempfile harness: a missing baseline raises 'accepted literal baseline', and '../outside.json' raises 'inside the source book' via resolve()/is_relative_to, which also catches symlink escapes. test_integrated_source_baseline_matches_fixed_importer_fixture asserts that readings.json names the baseline and that its content equals the importer fixture once canonical_parts appears in live data."
+  ],
+  "findings": [],
+  "integration_checks": [
+    "PENDING (now permitted): for each real deferred_page_boundary use, confirm in both languages that there is exactly one pb per scan across the documentary assembly, and that facs/n match the scan. Confirm the pb comes right after the j:endConditional of the transition clause, or at the start of the next p/l when the continuation opens a new paragraph. Confirm the unit is not a literal-context home, because validate_generated's raw-position check would reject it there. Also confirm the transition clause has no repeat_cue: a cue would be emitted between j:endConditional and the deferred pb (see notes).",
+    "PENDING, carried over: after the data edit, confirm that the pure Kedushah library fragments are byte-identical to the frozen fixture's four parts, and that the real amidah_qedushah keeps speaker note → inline j:transclude inside the unit conditional, with the other parts keeping their corresp.",
+    "PENDING, carried over: confirm readings.json names accepted_literal_baseline, the integrated equality test then runs for real rather than passing vacuously, the build validates exactly 660 literal hashes, and every changed raw field is a whitelisted mapping field.",
+    "PENDING, carried over: PDF/HTML check of inline quotation seg milestones with typography.markers.verse_numbers set to shown and to hidden.",
+    "PENDING, carried over from round 3: EN provenance for the pure parts; Musaf caller transclusions and speakers; Kavod literal-context pb positions; Pachdekha attestations; per-project uniqueness of corresp and idno; processor end-to-end single-part transclusion and range rejection; receipts renewed only after final acceptance.",
+    "NOT RUN: I reviewed the code statically and did not execute anything. I have not verified the claimed 142 tests and 126 subtests. baseline.py (snapshot, validate_baseline) was not in the supplied files, so its behaviour is taken from earlier rounds."
+  ],
+  "notes": [
+    "This approves code only. It accepts no batch, source words, minted identities, generated output, order or export.",
+    "deferred_page_boundary_approved is true for the narrowed contract: the transition is inside the immediately preceding marked, self-contained conditional segment, and the deferred segment is the first segment after it.",
+    "Non-blocking: if the preceding clause has a repeat_cue, its navigation note is emitted after j:endConditional but before the deferred pb, so the facsimile puts the cue on the earlier page. One extra guard condition, `not preceding.get('repeat_cue')`, would rule this out. Otherwise check it per use (see integration checks).",
+    "Non-blocking: the check `preceding_fragments[transition-1]['scan'] != current_page` is always true, because transition is the first index on current_page. It does no harm. The real 'different earlier scan' guarantee comes from transition > 0.",
+    "Non-blocking: when both printed_page values are None, the label match passes and the pb is emitted without @n. This suits unnumbered leaves.",
+    "Non-blocking: test_integrated_source_baseline_matches_fixed_importer_fixture only runs when some unit has canonical_parts, while the build gate fires on a wider set of triggers. Running it when `'accepted_literal_baseline' in readings` or the build gate predicate is true would keep the two copies tied together in every case."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "71a14da5-99c5-4e2f-b7f5-d89c77e25c7c"
+  }
+}
