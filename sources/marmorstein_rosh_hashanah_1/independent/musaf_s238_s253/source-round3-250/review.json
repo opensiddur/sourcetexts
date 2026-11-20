@@ -1,0 +1,86 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "source_approved": false,
+  "pages_read": [
+    "s250",
+    "s251",
+    "s252",
+    "s253"
+  ],
+  "findings": [
+    {
+      "scan": "s250",
+      "key": "harachum_umakdim",
+      "old": "וְ״מַ שֶׁהוּא רַךְ לִרְצוֹת:",
+      "new": "וְ״מַ שֶׁחוּא רַךְ לִרְצוֹת:",
+      "reason": "In this line the source prints ח, not ה. Its left leg is joined at the top, unlike the open ה of שֶׁהוּא in the other five lines. Record it as printed and apply sic/corr later.",
+      "evidence_image": "/tmp/mahzor-s238/s250-band1.png"
+    },
+    {
+      "scan": "s250",
+      "key": "in_fuerth_veetayu_rubric",
+      "old": "סאַלטעט",
+      "new": "שאַלטעט",
+      "reason": "The first letter is the Rashi/Vaybertaytsh shin, which looks like a square ס. The real Rashi ס on this page, in סוגרים הארון, has a different shape that looks like ק. The German word is schaltet … ein.",
+      "evidence_image": "/tmp/mahzor-s238/s250-band3.png"
+    },
+    {
+      "scan": "s250",
+      "key": "in_frankfurt_tisgav_rubric",
+      "old": "פֿראנקפֿורט",
+      "new": "פֿראַנקפֿורט",
+      "reason": "The city name is the same word in the same typeface in both rubrics, and each time the source prints a patah under the alef. The human answer for the second rubric (325) already reads פֿראַנקפֿורט.",
+      "evidence_image": "/tmp/mahzor-s238/s250-band2.png"
+    },
+    {
+      "scan": "s250",
+      "key": "in_frankfurt_tisgav_rubric",
+      "old": "מעך",
+      "new": "מעץ",
+      "reason": "The human's ך in 324 was marked tentative. The last letter has a hooked head and a short descender, which is the Rashi final tsadi. A Rashi ך is a straight long stroke, as in כחך (נאָך) in the next rubric. The letter is also different from the ז in עז and מייזטען. Metz = מעץ.",
+      "evidence_image": "/tmp/mahzor-s238/s250-band2.png"
+    },
+    {
+      "scan": "s250",
+      "key": "in_fuerth_veetayu_rubric",
+      "old": "מעך",
+      "new": "מעץ",
+      "reason": "This is the same letter in the same typeface as the city name in the first rubric, and it should match that rubric: Rashi final tsadi.",
+      "evidence_image": "/tmp/mahzor-s238/s250-band3.png"
+    }
+  ],
+  "uncertainties": [
+    {
+      "scan": "s250",
+      "key": "in_frankfurt_tisgav_rubric",
+      "word": "מעץ",
+      "question": "Only needed if the human wants to confirm: is the last letter of the city name a final tsadi (hooked head, short tail) rather than a final kaf (straight long stroke like the end of כחך)? The same glyph appears in both rubrics. I read it as ץ.",
+      "crop_box": [
+        520,
+        675,
+        610,
+        710
+      ]
+    }
+  ],
+  "untranslated_extent_notes": [
+    "s250: two Hebrew-script German rubrics. The first covers תשגב in Frankfurt, Metz and many communities. The second covers ויאתיו in Fürth, and its omission in Frankfurt, Metz and most communities. The English on s251 renders both.",
+    "s250: סוגרים הארון. has no English equivalent on s251.",
+    "s250: the role marks קו״ח and ח״ are printed beside the Hebrew only. They will become descriptions."
+  ],
+  "notes": [
+    "I compared every other Hebrew word on s250 and in s252's scope (from לְךָ אֶת־זִבְחֵיהֶם through בָּרוּךְ … הַקָּדוֹשׁ:) against the scan and found no further differences. I did not reopen the settled marks 333/334/335/336.",
+    "I accepted the human's lamed in פֿיעלען. It is a tall Rashi lamed, and vielen fits the English 'many'.",
+    "The English on s251 and s253 matches the printed text, including 'Thou has created' and the missing comma in 'land happiness', both printed that way. The Hebrew cue words printed beside the English are correctly left out.",
+    "s253: 'abar don' and 'O. Lord' are breaks or specks in the print, not words. The candidate's 'abandon' and 'O Lord' are correct.",
+    "The scope stops correctly before אתה בחרתנו on s252/s253."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "9292aba5-8d9b-41e2-ae61-a252f4bf47cd"
+  }
+}

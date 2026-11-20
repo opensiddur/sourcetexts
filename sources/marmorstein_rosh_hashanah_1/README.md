@@ -10,6 +10,9 @@ published by Victor Goldschmidt, Basle, in 1965. Aharon N. Varady prepared the
 scan from the HUC-JIR Klau Library copy in Cincinnati. The Archive and Open Siddur
 identify their shared source as CC0 1.0 Universal; preserve those source records.
 
+
+The **unapproved** next installment covers PDF scans238–253. Confirmed human readings through361 are applied in `independent/musaf_s238_s253/candidate-round6.json`; questions362–374 remain open. Claude Opus5.5, invoked at medium effort, approved the seven standalone bilingual module encodings and the two importer helper changes in `poem-encoding-round2/review.json`. This scoped verdict does not accept the source words, full service order or exports. All14 draft language files pass schema checks, the isolated naming/feature checks pass, all14 source-candidate assembly comparisons match, and six conditional compilation cases pass. An11-page isolated PDF was inspected; an artificial inner-quotation row break remains open. Full canonical formula sharing, documentary/expanded spines, page boundaries, remaining review follow-ups and final exports still require completion. The660 accepted literal review payloads are unchanged. See `independent/musaf_s238_s253/current-draft-status.json`.
+
 ## Evidence and status
 
 - `ia/metadata.json`, `ia/scandata.xml`, `ia/page_numbers.json`: downloaded metadata

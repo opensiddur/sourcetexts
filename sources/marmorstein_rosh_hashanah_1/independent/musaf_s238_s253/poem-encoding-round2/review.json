@@ -1,0 +1,116 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "module_encoding_approved": true,
+  "helper_code_approved": true,
+  "findings": [
+    {
+      "file": "poem-units-revised.json (feeds musaf_vechayyot_asher_hennah-he.xml)",
+      "location": "vechayyot rachem_metzuqim fragment text / alternatives[0].printed",
+      "severity": "low",
+      "problem": "The draft fragment text places '(נ״א וּכְרוּב לִכְרוּב וְחַיָּה לְחַיָּה)' inline, before לְעֻמַּת כִּסֵּא. candidate-round6 instead records the main line without parentheses and the variant as a separate citation block ('variant_ka') after it. The generated XML is correct either way: the j:option replaces 'וְחַיָּה לְחַיָּה וּכְרוּב לִכְרוּב', and the siglum is in standOff. But the reviewed literal reading no longer matches the candidate's order on the page.",
+      "required_fix": "In the source audit, confirm where the parenthetical is printed. If it is outside the line, keep the literal fragment text as printed. Record that the variant's scope over 'וְחַיָּה לְחַיָּה וּכְרוּב לִכְרוּב' is an editorial alignment. XML output need not change."
+    },
+    {
+      "file": "musaf_haochez_beyad_middat_mishpat-he.xml; musaf_haochez_beyad_middat_mishpat-en.xml; musaf_v_yeetayu_kol_leavdekha-*.xml; musaf_tehillot_kevodekha-he.xml; musaf_qedushah_conclusion_parts-*.xml",
+      "location": "hehagui quotation seg; 'great is the Lord' / תָמִיד יִגְדַּל יְיָ; פַּחַד וָפַחַת וָפַח; כִּי קָדוֹשׁ הַיּוֹם לַאֲדֹנֵינוּ",
+      "severity": "low",
+      "problem": "The Exod 3:14 quotation is well bounded on both sides. Its quote-context milestones sit deeper than the stanza, so the stanza scope is not cut, and no bible: identity is claimed. Two things are open. (1) The seg carries @source but not type=\"quotation\", which JLPTEI 'Other inline spans' names for quoted words. (2) Only Ehyeh is marked, and the criterion is not recorded. The English prints 'great is the Lord' in quotation marks, yet neither language marks it. Leaving it unmarked is defensible, because the source is ambiguous (Ps 35:27 / 40:17), but the reason is not written down.",
+      "required_fix": "Optionally add type=\"quotation\" to the seg on both sides. Record the quotation criterion (an explicit, unambiguous single-verse source) and say why the other verbatim clauses stay unmarked. No verse milestones should be added."
+    },
+    {
+      "file": "musaf_qedushah_conclusion_parts-*.xml",
+      "location": "j:option condition URNs …ki_maqdishekha/biqedushatekha, …/keerkkha; text URN prayer:od_yizkar_lanu",
+      "severity": "low",
+      "problem": "Under the JLPTEI transliteration table, בִּקְדֻשָּׁתְךָ gives 'biqdushatekha' (the shva after a prefixed hiriq is silent) and כְּעֶרְכְּךָ gives 'keerkekha'. No reason is recorded for 'yizkar' (following the print's qamatz) or for prayer: rather than poem: and the amidah/ nesting. Round 1 asked for these, but the revised JSON only lists them under 'provisional'.",
+      "required_fix": "Correct or justify the names before registry submission, and record the namespace, nesting and yizkar decisions. This does not block, since the URNs are provisional."
+    },
+    {
+      "file": "all 14 files (helper document())",
+      "location": "publicationStmt/availability/licence; titleStmt/respStmt",
+      "severity": "low",
+      "problem": "Carried over from round 1. The licence target matches the filtered Archive metadata (https://creativecommons.org/publicdomain/zero/1.0/), but the URL and name are not the JLPTEI table values. One respStmt, keyed 'trc', also credits the markup; the table has a separate 'mrk'.",
+      "required_fix": "Apply the project's header policy (table licence values; separate trc and mrk) when headers are finalised. This is not a module-content defect."
+    },
+    {
+      "file": "build.py",
+      "location": "unit_review_text (pre-existing, outside the diff)",
+      "severity": "low",
+      "problem": "The review payload binds the literal fragment text, speakers, alternative reading texts, and now source notes. It does not bind segment-level conditions/marked, condition URNs, j:option corresp, or reference corresp/paragraph identities. The vehoveh and veyizbechu conditional interpretations, and the variant selector URNs, could therefore change without making a unit review stale. review_payloads does not cover these seven units either, because they have no overlays. The diff does not introduce this.",
+      "required_fix": "In a later change, add segment conditions, the marked flag and option corresp values to unit_review_text, or rely explicitly on encoding audits for them. This does not block the current helper diff."
+    },
+    {
+      "file": "realizations.py / build.py",
+      "location": "prepare_documents home_unit construction",
+      "severity": "low",
+      "problem": "Latent: the canonical-home document is built from ('stem','languages','source_printings') plus home_config, so a unit with both source_notes and canonical_home would emit the partial-translation note only in the context file. None of the seven units uses canonical_home.",
+      "required_fix": "If canonical homes are later used for partially translated units, carry source_notes into the home, or deliberately exclude them and say so."
+    }
+  ],
+  "alignment_findings": [
+    {
+      "file": "musaf_veattah_ezon_qol-en.xml",
+      "location": "tei:p 1 /sam",
+      "problem": "Resolved. /sam is inside English paragraph 1, before 'The paths of the world', with the paragraph unsplit. Hebrew /sam follows the mid-line ח׳ inside the merged paragraph 1.",
+      "required_fix": "None."
+    },
+    {
+      "file": "musaf_veammekha_teluim-*.xml",
+      "location": "former /kol_shofar boundary",
+      "problem": "Resolved. The milestone has been removed on both sides, and the 110→111 Hebrew page turn and the English 'in unison;' sentence are no longer split. Paragraph groupings match the candidate's blocks (He p1 veammekha+semukhim, p2 lehizzakher+im_yashqit, p3 od_yizzakher; En likewise, with p1 continuing across s241/s243).",
+      "required_fix": "None. Double spaces ('in unison;  let', 'Creator,  ', 'requital.  ') are cosmetic join artefacts; check they normalise in output."
+    },
+    {
+      "file": "musaf_haochez_beyad_middat_mishpat-*.xml",
+      "location": "stanza hehagui",
+      "problem": "Resolved. Hebrew is a marked j:conditional around וְהֹוֶה with the parentheses removed. English is an unmarked j:conditional around ', is' on the same condition URN. Both sides carry 22 incipit-named stanzas. The shared quote-context milestones add an alignment boundary inside hehagui, which is acceptable but not yet inspected visually.",
+      "required_fix": "None for the encoding. Check the hehagui row split in the visual pass."
+    },
+    {
+      "file": "musaf_v_yeetayu_kol_leavdekha-*.xml",
+      "location": "/1–/8 and the veyizbechu condition",
+      "problem": "Checked clause by clause. All eight boundaries agree across languages (/7 = פ צ ק ר ↔ mountains … exalt Thee in the assembly; /8 = ש ת ↔ those far away … crown). /3 opens with the shared marked conditional in both languages, and the Hebrew scope includes the final '.'. When the condition is false, both /3 scopes begin at וְיִזְנְחוּ / 'they will abandon'.",
+      "required_fix": "None."
+    },
+    {
+      "file": "musaf_vechayyot_asher_hennah-en.xml; musaf_tehillot_kevodekha-en.xml; musaf_qedushah_conclusion_parts-en.xml",
+      "location": "sourceDesc/bibl/note[@type='encoding']",
+      "problem": "Resolved. The main-reading and partial-translation statements are header encoding notes, outside the prayer text. No English j:option was invented. Their claims match the candidate English (Hayah before Cherub; 'roared'; 'Make straight, clear the way'; 'with Thy holiness'; 'Awe-inspiring One'). One cosmetic point: the note spells 'Hayyah' where the print has 'Hayah'.",
+      "required_fix": "None. Optionally match the note's spelling to the print."
+    }
+  ],
+  "integration_requirements": [
+    "Source acceptance: complete the independent readings and human362–374, including the print position of the vechayyot נ״א parenthetical, the paragraph boundary before עוֹד יִזְכָּר (Hebrew), and the קו״ח/קר״ס margin mark at haochez/hatam. This review does not accept the source text.",
+    "Page breaks: add tei:pb n/ed/facs for pp.109–116 and remove div/@facs. The Hebrew veyeetayu 115/116 break falls inside the veyizbechu conditional. As written, build.py (fragment loop) would put that pb inside the conditional scope, so foliation is lost when the condition is false. Choose and document a placement rule.",
+    "Full Kedushah spine in source order, with the frame (כסוד, ככתוב, Isa 6:3, כבודו ×2, Ezek 3:12, ממקומו ×2, Deut 6:4, אחד הוא ×2, Num 15:41 part, אדיר אדירנו ×2, ובדברי, Ps 146:10 ×2, לדור ודור, תשגב/Zech 14:9, ובכן ×3, ותמלוך, קדוש אתה/Isa 5:16, חתימה). Repeats go by transclusion or seg/@source, and partial verses by declared verse-parts.",
+    "Regional conditions around the transclusions of אדיר אדירנו (Frankfurt), תשגב (Frankfurt/Metz) and ויאתיו (Fürth recites; Frankfurt/Metz/most omit). The source rubrics become conditional instruction notes: Hebrew-script German as de-Hebr, and the Hebrew cue words in the English rubrics as seg xml:lang=he. The 'reader now sings' wording should double as the role description. Register the local-custom features.",
+    "Ark directives: the Hebrew index now places 'פותחים הארון.' / 'סוגרים הארון.' as instruction notes around the haochez transclusion, outside every stanza. The English source prints no ark rubric, and the English index correctly has none. Record this placement in the final spine and README.",
+    "Registry: register the poem identities, all stanza URNs, every condition URN (variant options, vehoveh, veyizbechu), the quote-context URNs (…/hehagui/quotations/quoted_exodus_3_14[/14]), the siddur:rosh_hashanah/musaf/qedushah_conclusion_parts context, both project ids and the codex contributor. Confirm that the existing v_yeetayu_kol_leavdekha/1–8 records denote exactly the clause groups encoded here. I could not check this against poem.jsonl.",
+    "Canonical formula sharing: qedushah_conclusion_parts realises literal Ki Maqdishekha / Od Yizkar words inside a siddur: context div with prayer: milestones. That is allowed by the context-plus-milestones pattern, but if canonical homes are chosen, move the realisation and transclude it so siddur: stays skeletal.",
+    "Source README: record the evidence for the abbreviation expansions (ק׳, ח׳, קו״ח, וְ״מַ/וְמַ״/וְ״מ, נ״א), the haochez column-heading convention (חזן./קהל. given once and governing every row), the קו״ח → reader_and_congregation mapping, the divineName policy and the quotation criterion.",
+    "Visual PDF/HTML inspection, and compiles under each abbreviation and option setting. check-compiled.py walks every text node, so its 22-refrain count includes tei:expan text and both j:option readings. It therefore does not show what is rendered. Confirm marked delimiters in the undecided state, Hebrew-only rows for the untranslated vechayyot stanzas, hehagui row splitting and whitespace normalisation.",
+    "Header policy (licence table values, separate trc and mrk), applied project-wide."
+  ],
+  "coverage": [
+    "Read in full: round1 review.json; poem-units-revised.json (all 2265 lines); implementation.diff; rights-evidence.json; schema-revised.json; compiler-qa.json; compiled-content-checks.json; check-compiled.py; candidate-round6.json (all blocks, Hebrew and English); SIDDUR_URN_SCHEME.md.",
+    "Read every one of the 14 module XML files and both index.xml files in full.",
+    "JLPTEI-3.md: lines 1–1399 and 1600–2158 (URN scope, terminators, transliteration, header, choice/option, inline segs, annotations, conditions, kinds of rubric, set-off, alignment). Skipped lines 1400–1599 (calendar and reading-cycle settings, not relevant here).",
+    "build.py: lines 1–1219 read, covering the full unit_document, quotation_words, rubric_words, unit_review_text, require_review, feature_structures and the registry checks. realizations.py read in full. The test file was seen only through the diff; the fixture and the P constant were not read.",
+    "Not checked: specs/urn_registry/poem.jsonl (2.5 MB, and I had no search tool), so registry identity reuse is unconfirmed. No scans were viewed. No PDF/HTML was rendered."
+  ],
+  "notes": [
+    "Scope: this approves only the seven standalone module encodings (14 witnesses) and the small build.py diff with its two tests. It is not full-batch or source acceptance. New URNs remain provisional.",
+    "All round-1 high findings are resolved in the XML. /sam was added. The chashot and sam paragraph splits are merged. kol_shofar is removed. Haochez rubrics are kept: חזן./קהל. column headings inside stanza 1, ע״ס as a div description, ark directives in the spine. vehoveh and veyizbechu are bilingual conditions on shared URNs with the literal parentheses removed. Variant options carry condition URNs with the printed main reading first, and the נ״א sigla are in standOff annotations targeting the choice xml:ids. candidate-round6 reads נ״א for היום, which resolves the earlier כ״א question.",
+    "Medium round-1 items resolved: role descriptions now follow the stanza milestone (milestone → note type=description → text), and the diff makes SIDDUR_URN_SCHEME agree with JLPTEI. Haochez uses incipit stanza names that follow the transliteration rules. teluim, lehizzakher, yisu and kevodekha are corrected. The partial translation is documented in sourceDesc. Paragraphs stay independent of milestones on both sides.",
+    "Helper diff, checked against the full functions. (1) source_notes become sourceDesc/bibl/note[@type='encoding'] with xml:lang, which is where JLPTEI says encoding notes go, and they are emitted before the reuse early return. (2) unit_review_text now includes each note with its language, so changing a note makes that unit's review stale. Units without notes are unaffected. require_review and build() both use this payload. (3) The standOff is now inserted before root's direct tei:text child instead of before body.getparent(). When publication_context reassigns body to the wrapper div, the old code looked up a non-child of root (ValueError). The new placement gives teiHeader, standOff, text, as the regression test asserts and as the qedushah XML shows.",
+    "Rights: the files' CC0 declaration matches the filtered Internet Archive licence metadata. This is a consistency observation, not legal advice.",
+    "Schema validation reports all 14 files valid. The isolated compile reports no pairing problems. Neither was taken as evidence of correctness; the XML was checked directly."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "358b7040-208e-400a-9833-1fead90d37f2"
+  }
+}
