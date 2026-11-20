@@ -1,0 +1,196 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+  },
+  "approved": false,
+  "findings": [
+    {
+      "file": "musaf_veattah_ezon_qol-he.xml",
+      "location": "tei:p 2 (ח׳ שָׂם הֲלִיכוֹת עוֹלָם … וַעֲצָמוֹתֵיהֶם:)",
+      "severity": "high",
+      "problem": "The stanza terminator after /veattah is followed by the ח׳ role note and then the שָׂם stanza with no milestone. The Reader's stanza therefore sits in no stanza scope: nothing can reference or transclude it, and it has no alignment target. The acrostic (א״ת ב״ש: …ח/ס, ט/נ…) shows that שָׂם is the ס member, so this is a real stanza, not an addendum to /veattah.",
+      "required_fix": "After the ח׳ note, add <tei:milestone unit=\"stanza\" corresp=\"urn:x-opensiddur:text:poem:veattah_ezon_qol/sam\"/> (incipit שָׂם, sin → s). Keep the existing terminator before the קו״ח note. Add the matching English milestone (see alignment_findings)."
+    },
+    {
+      "file": "musaf_vechayyot_asher_hennah-he.xml; musaf_veattah_ezon_qol-he.xml",
+      "location": "vechayyot: split between tei:p 1 and tei:p 2 at ח׳ חָשׁוֹת; veattah: split between tei:p 1 and tei:p 2 at ח׳ שָׂם",
+      "severity": "high",
+      "problem": "Both files start a new tei:p at a role mark that the source reading says is printed mid-line. candidate-round5 spk_chashot: 'printed in the middle of the line, before חָשׁוֹת'. speaker_het: 'small superscript role mark sits mid-line before שָׂם'. These are speaker changes inside one printed paragraph, not paragraph breaks. Tehillot handles the same situation correctly by keeping ח׳ סֹלּוּ inside tei:p 1. Inventing paragraph breaks changes the printed structure, which JLPTEI says must be kept independent of reference milestones.",
+      "required_fix": "Merge each pair into one tei:p. Keep the terminator → role note → stanza milestone sequence inside the merged paragraph, as tehillot already does. Correct the draft JSON 'paragraph' numbers to match."
+    },
+    {
+      "file": "musaf_veammekha_teluyim-he.xml",
+      "location": "tei:p 1 / tei:p 2 boundary; stanza milestone /kol_shofar",
+      "severity": "high",
+      "problem": "The Hebrew paragraph is split, and a new stanza URN (kol_shofar) opened, exactly at the 110→111 page turn. The source evidence only says 'The page ends mid-poem. The text continues on the next page.' Nothing shows a printed stanza or paragraph break: there is no role change (ק׳ continues) and no colon (the line ends with '.'). By contrast, the drafts merge the page-crossing paragraphs of ki_maqdishekha and veyeetayu. SIDDUR_URN_SCHEME forbids turning a page turn into a division. On the English side, this boundary forces a milestone in the middle of a sentence (after 'in unison;').",
+      "required_fix": "Check the s240/s242 scans. If p.111 does not start a new printed paragraph or strophe, merge the two tei:p elements and remove the /kol_shofar milestone, in both Hebrew and English. If there is a printed break, record the evidence and rename the stanza qol_shofar (see naming finding). Apply the same check to kaf_regel at the top of p.110 in vechayyot."
+    },
+    {
+      "file": "musaf_haochez_beyad_middat_mishpat-he.xml",
+      "location": "div start and end; every stanza",
+      "severity": "high",
+      "problem": "The source rubric 'פותחים הארון. חזן. ע״ס א״ב כפול. קהל.' survives only as the 'ע״ס א״ב כפול.' description. Three things are lost. (1) The directive 'פותחים הארון' is gone. (2) The column headings חזן. over the first hemistich and קהל. over the response column are gone, so the speaker boundary inside every stanza (Reader line / congregation וְכֹל מַאֲמִינִים response) is not encoded at all. (3) The closing directive 'סוגרים הארון.' after stanza 22 is absent.",
+      "required_fix": "Encode 'פותחים הארון.' and 'סוגרים הארון.' as <tei:note type=\"instruction\"> directives. Place them here before the first milestone and after the final terminator, or in the spine (see integration_requirements), and record which. Encode the column headings as printed: <tei:note type=\"description\" corresp=\"urn:x-opensiddur:instruction:role/reader\">חזן.</tei:note> before the stanza 1 hemistich, and the role/congregation note 'קהל.' before the stanza 1 response. Document in the source README that the column headings govern every line. Do not invent per-line rubrics the print lacks. Keep the uncertain 'קו״ח/קר״ס' margin mark at stanza 22 flagged for the source audit."
+    },
+    {
+      "file": "musaf_haochez_beyad_middat_mishpat-he.xml; musaf_haochez_beyad_middat_mishpat-en.xml",
+      "location": "stanza /5: 'שֶׁהָיָה (וְהֹוֶה) וְיִהְיֶה' ↔ 'He was, is and shall be'",
+      "severity": "high",
+      "problem": "The printed optional word is left as literal parentheses inside the recited text. Under JLPTEI, text some say and others omit is a condition, not an alternate. The English renders the optional word unconditionally ('is'), so the two sides disagree whenever the variant is decided false.",
+      "required_fix": "Hebrew: replace the literal '(וְהֹוֶה)' with <j:conditional xml:id=\"…\" type=\"marked\"><tei:fs type=\"opensiddur:variant\"><tei:f name=\"urn:x-opensiddur:condition:poem:haochez_beyad_middat_mishpat/hehagui/vehoveh\"><tei:binary value=\"true\"/></tei:f></tei:fs></j:conditional>וְהֹוֶה<j:endConditional target=\"#…\"/>, removing the parentheses (the exporter supplies delimiters for type=marked). Adjust the condition path to the final stanza name. English: wrap ', is' in a j:conditional on the same condition URN with no @type, because the English source does not mark it ('He was<cond>, is</cond> and shall be'). Register the condition URN."
+    },
+    {
+      "file": "musaf_veyeetayu-he.xml; musaf_veyeetayu-en.xml",
+      "location": "'(וְיִזְבְּחוּ לְךָ אֶת־זִבְחֵיהֶם.)' ↔ '(To Thee will they offer their sacrifices)'",
+      "severity": "high",
+      "problem": "In both languages the optional clause is literal parenthesised text inside recited words. It is not modelled as conditional and has no shared condition.",
+      "required_fix": "Wrap the clause in both files in <j:conditional type=\"marked\"> on one shared condition, e.g. urn:x-opensiddur:condition:prayer:veyeetayu/veyizbechu (opensiddur:variant). Remove the literal parentheses. In Hebrew, include the final '.' inside the scope. Keep j:conditional and j:endConditional as siblings inside the tei:p. See integration_requirements for the page break that falls inside this clause."
+    },
+    {
+      "file": "musaf_vechayyot_asher_hennah-he.xml; musaf_tehillot_kevodkha-he.xml; musaf_ki_maqdishekha-he.xml",
+      "location": "every tei:choice/j:option (מֵרְעִישׁוֹת/מַרְעִישׁוֹת; וְחַיָּה…/וּכְרוּב…; גָּעֲשׁוּ/גֵּעַשׁ; סֹלּוּ פַּנּוּ/סוּרוּ מִנִּי; בִּקְדֻשָּׁתְךָ/כערכך; אָיוֹם/היום)",
+      "severity": "high",
+      "problem": "The printed variant apparatus has been dropped. The siglum (נ״א, or כ״א for היום, which is itself uncertain), the parentheses, and the primary/secondary status are all gone, leaving two bare options. No j:option has @corresp, so no setting can select a reading, and the alternate cannot be chosen except by the first-option fallback. The edition's own statement that the second form is a נוסח אחר is lost.",
+      "required_fix": "Give each j:option a condition URN (opensiddur:variant names that mirror the stanza path, e.g. …:condition:poem:vechayyot_asher_hennah/chashot/marishot). Keep the printed main reading first. Retain the siglum as source text, e.g. a <tei:note type=\"description\"><tei:choice><tei:abbr>נ״א</tei:abbr><tei:expan>נוסח אחר</tei:expan></tei:choice></tei:note> at the head of the alternate option. If the schema rejects a note inside j:option, use a standoff note anchored on the choice. Document the convention and the expansion evidence in the source README. Resolve כ״א vs נ״א for היום in the source audit before encoding its abbr."
+    },
+    {
+      "file": "all *-he.xml with role notes",
+      "location": "terminator → tei:note[@type='description'][role] → stanza milestone",
+      "severity": "medium",
+      "problem": "Placing terminators before the role notes correctly keeps the notes out of the preceding stanza. But each note is then placed before the next stanza's milestone, so it falls outside that stanza's scope as well. JLPTEI 'Kinds of rubric' says a 'Reader:'-type description 'belongs to the passage … placed first inside the passage's scope'. As encoded, transcluding any stanza URN (for repeats or other spines) drops its printed speaker rubric. SIDDUR_URN_SCHEME separately says role URNs are 'emitted as tei:note type=\"instruction\"', which conflicts with JLPTEI.",
+      "required_fix": "Reorder to milestone(corresp) → role note → text, e.g. <milestone corresp=\"…/chashot\"/><note type=\"description\" corresp=\"…role/reader\">…</note>חָשׁוֹת…. The preceding terminator then becomes redundant wherever a same-unit milestone follows, and can stay or go. Keep explicit terminators wherever the following material belongs to no stanza (directives, rubrics, end of poem). Record the type=description vs instruction decision and raise the documentation conflict."
+    },
+    {
+      "file": "musaf_vechayyot_asher_hennah-he.xml; musaf_veammekha_teluyim-he.xml; musaf_veattah_ezon_qol-he.xml; musaf_tehillot_kevodkha-he.xml; musaf_haochez_beyad_middat_mishpat-he.xml",
+      "location": "role notes for קו״ח / 'קהל וחזן'",
+      "severity": "medium",
+      "problem": "'קהל וחזן' is mapped to role/reader_and_congregation, meaning both together. The order (congregation first) is equally consistent with role/congregation_then_reader, which is a separate vocabulary item. No evidence for the choice is recorded.",
+      "required_fix": "Decide from the edition's usage (and any key to its abbreviations) whether קו״ח means simultaneous or sequential recitation. Apply one mapping throughout and record the evidence in the source README."
+    },
+    {
+      "file": "musaf_haochez_beyad_middat_mishpat-he.xml; musaf_haochez_beyad_middat_mishpat-en.xml",
+      "location": "stanza URNs …/1 … …/22",
+      "severity": "medium",
+      "problem": "The stanzas carry ordinal URNs. SIDDUR_URN_SCHEME says 'Name by incipit, not by ordinal' and that a poem's stanzas 'are addressed by transliterated incipit'. A number is reserved for a division the edition makes itself, and it does not align with other witnesses (e.g. rites that omit or reorder lines).",
+      "required_fix": "Rename by incipit: haochez, habochen, hagoel, hadan, hehagui, havaddai, hazokher, hachotekh, hatov, hayodea, hakol, halan, hamamlikh, hanoheg, hasovel, haelyon, hapoteach, hatzofeh, haqetzar, harachum, hashaveh, hatam. Confirm against the registry and transliteration rules. Apply the same names on both language sides and in the condition URN for וְהֹוֶה."
+    },
+    {
+      "file": "multiple",
+      "location": "URN path components",
+      "severity": "medium",
+      "problem": "Several names break the transliteration rules. (a) veammekha_teluyim: the source spells תְּלוּאִים with aleph, not yod; aleph is not transliterated → teluim. (b) /kol_shofar: קוֹל → qol (quf = q), as veattah_ezon_qol already does. (c) /lehizakher: לְהִזָּכֵר has dagesh ḥazak → lehizzakher, matching the sibling /od_yizzakher. (d) veattah …/yissau: יִשְׂאוּ has no dagesh and a silent shva → yisu. (e) tehillot_kevodkha: shva after ḥolam is sounded → kevodekha. (f) ki_maqdishekha …/od_yizkor: the print reads יִזְכָּר (qamatz); decide whether the incipit follows the print (yizkar) or a normalised canonical incipit, and record why.",
+      "required_fix": "Correct the names, or show that the registry or spellings.yaml already fixes them. Update the div corresp, the idno, the milestones and the JSON on both language sides together."
+    },
+    {
+      "file": "musaf_ki_maqdishekha-*.xml; musaf_veyeetayu-*.xml",
+      "location": "div/@corresp urn:x-opensiddur:text:prayer:amidah/ki_maqdishekha; urn:x-opensiddur:text:prayer:veyeetayu",
+      "severity": "medium",
+      "problem": "The namespace and nesting are unvalidated. ki_maqdishekha is nested under prayer:amidah, which claims that the Amidah is its only home, and it uses prayer: while sibling piyyutim use poem:. Its second stanza (עוֹד יִזְכָּר…מֶלֶךְ הַמִּשְׁפָּט) is a separate composition with its own identity, which the stanza nesting hides. veyeetayu (a piyyut said on both RH and YK) is filed under prayer: rather than poem:.",
+      "required_fix": "Run a registry search for existing identities of כי מקדישיך, עוד יזכר and ויאתיו. Apply the 'second place it is said?' test. Choose poem: vs prayer: consistently. Avoid the amidah/ parent unless it is the only home."
+    },
+    {
+      "file": "musaf_veyeetayu-he.xml; musaf_veyeetayu-en.xml; musaf_ki_maqdishekha-*.xml",
+      "location": "stanza milestone …/veyeetayu/veyeetayu; …/ki_maqdishekha/ki_maqdishekha",
+      "severity": "low",
+      "problem": "In veyeetayu, the only 'stanza' URN covers exactly the div's own scope, which duplicates the identity without adding a division. 'stanza' is also the wrong unit for prose prayer parts.",
+      "required_fix": "Either remove the redundant child milestone, or divide at the printed colon groups (…פְּסִילֵיהֶם: / …בְּמָלְכֶךָ: / …מְלוּכָה:) with incipit names and matching interior English milestones. Use unit='prayer-part' for prayer: texts."
+    },
+    {
+      "file": "musaf_vechayyot_asher_hennah-en.xml",
+      "location": "teiHeader / div",
+      "severity": "medium",
+      "problem": "The partial translation (English prints only Rachem Metzuqim) is recorded in the draft JSON (partial_translation_note) but nowhere in the XML. The English div also claims the whole-poem URN while realising one stanza, and nothing tells a reader or validator that the gap is deliberate.",
+      "required_fix": "Add a <tei:note type=\"encoding\"> (sourceDesc/bibl or editionStmt) stating that the source translates only the concluding stanza. Keep the div URN only after a parallel compile confirms that Hebrew stanzas vechayyot…levilti come out as Hebrew-only rows and are not paired with the English."
+    },
+    {
+      "file": "all *-he.xml",
+      "location": "j:divineName usage",
+      "severity": "low",
+      "problem": "j:divineName appears only on יְיָ in ki_maqdishekha and veyeetayu. Other names and epithets of God are unmarked, e.g. אֱלֹהֵינוּ and אֲדוֹנֵינוּ/לַאֲדֹנֵינוּ (ki_maqdishekha), אֵל אֱמוּנָה, שַׁדַּי and הָעֶלְיוֹן (haochez), מֵאֱלֹהֵיהֶם (veattah).",
+      "required_fix": "Apply one project policy for which names and epithets are marked, and apply it across all seven units."
+    },
+    {
+      "file": "all 14 files",
+      "location": "tei:div/@facs",
+      "severity": "low",
+      "problem": "Each div carries one page-image URL, but most units span two printed pages (e.g. veammekha 110–111, ki_maqdishekha 113–114, haochez 114–115, veyeetayu 115–116). The guidelines attach @facs to tei:pb.",
+      "required_fix": "Remove div/@facs when the tei:pb stage is applied, and put @facs on each pb (see integration_requirements)."
+    },
+    {
+      "file": "all 14 files",
+      "location": "teiHeader",
+      "severity": "low",
+      "problem": "(a) The licence target/name 'https://creativecommons.org/publicdomain/zero/1.0/' / 'CC0 1.0 Universal' does not match the JLPTEI licence table value (http://www.creativecommons.org/publicdomain/zero/1.0, 'Creative Commons Zero (Public Domain Dedication)'). (b) Transcription and markup are credited in one respStmt under key 'trc'; the table has a separate 'mrk'. (c) Contributor urn:x-opensiddur:contributor:opensiddur.org/codex must already be in specs/urn_registry/contributor.jsonl, because an unregistered opensiddur.org id is an error.",
+      "required_fix": "Use the table licence values, after confirming the rights status of the 1965 source (see notes). Split the credits into trc and mrk respStmts. Confirm or register the contributor id."
+    },
+    {
+      "file": "musaf_ki_maqdishekha-he.xml; musaf_haochez_beyad_middat_mishpat-he.xml; musaf_veyeetayu-he.xml; musaf_tehillot_kevodkha-he.xml",
+      "location": "verbatim scriptural clauses (Neh 8:10 'כִּי קָדוֹשׁ היום לַאֲדֹנֵינוּ'; Ex 3:14 'אֶהְיֶה אֲשֶׁר אֶהְיֶה'; Ps 40:17/70:5 'תָמִיד יִגְדַּל יְיָ'; Isa 24:17 'פַּחַד וָפַחַת וָפַח')",
+      "severity": "low",
+      "problem": "None of the seven units quotes a complete verse. Each has only partial clauses or allusions (shibbutz). Correctly, no bible verse milestones were added, since one would claim a whole canonical verse and could duplicate a canonical mapping. The quotation policy is undecided, though: the English marks 'I am that I am' and 'great is the Lord' in quotation marks, while the Hebrew marks nothing.",
+      "required_fix": "Do not add verse or chapter milestones for these clauses. If the project wants quotation markup, use <tei:seg type=\"quotation\" source=\"urn:x-opensiddur:text:bible:…\"> on both language sides for the verbatim clauses only, and record the policy. The complete-verse requirements are all in the surrounding Kedushah frame (integration_requirements)."
+    }
+  ],
+  "alignment_findings": [
+    {
+      "file": "musaf_veattah_ezon_qol-en.xml",
+      "location": "tei:p 1, before 'The paths of the world (Mishnah)…'",
+      "problem": "The English /veattah scope runs through 'Kidneys, loins … and their bones.', which translates the Hebrew שָׂם stanza. Once the Hebrew /sam milestone is added, the two sides misalign.",
+      "required_fix": "Insert <tei:milestone unit=\"stanza\" corresp=\"urn:x-opensiddur:text:poem:veattah_ezon_qol/sam\"/> immediately before 'The paths of the world (Mishnah)', inside the existing tei:p 1. Do not split the paragraph."
+    },
+    {
+      "file": "musaf_veammekha_teluyim-en.xml",
+      "location": "interior milestone /kol_shofar after 'in unison;'",
+      "problem": "This mid-sentence boundary exists only because of the Hebrew page-turn split. If the Hebrew is merged, it must be removed too. If it is kept, the URN must become qol_shofar on both sides.",
+      "required_fix": "Follow the outcome of the Hebrew kol_shofar finding on both sides. Keep the original English paragraph 1 intact either way."
+    },
+    {
+      "file": "musaf_haochez_beyad_middat_mishpat-en.xml",
+      "location": "stanza 5 'He was, is and shall be'",
+      "problem": "The English renders the optional וְהֹוֶה with no condition.",
+      "required_fix": "Unmarked j:conditional around ', is' on the same condition URN as the Hebrew (see findings)."
+    },
+    {
+      "file": "musaf_veyeetayu-en.xml",
+      "location": "'(To Thee will they offer their sacrifices)'",
+      "problem": "Literal parenthetical, not linked to the Hebrew optional clause.",
+      "required_fix": "j:conditional type=\"marked\" on the shared veyeetayu condition URN, with the literal parentheses removed."
+    },
+    {
+      "file": "musaf_vechayyot_asher_hennah-en.xml; musaf_tehillot_kevodkha-en.xml; musaf_ki_maqdishekha-en.xml",
+      "location": "English rendering of Hebrew j:option sites",
+      "problem": "The English consistently follows the printed main reading: Hayah before Cherub; 'roared' for גָּעֲשׁוּ; 'Make straight, clear the way' for סֹלּוּ פַּנּוּ; 'with Thy holiness' for בִּקְדֻשָּׁתְךָ; 'Awe-inspiring One' for אָיוֹם. When an alternate is selected, the English will not match. This is acceptable as a partial witness, but it is undocumented.",
+      "required_fix": "No English text change. Record in an encoding note or the README that the translation follows the main reading at each variant. Do not invent English options."
+    },
+    {
+      "file": "all *-en.xml",
+      "location": "paragraph structure",
+      "problem": "Checked: original English paragraphs are kept across interior milestones in veammekha (3), tehillot (2), ki_maqdishekha (1), veattah (2), veyeetayu (1, across the page turn), haochez (22) and vechayyot (1), matching the English source blocks. No Hebrew characters appear in English text and there are no @rend/tei:hi attributes. No action needed beyond the items above.",
+      "required_fix": "None."
+    }
+  ],
+  "integration_requirements": [
+    "Source-order spine (siddur:rosh_hashanah/musaf/… kedushah unit) for both projects. It must interleave these units with the Kedushah frame exactly as printed: כסוד שיח (ח׳) → ככתוב (ח׳) → Isa 6:3 (קו״ח) → כבודו (ק׳) → [ע״ס rubric + vechayyot] → כבודו (ח׳, repeat) → Ezek 3:12 (קו״ח) → ממקומו (ק׳) → [veammekha] → ממקומו (ח׳, repeat) → Deut 6:4 (קו״ח) → אחד הוא (ק׳) → [veattah] → אחד הוא (ח׳, repeat) → Num 15:41 end (קו״ח) → Frankfurt rubric + אדיר אדירנו (ק׳) → [tehillot] → אדיר אדירנו (ק׳, repeat) → ובדברי (ח׳) → Ps 146:10 (קו״ח) → לדור ודור (ח׳) → [ki_maqdishekha] → פותחים הארון → [haochez] → סוגרים הארון → Frankfurt rubric + תשגב/Zech 14:9 → ובכן ×3 → Fürth/Frankfurt rubric + [veyeetayu] → ותמלוך/Ps 146:10 → קדוש אתה/Isa 5:16 → ברוך…המלך הקדוש.",
+    "Canonical repeat modules. כבודו, ממקומו, אחד הוא and אדיר אדירנו are each printed twice with different speakers, and Ps 146:10 appears twice (p.113 as יְיָ, p.116 as יְהֹוָה). Each text URN may be realised once per project (DuplicateUrnError, first-copy-only). The second printing must be a transclusion, or carry its URN in tei:seg/@source where the printed form differs, with its own role description in the spine context.",
+    "Biblical scopes in the frame: verse milestones for isaiah/6/3, deuteronomy/6/4, psalms/8/10, zechariah/14/9 (twice: Adir Adirenu and Tisgav), psalms/146/10 and isaiah/5/16. ezekiel/3/12 and numbers/15/41 are partial, so a declared verse-part is needed in opensiddur/common/subverse.py for each (e.g. ezekiel/3/12/barukh and numbers/15/41/ani, plus a terminating part if the verse continues past the quotation). English sides need the same verse URNs; they need no half-verses.",
+    "Regional conditions. The Frankfurt omission of אדיר אדירנו ('בפפד״מ אין אומרים כאן'), the Frankfurt/Metz omission of תשגב (Hebrew-script German and English rubrics), and Fürth recites / Frankfurt-Metz-most omit ויאתיו (both languages) each need a j:conditional around the spine transclusion, with the source rubric as the conditional's instruction note. Local-custom features (Frankfurt, Fürth, Metz) must be registered in features.yaml or as opensiddur:rite open features. They must not be inferred from ashkenaz/german. The Hebrew rubrics need xml:lang for German in Hebrew script (e.g. de-Hebr). The English Fürth/Frankfurt rubrics contain Hebrew cue words (ויאתיו, תשגב) that must be <tei:seg xml:lang=\"he\">. The ויאתיו rubric also names the Reader ('the reader now sings'), so it doubles as the role description.",
+    "Ark directives. 'פותחים הארון' / 'סוגרים הארון' (tei:note type=instruction) go in either the haochez unit or the spine context. Decide and document, and keep the closing directive outside every stanza scope.",
+    "Page starts (tei:pb n=… ed=\"1965\" facs=…) for printed pp.109–116 in each project, replacing div/@facs. Known in-unit breaks: vechayyot (109/110 before כַּף רֶגֶל), veammekha He (110/111) and En (110/111 at 'created, | one was chosen'), ki_maqdishekha He (after יְיָ | אֱלֹהֵינוּ) and En (after 'Thy city,'), haochez He (stanza 16/17) and En (16/17), veyeetayu En ('will | praise Thee'). The Hebrew veyeetayu 115/116 break falls inside the optional parenthetical (וְיִזְבְּחוּ | לְךָ…). Choose a placement rule so foliation is not lost when the condition is false, e.g. a pb outside the j:conditional with the displacement documented.",
+    "Registry: register the poem/prayer identities and all stanza/part URNs once renamed, every new condition URN (variant options, וְהֹוֶה, ויזבחו, regional customs), the contributor id, and both project ids. The project id title/author components (prayerbook_for_the_new_year-heidenheim-1965-he vs …-marmorstein-1965-en) need NAMING_SCHEME validation. Each project's index.xml must define #project_source_bibl.",
+    "Source README: evidence for the abbreviation expansions (וְ״מַ / וְמַ״ / וְ״מ → וְכֹל מַאֲמִינִים; ק׳, ח׳, קו״ח; נ״א/כ״א), the column-heading convention for haochez, and the קהל וחזן role mapping."
+  ],
+  "notes": [
+    "Not approved. Schema validity was not assessed and would not change the verdict. Source wording was not checked against the scans: that audit runs separately, and readings are cited from candidate-round5 only as structural evidence (mid-line role marks, page continuations).",
+    "Checked and correct: contiguity. Each unit covers an unbroken source range with nothing missing from the middle. The only omissions are rubrics and directives (haochez) and frame material that belongs to the spine.",
+    "Checked and correct: role abbreviations use tei:choice abbr/expan inside notes, and acrostic/signature rubrics are description notes outside the recited words. Haochez response cues are encoded as printed with consistent expansions, and the English consistently renders 'All believe'.",
+    "Documentation conflict for the maintainers: SIDDUR_URN_SCHEME ('Speaker roles … Emitted as tei:note type=\"instruction\"') contradicts JLPTEI 'Kinds of rubric' ('Reader:' is a description placed inside the passage's scope).",
+    "Rights: the files declare CC0 for a 1965 English translation and edition. Confirm the copyright status before release; this is outside the encoding audit but blocks publication.",
+    "Coverage: all 14 XML files, both specs (JLPTEI-3 in full) and candidate-round5 were read in full. In draft-poem-units-refined.json, lines 1244–1379 (Haochez English paragraphs 8–18) were skipped; the XML for those stanzas was checked directly against the candidate English blocks."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "0d1a8f7a-c2d7-4c7b-93b5-117977d88416"
+  }
+}

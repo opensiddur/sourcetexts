@@ -1,0 +1,52 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "approved": true,
+  "findings": [
+    {
+      "severity": "medium",
+      "location": "heidenheim-1965-he/shemo_mefoarim.xml:44; machzor_expanded-opensiddur-he/index.xml:1652, :1665",
+      "issue": "The native Metz omission instruction (<tei:note type=\"instruction\">בק״ק מיץ אין אומרים</tei:note>) and the literal parentheses are both inside the canonical poem:shemo_mefoarim/kol_yoshvei stanza range. The expanded Shabbat route transcludes that canonical stanza twice, so the expanded output prints this regional omission rubric, unconditioned, at both kol yoshvei positions. The source prints the instruction only at the first occurrence (s134); the documentary second occurrence (he :52) has no instruction. So the claim 'expanded transcludes only prayer stanzas/refrains' needs qualifying: no navigation cues leak into expanded, but this source instruction does. The runtime word hashes cannot see it: canonical and shabbat_refrains kol_yoshvei have the same he hash (998c…), so nonspoken notes and parentheses are evidently normalized away.",
+      "recommendation": "This does not block draft structural approval, because the regional condition is deliberately unassigned pending human question 4. When human 4 is settled, either (a) move the Metz instruction just before the canonical stanza milestone into its own local navigation context (like shabbat_cues) and transclude it only in the documentary index, or (b) turn it into the j:conditional instruction child once the regional condition is assigned. Also decide then whether the expanded text should keep the source's literal parentheses inside the canonical stanza. Until then, list this in the recorded limitations."
+    },
+    {
+      "severity": "low",
+      "location": "heidenheim-1965-he/shemo_mefoarim.xml:44",
+      "issue": "The encoded reading and position of the first-occurrence note do not match the previous nonblind observation. The encoding has 'בק״ק מיץ' placed before '('. The prior nonblind look suggested 'נק״ק מ״ץ' (or similar) inside the parenthesis. The resolution file says this is a blind independent reading with pointing uncertainty recorded. I did not view s134 in this round.",
+      "recommendation": "Include both the siglum reading and the note's position (inside or outside the parentheses) in human question 4. No structural change is needed now."
+    },
+    {
+      "severity": "info",
+      "location": "marmorstein-1965-en/shemo_mefoarim.xml:39 vs :47",
+      "issue": "The English first kol_yoshvei (:39) has no parentheses, while the English second occurrence (:47) is parenthesized. The Hebrew has parentheses on both. This may reflect the English page faithfully. I did not view the English scan.",
+      "recommendation": "Confirm against the English page during source review. No structural change is needed."
+    }
+  ],
+  "checks": [
+    "he shemo_mefoarim.xml:45, :47, :48, :49, :50: each of the five cues (adar, varasham, zevach, yarum, motot) opens with <milestone unit=\"navigation\" corresp=\"…/repetition/shabbat_cues/<n>\"/> immediately after the owning stanza's bare <milestone unit=\"stanza\"/> terminator. Each encloses one tei:note type=instruction containing a tei:ref to the correct canonical refrain (shemo, shomerei, shapru, shivtei, shevutenu) and closes with a bare navigation milestone. dea (:46) correctly has no cue. No cue lies inside any stanza range.",
+    "he index.xml:438, :470, :472, :474, :503: each shabbat_cues/<n> is transcluded exactly once, directly after its owning stanza, inside the matching shabbat=true conditional. This makes all five printed cues reachable in documentary order and resolves the prior medium finding 1.",
+    "en index.xml:337-404 and en shemo_mefoarim.xml: no shabbat_cues transclusions and no navigation milestones. This is consistent with the stated English omission of the cues.",
+    "Expanded index :1646-1669: no shabbat_cues or shabbat_refrains targets. Only canonical poem:shemo_mefoarim stanzas are transcluded, and the refrains are expanded twice as before. The canonical stanza ranges in he :39-:51, :53-:54 contain no navigation cue. The one exception to 'prayer content only' is the Metz instruction inside kol_yoshvei (finding 1).",
+    "he :52 and en :47: the shabbat_refrains/kol_yoshvei range now has stanza milestone → a single non-empty source-attributed seg holding the literal parenthesized text → bare terminator. There is no j:conditional and no empty seg wrapper. qiryat (:51 / en :46) closes with its own terminator first. The structure is balanced by inspection. This agrees with range-balance.json, which shows status pass and 0 open conditions for both targets in both languages.",
+    "he :44: the canonical kol_yoshvei stanza is unconditioned and now pointed, and the Metz instruction is encoded literally as type=instruction. No shabbat or regional condition is assigned, as stated.",
+    "Documentary he/en weekday and Shabbat conditional blocks are unchanged in structure and remain mutually exclusive (shabbat=false/true, each with a matching endConditional).",
+    "Read runtime-verification.json (status pass; per-unit hash entries for documentary and expanded modes in both languages, with source_accuracy_not_certified=true) and range-balance.json (status pass). The runtime file contains no shabbat_cues units, so cue reachability rests on my static index inspection, not on the runtime comparison.",
+    "build.py header (lines 1-150) read only. I did not find or inspect the repeat_cue/corresp registry-validation code or test_resume_cue_is_addressable_outside_the_prayer_scope."
+  ],
+  "limitations": [
+    "Read-only review. I ran no build, validator, transclusion resolver or tests. The figures '68 tests plus 12 subtests pass' and '182 comparisons' are as reported to me. I did not count the runtime entries myself.",
+    "I did not verify importer support for optional repeat_cue/corresp or its registry validation (I read only the first 150 lines of build.py). I did not read the named test, so I cannot confirm the witnesses=['he'] configuration.",
+    "range-balance.json reports 'balanced_conditions: 0'. I read this as zero open conditions, which matches my static read of :51-:52, but the file does not define the field.",
+    "No source images were viewed in this round. Nothing here certifies Hebrew consonants, pointing or siglum readings, including the first kol yoshvei note, the אאפיר Etten melody cue, or the 'אם שבת' rubrics. The English p.139 absence of an acrostic note and the English parentheses are as reported, not checked by me.",
+    "Per-line ח׳/ק׳ sigla in the Shabbat strophes and Adderet part_3 are explicitly DEFERRED to source review and remain unencoded. They are not certified as transcribed.",
+    "Human questions 1-4 (Frankfurt direction; Shabbat/Metz directions and קליר attribution; aafir opening; the kol yoshvei regional scope and reading) remain open. The regional condition is deliberately UNASSIGNED, and no rite choice is settled or inferred.",
+    "This approval covers draft structural handling only. Full source and rite acceptance stays blocked by the explicit source uncertainties above. All new modules remain unaccepted drafts."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "79dfd18f-d7df-4ea5-b1db-409cc5c5dd51"
+  }
+}

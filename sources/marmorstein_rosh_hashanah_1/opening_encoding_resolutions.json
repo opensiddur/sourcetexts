@@ -1,0 +1,48 @@
+{
+  "review": "independent/opening_encoding_review.json",
+  "actual_invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "note": "The JSON body self-reports low; the CLI was explicitly invoked with --effort medium. Both records are retained."
+  },
+  "resolutions": [
+    {
+      "finding": "Missing maqaf and dagesh in Mah Tovu",
+      "status": "fixed",
+      "evidence": "Narrow 6× original-pixel crops confirm both marks; source accepted text and hash-bound adjudication corrected. Prior adjudication preserved."
+    },
+    {
+      "finding": "Adapted Psalm 95:6 source span",
+      "status": "fixed",
+      "evidence": "seg type=adaptation preserves the source citation while the corresp remains liturgical."
+    },
+    {
+      "finding": "Varani scope includes four verses",
+      "status": "retained",
+      "evidence": "Existing canonical registry entry mah_tovu/varani explicitly covers Psalms 5:8,26:8,95:6,69:14. Splitting its identity at every verse would change that existing scope. Source spans mark each biblical source independently."
+    },
+    {
+      "finding": "Divine Name after maqaf",
+      "status": "fixed",
+      "evidence": "Hebrew letter/point lookarounds now treat Hebrew punctuation as a boundary; regression test checks maqaf, sof pasuq and an unrelated Hebrew word."
+    },
+    {
+      "finding": "Ashrei uses a prayer-local identity for Psalm 115:18",
+      "status": "retained",
+      "evidence": "Reuse existing canonical ashrei/quoted_115_18 identity and bounded Bible source, matching the existing Birnbaum Ashrei module. No new identity created."
+    },
+    {
+      "finding": "Psalm 145 citation attachment",
+      "status": "verified",
+      "evidence": "Generated PDF shows the citation anchor at תְּהִלָּה לְדָוִד after the two introductory verses; HTML also links that milestone occurrence."
+    },
+    {
+      "finding": "Morning holiday constraint",
+      "status": "fixed",
+      "evidence": "Morning condition also requires opensiddur:holiday/rosh-hashana=1; weekday Minchah retains separate local conditions."
+    }
+  ],
+  "limits": [
+    "This audit covers accepted Mah Tovu/Ashrei excerpts and service scopes only. It does not certify whole leaves, the complete preliminary service or the full volume."
+  ]
+}

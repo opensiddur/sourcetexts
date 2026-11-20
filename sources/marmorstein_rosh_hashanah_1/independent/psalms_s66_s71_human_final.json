@@ -1,0 +1,77 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low as configured for this session. I fully read the human confirmation, the resolutions, the machine codepoint proof, the earlier audit, the HE and EN psalm_34/90/91 files, HE psalm_91_repeat.xml, the end of the HE index, the end of the EN index and the end of the expanded index's morning section. Read-only: no diff tool and no codepoint dump."
+  },
+  "human_readings_applied": true,
+  "repetition_reuse_confirmed": true,
+  "encoding_alignment_order_approved": true,
+  "findings": [
+    {
+      "severity": "none (verified)",
+      "file": "HE psalm_34.xml:42-43",
+      "issue": "34:1 reads וַיְגָרֲשֵׁהוּ and 34:2 reads אֲבָרֲכָה. Both reshes carry hataf-patah, as the human answered. 34:2 keeps the divineName יְהוָה with no holam, as previously settled.",
+      "recommendation": "No change."
+    },
+    {
+      "severity": "none (verified)",
+      "file": "HE psalm_90.xml:41",
+      "issue": "90:1 reads לָּנוּ (lamed with dagesh). 90:10 reads בָּהֶם (bet with dagesh). 90:16 reads פָּעֳלֶךָ (pe with dagesh, ayin with hataf-qamats). All three match the human answers. The settled readings around them are unchanged: plene שְׁמוֹנִים, no maqaf in יְמֵי שְׁנוֹתֵינוּ or כִּי גָז, and חִישׁ.",
+      "recommendation": "No change."
+    },
+    {
+      "severity": "none (verified, with a stated limit)",
+      "file": "HE psalm_34.xml:60",
+      "issue": "34:19 reads יוֹשִֽׁיעַ, with the meteg on the shin beside its hiriq and no mark on the following consonantal yod. I could not dump codepoints with a read-only tool. The machine proof in /tmp/psalms-s66/human-codepoints.json records the order shin, hiriq, meteg, shin-dot and no meteg on the yod. That order is also the canonical (NFC) order. No other meteg was added anywhere, which keeps the settled no-extra-meteg rule.",
+      "recommendation": "No change."
+    },
+    {
+      "severity": "none (verified)",
+      "file": "HE psalm_91.xml:41; HE psalm_91_repeat.xml:33-37; EN psalm_91.xml:41",
+      "issue": "Canonical 91:16 (אֹרֶךְ יָמִים אַשְׂבִּיעֵהוּ וְאַרְאֵהוּ בִּישׁוּעָתִי) has exactly one verse milestone. A bare verse terminator and then a chapter terminator close it. psalm_91_repeat.xml is a separate Hebrew-only div with corresp urn:x-opensiddur:text:siddur:rosh_hashanah/psalm_91_repeat. It holds only an inline transclusion of psalms/91/16@prayerbook_for_the_new_year-heidenheim-1965-he, with no copied text and no second psalms/91/16 identity. Because the repeat is a pure transclusion, the human's confirmation that the two printings have identical pointing (including אַשְׂבִּיעֵהוּ) holds by construction. Result: the Hebrew is recited twice and the English once. The EN project has no psalm_91_repeat file, and the EN index stops at psalms/91.",
+      "recommendation": "No change. The reuse is now authorized by the source, not provisional."
+    },
+    {
+      "severity": "none (verified)",
+      "file": "all six psalm files",
+      "issue": "Scopes are bounded: each chapter has one milestone with canonical @n and @corresp, verses are numbered in order with no duplicates (34:1–23, 90:1–17, 91:1–16), and each file ends with a verse terminator followed by a chapter terminator. HE and EN use the same verse URNs. Citations are standOff notes of type citation, each targeting verse 1 with a ref to the chapter URN (לד / צ / צא; 'Psalm 34.' / 'Psalm 90.' / 'Psalm 91.'). None of them is in the prayer text.",
+      "recommendation": "No change."
+    },
+    {
+      "severity": "none (verified)",
+      "file": "EN psalm_34.xml:41; HE psalm_91.xml:41; EN psalm_91.xml:41; HE psalm_34.xml:59",
+      "issue": "Page boundaries are specific to each language. In EN, pb n=19 (n68) falls inside 34:18, between 'the Lord' and 'listens'. In HE, pb n=20 (n69) falls inside 91:2, after אֹמַר לַיהוָה. In EN, pb n=20 (n70) falls inside 91:2, between 'I say to' and 'the Lord'. In HE, 34:18 starts the new page (pb n=19, n67), as previously settled. The biblScope page ranges are 18–19, 19–19, 19–20 and 20–20, and they agree with these breaks.",
+      "recommendation": "No change."
+    },
+    {
+      "severity": "none (verified)",
+      "file": "HE psalm_34.xml; HE psalm_90/91.xml; EN psalm_34/90/91.xml",
+      "issue": "Layout is unchanged. Hebrew 34 is set as tei:lg/tei:l with one verse per line. Hebrew 90 and 91 are each one running tei:p. Each English psalm is one paragraph. The milestones are independent of the p/l structure.",
+      "recommendation": "No change."
+    },
+    {
+      "severity": "none (verified)",
+      "file": "HE index.xml:274-278; EN index.xml:200-203; machzor_expanded-opensiddur-he/index.xml:1426-1433",
+      "issue": "Order is 19 → 34 → 90 → 91 in all three indexes, followed by psalm_91_repeat in the HE and expanded indexes only. In the expanded index, the repeat sits before endDeclare #section_morning_settings (shaharit=true, rosh-hashana=1) and before endConditional #section_morning_condition, so it falls inside the morning scope. No new conditions were added. Psalm 24 stays in its separate appendix div.",
+      "recommendation": "No change."
+    },
+    {
+      "severity": "limit of verification",
+      "file": "all reviewed XML",
+      "issue": "Comparing against the earlier audit's description and the settled list, the only text changes I found are the six human-adjudicated forms and the repeat's status moving from provisional to authorized. Every other reviewed token, milestone, pb, note and index entry matches what the earlier review approved. This was a full read against the recorded state, not a byte-level diff against a snapshot taken before the change.",
+      "recommendation": "If you need a mechanical guarantee that nothing else changed, run a git diff of the commit that applied the adjudications, limited to these files."
+    },
+    {
+      "severity": "advisory (carried over, not blocking)",
+      "file": "HE index.xml:279; HE psalm_91_repeat.xml",
+      "issue": "Two earlier advisories still apply. First, psalms/24 directly follows the repeat in the HE project index with no division between them. Second, the repeat's smaller type and the fact that it runs on inline in the print are not recorded. Separately, and outside this installment's scope, the EN index has no morning_qorbanot entry while the HE index does. I did not check that against the scan.",
+      "recommendation": "Handle these when Psalm 135 and the rest of the section are added. No text change needed."
+    }
+  ],
+  "verdict": "Approved for this installment. The human answers are applied exactly: hataf-patah under both reshes; pe with dagesh and ayin with hataf-qamats in פָּעֳלֶךָ; dagesh in בָּהֶם and לָּנוּ; and the meteg on the shin of יוֹשִֽׁיעַ, not on the following yod. The 91:16 repeat is a Hebrew-only structural occurrence that transcludes the single canonical 91:16, so the Hebrew is recited twice and the English once, with no duplicate canonical identity. The user explicitly authorized this reuse. Verse and chapter scopes are bounded, citations are standOff notes, the page breaks inside EN 34:18 and inside 91:2 in both languages are correct, Hebrew 34 is set in verse lines, and the order 19→34→90→91→repeat sits inside the morning scope. No settled question was reopened, and nothing was decided from standard Hebrew. Whole-volume acceptance remains false. The unrelated German glyph in source 57 remains explicitly uncertain.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "020cd6ef-1507-42d2-a650-6781cd8b9a5a"
+  }
+}

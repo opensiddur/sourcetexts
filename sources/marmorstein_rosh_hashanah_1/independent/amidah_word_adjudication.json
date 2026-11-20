@@ -1,0 +1,73 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "readings": [
+    {
+      "crop": "amidah-tight-chasdei.png",
+      "reading": "חַסְדֵּי",
+      "mark": "dagesh in dalet: present",
+      "evidence": "A single dot at mid letter height, under the dalet's roof and left of its leg. It is clearly apart from the yod and from the vowel dots under the line. Below the line: patah under het, sheva under samekh, tsere under dalet. The word crop shows the same.",
+      "confidence": "medium"
+    },
+    {
+      "crop": "amidah-tight-domeh.png",
+      "reading": "דּוֹמֶה",
+      "mark": "dagesh in dalet: present",
+      "evidence": "A dot at mid height, under the dalet's roof, between its leg and the vav. The holam dot sits higher, above the vav, so it is a separate mark. Segol under mem.",
+      "confidence": "medium-high"
+    },
+    {
+      "crop": "amidah-tight-av.png",
+      "reading": "אַב",
+      "mark": "patah",
+      "evidence": "A plain horizontal dash under the alef with no downward stem. In the same crop, the qamatz under the he of הָרַחֲמִים shows a clear T-stem, which gives a direct comparison.",
+      "confidence": "high"
+    },
+    {
+      "crop": "amidah-tight-keashan.png",
+      "reading": "כְּעָשָׁן",
+      "mark": "sheva under kaf",
+      "evidence": "Two dots stacked vertically under the kaf. There is no third dot making the triangle a segol would need. The dot inside the kaf is a dagesh. Qamatz under ayin and under shin.",
+      "confidence": "high"
+    },
+    {
+      "crop": "amidah-tight-niqdash.png",
+      "reading": "נִקְדַּשׁ",
+      "mark": "patah under dalet",
+      "evidence": "A plain dash under the dalet with no stem. The vertical stroke nearby is the qof's descender, not part of the vowel. There is also a dot inside the dalet. The word crop agrees.",
+      "confidence": "medium-high"
+    },
+    {
+      "crop": "amidah-tight-ufiqdonenu.png",
+      "reading": "וּפָקְדֵּנוּ (dalet region only)",
+      "mark": "dagesh in dalet: present",
+      "evidence": "A dot at mid height, inside the dalet's roof area, before the nun. It is apart from the vowel dots under the line. A separate dot also appears inside the pe.",
+      "confidence": "medium"
+    },
+    {
+      "crop": "amidah-tight-beappo.png",
+      "reading": "בְ(?)אַפּוֹ",
+      "mark": "dagesh in bet: unresolved",
+      "evidence": "The sheva under the bet, the hataf/patah dash under the alef and the dot inside the pe are all visible. Inside the bet there may be a faint speck, but it is too small to tell from print noise or the bet's own stroke at this resolution. I am not counting it as a dagesh.",
+      "confidence": "low"
+    },
+    {
+      "crop": "amidah-tight-layya.png",
+      "reading": "לַיְיָ (abbreviated divine name)",
+      "mark": "sheva under first yod: not clearly visible",
+      "evidence": "There is a dash (patah) under the lamed and a T/triangle mark (qamatz-like) under the yod pair. I can't separate a distinct two-dot sheva under the first yod; the marks merge at this resolution. The word crop doesn't contain this word.",
+      "confidence": "low"
+    }
+  ],
+  "pending_human": [
+    "beappo: check at higher resolution for a dagesh dot inside the bet; the tight crop can't separate it from noise.",
+    "layya: check for a sheva under the first yod; the tight crop is too blurred and the word crop doesn't contain the word."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "ecd11959-f906-4bc8-9bd5-76d9c9982770"
+  }
+}

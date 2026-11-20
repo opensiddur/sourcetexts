@@ -1,0 +1,95 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "approved": true,
+  "findings": [
+    {
+      "severity": "medium",
+      "location": "machzor_expanded-opensiddur-he/index.xml:1507-1508 (between shema/numbers_15 and prayer:emet_veyatziv); guideline-packet expanded_order morning_shema_blessings",
+      "issue": "The source prints a Hebrew directive on s112 about joining אלהיכם to אמת. The documentary index keeps it (heidenheim index.xml:338). The expanded recitation order leaves it out: it is not in the emet_veyatziv unit's instructions and not in expanded_order. It is a performance directive that applies to the recitation itself, and other directives of that kind are carried into the expanded order (for example vayevarekh_standing).",
+      "recommendation": "Add it to expanded_order as an instruction (or as a description inside emet_veyatziv) between numbers_15 and emet_veyatziv, in Hebrew only. Supply no English."
+    },
+    {
+      "severity": "medium",
+      "location": "build.py:401-402 (corresp=segment.get('source_reference_corresp', source_reference)); tests test_quoted_scripture_keeps_both_scopes_across_a_page_boundary (lines 197-224)",
+      "issue": "If source_reference_corresp is missing, the code silently falls back to the canonical Bible verse URN as a milestone @corresp inside a liturgical project. This redefines scripture and contradicts the occurrence-context policy and test_reprinted_verses_keep_context_without_redefining_scripture. An existing test asserts the fallback. No current installment data reaches this path, because every quote carries source_reference_corresp.",
+      "recommendation": "Raise an error when source_reference has no source_reference_corresp and chapter_corresp, or drop @corresp entirely. Update the old test to supply registered contexts or to expect the error."
+    },
+    {
+      "severity": "low",
+      "location": "build.py:343-346 and 397-400 (chapter milestone emitted with @n but no @corresp when chapter_corresp is absent)",
+      "issue": "Without chapter_corresp, the code opens the quote with a bare chapter milestone. Under schema scope rule 3 a bare milestone of a unit is a terminator. It can close an enclosing chapter scope and it opens nothing. The current data always supplies chapter_corresp.",
+      "recommendation": "Require chapter_corresp whenever reference_unit=verse or source_reference is used inside a non-biblical unit, or emit no opening chapter milestone at all."
+    },
+    {
+      "severity": "low",
+      "location": "build.py source_reference / chapter_corresp handling; test_bounded_scripture_context_does_not_end_its_enclosing_prayer_part",
+      "issue": "The rule that a quote context must be deeper than the active prayer-part path is only shown by one positive test. Nothing in the code or tests prevents a context at the same depth or shallower, which would truncate the prayer-part under scope rule 2.",
+      "recommendation": "At emission time, assert that chapter_corresp and source_reference_corresp have strictly more path components than the active prayer-part URN. Add a negative test."
+    },
+    {
+      "severity": "low",
+      "location": "heidenheim shacharit_deuteronomy_11_13_to_21.xml:34; packet citations for shacharit_numbers_15_37_to_41",
+      "issue": "The printed citations give a range (יג-כא, לז-מא) but ref/@target names only the first verse. Separately, blind reader A read these citations as 'דברים י״א י״ג' and 'במדבר ט״ו ל״ז', with no end verse and with gershayim. The printed range itself is therefore not corroborated.",
+      "recommendation": "After image adjudication, either use a range URN (deuteronomy/11/13-21, numbers/15/37-41) or reduce the text to what is actually printed."
+    },
+    {
+      "severity": "low",
+      "location": "heidenheim shacharit_amidah_qedushat_hayom.xml:32 (standOff commentary note target)",
+      "issue": "The editorial note on (מלכנו) targets the whole qedushat_hayom division rather than the point where (מלכנו) occurs. The schema expects commentary to target an anchor.",
+      "recommendation": "Put a tei:anchor before (מלכנו), target it, and keep the 'הערת המהדיר' label."
+    },
+    {
+      "severity": "low",
+      "location": "qedushat_hayom vattitten_lanu and melokh segments (he/en)",
+      "issue": "seg/@source covers only the first fragment of each prayer-part. Later unconditional words (הזכרון הזה… / קדשנו… מקדש… ישראל ויום הזכרון) have no source attribution. Prayer-part scope still covers the full extent, so the structure is unaffected.",
+      "recommendation": "Optionally carry the source attribution onto the continuation fragments."
+    },
+    {
+      "severity": "low",
+      "location": "shacharit_el_melekh_neeman condition instruction",
+      "issue": "The condition rubric reads 'יחיד', while the printed directive is 'יחיד אומר אל מלך נאמן.'. Dropping 'אומר' is acceptable editorially but less literal.",
+      "recommendation": "Consider 'יחיד אומר' as the condition note. The importer test already uses that form."
+    },
+    {
+      "severity": "info",
+      "location": "source-image readings, packet vs blind reports (not structural)",
+      "issue": "Discrepancies to adjudicate against the images, among others: s112 Emet directive wording (יש לסמוך…לכן…כמו יתנו ה״א vs יש לצרף…אכן…שלא יבולע הא׳); s116 Exod 15:11 printed with full cantillation and יְהֹוָה per blind, but the packet has it unaccented; וְקֹנֵה (defective) vs וְקוֹנֵה; s118 נִקְדַּשׁ vs נִקְדָּשׁ, אַחַת vs אֶחָת, בְּהַר צִיּוֹן without maqaf; s114 קַיֶּמֶת/וּמְבֹרָךְ/הָרַגְתָּ/וּמַגְבִּיהַּ and the maqaf in וַיְכַסּוּ־מַיִם; s120 rubric 'בשבת' vs 'אם שבת', זִכְרֹנֵנוּ/וּפִקְדֹּנֵנוּ; s122 בְּרִיתֶךָ dagesh, לְדוֹר vs לְדֹר; s124 קַדְמֹנִיּוֹת and וִירוּשָׁלָםִ; English 'astray Thus' (missing period, possible sic/corr).",
+      "recommendation": "Resolve these through the pending image and human adjudication. A confirmed printed dagesh or spelling error should get sic/corr, not silent normalization."
+    }
+  ],
+  "checks": [
+    "Structural readiness assessed only. Source-image certification was not requested and is not given; four human snippets and fine image findings remain pending.",
+    "Extent: the blind reports cover s108-s125 from Ahavah Rabbah to Yehi Ratzon (Temple). Packet and XML match that extent in Hebrew and English, including the page joins s108→110, s110→112, s112→114, s122→124 and s123→125. The reader repetition after the rule on s124/s125 is excluded.",
+    "HE/EN alignment: every corresp-bearing prayer-part and quote context appears in both languages with the same URN. The editorial English splits (Exod 15:18, Ps 19:15, Ps 60:7, Ps 146:10, Isa 5:16, Isa 47:4) mirror the Hebrew without changing any words.",
+    "Expanded order: Yotzer → Ahavah Rabbah → El Melekh Ne'eman (quorum minyan=false, rubric 'יחיד') → Shema → Barukh Shem (description 'בלחש') → Deut 6 → Deut 11 → Num 15 → Emet veYatziv → silent Amidah (10 units). No stray Psalm 24 in the morning section; Psalm 24 stays only in the documentary appendix.",
+    "Silent Amidah: the section is gated on opensiddur:recitation silent=true with no rubric, and declares silent=true and repetition=false locally. אתה קדוש is present, there is no Kedushah, and no reader-repetition words.",
+    "Quote contexts are all one or more path components deeper than the active prayer-part: emet_veyatziv/quotations/* under emet_veyatziv/{ezrat,mi_khamokhah,adonai_yimlokh,tzur_yisrael}, and silent_amidah/*/quotations/* under silent_amidah/*/* parts. Chapter and verse milestones are separate units, and their bare terminators do not close prayer-part.",
+    "Whole prayer segments cover their full extent including nested quotes: ezrat runs through Ps 106:11 to al_zot; tzur_yisrael, vetimlokh, qadosh_attah, elohai_netzor/text and yehi_ratzon_temple/text each run through their quote(s) and the closing words to an explicit prayer-part terminator.",
+    "No complete Bible chapter is overclaimed. Every chapter milestone's corresp is a local registered context (quoted_*_N, shema/deuteronomy_6/chapter, shema/deuteronomy_11/chapter, shema/numbers_15/chapter), bounded by bare verse and chapter terminators. No milestone carries a bible: URN.",
+    "Repeated occurrences (Deut 6:4, Exod 15:11/18, Ps 19:15, Ps 146:10 and others) are addressable by occurrence contexts and are not new canonical prayers. Canonical prayer URNs (ahavah_rabbah, emet_veyatziv, shema/el_melekh_neeman, amidah/shalom/*) are reused. Prayer-parts in the siddur context carry seg/@source pointing to the existing canonical prayer.",
+    "build.py registry gate covers source_reference_corresp and chapter_corresp. Numeric verse tails resolve through the registered chapter context.",
+    "Marked Shabbat brackets: the source parentheses are stripped and j:conditional type='marked' is used. The (זכרון) and (באהבה) insertions in יום (זכרון) תרועה (באהבה) are genuinely Shabbat-only. 'אם שבת' appears as the conditional's own instruction in Hebrew only. '(השבת ו)' joins to ישראל without a space. The English markers have no invented rubric.",
+    "(מלכנו) is kept literally, with no condition and no English, and is labeled by a Hebrew 'הערת המהדיר' commentary note.",
+    "English linkage cues (Hebrew catchwords) are absent from the English XML. English citations are printed without parentheses (Deut. VI. 4). Hebrew citations are kept as printed.",
+    "sic/corr: 'has'→'hast' (From Egypt has Thou), 'Praiscs'→'Praises', 'Thou has created'→'hast'. The pausal אָתָּה in Ahavah Rabbah is correctly left uncorrected.",
+    "El Melekh Ne'eman: Hebrew-only file, unpointed as printed in the directive, quorum minyan=false. The documentary index keeps the original 'יחיד אומר אל מלך נאמן.' directive in place. No English file exists.",
+    "No new Birnbaum transclusion in the installment. heidenheim-he comes before the Birnbaum dependency in transclusion priority, the English parallel is Marmorstein only, and no English fallback was added.",
+    "The Az Yashir absolute single-hyphen range URN was treated as valid syntax, not concatenation."
+  ],
+  "limitations": [
+    "Only Read tools were used. No build, schema validation, refdb resolution or test run was executed, so scope conclusions come from reading the XML against schema rules 2 and 3 and build.py.",
+    "specs/urn_registry was not read. The claims that the 95 new records are all contexts and that the canonical count is unchanged rest on build.py's registration gate and were not checked against the files.",
+    "UNIT_CONTAINED_BY in opensiddur/exporter/refdb.py was not opened. The prayer-part depth analysis assumes prayer-part is unlisted and falls under the component-count rule.",
+    "No page images were consulted. All source-image differences are reported as pending, not adjudicated.",
+    "Only part of the English XML was opened: emet_veyatziv, shema_yisrael, qedushat_hayom, qedushat_hashem and elohai_netzor. The other English units were checked through the packet only.",
+    "Old-batch disputes were not reopened (sof pasuq rendered as ':', prayer-part spelling variants, ki_va_sus mapping, Kaddish and Hamotzi dependencies)."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "67887418-bcfb-4ba4-9395-7339aa8d5a93"
+  }
+}

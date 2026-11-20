@@ -1,0 +1,117 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "low: one full pass over all six image thirds at the provided resolution, compared word by word with the dossier and the human pending-readings file. No higher-resolution crops were available, so marks too fine to read at this resolution are left unresolved, not certified."
+  },
+  "pages": [
+    {
+      "scan": "s198",
+      "complete_body_accounted": true,
+      "source_findings": [
+        {
+          "unit": "cantor_hineni",
+          "language": "he",
+          "printed": "וְחַנּוּן. אֱלֹהִים.",
+          "current": "וְחַנּוּן, אֱלֹהִים.",
+          "correction": "Replace the comma after וְחַנּוּן with a period: יְיָ יְיָ אֵל רַחוּם וְחַנּוּן. אֱלֹהִים.",
+          "reason": "The image shows a full stop after וְחַנּוּן, the same as the stops after אֱלֹהִים and וְנוֹרָא on that line. There is no comma.",
+          "certainty": "high",
+          "location": "s198-part2, Hineni line 4, which begins יְיָ יְיָ"
+        },
+        {
+          "unit": "cantor_hineni",
+          "language": "he",
+          "printed": "יְיָ יְיָ. אֵל",
+          "current": "יְיָ יְיָ אֵל",
+          "correction": "Add a period after the second יְיָ: יְיָ יְיָ. אֵל רַחוּם",
+          "reason": "There is a dot on the baseline after the second divine name, at line start, with a gap before אֵל. It looks like a full stop and matches how the line is divided by periods.",
+          "certainty": "medium",
+          "location": "s198-part2, Hineni line 4, start of line, right side"
+        }
+      ],
+      "unresolved": [
+        {
+          "unit": "cantor_el_melekh_neeman",
+          "word": "בִּתְפִלָּתִי (in עִמִּי בִּתְפִלָּתִי)",
+          "mark": "first letter, bet or kaf (כִּתְפִלָּתִי)",
+          "location": "s198-part1, El melekh line 4, second word from the right",
+          "reason": "At this resolution the first letter looks to me closer to kaf than bet. Bet and kaf differ only by the small foot at the base, so I can't certify either reading. The dossier's bet is the expected reading but has not been confirmed against the image. This needs a zoomed crop."
+        },
+        {
+          "unit": "cantor_el_melekh_neeman",
+          "word": "יַעֲשׂוּ, יֵבוֹשׁוּ (וְאַל יֵבוֹשׁוּ בִי שׁוֹלְחַי), וַיְהִי (שֶׁנֶּאֱמַר וַיְהִי), עֲדָתִי (וּבְעַד עֲדָתִי)",
+          "mark": "possible meteg/ga'ya on the first letter",
+          "location": "s198-part1, lines 3, 4, 6 and 9: a low stroke just right of the first letter of each word",
+          "reason": "Each word has a low stroke beside its first vowel that looks like a meteg. The human file already lists these as uncertain. I can see the strokes but can't tell for certain whether they are a meteg or part of the vowel."
+        },
+        {
+          "unit": "cantor_el_melekh_neeman / cantor_hineni",
+          "word": "כְבוֹדֶךָ (both occurrences), כְדַי, בִי (וְאַל יִכָּלְמוּ בִּי, as encoded), דִגְלֵנוּ, בְאַהֲבָה, כִסֵּא",
+          "mark": "whether the begadkefat or initial letter has a dagesh",
+          "location": "s198-part1 line 5; s198-part2 Hineni lines 3, 6, 9; s198-part3 line 2",
+          "reason": "Too fine to read at this resolution. The human file records כְבוֹדֶךָ, כְדַי, דִגְלֵנוּ and בִי as uncertain. Also, the dossier has בִּי with a dagesh in וְאַל יִכָּלְמוּ בִּי but בִי without one in the next clause. I can't confirm either one from the image."
+        },
+        {
+          "unit": "cantor_four_verses",
+          "word": "יָדַעְתִּי, הַקְשִׁיבָה, וְנַפְשִׁי, עַבְדּוֹ",
+          "mark": "meteg",
+          "location": "s198-part3, verse lines 1–4: a low stroke at the first letter of each word",
+          "reason": "Strokes are visible and look like meteg on יָדַעְתִּי and הַקְשִׁיבָה (the human file also calls these possible). There are similar strokes before וְנַפְשִׁי and עַבְדּוֹ. They are not legible enough to certify, so they stay unencoded until a closer inspection."
+        },
+        {
+          "unit": "cantor_el_melekh_neeman",
+          "word": "יְיָ / בַּייָ",
+          "mark": "exact placement of the points under the two yods",
+          "location": "s198, every divine name",
+          "reason": "The human file already notes the placement as approximate. I found nothing that contradicts it."
+        }
+      ],
+      "citation_and_instruction_findings": [
+        {
+          "unit": "cantor_el_melekh_neeman",
+          "item": "head תְּפִלָּה לִשְׁלִיחַ צִבּוּר.",
+          "finding": "Human pending item heading_tefillah_lishliach_tzibbur: the low stroke between לִשְׁלִיחַ and צִבּוּר sits on the baseline under the ח, as a patah would. A maqaf would sit at the top of the letters, and there isn't one. My reading matches the dossier (patah, no maqaf). Certainty medium-high."
+        },
+        {
+          "unit": "cantor_el_melekh_neeman",
+          "item": "rubric לאמרה בכונה וברתת ובחרדה קודם התפלה.",
+          "finding": "Matches the image: small Rashi-script type, centred, with a final period."
+        },
+        {
+          "unit": "cantor_el_melekh_neeman",
+          "item": "variant note נ״א מְנַשֶּׁה",
+          "finding": "Matches the image. It is printed inline in parentheses with נ״א in small type, the parenthesis opening at the end of line 5 and closing after מְנַשֶּׁה at the start of line 6, followed by a period. The encoding as an alternative reading plus a commentary note is consistent with the print."
+        },
+        {
+          "unit": "cantor_hineni",
+          "item": "rubric תפלה אחרת לש״ץ.",
+          "finding": "Matches the image."
+        },
+        {
+          "unit": "cantor_four_verses",
+          "item": "rubric קבלה מר״ת לומר ד׳ פסוקים אלו, קודם שמתחיל הש״ץ המלך וקודם הקדיש:",
+          "finding": "Matches the image, including the comma after אלו and the final colon. The verses carry no printed citations, and none are encoded as printed text. I see vowels only, no cantillation."
+        }
+      ]
+    },
+    {
+      "scan": "s199",
+      "complete_body_accounted": true,
+      "source_findings": [],
+      "unresolved": [],
+      "citation_and_instruction_findings": [
+        {
+          "unit": "all",
+          "item": "English body text",
+          "finding": "Every word and punctuation mark matches the image, including 'Moses (Menasseh)', the curly quotes ‘…’ around the Exodus verse, “I am that I am”, and 'Lord, Lord, merciful'. The line-break hyphens (gra-cious, im-plore, ap-proach, faith-fully) are layout only. The Hebrew incipit cues (אל, הנני, ויהי, ידעתי) are omitted as intended. The running head 'A Prayer for the Reader' matches head.en."
+        }
+      ]
+    }
+  ],
+  "coverage_limits": "I read all six image thirds in full at the provided resolution. Hebrew words, word order, rubrics, abbreviations and the variant note were all checked. Fine pointing (dagesh in begadkefat letters, meteg/ga'ya strokes, placement of the points under the divine name) can't be read reliably at this resolution, so anything I list as unresolved is uncertified, not confirmed. The bet/kaf question in עִמִּי בִּתְפִלָּתִי needs a zoomed crop before s198 can be accepted. s198 should not be accepted until the two punctuation corrections in Hineni are applied and the unresolved items are settled. On s199 I found no discrepancies.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "1a000bf1-99e7-4102-bd4a-c893def5e99b"
+  }
+}

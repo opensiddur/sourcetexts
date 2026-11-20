@@ -1,0 +1,78 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Low reasoning effort; adjudication, not a blind read. I read: the whole of human_completion_review_2026_11_172_194.json; lines 1–140 of human_completion_review_2026_11_147_158.json (the exact answers, the change list and the start of the meteg placements; I did not read the rest of the before/after witnesses); the whole of current.json, current.review.xml, guideline-excerpts.md and the prior yotzer-three-source-final/review.json; the native s102.jpg and s104.jpg; the enlarged rows s102-row1–3 and s104-row1, row2 and row5–9; and the enlarged human crops 172, 176, 180, 181 and 194. I did not open the other 17 human crops (173–175, 177–179, 182–193). For those decisions I relied on the human answers and the enlarged rows. I did not open s102-row4–9 or s104-row3–4, which hold only the out-of-scope Hakol and El Adon. I did not open yotzer102-108-final/review.json or yotzer-english-scope-final/review.json directly; my knowledge of them comes from the prior report and the user's summary. I compared every word by eye. I ran no diff, normalization, schema, compiler, refdb or URN tool, and I had no way to crop or zoom beyond the supplied images."
+  },
+  "witnesses": [
+    {
+      "stem": "yotzer_hameir",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "Extent: the text starts with הַמֵּאִיר on s102, just below the out-of-scope directive. It runs to אֲדוֹן above the s102 rule, then continues on s104 from the top line עֻזֵּנוּ … בַּעֲדֵֽנוּ: and stops before אֵל בָּרוּךְ. Hakol is not mixed in.",
+        "I checked every word, consonant, visible vowel, dagesh, maqaf, period/colon and the word order against s102 rows 1–3 and s104 row 1, and they match the current Hebrew. Examples: בְּכָל־יוֹם, בְרֵאשִׁית with no dagesh (151a), יְיָ., עָשִׂיתָ., קִנְֽיָנֶךָ:, מֵאָז., עוֹלָם:, עָלֵֽינוּ., מִשְׂגַּבֵּנוּ., בַּעֲדֵֽנוּ:.",
+        "Human 172–176 are present only at their exact occurrences. 172: מַעֲשֶֽׂיךָ, with the meteg after the segol on the SIN; the existing sin dot is kept, and the crop shows the stroke beside the segol under שׂ. 173: קִנְֽיָנֶךָ (NUN). 174: הַמֶּֽלֶךְ (MEM). 175: הָאָֽרֶץ (ALEF). 176: לָאָֽרֶץ (ALEF; the crop shows the stroke beside the alef's qamats, not the lamed's).",
+        "177 בְּחָכְמָה has no meteg, as the human decided.",
+        "Human 147 עָלֶֽיהָ, 148 בְּרַחֲמֶֽיךָ / עָלֵֽינוּ and 150a יִשְׁעֵֽנוּ / בַּעֲדֵֽנוּ are present at these weekday occurrences.",
+        "The Hebrew is identical in current.json and current.review.xml. There is no opening pb 37 (closed finding). div@facs is n101. The internal pb n=38 (facs n103) sits between אֲדוֹן and עֻזֵּנוּ, which is the real page turn.",
+        "Ps 104:24 is marked as a full verse: chapter milestone, verse milestone with corresp, bounded seg@source, then bare verse and chapter terminators. HE and EN carry the same URN. The guard is shabbat=false with no rubric. The EN text is identical to the before/after record."
+      ]
+    },
+    {
+      "stem": "yotzer_el_barukh",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [
+        "180 שֶׁעָשִׂיתָ: the meteg is on the wrong letter. The snippet asked about the SIN (meteg_host_question \"sin\"), and the human answered \"(180) yes\". But the change record gives the host as the first ש, and the current text reads שֶֽׁעָשִׂיתָ, with the meteg beside the segol under the initial SHIN. In the enlarged crop human-180.png, from right to left: segol under the first ש, qamats under ע, the ḥiriq dot under שׂ, and then the vertical stroke immediately left of that ḥiriq. There is no stroke beside the segol of the first ש. The word that matches the source and the human's answer is שֶׁעָשִֽׂיתָ (meteg on the שׂ, next to the ḥiriq). This changes how the human decision was applied, not the decision itself."
+      ],
+      "unresolved": [],
+      "verified": [
+        "Extent: the text runs from אֵל בָּרוּךְ on the s104 top line (the same printed paragraph as the end of Hameir) to סֶּֽלָה: just above the first horizontal rule. The first סֶּלָה on s104 belongs here.",
+        "Apart from 180, every consonant, visible vowel, dagesh, maqaf and punctuation mark matches s104 rows 1–2, in printed order. Examples: וּפָעַל with no dagesh (154), זָהֳרֵי, כְּבוֹד־אֵל, וּקְדֻשָּׁתוֹ:, יָדֶֽיךָ., וְעַל־מְאוֹרֵי־אוֹר with two maqafs.",
+        "Human 179 אֱלֹהֵֽינוּ (HE) is present. 181 יְפָאֲרֽוּךָ has the meteg on the RESH before the shuruq vav, not on the PE; the crop shows the stroke left of the ḥataf pataḥ under the alef.",
+        "178 זָהֳרֵי has no meteg, as the human decided.",
+        "Human 152a סֶּֽלָה and 153 שֶֽׁבַח / יָדֶֽיךָ are present at this occurrence only.",
+        "The JSON and XML Hebrew are identical. There is no pb. div@facs is n103. The guard is shabbat=false. There are no corresp milestones in HE or EN, so the alignment is unchanged. EN is identical."
+      ]
+    },
+    {
+      "stem": "lael_asher_shavat",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [
+        "194 שֶׁעָשִׂיתָ (last line): the same misplacement as 180. The snippet asked about the SIN and the human said yes, but the current text reads שֶֽׁעָשִׂיתָ (meteg on the initial SHIN). In crop human-194.png the vertical stroke sits immediately left of the ḥiriq dot under שׂ, and there is no stroke beside the first ש's segol. It should be שֶׁעָשִֽׂיתָ. This is a separate occurrence from 180 and is decided by its own crop."
+      ],
+      "unresolved": [
+        "s104 rows 8/9, מִמַּעַל (start of the second-to-last line, in וּ…בַּשָּׁמַיִם מִמַּעַל וְעַל־הָאָֽרֶץ): in the enlarged row there seems to be a short vertical stroke next to the pataḥ under the second (dageshed) MEM. If real, the word would be מִמַּֽעַל. The current text has מִמַּעַל with no meteg. No human or prior review has decided this occurrence. Confidence is low at the available enlargement, and it needs an exact crop for a human decision. Not approved."
+      ],
+      "verified": [
+        "Extent: the text runs from לָאֵל on s104 (an indented new paragraph directly after El Adon's הַקֹּדֶשׁ:) to סֶּֽלָה: on the last line of the page. There is exactly one סֶּלָה, at the very end (152c, with dagesh and meteg). The first s104 סֶּלָה (El Barukh) is not mixed in.",
+        "Apart from 194 and the unresolved מִמַּעַל, every consonant, visible vowel, dagesh, maqaf and punctuation mark matches s104 rows 5–9, in printed order. Examples: מִכָּל־הַמַּעֲשִׂים, עַל־כִּסֵּא כְבוֹדוֹ., שֶׁלַּיּוֹם as one word (155), מִכָּל־מְלַאכְתּוֹ:, הַשַּׁבָּת טוֹב with no punctuation between, לַייָ: (157), כָּל־יְצוּרָיו., בְּיוֹם שַׁבַּת קֹדֶשׁ: with pataḥ and dagesh (156), יִתְקַדַּשׁ., יִתְפָּאַר., וְעַל־הָאָֽרֶץ מִתָּחַת:, וְעַל־מְאוֹרֵי־אוֹר.",
+        "Human 182–190 and 193 are present at these exact occurrences: יָדֶֽיךָ (DALET); עַל־שֶֽׁבַח, זֶה שֶֽׁבַח and שֶֽׁבַח יְקָר (SHIN); מוֹשִׁיעֵֽנוּ (AYIN); אֱלֹהֵֽינוּ (HE); מַלְכֵּֽנוּ (KAF); תִּפְאֶֽרֶת (ALEF); הָאָֽרֶץ (ALEF, not HE); יְפָאֲרֽוּךָ (RESH, not PE).",
+        "191 יְפָאֲרוּ has no meteg on the PE, and 192 וִיבָרְכוּ has no meteg on the BET, as the human decided.",
+        "The JSON and XML Hebrew are identical. div@facs is n103 and there is no pb. The guard is shabbat=true.",
+        "Ps 92:1 carries the full-verse canonical source, and its existing occurrence context is unchanged. Ps 92:2a is nested as chapter, verse and half-verse (n=a) with source psalms/92/2/a. It closes with bare half-verse, verse and chapter terminators, then a bare prayer-part terminator before לְפִיכָךְ. The parent occurrence URI is preserved. HE and EN have the same corresp sets. EN is unchanged, including tei:sic 'Name.' / tei:corr 'Name,'. These are closed findings and were not reopened."
+      ]
+    }
+  ],
+  "limits": [
+    "I did not reopen any human decision from 147–158 or 172–194, and I did not carry any of them over to another occurrence. The 180/194 findings concern how the decisions were applied: the human approved a meteg on the SIN, and it was encoded on the initial SHIN.",
+    "Of the 22 human crops for 172–194, I opened only 172, 176, 180, 181 and 194. I checked the others (173–175, 177–179, 182–193) only against the human answers and the enlarged rows.",
+    "The only mark I could not resolve is the possible stroke in Lael's מִמַּעַל. Because of it, and because of the 194 misplacement, Lael is not approved. El Barukh is not approved only because of 180.",
+    "I opened no images of Hakol or El Adon (s102 rows 4–9, s104 rows 3–4). I did not open yotzer102-108-final/review.json or yotzer-english-scope-final/review.json. My statements about the earlier English and structural closures rely on the prior report and the user's summary.",
+    "Approval of encoding, citations and alignment comes from reading the XML against the guideline excerpts. I ran no schema, compiler, refdb or URN-resolution tool."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "19b969b4-18f2-4305-8f28-ce96efd27183"
+  }
+}

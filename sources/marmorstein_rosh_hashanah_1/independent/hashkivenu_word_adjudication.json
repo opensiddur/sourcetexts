@@ -1,0 +1,49 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "readings": [
+    {
+      "item": "mikol",
+      "text": "מִן־כָּל־בִּרְכָתָא",
+      "evidence": "In next-word-mikol.png, a separate tall vertical stroke comes right after the mem, before the first maqaf. The mem has the normal open shape, not a closed final mem, so the stroke is its own letter. Vav would make no sense there, so it reads as final nun. The page has min-kol, not מכל. I see a hiriq dot under the mem, a dagesh and qamatz in the kaf, and maqafs on both sides of כָּל. Line 1 is cut on the right edge; only ...לְעֵלָּא and the left part of the vav are visible.",
+      "confidence": "high (מן־כל); medium-high (hiriq under mem)"
+    },
+    {
+      "item": "vitromam",
+      "text": "וְיִתְרֹמַם",
+      "evidence": "In next-word-vitromam.png, there is no vav letter between resh and mem. The only thing in that gap is a small raised holam dot at the top, between ר and מ. The spelling is defective (no vav): ר מ ם. I see a patah under the first mem. Under vav, yod and tav I see shva, hiriq and shva.",
+      "confidence": "high (defective spelling); medium (exact vowels on the prefix letters)"
+    },
+    {
+      "item": "bakesseh",
+      "text": "בַּכֵּסֶה (tsere under kaf, tentative)",
+      "evidence": "In next-word-bakesseh.png, bet has a dagesh and a patah. Kaf has a dagesh. Below kaf and samekh there is one group of dots with a small meteg-like tick. As far as I can count, it has about 5 dots. That fits a 2-dot tsere under kaf plus a 3-dot segol under samekh; segol under both would give 6. At this resolution I can't firmly separate tsere from segol under the kaf. I'm not reading this from the usual spelling.",
+      "confidence": "low-medium"
+    },
+    {
+      "item": "role",
+      "text": "Line 1: כ־ר־ע… (cut on the left; vowels unclear). Line 2: דְכָל (ל at the cut edge). No speaker label is visible.",
+      "evidence": "The crop next-word-role.png does not show the small fully-spelled speaker label at all. Only two line-starts are visible, with blank space on the right and the text cut off on the left. Line 1 shows the letters כ, ר, ע, then the cut. There are dots below כ and ר, but I can't tell whether they are a hiriq plus a shva or something else. Line 2 shows ד with a shva below and no dagesh I can see, then כ with a qamatz, then the ascender of ל right at the cut. Anything past these letters is not visible.",
+      "confidence": "medium for the letters; low for line 1 vowels; label: not in crop"
+    },
+    {
+      "item": "shabbat",
+      "text": "(אם שבת), Rashi script, most likely unpointed",
+      "evidence": "In next-word-shabbat.png, the Rashi alef looks like ח and has a line-like stroke at its base. There is also a T-shaped, qamatz-like mark under the bet of שבת. I think both are letter shapes or print artifacts, not real vowel points. Real pointing of these words would need a hiriq under alef and a patah under shin, and neither is there. A patah-like line under alef doesn't fit either word. Only one point-like mark in the whole label fits a glyph feature better than pointing. The square-script line below has its own proper pointing, which shows the printer did point that text, but not this label.",
+      "confidence": "medium"
+    }
+  ],
+  "pending_human": [
+    "bakesseh: check at higher resolution whether the kaf has a tsere (2 dots) or a segol (3 dots), and count the dots under kaf and samekh separately.",
+    "role: the speaker label is not in next-word-role.png. A new crop that includes the label is needed to settle its spelling.",
+    "role: check the vowel under the כ and the shva under the ר in line 1.",
+    "shabbat: zoom in on the bet of שבת to check whether the T-shaped mark is separate from the letter (a real qamatz) or attached to it (part of the Rashi glyph)."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "c32afc07-c42f-4cc5-81fc-920f6deedd4a"
+  }
+}

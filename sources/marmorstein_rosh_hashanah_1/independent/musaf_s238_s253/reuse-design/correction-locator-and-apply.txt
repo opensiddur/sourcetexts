@@ -1,0 +1,95 @@
+    def walk(current):
+        if current.text:
+            parts.append(current.text)
+        for child in current:
+            if child.tag not in (f'{{{TEI}}}corr', f'{{{TEI}}}expan'):
+                walk(child)
+            if child.tail:
+                parts.append(child.tail)
+    walk(node)
+    return separator.join(parts)
+
+
+def _locate(documents, spec, span, kind):
+    """The one text position a correction or editorial note names: (root, node, attribute, start).
+
+    A spec names its `file` (``project/file.xml``) and the `before`/`after` text around `span`
+    in one text node (the whole of it, with `exact`), or `follows`: the end of the string value
+    of the element whose tail it begins. Text inside an earlier correction is never matched.
+    Optional `xpath` narrows the search to a single TEI element (including its
+    descendants), for identical printed passages whose occurrence matters.
+    It must match exactly once, so an entry never lands twice or goes stale silently.
+    """
+    root = documents.get(spec['file'])
+    if root is None:
+        raise ValueError(f"{kind} {spec['id']}: no document {spec['file']}")
+    before, after = spec.get('before', ''), spec.get('after', '')
+    target = before + span + after
+    matches = []
+    corrected = {f'{{{TEI}}}sic', f'{{{TEI}}}corr'}
+    scope = root
+    if 'xpath' in spec:
+        selected = root.xpath(spec['xpath'], namespaces={'tei': TEI, 'j': J})
+        if (not isinstance(selected, list) or len(selected) != 1
+                or not isinstance(selected[0], etree._Element)):
+            raise ValueError(f"{kind} {spec['id']}: xpath must select one element")
+        scope = selected[0]
+    for node in scope.iter():
+        if not isinstance(node.tag, str):
+            continue
+        inside = node.tag in corrected or any(a.tag in corrected for a in node.iterancestors())
+        for attribute in ('text', 'tail'):
+            if 'xpath' in spec and node is scope and attribute == 'tail':
+                continue  # The selected element's tail belongs outside its scope.
+            if inside and (attribute == 'text' or node.tag not in corrected):
+                continue
+            value = getattr(node, attribute)
+            if not value:
+                continue
+            if 'follows' in spec:
+                if (attribute == 'tail' and value.startswith(target)
+                        and ''.join(node.itertext()).endswith(spec['follows'])):
+                    matches.append((node, attribute, len(before)))
+            elif spec.get('exact'):
+                if value == target:
+                    matches.append((node, attribute, len(before)))
+            elif value.count(target) == 1:
+                matches.append((node, attribute, value.index(target) + len(before)))
+            elif value.count(target) > 1:
+                matches.extend([None, None])
+    if len(matches) != 1 or matches[0] is None:
+        raise ValueError(f"{kind} {spec['id']}: {len(matches)} places match in {spec['file']}")
+    return (root,) + matches[0]
+
+
+def _insert_at(node, attribute, start, end, new):
+    """Put `new` where characters start..end of node.text/.tail were, keeping the rest."""
+    value = getattr(node, attribute)
+    new.tail = value[end:]
+    setattr(node, attribute, value[:start])
+    if attribute == 'text':
+        node.insert(0, new)
+    else:
+        parent = node.getparent()
+        parent.insert(parent.index(node) + 1, new)
+
+
+def apply_corrections(documents, corrections):
+    """Mark each recorded misprint as tei:choice/tei:sic + tei:corr in its document.
+
+    `documents` maps a project-relative path to its root. Each correction gives the printed
+    `sic` and its `corr`, located as `_locate` describes.
+    """
+    for correction in corrections:
+        _, node, attribute, start = _locate(documents, correction, correction['sic'], 'Correction')
+        choice_node = etree.Element(f'{{{TEI}}}choice')
+        element(choice_node, 'sic', correction['sic'] or None)
+        element(choice_node, 'corr', correction['corr'] or None)
+        _insert_at(node, attribute, start, start + len(correction['sic']), choice_node)
+
+
+def apply_editorial_notes(documents, notes):
+    """Add each editorial note as a standoff tei:note on an anchor at its place in the text.
+
+    A note gives its `text` (English; Hebrew in it is marked as such) and is placed after the
+    `before` text, located as `_locate` describes. Notes are found through the anchor, so they

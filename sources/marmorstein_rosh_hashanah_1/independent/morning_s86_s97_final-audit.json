@@ -1,0 +1,26 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "encoding_alignment_order_approved": true,
+  "human_decisions_1_to_12_applied_correctly": true,
+  "english_unchanged_except_recorded_quote_correction": true,
+  "issues": [],
+  "observations": [
+    "Fix 1 is confirmed in both languages of nishmat.xml. Each verse has a chapter milestone, then a canonical verse milestone (corresp bible:psalms/35/10 and bible:psalms/103/1), then a seg whose source is the same Bible URN. The prayer-part scope is closed after כַּדָּבָר שֶׁכָּתוּב / 'which is written:'. The Psalm 35:10 seg and its verse and chapter terminators all close before מִי יִדְמֶה / 'Who is like Thee'. Psalm 103:1 opens after כָּאָמוּר / 'as it is said:'. The canonical verse milestones are kept, as you required. I withdraw my earlier advice to drop them.",
+    "Fix 2 is confirmed. HE Nishmat p.31 is on n91 and EN p.31 on n92. p.32 is on n93 in both. hael_betaatzumot opens with pb ed=1965 n=33 on n94 in both languages, and befi_yesharim and uvemaqhalot also point to n94. I did not reread Yishtabbach, as it is outside this file list. I accept the correction that the HE and EN Yishtabbach pages are on separate leaves (n95 and n96), and I withdraw my earlier demand that EN point to n95.",
+    "Fix 3 is confirmed. In appendix-context.xml, Psalm 24 is in its own div, section_supplementary_psalms (headed 'Appendix — daily psalm'), outside the morning section. It is from scan 351 (Archive n350) and marked preexisting. My earlier demand that it be added after Yishtabbach is withdrawn.",
+    "Fix 5: in az_yashir HE, 15:1 opens and the range runs to quoted_exodus_15_18, with repeated_exodus_15_18 as a separate milestone. Both are in one div and closed by verse and chapter terminators. For whether the endpoints resolve and the 48 word comparisons, I rely on runtime-verification.json, which I did not read.",
+    "Decisions checked one by one in the current XML: 1a/1b בְּרִיּוֹת and וּבְרִיּוֹתָיו have yod dagesh. 2 תִּטְּשֵׁנוּ has tet dagesh. 3 וּמֵחֳלָיִם has hataf-qamats. 4 יִדְמֶה־לָּךְ and יִשְׁוֶה־לָּךְ have lamed dagesh. 5 תִשָּׁבַע has no tav dagesh. 6 תִּתְבָּרַךְ has patah under resh. 7 יִשַׁי has no shin dagesh. 8 is sic וְכָרוֹת׳ with corr וְכָרוֹת. 9 is מִֽי־כָמֹ֤כָה with maqaf. 10 is יְכַסְֿיֻ֑מוּ with rafe on samekh after the sheva. 11 is sic אֶרְדֹּ֥ף: with corr אֶרְדֹּ֥ף. 12 is sic בָ֩א with telisha qetannah on bet, and corr בָא֩ with it after alef.",
+    "The XML has no attribute marking item 12's corr as a probable editorial correction. If that classification belongs only in the batch record, this is fine.",
+    "EN nishmat: apart from the seg wrappers, the only textual change is the sic/corr for the missing closing quote after 'Name.' I am judging only the current state here, not a diff.",
+    "Cosmetic: in HE nishmat, the Psalm 35:10 seg has a trailing space before </tei:seg>, and there are double spaces after כָּאָמוּר and its EN equivalent. The chapter milestones that have n but no corresp are terminators that close nothing. They are harmless but redundant.",
+    "Not certified: faint source points outside the 12 decisions, such as ייָ against יְיָ, meteg, and the divine-name orthography."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "af0c6a4d-d2c9-405e-a369-b6b132e71291"
+  }
+}

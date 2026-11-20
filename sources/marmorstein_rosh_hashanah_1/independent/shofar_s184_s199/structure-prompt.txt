@@ -1,0 +1,26 @@
+Review the new maḥzor installment for adherence to the general encoding guidelines, source alignment, canonical URN reuse and exact recitation order. Use Read only. This is a nonblind structural review following actual blind image readings; do not certify source accuracy wholesale. The source remains DRAFT, accepted pages100/355 unchanged. First read /home/efeins/.codex/worktrees/marmorstein-processor/master/schema/JLPTEI-3.md and the new implementation specification /home/efeins/.codex/worktrees/marmorstein-processor/master/specs/MARMORSTEIN_ROSH_HASHANAH_1.md. Inspect actual generated XML and source images, not just claims. New batch physical PDF scans184–199 (16leaves): Shofar prayers and30sounds; Shabbat community prayers; Ashrei; Torah return with alternate complete Psalms29/24; cantor ElMelekh, Hineni and four verses. Printed labels:184/185=81,186/187=82,188=83,189=84,190/191=85,192/193=86,194/195=87,196/197=88,198/199=89. Do not assume a constant arithmetic or facing-language pattern.188/189mixHEandEN.
+
+Important checks: source HareiAni and quiet Shofar prayers have no English translation; do not substitute translations. EnglishPsalm29omitsverse7: this absence must persist and alignment resumeatverse8. Englishprinted typos MayitbyandWiscompassion use sic/corr. Printed Scripture citations are standoff notes without parentheses; embedded full/partial verses have bounded chapter/verse/halfverse or versepart scopes using canonical identities with distinct context occurrences. Number29:1closingclause is halfverseb; Exodus19:19quote excludes meodandMoses; added precise versepartvayehi_qolendsbeforemeod in BOTH HebrewBibleproviderswithoutchanginganywords. Psalm90:17adaptedphraseinRibbon lacks middleclause and must not claim the completeBibleverse. FullPsalms47,24,29 and repeated Ashrei must not replace earlier edition occurrences. Hineni reuses existinghineni_the_prayer_of_the_shaliach_tsibur identity and five stanza boundaries, not a new prayer identity merely for this book. Other prayer identities are newly registered only after registry/project search found no equivalent.
+
+Expandedsequence: allShofaronweekdayonly;30sounds,9rows, finalteqiahgedolah; sitdirections aftertashratandtashat remainactions (שֵׁב, not an abbreviation/repetitioncue). Quietkashrakprayerbetweenfirstandsecondsets, quiettashtprayerbetweensecondandthirdsets. CongregationAshreiHaAm whileblowerquietUvkhen, thenblowerfullPsalm149(resumeelsewhereexpandedusingexistingmahzorwitness),thenblowerAshreiHaAmaloud. Do not insert a new English translation for quietprayers. Shabbat skipsShofar and entersYequmPurqan,MiSheberakh,Hanotenprayers thenAshrei. Torah-returnPsalm29onShabbat,Psalm24otherwise. Publiccommunity/Torahreturn/cantor tasks gatedonminyan;individualShofar remains possiblewithoutminyan. Native rubric on198directs4versesbeforeHamelekhANDbeforeKaddish: expanded inserts sameverses beforeHamelekh insideHaelBetaatzumotbyseparateexistingtextboundaries and beforeMusafKaddish atcurrentend. Morningselection mustcontinue throughMusafprelude with localservice-timeMusafdeclaration. Optionalpage85refsnowresolveinbothlanguages;Ashrei87refneedssameeditiondestination. Expandedhasno requirednavigation. SourceprogressnoteindexonlymovedafterlastcantorsectionbeforeseparatedailyPsalmappendix.
+
+Two literal source questions remain open: initialwordויסב/וישבon189andcantillationPsalm89:16. Third: exactRashiattributionline198. Do not resolve from memory. Flag actual structural/source discrepancies rather than treating all uncertainty as a blocker. Return JSON only {reviewer:{model,effort},approved:false,findings:[{id,severity,category,evidence,action}],checks:[],limitations:[]}.
+
+Files to inspect:
+/tmp/mahzor-s184/batch-data.json
+/tmp/mahzor-s184/primary-frozen.json
+/tmp/mahzor-s184/source-patches.json
+/tmp/mahzor-s184/quotation-decisions.json
+/tmp/mahzor-s184/independent-188.json
+/tmp/mahzor-s184/independent-single-196.json
+/tmp/mahzor-s184/independent-single-197.json
+/tmp/mahzor-s184/independent-198.json
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s188.jpg
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s189.jpg
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s190.jpg
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s196.jpg
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s198.jpg
+/home/efeins/.codex/worktrees/marmorstein-projects/master/project/machzor_expanded-opensiddur-he/index.xml
+/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/index.xml
+/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/index.xml
+Additionalnewfilesatbothsameprojectdirectories: shofar_psalm_47.xml,shofar_tashrat.xml,shofar_tashat.xml,shofar_tarat.xml,shofar_yehi_ratzon_qashraq.xml,shofar_yehi_ratzon_tashat.xml,shofar_uvkhen_yehi_ratzon.xml,shofar_ashrei_haam.xml,torah_ashrei.xml,torah_return_psalm_29.xml,torah_return_psalm_24.xml,torah_yehallelu.xml,torah_uvenuchoh.xml,cantor_el_melekh_neeman.xml,cantor_hineni.xml,cantor_four_verses.xml. SomehaveHEonly—absenceENdeliberate.

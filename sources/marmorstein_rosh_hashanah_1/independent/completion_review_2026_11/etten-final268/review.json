@@ -1,0 +1,38 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Read in full: etten-final268/current.json, etten-final268/current.raw.xml, late-piyyutim-after267/review.json, human_completion_review_2026_11_268_276.json, and the enlarged human-268.png snippet (s140 bbox 310,1495,560,1585). From the frozen late-piyyutim-after267/current.json I read lines 1-120, which hold the whole repetition_etten_lefoali unit and the start of the next unit. I compared the frozen and current Etten records by reading them side by side: title, urn, both HE paragraphs, the speaker abbr/expan, page_start, scan, printed_page, corresp, the instruction, and the full EN paragraph. I checked the current HE and EN XML against current.json. I did not compute byte or hash diffs or run any compiler, schema or render tool. I read no other new source areas blind."
+  },
+  "witnesses": [
+    {
+      "stem": "repetition_etten_lefoali",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "Human268 closes the only remaining source dispute. The after267 review (late-piyyutim-after267/review.json) withheld Hebrew approval for one reason only: whether the second dalet in בְּדִקְדוּקָם (s140 band3, line beginning וּתְחִלָּה, before יָחִילוּ) has a dagesh. That review had no other issues and no other unresolved items for Etten. human_completion_review_2026_11_268_276.json records answer 268 = 'yes' and change 268: before בְּדִקְדוּקָם, after בְּדִקְדּוּקָם, occurrences 1. The answer is explicit and definitive, so the dispute is settled.",
+        "The change is applied exactly once. Current paragraph 1 reads נְדִיבִים בְּדִקְדּוּקָם יָחִילוּ, with a dagesh in the second dalet, in both current.json and the HE tei:p of current.raw.xml. The frozen after267 current.json has בְּדִקְדוּקָם with no dagesh at the same spot. The word occurs only once in the unit.",
+        "The enlarged human-268.png is consistent with the human answer. There is a dot inside the second dalet, separate from the vav's shuruk dot. The decision rests on the human adjudication; the snippet supports it and does not contradict it.",
+        "Read comparison against the frozen record: apart from that one dagesh, paragraph 1 is word-for-word and point-for-point identical, including human264 דִּין, human265 בְּעִתּוֹ and human266 פָּעָֽלוּ, and all 17 earlier source corrections. Paragraph 2, זוֹכֵר בְּרִית רִאשׁוֹנִים. קַיֵּם שְׁבוּעָה לָאַחֲרוֹנִים:, is identical. Speaker abbr קו״ח / expan קהל וחזן, scan s140, printed_page 56, the page_start flags, the corresp URN, the title, the urn and the instruction כנגון אאפיר. (description, he) are all identical. This agrees with the payload's flag entire_payload_identical_except_human268_second_dalet_dagesh: true.",
+        "The English paragraph (s141, p. 56, the same corresp) is character-identical by reading to the frozen record and to the current EN XML. english_identical: true is confirmed.",
+        "The XML structure is kept. The HE div has the tune description note, then paragraph 1 with pb n=56 and the opening prayer-part milestone. Paragraph 2 is a new tei:p that starts with a description note using the existing canonical, unordered role urn:x-opensiddur:instruction:role/reader_and_congregation, with tei:choice abbr קו״ח / expan קהל וחזן keeping the printed order. It ends with the bare prayer-part terminator. The EN div has the matching milestone and terminator. No new role identity is created.",
+        "The guideline, English and citation verdicts from the after267 review were already positive. They carry forward unchanged, because nothing apart from the one Hebrew point changed."
+      ]
+    }
+  ],
+  "human268_closes_sole_remaining_source_dispute": true,
+  "limits": [
+    "I compared the frozen and current payloads by reading the Etten unit side by side, not with a byte or hash diff. I am relying on the programmatic whole-payload comparison that was reported, and my reading agrees with it. I did not read the rest of the frozen current.json past line 120 (the other units), because only Etten is being decided here.",
+    "Human answers 264-268 are closed and were not reopened. I raised no general meteg or familiar-spelling questions. Human269-276 belong to other stems and are outside this verdict.",
+    "Everything else in the Hebrew approval rests on the earlier complete source comparison (late-piyyutim-after267/review.json) plus human268. I did no new blind reading of other parts of the page.",
+    "I make no PDF or HTML visual approval claim, and I ran no compiler, schema or refdb checks."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "f8f89a67-9589-4bf4-b1c7-d221adc0bfad"
+  }
+}

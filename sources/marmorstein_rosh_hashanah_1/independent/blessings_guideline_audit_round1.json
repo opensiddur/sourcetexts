@@ -1,0 +1,168 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "medium",
+      "blocking": true,
+      "file": "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/ellu_devarim.xml:34-35",
+      "also": "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/readings.json:11359-11371",
+      "issue": "English Ellu Devarim is printed as two paragraphs but encoded as one tei:p with a literal newline inside it. TEI treats that newline as ordinary whitespace, so the printed break is lost.",
+      "evidence": "s47 band1: the line 'אלו The following matters have no legal measure:' is short and ends well before the right margin of the justified text (about x=1435 of 1670). The next line, 'The corner of the field…', starts at about x=207. That equals the first-line indent of the other p5 paragraphs (והערב about 185, ברוך about 200, יברכך about 200, אלהי about 210). Wrapped lines start at about x=160 ('the practice of charity…', 'to the following matters…'). So this is a new indented paragraph, not a wrap. The blind reader's note 'new line with no indent' is contradicted by the image; the enlarged reader's 'new indented line' is correct.",
+      "fix": "Split the EN unit into two tei:p: (1) 'The following matters have no legal measure:' and (2) 'The corner of the field, … with the study of Torah outweighing all of them.' Mirror this as en paragraph 1 and 2 in readings.json. Keep every word, the missing commas, 'study of the Torah' in the first sentence and 'study of Torah' in the last. HE stays one paragraph; do not force the two sides to match. Alignment is at the div level (prayer:ellu_devarim), so no milestone is needed."
+    },
+    {
+      "id": "F2",
+      "severity": "low",
+      "blocking": false,
+      "file": "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/morning_blessings.xml:23-27 (and EN counterpart)",
+      "issue": "The structural service file has a tei:bibl ptr but no biblScope. It carries printed content from p4 (the head, the p4 pb and the direction) and transcludes material running through p5.",
+      "fix": "Optional: add <tei:biblScope unit=\"pages\" from=\"4\" to=\"5\"/> to both language files, unless the project convention is deliberately to leave biblScope off structural/index files."
+    }
+  ],
+  "alignment_findings": [
+    {
+      "unit": "poem:adon_olam",
+      "status": "ok",
+      "detail": "HE: 10 tei:l, each opening with one of the ten stanza milestones (adon_olam … veim_ruchi), plus a bare stanza terminator in l10. EN: 12 tei:p carrying the same 10 milestones. Paragraph 8 ('The rock…') lies inside vehu_eli's scope and paragraph 12 ('God is with me…') inside veim_ruchi's, closed by the terminator. The paragraph counts were not forced to match."
+    },
+    {
+      "unit": "bible:numbers/6/24-/6/26",
+      "status": "ok",
+      "detail": "HE l1 holds verses 24 and 25, l2 holds verse 26. EN is one p with three verse milestones. Both sides close with a bare verse terminator and a bare chapter terminator. No printed citation is invented. Note: the leading <milestone unit=\"chapter\" n=\"6\"/> has no corresp, so under rule 3 it is formally a terminator that closes nothing. It is harmless and consistent with the brief's 'excerpt context, not a whole-chapter witness'; I record it, not flag it."
+    },
+    {
+      "unit": "al_netilat_yadayim, asher_yatzar, birkhot_hatorah/*, ellu_devarim, elohai_neshamah",
+      "status": "ok",
+      "detail": "Same div corresp on both sides; whole-prayer alignment. The EN Hebrew catchwords (ברוך, והערב, יברכך, אלו, אלהי, אדון) are correctly left out of the English prayer text."
+    },
+    {
+      "unit": "siddur:rosh_hashanah/morning_blessings",
+      "status": "ok",
+      "detail": "Both files have the same transclusion order, matching the print: AdonOlam, Netilat, AsherYatzar, direction, Laasoq, Vehaarev, AsherBachar, Num6, EluDevarim, ElohaiNeshamah. Each has its own head (HE 'תְּפִלַּת שַׁחֲרִית.', EN 'Morning Prayer') after pb n=4. Both indexes transclude this file in the same place."
+    },
+    {
+      "unit": "ellu_devarim EN paragraphing",
+      "status": "see F1",
+      "detail": "After the split, HE has 1 paragraph and EN 2. Alignment is unaffected."
+    }
+  ],
+  "remaining_source_ambiguities": [
+    "Known and pending HUMAN (not re-raised as a finding): the pointing of והראיון in Ellu Devarim. The XML still holds the draft placeholder וְהָרֵאָיוֹן (tsere). The micro and tight crops show a vertically stacked pair under the resh, a horizontal stroke touching the heh's qamatz, and a single dot at the alef's upper left. Left unnormalized, as required.",
+    "Lowest-confidence item among the settled marks: the final-kaf interior dot in וִיחֻנֶּךָּ. The tight crop shows a mid-height round dot plus a separate low qamatz (medium-high confidence). The XML matches; this is noted only because it is the weakest of the settled readings."
+  ],
+  "reviewed_files": [
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/adon_olam.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/al_netilat_yadayim.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/asher_yatzar.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/numbers_6_24_to_26.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/ellu_devarim.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/elohai_neshamah.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/birkhot_hatorah_laasoq.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/birkhot_hatorah_vehaarev.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/birkhot_hatorah_asher_bachar.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/morning_blessings.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/index.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/adon_olam.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/al_netilat_yadayim.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/asher_yatzar.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/numbers_6_24_to_26.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/ellu_devarim.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/elohai_neshamah.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/birkhot_hatorah_laasoq.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/birkhot_hatorah_vehaarev.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/birkhot_hatorah_asher_bachar.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/morning_blessings.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/index.xml",
+    "schema/JLPTEI-3.md (URN scope, milestones/terminators, Bible, Kinds of rubric, Page references)",
+    "sources/.../readings.json (units adon_olam…elohai_neshamah, source_order.morning_blessings, navigation.elohai_neshamah_early, documentary_instructions.blessings_heading_*)",
+    "sources/.../primary/blessings_s44_s47.json, independent/blessings_s44_s47.json, blessings_s44_s47_comparison.json, independent/blessings_s44_s47_{enlarged,micro,tight}.json",
+    "Images: s44–s47 band0–3, gviati-tight, vichunekkha-tight, bekirbi1-tight, micro-bekirbi2, micro-harayon"
+  ],
+  "verdict": "changes_requested (one medium fix: F1 English Ellu Devarim paragraph split; F2 optional). Everything else checked matches the scans and the guidelines.",
+  "checks": [
+    {
+      "check": "HE Adon Olam text vs s44",
+      "result": "pass",
+      "note": "10 lines match. No period after שֵׁנִי. גְּוִיָּתִי with dagesh (tight crop: high). Standard יְיָ in divineName."
+    },
+    {
+      "check": "HE Asher Yatzar vs s44",
+      "result": "pass",
+      "note": "נְקָבִים ×2 and חֲלוּלִים ×2. No period after the second נְקָבִים. 'שֶׁאִם יִפָּתֵחַ' with a space, no maqaf."
+    },
+    {
+      "check": "HE Netilat, Laasoq, Vehaarev, AsherBachar vs scans",
+      "result": "pass",
+      "note": "First תוֹרָתְךָ has shva, second תוֹרָתֶךָ has segol. (לִשְׁמָהּ) with mappiq kept. The pilot wording is unchanged."
+    },
+    {
+      "check": "HE Numbers 6:24–26 vs s46",
+      "result": "pass",
+      "note": "Line 1 = verses 24+25, line 2 = verse 26. וִיחֻנֶּךָּ has an interior dot plus a separate qamatz."
+    },
+    {
+      "check": "HE Ellu Devarim vs s46",
+      "result": "pass_except_known_pending",
+      "note": "One paragraph. וְהַלְוָיַת with ה is the source reading. Only the והראיון placeholder remains (pending human)."
+    },
+    {
+      "check": "HE Elohai Neshamah vs s46",
+      "result": "pass",
+      "note": "Literal small (הִיא) with no condition invented. Both בְּקִרְבִּי have dagesh (bekirbi1 tight: high; micro-bekirbi2: dot visible). readings.json was updated to match; the earlier primary/blind 'בְקִרְבִּי' was superseded."
+    },
+    {
+      "check": "EN texts vs s45/s47",
+      "result": "pass except F1",
+      "note": "Adon Olam has 12 paragraphs (stanzas 7 and 10 each run over 2). Source quirks 'lives .' and 'Israel .' are kept. Numbers reads 'on you'/'towards you'. Ellu Devarim has the missing commas and the final 'study of Torah'. Hyphenated line breaks are joined correctly."
+    },
+    {
+      "check": "Direction on both sides",
+      "result": "pass",
+      "note": "Wording matches s44/s45 and readings.json keeps the raw '(P. 5.)'. The TEI has no literal page number. The Hebrew name stays in tei:foreign. Only '(P. <ref/>.)' is wrapped in seg optional-page-reference. Each target is the same-language project (HE → elohai_neshamah@…heidenheim-1965-he, EN → @…marmorstein-1965-en), and both targets exist later in the same service file on printed p5. type=instruction (directive) with no rend."
+    },
+    {
+      "check": "Page breaks and facs",
+      "result": "pass",
+      "note": "p4 pb opens morning_blessings before the head (HE n43, EN n44). p5 pb sits at the start of Vehaarev (HE n45, EN n46). No false mid-page pb at the direction or elsewhere. Running heads on p5 are excluded. facs follows n = scan − 1, consistent with the index (e.g. p8 = n51/n52). Laasoq has no pb, consistent with page_start=false; I didn't find the Laasoq unit in readings.json to confirm the flag itself."
+    },
+    {
+      "check": "biblScope per unit",
+      "result": "pass",
+      "note": "p4: AdonOlam, Netilat, AsherYatzar, Laasoq. p5: Vehaarev, AsherBachar, Num6, EluDevarim, ElohaiNeshamah. See F2 for the structural file."
+    },
+    {
+      "check": "Canonical reuse / identities",
+      "result": "pass",
+      "note": "Adon Olam uses the ten incipit stanza names (not numeric ones) on both sides. prayer:ellu_devarim is used with no claim to be an exact Mishnah or Talmud quotation and no new variant identity. Six units, no new roots. I didn't open Birnbaum's file; the names are checked for consistency between the two sides only."
+    },
+    {
+      "check": "Milestone scope and terminators",
+      "result": "pass",
+      "note": "Stanza and verse sequences end with exact-unit bare terminators. Paragraph closures are not relied on as terminators."
+    },
+    {
+      "check": "Index transclusion",
+      "result": "pass",
+      "note": "Both indexes transclude the common morning_blessings file between morning_preliminaries and the p8 pb. The structural root is not mistaken for a reusable prayer."
+    },
+    {
+      "check": "No invented citations or substitute translations",
+      "result": "pass",
+      "note": "No Bible or Mishnah citation notes, no supplied English, no rend on rubrics."
+    },
+    {
+      "check": "Pre-existing p8 Torah-blessings direction (index.xml:269-271)",
+      "result": "noted, not in scope",
+      "note": "That direction wraps the whole sentence in optional-page-reference, whereas the new p4 direction wraps only the page clause. Both are valid under the guideline; recorded only for consistency."
+    }
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "398479c3-67a9-44a2-977e-2e92b324b8e9"
+  }
+}

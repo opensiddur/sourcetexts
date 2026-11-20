@@ -1,0 +1,106 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Medium for this delta. I read the corrected veyippatechu image first, on its own, and recorded my reading (וְיִפָּתְחוּ) before looking at any expected form. Then I read the six other original crops for the seven-mark delta: ktohu, veyechredu, vadin, ladaat, naqi_first and hammelitzim. As instructed, I ignored veyippatechu.png, naqi_second.png and chet-points-pixels.png. I read all of current.json for this stem and the Melekh Bemishpat Hebrew and English files in current.review.xml (lines 1–40). I read the whole 277 delta proof (BEFORE and AFTER witnesses, all 1020 lines), human-authorities.json, english-preservation-proof.json, existing-wlc-halfverse-proof.json, guideline-excerpts.md, the after-276 review and the seven-crop review. For routing-context.json I read only the first 2290 lines, which cover the Melekh source-order entry and the expanded morning repetition. I compared BEFORE and AFTER by eye, segment by segment. I did not run a byte-level diff tool."
+  },
+  "witnesses": [
+    {
+      "stem": "melekh_bemishpat_yaamid_aretz",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "The delta has exactly seven changes. Comparing the BEFORE and AFTER Hebrew segments of the 277 proof, the only differences are כְּתֹהוּ→כַּתֹּהוּ (s146), וְיֶחְרְדוּ→וְיֶחֶרְדוּ, וְדִין→וָדִין, לְדַעַת→לָדַעַת (s148), נְקֵי→נָקִי (s150), and וְיִפְתְּחוּ→וְיִפָּתְחוּ, הַמֵּלִיצִים→הַמְּלִיצִים (s151). Each changes only vowel points or dagesh. No consonant, word, punctuation mark, segment boundary or metadata field changed.",
+        "Each change hits only its exact occurrence. The later 'אִי נָקִי' on s150 was already correct and is unchanged. 'לָדִין' and the other דין-rhyme words are unchanged.",
+        "current.json and the Hebrew file in current.review.xml both match the 277 AFTER witness. All seven corrected forms appear at their sites in the XML.",
+        "Human277 is applied exactly as given: וְיֶחֶרְדוּ, with segol under chet and sheva under resh. In veyechredu.png I see a segol triangle under chet and the vertical pair to its left under resh. That is consistent with the human answer, and it resolves the hataf-segol/segol question the seven-crop reviewer left open. No hataf-segol was introduced.",
+        "My reading of the corrected full-word veyippatechu image, made before I consulted the expectation: vav sheva, yod hiriq, pe with dagesh and qamatz, tav with sheva and no dagesh, chet unmarked, final vav shuruk. That is וְיִפָּתְחוּ. It matches the primary reader and the seven-crop reviewer's top-edge reading. The whole word is visible, so the earlier wrong-crop problem no longer applies. This is the fresh independent confirmation the 277 proof requested.",
+        "I re-read the five agreed crops and agree with each: כַּתֹּהוּ has patah and dagesh under/in kaf and dagesh plus holam on tav. וָדִין has qamatz under vav and hiriq under dalet. לָדַעַת has qamatz under lamed and patah under dalet and ayin. נָקִי has qamatz under nun and hiriq under qof. הַמְּלִיצִים has patah under he and dagesh plus a vertical sheva on mem.",
+        "Human269–275 are kept exactly: יֵחָנֵן, בְּבוּקָה, בְּתַבְנִית, מְחֻזָּקָה, מְעֻזָּקָה, בְּחָזְקָה and שְׁרֵא נְהוֹרָא. The earlier human readings וְכַעֲלוֹת שׁוֹפַר מִדַּלֵּי and וְיֻקְדַּשׁ בְּאַחַת מִשָּׁלֹשׁ are also unchanged.",
+        "Both למעלה words on s150 are kept: 'וְעַד לְמַעְלָה לְמַעְלָה רַבּוֹת'. Nothing was normalized.",
+        "Encoding is unchanged by the point corrections. All six source segs are bounded by chapter, verse and half-verse milestones, each with a bare terminator of the same unit. The two Ps 8:10b occurrences use different corresp values (psalms_8_first and psalms_8_second). Isa 6:3b keeps type=adaptation. The earth/judgment/merit/mystical prayer-part milestones are in order and end with a bare terminator. The ק׳ description sits outside the second seg. 'סלוק.' remains a description. No quoted source is unbounded.",
+        "Source and URN alignment are unaffected. None of the seven words is inside a quotation seg. The WLC half-verse identities in existing-wlc-halfverse-proof.json are unchanged, and no new canonical identity or split was introduced.",
+        "English is unchanged. The English body in the AFTER witness, in current.json and in the English file of current.review.xml matches the BEFORE witness and the accepted payload cited in english-preservation-proof.json. All shared corresp values are as before. The mystical part is still Hebrew-only and sits inside the merit row.",
+        "Both s149 notes are unchanged. The incomplete printed translator sentence is kept as tei:seg type=incomplete-source-note. The bounded editorial note is credited with resp=codex and claims only that no continuation appears on scan pages 150–159.",
+        "Routing is unchanged. melekh_bemishpat_yaamid_aretz is still at source-order index 123, between uvekhen_lekha_taaleh_qedushah and repetition_qedushah, and keeps the same position in the expanded morning repetition."
+      ]
+    }
+  ],
+  "delta_readings": [
+    {
+      "scan": "s146",
+      "before": "כְּתֹהוּ",
+      "after": "כַּתֹּהוּ",
+      "basis": "agreed primary + independent enlarged crop; reconfirmed on ktohu.png",
+      "approved": true
+    },
+    {
+      "scan": "s148",
+      "before": "וְיֶחְרְדוּ",
+      "after": "וְיֶחֶרְדוּ",
+      "basis": "Human277 (authoritative): chet segol, resh sheva; consistent with veyechredu.png",
+      "approved": true
+    },
+    {
+      "scan": "s148",
+      "before": "וְדִין",
+      "after": "וָדִין",
+      "basis": "agreed primary + independent; reconfirmed on vadin.png",
+      "approved": true
+    },
+    {
+      "scan": "s148",
+      "before": "לְדַעַת",
+      "after": "לָדַעַת",
+      "basis": "agreed primary + independent; reconfirmed on ladaat.png",
+      "approved": true
+    },
+    {
+      "scan": "s150",
+      "before": "נְקֵי",
+      "after": "נָקִי",
+      "basis": "agreed primary + independent; reconfirmed on naqi_first.png; first occurrence only",
+      "approved": true
+    },
+    {
+      "scan": "s151",
+      "before": "וְיִפְתְּחוּ",
+      "after": "וְיִפָּתְחוּ",
+      "basis": "my independent reading of veyippatechu-corrected.png, made before consulting the expectation, plus primary reader and the seven-crop reviewer's partial view",
+      "approved": true
+    },
+    {
+      "scan": "s151",
+      "before": "הַמֵּלִיצִים",
+      "after": "הַמְּלִיצִים",
+      "basis": "agreed primary + independent; reconfirmed on hammelitzim.png",
+      "approved": true
+    }
+  ],
+  "prior_full_review_used": "/tmp/mahzor-backlog/morning-tail-after276/review.json: the full word-by-word review of s146/s148/s150/s151, which withheld Hebrew source approval only for these seven marks. I combined it with /tmp/mahzor-backlog/melekh-seven-details/review.json and the exact 277 delta proof. I did not redo the whole-poem review.",
+  "source_images_read": [
+    "/home/efeins/.codex/visualizations/2026/11/08/01a1bd21-7b3c-7f01-87c4-2a96842e88bc/backlog/veyippatechu-corrected.png",
+    "/tmp/mahzor-backlog/melekh-seven-details/ktohu.png",
+    "/tmp/mahzor-backlog/melekh-seven-details/veyechredu.png",
+    "/tmp/mahzor-backlog/melekh-seven-details/vadin.png",
+    "/tmp/mahzor-backlog/melekh-seven-details/ladaat.png",
+    "/tmp/mahzor-backlog/melekh-seven-details/naqi_first.png",
+    "/tmp/mahzor-backlog/melekh-seven-details/hammelitzim.png"
+  ],
+  "limits": [
+    "Scope: the Hebrew source approval rests on the earlier full after-276 review of s146–s151 plus this check of the seven-mark delta. In this session I did not re-read the full native pages or bands for s146–s151, the English page s147, or s149.",
+    "I compared BEFORE and AFTER by eye, segment by segment. I did not run a byte-level or Unicode-normalization diff.",
+    "I did not open the human 277-veyechredu.png snippet. For that word I relied on the human answer, which is authoritative for this occurrence, and checked only that the seven-detail crop is consistent with it.",
+    "I read routing-context.json only through line 2290 and current.review.xml only through line 127. All the Melekh content falls in those ranges.",
+    "I did not run schema validation, the compiler, refdb, validate_urn_references or any export. This review makes no claim about schema, the compiler, PDF/HTML or export.",
+    "I did not assess the other stems in the payload (avinu_malkenu, morning_full_kaddish)."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "9450c2f7-ff64-46ea-81b7-79ac7ebc9884"
+  }
+}

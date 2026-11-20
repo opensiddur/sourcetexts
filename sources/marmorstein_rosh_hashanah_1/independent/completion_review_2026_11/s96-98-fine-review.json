@@ -1,0 +1,112 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "readings": [
+    {
+      "target": "כרעותה (kiruteh-correct)",
+      "scan": "s96",
+      "reading": "Consonants: כרעותה. The he has a mapiq (dot inside it). The vav reads as shuruk (dot beside the vav). Two dots side by side under tav (tsere). There is no visible dot inside the kaf. Under the kaf/resh area there are two dots side by side that I can't confidently assign; they could be hiriq under kaf plus a stray mark, or a sheva split by the crop.",
+      "certainty": "medium for kaf dagesh absent, low for kaf/resh vowels",
+      "unresolved": [
+        "vowel under kaf (hiriq?)",
+        "whether resh has sheva",
+        "crop bottom is tight: marks below the baseline may be clipped"
+      ],
+      "reason": "The inside of the kaf is clean at this enlargement. The marks under the letters sit horizontally, so they don't read as a clear sheva under resh. Did not check against full s96.jpg."
+    },
+    {
+      "target": "ראשון (rishon-full)",
+      "scan": "s96",
+      "reading": "רִאשׁוֹן: hiriq (single dot) under resh, shin dot on the right, holam on the vav.",
+      "certainty": "high",
+      "unresolved": [],
+      "reason": "A single dot sits clearly under the resh with nothing else around it."
+    },
+    {
+      "target": "לעולם (leolam-shem-full, in מלכותו לעלם ועד)",
+      "scan": "s96",
+      "reading": "לְעֹלָם, spelled defectively (no vav): sheva under the first lamed, holam dot at the upper left of the ayin, qamatz under the second lamed. No meteg at the first lamed.",
+      "certainty": "high for spelling and vowels, medium-high for meteg absent",
+      "unresolved": [],
+      "reason": "Only the two sheva dots appear under the first lamed, with no vertical stroke."
+    },
+    {
+      "target": "לעולם (leolam-response, …רך: לעלם וע…)",
+      "scan": "s96",
+      "reading": "לְעֹלָם, spelled defectively: sheva under the first lamed, holam at the upper left of the ayin, qamatz under the second lamed. No meteg at the first lamed. Next word starts וָ.",
+      "certainty": "high for spelling, medium-high for pointing",
+      "unresolved": [
+        "bottom edge is tight, but the marks under the lameds are visible"
+      ],
+      "reason": "Same layout as the other instance. No vertical meteg stroke at the first lamed."
+    },
+    {
+      "target": "התאזר בקדושים (hitazar-bikdoshim)",
+      "scan": "s98",
+      "reading": "הִתְאַזָּר: hiriq under he, sheva under tav, patah under alef, qamatz under zayin (a possible dagesh dot by the zayin is unclear). בִּקְדוֹשִׁים: dot inside the initial bet (dagesh), single dot under bet (hiriq), sheva under qof, holam on vav, shin dot, hiriq under shin. No dot inside the qof.",
+      "certainty": "medium-high for zayin qamatz and qof without dagesh, medium for bet hiriq",
+      "unresolved": [
+        "dagesh in zayin",
+        "the dot under bet versus the qof's sheva is close spacing"
+      ],
+      "reason": "The qamatz under zayin is clear. The sheva is under the qof and the single dot is under the bet. The qof's interior is clean."
+    },
+    {
+      "target": "התאזר (hitazar2-row, מלך התאזר עז)",
+      "scan": "s98",
+      "reading": "הִתְאַזָּר: hiriq under he, sheva under tav, patah under alef, qamatz under zayin. Dagesh in zayin not resolvable at this scale. Followed by עֹז.",
+      "certainty": "medium",
+      "unresolved": [
+        "dagesh in zayin"
+      ],
+      "reason": "At row scale the mark under the zayin matches the qamatz shape in the enlarged crop. Too small to check for a dagesh."
+    },
+    {
+      "target": "כשלמה / כאורה (kashalmah-kaorah)",
+      "scan": "s98",
+      "reading": "כַשַׂלְמָה: patah under kaf, no dot inside the kaf. כָאוֹרָה: qamatz under kaf, no dot inside the kaf. Neither initial kaf has a visible dagesh.",
+      "certainty": "medium-high",
+      "unresolved": [
+        "shin/sin dot and dagesh in the shin of כשלמה: not targeted"
+      ],
+      "reason": "The inside of both kafs is clean at this enlargement."
+    },
+    {
+      "target": "לנצח (lanetzach-row)",
+      "scan": "s98",
+      "reading": "לָנֶצַח: a qamatz-shaped mark (vertical tick on the bar) under the lamed, not a two-dot sheva. Segol under nun, patah under tsade.",
+      "certainty": "medium",
+      "unresolved": [
+        "qamatz vs patah+meteg under the lamed at row resolution"
+      ],
+      "reason": "The mark under the lamed is a stroke, not two vertical dots, so it isn't a sheva. Same word is visible at the top of yaat-row and matches."
+    },
+    {
+      "target": "יעט (yaat-row, מלך יעט קנאה)",
+      "scan": "s98",
+      "reading": "יעט: the mark under the yod is a bar with a downward tick, which looks like qamatz. Patah under ayin. The יעיר in the next line shows the same kind of mark under its yod.",
+      "certainty": "low-medium",
+      "unresolved": [
+        "qamatz vs patah+meteg under the yod"
+      ],
+      "reason": "A tick below the bar shows, but at row scale I can't separate qamatz from patah with a meteg. A tighter crop is needed."
+    },
+    {
+      "target": "לשפוט / בא (lishpot-ba, כי בא לשפוט)",
+      "scan": "s98",
+      "reading": "כִּי: dagesh in kaf, hiriq. בָא: qamatz under bet, no clear dagesh dot inside the bet. לִשְׁפּוֹט: hiriq under lamed, shin dot, sheva under shin, dagesh dot inside the pe, holam vav (plene).",
+      "certainty": "medium-high for pe dagesh, medium for bet without dagesh",
+      "unresolved": [
+        "dagesh in bet of בא: the interior looks clean but the print is heavy"
+      ],
+      "reason": "A dot is clearly inside the pe. No equivalent dot shows inside the bet."
+    }
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "3beb9725-a983-497f-9406-696be2094c30"
+  }
+}

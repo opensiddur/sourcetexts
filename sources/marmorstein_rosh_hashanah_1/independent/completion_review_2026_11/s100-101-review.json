@@ -1,0 +1,99 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "One full pass comparing all six overlapping image thirds (s100 parts 1–3, s101 parts 1–3) against current-readings.json, line by line. I also opened the full s100.jpg once for context on the marginal mark, and checked the human decisions file. I did not open the blind-response JSONs, because this was a comparison against the current dossier only. I did not zoom past the resolution of the supplied images."
+  },
+  "pages": [
+    {
+      "scan": "s100",
+      "complete_body_accounted": true,
+      "source_findings": [],
+      "unresolved": [
+        {
+          "unit": "melekh_azur_gevurah (stanza 24 line)",
+          "word": "(right margin, before מֶלֶךְ תִחֵת)",
+          "mark": "small marginal siglum, read as ס׳ (could be פ׳)",
+          "location": "s100 part3 line 2 (full page line 19), outer right margin",
+          "reason": "There is a small marginal siglum in printed type next to the start of stanza 24, which is the same line as the human-adjudicated תִחֵת. Nothing in the current dossier records it: no note, citation or instruction on s100. I can't tell whether it is a variant or note marker, a reference to a note on another page, or a printer's mark. I am not asking to reopen the human-decided word תִחֵת. Only the mark beside it is unaccounted for."
+        },
+        {
+          "unit": "melekh_azur_gevurah stanza 23",
+          "word": "לְמָעְלָה",
+          "mark": "vowel under mem: qamats vs patach",
+          "location": "s100 part2 last line / part3 line 1, 'תָּלָה לְ_עְלָה'",
+          "reason": "At this resolution the mark under מ looks closer to a patach (לְמַעְלָה), but the scan is soft and I can't confirm it either way. Current reading 'לְמָעְלָה' is neither confirmed nor refuted. If a closer look shows patach, the proposed text is 'וְכִסְאוֹ תָּלָה לְמַעְלָה.'"
+        },
+        {
+          "unit": "melekh_azur_gevurah stanza 21",
+          "word": "בְּמִשְׁפָּט (first occurrence, after וְגָבֹהַּ)",
+          "mark": "vowel under bet (sheva vs patach)",
+          "location": "s100 part2 line 6",
+          "reason": "The first letter's vowel is unclear. It could be read as בַּמִּשְׁפָּט, but I couldn't confirm a dagesh in the mem. I am not proposing a change."
+        },
+        {
+          "unit": "melekh_azur_gevurah stanza 21",
+          "word": "וְגָבֹהַּ",
+          "mark": "mappiq in final he",
+          "location": "s100 part2 line 6",
+          "reason": "I can't make out a dot inside the final ה clearly against the patach below it. Current mappiq is not verified."
+        },
+        {
+          "unit": "melekh_azur_gevurah stanza 17",
+          "word": "שְׁפוֹט",
+          "mark": "possible dagesh in peh",
+          "location": "s100 part1 line 6",
+          "reason": "The inside of the פ shows a dark area that could be a dagesh or could just be the shape of the letter. Current has no dagesh. Left as is, not certified."
+        },
+        {
+          "unit": "melekh_azur_gevurah stanzas 14, 16, 18, 20, 26",
+          "word": "מִגַּאֲוָתוֹ; יַעֲצָר; לַסְתִּיר עֵצָה; עֲמוּקִים; עַל צְבָא; הִמְלִיכוּהוּ עַם",
+          "mark": "small vertical strokes at the lower right of the first letter (possible meteg/gaʿya)",
+          "location": "s100 part1 lines 1, 4, 7; part2 lines 2, 5; part3 line 5",
+          "reason": "Short vertical strokes sit at the base, just right of ע (or י in יַעֲצָר, ג in מִגַּאֲוָתוֹ). They look like meteg/gaʿya marks, but the same thing could come from the typeface or from print bleed, and there is no meteg in the current reading. I haven't certified them either way. Similar faint marks may also be present at בְּמַעֲמַקִּים and בְּסַעֲרוֹ. A close look at the high-resolution image is needed before accepting this page."
+        }
+      ],
+      "citation_and_instruction_findings": [
+        "Running header 'יוצר ליום ראשון של ראש השנה' and page number 36 (both sides) are present in print. They are not body text and are correctly handled by printed_page '36'.",
+        "No commentary note, rubric, speaker siglum or instruction is printed on s100 apart from the unexplained marginal siglum at stanza 24 (see unresolved).",
+        "Human decision #2 (תִחֵת … תָּר) matches the current text. The first glyph of תִחֵת is visibly damaged in print, which is consistent with it needing human adjudication. I did not reopen it.",
+        "All other words and stanza order (14 continuation through 26, ending 'קָדוֹשׁ:') match the image at this resolution. That includes punctuation (periods inside stanzas, sof-pasuq colons at stanza ends) and the maqafs in יַעֲצָר־כֹּחַ, מִכָּל־רוּחַ and בְּכָל־פֹּעַל. Stanza 26 is printed centred/indented as a separate closing block, consistent with paragraph 4."
+      ]
+    },
+    {
+      "scan": "s101",
+      "complete_body_accounted": true,
+      "source_findings": [
+        {
+          "unit": "melekh_azur_gevurah stanza 20 (en)",
+          "language": "en",
+          "printed": "the prophesy of Duma",
+          "current": "when He fulfils in the storm the prophesy of Duma",
+          "correction": "when He fulfils in the storm the <sic>prophesy</sic><corr>prophecy</corr> of Duma",
+          "reason": "The print reads 'prophesy' (the verb) where the noun 'prophecy' is meant. The current text keeps the printed form, which is correct, but it isn't marked. Under the preserve-typo-with-sic/corr policy, it should get sic/corr markup. Low-severity editorial markup; the source wording itself is unchanged.",
+          "certainty": "high (printed spelling clearly 'prophesy')",
+          "location": "s101 part2 line 6"
+        }
+      ],
+      "unresolved": [],
+      "citation_and_instruction_findings": [
+        "'sum.mit' in s101 part2 line 7 is a broken or ink-damaged 'm' in 'summit', not a typo. The current reading 'summit' is correct, and no sic is needed.",
+        "Lowercase 'he' in 'all that he may do' (stanza 25) matches the print exactly and is kept correctly. It is not a typo needing sic.",
+        "'fulfils' is a British spelling and is correct as printed.",
+        "Header 'Morning Prayer for the New Year' and page number 36 are not body text and are handled by printed_page '36'.",
+        "Stanza 26 English is printed as a separate indented block, matching paragraph 4. Line order and punctuation of stanzas 14 to 26 match the image, including the question mark after 'bear Him?' and the em-dash-free wording on this page."
+      ]
+    }
+  ],
+  "coverage_limits": [
+    "I judged only scans s100 and s101. Neighbouring fragments in the same units (s98, s99) were used as context only.",
+    "At the supplied resolution I could not confirm every vowel, dagesh and meteg on s100. The items listed as unresolved are not certified, and I am not claiming source acceptance for s100 until they are settled from the high-resolution image.",
+    "I did not open the blind-response JSONs. This review compares the images against the current dossier only.",
+    "No accents (te'amim) are printed in this piyyut on s100 apart from the possible meteg/gaʿya strokes listed under unresolved.",
+    "I am satisfied with s101 (English) apart from the sic/corr markup recommended for 'prophesy'."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "c92987d1-3b85-4b3e-a2dc-0c871276b972"
+  }
+}

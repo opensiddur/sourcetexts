@@ -1,0 +1,36 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "low (session setting). I read all of current.json, current-xml.xml, page-audits.json, guideline-excerpts.md, english-rest-resolutions.json and the full report at /tmp/mahzor-backlog/s198-199/source-review.json. I looked at the original full-page scan s199.jpg myself at the displayed resolution (1208x2000 from 1368x2264) and compared the four English verse lines word by word and mark by mark. I made no enlarged crops because nothing in the target lines was unclear at that resolution. I did not open the Hebrew scan s198 or the split parts under /tmp/mahzor-backlog/s198-199/. I ran no validators, tests or exporter."
+  },
+  "scope": "English source accuracy, plus how it is encoded against the guidelines and its shared correspondence boundaries, for one witness only: cantor_four_verses (scan s199, printed page 89). Hebrew source and fine-mark acceptance is not requested and is not given.",
+  "witnesses": [
+    {
+      "stem": "cantor_four_verses",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    }
+  ],
+  "verified": [
+    "The English text matches the s199 image exactly in all four segments, including commas and final periods: 'I know, O Lord, that Thy judgments are justice, and faithfully hast Thou chastised me.' / 'Listen to me and answer me when I lament and sigh.' / 'Let my soul exult in the Lord, rejoice in His help.' / 'It is He who gives salvation to kings, who saves His servant David from the evil sword.' The print breaks 'faith-fully' across a line and uses hanging indents. Both are layout only, and both are correctly normalized.",
+    "This agrees with the existing full-page audit (claude-opus-5-5, recorded actual_effort low, invocation effort medium). It found no s199 discrepancies and noted that 'faith-fully' and the Hebrew incipit cue ידעתי are handled as intended.",
+    "english-rest-resolutions.json has no correction or disposition entries for cantor_four_verses. original_source_typo_corrections is empty, and I found no misprint that needs sic/corr.",
+    "The Hebrew incipit cue ידעתי printed beside the English is left out of the English project, which follows the stated convention. No English rubric is printed for this unit. The Hebrew rubric קבלה מר״ת… appears only in the Hebrew witness, so no English translation is missing and none was supplied.",
+    "Encoding: each verse is opened by a chapter milestone and then a verse milestone, both with occurrence-context local corresp and n. The verse text follows in a bounded tei:seg@source holding the canonical Psalms URN (119/75, 55/3, 35/9, 144/10), with the milestone before the semantic span as the URN-scope section requires. Bare verse and chapter terminators close each unit before the next chapter opens, and the last verse is closed explicitly. Nothing runs past the div, and no canonical corresp is duplicated.",
+    "Alignment: the Hebrew and English files use the same div corresp and the same chapter and verse corresp URNs, in the same order, with the same terminator pattern. Each verse therefore forms its own aligned row, and no boundary or extent mismatch occurs.",
+    "The paragraph structure follows the four printed lines. The facs page indices are consistent with the scans: Hebrew n197 for s198, English n198 for s199.",
+    "There is no conditional or j:option material in this unit, so the conditional and alternate-reading rules do not apply."
+  ],
+  "limits": [
+    "I did not read the Hebrew source image, so I make no claim about Hebrew text, pointing or the rubric. The earlier audit's unresolved meteg questions on יָדַעְתִּי, הַקְשִׁיבָה, וְנַפְשִׁי and עַבְדּוֹ remain open on the Hebrew side and do not affect this English approval.",
+    "My English comparison used the full-page scan at the displayed resolution, not enlarged crops. The lines are clearly legible, so I raised no ambiguity.",
+    "I did not run the reference database, validate_urn_references, the parallel compiler, test_repeated_scripture_has_addressable_chapter_and_verse_context or any renderer. My conclusions about alignment and scope come from reading the markup against the guideline text."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "b8dcb26c-d2f7-4f92-aee0-50dbb27fb01e"
+  }
+}

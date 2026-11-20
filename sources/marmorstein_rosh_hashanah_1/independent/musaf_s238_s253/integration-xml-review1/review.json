@@ -1,0 +1,139 @@
+{
+  "generated_encoding_approved": false,
+  "alignment_approved": true,
+  "recitation_order_approved": false,
+  "canonical_identity_approved": false,
+  "findings": [
+    {
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/index.xml; prayerbook_for_the_new_year-marmorstein-1965-en/index.xml; machzor_expanded-opensiddur-he/index.xml",
+      "location": "Musaf repetition conditionals documentary_musaf_adir_first_he/_en, documentary_musaf_tisgav_custom_he/_en, documentary_musaf_veyeetayu_custom_he/_en; expanded section_musaf_adir_first, section_musaf_tisgav_custom, section_musaf_veyeetayu_custom",
+      "severity": "high",
+      "problem": "The new Musaf conditionals test opensiddur:rite feature 'frankfurt'. The same books' Shacharit and Torah-service conditionals (documentary_repetition_attah_hu_frankfurt_source_he, documentary_torah_berikh_shema_custom_he, expanded section_repetition_attah_hu_custom, section_torah_berikh_shema_expanded) test 'frankfurt_am_main' for the same community. Every rubric says Frankfurt am Main (בפֿפֿד״מ / 'Frankfurt a. M.'). The rite feature set is open, so nothing flags the split. A setting that declares only one of the two names leaves the other service's conditionals undecided. For example, a Frankfurt build that sets frankfurt_am_main still prints the first Adir Adirenu, Tisgav and Veyeetayu with their rubrics.",
+      "required_fix": "Use one rite feature for Frankfurt am Main, the existing frankfurt_am_main, in all six new conditionals in all three indexes. Re-run the frankfurt-included builds and confirm that the first Adir, Tisgav and Veyeetayu are omitted and Shacharit's Attah Hu and Berikh Shemeh behave as before."
+    },
+    {
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/amidah_qadosh_attah_venora_parts.xml; amidah_vetimlokh_attah_hashem_parts.xml; rh_qadosh_attah.xml; rh_vetimlokh.xml (and the same four in -marmorstein-1965-en)",
+      "location": "prayer-part milestones qadosh_attah_venora/qadosh_attah and vetimlokh_attah_hashem/vetimlokh",
+      "severity": "high",
+      "problem": "Whether these parts include their quoted verse is unclear. In qadosh_attah there is no prayer-part terminator before the Isaiah 5:16 verse; the next prayer-part milestone is hamelekh_haqadosh. In vetimlokh the only prayer-part terminator comes after the Psalm 146:10 verse. If prayer-part ends only at prayer-part milestones, both parts include their verses. Then the Maariv rh_qadosh_attah transclusion (qadosh_attah + isaiah/5/16 + hamelekh_haqadosh) and rh_vetimlokh (vetimlokh + psalms/146/10) print the verse twice in both languages. Under the JLPTEI 'as many or fewer components' rule (both URNs have 3 components) the scope would end at the verse instead, and the output would be correct. The other new compositions (addir, echad_hu, tisgav, kakatuv) avoid the ambiguity with an explicit terminator before the quotation, and the Musaf range transclusions assume yet another reading. The boundary currently depends on the scope rule rather than the markup.",
+      "required_fix": "Add <tei:milestone unit=\"prayer-part\"/> immediately before the chapter/verse milestones in both parts files, HE and EN. Remove the trailing terminator after the vetimlokh verse, or keep it only if the verse is meant to be included and then drop the separate verse transclusion from rh_vetimlokh. Then dump the resolved scopes of qadosh_attah and vetimlokh from the refdb and confirm each verse appears exactly once in the documentary first-night Maariv, HE and EN."
+    },
+    {
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/index.xml; prayerbook_for_the_new_year-marmorstein-1965-en/index.xml; machzor_expanded-opensiddur-he/index.xml",
+      "location": "Veyeetayu conditional: HE index note facs n249 (de-Hebr); EN index note facs n250; expanded section_musaf_veyeetayu_custom (de-Hebr + en notes)",
+      "severity": "medium",
+      "problem": "The custom statement ('In Fuerth … the reader now sings ויאתיו, but in Frankfurt a. M., Metz and many communities this prayer is omitted') says when the text is read. It is encoded as tei:note type=\"description\" inside the controlled text, and the j:conditional has no rubric. JLPTEI says an instruction about when a text is read is the conditional's own tei:note type=\"instruction\". As encoded, the statement prints even when the condition is decided, and nothing prints as the rubric when it is undecided.",
+      "required_fix": "Move the printed statement into the j:conditional as its tei:note type=\"instruction\", in both printed languages where printed, as the Adir and Tisgav conditionals already do. Do not reword the source."
+    },
+    {
+      "file": "all three indexes (Tisgav and Veyeetayu conditionals)",
+      "location": "opensiddur:rite features marmorstein_tisgav, marmorstein_veyeetayu",
+      "severity": "medium",
+      "problem": "Rite features are named after the 1965 English translator rather than a community. They encode an edition or editorial choice inside the rite space. JLPTEI reserves opensiddur:rite for communities, one binary per rite, and uses opensiddur:variant condition URNs (mirroring the text path) for wording or custom choices. feature-check.log is empty, so there is no evidence these features, or 'frankfurt', were checked against features.yaml.",
+      "required_fix": "Replace each with either a real community rite feature or an opensiddur:variant condition URN under the text path (for example urn:x-opensiddur:condition:prayer:amidah/tisgav_levaddekha/<name>). Register it, re-run the feature registry check, and attach its non-empty output."
+    },
+    {
+      "file": "addir_adiraynu_parts.xml, amidah_qadosh_attah_venora_parts.xml, amidah_vetimlokh_attah_hashem_parts.xml, musaf_qedushah_ani_adonai.xml (HE and EN)",
+      "location": "<tei:milestone unit=\"chapter\" n=\"8|5|146|15\"/> and, in ani_adonai, <tei:milestone unit=\"verse\" n=\"41\"/>",
+      "severity": "medium",
+      "problem": "These chapter and verse milestones carry @n but no @corresp. Under JLPTEI rule 3 a milestone with a unit and no corresp is a terminator, and the guideline says bare terminators carry neither corresp nor n. So they open nothing and are ambiguous to processors. The same file sometimes does it differently: addir_adiraynu_parts gives Zechariah 14 a quotation-context chapter corresp but gives Psalm 8 an n-only chapter.",
+      "required_fix": "Either remove @n so the milestones are true bare terminators (or drop them), or give them corresp values consistent with their content. Never use canonical whole-chapter URNs for partial chapters. If an n-only display chapter is an established house convention, document it in JLPTEI and confirm the exporter treats it as display-only."
+    },
+    {
+      "file": "new-registry-records.json",
+      "location": "siddur:rosh_hashanah/musaf/repetition/uvekhen_ten_kavod, …/uvekhen_ten_pachdekha, …/uvekhen_tzaddiqim; …/musaf/qedushah/{barukh_kevod,ledor_vador,qadosh,uvedivrei}; …/qedushah_kevodo/repeat; …/qedushah_mimeqomo/repeat; …/qedushah/addir_first",
+      "severity": "medium",
+      "problem": "Several registry labels are wrong. The three Musaf repetition contexts are labelled 'Evening Prayer for the New Year — …', apparently copied from Maariv; the file headers correctly say 'Grant honour' and so on. Several label_en values are Hebrew, which violates the field's language. addir_first's label says 'adir first' even though the stem was corrected to addir.",
+      "required_fix": "Relabel the Musaf contexts from their actual printed English titles. Give each label_en an English or transliterated value and keep Hebrew in label_he. Correct 'adir' to 'addir'. Re-run urn_registry --check."
+    },
+    {
+      "file": "new-registry-records.json",
+      "location": "urn:x-opensiddur:text:prayer:amidah/addir_adiraynu/quotations/psalms_8; urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/veattah_qadosh/quotation",
+      "severity": "low",
+      "problem": "The psalms_8 context is registered, but no XML uses it: both projects encode Psalm 8:10 as canonical bible:psalms/8/10 under an n-only chapter. The veattah_qadosh record belongs to Shacharit, not this batch's files, and it lacks references. Several context records lack parent, unlike their siblings.",
+      "required_fix": "Delete the orphan psalms_8 record, or use it consistently. Confirm the veattah_qadosh record is referenced by actual XML and add references and parent. Add missing parent fields."
+    },
+    {
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/index.xml; machzor_expanded-opensiddur-he/index.xml",
+      "location": "Index-level actor notes ק׳/ח׳/קו״ח/ח״ before kevodo_first, mimeqomo_first, echad_first, addir_first, tisgav (HE index facs n237–n249); every Musaf Kedushah actor note in the expanded index",
+      "severity": "low",
+      "problem": "These actor notes lack corresp=\"urn:x-opensiddur:instruction:role/…\". The file-level actor notes in this same batch, and earlier expanded sections (e.g. role/reader on חזן), carry it. Role-based processing and instruction swapping will miss them.",
+      "required_fix": "Add the matching role/congregation, role/reader or role/reader_and_congregation corresp to each index-level actor note. Text unchanged."
+    },
+    {
+      "file": "prayerbook_for_the_new_year-marmorstein-1965-en/musaf_vechayyot_asher_hennah.xml",
+      "location": "whole div",
+      "severity": "low",
+      "problem": "The English file contains only the rachem_metzuqim stanza. The Hebrew has vechayyot, chashot, kaf_regel, levilti and rachem_metzuqim. The page-boundary data is consistent with the translator omitting stanzas 1–4, and this must not be filled in, but the gap is not recorded in the XML or as an accepted-gap entry.",
+      "required_fix": "Record an encoding note (tei:note type=\"encoding\" in the header or README, per project convention) that the printed English translates only the final stanza. Confirm the compiler treats the four HE stanzas as intentionally unpaired."
+    },
+    {
+      "file": "prayerbook_for_the_new_year-marmorstein-1965-en/musaf_qedushah_ani_adonai.xml",
+      "location": "half-verse b corresp urn:x-opensiddur:text:bible:numbers/15/41/b",
+      "severity": "low",
+      "problem": "JLPTEI says a translation has no accents and places no half-verses, yet the English project carries the canonical half-verse. Content-wise it matches the HE exactly and avoids whole-verse fallback in the expanded book, so this is a policy exception, not a content error.",
+      "required_fix": "Record the exception, or apply an explicit project policy for aligned translation half-verses, and confirm validate_urn_references accepts it."
+    },
+    {
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/musaf_qedushah_shema.xml",
+      "location": "קו״ח note placed after the deuteronomy_6/4 context verse milestone",
+      "severity": "low",
+      "problem": "The actor rubric is inside the quotation-context verse scope, so resolving the context URN returns the rubric with the verse. Elsewhere, e.g. ani_adonai, the rubric comes before the milestones.",
+      "required_fix": "Move the note before the chapter and verse milestones."
+    },
+    {
+      "file": "new-registry-records.json; musaf_qedushah_conclusion_parts.xml",
+      "location": "urn:x-opensiddur:text:prayer:od_yizkar_lanu (+ condition children)",
+      "severity": "low",
+      "problem": "The printed word is יִזְכָּר. If its qamatz is qatan, which is the normal reading of this verb, JLPTEI transliteration gives 'yizkor'. The naming check cannot detect qamatz quality.",
+      "required_fix": "Decide the vowel quality. If qatan, rename to od_yizkor_lanu, with its conditions, before the URN is published. Otherwise record the reason for keeping 'yizkar'."
+    },
+    {
+      "file": "new-registry-records.json; musaf_v_yeetayu_kol_leavdekha.xml",
+      "location": "urn:x-opensiddur:condition:poem:v_yeetayu_kol_leavdekha/veyizbechu",
+      "severity": "low",
+      "problem": "Reusing the existing canonical is correct, but the existing stem breaks the prefix-joining rule ('v_') and qamatz qatan ('leavdekha' for לְעָבְדֶךָ). The new condition extends that stem.",
+      "required_fix": "Keep the reuse. Record an alias or rename ticket for the existing stem rather than minting a parallel identity."
+    },
+    {
+      "file": "musaf_qedushah_echad_hu_repeat.xml (HE and EN)",
+      "location": "<tei:pb ed=\"1965 rosh_hashanah/musaf/repetition/qedushah/echad_repeat\" n=\"113\"/>",
+      "severity": "low",
+      "problem": "This page break carries a second @ed token naming a printing; every other new page break has ed=\"1965\". Scan linking is evidenced only for the documentary frame.",
+      "required_fix": "Confirm the token matches the SIDDUR_URN_SCHEME printing-name grammar and that the page link appears in every build that should show it, or normalize it to ed=\"1965\"."
+    }
+  ],
+  "remaining_export_checks": [
+    "Refdb dump of the resolved scopes of prayer:amidah/qadosh_attah_venora/qadosh_attah and prayer:amidah/vetimlokh_attah_hashem/vetimlokh in both projects, plus rendered documentary first-night Maariv HE/EN, showing Isaiah 5:16 and Psalm 146:10 once each.",
+    "Show which rite feature(s) each *-frankfurt-included.yaml declares. After unifying the feature, re-run all 32 states and confirm the Adir/Tisgav/Veyeetayu and Attah Hu/Berikh Shemeh outcomes.",
+    "Feature registry check (features.yaml) with non-empty output covering every new opensiddur:rite and opensiddur:variant name; feature-check.log is currently empty.",
+    "Per-project refdb duplicate scan (Heidenheim and Marmorstein) for bible:psalms/146/10 (vs Pesuqei deZimrah Psalm 146), bible:isaiah/5/16, bible:psalms/8/10, bible:numbers/15/41/b vs the Maariv/Shacharit Numbers 15:41, and prayer:amidah/qedushat_hashem/hamelekh_haqadosh (vs Shacharit/Musaf attah_qadosh files). Heidenheim amidah_qedushat_hashem.xml checked: no hamelekh_haqadosh there.",
+    "validate_urn_references for the @source verse-part references bible:isaiah/6/3/veqara and …/qadosh, and confirm both are declared in opensiddur/common/subverse.py.",
+    "Cross-project scope check: confirm prayer:amidah/qedushah/kevodo, which here includes לעמתם ברוך יאמרו, and prayer:amidah/naaritzekha_venaqdishkha_kesod, whose Heidenheim div starts at כסוד שיח, denote the same words in the other projects that carry them.",
+    "Scan check at n245/n246: confirm no Chamol al Maasekha (חמול על מעשיך) passage is omitted between ledor_vador and ki_maqdishekha (it is in the standard Ashkenaz order).",
+    "urn_registry --check over the corrected new-registry-records (labels, parents, references, orphan removal)."
+  ],
+  "coverage": [
+    "Read generated-bodies.xml in full (6035 lines): the expanded index (all services, with the new Musaf repetition at section_musaf_repetition_s220), the Heidenheim and Marmorstein indexes (Musaf section and the shared surrounding structure), and every changed or new HE and EN fragment in the manifest (63 Heidenheim + 0 shared + 31 Marmorstein file entries plus 3 indexes).",
+    "Opened full XML headers for EN musaf_repetition_uvekhen_ten_kavod.xml and HE musaf_repetition_uvekhen_tzaddiqim.xml: titles are printed-language ('Grant honour', 'ובכן צדיקים'), with biblScope pages, idno URN and bibl pointer present. Opened HE amidah_qedushat_hashem.xml for the duplicate-URN check.",
+    "Read all 1289 lines of new-registry-records.json, JLPTEI-3.md sections on URNs, milestone scope and terminators, versification and sub-verse units, inclusions/ranges, annotations, conditional notes, and opensiddur:variant/rite/recitation settings.",
+    "Read compiler-report.json (32 states, zero pairing problems), full-service-report.json, final-build-schema-report.json (754/737 cached/17 fresh), integration-evidence-check.json, page-boundary-decisions.json, naming-final.log (0 errors), feature-check.log (empty), and the head of corrections.json.",
+    "Checked the Musaf Kedushah recitation sequence entry by entry across the documentary HE, documentary EN and expanded indexes.",
+    "Checked the 14 physical page starts (HE n239–n251 odd, EN n240–n252 even) against pb @n/@facs in the fragments: all present once, in sequence p.110–116. The HE p.116 break is displaced after the optional veyizbechu clause, as documented.",
+    "Did not read readings.json or accepted_literal_baseline.json in detail; source words were accepted out of scope."
+  ],
+  "notes": [
+    "Musaf repetition order (Kesod siach → Qadosh → Kevodo ק׳ → Vechayyot → Kevodo ח׳ → Barukh kevod → Mimeqomo ק׳ → Veammekha → Mimeqomo ח׳ → Shema → Echad ק׳ → Veattah ezon → Echad ח׳ → Ani Adonai → [Adir, not in Frankfurt] → Tehillot → Adir → Uvedivrei → Yimlokh → Ledor vador → Ki maqdishekha/Od yizkar → ark → Haochez → [Tisgav] → Pachdekha → Kavod → Tzaddiqim → [Veyeetayu] → Vetimlokh → Qadosh attah) is identical in the documentary HE, documentary EN and expanded books. recitation_order_approved is false only because of the possible duplicated Maariv verses (finding 2) and the open Chamol scan check.",
+    "Quotation-context encodings follow the guideline: hehagui Exodus 3:14, kakatuv Isaiah 6:3, qadosh/barukh_kevod, echad_hu Numbers 15:41, Tisgav and Adir Zechariah 14:9, and the Kedushah Shema Deuteronomy 6:4. Each has a bounded seg with inner context chapter/verse milestones closed before the span ends, and none advertises a partial verse as canonical.",
+    "Pure canonical first/repeat composition works. The kevodo, mimeqomo, echad, addir, barukh_kevod, ledor_vador, uvedivrei, yimlokh, pachdekha, kavod and tzaddiqim repeats transclude one canonical source and choose the printing through opensiddur:variant declares. No duplicate canonical prayer URNs were found in the new fragments. The Maariv rh_uvekhen_ten_kavod remains a literal protected witness (keeping pb 17); this is consistent with the baseline policy and is not a duplicate URN.",
+    "No doubled actor cues: where the index adds ק׳ before kevodo/mimeqomo/echad/addir first occurrences, the fragment carries none, and repeat fragments carry their own ח׳/ק׳. Adir repeat is ק׳ in both books; treated as an accepted source reading.",
+    "The expanded book's Musaf Kedushah Shema uses bible:deuteronomy/6/4, which resolves to the Shema printing elsewhere in each project rather than the Musaf printing. This is an editorial choice, not a defect; the documentary books use the Musaf context.",
+    "Out-of-batch: the full-book Birnbaum Kaddish optional-missing-counterpart warnings are pre-existing and not attributed to this batch. No new pairing regressions were reported.",
+    "Data review 1 is still running. None of its possible findings are assumed resolved here, and no translations or readings were invented or normalized."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "bdf202d5-e721-44fe-b279-902278d36bc3"
+  }
+}

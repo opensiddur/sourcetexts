@@ -1,0 +1,106 @@
+[
+  {
+    "file": "/tmp/mahzor-backlog/s190-197/source-review.json",
+    "reviewer": {
+      "model": "claude-opus-5-5",
+      "actual_effort": "low effort; one pass over all 24 image thirds at the given resolution, no extra zoom or crops"
+    },
+    "page": {
+      "scan": "s193",
+      "complete_body_accounted": true,
+      "source_findings": [],
+      "unresolved": [],
+      "citation_and_instruction_findings": [
+        "The English matches the print, including 'lord . . .' and the original 'Zion, Thus'."
+      ]
+    }
+  },
+  {
+    "file": "/tmp/mahzor-backlog/s190-197/source-review.json",
+    "reviewer": {
+      "model": "claude-opus-5-5",
+      "actual_effort": "low effort; one pass over all 24 image thirds at the given resolution, no extra zoom or crops"
+    },
+    "page": {
+      "scan": "s195",
+      "complete_body_accounted": true,
+      "source_findings": [
+        {
+          "unit": "torah_ashrei",
+          "language": "en",
+          "printed": "Thy kingdom is an everlasting kingdom and Thy dominion is in every generation.",
+          "current": "Thy kingdom is an everlasting kingdom, and Thy dominion is in every generation.",
+          "correction": "Delete the comma after 'kingdom'.",
+          "reason": "There is no comma after 'kingdom' in the print.",
+          "certainty": "high",
+          "location": "part2, lines 11–12"
+        },
+        {
+          "unit": "torah_ashrei",
+          "language": "en",
+          "printed": "Hymn by David (centred italic line, no period)",
+          "current": "Hymn by David. I exalt Thee…",
+          "correction": "Remove the added period, or encode the words as the italic heading of verse 1.",
+          "reason": "The print sets 'Hymn by David' as a centred italic line with no final period.",
+          "certainty": "high",
+          "location": "part1, line 5"
+        }
+      ],
+      "unresolved": [],
+      "citation_and_instruction_findings": [
+        "The citation '(Psalm 145.)' is encoded as 'Psalm 145.' with the parentheses stripped, which is the convention.",
+        "'Wis' for 'His' is already handled by source_typo_corrections."
+      ]
+    }
+  },
+  {
+    "file": "/tmp/mahzor-backlog/s190-197/source-review.json",
+    "reviewer": {
+      "model": "claude-opus-5-5",
+      "actual_effort": "low effort; one pass over all 24 image thirds at the given resolution, no extra zoom or crops"
+    },
+    "page": {
+      "scan": "s197",
+      "complete_body_accounted": false,
+      "source_findings": [
+        {
+          "unit": "torah_return_psalm_24",
+          "language": "en",
+          "printed": "He is the Lord strong and mighty, the Lord mighty in war.",
+          "current": "He is the Lord, strong and mighty, the Lord mighty in war.",
+          "correction": "Delete the comma after 'Lord'.",
+          "reason": "There is no comma after 'Lord' in the print.",
+          "certainty": "high",
+          "location": "Psalm 24:8, right column, part2, lines 11–12"
+        }
+      ],
+      "unresolved": [],
+      "citation_and_instruction_findings": [
+        "The italic rubrics 'On the Sabbath:' (left column, Psalm 29) and 'On weekdays:' (right column, Psalm 24) are not in the dossier.",
+        "The printed English of Psalm 29 has no verse 7. The dossier also leaves it out, so the encoding is faithful to the print.",
+        "'near Him, Halleluyah.' has a stray stroke near the comma. This is print noise; the current text is correct.",
+        "The citations '(Psalm 29)' and '(Psalm 24)' are encoded without parentheses, which is fine. The speaker labels and 'resting-place' (hyphen at the line break) match the print."
+      ]
+    }
+  },
+  {
+    "file": "/tmp/mahzor-backlog/s198-199/source-review.json",
+    "reviewer": {
+      "model": "claude-opus-5-5",
+      "actual_effort": "low: one full pass over all six image thirds at the provided resolution, compared word by word with the dossier and the human pending-readings file. No higher-resolution crops were available, so marks too fine to read at this resolution are left unresolved, not certified."
+    },
+    "page": {
+      "scan": "s199",
+      "complete_body_accounted": true,
+      "source_findings": [],
+      "unresolved": [],
+      "citation_and_instruction_findings": [
+        {
+          "unit": "all",
+          "item": "English body text",
+          "finding": "Every word and punctuation mark matches the image, including 'Moses (Menasseh)', the curly quotes ‘…’ around the Exodus verse, “I am that I am”, and 'Lord, Lord, merciful'. The line-break hyphens (gra-cious, im-plore, ap-proach, faith-fully) are layout only. The Hebrew incipit cues (אל, הנני, ויהי, ידעתי) are omitted as intended. The running head 'A Prayer for the Reader' matches head.en."
+        }
+      ]
+    }
+  }
+]

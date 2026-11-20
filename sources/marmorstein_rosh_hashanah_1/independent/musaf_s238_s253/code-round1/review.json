@@ -1,0 +1,77 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "default (single static pass; tests not re-run by reviewer)"
+  },
+  "approved": false,
+  "findings": [
+    {
+      "file": "realizations.py",
+      "line": 131,
+      "severity": "high",
+      "problem": "A whole-prayer root can now be selected just because target == unit['urn']. The only checks are on segment and fragment keys (canonical_text lines 153-157). Unit-level controls are never checked. unit_document puts the host's head, unit instructions (rubric notes), unit `conditions`/`marked` j:conditional, `wording_selection` j:declare, `opening_page` pb, poetry lg/l structure and publication_context inside or around the div corresp=urn, and its citations target that same URN. All of these travel with the inline transclusion. The source-equality check compares only fragment text, so it passes while extra annotations, speaker/rubric material and conditions leak into every caller. The root may also span several <p> paragraphs, which are then transcluded inline into the caller's single <p>.",
+      "required_fix": "When a host is used as a whole-root canonical target, reject the same unit-level controls that prepare_documents rejects for canonical homes: conditions, marked, instructions, head, opening_page, publication_context, reuse, text_corresp, canonical_whole, wording_selection, citations, poetry and start/end. Also require a single paragraph, or define and test a multi-paragraph (non-inline) model. Add tests that set each control on a whole-root host and expect validate_occurrences to raise."
+    },
+    {
+      "file": "realizations.py",
+      "line": 72,
+      "severity": "high",
+      "problem": "The overlap check (lines 72-80) and the optional/alternative mixing check (lines 81-84) only compare overlays with the same `identity`. The new root identity (host urn, line 63) and a segment identity can both resolve to the same fragment. Overlapping or mixed overlays across the two scopes are therefore never compared. A fragment can then get both `optional_spans` and `alternatives`. unit_document (build.py:560/574) uses if/elif, so it silently drops the alternatives and the printed source is no longer faithfully encoded. canonical_text (line 176) would also splice overlapping replacements, producing corrupt text.",
+      "required_fix": "Do the overlap and kind checks per resolved fragment, over all overlays that resolve to that fragment, whatever their identity. For example, collect (fragment id, start, end, kind) for every overlay first, then validate. Add tests where a root-identity overlay and a segment-identity overlay overlap or mix kinds on one fragment and expect ValueError."
+    },
+    {
+      "file": "build.py",
+      "line": 1226,
+      "severity": "high",
+      "problem": "Corrections that target guarded canonical stems and home files used to be forbidden. They are now allowed whenever the file hash matches readings['canonical_corrections_sha256']. apply_corrections runs after validate_occurrences and edits the generated XML, so a correction can change canonical host words after the source-equality gate has run, and callers then no longer reproduce their printed occurrence. The realization review payload (realizations.py:245) contains only the hash, not the corrections themselves. An approval binds an opaque digest; it is not a review of what the corrections change. `guarded_stems` is now used only for its truthiness.",
+      "required_fix": "Include the actual correction items that touch guarded files (canonical homes, whole-root hosts, realization stems) in the relevant realization payloads. A bare digest is not enough. After apply_corrections, either check the corrected generated text of each canonical home or root against canonical_text for every caller, or keep rejecting corrections that alter words inside guarded canonical ranges. Add build-level tests for: hash mismatch rejected; a correction that changes canonical host words rejected or re-verified; a correction-content change invalidates the review."
+    },
+    {
+      "file": "realizations.py",
+      "line": 245,
+      "severity": "medium",
+      "problem": "The payload records the value claimed in readings.json, not the actual state of the file. If corrections.json is deleted while readings still holds a hash, both build (gated by corrections.exists()) and verify skip the check. Realization approvals stay current even though the generated output changes, because corrections are no longer applied. Build also reads the file twice (bytes for the hash, text for parsing), so the parsed content is not provably the hashed content.",
+      "required_fix": "Require readings['canonical_corrections_sha256'] to be null or absent exactly when corrections.json is absent and realization payloads exist, in both build and verify. Read the bytes once and parse those same bytes. Add tests for the absent-file case and the stale-hash case in verify.report."
+    },
+    {
+      "file": "realizations.py",
+      "line": 153,
+      "severity": "medium",
+      "problem": "The 'Canonical range crosses a printed source page' check was removed for all ranges, not only whole roots. The host renders its own pb elements inside the transcluded range (build.py:392-398), so the host's page breaks (e.g., host pages 1 and 2 in the new test) are injected into the documentary caller's page stream. At the same time the caller occurrence must be one plain fragment (line 222), so it cannot record its own page boundary when the printed occurrence itself crosses a page. The test only inspects the caller's unresolved file. It does not check the resolved or exported output, so 'preserve source page boundaries at documentary occurrences' is not shown to hold.",
+      "required_fix": "Either suppress or neutralize host pb elements inside ranges used as canonical targets (as canonical_home does with page_start=False), or show with an exporter/resolution test that host pbs are not rendered for callers. Let an occurrence that spans pages carry its own page boundary, e.g. multiple fragments with a pb-only model whose concatenated text is compared. Add a non-root range test that crosses pages."
+    },
+    {
+      "file": "realizations.py",
+      "line": 326,
+      "severity": "medium",
+      "problem": "validate_generated registers a root-identity overlay (identity == host urn) only under groups[host urn]. A direct caller transcluding a sub-range such as P/part gets no local defaults and no 'Caller must decide every wording option' check for that overlay, even though canonical_text (line 161) applies it to that range. The targetEnd branch (line 353) only matches segment identities and only extends groups by segment identity, so it also misses root-identity overlays.",
+      "required_fix": "Resolve the fragment each overlay binds to. Register its group under every target or range that contains that fragment, including segment identities when the identity is the root URN. Add tests for P/part and P/a..P/b callers with a root-identity overlay."
+    },
+    {
+      "file": "realizations.py",
+      "line": 161,
+      "severity": "low",
+      "problem": "Scope resolution is inconsistent. prepare_unit treats identity == urn as the whole root only when map_root is true (line 63). canonical_text and validate_occurrences (line 209) always treat host['urn'] as matching every segment. _range_segments selects a whole root when map_root defaults to True, but unit_document emits corresp=urn for biblical roots only when map_root is explicitly true. validate_generated catches the second case late; the first can apply an overlay to a different fragment than the one encoded.",
+      "required_fix": "Use one helper for the effective root mapping (including the biblical default) and for which fragment an overlay binds to, and call it from prepare_unit, _range_segments, canonical_text, validate_occurrences and validate_generated."
+    },
+    {
+      "file": "test_marmorstein_realizations.py",
+      "line": 198,
+      "severity": "medium",
+      "problem": "Tests are missing for several new paths: unit-level control leakage through whole-root reuse; cross-identity overlap and mixed kinds; multi-paragraph whole roots; non-root ranges across pages; build/verify rejecting a hash mismatch or a missing file; corrections that modify canonical text after generation; resolved caller output not containing host pbs; and root-identity overlays used by sub-range callers in validate_generated.",
+      "required_fix": "Add the tests listed in the findings above. Each negative case should assert ValueError, using the specific message where practical."
+    }
+  ],
+  "notes": [
+    "I did not re-run the test suite. The reported 21 tests + 34 subtests passing was not checked independently.",
+    "The rest of the multi-overlay ordering logic looks correct: sorting by original offset, sequential partitioning in unit_document, and applying canonical_text replacements in reverse order are consistent for non-overlapping spans.",
+    "No source text was assessed or accepted. unit_review_text and the literal inventory are unchanged by this diff; prepare_unit still works on a deepcopy.",
+    "Pre-existing, not introduced here: canonical_text uses join_source_fragments, but unit_document appends a space between fragments unless join_source_fragments, join_next or a maqaf applies. A host fragment followed by ', O God.' can therefore render as 'Israel , O God.' while equality is checked against 'Israel, O God.'. Whole-root ranges spanning many fragments make this more likely.",
+    "Binding the whole corrections.json hash into every realization payload invalidates all realization approvals after any correction, including ones to unrelated files. That is safe, but scoping the payload to the corrections relevant to each realization would reduce review churn once content binding is added."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "dd9e0fbf-db9c-4c47-a18b-aeca1a9f4a52"
+  }
+}

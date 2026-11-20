@@ -1,0 +1,160 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Low reasoning effort, bounded to adjudication. Read all of current.json (2410 lines, in two parts) and current.review.xml (112 lines, in two parts). Read english-preservation-proof.json, human-authorities.json and guideline-excerpts.md in full. Read routing-context.json lines 1–2289: all of source_order and the torah_service weekday aliyah routing for aliyot 1–4, with aliyah 5 cut off at line 2289. Read the corrections proof: its 'changes' list, its BEFORE payload lines 1–1296 (Gen 21 in both languages, Num 29 in both languages, 1 Sam 1:1–1:20 Hebrew) and its tail (lines 3940–4006: english_words_unchanged, review_evidence, decision). Did not read proof lines 1297–3939. Read in full the prior torah-bible-completion/review.json, the torah-bible-details/review.json and the two English verdicts it links to (english-shard-07 and english-shard-08 review.json). Compared BEFORE and AFTER by eye: word by word at the four changed words and the 21:21/21:22 note site, and by spot-check elsewhere. Ran no shell or diff tool. Opened no source images or crops. Ran no exporter or validator."
+  },
+  "witnesses": [
+    {
+      "stem": "torah_genesis_21",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "Gen 21:3 (s168): the AFTER text has אֶת־ with no alef meteg, and הַנּֽוֹלַד־ keeps its nun meteg. This matches the details review's confident readings 'et' (meteg absent) and 'hannolad' (nun meteg present).",
+        "Gen 21:14 (s170): the AFTER text has וַיִּֽקַּח־לֶ֩חֶם֩. The meteg stays under the yod and the extra meteg after the qof is gone. This matches the details review, which says the long vertical is the qof's own descender. Its remark about the narrow yod only explains where it placed the meteg; it is not an open question about the source.",
+        "Gen 21:21 (s170): the AFTER text has וַתִּֽקַּח־ל֥וֹ. The meteg stays under the tav (this word has no yod) and the extra meteg after the qof is gone. This matches the details review.",
+        "Gen 21:19 (s170): וַתַּ֖שְׁקְ keeps its final-qof sheva in current.json and the XML. The details review confirms this. Its 'unresolved' item there is a stray dot from the next printed line, not a question about this mark.",
+        "Note split: BEFORE had one note 'ד. פ (בשבת ו.)' on the 21:22 entry. AFTER has two descriptions in printed right-to-left order, 'פ' and then 'ד. (בשבת ו.)'. This matches the details review reading 'מִצְרָֽיִם׃ פ ד. (בשבת ו.)' and the fix the completion review asked for.",
+        "XML at 21:21/21:22: …מִצְרָֽיִם׃ <milestone unit=\"verse\"/><note type=\"description\" xml:lang=\"he\">פ</note><note type=\"description\" xml:lang=\"he\">ד. (בשבת ו.)</note><milestone unit=\"verse\" corresp=\"…genesis/21/22\" n=\"22\"/>. So the terminator ends verse 21 before both notes, and verse 22 begins after them, as end_reference_before_instructions requires.",
+        "XML check that no verse includes a parashah or aliyah label: every Hebrew inter-verse note (לוי., (בשבת ג.), ג. (בשבת ד.), (בשבת ה.), פ, ד. (בשבת ו.), ה. (בשבת ז.)) sits right after a bare <milestone unit=\"verse\"/> terminator and before the next verse milestone. The chapter-final פ comes after both the verse and the chapter terminators.",
+        "Verse milestones genesis/21/1–34 appear exactly once each in HE and in EN. The chapter milestone carries corresp genesis/21 in both languages, matching complete_chapters. The canonical chapter and verse boundaries are unchanged from BEFORE.",
+        "Routing references (weekday aliyot: 21:1–4, 21:5–8, 21:9–12, 21:13–17, 21:18–21, 21:22–27) point at verse URNs whose scopes exclude the notes. The note positions agree with the aliyah starts at 21:5, 21:13, 21:22 and 21:28, and the Shabbat starts at 21:9, 21:18 and 21:22.",
+        "English verses 21:1–34 in current.json are identical to the BEFORE payload. The proof records english_words_unchanged=true. The English XML has no inter-verse notes and the same verse URNs as the Hebrew.",
+        "Whole-text accuracy rests on the completion review, which read every word, plus this adjudicated delta. The completion review approved everything else and held back only the named marks and the פ/aliyah order. The details review settled all of those confidently, and the AFTER text follows those readings."
+      ]
+    },
+    {
+      "stem": "torah_maftir_numbers_29",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [
+        {
+          "severity": "low",
+          "blocking": false,
+          "location": "HE and EN opening <tei:milestone unit=\"chapter\" n=\"29\"/>",
+          "problem": "Under URN scope rule 3, a chapter milestone with no corresp is only a terminator. It is not indexed and opens no scope, so its @n does nothing. Leaving out the numbers/29 corresp is correct, because only 29:1–6 is read and the unit must not claim the whole chapter. This milestone has no effect on alignment or on any reference.",
+          "fix": "Not required. Removing the bare opening milestone is optional tidying. Do not add a whole-chapter corresp."
+        }
+      ],
+      "unresolved": [],
+      "verified": [
+        "Nothing changed in this unit: the proof's change list has no Num 29 entry, and the BEFORE Hebrew and English payloads (proof lines 907–1059) match current.json.",
+        "Verse milestones numbers/29/1–6 appear once each in HE and EN, with verse and chapter terminators before the end of the paragraph. There is no chapter corresp, which matches start/end 29:1–29:6. There is no complete_chapters entry.",
+        "The page break pb n=76 falls between 29:3 and 29:4 in the Hebrew and inside 29:4 ('and one tenth | for each') in the English, matching the earlier reviews.",
+        "The earlier approval stands: the completion review approved this unit and raised only this optional low point, and english-shard-07 approved the English with the same low point."
+      ]
+    },
+    {
+      "stem": "haftarah_samuel_1",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "1 Sam 1:13 (s176): the AFTER text has נָע֔וֹת without the nun dagesh (BEFORE had נָּע֔וֹת). This matches the details review: plain nun with qamats, zaqef qatan over the ayin.",
+        "1 Sam 1:6 (s176): וְכִֽעֲסַ֤תָּה keeps the kaf meteg. The details review confirms it as present.",
+        "This is the only change in this unit. The other Hebrew verses I compared with BEFORE (1:1–1:20, partly by spot-check) are unchanged. The English is unchanged (english_words_unchanged=true).",
+        "XML: verse milestones samuel_1/1/1–28 and 2/1–10 appear once each in HE and EN. Chapter 1 carries corresp samuel_1/1 (complete_chapters). Chapter 2 opens with a bare milestone and does not claim the whole of samuel_1/2. Verse and chapter terminators close the unit.",
+        "Qere/ketiv for 2:3, 2:9 and 2:10 (×2) is encoded as tei:choice with j:read and j:written, and no milestone sits inside a choice.",
+        "Whole-text accuracy rests on the completion review, which read every word and held back only the 1:13 dagesh and the 1:6 meteg. The details review settled both, and the AFTER text follows those readings. All earlier human mark decisions (for example 1:16 מֵרֹ֥ב/שִׂיחִ֛י) are unchanged."
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "stem": "torah_genesis_21",
+      "language": "en",
+      "index": 0,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "basis": "Raw citations.en[0]: 'Genesis: Chapter 21', reference genesis/21, target genesis/21/1, scan s169. The XML standOff citation matches exactly. The accepted english-shard-07 review checked s169 and approved the printed '(Genesis: Chapter 21)' emitted without parentheses as the project convention. The completion review's 'unresolved' note here only said it had not opened s169 itself; it does not dispute the reading."
+    },
+    {
+      "stem": "haftarah_samuel_1",
+      "language": "he",
+      "index": 0,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "basis": "Raw citations.he[0]: 'בשמואל א׳ סמן א׳.', reference samuel_1/1, target samuel_1/1/1, s174. The XML is a citation note with a ref to samuel_1/1. The completion review approved it against the source."
+    },
+    {
+      "stem": "haftarah_samuel_1",
+      "language": "he",
+      "index": 1,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "basis": "Raw citations.he[1]: 'ולו ק׳.', a commentary note targeting samuel_1/2/3, s180. The XML matches. The completion review approved it."
+    },
+    {
+      "stem": "haftarah_samuel_1",
+      "language": "he",
+      "index": 2,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "basis": "Raw citations.he[2]: 'דיו ק׳.', a commentary note targeting samuel_1/2/9, s180. The XML matches. The completion review approved it."
+    },
+    {
+      "stem": "haftarah_samuel_1",
+      "language": "he",
+      "index": 3,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        {
+          "severity": "info",
+          "blocking": false,
+          "location": "s182 footnote '°) ביו ק׳. — *) ליו ק׳.'",
+          "problem": "The printed reference marks °) and *) are left out, and both qere notes are combined into one commentary note on samuel_1/2/10. The wording is exact and the marks are only reference signs, so this is acceptable.",
+          "fix": "None required. Splitting it into one note per qere is optional."
+        }
+      ],
+      "unresolved": [],
+      "basis": "Raw citations.he[3]: 'ביו ק׳. — ליו ק׳.', a commentary note targeting samuel_1/2/10, s182. The XML matches. The completion review approved it with this info note."
+    },
+    {
+      "stem": "haftarah_samuel_1",
+      "language": "en",
+      "index": 0,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "basis": "Raw citations.en[0]: '1 Samuel, ch. 1—2 v. 10', reference samuel_1/1/1-/2/10, target samuel_1/1/1, s175. The XML matches. The accepted english-shard-08 review checked s175 and approved it, with the printed parentheses left out by convention. The completion review's 'unresolved' note here was only a limit on what it had opened, not a disputed reading."
+    }
+  ],
+  "prior_full_review_used": [
+    "/tmp/mahzor-backlog/torah-bible-completion/review.json (read every word of Gen 21, Num 29 and 1 Sam 1:1–2:10; held back only the named marks and the פ/aliyah order)",
+    "/tmp/mahzor-backlog/torah-bible-details/review.json (confident enlarged readings for all 8 sites)",
+    "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/completion_review_2026_11_torah_bible_source_corrections.json (exact BEFORE/AFTER proof)",
+    "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/independent/completion_review_2026_11/english-shard-07/review.json (approves the English of torah_genesis_21 and torah_maftir_numbers_29)",
+    "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/independent/completion_review_2026_11/english-shard-08/review.json (approves the English of haftarah_samuel_1)"
+  ],
+  "source_images_read": [],
+  "limits": [
+    "I opened no source images or crops. The source verdicts rest on the completion review's full word-by-word reading plus the details review's confident readings of all 8 sites. Nothing remains in dispute that would need the crops.",
+    "I compared BEFORE and AFTER by eye with no diff tool. I compared the four changed words and the 21:21/21:22 note site exactly. Elsewhere I spot-checked BEFORE lines 1–1296 against current.json and did not read proof lines 1297–3939. That the rest is unchanged relies on the proof's explicit change list and its english_words_unchanged=true.",
+    "The English verdicts are inherited from english-shard-07 and english-shard-08. Shard-08 says it did not open s177, s179 or s181 and relied on an earlier unmagnified full-page audit for 1 Sam 1:4–2:9 English. I take those accepted verdicts as authoritative, and I did no new review of the English source wording.",
+    "I read routing-context.json only to line 2289 of 3417. That covers source_order and weekday aliyot 1–4; aliyah 5's references were cut off at that line. Any Shabbat aliyah routing, if present, was beyond the read range. I check only that the verse-URN scopes exclude the notes.",
+    "This review covers source accuracy and markup only. I make no claim that the schema validates, that it compiles, or that the PDF or HTML output is correct, and I ran no validator (validate_versification, validate_urn_references)."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "d7c6a0e3-3b74-4062-a49c-37ab771d5318"
+  }
+}

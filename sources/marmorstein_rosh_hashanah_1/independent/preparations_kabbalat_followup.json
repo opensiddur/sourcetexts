@@ -1,0 +1,108 @@
+{
+  "source_fidelity": {
+    "status": "pass",
+    "findings": [
+      "I compared the Birnbaum extraction (festival_candles_shabbat.xml line 30) with its parent (festival_candles_text.xml line 33) word for word. The extraction is the parent's text with the Sabbath branch taken: 'בָּרוּךְ אַתָּה, יְיָ אֱלֹהֵֽינוּ, מֶֽלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָֽׁנוּ בְּמִצְוֹתָיו וְצִוָּֽנוּ לְהַדְלִיק נֵר שֶׁל שַׁבָּת וְשֶׁל יוֹם טוֹב.' The commas, the meteg marks (ֽ) and the plain יְיָ (not wrapped in j:divineName, as in the parent) are kept. The only other difference is whitespace: the parent's space before the conditional becomes a line break and indent, which normalises to one space. Exactly two things were removed: the j:conditional/j:endConditional pair and its English rubric 'On the Sabbath:'. No word was added or dropped.",
+      "The Birnbaum parent file has the same content as before: the conditional, the rubric, pb n=585, the CC BY-SA 4.0 licence and Efraim Feinstein's trc credit. The extraction keeps CC BY-SA 4.0, biblScope 585 and the Feinstein trc credit, and adds a Codex mrk credit.",
+      "Minor wording problem, not a text defect: the trc resp in festival_candles_shabbat.xml line 6 still says 'Transcription in the transcluded 1949 source'. The words are now copied, not transcluded. Suggested wording: 'Transcription in the 1949 source (hadlaqat_ner_yom_tov@hasiddur_hashalem-birnbaum-1949-he), read and encoded by'.",
+      "Optional: the extraction has no pb n=585 or facs, so a compiled Shabbat blessing carries no page link to its scan. Adding <tei:pb n=\"585\" ed=\"1949 regalim\" facs=\"…n609_medium.jpg\"/> would make it match the parent.",
+      "Maintenance note, optional: the words now exist twice in the Birnbaum project, so a later correction to the parent will not reach the extraction automatically. A note in the editionStmt naming the parent file as the master copy would be enough.",
+      "The words of the Heidenheim lekhah_dodi.xml are the same as the accepted text. The only change is the הש״ץ choice/abbr/expan wrapper in the performance note at line 34. readings.json lines 5188–5206 record the abbreviation, and build.py unit_review_text (lines 274–276) puts 'הש״ץ [השליח ציבור]' into the review payload, so a change to either the abbreviation or its expansion forces a new review."
+    ]
+  },
+  "alignment": {
+    "status": "pass",
+    "findings": [
+      "The canonical URN prayer:hadlaqat_ner_yom_tov/shabbat appears only once, in the corresp of the Birnbaum extraction's div. The Heidenheim and English leaves pair only on the bare prayer:hadlaqat_ner_yom_tov (Heidenheim line 33, English line 33). There is no English for the combined wording, and none was supplied. The runtime agrees: english_ordinary_light is 0 for rh_shabbat_before_sunset and rh_shabbat_night, and 1 for the weekday and Elul-29 cases.",
+      "The extraction no longer contains an inline transclusion of its parent, so no parent corresp can be copied in and no Birnbaum ordinary-wording witness can be pulled in.",
+      "Lekhah Dodi alignment has not changed. The expanded spine's note at line 508 now uses the same choice/abbr/expan as the leaf's line 34."
+    ]
+  },
+  "guideline_adherence": {
+    "status": "pass_with_minor_findings",
+    "findings": [
+      {
+        "severity": "pass",
+        "file": "opensiddur/importer/marmorstein_rosh_hashanah_1/build.py",
+        "line": 88,
+        "rule": "abbr/expan for source abbreviations; readings.abbreviations=expanded",
+        "evidence": "rubric_words partitions on each abbreviation in order, raises an error if the abbreviation is missing from the text, and emits tei:choice/abbr/expan. It is used for both unit instructions (line 131) and expanded rubrics (line 343). feature_structures (line 293) recurses through all/any/none/one, rejects unknown operators, and tests bool before numeric, so True is never emitted as numeric 1.",
+        "required_fix": "None."
+      },
+      {
+        "severity": "pass",
+        "file": "specs/urn_registry/prayer.jsonl",
+        "line": 23291,
+        "rule": "SIDDUR_URN_SCHEME.md lines 132–142 (new wording-variant paragraph)",
+        "evidence": "The record has kind 'variant', label_en, label_he and a note explaining that this is a wording variant, not an edition or placement. It matches the new scheme paragraph, which names this exact URN and gives the rationale: an ordinary-only witness cannot serve, and an extraction from a compatible witness adds no new words. This resolves the earlier scheme-level finding.",
+        "required_fix": "None."
+      },
+      {
+        "severity": "minor (recommended)",
+        "file": "specs/SIDDUR_URN_SCHEME.md",
+        "line": 120,
+        "rule": "Internal consistency of the scheme",
+        "evidence": "Line 120 still says in bold that a prayer: URN '**Never contains an occasion, service or rite.**'. The paragraph twelve lines later allows a calendar name for a complete wording variant. Lines 144–148 ('Nest only what lives in one place') still define a nested path as a sub-part, while line 137 says this parent path means a wording variant. A reader who stops at line 120 or 146 gets the old rule.",
+        "required_fix": "Qualify line 120, for example 'Never contains an occasion, service or rite, except to name a complete wording variant (below)', and add a one-line cross-reference in 'Nest only what lives in one place' saying that kind: variant children are the documented exception."
+      },
+      {
+        "severity": "info",
+        "file": "sources/marmorstein_rosh_hashanah_1/readings.json",
+        "line": 6109,
+        "rule": "Recording editorial role labels (earlier optional suggestion)",
+        "evidence": "editorial_role: true is now recorded on the opening reader rendition, the opening response and all nine responses (lines 6109–6319). build.py expanded_order ignores the key, so the expanded XML (lines 512–618) still cannot tell editorial ח/ק labels from printed ones. This is acceptable as source-side recording.",
+        "required_fix": "None. Optionally emit a resp or a different note type later, if renderers need to tell editorial labels from printed ones."
+      }
+    ]
+  },
+  "expanded_order": {
+    "status": "fail: one required defect (orphaned candle-lighting heading and kindling instruction); the requested pre-sunset and after-nightfall behaviour is otherwise correct",
+    "findings": [
+      "Pre-sunset Friday, Elul 29 (checked from the condition expressions, not the old report). The outer gate (lines 356–374) is any(hebrew-date 6/29, rosh-hashana=1), so it is true. Weekday variant (lines 380–420): branch A needs Elul 29 and none(secular-day 6), which is false on Friday; branch B needs rosh-hashana=1, which is false. So the weekday variant is hidden. Shabbat variant (lines 427–444): all(Elul 29, secular-day 6) is true. No ancestor carries a j:declare: the Minchah declaration closes at line 309, the eruv declaration at line 351, and neither section contains the lights. The Shabbat variant itself has no declaration, so no automatic actual-day gate can hide it. The extraction has no internal conditional, so all its words appear. The runtime agrees for 2026-09-11 15:00 Minchah: shabbat_light=true, english_ordinary_light=0, eruv=false, refrains=0.",
+      "After nightfall on RH-Shabbat (Hebrew date Tishrei 1, civil date still Friday). The Shabbat variant needs Elul 29, so it is false. Weekday branch B needs shabbat=false, so it is false, and branch A needs Elul 29, so it is also false. No blessing appears, as intended. Kabbalat (lines 454–467) needs shabbat=true and maariv=true, and both hold, so Psalms 95–99 and 29, Lekhah Dodi with 11 refrains, Psalms 92 and 93, and the gated Mourner's Kaddish are all present. None of them has omission logic. The runtime agrees for 2026-09-11 22:00: shabbat_light=false, refrains=11, mourner_kaddish=true. This is full Kabbalat, consistent with the confirmed different custom.",
+      {
+        "severity": "REQUIRED",
+        "file": "project/machzor_expanded-opensiddur-he/index.xml",
+        "line": 356,
+        "evidence": "The outer festival_lights gate is any(Elul 29, rosh-hashana=1). It is broader than the union of its two variants. The heading 'הדלקת נר של יום טוב / Festival lights' (lines 376–377) and the instruction 'The housewife kindles the festival lights and says the following benediction:' (line 378) sit outside both variant gates. So whenever rosh-hashana=1 but neither variant applies, they appear with no blessing after them. That happens on (a) RH-Shabbat after nightfall, which is exactly the rh_shabbat_night case: the page tells the reader to kindle lights on Shabbat and then gives nothing; and (b) every RH1 non-Maariv compile, including the book's own RH1 Shacharit build, where a lighting heading and instruction appear before section_morning. The verification JSON counts only blessings, never this heading or instruction, so 'passed' does not cover the problem.",
+        "required_fix": "Make the outer gate exactly any(weekday-variant condition, Shabbat-variant condition). That is: any(all(Elul 29, none(secular-day 6)), all(rosh-hashana=1, shabbat=false, maariv=true), all(Elul 29, secular-day 6)). Change it in readings.json expanded_order festival_lights.conditions and regenerate. Then add verification observations for the lights heading or instruction (absent in rh_shabbat_night and in an RH1 Shacharit case; present in the before-sunset, weekday-night and undated cases)."
+      },
+      "Weekday variant coverage is correct. Elul 29 on Monday, Wednesday or Thursday before sunset shows the ordinary blessing (runtime 2024-10-02 15:00 and 2025-09-22 15:00: english_ordinary_light=1, shabbat_light=false). RH1 weekday Maariv shows the ordinary blessing (2024-10-02 22:00). Elul 29 can never fall on Saturday, so none(secular-day 6) leaves no gap.",
+      "The undated build shows both variants, each with its own condition rubric ('כשיום טוב אינו בשבת:' and 'לפני כניסת שבת, כשיום טוב חל בשבת:'). The runtime agrees: shabbat_light=true and english_ordinary_light=1.",
+      "Behaviour to note, not a defect: a congregation that brings in Shabbat early on Friday and builds with maariv=true before sunset gets no Kabbalat, because the shabbat aggregate is still false. In the same build the combined-blessing branch stays visible. This follows from the confirmed incoming-Maariv design."
+    ]
+  },
+  "limits": [
+    "I ran no compiler, validator or tests. The runtime outcomes come only from /tmp/mahzor-kabbalat-verification.json, which records booleans and counts: refrains, eruv, mourner_kaddish, shabbat_light, english_ordinary_light. It records no heading or instruction presence and no compiled word sequence. So it neither confirms nor rules out the orphaned heading, and it does not show the compiled Shabbat blessing text. My word-for-word check is file against file.",
+    "The verification JSON contains no runtime caveat field, and no case covers twilight (between sunset and nightfall on Friday), RH1 Shacharit, or an early Friday Maariv. Behaviour at twilight depends on how the runtime treats an undefined Hebrew date and is unverified.",
+    "I assumed opensiddur:day-of-week secular-day=6 means civil Friday. I base that on the user's statement and on the before-sunset case returning shabbat_light=true for 2026-09-11. I did not re-read features.yaml.",
+    "I read only the last six prayer.jsonl records (lines 23286–23291). I did not check whether kind 'variant' is in the registry checker's allowed kind list.",
+    "I did not re-check the unchanged leaves (eruv files, psalm leaves, English index) beyond confirming that the Heidenheim and English hadlaqat leaves still carry only the ordinary wording. Image-level source fidelity rests on the frozen final audit.",
+    "I did not inspect reviews.json, so I did not check whether the stored review for lekhah_dodi/he matches the new payload that includes the abbreviation. A stale review would make a non-draft build fail, not produce bad output."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "0fdaffc3-50f9-4979-b019-3e445ba78e05"
+  },
+  "file_sha256": {
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/eruv_tavshilin.xml": "edf028cbc4ecdf9f760daf5e90a944f9895bcc10cad29f39a97a957f74a883d3",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/hadlaqat_ner_yom_tov.xml": "3d95ab9593bf1bd36dafbe9081e95c76e56d04a388c2121eafde0394dd1affb3",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/lekhah_dodi.xml": "bda78df6e80d8d750aef8253fb6a9625abcb7261986f47660b4403c240661344",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_95.xml": "34167ca9c405ed54b523dc3e21b5391f97edd6970621022bfd469f2cddd27d4d",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_96.xml": "042b78bde9bdd2aa34bc3a3852fd623c0aee2506976f45150c83570cb94b9d68",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_97.xml": "8890efa35b6f4b2ad06e1ce0ae98d146cbacd68339efee120186e59bf98263ba",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_98.xml": "de05e5bd546299b6109f615bf593680fb97d3ccb56d4eda40f789b9b1960384b",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_99.xml": "d708aba2fe1820fb53bc2f9172fb97c242c14abc87ab81c89fad0c527bc3a2d3",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_29.xml": "3b8a604ca8b5c2c1ba36da2756823db6b26ca1d79d6be3beae3e301bb6d17e80",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_92.xml": "fd80fac4dc2088a3c7d29be4a0971e9c51921da89d9e52eaabaa14338d5d58b3",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_93.xml": "9c1c8545e25e8de4c3978ec5147aeac0e4fd1a7dac0fb9ffb881f65cb25c77f8",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/eruv_tavshilin.xml": "57351971581e9a7b16501d5eb9310cc4360c07c946a633ae3bee3c06e08d39cc",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/hadlaqat_ner_yom_tov.xml": "7cea3cb47056f9bbcc59d88d14880472c130a7789144a41260e853c08ac04c7d",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/index.xml": "5d586b6be18f8e35aa61b847a0a71c6d2ae98d634c78dae95a3aa6ce3b9dc8b3",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/index.xml": "efd53cdf3246f5abb37a05a3fb3a8c7adabe018da9357a1194ef83de9bc8c6cb",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/machzor_expanded-opensiddur-he/index.xml": "0b520034f4b5eb7c152e878471758fb53558ee2968702c6ee24f8a1b72ab64fa",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/hasiddur_hashalem-birnbaum-1949-he/festival_candles_shabbat.xml": "b1307a404fcbb62e9b101121a7b99bd78cc0a9ac790e1670f51048b74a206c1f"
+  },
+  "files_unchanged_during_review": true
+}

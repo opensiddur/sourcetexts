@@ -1,0 +1,87 @@
+{
+  "reviewer": "Claude (independent JLPTEI placement review)",
+  "model": "claude-opus-5-5",
+  "effort": "low",
+  "approved": true,
+  "findings": [
+    {
+      "severity": "low",
+      "blocking": false,
+      "location": "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/machzor_expanded-opensiddur-he/index.xml:36",
+      "issue": "The new explanation of the Psalm24 deferral is an untyped tei:note on project_source_bibl. JLPTEI-3.md (header template, around lines 515-518) says an untyped note belongs to the citation and is printed with it. A note about how this project encodes the source should be typed \"encoding\". This sentence is about the encoding and placement, not about the printed source, so as written it will be printed in the bibliography.",
+      "recommendation": "Change it to <tei:note type=\"encoding\">, or move it to editionStmt."
+    },
+    {
+      "severity": "low",
+      "blocking": false,
+      "location": "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/index.xml:333",
+      "issue": "The small-type line 'היום ראשון בשבת שבו הלויים היו אומרים במקדש' is encoded as tei:note type=\"instruction\". By the 'Kinds of rubric' section (lines 1957-1980) it is neither a directive (it does not ask for anything the text omits) nor a when-condition. It names the passage that follows, so it is closer to a description, and some rites say this formula aloud. It is correctly kept out of the canonical psalms/24 text and stays only in the documentary div, so the rubric is not mixed into the prayer. Only its rubric type is debatable.",
+      "recommendation": "Optional: change it to type=\"description\". This is not needed for the placement change, and the reviewed change did not introduce it."
+    }
+  ],
+  "checks": [
+    {
+      "check": "Unconditional Psalm24 append removed from the expanded service",
+      "result": "pass",
+      "evidence": "I read all 1511 lines of the expanded index.xml. There is no transclusion of urn:x-opensiddur:text:bible:psalms/24 anywhere; the only psalms/25/6 is the morning Kaddish verse. section_morning ends with prayer:yotzer_or/or_chadash inside section_morning_shema_blessings (line 1500), followed by endDeclare section_morning_settings (1503) and endConditional section_morning_condition (1505)."
+    },
+    {
+      "check": "No new recitation placement invented",
+      "result": "pass",
+      "evidence": "The expanded file has no daily-psalm or Shir shel Yom section and no new day-of-week (secular-day=1) conditional. The deferral is recorded only in the header note."
+    },
+    {
+      "check": "Service/day condition bypass",
+      "result": "pass",
+      "evidence": "The removed append no longer exists, so no content sits outside section_morning_condition (shaharit=true and rosh-hashana=1) or after its endConditional. The morning gate and declare are unchanged and their scope is still balanced. Every j:conditional/j:declare in the file has a matching sibling endConditional/endDeclare."
+    },
+    {
+      "check": "Scope leakage (milestone, declare, conditional)",
+      "result": "pass",
+      "evidence": "In psalm_24.xml the chapter milestone corresp=psalms/24 and the verse milestones psalms/24/1-10 are closed by bare <tei:milestone unit=\"verse\"/> and <tei:milestone unit=\"chapter\"/> terminators (rule 3, lines 182 and 217-240). Neither scope runs past the psalm. The documentary div holding the transclusion closes before the body div ends. The expanded file has no unterminated declare or conditional."
+    },
+    {
+      "check": "Verse/chapter IDs unchanged",
+      "result": "pass",
+      "evidence": "The publication idno is urn:x-opensiddur:text:bible:psalms/24@prayerbook_for_the_new_year-heidenheim-1965-he. The chapter milestone is n=24, and there are 10 canonical verse milestones n=1..10 with matching corresp values. There are no duplicates and no edition-verse units. Psalm 24 has 10 canonical verses, so no renumbering was needed."
+    },
+    {
+      "check": "Source-qualified witness and canonical text retained",
+      "result": "pass",
+      "evidence": "Documentary index.xml line 334 still transcludes psalms/24@prayerbook_for_the_new_year-heidenheim-1965-he. The psalm module still carries the canonical correspondences, with no @project in @corresp."
+    },
+    {
+      "check": "Source heading and rubric kept apart from prayer and confined to the documentary source",
+      "result": "pass",
+      "evidence": "Documentary index.xml lines 331-335: a tei:div with tei:head 'שיר של יום.' and the Sunday rubric note, then the transclusion. This matches s351.jpg, where the centered heading 'שיר של יום' and the small-type Sunday line come before Psalm 24 verse 1. Neither the heading nor the rubric is inside psalm_24.xml, and neither was moved into the expanded service. See finding 2 on the rubric type."
+    },
+    {
+      "check": "Documentary content not placed into the expanded recitation",
+      "result": "pass",
+      "evidence": "The expanded file transcludes neither the documentary שיר של יום div nor its heading or rubric."
+    },
+    {
+      "check": "Source image supports the 'separate daily-psalm supplement' claim",
+      "result": "pass",
+      "evidence": "s351.jpg is a standalone 'שיר של יום' page: Psalm 24 under the Sunday line, followed directly by the Monday line and Psalm 48. It does not continue from Yotzer. The facs n350.jpg (0-based archive page) is consistent with physical scan 351."
+    },
+    {
+      "check": "Absent English not filled",
+      "result": "pass (Hebrew side only)",
+      "evidence": "The Hebrew files supply no English for Psalm24, and the header says no absent English translation is supplied. I did not read the English counterpart project."
+    }
+  ],
+  "limitations": [
+    "Scope is limited to the Psalm24 placement change. I did not certify any other source text, transcription accuracy of Psalm 24 beyond a quick look, or completeness of the expanded service.",
+    "I did not read the English expanded project or any English Heidenheim–Marmorstein project, so the claim that the shared Hebrew/English sequence is preserved is checked on the Hebrew side only.",
+    "I had no diff or previous version of the files. 'Prior append removed' is inferred from its absence in the current generated output, not from a before/after comparison.",
+    "I could not run any build, validator (validate_urn_references, schema) or reference-database resolution because only Read was allowed. Scope findings come from reading the XML against JLPTEI-3.md rules.",
+    "I could not reliably read the small marginal abbreviation at the left of the Sunday line on s351.jpg. It is not encoded, and I did not evaluate it.",
+    "I read JLPTEI-3.md selectively (URN and milestone scope, versification, header and sources, transclusion, rubrics, conditions, running-order gates). Lines 1400-1500 (other holiday-aggregate and torah-reading features) were skipped because they don't bear on this change."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "5bba28ad-69b1-4ef3-b9ed-b5f208003a52"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "english136_layout_correct": true,
+  "encoding_alignment_order_approved": true,
+  "all_other_source_readings_approved_except_pending_hallelu_mark": true,
+  "pending_human": [
+    {
+      "item": "Halleluyah first-lamed additional mark",
+      "detail": "The scan shows a small dot below the hataf-patah under the first lamed of הַלֲלוּיָהּ, in the same place in the s70, s8 and s28 crops. Is it a meteg? The question applies to all six Halleluyah occurrences: HE psalm_135.xml at 135:1, 135:3 and 135:21, and the earlier s8 Ashrei, s9 Qedushah and s28 Vetimlokh forms.",
+      "current_encoding": "הַלֲלוּיָהּ, with no meteg. This stays until the human answers.",
+      "blocks_certification_of": [
+        "HE psalm_135.xml",
+        "earlier three Halleluyah units (ashrei.xml, amidah_qedushah.xml, rh_vetimlokh.xml)"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "medium",
+      "file": "sources/marmorstein_rosh_hashanah_1/psalms_s70_s75_resolutions.json (lines 2-3)",
+      "issue": "\"pending_human\" is an empty list, and \"status\" says only that a final review is pending. The file does not mention that the Halleluyah mark question is still with the human. That is the batch's only human dependency, and this file does not show it.",
+      "recommendation": "List the Halleluyah first-lamed mark question in pending_human, with the same scope as above. Say in status that HE Psalm 135 and the three earlier Halleluyah units are not certified until it is answered. Keep the batch and the volume marked as draft."
+    },
+    {
+      "severity": "info",
+      "file": "EN psalm_136.xml line 55; s73-b3.jpg",
+      "issue": "Verified: 136:8 is one tei:l. It holds the verse milestone, then 'The sun to rule by day ', then the refrain seg. This matches the scan, where the lead and the refrain are on one printed line. 136:2, 3, 17 and 18 are also single lines, which matches the corrected layout note: English 2, 3, 8, 17 and 18 share a line. All other verses keep the lead and the refrain on separate lines. The milestones run 1–24 then 26, with no English 25 and no invented text. The page break before 136:17 is unchanged, and the bare verse and chapter terminators come after the 26 refrain. 'cver' in the scan is a damaged 'e', and 'ever' is correct.",
+      "recommendation": "None."
+    },
+    {
+      "severity": "info",
+      "file": "HE index.xml line 283; HE psalm_24.xml",
+      "issue": "Psalm 24 has facs page/n350, which is s351. That fits the resolution: it is printed much later in the volume, and its place in the documentary order is scan order with a gap, not a claim that it follows Psalm 136 on the page. In this pass I could not find the expanded-index path to reread it. I am relying on the previous review's direct reading that the expanded index puts Psalm 24 in a separate appendix.",
+      "recommendation": "Accepted. When Psalm 33 is encoded, insert it before Psalm 24 as planned."
+    },
+    {
+      "severity": "info",
+      "file": "HE/EN index.xml (lines 280 / 205)",
+      "issue": "targetEnd is used the same way in both languages. HE covers 1–24, then 25, then 26. EN covers 1–24, then 26. I could not run the validator or compiler in this read-only review. The claim that schema validation and compilation pass is consistent with targetEnd being used throughout the expanded index.",
+      "recommendation": "Accepted."
+    },
+    {
+      "severity": "info",
+      "file": "HE psalm_135.xml (135:21)",
+      "issue": "In the generated file, יְרוּשָׁלָ͏ִם shows lamed, qamats, CGJ, hiriq in that order. That agrees with the stated check of U+05DC U+05B8 U+034F U+05B4. This review only viewed the file and did not inspect raw bytes.",
+      "recommendation": "Accepted."
+    },
+    {
+      "severity": "info",
+      "file": "earlier partial-chapter excerpts",
+      "issue": "Partial excerpts deliberately leave out a chapter corresp so they do not present themselves as full chapters. That is a separate question from the current whole 135 and 136 files, which do carry chapter corresp and terminators.",
+      "recommendation": "Accepted as a recorded authoring decision. It does not affect s70–s75."
+    },
+    {
+      "severity": "info",
+      "file": "EN index.xml lines 203-204",
+      "issue": "The English documentary order goes from Psalm 91 straight to Psalm 135, with no psalm_91_repeat. The Hebrew index has it at line 278. The previous review described the order as '91, 91 repeat' in both languages. This is outside the 135/136 scope and may be correct if the English pages do not print the repeat.",
+      "recommendation": "Confirm that the English pages do not print the Psalm 91 repeat. It does not affect the 135/136 findings."
+    }
+  ],
+  "verdict": "The English 136:8 layout is correct and matches s73-b3. Encoding, alignment and recitation order for Psalms 135 and 136 are approved in both languages, as are all other source readings in this scope. That scope is s70–s73 in full plus the Psalm 136 continuation on s74–s75, with Psalm 33 excluded. The resolutions for the earlier low and info findings (Psalm 24 placement, targetEnd, the Jerusalem codepoints, partial-chapter markers) are accepted. Not certified: HE Psalm 135 and the three earlier Halleluyah units (Ashrei s8, Qedushah s9, Vetimlokh s28) stay uncertified until the human answers one question: is the extra dot under the first lamed of Halleluyah a meteg? That is the only human dependency left. It must be recorded in pending_human in psalms_s70_s75_resolutions.json, which currently lists none. The whole batch and the volume remain draft.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "616d3a0e-9869-4e1f-97c6-de94e5216491"
+  }
+}

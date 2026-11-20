@@ -1,0 +1,117 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "scan_pair": [
+    234,
+    235
+  ],
+  "source_approved": false,
+  "findings": [
+    {
+      "scan": "s234",
+      "key": "melekh_8",
+      "old": "סַב",
+      "proposed": "סָב",
+      "reason": "In band1 the mark under the ס of סב looks like a T-shaped qamats, not a patach. Medium confidence."
+    },
+    {
+      "scan": "s234",
+      "key": "melekh_9",
+      "old": "פָּאֳרוֹ",
+      "proposed": "פְּאֵרוֹ",
+      "reason": "Band1 shows a vertical shva under the פ and a horizontal two-dot tsere under the א. It does not show qamats + hataf-qamats."
+    },
+    {
+      "scan": "s234",
+      "key": "melekh_11",
+      "old": "שֶׁקֶט בְּפַנִּינָיו",
+      "proposed": "שֶׁקֶט בִּפְנִינָיו",
+      "reason": "Band1/band2 show a hiriq under the ב, a shva under the פ, then נִ, י, נָ. I see no patach under the פ and no dagesh in the first נ. Medium confidence on the ב vowel."
+    },
+    {
+      "scan": "s234",
+      "key": "melekh_11",
+      "old": "טוּב",
+      "proposed": "טוֹב",
+      "reason": "Band2: the dot sits at the top of the vav (holam male), not in its middle."
+    },
+    {
+      "scan": "s234",
+      "key": "melekh_11",
+      "old": "בְּמַצְפֻּנָּיו",
+      "proposed": "בְּמַצְפּוּנָיו",
+      "reason": "Band2 shows a full vav with a shuruq after the פ (plene spelling, no qubbutz) and no visible dagesh in the נ."
+    },
+    {
+      "scan": "s234",
+      "key": "melekh_8..melekh_11",
+      "old": "(refrain has no siglum)",
+      "proposed": "ק׳ before לַעֲדֵי עַד יִמְלוֹךְ in each of stanzas 8–11",
+      "reason": "The source prints a small ק׳ siglum before the refrain in each of stanzas 8–11. None of these is encoded. The stanza-12 refrain has no ק׳."
+    },
+    {
+      "scan": "s234",
+      "key": "melekh_joint",
+      "old": "speaker block קו״ח placed after melekh_12",
+      "proposed": "קו״ח inside melekh_12, after 'מֶלֶךְ עֶלְיוֹן.' and before 'תָּקְפּוֹ לָעַד'",
+      "reason": "In the source קו״ח appears mid-line in the last stanza, right before תָּקְפּוֹ, not after the stanza. Its role scope (from תקפו onward) is misrepresented unless project convention says otherwise."
+    }
+  ],
+  "uncertainties": [
+    {
+      "scan": "s234",
+      "key": "melekh_9",
+      "word": "עֹז (first)",
+      "question": "I can't see a holam on the first עז (after פְּאֵרוֹ) at this resolution; the second one, הָעֹז, does seem to have a holam. Is the first עֹז or unpointed עז?"
+    },
+    {
+      "scan": "s234",
+      "key": "melekh_10",
+      "word": "בָּאֹהַב",
+      "question": "Under the ב the mark looks more like a shva (בְּ) than a qamats. Under the א there is a qamats/hataf-type mark rather than a clear holam. Possible readings: בְּאַהַב or בְּאָהַב. Needs a higher-resolution check."
+    },
+    {
+      "scan": "s234",
+      "key": "melekh_8..12",
+      "word": "לַעֲדֵי",
+      "question": "There may be a meteg under the ל of לַֽעֲדֵי in the refrains. I can't resolve it at band resolution."
+    },
+    {
+      "scan": "s234",
+      "key": "melekh_10",
+      "word": "מֵי",
+      "question": "There is a possible meteg under the מ (מֵֽי)."
+    },
+    {
+      "scan": "s234",
+      "key": "uvekhen_reader",
+      "word": "חזן.",
+      "question": "The printed siglum looks like 'חז.' (abbreviated). Confirm whether it is חז׳/חז. rather than the full חזן."
+    },
+    {
+      "scan": "s234",
+      "key": "uvekhen_qedushah",
+      "word": "תַעֲלֶה",
+      "question": "I can't confirm whether the ת has a dagesh."
+    },
+    {
+      "scan": "s234",
+      "key": "unetaneh",
+      "word": "דַיָּן / הוּא",
+      "question": "I see no dagesh in the ד of דַיָּן, which matches the candidate. I'm noting it only as a low-resolution check."
+    }
+  ],
+  "coverage_notes": [
+    "s234: everything below the running head is covered: stanzas 8–12, the סוגרים הארון rubric, חזן + ובכן, the Yiddish rubric קהל בעטעט ביז מעבירין את רוע הגזרה, and Unetaneh up to 'וְיֹאמְרוּ, הִנֵּה'. Nothing is printed below the text block. I ignored the running head and page number (107).",
+    "Unencoded source content: the ק׳ refrain sigla in stanzas 8–11, and the true mid-line position of קו״ח in stanza 12.",
+    "The extra-large elongated א in תִנָּשֵׂא is typographic emphasis only; there is no textual variant.",
+    "s235: I checked the English word by word against the page image and found no discrepancies. That includes 'splendour', 'trea-sures' (hyphenated across a line break), 'ocean’s', 'reckons', 'Shofar', and the open quote ‘Behold … host on high'. The Hebrew cues ובכן and ונתנה תוקף are correctly omitted. The English page has no counterpart to the Hebrew rubrics or sigla, so leaving those missing is correct. I did not open the s235 band images; the full-page scan was legible."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "c1725027-68db-431d-85b7-af1a135000a6"
+  }
+}

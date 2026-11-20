@@ -1,0 +1,87 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Low effort setting. I read all of current.json, current.review.xml, guideline-excerpts.md, yotzer102-108-final/review.json, yotzer-english-scope-final/review.json, and the human 147–158 before/after file (lines 1–1646, in two reads). I looked at the native s102.jpg and s104.jpg. I read only the enlarged rows that cover these three units: s102 rows 1–3 and s104 rows 1, 2, 5, 6, 7, 8 and 9. I did not open s102 rows 4–9 or s104 rows 3–4, because they contain only Hakol and El Adon, which are out of scope. I compared every word by eye. I ran no diff, schema, compiler, refdb, UrnResolver or OCR tool. I could not enlarge beyond the supplied rows, so I could not make out small vertical strokes beside vowels with certainty. Every such stroke I saw is listed under unresolved."
+  },
+  "witnesses": [
+    {
+      "stem": "yotzer_hameir",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [
+        "s102 row2, מַעֲשֶׂיךָ (Ps 104:24): next to the segol under the shin there appears to be a vertical stroke, the same shape as the human-confirmed stroke in בְּרַחֲמֶֽיךָ. The current text has none. Needs a native-resolution or human check. Not approved.",
+        "s102 row2, קִנְיָנֶךָ: there may be a vertical stroke next to the segol under the nun. Not in the current text. Unresolved.",
+        "s102 row2 (end of line), הַמֶּלֶךְ: there may be a stroke under the mem, next to the segol. Not in the current text. Unresolved.",
+        "s102 row2, הָאָרֶץ, and s102 row1, לָאָרֶץ: I can see an extra short vertical mark in the qamats area of each word. At this enlargement I cannot tell whether it sits under the he/lamed or under the alef, or whether it is a meteg at all. Not in the current text. Unresolved.",
+        "s102 row2, בְּחָכְמָה: there may be a stroke under the ḥet, next to the qamats. Not in the current text. Low certainty. Unresolved."
+      ],
+      "verified": [
+        "Extent: the HE text runs from הַמֵּאִיר on s102 row1, just below the out-of-scope directive, through אֲדוֹן at the end of row3 above the rule, then continues on s104 row1 with עֻזֵּנוּ … בַּעֲדֵֽנוּ:. It stops before אֵל בָּרוּךְ. Hakol below the s102 rule is not included.",
+        "Every letter, visible vowel, dagesh, maqaf and punctuation mark matches the print word by word, including וְלַדָּרִים, בְּכָל־יוֹם (maqaf; the word opens row2), מַעֲשֵׂה בְרֵאשִׁית: (no dagesh in the bet, per human 151a), יְיָ. with a period, כֻּלָּם בְּחָכְמָה עָשִׂיתָ. with a period, קִנְיָנֶךָ:, מֵאָז., עוֹלָם:, רַחֵם עָלֵֽינוּ. with a period, מִשְׂגַּבֵּנוּ. and בַּעֲדֵֽנוּ:. The word order is as printed.",
+        "Human 147 עָלֶֽיהָ (meteg under the lamed), 148 בְּרַחֲמֶֽיךָ (under the mem) and עָלֵֽינוּ (under the lamed), and 150a יִשְׁעֵֽנוּ (under the ayin) and בַּעֲדֵֽנוּ (under the dalet) are present at exactly these weekday occurrences. They are not carried into Hakol, as required. The strokes are visible in s102 rows1/3 and s104 row1.",
+        "current.json and current.review.xml have identical Hebrew strings. The pb n=38 facs n103 sits between אֲדוֹן and עֻזֵּנוּ, which is the real page turn. There is no opening pb 37, a closed scope finding. div@facs is n101.",
+        "Ps 104:24 is the full printed verse. The canonical verse milestone comes before the bounded seg@source and is closed by bare verse and chapter terminators. HE and EN have the same URN set, {psalms/104/24}.",
+        "The guard is shabbat=false with no rubric, which matches the unrubricated weekday text. The EN strings are identical to the before/after record and to the approved English scope review."
+      ]
+    },
+    {
+      "stem": "yotzer_el_barukh",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [
+        "s104 row1, זָהֳרֵי: the zayin area shows marks beyond the qamats that could be a meteg before the ḥataf. Not in the current text. Unresolved.",
+        "s104 row2, אֱלֹהֵינוּ: there may be a vertical stroke beside the tsere under the he. Not in the current text. Unresolved.",
+        "s104 row2, שֶׁעָשִׂיתָ: there may be a vertical stroke under the sin, beside the ḥiriq. Not in the current text. Unresolved.",
+        "s104 row2, יְפָאֲרוּךָ: there may be a stroke under the pe, between the qamats and the ḥataf pataḥ under the alef. Not in the current text. Unresolved."
+      ],
+      "verified": [
+        "Extent: the HE text runs from אֵל בָּרוּךְ on s104 row1 (in the same printed paragraph as the Hameir tail) to סֶּֽלָה: at the end of row2, just above the first horizontal rule. The first סֶּלָה on s104 belongs to this unit.",
+        "Every letter, visible vowel, maqaf and punctuation mark matches: גְּדוֹל דֵּעָה. הֵכִין וּפָעַל (no dagesh in the pe, per human 154) זָהֳרֵי חַמָּה. טוֹב יָצַר כָּבוֹד לִשְׁמוֹ. מְאוֹרוֹת נָתַן סְבִיבוֹת עֻזּוֹ. פִּנּוֹת צְבָאָיו קְדוֹשִׁים רוֹמְמֵי שַׁדָּי. תָּמִיד מְסַפְּרִים כְּבוֹד־אֵל וּקְדֻשָּׁתוֹ: תִּתְבָּרַךְ יְיָ אֱלֹהֵינוּ עַל־שֶֽׁבַח מַעֲשֵׂה יָדֶֽיךָ. וְעַל־מְאוֹרֵי־אוֹר (two maqafs) שֶׁעָשִׂיתָ יְפָאֲרוּךָ סֶּֽלָה:. The order is as printed.",
+        "Human 152a סֶּֽלָה (dagesh and meteg in the samekh) and 153 שֶֽׁבַח (meteg under the shin) and יָדֶֽיךָ (under the dalet) are present at exactly this occurrence.",
+        "The JSON and XML Hebrew are identical. There is no pb inside the unit. div@facs is n103. The guard is shabbat=false with no rubric, as printed above the rule. EN is unchanged. Neither language has a corresp milestone, so the alignment is unchanged."
+      ]
+    },
+    {
+      "stem": "lael_asher_shavat",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [
+        "s104 row9, יָדֶיךָ (final line): the dalet appears to carry the same vertical stroke beside the segol as the human-confirmed יָדֶֽיךָ in El Barukh (s104 row2). The two rows look the same. The current Lael text has יָדֶיךָ with no meteg. Human 153 covered only El Barukh, so this occurrence has not been decided. Not approved.",
+        "s104 row8 end / row9, עַל־שֶׁבַח (before מַעֲשֵׂה): the stroke beside the segol under the shin looks like El Barukh's שֶֽׁבַח. Not in the current text. Unresolved.",
+        "s104 row6, זֶה שֶׁבַח, and s104 row7, שֶׁבַח יְקָר: there may be strokes beside the segol under the shin. Not in the current text. Unresolved.",
+        "s104 row9, מוֹשִׁיעֵנוּ: there may be a vertical stroke beside the tsere under the ayin, like the confirmed יִשְׁעֵֽנוּ. Not in the current text. Unresolved.",
+        "s104 row8, אֱלֹהֵינוּ and מַלְכֵּנוּ: there may be strokes beside the tsere. Not in the current text. Unresolved.",
+        "s104 row6, תִּפְאֶרֶת (Lael occurrence): there may be a stroke under the alef, beside the segol. Not in the current text. Unresolved.",
+        "s104 row8/9, הָאָרֶץ in וְעַל־הָאָרֶץ: there may be an extra vertical mark in the qamats area. Not in the current text. Unresolved.",
+        "s104 row7, יְפָאֲרוּ and וִיבָרְכוּ, and s104 row9, יְפָאֲרוּךָ and שֶׁעָשִׂיתָ: there may be strokes before the ḥataf or shva, or under the sin. Not in the current text. Low certainty. Unresolved."
+      ],
+      "verified": [
+        "Extent: the HE text runs from לָאֵל on s104 row6 (an indented new printed paragraph directly after the El Adon colon הַקֹּדֶשׁ:) to סֶּֽלָה: on row9, the last line of the page. The current text has exactly one סֶּלָה, at the very end. That is the human-confirmed 152c form with dagesh and meteg. The first s104 סֶּלָה is not mixed in.",
+        "Every letter, visible vowel, maqaf and punctuation mark matches word by word: מִכָּל־הַמַּעֲשִׂים, בַּיּוֹם, הִתְעַלָּה, וְיָשַׁב עַל־כִּסֵּא כְבוֹדוֹ., לְיוֹם הַשַּׁבָּת:, זֶה שֶׁבַח שֶׁלַּיּוֹם (one word, per human 155), שֶׁבּוֹ שָׁבַת אֵל מִכָּל־מְלַאכְתּוֹ:, וְאוֹמֵר מִזְמוֹר שִׁיר לְיוֹם הַשַּׁבָּת טוֹב לְהוֹדוֹת לַייָ: (no punctuation between הַשַּׁבָּת and טוֹב; the Divine Name is לַייָ per human 157), כָּל־יְצוּרָיו., יִתְּנוּ לָאֵל מֶלֶךְ יוֹצֵר כֹּל, בְּיוֹם שַׁבַּת קֹדֶשׁ: (pataḥ and dagesh in the bet per human 156, at this occurrence only), יִתְקַדַּשׁ., יִתְפָּאַר., מִמַּעַל וְעַל־הָאָרֶץ מִתָּחַת:, עַל־שֶׁבַח, וְעַל־מְאוֹרֵי־אוֹר. The order is as printed.",
+        "The JSON and XML Hebrew are identical. div@facs is n103 and there is no pb. The guard is shabbat=true.",
+        "Ps 92:1 is the full verse as printed: the full-verse canonical source and the existing occurrence context are unchanged. Ps 92:2a טוֹב לְהוֹדוֹת לַייָ: is nested as chapter, verse and half-verse with canonical source psalms/92/2/a. It closes with bare half-verse, verse and chapter terminators and then a bare prayer-part terminator before לְפִיכָךְ. The parent occurrence URI is preserved. The printed source spelling לַייָ is kept inside the quotation without MT normalisation. HE and EN have identical corresp sets. These are closed scope findings and I did not reopen them.",
+        "EN is unchanged, including the tei:sic 'Name.' with tei:corr 'Name,' from the approved English scope closure."
+      ]
+    }
+  ],
+  "limits": [
+    "Every unresolved item above is a small vertical stroke beside a vowel that I saw in the supplied enlargement but could not identify for certain. Each needs a native-resolution or human confirmation. Because of them, hebrew_source_approved is false for all three witnesses. Apart from these marks, I found no word, letter, maqaf, punctuation or ordering discrepancy in any of the three.",
+    "The human-confirmed occurrences 147, 148, 150a, 151a, 152a, 152c, 153, 154, 155, 156 and 157 are verified as present. I did not reopen them, and I did not treat them as deciding the other occurrences listed above.",
+    "I read only the enlarged rows that cover these three units (s102 rows 1–3; s104 rows 1, 2 and 5–9). I did not open s102 rows 4–9 or s104 rows 3–4, which hold only the out-of-scope Hakol and El Adon text.",
+    "Encoding, citation and alignment approval comes from reading the XML against the guideline excerpts and the prior structural closure. I ran no schema, compiler, refdb or URN-resolution tool."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "89b7d237-9ecf-4d83-9335-caf6a2762b18"
+  }
+}

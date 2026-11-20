@@ -1,0 +1,74 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Low effort setting, but I read every file the request named. That means all of current.json, current.review.xml (all 8 files: 4 units in HE and EN), canonical-use-proof.json, guideline-excerpts.md, ordinary-amidah-final-01/review.json and final-candidate-scope-followup/review.json. Source images I looked at: enlarged s120 rows 5, 6 and 7 and s122 rows 2 to 6, plus the native s120.jpg and s122.jpg pages. I checked layout only: indentation, centring, where parentheses sit and whether rubrics are present. I did not check fine pointing, and I did not adjudicate any source words. I did not open current.raw.xml, the registry, or any build or validator output."
+  },
+  "witnesses": [
+    {
+      "stem": "shacharit_amidah_qedushat_hayom",
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "issues": [],
+      "unresolved_structural_questions": [],
+      "verified": [
+        "Prior finding on missing page provenance is resolved. In HE, the div facs is n117 (s118). Attah_vechartanu and vattitten start partway down s118, so a facs on the div is enough there. The paragraph holding yaaleh_veyavo opens with tei:pb ed=1965 n=46 facs=n119 (s120), placed before the prayer-part milestone. In EN, the div facs is n118 (s119) and the pb is n=46 facs=n120 (s121). The native s120 page header says 46, and yaaleh_veyavo is the indented first paragraph of that page, which matches. current.json page_start=true is on the same two fragments.",
+        "The pb does not change any reference scope. It is a different unit from prayer-part, so it cannot end the vattitten_lanu scope or open anything itself. Each seg@source sits inside its prayer-part milestone scope as before: attah_vechartanu_mikol, vattitten_lanu_hashem, yaaleh_veyavo and melokh_al_kol_haolam. The unit is closed by a bare prayer-part terminator.",
+        "HE and EN carry the same shared corresp set: attah_vechartanu, vattitten_lanu, yaaleh_veyavo and melokh, plus the terminator. All the Shabbat parentheticals are still j:conditional type=marked with shabbat=true, in both languages. The printed rubric אם שבת is still the conditional's own instruction note on the two HE segments where it is printed (row5 last line and row6 line 3). Whether it is pointed is a source-word question and is not adjudicated here.",
+        "(מלכנו): the source evidence matches the encoding. Native s120, and row6 last line continuing into row7 line 1, show וּדְבָרְךָ (מלכנו) אֱמֶת in small type inside parentheses. It is unpointed. No rubric, siglum or occasion is printed with it, unlike the two (אם שבת …) parentheticals on the same page. There is no second wording, so tei:choice/j:option cannot be used: the guideline requires at least two j:options. A j:conditional needs a feature structure saying when the text applies, and the source gives none, so writing one would invent a ritual occasion.",
+        "Policy as against actual structure for (מלכנו). The documentary policy accepted in final-candidate-scope-followup for (וְנוֹרָא) in echad_eloheinu, and for (הוּא) in uvekhen_lekha_taaleh, was this: keep the printed parenthesis inline as literal text, with no invented condition, when the source assigns no occasion. (מלכנו) is the same kind of case, so that policy fits it. The actual encoding goes further than the precedent in a way the guidelines support. It has a tei:anchor xml:id=malkeinu_alternative immediately before the seg, and a tei:standOff type=notes with tei:note type=commentary target=#malkeinu_alternative. Annotations > Comments and Notes says commentary that is not an integral part of the text should be standoff markup targeting an anchor, and this follows that. The note says only that the condition is not stated (תנאי אמירתה אינו מצוין) and asserts no rite. I found no guideline text that requires a different encoding, so I propose no change.",
+        "The parenthetical has no English counterpart in the source, and no English was added. The (מלכנו) seg carries no corresp, so leaving it out of the EN does not move any alignment boundary. The xml:ids of the EN conditionals (…_segment_14 against HE …_segment_16) differ only in their local numbering. Those ids are not alignment keys.",
+        "Paragraphing matches native s120: yaaleh_veyavo and melokh are each indented. The (אם שבת …) parentheticals and the closing (הַשַּׁבָּת וְ)יִשְׂרָאֵל line sit inside the melokh paragraph."
+      ]
+    },
+    {
+      "stem": "shacharit_amidah_avodah",
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "issues": [],
+      "unresolved_structural_questions": [],
+      "verified": [
+        "Prior finding on missing page provenance is resolved. In HE, the div facs is n119 (s120). Retzeh starts partway down s120, at the bottom three lines of native s120, so a facs on the div is enough there. The vetechezeinah paragraph opens with tei:pb ed=1965 n=47 facs=n121 (s122), before its milestone. In EN, the div facs is n120 (s121) and the pb is n=47 facs=n122 (s123). The native s122 header says 47, and וְתֶחֱזֶינָה is the indented first line, which matches page_start=true in current.json.",
+        "The seg sources amidah/avodah/retzeh and amidah/avodah/vetechezeinah are still scoped under their own prayer-part milestones, and a bare terminator closes the unit. HE and EN carry the same corresp pair, retzeh and vetechezeinah. Two tei:p in each language match the two indented printed paragraphs."
+      ]
+    },
+    {
+      "stem": "shacharit_amidah_hodaah",
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "issues": [],
+      "unresolved_structural_questions": [],
+      "verified": [
+        "The required join is resolved. On native s122, rows 2 and 3, מוֹדִים is indented. The line ending קִוִּינוּ לָךְ: is justified to full width, and וְעַל־כֻּלָּם starts flush at the right margin. The HE now has both the modim and veal_kullam milestones in one tei:p, each followed by its own seg@source. That follows 'reference boundaries are independent of the printed tei:p … retain that structure'.",
+        "The centred line וּכְתוֹב לְחַיִּים טוֹבִים כָּל־בְּנֵי בְרִיתֶךָ: (row4 line 3) is a separate centred block and is kept as its own tei:p.",
+        "Documentary status of וְכֹל הַחַיִּים, settled from the image. It starts flush at the right margin (row4 last line and row5 line 1), with no indent, directly after the centred block. On the same page the printer indents every true paragraph opening, even one directly after a closing colon: וְתֶחֱזֶינָה, מוֹדִים, שִׂים שָׁלוֹם and אֱלֹהַי נְצוֹר. So the print does not mark Vekhol as a new indented paragraph. It is the running text picking up again after the centred insertion. The centred line is still a printed block, and TEI cannot nest one tei:p inside another. Closing p1 before the centred block and continuing the text in a following tei:p (p4) is therefore the faithful way to encode it, and it does not merge or split anything the print does not. No change is required. The prior review's question about its paragraph status is closed from this evidence and is not left open.",
+        "The reference parts were not pushed into the paragraph structure. Four prayer-part milestones (modim, veal_kullam, ukhetov, vekhol_hachayyim) run across three HE tei:p and end with one terminator. The EN keeps its own four printed paragraphs with the same four corresp values, which is allowed: 'retain that structure even when the facing translation has different paragraph breaks'.",
+        "Nothing in vekhol_hachayyim changed: its corresp is local and its seg@source is amidah/hodaah/hatov_shimkha, the same as before."
+      ]
+    },
+    {
+      "stem": "shacharit_amidah_sim_shalom",
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "issues": [],
+      "unresolved_structural_questions": [],
+      "verified": [
+        "Paragraph join is resolved. On native s122, rows 5 and 6, שִׂים שָׁלוֹם is indented. The line ending בִּשְׁלוֹמֶךָ. is justified to full width, and בְּסֵפֶר starts flush. The next true paragraph, אֱלֹהַי נְצוֹר, is indented again. The HE is now one tei:p holding the sim_shalom milestone, the text, the besefer_chayyim milestone, the text, and a bare prayer-part terminator. Each milestone opens its own independent scope, and the paragraph boundary is not used as a terminator.",
+        "The canonical-duplicate concern is resolved by the proof, not left as a question. The prior review said: IF the same URN is used as a corresp elsewhere, the alignment join would break. canonical-use-proof.json (status pass) lists every source-unit corresp use per language. prayer:amidah/shalom/sim_shalom and prayer:amidah/shalom/besefer_chayyim each occur exactly once in HE and once in EN, both in this unit (segments 0 and 1), and each is marked unique_in_this_witness=true. So the condition in Alignment ('a @corresp repeated within a document breaks the join') does not apply. 'Do not duplicate a canonical URN merely because the text is printed again elsewhere' is satisfied, and this is the first and only canonical occurrence. Where the same prayer text appears elsewhere in the edition under a local context URN, it is not a duplicate, because its corresp value is different.",
+        "Policy as against actual structure. The other units pair a local corresp with seg@source. That is a convention, and none of the quoted guidelines requires every milestone to have a local context URN, or requires a seg@source when the milestone corresp is already the canonical identity. Using the existing canonical URNs directly follows the user's explicit requirement to reuse them. Adding local URNs or segs only to match the other units would create new identities for style alone, so I do not recommend it.",
+        "HE and EN carry the same corresp pair, sim_shalom and besefer_chayyim, plus the terminator. The EN keeps its two printed paragraphs. That is allowed because reference boundaries are independent of each language's tei:p."
+      ]
+    }
+  ],
+  "limits": [
+    "This is a structural and encoding review only. No Hebrew source words, rubric pointing (for example אם against אִם), meteg or dagesh questions are certified or redrafted here. Human pointing items 89–96 and later, and the separate source-word adjudication, are still pending. encoding_guidelines_approved=true does not mean the Hebrew source is approved.",
+    "For canonical uniqueness I relied on canonical-use-proof.json, using its stated method of inspecting every segment corresp in all current reading units, per language. I did not re-enumerate the edition's other unit files myself. I did not run the build, validate_urn_references.py or the parallel compiler. Resolved URN ranges and rendering are therefore verified only by reading the XML statically against URN scope rules 2 and 3.",
+    "I judged english_alignment_unchanged by checking that the HE and EN corresp sets are identical and the same as the URNs the prior review listed. I did not have the previous XML, so I could not diff it line by line.",
+    "The centred וּכְתוֹב tei:p has no @rend recording the centring. The quoted guidelines do not require one, so I did not treat it as an issue. A rend on it, or on the flush-started continuation paragraph, would be an optional refinement.",
+    "Outside the review scope: title.en in current.json is the Hebrew string עבודה for avodah and הודאה for hodaah. It does not affect the XML structure reviewed here."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "7bdad50c-5168-47fb-8df3-4f424adde57d"
+  }
+}

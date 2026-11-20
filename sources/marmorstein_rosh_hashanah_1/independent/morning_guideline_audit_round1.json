@@ -1,0 +1,135 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "not stated in this session"
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "medium",
+      "file": "prayerbook_for_the_new_year-marmorstein-1965-en/yigdal.xml:34",
+      "issue": "Extra page break. The English Yigdal has <tei:pb n=\"3\" facs=…n42>, but page 3 already starts in en/morning_before_prayer.xml:34, before the English of Ps 39:13. The s43 image shows English Yigdal starting partway down page 3, under the Ps 26:12 paragraph. The Hebrew yigdal.xml has no matching pb. Because poem:yigdal now replaces the Birnbaum Yigdal in Maariv, this page-3 marker would also appear at the end of Maariv.",
+      "fix": "Remove the pb from en/yigdal.xml."
+    },
+    {
+      "id": "F2",
+      "severity": "medium",
+      "file": "heidenheim-he/morning_mah_tovu.xml:34-35 vs heidenheim-he/mah_tovu.xml:33-34",
+      "issue": "The same canonical identity is declared twice in one project. The div corresp urn:x-opensiddur:text:prayer:mah_tovu and the prayer-part milestones mah_tovu/mah_tovu and mah_tovu/varani appear in both files. The guidelines say only the first occurrence can be reached by URN, so which copy you get depends on indexing order. The HE index (s7 entering_synagogue) and the expanded index (lines 80 and 1205, unbound prayer:mah_tovu) both resolve this URN. The registry note (siddur.jsonl:1995) gives 'local pointing' as the reason for the second copy, but the s40 Hebrew is character-identical to the s7 reading in readings.json, including בְּרֹב, אָבֹא and לִפְנֵי־יְיָ. I checked the HE side; the EN pair probably has the same problem but I did not open the old EN mah_tovu.xml.",
+      "fix": "Have the context div transclude prayer:mah_tovu@project, or otherwise keep a single canonical declaration per project."
+    },
+    {
+      "id": "F3",
+      "severity": "medium",
+      "file": "morning_entrance_verses.xml:34 + morning_mah_tovu.xml:35 (HE and EN)",
+      "issue": "Psalm 5:8 gets a verse milestone (psalms/5/8) in the entrance verses and again inside Mah Tovu. morning_preliminaries.xml:36-37 transcludes the two files one after the other, so one compiled stream carries the same corresp twice. Under the alignment rules the second one is dropped, and the varani row merges into the previous row. The old canonical mah_tovu.xml marked these verses only with seg/@source, with no verse milestones, which avoided this. psalms/5/8 also appears in the s7 entering_synagogue.",
+      "fix": "Inside Mah Tovu, keep seg/@source only, as the old module does. At minimum, drop the psalms/5/8 milestone there."
+    },
+    {
+      "id": "F4",
+      "severity": "medium",
+      "file": "morning_before_prayer.xml:35 (HE and EN) → morning_psalm_17_6_repeat.xml:33-35",
+      "issue": "The repeat is pulled in with type=\"inline\". Inline transclusion drops hierarchy, so the div that carries the unique psalm_17_6_repeat corresp is lost. The milestone corresp=psalms/17/6 inside it survives. The compiled before_prayer stream therefore contains psalms/17/6 twice, which is exactly what the registry note (siddur.jsonl:1997) says the design avoids. The second English reading, 'I called … to me. O God', would be dropped or merged at alignment. I took this from the guideline text; I did not read compiler code.",
+      "fix": "In the repeat file, mark the verse with seg/@source, or a non-canonical boundary, instead of a second psalms/17/6 milestone. Or carry the unique context corresp on an element that survives inline flattening."
+    },
+    {
+      "id": "F5",
+      "severity": "low",
+      "file": "heidenheim-he/morning_mah_tovu.xml:35; en/morning_mah_tovu.xml:35",
+      "issue": "The adapted Ps 95:6 seg has no type=\"adaptation\". The old module has it (mah_tovu.xml:34). The printed wording (וַאֲנִי אֶשְׁתַּחֲוֶה וְאֶכְרָעָה … עֹשִׂי) is a first-person adaptation. Without the type, the seg looks like an exact quotation, the same as its neighbours. This does not match the 'exactly as old module' requirement."
+    },
+    {
+      "id": "F6",
+      "severity": "low",
+      "file": "morning_preliminaries.xml:35,39 (HE and EN); tallith.xml:35,37,39 (HE); machzor_expanded index.xml:1188-1192,1202,1207 vs :77",
+      "issue": "Rubric types are inconsistent. 'On entering the Synagogue:' is type=description in the generic entrance (expanded index line 77; readings.json for s7) but type=instruction in the morning files. Under 'Kinds of rubric', these all describe when or how the following passage is said, so they are descriptions: 'On entering…', 'Before the morning prayer:', 'Before draping … the following is said:' and 'Then this ברכה is recited while standing:'. 'One then removes the טלית…' is a pure directive and is correctly an instruction."
+    },
+    {
+      "id": "F7",
+      "severity": "low",
+      "file": "heidenheim-he/yigdal.xml:34 vs en/yigdal.xml:35",
+      "issue": "The printed heading above Yigdal and its English counterpart are encoded differently: Hebrew as tei:note type=description, English ('The Thirteen Principles') as tei:head. In parallel output they won't be treated as the same kind of element."
+    },
+    {
+      "id": "F8",
+      "severity": "info",
+      "file": "e.g. tallith_mah_yaqar.xml:35, morning_entrance_verses.xml:34, morning_before_prayer.xml:34",
+      "issue": "Chapter milestones with @n but no @corresp are terminators under URN-scope rule 3. They open nothing, so the bare <milestone unit=\"chapter\"/> that follows has nothing to close. The result is harmless: no whole chapter is claimed, which is the intent. But a bare terminator is supposed to carry neither n nor corresp, so these are formally irregular."
+    },
+    {
+      "id": "F9",
+      "severity": "info",
+      "file": "tallith.xml and morning_preliminaries.xml (HE and EN), sourceDesc",
+      "issue": "The bibl has no biblScope pages, unlike the header template and the other new files."
+    }
+  ],
+  "alignment_findings": [
+    "Ps 36:8–11: four canonical verse milestones in HE (lg/l) and EN (one p), terminated on both sides. They match.",
+    "Tallit blessing: both sides align. Hineni and Yehi ratzon are HE-only, with no EN file and no invented English. Correct.",
+    "Entrance: psalms/5/8 and half-verse 55/15/b are on both sides and terminated. 55:15 has its atnach at סוֹד, so a 'b' half is valid.",
+    "Mah Tovu: prayer-part mah_tovu and varani, plus the verse milestones for Num 24:5 and Ps 5:8, 26:8 and 69:14, match HE/EN. 95:6 is source-only on both sides. See F3 for the 5:8 duplication.",
+    "Gabirol: stanzas _39123/1–4 are on both sides with a final terminator. HE has four l elements; EN keeps them in one p. The EN split points match the HE stanza content.",
+    "Before-prayer: 16 units (17:6, 17:15, 31:15, 28:2, 30:3, 30:9, 31:17, 38:16, 39:13/shimah, 30:11 | 122:1, 119:162, 5:3, 5:4, [repeat], 26:12) are identical in order and URN on both sides. I checked every Hebrew verse against its cited Psalm. Ps 39:13 uses a verse-part rather than a half-verse, which is correct because ole-we-yored governs there. HE and EN both terminate the verse-part. The paragraph break before 122:1 matches the printed paragraphs (s43 image).",
+    "Yigdal: yigdal_daniel/1–13 on both sides (13 HE l, 13 EN p), with a final terminator.",
+    "Repeat 17:6: see F4. The duplicate psalms/17/6 inside the inline-transcluded stream breaks the join claimed for the 'I called' variant."
+  ],
+  "order_findings": [
+    "Expanded section_morning (index.xml:1184-1236): Tallit → Ps 5:8 and 55:15b → Mah Tovu → Shachar → 'Before the morning prayer' verses, with 17:6 transcluded twice → Yigdal → Torah benedictions and existing excerpts. This matches the stated order.",
+    "The generic entrance is guarded with shaharit=false (index.xml:65-73). The morning section is gated and declared for shaharit and rosh-hashana 1. There is no navigation markup.",
+    "Maariv now transcludes unbound poem:yigdal (index.xml:1040), so the Birnbaum dependency is removed. The header note says so. Birnbaum Kaddish and Hamotzi are still credited, with no English supplied.",
+    "In the documentary HE and EN indexes, the tallit service is transcluded before morning_preliminaries, and the EN 'Prayers' head (en/morning_preliminaries.xml:34) comes after all the HE-only tallit material.",
+    "Risk: the unbound expanded targets prayer:mah_tovu and bible:psalms/5/8 now have two or three same-project witnesses, so which witness is used is order-dependent (F2, F3). The EN pb from F1 also leaks into Maariv."
+  ],
+  "remaining_source_ambiguities": [
+    "Pending human: is there a dagesh in the dalet of לְאַחְדוּתוֹ (s42, Yigdal line 2)? The XML has no dagesh.",
+    "Possible but unconfirmed: Yigdal 6 אֶל אַנְשֵׁי. The readers disagreed (primary read a maqaf; independent read a space, confidence 0.6). In s42-band2 a short stroke is visible after אֶל, before a wide gap. Low priority, but it was never adjudicated by a human.",
+    "Consistency check: the micro reading cites a dot-stroke-dot (meteg) under the samekh of the heading's סֵדֶר as the decisive comparison for עֵֽדֶן. tallith.xml:5,34 encodes סֵדֶר without a meteg. Either encode it or record why it differs."
+  ],
+  "settled_items": [
+    "The mark between תִּזְכֶּה and נִשְׁמָתִי (s39-band0, line 4) is a blemish, not a comma. The real comma after עֵֽדֶן in the same paragraph is a larger wedge at baseline height with a following space. This mark is a much smaller speck that sits lower, near the left foot of the ה, and the word spacing is normal. The XML, which has no comma, is correct. Confidence about 0.75 at band resolution."
+  ],
+  "reviewed_xml_sha256": {
+    "_note": "These are the frozen values from /tmp/morning-audit-hashes.json, copied unchanged. I could not recompute them because code execution was not allowed, so I have not verified that the files I read match these hashes.",
+    "heidenheim-he/tallith_hineni_mitattef.xml": "24f008e9aadea0e94107a26738602d4521973a5ce530fc0b9b9d7a2baec32e85",
+    "heidenheim-he/tallith_lehitattef.xml": "70f0e8fdfd8c85dcdbc5283ac9c79fd687d83788fbbda80372c3f1695547cd22",
+    "heidenheim-he/tallith_mah_yaqar.xml": "0c083d339615b518da1bee1eb4b1c2d34da208d55de11ce20f375423ba64bd87",
+    "heidenheim-he/tallith_yehi_ratzon.xml": "291e7d9c91135e29d9cf00e8a1433ee8d55c603b9705e13ae59ef18def9ee01b",
+    "heidenheim-he/morning_entrance_verses.xml": "90a4ab4f77d3e6afa5cee8040c998f6b6620326df63ba8a197f873b6eed9a30d",
+    "heidenheim-he/morning_mah_tovu.xml": "53b52048bcd0a8cf1c0a9ba6c4d816e88386bcc9244a3c00ec7cbf7dcd16c6a9",
+    "heidenheim-he/shachar_avaqeshkha_gabirol.xml": "b764ea14bb6b30b2c82340c6b09db101b2654405fa0dd1b20c4bc5cf41b926bf",
+    "heidenheim-he/morning_psalm_17_6_repeat.xml": "9a8a037346b6bada165b95519ee5c2c053f30814a7508f440bac0d2e474b0f05",
+    "heidenheim-he/morning_before_prayer.xml": "a27ff24eb35c55505f846f20851196e04be3666dea0b06ed7c3cd4a45f917f29",
+    "heidenheim-he/yigdal.xml": "d8940f03002812c000c68d3141e1dfd77da24fbaa9394316bfc71ff41cd2fd6e",
+    "marmorstein-en/tallith_lehitattef.xml": "f6687c998c5f2b609a3b2a5c341c48e65bee10b288df7eb88a001f1a268709c1",
+    "marmorstein-en/tallith_mah_yaqar.xml": "ec9a9b3c01c7a6bb8aa81cfd1828e078778243c14137abaef6e94fed876106d9",
+    "marmorstein-en/morning_entrance_verses.xml": "fbd8c4c902788453f77c4fd3202d24bde9d9862f6fdac30a1beb19ab15df808f",
+    "marmorstein-en/morning_mah_tovu.xml": "bc9af7616c24a1cc1db1e30be9e237c3d0870fe71e3723425967dee245be8779",
+    "marmorstein-en/shachar_avaqeshkha_gabirol.xml": "cd508f63a7612c1b41829473c69084411eb68d5a8c26e4ebc0d4019cf33b1b47",
+    "marmorstein-en/morning_psalm_17_6_repeat.xml": "f06f293b467d23f357f9d3844712effa87fea729bc75700eca19d437324252b4",
+    "marmorstein-en/morning_before_prayer.xml": "1922f4e994328751f62653753ac0363dafd1b7a01cb415c2f9ef741ca75c6e37",
+    "marmorstein-en/yigdal.xml": "2712010777fdcf004f04f65e0f39698226bcfa00f146a4b87c7630be84fc0a3c",
+    "heidenheim-he/tallith.xml": "51d92bc806f9260c1c7f91967efb1cb9d7c8bbda86e8f870caadac01c13be0f5",
+    "heidenheim-he/morning_preliminaries.xml": "01a414e399569a5e8a7530914eaf7c62e619cd21a4b383ad45426cb0e6564211",
+    "marmorstein-en/tallith.xml": "91a1c5b95af412bca50cca514ad14f2ef72b29cc26caf9a880d74ab825739f34",
+    "marmorstein-en/morning_preliminaries.xml": "91ff8f067c231c3d53fe2a0d87161667ca91a176cb540a4e15c7d57fa8e6fc9d",
+    "heidenheim-he/index.xml": "a10222182a08cebfbc6c737ebf62019367020043cc31c8bb6d86fdbe53ebf8b3",
+    "marmorstein-en/index.xml": "2786a409163f883b66d53ffb51ac2a3eb8015773d9e2c8838eb1fe0e1fef36f3",
+    "machzor_expanded-opensiddur-he/index.xml": "316f8c28be5a35431617e4f535ea0a900332167f1e942625423f2c470f1f336b"
+  },
+  "verdict": "changes_requested: no transcription errors found. Fix F1–F4 (an extra page break and three duplicate-URN or alignment-key problems), then F5–F7.",
+  "checks": [
+    "All 25 frozen XMLs read in full.",
+    "The XML text matches the enlarged and micro adjudications and the human rulings: בקשה with ב׳/וב׳ expansions, plain יְיָ, no meteg in עֲטִיפַת, בַּתּוֹרָה, עֵֽדֶן, כְּמֹשֶׁה, רַע, נוֹתֵן, בְּרֹב, שִׁמְעָה, אָבֹא, לִפְנֵי־יְיָ, אֶעְרוֹךְ/אֶעְמֹד, וּמַה־כֹּחִי. רוּחִי, אֱנוֹשׁ, and ותרי״ג as abbr/expan.",
+    "Checked against the images (s39-b0, s40-b1/b2, s42-b1/b2, s43-b0): Hineni line by line; Shachar punctuation; maqaf after כִּי in Ps 5:3; the line break with no maqaf at אֲנִי | קְרָאתִיךָ; 'Lister' and 'me. O God'; the EN paragraph break before 'Song of the ascents'; page 3 starting with the EN of Ps 39:13.",
+    "Sic/corr: Lister/Listen (en/morning_before_prayer.xml:35) and מסדורים/מסודרים (he/yigdal.xml:34) keep the printed reading in sic, matching corrections.json.",
+    "Num 15:38 in Hineni is a source-only quotation seg with no verse milestone, so it does not claim the whole verse. Correct.",
+    "Note: the Hebrew Shachar is printed as justified run-in lines (s40-b1), not one stanza per line, so its lg/l is a semantic encoding rather than the printed layout. Yigdal and Ps 36 are printed one unit per line.",
+    "The five registry records (siddur.jsonl:1993-1997) are status 'context' and create no new prayer identities. Stanza and part IDs reuse _39123/1–4 and yigdal_daniel/1–13.",
+    "Not done: hash recomputation, schema validation and compiler runs, because code execution was out of scope. ODD not consulted; the guideline text was sufficient for these points."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "e781169d-1433-4db3-9afa-02a50251b8b9"
+  }
+}

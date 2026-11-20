@@ -1,0 +1,92 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "approved": false,
+  "findings": [
+    {
+      "severity": "high",
+      "location": "prayerbook_for_the_new_year-heidenheim-1965-he/shemo_mefoarim.xml:40 (adar), :44 (yarum), :45 (motot); machzor_expanded-opensiddur-he/index.xml:1648-1658",
+      "issue": "In Hebrew, the stanzas adar, yarum and motot each end with a bare <tei:milestone unit=\"stanza\"/> just before the first resume cue. Nothing opens a new stanza scope after that cue. So the rest of each printed strophe is outside every stanza: the later couplets (ביום הנבחר…, גאותו…, כהגלותך…, לך יאתה…, נדיבי עמים…, סליל מסלתנו…) and the quotations adar_1–3, yarum_6–8 and motot_9–10. As a result the expanded order (which transcludes shemo_mefoarim/adar, /yarum, /motot) leaves out most of these three strophes. It also expands only one refrain after each one, while the source prints the cue three or four times inside each strophe. In English the same stanza IDs cover the whole strophe because English has no cues or terminators. The Hebrew and English scopes for the same canonical URN therefore do not line up.",
+      "recommendation": "Give each sub-strophe its own stanza milestone after each cue, e.g. adar/1..n or new canonical sub-IDs, with matching milestones in English. Alternatively open a continuation scope so one canonical stanza covers the whole strophe and the cues stay as excluded links. Then rebuild the expanded sequence so every printed cue is expanded in place (adar → shemo ×4, yarum → shivtei ×4, motot → shevutenu ×4, or whatever the source review confirms). Verify the resolved URN ranges for both languages."
+    },
+    {
+      "severity": "medium",
+      "location": "prayerbook_for_the_new_year-heidenheim-1965-he/shemo_mefoarim.xml:46-48 (and the same in the en file:46-48)",
+      "issue": "The marked j:conditional around the printed kol_yoshvei repeat comes before the local-context stanza milestone. So the qiryat stanza scope (which ends at the next stanza milestone) contains the j:conditional start, and the shabbat_refrains/kol_yoshvei scope contains only the matching j:endConditional. Transcluding either one (the documentary index at :451/en :354 and the expanded qiryat at :1659) gives an unbalanced conditional.",
+      "recommendation": "Put the stanza milestone (or a stanza terminator after qiryat) before the j:conditional, so the conditional and its endConditional are both inside the local kol_yoshvei scope."
+    },
+    {
+      "severity": "medium",
+      "location": "heidenheim-he adderet_mamlakhah.xml:34, aafir_nezer.xml:34, shemo_mefoarim.xml:34-38,48-49; index.xml:381,393-453",
+      "issue": "Speaker and description rubrics are deliberately placed before the reference milestones: ק׳ on adderet part_1, the ע״ס א״ב. div note on aafir_nezer, and every חו״ק before a shemo_mefoarim stanza. The documentary order uses partial transclusions (…/part_1, shemo_mefoarim/<stanza>), so these printed source rubrics never appear in the documentary order. The חו״ק rubrics are also missing from the expanded Shabbat route. Wholly transcluded poems (et_chil, naalah, tair, melekh_zokher, Etten) do not have this problem.",
+      "recommendation": "Give the source-layout part contexts a scope that includes the leading rubric, for example a separate source-layout milestone placed before the speaker note. Or have the index emit the rubric next to the partial transclusion. Keep the canonical stanza scopes free of speakers."
+    },
+    {
+      "severity": "medium",
+      "location": "prayerbook_for_the_new_year-heidenheim-1965-he/index.xml:477-479 and adirei_ayummah.xml:34",
+      "issue": "The documentary index prints ש״ץ מנגן. and והקהל חוזר. as separate notes and then transcludes the whole adirei_ayummah poem. That poem's div already contains the note ש״ץ מנגן. והקהל חוזר., so the rubric appears twice in documentary output.",
+      "recommendation": "Keep the rubric in exactly one place: either the poem file (it is then used in the expanded order too) or the index, not both."
+    },
+    {
+      "severity": "low",
+      "location": "prayerbook_for_the_new_year-heidenheim-1965-he/naalah_vedin.xml:39 vs prayerbook_for_the_new_year-marmorstein-1965-en/naalah_vedin.xml:34",
+      "issue": "The Shofar alternative is handled inconsistently. In Hebrew neither branch has type=\"marked\". In English only the Shabbat branch is marked. Under the stated policy (source parentheses become marked alternatives), both branches in both languages should be marked. The English 'with' is correctly kept outside both branches. In Hebrew the prefix ב is repeated inside each branch, which is unavoidable for an attached prefix and acceptable. The en rubric 'On Sabbath:' and the he rubric אם שבת still need confirmation as printed text rather than editorial text; that is part of source review.",
+      "recommendation": "Put type=\"marked\" on both branches in both languages, or document why the weekday branch is not marked. Confirm the printed status of each rubric in the separate source review."
+    },
+    {
+      "severity": "low",
+      "location": "prayerbook_for_the_new_year-heidenheim-1965-he/index.xml:382-473 and marmorstein-1965-en/index.xml:285-376",
+      "issue": "The documentary Shabbat blocks put the 'when' rubric (אם שבת. / On Sabbath.) in a tei:head after the j:conditional. JLPTEI-3 lines 916-919 say such a rubric is the conditional's own tei:note[@type='instruction'] child. Also, the weekday parts in the documentary order are unconditioned, so a Shabbat=true rendering prints both routes. Exclusivity is implemented only in the expanded order.",
+      "recommendation": "Move the rubric into the j:conditional as an instruction note. Decide, and document in the encoding note, whether the documentary weekday sections should also be conditioned once human question 2 (Shabbat/Metz directions) is answered."
+    },
+    {
+      "severity": "low",
+      "location": "machzor_expanded-opensiddur-he/index.xml:1664",
+      "issue": "After Etten, the expanded Shabbat route transcludes the local context siddur:rosh_hashanah/shacharit/repetition/yishpot_repeat, not the canonical stanza poem:shemo_mefoarim/yishpot. Elsewhere the expanded order uses canonical references for repeats (tair_vetaria, melekh_zokher_achuz_qeren, kol_yoshvei), so this is inconsistent with the stated policy.",
+      "recommendation": "Use urn:x-opensiddur:text:poem:shemo_mefoarim/yishpot in the expanded order. Keep the local context for documentary use only."
+    },
+    {
+      "severity": "low",
+      "location": "machzor_expanded-opensiddur-he/index.xml:1567-1576",
+      "issue": "The morning repetition's j:declare sets only recitation/repetition=true and silent=false. It does not declare quorum/minyan=true, even though the condition requires it. The Minchah repetition (:246-260) declares both. This is inconsistent with the stated rule that repetition requires minyan=true plus recitation/repetition=true, with local declarations.",
+      "recommendation": "Add opensiddur:quorum minyan=true to section_morning_repetition_settings to match Minchah."
+    },
+    {
+      "severity": "low",
+      "location": "heidenheim-he index.xml:378; machzor_expanded index.xml:1618",
+      "issue": "נ״ק מ״ץ חזן אומרים תעיר ותריע. is typed as an instruction. Its readable part says who recites the text, which JLPTEI-3 lines 916-919 classify as a description. The sigla נ״ק/מ״ץ are unresolved.",
+      "recommendation": "Retype it as a description, or record why it is an instruction, once the sigla are resolved in source review. Leave the sigla unexpanded until then."
+    },
+    {
+      "severity": "info",
+      "location": "machzor_expanded index.xml:1596-1605; heidenheim-he index.xml:373-377",
+      "issue": "AttahHu is in an unconditioned div with an editorial label (לפי מנהג המקום / According to local custom). The Frankfurt direction stays as a free de-Hebr instruction outside any conditional. The structure therefore always includes the poem. This matches the user's statement that regional inclusion and Metz omission are unresolved and only labeled, but it is not a settled rite choice.",
+      "recommendation": "No change before human question 1 (exact Frankfurt German direction) and question 2 are answered. Then turn the direction into a j:conditional rubric on an appropriate rite setting."
+    }
+  ],
+  "checks": [
+    "Read JLPTEI-3.md lines 170-260 (milestone scope, terminators, the 'no duplicate canonical URN' rule) and lines 880-1020 (rubrics, notes, conditions)",
+    "Read the end of machzor_expanded-opensiddur-he/index.xml (lines 1-857 and 1250-1684): morning repetition condition and declare, ark actions kept as instructions, Shabbat and weekday routes conditioned exclusively (shabbat=true/false), Etten reuses canonical urn:x-opensiddur:text:poem:eten_lefoali_tsedeq_shimon",
+    "Read the end of heidenheim-he/index.xml (lines 330-490) and marmorstein-en/index.xml (lines 270-384): documentary interleaving of the weekday top and Shabbat lower sections with partial transclusions; the order matches the expanded weekday route (tair, adderet, tair-repeat, memallet, zokher, aafir, teshalesh, zokher-repeat)",
+    "Read he and en shemo_mefoarim.xml: found the stanza-scope gap after cues and the Hebrew/English scope mismatch; counted 13 quotations, each with chapter/verse occurrence milestones, a canonical seg@source and explicit verse+chapter terminators",
+    "Read he/en repetition_veattah_qadosh.xml: Psalm 22:4 is bounded with terminators and the extra אל נא / O God is outside the verse and chapter contexts",
+    "Read he/en naalah_vedin.xml: the Shofar alternatives are conditionals; English 'with' is outside both branches; type=marked is inconsistent",
+    "Read he adderet_mamlakhah, aafir_nezer, adirei_ayummah, attah_hu_eloheinu, tair_vetaria, melekh_zokher_achuz_qeren, repetition_tair_repeat, repetition_melekh_zokher_repeat, repetition_yishpot_repeat, repetition_etten_lefoali, and en adderet_mamlakhah, aafir_nezer, repetition_veattah_qadosh, repetition_etten_lefoali: part_1..n context IDs line up across languages; printed repeats are local contexts with seg@source pointing to canonical; no new canonical ID for repeated refrains",
+    "Read registry-quoted.json lines 1-1011: repeats (tair, melekh_zokher, yishpot, kol_yoshvei) are registered as status=context with references to the existing canonical URN; Etten gets only context entries (no new canonical)",
+    "Speakers and native rubrics in the reviewed files are Hebrew (de-Hebr for the German directions); no invented English translations of native rubrics seen; commentary variant נ״א ארצנו is a standOff note"
+  ],
+  "limitations": [
+    "Read-only static review. I ran no tests, builds, validators or URN-range resolution, and opened no source scan images. Every Hebrew and English reading (vocalization, punctuation, word order, cue placement relative to verses) is uncertified and left to the pending source-accuracy adjudication.",
+    "The three documented pending human readings are not counted as structural defects: (1) the exact Frankfurt German direction on 131/132; (2) the Shabbat/Metz directions and the תוסד לכה״י … קליר attribution on 132; (3) the opening אאפיר נזר on 138, which also makes the aafir_nezer URN provisional. The related כנגון אופיר note in Etten may depend on (3).",
+    "AttahHu regional inclusion and the Metz omission are labeled but not implemented as a rite choice, as stated. Unresolved sigla (נ״ק, מ״ץ, ע״ס …) stay as source-review concerns.",
+    "Not read: et_chil_yom_pequddah, taalat_zo, melekh_bedin, even_chug, melekh_memallet, teshalesh_shofarot, uvekhen_namlikhekha, hashem_melekh, the other repetition_* Amidah-frame files, the English versions of most units, the full structure-packet.json/readings.json, the identity search JSONs, registry-quoted.json lines 1012-1354, build.py, the ODD, and refdb.py UNIT_CONTAINED_BY. The stanza/chapter interaction was checked only against the prose rule.",
+    "Approval for draft structural handling is withheld because of the high-severity stanza-scope gap in shemo_mefoarim and the unbalanced conditional. Once those are fixed, and given the limitations above, the rest looks fit for draft structural approval."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "1904c1ac-7b75-4c71-b97d-d65454d9cfc3"
+  }
+}

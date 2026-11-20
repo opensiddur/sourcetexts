@@ -1,0 +1,69 @@
+{
+  "model": "claude-opus-5-5",
+  "effort": "low",
+  "findings": [
+    {
+      "severity": "medium",
+      "file": "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/mah_tovu.xml",
+      "problem": "The maqaf between לִפְנֵי and the Divine Name in Ps 95:6 is missing. The XML has a plain space there.",
+      "evidence": "Page 1, 4th Mah Tovu line, prints 'לִפְנֵי־יְיָ עֹשִׂי' joined by a maqaf. XML line 33 has 'לִפְנֵי <j:divineName>יְיָ</j:divineName> עֹשִׂי'."
+    },
+    {
+      "severity": "medium",
+      "file": "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/mah_tovu.xml",
+      "problem": "In Ps 5:8 the XML probably drops a dagesh: it has בְרֹב where the page prints בְּרֹב.",
+      "evidence": "Page 1, end of the first Mah Tovu line: 'וַאֲנִי בְּרֹב' shows a dot in the bet, just as in the display verse above it. The Masoretic text also has בְּרֹב. XML line 33 has 'וַאֲנִי בְרֹב חַסְדְּךָ'."
+    },
+    {
+      "severity": "low",
+      "file": "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/mah_tovu.xml",
+      "problem": "The source attribute for verse 4 says it is Ps 95:6, but the liturgical text is a first-person adaptation, not the verse as written ('בֹּאוּ נִשְׁתַּחֲוֶה וְנִכְרָעָה נִבְרְכָה ... עֹשֵׂנוּ'). Without a marker, this reads as an exact scripture quotation.",
+      "evidence": "XML line 33 has seg source='...psalms/95/6' with text 'וַאֲנִי אֶשְׁתַּחֲוֶה וְאֶכְרָעָה אֶבְרְכָה ...'. It should be marked as an adaptation or allusion, for example with a type attribute or a note."
+    },
+    {
+      "severity": "low",
+      "file": "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/mah_tovu.xml",
+      "problem": "Verse milestones are inconsistent. Only verses 1 and 2 have milestones (mah_tovu/mah_tovu and mah_tovu/varani). Verses 3–5 (Ps 26:8, 95:6, 69:14) have none, so they look like part of the 'varani' unit.",
+      "evidence": "XML line 33: there are two milestone elements and five seg elements."
+    },
+    {
+      "severity": "medium",
+      "file": "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/ashrei.xml",
+      "problem": "In Ps 145:9 the Divine Name is not tagged as j:divineName. Every other יְיָ in the file is tagged.",
+      "evidence": "XML line 39 has 'טוֹב־יְיָ לַכֹּל' as bare text. Compare verses 3, 8, 10, 14, 17, 18, 20 and 21, which all wrap יְיָ in j:divineName. The page prints 'טוֹב־יְיָ לַכֹּל' with a maqaf, and the text itself matches."
+    },
+    {
+      "severity": "low",
+      "file": "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/ashrei.xml",
+      "problem": "Scripture identity is encoded in mixed ways. Ps 84:5, 144:15 and 145 use milestones whose corresp points straight at the Bible. Ps 115:18 instead uses a milestone with a prayer-local corresp (ashrei/quoted_115_18) plus a seg with a source attribute. All of these are quotations inside the Ashrei unit, so one convention should be used.",
+      "evidence": "XML lines 38–39."
+    },
+    {
+      "severity": "low",
+      "file": "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/ashrei.xml",
+      "problem": "The קמה citation is placed correctly. On the page it sits in the margin at the start of תְּהִלָּה לְדָוִד (Ps 145:1), not at the two introductory אשרי verses. However, the standOff note targets a Bible URN rather than a local anchor, so it only attaches if the processor resolves notes through milestone corresp. Please confirm that it does.",
+      "evidence": "Page 2, line 3, has the small 'קמה' to the right of 'תְּהִלָּה לְדָוִד.' XML lines 31–33 have note target='urn:x-opensiddur:text:bible:psalms/145/1', and the milestone at line 39 has the same corresp."
+    },
+    {
+      "severity": "low",
+      "file": "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/machzor_expanded-opensiddur-he/index.xml",
+      "problem": "The two service conditions are asymmetric. Weekday Minchah requires minha=true, shabbat=false and yom-tov=false. Morning requires only shaharit=true, with no holiday constraint, so it would be selected on any Shacharit, not just Rosh ha-Shanah. The two sections don't leak into each other, but the morning scope is broader than the source supports.",
+      "evidence": "XML lines 64–80 compared with lines 90–98."
+    }
+  ],
+  "alignment_assessment": "Mah Tovu: the file correctly leaves out the display verses Ps 5:8 and 55:15. Its five segments (Num 24:5, Ps 5:8, 26:8, 95:6, 69:14) match the visible page text apart from the maqaf after לִפְנֵי and the probable dagesh in בְּרֹב. The last half of Ps 69:14 is on the cropped bottom line and can't be checked against the images I was given. Ashrei: Ps 84:5 and 144:15, Ps 145:1–21 and Ps 115:18 match the page 2 text and maqafim word for word. The only problem I found there is the untagged Divine Name in 145:9. The חצי קדיש rubric is correctly left out of ashrei.xml, and no Kaddish, Amidah or other raw-intake material has been added.",
+  "order_assessment": "The spine follows the source order: the page 1 entrance section (Mah Tovu only, labelled incomplete) comes before the page 2 תפלת מנחה (Ashrei only, labelled as excluding the Kaddish and Amidah and as incomplete). Next comes the conditioned morning section, labelled with intervening material in progress, and then Psalm 24 in an unconditioned appendix outside both services. The Minchah and morning conditions are separate, each with its own endConditional, so neither leaks into the other. Nothing claims a page or service is complete.",
+  "limits": [
+    "Only page 1 tile 0 was available. The rest of Mah Tovu (the end of Ps 69:14 after 'עֵת') is cropped and was not verified.",
+    "Some fine points of pointing (for example the dagesh in טֹּבוּ and בֶאֱמֶת) can't be resolved at this scan resolution.",
+    "No English files were provided, so I couldn't check the Hebrew-only omissions in English. The index sourceDesc does say no translations were supplied for passages missing from the English edition.",
+    "The morning transclusions (Birkhot ha-Torah, Pesukei de-Zimrah, Ps 19) and the appendix Ps 24 have no images here, and I didn't check that their targets exist.",
+    "I didn't validate any of the files against the JLPTEI schema."
+  ],
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "2a646d88-863d-4624-99e7-88d54bf2bb72",
+    "input": "Images first, then the two accepted Hebrew modules and expanded structural spine; no other edition or OCR."
+  }
+}

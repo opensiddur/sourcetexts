@@ -1,0 +1,125 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "source_approved": false,
+  "files_read": [
+    "/tmp/mahzor-s224/source-round3-s228-s233/candidate.json",
+    "/tmp/mahzor-s224/source-round3-s228-s233/human288_290.json",
+    "/tmp/mahzor-s224/source-round3-s228-s233/human291_298.json",
+    "/tmp/mahzor-s224/source-round3-s228-s233/human299_309.json",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s228.jpg",
+    "/tmp/mahzor-s224/s228-detail0.png",
+    "/tmp/mahzor-s224/s228-detail1.png",
+    "/tmp/mahzor-s224/s228-detail2.png",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s229.jpg",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s230.jpg",
+    "/tmp/mahzor-s224/s230-detail0.png",
+    "/tmp/mahzor-s224/s230-detail1.png",
+    "/tmp/mahzor-s224/s230-detail2.png",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s231.jpg",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s232.jpg",
+    "/tmp/mahzor-s224/s232-detail0.png",
+    "/tmp/mahzor-s224/s232-detail1.png",
+    "/tmp/mahzor-s224/s232-detail2.png",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s233.jpg",
+    "/tmp/mahzor-s224/question-299-v1.png",
+    "/tmp/mahzor-s224/question-300-v1.png",
+    "/tmp/mahzor-s224/question-301-tight-v3.png",
+    "/tmp/mahzor-s224/question-302-v2.png",
+    "/tmp/mahzor-s224/question-303-v1.png",
+    "/tmp/mahzor-s224/question-304-v1.png",
+    "/tmp/mahzor-s224/question-305-v1.png",
+    "/tmp/mahzor-s224/question-306-v1.png",
+    "/tmp/mahzor-s224/question-307-v2.png"
+  ],
+  "findings": [
+    {
+      "scan": "s228",
+      "key": "amitz_description",
+      "old": "ומזה יבינו כל יצורי חלד,",
+      "proposed": "ומזה יבינו כל יצורי ארץ,",
+      "reason": "The Rashi-script rubric, line 2 (s228-detail0), shows three letters after יצורי: an aleph shaped like the aleph in the following אם, then ר, then final ץ. That spells ארץ, not חלד. It also matches the poem's own wording יָבִינוּ כָל יְצוּרֵי אָרֶץ on s230."
+    },
+    {
+      "scan": "s232",
+      "key": "amitz_reader",
+      "old": "ח׳",
+      "proposed": "ק׳",
+      "reason": "The small siglum before רְאֵה כִּי אֵין אִישׁ (s232 line 2, s232-detail0) has a descender. It matches the ק׳ cues printed before every לַעֲדֵי עַד יִמְלוֹךְ on the same page, and does not read as ח׳."
+    },
+    {
+      "scan": "s232",
+      "key": "melekh_1..melekh_7",
+      "old": "[no cue] לַעֲדֵי עַד יִמְלוֹךְ:",
+      "proposed": "ק׳ לַעֲדֵי עַד יִמְלוֹךְ:",
+      "reason": "Each of the seven מלך עליון stanzas prints a small ק׳ (congregation) cue just before the refrain לַעֲדֵי עַד יִמְלוֹךְ (s232-detail0/1/2). None of these seven speaker cues is in the inventory."
+    },
+    {
+      "scan": "s232",
+      "key": "open_ark",
+      "old": "פותחים הארון.",
+      "proposed": "speaker cue חזן. + rubric פותחים הארון.",
+      "reason": "The page prints חזן. twice: once before וּבְכֵן וַיְהִי (already uvekhen_reader), and again on its own line before פותחים הארון., introducing מלך עליון. The second חזן. cue is missing from the inventory."
+    }
+  ],
+  "uncertainties": [
+    {
+      "scan": "s232",
+      "key": "melekh_5",
+      "word": "טֹפֵחַ",
+      "question": "At available resolution the printed word looks like טִפַּח (patah under a dageshed pe, no visible tsere, possibly hiriq not holam under tet) rather than טֹפֵחַ. Please confirm the exact pointing from a tighter crop."
+    },
+    {
+      "scan": "s232",
+      "key": "amitz",
+      "word": "(אם שבת",
+      "question": "This is the tiny Rashi-type Shabbat rubric itself; human 307 settled only the נ״א siglum. Does אם carry a hiriq under the aleph, and is שבת pointed (e.g. שַׁבָּת)? Or are both unpointed as encoded? The crops can't resolve it."
+    },
+    {
+      "scan": "s232",
+      "key": "uvekhen_king",
+      "word": "בִישֻׁרוּן",
+      "question": "Is there a dagesh in the bet (בִּישֻׁרוּן)? A dot seems to show inside the bet in question-307-v2."
+    },
+    {
+      "scan": "s230",
+      "key": "amitz",
+      "word": "נַעֲשָׂה בוֹ",
+      "question": "The vowel under the shin looks closer to segol (נַעֲשֶׂה) than qamatz in s230-detail1. The bet of בוֹ may also carry a dagesh. Both need confirmation."
+    },
+    {
+      "scan": "s230",
+      "key": "amitz",
+      "word": "יְכֻפַּר",
+      "question": "The vowel under the pe looks like qamatz (יְכֻפָּר) in s230-detail1. Patah or qamatz?"
+    },
+    {
+      "scan": "s230",
+      "key": "amitz",
+      "word": "וְאַחֲרֵי כָל זֹאת / יָבִינוּ כָל",
+      "question": "Is there a dagesh in the kaf of either כָל? Human 301's kol dagesh is not clearly tied to these s230 occurrences."
+    },
+    {
+      "scan": "s228",
+      "key": "amitz",
+      "word": "כְּלֹא נִמְצָא בָהֶם",
+      "question": "Is there a dagesh in the bet of בָהֶם? It is unclear at line-crop resolution."
+    }
+  ],
+  "coverage_notes": [
+    "s228: both חו״ק cues, אל אמונה, אם לא, the Rashi-script rubric (correction above), the ק׳ cue and the אמץ text through בְּהִתְיַצְּבוֹ לָרִיב are all covered. Human 288, 298, 299, 300 and 301 are applied, and the candidate agrees with them, including the human spelling צִוֻּיוֹ and holam in לְיֹשֶׁר.",
+    "s229: the English for אל, אם and אמץ is complete and matches word for word. The Hebrew linkage cues are deliberately omitted.",
+    "s230: the Hebrew continuation from בְּעָמְדוֹ through יַעֲרֵי שִׂיחִים. is covered. Human 302–306 are applied (כֻּבַּל בְּאֵסֶר, nonmeteg יֵדְעוּן/יַעַן, נוֹקַשׁ, פְזוּרָה/בְגָרוֹן/בְּמִשְׁפָּט/בְּוִכּוּחַ, יְבֻקְרוּ). The sic reading וְהִדְרִיר is preserved as printed.",
+    "s231: the English is complete and matches. The sic reading Abibu is preserved.",
+    "s232: the closing אמץ stanzas, ובכן with its נ״א variant (human 307), the חזן. cue, פותחים הארון. and all seven מלך עליון stanzas are covered as text. The ק׳ before רְאֵה, the seven refrain ק׳ cues and the second חזן. are wrong or missing (see findings). The אֵל in melekh_1 is printed as an aleph-lamed ligature, and reading it as אֵל is correct.",
+    "s233: the English for the end of אמץ, ובכן with its parenthetical and the seven מלך עליון stanzas is complete. The sic reading 'ot all' is preserved. 'fulfil' is spelled exactly as printed.",
+    "Running headers and page numbers are excluded as instructed. Human 308 and 309 (s224/s226) were not applied to this scope."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "385e3d0d-ea4a-4c11-bf99-b5e8d28a0ce0"
+  }
+}

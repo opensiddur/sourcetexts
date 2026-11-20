@@ -1,0 +1,66 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "approved_for_draft": false,
+  "issues": [
+    {
+      "severity": "high",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/khevodo_ahel.xml; prayerbook_for_the_new_year-marmorstein-1965-en/khevodo_ahel.xml",
+      "issue": "The stanza milestone for khevodo_ahel/6 sits inside the weekday j:conditional (shabbat=false), after the rubric. When it is Shabbat that branch is filtered out and the milestone goes with it. Stanza 6 never opens, so the Shabbat wording (קְשׁוֹב זִכְרוֹן תְּקִיעָה… / 'heed the memory…') and the shared ending are counted as part of stanza 5. The standOff note that targets khevodo_ahel/6 also has nothing to attach to on Shabbat.",
+      "fix": "In both files, move <tei:milestone unit=\"stanza\" corresp=\"…khevodo_ahel/6\"/> so it comes before the first j:conditional in that paragraph."
+    },
+    {
+      "severity": "medium",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/khevodo_ahel.xml; prayerbook_for_the_new_year-marmorstein-1965-en/khevodo_ahel.xml",
+      "issue": "The new canonical stanza numbering doesn't match the poem's units. Every other stanza ends at a colon (א–ד, ה–י, כ–מ, נ–ע, ש–ת), but the פ–צ / ק / ר group (one unit ending with ':' after רַחֲמִים תְּעוֹרֵר) has been split into stanzas 5, 6 and 7. The split follows the weekday/Shabbat variant, not the acrostic. Since this identity is new, the numbering becomes hard to change once other files reuse it.",
+      "fix": "Make פ–ר a single stanza 5 with the conditional variant inside it, and renumber the final ש–ת stanza to 6. Point the variant-reading note (וי״א קשוב קול זכירה) at stanza 5. Apply the same change to both languages."
+    },
+    {
+      "severity": "medium",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/yotzer_hameir.xml; prayerbook_for_the_new_year-marmorstein-1965-en/yotzer_hameir.xml",
+      "issue": "The Psalm 104:24 verse milestone uses the canonical Bible URN (corresp=\"urn:x-opensiddur:text:bible:psalms/104/24\"), which re-declares the canonical text identity at a reprint. The guidelines forbid this ('Do not duplicate a canonical URN merely because the text is printed again'). It also doesn't match the occurrence-context URNs used in the other files in this batch (…/quoted_psalms_92_1, …/quoted_isaiah_6_3, etc.).",
+      "fix": "Change the corresp to an occurrence URN, e.g. urn:x-opensiddur:text:prayer:yotzer_or/hameir/quoted_psalms_104_24, in both languages. Keep seg/@source pointing to bible:psalms/104/24."
+    },
+    {
+      "severity": "medium",
+      "file": "all quotation files in this batch, both languages: morning_numbers_14_17, morning_psalm_25_6, yotzer_hameir, lael_asher_shavat, yotzer_qadosh, yotzer_barukh_kevod, yotzer_lael_barukh",
+      "issue": "Each quotation opens with <tei:milestone unit=\"chapter\" n=\"…\"/>, which has no corresp. Under rule 3 a unit milestone without corresp is a terminator: it opens no chapter scope, and the n value means nothing. The closing <tei:milestone unit=\"chapter\"/> is then a second terminator with nothing to end. lael_asher_shavat shows the problem most clearly: it closes and reopens the same 'chapter 92' between 92:1 and 92:2, which are adjacent and should share a boundary.",
+      "fix": "Remove both chapter milestones from every quotation. The occurrence verse milestone plus seg/@source already carry the chapter and verse. In lael_asher_shavat, let 92:1 and 92:2 share one boundary: delete the verse terminator between them and keep a single terminator after 92:2."
+    },
+    {
+      "severity": "medium",
+      "file": "yotzer_qadosh.xml, yotzer_barukh_kevod.xml, lael_asher_shavat.xml (both languages)",
+      "issue": "Three quotations cover only part of their verse but are cited as the whole verse. Isaiah 6:3 leaves out וְקָרָא זֶה אֶל־זֶה וְאָמַר. Ezekiel 3:12 leaves out וַתִּשָּׂאֵנִי רוּחַ… קוֹל רַעַשׁ גָּדוֹל. Psalm 92:2 has only טוֹב לְהֹדוֹת לַה׳. The milestone and seg/@source both claim the full verse.",
+      "fix": "Mark these three as partial quotations using the project's existing partial-verse convention, so neither the source nor the resolved range claims the whole verse. Do the same in both languages."
+    },
+    {
+      "severity": "medium",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/yotzer_hakol_yodukha.xml; prayerbook_for_the_new_year-marmorstein-1965-en/yotzer_hakol_yodukha.xml",
+      "issue": "Page 37 is split into a weekday stream (hameir) and a Shabbat stream (hakol_yodukha). Only hameir has a pb n=37. hakol_yodukha (biblScope 37–37) has no pb, so in the compiled order its page-37 text comes after hameir's pb n=38 and after el_barukh. el_adon then has a second pb n=38. As encoded, the Shabbat stream's page numbering is wrong.",
+      "fix": "Add <tei:pb ed=\"1965\" n=\"37\"/> at the start of hakol_yodukha, using facs n101 for Hebrew and n102 for English. That gives the Shabbat stream its own page sequence (37, then el_adon's 38)."
+    },
+    {
+      "severity": "medium",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/morning_kaddish.xml",
+      "issue": "The Hebrew file contains an English note: <tei:note type=\"instruction\" xml:lang=\"en\">The Reader says half Kaddish.</tei:note>. It repeats the English file's rubric and sits alongside the Hebrew role note חזן. It also has the wrong type: a rubric saying who says what is a description, not an instruction about when the text is read.",
+      "fix": "Delete it from the Hebrew file, unless this English rubric is actually printed on the Hebrew page (scan n95). If it is printed there, change it to type=\"description\" with the role corresp, placed inside the controlled text."
+    }
+  ],
+  "observations": [
+    "Scope: I reviewed 20 stems (40 files). This is not a certification of scans 96–109 or of the whole volume. Nothing is accepted as source text.",
+    "Human snippets still open, not assessed and not certified: attribution98 (the melekh_azur_gevurah standOff note, whose text looks garbled: 'ע״ס א״ב מת״י תנת מלך נכלם…'), zeal98 (stanza 11 קַנָּא קִנָּא גָאֹה גָאָה / 'enflamed with zeal'), finaltriplets100 (melekh_azur_gevurah stanzas 24–25), openingword106 (khevodo_ahel 'כְּבוֹדוֹ. אֹהֶל בְּיוֹם' and the unpointed title, which doesn't match the English 'this day'), and accents106.",
+    "Canonical identities are reused correctly at div level (prayer:yotzer_or/*, prayer:kaddish/*, prayer:barekhu/*, poem:el_adon). Hebrew and English use the same corresp values and the same milestone sequences in every pair.",
+    "El Adon has six stanzas in both languages: א–ד, ה–ח, ט–ל, מ–ע, פ–ר, ש–ת, with one closing terminator. That matches the canonical extents.",
+    "melekh_azur_gevurah has 26 stanzas, matched in both languages, with a terminator after stanza 26. Stanzas are encoded as running text in tei:p rather than tei:lg/tei:l. That is fine if the print sets them as running lines; I couldn't check the scan layout.",
+    "No English linkage cues to the Hebrew, no Bible citations encoded as notes, and no chapter/verse numbers inside the prayer text were found. Verse numbers appear only in milestone/@n. Whether any printed English citations were rightly left out needs a check against the scans.",
+    "Things to check against the scans, not corrections: in English barekhu, 'Blessed be Him, His Name is exalted above and ever' doesn't render בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ. In barekhu the response role is reader_and_congregation in Hebrew (קו״ח) but congregation only in English; this is fine if each follows its own print. סֶּלָה with dagesh appears in el_barukh, hakol_yodukha and lael_asher_shavat, and כַּייָ in hakol_yodukha, which may be reading errors. morning_numbers_14_17 and morning_psalm_25_6 both have the English title 'Preface to half Kaddish'.",
+    "The conditional rubric placement is correct (hakol_yodukha 'אם שַׁבָּת' / 'On the Sabbath'; the khevodo_ahel variants). The role descriptions sit inside the controlled text with role URNs."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "4d23f435-16c1-4cd8-977b-58d6e3ea34a4"
+  }
+}

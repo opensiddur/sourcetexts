@@ -1,0 +1,149 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Bounded final review of these 8 units only. I read all of current.json, current.review.xml, page-audits.json and guideline-excerpts.md. I compared each current Hebrew word with the enlarged rows s160 rows 1-9, s164 rows 1-6, s166 rows 1, 5-9 and s168 rows 1-2, and with the native s160.jpg, which is lower resolution than the rows and gave no extra detail. I checked against the original blind readings independent-160 (morning_s144_s161), independent-164 and independent-166 (torah_s162_s183). I did not open s164 rows 7-9, s166 rows 2-4 or s168 rows 3-9 because they hold neighbouring units. This is not a new blind reading."
+  },
+  "witnesses": [
+    {
+      "stem": "morning_full_kaddish_preface",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [
+        "s160-row1.png and s160-row2.png, 2nd Hebrew line, 2nd word רַחֲמֶיךָ (and possibly וַחֲסָדֶיךָ, 4th word): there seems to be a small stroke above the letters, which could be a stress/ole-type accent. The original blind reading independent-160 also saw it ('There may be an accent or meteg mark over רַחֲמֶיךָ'). The current text has no such mark. I can't tell what it is at the available resolution, so I am holding back Hebrew approval on this mark only. Everything else matches the print."
+      ],
+      "verified": [
+        "Numbers 14:17, every consonant and vowel matches s160 row1/row2 line 1: וְעַתָּה יִגְדַּל־נָא כֹּחַ אֲדֹנָי כַּאֲשֶׁר דִּבַּרְתָּ לֵאמֹר: The maqaf in יִגְדַּל־נָא is visible, and it ends with a sof pasuq colon.",
+        "Psalms 25:6 matches line 2: זְכֹר רַחֲמֶיךָ יְיָ וַחֲסָדֶיךָ כִּי מֵעוֹלָם הֵמָּה: The source prints a space after זְכֹר, not the Masoretic maqaf. That is correctly kept as printed and not normalized.",
+        "Both quotations are whole verses. Each has a local chapter/verse milestone with a closing terminator and a seg/@source carrying the canonical Bible URN, which follows the repeated-quotation convention. The prayer-part 'text' terminator closes after the last verse.",
+        "Provenance: pb n=69 facs n159 (HE) and n160 (EN). The div has facs.",
+        "No speaker or rubric is printed for this unit on s160. The text runs straight on into the Kaddish with the חזן siglum, which is outside this unit.",
+        "HE and EN carry the same corresp set (text, numbers_14, numbers_14/17, psalms_25, psalms_25/6), so they align."
+      ]
+    },
+    {
+      "stem": "torah_ein_kamokha",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "Every word matches s160-row7.png lines 1-4: אֵין כָּמוֹךָ בָאֱלֹהִים אֲדֹנָי וְאֵין כְּמַעֲשֶׂיךָ: מַלְכוּתְךָ מַלְכוּת כָּל עֹלָמִים וּמֶמְשַׁלְתְּךָ בְּכָל דּוֹר וָדֹר: יְיָ מֶלֶךְ יְיָ מָלָךְ יְיָ יִמְלֹךְ לְעוֹלָם וָעֶד: יְיָ עֹז לְעַמּוֹ יִתֵּן יְיָ יְבָרֵךְ אֶת עַמּוֹ בַשָּׁלוֹם: The source prints spaces where the Masoretic text has maqafs (אֵין כָּמוֹךָ, כָּל עֹלָמִים, בְּכָל דּוֹר, אֶת עַמּוֹ). These are kept as printed, along with defective עֹלָמִים / וָדֹר / עֹז and בַשָּׁלוֹם without dagesh.",
+        "s160-row7.png line 3: there is an isolated dot between יְיָ and יִמְלֹךְ. It is not a vowel or a punctuation mark in context. I judge it to be print debris, and it was correctly not transcribed.",
+        "Citations Ps 86:8, 145:13 and 29:11 are whole verses with local chapter/verse milestones and terminators plus seg/@source. The non-biblical line יְיָ מֶלֶךְ… correctly has no Bible source and carries only the prayer-part 'melekh'.",
+        "Prayer-part milestones malkhut, melekh and oz each have a bare terminator. HE and EN have the same corresp set, so they align.",
+        "Provenance: pb n=69 facs n159/n160."
+      ]
+    },
+    {
+      "stem": "torah_shema",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "Matches s164-row4.png / s164-row5.png (centre line): שְׁמַע יִשְׂרָאֵל יְיָ אֱלֹהֵינוּ יְיָ אֶחָד: There is no enlarged ע or ד and no cantillation, which agrees with independent-164.",
+        "Deuteronomy 6:4 is a whole verse with a local chapter/verse milestone plus seg/@source and terminators.",
+        "The small rubric (הש״ץ אומר בקול רם, printed to the right of this line) and the Frankfurt rubric at the top of s164 are separate units. They are correctly not inside this witness and are not accepted by this review.",
+        "Provenance: pb n=71 facs n163/n164. HE and EN corresp match."
+      ]
+    },
+    {
+      "stem": "torah_echad_eloheinu",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": false,
+      "citations_source_approved": true,
+      "issues": [
+        "Guideline question, not a transcription error. s164-row5.png line 2 prints (וְנוֹרָא) in parentheses. The current encoding keeps the parentheses as literal text characters. Under the Conditional text guidelines, words that some congregations add and others omit are a condition, and a passage the source marks off with parentheses is a j:conditional with @type=\"marked\". Before guideline approval, an editor needs to decide whether these parentheses mark an optional/customary addition, which would mean encoding it as a marked conditional (and the same in EN '(and awe-inspiring)'), or are just printed punctuation, which would make the current literal encoding acceptable. The source prints no rubric that explains them."
+      ],
+      "unresolved": [],
+      "verified": [
+        "Every word and point matches s164-row5.png line 2: אֶחָד אֱלֹהֵינוּ גָּדוֹל אֲדוֹנֵנוּ קָדוֹשׁ (וְנוֹרָא) שְׁמוֹ: אֲדוֹנֵנוּ is plene with a vav, as printed. This agrees with independent-164.",
+        "There is no Bible citation, and correctly no seg/@source.",
+        "Provenance: pb n=71 facs n163/n164. The prayer-part 'text' has a terminator. HE and EN corresp match."
+      ]
+    },
+    {
+      "stem": "torah_gaddelu",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": false,
+      "citations_source_approved": true,
+      "issues": [
+        "Canonical identity is inconsistent inside the unit, in both HE and EN. The div corresp and the quotation milestones use urn:x-opensiddur:text:siddur:chol/shacharit/torah/gaddelu… (the reusable weekday identity), but the prayer-part milestone uses urn:x-opensiddur:text:siddur:rosh_hashanah/torah/gaddelu/text. That rosh_hashanah URN is not under this div's identity. Another edition that reuses the chol module's …/chol/shacharit/torah/gaddelu/text would not join with it. Barekhu, the other chol-reused unit here, is consistent (chol/…/barekhu/call and response). Either make it …/chol/shacharit/torah/gaddelu/text or confirm that the rosh_hashanah URN is intended. HE and EN agree with each other, so local alignment is not broken."
+      ],
+      "unresolved": [
+        "Low confidence, not blocking. s164-row5.png, large line, last word יַחְדָּו: under the yod there may be a small extra stroke beside the patah (a possible meteg). I can't tell it apart from the patah glyph at this size, and independent-164 did not report it. Hebrew approval does not depend on it, but someone with a higher-resolution scan could check it."
+      ],
+      "verified": [
+        "Matches s164-row5.png large line: גַּדְּלוּ לַייָ אִתִּי. וּנְרוֹמְמָה שְׁמוֹ יַחְדָּו: The period after אִתִּי is printed and kept. The divine name לַייָ (patah under lamed, qamats under the second yod) agrees with independent-164.",
+        "Psalms 34:4 is a whole verse with a local chapter/verse milestone plus seg/@source and terminators.",
+        "The English direction 'The reader, holding the scroll of the Torah in front of him, says:' is printed on Hebrew page s164 (row5) directly above this verse. It is retained word for word as tei:note type=\"description\" first in the div (it says who says the passage and how), in both HE and EN. Nothing is invented.",
+        "Provenance: pb n=71 facs n163/n164, and the div has facs, which covers the description that sits before the pb."
+      ]
+    },
+    {
+      "stem": "torah_vayaazor",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [
+        "Low confidence, not blocking. s166-row6.png line 3, first word יַעֲמוֹד: there may be a small vertical stroke under the yod next to the patah (a possible meteg). independent-166 did not report it, and I can't confirm it at this size."
+      ],
+      "verified": [
+        "Matches s166-row5.png last line and s166-row6.png lines 1-3: וְיַעֲזוֹר וְיָגֵן וְיוֹשִׁיעַ לְכָל הַחוֹסִים בּוֹ וְנֹאמַר אָמֵן: הַכֹּל הָבוּ גֹדֶל לֵאלֹהֵינוּ וּתְנוּ כָבוֹד לַתּוֹרָה כֹּהֵן קְרָב. יַעֲמוֹד (פלוני בר פלוני הכהן): בָּרוּךְ שֶׁנָּתַן תּוֹרָה לְעַמּוֹ יִשְׂרָאֵל בִּקְדֻשָּׁתוֹ: That includes the period after קְרָב, the small unpointed parenthetical placeholder kept as printed, and גֹדֶל without dagesh.",
+        "Ps 19:8, 19:9, 29:11 and 18:31 match s166-row6.png lines 4-5 and s166-row7.png lines 1-4, word for word. The source has plene הַחוֹסִים in line 1 and defective הַחֹסִים plus לְכֹל in the 18:31 line, and both are kept as printed. אֶת עַמּוֹ is printed without a maqaf.",
+        "Each verse is complete and has a local chapter/verse milestone, a terminator and seg/@source with the correct canonical URN. Ps 29:11 is repeated from ein_kamokha with local corresp only, as the convention requires.",
+        "The English direction 'The Torah scroll is laid on the reading desk and unrolled. The reader then calls upon the Cohen, saying:' (s166-row5.png) is not inside this unit. That fits the stated move of action descriptions into reusable modules, but that module is outside this review.",
+        "Provenance: pb n=72 facs n165/n166. HE and EN corresp sets are identical."
+      ]
+    },
+    {
+      "stem": "torah_veattem",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "Matches s166-row8.png: וְאַתֶּם הַדְּבֵקִים בַּייָ אֱלֹהֵיכֶם חַיִּים כֻּלְּכֶם הַיּוֹם: The qubbuts under the kaf of כֻּלְּכֶם is visible. The pointing of the name בַּייָ (patah under bet, qamats under the second yod) agrees with independent-166.",
+        "Deuteronomy 4:4 is a whole verse with a local chapter/verse milestone plus seg/@source and terminators.",
+        "The English direction 'The congregation responds:' printed directly above on s166-row8.png is retained word for word as a description first in the div, in HE and EN.",
+        "Provenance: pb n=72 facs n165/n166. HE and EN corresp match."
+      ]
+    },
+    {
+      "stem": "torah_barekhu",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": false,
+      "citations_source_approved": true,
+      "issues": [
+        "Description scope. In both HE and EN, paragraph 2 places the speaker description (HE 'Cong.', EN 'The congregation responds:', corresp instruction:role/congregation) before the milestone that opens prayer-part …/barekhu/response. The call has already been closed by a bare terminator, so the note falls in the gap between the two scopes, not inside the response. Kinds of rubric says a description goes 'first inside the passage's scope'. As encoded, anything that transcludes or aligns …/barekhu/response alone would drop the speaker label. The fix is to move the milestone in front of the note in both witnesses, unless a tested repository convention for speaker_before_reference documents this placement as intended."
+      ],
+      "unresolved": [],
+      "verified": [
+        "Matches s168-row2.png: בָּרְכוּ אֶת־יְיָ הַמְבֹרָךְ: with a visible maqaf, and בָּרוּךְ יְיָ הַמְבֹרָךְ לְעוֹלָם וָעֶד: Under the bet of בָּרוּךְ is the long-stem qamats glyph this font also uses in s166 בָּרוּךְ שֶׁנָּתַן. It is not a separate meteg.",
+        "The siglum 'Cong.' is printed in English beside the response line on Hebrew page s168 and is retained word for word. The EN witness uses the English page's own wording. Both carry the same role corresp.",
+        "The English directions 'Before reading from the Torah, the individual called upon says the following:' and 'He then repeats this and continues:' (s168-row1.png and row2.png) are not inside this unit. That fits the move to reusable modules, but those modules are outside this review.",
+        "There is no Bible quotation, and correctly no seg/@source.",
+        "Provenance: pb n=73 facs n167/n168. The call and response corresp match between HE and EN."
+      ]
+    }
+  ],
+  "limits": [
+    "Fine marks (meteg, stress/ole-type accents, dagesh in large or decorative type) are certified only where named above. I give no blanket glyph certification beyond what I could actually read at the resolution of the enlarged rows. The native page jpg is lower resolution than the rows.",
+    "Directions printed on these pages that sit outside the 8 units were not checked in their modules or in the running order, and nothing about them is approved here: s160 'Before the scroll of the Torah is taken out of the Ark, some congregations say the following:' (a condition governing ein_kamokha), the s164 Frankfurt rubric and הש״ץ אומר בקול רם (which govern the conditions on shema and echad_eloheinu), s166 'The Torah scroll is laid…', and the s168 directions before and after barekhu.",
+    "I did not open s164 rows 7-9, s166 rows 2-4 or s168 rows 3-9 because they hold neighbouring units. Neighbouring units and whole pages are not approved by implication.",
+    "I did not reopen any human decisions (source144 דַּיַּן אֱמֶת אָֽתָּה, Torah 178/182, the shofar adjudications), and none of them falls inside these 8 units. I did not retranslate or recertify the English. I only checked shared scope and corresp alignment.",
+    "I worked from the review display and JSON as supplied. I did not compare current.raw.xml or its hashes separately. No display wrap affected any of these findings.",
+    "I took the repository convention of local chapter/verse corresp plus seg/@source for repeated Bible quotations as given, as instructed."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "dbbe6af6-7f5a-4610-9d8f-2155c144282b"
+  }
+}

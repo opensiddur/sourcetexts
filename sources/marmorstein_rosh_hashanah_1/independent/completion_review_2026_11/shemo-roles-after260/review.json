@@ -1,0 +1,258 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Focused independent review. I read both units in full in current.json and current.review.xml, plus the guideline excerpts. I viewed all four complete Shemo bottom-region images (s132, s134, s136, s138) and s140-row2.png. I read human_completion_review_2026_11_246_260.json up to line 1369 of 3142, which covers the exact-answer line and all 15 changes. I read the role-alternation and qiryat-short-quote receipts up to lines 1509 and 1503 (most of each 'before' state, not the 'after' or English tails). I also read instruction.jsonl lines 98–101 and build.py lines 20–34. I did not open the native s132–s140 JPGs, the English page images s133–s141, english-shard-03 review.json/current.json, shemo-scripture-identification.json, or either previous piyyutim review.json. I did not run any runtime or compile checks."
+  },
+  "witnesses": [
+    {
+      "stem": "shemo_mefoarim",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [
+        "262: the yod of יְקִירְךָ (s138, motot, Reader line before ק׳ כְּנַֽמְתָּ) is waiting for a human reading. This is the only open Hebrew word reading. The Hebrew source is not approved while it is open.",
+        "Scope confirmation, not a word reading: each of the four images has a small centred heading above the first line, roughly 'מין/לחן שבת.'. It is not encoded in this unit. It looks like a running/section heading for the Sabbath alternative, which would belong to the running-order condition or page structure rather than to the poem text. I could not see from these files where, or whether, it is handled. I am reporting it here rather than counting it as approved."
+      ],
+      "verified": [
+        "I compared every Hebrew word in the s132/s134/s136/s138 bottom regions with the completeXML, stanza by stanza: shemo, shomerei, shapru, shivtei, shevutenu, kol_yoshvei (s134), adar, dea, varasham, zevach, yarum, motot, qiryat, kol_yoshvei refrain (s138), yishpot, vehu. Apart from 262 I found no disagreement.",
+        "Human readings 254–260 appear exactly at their displayed occurrences: תוּפַר, וָעֹז, the note (נ״א מַלְכוּת), כְּנַֽמְתָּ, יְרוּשָׁלָֽ͏ִם (qamatz-meteg-CGJ-hiriq), צְפַר, בְּאֶחָד. I did not reopen them.",
+        "The colon after לְזִכָּרוֹן בְּהֵיכַל יְיָ: is restored, inside the Zech 6:14 seg, and matches s136.",
+        "yarum_7 has the period after וָעֶד., as printed. qiryat_25 has the colon after לְעוֹלָם:, as printed.",
+        "The first kol_yoshvei (s134) is j:conditional type='marked' with the printed instruction בק״ק מיץ אין אומרים, which sits inside the printed parentheses. The s138 repeat has no printed instruction, and the encoding gives it none. It is marked, metz=false, and carries source= pointing to the first occurrence instead of a duplicate canonical URN. Dropping the parentheses is consistent with @type='marked'.",
+        "Repeat cues (שְׁמוֹ מְפָאֲרִים. / שׁוֹמְרֵי מִצְוֹתָיו. / שַׁפְּרוּ. / שִׁבְטֵי. / שְׁבוּתֵנוּ.) are each placed after the stanza terminator as navigation instruction refs. Their text and position match the print.",
+        "Every role note is a tei:note type='description' placed before the chapter/verse milestones, so no rubric falls inside a quotation scope.",
+        "English: comparing the current EN fragments with the 'before' states in human_246_260 and the role-alternation receipt, the words are unchanged; only the split into quotation fragments differs. For qiryat I saw only the Hebrew 'before' and the current EN, so treat that one as partial.",
+        "dea_5: the source is psalms/105/8, the milestone has n='8', and the context URI .../dea_5/chapter/5 is intentionally opaque, as stated. No rename is needed."
+      ]
+    },
+    {
+      "stem": "teshalesh_shofarot",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "s140-row2: קו״ח תְּשַׁלֵּשׁ שׁוֹפָרוֹת בְּהַר הַקֹּדֶשׁ. וַאֲשַׁלֵּשׁ קְדֻשָּׁה בַּקֹּדֶשׁ: matches the encoding word for word.",
+        "The printed abbreviation קו״ח is kept as tei:choice abbr/expan, with the expansion קהל וחזן in printed order.",
+        "instruction.jsonl line 100 defines role/reader_and_congregation as a joint role, explicitly order-neutral, and says to preserve each witness's abbreviation and expansion. build.py ROLE_LABELS maps reader_and_congregation to 'קהל וחזן'. Reusing that URN, with no new role, meets the reuse policy. The same URN with expan חזן וקהל on the Shemo חו״ק cues is equally correct.",
+        "Both languages share the prayer-part milestone part_1 with a bare terminator, so alignment is correct. English is unchanged. I did not view the English page image."
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "stem": "shemo_mefoarim",
+      "index": 0,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "Approved separately from the Bible quotations. Basis: the printed '(נ״א מַלְכוּת)' matches human reading 256 exactly. The standOff note type='commentary' targets #yarum_variant. The anchor sits at the printed position, between כָּבוֹד and וָעֹז. The note's display text drops the parentheses, which is allowed."
+      ]
+    }
+  ],
+  "quotation_scopes": [
+    {
+      "context": "shomerei_14 Mal 3:16",
+      "hebrew_and_english_extent_correct": true,
+      "terminators_correct": true,
+      "issues": [
+        "Partial verse: וַיַּקְשֵׁב…זִכָּרוֹן. קָדוֹשׁ: and 'the Holy One.' are both outside the scope."
+      ]
+    },
+    {
+      "context": "shapru_15 Ps 69:32",
+      "hebrew_and_english_extent_correct": true,
+      "terminators_correct": true,
+      "issues": [
+        "The English seg has no final punctuation. This is archived English; I made no change."
+      ]
+    },
+    {
+      "context": "shivtei_16 Ps 22:29",
+      "hebrew_and_english_extent_correct": true,
+      "terminators_correct": true,
+      "issues": []
+    },
+    {
+      "context": "shevutenu_17 Ps 105:42",
+      "hebrew_and_english_extent_correct": true,
+      "terminators_correct": true,
+      "issues": []
+    },
+    {
+      "context": "kol_yoshvei_23 Zech 14:9 (s134)",
+      "hebrew_and_english_extent_correct": true,
+      "terminators_correct": true,
+      "issues": [
+        "Only וְהָיָה…הָאָרֶץ. is in scope. The refrain lead-in and קָדוֹשׁ are excluded."
+      ]
+    },
+    {
+      "context": "adar_1 Ps 57:3",
+      "hebrew_and_english_extent_correct": true,
+      "terminators_correct": true,
+      "issues": []
+    },
+    {
+      "context": "adar_2 Ps 97:1",
+      "hebrew_and_english_extent_correct": true,
+      "terminators_correct": true,
+      "issues": []
+    },
+    {
+      "context": "adar_3 Ps 47:8",
+      "hebrew_and_english_extent_correct": true,
+      "terminators_correct": true,
+      "issues": [
+        "The printed piyyut wording 'מֶלֶךְ עַל כָּל' is kept as printed. The repeat cue is outside the scope."
+      ]
+    },
+    {
+      "context": "dea_4 Ps 111:4",
+      "hebrew_and_english_extent_correct": true,
+      "terminators_correct": true,
+      "issues": []
+    },
+    {
+      "context": "dea_5 Ps 105:8",
+      "hebrew_and_english_extent_correct": true,
+      "terminators_correct": true,
+      "issues": []
+    },
+    {
+      "context": "varasham_18 Zech 6:14",
+      "hebrew_and_english_extent_correct": true,
+      "terminators_correct": true,
+      "issues": [
+        "The colon is inside the scope. The cue שׁוֹמְרֵי מִצְוֹתָיו. is outside it."
+      ]
+    },
+    {
+      "context": "zevach_19 Gen 22:13",
+      "hebrew_and_english_extent_correct": true,
+      "terminators_correct": true,
+      "issues": []
+    },
+    {
+      "context": "zevach_20 Lev 23:24",
+      "hebrew_and_english_extent_correct": true,
+      "terminators_correct": true,
+      "issues": []
+    },
+    {
+      "context": "zevach_21 Num 29:1",
+      "hebrew_and_english_extent_correct": true,
+      "terminators_correct": true,
+      "issues": []
+    },
+    {
+      "context": "yarum_6 Ps 145:13",
+      "hebrew_and_english_extent_correct": true,
+      "terminators_correct": true,
+      "issues": []
+    },
+    {
+      "context": "yarum_7 Ex 15:18",
+      "hebrew_and_english_extent_correct": true,
+      "terminators_correct": true,
+      "issues": [
+        "Includes וָעֶד and 'and ever', matching the print."
+      ]
+    },
+    {
+      "context": "yarum_8 Jer 10:7",
+      "hebrew_and_english_extent_correct": true,
+      "terminators_correct": true,
+      "issues": []
+    },
+    {
+      "context": "motot_9 Ps 74:2",
+      "hebrew_and_english_extent_correct": true,
+      "terminators_correct": true,
+      "issues": []
+    },
+    {
+      "context": "motot_10 Ps 137:7",
+      "hebrew_and_english_extent_correct": true,
+      "terminators_correct": true,
+      "issues": []
+    },
+    {
+      "context": "motot_22 Jer 31:20",
+      "hebrew_and_english_extent_correct": true,
+      "terminators_correct": true,
+      "issues": [
+        "כְּנַֽמְתָּ and 'as Thou hast said:' are outside the scope. 31:20 is the adopted reference; the Jer 31:19 entry is rejected per the user's statement. I did not open the identification JSON."
+      ]
+    },
+    {
+      "context": "qiryat_25 Ex 15:18 short",
+      "hebrew_and_english_extent_correct": true,
+      "terminators_correct": true,
+      "issues": [
+        "Hebrew is three words in Exodus 15:18 order, without ועד, against Psalms 146:10, which puts ימלך first. English 'the Lord will reign for ever.' likewise has no 'and ever'. It is a bounded local context with source=exodus/15/18 and no invented full-verse mapping."
+      ]
+    },
+    {
+      "context": "qiryat_11 Ruth 1:6",
+      "hebrew_and_english_extent_correct": true,
+      "terminators_correct": true,
+      "issues": []
+    },
+    {
+      "context": "qiryat_12 Ps 150:3",
+      "hebrew_and_english_extent_correct": true,
+      "terminators_correct": true,
+      "issues": []
+    },
+    {
+      "context": "kol_yoshvei_24 Zech 14:9 (s138 refrain)",
+      "hebrew_and_english_extent_correct": true,
+      "terminators_correct": true,
+      "issues": [
+        "Nested inside the source= seg. קָדוֹשׁ and 'the Holy One.' are outside the inner scope."
+      ]
+    },
+    {
+      "context": "vehu_13 Job 23:13",
+      "hebrew_and_english_extent_correct": true,
+      "terminators_correct": true,
+      "issues": [
+        "Full verse. נוֹרָא וְקָדוֹשׁ: and 'Awe-inspiring and Holy!' are excluded. The חו״ק note comes before the chapter milestone."
+      ]
+    }
+  ],
+  "source_images_fully_read": [
+    "/tmp/mahzor-backlog/shemo-roles-after260/s132-complete-shemo.png",
+    "/tmp/mahzor-backlog/shemo-roles-after260/s134-complete-shemo.png",
+    "/tmp/mahzor-backlog/shemo-roles-after260/s136-complete-shemo.png",
+    "/tmp/mahzor-backlog/shemo-roles-after260/s138-complete-shemo.png",
+    "/tmp/mahzor-backlog/piyyutim-after260/s140-row2.png"
+  ],
+  "role_positions_verified": [
+    "There are 7 printed חו״ק cues: shemo, shomerei, shapru, shivtei, shevutenu, yishpot, vehu. All are encoded as reader_and_congregation, expan חזן וקהל, at stanza head. kol_yoshvei has no printed cue at either occurrence and none is encoded.",
+    "s134 (10): ח׳ אֲדָר | ק׳ אֶקְרָא | ח׳ בְּיוֹם | ק׳ יְיָ מָלָךְ | ח׳ גֵּאוּתוֹ | ק׳ מֶלֶךְ | ח׳ דֵּעַ | ק׳ זֵכֶר | ח׳ הִצִּיב | ק׳ זָכַר לְעוֹלָם. All encoded at these positions.",
+    "s136 (14): ח׳ וְרָשַׁם | ק׳ לְזִכָּרוֹן | ח׳ זֶבַח | ק׳ אַחַר | ח׳ חִכֵּם | ק׳ זִכְרוֹן | ח׳ טִבְעוֹ | ק׳ יוֹם תְּרוּעָה | ח׳ יָרוּם | ק׳ מַלְכוּתְךָ | ח׳ כְּהִגָּלוֹתְךָ | ק׳ יְיָ יִמְלֹךְ לְעֹלָם וָעֶד | ח׳ לְךָ יָאֲתָה | ק׳ מִי לֹא. All encoded at these positions.",
+    "s138 (12): ח׳ מֹטַת | ק׳ זְכוֹר | ח׳ נְדִיבֵי | ק׳ זְכֹר יְיָ | ח׳ סְלוּל | ק׳ כְּנַֽמְתָּ (the cue comes BEFORE כְּנַֽמְתָּ, which is itself outside the Jer seg) | ח׳ קִרְיַת | ק׳ יְיָ יִמְלֹךְ לְעוֹלָם | ח׳ שָׁמַיִם | ק׳ כִּי פָקַד | ח׳ תֹּקֶף | ק׳ הַלְלוּהוּ. All encoded at these positions.",
+    "In total all 36 printed ח׳/ק׳ cues are present, at their printed positions, with role/reader or role/congregation. That includes the 25 restored ones. I did not reconcile which 25 of the 36 are the newly restored ones, because every position matches.",
+    "s140: the printed קו״ח is encoded at the head of teshalesh_shofarot part_1."
+  ],
+  "limits": [
+    "Pending source mark: only 262 (the yod of יְקִירְךָ, s138) among word readings. The Hebrew source for shemo_mefoarim is not approved until it is resolved.",
+    "Separately from that pending mark: the centred heading on each image (roughly 'מין/לחן שבת.') is not represented in the unit, and I could not verify where it is handled. Confirm it is covered at the running-order or page level before you call the source areas complete.",
+    "Guideline approval and unchanged-English approval are given independently of the 262 mark.",
+    "I did not view the native s132–s140 JPGs, the English page images s133–s141, the english-shard-03 archive, shemo-scripture-identification.json, or the previous piyyutim review.json files. I judged English as unchanged by comparing fragment text with the receipts' 'before' states, not against the English print. I read only part of each receipt file.",
+    "I ran no runtime, compile or alignment checks. The 48-range proof and the new 50-range run are not my results.",
+    "This is not a final PDF or HTML approval."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "f4a17fa0-2530-4b8b-80a1-60a4ce579403"
+  }
+}

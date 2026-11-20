@@ -1,0 +1,63 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "low"
+  },
+  "witnesses": [
+    {
+      "stem": "emet_veyatziv",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": false,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [
+        "s114, ezrat, s114-row6 line 3 (y≈380 display), between גָאָלְתָּ (x≈1150–1280) and וְיַם־סוּף: the print has no period here. The current text has 'גָאָלְתָּ.' with a period in both current.json and the review XML. The blind -114 read also has no punctuation there ('גָּאָלְתָּ וְיַם־סוּף'). Remove the period, as a direct transcription fix.",
+        "s114, emet, s114-row1 line 2 (y≈250, x≈1270–1430), קַיָּמֶת: the vowel under the yod looks like a segol (three dots), with another segol under the mem. The blind -114 also read קַיֶּמֶת and listed it explicitly. The current qamats (קַיָּמֶת) is not supported by the image. Change it to קַיֶּמֶת unless a closer look shows a qamats.",
+        "s116, Exod 15:11, s116-row1: the verse is printed with full cantillation. The current encoding has accents only on the three words in the human record (מִי־כָמֹ֤כָה בָּאֵלִם֙ יְהֹ֔וָה). Accent marks visible on the rest of the verse are not encoded (see unresolved). The human record's encoding note says 'no cantillation supplied to the unasked remainder of the verse'. So the unit currently leaves visible source marks untranscribed, and the Hebrew source cannot be certified complete."
+      ],
+      "unresolved": [
+        "s116-row1 line 1, בָּאֵלִם (x≈1480–1640): there is a small vertical stroke beside the qamats under the bet. It looks like a meteg (the blind also saw it and read meteg, possibly munach). It is not in the current text, and the human record (mahpakh on mem, pashta, zaqef by the holam) does not mention it. Is a meteg/ga'ya under the bet printed?",
+        "s116-row1 line 1, first מִי of מִי־כָמֹ֤כָה (x≈1800–1900): the blind read a meteg (מִֽי). Is there a mark under the mem besides the hiriq?",
+        "s116-row1 line 1, second מִי (x≈1200) and כָּמֹכָה (x≈950–1150): there are accent marks near and under these words (the blind read merkha/tipcha-type marks). Which accents are printed, and on which letters?",
+        "s116-row1 line 1, נֶאְדָּר (x≈720–900): there is a mark under the dalet beside the qamats (munach-like). Which accent is it?",
+        "s116-row1 line 1, בַּקֹּדֶשׁ (x≈420–650): there is a caret-shaped mark under the qof, which looks like an etnachta. Confirm it.",
+        "s116-row1 line 1, נוֹרָא (x≈100–330): there is an accent under the resh beside the qamats (merkha or munach?).",
+        "s116-row1 line 2, תְהִלֹּת (x≈1720–1900): there is a mark under the lamed (tipcha?).",
+        "s116-row1 line 2, עֹשֵׂה (x≈1500–1650): there is a faint stroke under the ayin (merkha or munach?).",
+        "s116-row1 line 2, פֶלֶא (x≈1300–1450): there is a vertical stroke beside the segol under the pe (silluq/meteg?).",
+        "s114-row6 line 3, הָרָגְתָּ (x≈1780–1900): the vowel under the resh is ambiguous at this resolution. The current text has a qamats; the blind read a patah (הָרַגְתָּ). Which is printed?",
+        "s114-row6 line 3, גָאָלְתָּ (x≈1150–1280): the current text has no dagesh in the gimel; the blind read גָּאָלְתָּ. Is a dot visible in the gimel?",
+        "s114-row8 line 1, גָדוֹל (x≈1530–1650): the current text has no dagesh; the blind read גָּדוֹל. Is a dagesh printed in the gimel?",
+        "s114-row8 line 1, וּמַגְבִּיהַ (x≈870–1050): the current text has no mappiq; the blind read וּמַגְבִּיהַּ. Is there a dot in the final he?",
+        "s114-row6 line 1, גּוֹאֵל in מֶלֶךְ גּוֹאֵל וּמוֹשִׁיעַ (x≈1010–1110): the alef is badly broken in print. The consonants גואל are accepted from context, but the tsere under the alef and the dagesh in the gimel cannot be seen.",
+        "s114-row2 line 2, וְעַל־דּוֹרוֹתֵינוּ and כָּל־דּוֹרוֹת: the dagesh in each dalet after the maqaf cannot be confirmed at this resolution.",
+        "s116-row2/row3, כִנְאֻמֶךָ (row2 line 3, left end) and גֹּאֲלֵנוּ (row3 line 1, x≈1450–1600): the dagesh status of the kaf and the gimel cannot be resolved at this resolution."
+      ],
+      "verified": [
+        "I read every word on s112 rows 8–9 (Emet from אֱמֶת וְיַצִּיב to מָגֵן) against the current text. The consonants, vowels and word order match. The colon after וָעֶד matches.",
+        "I read every word on s114 rows 1–9 against the current text. Apart from the issues and unresolved items above, the consonants, vowels, maqafs and punctuation match. Specifically: no maqaf in וְעַל כָּל־דּוֹרוֹת; periods after וָעֶד, אֲבוֹתֵינוּ, שְׁמֶךָ, פְּדִיתָנוּ and וּמְבֹרָךְ; colons elsewhere as encoded; שָׁאַתָּה with qamats under the shin, which is a printed form and is kept; לְמִצְוֹתֶיךָ with holam on the vav; שַׁוְּעָם; כֻלָּם with no dagesh after וְאָמְרוּ.",
+        "On s116 (Mi khamokha through גָּאַל יִשְׂרָאֵל:), the consonants and vowels match. This includes defective בָּאֵלִם, תְהִלֹּת and לְעֹלָם; the maqaf in מִי־כָמֹכָה and עַל־שְׂפַת; no maqaf after the second מִי; the period after וְאָמְרוּ, after יְהוּדָה וְיִשְׂרָאֵל and after קְדוֹשׁ יִשְׂרָאֵל; the final colon.",
+        "The accents in the human record for this occurrence are present as encoded: mahpakh on the mem of כָמֹ֤כָה, pashta on the final mem of בָּאֵלִם֙, and zaqef qatan with the holam on the Divine Name יְהֹ֔וָה. I did not move or normalize them.",
+        "The unit ends before אֲדֹנָי שְׂפָתַי. s112 Shema above and the s116 Amidah below are not included.",
+        "Hebrew paragraph breaks follow the print: 6 tei:p (Emet…עֲבָדֶיךָ: | עַל־הָרִאשׁוֹנִים…זוּלָתֶךָ: | עֶזְרַת…כֻלָּם: | מִי־כָמֹכָה…פֶלֶא: | שִׁירָה…וָעֶד: | צוּר…יִשְׂרָאֵל:). The prayer-part milestones are independent of these breaks.",
+        "Page breaks: pb n=43 (n113 = s114) sits before יִשְׁעֵנוּ, and pb n=44 (n115 = s116) sits at the head of Mi khamokha. The div facs n111 is s112. The English pb n114/n116 match.",
+        "Every יְיָ (5) and יְהֹ֔וָה (1) is wrapped in j:divineName.",
+        "Bible quotations: Ps 106:11, Exod 15:11, Exod 15:18 and Isa 47:4 are each a whole verse. Each has chapter and verse milestones before a tei:seg@source holding exactly the verse text, followed by bare verse and chapter terminators before the next unrelated word. בָּרוּךְ אַתָּה…גָּאַל יִשְׂרָאֵל falls outside the Isaiah seg. The edition's spelling inside the segs is kept.",
+        "English alignment: the same prayer-part corresp keys in the same order (emet, al_harishonim, ezrat, quoted_psalms_106_11, al_zot, mosheh, mi_khamokhah, quoted_exodus_15_11, shirah, adonai_yimlokh, quoted_exodus_15_18, tzur_yisrael, quoted_isaiah_47_4) and the same terminators. The extents correspond, including the trailing bare prayer-part terminator after גָּאַל יִשְׂרָאֵל / 'redeemed Israel.' I did not retranslate the English."
+      ]
+    }
+  ],
+  "limits": [
+    "This was a visual review only, from the native page images and enlarged rows. I ran no schema validation, compiler, URN resolver or validate_urn_references check.",
+    "I viewed s116 rows 1–5. Rows 6–9 of s116 contain only Amidah text, which is out of scope, so I did not read them for this unit. s112 rows 1–7 (Shema) were viewed only to find where Emet starts; I did not review them.",
+    "The quotation corresp URNs (emet_veyatziv/quotations/...) are internally consistent between Hebrew and English. I did not search other projects to check that they reuse an existing canonical identity rather than duplicating one.",
+    "I did not review the placement or encoding of the instructions (shacharit_shema_emet_join, shacharit_shema_alone). They are outside this unit's text.",
+    "I consulted the blind independent -114 and -116 reads only to cross-check disagreements. I did not open the primary morning_s108_s125_initial.json or independent -a.json.",
+    "Several dagesh and accent marks are below what the supplied enlargements can resolve (listed in unresolved). I certify none of them. A higher-resolution crop or a human check is needed before the Hebrew source can be approved."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "06ed2327-fa91-4dd3-9f02-7b57f97e3670"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "approved": false,
+  "findings": [
+    {
+      "severity": "medium",
+      "location": "heidenheim-1965-he/shemo_mefoarim.xml:45, :47, :48, :49, :50 (the resume-cue notes after each bare stanza terminator); heidenheim-1965-he/index.xml:437-438, :468-470, :498",
+      "issue": "Each printed resume cue now comes after its strophe's bare stanza terminator. So it lies outside every stanza range: the terminator closes adar, varasham, zevach, yarum or motot, and the next stanza milestone opens on the following line. The documentary index transcludes these strophes one stanza at a time (shemo_mefoarim/adar, /varasham, /zevach, /yarum, /motot) and does not emit the cues separately. The printed cues שְׁמוֹ מְפָאֲרִים., שׁוֹמְרֵי מִצְווֹתָיו., שַׁפְּרוּ., שִׁבְטֵי., שְׁבוּתֵנוּ. therefore never appear in documentary output. The images confirm all five cues are printed (s134 bottom, s136 ×3, s138). The expanded order is not affected because it expands the canonical refrains instead. The 182 word comparisons probably would not catch this, since the cues are nonspoken notes.",
+      "recommendation": "Make each cue reachable in documentary order without putting it back into the canonical stanza scope. Either (a) give the cue its own local-context milestone, e.g. siddur:rosh_hashanah/shacharit/repetition/shabbat_cues/<n>, and transclude it after the stanza in the documentary index, or (b) have the documentary index emit the cue note itself, as it now does for the aafir acrostic. Then check that each cue renders exactly once per strophe in documentary output."
+    },
+    {
+      "severity": "medium",
+      "location": "heidenheim-1965-he/shemo_mefoarim.xml:44 (canonical kol_yoshvei); s134.jpg, line beginning (נק״ק מ״ץ אין אומרים כל יושבי…",
+      "issue": "Nonblind image check: on s134 the first kol yoshvei is printed in parentheses, just like the second one on s138. Inside the parenthesis it opens with a small-type regional siglum note that appears to read נק״ק מ״ץ אין אומרים (exact reading not certified). The XML encodes the second occurrence as a marked conditional, but the first is plain canonical stanza text with no marked conditional and no note. So the statement that the Shofar alternative is the only parenthesized alternative does not hold for these pages: both kol yoshvei lines are parenthesized. The note also suggests the parentheses may mark the Metz omission rather than Shabbat-only use. That would be a regional condition, not shabbat=true, which is already implied by the enclosing Shabbat block. Separately, line 44 is unpointed (כל יושבי תבל…) while the printed line is pointed. That is a source-accuracy item, not a structural one.",
+      "recommendation": "Add this regional note on s134 (and its relation to the parentheses on s134 and s138) to the pending human question 2 (Metz). Once it is read, encode both parenthesized occurrences the same way. The likely shape is a type=marked j:conditional around the printed text in the documentary or local context, with the source note as the conditional's instruction child. Keep the canonical poem:shemo_mefoarim/kol_yoshvei stanza unconditioned. Until then, record that the first occurrence's parentheses and note are not yet encoded."
+    },
+    {
+      "severity": "low",
+      "location": "heidenheim-1965-he/shemo_mefoarim.xml:45-51 (adar…qiryat); adderet_mamlakhah.xml:36; s134/s136/s138",
+      "issue": "Nonblind image check: within each Shabbat strophe the source prints ח׳ before each poet couplet and ק׳ before each Biblical quotation. Adderet part_3 also has ח׳ before רָם עַל כָּל־מֶלֶךְ. None of these per-line speaker sigla are encoded, though the חו״ק before each refrain is. This omits printed source rubrics; it does not break structure.",
+      "recommendation": "Encode them as nonspoken tei:note type=\"description\" with role corresp (reader / congregation), placed inside the owning stanza or part range. Or record an explicit decision to defer per-line speaker sigla to source review."
+    },
+    {
+      "severity": "low",
+      "location": "heidenheim-1965-he/shemo_mefoarim.xml:52; marmorstein-1965-en/shemo_mefoarim.xml:47",
+      "issue": "The repeated kol_yoshvei is now balanced: the stanza milestone comes before j:conditional, j:endConditional comes before the terminator, and qiryat is closed by its own terminator. However, two empty <tei:seg source=\"…/kol_yoshvei\"/> elements sit on either side of the conditional. They carry no text or function, and they make it look as if the canonical refrain has three source-linked segments.",
+      "recommendation": "Remove the empty segs. A bare stanza terminator after j:endConditional is enough to close the range."
+    },
+    {
+      "severity": "info",
+      "location": "marmorstein-1965-en/index.xml:376-388 vs heidenheim-1965-he/index.xml:483",
+      "issue": "The Hebrew documentary order emits the ע״ס א״ב acrostic note next to aafir_nezer/part_1. The English order has no corresponding note. This is acceptable if the English page does not print one. I did not view the English scan.",
+      "recommendation": "Confirm the English page, or record that the acrostic note exists only in the Hebrew source."
+    },
+    {
+      "severity": "info",
+      "location": "heidenheim-1965-he/index.xml:373, :377-378; machzor_expanded-opensiddur-he/index.xml:1601-1610, :1623",
+      "issue": "The Frankfurt and Metz directions are still unconditioned free instructions. AttahHu is still always included, under an editorial 'local custom' label. This matches the stated pending status of human questions 1 and 2 and is not a settled rite choice.",
+      "recommendation": "No change until human questions 1 and 2 are answered. The s134 kol yoshvei note (finding 2) should be decided in the same Metz adjudication."
+    }
+  ],
+  "checks": [
+    "Nonblind image follow-up on s134, s136, s138 (follow-up only, not blind transcription): exactly one abbreviated resume cue at the end of each complete Shabbat strophe. adar→שמו מפארים (s134), varasham→שומרי מצותיו, zevach→שפרו, yarum→שבטי (s136), motot→שבותינו (s138). There are no cues inside the strophes. dea plus varasham form one strophe across the s134/s136 page break with a single cue, which matches the expanded sequence dea, varasham, shomerei.",
+    "he and en shemo_mefoarim.xml: adar, dea, varasham, zevach, yarum, motot and qiryat each have one stanza milestone and one bare terminator after the strophe's last words. All 13 quotation chapter/verse milestones are inside their stanza and explicitly terminated. Hebrew and English stanza IDs and extents line up. No duplicate cues remain.",
+    "kol_yoshvei repeat (he :52, en :47): the stanza milestone comes before j:conditional and the stanza terminator after j:endConditional, so both the qiryat range and the shabbat_refrains/kol_yoshvei range are balanced in both languages.",
+    "Speaker notes: adderet ק׳ (adderet_mamlakhah.xml:34) and every חו״ק are now inside their part/stanza ranges. The aafir ע״ס א״ב is a div-level note in the poem file (reached by the expanded whole-poem transclusion) and is emitted in the Hebrew documentary index at :483 next to part_1, with no duplicate inside part_1. adirei_ayummah: the index (:538) no longer adds notes, and the poem file has ש״ץ מנגן. והקהל חוזר. once.",
+    "naalah_vedin he/en: only the Shabbat branch is type=marked, and its native rubric (אם שבת / On Sabbath:) is a j:conditional instruction child. The weekday branch is unmarked. English 'But with' is outside both branches, and '(the Sanctuary)' is ordinary text. I did not view the s125/s126 image for this.",
+    "Documentary he/en index: all five weekday blocks are wrapped in shabbat=false conditionals, and all Shabbat blocks are shabbat=true with the WHEN rubric as an instruction child of j:conditional rather than a tei:head. Etten keeps the local yishpot_repeat.",
+    "Expanded index :1549-1679: the repetition is conditioned on repetition=true and minyan=true, and the local j:declare now includes minyan=true. Weekday and Shabbat routes are mutually exclusive. Etten is followed by the canonical poem:shemo_mefoarim/yishpot. On the Shabbat route each refrain (shemo, shomerei, shapru, shivtei, shevutenu, kol_yoshvei, yishpot) is transcluded twice.",
+    "Read the recorded results in runtime-verification.json (status pass; 182 per-unit/stanza hash entries in documentary and expanded modes, both languages, including repeated transclusions) and selector-verification.json (8/8 shabbat×minyan×repetition cases pass). I did not re-run either one."
+  ],
+  "limitations": [
+    "Read-only review. I ran no build, validator, transclusion resolver or tests. The runtime and selector results are reported here as recorded in their JSON files, not re-executed. runtime-verification.json lists hashes only, so I could not check which word sequences were compared or whether nonspoken cue notes were included.",
+    "The image checks were nonblind and limited to cue count and placement, the parentheses, and visible rubrics on s134, s136 and s138. They certify no Hebrew consonants, pointing or siglum readings, including the s134 נק״ק מ״ץ note, the 'אם שבת' section heads, and the aafir opening (human question 3; aafir_nezer identity stays provisional). I did not view English scans or the naalah page.",
+    "The pending human questions 1 (Frankfurt German direction), 2 (Shabbat/Metz directions, the קליר attribution, and now the s134 kol yoshvei note) and 3 (aafir opening) are open source questions, not structural defects. No rite choice is settled, and none is inferred here.",
+    "All 28 new modules remain unaccepted drafts. This review does not imply source acceptance or source-accuracy certification.",
+    "Approval is withheld for draft structural handling mainly because of finding 1: the printed resume cues are unreachable in documentary order. Once that is fixed, and with the kol yoshvei parentheses recorded under the Metz adjudication, the remaining structural handling looks fit for draft approval."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "b1e10e3c-c031-48de-bc2c-2b8cc26032fd"
+  }
+}

@@ -1,0 +1,908 @@
+{
+  "status": "Unapproved complete frame/order draft; page-boundary and registry work still pending",
+  "added_units": [
+    "musaf_repetition_kesod_siach",
+    "musaf_qedushah_kevodo",
+    "musaf_qedushah_kevodo_repeat",
+    "musaf_qedushah_mimeqomo",
+    "musaf_qedushah_mimeqomo_repeat",
+    "musaf_qedushah_shema",
+    "musaf_qedushah_echad_hu",
+    "musaf_qedushah_echad_hu_repeat",
+    "musaf_qedushah_ani_adonai",
+    "musaf_qedushah_adir",
+    "musaf_qedushah_adir_repeat",
+    "musaf_qedushah_yimlokh",
+    "musaf_tisgav_levaddekha"
+  ],
+  "documentary_sequence": [
+    {
+      "unit": "musaf_repetition_kesod_siach"
+    },
+    {
+      "unit": "musaf_repetition_qadosh"
+    },
+    {
+      "section": "musaf_qedushah_kevodo_first_occurrence",
+      "heading": null,
+      "order": [
+        {
+          "instruction": "musaf_qedushah_kevodo_first_role"
+        },
+        {
+          "unit": "musaf_qedushah_kevodo"
+        }
+      ]
+    },
+    {
+      "unit": "musaf_vechayyot_asher_hennah"
+    },
+    {
+      "unit": "musaf_qedushah_kevodo_repeat"
+    },
+    {
+      "unit": "musaf_repetition_barukh_kevod"
+    },
+    {
+      "section": "musaf_qedushah_mimeqomo_first_occurrence",
+      "heading": null,
+      "order": [
+        {
+          "instruction": "musaf_qedushah_mimeqomo_first_role"
+        },
+        {
+          "unit": "musaf_qedushah_mimeqomo"
+        }
+      ]
+    },
+    {
+      "unit": "musaf_veammekha_teluim"
+    },
+    {
+      "unit": "musaf_qedushah_mimeqomo_repeat"
+    },
+    {
+      "unit": "musaf_qedushah_shema"
+    },
+    {
+      "section": "musaf_echad_first",
+      "heading": null,
+      "order": [
+        {
+          "instruction": "musaf_echad_first_role"
+        },
+        {
+          "unit": "musaf_qedushah_echad_hu"
+        }
+      ]
+    },
+    {
+      "unit": "musaf_veattah_ezon_qol"
+    },
+    {
+      "unit": "musaf_qedushah_echad_hu_repeat"
+    },
+    {
+      "unit": "musaf_qedushah_ani_adonai"
+    },
+    {
+      "section": "musaf_adir_first",
+      "heading": null,
+      "conditions": [
+        {
+          "type": "opensiddur:rite",
+          "features": {
+            "frankfurt": false
+          }
+        }
+      ],
+      "condition_instruction": {
+        "he": "musaf_adir_frankfurt"
+      },
+      "order": [
+        {
+          "instruction": "musaf_adir_first_role"
+        },
+        {
+          "unit": "musaf_qedushah_adir"
+        }
+      ]
+    },
+    {
+      "unit": "musaf_tehillot_kevodekha"
+    },
+    {
+      "unit": "musaf_qedushah_adir_repeat"
+    },
+    {
+      "unit": "musaf_repetition_uvedivrei"
+    },
+    {
+      "unit": "musaf_qedushah_yimlokh"
+    },
+    {
+      "unit": "musaf_repetition_ledor_vador"
+    },
+    {
+      "unit": "musaf_qedushah_conclusion_parts"
+    },
+    {
+      "instruction": "musaf_open_ark_248"
+    },
+    {
+      "unit": "musaf_haochez_beyad_middat_mishpat"
+    },
+    {
+      "instruction": "musaf_close_ark_250"
+    },
+    {
+      "section": "musaf_tisgav_custom",
+      "heading": null,
+      "conditions": [
+        {
+          "type": "opensiddur:rite",
+          "features": {
+            "frankfurt": false,
+            "metz": false,
+            "marmorstein_tisgav": true
+          }
+        }
+      ],
+      "condition_instruction": {
+        "he": "musaf_tisgav_custom_he",
+        "en": "musaf_tisgav_custom_en"
+      },
+      "order": [
+        {
+          "instruction": "musaf_tisgav_reader"
+        },
+        {
+          "unit": "musaf_tisgav_levaddekha"
+        }
+      ]
+    },
+    {
+      "unit": "musaf_repetition_uvekhen_ten_pachdekha"
+    },
+    {
+      "unit": "musaf_repetition_uvekhen_ten_kavod"
+    },
+    {
+      "unit": "musaf_repetition_uvekhen_tzaddiqim"
+    },
+    {
+      "section": "musaf_veyeetayu_custom",
+      "heading": null,
+      "conditions": [
+        {
+          "type": "opensiddur:rite",
+          "features": {
+            "frankfurt": false,
+            "metz": false
+          }
+        },
+        {
+          "operator": "any",
+          "conditions": [
+            {
+              "type": "opensiddur:rite",
+              "features": {
+                "fuerth": true
+              }
+            },
+            {
+              "type": "opensiddur:rite",
+              "features": {
+                "marmorstein_veyeetayu": true
+              }
+            }
+          ]
+        }
+      ],
+      "order": [
+        {
+          "instruction": "musaf_veyeetayu_custom_he"
+        },
+        {
+          "instruction": "musaf_veyeetayu_custom_en"
+        },
+        {
+          "unit": "musaf_v_yeetayu_kol_leavdekha"
+        }
+      ]
+    },
+    {
+      "unit": "musaf_repetition_vetimlokh"
+    },
+    {
+      "unit": "musaf_repetition_qadosh_attah"
+    }
+  ],
+  "expanded_sequence": [
+    {
+      "reference": {
+        "target": "urn:x-opensiddur:text:prayer:amidah/naaritzekha_venaqdishkha_kesod"
+      }
+    },
+    {
+      "section": "musaf_repetition_qadosh_canonical",
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:prayer:amidah/qedushah/qadosh"
+          },
+          "source_witness": "musaf_repetition_qadosh"
+        }
+      ],
+      "declarations": [
+        {
+          "type": "opensiddur:variant",
+          "features": {
+            "urn:x-opensiddur:condition:prayer:amidah/qedushah/qadosh/haaretz_without_meteg": false,
+            "urn:x-opensiddur:condition:prayer:amidah/qedushah/qadosh/haaretz_with_meteg": true
+          }
+        }
+      ],
+      "rubrics": {
+        "he": {
+          "text": "קו״ח",
+          "abbreviations": [
+            {
+              "abbr": "קו״ח",
+              "expan": "קהל וחזן"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "section": "musaf_qedushah_kevodo_first_occurrence",
+      "rubrics": {
+        "he": {
+          "text": "ק׳",
+          "abbreviations": [
+            {
+              "abbr": "ק׳",
+              "expan": "קהל"
+            }
+          ]
+        }
+      },
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:prayer:amidah/qedushah/kevodo"
+          }
+        }
+      ]
+    },
+    {
+      "reference": {
+        "target": "urn:x-opensiddur:text:poem:vechayyot_asher_hennah"
+      }
+    },
+    {
+      "section": "musaf_qedushah_kevodo_repeat_canonical",
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:prayer:amidah/qedushah/kevodo"
+          },
+          "source_witness": "musaf_qedushah_kevodo_repeat"
+        }
+      ],
+      "rubrics": {
+        "he": {
+          "text": "ח׳",
+          "abbreviations": [
+            {
+              "abbr": "ח׳",
+              "expan": "חזן"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "section": "musaf_repetition_barukh_kevod_canonical",
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:prayer:amidah/qedushah/barukh_kevod"
+          },
+          "source_witness": "musaf_repetition_barukh_kevod"
+        }
+      ],
+      "declarations": [
+        {
+          "type": "opensiddur:variant",
+          "features": {
+            "urn:x-opensiddur:condition:prayer:amidah/qedushah/barukh_kevod/kevod_name_with_maqaf": false,
+            "urn:x-opensiddur:condition:prayer:amidah/qedushah/barukh_kevod/kevod_name_without_maqaf": true
+          }
+        }
+      ],
+      "rubrics": {
+        "he": {
+          "text": "קו״ח",
+          "abbreviations": [
+            {
+              "abbr": "קו״ח",
+              "expan": "קהל וחזן"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "section": "musaf_qedushah_mimeqomo_first_occurrence",
+      "rubrics": {
+        "he": {
+          "text": "ק׳",
+          "abbreviations": [
+            {
+              "abbr": "ק׳",
+              "expan": "קהל"
+            }
+          ]
+        }
+      },
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:prayer:amidah/qedushah/mimeqomo"
+          }
+        }
+      ],
+      "declarations": [
+        {
+          "type": "opensiddur:variant",
+          "features": {
+            "urn:x-opensiddur:condition:prayer:amidah/qedushah/mimeqomo/veyachon_defective_without_maqaf": true,
+            "urn:x-opensiddur:condition:prayer:amidah/qedushah/mimeqomo/veyachon_plene_with_maqaf": false,
+            "urn:x-opensiddur:condition:prayer:amidah/qedushah/mimeqomo/first_printing": true,
+            "urn:x-opensiddur:condition:prayer:amidah/qedushah/mimeqomo/second_printing": false
+          }
+        }
+      ]
+    },
+    {
+      "reference": {
+        "target": "urn:x-opensiddur:text:poem:veammekha_teluim"
+      }
+    },
+    {
+      "section": "musaf_qedushah_mimeqomo_repeat_canonical",
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:prayer:amidah/qedushah/mimeqomo"
+          },
+          "source_witness": "musaf_qedushah_mimeqomo_repeat"
+        }
+      ],
+      "declarations": [
+        {
+          "type": "opensiddur:variant",
+          "features": {
+            "urn:x-opensiddur:condition:prayer:amidah/qedushah/mimeqomo/veyachon_defective_without_maqaf": false,
+            "urn:x-opensiddur:condition:prayer:amidah/qedushah/mimeqomo/veyachon_plene_with_maqaf": true,
+            "urn:x-opensiddur:condition:prayer:amidah/qedushah/mimeqomo/first_printing": false,
+            "urn:x-opensiddur:condition:prayer:amidah/qedushah/mimeqomo/second_printing": true
+          }
+        }
+      ],
+      "rubrics": {
+        "he": {
+          "text": "ח׳",
+          "abbreviations": [
+            {
+              "abbr": "ח׳",
+              "expan": "חזן"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "section": "musaf_shema_response",
+      "rubrics": {
+        "he": {
+          "text": "קו״ח",
+          "abbreviations": [
+            {
+              "abbr": "קו״ח",
+              "expan": "קהל וחזן"
+            }
+          ]
+        }
+      },
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:bible:deuteronomy/6/4"
+          }
+        }
+      ]
+    },
+    {
+      "section": "musaf_echad_first",
+      "rubrics": {
+        "he": {
+          "text": "ק׳",
+          "abbreviations": [
+            {
+              "abbr": "ק׳",
+              "expan": "קהל"
+            }
+          ]
+        }
+      },
+      "declarations": [
+        {
+          "type": "opensiddur:variant",
+          "features": {
+            "urn:x-opensiddur:condition:prayer:amidah/qedushah/echad_hu_eloheinu/echad_hu/first_printing": true,
+            "urn:x-opensiddur:condition:prayer:amidah/qedushah/echad_hu_eloheinu/echad_hu/second_printing": false
+          }
+        }
+      ],
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:prayer:amidah/qedushah/echad_hu_eloheinu"
+          }
+        }
+      ]
+    },
+    {
+      "reference": {
+        "target": "urn:x-opensiddur:text:poem:veattah_ezon_qol"
+      }
+    },
+    {
+      "section": "musaf_qedushah_echad_hu_repeat_canonical",
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:prayer:amidah/qedushah/echad_hu_eloheinu/echad_hu",
+            "targetEnd": "urn:x-opensiddur:text:prayer:amidah/qedushah/echad_hu_eloheinu/quotations/numbers_15/41"
+          },
+          "source_witness": "musaf_qedushah_echad_hu_repeat"
+        }
+      ],
+      "declarations": [
+        {
+          "type": "opensiddur:variant",
+          "features": {
+            "urn:x-opensiddur:condition:prayer:amidah/qedushah/echad_hu_eloheinu/echad_hu/first_printing": false,
+            "urn:x-opensiddur:condition:prayer:amidah/qedushah/echad_hu_eloheinu/echad_hu/second_printing": true
+          }
+        }
+      ],
+      "rubrics": {
+        "he": {
+          "text": "ח׳",
+          "abbreviations": [
+            {
+              "abbr": "ח׳",
+              "expan": "חזן"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "section": "musaf_ani_adonai",
+      "rubrics": {
+        "he": {
+          "text": "קו״ח",
+          "abbreviations": [
+            {
+              "abbr": "קו״ח",
+              "expan": "קהל וחזן"
+            }
+          ]
+        }
+      },
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:bible:numbers/15/41/b"
+          }
+        }
+      ]
+    },
+    {
+      "section": "musaf_adir_first",
+      "conditions": [
+        {
+          "type": "opensiddur:rite",
+          "features": {
+            "frankfurt": false
+          }
+        }
+      ],
+      "condition_rubrics": {
+        "he": {
+          "text": "בפֿפֿד״מ אין אומרים כאן אדיר אדירנו."
+        }
+      },
+      "rubrics": {
+        "he": {
+          "text": "ק׳",
+          "abbreviations": [
+            {
+              "abbr": "ק׳",
+              "expan": "קהל"
+            }
+          ]
+        }
+      },
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:prayer:amidah/addir_adiraynu"
+          }
+        }
+      ]
+    },
+    {
+      "reference": {
+        "target": "urn:x-opensiddur:text:poem:tehillot_kevodekha"
+      }
+    },
+    {
+      "section": "musaf_qedushah_adir_repeat_canonical",
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:prayer:amidah/addir_adiraynu/addir",
+            "targetEnd": "urn:x-opensiddur:text:prayer:amidah/addir_adiraynu/quotations/zechariah_14/9"
+          },
+          "source_witness": "musaf_qedushah_adir_repeat"
+        }
+      ],
+      "rubrics": {
+        "he": {
+          "text": "ק׳",
+          "abbreviations": [
+            {
+              "abbr": "ק׳",
+              "expan": "קהל"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "section": "musaf_repetition_uvedivrei_canonical",
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:prayer:amidah/qedushah/uvedivrei"
+          },
+          "source_witness": "musaf_repetition_uvedivrei"
+        }
+      ],
+      "rubrics": {
+        "he": {
+          "text": "ח׳",
+          "abbreviations": [
+            {
+              "abbr": "ח׳",
+              "expan": "חזן"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "section": "musaf_qedushah_yimlokh_canonical",
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:bible:psalms/146/10"
+          },
+          "source_witness": "musaf_qedushah_yimlokh"
+        }
+      ],
+      "declarations": [
+        {
+          "type": "opensiddur:variant",
+          "features": {
+            "urn:x-opensiddur:condition:bible:psalms/146/10/name_plene_hallaluyah_chataf": false,
+            "urn:x-opensiddur:condition:bible:psalms/146/10/name_abbreviated_halleluyah_sheva": true,
+            "urn:x-opensiddur:condition:bible:psalms/146/10/name_plene_halleluyah_sheva": false,
+            "urn:x-opensiddur:condition:bible:psalms/146/10/the_lord_shall_reign": false,
+            "urn:x-opensiddur:condition:bible:psalms/146/10/the_lord_will_reign": false,
+            "urn:x-opensiddur:condition:bible:psalms/146/10/the_lord_will_reign_in_eternity": true
+          }
+        }
+      ],
+      "rubrics": {
+        "he": {
+          "text": "קו״ח",
+          "abbreviations": [
+            {
+              "abbr": "קו״ח",
+              "expan": "קהל וחזן"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "section": "musaf_repetition_ledor_vador_canonical",
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:prayer:amidah/qedushah/ledor_vador"
+          },
+          "source_witness": "musaf_repetition_ledor_vador"
+        }
+      ],
+      "declarations": [
+        {
+          "type": "opensiddur:variant",
+          "features": {
+            "urn:x-opensiddur:condition:prayer:amidah/qedushah/ledor_vador/dor_plene": false,
+            "urn:x-opensiddur:condition:prayer:amidah/qedushah/ledor_vador/dor_defective": true
+          }
+        }
+      ],
+      "rubrics": {
+        "he": {
+          "text": "ח׳",
+          "abbreviations": [
+            {
+              "abbr": "ח׳",
+              "expan": "חזן"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "section": "musaf_qedushah_conclusion",
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:prayer:amidah/ki_maqdishekha"
+          }
+        },
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:prayer:od_yizkar_lanu"
+          }
+        }
+      ]
+    },
+    {
+      "instruction": "musaf_open_ark_248"
+    },
+    {
+      "reference": {
+        "target": "urn:x-opensiddur:text:poem:haochez_beyad_middat_mishpat"
+      }
+    },
+    {
+      "instruction": "musaf_close_ark_250"
+    },
+    {
+      "section": "musaf_tisgav_custom",
+      "conditions": [
+        {
+          "type": "opensiddur:rite",
+          "features": {
+            "frankfurt": false,
+            "metz": false,
+            "marmorstein_tisgav": true
+          }
+        }
+      ],
+      "condition_rubrics": {
+        "de-Hebr": {
+          "text": "אין פֿראַנקפֿורט אַם מאַין, מעץ אונד פֿיעלען געמיינדען ווירד תֻּשְׂגַּב ניכֿט געבעטעט.",
+          "language": "de-Hebr",
+          "witnesses": [
+            "he"
+          ],
+          "scan": "s250",
+          "printed_page": "115",
+          "page_start": false,
+          "type": "instruction"
+        },
+        "en": {
+          "text": "In Frankfurt a. M. and many congregations תשגב is not said.",
+          "language": "en",
+          "witnesses": [
+            "en"
+          ],
+          "scan": "s251",
+          "printed_page": "115",
+          "page_start": false,
+          "type": "instruction",
+          "language_spans": [
+            {
+              "text": "תשגב",
+              "language": "he"
+            }
+          ]
+        }
+      },
+      "rubrics": {
+        "he": {
+          "text": "ח״",
+          "abbreviations": [
+            {
+              "abbr": "ח״",
+              "expan": "חזן"
+            }
+          ]
+        }
+      },
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:prayer:amidah/tisgav_levaddekha"
+          }
+        }
+      ]
+    },
+    {
+      "section": "musaf_repetition_uvekhen_ten_pachdekha_canonical",
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:prayer:amidah/uvekhen_ten_pachdekha"
+          },
+          "source_witness": "musaf_repetition_uvekhen_ten_pachdekha"
+        }
+      ],
+      "declarations": [
+        {
+          "type": "opensiddur:variant",
+          "features": {
+            "urn:x-opensiddur:condition:prayer:amidah/uvekhen_ten_pachdekha/kol_without_maqaf_shaltan": false,
+            "urn:x-opensiddur:condition:prayer:amidah/uvekhen_ten_pachdekha/kol_with_maqaf_shiltan": true
+          }
+        }
+      ]
+    },
+    {
+      "section": "musaf_repetition_uvekhen_ten_kavod_canonical",
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:prayer:amidah/uvekhen_ten_kavod"
+          },
+          "source_witness": "musaf_repetition_uvekhen_ten_kavod"
+        }
+      ],
+      "declarations": [
+        {
+          "type": "opensiddur:variant",
+          "features": {
+            "urn:x-opensiddur:condition:prayer:amidah/uvekhen_ten_kavod/land_with_comma": false,
+            "urn:x-opensiddur:condition:prayer:amidah/uvekhen_ten_kavod/land_without_comma": true
+          }
+        }
+      ]
+    },
+    {
+      "section": "musaf_repetition_uvekhen_tzaddiqim_canonical",
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:prayer:amidah/uvekhen_tzaddiqim"
+          },
+          "source_witness": "musaf_repetition_uvekhen_tzaddiqim"
+        }
+      ]
+    },
+    {
+      "section": "musaf_veyeetayu_custom",
+      "conditions": [
+        {
+          "type": "opensiddur:rite",
+          "features": {
+            "frankfurt": false,
+            "metz": false
+          }
+        },
+        {
+          "operator": "any",
+          "conditions": [
+            {
+              "type": "opensiddur:rite",
+              "features": {
+                "fuerth": true
+              }
+            },
+            {
+              "type": "opensiddur:rite",
+              "features": {
+                "marmorstein_veyeetayu": true
+              }
+            }
+          ]
+        }
+      ],
+      "rubrics": {
+        "de-Hebr": {
+          "text": "אין פֿירט אונד אַייניגען אַנדערען געמיינדען סאַלטעט היער דער פֿאַרבעטער נאָך וְיֶאֱתָיוּ איין. אין פֿראַנקפֿורט אַם מאַין, מעץ אונד דען מייזטען געמיינדען ווירד עז אַבער ניכֿט געזאַגט.",
+          "language": "de-Hebr",
+          "witnesses": [
+            "he"
+          ],
+          "scan": "s250",
+          "printed_page": "115",
+          "page_start": false,
+          "type": "description"
+        },
+        "en": {
+          "text": "In Fuerth and other communities the reader now sings: ויאתיו but in Frankfurt a. M., Metz and many communities this prayer is omitted.",
+          "language": "en",
+          "witnesses": [
+            "en"
+          ],
+          "scan": "s251",
+          "printed_page": "115",
+          "page_start": false,
+          "type": "description",
+          "language_spans": [
+            {
+              "text": "ויאתיו",
+              "language": "he"
+            }
+          ]
+        }
+      },
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:poem:v_yeetayu_kol_leavdekha"
+          }
+        }
+      ]
+    },
+    {
+      "section": "musaf_repetition_vetimlokh_canonical",
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:prayer:amidah/vetimlokh_attah_hashem/vetimlokh",
+            "targetEnd": "urn:x-opensiddur:text:bible:psalms/146/10"
+          },
+          "source_witness": "musaf_repetition_vetimlokh"
+        }
+      ],
+      "declarations": [
+        {
+          "type": "opensiddur:variant",
+          "features": {
+            "urn:x-opensiddur:condition:bible:psalms/146/10/name_plene_hallaluyah_chataf": false,
+            "urn:x-opensiddur:condition:bible:psalms/146/10/name_abbreviated_halleluyah_sheva": false,
+            "urn:x-opensiddur:condition:bible:psalms/146/10/name_plene_halleluyah_sheva": true,
+            "urn:x-opensiddur:condition:bible:psalms/146/10/the_lord_shall_reign": true,
+            "urn:x-opensiddur:condition:bible:psalms/146/10/the_lord_will_reign": false,
+            "urn:x-opensiddur:condition:bible:psalms/146/10/the_lord_will_reign_in_eternity": false
+          }
+        }
+      ]
+    },
+    {
+      "section": "musaf_repetition_qadosh_attah_canonical",
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:prayer:amidah/qadosh_attah_venora/qadosh_attah",
+            "targetEnd": "urn:x-opensiddur:text:prayer:amidah/qedushat_hashem/hamelekh_haqadosh"
+          },
+          "source_witness": "musaf_repetition_qadosh_attah"
+        }
+      ]
+    }
+  ]
+}

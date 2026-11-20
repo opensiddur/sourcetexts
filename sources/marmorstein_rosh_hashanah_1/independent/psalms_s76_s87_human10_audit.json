@@ -1,0 +1,27 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "snippet10_applied_correctly": true,
+  "meteg_host": "alef (the second letter of הָאָֽרֶץ, the first after the he). The meteg is not on the kaf of כָּל.",
+  "encoding_scope_unchanged": true,
+  "findings": [],
+  "remaining_current_batch_questions": [],
+  "checks": [
+    "Source record: human_psalms_s76_s87_snippets_1_to_10.json now lists settled_snippets [1..10]. Snippet 10 has user_clarification 'maqaf after kol and haaretz has a meteg' and status 'settled'. Its decision says the kaf keeps its qamatz and the following maqaf, and the meteg goes on the alef. The 'changes[9]' entry and the top-level 'snippet10' object match on before, after, decision, image and crop_box.",
+    "Before → after diff for 72:19: the only difference is one added U+05BD meteg after the qamatz on the alef of הָאָרֶץ, giving הָאָֽרֶץ. No other character in the verse differs.",
+    "Enlarged image haaretz-s86-meteg.png: the word reads הָאָֽרֶץ. The he has a qamatz. The next letter is clearly an alef (diagonal stroke with two arms), and under it are a qamatz and a short vertical stroke beside it, which is the meteg. The resh has a segol and the final tsadi has no mark. On the kaf, the qamatz is under the letter and no vertical stroke is next to it.",
+    "Context image s86-b1.jpg: the line ends וִימַּלֵא כְבוֹדוֹ אֶת־כָּל and the next line starts הָאָֽרֶץ אָמֵן וְאָמֵן:. This confirms the crop shows the right word, and that כל ends the line, which is the spot where the user confirmed a maqaf.",
+    "barukh_adonai.xml line 34, 72:19: the text is exactly וּבָרוּךְ שֵׁם כְּבוֹדוֹ לְעוֹלָם וְיִמָּלֵא כְבוֹדוֹ אֶת־כָּל־הָאָֽרֶץ אָמֵן וְאָמֵן:, identical to the record's 'after' string. כָּל has dagesh and qamatz and is followed by a maqaf. In הָאָֽרֶץ the qamatz comes before the meteg on the alef.",
+    "Structure: the milestones for 72:19 (verse corresp psalms/72/19 n=19, then the verse and chapter closers) are unchanged. The 89:53, 135:21 (with seg/@source psalms/135/21 and context milestone) and 72:18 contents, divineName markup, div corresp/facs, header and biblScope 28 are all consistent with the previously approved encoding. Nothing outside the 72:19 meteg looks changed.",
+    "Questions 1–9 are settled by the user and were confirmed in the prior audit. Question 10 is now settled and implemented. Questions 11–12 were reported as settled. No question in the current batch is still open.",
+    "Separate from this batch, and still open and not reviewed here: old item 57, and the queued old p.2 initial/canonical Ashrei 84:5 and 145:2 lamed-pointing review.",
+    "Limitations: I used only the Read tool. I checked codepoint order from the rendered text, not from a hex dump. I had no earlier copy of barukh_adonai.xml to diff against, so 'no other change' rests on the record's before string (for 72:19) and on the file matching the previously approved structure. The edition note still says 'DRAFT: independent adjudication pending'. That is informational and not part of this check."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "18d83c28-80ae-45d8-a6e5-128036b47a0f"
+  }
+}

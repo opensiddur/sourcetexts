@@ -1,0 +1,65 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "mode": "read-only static review; no builds, validators, resolvers or tests run; no source images viewed"
+  },
+  "approved": true,
+  "findings": [
+    {
+      "severity": "medium",
+      "location": "machzor_expanded-opensiddur-he/index.xml:1645-1659, :1661-1675; heidenheim-1965-he/shemo_mefoarim.xml:44 (canonical kol_yoshvei, used by expanded :1701, :1714)",
+      "issue": "In the expanded order, none of the four Metz omissions has a rubric. The two Tair conditionals have neither a tei:note child nor @type, so under 'How an undecided scope is set off' they count as processor directions. With metz undefined, Tair prints plainly and nothing tells the reader it is omitted in Metz. The canonical Kol conditional is type=\"marked\" but also has no note, so the expanded output prints brackets with no explanation. The Frankfurt omission, by contrast, has an editorial rubric at :1603. JLPTEI-3 says that when opensiddur:rite is unset, variants are kept 'together with the heading that says whose custom it is'. Selection itself works correctly when metz is set.",
+      "recommendation": "Follow the Frankfurt pattern. Give each expanded Tair conditional an editorial tei:note type=\"instruction\" child (for example בק״ק מיץ אין אומרים). For the two expanded Kol transclusions, wrap each in an index-level metz=false conditional with the same note. The outer conditional is redundant with the inner marked one, but that is harmless. This keeps the documentary instruction out of the reusable stanza, as the user intended. Not blocking for draft structure."
+    },
+    {
+      "severity": "low",
+      "location": "heidenheim-1965-he/index.xml:373, :390, :460",
+      "issue": "Three native rubrics say when text is or is not said, but each is encoded as a free-standing tei:note type=\"instruction\" outside the j:conditional it governs: the Frankfurt direction (:373), the Metz Tair rubric (:390) and the Metz Kol rubric (:460). JLPTEI-3 (Instructions; Kinds of rubric) says such a rubric is the conditional's own note and is printed only while the condition is undefined. As encoded, all three print in every compiled documentary edition, including when frankfurt_am_main or metz is decided. Because :390 sits before the weekday shabbat=false block, the Metz Tair rubric also prints on Shabbat, when Tair is not said. The Kol rubric at :460 is correctly inside the shabbat=true block and is printed only once. That placement does keep it off the second occurrence, as the human wanted. I accept this as a deliberate documentary-preservation choice.",
+      "recommendation": "Acceptable for a draft structure. Later, either make each rubric the tei:note child of its documentary-index conditional (:375, :402, and a new index-level metz conditional around the :461 transclusion), or record in the encoding notes that native conditional rubrics are kept as unconditional directives in the documentary order. If the first option is chosen, move :390 inside the weekday block."
+    },
+    {
+      "severity": "low",
+      "location": "heidenheim-1965-he/index.xml:414",
+      "issue": "The Kalir attribution 'חתום בראשי חרוזים אלעזר בירבי קליר.' (tei:note type=\"description\") is inside the weekday conditional but outside the Metz Tair conditional (:402-412). In a metz=true... correction: in a metz=false-evaluating Metz edition, Tair drops out and the attribution for its acrostic still prints with no poem in front of it. Under 'Kinds of rubric', a description belongs to the passage it describes and is left out with it. I did not check whether tair_vetaria.xml also carries this attribution internally.",
+      "recommendation": "Move :414 inside documentary_metz_tair_vetaria_source_he, after the transclusion and before its endConditional. Alternatively, make it part of the Tair unit's own scope."
+    },
+    {
+      "severity": "info",
+      "location": "machzor_expanded-opensiddur-he/index.xml:1601-1632",
+      "issue": "Attah Hu is nested inside two conditionals with the identical test frankfurt_am_main=false. The outer one carries the rubric 'חוץ מפרנקפורט אם מיין / Outside Frankfurt am Main'. The inner one has no rubric and contains the ark open/close actions and the poem. Both are balanced and the result is correct. The rubric's sense (said outside Frankfurt, therefore omitted in Frankfurt) agrees with the human's confirmation. No German skip direction remains in the expanded output.",
+      "recommendation": "No change needed. The inner wrapper could be dropped later to simplify."
+    },
+    {
+      "severity": "info",
+      "location": "heidenheim-1965-he/aafir_nezer.xml:34; heidenheim-1965-he/index.xml:524",
+      "issue": "The rubric 'ע״ס א״ב.' appears twice. In aafir_nezer.xml it is at div level before the part_1 milestone, so it is outside the part_1 range, and only the expanded whole-poem transclusion (:1678) reaches it. The documentary index has its own copy at :524. So it is printed once in each order and never twice. This is consistent, but the same source rubric is stored twice.",
+      "recommendation": "Record which copy is the source-attributed one in the encoding notes. No structural change needed."
+    }
+  ],
+  "checks": [
+    "Read /tmp/mahzor-s124/structure-final.json (the previous approval and its findings), /tmp/mahzor-s124/human-followup.json, and human_morning_s124_s145_snippets_1_to_4.json, including all four human snippets and the six adjudication entries.",
+    "Read the JLPTEI-3.md sections on URN scope and terminators, Prefer milestones, Instructions, Conditional notes, opensiddur:rite (open feature set; undefined keeps variants with a heading), Declaring conditions, Kinds of rubric, How an undecided scope is set off (marked / instruction / neither), Conditions on a running order, and the truth tables.",
+    "Frankfurt: he index:373 has the direction 'אין פֿפֿד״מ ווירד דיעזעז ניכֿט געזאַגט, מאַן בעגיננט גלייך מיט תָּעִיר וְתָרִיעַ.' with גלייך corrected as adjudicated and the human's ניכֿט rafe kept. he :374-388: the frankfurt_am_main=false conditional wraps ark-open, Attah Hu and ark-close, and is balanced within its tei:div. en :282-294 has the same feature around Attah Hu, with no ark notes and no German direction in the en index. Expanded :1601-1632 is described in the findings. The canonical poem transclusion target stays unconditional.",
+    "Shabbat German direction (he :389) reads 'אַם שַׁבָּת ווירד דאַ: …'. דאַ: is kept and not normalized to דאס. The pointing מְפָֽאַרִים follows the human reading.",
+    "Metz Tair: he :401-413 and :478-490, and en :305-317 and :379-391, each wrap both Tair recitations (tair_vetaria and repetition_tair_repeat) in a metz=false conditional inside the shabbat=false blocks. All are balanced. The expanded order wraps both Tair transclusions (:1645-1675). Adderet, melekh_memallet, melekh_zokher, aafir and teshalesh are outside every Metz scope in all three projects.",
+    "First Kol: he shemo_mefoarim.xml:44 and en :39 have the canonical stanza milestone first, then the metz=false conditional, the words, endConditional, and the bare stanza terminator, in that order within one tei:p. No prayer words fall outside the conditional except inter-element whitespace. he has type=\"marked\"; en has no @type, which matches the user's claim. The native Metz instruction is gone from the canonical stanza.",
+    "Second Kol: he :52 and en :47 have the shabbat_refrains/kol_yoshvei milestone, then a metz=false type=\"marked\" conditional around a seg with source=poem:shemo_mefoarim/kol_yoshvei, then endConditional, then the terminator. Both are balanced, and the source attribution and contextual URN are kept. qiryat closes with its own terminator before it.",
+    "Documentary Kol rubric: he index:460 is inside the shabbat=true block, immediately before the :461 kol_yoshvei transclusion and outside any stanza range. The en index has no Metz rubric. The second occurrence (he :542, en :438) has no rubric, which matches the claim that the repeated omission is inferred.",
+    "Expanded Shabbat order :1696-1718 transcludes canonical kol_yoshvei twice (:1701, :1714) and has no shabbat_cues, shabbat_refrains or instruction leak. The refrain re-insertions (shemo after adar; shomerei after varasham; shapru after zevach; shivtei after yarum; shevutenu after motot; none after dea) match the documentary cue order in he shemo_mefoarim.xml:45-50. The expanded weekday order matches the documentary weekday sequence.",
+    "Bilingual sync: he and en share the frankfurt_am_main and metz feature names and use the same conditional placement at all four Metz points and the Frankfurt point. Every Shabbat and weekday division and transclusion target is parallel between he and en, except the he-only native rubrics and cues.",
+    "Aafir: he aafir_nezer.xml:35 opens with 'אַאֽפִּיר נֶֽזֶר אָיוֹם.', which is exactly the explicit human reading. The follow-up reader's dalet/sheva proposal was not adopted, and I am not reopening it. 'החזן בנגון.' is an uncorresponded tei:note type=\"description\", so no new Reader role identity was created. part_1/part_2 milestones and the terminator are present in he and en (en :34-35)."
+  ],
+  "limitations": [
+    "Read-only static inspection. I ran no build, validator, schema check, range-balance or runtime comparison, and no transclusion resolver. Every balance statement comes from reading the XML.",
+    "I did not view any source image. Nothing here certifies consonants, pointing, siglum readings, rubric placement relative to the printed page (for example, whether the Frankfurt direction stands before or after Attah Hu on n131), or whether the English pages print the Metz/Frankfurt rubrics and the parentheses as encoded.",
+    "I did not read tair_vetaria.xml, the repetition_tair_repeat source, adderet_mamlakhah, eten or attah_hu_eloheinu. I did not read the shabbat_cues definitions beyond he shemo_mefoarim.xml, or the expanded index outside lines 1590-1729.",
+    "I did not check the features.yaml registry. The open opensiddur:rite feature set is taken from JLPTEI-3 as written.",
+    "Per-line ח׳/ק׳ sigla and the reconciliation of Hebrew fine marks are still incomplete, as stated. All new units are DRAFT; I relied on the stated 100/355 accepted count and did not verify it. No source acceptance is given or implied.",
+    "This approval covers draft structural handling only (boundaries, condition nesting, omission scope, selection, bilingual parallelism). It does not cover transcription accuracy or rite acceptance."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "ae1b3c50-71db-4dfc-8201-8597e591e85b"
+  }
+}

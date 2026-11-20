@@ -1,0 +1,56 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Low reasoning effort (10). I read all of english-rubric-closure-complete/review.json, navigation-final/current.json, navigation-final/current.xml (94 lines), both new verification JSONs, and /tmp/mahzor-backlog/guideline-excerpts.md. I did not reopen the scans for pages 182, 183 or 189. The raw strings and clause splits are the same as in the earlier approved source comparisons, so I relied on those. I ran no tests and no compiler."
+  },
+  "navigation": [
+    {
+      "key": "torah_after_haft_he",
+      "source_approved": true,
+      "guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "Accepted on purpose: 'On Sabbath the following passages are omitted' is kept as a bare directive, not as the condition note of documentary_shofar_weekday_he. As a result it is also printed when the day is known. On a known weekday it reads 'On Sabbath the following passages are omitted.' before the shofar units, and the optional seg drops because yequm_purqan/scholars is gated shabbat=true. On a known Sabbath it is redundant but true. This matches the guideline's page-reference directive example ('Hallel (page …) is recited here on …'), keeps the source wording intact, and stops the p. 85 routing from being hidden as a condition rubric. The cost is that the 'Instructions' rule ('if an instruction says when a text is read, it is the condition's own rubric') is relaxed for the first clause. I accept that as a documented editorial decision, not a defect."
+      ]
+    },
+    {
+      "key": "torah_after_haft_en",
+      "source_approved": true,
+      "guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "Reads correctly in all three states. Known weekday: 'After the Haphtora the Shofar is blown.' (the seg drops with yequm_purqan). Known Sabbath: the full sentence with the p. 85 routing, and the shofar section is gone. Unknown: the full sentence and both sequences. 'After the Haphtora the Shofar is blown.' is outside the seg, so it is never removed, which is what the source prints."
+      ]
+    },
+    {
+      "key": "shofar_to_ashrei",
+      "source_approved": true,
+      "guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "It is now inside documentary_shofar_weekday_he/en, so it disappears with the shofar section on a known Sabbath. Sabbath readers are then routed by the bare page-80 directive to Yequm Purqan, and through the shabbat=true community conditional to Ashrei. The page-87 Ashrei target is unchanged and correct. The 'Ashrei-only' scope (printed verse 89:16 only) is a human decision I did not reopen."
+      ]
+    }
+  ],
+  "verified": [
+    "current.xml, Hebrew and English: documentary_shofar_weekday_{he,en} is a j:conditional on holiday-aggregate shabbat=false with no instruction note. It covers the whole documentary shofar sequence, from ribbon_haolamim_banekha through ashrei_haam, including the two שֵׁב directives and the Psalm 149 directive in the Hebrew volume, and ends with shofar_to_ashrei before j:endConditional. The guideline case 'Neither: the conditional is a direction to the processor' applies: when the condition is unknown the units are kept without delimiters, and the bare source directive is the only printed signal.",
+    "documentary_shabbat_community_prayers_{he,en}: the j:conditional is shabbat=true. Its tei:note type=instruction is 'On Sabbath the following prayer is recited before אשרי', which fits 'Kinds of rubric: a condition'. It covers yequm_purqan/scholars, yequm_purqan/congregation, mi_sheberakh/kol_haqahal and hanoten_teshuah, the same four units in the same order as before. tei:pb n=85 (he n189 = s190, en n190 = s191) comes before the j:conditional, so the page marker sits outside the omitted scope.",
+    "The bare page-80 directives are outside both conditionals and keep the source words unchanged (he facs n181 = s182, en facs n182 = s183). Each removable routing clause is inside tei:seg type=optional-page-reference. The tei:ref type=page targets the edition-qualified yequm_purqan/scholars@…-he / @…-en, which is the canonical identity used by the first transclusion in the community conditional, so it lands on printed page 85. shofar_to_ashrei targets siddur:rosh_hashanah/torah/ashrei@ in each edition, with 'is now said.' and the Hebrew 'אשרי' outside the seg. No substitute English translation is introduced anywhere.",
+    "Guideline 'Page references in a generated edition': in every state where a page-ref seg survives, its destination survives too. Unknown: both conditionals are kept, so Yequm Purqan and the shofar units are present. Known Sabbath: Yequm Purqan is present and the shofar section, including shofar_to_ashrei, is removed with its ref. Known weekday: the Yequm Purqan destination is absent, so the bare directive's seg is omitted, and shofar_to_ashrei's Ashrei destination lies outside both conditionals. None of the surviving refs would trigger a missing-destination export error.",
+    "community-selection-verification.json: status pass, 6 checks (he/en × null/false/true). null: prayers present, unresolved_conditional true. false: prayers absent. true: prayers present. source_page_preserved is true in all 6, which matches the pb-before-conditional placement in the XML.",
+    "shofar-weekday-selection-verification.json: status pass, 6 checks (he/en × null/false/true). null: present, unresolved. false: present. true: absent. source_page_gated_with_section is true in all 6. The two files are consistent with each other and with the XML: each state selects exactly one of the two alternatives, and the unknown state keeps both.",
+    "The earlier carried-over question (no documentary shabbat=false conditional for the shofar passages) is now closed by documentary_shofar_weekday_{he,en}. It was a scope gap, not a source omission."
+  ],
+  "limits": [
+    "The verification files are boolean summaries, not compiler logs or compiled output. I accept them as reported run evidence, and I did not rerun the 83 tests and 22 subtests or either selection run. They do not show that each page ref resolves to a page number in each state. That claim rests on the XML structure and the exporter rule quoted above.",
+    "current.xml lists the two divs first and the bare page-80 directive last. From this file alone I cannot confirm that, in the actual document, the directive comes before documentary_shofar_weekday_{he,en}. I rely on your statement and the passing tests for that order.",
+    "documentary_shofar_weekday_{he,en} fixes shabbat to a single value but has no j:declare. 'Conditions on a running order' asks for one at running-order section gates. The excerpt does not say whether that applies to a documentary source index, and nothing shown inside the shofar sequence branches on shabbat, so I note it rather than raise it as an issue.",
+    "The Hebrew-volume shofar sequence has more units than the English one (harei_ani_mukhan, tashrat/tashat/tarat, the yehi ratzon units, the שֵׁב directives). I treated this as an edition difference and did not check it.",
+    "Hebrew prayer-text accuracy, Hebrew rubric wording and editorial expanded-index rubrics are out of scope and not certified. I did not reopen the scans for pages 182, 183 or 189."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "77484ac0-9572-4f7f-b752-838c766f03b5"
+  }
+}

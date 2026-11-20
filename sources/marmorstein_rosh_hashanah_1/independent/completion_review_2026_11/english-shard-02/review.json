@@ -1,0 +1,99 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Read all of current.json, current-xml.xml, page-audits.json, english-rest-resolutions.json and guideline-excerpts.md. Compared each English witness word by word and mark by mark against the full original page images s127.jpg, s131.jpg and s133.jpg. These are 1368x2264 originals viewed at 1208x2000, where the English print is plainly legible, so I did not make enlarged crops. I checked the English XML against the excerpted JLPTEI-3 sections: URN scope, milestone preference and terminators, seg/source, verse rules, sic/corr, annotations and kinds of rubric, and alignment. I did not open the separate full report files at the page-audits paths, the source_order or documentary-index XML, the english-routing-proof.xml file, or the sSTART-END overlap images. I did not render anything or run any tests."
+  },
+  "scope": [
+    "even_chug",
+    "repetition_zokhrenu_magen",
+    "repetition_attah_gibbor",
+    "repetition_mekhalkel",
+    "repetition_mi_khamokha",
+    "repetition_yimlokh",
+    "repetition_veattah_qadosh",
+    "attah_hu_eloheinu"
+  ],
+  "witnesses": [
+    {
+      "stem": "even_chug",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "repetition_zokhrenu_magen",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "repetition_attah_gibbor",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "repetition_mekhalkel",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "repetition_mi_khamokha",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "repetition_yimlokh",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "repetition_veattah_qadosh",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "attah_hu_eloheinu",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    }
+  ],
+  "verified": [
+    "s127 (p. 49): the English for zokhrenu_magen, attah_gibbor and mekhalkel matches the print exactly. This includes 'O King who delights in life,' 'helper, saviour and shield.' 'O Lord, shield of Abraham.' 'Thou art for ever mighty, O Lord, the reviver of the dead, Thou art great to save.' and 'healing the sick and releasing the captives'. The Hebrew incipit cues (זכרנו, אתה, מכלכל) are correctly left out.",
+    "s131 (p. 51): mi_khamokha matches, including 'Blessed art Thou, O Lord who revives the dead.' with no comma after Lord. even_chug matches the whole paragraph. The line-end hyphens 'chil-dren' and 'remem-bered' are correctly joined. The semicolons after 'children' and 'womb', the parentheses '(of our people)', '(Esau)' and '(Jacob)', and the curly apostrophes in sister’s and potter’s all match.",
+    "s131: the print reads 'from generation to generation, Halleluyah.' with a comma. The current payload and XML have the comma, which closes the one page-audit finding and its ledger entry in accepted_transcription_corrections.",
+    "s131: veattah_qadosh reads 'And Thou, Holy One, dwellest above the songs of praise of Israel, O God.' The Psalms 22:4 seg ends at 'Israel', and ', O God.' sits outside the verse and chapter terminators. That mirrors the Hebrew, where אֵל נָא is outside the verse, so the shared correspondence boundary is correct.",
+    "s133 (p. 52): all 12 attah_hu_eloheinu stanzas match the print, with the two-column layout re-paired by meaning as the page audit says. The print has no comma in 'Mighty and awe-inspiring distinguished among myriads.' or in 'He resides in the clouds and suspends the earth in space.', and the transcription follows it. The run-over lines 'Him in truth,' 'they created.' and 'in space.' are correctly joined.",
+    "s133: the italic 'On Sabbath we say שמו מפארים etc., as below.' is printed after stanza 12. It is now in documentary_instructions with a Hebrew language span, as the ledger's restored_documentary_instruction says, so it is no longer missing. The terminator after stanza 12 keeps it out of the poem's scope.",
+    "Encoding: every multi-part unit uses empty milestones with corresp and closes with a bare terminator of the same unit, as URN scope rule 3 and 'Prefer milestones' require. This covers prayer-part in even_chug and the amidah parts, stanza in attah_hu_eloheinu, and verse then chapter in yimlokh and veattah_qadosh. Where a seg carries source, the milestone comes before the seg, as the guideline says.",
+    "Alignment: the English and Hebrew files have the same div corresp and the same milestone corresp URNs in the same order, so they join on exact URN equality, as the Alignment section requires. Each bounded seg's source gives the right canonical verse: Psalms 146:10 is 'The Lord will rule…' and Psalms 22:4 is 'And Thou, Holy One…'. The local occurrence-context chapter/verse milestones follow the established repository convention.",
+    "English pb facs n126, n130 and n132 correspond to scans s127, s131 and s133, assuming archive.org's zero-based page numbering. pb/@n 49, 51 and 52 match the printed folios.",
+    "original_source_typo_corrections is empty for this shard. None of these eight English witnesses has a printed misprint that needs sic/corr, and I propose no new correction.",
+    "The page audits and these current files contain no conditional, j:option or description markup inside the eight English witnesses, and the print has no English rubric inside them that needs any. The Hebrew ק׳ description in even_chug has no English counterpart in the print."
+  ],
+  "limits": [
+    "I did not open the XML file or files holding the s133 directive, so I did not check where it ends up as the rubric of the complete Shabbat alternative (complete_shabbat_piyyutim), or where the raw 'On Sabbath.' page-furniture record ends up. I rely on the ledger's documentary_placement statement for that. It sits outside these eight witnesses' boundaries.",
+    "documentary_instructions.complete_weekday_en ('On a weekday') is not printed on s133. It is correctly marked editorial=true with resp codex. Whether that editorial supply is acceptable belongs to the conditional-arrangement review, not to English source accuracy, and I did not adjudicate it.",
+    "I did not open the full report files at the page-audits paths. My approval rests on the page-audit summaries, the ledger and my own comparison against the full page images.",
+    "I made no Hebrew source or fine-mark judgement. The Hebrew XML was used only to compare boundaries and correspondences.",
+    "This was a source and markup audit. It does not cover rendering, export, or whether test_repeated_scripture_has_addressable_chapter_and_verse_context passes."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "d2bd76b4-fd22-4ad7-bfa3-a245471b14fa"
+  }
+}

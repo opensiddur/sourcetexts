@@ -1,0 +1,61 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "post_human_module_encoding_approved": true,
+  "sic_corr_approved": true,
+  "findings": [
+    {
+      "file": "musaf_haochez_beyad_middat_mishpat.xml (HE)",
+      "location": "stanza harachum, tei:choice sic/corr",
+      "severity": "low",
+      "problem": "The encoding is correct. It reads <tei:choice><tei:sic>שֶׁחוּא</tei:sic><tei:corr>שֶׁהוּא</tei:corr></tei:choice>, placed after the separate וְ״מַ abbr/expan choice and before ' רַךְ לִרְצוֹת: '. However, the generated corr has no @resp or @source, and the XML does not point to the user374 authority or the scan evidence. That provenance is recorded only in pending-corrections.json.",
+      "required_fix": "Not blocking. When the correction layer is installed into the accepted corrections.json, decide whether the corr needs @resp/@source or a standOff note to carry the authority and the n249 evidence. Otherwise, record in the README that corrections.json is the provenance record."
+    },
+    {
+      "file": "human-362-374.json",
+      "location": "applications 364 (עֶֽרֶב) and 367 (יִֽפֶן), key mimekomo; 373 (סאַלטעט), key in_fuerth_veetayu_rubric",
+      "severity": "low",
+      "problem": "These three applications show encoded_fragment_applications 0. That is correct for these seven modules: mimekomo and the Fürth rubric belong to the Kedushah spine and rubric layer, which have not been built yet. The יִפֶן in vechayyot/kaf_regel (s240) is a different occurrence and correctly stays without meteg. The risk is that the meteg readings and the exact 373 spelling are lost when the spine is encoded later.",
+      "required_fix": "When the spine and rubrics are encoded, confirm that ממקומו carries עֶֽרֶב and יִֽפֶן, and that the Fürth rubric keeps סאַלטעט exactly (no normalisation to שאַלטעט) along with the source-round3 corrections פֿראַנקפֿורט / מעץ."
+    },
+    {
+      "file": "model-diff.json; musaf_veammekha_teluim.xml",
+      "location": "od_yizzakher וָשַֽׁחַר; im_yashqit לְהוֹדִֽיעַ",
+      "severity": "info",
+      "problem": "I could only check the order of the combining marks (patah/meteg/shin dot) visually, because I had no byte-level tool. The literal-assembly SHA match shows that the encoded text equals candidate-round7, but it does not show that the marks are in canonical (NFC) order.",
+      "required_fix": "Optional: run an NFC/codepoint check on the 5 changed words as part of the separate closure audit."
+    }
+  ],
+  "coverage": [
+    "model-diff.json read in full. It has exactly 5 text hunks plus a status-string change: לְהוֹדִֽיעַ (365), וָשַֽׁחַר (366), וַעֲצְמוֹתֵיהֶם (source-round3 s244), תַּחְתִּיֹּת (372), and שֶׁחוּא (374, literal fragment). These match the 5 applications with encoded_fragment_applications=1. No other fragment text, alternative, speaker or abbreviation changed.",
+    "The exact human marks were checked in the generated HE XML. 365 is a dalet meteg in veammekha/im_yashqit. 366 is patah+meteg on the shin in veammekha/od_yizzakher. 372 has no vav after the yod in tehillot/sollu_pannu. The s244 correction appears in veattah/sam. 362 (מֵרְעִישׁוֹת, no meteg) and 363 (יְפַרְשֵׁז, no dagesh) are unchanged in vechayyot, as adjudicated. 368–371 are unchanged no-ops.",
+    "Haochez HE was read in full. Harachum is the only stanza with sic/corr, and the printed chet is kept in sic, with he only in corr. The five other s250 שֶׁהוּא responses (hapoteach, hatzofeh, haqetzar, hashaveh, hatam) all keep he, with no substitution. The s248 occurrences are also unaffected. sic-corr-check.json (choices=1) agrees.",
+    "pending-corrections.json: the one correction (musaf_harachum_shehu) is kept as a separate, unapproved batch layer, with the sic/corr/after context, the n249 evidence URL and the user374 authority. It is not yet installed in the accepted corrections.json.",
+    "Alignment was compared with the stanza and paragraph structure approved in round 2. The stanza milestones/URNs, paragraph groupings, role notes, the vehoveh and veyizbechu conditionals, the j:option condition URNs, the standOff נ״א notes and the quote-context milestones are all unchanged in all 7 HE modules.",
+    "literal-assembly-check.json: 14/14 matches true (7 HE + 7 EN). schema-revised.json: 14/14 valid. compiler-qa.json: 6 states, no pairing problems. compiled-content-checks.json: all 6 states pass. I treated these as supporting evidence, not proof; the XML was checked directly.",
+    "Read: review.json (round 2), human-362-374.json, source-round3-adjudications.json, model-diff.json, pending-corrections.json, schema-revised.json, literal-assembly-check.json, sic-corr-check.json, compiler-qa.json, compiled-content-checks.json, and all 7 HE module XML files in full.",
+    "Not read: the body of candidate-round7.json, because source-word comparison is a separate closure audit and the SHA match was relied on. EN XML was not reread because it is unchanged and already approved. No scans were viewed and nothing was rendered."
+  ],
+  "remaining_integration": [
+    "Install the pending sic/corr into the accepted corrections.json, and record the corr provenance policy.",
+    "Kedushah spine in source order, including the ממקומו meteg readings (364, 367), the regional conditions, and the rubric texts with 373 סאַלטעט and the source-round3 פֿראַנקפֿורט/מעץ.",
+    "Full-service canonical sharing and transclusion, including the qedushah_conclusion_parts siddur:-context question.",
+    "Page breaks (tei:pb for pp.109–116, remove div/@facs), and a placement rule for the veyeetayu 115/116 break inside the veyizbechu conditional.",
+    "Registry: poem/stanza/condition/quote-context URNs, and confirming the v_yeetayu /1–8 records.",
+    "Open round-2 low items: seg type=quotation and the quotation criterion; transliteration of biqdushatekha/keerkekha/yizkar; header licence and trc/mrk policy; README evidence for the abbreviations.",
+    "Final visual PDF/HTML inspection in all states, including the hehagui row split, whitespace normalisation and how the sic/corr choice renders. The known inner-quotation row break on PDF7 is still OPEN."
+  ],
+  "notes": [
+    "Scope: this approves only the post-human374 encoding of the 7 HE modules and the separate sic/corr layer. EN keeps its earlier approval. It is not approval of the source text, the visual output, the integration, or the whole batch.",
+    "The transient over-broad 374 replacement was checked and is absent from the final artifacts: exactly one שֶׁחוּא exists, and it is inside tei:sic.",
+    "Source-round3 rejected the proposed שאַלטעט normalisation in favour of the user's 373 reading, which is consistent with keeping human readings closed.",
+    "No new importer code was proposed or reviewed."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "a0a0af4e-b30a-4453-a251-7712fbfc2932"
+  }
+}

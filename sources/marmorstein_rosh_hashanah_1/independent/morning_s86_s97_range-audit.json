@@ -1,0 +1,21 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "range_address_and_order_approved": true,
+  "issues": [],
+  "observations": [
+    "index.xml:1451 matches expanded-range-target.txt character for character. It is one j:transclude with no targetEnd and no @edition qualifier. The start is the existing canonical div urn:x-opensiddur:text:siddur:chol/shacharit/pesuqei_dezimrah/az_yashir. The end segment '/shacharit/pesuqei_dezimrah/az_yashir/quoted_exodus_15_18' is absolute below the work 'chol', so it expands to the existing milestone corresp in both modules. No new canonical or prayer identity is introduced. None of the path segments contain a hyphen, so splitting the range at the '-' is unambiguous.",
+    "HE (prayerbook_for_the_new_year-heidenheim-1965-he/az_yashir.xml) and EN (prayerbook_for_the_new_year-marmorstein-1965-en/az_yashir.xml) both have a single div with corresp=az_yashir. Each opens with chapter 15 and canonical verse 15:1. The quoted_exodus_15_18 milestone and its seg come right before the repeated_exodus_15_18 milestone, inside the same div. So in both languages, ending at quoted_exodus_15_18 runs from 15:1 through the first 15:18 and stops before the source's own repeat.",
+    "Order at index.xml:1450-1454 is vayyosha, then the az_yashir range (15:1 through the first 15:18), then canonical bible:exodus/15/18 exactly once, then bible:exodus/15/19 (the source-only verse, unchanged), then ki_ladonai. The 15:18 repeat is neither duplicated nor dropped.",
+    "The range includes the module-internal quoted_exodus_15_11 milestone and seg, as before. The repeated_exodus_15_18 milestone in each module is now outside the range. This is intended, because the repeat comes from the canonical Bible transclusion. As a result, the source's HE repeat rendering (יְיָ, no te'amim) is not what prints there. That is presentation only, not a sequence error.",
+    "I did not check the resolver at runtime. Approval assumes the resolver resolves a single-target range inside one document that contains both endpoints. Only the Marmorstein/Heidenheim modules have quoted_exodus_15_18, so a Birnbaum az_yashir div can't satisfy this range.",
+    "Not reopened: source text, scopes, the user-adjudicated characters, and 15:19. The one source meteg is still cert=low and pending."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "a1360df7-6ac5-4ede-b173-b1b20bdf7ff0"
+  }
+}

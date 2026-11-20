@@ -1,0 +1,92 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "decisions": [
+    {
+      "file": "meelef.png",
+      "word": "מֵאֶלֶף (first of the pair; a second אֶלֶף follows)",
+      "exact_reading": "מֵאֶלֶף אֶלֶף",
+      "evidence": "Under the alef of the first word is a three-dot segol cluster. It has the same shape as the segols under the following אֶלֶף. There is no vertical stroke, so it is not a T-shaped qamats. The second אֶלֶף is fully inside the crop, with segol under the alef and the lamed."
+    },
+    {
+      "file": "vayy.png",
+      "word": "ויי (Divine Name with vav prefix)",
+      "exact_reading": "וַייָ",
+      "evidence": "No sheva is printed under the first yod. In the same crop the sheva under וְלֹא is clearly visible as two stacked dots, and nothing like it appears under ויי. The only marks under ויי are horizontal strokes (patah under the vav, plus a mark under the second yod). This matches בַּייָ on s95."
+    },
+    {
+      "file": "pinu.png",
+      "word": "פינו",
+      "exact_reading": "פִּינוּ",
+      "evidence": "A dot is visible inside the pe's mouth, with hiriq below. The dagesh is present."
+    },
+    {
+      "file": "viromamu.png",
+      "word": "וירוממו",
+      "exact_reading": "וִירוֹמֲמוּ",
+      "evidence": "The mark under the first mem has a horizontal stroke next to the two dots, which makes it a hataf patah. A plain sheva would have no stroke. Confidence is moderate, so a human may want to spot-check it."
+    },
+    {
+      "file": "hammelekh.png",
+      "word": "המלך (display type)",
+      "exact_reading": "הַמֶּֽלֶךְ",
+      "evidence": "The large type is clear. There is a patah under the he and a dagesh in the mem. Under the mem is a segol with a separate vertical tick to its left, which is a printed meteg. The two stacked dots at the final kaf sit inside the kaf's open area, under its top bar and left of the descender, so they are the kaf's sheva. Nothing is printed in the empty margin of roughly 45px to the left of the kaf, so there is no sof-pasuq colon."
+    },
+    {
+      "file": "tithbarakh-full.png",
+      "word": "תתברך:",
+      "exact_reading": "תִּתְבָּרַךְ:",
+      "evidence": "The bet has a T-shaped qamats with a visible vertical. Under the resh is only a horizontal bar with no vertical, which is a patah. The two shapes are easy to tell apart side by side. A colon follows the final kaf."
+    },
+    {
+      "file": "ata-paused.png",
+      "word": "אלא אתה:",
+      "exact_reading": "אֶלָּא אָתָּה:",
+      "evidence": "The alef of אתה has a T-shaped qamats, so the form is pausal, and the tav has qamats with dagesh. The alef of אלא has a segol and the lamed has qamats with dagesh. A colon follows."
+    }
+  ],
+  "pending_human": [
+    {
+      "file": "nashrei.png",
+      "word": "כנשרי שמים",
+      "issue": "The bottom edge of the crop runs right through the row of sub-linear vowels, and the marks under שמים look partly cut off. I can't tell patah from qamats under the mem. The shin/sin dot on נשרי is not clear enough to decide. Recrop from s92-b2.jpg line 2 with more margin below."
+    },
+    {
+      "file": "tishava.png",
+      "word": "תשבע",
+      "issue": "There is a dot to the left of the tav at mid-height, between it and the shin. It could be a dagesh inside the tav's left leg or stray ink, and no hiriq is clearly visible below. I can't decide between תִּשָּׁבַע and תִשָּׁבַע."
+    },
+    {
+      "file": "lameds.png",
+      "word": "ידמה־לך / ישוה־לך",
+      "issue": "Qamats is visible under both lameds, but I can't see a clear dagesh dot inside either lamed at this resolution."
+    },
+    {
+      "file": "briyot.png",
+      "word": "בריות",
+      "issue": "The yod is too small to confirm a dagesh. The mappiq in אלוה is also not clearly resolved in this crop."
+    },
+    {
+      "file": "titshenu.png",
+      "word": "תטשנו",
+      "issue": "I can't separate a dagesh dot inside the tet from the glyph's own stroke."
+    },
+    {
+      "file": "mecholayim.png",
+      "word": "ומחלים",
+      "issue": "The marks under the word are blurred. A T plus two dots under the het (hataf qamats) looks plausible but isn't clear enough to confirm."
+    },
+    {
+      "file": "yishai.png",
+      "word": "ישי (בֶּן־יִשַׁי context)",
+      "issue": "The crop is cut off: only the bottom edges of the letters and the vowel row are inside the boundary, and the letter bodies are missing. I didn't infer any points. Recrop the full line from s95-he.jpg."
+    }
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "48cebbd7-f769-49ea-bdd0-ff9cb54029cf"
+  }
+}

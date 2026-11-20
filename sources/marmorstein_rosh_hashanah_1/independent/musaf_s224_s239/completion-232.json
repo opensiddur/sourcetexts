@@ -1,0 +1,124 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "scan_pair": [
+    232,
+    233
+  ],
+  "source_approved": false,
+  "findings": [
+    {
+      "scan": "s232",
+      "key": "amitz",
+      "old": "אֲשַׁנֶּה",
+      "proposed": "אֲשַׁנְּנָה",
+      "reason": "Line 3 clearly prints two nuns (שַׁנְּנָה) with qamats under the second nun and he at the end. The candidate has dropped a nun and changed the vowel."
+    },
+    {
+      "scan": "s232",
+      "key": "amitz",
+      "old": "לְרַצּוֹתְךָ בְּשׁוֹפַר (אם שבת בְּזִכְרוֹן שׁוֹפַר)",
+      "proposed": "לְרַצּוֹתְךָ בְּשׁוֹפָר (אם שבת בְּזִכְרוֹן שׁוֹפָר)",
+      "reason": "Both occurrences of שׁוֹפָר, the main text and the small parenthetical, have qamats under the pe, not patah."
+    },
+    {
+      "scan": "s232",
+      "key": "amitz_reader",
+      "old": "separate speaker block 'ח׳' placed after the whole amitz stanza",
+      "proposed": "split amitz at 'רְאֵה כִּי אֵין אִישׁ' and put the siglum before that clause, e.g. amitz_a = 'אִם אֵשׁ ... כְּסוּחִים:'; siglum; amitz_b = 'רְאֵה כִּי אֵין אִישׁ ... בְּזֶה רֹאשׁ הַשָּׁנָה:'",
+      "reason": "The small siglum is printed at the start of line 2, right before רְאֵה. That is where the change of speaker happens. Putting it after the whole stanza misplaces where the role starts."
+    },
+    {
+      "scan": "s232",
+      "key": "open_ark",
+      "old": "פותחים הארון.",
+      "proposed": "add a speaker block 'חזן.' before open_ark (or before melekh_1)",
+      "reason": "The source has two separate חזן sigla: 'חזן·' before וּבְכֵן (already in uvekhen_reader) and 'חזן.' starting the next line, before 'פותחים הארון.' The second siglum is not in the candidate. Also, uvekhen_reader comes after uvekhen_king in the candidate, but on the page the siglum comes before the line."
+    },
+    {
+      "scan": "s232",
+      "key": "melekh_1..melekh_7",
+      "old": "... לַעֲדֵי עַד יִמְלוֹךְ:",
+      "proposed": "insert speaker siglum 'ק׳' before each 'לַעֲדֵי עַד יִמְלוֹךְ:', either inline or as a split block (7 places)",
+      "reason": "Each of the seven stanzas prints a small 'ק׳' before the refrain לַעֲדֵי עַד יִמְלוֹךְ, marking the congregation's response. None of these role marks are in the candidate."
+    },
+    {
+      "scan": "s233",
+      "key": "melekh_6",
+      "old": "He gives light of all lights",
+      "proposed": "He gives light ot all lights",
+      "reason": "The printed text reads 'ot', a typo for 'of'. The candidate silently corrected it. If the project keeps printed typos, restore 'ot'. If it corrects them, record the correction explicitly."
+    }
+  ],
+  "uncertainties": [
+    {
+      "scan": "s232",
+      "key": "melekh_5",
+      "word": "טֹפֵחַ",
+      "question": "The enlarged band seems to show one horizontal stroke (patah) under a pe with dagesh, and no furtive patah under the het. That would read like טֹפַּח rather than טֹפֵחַ. I can't tell for sure whether the mark under the pe is tsere or patah, or whether a furtive patah is there. Needs a higher-resolution check. If it really is patah, this is an error."
+    },
+    {
+      "scan": "s232",
+      "key": "amitz",
+      "word": "אָחֲזָה",
+      "question": "There may be a meteg next to the qamats under the alef (אָֽחֲזָה). Not resolved at this resolution."
+    },
+    {
+      "scan": "s232",
+      "key": "amitz",
+      "word": "(אם שבת",
+      "question": "The rubric is in small Rashi-style type. The first word looks like 'אם' in Rashi letterforms, but it could be read differently. Please confirm."
+    },
+    {
+      "scan": "s232",
+      "key": "amitz_reader",
+      "word": "ח׳",
+      "question": "The siglum before רְאֵה is tiny. It looks most like ח׳ (חזן), but ק׳ can't be completely ruled out."
+    },
+    {
+      "scan": "s232",
+      "key": "uvekhen_king",
+      "word": "כ״י",
+      "question": "The small siglum inside the parenthesis before וּבְכֵן נַמְלִיכְךָ is read as כ״י. The second letter is unclear."
+    },
+    {
+      "scan": "s232",
+      "key": "uvekhen_king",
+      "word": "בִישֻׁרוּן",
+      "question": "I can't confirm whether the bet has a dagesh, or whether the vowel under the shin is qubbuts or something else."
+    },
+    {
+      "scan": "s232",
+      "key": "amitz",
+      "word": "לְרַצּוֹתְךָ",
+      "question": "A dagesh in the tsadi is likely but not clearly visible."
+    },
+    {
+      "scan": "s232",
+      "key": "melekh_1..melekh_7",
+      "word": "לַעֲדֵי",
+      "question": "The lamed seems to carry an extra mark that could be a meteg (לַֽעֲדֵי) in some or all seven refrains. Not resolved."
+    },
+    {
+      "scan": "s233",
+      "key": "melekh_3 / uvekhen_king",
+      "word": "Speaking / Therefore",
+      "question": "The scan looks like 'Spcaking' and 'Thcrefore', and 'severed' looks like 'severeJ'. I take these as worn type or scan artifacts, not printed misspellings, so no change is proposed."
+    }
+  ],
+  "coverage_notes": [
+    "Running heads ('מוסף ליום ראשון של ראש השנה', 'Musaph for the New Year') and the page numbers 106 were ignored as instructed.",
+    "On s233 the printed Hebrew cue words (ובכן, מלך עליון) before the English were left out on purpose. The candidate correctly leaves them out.",
+    "No text, footnotes or rubrics appear below the last line on either page. Both pages end with the melekh_7 stanza.",
+    "The Hebrew 'אֵל' in melekh_1 is printed as an alef-lamed ligature. Encoding it as אֵל is correct.",
+    "Unencoded source content: the 7 congregation sigla ק׳ before the refrains, the second 'חזן.' before פותחים הארון, and the position of the siglum before רְאֵה (see findings).",
+    "Everything else was checked word by word against the enlarged bands and matches the candidate: the rest of the Hebrew stanzas (melekh_1–7) and all the English, apart from 'ot'."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "440a08d0-4991-41eb-b155-c8c8656ed549"
+  }
+}

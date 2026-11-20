@@ -1,0 +1,119 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Low effort setting. I read all of current.json, current-xml.xml, page-audits.json, english-rest-resolutions.json, english-routing-proof.xml and guideline-excerpts.md. I viewed the full original page images s187, s188, s189, s191 and s193 once each at the supplied display resolution (1208x2000 downscaled from 1368x2264). I compared every English word and punctuation mark in the 8 witnesses against those images. I made no enlarged crops because no English ambiguity needed one. I did not open the s182-189 or s190-197 overlap folders or the full report files, because the summarized audits plus my own page reading covered every English line in scope."
+  },
+  "scope": "English source accuracy and its JLPTEI encoding and guideline adherence, plus the shared Hebrew/English correspondence and page boundaries, for exactly: shofar_alah_elohim, shofar_psalm_47, shofar_blessing, shofar_shehecheyanu, shofar_ashrei_haam, torah_yequm_purqan_scholars, torah_yequm_purqan_congregation, torah_mi_sheberakh_kol_haqahal. Hebrew fine marks and Hebrew source acceptance are not assessed.",
+  "witnesses": [
+    {
+      "stem": "shofar_alah_elohim",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "shofar_psalm_47",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "shofar_blessing",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        {
+          "severity": "low (ledger documentation only; payload is correct)",
+          "location": "english-rest-resolutions.json accepted_transcription_corrections, entry unit=shofar_blessing scan=s188",
+          "problem": "The 'method' text was copied from the Arise entry. It says 'The earlier rejected Arise finding was a primary visual error; the close crop clearly confirms the comma.' That is wrong for this entry, which removes a comma. The payload is correct: 'King of the World who' is in current.json, the EN XML and the s188 image.",
+          "fix": "Change the method to say the s188 image shows no comma after 'World' in the blessing, while Shehecheyanu directly below has 'World, who'. The payload needs no change."
+        }
+      ],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "shofar_shehecheyanu",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        {
+          "severity": "low (cross-witness observation; does not affect the English witness)",
+          "location": "HE shofar_shehecheyanu.xml, tei:note type=instruction 'ביום שני אין אומרים שהחינו אלא כשחל יום ראשון בשבת.'",
+          "problem": "This rubric says when the blessing is said. Under 'Kinds of rubric' and 'Instructions' that makes it a condition, which should be the rubric of a j:conditional around the prayer part. Here it is a plain directive note, and none of the supplied material shows a governing conditional. The English witness prints no rubric, so the English scope, alignment and correspondence are not affected. The English prayer-part milestone matches the Hebrew one exactly.",
+          "fix": "No English change. If the Hebrew project or running order has no such conditional (a day-two condition, unless day one was Shabbat), handle it in the Hebrew/condition review."
+        }
+      ],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "shofar_ashrei_haam",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "torah_yequm_purqan_scholars",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        {
+          "severity": "low (not verifiable from supplied evidence; not a defect in this witness file)",
+          "location": "s191 top italic rubric 'On Sabbath the following prayer is recited before אשרי' (documentary_instructions.shofar_s184_shabbat_intro_191_en)",
+          "problem": "This English condition rubric is printed on the leaf directly above יקום פורקן, and it is the source of the English pb n=85 (page_start true). It belongs in the running order as the rubric of the Shabbat conditional, not inside the witness file, so its absence from the witness XML is correct. However, none of the supplied XML shows it emitted: the routing proof covers s182, s189 and s197 but not s191. The payload also has no he language span on אשרי, although the s133 restoration models one for שמו מפארים.",
+          "fix": "Confirm that the running-order j:conditional for the Shabbat Yequm Purqan section carries this English rubric, with <tei:foreign xml:lang=\"he\">אשרי</tei:foreign>, and that the English pb n=85 is emitted before it. No change to the witness file."
+        }
+      ],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "torah_yequm_purqan_congregation",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "torah_mi_sheberakh_kol_haqahal",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        {
+          "severity": "low (naming consistency; not a guideline violation, alignment intact)",
+          "location": "HE and EN torah_mi_sheberakh_kol_haqahal.xml prayer-part milestone corresp",
+          "problem": "The div has corresp urn:x-opensiddur:text:prayer:mi_sheberakh/kol_haqahal, but its prayer-part is urn:x-opensiddur:text:siddur:rosh_hashanah/torah_mi_sheberakh_kol_haqahal/text. Both Yequm Purqan witnesses use <div URN>/text. Both languages use the identical URN, so the join on exact equality works and the scope ends at the terminator.",
+          "fix": "Optional: align with the sibling pattern (urn:x-opensiddur:text:prayer:mi_sheberakh/kol_haqahal/text) in both projects at once. Otherwise accept it as is."
+        }
+      ],
+      "remaining_source_questions": []
+    }
+  ],
+  "verified": [
+    "s187 English (p. 82): the alah_elohim line 'God rises at the Teruah sound, the Lord at the Shofar’s voice.' matches. Psalm 47 vv.1-6a match word for word, including 'rejoicing for the Lord' with no punctuation and 'awe-inspiring', where the line-end hyphen is a real compound. The page ends 'the sound of the'.",
+    "s188 English (p. 83): 'Shofar.' opens the page, which is correct for the EN pb n=83 placed inside verse 6. Psalm 47 vv.7-10 match ('peo-ples' is only a line break). The blessing has 'King of the World who' with no comma, as resolved. Shehecheyanu has 'King of the World, who' with the comma. Both match the payload.",
+    "s189 English (p. 84): ashrei_haam 'Fortunate the people familiar with the Teruah sound, O Lord, in the light of Thy countenance let them walk.' matches. It opens the English page, so the EN pb n=84 at the start of the div and opening_page.en=true are correct. The italic 'אשרי (p. 87) is now said.' is encoded as navigation with an optional-page-reference in both projects (routing proof), which settles the earlier audit's missing_instruction / complete_body_accounted=false.",
+    "s191 English (p. 85): both Yequm Purqan paragraphs match word for word ('en-during' and 'happen-ings' are line breaks; 'Heaven' is capitalized in the scholars paragraph and 'heaven' lower-case in the congregation paragraph, both as printed). Mi Sheberakh runs through 'sons and daughters'.",
+    "s193 English (p. 86): Mi Sheberakh continues 'and all that belong to them; ... and let us say: Amen.' and matches. The EN pb n=86 (facs n192) sits between 'daughters' and 'and', which is correct. The Hebrew pb n=86 (n191) sits between וּבְנֵיהֶם and וּבְנוֹתֵיהֶם; each language has its own foliation, as it should.",
+    "The English cue words in Hebrew script (יהי, עלה, למנצח, ברוך, יקום פורקן, מי שברך) are excluded from the English text, following the convention.",
+    "Psalm 47 encoding: the chapter and verse milestones carry canonical bible:psalms/47 and /47/1-10 corresp. Bare verse and chapter terminators close the passage. Hebrew and English carry identical verse URNs, so every verse is an alignment boundary. complete_chapters is consistent.",
+    "alah_elohim (Ps 47:6) and ashrei_haam (Ps 89:16) use the established occurrence-context chapter/verse milestones with local corresp, plus a tei:seg source carrying the canonical verse. HE and EN match exactly. No duplicate canonical corresp is needed.",
+    "shofar_blessing, shofar_shehecheyanu and both Yequm Purqan witnesses: the prayer-part milestone URNs are identical in HE and EN and closed by bare prayer-part terminators. The div corresp values match across languages.",
+    "No English instruction is printed inside these 8 units. All instruction notes in the witness files are Hebrew-only and sit in the Hebrew project.",
+    "No English misprint was found in the 8 witnesses. The only correction in this shard's typo layer (s187 'by'→'be') belongs to shofar_yehi_ratzon, which is out of scope.",
+    "The existing audits for s187, s188, s191 and s193 had no outstanding English findings other than the s188 comma, which has been applied. Current payload equals current XML text for all 8 English witnesses."
+  ],
+  "limits": [
+    "I viewed the images at downscaled full-page resolution without enlarged crops. That was enough for every English mark in scope. No English ambiguity came up that needed magnification.",
+    "I did not assess Hebrew text, niqqud or cantillation, including the pending בִּתְרוּעָה, וֵאלֹהֵי and Ps 89:16 accent questions, or the reported הללויה single-yod finding. Hebrew source acceptance remains pending.",
+    "I did not run the exporter, validators, refdb or tests, or check how anything renders. Statements about scope and alignment come from reading the markup against the guideline excerpts.",
+    "I did not see the running-order or source_order XML for the s191 Shabbat rubric, or any conditional governing the Hebrew Shehecheyanu rubric. Those are flagged as unverified, not certified.",
+    "I did not open the overlap folders /tmp/mahzor-backlog/s182-189 and s190-197 or the full audit report files. The page-audit summaries plus my own full-page reading covered all English text in scope."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "8842d0ba-5d60-4f09-9198-9a764d733a69"
+  }
+}

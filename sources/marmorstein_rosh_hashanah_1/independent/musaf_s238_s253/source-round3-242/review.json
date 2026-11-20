@@ -1,0 +1,89 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "source_approved": false,
+  "pages_read": [
+    "s242",
+    "s243",
+    "s244",
+    "s245"
+  ],
+  "findings": [
+    {
+      "scan": "s244",
+      "key": "sam_halikhot",
+      "old": "וַעֲצָמוֹתֵיהֶם",
+      "new": "וַעֲצְמוֹתֵיהֶם",
+      "reason": "In the last line of the sam_halikhot stanza (עוֹר וּבָשָׂר וְגִיד …), the mark under the tsadi is two vertical dots (sheva), not qamatz. This also matches the usual form עַצְמוֹתֵיהֶם. The candidate's qamatz is not printed.",
+      "evidence_image": "/tmp/mahzor-s238/s244-band3.png"
+    }
+  ],
+  "uncertainties": [
+    {
+      "scan": "s242",
+      "key": "im_yashkit",
+      "word": "לְהוֹדִיעַ",
+      "question": "There is a small vertical stroke under the dalet/yod beside the hiriq. Is it a meteg (לְהוֹדִֽיעַ) or just a print artifact? The candidate has no meteg.",
+      "crop_box": [
+        180,
+        1105,
+        300,
+        1185
+      ]
+    },
+    {
+      "scan": "s242",
+      "key": "od_yizakher",
+      "word": "וָשַׁחַר",
+      "question": "In the large-type line, the vowel under the shin looks like a patah with an extra mark below it. Is it a plain patah, patah+meteg (וָשַֽׁחַר), or hataf patah? The candidate has a plain patah.",
+      "crop_box": [
+        295,
+        1315,
+        395,
+        1405
+      ]
+    },
+    {
+      "scan": "s242",
+      "key": "mimekomo",
+      "word": "יִפֶן",
+      "question": "This is the small-type mimekomo line on s242, not the s240 instance settled in 338. Is there a meteg on the yod as well as the hiriq (יִֽפֶן)? The candidate has hiriq only.",
+      "crop_box": [
+        645,
+        1495,
+        715,
+        1555
+      ]
+    },
+    {
+      "scan": "s244",
+      "key": "veatah_azon_kol",
+      "word": "בְּקַרְסֻלֵּיהֶם",
+      "question": "Under the qof there is a patah with an extra mark below it (meteg?), and the vowel under the samekh is unclear (qubutz or sheva?). Please confirm the exact pointing of the qof and samekh.",
+      "crop_box": [
+        1045,
+        340,
+        1185,
+        400
+      ]
+    }
+  ],
+  "untranslated_extent_notes": [
+    "s242: every Hebrew block from קוֹל שׁוֹפָר through לִהְיוֹת לָכֶם לֵאלֹהִים has English on s241/s243. The English on s243 starts mid-sentence ('one was chosen;'), so the English for the start of the page is on s241, which was not assigned to me.",
+    "s244: the acrostic rubric ע״ס א״ת ב״ש. has no English equivalent on s245. It is a source abbreviation and must be kept as printed."
+  ],
+  "notes": [
+    "I did not reopen settled human marks: 344 bet in בּוֹ, 345, 346 יֻאֲחָד, 347, 348, 349, 350 qamatz in כָּל־חָי, 351–354. To my eye, קְרוֹת בּוֹ on s244 also reads as bet, the same glyph as in 344.",
+    "I checked these earlier round-2 correction proposals against the scans and they are correctly applied: אֶלֶף, תָּמוּט, וְהוּא יַשְׁמִיעֵנוּ, 'proclaims', both אֵבָרֵיהֶם, מוּסְפֵי (twice), בַּכֶּסֶא, עֶשְׂרֵה, צָקוּן, שְׁמֹנֶה, חוּלְיוֹת, חַק, בְּלִבָבֵיהֶם.",
+    "The speaker and rubric marks match the scans: ח׳/ק׳ prefixes, קהל וחזן printed in full before עוֹד יִזָּכֵר, and קו״ח before שְׁמַע and יִשְׂאוּ. The page headings on s242/s244 are running headers and were correctly left out.",
+    "The English on s243 and s245 matches the print word for word. Words hyphenated only at line breaks (counte-nance, fore-father, judg-ment, eigh-teen, justi-fication) are correctly joined. 'life-/force' breaks at a printed hyphen at line end, and the candidate's 'life-force' is an acceptable reading of a compound. 'fortyeight' is printed as one unhyphenated word and is correctly kept that way (a sic/corr candidate later).",
+    "The German rubrics for 324/325 (Frankfurt/Metz, viel(en)) are on s250, which is outside my assigned pages, so I did not adjudicate them."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "cd65f945-2bc4-49dd-af94-8579f3bada74"
+  }
+}

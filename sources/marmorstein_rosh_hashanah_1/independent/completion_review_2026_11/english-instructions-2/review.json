@@ -1,0 +1,190 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "low (reasoning effort 10); checked every supplied key by eye against the full-page scans; no pixel-level comparison"
+  },
+  "instructions": [
+    {
+      "key": "torah_s162_before_reading_168",
+      "source_approved": true,
+      "guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "s168 prints 'Cong.' before ברוך ה' המבורך. It is not in the supplied index rubrics. That fits it having moved into the reusable Barekhu module, but the module's contents were not supplied, so I could not confirm it is there."
+      ]
+    },
+    {
+      "key": "torah_s162_before_reading_169",
+      "source_approved": true,
+      "guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "s169 prints 'The congregation responds:' between ברכו and ברוך. It is not in the supplied index, which is correct if it moved into the Barekhu module, but that module was not supplied. The XML shows no copy of it in the index, so nothing is duplicated there."
+      ]
+    },
+    {
+      "key": "torah_s162_repeat_168",
+      "source_approved": true,
+      "guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "key": "torah_s162_repeat_169",
+      "source_approved": true,
+      "guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "key": "torah_s162_after_reading_168",
+      "source_approved": true,
+      "guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "key": "torah_s162_after_reading_169",
+      "source_approved": true,
+      "guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "key": "torah_s162_maftir_intro_173",
+      "source_approved": true,
+      "guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "key": "torah_s162_hagbah_intro_175",
+      "source_approved": true,
+      "guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "key": "torah_s162_haft_before_intro_175",
+      "source_approved": true,
+      "guidelines_approved": false,
+      "issues": [
+        "The rubric only names the blessing that follows ('Blessing before the Haphtorah:'). Under 'Kinds of rubric' that makes it type=\"description\", but it is encoded as type=\"instruction\"."
+      ],
+      "unresolved": []
+    },
+    {
+      "key": "torah_s162_after_haft_intro_183",
+      "source_approved": true,
+      "guidelines_approved": false,
+      "issues": [
+        "The rubric only names the blessings that follow ('Blessings after the Haphtorah:'), so it should be type=\"description\", not \"instruction\"."
+      ],
+      "unresolved": []
+    },
+    {
+      "key": "expanded_torah_repeat_response_en",
+      "source_approved": false,
+      "guidelines_approved": false,
+      "issues": [
+        "This is editorial wording (resp codex) that does not appear on s162 or anywhere else in the source. Its metadata still says scan s162 / printed page 70, so it presents itself as source text.",
+        "It has no closing period. That is acceptable for editorial text, but it confirms the text is not a transcription."
+      ],
+      "unresolved": [
+        "It does not appear in current.xml, so I could not check where it is placed or what condition governs it."
+      ]
+    },
+    {
+      "key": "expanded_torah_place_second_en",
+      "source_approved": false,
+      "guidelines_approved": false,
+      "issues": [
+        "The text is word-for-word the first sentence of the s173 / p.75 rubric. But the metadata says s162 / p.70, and nothing like it is printed there. The scan/page should be s173 / 75, or the key should carry a resp marking it as a split."
+      ],
+      "unresolved": [
+        "It does not appear in current.xml."
+      ]
+    },
+    {
+      "key": "expanded_torah_lift_first_en",
+      "source_approved": false,
+      "guidelines_approved": false,
+      "issues": [
+        "The text is word-for-word the second and third sentences of the s173 / p.75 rubric, but the metadata says s162 / p.70. Same provenance fix as expanded_torah_place_second_en."
+      ],
+      "unresolved": [
+        "It does not appear in current.xml."
+      ]
+    },
+    {
+      "key": "torah_first_scroll_heading",
+      "source_approved": true,
+      "guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "The citation printed below the heading, '(Genesis: Chapter 21)', was not supplied, so its handling was not reviewed."
+      ]
+    },
+    {
+      "key": "torah_haft_heading_en",
+      "source_approved": true,
+      "guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "The heading prints 'Haphtarah' while the running head prints 'Haphtorah'. These are source spellings and are rightly kept. The citation '(1 Samuel, ch. 1—2 v. 10)' was not supplied."
+      ]
+    },
+    {
+      "key": "shofar_s184_shabbat_intro_190_en",
+      "source_approved": true,
+      "guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "This says when the following prayer is said, so it should be the j:conditional's own tei:note. The supplied XML shows the note without its parent, so I could not check that it sits inside the Shabbat conditional. The missing final period matches the print."
+      ]
+    },
+    {
+      "key": "shofar_s184_shabbat_intro_191_en",
+      "source_approved": true,
+      "guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "Same placement question as the s190 copy."
+      ]
+    },
+    {
+      "key": "repetition_shabbat_below_en",
+      "source_approved": true,
+      "guidelines_approved": true,
+      "issues": [
+        "Metadata gaps: the JSON record has no 'type' (the XML gives instruction), and the XML note has no @facs, unlike every other documentary note in the set."
+      ],
+      "unresolved": []
+    }
+  ],
+  "navigation": [],
+  "verified": [
+    "I compared the wording, punctuation, italic rubric extent and embedded Hebrew text names of every supplied key with s133, s168, s169, s173, s175, s183, s190 and s191. Where a key is approved, its text matches exactly.",
+    "Each @facs value is the scan number minus one: s168→n167, s169→n168, s173→n172, s175→n174, s183→n182, s190→n189, s191→n190.",
+    "Hebrew text names inside the English directions (אשרי, שמו מפארים) are kept and wrapped in foreign xml:lang=he. No incipit cue beside a translation appears among the supplied rubrics.",
+    "The Frankfurt cue reads 'בריך שמה' without a yod on both s164 and s165, and the enlarged crop frankfurt-cue.png agrees. The full English line on both pages is: 'In Frankfurt a. M. and many congregations neither בריך שמה nor שמע ישראל is said, but the reader begins with גדלו'. It has no final period, which supports keeping it as an incomplete sentence.",
+    "Both conditional orders, the source one (torah_berikh_shema_custom) and the expanded one, cover בריך שמה, the Shema rubric, Shema and אחד, and stop before גדלו. That matches the cue, which says the reader begins with גדלו. The conditions are frankfurt_am_main=false plus the berikh_shemeh/torah_opening variant, which leaves room for the 'many congregations'.",
+    "The before-reading rubric is typed as a description and placed before the Barekhu call-up in source order on both the Hebrew and English sides.",
+    "The redundant 'On Sabbath.' heading on s133 and the 'On Sabbath we say … as below.' line are kept as raw documentary text, as you instructed."
+  ],
+  "limits": [
+    "No navigation records were supplied: current.json has \"navigation\": {}. The s183 rubric 'After the Haphtora the Shofar is blown. But when the first day of the festival falls on a Sabbath, then one continues immediately with יקום פורקן (p. 85)' carries a printed page reference. Neither it nor any generated tei:ref type=\"page\" with an edition-qualified target appears in current.json or current.xml, so I could not approve or reject the page-navigation requirement for any key.",
+    "The keys torah_s162_frankfurt_164, torah_s162_frankfurt_165 and torah_s162_shema_rubric_164 are used in the conditional orders but their records were not supplied. I checked the printed text above, not the stored records.",
+    "torah_gaddelu.xml, torah_lekha_adonai.xml, torah_al_hakol.xml and torah_veattem.xml appear as empty elements in current.xml. So I could not confirm that the speaker descriptions on s164/s165 moved into them: 'The reader, holding the scroll of the Torah in front of him, says:', 'The congregation responds:' and 'While the reader carries a Torah scroll to the reading desk, the congregation says:'. The Barekhu module was not supplied either.",
+    "Both conditional orders list one instruction, torah_s162_shema_rubric_164, a Hebrew-page rubric with no counterpart on English s165. I could not tell whether the English edition leaves it out.",
+    "The Hebrew expanded condition rubric 'לפי מנהג המקום, חוץ מפרנקפורט דמיין', including the spelling 'דמיין', is editorial Hebrew. It falls outside this review and I did not accept it. Neither its English nor its Hebrew rubric shows a resp in the supplied JSON.",
+    "The by/be misprint ('blessed by Thy crown', s165) is in translation text, not a rubric. I did not review its sic/corr handling.",
+    "No Hebrew prayer text was accepted. Hebrew rubrics such as the s168 line 'וקורא ... וה׳ פקד את שרה ...' and the s162/s164 small-print Hebrew are outside this review.",
+    "I did not consult the earlier full-page audits under /tmp/mahzor-backlog/sSTART-END/. Every judgement comes straight from the scans."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "b21e8047-3ad7-4cfb-b4b2-c47e78b9d1c0"
+  }
+}

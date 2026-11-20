@@ -1,0 +1,69 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Low reasoning effort. This was a focused adjudication, not a blind or full reread. I read the whole of these files: yotzer-three-after-human172-194/review.json (the prior full source report); completion_review_2026_11_human172_194_sin_host_correction.json; yotzer-sin-host-followup/current.json and current.review.xml; human_completion_review_2026_11_172_194.json; and guideline-excerpts.md. I viewed only two images, the enlarged crops human-180.png and human-194.png. I did not open s102.jpg, s104.jpg, any row crop or any other human crop in this pass. All source statements beyond the two crops rest on the prior full report. I compared the El Barukh and Lael Hebrew in three places by eye, word by word: the prior human172–194 'after' record, the correction file's before/after, and current.json/current.review.xml. I ran no diff, Unicode or normalization check, schema, compiler, refdb or URN tool, and I claim none."
+  },
+  "fixes": [
+    {
+      "snippet": 180,
+      "correct_sin_host": true,
+      "source_crop_checked": true,
+      "notes": "Crop human-180.png, read right to left: segol (3 dots) under the first ש, with no vertical stroke beside it. Then qamats under ע, then the ḥiriq dot under the second ש followed by a short vertical stroke just to its left, then qamats under ת. The sin dot sits on the upper left of the third letter. The meteg is therefore on the second ש (SIN with ḥiriq), which matches the human answer '(180) yes' to meteg_host_question 'sin'. In current.json and the El Barukh <tei:p> in current.review.xml the word reads שֶׁעָשִֽׂיתָ: the initial שֶׁ has no meteg, and the meteg sits with the ḥiriq on the sin-dotted ש. That matches the correction file's 'new' value. I checked this by eye only. I did not check codepoints or mark order, so I do not certify normalization."
+    },
+    {
+      "snippet": 194,
+      "correct_sin_host": true,
+      "source_crop_checked": true,
+      "notes": "Crop human-194.png shows the same layout: segol under the first ש with no stroke, qamats under ע, the ḥiriq dot under the sin-dotted ש with a vertical stroke just to its left, and qamats under ת. This matches the human answer '(194) yes' to meteg_host_question 'sin'. The last line of the Lael Hebrew in current.json and current.review.xml reads שֶׁעָשִֽׂיתָ, matching the correction file's 'new' value. I checked this by eye only and do not certify normalization."
+    }
+  ],
+  "witnesses": [
+    {
+      "stem": "yotzer_el_barukh",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "Approval basis: the prior full source comparison (yotzer-three-after-human172-194/review.json), whose only El Barukh issue was 180, combined with this focused check of the 180 fix. This pass is not a fresh full source reread.",
+        "The 180 finding is closed. Current Hebrew has שֶׁעָשִֽׂיתָ, with the meteg on the second ש (SIN with ḥiriq) and none on the initial שֶׁ, as crop human-180.png shows.",
+        "No other changes: apart from that one word, the current.json Hebrew is word-for-word identical to the human172–194 'after' record for El Barukh, which the prior report verified against s104 rows 1–2. That includes אֱלֹהֵֽינוּ (179), עַל־שֶֽׁבַח, יָדֶֽיךָ, יְפָאֲרֽוּךָ with the meteg on the RESH (181), סֶּֽלָה:, זָהֳרֵי with no meteg (178), and וּפָעַל with no dagesh. The correction file's 'after' matches current.json.",
+        "The current.review.xml Hebrew <tei:p> matches current.json. The only addition is the j:divineName wrapper around יְיָ. div@corresp, div@facs n103, the shabbat=false conditional and endConditional match the prior report's description. There is no pb and there are no corresp milestones.",
+        "English: the current.json and XML English text is identical to both the before and after records. Alignment is by div@corresp only, as before.",
+        "Guideline scope: this is an implementation correction of how a human decision was applied, not a printed misprint, so leaving it without tei:sic/tei:corr is consistent with the excerpts. Nothing touches URN scopes, milestones or citations."
+      ]
+    },
+    {
+      "stem": "lael_asher_shavat",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [
+        "s104, second-to-last line, בַּשָּׁמַיִם מִמַּעַל וְעַל־הָאָֽרֶץ: is there a meteg on the dageshed second MEM of מִמַּעַל (i.e. מִמַּֽעַל)? Current encoding: מִמַּעַל with no meteg. This has not been decided by a human. I have not seen the new inspected crop."
+      ],
+      "verified": [
+        "The 194 finding is closed. Current Hebrew has שֶׁעָשִֽׂיתָ, with the meteg on the second ש (SIN with ḥiriq) and none on the initial שֶׁ, as crop human-194.png shows.",
+        "No other changes: apart from that one word, the current.json Hebrew in all four segments is word-for-word identical to the human172–194 'after' record for Lael, which the prior report checked. That includes תִּפְאֶֽרֶת, זֶה שֶֽׁבַח, שֶֽׁבַח יְקָר, אֱלֹהֵֽינוּ, מַלְכֵּֽנוּ, הָאָֽרֶץ, מוֹשִׁיעֵֽנוּ, עַל־שֶֽׁבַח, יָדֶֽיךָ, יְפָאֲרֽוּךָ (meteg on the RESH), the unpointed-meteg יְפָאֲרוּ and וִיבָרְכוּ (191/192), and סֶּֽלָה:. מִמַּעַל was not changed. The correction file's 'after' matches current.json.",
+        "The current.review.xml Hebrew matches current.json, apart from the j:divineName wrappers. The structure matches what the prior report verified: Ps 92:1 verse milestone and seg@source; Ps 92:2a as nested chapter, verse and half-verse n=a with seg@source psalms/92/2/a; bare half-verse, verse and chapter terminators; then a bare prayer-part terminator before לְפִיכָךְ. Also unchanged: the shabbat=true guard and div@facs n103.",
+        "English text and the corresp sets are unchanged, including tei:sic 'Name.' / tei:corr 'Name,'.",
+        "Hebrew source approval is withheld only because of the open מִמַּעַל question, not because of 194."
+      ]
+    }
+  ],
+  "limits": [
+    "This was a focused check of the 180 and 194 fix against the prior full source review. It is not a complete source reread. Source approval of El Barukh rests on the prior full comparison plus this fix.",
+    "I viewed only human-180.png and human-194.png. I did not open the native pages, the row crops or the new מִמַּעַל crop.",
+    "I compared text by eye. I ran no diff or codepoint inspection, so I do not certify Unicode normalization or the order of combining marks.",
+    "Hameir is out of scope here. It was approved in the prior report and does not appear in the current follow-up files.",
+    "I did not reopen any human decision from 147–194, and I ran no validator, schema, compiler, refdb or URN tool."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "45f57fd6-f745-4883-b0b1-013c3bf9aaef"
+  }
+}

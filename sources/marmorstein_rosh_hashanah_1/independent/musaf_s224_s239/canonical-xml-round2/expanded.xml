@@ -1,0 +1,108 @@
+<tei:div xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:j="http://jewishliturgy.org/ns/jlptei/2" xml:id="section_musaf_repetition_gevurot_open_canonical">
+                      <tei:div>
+                        <j:declare xml:id="section_musaf_repetition_gevurot_open_canonical_settings">
+                          <tei:fs type="opensiddur:variant">
+                            <tei:f name="urn:x-opensiddur:condition:prayer:amidah/gevurot/attah_gibbor/for_ever">
+                              <tei:binary value="false"/>
+                            </tei:f>
+                            <tei:f name="urn:x-opensiddur:condition:prayer:amidah/gevurot/attah_gibbor/forever">
+                              <tei:binary value="true"/>
+                            </tei:f>
+                            <tei:f name="urn:x-opensiddur:condition:prayer:amidah/gevurot/mekhalkel_chayyim/falling_and_healing">
+                              <tei:binary value="false"/>
+                            </tei:f>
+                            <tei:f name="urn:x-opensiddur:condition:prayer:amidah/gevurot/mekhalkel_chayyim/falling_healing">
+                              <tei:binary value="true"/>
+                            </tei:f>
+                          </tei:fs>
+                        </j:declare>
+                        <j:transclude type="external" target="urn:x-opensiddur:text:prayer:amidah/gevurot/attah_gibbor" targetEnd="urn:x-opensiddur:text:prayer:amidah/gevurot/mekhalkel_chayyim"/>
+                        <j:endDeclare target="#section_musaf_repetition_gevurot_open_canonical_settings"/>
+                      </tei:div>
+                    </tei:div>
+                    
+<tei:div xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:j="http://jewishliturgy.org/ns/jlptei/2" xml:id="section_musaf_repetition_gevurot_close_canonical">
+                      <tei:div>
+                        <tei:note type="description" corresp="urn:x-opensiddur:instruction:role/reader" xml:lang="he">חזן</tei:note>
+                        <j:declare xml:id="section_musaf_repetition_gevurot_close_canonical_settings">
+                          <tei:fs type="opensiddur:variant">
+                            <tei:f name="urn:x-opensiddur:condition:prayer:amidah/gevurot/mi_khamokha/compassion_with_comma">
+                              <tei:binary value="false"/>
+                            </tei:f>
+                            <tei:f name="urn:x-opensiddur:condition:prayer:amidah/gevurot/mi_khamokha/compassion_without_comma">
+                              <tei:binary value="true"/>
+                            </tei:f>
+                            <tei:f name="urn:x-opensiddur:condition:prayer:amidah/gevurot/mechayyeh_hametim/and_thou_lord_without_comma">
+                              <tei:binary value="false"/>
+                            </tei:f>
+                            <tei:f name="urn:x-opensiddur:condition:prayer:amidah/gevurot/mechayyeh_hametim/and_thou_lord_with_comma">
+                              <tei:binary value="true"/>
+                            </tei:f>
+                          </tei:fs>
+                        </j:declare>
+                        <j:transclude type="external" target="urn:x-opensiddur:text:prayer:amidah/gevurot/mi_khamokha" targetEnd="urn:x-opensiddur:text:prayer:amidah/gevurot/mechayyeh_hametim"/>
+                        <j:endDeclare target="#section_musaf_repetition_gevurot_close_canonical_settings"/>
+                      </tei:div>
+                    </tei:div>
+                    
+<tei:div xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:j="http://jewishliturgy.org/ns/jlptei/2" xml:id="section_musaf_repetition_yimlokh_canonical">
+                      <tei:div>
+                        <j:declare xml:id="section_musaf_repetition_yimlokh_canonical_settings">
+                          <tei:fs type="opensiddur:variant">
+                            <tei:f name="urn:x-opensiddur:condition:bible:psalms/146/10/name_plene_hallaluyah_chataf">
+                              <tei:binary value="false"/>
+                            </tei:f>
+                            <tei:f name="urn:x-opensiddur:condition:bible:psalms/146/10/name_abbreviated_halleluyah_sheva">
+                              <tei:binary value="true"/>
+                            </tei:f>
+                            <tei:f name="urn:x-opensiddur:condition:bible:psalms/146/10/the_lord_shall_reign">
+                              <tei:binary value="false"/>
+                            </tei:f>
+                            <tei:f name="urn:x-opensiddur:condition:bible:psalms/146/10/the_lord_will_reign">
+                              <tei:binary value="true"/>
+                            </tei:f>
+                          </tei:fs>
+                        </j:declare>
+                        <j:transclude type="external" target="urn:x-opensiddur:text:bible:psalms/146/10"/>
+                        <j:endDeclare target="#section_musaf_repetition_yimlokh_canonical_settings"/>
+                      </tei:div>
+                    </tei:div>
+                    
+<tei:div xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:j="http://jewishliturgy.org/ns/jlptei/2" xml:id="section_musaf_repetition_veattah_qadosh_canonical">
+                      <tei:div>
+                        <j:declare xml:id="section_musaf_repetition_veattah_qadosh_canonical_settings">
+                          <tei:fs type="opensiddur:variant">
+                            <tei:f name="urn:x-opensiddur:condition:bible:psalms/22/4/holy_one_dwellest">
+                              <tei:binary value="false"/>
+                            </tei:f>
+                            <tei:f name="urn:x-opensiddur:condition:bible:psalms/22/4/holy_one_art_enthroned">
+                              <tei:binary value="true"/>
+                            </tei:f>
+                          </tei:fs>
+                        </j:declare>
+                        <j:transclude type="external" target="urn:x-opensiddur:text:prayer:veattah_qadosh_el_na/text"/>
+                        <j:endDeclare target="#section_musaf_repetition_veattah_qadosh_canonical_settings"/>
+                      </tei:div>
+                    </tei:div>
+                    
+<tei:div xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:j="http://jewishliturgy.org/ns/jlptei/2" xml:id="section_musaf_uvekhen_lekha_taaleh_qedushah_canonical">
+                      <tei:div>
+                        <tei:note type="description" corresp="urn:x-opensiddur:instruction:role/reader" xml:lang="he">חזן</tei:note>
+                        <j:declare xml:id="section_musaf_uvekhen_lekha_taaleh_qedushah_canonical_settings">
+                          <tei:fs type="opensiddur:variant">
+                            <tei:f name="urn:x-opensiddur:condition:prayer:uvekhen_lekha_taaleh_qedushah/text/let_sanctification_arise">
+                              <tei:binary value="false"/>
+                            </tei:f>
+                            <tei:f name="urn:x-opensiddur:condition:prayer:uvekhen_lekha_taaleh_qedushah/text/let_holiness_ascend">
+                              <tei:binary value="true"/>
+                            </tei:f>
+                            <tei:f name="urn:x-opensiddur:condition:prayer:uvekhen_lekha_taaleh_qedushah/text/hu">
+                              <tei:binary value="false"/>
+                            </tei:f>
+                          </tei:fs>
+                        </j:declare>
+                        <j:transclude type="external" target="urn:x-opensiddur:text:prayer:uvekhen_lekha_taaleh_qedushah/text"/>
+                        <j:endDeclare target="#section_musaf_uvekhen_lekha_taaleh_qedushah_canonical_settings"/>
+                      </tei:div>
+                    </tei:div>
+                    

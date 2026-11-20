@@ -1,0 +1,33 @@
+{
+  "source_check_closed": true,
+  "readings": [
+    {
+      "word": "יְהַֽלְלוּךָ (Ps 84:5, scan8 / printed p.2, header line 1), crop 84_5-tight.png",
+      "vowel_under_first_lamed": "hataf-patah (ֲ)",
+      "certainty": "high",
+      "reason": "Going right to left along the under-line of the crop: (1) under the yod (x≈1085) are two dots with no bar beside them, a plain sheva. (2) Under the he, at x≈870–950, is a single patah bar with no dots, about 135 px from the yod's sheva. (3) Under the first lamed are two dots (x≈720, at y≈375 and y≈430), and a horizontal bar (x≈620–680, y≈370) sits right next to them on their LEFT, with a gap of only about 40 px. The bar is level with the upper dot, and the two together read as one mark. (4) Farther left, at x≈440, is a short vertical stroke (meteg) under the second lamed. Then come the vav with its dot and the final kaf with qamats. The he already has its own patah. The only mark under the second lamed is the vertical stroke. So the bar at x≈620–680 can only belong to the first lamed, and with the dots it forms a hataf-patah. My earlier worry, that this bar might be the he's patah or the meteg, is ruled out: both of those marks are clearly separate."
+    },
+    {
+      "word": "וַאֲהַלְלָה (Ps 145:2, scan8 / printed p.2, body line 2), crop 145_2-tight.png",
+      "vowel_under_first_lamed": "hataf-patah (ֲ)",
+      "certainty": "high",
+      "reason": "Going right to left: (1) under the vav, a patah bar (x≈1060–1110). (2) Under the alef, which is the expected hataf-patah, two dots at x≈985 with a bar on their LEFT (x≈880–940, gap ≈45 px). (3) Under the he, a lone patah bar (x≈720–780). (4) Under the first lamed, two dots at x≈620 with a bar on their LEFT (x≈510–570, gap ≈50 px). (5) Under the second lamed, a qamats (a T-shaped mark with a dot below it, x≈410). The mark under the first lamed has the same shape and spacing as the alef's hataf-patah in the same word, which is a direct comparison within this print's own typeface. The bar at x≈510–570 can't belong to the second lamed, because that letter already has its qamats, and it can't belong to the he, because the he has its own bar."
+    }
+  ],
+  "findings": [
+    "Both words in the queue have hataf-patah under the first lamed, not the plain sheva in the current transcription. The new 6× crops settle what my first report couldn't: each bar sits in its own place, so the patah under the he and the second lamed's mark are clearly separate from the first lamed's mark.",
+    "The strongest evidence is internal to the print. In Ps 145:2, the alef's hataf-patah, which nobody disputes, has the same shape (bar to the left of the two dots) and nearly the same spacing (≈45 vs ≈50 px) as the mark under the first lamed. In Ps 84:5, the yod has a plain sheva with no bar next to it, so this print does show plain sheva and hataf-patah as different marks.",
+    "These readings come from where the marks sit in the image. I didn't consider which vowel is usual under a non-guttural letter. Hataf under the first of two identical letters is unusual in common prints, but that doesn't change what this source shows.",
+    "Side note on Ps 84:5, outside the queue: in this crop the only mark under the second lamed is the vertical stroke at x≈440. I see no sheva dots there. I'm not asking for a correction because it falls outside this queue, but whoever applies the fixes may want to check that the meteg and the second lamed's vowel are placed as the print shows them.",
+    "This review covers only the two historical queue items. It doesn't reopen any other part of the accepted source."
+  ],
+  "corrections_required": [
+    "Ps 84:5: change the first lamed's vowel from sheva (U+05B0) to hataf-patah (U+05B2), so the text reads יְהַֽלֲלוּךָ. Keep the meteg and the other marks as they are in the existing transcription, subject to the side note above.",
+    "Ps 145:2: change the first lamed's vowel from sheva (U+05B0) to hataf-patah (U+05B2), so the text reads וַאֲהַלֲלָה."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "60937838-9b7b-49ab-aa4f-6c5444b69e93"
+  }
+}

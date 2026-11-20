@@ -1,0 +1,88 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Read all of current.json, current-xml.xml (lines 1-169), page-audits.json, guideline-excerpts.md, english-rest-resolutions.json and english-routing-proof.xml. Did my own visual comparison of the English text on full-page scans s133, s135, s137, s139 and s141 (shown at 1208x2000, scaled down from 1368x2264). I did not make enlarged crops: nothing at full-page resolution looked ambiguous enough to need one. I did not read any Hebrew source images, did not run validators or the exporter, and did not do any renderer QA."
+  },
+  "scope": "English source accuracy, its encoding against the JLPTEI-3 guideline sections in the excerpts, and the boundaries shared with the Hebrew for 8 English witnesses: tair_vetaria, adderet_mamlakhah, melekh_memallet, melekh_zokher_achuz_qeren, aafir_nezer, teshalesh_shofarot, shemo_mefoarim, repetition_etten_lefoali. Hebrew source and fine-mark acceptance is not included.",
+  "witnesses": [
+    {
+      "stem": "tair_vetaria",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "adderet_mamlakhah",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "melekh_memallet",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "melekh_zokher_achuz_qeren",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "aafir_nezer",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "teshalesh_shofarot",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "shemo_mefoarim",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "repetition_etten_lefoali",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    }
+  ],
+  "verified": [
+    "Each English paragraph in current.json and in the English XML matches the printed English word for word, including punctuation, on the scans I checked: s133 (tair_vetaria; adderet part 1 ending 'my upright'; shemo/shomerei/shapru), s135 (adderet part 2 ending 'served idols zealously'; shivtei, shevutenu, kol_yoshvei, adar, dea), s137 (adderet part 3; melekh_memallet; melekh_zokher ending 'Holy One!'; varasham, zevach, yarum), s139 (aafir part 1 ending 'Him who'; motot, qiryat, the parenthesised kol passage, yishpot, vehu ending 'He accomplishes, Awe-inspiring and Holy!') and s141 (aafir part 2; teshalesh; etten_lefoali in full).",
+    "Words hyphenated across printed line breaks are correctly rejoined: 'understand' (s137), 'acquired' (s135), 'perplexed' (s141) and 'righteousness' (s139).",
+    "Printed wording differences between the two kol_yoshvei occurrences are kept as printed: 'All inhabitants' on s135 and '(All the inhabitants ... the Holy One.)' on s139.",
+    "My readings agree with the existing page audits for s135, s137, s139 and s141. The only gap the s133 audit recorded was the missing 'On Sabbath we say שמו מפארים etc., as below.' That direction is now restored, according to english-rest-resolutions.json. The image confirms it is printed in italic, centred, before תעיר. No correction in the resolution ledger falls on these 8 witnesses, and current.json has an empty original_source_typo_corrections. I saw no printed misprint that would need sic/corr.",
+    "The 'On Sabbath.' headings printed on s133, s135, s137, s139 and s141 are present as raw documentary_instructions. That is consistent with the stated continuous-arrangement disposition.",
+    "Shared boundaries: every prayer-part, stanza, chapter and verse corresp in the English XML is identical to its Hebrew counterpart. That covers adderet part_1/2/3 at the same page turns, aafir part_1/2 at the s139/s141 turn, the 16 stanza URNs of shemo_mefoarim including shabbat_refrains/kol_yoshvei, and etten_lefoali/text. Every sequence is closed by a bare milestone of the same unit before the paragraph ends (JLPTEI-3 URN scope rule 3). Verse milestones close before chapter milestones.",
+    "Scripture: the 13 bounded quotations in shemo_mefoarim follow the established occurrence-context convention. A local chapter/verse corresp is placed before the tei:seg, and the seg's source gives the canonical reference, matching the Hebrew exactly: Ps 57:3, 97:1, 47:8, 111:4, 111:5, 145:13, 74:2, 137:7, 150:3; Ex 15:18; Jer 10:7; Ruth 1:6; Job 23:13. No canonical URN is duplicated.",
+    "Conditionals: kol_yoshvei on s135 has no English brackets and no English rubric, so it is correctly a j:conditional with no @type and no note: the guideline's 'Neither' case, a processor-only condition. The refrain on s139 is printed in parentheses, so it is correctly j:conditional type='marked'. The parentheses are left out of the seg and supplied by the marked delimiters, and the seg's source points to the poem's kol_yoshvei. Both English conditions are rite metz=false, matching the Hebrew features. The xml:id values differ between projects (segment_36 vs 37), which has no effect because ids are local.",
+    "The English project has no description notes. None is printed in English, and the Hebrew-only rubrics (חו״ק, ק׳, החזן בנגון, the signature descriptions, כנגון אאפיר) are correctly left as witness-he descriptions. Hebrew incipit cues beside the translation are left out on purpose."
+  ],
+  "limits": [
+    "I compared against full-page images at reduced display resolution and made no enlarged crops. Fine punctuation was legible, and I found nothing that needed one.",
+    "Hebrew text, Hebrew source images and Hebrew fine marks were not reviewed. The Hebrew XML was read only to compare shared URNs, conditions and boundaries.",
+    "I did not run validators, tests, URN resolution or rendering. The scope and alignment findings come from reading the markup.",
+    "The repeated melekh_zokher line and the yishpot line printed after etten on s141 belong to other units and were not checked in this scope.",
+    "The placement of the restored s133 direction as the conditional rubric of the complete Shabbat alternative, and the routing for sources 182, 183, 189 and 197, are accepted as stated in the ledger and routing proof. I did not check them against those units' XML."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "44334996-ad84-49c5-a235-5ef5d6b8e527"
+  }
+}

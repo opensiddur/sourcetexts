@@ -1,0 +1,942 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "low (single pass over each supplied band at displayed resolution; no native-scan zoom)"
+  },
+  "witnesses13": [
+    {
+      "stem": "torah_av_harachamim",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": false,
+      "issues": [
+        "s160 band3 line 5, first word: printed אַב with a patach under the alef; the record has אָב. Fix: אַב",
+        "s160 band3 line 6, first word after חוֹמוֹת (inside the Ps 51:20 seg): printed defectively with no yod, ending in a colon. The record has יְרוּשָׁלָיִם. (yod, period). Fix: יְרוּשָׁלָ͏ִם: (same CGJ form as מִירוּשָׁלָֽ͏ִם in torah_vayehi_binsoa)"
+      ],
+      "unresolved": [
+        "s160 band3 line 6: is there a meteg/second mark under the tet of בָּטָחְנוּ and under the mem of מֶלֶךְ? Not decidable at this resolution"
+      ],
+      "verified": [
+        "The rest of the consonants, vowels and the final colon after עוֹלָמִים match",
+        "The Ps 51:20 boundaries correctly exclude אב הרחמים and כי בך…",
+        "pb n=69 facs n159 = s160 minus 1",
+        "The he/en milestones prayer-part, chapter 51 and verse 20 match exactly"
+      ]
+    },
+    {
+      "stem": "torah_vayehi_binsoa",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": false,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": false,
+      "issues": [
+        "Both witnesses: <tei:milestone unit=\"chapter\" n=\"10\"/> has no corresp, so under JLPTEI rule 3 it is a chapter terminator that opens nothing. The opening chapter of the Numbers 10:35 quotation is never opened",
+        "Numbers 10:35 carries the canonical Bible URN urn:x-opensiddur:text:bible:numbers/10/35 as a verse corresp inside the prayer, with no seg@source. Every other quotation in this batch uses seg@source plus a prayer-local quotation corresp. As written it claims a second copy of a canonical Bible URN, which the guidelines say not to do. Fix: seg source=bible:numbers/10/35 with a vayehi_binsoa/quotations/… corresp, or drop the corresp"
+      ],
+      "unresolved": [
+        "s162 band1 line 4: possible meteg under the vav of וַיֹּאמֶר and under the qof of קוּמָה. Faint; needs a native-scan check"
+      ],
+      "verified": [
+        "Head סֵדֶר הוֹצָאַת סֵפֶר הַתּוֹרָה. matches",
+        "Numbers 10:35 and Isaiah 2:3b words match",
+        "Isaiah 2:3b correctly begins after the etnachta (בארחתיו)",
+        "בָּרוּךְ שֶׁנָּתַן… matches as a separate printed paragraph",
+        "The English rubric is printed on the Hebrew page s162 as encoded"
+      ]
+    },
+    {
+      "stem": "torah_shelosh_esreh_middot",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": false,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": false,
+      "issues": [
+        "Hebrew repeat cue ג״פ.: its ref targets …/shelosh_esreh_middot/torah_opening, the whole div, which includes the rubric תפלה משערי ציון and the cue itself. The expanded order repeats …/torah_opening/text three times. Fix: retarget the ref to urn:x-opensiddur:text:prayer:shelosh_esreh_middot/torah_opening/text"
+      ],
+      "unresolved": [
+        "s162 band1 line 9: both divine names may carry a holam dot (יְהֹוָה); the record has יְהוָה. Must be checked on the native scan, not inferred"
+      ],
+      "verified": [
+        "The rest of the words and the colons after וֶאֱמֶת and וְנַקֵּה match",
+        "ג״פ. is printed after וְנַקֵּה",
+        "Rubric תפלה משערי ציון לאמר בשעת הוצאת ס״ת. matches and is printed only in the Hebrew witness",
+        "The verse-part URNs adonai_adonai, notzer_chesed and venakeh are reused identically in he/en"
+      ]
+    },
+    {
+      "stem": "torah_ribbono_malle_mishalot",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [
+        "s162 band2 line 7, second word: printed plene with a vav. Record לֶאֱכֹל; fix: לֶאֱכוֹל",
+        "s162 band3 line 1, after יָדֵינוּ: printed plene with a vav. Record וְתִגְזֹר; fix: וְתִגְזוֹר"
+      ],
+      "unresolved": [
+        "s162 band3 line 3, first word: the tet vowel looks like segol (וְתַטֶּה); the record has tsere (וְתַטֵּה)",
+        "s162 band2 line 6, after אֲרוּכִים: a sheva-like mark/letter precedes טוֹבִים; it may be a stray mark or a printed letter",
+        "s162 band2 line 3: dagesh in the tav of בָתֵינוּ and in the bet of בְחֶסֶד is not decidable",
+        "s162 band2 line 8: מִצְוֹתֶיהָ may be printed מִצְווֹתֶיהָ"
+      ],
+      "verified": [
+        "Three printed paragraphs: Ribbono, Ps 19:15, Ps 69:14",
+        "The ג״פ. cue sits after Ps 69:14 and targets …/vaani, matching the expanded order's three repeats",
+        "Maqafs in וְתֶן־לָנוּ, כָּל־עֲוֹנוֹתֵינוּ, אִמְרֵי־פִי, תְפִלָּתִי־לְךָ and בְּרָב־חַסְדֶּךָ match"
+      ]
+    },
+    {
+      "stem": "torah_berikh_shemeh",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [
+        "s164 band1 line 4: a period is printed after בְּטִיבוּתָא; the record has a comma. Fix: בְּטִיבוּתָא.",
+        "s164 band1 last line to band2 line 1: a period is printed after the third קְשֹׁט, before וּמַסְגֵּא. Fix: וּנְבִיאוֹהִי קְשֹׁט. וּמַסְגֵּא",
+        "s164 band2 line 2, after אֵמַר: printed with a vav shuruq; the record has qubuts תֻּשְׁבְּחָן. Fix: תּוּשְׁבְּחָן (the tav dagesh still needs a scan check)",
+        "s164 band2 line 3: periods are printed after דְּלִבִּי and after יִשְׂרָאֵל. Fix: דְּלִבִּי. וְלִבָּא דְכָל־עַמָּךְ יִשְׂרָאֵל. לְטַב"
+      ],
+      "unresolved": [],
+      "verified": [
+        "The other words match",
+        "The single printed paragraph is split into prayer-parts berikh/velehevei at the same point in he and en",
+        "The Frankfurt omission rubric is printed above it on s164 and serves as the section's condition rubric"
+      ]
+    },
+    {
+      "stem": "torah_gaddelu",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [
+        "The prayer-part corresp uses the siddur:rosh_hashanah/torah/gaddelu/text namespace while the div uses chol/shacharit/torah/gaddelu. Accepted as an existing reused URN; I cannot check this without refdb"
+      ],
+      "verified": [
+        "גַּדְּלוּ לַייָ אִתִּי. וּנְרוֹמְמָה שְׁמוֹ יַחְדָּו: matches, including the medial period",
+        "The description 'The reader, holding…' is printed on s164 directly before it"
+      ]
+    },
+    {
+      "stem": "torah_lekha_adonai",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": false,
+      "issues": [],
+      "unresolved": [
+        "s164 band3 line 2: I see no maqaf between לְהַר and קָדְשׁוֹ (the record has לְהַר־קָדְשׁוֹ). Needs a native-scan check; do not infer it from the Masoretic text"
+      ],
+      "verified": [
+        "1 Chr 29:11 matches, including כִּי־כֹל",
+        "Ps 99:5 matches",
+        "Three separate printed lines encoded as three p elements; English is one paragraph with the same milestones",
+        "The description 'The congregation responds:' is printed before it on s164"
+      ]
+    },
+    {
+      "stem": "torah_al_hakol",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": false,
+      "issues": [
+        "s166 band1 line 5, last word (Ps 68:5 seg): printed plene with a vav. Record לָרֹכֵב; fix: לָרוֹכֵב"
+      ],
+      "unresolved": [
+        "s166 band1 line 8: dagesh in the kaf of כְבוֹד is not decidable"
+      ],
+      "verified": [
+        "The s164 part and the s166 continuation match, with צוּר / pb / הָעוֹלָמִים",
+        "Isaiah 52:8b starts correctly after the etnachta (ירננו)",
+        "The quotation boundaries of Isaiah 40:5 and the וְנֶאֱמַר linkage are correct",
+        "pb n=72 facs n165"
+      ]
+    },
+    {
+      "stem": "torah_av_harachamim_hu_yerachem",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [
+        "s166 band2 line 3, after אוֹתָנוּ: printed with a yod. Record לִפְלֵטַת; fix: לִפְלֵיטַת"
+      ],
+      "unresolved": [
+        "s166 band2 line 2: the vowel under the resh of הָרַעוֹת looks like qamatz (הָרָעוֹת)"
+      ],
+      "verified": [
+        "The other words match",
+        "First word אַב with patach (contrast torah_av_harachamim)"
+      ]
+    },
+    {
+      "stem": "torah_vayaazor",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": false,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [
+        "(פלוני בר פלוני הכהן) is printed in small rabbinic type as a name placeholder but is encoded as plain recited prayer text inside prayer-part vayaazor/text. It should be marked off as a placeholder or rubric, not recited words. The English '. . .' shows the same gap"
+      ],
+      "unresolved": [],
+      "verified": [
+        "All words match, including יַעֲמוֹד, כֹּהֵן קְרָב. and הַחוֹסִים/הַחֹסִים",
+        "Ps 19:8, 19:9, 29:11 and 18:31 have correct verse correspondences and terminators",
+        "The call rubric is printed on s166 before it"
+      ]
+    },
+    {
+      "stem": "torah_before_blessing",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [
+        "s168 band1 blessing line 1: a comma is printed after the first יְיָ. Fix: בָּרוּךְ אַתָּה יְיָ, אֱלֹהֵינוּ",
+        "s168 band1 blessing line 1, end of line: a maqaf is printed after בָּחַר. Fix: בָּחַר־בָּנוּ"
+      ],
+      "unresolved": [],
+      "verified": [
+        "The other words and punctuation match, including the comma after the second יְיָ and the colon"
+      ]
+    },
+    {
+      "stem": "torah_after_blessing",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [
+        "s168 band2 line 1: a comma is printed after the first יְיָ. Fix: בָּרוּךְ אַתָּה יְיָ, אֱלֹהֵינוּ"
+      ],
+      "unresolved": [],
+      "verified": [
+        "נָתַן־לָנוּ, the commas, the period after בְּתוֹכֵנוּ and the colon match"
+      ]
+    },
+    {
+      "stem": "haftarah_al_hatorah",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [
+        "s182 band3 line 4: a colon is printed after לָעַד; the record has a period. Fix: לָעַד:",
+        "s182 band3 line 3: printed בְּפִי כָל־חַי with a space and no maqaf after בְּפִי. Record בְּפִי־כָל־חַי; fix: בְּפִי כָל־חַי"
+      ],
+      "unresolved": [
+        "s182 band3 line 1: the lamed dagesh in לָּנוּ is not decidable"
+      ],
+      "verified": [
+        "The three parenthesized Shabbat insertions are encoded as marked conditionals (shabbat=true) in he/en",
+        "The join at (הַשַּׁבָּת וְ)יִשְׂרָאֵל is correct",
+        "The seal prayer-part is shared"
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "stem": "torah_av_harachamim",
+      "language": "he",
+      "index": 1,
+      "source_approved": false,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        "ירושלם is printed without a yod and with a colon (see witness)"
+      ],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_av_harachamim",
+      "language": "en",
+      "index": 1,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_vayehi_binsoa",
+      "language": "he",
+      "index": 0,
+      "source_approved": true,
+      "encoding_guidelines_approved": false,
+      "issues": [
+        "Bare chapter terminator n=10; canonical numbers/10/35 used as corresp; no seg@source"
+      ],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_vayehi_binsoa",
+      "language": "en",
+      "index": 0,
+      "source_approved": true,
+      "encoding_guidelines_approved": false,
+      "issues": [
+        "Same as he"
+      ],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_vayehi_binsoa",
+      "language": "he",
+      "index": 1,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_vayehi_binsoa",
+      "language": "en",
+      "index": 1,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_shelosh_esreh_middot",
+      "language": "he",
+      "index": 0,
+      "source_approved": false,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "Holam in the divine names"
+      ]
+    },
+    {
+      "stem": "torah_shelosh_esreh_middot",
+      "language": "he",
+      "index": 2,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "I cannot verify that the notzer_chesed and venakeh verse-parts are declared in subverse.py"
+      ]
+    },
+    {
+      "stem": "torah_shelosh_esreh_middot",
+      "language": "he",
+      "index": 3,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_shelosh_esreh_middot",
+      "language": "en",
+      "index": 0,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_shelosh_esreh_middot",
+      "language": "en",
+      "index": 2,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_shelosh_esreh_middot",
+      "language": "en",
+      "index": 3,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_ribbono_malle_mishalot",
+      "language": "he",
+      "index": 1,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_ribbono_malle_mishalot",
+      "language": "he",
+      "index": 2,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_ribbono_malle_mishalot",
+      "language": "en",
+      "index": 1,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_ribbono_malle_mishalot",
+      "language": "en",
+      "index": 2,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_gaddelu",
+      "language": "he",
+      "index": 0,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_gaddelu",
+      "language": "en",
+      "index": 0,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_lekha_adonai",
+      "language": "he",
+      "index": 0,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_lekha_adonai",
+      "language": "he",
+      "index": 2,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_lekha_adonai",
+      "language": "he",
+      "index": 4,
+      "source_approved": false,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "Maqaf in להר־קדשו"
+      ]
+    },
+    {
+      "stem": "torah_lekha_adonai",
+      "language": "en",
+      "index": 0,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_lekha_adonai",
+      "language": "en",
+      "index": 2,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_lekha_adonai",
+      "language": "en",
+      "index": 4,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_al_hakol",
+      "language": "he",
+      "index": 2,
+      "source_approved": false,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        "לָרֹכֵב → לָרוֹכֵב"
+      ],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_al_hakol",
+      "language": "he",
+      "index": 4,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_al_hakol",
+      "language": "he",
+      "index": 6,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "Dagesh in the kaf of כבוד"
+      ]
+    },
+    {
+      "stem": "torah_al_hakol",
+      "language": "en",
+      "index": 2,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_al_hakol",
+      "language": "en",
+      "index": 4,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_al_hakol",
+      "language": "en",
+      "index": 6,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_vayaazor",
+      "language": "he",
+      "index": 1,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_vayaazor",
+      "language": "he",
+      "index": 3,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_vayaazor",
+      "language": "he",
+      "index": 5,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_vayaazor",
+      "language": "he",
+      "index": 7,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_vayaazor",
+      "language": "en",
+      "index": 1,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_vayaazor",
+      "language": "en",
+      "index": 3,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_vayaazor",
+      "language": "en",
+      "index": 5,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_vayaazor",
+      "language": "en",
+      "index": 7,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_before_blessing",
+      "language": "he",
+      "index": 0,
+      "source_approved": false,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        "Comma after יְיָ and maqaf in בָּחַר־בָּנוּ missing"
+      ],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_before_blessing",
+      "language": "en",
+      "index": 0,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_after_blessing",
+      "language": "he",
+      "index": 0,
+      "source_approved": false,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        "Comma after the first יְיָ missing"
+      ],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_after_blessing",
+      "language": "en",
+      "index": 0,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    }
+  ],
+  "instructions": {
+    "torah_s162_frankfurt_164": {
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    "torah_s162_frankfurt_165": {
+      "source_approved": false,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "s165 image not supplied"
+      ]
+    },
+    "torah_s162_shema_rubric_164": {
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "The print has an opening '(' before הש״ץ that is never closed; the paren is omitted from the record"
+      ]
+    },
+    "torah_s162_gadlu_rubric_164": {
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    "torah_s162_gadlu_rubric_165": {
+      "source_approved": false,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "s165 not supplied"
+      ]
+    },
+    "torah_s162_lekha_rubric_164": {
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    "torah_s162_lekha_rubric_165": {
+      "source_approved": false,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "s165 not supplied"
+      ]
+    },
+    "torah_s162_al_hakkol_rubric_164": {
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    "torah_s162_al_hakkol_rubric_165": {
+      "source_approved": false,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "s165 not supplied"
+      ]
+    },
+    "torah_s162_call_rubric_166": {
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    "torah_s162_call_rubric_167": {
+      "source_approved": false,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "s167 not supplied"
+      ]
+    },
+    "torah_s162_veattem_rubric_166": {
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    "torah_s162_veattem_rubric_167": {
+      "source_approved": false,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "s167 not supplied"
+      ]
+    },
+    "torah_s162_before_reading_168": {
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    "torah_s162_before_reading_169": {
+      "source_approved": false,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "s169 not supplied"
+      ]
+    },
+    "torah_s162_repeat_168": {
+      "source_approved": true,
+      "encoding_guidelines_approved": false,
+      "issues": [
+        "The expanded aliyot use torah_s162_repeat_169 (English-witness key) instead of this Hebrew-witness key or the he/en pair used for the place_second/lift_first instructions"
+      ],
+      "unresolved": []
+    },
+    "torah_s162_repeat_169": {
+      "source_approved": false,
+      "encoding_guidelines_approved": false,
+      "issues": [
+        "Used alone in the expanded order; see repeat_168"
+      ],
+      "unresolved": [
+        "s169 not supplied"
+      ]
+    },
+    "torah_s162_after_reading_168": {
+      "source_approved": true,
+      "encoding_guidelines_approved": false,
+      "issues": [
+        "Not used in the expanded order; the English-witness _169 key is used alone instead"
+      ],
+      "unresolved": []
+    },
+    "torah_s162_after_reading_169": {
+      "source_approved": false,
+      "encoding_guidelines_approved": false,
+      "issues": [
+        "Same as above"
+      ],
+      "unresolved": [
+        "s169 not supplied"
+      ]
+    },
+    "torah_s162_reading_intro_168": {
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    "torah_s162_maftir_intro_172": {
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    "torah_s162_maftir_intro_173": {
+      "source_approved": false,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "s173 not supplied"
+      ]
+    },
+    "torah_s162_hagbah_intro_174": {
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    "torah_s162_hagbah_intro_175": {
+      "source_approved": false,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "s175 not supplied"
+      ]
+    },
+    "torah_s162_haft_before_intro_174": {
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    "torah_s162_haft_before_intro_175": {
+      "source_approved": false,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "s175 not supplied"
+      ]
+    },
+    "torah_s162_after_haft_intro_182": {
+      "source_approved": false,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        "s182 band1, centered rabbinic-type line: printed ברכות אחרונות. with no ה. Record ברכות האחרונות.; fix: המפטיר יברך ברכות אחרונות."
+      ],
+      "unresolved": []
+    },
+    "torah_s162_after_haft_intro_183": {
+      "source_approved": false,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "s183 not supplied"
+      ]
+    },
+    "expanded_torah_repeat_response_he": {
+      "source_approved": false,
+      "encoding_guidelines_approved": false,
+      "issues": [
+        "Editorial text (resp codex) attributed to scan s162, page 70; no such text is printed on s162. Also unused in the expanded order"
+      ],
+      "unresolved": []
+    },
+    "expanded_torah_place_second_he": {
+      "source_approved": false,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        "Text is correctly the first clause of the s172 maftir instruction, but its provenance says s162/page 70. Fix: scan s172, printed_page 75"
+      ],
+      "unresolved": []
+    },
+    "expanded_torah_place_second_en": {
+      "source_approved": false,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "s173 not supplied; the split point is plausible"
+      ]
+    },
+    "expanded_torah_lift_first_he": {
+      "source_approved": false,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        "Provenance says s162/page 70. Fix: s172, printed_page 75"
+      ],
+      "unresolved": []
+    },
+    "expanded_torah_lift_first_en": {
+      "source_approved": false,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "s173 not supplied"
+      ]
+    },
+    "torah_haft_heading_he": {
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    "torah_haft_heading_en": {
+      "source_approved": false,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "s175 not supplied"
+      ]
+    }
+  },
+  "source_images_fully_read": [
+    "s160-band1",
+    "s160-band2",
+    "s160-band3",
+    "s162-band1",
+    "s162-band2",
+    "s162-band3",
+    "s164-band1",
+    "s164-band2",
+    "s164-band3",
+    "s166-band1",
+    "s166-band2",
+    "s166-band3",
+    "s168-band1",
+    "s168-band2",
+    "s168-band3",
+    "s172-band1",
+    "s172-band2",
+    "s172-band3",
+    "s174-band1",
+    "s174-band2",
+    "s174-band3",
+    "s182-band1",
+    "s182-band2",
+    "s182-band3"
+  ],
+  "limits": [
+    "Bands were read at displayed resolution (about 0.9x). The full native scans were not opened, so faint metegs, dageshim, holams and maqafs are listed as unresolved, not as approved or rejected",
+    "No English-page images (s161…s183) were supplied. English words were taken on the strength of english-preservation-proof.json (index only). The linked review.json and current.json proof files were not opened",
+    "I did not read the source or expanded spine index.xml files. Order and conditions were checked only against routing-context.json source_order (excerpted indices) and expanded_order",
+    "No schema, compiler, refdb, validate_urn_references, subverse.py, PDF or HTML checks were run",
+    "Adjacent Genesis 21, Numbers 29, 1 Samuel 1, Kaddish, torah_shema, torah_echad_eloheinu, torah_veattem and torah_vezot_hatorah were not reviewed",
+    "Ritual sequence in the expanded order looks consistent with the print: place second scroll, half kaddish, lift first, maftir, hagbah, Vezot haTorah, haftarah. Reading-intro before the aliyot; Barekhu call, response, oleh repeat, blessing. This is not a full spine verification"
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "802c9601-1c70-4bdd-85af-38fed2068569"
+  }
+}

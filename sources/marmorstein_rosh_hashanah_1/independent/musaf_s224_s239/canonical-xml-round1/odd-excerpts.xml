@@ -1,0 +1,235 @@
+<elementSpec xmlns="http://www.tei-c.org/ns/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" ident="transclude" ns="http://jewishliturgy.org/ns/jlptei/2" module="jlptei" mode="add">
+        <desc>An element that includes content from another part of the document.</desc>
+        <classes>
+          <memberOf key="model.phrase"/>
+          <memberOf key="model.global"/>
+        </classes>
+        <attList>
+          <attDef ident="target" usage="req" mode="add">
+            <datatype>
+              <dataRef key="teidata.pointer"/>
+            </datatype>
+            <desc>Specifies the path of the target to be included.</desc>
+          </attDef>
+          <attDef ident="targetEnd" usage="rec" mode="add">
+            <datatype>
+              <dataRef key="teidata.pointer"/>
+            </datatype>
+            <desc>Specifies where the transclusion should end (inclusive). If not provided, anything enclosed by target will be transcluded.</desc>
+          </attDef>
+          <attDef ident="type" usage="opt" mode="add">
+            <desc>Specifies the type of transclusion to perform. If no type is specified, the default is external.</desc>
+            <defaultVal>external</defaultVal>
+            <valList type="closed">
+              <valItem ident="external">
+                <desc>Include both XML hierarchy and text content.</desc>
+              </valItem>
+              <valItem ident="inline">
+                <desc>Include only text content, without XML hierarchy.</desc>
+              </valItem>
+            </valList>
+          </attDef>
+        </attList>
+        <constraintSpec ident="transclude-constraints" scheme="schematron">
+          <desc>
+            Schematron rule ensuring <att>targetEnd</att> names a single point, not a range:
+            a transclusion spanning a range is written as <att>target</att> alone (itself
+            possibly a range) or <att>target</att>/<att>targetEnd</att> naming two points,
+            never as a ranged <att>targetEnd</att>.
+          </desc>
+          <constraint>
+            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="j:transclude">
+              <sch:assert test="not(@targetEnd) or not(starts-with(@targetEnd, 'urn:x-opensiddur:'))                   or not(some $t in tokenize(@targetEnd, '/')[position() gt 1] satisfies contains($t, '-'))">
+                <att>targetEnd</att> must not itself be a ranged URN; split this into two
+                <gi>transclude</gi> elements instead.
+              </sch:assert>
+            </sch:rule>
+          </constraint>
+        </constraintSpec>
+      </elementSpec>
+      
+      
+<elementSpec xmlns="http://www.tei-c.org/ns/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" ident="option" module="jlptei" ns="http://jewishliturgy.org/ns/jlptei/2" mode="add">
+        <desc>One of several alternate wordings of the same text, exactly one of which is
+          read. Appears within a &lt;choice&gt; element alongside one or more other
+          &lt;option&gt; elements. Use <att>xml:lang</att> when the options differ in language,
+          and <att>corresp</att> to carry a URN by which a setting may select an option.
+          Contrast <gi>conditional</gi>, which governs text that is either said or omitted.</desc>
+        <classes>
+          <memberOf key="att.global"/>
+          <memberOf key="model.choicePart"/>
+        </classes>
+        <content>
+          <macroRef key="macro.paraContent"/>
+        </content>
+        <constraintSpec ident="option-constraints" scheme="schematron">
+          <desc>
+            Schematron rules to ensure <gi>option</gi> is used as a set of mutually exclusive
+            alternates, and is not mixed with the kri/ktiv vocabulary.
+          </desc>
+          <constraint>
+            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="j:option">
+              <sch:assert test="count(../j:option) &gt;= 2">
+                A <gi>choice</gi> containing <gi>option</gi> must contain at least two of them:
+                an alternate is a choice between readings.
+              </sch:assert>
+              <sch:assert test="not(../j:read) and not(../j:written)">
+                <gi>option</gi> must not appear beside <gi>read</gi> or <gi>written</gi>:
+                alternate wordings and kri/ktiv pairs are different things.
+              </sch:assert>
+            </sch:rule>
+          </constraint>
+        </constraintSpec>
+      </elementSpec>
+
+    
+<elementSpec xmlns="http://www.tei-c.org/ns/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" ident="declare" module="jlptei" ns="http://jewishliturgy.org/ns/jlptei/2" mode="add">
+      <desc>
+        Associates a set of conditional attribute declarations with a range of text. 
+        Used to specify that the following content is to be processed with the given declarations in effect, until the corresponding
+        <gi>endDeclare</gi> element, which is required. Contains one or more feature structures representing the declarations,
+        each with a <att>type</att> and at least one feature, and nothing else. A declaration gives values, never
+        alternatives: <gi>vAlt</gi> and <gi>vNot</gi> belong in conditions.
+      </desc>
+      <classes>
+        <memberOf key="att.global"/>
+        <memberOf key="model.global"/>
+      </classes>
+      <content>
+        <classRef key="model.featureVal.complex" minOccurs="1" maxOccurs="unbounded"/>
+      </content>
+    </elementSpec>
+
+    
+<elementSpec xmlns="http://www.tei-c.org/ns/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" ident="endDeclare" module="jlptei" ns="http://jewishliturgy.org/ns/jlptei/2" mode="add">
+      <desc>
+        Marks the end of the scope of a set of conditional attribute declarations previously established by a <gi>set</gi> element.
+        The <gi>endDeclare</gi> element must have a required <att>target</att> attribute, which points to the <att>xml:id</att> of the corresponding <gi>declare</gi> element in the same file.
+      </desc>
+      <classes>
+        <memberOf key="att.global"/>
+        <memberOf key="model.global"/>
+      </classes>
+      <attList>
+        <attDef ident="target" usage="req">
+          <desc>
+            Points to the xml:id of the <gi>declare</gi> element whose settings declarations are being ended. The value must be a URI reference (typically a fragment identifier, e.g., "#setting1") that refers to a <gi>declare</gi> element in the same file.
+          </desc>
+          <datatype>
+            <dataRef key="data.pointer"/>
+          </datatype>
+        </attDef>
+      </attList>
+      <content>
+        <empty/>
+      </content>
+      <constraintSpec ident="endDeclare-target-constraints" scheme="schematron">
+        <desc>
+          Schematron rules to ensure that the target attribute of <gi>undeclare</gi> points to a <gi>declare</gi> element in the same file.
+        </desc>
+        <constraint>
+          <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="j:declare">
+            <sch:assert test="@xml:id">
+              Every <gi>declare</gi> element must have an xml:id attribute.
+            </sch:assert>
+            <sch:assert test="following::j:endDeclare[substring(@target, 2) = current()/@xml:id]">
+              Every <gi>declare</gi> element must be closed by an <gi>endDeclare</gi> element
+              that follows it and names it in its target attribute. A declaration that is never
+              closed governs the rest of the file, and leaks into whatever transcludes it.
+            </sch:assert>
+            <sch:assert test="every $child in * satisfies $child/self::tei:fs">
+              A <gi>declare</gi> element holds only feature structures (<gi>tei:fs</gi>).
+            </sch:assert>
+            <sch:assert test="not(.//tei:vAlt or .//tei:vNot)">
+              A declaration gives values, not alternatives: <gi>tei:vAlt</gi> and
+              <gi>tei:vNot</gi> belong in conditions.
+            </sch:assert>
+          </sch:rule>
+          <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="j:endDeclare">
+            <sch:assert test="@target">
+              The <gi>endDeclare</gi> element must have a target attribute.
+            </sch:assert>
+            <sch:assert test="starts-with(@target, '#')">
+              The target attribute must be a fragment identifier (start with '#').
+            </sch:assert>
+            <sch:assert test="//j:declare[@xml:id = substring(current()/@target, 2)]">
+              The target attribute must point to a <gi>declare</gi> element in the same file.
+            </sch:assert>
+            <sch:assert test="preceding::j:declare[@xml:id = substring(current()/@target, 2)]">
+              The targeted <gi>declare</gi> element must precede the <gi>endDeclare</gi> element in document order.
+            </sch:assert>
+            <sch:let name="opener" value="preceding::j:declare[@xml:id = substring(current()/@target, 2)][1]"/>
+            <sch:assert test="empty(ancestor::*[. &gt;&gt; $opener])">
+              A declaration's scope must fully contain every element that begins inside it. An
+              element that begins after the <gi>declare</gi> and still holds the
+              <gi>endDeclare</gi> may be left out -- by a false condition or a transcluded range
+              -- and the marker that ends the declaration goes with it.
+            </sch:assert>
+            <sch:assert test="parent::* is $opener/parent::*">
+              A <gi>declare</gi> and its <gi>endDeclare</gi> must be siblings. A declaration
+              that begins inside an element and ends outside it is pushed only when that element
+              is processed; when it is left out, the <gi>endDeclare</gi> ends a declaration that
+              was never made.
+            </sch:assert>
+          </sch:rule>
+        </constraint>
+      </constraintSpec>
+    </elementSpec>
+
+    
+<elementSpec xmlns="http://www.tei-c.org/ns/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" ident="milestone" module="core" mode="change">
+        <constraintSpec ident="edition-verse-constraints" scheme="schematron">
+          <desc>
+            An edition-verse milestone records an edition's own numbering, not an identity.
+          </desc>
+          <constraint>
+            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:milestone[@unit = 'edition-verse']">
+              <sch:assert test="@n">
+                A milestone with unit="edition-verse" must carry the edition's verse number in @n.
+              </sch:assert>
+              <sch:assert test="not(@corresp)">
+                A milestone with unit="edition-verse" must not carry @corresp: it records an
+                edition's own numbering for display, and only the canonical unit="verse"
+                milestone identifies the text.
+              </sch:assert>
+            </sch:rule>
+          </constraint>
+        </constraintSpec>
+        <constraintSpec ident="subverse-constraints" scheme="schematron">
+          <desc>
+            The two sub-verse units divide a verse and hang their URN one component below it.
+          </desc>
+          <constraint>
+            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:milestone[@unit = 'half-verse']">
+              <sch:assert test="not(@corresp) or @n = 'a' or @n = 'b'">
+                A milestone with unit="half-verse" must carry @n of "a" or "b": a verse has a
+                first half and a second, divided at the etnachta.
+              </sch:assert>
+              <sch:assert test="@corresp or not(@n)">
+                A numbered half-verse must carry @corresp. A bare half-verse milestone
+                with neither @n nor @corresp is a terminator and opens no scope.
+              </sch:assert>
+              <sch:assert test="not(@corresp) or ends-with(@corresp, concat('/', @n))">
+                A half-verse's @corresp must be the verse's URN with "/a" or "/b" after it,
+                matching @n.
+              </sch:assert>
+            </sch:rule>
+            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:milestone[@unit = 'verse-part']">
+              <sch:assert test="@corresp or not(@n)">
+                A named verse-part must carry @corresp. A bare verse-part milestone
+                with neither @n nor @corresp is a terminator and opens no scope.
+              </sch:assert>
+              <sch:assert test="not(@corresp) or not(contains(tokenize(@corresp, '/')[last()], '-'))">
+                A verse part's name may not contain "-": a dash in the last component of a
+                URN is what marks a range. Transliterations use "_".
+              </sch:assert>
+              <sch:assert test="not(@corresp) or (tokenize(@corresp, '/')[last()] != 'a'                                                  and tokenize(@corresp, '/')[last()] != 'b')">
+                "a" and "b" are reserved for the accentual halves; a verse part must be named
+                for the word it begins on.
+              </sch:assert>
+            </sch:rule>
+          </constraint>
+        </constraintSpec>
+    </elementSpec>
+
+    

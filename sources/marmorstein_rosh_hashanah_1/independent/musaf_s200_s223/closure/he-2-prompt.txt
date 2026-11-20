@@ -1,0 +1,29 @@
+You are the second reader closing the source-fidelity and encoding review of a documentary JLPTEI transcription. Earlier independent blind image readings already exist; now audit the CURRENT transcription against enlarged source images. Scope ONLY physical PDF scan pages [206, 208, 210]. Primary/baseline and independent readings exist separately; this is adjudication, not a new blind reading. Actual model/effort must be recorded. Read ALL words and printed Hebrew marks on these pages, including small rubrics, verse passages, page continuations. Historical candidates contain informational entries and resolved disputes, not a list of open questions. Human adjudications override earlier model guesses, ONLY at the exact occurrences displayed. Do NOT repeat any human-resolved question. Do NOT normalize spelling or supply familiar pointing from memory. Do not insert cantillation absent from this prayerbook; explicitly determine whether the supposedly missing cantillation on Exodus19/20, Isaiah27, Zechariah9 and Numbers10 is actually printed. The Psalms quotations often have vowels only. Uncertain remaining marks require a specific word/letter; don't say generic 'fine marks unresolved'. Be honest if source cannot settle it. Proposed changes must quote exact CURRENT text and exact proposed replacement plus scan and unit stem. Compare consonants, pointing, meteg, maqaf, abbreviations, verse extent and printed instructions. English and review acceptance counters are out of scope. Preserve human-provided words even if unusual. Current primary model is GPT-6 (Codex); you're claude-opus-5-5.
+Read guidelines /home/efeins/.codex/worktrees/marmorstein-processor/master/schema/JLPTEI-3.md (relevant Hebrew/Scripture/milestone/rubric/alternatives sections), and current data /tmp/mahzor-s200/closure/he-2-input.json.
+Images (full page plus enlarged bands; use bands to read actual marks):
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s206.jpg
+/tmp/mahzor-s200/s206-band1.png
+/tmp/mahzor-s200/s206-band2.png
+/tmp/mahzor-s200/s206-band3.png
+/tmp/mahzor-s200/s206-band4.png
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s208.jpg
+/tmp/mahzor-s200/s208-band1.png
+/tmp/mahzor-s200/s208-band2.png
+/tmp/mahzor-s200/s208-band3.png
+/tmp/mahzor-s200/s208-band4.png
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s210.jpg
+/tmp/mahzor-s200/s210-band1.png
+/tmp/mahzor-s200/s210-band2.png
+/tmp/mahzor-s200/s210-band3.png
+/tmp/mahzor-s200/s210-band4.png
+Actual generated Hebrew XML (read relevant files to check encoding):
+/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/musaf_yismechu.xml
+/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/musaf_aleinu.xml
+/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/musaf_al_ken.xml
+/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/musaf_malkhuyot_close.xml
+/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/musaf_zikhronot_open.xml
+/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/musaf_festival_offering.xml
+/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/musaf_offering_formula.xml
+/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/musaf_malkhuyot_verses.xml
+/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/musaf_useir_lekhapper.xml
+Return JSON only {reviewer:{model,effort},scope:"current Hebrew source and encoding closure",pages:[{scan:"s200",all_printed_text_checked:true,source_complete:false,printed_cantillation:{passage:"present/absent/not applicable/uncertain"},notes:[]}],corrections:[{scan,stem,current,replacement,reason,image_evidence}],questions:[{scan,stem,word,letter,question,image_location}],guideline_findings:[],approved:false}. Set approved true only if all scoped content is faithfully encoded and no unresolved reading/guideline issues; a proposed correction means false pending application/recheck. Do not write any files. Use Read only.

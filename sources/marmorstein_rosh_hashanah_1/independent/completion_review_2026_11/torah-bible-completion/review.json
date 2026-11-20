@@ -1,0 +1,239 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Read in full: current.json, current.review.xml, human-authorities.json, english-preservation-proof.json, guideline-excerpts.md, plus the routing-context source_order and the torah_service part of expanded_order. Read both English review.json verdicts named in the proof (english-shard-07 and english-shard-08). Read all 24 enlarged bands (s168–s182, 3 bands each, about 2000 px wide) and compared every printed word of Gen 21:1–34, Num 29:1–6 and 1 Sam 1:1–2:10, plus the Hebrew notes and rubrics on these pages, against the encoded text and XML. Did not open the full-page scans separately or make further crops. Did not open the English pages (s169–s183). Ran no exporter or validator."
+  },
+  "witnesses": [
+    {
+      "stem": "torah_genesis_21",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": false,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [
+        {
+          "severity": "medium",
+          "location": "s170 last line of Gen 21:21, Hebrew note after the 21:21 verse terminator (current.json instructions text \"ד. פ (בשבת ו.)\"; XML <tei:note type=\"description\">ד. פ (בשבת ו.)</tei:note>)",
+          "problem": "The print, reading right to left after מִצְרָֽיִם׃, has the parashah-petuchah letter פ first, then the aliyah number ד., then (בשבת ו.). The encoded note puts ד. before פ, so it does not match the printed order. The פ is the masoretic open-section mark; the aliyah labels are a separate thing.",
+          "fix": "Use the printed order. The best fix is two notes after the 21:21 verse terminator: <tei:note type=\"description\" xml:lang=\"he\">פ</tei:note>, then <tei:note type=\"description\" xml:lang=\"he\">ד. (בשבת ו.)</tei:note>. This matches how the chapter-final פ is already encoded on its own. At minimum, change the text to \"פ ד. (בשבת ו.)\"."
+        }
+      ],
+      "unresolved": [
+        "s170 Gen 21:19 וַתַּ֖שְׁקְ: whether the sheva under the final qof is printed can't be confirmed at band resolution (the encoding has it).",
+        "s170 Gen 21:14 וַיִּֽקַּֽח־לֶ֩חֶם֩ and s170 Gen 21:21 וַתִּֽקַּֽח־ל֥וֹ: the encoding has two metegs (under yod and under qof). Neither stroke is clearly visible in the bands.",
+        "s168 Gen 21:3 אֶֽת־ (meteg under alef, at the end of the line) and הַנּֽוֹלַד־ (meteg under nun): can't be confirmed at band resolution."
+      ],
+      "verified": [
+        "s168–s172: all 34 verses read word by word. Consonants, vowels, maqqefs, the two paseqs (21:14 אַבְרָהָ֣ם ׀, 21:17 אֱלֹהִ֤ים ׀), the segolta pair in 21:17 הַנַּ֒עַר֒, the telisha pairs (21:2 וַתַּ֩הַר֩, 21:14 לֶ֩חֶם֩, 21:16 וַתֵּ֩לֶךְ֩), the zaqef gadol on 21:6 צְחֹ֕ק and the sof pasuq marks all match the print.",
+        "The divine names in 21:1 (וַֽיהוָ֛ה, יְהוָ֛ה) and 21:33 (יְהוָ֥ה) are printed with the full Tetragrammaton and are encoded as j:divineName.",
+        "Hebrew notes between verses match the print in wording and position: לוי. after 21:4; (בשבת ג.) after 21:8 (s168 last line); ג. (בשבת ד.) after 21:12; (בשבת ה.) after 21:17; ה. (בשבת ז.) after 21:27; the chapter-final פ after 21:34. Each comes after a bare verse terminator, so no verse scope includes a rubric.",
+        "Page breaks: s168 to s170 falls inside 21:9 after אֲשֶׁר־יָלְדָ֥ה; s170 to s172 inside 21:23 after וּלְנִינִ֖י. pb n=73/74/75 with facs n167/n169/n171 (IA leaf = scan − 1) are correct.",
+        "Gen 21 is complete, so the chapter milestone carries corresp genesis/21 in both languages, with verses 1–34 once each. The verse and chapter terminators come before the final פ note.",
+        "One printed paragraph is kept as one tei:p.",
+        "The adjacent Hebrew routing rubric s168 'וקוראים בס״ת ראשון וה׳ פקד את שרה בפרשת וירא.' matches the print."
+      ]
+    },
+    {
+      "stem": "torah_maftir_numbers_29",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [
+        {
+          "severity": "low",
+          "location": "HE and EN opening <tei:milestone unit=\"chapter\" n=\"29\"/>",
+          "problem": "Under scope rule 3, a chapter milestone without corresp is only a terminator, so @n has no effect. Leaving out the numbers/29 corresp is correct, because only 29:1–6 is read. Alignment is unaffected. The english-shard-07 reviewer raised the same point.",
+          "fix": "Not required. Optionally drop the bare opening milestone."
+        }
+      ],
+      "unresolved": [],
+      "verified": [
+        "s172 band 3 and s174 band 1: 29:1–6 read word by word. 29:1 וּבַחֹ֨דֶשׁ (qadma), מִֽקְרָא־קֹ֙דֶשׁ֙ (double pashta); 29:2 לַֽיהוָ֔ה, נִיחֹ֙חַ֙; 29:3 לַפָּ֔ר; 29:6 מִלְּבַד֩ (telisha qetana), לַיהוָֽה׃ all match.",
+        "Page break s172 to s174 falls between 29:3 and 29:4. pb n=76, facs n173.",
+        "Six canonical verse milestones in both languages, closed by verse and chapter terminators. The scope ends before the hagbah rubric on s174 ('מי שברך. ומגביהין וגוללין. כשמגביהין הס״ת מביטין נגד הכתב של ס״ת ואומרין:'), which matches the print and is routed separately.",
+        "The adjacent rubric s172 'מניחים ס״ת שני אצל הראשון ואומרים חצי קדיש על שניהם, ומגביהים וגוללים ס״ת שקראו בו, ופותחים ס״ת ב׳ וקוראים בו למפטיר בפ׳ פינחס.' matches the print."
+      ]
+    },
+    {
+      "stem": "haftarah_samuel_1",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [
+        "s176 1 Sam 1:13 נָּע֔וֹת: the encoding has a dagesh in the initial nun. In the band this nun looks plain, but I can't confirm either way. Do not keep the dagesh just because MT has it. Check this one letter at higher magnification and remove the dagesh if it isn't printed.",
+        "s176 1 Sam 1:6 וְכִֽעֲסַ֤תָּה: whether the meteg under the kaf is printed can't be confirmed at band resolution."
+      ],
+      "verified": [
+        "s174–s182: 1:1–1:28 and 2:1–2:10 read word by word. 1:1 וּשְׁמ֡וֹ (pazer), אֶ֠לְקָנָה (telisha gedolah); 1:3 וְשָׁ֞ם (gershayim), לְהִֽשְׁתַּחֲוֹ֥ת; 1:9 אָכְלָ֥הֿ with the printed rafe stroke over the he; 1:11 the paseq in תִרְאֶ֣ה ׀; 1:20 מֵיְהוָ֖ה; 1:24/25 שִׁלֹ֑ו spanning the page break; 2:5 עַד עֲקָרָה֙ printed and encoded without a maqqef (correctly not normalized to MT) — all match.",
+        "1:16 מֵרֹ֥ב (merkha under resh) and שִׂיחִ֛י (tevir under chet) are encoded as the prior human decision specifies. Not reopened.",
+        "The long diagonal strokes through alef (for example 1:26 אֲדֹנִ֔י, 2:9 אִֽישׁ, 1:23 אֹתֽוֹ, 1:11 אֶת־) are typographic ligatures. They are rightly encoded as ordinary letters, not as damage or punctuation.",
+        "Qere/ketiv: the asterisked ketiv words 2:3 וְל֥א, 2:9 חֲסִידָו֙ and 2:10 מְרִיבָ֗ו and עָלָו֙ are each encoded as tei:choice with j:read (the qere from the margin or footnote) and j:written (as printed), with accents on both. No milestone sits inside a choice.",
+        "Page breaks are at the printed points: 1:3 after בְנֵי־עֵלִ֗י (n77), 1:14 after הָסִ֥ירִי (n78), 1:24 after בֵית־יְהוָ֖ה (n79), 2:10 after יֵחַ֣תּוּ (n80). facs n173/175/177/179/181 are correct.",
+        "Chapter 1 carries corresp samuel_1/1 (complete). Chapter 2 opens with a bare milestone (partial). Every verse appears once and is terminated, and the verse and chapter terminators come before the s182 rubric 'המפטיר יברך ברכות האחרונות.', which matches the print and is routed outside the unit. The haftarah blessings are outside this batch and were not reviewed.",
+        "The Hebrew head 'הפטרה ליום א׳ של ראש השנה.' matches s174."
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "stem": "torah_genesis_21",
+      "language": "en",
+      "index": 0,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "I did not open s169 myself. The approval rests on the accepted english-shard-07 review, which records the printed '(Genesis: Chapter 21)' as emitted without parentheses, by project convention. reference genesis/21, target genesis/21/1."
+      ]
+    },
+    {
+      "stem": "haftarah_samuel_1",
+      "language": "he",
+      "index": 0,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "haftarah_samuel_1",
+      "language": "he",
+      "index": 1,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "haftarah_samuel_1",
+      "language": "he",
+      "index": 2,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "haftarah_samuel_1",
+      "language": "he",
+      "index": 3,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        {
+          "severity": "info",
+          "location": "s182 footnote '°) ביו ק׳. — *) ליו ק׳.'",
+          "problem": "The printed reference marks °) and *) are left out, and both qere notes are combined into one commentary note on 2/10. The wording is exact, and the marks are only reference signs, so this is acceptable.",
+          "fix": "None required. Optionally split it into two notes, one per qere."
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "stem": "haftarah_samuel_1",
+      "language": "en",
+      "index": 0,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [
+        "I did not open s175 myself. The approval rests on the accepted english-shard-08 review: the printed '(1 Samuel, ch. 1—2 v. 10)' is emitted without parentheses, with reference samuel_1/1/1-/2/10."
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "id": "genesis_21 note after 21:4",
+      "text": "לוי.",
+      "source_approved": true,
+      "encoding_guidelines_approved": true
+    },
+    {
+      "id": "genesis_21 note after 21:8",
+      "text": "(בשבת ג.)",
+      "source_approved": true,
+      "encoding_guidelines_approved": true
+    },
+    {
+      "id": "genesis_21 note after 21:12",
+      "text": "ג. (בשבת ד.)",
+      "source_approved": true,
+      "encoding_guidelines_approved": true
+    },
+    {
+      "id": "genesis_21 note after 21:17",
+      "text": "(בשבת ה.)",
+      "source_approved": true,
+      "encoding_guidelines_approved": true
+    },
+    {
+      "id": "genesis_21 note after 21:21",
+      "text": "ד. פ (בשבת ו.)",
+      "source_approved": false,
+      "encoding_guidelines_approved": false,
+      "issue": "The printed order is 'פ ד. (בשבת ו.)'. See the witness issue: reorder it, or split it into פ and ד. (בשבת ו.)."
+    },
+    {
+      "id": "genesis_21 note after 21:27",
+      "text": "ה. (בשבת ז.)",
+      "source_approved": true,
+      "encoding_guidelines_approved": true
+    },
+    {
+      "id": "genesis_21 final note",
+      "text": "פ",
+      "source_approved": true,
+      "encoding_guidelines_approved": true
+    },
+    {
+      "id": "torah_s162_reading_intro_168",
+      "source_approved": true,
+      "note": "Text checked against s168 only. Adjacent routing is out of scope."
+    },
+    {
+      "id": "torah_s162_maftir_intro_172",
+      "source_approved": true,
+      "note": "Text checked against s172 only."
+    },
+    {
+      "id": "torah_s162_hagbah_intro_174",
+      "source_approved": true,
+      "note": "Text checked against s174 only."
+    },
+    {
+      "id": "torah_haft_heading_he",
+      "source_approved": true,
+      "note": "Text checked against s174 only."
+    },
+    {
+      "id": "torah_s162_after_haft_intro_182",
+      "source_approved": true,
+      "note": "Text checked against s182 only."
+    }
+  ],
+  "source_images_fully_read": [
+    "s168-band1/2/3",
+    "s170-band1/2/3",
+    "s172-band1/2/3",
+    "s174-band1/2/3",
+    "s176-band1/2/3",
+    "s178-band1/2/3",
+    "s180-band1/2/3",
+    "s182-band1/2/3"
+  ],
+  "limits": [
+    "Every word of the three readings was read in the enlarged bands. At this resolution, metegs on narrow letters, dagesh in small letters and a sheva on a final letter can't always be told apart from noise. Only the specific sites listed under 'unresolved' remain open. No other mark was found to disagree with the print.",
+    "I did not open the native full-page scans in /home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/ or make tighter crops. The unresolved sites need such crops or a human answer.",
+    "English: I did not re-read the English pages. 'english_alignment_unchanged' rests on the accepted shard-07 and shard-08 reviews (both approve these three stems), plus my own check that each English verse milestone, page break and citation in current.review.xml has the same URN as its Hebrew counterpart.",
+    "The haftarah blessings, the Torah blessings and other adjacent material are out of scope and were not reviewed. The human authority record (blessing pointing) was noted but not applied here.",
+    "No schema, compiler, PDF or HTML validation was performed or is claimed."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "0276f4c3-dc03-4d35-b6b5-7736501b43ff"
+  }
+}

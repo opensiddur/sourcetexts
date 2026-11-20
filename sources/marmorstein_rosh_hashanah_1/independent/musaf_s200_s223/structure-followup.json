@@ -1,0 +1,89 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "approved": false,
+  "scope": "DRAFT structural guideline/alignment/order only",
+  "files_read": [
+    "/tmp/mahzor-s200/structure.json",
+    "/tmp/mahzor-s200/structure-resolutions.json",
+    "/tmp/mahzor-s200/human-adjudication.json",
+    "/tmp/mahzor-s200/actual-xml-revised.xml",
+    "/tmp/mahzor-s200/supporting-bible-validation.json",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/opensiddur/common/subverse.py",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/opensiddur/exporter/features.yaml",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s200.jpg"
+  ],
+  "findings": [
+    {
+      "id": "R1",
+      "severity": "medium",
+      "location": "he musaf_uppad_meaz.xml, stanza 5: <j:conditional xml:id=\"musaf_uppad_meaz_segment_5\"> … <tei:note role/reader>ח׳</tei:note> קֶרֶן בְּמָשְׁכָם <j:endConditional/>",
+      "problem": "The reader label ח׳ sits inside the weekday-only conditional (shabbat=false). On Shabbat the label drops out, so the Shabbat line קֶרֶן בְּזָכְרָם has no speaker and the reader's part appears to belong to the congregation. The label is printed before the alternation, so it belongs to both readings. The rest of the F3 pair is correct: both readings are exclusive and binary, the Shabbat one is marked with its instruction, and English 'blow'/'remember' mirrors them.",
+      "fix": "Move the ח׳ description note (with its abbr/expan) to just before <j:conditional xml:id=\"musaf_uppad_meaz_segment_5\">, so the conditional holds only קֶרֶן בְּמָשְׁכָם. Re-run the actual selector assertions for shabbat true, false and undecided."
+    },
+    {
+      "id": "R2",
+      "severity": "low",
+      "location": "he musaf_misod_chakhamim.xml, second j:option 'פני מלך מלכי המלכים מלא רחמים'",
+      "problem": "The page prints נ״א פני ממ״ה מלא רחמים, and the human confirmed ממ״ה = מלך מלכי המלכים. The selectable reading, however, writes the expansion out unpointed as plain recited text. The printed abbreviation survives only in the standOff note, so a build that selects this option shows text the page does not print, with nothing marking it as an expansion.",
+      "fix": "Inside the option, write פני <tei:choice><tei:abbr>ממ״ה</tei:abbr><tei:expan>מלך מלכי המלכים</tei:expan></tei:choice> מלא רחמים, or record the expansion as editorial. Do not change the words."
+    },
+    {
+      "id": "R3",
+      "severity": "low",
+      "location": "standOff notes in he musaf_misod_chakhamim.xml and musaf_shofarot_close.xml (target=…/text)",
+      "problem": "These variant notes point at the whole prayer-part, not at the word where the variant is printed. Uppad's note at least targets stanza 6. Each variant is also encoded a second time as a j:option, so a build with paratext turned on may show it twice.",
+      "fix": "Put an xml:id on each tei:choice holding the options and target the note there. If the project wants both encodings, check that the exporter suppresses one of them."
+    },
+    {
+      "id": "R4",
+      "severity": "low",
+      "location": "he/en musaf_half_kaddish.xml tei:head",
+      "problem": "On s200, 'תְּפִלַּת מוּסָף לְיוֹם רִאשׁוֹן שֶׁל רֹאשׁ הַשָּׁנָה' sits between two '90' page numbers, which makes it the running head, not a section title. As tei:head it duplicates the spine's head 'תפלת מוסף'. The English 'Musaph for the New Year' is probably the same case. (This was left unadjudicated in the first report.)",
+      "fix": "Encode it as tei:fw type=\"header\", or drop it if running heads are not kept, after checking s201 for the English. Leave the section title to the spine head."
+    },
+    {
+      "id": "R5",
+      "severity": "low",
+      "location": "he musaf_half_kaddish.xml: <tei:note role/reader>חזן</tei:note> before יִתְגַּדַּל",
+      "problem": "On s200 the small speaker label before יתגדל looks abbreviated (חז׳-like), but it is encoded as full חזן with no abbr. F11 handled the Uppad labels differently. I am not certifying this reading.",
+      "fix": "The human should confirm the printed form. If it is abbreviated, use tei:choice abbr/expan חזן as in F11."
+    },
+    {
+      "id": "R6",
+      "severity": "low",
+      "location": "he musaf_useir_lekhapper.xml idno/div corresp urn:…/musaf/offering_formula/useir_lekhapper vs milestone …/offering_formula/ushenei_seirim",
+      "problem": "The Frankfurt alternate is a separate document whose URN sits under another document's path, while its sibling ushenei_seirim is a milestone inside that document. The resolver could read offering_formula/useir_lekhapper as a missing part of offering_formula instead of a document in its own right.",
+      "fix": "Either make the URN a sibling (…/musaf/useir_lekhapper, and update the spine transclude), or confirm that validate_urn_references and the transclusion resolver look for an exact document match first."
+    },
+    {
+      "id": "R7",
+      "severity": "low",
+      "location": "en musaf_uppad_meaz.xml ('witnesses  [blow ][remember ] the'); he musaf_malkhuyot_close.xml/musaf_vattitten_lanu.xml segment joins",
+      "problem": "Trailing spaces inside the conditional content, plus whitespace around the conditionals, leave double spaces in the output, e.g. 'witnesses  blow  the'. The words are correct; this is cosmetic only.",
+      "fix": "Keep one space outside the conditional pair and none inside."
+    }
+  ],
+  "notes": [
+    "F1 resolved. Exodus 20:18 appears in both languages (seg/@source, verse n=18, local URNs …/exodus_20_18/exodus_20/18), split across pb 98 under one milestone. Every Exodus 20 reference in the draft is this one verse.",
+    "F2 resolved, and both points you asked about check out. The Zechariah 9:15 sourceReferencePart is bible:zechariah/9/15/adonai_tzevaot_yagen, inside verse-part milestones in both he and en. subverse.py VERSE_PARTS declares adonai_tzevaot_yagen ('יהוה צבאות יגן עליהם') and the remainder veakhelu, so the part is bounded. The petition כֵּן תָּגֵן עַל־עַמְּךָ יִשְׂרָאֵל בִּשְׁלוֹמֶךָ / 'So mayest Thou protect Thy people Israel with Thy peace' is plain text after the closing verse-part, verse and chapter milestones in both languages. English carries the canonical part URN even though translations get no declared parts; that is expected under the subverse.py design. supporting-bible-validation.json reports WLC and MAM validated with Scripture characters unchanged. I did not re-run it.",
+    "F3 resolved apart from R1. The weekday בְּמָשְׁכָם and Shabbat בְּזָכְרָם are as the human gave them (Q5). The cue אם שבת is now the instruction note of a marked conditional, not inline text, and English has no Hebrew cue.",
+    "F4 resolved. All three sigla are נ״א with abbr/expan in standOff notes, and none is recited. The Shofarot main reading כְּמִצְוָה and alternate כִּמְצֻוָּה, and Uppad's לִנְדָן / לַנֶּֽדֶן, match human Q6 and Q8. Only presentation details remain (R2, R3).",
+    "F5 resolved. In Hebrew, הַשַּׁבָּת וְ</seg><j:endConditional/><seg>יִשְׂרָאֵל has no gap; English is fine.",
+    "F6 resolved. The URNs are named by incipit (ushenei_seirim, useir_lekhapper). frankfurt_am_main passes the open opensiddur:rite name pattern in features.yaml. The Frankfurt rubric is that conditional's own instruction, and English has no Frankfurt counterpart. One new minor point is R6.",
+    "F7: accepted as the user's decision. Birnbaum's aleinu/aleinu and aleinu/al_ken are now cited as a consistent pair. Umippenei deliberately reuses siddur:regalim/musaf/text/umippenei for the RH wording; I am noting this, not raising it again.",
+    "F8 resolved. All three Ark actions are now in the Hebrew sources, and none is left in the spine. The spine order for the repetition comes out as: open Ark → בָּרוּךְ…בְּאַהֲבָה → מסוד חכמים → close Ark → Uppad Me'az → open Ark → זכרנו → מגן אברהם. That is liturgically coherent. I could not check the exact printed positions on s220/s222 because those images were not in this pass.",
+    "F9 withdrawn. The s200 image does print the English rubric 'The Reader says half Kaddish.' on the Hebrew page, so keeping it in the Hebrew source is correct. In a parallel build it will appear once from each source; that is faithful to the print.",
+    "F10 to F16 resolved or accepted as the user decided: sic/corr is in place, Uppad's reader label ח׳ uses abbr/expan with the final label printed in full as חזן, there are two paragraphs with six shared stanza milestones and pb 101 before the description, Sabbath offering and Yismechu are marked, the Avot sub-parts are consistent, the poem identity is now poem:uppad_meaz, and the chapter/verse context milestones are kept.",
+    "Silent Amidah order and service gating are unchanged from the first report and still correct. The repetition still stops after Avot, as stated.",
+    "Not certified: fine readings and pointing (e.g. וְקֹנֵה vs וְקוֹנֵה), the content of the Ark notes, and anything beyond the human's answers to questions 1, 4, 5, 6, 7 and 8. Sources stay DRAFT (100/355 accepted).",
+    "Not done this pass: I did not re-read JLPTEI-3.md, SIDDUR_URN_SCHEME.md or jlptei.odd.xml and relied on the first report for those rules. With Read-only access I could not run validate_features, validate_urn_references, urn_registry --check or the selector tests. Run them before acceptance."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "8f95486d-cd3d-4931-b2d9-11a0990b6b79"
+  }
+}

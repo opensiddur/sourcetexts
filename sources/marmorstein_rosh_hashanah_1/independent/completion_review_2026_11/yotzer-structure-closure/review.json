@@ -1,0 +1,115 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Low. I read every file named in the brief: current.json, current.review.xml, registry-context-proof.json, english-preservation-proof.json, guideline-excerpts.md, yotzer102-108-final/review.json, documentary-context.txt, and both completion_review_2026_11 before/after files. I compared before against after, and current.json against the XML, by reading them. I did not run diff, schema, compiler, refdb or URN-resolution tools. I opened no page images. I did not inspect UNIT_CONTAINED_BY in refdb.py or the English documentary index."
+  },
+  "witnesses": [
+    {
+      "stem": "yotzer_hameir",
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "issues": [],
+      "unresolved_structural_questions": [
+        "The English div opens with <tei:pb n=\"37\" facs=\"…/n102.jpg\"/> (page_start true), and the English hakol_yodukha div opens with the same pb. I do not have the English index, so I cannot tell whether this repeats an index pb the way the Hebrew one did. It is unchanged from the accepted input and the guideline excerpts have no rule on it, so I am not treating it as a violation.",
+        "In an edition where the Shabbat condition is undecided, the Hebrew pb 38 (n103) comes once in hameir and again in el_adon. This follows from the separate weekday and Shabbat paths sharing one printed page. No excerpted rule covers it. Weekday-only and Shabbat-only paths each get a single pb 38."
+      ],
+      "verified": [
+        "The Hebrew div has no opening pb, and the div keeps facs n101. documentary-context.txt line 4 already has <tei:pb n=\"37\" facs=\"…/n101.jpg\"/> before the Yiddish directive on line 5, which comes before the hameir transclusion on line 6. The weekday path therefore gets exactly one pb 37. This closes the earlier review's page-break finding.",
+        "The continuation <tei:pb n=\"38\" facs=\"…/n103.jpg\"/> is still between אֲדוֹן and עֻזֵּנוּ. In English, pb 38 (n104) is before 'Lord of our might'.",
+        "Before/after: the only change is the first Hebrew fragment's page_start, from true to false. All Hebrew and English text, corresp values, conditions and paragraphs are unchanged.",
+        "Ps 104:24 has a verse milestone with the canonical corresp, placed before the bounded seg@source and closed by a bare verse terminator, then a bare chapter terminator. This follows 'If that passage also needs a correspondence, place its milestone before the semantic span' and rule 3. The milestone and its URN are the same in both languages.",
+        "<tei:milestone unit=\"chapter\" n=\"104\"/> has no corresp, so under rule 3 it is a terminator and opens nothing. That is harmless and was not changed in this round.",
+        "The guard is holiday-aggregate shabbat=false with no note, which matches the unrubricated weekday text."
+      ]
+    },
+    {
+      "stem": "yotzer_hakol_yodukha",
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "issues": [],
+      "unresolved_structural_questions": [
+        "The English div opens with pb 37 (n102) and page_start true. The English hameir div also claims to start that page. Both cannot be at the top of English page 37 unless the English page prints them in parallel columns. This is the English counterpart of the Hebrew finding just fixed. It is unchanged from the accepted English input and needs a check against the English page image or index. The guideline excerpts have no rule on it."
+      ],
+      "verified": [
+        "The Hebrew div has no opening pb, so the text starts mid-page with no false page boundary. The div keeps facs n101. On the Shabbat path the only pb 37 is the index one (documentary-context.txt line 4). This closes the earlier review's finding.",
+        "Before/after: the only change is the Hebrew page_start, from true to false. All text, conditions and instructions are unchanged.",
+        "The condition rubric אַם שַׁבָּת. (de-Hebr) and 'On the Sabbath.' (en) are each a tei:note type=\"instruction\" that is the j:conditional's own first child. The guard is shabbat=true. This follows 'An instruction that governs a passage … is the rubric of the j:conditional around the passage'.",
+        "Neither language has a corresp milestone, so there is nothing to align and the alignment is unchanged."
+      ]
+    },
+    {
+      "stem": "el_adon",
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "issues": [],
+      "unresolved_structural_questions": [
+        "In English the nested conditional opens after 'merit and equity are', at the s103/s105 page boundary. In Hebrew it opens before זְכוּת, at the start of the couplet. So the brief's 'opens before the Zayin/Het couplet in both languages' is true for Hebrew only. English follows its own page-38 rubric position. Both openings are inside the stanza /2 scope, so alignment is unaffected. Whether the English print really has 'On Sabbath.' mid-sentence at the head of page 38 is a question for the English page image.",
+        "If the condition is undecided, the outer el_adon guard and the lael_asher_shavat guard have no note and no @type. Under 'Neither: … the passage is kept with no delimiters at all', stanza 1 to mid-stanza 2, and all of Lael Asher Shavat, would print without delimiters. The bracketed אַם שַׁבָּת. / 'On Sabbath.' scope would cover only mid-stanza 2 through stanza 6. Selection is correct under true and false. The earlier reviewer read the page-38 rubric as running on through Lael Asher Shavat. A j:conditional cannot cross from this module into the next, so if that reading is right, it would have to be stated at the index or in lael's own guard. This is a question about source extent and undecided-mode presentation. No excerpted rule is violated."
+      ],
+      "verified": [
+        "Hebrew XML: <j:conditional xml:id=\"el_adon_segment_2\"> with <tei:note type=\"instruction\" xml:lang=\"de-Hebr\">אַם שַׁבָּת.</tei:note> and shabbat=true. It opens after …עַל־הַמֶּרְכָּבָה: and before pb 38 and זְכוּת. <j:endConditional target=\"#el_adon_segment_2\"/> comes after …וְחַיּוֹת הַקֹּדֶשׁ:, the end of stanza 6, and before the bare <tei:milestone unit=\"stanza\"/>. Stanzas 3, 4, 5 and 6 are all inside it.",
+        "English XML: the same conditional id with 'On Sabbath.' (en). endConditional comes after '…Ophanim and holy Hayoth.' (stanza 6) and before the bare stanza terminator. Stanzas 3 to 6 are inside it.",
+        "condition_end_corresp is urn:x-opensiddur:text:poem:el_adon/6, the existing stanza 6 URN, in both languages. No new text URN was created. endConditional is placed at the end of stanza 6's content, not at its milestone.",
+        "Stanza milestones /1 to /6 are unchanged and identical in Hebrew and English. The ז–ח couplet and 'merit and equity are before His throne…' stay inside the /2 scope in both languages. The sequence is closed by one bare stanza terminator. Each stanza scope runs across the conditional boundaries and the pb on its own, as 'The reference boundaries are independent of the printed tei:p …' requires.",
+        "The outer whole-unit guard el_adon_condition (shabbat=true) is kept. The nested condition is the same as the outer one, so content can never drop out partway through a stanza.",
+        "The rubric wording is kept as printed: אַם שַׁבָּת. and On Sabbath. As the condition's own note, it prints only while the condition is undecided (Kinds of rubric: 'it is printed when the condition is undefined, and not at all when it is true or false').",
+        "Before/after: the only change is condition_end_corresp added to the conditional segment in both languages. The Hebrew and English text and the single paragraph are unchanged. english-preservation-proof.json reports the English fragments and paragraphs unchanged, which matches my reading.",
+        "pb 38 is n103 in Hebrew, before זְכוּת, and n104 in English, before 'before His throne'. Both are unchanged."
+      ]
+    },
+    {
+      "stem": "lael_asher_shavat",
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "issues": [],
+      "unresolved_structural_questions": [
+        "The English file now has <tei:milestone unit=\"half-verse\" n=\"a\" corresp=\"…/quoted_psalms_92_2/verse/2/a\"/>. JLPTEI-3.md, Sub-verse scope, says: 'A project need not carry them. A translation has no accents and can place no half-verses.' The table also gives half-verse placement as 'from the accents, mechanically'. I read that passage as explaining how references fall back to the containing division, not as an explicit prohibition. The English URN is an occurrence context, not the canonical half-verse, and its scope is the same as the shared prayer-part and verse context, so it adds no alignment boundary. I am not calling it a violation, but a maintainer should confirm that an occurrence-context half-verse milestone is acceptable in a translation.",
+        "The context registry gives …/quoted_psalms_92_2/verse/2 the parent …/quoted_psalms_92_2/chapter, but its URN path does not go through /chapter. That is cosmetic, and scope follows unit containment, not URN nesting. Not a rule violation.",
+        "The Ps 92:1 occurrence keeps its opening <tei:milestone unit=\"chapter\" n=\"92\"/>, which has no corresp and so is a terminator under rule 3. Unlike the 92:2 occurrence, it has no chapter context. This is unchanged and harmless.",
+        "See el_adon: when the condition is undecided, this unit's guard has no note and no @type, so it prints without delimiters."
+      ],
+      "verified": [
+        "The registry proof lists quoted_psalms_92_1 and quoted_psalms_92_2 with status \"context\", referencing the canonical psalms/92/1 and psalms/92/2. They are not canonical prayer or Bible identities. The canonical Bible URNs appear only as tei:seg/@source. Nothing breaks 'Do not duplicate a canonical URN merely because the text is printed again elsewhere'. The earlier 'invented identities' finding rested on reading these as new canonical identities, which the registry does not support.",
+        "The whole Ps 92:1 occurrence is unchanged in both languages: verse milestone, corresp …/quoted_psalms_92_1, seg@source psalms/92/1, then a verse terminator and a chapter terminator.",
+        "Ps 92:2a, in both languages and in this order: prayer-part …/quoted_psalms_92_2; chapter n=92 …/chapter; verse n=2 …/verse/2; half-verse n=a …/verse/2/a; tei:seg source=psalms/92/2/a type=quotation; then <tei:milestone unit=\"half-verse\"/>, <tei:milestone unit=\"verse\"/> and <tei:milestone unit=\"chapter\"/>; then whitespace; then <tei:milestone unit=\"prayer-part\"/>, all before לְפִיכָךְ / 'Therefore'. The half-verse closes before the verse, the verse before the chapter, and all of them before the unrelated text. The terminators are bare, with no corresp and no n, as the rule for half-verse terminators requires. This satisfies 'A bare verse or chapter milestone cannot substitute for a subverse terminator' and 'Explicitly terminate the sequence before unrelated prose'.",
+        "The earlier granularity finding (a verse-unit milestone on a half-verse quotation) is fixed. The occurrence target quoted_psalms_92_2 is now unit=prayer-part with the same extent, and the half-verse level carries the partial excerpt.",
+        "The 6 added contexts (3 here, 3 in barukh_kevod) all have status context, and each references an existing canonical URN.",
+        "The Hebrew and English corresp sets are the same: quoted_psalms_92_1, quoted_psalms_92_2, …/chapter, …/verse/2 and …/verse/2/a.",
+        "Before/after: only reference_unit (verse to prayer-part) and the nested source_reference fields changed. The text, source values and paragraphs are unchanged. The English sic/corr on 'Name.'/'Name,' is still there. english-preservation-proof.json matches my reading.",
+        "The whole-unit guard is shabbat=true."
+      ]
+    },
+    {
+      "stem": "yotzer_barukh_kevod",
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "issues": [],
+      "unresolved_structural_questions": [
+        "The English file has an occurrence-context half-verse milestone (…/verse/12/b). This raises the same question about 'A translation has no accents and can place no half-verses' as lael_asher_shavat. I am not calling it a violation, but it needs maintainer confirmation.",
+        "The context registry gives …/verse/12 the parent …/chapter, but the URN path does not go through /chapter. Cosmetic only."
+      ],
+      "verified": [
+        "In both languages, in this order: prayer-part …/quoted_ezekiel_3_12; chapter n=3 …/chapter; verse n=12 …/verse/12; half-verse n=b …/verse/12/b; tei:seg source=ezekiel/3/12/b type=quotation; then bare half-verse, verse and chapter terminators; then whitespace; then a bare prayer-part terminator. Each level closes in nesting order, and all close before the paragraph ends.",
+        "The earlier finding (unit=verse n=12 on a b-half) is fixed. The occurrence URN is unchanged, with unit prayer-part and the same extent. The canonical ezekiel/3/12/b stays only on the bounded seg@source.",
+        "The registry proof shows quoted_ezekiel_3_12 and its three deeper contexts with status context.",
+        "The Hebrew and English corresp sets are the same.",
+        "Before/after: only reference_unit, the nested source_reference fields and end_reference changed. The text and source are unchanged. english-preservation-proof.json matches my reading.",
+        "There is no condition, which is correct because the text is said on both days."
+      ]
+    }
+  ],
+  "limits": [
+    "This review covers only structure and general encoding. I approve no Hebrew source points. Every Hebrew reading question in yotzer102-108-final/review.json is still pending and is not certified here, including סֹבְבִים, טֹבִים, the colon after בְּכָל־הָעוֹלָם, וַיִּזְרַח אוֹר, נוֹתְנִים־לוֹ, שֶׁלַּיּוֹם, שַׁבַּת קֹדֶשׁ, the stress strokes and the dagesh questions.",
+    "I approve English alignment only as unchanged from the accepted input: the same URN sets on both sides, and fragments and paragraphs unchanged by my reading of the before/after files. This is not a new English source reading.",
+    "No excerpted guideline rule is violated, as far as I can see. The cited unresolved questions are judgments for the maintainer, not violations.",
+    "I did not check whether the canonical Tanakh project carries psalms/92/2/a. JLPTEI-3.md leaves undivided any Psalms verse with an ole. psalms/92/2/a was already on the seg@source before this round, but it has to exist for the reference to resolve without falling back to the whole verse.",
+    "I did not inspect UNIT_CONTAINED_BY. My scope analysis assumes chapter, verse and half-verse are in it. For prayer-part I assume the component-count fallback in rule 2, under which the deeper context milestones do not end prayer-part scopes.",
+    "documentary-context.txt shows only the Hebrew index. I did not see the English index, so I cannot settle the English pb 37 questions.",
+    "I ran no schema, compiler, refdb, validate_urn_references or importer tests. I did not reproduce the '85 importer tests and 25 subtests pass' figure in condition_boundaries.json."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "6cd756d8-2370-46e3-bb4f-c2da92406728"
+  }
+}

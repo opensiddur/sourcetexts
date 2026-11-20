@@ -1,0 +1,41 @@
+{
+  "guideline_adherence": {
+    "status": "pass",
+    "findings": [
+      "Heidenheim amidah_qedushah.xml:34-50: the reusable Kedushah's j:conditional and j:endConditional are siblings inside the canonical div. They follow the Birnbaum amidah_qedushah.xml:36-75 pattern. This meets the ODD rules on xml:id, a following endConditional and a fully contained scope.",
+      "The caption 'קדושה לש״ץ בחזרת התפלה.' is a tei:note type=description, placed first after the conditional (line 48). It says both what the passage is and when it is said, so under 'Kinds of rubric' it is a description, not the conditional's instruction. The ODD rule allowing only instruction notes inside j:conditional is met. The conditional has no @type, so when the condition is undefined this opening description sets the scope off.",
+      "Every prayer word, every prayer-part milestone and the bare closing prayer-part terminator (line 49) sit inside that scope. The div corresp urn:x-opensiddur:text:prayer:amidah/qedushah and all part URNs are unchanged. Only the hael_haqadosh seal is present; no unprinted hamelekh_haqadosh variant was added.",
+      "Expanded index.xml:91-311: the preparatory Minchah gate has no instruction note and no @type, which is correct for a running-order gate. Each feature the gate fixes (service-time minha, the shabbat, yom-tov and aseret-ymei-tshuva aggregates, hebrew-date month/day) is declared again locally (122-162), as 'Conditions on a running order' requires. The declaration also sets the other service-time features to false. declare/endDeclare (122/309) and conditional/endConditional (91/311) are each sibling pairs.",
+      "Repetition (221-290): the instruction 'במניין: / With a minyan:' is the conditional's own tei:note type=instruction. The local declare sets recitation silent=false, repetition=true and quorum minyan=true, and its endDeclare (287) is a sibling.",
+      "No instruction or description note in either file has a rend attribute (index 166, 223, 293, 358 and the Modim descriptions 270-280 checked). The bare targets urn:x-opensiddur:text:prayer:amidah/qedushah (253) and the other Amidah targets carry no @project and are unchanged.",
+      "Cosmetic only: the xml:ids still say section_weekday_minchah* although the section is now Erev Rosh ha-Shanah Minchah. This has no effect on behaviour."
+    ]
+  },
+  "conditional_behavior": {
+    "status": "pass",
+    "findings": [
+      "The reusable Kedushah requires both conditions: j:all of recitation/repetition=true and quorum/minyan=true. The evidence agrees: unit cases TT=1, FT=0, TF=0. By the all truth table, a false on either side settles the result as false.",
+      "The repetition gate still depends on the minyan: the outer condition is minyan=true, and the local declare then fixes repetition=true, silent=false and minyan=true. That decides the inner Kedushah guard even with no date or quorum given. Evidence: 'undated' inner_qedushah_guard_resolved=true, with the outer alternatives kept.",
+      "The silent Amidah declares repetition=false and transcludes qedushat_hashem, so Kedushah cannot appear twice. Evidence: erev-alone gives Minchah included, Kedushah 0; erev-with-minyan gives Kedushah 1.",
+      "The Minchah gate is Elul 29 in the Nisan-first numbering: month 6, day 29. JLPTEI-3.md:1077 defines month 1 as Nisan, and compute.py gets Hebrew dates from pyluach, which also starts at Nisan. The gate closes at line 311, before section_morning (313). Evidence: Elul 28, 3 Tishrei and 1 Tishrei all exclude Minchah and give Kedushah 0.",
+      "The gate tests shabbat=false, which is always true on 29 Elul (Rosh Hashanah never falls on Sunday), and yom-tov/aseret-ymei-tshuva=false, which are also always true on that date. These are redundant but harmless, and they correctly mark the ordinary-season context."
+    ]
+  },
+  "limits": [
+    "Read-only static review. I did not run Schematron/RelaxNG validation, the features.yaml registry check, validate_urn_references, or the compiler. Compiler behaviour comes only from the summary JSON, which records no command, settings file, location, commit or output excerpt.",
+    "I did not trace the derivation code in compute.py; only its header was read. The month numbering rests on the schema text and pyluach's convention.",
+    "The spec says a Hebrew date declared after a secular one re-derives the secular date as 'the evening before, at a time after nightfall' (JLPTEI-3.md:1104-1106). The local month/day declaration could therefore move a dated 15:00 context to after nightfall. That is harmless here, because service-time and the aggregates are declared explicitly in the same block and the erev-with-minyan case shows the expected output. But that rests on the evidence, not on tracing the code.",
+    "The Heidenheim Kedushah prints only the haEl seal, as agreed. If it is ever transcluded in a Ten Days context outside this gated Minchah, it would set haEl without a haMelekh alternative. None of the cases covers that.",
+    "When the Kedushah condition is false, the canonical div with its corresp remains as an empty shell. This matches the Birnbaum pattern and is not counted as a defect."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "daad776c-0f69-4b20-a9b8-d4a30640d238"
+  },
+  "file_sha256": {
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/amidah_qedushah.xml": "7394a2862439fff10e4dda3d7baa7f194989e304701c90351245b191530a0fac",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/machzor_expanded-opensiddur-he/index.xml": "0f510eb445e636a0ccbae18ef446bb248787c11280434a5fad754ab58b3eb2e4"
+  },
+  "hash_capture": "After review; these generated files were unchanged throughout the review."
+}

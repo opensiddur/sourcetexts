@@ -1,0 +1,42 @@
+{
+  "status": "Documentary scans44–47 and expanded German/non-German rite order accepted.",
+  "review_rounds": [
+    "independent/blessings_guideline_audit_round1.json",
+    "independent/blessings_guideline_audit_round2.json"
+  ],
+  "human_confirmations": "human_blessings_s44_s47_confirmation.json",
+  "resolutions": {
+    "F1": "English EluDevarim has two real source paragraphs; Hebrew remains one. All original words, missing commas and final study of Torah retained.",
+    "F2": "Optional service-level biblScope omitted consistently with existing structural service files. Each reusable unit has exact page extent and facsimile.",
+    "human_harayon": "User confirms patah under resh, sheva under alef: וְהָרַאְיוֹן, retained literally with no speculative sic/corr.",
+    "tight_marks": "Complete crops settle gimel dagesh, final-kaf dagesh and both initial bet dageshes. Initial ambiguities and actual raw differences retained.",
+    "source_boundaries": "Remove only the false initial p4 break in existing Laasoq. Real p4 opens at service heading; real p5 starts Vehaarev. Mid-page nav has no pb.",
+    "canonical_reuse": "Six new units use existing canonical identities; one structural service context added, no new prayer identities.",
+    "english_cues": "Omit only Hebrew linkage words in accepted English prayer text; retain Hebrew prayer name in the ritual direction.",
+    "expanded_order": "Explicit opensiddur:rite/german. True: AsherYatzar→ElohaiNeshamah, whole5unit block at later p8anchor. False: wholeblock between AsherYatzar andElohaiNeshamah. Unknown: both alternatives with bilingual conditional-own labels. No generic variant flag or automatic broad-Ashkenaz inference.",
+    "expanded_review_findings": "Both minor items addressed: Hebrew/English conditional labels and editorial coverage note in expanded bibl. Follow-up approves. Remaining findings are informational review limits, not unresolved source/order disputes. Existing source sic/corr is preserved; compiled selected-corr projection is expected."
+  },
+  "pending": [],
+  "acceptance": false,
+  "validation": {
+    "schema": "182 XML files pass RelaxNG/Schematron in guarded accepted build; all source review hashes current.",
+    "tests": "211 targeted tests and629subtests pass (116importer/scan plus95feature/condition tests).",
+    "features_names_registry": "Pass; one new structural context, no new canonical prayers.",
+    "documentary_alignment": "17new paired rows match exact HE/EN source words, including10Adon stanzas and3Numbers verses; shared headings together.",
+    "documentary_links": "Both mid-page links resolve to the correct-language ElohaiNeshamah; all HTML internal anchors resolve.",
+    "documentary_pdf": "44-page accepted documentary PDF; physical pages34–36 rendered, visually inspected and pixel-identical to reviewed draft. No clipping/overlap; no unresolved final PDF references. All HTML anchors and correct-language directions resolve.",
+    "post_audit_changes": "Documentary-stage proof before rite integration:22review targets differ only in acceptance metadata;163prior non-index XML files unchanged and2Laasoq files only remove false initial pb. The expanded index was unchanged at that stage; the subsequent expanded_post_review proof covers its rite-order update.",
+    "marked_html": "Current final production JavaScript:20documentary and28expanded Sabbath scopes pass false/true/undefined; expanded German-rite gates are separately checked in3DOM/CSS cases.",
+    "page_identity": "blessings_pdf_page_identity.json: scans44–47match their ordinal pages in the355-page original PDF.",
+    "expanded_runtime": "8real compiler cases:5definite morning choices, undefined rite, Maariv/Minchah negative leakage cases. All10Adonstanzas,3Numbersverses andcompleteEluDevarim checked. Shabbat/broad-rite cases establish independence, not new Shabbat content; RH1Minchah is a negative scope case.",
+    "expanded_html": "3production JavaScript DOM/CSS cases true/false/unknown; exactly1/1/2copies in correct order, allancestor gates, false-branch hiding, known-label hiding and4bilingual labels.",
+    "expanded_export": "46-page expanded PDF/HTML rebuilt,6rendered pages inspected; anchors/finalPDFreferences/credits pass. Documentary44-pagePDF unchanged. No new browser review claimed.",
+    "expanded_post_review": "Expandedindex matches final independent snapshot exactly;181other XML files unchanged."
+  },
+  "documentary_acceptance": true,
+  "expanded_acceptance": true,
+  "expanded_reviews": [
+    "independent/blessings_expanded_german_order_round1.json",
+    "independent/blessings_expanded_german_order_round2.json"
+  ]
+}

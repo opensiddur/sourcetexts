@@ -1,0 +1,217 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "scope": "Canonical XML and encoding",
+  "approved": false,
+  "files_read": [
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/AGENTS.md",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/schema/JLPTEI-3.md (all 2156 lines)",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/specs/SIDDUR_URN_SCHEME.md",
+    "/tmp/mahzor-s224/canonical-xml-round1/odd-excerpts.xml",
+    "/tmp/mahzor-s224/canonical-xml-round1/actual-xml.xml (all 1799 lines: 22 files, 8 index callers, 2 index Musaf scopes, 6 expanded-order callers and scopes)",
+    "/tmp/mahzor-s224/canonical-round1/data.json",
+    "/tmp/mahzor-s224/canonical-realization-checks.json",
+    "/tmp/mahzor-s224/canonical-structure-checks.json",
+    "/tmp/mahzor-realization-registry.log"
+  ],
+  "findings": [
+    {
+      "severity": "blocking",
+      "location": "prayerbook_for_the_new_year-heidenheim-1965-he/uvekhen_lekha_taaleh_qedushah.xml, the tei:choice inside the prayer:uvekhen_lekha_taaleh_qedushah/text part, plus the matching selectors in musaf_uvekhen_lekha_taaleh_qedushah.xml (he) and the index and expanded-order callers",
+      "problem": "On p.59 the parenthesised (הוּא) is a word that some say and others leave out, and p.107 leaves it out. JLPTEI-3 says outright that 'Text that some communities add and others omit is a condition, not an alternate'. It also says that when the source sets a passage off with parentheses, the conditional is @type=\"marked\". Here the whole sentence is instead duplicated as two j:option elements, and the first option has the printed parentheses inside the words to be read. Setting attah_hu_eloheinu=true therefore selects a 'wording' that includes editorial brackets, which nobody says. j:option means 'exactly one of which is read', which does not fit.",
+      "fix": "Keep one sentence. Wrap only הוּא in <j:conditional type=\"marked\"> with a single condition URN (for example …:condition:prayer:uvekhen_lekha_taaleh_qedushah/text/hu), and leave the parentheses to the marked rendering. The p.107 host and the expanded-order caller declare that condition false. The p.59 caller leaves it undefined, or declares true if the edition's reading is wanted. Change the commentary note's j:condition to test the same feature: true or undefined sets the note, false suppresses it. Then drop the attah_hu_eloheinu/attah_eloheinu option pair."
+    },
+    {
+      "severity": "blocking",
+      "location": "tei:sourceDesc/tei:bibl/tei:biblScope in: en gevurot_parts.xml (16–16), he+en rh_vetimlokh.xml (17–17), en veattah_qadosh_el_na.xml (51–51), he+en uvekhen_lekha_taaleh_qedushah.xml (59–59)",
+      "problem": "These canonical homes now contain words printed on other pages. The second j:option readings come from p.102/103 (gevurot English), p.103 (Ps 146:10 in he and en, and Ps 22:4 English) and p.107 (Uvekhen in he and en). Each file's source extent still names only its first page. SIDDUR_URN_SCHEME says biblScope carries one entry per printing. As written, the provenance of words that are physically in the file is wrong.",
+      "fix": "Add a tei:biblScope unit=\"pages\" for each printing whose words the file contains: en gevurot_parts 16, 102 and 103; rh_vetimlokh 17 and 103; en veattah_qadosh_el_na 51 and 103; uvekhen 59 and 107."
+    },
+    {
+      "severity": "blocking",
+      "location": "prayerbook_for_the_new_year-marmorstein-1965-en/veattah_qadosh_el_na.xml, `</tei:seg> <tei:milestone unit=\"verse\"/><tei:milestone unit=\"chapter\"/>, O God.`",
+      "problem": "The generator puts a space after the end-referenced Ps 22:4 segment, so the encoded text reads 'Israel , O God.' The source reads 'Israel, O God.' (data.json: fragment 1 ends 'Israel', fragment 2 is ', O God.'). Whitespace in mixed content is text. The Hebrew home has the same defect in a milder form: the inserted space plus the leading space of ' אֵל נָא:' makes a double space. The literal hashes only cover data.json, so they cannot catch this. The exact_words check may be normalising whitespace before punctuation.",
+      "fix": "Do not insert a separator after an end_reference segment when the next fragment already starts with whitespace or punctuation. Emit `</tei:seg><tei:milestone unit=\"verse\"/><tei:milestone unit=\"chapter\"/>, O God.` in English and a single space in Hebrew. Then check the rendered strings with whitespace kept as is."
+    },
+    {
+      "severity": "medium",
+      "location": "Every inline j:transclude whose target holds j:option: musaf_repetition_gevurot_open/close, musaf_repetition_yimlokh, musaf_repetition_veattah_qadosh, musaf_uvekhen_lekha_taaleh_qedushah, rh_gevurot and repetition_veattah_qadosh, in both languages",
+      "problem": "JLPTEI-3 §Inclusions says an inline transclusion keeps 'only one' reading of a tei:choice, 'the j:read (qere), or the first j:option'. Read literally, every later occurrence would get the p.16/17/51/59 wording, which is wrong. The supplied execution evidence shows the exporter applies opensiddur:variant before it flattens the text, so the encoding works only because of behaviour the guideline does not describe. A processor that follows the written guideline would produce the wrong words.",
+      "fix": "Change the JLPTEI-3 paragraph to say that a decided opensiddur:variant selects among j:option before inline flattening, and that the first option is the fallback only when nothing is decided. Alternatively, use external transclusion where the selection matters. Not blocking, given the execution evidence."
+    },
+    {
+      "severity": "minor",
+      "location": "he+en veattah_qadosh_el_na.xml (`<tei:milestone unit=\"chapter\" n=\"22\"/>`) and he+en rh_vetimlokh.xml (`n=\"146\"`)",
+      "problem": "A chapter milestone with @n but no @corresp is a terminator under URN-scope rule 3: it opens nothing. A numbered terminator suggests that a chapter scope opens there. JLPTEI-3 says bare terminators carry neither corresp nor n. Giving it a corresp would wrongly claim the whole chapter.",
+      "fix": "Drop both chapter milestones around the single-verse quotation (the verse URN already names the chapter), or leave them bare without @n."
+    },
+    {
+      "severity": "minor",
+      "location": "tei:pb ed=\"1965\" n=\"51\" in he+en veattah_qadosh_el_na.xml; tei:pb ed=\"1965\" n=\"59\" in he+en uvekhen_lekha_taaleh_qedushah.xml",
+      "problem": "Both texts are now printed twice (51/103 and 59/107). Under SIDDUR_URN_SCHEME, a pb in the file holding a text printed more than once takes a second @ed token naming the printing. The veattah home's pb also duplicates the pb 51 in repetition_veattah_qadosh.xml. It sits outside the /text scope, so it is only emitted if someone transcludes the root.",
+      "fix": "Remove the pb from veattah_qadosh_el_na (the context file already has it). For uvekhen, either qualify the ed token or note that the p.59 printing has no siddur: unit. A bare '1965' is read as a single printing."
+    },
+    {
+      "severity": "minor",
+      "location": "he musaf_repetition_gevurot_open.xml and en musaf_repetition_gevurot_close.xml, @targetEnd",
+      "problem": "@target names the project but @targetEnd does not. Both ends have to resolve to one file. An unqualified end relies on resolver priority to land in the same project.",
+      "fix": "Add the same @project suffix to @targetEnd."
+    },
+    {
+      "severity": "minor",
+      "location": "en repetition_veattah_qadosh.xml, en uvekhen_lekha_taaleh_qedushah.xml, en veattah_qadosh_el_na.xml: tei:title",
+      "problem": "These Hebrew titles inherit xml:lang=\"en\" from tei:TEI. Separately, the English gevurot_parts title 'Evening Prayer for the New Year — Divine might' names one context in a canonical home that the Musaf hosts now share.",
+      "fix": "Add xml:lang=\"he\" to the Hebrew titles, or give English titles. Retitle gevurot_parts to describe the text, not the evening context."
+    },
+    {
+      "severity": "minor",
+      "location": "he+en rh_gevurot.xml and repetition_veattah_qadosh.xml: the host j:declare, plus the identical index caller declare",
+      "problem": "The same wording selection is declared twice, once at the caller and once in the siddur host. It does no harm, but there are two sources of truth for the default.",
+      "fix": "Keep one declaration, preferably the caller's, to match the rule that host defaults live at callers."
+    },
+    {
+      "severity": "minor",
+      "location": "gevurot_parts.xml tei:idno type=\"urn\"",
+      "problem": "The idno names only prayer:amidah/gevurot/attah_gibbor, but the file realises four parts.",
+      "fix": "Use a file-level identifier, or leave the idno out, rather than naming one of the parts."
+    }
+  ],
+  "unit_verdicts": [
+    {
+      "stem": "rh_gevurot",
+      "lang": "he",
+      "approved": true
+    },
+    {
+      "stem": "rh_gevurot",
+      "lang": "en",
+      "approved": true
+    },
+    {
+      "stem": "rh_vetimlokh",
+      "lang": "he",
+      "approved": false
+    },
+    {
+      "stem": "rh_vetimlokh",
+      "lang": "en",
+      "approved": false
+    },
+    {
+      "stem": "repetition_veattah_qadosh",
+      "lang": "he",
+      "approved": true
+    },
+    {
+      "stem": "repetition_veattah_qadosh",
+      "lang": "en",
+      "approved": true
+    },
+    {
+      "stem": "uvekhen_lekha_taaleh_qedushah",
+      "lang": "he",
+      "approved": false
+    },
+    {
+      "stem": "uvekhen_lekha_taaleh_qedushah",
+      "lang": "en",
+      "approved": false
+    },
+    {
+      "stem": "musaf_repetition_gevurot_open",
+      "lang": "he",
+      "approved": true
+    },
+    {
+      "stem": "musaf_repetition_gevurot_open",
+      "lang": "en",
+      "approved": true
+    },
+    {
+      "stem": "musaf_repetition_gevurot_close",
+      "lang": "he",
+      "approved": true
+    },
+    {
+      "stem": "musaf_repetition_gevurot_close",
+      "lang": "en",
+      "approved": true
+    },
+    {
+      "stem": "musaf_repetition_yimlokh",
+      "lang": "he",
+      "approved": true
+    },
+    {
+      "stem": "musaf_repetition_yimlokh",
+      "lang": "en",
+      "approved": true
+    },
+    {
+      "stem": "musaf_repetition_veattah_qadosh",
+      "lang": "he",
+      "approved": true
+    },
+    {
+      "stem": "musaf_repetition_veattah_qadosh",
+      "lang": "en",
+      "approved": true
+    },
+    {
+      "stem": "musaf_uvekhen_lekha_taaleh_qedushah",
+      "lang": "he",
+      "approved": false
+    },
+    {
+      "stem": "musaf_uvekhen_lekha_taaleh_qedushah",
+      "lang": "en",
+      "approved": true
+    },
+    {
+      "stem": "gevurot_parts",
+      "lang": "he",
+      "approved": true
+    },
+    {
+      "stem": "gevurot_parts",
+      "lang": "en",
+      "approved": false
+    },
+    {
+      "stem": "veattah_qadosh_el_na",
+      "lang": "he",
+      "approved": true
+    },
+    {
+      "stem": "veattah_qadosh_el_na",
+      "lang": "en",
+      "approved": false
+    }
+  ],
+  "unread_inputs": [
+    "The 22 project files on disk. They were reviewed only through the supplied actual-xml.xml snapshot.",
+    "Full schema/jlptei.odd.xml. Only the supplied excerpts were read.",
+    "specs/urn_registry/*.jsonl and opensiddur/exporter/features.yaml, the registry lines for the new prayer root, /text and the condition URNs. Only the summary log was read.",
+    "Other callers of the reused canonical URNs that now carry j:option, such as siddur:rosh_hashanah/{shacharit,musaf}/gevurot, musaf/vetimlokh and any Kedushah unit containing Ps 146:10. I could not check that each one declares a wording; an undeclared caller leaves both options undecided.",
+    "The English or bilingual expanded-order spine. Only the Hebrew machzor_expanded callers and scopes were supplied.",
+    "Validation logs for the 676 schema files and the 38+32 check outputs, beyond the two JSON files. Treated as supplied evidence.",
+    "Encodings for portions 238–239. Out of scope and not approved."
+  ],
+  "notes": [
+    "Verified: the siddur: hosts hold only declare, pb, description notes and transclusions. Removing the transclusions leaves no liturgy.",
+    "Verified: the canonical homes (gevurot_parts, veattah_qadosh_el_na, rh_vetimlokh for Ps 146:10, uvekhen for /text) carry no j:declare. Defaults sit at the index callers, and each later host declares its own exact wording using only opensiddur:variant, with no invented day or service flags.",
+    "Verified: Ps 22:4 is the whole verse. Its verse milestone comes before the tei:seg and a bare verse terminator closes it before אֵל נָא / ', O God'. The ElNa invocation sits only inside prayer:veattah_qadosh_el_na/text.",
+    "Verified: paragraphing follows each source. On p.102 the Hebrew is one paragraph (one ranged inline transclusion) and the English is two (two transclusions). On p.103 each language is one paragraph.",
+    "Verified: the Hu commentary's j:condition tests attah_hu_eloheinu=true, so it is set at p.59 and suppressed at p.107. This would need re-pointing if the blocking (הוּא) finding is fixed.",
+    "Verified: the expanded order uses project-free canonical references with local declares. Speaker descriptions come first inside each occurrence's scope.",
+    "Out of scope, already in place before this change: the siddur: service component 'minchah_maariv' is not on SIDDUR_URN_SCHEME's closed service list (which uses 'arvit'). The reused part name mi_khamokha shares its incipit with מי כמוך בעל גבורות inside mekhalkel_chayyim.",
+    "Code, exports and portions 238–239 are not approved by this review."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "386bbe77-234e-4d82-9c91-14ab06d39e88"
+  }
+}

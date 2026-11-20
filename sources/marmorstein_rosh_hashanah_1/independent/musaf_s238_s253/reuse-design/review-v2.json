@@ -1,0 +1,288 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low (one static design pass over the five inputs; no code run, no tests run, no source images examined)"
+  },
+  "design_approved": false,
+  "recommended_design": [
+    {
+      "id": "D0-principle",
+      "summary": "Each of the six host units becomes a canonical_home. A canonical_home is a pure file of words plus identities, with no pb, speaker, rubric, condition or caller-level declare. The old host file stays as a documentary context. New occurrences use j:transclude on segment identities or segment ranges (target/targetEnd), or on an existing text_corresp. No whole-root (unit urn) targeting is reintroduced. _range_segments keeps matching only segment identities and text_corresp. The withdrawn root-reuse prototype is not used in any form.",
+      "rationale": "This works within the existing canonical_home, canonical, wording_variants and validate_generated machinery. It needs four narrow, opt-in relaxations (C1–C4) plus a corrections path (C5). Each is scoped to canonical_home hosts and fails closed."
+    },
+    {
+      "id": "D1-amidah_qedushah",
+      "host": "amidah_qedushah",
+      "shape": {
+        "canonical_home": {
+          "file": "amidah_qedushah_text",
+          "urn": "urn:x-opensiddur:text:prayer:amidah/qedushah",
+          "title": {
+            "he": "קדושה",
+            "en": "Kedushah"
+          },
+          "map_root": true,
+          "context_controls": [
+            "conditions",
+            "instructions",
+            "speaker"
+          ]
+        },
+        "segments": "Unchanged. All eight already carry a prayer-part corresp (neqaddesh … hael_haqadosh). The speaker on each segment stays in the reviewed data."
+      },
+      "behaviour": "The home keeps only the eight identified segments, with speaker removed and page_start forced false. The context (the old file) keeps the unit instructions, the j:conditional (repetition and minyan) and a per-segment speaker note, followed by j:transclude target=<part>. New occurrences supply their own speaker on each of their own canonical segments. They may transclude single parts or a range such as neqaddesh..ledor_vador. A speaker in the old host can never reach them, because the home has none.",
+      "requires": [
+        "C1"
+      ]
+    },
+    {
+      "id": "D2-uvekhen-single-segment (Pachdekha, Tzaddiqim)",
+      "hosts": [
+        "rh_uvekhen_ten_pachdekha",
+        "rh_uvekhen_tzaddiqim"
+      ],
+      "shape": {
+        "segment_change": "Add \"corresp\": <existing unit urn> to the single he segment and the single en segment. Fragment text, scan, printed_page and page_start stay byte-identical.",
+        "canonical_home": {
+          "file": "uvekhen_ten_pachdekha_text | uvekhen_tzaddiqim_text",
+          "urn": "<existing unit urn>",
+          "title": "<existing title>",
+          "map_root": false
+        }
+      },
+      "behaviour": "Use the segment-identity form, not text_corresp. Reason: wording overlays bind only through segment_identity, and the guard 'Whole formula identity cannot contain nested prayer-part milestones' would reject a text_corresp host that has a prayer-part corresp. map_root=false avoids two corresp elements for one URN. The context becomes one canonical segment per language. Pointing differences go in wording_variants with identity = the unit urn.",
+      "requires": [
+        "C5 (Pachdekha en only)",
+        "C6"
+      ]
+    },
+    {
+      "id": "D3-uvekhen_ten_kavod (cross-page host)",
+      "host": "rh_uvekhen_ten_kavod",
+      "shape": {
+        "segment_change": "Add \"corresp\": \"urn:x-opensiddur:text:prayer:amidah/uvekhen_ten_kavod\" to the single he segment and the single en segment. Both fragments stay unchanged, including page_start:true on s28 and s29.",
+        "canonical_home": {
+          "file": "uvekhen_ten_kavod_text",
+          "urn": "urn:x-opensiddur:text:prayer:amidah/uvekhen_ten_kavod",
+          "title": "<existing>",
+          "map_root": false,
+          "context": "literal"
+        }
+      },
+      "behaviour": "The home holds both fragments with page_start=false, so it contains no pb. The old documentary file stays literal: its own words, its own pb at s28 (he) and s29 (en), segment corresp removed, no wording alternatives. The new single-page occurrence transcludes the segment identity as a single plain fragment. canonical_text compares that fragment against the joined home fragments.",
+      "rejected_alternatives": [
+        "Splitting the identity at the page break: the break falls at a different point in each language, and in English it is mid-phrase ('joy to Thy | land'). Identities would then follow the print layout.",
+        "Emitting the context pb before or after a whole transclusion: the page boundary would be in the wrong place.",
+        "Relaxing canonical_whole to cross pages: this weakens a safeguard the brief says to keep."
+      ],
+      "requires": [
+        "C2",
+        "C3",
+        "C4 (only if a variant falls in the second fragment, or the segment stays multi-fragment)"
+      ]
+    },
+    {
+      "id": "D4-vetimlokh and qadosh_attah (invocation + verse + blessing)",
+      "hosts": [
+        "rh_vetimlokh",
+        "rh_qadosh_attah"
+      ],
+      "shape": {
+        "segment_change": "Add a prayer-part corresp to every segment that lacks one, in he and in parallel en. Keep source and source_reference as they are, so the home still emits seg@source and the chapter/verse milestones.",
+        "proposed_identities (naming needs approval)": {
+          "rh_vetimlokh": [
+            "…amidah/vetimlokh_attah_hashem/vetimlokh",
+            "…amidah/vetimlokh_attah_hashem/yimlokh"
+          ],
+          "rh_qadosh_attah": [
+            "…amidah/qadosh_attah_venora/qadosh_attah",
+            "…amidah/qadosh_attah_venora/vayigbah",
+            "existing …amidah/qedushat_hashem/hamelekh_haqadosh"
+          ]
+        },
+        "canonical_home": {
+          "file": "<stem>_text",
+          "urn": "<existing unit urn>",
+          "map_root": true
+        }
+      },
+      "behaviour": "Every segment now has a prayer-part identity. The verse segment keeps its bible milestones nested inside its own prayer-part, so a transclusion of the invocation cannot pull in the verse. The context becomes N inline transclusions in one paragraph. A new whole occurrence uses target=<first part> targetEnd=<last part>, one transclusion with no root targeting. text_corresp cannot work for QadoshAttah because hamelekh_haqadosh is a non-bible part. text_corresp would work for Vetimlokh as the code stands, but it leaves the invocation unaddressable for variants.",
+      "requires": [
+        "C6"
+      ]
+    },
+    {
+      "id": "D5-corrections (Pachdekha 'Thou has')",
+      "shape": {
+        "corrections.json entry (replaces rh_pachdekha_hast; keeps the same id)": {
+          "id": "rh_pachdekha_hast",
+          "file": "prayerbook_for_the_new_year-marmorstein-1965-en/uvekhen_ten_pachdekha_text.xml",
+          "identity": "urn:x-opensiddur:text:prayer:amidah/uvekhen_ten_pachdekha",
+          "scan": "s27",
+          "sic": "has",
+          "corr": "hast",
+          "before": "all that Thou ",
+          "after": " created.",
+          "attestations": [
+            {
+              "unit": "rh_uvekhen_ten_pachdekha",
+              "scan": "s27",
+              "former_id": "rh_pachdekha_hast"
+            },
+            {
+              "unit": "<each new transcluding occurrence>",
+              "scan": "<its scan>",
+              "former_id": "<e.g. musaf_has_hast if that unit becomes a caller>"
+            }
+          ],
+          "evidence": "<unchanged>",
+          "reason": "<unchanged>",
+          "authority": "<unchanged>"
+        }
+      },
+      "behaviour": "The sic/corr layer stays in the separate corrections.json and is applied only to the home file, inside the element whose corresp is the identity. The literal readings and unit_review_text are untouched. Source-printed output resolves sic, which equals every attested witness. Source-corrected output keeps the <choice>, so every transcluding caller shows 'hast'. Corrections against a transcluding context or caller file stay forbidden. Caller-file entries that fall inside a now-transcluded span are merged into attestations, keeping their former_id.",
+      "requires": [
+        "C5"
+      ]
+    },
+    {
+      "id": "D6-new-occurrence (caller) shape",
+      "shape": {
+        "stem": "<new unit>",
+        "wording_selection": [
+          {
+            "type": "opensiddur:variant",
+            "features": {
+              "urn:x-opensiddur:condition:wording/<name-printed-old>": false,
+              "urn:x-opensiddur:condition:wording/<name-printed-here>": true
+            }
+          }
+        ],
+        "languages": {
+          "he": [
+            {
+              "paragraph": 1,
+              "speaker": {
+                "abbr": "…",
+                "expan": "…"
+              },
+              "canonical": "…/qedushah/neqaddesh",
+              "canonical_end": "…/qedushah/uvedivrei",
+              "fragments": [
+                {
+                  "scan": "sNNN",
+                  "printed_page": "NNN",
+                  "text": "<literal caller reading>",
+                  "page_start": false
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "wording_variant_shape": {
+        "id": "<host>_<lang>_<slug>",
+        "host": "<host stem>",
+        "lang": "he",
+        "identity": "<segment identity>",
+        "fragment": "<index; required only if the segment has more than one fragment (C4)>",
+        "printed": "<exact old-host span>",
+        "readings": [
+          {
+            "text": "<old printed>",
+            "corresp": "urn:x-opensiddur:condition:wording/…"
+          },
+          {
+            "text": "<new printed>",
+            "corresp": "urn:x-opensiddur:condition:wording/…"
+          }
+        ],
+        "printings": [
+          {
+            "scan": "sNNN",
+            "printed_page": "NNN"
+          }
+        ]
+      },
+      "behaviour": "Variants are named and selected locally. The host context automatically gets selection() = printed-first. validate_generated inserts caller-local default declares around any transclusion that lacks a decision. A partial decision still raises an error. A caller occurrence remains one plain fragment, which is not relaxed."
+    }
+  ],
+  "required_changes": [
+    {
+      "id": "C1",
+      "file": "realizations.py:prepare_documents",
+      "change": "Add 'context_controls' to the allowed home_config keys. Allow unit-level 'conditions' and 'instructions', and segment-level 'speaker', on a canonical_home unit only if each is listed in context_controls. Reject the unit if a listed control is absent or a present control is unlisted. Keep rejecting marked, head, opening_page, publication_context, reuse, text_corresp, canonical_whole, citations, poetry, start and end. Remove 'speaker' from home segments. Keep these controls on context segments, where unit_document already emits the speaker note before the canonical j:transclude. Use a CONTEXT_ONLY_SEGMENT_KEYS = {'speaker'} constant in the line-237 guard instead of widening PLAIN_SEGMENT_KEYS."
+    },
+    {
+      "id": "C2",
+      "file": "realizations.py:prepare_documents",
+      "change": "Accept canonical_home.context == 'literal' only if every language of the host has a fragment after the first with page_start true. Otherwise reject: transclusion is required when it is possible. The literal context is a deepcopy with segment identity keys (corresp, source_reference_corresp) removed, wording_selection=[], map_root=false, and wording overlays not applied. The home is built as today, with page_start=false."
+    },
+    {
+      "id": "C3",
+      "file": "realizations.py:canonical_text and validate_generated",
+      "change": "In canonical_text, skip the 'Canonical range crosses a printed source page' check only when host.get('canonical_home') is set, because the transcluded rendering is the home. Keep the check unchanged for every other host. Add a compensating check in validate_generated: every generated canonical home document must contain zero tei:pb, with an explicit error message. canonical_whole (one paragraph, one page) and the caller rule of one plain fragment stay unchanged."
+    },
+    {
+      "id": "C4",
+      "file": "realizations.py:prepare_unit, canonical_text, validate_occurrences",
+      "change": "Conditional: needed only if a Kavod variant must bind to a two-fragment segment. Add an optional overlay key 'fragment' (int). It is required when the segment has more than one fragment and forbidden otherwise. The printed span must occur exactly once inside that fragment and must not cross the join. prepare_unit and canonical_text apply the overlay to that fragment only. Today canonical_text would raise on the other fragment ('span is missing')."
+    },
+    {
+      "id": "C5",
+      "file": "build.py corrections block + realizations.py new canonical_corrections()",
+      "change": "Replace the blanket 'Canonical realization corrections must be part of its reviewed source data' rejection with the following rules. (a) A correction whose file stem is guarded is accepted only if it has 'identity', its file is that host's canonical_home file, and the host's context is not a context file. Corrections against context or caller files stay rejected. (b) before+sic+after must occur exactly once in a single fragment of the home segment with that identity, and must not overlap any wording overlay span in that fragment. (c) The attestation units must exactly equal the host plus every unit whose canonical range contains the identity. The literal fragment of each one must contain before+sic+after exactly once, and its scan must be among that unit's fragment scans. (d) The full correction items, not a digest, go into the realization payload of the host and of every attesting caller. review_payloads takes the corrections as an argument, so removing corrections.json changes payloads and approvals go stale (fail closed). (e) After apply_corrections, check each corrected home: its sic-resolved text equals canonical_text with printed defaults, and its corr-resolved text equals the same text with exactly that span replaced. (f) A non-guarded caller correction whose context is not found among the caller's literal words must raise. Confirm whether apply_corrections already does this, and add the check if it does not."
+    },
+    {
+      "id": "C6",
+      "file": "realizations.py:validate_generated",
+      "change": "Extend the identities that must have exactly one corresp element per project. Add every segment identity of every canonical home, each home text_corresp, and the home urn when map_root is true, in addition to the identities currently used as targets. This catches a context file that re-emits the root or a part corresp (literal Kavod, or a map_root default on contexts)."
+    },
+    {
+      "id": "C7",
+      "file": "realizations.py:review_payloads",
+      "change": "Add a per-caller source_fidelity record to each payload: target, target_end, effective settings, the ids of corrections inside the range, and a sha256 of each side of the normalized-equality comparison. Reviewers then see exactly what was shown equal. This adds information only and changes no behaviour."
+    }
+  ],
+  "tests": [
+    "T1 qedushah home: the generated home has no note[@type='description'], no j:conditional, no instruction note and no pb. The context has, in order: instruction note, conditional, then a speaker note followed by a transclusion for each of the eight parts.",
+    "T2 C1 negative: context_controls lists 'conditions' but the unit has none → ValueError. The unit has 'head' or 'marked' → ValueError. Listing 'speaker' but leaving it out of context_controls → ValueError.",
+    "T3 New qedushah caller with its own speakers transcluding neqaddesh..ledor_vador: validate_occurrences passes. The old host's speaker expansions do not appear in the resolved caller, which contains only the caller's own speakers.",
+    "T4 Kavod: a single-page caller transcluding uvekhen_ten_kavod passes validate_occurrences. The home contains zero pb. The literal context contains exactly one pb, at s28 (he) and s29 (en), and no corresp equal to the identity.",
+    "T5 C3 negative: a non-home host with a page_start:true second fragment, used as a canonical range → still raises 'crosses a printed source page'. A home document with an injected pb → validate_generated raises.",
+    "T6 C2 negative: context:'literal' on a single-page host → ValueError.",
+    "T7 C4: an overlay on fragment 1 of Kavod applies only to fragment 1. A missing 'fragment' on a multi-fragment segment → ValueError. A span crossing the join → ValueError.",
+    "T8 Vetimlokh/QadoshAttah: a caller transcluding first..last passes. A caller transcluding only the invocation identity gets the invocation text and no verse text. The home keeps seg@source plus chapter/verse milestones. hamelekh_haqadosh has exactly one corresp element in each project.",
+    "T9 Caller-local defaults: a caller with no wording_selection gets an inserted j:declare carrying the printed-first defaults for each overlay inside its range, including targetEnd ranges. A caller that decides only some options of a group → 'Caller must decide every wording option'.",
+    "T10 Wording mismatch: a caller whose literal reading has the new pointing but which selects the old wording → 'Canonical occurrence differs from its image reading'.",
+    "T11 Corrections positive: with rh_pachdekha_hast moved to the home with identity and attestations, the build succeeds. The source-printed resolution of each attesting caller equals its literal fragment. The source-corrected resolution contains 'hast', and the home contains choice/sic='has' and corr='hast'.",
+    "T12 Corrections negative: an attestation is missing for a transcluding caller → raise. An attested witness that printed 'hast' → raise. A correction against a context file → raise. A correction overlapping a wording overlay span → raise. A correction whose context is not found in the home segment → raise.",
+    "T13 Review binding: editing the corr text of a home correction changes the payload of the host and of every attesting caller. Deleting corrections.json changes them too.",
+    "T14 Post-apply check: a deliberately wrong correction that alters words outside sic → the post-apply check raises.",
+    "T15 C6: a context that re-emits a home segment corresp or the root corresp → 'Canonical target needs one generated home'.",
+    "T16 Literal preservation: unit_review_text payloads (and literal fragment text, scan, printed_page and page_start) for all six hosts and all new callers are byte-identical before and after the change, compared against stored fixtures.",
+    "T17 Generated-home collision: a canonical_home.file equal to any existing stem → existing collision error still fires."
+  ],
+  "open_questions": [
+    "Does unit_review_text hash only the literal words, or the whole segment structure? If it covers segment keys, adding corresp breaks 'preserve raw unit_review_text'. The identities would then have to move into canonical_home config (e.g. canonical_home.identities[lang][segment_index]), which touches segment_identity everywhere.",
+    "Which units are the new occurrences? In particular, are musaf_uvekhen_ten_pachdekha (s203, musaf_has_hast) and shacharit_amidah_qedushat_hashem (s119, morning_has_created) becoming callers of the Pachdekha home? If so, their entries merge into attestations. If they stay literal, their entries stay as they are.",
+    "Approval is needed for the minted identity names for the Vetimlokh and QadoshAttah invocation and verse parts.",
+    "Which fragment do the new Kavod pointing differences fall in? If none fall in a multi-fragment segment, C4 can be dropped.",
+    "Is a literal (non-transcluding) old Kavod context acceptable as 'reuse'? The alternative, splitting the identity at the page break, is not recommended.",
+    "Will any caller transclude the same host twice with different wordings? If so, unit-level wording_selection is not enough and a segment-level selection is needed. That case is not designed here.",
+    "Does unit_document emit a pb when the scan changes while page_start is false? T4 and T5 will show this, but please confirm what the build intends.",
+    "Does apply_corrections already raise when a correction's context is missing (C5f)?"
+  ],
+  "notes": [
+    "This is a design proposal only. It does not accept any source text and does not approve any implementation. design_approved is false because the open questions affect the data shapes, and the build excerpt is partial: I did not see unit_document's fragment loop, apply_corrections or text_corresp emission.",
+    "The design responds to every high or medium finding in code-round1/review.json. There is no whole-root targeting, so no unit-level controls can leak (F1). Overlays still bind to one segment identity, so no cross-scope overlap is possible (F2, F6, F7). Corrections are bound by content, with post-apply verification, attestations, and fail-closed handling of a missing file (F3, F4). Host pbs are excluded structurally (no pb in homes) and checked on generated output (F5).",
+    "Safeguards I kept and deliberately did not weaken: canonical_whole one paragraph and one page; the caller rule of one plain fragment; plain-key checks on homes; _range_segments matching only segment identities and text_corresp; the multi-page check for non-home hosts. Relaxations C1–C4 are each opt-in, limited to canonical_home hosts, and paired with a compensating check.",
+    "Vetimlokh alone would work as the code stands with canonical_home.text_corresp. I recommend the parts form so it matches QadoshAttah and so invocation variants are possible. text_corresp is the more minimal fallback if new identities are refused.",
+    "Pre-existing spacing risk, unchanged: canonical_text joins fragments with join_source_fragments, but unit_document may insert a space differently. Kavod's join ('לְאַרְצֶךָ | וְשָׂשׂוֹן', 'Thy | land,') is space-safe, but T4 should compare the rendered home text, not only canonical_text."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "930d7f0e-16f4-4c8e-9a06-3271fd08a71a"
+  }
+}

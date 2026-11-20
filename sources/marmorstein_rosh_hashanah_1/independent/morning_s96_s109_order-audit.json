@@ -1,0 +1,84 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "approved_for_draft": false,
+  "issues": [
+    {
+      "severity": "high",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/khevodo_ahel.xml; prayerbook_for_the_new_year-marmorstein-1965-en/khevodo_ahel.xml",
+      "issue": "The milestone for poem:khevodo_ahel/6 sits inside the weekday conditional (the j:conditional comes before it in the same tei:p). On Shabbat the weekday branch is dropped and the milestone goes with it. The Shabbat text 'קְשׁוֹב זִכְרוֹן תְּקִיעָה מְזוֹכְרֵי … לְךָ הַיּוֹם מֶלֶךְ' / 'heed the memory…' then falls under stanza 5, and the standOff note aimed at /6 has nothing to attach to.",
+      "fix": "Put <tei:milestone unit=\"stanza\" corresp=\"…/khevodo_ahel/6\"/> before the weekday j:conditional, in both languages, so the boundary stays when either branch is chosen. Then check the resolved ranges with shabbat=true and shabbat=false."
+    },
+    {
+      "severity": "medium",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/yotzer_hameir.xml; prayerbook_for_the_new_year-marmorstein-1965-en/yotzer_hameir.xml",
+      "issue": "Lost instruction text. The routing rubric at the top of p.37 is missing from both source modules. Hebrew side (s102), in Yiddish: 'אַם שבת ווירד דאָס נאָכשטעהענדע הכל יודוך געבעטעט.' English side (s103): 'On the Sabbath הכל יודוך which is printed below, is said here.' The documentary source should keep this wording.",
+      "fix": "Add it as tei:note type=\"instruction\" at the start of the Hameir div in each documentary module (xml:lang=\"yi\" for Hebrew, \"en\" for English). Keep it out of the weekday condition's rubric, because it is a page-routing direction. The expanded index needs no page-turn text, since the conditionals already handle the routing."
+    },
+    {
+      "severity": "medium",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/khevodo_ahel.xml; prayerbook_for_the_new_year-marmorstein-1965-en/khevodo_ahel.xml",
+      "issue": "The weekday rubrics are invented. Hebrew 'ביום חול' and English 'On a weekday' are presented as source instructions, but neither page prints them. The Hebrew page prints only '(אַם שבת … וי״א …)' and the English page only a parenthesis. 'אם שבת' and 'On Shabbat' are also not exact: the English print has no rubric at all, and the Hebrew reads 'אַם שבת' inside the parenthesis. The English Shabbat conditional has type=\"marked\" but the Hebrew one does not, so the two languages behave differently.",
+      "fix": "Remove the supplied weekday rubric from the documentary modules. If the weekday branch needs a label, add an editorial rubric in the expanded index, marked as editorial. Keep only the printed 'אַם שבת' in Hebrew. In English, either show the parenthesis as printed or use an editorial rubric marked as such. Make @type the same in both languages."
+    },
+    {
+      "severity": "medium",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/khevodo_ahel.xml",
+      "issue": "The printed 'some say' alternate 'וי״א קשוב קול זכירה מזוכרי' is kept as a commentary note, as intended, not as an extra recitation. But it is an unconditional standOff note on /6, so it would also print in the weekday text. In the print it sits inside the Shabbat parenthesis and is an alternative only to the Shabbat wording.",
+      "fix": "Add <j:condition> with holiday-aggregate shabbat=true to the note. Keep it as a note and do not make it a recitable alternative. This depends on fixing the /6 milestone first."
+    },
+    {
+      "severity": "medium",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/khevodo_ahel.xml",
+      "issue": "Role sigla lost. On pp.39–40 (s106/s108), small reader sigla stand before בּוֹחֵן, חֹק, נָא and צַדְּקֵם, and 'קו״ח' stands before שְׁעֵה. They mark alternating reader and congregation lines. None are encoded, while the same sigla are encoded in Kaddish and Barkhu.",
+      "fix": "Encode each siglum as tei:note type=\"description\" with the matching urn:x-opensiddur:instruction:role/* corresp, at its printed position. Flag the reading of each siglum for human confirmation."
+    },
+    {
+      "severity": "medium",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/morning_kaddish.xml; prayerbook_for_the_new_year-marmorstein-1965-en/morning_kaddish.xml; machzor_expanded-opensiddur-he/index.xml (lines 1462–1464)",
+      "issue": "Instruction order changed. Both pages (s96/s97) print 'The Reader says half Kaddish' / 'The reader recites half Kaddish' before the preface וְעַתָּה יִגְדַּל־נָא / זְכֹר רַחֲמֶיךָ. The encoding puts it inside morning_kaddish, so it renders after the two verses. The languages also differ: Hebrew uses a type=\"instruction\" note before the milestone, while English uses a type=\"description\" role/reader note inside the yitgaddal prayer-part scope.",
+      "fix": "Move the instruction to the start of morning_numbers_14_17, as type=\"instruction\", before its milestone, in both languages. Alternatively make it the rubric of one minyan conditional in the expanded index that wraps the preface verses and the Kaddish. Take it out of the yitgaddal prayer-part scope in English."
+    },
+    {
+      "severity": "low",
+      "file": "machzor_expanded-opensiddur-he/index.xml (lines 1469–1473)",
+      "issue": "Whether shabbat is true or false, the result is correct: Hameir/El Barukh against Hakol Yodukha/El Adon/LaEl Asher Shavat, mutually exclusive through the module conditionals. But if the condition is undecided, the weekday branch prints with no label while the Shabbat branch has 'אם שַׁבָּת.', so a reader could recite both.",
+      "fix": "In the expanded index, wrap Hameir+El Barukh in a conditional with an editorial weekday rubric, and Hakol Yodukha+El Adon+LaEl Asher Shavat in one with an On Shabbat rubric. Alternatively add an editorial rubric to the weekday side only in the expanded index. Leave the documentary modules as printed."
+    },
+    {
+      "severity": "low",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/khevodo_ahel.xml (+en)",
+      "issue": "The stanza units do not follow the printed paragraphs. The print groups פ–ר into one paragraph ending 'מֶלֶךְ:', but the encoding splits it into stanzas 5, 6 and 7, apparently to fit the conditional. Stanzas 1–4 and 8 follow the printed paragraphs.",
+      "fix": "Either restore one stanza for פ–ר, with the variant inside it, or document why the poem is split by letter here. Use the same rule throughout the poem."
+    },
+    {
+      "severity": "low",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/yotzer_hakol_yodukha.xml; el_adon.xml",
+      "issue": "The rubric as printed reads 'אַם שַׁבָּת.' (Yiddish-style vowel pointing, Yiddish 'am'). It is encoded as 'אם שַׁבָּת.' with xml:lang=\"he\". The repeated 'אַם שַׁבָּת.' heading the lower register on p.38 (s104) is not kept in el_adon, so documentary routing wording is lost.",
+      "fix": "Leave the reading of the rubric's language and pointing for human review. Keep the p.38 repeat as an instruction note at the pb inside el_adon, in the documentary source only. No condition change is needed."
+    },
+    {
+      "severity": "low",
+      "file": "machzor_expanded-opensiddur-he/index.xml (line 1451)",
+      "issue": "This is before Yishtabbach, outside this review's range. The Az Yashir transclude target looks malformed: '…az_yashir/quoted_exodus_15_1-/shacharit/pesuqei_dezimrah/az_yashir/quoted_exodus_15_18'. It looks like a target/targetEnd pair that was merged into one string.",
+      "fix": "Split it into target=…/quoted_exodus_15_1 and targetEnd=…/quoted_exodus_15_18 with the full URN prefix, then check that it resolves."
+    }
+  ],
+  "observations": [
+    "The expanded order after Yishtabbach matches the scans: Num 14:17 → Ps 25:6 → half Kaddish → Barkhu → Yotzer opening → Or Olam → Melekh Azur → Hameir/El Barukh (weekday) | Hakol Yodukha/El Adon/LaEl Asher Shavat (Shabbat) → Titbarakh → Et Shem → Qadosh → Kevodo Ohel → VeHaOfanim → Barukh Kevod → LaEl Barukh → Or Chadash. It stops before Ahavah Rabbah, which appears on s108 but is not transcluded.",
+    "Hameir and El Barukh have shabbat=false, and Hakol Yodukha, El Adon and LaEl Asher Shavat have shabbat=true. The two branches are mutually exclusive. The common Titbarakh onward has no condition, which is correct. LaEl Asher Shavat carries its own Shabbat closing 'תתברך מושיענו', so with the El Barukh 'תתברך יי אלהינו' closing excluded on Shabbat, no closing is doubled.",
+    "The preface verses, Kaddish and Barkhu each carry the condition quorum minyan=true. That is internally consistent; whether the preface verses really depend on a minyan is a halakhic choice to confirm. The standing instruction at index line 1447 ('until after ברכו') is kept and still fits.",
+    "No Birnbaum material is imported into this block, and no English is supplied where the English edition has none. The English Barkhu column on s97 merges the Yotzer opening into the congregation side. That is a layout feature of the source, not missing English.",
+    "Psalm 24 stays in section_supplementary_psalms as a separate appendix after the morning service. It is not attached to the morning sequence.",
+    "No page-turn routing text remains in the expanded index. The routing wording is missing from the documentary sources (Hameir p.37, el_adon p.38), as noted in the issues.",
+    "Not certified: Hebrew and English word readings, vowel pointing, and source-pointing questions 1–5 remain pending human review. The Melekh Azur commentary note ('ע״ס א״ב מת״י…') could not be checked, because pp.35–36 (s98–s101) were not among the pages provided.",
+    "Not read: the English modules for barekhu, hakol_yodukha, el_adon, lael_asher_shavat, titbarakh and later stems, and English scan s105. The English findings above come from hameir, khevodo_ahel and morning_kaddish only."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "56fe6f88-8d94-481c-8977-37e36bf83eb7"
+  }
+}
