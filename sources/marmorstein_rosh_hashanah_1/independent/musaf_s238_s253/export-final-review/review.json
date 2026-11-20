@@ -1,0 +1,105 @@
+{
+  "exporter_fix_approved": true,
+  "export_qa_approved": false,
+  "findings": [
+    {
+      "severity": "medium",
+      "file": "/tmp/mahzor-s238/integration-v1/qa/expanded-kept-review.pdf (printed pp. 9-10, PDF pages 11-12); /home/efeins/.codex/worktrees/conditional-rubric-keep/master/opensiddur/exporter/tex/reledmac.xslt (OSInstructionBlock path for j:conditional notes)",
+      "issue": "In the expanded edition, the Tisgav and Veyeetayu statements are each one tei:note that holds both the Judeo-German text and the English. They print as a single full-width RTL paragraph with the two languages run together. On p. 9 the English starts mid-line at the far left ('In Frankfurt a. M. and') and continues on the next line ('many congregations תשגב is not said.'). On p. 10 the same happens with 'In Fuerth and other communities the' / 'reader now sings: ויאתיו but in Frankfurt…'. The documentary PDF (pp. 9-10) sets the same statements cleanly, one language per column. No words are lost, but the reading order is poor and inconsistent with the documentary edition. The new patch did not cause this: these notes take the OSInstructionBlock branch with no keep tag. The pre-fix screenshots final-expanded-11/12 show the same layout.",
+      "required_change": "For a block rubric with top-level runs in more than one direction, start each language run on its own line, or set the two parts in the paired columns as the documentary does. Re-render expanded pp. 9-10 and add a test asserting a line break between the runs."
+    },
+    {
+      "severity": "medium",
+      "file": "/tmp/mahzor-s238/integration-v1/qa/final-expanded-05.png … final-expanded-13.png",
+      "issue": "These screenshots come from the pre-fix expanded-review.pdf, not from expanded-kept-review.pdf. The pagination differs from the kept PDF: kept p. 3 starts 'שקולים עד עשור', while final-expanded-05 (p. 3) starts 'אחד ואחד'. final-expanded-08 (p. 6) shows the exact defect the patch fixes: a stranded 'קהל וחזן' at the foot of the page, with Yimlokh on the next page. So the brief's statement that only expanded-03/04 were superseded is wrong. I checked kept-PDF pp. 6-7 directly: the cue now opens p. 7 above יִמְלֹךְ, so the PDF itself is correct.",
+      "required_change": "Regenerate the expanded screenshot set (all pages) from expanded-kept-review.pdf and retire final-expanded-05..13 from the acceptance evidence."
+    },
+    {
+      "severity": "medium",
+      "file": "/tmp/mahzor-s238/integration-v1/qa/full-service-report.json; browser-export-evidence.json",
+      "issue": "Part of integration-review3's remaining export checks is still unproven. (1) No 36-state matrix appears. full-service-report has only 4 morning states, all shabbat × frankfurt_am_main. The browser and compiler reports cover 8 core states per view plus 8 special states. (2) The per-rite rules (metz omits Tisgav and Veyeetayu; fuerth alone includes Veyeetayu with its instruction; frankfurt omits the first Adir, Tisgav, Veyeetayu, Shacharit Attah Hu and Berikh; the repeated Adir always stays) appear only as opaque booleans: regional_omission_correct and regional_conditions_and22refrains_correct. (3) No artifact shows the corrected-state page breaks for pp. 109-116: the s252 break after the optional וְיִזְבְּחוּ clause with the clause included and omitted, and the EN s253 break in stanza 2. Every render I inspected is an 'included' state.",
+      "required_change": "Either run the 36-state matrix, or record why the 24-state set is equivalent. Emit an itemized include/omit table per state for each named passage. Add rendered evidence, or a word-position check, for the s252 and s253 breaks in both clause states."
+    },
+    {
+      "severity": "low",
+      "file": "/tmp/mahzor-s238/integration-v1/qa/final-compiled-checks.json",
+      "issue": "All 16 documentary rows report expanded_actor_scopes_correct: false. It is presumably not applicable to documentary output, but as written it reads as a failure. There is also no equivalent check of documentary actor cues.",
+      "required_change": "Report null or 'n/a' for documentary rows, and add a documentary actor-cue check (one cue per row, cues only where the source prints them)."
+    },
+    {
+      "severity": "low",
+      "file": "documentary-review.pdf p. 7 / expanded-kept-review.pdf p. 7 (Ha-ohez first line)",
+      "issue": "In both views the inline actor cue follows the colon with no space: 'מִשְׁפָּט:קהל'. The documentary prints 'מִשְׁפָּט:קהל.' and the expanded prints 'מִשְׁפָּט:קהל'. Every other inline cue has a preceding space.",
+      "required_change": "Make sure a word space comes before the inline קהל cue, either in the source whitespace (this is not a reading change) or in the exporter."
+    },
+    {
+      "severity": "low",
+      "file": "/tmp/mahzor-s238/integration-v1/qa/numbers-detail9.png (special shown_numbers)",
+      "issue": "In shown-numbers mode, the citation mark at the start of the quotation splits the prefixed word: 'בְּ¹⁴ אֶהְיֶה' instead of 'בְּאֶהְיֶה'. Stray spaces also appear before the closers: 'אֶהְיֶה :' and 'I am that I am ’.'. Normal mode is correct.",
+      "required_change": "Remove the boundary whitespace around quotation start and end markers when numbers are shown. Add a check that the shown-numbers view does not split words or add space before punctuation."
+    },
+    {
+      "severity": "low",
+      "file": "kept-page-03.png, kept-page-04.png, expanded-kept-review.pdf p. 5; final-documentary-03.png, final-documentary-11.png",
+      "issue": "Standalone role cues between parallel rows ('קהל', 'קהל וחזן', 'חזן') are set full width and right-aligned, so they sit above the English column rather than the Hebrew they label. After 'קהל וחזן' there is a gap of roughly two lines. The documentary Tisgav 'חזן' (inside its conditional) instead sits over the Hebrew column. Placement is inconsistent, but no cue is wrong, duplicated or stranded in the kept PDF.",
+      "required_change": "Optionally set standalone Hebrew actor cues over the Hebrew column, or in both columns, and remove the extra space after them. This does not block the patch."
+    },
+    {
+      "severity": "low",
+      "file": "/home/efeins/.codex/worktrees/conditional-rubric-keep/master/opensiddur/tests/exporter/test_reledmac_xslt.py:1257; test_keep_together_geometry.py:382-419",
+      "issue": "The changed regex makes '{\\OSKeepAttr=3\\relax ' optional, even though that fixture is a standalone division that must get the tag, so the test no longer pins the new behaviour. In the test_reledmac_xslt.py sections I read (lines 1-60, 600-1300, 2860-2980, 5180-5312) I found no negative assertion that the tag stays off a run-in cue inside a division with words, a cue inside p/l, or a cue in a head. The new TestStandaloneRoleBeforeColumns class is defined after `if __name__ == \"__main__\": unittest.main()`, so it never runs when the file is executed as a script (pytest is unaffected). The unprotected control disables all keep logic, so it does not show that the pre-patch stylesheet fails.",
+      "required_change": "Assert the tag positively at line 1257. Add negative cases: the existing 'Stand.' + 'Blessed art thou.' division, a cue inside p, and a cue in a head must have no OSKeepAttr. Move the new class above the __main__ guard. Optionally run the geometry case once against the pre-patch stylesheet to show it catches the regression."
+    },
+    {
+      "severity": "low",
+      "file": "documentary-review.pdf p. 10 / expanded-kept-review.pdf p. 11",
+      "issue": "There is a space before the closing bracket of the optional clause: '[To Thee will they offer their sacrifices ]' and 'זִבְחֵיהֶם. ]'.",
+      "required_change": "Trim the whitespace before the bracket that closes the optional-clause span, as a whitespace or exporter fix only."
+    },
+    {
+      "severity": "low",
+      "file": "/tmp/mahzor-s238/integration-v1/qa/browser-export-evidence.json",
+      "issue": "Nothing in the report records that the browser cases ran offline (network blocked), although the brief says they did. No PDF overfull-box or overflow report exists either: 'no overflow' covers only HTML horizontal overflow.",
+      "required_change": "Record the network-blocking mode in the evidence, and add a lualatex overfull-hbox summary for the two review PDFs."
+    }
+  ],
+  "inspected_files": [
+    "/tmp/mahzor-s238/standalone-rubric-fix.patch",
+    "/tmp/mahzor-s238/integration-review3/review.json",
+    "/tmp/mahzor-s238/standalone-rubric-tests.log",
+    "/tmp/mahzor-s238/standalone-rubric-geometry.log",
+    "/home/efeins/.codex/worktrees/conditional-rubric-keep/master/opensiddur/exporter/tex/reledmac.xslt (lines 3850-3959)",
+    "/home/efeins/.codex/worktrees/conditional-rubric-keep/master/opensiddur/tests/exporter/test_keep_together_geometry.py (full)",
+    "/home/efeins/.codex/worktrees/conditional-rubric-keep/master/opensiddur/tests/exporter/test_reledmac_xslt.py (lines 1-60, 600-1300, 2860-2980, 5180-5312)",
+    "/tmp/mahzor-s238/integration-v1/qa/standalone-cue-word-preservation.json",
+    "/tmp/mahzor-s238/integration-v1/qa/browser-export-evidence.json",
+    "/tmp/mahzor-s238/integration-v1/qa/compiler-report.json",
+    "/tmp/mahzor-s238/integration-v1/qa/special-compiler-report.json",
+    "/tmp/mahzor-s238/integration-v1/qa/final-compiled-checks.json",
+    "/tmp/mahzor-s238/integration-v1/qa/resolved-scope-checks.json",
+    "/tmp/mahzor-s238/integration-v1/qa/full-service-report.json",
+    "/tmp/mahzor-s238/integration-v1/qa/kept-page-03.png",
+    "/tmp/mahzor-s238/integration-v1/qa/kept-page-04.png",
+    "/tmp/mahzor-s238/integration-v1/qa/final-documentary-03.png through final-documentary-13.png (all 11)",
+    "/tmp/mahzor-s238/integration-v1/qa/final-expanded-05.png through final-expanded-13.png (03/04 not opened; superseded per brief)",
+    "/tmp/mahzor-s238/integration-v1/qa/numbers-detail9.png",
+    "/tmp/mahzor-s238/integration-v1/qa/printed-detail10.png",
+    "/tmp/mahzor-s238/integration-v1/qa/expanded-kept-review.pdf (PDF pages 5-16; pages 3-4 via kept-page-03/04.png)",
+    "/tmp/mahzor-s238/integration-v1/qa/documentary-review.pdf (PDF pages 11-14; earlier pages via final-documentary screenshots, which match on pp. 9-11)"
+  ],
+  "remaining_limitations": [
+    "Exporter fix assessment: the patch is narrow and correct as written. It applies only when the note is not inside p, l or head, its nearest div has no non-note, non-fs text, and the command would be \\instructionnote. Inline instructions, OSInstructionLine/Block and apparatus anchors are unchanged. Word boxes are 9728 before and after with no differences. 364 unit tests and 150 subtests passed. The geometry test passed 3 tests with 60 subtests, and its unprotected control stranded cues. In the kept PDF I confirmed that 'קהל וחזן' moved from the foot of p. 6 to the top of p. 7, and that cues are kept with the following row on pp. 1-7.",
+    "I did not open the preamble definition of \\OSKeepAttr or the Lua keep code to confirm that value 3 means 'rubric'. Its effect is shown only by the geometry test and the kept PDF.",
+    "I could not grep test_reledmac_xslt.py (5312 lines); I read only the ranges listed. Other changed assertions outside those ranges, if any, were not reviewed.",
+    "Rendered states inspected: documentary and expanded, all-included (unknown) state, plus the shown_numbers and printed_errors detail crops. No omitted-condition, metz-only, fuerth-only or abbreviated render was visually inspected. Kesod shows expanded 'חזן' before ככתוב; the ח׳ form appears only in the abbreviated special view, which I did not view.",
+    "In the inspected pages, Kesod has exactly two inline cues and no extra expanded cue. Ani and Shema each show 'קהל וחזן' once. The Veyeetayu editorial חזן appears once, after the conditional statement. The sic/corr pair שֶׁחוּא/שֶׁהוּא renders in printed mode. The other corrections (forty-eight, once/one, pachdekha) were checked only through browser-evidence booleans.",
+    "Expanded p. 12 carries only the closing 'בָּרוּךְ אַתָּה … הַמֶּלֶךְ הַקָּדוֹשׁ' row before the back matter. That row is its own paragraph, so it is not a widow, but it is cosmetically isolated. Both PDFs print an empty 'Metadata' heading; that is general back matter and outside this installment.",
+    "PRs 310, 312 and 313 remain release dependencies. I did not assess their code; merging them is not content acceptance.",
+    "No settled source reading, encoding, alignment, order or identity was reopened. The whitespace findings (משפט:קהל, 'sacrifices ]') ask only for spacing fixes and do not touch any reading."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "4e77ae16-14d3-4086-a97e-308bf683f3a3"
+  }
+}

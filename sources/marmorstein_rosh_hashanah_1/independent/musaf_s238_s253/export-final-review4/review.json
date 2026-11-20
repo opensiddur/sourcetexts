@@ -1,0 +1,42 @@
+{
+  "exporter_fix_approved": true,
+  "findings": [
+    {
+      "severity": "low (non-blocking)",
+      "file": "/home/efeins/.codex/worktrees/conditional-rubric-keep/master/opensiddur/tests/exporter/test_keep_together_geometry.py",
+      "issue": "TestConditionalRuleOwnLine (lines 423-438) checks only that 'CloseArk.' and 'AfterRule.' are on the same page and more than 15pt apart vertically. That proves a separate line sits between them in both the single and the parallel stream. It does not check what this fix is for: _typeset fails only on '! ' errors and never looks for 'Overfull \\hbox'. pdftotext cannot see the rule, so the test also does not check where the rule sits horizontally (inside the column, centred). The test case is a rule in the middle of a paragraph between two words. The reported contexts were rules next to Ark/kaddish rubric blocks, and the test does not cover those.",
+      "required_change": "Optional hardening: have the test return the log and assert that it contains no 'Overfull \\hbox' for both parallel=False and parallel=True. Also consider a case with the rule straight after an \\OSInstructionBlock. This does not block approval, because the macro is correct by inspection (see notes)."
+    },
+    {
+      "severity": "low (non-blocking)",
+      "file": "/home/efeins/.codex/worktrees/conditional-rubric-keep/master/opensiddur/exporter/tex/typography_tex.py",
+      "issue": "_markers_section, lines 858-865: if \\OSCondRule runs in vertical mode (at the head of a \\pstart), \\leavevmode adds a \\parindent box ahead of \\strut\\hbox to \\OSMeasure. The line is then too wide by \\parindent. paragraphs.indent defaults to 0pt (typography.py:966-968), so the default build and any book that keeps that default are unaffected. A book that sets a non-zero indent would get an overfull box on a rule that opens a paragraph.",
+      "required_change": "None required for this acceptance, provided the cumulative books use indent 0pt. If non-zero indents are to be supported, use \\ifvmode\\noindent\\fi (or subtract \\parindent from the box width) instead of the bare \\leavevmode."
+    }
+  ],
+  "inspected_files": [
+    "/home/efeins/.codex/worktrees/conditional-rubric-keep/master/opensiddur/exporter/tex/typography_tex.py (whole file; \\OSCondRule at lines 851-875)",
+    "/home/efeins/.codex/worktrees/conditional-rubric-keep/master/opensiddur/exporter/tex/reledmac.xslt (lines 1-700: \\OSInstructionBlock/\\OSInstructionLine at 343-395, \\OSMeasure at 396-406, \\OSKeepSep, \\AtEveryPstart*, list indent skips)",
+    "/home/efeins/.codex/worktrees/conditional-rubric-keep/master/opensiddur/exporter/typography.py (lines 1-400, 560-1128: ParagraphConfig.indent default 0pt, ConditionalMarkerConfig defaults rule/25%/0.4pt)",
+    "/home/efeins/.codex/worktrees/conditional-rubric-keep/master/opensiddur/tests/exporter/test_keep_together_geometry.py (whole file)",
+    "/tmp/mahzor-s238/conditional-rule-tests.log",
+    "/tmp/mahzor-s238/conditional-rule-geometry.log",
+    "/tmp/mahzor-s238/export-final-review3/review.json",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/output/pdf/marmorstein_s253/conditional-rule-body-preservation.json"
+  ],
+  "notes": [
+    "The macro as it stands: \\ifhmode\\unskip\\strut\\newline\\fi \\leavevmode\\strut\\hbox to \\OSMeasure{\\hss\\rule{0.25\\hsize}{0.4pt}\\hss}\\newline\\ignorespaces. It uses the same ending and restarting pattern as \\OSInstructionBlock/\\OSInstructionLine, which the project already relies on in single and parallel streams. It emits no \\par, so it stays inside reledmac's line capture and inside reledpar's column. It does not touch \\OSCondStartBlock/\\OSCondEndBlock selection or the ConditionalBlock logic.",
+    "Width: the rule line is \\strut (zero width) + \\hbox of exactly \\OSMeasure + \\hfil from \\newline. \\OSMeasure is \\hsize-\\leftskip-\\rightskip. In a reledpar column \\hsize is the column width, so the line plus \\leftskip and \\rightskip comes to \\hsize exactly. That holds for single text, \\Columns, \\Pages and list or interleaved indents alike. Stretchable \\rightskip from ragged settings is coerced to its natural width by \\dimexpr. The rule is centred by symmetric \\hss, so it is the same in TRT and TLT paragraphs. It cannot be overfull unless \\parindent is non-zero (finding 2).",
+    "There is no breakpoint inside the rule line: \\strut and the hbox are boxes with no glue between them. The leading \\unskip removes a trailing interword space before the forced break. The strut gives the rule row a full baselineskip height, which matches the documented reason for \\strut in the instruction macros (\\Columns slicing).",
+    "The optional-argument trap is guarded: the leading \\newline is followed by \\fi, and the trailing \\newline is followed by \\ignorespaces. So text after the rule that begins with a literal '[' cannot be taken as \\\\[length]. The trailing \\newline always runs in horizontal mode, so 'There's no line here to end' cannot happen.",
+    "Cosmetic, matches existing design: when the rule follows an \\OSInstructionBlock directly, or the other way round, the second macro's \\ifhmode branch ends an empty line containing only \\strut. That leaves one blank text-height row between the rubric and the rule, and the row is counted by reledmac's line numbering. reledmac.xslt's comments already accept this for two adjacent instruction blocks. If it should go, an optional refinement is to skip the leading break when \\lastpenalty=-10000. It is not required for correctness.",
+    "Evidence I accepted from logs and did not re-run: 472 passed / 179 subtests (conditional-rule-tests.log), and 1 passed / 2 subtests for the single and parallel geometry test (conditional-rule-geometry.log). The test-helper use of tex_replacements to inject \\OSCondEndBlock{} is sound for exercising the macro directly. The trailing {} is an empty group and typesets nothing.",
+    "conditional-rule-body-preservation.json records entire_document_tex_body_unchanged=true for documentary-hebrew, documentary and expanded. I did not recompute those hashes. If the bodies are identical, the full books change only through the preamble macro, which fits the claim that no words, metadata or decisions changed.",
+    "I did not inspect the git diff 5362fa4..cd66b7d or commit c6419e3d, because I had no shell. I reviewed the macro as it now stands in the worktree. I did not open any full cumulative PDF or its log, and I make no claim about the 7 earlier overfull contexts being gone or about final destination checks. Those stay with the primary once the renders finish. The fix should be considered confirmed only after those logs show no Overfull \\hbox at the rule sites."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "571bf8b0-0962-4d4f-9791-779c4b52aae7"
+  }
+}

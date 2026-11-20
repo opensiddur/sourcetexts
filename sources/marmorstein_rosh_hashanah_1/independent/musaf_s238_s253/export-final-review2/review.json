@@ -1,0 +1,65 @@
+{
+  "exporter_fix_approved": false,
+  "export_qa_approved": false,
+  "source_amendment_approved": true,
+  "previous_findings_closed": [
+    "M2 (stale expanded screenshots): closed. final-screenshot-manifest.json binds accepted-expanded-03..14 to expanded-final-review.pdf and accepted-documentary-03..14 to documentary-final-review.pdf, with sha256 for each. I viewed accepted-expanded-03..14 (all 12) and they show the new pagination. The obsolete final-expanded*/current-expanded* sets were not used for any verdict.",
+    "M3 (36-state matrix, per-rite rules, s252/s253 breaks): closed. matrix-36-states.json has exactly 36 rows (2 views × unknown/frankfurt/metz/fuerth_alone/other_include/other_omit × unknown/included/omitted), all with empty pairing_problems. Frankfurt: first_adir/tisgav/veyeetayu false. Metz: tisgav/veyeetayu false, first_adir true. Repeated Adir true in all 36. veyeetayu_instruction_in_compiled_text is true only for fuerth_alone and unknown, which matches the integration-review3 rule. full-service-report.json has 4 morning rows with itemized shacharit_attah_hu_included/berikh_shemeh_included (false exactly when frankfurt_am_main=true). page-boundaries-condition-states.json has 12 proofs (2 views × 3 clause states × s252/s253 breaks). Each proof has facs, n=116, outside_optional_clause=true, a stanza 2 or 3 milestone, and preceding/following excerpts. In the omitted state the clause is absent and the break stays. omitted-expanded-11..13.png confirm this visually: the ↗ marker sits before וְיִזְנְחוּ, the bracketed clause is gone in both languages, and nothing is stranded.",
+    "L4 (documentary actor-scope row semantics): closed. final-compiled-checks.json reports expanded_actor_scopes_correct:null for all 16 documentary rows and documentary_actor_scopes_correct:null for all 16 expanded rows. Each documentary row itemizes kevodo_first/mimeqomo_first (congregation) and shema/ani (reader_and_congregation), each with count 1.",
+    "L5 (missing space before inline קהל): closed. accepted-expanded-09 reads 'מִדַּת מִשְׁפָּט: קהל' and accepted-documentary-09 reads 'מִשְׁפָּט: קהל.'.",
+    "L6 (shown-numbers prefix split and stray spaces): closed. final-numbers-detail.png shows 'בְּ¹⁴אֶהְיֶה' attached, 'אֶהְיֶה:' with no space before the colon, and 'I am that I am’.' with no space before the closer.",
+    "L7 (standalone cue column placement and the gap after the cue): acknowledged as a non-blocking cosmetic issue (see nonblocking_limitations). In the final screenshots no cue is orphaned or duplicated: every standalone cue sits directly above its row on the same page (expanded pp. 1–10).",
+    "L8 (test assertions and class placement): closed on the strength of the log. standalone-rubric-tests-final2.log shows 470 passed and 179 subtests passed. I did not re-read the test source.",
+    "L9 (space before the optional-clause closer): closed. accepted-expanded-13 and accepted-documentary-12 read '[To Thee will they offer their sacrifices]' and 'זִבְחֵיהֶם.]' with no space before the bracket.",
+    "L10 (network mode and PDF overfull evidence): closed. browser-export-evidence.json records 'Playwright route **/* aborts HTTP(S)' and offscreen forced rendering, and lists 24 cases (16 core + 8 special), all with 0 JS errors, overflows, duplicate ids and broken links. final-pdf-log-evidence.json shows no overfull hboxes and no missing glyphs for all 5 final PDFs (expanded/documentary/numbers final review plus both omitted reviews).",
+    "M1 (bilingual rubric reading order): closed for the expanded view only. accepted-expanded-11/12 now start the English on its own line after the Judeo-German, the inline תשגב/ויאתיו stays within the English sentence, and the חזן cue follows directly above its row. The same change caused the documentary regression reported below, so the fix as a whole is not approved."
+  ],
+  "findings": [
+    {
+      "severity": "medium",
+      "file": "/tmp/mahzor-s238/integration-v1/qa/documentary-final-review.pdf printed pp. 9–10 (accepted-documentary-11.png, accepted-documentary-12.png); /home/efeins/.codex/worktrees/conditional-rubric-keep/master/opensiddur/exporter/tex/reledmac.xslt (new direction-run break for block rubrics)",
+      "issue": "Regression introduced by the M1 fix. In the documentary edition the English Tisgav and Veyeetayu rubrics are English sentences with one embedded Hebrew word. The new rule now treats that word as a separate top-level direction run and forces line breaks around it. p. 9 now reads 'In Frankfurt a. M. and many congre-gations' / 'תשגב' / 'is not said.' and p. 10 reads 'In Fuerth and other communities the reader now sings:' / 'ויאתיו' / 'but in Frankfurt a. M., Metz and many communities this prayer is omitted.' The pre-fix documentary render (final-documentary-11/12.png, viewed only to compare) set both sentences inline. This contradicts the resolution note ('inline foreign phrases unchanged'), and it creates in the documentary view the same kind of broken reading order that M1 fixed in the expanded view. No words are lost.",
+      "required_change": "Narrow the break rule. Separate runs only at language-block boundaries: for example, between child elements that carry different xml:lang (the expanded case, a de-Hebr block followed by an English block). Do not break around an inline foreign-language segment that sits inside running text of the note's main language (a he span with text in the note's language on both sides). Add a negative regression test using an EN instruction note with an embedded he word, as in the documentary Tisgav/Veyeetayu notes, that asserts no forced break. Keep the existing positive expanded test. Re-render documentary-final-review.pdf, refresh accepted-documentary-11/12 and the manifest hashes, and re-run final-pdf-log-evidence for the new PDF. The expanded output should not change."
+    }
+  ],
+  "inspected_files": [
+    "/tmp/mahzor-s238/export-final-review/review.json",
+    "/tmp/mahzor-s238/export-final-review2/resolution-notes.json",
+    "/tmp/mahzor-s238/integration-review3/review.json",
+    "/tmp/mahzor-s238/standalone-rubric-tests-final2.log",
+    "/tmp/mahzor-s238/integration-v1/qa/final-screenshot-manifest.json",
+    "/tmp/mahzor-s238/integration-v1/qa/final-pdf-log-evidence.json",
+    "/tmp/mahzor-s238/integration-v1/qa/matrix-36-states.json",
+    "/tmp/mahzor-s238/integration-v1/qa/full-service-report.json",
+    "/tmp/mahzor-s238/integration-v1/qa/final-compiled-checks.json",
+    "/tmp/mahzor-s238/integration-v1/qa/page-boundaries-condition-states.json",
+    "/tmp/mahzor-s238/integration-v1/qa/browser-export-evidence.json",
+    "/tmp/mahzor-s238/integration-v1/qa/accepted-expanded-03..14.png (all 12)",
+    "/tmp/mahzor-s238/integration-v1/qa/accepted-documentary-03, 08, 09, 10, 11, 12, 13.png",
+    "/tmp/mahzor-s238/integration-v1/qa/final-numbers-detail.png",
+    "/tmp/mahzor-s238/integration-v1/qa/omitted-expanded-11.png, -12.png, -13.png",
+    "/tmp/mahzor-s238/integration-v1/qa/final-documentary-11.png, -12.png (pre-fix, regression comparison only)",
+    "/tmp/mahzor-s238/integration-v1/source/accepted_literal_baseline_amendments.json",
+    "/tmp/mahzor-s238/ashrei-queue-closure/review3.json",
+    "/tmp/mahzor-s238/ashrei-queue-closure/manifest.json",
+    "/tmp/mahzor-s238/integration-v1/project-normal/prayerbook_for_the_new_year-heidenheim-1965-he/ashrei.xml",
+    "/tmp/mahzor-s238/integration-v1/project-normal/prayerbook_for_the_new_year-heidenheim-1965-he/initial_ashrei.xml (lines 40–50)",
+    "/tmp/mahzor-s238/integration-v1/non-draft-build-manifest.json (summary header and first ~200 artifact entries)"
+  ],
+  "nonblocking_limitations": [
+    "Source amendment approved. Both HE files contain exactly יְהַלֲלֽוּךָ (Ps 84:5) and וַאֲהַלֲלָה (Ps 145:2), matching review3.json's approved words and its order: hataf patah on the first lamed, meteg on the second lamed. I checked this from the rendered text in the Read output, not with a byte-level codepoint dump. The amendment records old/new strings and before/after protected and literal hashes. EN literal hashes are unchanged, and 'all_other_658_literal_witnesses_unchanged' is true. The build manifest summary shows 756 files, all schema-valid, with 2 freshly validated amended files. Note that its field 'all_text_and_standoff_equal_approved_draft: true' sits beside the amendment note and should be read as 'except the two amended files'. I did not recompute any sha256.",
+    "Optional cosmetic: standalone Hebrew actor cues in the expanded view are still right-aligned across the full width (above the English column), and there is a gap of about 2 lines after 'קהל וחזן' (expanded pp. 1, 5). This is acknowledged as non-blocking.",
+    "Optional cosmetic: in expanded pp. 9–10 the English line of each bilingual rubric is set right-aligned (it inherits the RTL paragraph direction). It reads correctly.",
+    "Optional cosmetic: documentary p. 10/11 splits one parallel row across the page, leaving the English tail on p. 11 with an empty Hebrew cell. Expanded p. 12 holds only the closing בָּרוּךְ row before the back matter. Both PDFs print an empty 'Metadata' heading. These are general layout or back matter, outside this installment.",
+    "final-compiled-checks.json itemizes one cue per documentary part but has no explicit field for 'no English cue'. The absence of an invented EN cue is implicit in the counts and visible in the documentary screenshots.",
+    "The matrix/service/browser JSON values are booleans produced by the QA scripts. I checked that they agree with the integration-review3 rules and with the renders I viewed, but I did not re-run the scripts.",
+    "Not opened: accepted-documentary-04..07 and -14, expanded-omitted-review.pdf and documentary-omitted-review.pdf (their PDF logs are clean in final-pdf-log-evidence.json), and the exporter diffs (reledmac.xslt, typography_tex.py) line by line. I judged the code by its rendered behaviour and the 470-test/179-subtest log, which passes but does not cover the documentary regression.",
+    "PR310/312/313 remain unmerged release dependencies (combined QA commit 2868d98, separate PR310 cb9d10d). Merging them is not a condition of content acceptance.",
+    "No settled reading, encoding, alignment, order, canonical scope or other pointing was reopened."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "6c758cc7-69da-4a91-a378-9c79196019c4"
+  }
+}

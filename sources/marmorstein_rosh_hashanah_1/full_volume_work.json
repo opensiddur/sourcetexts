@@ -20,10 +20,10 @@
       253
     ],
     "scope": "Lower Kedushah PDF238239 through Ha-melekh Ha-qadosh PDF252253; stop before Atah Vechartanu",
-    "status": "Source, importer, canonical reuse, generated encoding, alignment, identity and recitation-order reviews approved; final independent export sign-off pending.",
+    "status": "Accepted: source readings, canonical integration, guideline/alignment/order/identity and final PDF/electronic QA complete.",
     "work_record": "musaf_s238_s253_work.json",
     "source_acceptance": true,
-    "whole_batch_accepted": false,
+    "whole_batch_accepted": true,
     "human_answered": [
       324,
       325,
@@ -77,15 +77,16 @@
     "human_pending": [],
     "source_review_complete": true,
     "encoding_guideline_review_pending": false,
-    "export_qa_complete": false,
-    "accepted_current_batch_leaves": 0,
+    "export_qa_complete": true,
+    "accepted_current_batch_leaves": 16,
     "standalone_module_encoding_approved": true,
     "source_review_evidence": "independent/musaf_s238_s253/source-closure-round4/review.json",
     "standalone_encoding_review_evidence": "independent/musaf_s238_s253/encoding-post-human374/review.json",
-    "encoding_review_complete": true
+    "encoding_review_complete": true,
+    "acceptance_evidence": "musaf_s238_s253_acceptance.json"
   },
-  "next_primary_scan": 238,
-  "next_adjudication_scan": 238,
+  "next_primary_scan": 254,
+  "next_adjudication_scan": 254,
   "images": "Cached outside Git; never use OCR to settle a reading.",
   "secondary_review_requirements": {
     "blind_scan_reading": true,
@@ -1116,55 +1117,8 @@
       "export_acceptance": "musaf_s224_s239_export_acceptance.json"
     }
   ],
-  "next_scan_notes": "Begin the next Musaf repetition installment at Gevurot, PDF224. Morning selection continues through Musaf via the local service declaration.",
-  "prior_partial_batches": [
-    {
-      "scan_pages": [
-        56,
-        57,
-        58,
-        59
-      ],
-      "archive_leaves": [
-        55,
-        56,
-        57,
-        58
-      ],
-      "printed_pages": [
-        11,
-        12,
-        13,
-        14
-      ],
-      "status": "Human Hebrew readings independently verified; three pages accepted, one source glyph on scan57 uncertain.",
-      "units": "qorbanot_s56_s59_units.json",
-      "pending": [
-        "Final glyph of פֿאָלגענדע־ remains indistinct after human review and glyph comparison. Tentative ז encoded with cert=low. Samekh in איינגעסאַלטעט is confirmed."
-      ],
-      "encoding_alignment_order_approved": true,
-      "source_acceptance": false,
-      "export_verification": "qorbanot_draft_export_verification.json",
-      "accepted_scan_pages": [
-        56,
-        58,
-        59
-      ],
-      "unaccepted_scan_pages": [
-        57
-      ],
-      "human_final_verification": "independent/qorbanot_human_final_verification.json",
-      "expanded_pdf_status": "Fresh raster/coordinate recheck passes. Previous top-margin diagnosis retracted as preview-reading error; no exporter change required."
-    }
-  ],
-  "queued_source_checks": [
-    {
-      "scan": "s8",
-      "scope": "EarlierAshrei84:5and145:2firstlamedpointing",
-      "status": "Separatefocusedreviewpending; earlieracceptedwordsunchanged.",
-      "reason": "Enlargednewmorningprintinghaslamedhataf; inspectolderprintingindependentlyratherthannormalizefromnewcopy."
-    }
-  ],
+  "next_scan_notes": "Continue after HaMelekh HaQadosh with Attah Vechartanu on PDF 254. Full current encoded material accepted; no new source questions remain.",
+  "queued_source_checks": [],
   "superseded_status_records": [
     {
       "reason": "Historical installment record superseded by final224-leaf acceptance and new batch.",
@@ -1206,6 +1160,47 @@
         "export_qa_complete": true,
         "next_transcription_scan": 224
       }
+    },
+    {
+      "reason": "Historical partial record superseded by final254leaf/all720witness acceptance; original retained as evidence.",
+      "record": {
+        "scan_pages": [
+          56,
+          57,
+          58,
+          59
+        ],
+        "archive_leaves": [
+          55,
+          56,
+          57,
+          58
+        ],
+        "printed_pages": [
+          11,
+          12,
+          13,
+          14
+        ],
+        "status": "Human Hebrew readings independently verified; three pages accepted, one source glyph on scan57 uncertain.",
+        "units": "qorbanot_s56_s59_units.json",
+        "pending": [
+          "Final glyph of פֿאָלגענדע־ remains indistinct after human review and glyph comparison. Tentative ז encoded with cert=low. Samekh in איינגעסאַלטעט is confirmed."
+        ],
+        "encoding_alignment_order_approved": true,
+        "source_acceptance": false,
+        "export_verification": "qorbanot_draft_export_verification.json",
+        "accepted_scan_pages": [
+          56,
+          58,
+          59
+        ],
+        "unaccepted_scan_pages": [
+          57
+        ],
+        "human_final_verification": "independent/qorbanot_human_final_verification.json",
+        "expanded_pdf_status": "Fresh raster/coordinate recheck passes. Previous top-margin diagnosis retracted as preview-reading error; no exporter change required."
+      }
     }
   ],
   "previous_checkpoint": {
@@ -1213,5 +1208,15 @@
     "current_unit_witnesses": 634,
     "evidence": "completion_review_2026_11_source_acceptance.json",
     "source_review_complete": true
-  }
+  },
+  "prior_partial_batches": [],
+  "completed_source_checks": [
+    {
+      "scan": "s8",
+      "scope": "EarlierAshrei84:5and145:2firstlamedpointing",
+      "status": "Closed: enlarged primary and independent source adjudication confirm two hataf-patah readings and the second-lamed meteg. Both source witnesses corrected; baseline amendment preserves before/after hashes.",
+      "reason": "Enlargednewmorningprintinghaslamedhataf; inspectolderprintingindependentlyratherthannormalizefromnewcopy.",
+      "evidence": "independent/musaf_s238_s253/ashrei-queue-closure/review3.json"
+    }
+  ]
 }

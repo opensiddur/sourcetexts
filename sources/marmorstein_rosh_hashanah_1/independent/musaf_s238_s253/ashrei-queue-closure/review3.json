@@ -1,0 +1,15 @@
+{
+  "source_check_closed": true,
+  "approved_exact_words": [
+    "יְהַלֲלֽוּךָ",
+    "וַאֲהַלֲלָה"
+  ],
+  "remaining_uncertainties": [],
+  "findings": [],
+  "reason": "84_5-tight.png, read right to left: yod has sheva; he has patah; the first lamed has hataf patah (a dash plus two dots); the second lamed has one vertical stroke directly under its body, which is a meteg on the lamed. Vav has a shuruk dot and final kaf has qamatz. There is no mark under the he other than its patah, so review2's string with the meteg under the he was wrong and the proposed placement is right. Expected code points: U+05D9 U+05B0, U+05D4 U+05B7, U+05DC U+05B2, U+05DC U+05BD, U+05D5 U+05BC, U+05DA U+05B8. 145_2-tight.png: vav has patah; alef has hataf patah; he has patah; the first lamed has hataf patah; the second lamed has qamatz (the T-shaped mark under the left lamed); the final he has no mark. Expected code points: U+05D5 U+05B7, U+05D0 U+05B2, U+05D4 U+05B7, U+05DC U+05B2, U+05DC U+05B8, U+05D4. In this font hataf patah is drawn with the dots to the right of the dash. That is consistent on alef and on both first lameds, so the reading holds. There is a small vertical tick at the bottom edge of 145_2, under the alef and well below the vowel line. Because of its distance from the vowels and where it sits at the crop edge, I take it to be the top of a letter from the next line, not a meteg. I see no remaining defects in either word beyond the two corrections already being recorded (hataf patah on the first lamed in both words, plus the meteg move in the first word).",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "a30f463a-2888-49bf-8c4f-f97fd6ab147e"
+  }
+}
