@@ -1,0 +1,58 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "source_approved": true,
+  "scope": "Source-text acceptance only, scans s238–s253: lower Kedushah through HolyKing (בָּרוּךְ … הַמֶּלֶךְ הַקָּדוֹשׁ:). Excludes the earlier upper s238/s239 material and AtahVeḥartanu. This is not approval of encoding, block or spine order, page breaks, the URN registry, headers, export, or the batch.",
+  "closed_findings": [
+    "s244 sam_halikhot וַעֲצָמוֹתֵיהֶם→וַעֲצְמוֹתֵיהֶם (source-round3-242 finding). Present in candidate7.",
+    "s250 harachum_umakdim: printed שֶׁחוּא kept (source-round3-250 finding; user374). The correction to שֶׁהוּא is only in the pending sic/corr layer (musaf_harachum_shehu); the source text is not changed. Note that pending-corrections.json is still marked unapproved for the batch.",
+    "s250 in_fuerth_veetayu_rubric שאַלטעט proposal: rejected. User373 settles סאַלטעט, which candidate7 keeps without German normalisation.",
+    "s250 in_frankfurt_tisgav_rubric פֿראנקפֿורט→פֿראַנקפֿורט. Present in candidate7. The band2 image shows a patah under the Rashi alef, the same as in the Fürth rubric's city name.",
+    "s250 in_frankfurt_tisgav_rubric מעך→מעץ. Present. Bands 2 and 3 show the same glyph in both rubrics: a hooked head with a short descender. That differs from the long straight final kaf of נאָך in band3. It agrees with the primary and three independent readings.",
+    "s250 in_fuerth_veetayu_rubric מעך→מעץ. Present, by the same glyph comparison.",
+    "source-round3-250 uncertainty (Metz final letter): closed by the image check above. No human answer is needed.",
+    "362 s238 chashot מֵרְעִישׁוֹת, no meteg. Candidate7 is unchanged and matches.",
+    "363 s240 kaf_regel יְפַרְשֵׁז, no dagesh in the pe. Matches, and band1 agrees.",
+    "364 s240 mimekomo עֶֽרֶב. Applied.",
+    "365 s242 im_yashkit לְהוֹדִֽיעַ. Applied.",
+    "366 s242 od_yizakher וָשַֽׁחַר. Applied.",
+    "367 s242 mimekomo יִֽפֶן. Applied.",
+    "368 s244 veatah_azon_kol בְּקַרְסֻלֵּיהֶם. Matches, unchanged.",
+    "369 s246 adir_adirenu_1, first אַדִּיר with patah and dagesh. Matches.",
+    "370 s246 adir_adirenu_2, first אַדִּיר with patah and dagesh. Matches.",
+    "371 s246 adir_adirenu_1 עַל with patah. Matches.",
+    "372 s246 tehillot_kevodecha תַּחְתִּיּוֹת→תַּחְתִּיֹּת. Applied.",
+    "373 s250 סאַלטעט. Kept.",
+    "374 s250 chet, with sic/corr. Recorded as above.",
+    "Encoding-round2 source item (vechayyot נ״א placement): resolved from the s240 band2 image. See source_placement_notes.",
+    "Encoding-round2 source item (paragraph boundary before עוֹד יִזְכָּר): resolved from the s248 band1 image. See source_placement_notes."
+  ],
+  "remaining_findings": [],
+  "source_placement_notes": [
+    "s240 rahem_metsukim / variant_ka: the parenthetical (נ״א וּכְרוּב לִכְרוּב וְחַיָּה לְחַיָּה) is printed inline, in small type. It opens the last line of the stanza, right after the line break that follows לִכְרוּב, and comes immediately before לְעֻמַּת כִּסֵּא:. It is not a separate line and it does not follow the colon. The literal fragment text should therefore read …וְחַיָּה לְחַיָּה וּכְרוּב לִכְרוּב (נ״א וּכְרוּב לִכְרוּב וְחַיָּה לְחַיָּה) לְעֻמַּת כִּסֵּא:. Applying the variant to exactly 'וְחַיָּה לְחַיָּה וּכְרוּב לִכְרוּב' (the same two pairs in reverse order) is an editorial alignment. The print places the variant after the phrase but does not mark where its scope begins. Candidate7 has variant_ka as a separate block after the stanza, but that is only how the candidate is grouped, not a claim about line order. The XML j:option output does not need to change.",
+    "s248 Ki→Od: עוֹד יִזְכָּר starts in the middle of the line, straight after וְהֵיכָלֶךָ:. There is no paragraph break or indent. Ki Maqdishekha and Od Yizkor are therefore one printed paragraph, continued from s246 (…יִתְקַדַּשׁ שִׁמְךָ יְיָ / אֱלֹהֵינוּ.). The candidate's separate block od_yizkor_lanu is a segmentation choice and must not be encoded as a source paragraph break.",
+    "s248 haochez headings: the rubric line is printed as 'פותחים הארון.' followed by column headings: 'חזן.' over the right column, 'ע״ס א״ב כפול.' in the centre and 'קהל.' over the left. That supports the convention that these headings govern every row. The final hatam row (s250) carries קו״ח, which source-round3-250 recorded as printed beside the Hebrew. s250-band1 was not among my inputs, so I did not re-check that mark visually. Nothing on record disputes it.",
+    "s238 kevodo_male breaks after לָזֶה in print, as on s240, but only the s240 block has the \\n. This is formatting only and makes no textual difference."
+  ],
+  "coverage": [
+    "Read in full: all four source-round3 reviews, source-round3-adjudications.json, human-362-374.json, iteration3/pending-corrections.json and poem-encoding-round2/review.json.",
+    "Read candidate-round7.json in full, Hebrew and English.",
+    "Compared every Hebrew block of candidate-round6.json against round7. The only differences are the 10 changes listed (364, 365, 366, 367, 372, 374, sam_halikhot, Frankfurt patah, מעץ ×2). Every no-change answer (362, 363, 368–371, 373) already matched in round6.",
+    "Did not compare the English blocks of round6 against round7. No English applications are recorded.",
+    "Viewed the images s240-band1, s240-band2, s248-band1, s250-band2 and s250-band3.",
+    "Did not restart the blind reading. For coverage of all other words, I rely on round 3's statement that all other words were reviewed (s238/s240, s242/s244, s246/s248, s250/s252, plus English s239–s253)."
+  ],
+  "notes": [
+    "Source acceptance rests on three things: round 3 reviewed every word not listed as an open item, the 13 human answers (applied exactly and not reopened), and the image adjudications above. All recorded source findings and uncertainties are closed.",
+    "These items are not source errors. Each keeps the printed text and is a candidate for the later sic/corr layer: English s239 'once calls to the other', s245 'fortyeight', s251 'Thou has created' and 'land happiness'. Only musaf_harachum_shehu is currently entered in pending-corrections.json.",
+    "source-round3-246 assumed that answer 358 concerns the faint mark between בְּחוּנָיו and לְפָאֲרוֹ. 358 belongs to the earlier settled set, which is outside this closure. I raise no new question about it.",
+    "Still open and outside source acceptance: the encoding-round2 low findings (quotation criterion, URN transliteration, header policy, build.py payload binding, canonical_home source_notes), plus the integration requirements: pb placement, the full Kedushah spine, regional conditions, ark directives, registry, README and visual/compile checks. Installing pending-corrections.json as an accepted correction also still needs batch approval."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "0dede346-13fa-4f61-bd07-abed1099c461"
+  }
+}

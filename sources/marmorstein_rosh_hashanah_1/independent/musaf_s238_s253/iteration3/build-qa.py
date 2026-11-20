@@ -1,6 +1,7 @@
 from pathlib import Path
 import json,copy,yaml
 from lxml import etree
+from opensiddur.importer.scan.authoring import apply_corrections
 from opensiddur.importer.marmorstein_rosh_hashanah_1.build import unit_document,document,element,PROJECTS,ROOT_URN,unit_urn,validate
 p=Path('/tmp/mahzor-s238/iteration3');qa=p/'qa-projects';units=json.loads((p/'poem-units-revised.json').read_text())['units'];reports=[]
 for lang,project in PROJECTS.items():
@@ -8,7 +9,11 @@ for lang,project in PROJECTS.items():
  root,body=document(lang,project,'DRAFT: seven-module alignment check only',ROOT_URN,index=True,draft=True);div=element(body,'div',corresp=ROOT_URN)
  for u in units:
   if u['stem']=='musaf_haochez_beyad_middat_mishpat'and lang=='he':element(div,'note','פותחים הארון.',type='instruction')
-  doc=unit_document(u,lang,True);text=etree.tostring(doc,encoding='unicode');f=dest/(u['stem']+'.xml');f.write_text(text);ok,errors=validate(text);reports.append(dict(file=str(f),valid=ok,errors=errors))
+  doc=unit_document(u,lang,True)
+  file=project+'/'+u['stem']+'.xml'
+  corrections=[c for c in json.loads((p/'pending-corrections.json').read_text())['corrections']if c['file']==file]
+  if corrections:apply_corrections({file:doc},corrections)
+  text=etree.tostring(doc,encoding='unicode');f=dest/(u['stem']+'.xml');f.write_text(text);ok,errors=validate(text);reports.append(dict(file=str(f),valid=ok,errors=errors))
   element(div,'j:transclude',type='external',target=unit_urn(u)+'@'+project)
   if u['stem']=='musaf_haochez_beyad_middat_mishpat'and lang=='he':element(div,'note','סוגרים הארון.',type='instruction')
  (dest/'index.xml').write_text(etree.tostring(root,encoding='unicode'))

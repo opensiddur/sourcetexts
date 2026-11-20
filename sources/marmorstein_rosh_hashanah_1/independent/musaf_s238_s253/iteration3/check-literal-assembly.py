@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,re,hashlib,unicodedata
 from opensiddur.importer.marmorstein_rosh_hashanah_1.realizations import join_source_fragments
-p=Path('/tmp/mahzor-s238');rows=json.loads((p/'candidate-round6.json').read_text())['blocks'];units=json.loads((p/'iteration3/poem-units-revised.json').read_text())['units'];by={u['stem']:u for u in units}
+p=Path('/tmp/mahzor-s238');rows=json.loads((p/'candidate-round7.json').read_text())['blocks'];units=json.loads((p/'iteration3/poem-units-revised.json').read_text())['units'];by={u['stem']:u for u in units}
 expected={
 'vechayyot_asher_hennah':{'he':[(238,'vechayot_asher'),(238,'chashot_beratzo'),(240,'kaf_regel'),(240,'levilti_lenabel'),(240,'rahem_metsukim')],'en':[(241,'rachem')]},
 'veammekha_teluim':{'he':[(240,'veamkha_teluim'),(242,'kol_shofar_kafuf'),(242,'semukhim_betzidkat'),(242,'lehizakher_lamo'),(242,'im_yashkit'),(242,'od_yizakher')],'en':[(241,'amekha'),(243,'amekha'),(243,'lehaver'),(243,'od_yizkor')]},
