@@ -1,0 +1,51 @@
+{
+  "verdict": "NOT ACCEPTABLE YET: revisions required. The Hebrew and English spans align correctly by meaning, and the counts are right: 46 strophes (two each for alef through nun, sin standing in for samekh as 29–30, two each for ayin through shin, four for tav) plus 14 verses, 60 spans in all. The Hebrew text matches candidate-round5 and the authoritative human readings 375–394. Every role marker sits on the correct strophe. Three things block acceptance: (1) the paragraph and page_start metadata does not match the print; (2) the 'rows' view puts each verse introduction inside the verse's scope; (3) the human-confirmed sic/corr for שְׂעוּ is not encoded. Final acceptance must also wait for human readings 395–405, which are still pending.",
+  "alignment_findings": [
+    "All 46 stanza corresp pairs (Hebrew and English, /1 to /46) match by meaning. I checked each one, including the strophes split across pages: 11 (s260/s262 against s261/s263, 'The first people (Amalek)' | 'to fight fought and perished'), 21 (s262/s264 against s263, where the English is not split) and 22 (s264 against s263/s265, 'then all could perceive' | 'that to God was the kingdom'). The English has no filler: every English fragment appears in print on s261–s273.",
+    "Where the printed English reads differently from the Hebrew, that is the 1965 translator's choice, not an alignment error. Examples: 16 'their seed was deprived of a kingdom' for וּמֵעַל זְרוּעָם נָפְלָה מְלוּכָה; 21 'In my might I will bring down the kingdom' for אוֹרִיד כַּבִּיר הַמְּלוּכָה; 25 the parenthetical about Benjamin and Esther. Keep them as printed.",
+    "The English for 35 ends with ';' and the English for 36 begins in lowercase 'they stepped…'. That matches the print, and the pairing 35↔35 and 36↔36 is correct.",
+    "All 14 verse pairs match by meaning. The English quotation marks are as printed: Ps 24:7 opens with ‘ and Ps 24:8 closes with ’; Ps 24:9 opens and 24:10 closes; Exod 15:17 and 15:18 are each quoted. The printed English for Obadiah reads 'As it was written', and the draft has that.",
+    "Each verse introduction ('As it is written in Thy Torah:', 'And it was said:' and so on) has a matching Hebrew introduction, and in the languages structure none of them carries a corresp or source. That is correct."
+  ],
+  "source_boundary_findings": [
+    "Verse scope: each Bible-verse span is exactly one complete verse with no introduction inside it. Deut 33:5, Ps 48:3, Isa 24:23, Exod 15:17, Exod 15:18, Ps 24:7, 24:8, 24:9, 24:10, Obad 1:21, Num 23:21, Ps 93:1, Zech 14:9 and Deut 6:4 all match the Bible text and their chapter_corresp values are right. The introductions כַּכָּתוּב…, וְנֶאֱמַר and וּבְתוֹרָתְךָ כָּתוּב לֵאמֹר are separate unreferenced fragments in languages.he and languages.en.",
+    "The 'rows' array breaks this rule. Rows 31, 34, 37, 40, 41, 44, 46, 50, 53, 56, 59 and 60 join the introduction onto the verse text in both 'he' and 'en', under the verse's identity. For example, row 31 has identity …/quotes/deuteronomy_33_5 with he 'כַּכָּתוּב בְּתוֹרָתֶךָ וַיְהִי…'. Any export or review that uses rows will put the introductions inside the verse scope.",
+    "Psalm 24:9 is printed with ayin, שְׂעוּ. Human 394b confirmed this as a source typo to be kept as sic with corr שְׂאוּ (source_corrections id musaf_shabbat_seu_ayin). The alignment has plain שְׂעוּ with no sic/corr marking, and the verse URN points to Ps 24:9, whose Bible text has alef.",
+    "Isaiah 24:23 keeps human 394a's וּבִירוּשָׁלַֽ͏ִם, which has CGJ and no yod. That is correct.",
+    "Text coverage against candidate-round5: every Hebrew stanza and verse string is identical to the candidate blocks ahallelah (s260, s262, s264), ahallelah_final, the stanza_* and verse* blocks on s266 and s268, and the s270 and s272 blocks. Nothing is missing or duplicated, and the catchword fragments at the page joins (גּוֹיִם|וְאָבַד, אוֹרִיד.|כַּבִּיר) are reassembled correctly.",
+    "Readings 389b גּוֹשׁוּ גּוֹיִם, 389c כֹחוֹ, 391 בֶצַע ×2 and יָהּ, 392c מֻגָּרָה צֹאן לָטֶבַח, 393a וְרָד and 393b וּמִגְּרוּם are all present in the alignment. The candidate's 'changes' notes are out of date and contradict its own corrected text: s260 says 'כֹּחוֹ'; s264 says 'וְרָד→וְיָרַד', 'וּמֹגְרוּם' and 'מְגֹרָה…לַטֶּבַח'. The text is right; the notes should be cleaned up so they don't mislead later reviews.",
+    "Correctly left out of the work: the Hebrew rubrics אַם שבת. / אם שבת. on s260–s272, the English 'On (the) Sabbath.' rubrics, the English-page Hebrew catchwords (אהללה, ככתוב, עשה, פני, צבאות, קמטו, רבצה, שוא, תחגור, תקום) and the weekday אנסיכה / Malkhuyot alternative above the rule. The rubrics still need to be encoded in the containing (non-work) layer.",
+    "Root work identity: urn:x-opensiddur:text:poem:ahallelah_elohai is declared as a new work. Neither this file nor the candidate contains any record of the registry search, so I could not verify that claim from these files."
+  ],
+  "role_findings": [
+    "Role positions all match the scans. קהל. stands in the margin before stanza 1 (s260). חזן is written out, inline at the start of the last line before 30 שֻׂגַּב (s264). ח׳ appears inline mid-paragraph before 32 עוֹרֵר (s266), 34 פָּאֵר (s266), 36 צָעֲדוּ (s268), 38 קָדוֹשׁ (s268), 40 רִיבוּ (s270) and 42 שַׁדַּי (s270). ח׳ opens the paragraph before 44 תִּכּוֹן (s272). חזן is written out, inline, before 46 תַּחֲלִיף (s272). Strophes 31, 33, 35, 37, 39, 41, 43 and 45 have no printed role, and none is encoded, which is correct.",
+    "The role encoding is inconsistent. Stanzas 1, 30 and 46 use {label, role}; stanzas 32–44 use {abbr:'ח׳', expan:'חזן'} with no role:'reader'. The candidate's own question asking whether ח׳ could be a Rashi א׳ has no recorded human resolution in 375–394. In the scans the glyph matches ח, but that needs explicit closure, possibly in 395–405.",
+    "The stanza-1 label drops the printed period: the print and the candidate have 'קהל.'.",
+    "Speaker scope: nothing is printed before 31, 33, 35 and so on, and the reading is that the congregation says the first strophe of each pair and the reader the second. The encoding must not let the reader role from 30, 32, 34… carry forward into 31, 33, 35…. Either make speaker scope strictly per span, or document that an unmarked span has no stated role. Do not invent קהל labels that are not printed.",
+    "I found no numbered roles in the alignment. The candidate keys role1/role2 and role_1/role_2 are only block keys, not printed numbering, and their order matches the alignment."
+  ],
+  "missing_material": [
+    "No Hebrew or English work text is missing compared with candidate-round5 or the scans s260–s273.",
+    "Missing metadata: the sic/corr for שְׂעוּ (Ps 24:9).",
+    "Missing metadata: real paragraph divisions (see required_changes).",
+    "Missing metadata: role:'reader' on the ח׳ abbr speakers.",
+    "Missing metadata: any record of the registry search behind the new root.",
+    "Human readings 395–405 are not yet incorporated, so the text is not final."
+  ],
+  "required_changes": [
+    "1. Replace 'paragraph': 1 everywhere, in both he and en, with the printed paragraphs, which are the same in both languages. P1: stanzas 1–30, one paragraph across s260–s264 with 30 inline. P2: Deut 33:5 introduction and verse. P3: 31–32. P4: Ps 48:3. P5: 33–34. P6: Isa 24:23. P7: 35–36. P8: Exod 15:17, the introduction וְנֶאֱמַר and 15:18. P9: 37–38. P10: Ps 24:7–10. P11: 39–40. P12: Obad 1:21. P13: 41–42. P14: Num 23:21. P15: 43. P16: 44. P17: Ps 93:1. P18: 45–46. P19: Zech 14:9 and Deut 6:4.",
+    "2. Fix Hebrew page_start. It should be true only for the first Shabbat-region fragment on each new scan: s262 stanza 11b, s264 stanza 21b, s266 the introduction before Deut 33:5, s268 stanza 35, s270 stanza 39 and s272 stanza 44. Set it to false for stanza 30 and for 31, 32, 33, 34, 36, 37, 38, 40, 41, 42 and 43, 45 and 46, and for the introductions before Ps 48:3, Isa 24:23, Exod 15:17, Ps 24:7, Obad 1:21, Num 23:21, Ps 93:1 and Zech 14:9. The draft appears to use page_start to mean 'paragraph or role start'; the English fragments already use it correctly.",
+    "3. In 'rows', separate each verse introduction from the verse. Either give the introduction its own unreferenced row, or drop it from the verse row's he and en, so that no verse identity row contains introduction text.",
+    "4. Encode Ps 24:9 as <sic>שְׂעוּ</sic>/<corr>שְׂאוּ</corr>, following human387-394 source_corrections.musaf_shabbat_seu_ayin.",
+    "5. Use one speaker encoding everywhere: printed form plus expansion plus role. Use abbr 'ח׳' with expan 'חזן' and role 'reader' for 32, 34, 36, 38, 40, 42 and 44. Use the full printed form 'חזן' with role 'reader' for 30 and 46. Use 'קהל.' with its printed period for 1. Get the ח׳ versus א׳ question closed by a human reading or record its resolution.",
+    "6. Make speaker scope per span, or state explicitly that it does not persist, so the reader role does not carry into the next, unmarked strophe.",
+    "7. Record the registry-search evidence that justifies a new root work, urn:x-opensiddur:text:poem:ahallelah_elohai, in the alignment or a linked file.",
+    "8. Clean up the out-of-date 'changes' notes in the candidate (s260 כֹּחוֹ, s264 וְיָרַד, וּמֹגְרוּם, מְגֹרָה) so they agree with the corrected text.",
+    "9. Keep the status as DRAFT until human readings 395–405 are back and applied, then re-run the coverage check against the next candidate."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "a098d8a3-1f98-4327-abde-03436748a819"
+  }
+}

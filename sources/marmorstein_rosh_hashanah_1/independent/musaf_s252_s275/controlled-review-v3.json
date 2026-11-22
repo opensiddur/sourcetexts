@@ -1,0 +1,51 @@
+{
+  "code_verdict": "APPROVED FOR CODE ONLY, with conditions. Not full-batch approval. Reading the diff alone, the fix logic for all six earlier findings is correct: None-identity binding, range attesters, transclude and reuse skips, citations.reference, the speaker flag after an open reference, and both redirection speaker forms. Closure depends on two things. First, the final suite run (the one after the inert-metadata cleanup) has to be green; its result was not available to this review. Second, the MEDIUM finding below needs fixing: the last change has no regression test, and it fixes an allow-list problem by adding to a deny-list. Caveat: I could not open the importer source tree or build.py. They were not at /tmp/opensiddur or /tmp/mahzor-s254/opensiddur, and I only looked in those two places. So two claims are unverified: that the build mirrors attesting_controls, and that prepare_documents works on a deep copy (the claim that the host keeps source_reference_part).",
+  "findings": [
+    {
+      "priority": "medium",
+      "file": "opensiddur/importer/marmorstein_rosh_hashanah_1/realizations.py",
+      "line": 501,
+      "reason": "The fix that strips source_reference_end and source_reference_part extends a deny-list of keys to pop. Nothing in the code then checks that a generated context pointer is a valid canonical occurrence. validate_occurrences runs before prepare_documents creates these pointers, so its CANONICAL_OCCURRENCE_KEYS check never sees them. The Ani pointer bug shows this fails silently: any other non-plain key on a canonical_home segment would reach the generated pointer without any error. Examples are repeat, anchor, marked, instructions, deferred_page_boundary, and transclude. The diff also adds no test for this final change. Without that test, nothing shows that the context pointer loses these keys, or that the word host (the `home` document) keeps them, or that mutating one leaves the other unchanged.",
+      "required_fix": "After `segment['canonical'] = identity`, check `set(segment) <= CANONICAL_OCCURRENCE_KEYS` and run `validate_occurrence_controls(segment)`, raising ValueError on failure. Even better, build the pointer from an allow-list. Add a test with a canonical_home host segment that carries source_reference, source_reference_end and source_reference_part. Assert that the context pointer has none of them. Assert that the home/host segment and its rendered XML still have them. Assert that an unknown extra key on the home segment makes prepare_documents raise."
+    },
+    {
+      "priority": "low",
+      "file": "opensiddur/importer/marmorstein_rosh_hashanah_1/realizations.py",
+      "line": 62,
+      "reason": "attesting_controls finds condition_end_corresp endpoints only through `s.get('corresp')`. The redirection still to be done (yismechu, offering_formula, useir_lekhapper) replaces corresp with canonical. If an enclosing scope's condition_end_corresp names an identity that becomes a canonical pointer, attesting_controls will raise, or it will disagree with how the build resolves the endpoint. This fails loudly, not silently, but it would block the redirection or hide a mismatch with the renderer. Nothing tests it.",
+      "required_fix": "Resolve endpoints the same way build.py does, whether it matches corresp, canonical, or both. Add a test where condition_end_corresp points at a segment that has been redirected to canonical. Also confirm that no condition_end_corresp in the real data names one of the four identities being redirected."
+    },
+    {
+      "priority": "low",
+      "file": "opensiddur/tests/importer/test_marmorstein_realizations.py",
+      "line": 487,
+      "reason": "The low test-quality items from the previous review are only partly done. The citation test still has no passing baseline: validate_occurrences(r) is never shown to succeed before citations are added. It also loops only over target and targetEnd, so the new `reference` check (realizations.py:357) is untested. test_invalid_conditions_and_orphan_condition_rubric_fail (line 430) still uses a bare assertRaises(ValueError).",
+      "required_fix": "Call validate_occurrences(r) once successfully before the loop. Add 'reference' to the keys. Add a passing case with an external or biblical reference. In the invalid-conditions test, match 'typed feature structures', 'requires conditions', or 'one plain source fragment' in the error message."
+    },
+    {
+      "priority": "low",
+      "file": "opensiddur/tests/importer/test_marmorstein_realizations.py",
+      "line": 527,
+      "reason": "The flag-inertness test only checks that some milestone without @corresp comes before the note. It does not show that the milestone closes the reference opened by the inserted segment. It does not show that nothing closes between the note and the pointer. The biblical case uses a bare `corresp` with no `chapter_corresp`, so it may not open a chapter scope at all. Byte-identity with and without the flag still holds, so this weakens regression detection but leaves correctness intact.",
+      "required_fix": "Assert that the element just before the note (or the contiguous run before it) is the closing milestone for the prior reference. Add `chapter_corresp` to the Bible case and assert that its chapter closure also comes before the note."
+    }
+  ],
+  "data_integration_still_required": [
+    "Final full-suite result after the inert-metadata cleanup. Record the exact command, the collected files, and the pass counts. The 155 tests/144 subtests figure is from before the last change.",
+    "controlled-real-data-audit.json reports `generated_context_pointers: []`. That conflicts with the statement that the strict inventory caught source_reference_part on the generated Ani pointer. Re-run the inventory on the final code. List every generated context pointer (including musaf_qedushah_ani_adonai he/en) with its key set, and show each is a subset of CANONICAL_OCCURRENCE_KEYS. Show that the word host still has source_reference_part.",
+    "Re-generate the audit after the final cleanup. receipts_changed and payload hashes may shift if context documents feed into payloads.",
+    "Hand re-review, not bulk re-stamping, of all 62 changed realization receipts listed in the audit. Spot-check the largest payloads (up to 12314 bytes) to confirm that every attesting_controls entry is a real canonical pointer.",
+    "The redirection itself is still PENDING. The preflight passing (`allowed_mapping_only`) is not execution. Re-point each witness. Then validate_baseline against the unchanged accepted baseline. Show a readings diff limited to UNIT_MAPPING_FIELDS and SEGMENT_MAPPING_FIELDS. Explicitly place any end_reference or source_reference* on either the host or the pointer. Confirm that no condition_end_corresp targets a redirected identity.",
+    "Check every real citation `reference` value: it is external or biblical and passes check_citations.",
+    "Real canonical_parts libraries: validate_pure_parts and the literal-attestation check. The generated library XML has no pb, note, conditional, declare, head, div@corresp or publication idno.",
+    "Compile projections. Yismechu with shabbat unknown, true and false. ushenei_seirim with rite unknown, frankfurt_am_main=true and frankfurt_am_main=false. Show exact word sequences, that the rubric appears only when the setting is unknown, and that each library's words appear exactly once per project.",
+    "Page fidelity in generated context XML: pb n and facs positions are preserved, and a conditioned pointer that starts a page has pb before j:conditional with no duplicate.",
+    "Receipt behaviour on real data. Changing an attester's condition, or the condition of a scope enclosing it, marks callers stale. Reordering units or editing unrelated units does not. Changing library words changes resolved_sha256.",
+    "Still outstanding and outside this diff: the scope-fidelity check of generated XML against canonical_text for every part identity (he and en), and the audit of the Aleinu end_reference callers."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "e0730dab-8169-4517-a428-7a21b4762b2f"
+  }
+}

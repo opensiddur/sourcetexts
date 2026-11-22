@@ -1,0 +1,128 @@
+{
+  "status": "in_progress_not_accepted",
+  "scope": "Attah Vechartanu tails on PDF252–253 through Malkhuyot shofar prayers on275; Zikhronot276 excluded",
+  "primary_frozen": "primary-frozen.json",
+  "primary_model": "GPT-6 (Codex)",
+  "secondary_model": "claude-opus-5-5",
+  "secondary_effort": "medium",
+  "independence": "Primary frozen before any blind output was opened. Blind252 had insufficient crop at paragraph opening; reconciliation explicitly reads original full JPEG to fill the missing opening.",
+  "review_scope": [
+    "source words and pointing",
+    "instruction and actor labels",
+    "guideline adherence",
+    "canonical identity reuse",
+    "Hebrew-English alignment",
+    "continuous alternate weekday/Shabbat works",
+    "expanded recitation order",
+    "schema/reference/feature/name validation",
+    "PDF and electronic exports"
+  ],
+  "guideline_sha256": {
+    "schema/JLPTEI-3.md": "667a2cee7339c8407dcc0dc0cd01e49e5035e411e50818951bc8098654c4eeaa",
+    "schema/jlptei.odd.xml": "688bac1dd3d6a7eb8a1f43c057a1d5249a610659de45a27d0496d22b4874e016",
+    "specs/SIDDUR_URN_SCHEME.md": "ac10706385ecf094fe03db2e0976c1df4446747e533822feb2f5de94958a2514",
+    "specs/NAMING_SCHEME.md": "f30c55fcbb8e54b23894e8656809bd12da06328ef89d59a77911a1f165f36dd2",
+    "AGENTS.md": "7ca2517bd5a973c1ad915997307a1cc5cf94574164a3d19b2c5c718db24498cb"
+  },
+  "protected_prior_units": 403,
+  "protected_prior_witnesses": 720,
+  "accepted_complete_pages_before": 252,
+  "expected_complete_pages_after": 276,
+  "expected_leaves_remaining_after": 79,
+  "next_installment_scan_if_accepted": 276,
+  "pending_human_questions": [
+    395,
+    396,
+    397,
+    398,
+    399,
+    400,
+    401,
+    402,
+    403,
+    404,
+    405
+  ],
+  "notes": [
+    "Catchword-like repeated זר at upper-page boundary262/264 must be checked separately from prayer words.",
+    "Shabbat piyyut owns embedded Malkhuyot verse sequence; do not append weekday verse chain unconditionally.",
+    "No scan images or raw external API responses committed.",
+    "Human375 printed-yod Jerusalem verified in draft XML: lamed+patah+meteg, yod+hiriq, noCGJ. Human376 uncertain words resolved as חזן and לייזע by primary/independent glyph comparison; all certain supplied points kept.",
+    "Human384 final: הש״ץ אומר בנגון. The discarded final tsadi was a user typo, not a source sic/corr case. All379386 supplied marks applied or confirmed; draft metegs schema-validated."
+  ],
+  "reconciliation_blocks": 165,
+  "source_candidate": "candidate-round5.json",
+  "opening_draft_validation": {
+    "status": "schema_passed_not_source_accepted",
+    "total_xml_files": 762,
+    "new_literal_witnesses": 6,
+    "normal_project_files_installed": false,
+    "accepted_prior_baseline": "accepted-720-baseline.json",
+    "protected_prior_units": 403,
+    "protected_prior_witnesses": 720
+  },
+  "independent_line_closures_completed": [
+    254,
+    258,
+    262,
+    266,
+    270,
+    274
+  ],
+  "remaining_work": [
+    "Adjudicate395405 with source snippets already shown; do not close uncertain marks by analogy.",
+    "Integrate remaining shared formulas and Bible-verse parts with source-specific pointing and local conditions.",
+    "Close code review and demonstrate actual conditional compilation projections.",
+    "Independent guideline/identity/alignment/order review, schema/features/names/registry/refdb checks.",
+    "Final PDF/electronic export QA and independent approval.",
+    "Only then accept batch252253tails/254275 and publish refreshed exports."
+  ],
+  "adjudicated_human_questions": [
+    375,
+    376,
+    377,
+    378,
+    379,
+    380,
+    381,
+    382,
+    383,
+    384,
+    385,
+    386,
+    387,
+    388,
+    389,
+    390,
+    391,
+    392,
+    393,
+    394
+  ],
+  "human375_xml_verification": "human375-xml-verification.json",
+  "human379386_verification": "human379-386-verification.json",
+  "alignment_drafts": [
+    "weekday-alignment-v3.json",
+    "shabbat-alignment-v5.json",
+    "pifiyyot-ochilah-units-v2.json"
+  ],
+  "independent_alignment": {
+    "weekday": "All43 pairs and genuine untranslated Hebrew23 independently confirmed; corrections to tomekh paragraph, page flags, variant and role punctuation applied, await closure.",
+    "shabbat": "46strophes plus14 embedded verse units; independent alignment review running."
+  },
+  "accepted_before_batch": {
+    "units": 403,
+    "literal_witnesses": 720,
+    "complete_leaves": 252
+  },
+  "batch_accepted": false,
+  "validation_checkpoint": {
+    "xml_draft_files": 8,
+    "schema_passed": true,
+    "importer_tests_passed": 156,
+    "subtests_passed": 146,
+    "source_baseline_unchanged": 720,
+    "evidence": "alignment-draft-validation.json",
+    "code_audit": "controlled-real-data-audit.json"
+  }
+}

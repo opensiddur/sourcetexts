@@ -1,0 +1,113 @@
+{
+  "verdict": "NOT ACCEPTED. All 43 English-to-Hebrew pairs are semantically correct and the Hebrew 23 omission is a genuine gap in the source's English, but three things block acceptance: the variant note is not integrated, the tomekh paragraph/page_start encoding is wrong, and change logs and open-question lists in candidate-round5 are stale.",
+  "alignment_findings": [
+    {
+      "pairs": "He1–9 ↔ En1–9 (ansikhah…hillukh)",
+      "status": "correct",
+      "note": "Each English sentence renders its Hebrew stanza: homage/walk/girds strength; casting away idols / herald (Elijah); falsehood (חנף) / house of the proud; walks in my midst; nations and kingdoms confounded; scroll and book / those who wait (חוכיו); princely tread (Esau's tears); lowly / yoke of the kingdom; wandering of five hundred years."
+    },
+    {
+      "pair": "He10 havel ↔ En10",
+      "status": "correct; one stanza",
+      "note": "s263 lines 8–10: 'As to Bel set on a throne, over what does he reign? Through whom was he crowned that he has hastened to reign?' is a single printed stanza. The two questions render עַל מֶה מָלָךְ and הֲלֹא בְּמִי נִמְלָךְ. כִּי אָץ לִמְלוֹךְ. The regex chunks 10 and 11 are a split at the '?' and do not reflect a source division. The joined pairing is right."
+    },
+    {
+      "pairs": "He11–22 ↔ En11–22",
+      "status": "correct",
+      "note": "umillifnei (Before any king), umah (Molech), zakh (Pure One), zer (garland), chiddeshu (renews realm), chovesh (healing), torach (oppression of kingdoms), tohar (purity of merits / floods), yahav (lay burden), yaavru (like angels / ‘The Lord will reign’), kittim, kevod. All match."
+    },
+    {
+      "pair": "He23 lekhol",
+      "status": "no English in the source; confirmed",
+      "note": "s266 lines 2–4 print לְכָל גֹּבַהּ יַפִּיל… וּכְאוֹר זָרוּעַ יִמְלֹךְ. On s267 the English goes straight from kevod ('…when He completes His work and will reign.') to 'He will fold up the skies…', which renders לְרָאִי יַקְפִּיל / וַחֲדָשִׁים יַכְפִּיל / פּוּר הִפִּיל / מִצִּיּוֹן, i.e. He24. Nothing on s267 renders casting down heights, lowering mountain and hill, or darkening nations. The omission is real, and leaving en null with a source note and no substitute translation is correct."
+    },
+    {
+      "pairs": "He24–44 ↔ En23–43",
+      "status": "correct",
+      "note": "leroi, matu, malkhu (דְגוּיִם = fish), nedivei, niggun, sikkut (Sikkut/Kiyun), sod, izzuz, al_rum, pur, pachad (shofar three times), tzevi, tzevaot, qetzinim, qeruim, raz, roeh (Teman/Gilead), shinan (Shinanim), sheiyyot, tekhan, tomekh. All match. Shinan's English 'assembly of angels' renders the main-text reading וְסוֹד פְּלִיאִיּוֹת, not the variant."
+    },
+    {
+      "topic": "page breaks within stanzas",
+      "status": "correct",
+      "note": "The following splits match the scans. Hebrew: kittim at כֵּס מַמְלַכְתּוֹ. | יִכּוֹן (s264→s266); sikkut at כִּיּוּן | גִּלּוּלִים (s266→s268); qetzinim at יַשְׁלִיכוּ. | קוֹל (s268→s270). English: gilyon at 'ways of life,' | 'open' (s261→s263); zakh at 'vengeance' | 'and reigns.' (s263→s265); kittim at 'established and' | 'He will reign.' (s265→s267); sikkut at 'abominations' | 'of Kiyun' (s267→s269); qetzinim at 'The princes' | 'who once ruled' (s269→s271)."
+    },
+    {
+      "topic": "catchword",
+      "status": "correct",
+      "note": "The last word on s262, זֵר (at the end of the יֹאחֵז דַּרְכּוֹ line), is a catchword: s264 begins again with זֵר בְּשַׁלְּכוֹ. Excluding it from the text is right, and zer starts on s264 with page_start true. No other page transition in this unit has a catchword: s264→s266, s266→s268 and s268→s270 all run straight on."
+    },
+    {
+      "topic": "speakers",
+      "status": "mostly correct",
+      "note": "The small קהל. at the right margin before אַנְסִיכָה on s260 is a correct speaker placement before stanza 1. The alignment label 'קהל' drops the printed period that the candidate block 'קהל.' keeps; make them match the print. The small ח׳ before תּוֹמֵךְ on s270 is correctly attached before the tomekh stanza. The English has no speaker labels, which is correct."
+    },
+    {
+      "topic": "paragraphs",
+      "status": "error",
+      "note": "On s270 the Hebrew תּוֹמֵךְ begins a new indented paragraph: the line after בְּמָלְכוֹ יִמְלֹךְ: is left short, and the next line is indented with ח׳. The English on s271 also starts a new paragraph with the cue תומך. The alignment gives the English tomekh paragraph 2 but the Hebrew tomekh paragraph 1."
+    },
+    {
+      "topic": "page_start flags",
+      "status": "error",
+      "note": "Hebrew tomekh (s270) has page_start true, but it is mid-page: s270 starts with קוֹל יִתְּנוּ. English tomekh (s271) has page_start true, but s271 starts with 'who once ruled'. Elsewhere page_start marks the first fragment on a scan. Here it appears to have been used to mark a paragraph start."
+    }
+  ],
+  "missing_source_material": [
+    {
+      "item": "Variant note (נ״א פְּלִילִיּוֹת)",
+      "scan": "s270",
+      "location": "Small parenthesised type at the right (line-start) end of printed line 6, immediately after line 5 ends with וְסוֹד פְּלִיאִיּוֹת and before שִׁיר מִתְלוּלִיּוֹת. That puts it inside the shinan stanza, attached to פְּלִיאִיּוֹת.",
+      "status": "Not integrated. It sits in unassembled_variant_note and is absent from the he shinan fragments. Omitting it is not acceptable.",
+      "note": "The candidate describes it as being on 'printed line 7'. On the scan it is line 6. On the full-page image the first letter of the abbreviation looks like nun, but candidate-round5 still lists nun-or-kaf as an open question, so leave that question open."
+    },
+    {
+      "item": "Hebrew rubric and attribution before the poem",
+      "scan": "s260",
+      "text": "the Shabbat instruction line; מיוסד ע״פ א״ב מרובע.",
+      "status": "Not in the alignment unit. Decide whether the unit links to these candidate blocks as heading/description. English counterpart: the instruction 'On the Sabbath the prayer below the line is said:' (s261). The attribution has no English counterpart."
+    },
+    {
+      "item": "English-page Hebrew cues אנסיכה (s261) and תומך (s271)",
+      "status": "Correctly left out of the English prayer text. Confirm they are recorded as linkage cues in source_boundaries. The תומך cue also confirms the paragraph-2 break."
+    }
+  ],
+  "corrected_pairs": [
+    {
+      "identity": "urn:x-opensiddur:text:poem:ansikhah_malki/havel",
+      "he_stanza": 10,
+      "en": "As to Bel set on a throne, over what does he reign? Through whom was he crowned that he has hastened to reign?",
+      "correction": "None to the pairing. Record it as one English stanza, and drop or annotate en_regex_chunks [10,11] as a regex artifact."
+    },
+    {
+      "identity": "urn:x-opensiddur:text:poem:ansikhah_malki/lekhol",
+      "he_stanza": 23,
+      "en": null,
+      "correction": "None. Confirmed absent in the source."
+    },
+    {
+      "identity": "urn:x-opensiddur:text:poem:ansikhah_malki/shinan",
+      "he_stanza": 41,
+      "correction": "Add the variant note (נ״א פְּלִילִיּוֹת) as an anchored note on פְּלִיאִיּוֹת in the he stanza."
+    },
+    {
+      "identity": "urn:x-opensiddur:text:poem:ansikhah_malki/tomekh",
+      "he_stanza": 44,
+      "correction": "he: paragraph 2, page_start false. en: page_start false (keep paragraph 2)."
+    }
+  ],
+  "required_changes": [
+    "Integrate the s270 variant note into the shinan Hebrew stanza, anchored to פְּלִיאִיּוֹת, with its printed parentheses. Delete unassembled_variant_note. Correct the description from 'line 7' to 'line 6'. Keep the nun-or-kaf question open until it is resolved.",
+    "Set the Hebrew tomekh to paragraph 2, matching the source indentation and the English.",
+    "Set page_start to false on both the Hebrew tomekh (s270) and the English tomekh (s271) fragments.",
+    "Make the stanza-1 speaker label match the print, 'קהל.' with its period, or document that the period is dropped as encoding policy.",
+    "Make en_regex_chunks for havel clearly diagnostic (one source stanza), or drop the field so the 10/11 regex split is not mistaken for a source boundary.",
+    "Link or account for the s260 rubric and attribution (מיוסד ע״פ א״ב מרובע.) and the s261 English rubric in the unit.",
+    "Bring the candidate-round5 records up to date with human387–394. Alignment text is already correct for these, but the logs are not: on s260 anassekha, the change 'לִפְנוֹת→לִזְכּוֹת' and the open questions on לִזְכּוֹת and גּוֹיִם are superseded by 388 and 389a; on s264 anassekha, 'חֹבֵשׁ' and 'מַלְכֻיּוֹת' in the changes list are superseded by 392a and 392b; on s264 ahallelah, the 'וְרָד→וְיָרַד', 'מְגֹרָה צֹאן לַטֶּבַח' and 'וּמֹגְרוּם' entries are superseded by 392c, 393a and 393b.",
+    "Keep the Hebrew 23 source note as it is: no substitute English."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "202a1292-e109-49fe-b8f3-3846ee7298d6"
+  }
+}
