@@ -1,0 +1,18 @@
+{
+  "html_approved": true,
+  "prior_PDF_visual_approval_preserved": true,
+  "blocking_findings": [],
+  "cosmetic_findings": [
+    "documentary 1280: the Hebrew 'ארשת שפתינו … ומקשיב לקול' line ends at 'לקול' and 'אם שבת.[זכרון ]…' starts as a separate block with a large gap, so the Hebrew column breaks visually mid-sentence. The English splits at the same place ('…to the sound of' / '[the memory of ] our Tekiah…'). It is still readable and the columns stay paired.",
+    "documentary 1280 and 390: page markers show out of order or in odd places. At 1280, '131' sits under the English closing paragraph while '130' sits above the Hebrew 'שיר של יום' heading. At 390, '130' appears beside the heading and '131' appears below it, just above the psalm.",
+    "documentary 390 and expanded 390: the stacked view has pairs of empty horizontal separator lines, and some stand alone around the short '[the memory of ]' and 'אם שבת.[זכרון ]' fragments. This adds visual noise but loses no content.",
+    "All profiles: the bracketed placeholders keep an inner space before the closing bracket ('[the memory of ]', '[זכרון ]', '[כל ]', '[של יעקב ]'). This looks like it is intentional editorial marking; flagged only for spacing consistency.",
+    "documentary-hebrew 1280: the full-width Hebrew paragraphs have long lines, about 1150px, which makes them harder to read than the two-column profiles. This layout appears to be unchanged from before."
+  ],
+  "verdict": "HTML approved, final generated-export review only. In all six screenshots the text is readable. At 1280 the columns are in the right order (Hebrew on the right, English on the left, rows aligned). At 390 each pair stacks Hebrew first, then English. The closing paragraph 'אתה נגלית בענן כבודך … ובקול שפר עליהם הופעת' is shown in full in every profile, and so is its English, 'Thou hast revealed Thyself … didst Thou appear to them.', in documentary and expanded. The colophon (title, contributors, licences) follows in every profile. The browser QA summaries show no errors, no duplicate IDs and no broken internal links, and scrollWidth matches the viewport at both widths for all three files, so there is no horizontal overflow. The equivalence claims (only canonical-URI and empty-anchor metadata changed in the HTML, no visible, layout or control changes, print TeX identical or differing only in ignored leading indents, PDF binaries preserved) are taken as reported by local machine QA and were not checked independently. The earlier PDF visual approval still holds because the three PDF binaries are reported unchanged. No findings block release. This review does not approve any implementation code, and the comparison script was not reviewed. No edits were made.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "2f398ca3-13c7-461e-8083-584ce7cf2f31"
+  }
+}
