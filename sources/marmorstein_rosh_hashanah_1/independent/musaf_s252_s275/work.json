@@ -119,10 +119,28 @@
   "validation_checkpoint": {
     "xml_draft_files": 8,
     "schema_passed": true,
-    "importer_tests_passed": 156,
+    "importer_tests_passed": 158,
     "subtests_passed": 146,
     "source_baseline_unchanged": 720,
     "evidence": "alignment-draft-validation.json",
     "code_audit": "controlled-real-data-audit.json"
+  },
+  "importer_code_review": {
+    "verdict": "approved_code_only",
+    "review": "controlled-review-v5.json",
+    "processor_commit": "d6037d9",
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+  },
+  "compile_proof": {
+    "isolated_source_projection_cases": 18,
+    "result": "passed",
+    "report": "controlled-projections.json",
+    "full_batch_integration": false
+  },
+  "realization_review_migration": {
+    "changed_existing_payloads": 62,
+    "review_required": true,
+    "raw720_literal_witnesses_unchanged": true
   }
 }
