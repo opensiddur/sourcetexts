@@ -1,0 +1,65 @@
+{
+  "narrowed_approved": {
+    "verdict": "conditional",
+    "basis": "Unverified review of the 8-point design as described; source files, schema, importer and exporter were not available.",
+    "approved_as_described": [
+      "Item 1: rh_qedushat_hayom and musaf_malkhuyot_close stay literal, with no canonical_words, the old wholeP root and scopes unchanged, and baseline720 unchanged.",
+      "Item 2: source274-only EN split at 'Thy word is | truth', matching HE 'ודברך | אמת'. It is a shared editorial milestone, not a printed paragraph. The original single paragraph is kept and accepted EN sources stay unsplit.",
+      "Item 4: single-target canonical_words only, strict minimum keys, pure part targets only. No multi-target support (not reopened).",
+      "Item 6: explicit hard rejection of corrections on mapped targets, libraries and mapped source caller files. No generic reuse/repeat/transclude bypass.",
+      "Item 7: canonical/plain-pointer calls into ranges that have canonical_words stay rejected. source_order transclusion of the context root and markers is allowed for the documentary frame. The expanded spine uses parts only.",
+      "Attah Vechartanu: canonical=P directly on old segment0 (a single PLAIN host). The overlay and printed default are declared in the caller's transclude_unit, outside the target scope.",
+      "The three conditional offering/Yismechu libraries keep their already-approved simple canonical pointers."
+    ]
+  },
+  "blocking_design_findings": [
+    {
+      "id": "B1-intra-word-boundary",
+      "finding": "In HE, hashabbat_ve | yisrael_veyom_hazzikkaron falls inside one printed word: 'מקדש (השבת ו)ישראל'. The 'ו' is attached to 'ישראל'. If projection joins parts with a space, Shabbat=true produces 'השבת ו ישראל' instead of 'השבת וישראל'. If the 'ו' is placed in the next part, Shabbat=false produces 'וישראל' instead of 'ישראל'.",
+      "resolution_required": "Either (a) canonical_words supports an explicit no-space join at this one boundary, with validation that the join appears only where the source span has no whitespace, or (b) the boundary is moved to whole words (e.g. a conditional HE variant 'השבת וישראל'/'ישראל'). That would change the part IDs, so you need to decide. EN '(the Sabbath and) Israel' has no such problem."
+    },
+    {
+      "id": "B2-nested-id-containment",
+      "finding": "The new parts are 'additional boundaries under' P:amidah/melokh_al_kol_haolam, but the root's only home is the old accepted source, which has no such inner boundaries and possibly different wording/edition. If URN traversal, unique-home checks or fidelity treat child IDs as contained in the root's home, then (i) resolving a child could search the old root home and fail or misresolve, and (ii) the hierarchy would claim the parts concatenate to the root text when they come from a different source.",
+      "resolution_required": "Show from the exporter/importer that child-ID resolution never goes through the ancestor's home and that the root never resolves through the children. Otherwise declare explicitly, and test, that P root and the new part IDs are textually independent identities (no derived-root rule). If the old root wording differs from source274, record that in the design."
+    },
+    {
+      "id": "B3-hash-neutral-baseline-field",
+      "finding": "Adding a mapping field to the accepted baseline keeps the hashes unchanged only if the field is absent (not null/empty) in all 720 entries, or is explicitly left out of the hashed serialization.",
+      "resolution_required": "Pick one, and test that all 720 hashes are byte-identical before and after the schema change."
+    }
+  ],
+  "remaining_constraints": [
+    "C1: The source274 frame unit with source=P must count as a documentary correspondence, not a home of P root. Unique-home counting must still find exactly one P root home (the old source).",
+    "C2: Each language's parts must cover the full source274 raw block for that language with no gaps or overlaps (modulo marked parentheses and the B1 join). Offsets must be exact against the same block, and the EN halves must meet exactly at the verified boundary.",
+    "C3: malkenu is HE-only. The EN library has no malkenu entry, and the EN spine reference to it must resolve to nothing: no fallback to HE, no missing-translation error, no empty element. The variant condition is evaluated identically for both languages.",
+    "C4: marked=True requires exactly one leading '(' and one trailing ')' with balanced content and no other parentheses. Projection removes exactly those two characters and does no other trimming. marked=False must not contain outer parentheses. The source frame keeps the printed parentheses.",
+    "C5: In print compilation with Shabbat/variant=unknown, the presentation must come from condition rendering, not from copied parentheses (they were removed). Declare whether it should match the printed source274 parentheses and test that.",
+    "C6: The overlap check exempts only an enumerated list of structural/context source_order marker types (M/repetition/melokh, M/repetition/melokh/text). It is not weakened for canonical, canonical_whole, canonical_home, reuse or canonical_parts.",
+    "C7: Inline canonical_words go only in the existing content node. All source metadata and scope events are kept. A source_order transclusion of the frame renders the frame's own literal text and does not count as a home, attestation or fidelity proof for the parts.",
+    "C8: The source274 freeze in word_frame_baseline.json is recorded before mappings are inserted. The build compares exact unit dictionaries with only the canonical_words key removed (no leftover empty container), covering urn, titles, corresp/source/ref, conditions, raw fragments, notes, wording_selection and unmapped segments. Because source274 is unaccepted, the freeze needs its own recorded hash or receipt so it can't be silently regenerated.",
+    "C9: The correction guard is keyed on resolved file identity and on any URN that resolves into the mapped targets, libraries or caller files, so alternate paths can't get around it. Other source corrections behave as before.",
+    "C10: Search for existing exact part IDs under P:amidah/melokh_al_kol_haolam before creating new ones. Reuse a match only if its wording is identical; otherwise reject. No duplicate homes.",
+    "C11: The Attah Vechartanu overlay doesn't modify the accepted host file or its baseline720 hash. The preflight guard runs unchanged.",
+    "C12: Triggers, used_features, attesting_controls, fidelity, the generated unique-home check and URN traversal all include canonical_words, so no code path silently skips it."
+  ],
+  "required_proofs": [
+    "P1: The full generated schema for source274, plus print and electronic compilation for Shabbat unknown/true/false and malkenu variant unknown/on/off, HE and EN.",
+    "P2: Exact HE and EN word projections for every condition combination, including the B1 cases: 'מקדש השבת וישראל' and 'מקדש ישראל' with no stray space, and 'ודברך מלכנו אמת' / 'ודברך אמת'.",
+    "P3: Source omissions are unchanged, and paragraph/page/line markers are byte-identical before and after inserting canonical_words (still one printed paragraph across the EN split).",
+    "P4: One unchanged P root home, and all 720 accepted hashes unchanged (covers B3).",
+    "P5: Each pure part has exactly one home, with no controls, pages or copied library milestones leaking out. The expanded sequence references only parts.",
+    "P6: The context root M/repetition/melokh still covers the complete source274 block, and a source_order transclusion of it renders the literal frame.",
+    "P7: The B2 traversal test: a child ID resolves only to the new library and the root only to the old source, with no cross-resolution.",
+    "P8: Strict rejection tests: extra keys, arrays/ranges, source_reference, chapter/verse, speaker_before_reference, editorial_note, overlays on the mapped caller, root/self/ancestor/qualifier/cycle targets, overlap with canonical-type units, bad marked parentheses, and canonical/plain-pointer calls into mapped ranges.",
+    "P9: Fidelity tests: the parts concatenation equals the source span; any 1-character mutation of a part or a frame span fails.",
+    "P10: Stale-receipt tests: changing a frame unit or the freeze file without a new receipt fails the build.",
+    "P11: Frame-mutability tests: every frozen field mutated one at a time fails, and removing canonical_words alone passes.",
+    "P12: Correction-rejection tests on each mapped target, library and caller file, including via alternate URN paths, plus a control test that a correction to an unmapped source still works."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "7860ab72-6f2d-4f53-b1ad-ec6d0cdc3d2a"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "status": "in_progress_not_accepted",
+  "status": "accepted",
   "scope": "Attah Vechartanu tails on PDF252–253 through Malkhuyot shofar prayers on275; Zikhronot276 excluded",
   "primary_frozen": "primary-frozen.json",
   "primary_model": "GPT-6 (Codex)",
@@ -30,19 +30,7 @@
   "expected_complete_pages_after": 276,
   "expected_leaves_remaining_after": 79,
   "next_installment_scan_if_accepted": 276,
-  "pending_human_questions": [
-    395,
-    396,
-    397,
-    398,
-    399,
-    400,
-    401,
-    402,
-    403,
-    404,
-    405
-  ],
+  "pending_human_questions": [],
   "notes": [
     "Catchword-like repeated זר at upper-page boundary262/264 must be checked separately from prayer words.",
     "Shabbat piyyut owns embedded Malkhuyot verse sequence; do not append weekday verse chain unconditionally.",
@@ -51,7 +39,7 @@
     "Human384 final: הש״ץ אומר בנגון. The discarded final tsadi was a user typo, not a source sic/corr case. All379386 supplied marks applied or confirmed; draft metegs schema-validated."
   ],
   "reconciliation_blocks": 165,
-  "source_candidate": "candidate-round5.json",
+  "source_candidate": "candidate-round9.json",
   "opening_draft_validation": {
     "status": "schema_passed_not_source_accepted",
     "total_xml_files": 762,
@@ -69,14 +57,7 @@
     270,
     274
   ],
-  "remaining_work": [
-    "Adjudicate395405 with source snippets already shown; do not close uncertain marks by analogy.",
-    "Integrate remaining shared formulas and Bible-verse parts with source-specific pointing and local conditions.",
-    "Close code review and demonstrate actual conditional compilation projections.",
-    "Independent guideline/identity/alignment/order review, schema/features/names/registry/refdb checks.",
-    "Final PDF/electronic export QA and independent approval.",
-    "Only then accept batch252253tails/254275 and publish refreshed exports."
-  ],
+  "remaining_work": [],
   "adjudicated_human_questions": [
     375,
     376,
@@ -97,7 +78,27 @@
     391,
     392,
     393,
-    394
+    394,
+    395,
+    396,
+    397,
+    398,
+    399,
+    400,
+    401,
+    402,
+    403,
+    404,
+    405,
+    406,
+    407,
+    408,
+    409,
+    410,
+    411,
+    412,
+    413,
+    414
   ],
   "human375_xml_verification": "human375-xml-verification.json",
   "human379386_verification": "human379-386-verification.json",
@@ -115,7 +116,7 @@
     "literal_witnesses": 720,
     "complete_leaves": 252
   },
-  "batch_accepted": false,
+  "batch_accepted": true,
   "validation_checkpoint": {
     "xml_draft_files": 8,
     "schema_passed": true,
@@ -142,5 +143,24 @@
     "changed_existing_payloads": 62,
     "review_required": true,
     "raw720_literal_witnesses_unchanged": true
-  }
+  },
+  "integration_status": "Complete documentary and expanded frame assembled in draft; full schema build and independent source application/service-order reviews running.",
+  "complete_draft_units": 428,
+  "complete_draft_language_witnesses": 766,
+  "schema_validated_xml_files": 804,
+  "actual_compilation_outputs": 52,
+  "actual_pairing_errors": 0,
+  "actual_canonical_source_matches": 19,
+  "actual_quotation_extent_matches": 79,
+  "tests_passed": 191,
+  "subtests_passed": 260,
+  "old_realization_bindings_independently_approved": 87,
+  "recitation_order_independently_approved": true,
+  "complete_units": 428,
+  "complete_language_witnesses": 766,
+  "canonical_realization_payloads": 145,
+  "complete_leaves": 276,
+  "remaining_leaves": 79,
+  "next_scan": 276,
+  "acceptance_evidence": "../../musaf_s252_s275_acceptance.json"
 }

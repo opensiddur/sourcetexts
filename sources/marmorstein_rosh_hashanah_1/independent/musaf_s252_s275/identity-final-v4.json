@@ -1,0 +1,58 @@
+{
+  "canonical_identity_approved": true,
+  "data_encoding_approved": true,
+  "generated_encoding_approved": true,
+  "alignment_approved": true,
+  "umippenei_keys_approved": [
+    "realization/musaf_repetition_umippenei/he",
+    "realization/musaf_repetition_umippenei/en"
+  ],
+  "global_order_caption_cleanup_approved": true,
+  "findings": [
+    {
+      "severity": "resolved",
+      "item": "Umippenei split identity (the medium finding in identity-final-v3)",
+      "evidence_read": "I opened project-draft-v6 HE musaf_repetition_umippenei.xml. Line 22: idno is regalim/musaf/text/umippenei@prayerbook_for_the_new_year-heidenheim-1965-he. Line 37: div corresp is S. I opened the EN file in project-draft-v6/prayerbook_for_the_new_year-marmorstein-1965-en/. Line 22: idno is S@...-marmorstein-1965-en. Line 37: div corresp is S. Neither file mentions prayer:amidah/umipenay_chataaynu_galinu. Spine line 3353 transcludes S, between Vattitten (3352, P canonical) and sabbath_offerings (3354). I also opened v6 HE quiet musaf_umippenei.xml line 37-38. Its div corresp is M, the milestone corresp is M/text, all 3 segs carry @source=S, and no div or idno in it claims S. Birnbaum HE/EN festival_musaf_umippenei_text.xml: idno is S@birnbaum-1949-he/en and the prayer-part milestone corresp is S, as the closure record says.",
+      "conclusion": "Option (a) is implemented. Within this project, S has one published realization per language: the repetition unit. The quiet Musaf only cites S through seg/@source, so nothing competes with it. The P placeholder is unused here. No registry change was needed. The correction in the closure record about the quiet Musaf's source is accurate."
+    },
+    {
+      "severity": "info",
+      "item": "Repetition words compared with the quiet Musaf printing",
+      "detail": "HE: the repetition omits most meteg marks. It also differs at כָל/כָּל (לְעֵינֵי כָל חָי), רְצוֹנֶךָ/רְצוֹנְךָ and עַבְדֶּךָ/עַבְדְּךָ. The Shabbat insert is encoded as a marked conditional without the printed parentheses, which matches the quiet Musaf encoding. There is a double space before the conditional, which is only whitespace. EN: the only difference is 'in mirth and to Jerusalem' where the quiet printing has 'in mirth, and'. Page breaks are p.117, HE n253 and EN n254, consistent with the alternating HE/EN facs.",
+      "conclusion": "These are separate readings of the repetition page. The words were not harmonized and no alternate words were added. Unlike offering_formula and al_ken, there is no quiet_printing/repetition_printing variant declare. That is acceptable, because the repetition is the S realization in this project and the quiet Musaf stays literal. Birnbaum's S realization also differs textually (it adds לַעֲלוֹת וְלֵרָאוֹת וּלְהִשְׁתַּחֲוֹת), which shows S works as a work-level identity. Not blocking."
+    },
+    {
+      "severity": "low",
+      "item": "S covers a different extent in each corpus",
+      "detail": "Birnbaum's S realization ends at וּתְגַדֵּל כְּבוֹדוֹ. This book's repetition attaches to S the whole text through כָּאָמוּר: (אבינו מלכנו through ואת מוספי). The quiet Musaf seg/@source already did this in the accepted baseline, so this contribution does not introduce it.",
+      "required_change": "Not blocking. Record it with the regalim/musaf/text/vattitten item for a later master registry or extent cleanup. Reference validation should confirm that the S transclusion resolves only to the -he/-en realizations of this project."
+    },
+    {
+      "severity": "resolved",
+      "item": "Shofar-calls caption cleanup",
+      "evidence_read": "v6 spine lines 3587-3591: blower role note (3588), EN editorial cue resp=codex (3589), literal transclusion of rosh_hashanah/musaf/repetition/shofar_calls (3590). The duplicate HE 'תקיעה, שברים, תרועה, תקיעה.' note is gone.",
+      "conclusion": "Done as approved."
+    },
+    {
+      "severity": "info",
+      "item": "Scope of this pass",
+      "detail": "I did not compute SHA-256 for the Birnbaum word homes or any payload. I did not open siddur_expanded musaf.xml or morning.xml, the registry jsonl, or v4/v5 files. The Vattitten keys keep their v3 approval. The other 141 payloads are approved on the basis of earlier reads plus the primary's hash check, not reread here."
+    }
+  ],
+  "remaining_gates": [
+    "Primary machine: hash-check the original 143 payloads against the current manifest. Confirm that only the two Umippenei unit-URN fields and the global expanded_order hash changed, and record the new expanded_order_sha256.",
+    "Primary machine: verify the closure-record SHA-256 values for the 4 Birnbaum and siddur_expanded files.",
+    "Reference validation on the regenerated build. Confirm that S at spine line 3353 resolves only to this project's HE/EN repetition realizations and that P has no dangling users from this contribution.",
+    "Primary machine: uniqueness proof for the EN numbers/28/9 and 28/10 verse milestones.",
+    "Compile QA and names/features tests on the regenerated build.",
+    "Final exports and PDF/HTML visual QA.",
+    "Source custom-order follow-up (separate review).",
+    "Later master cleanup, not blocking: the extent of regalim/musaf/text/umippenei and the parallel regalim/musaf/text/vattitten.",
+    "No whole-batch, installation or export acceptance is given by this review."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "20e9da64-2eda-4402-a8f8-d60f4278f036"
+  }
+}

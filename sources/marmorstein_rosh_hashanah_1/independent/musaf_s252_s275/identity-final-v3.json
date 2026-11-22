@@ -1,0 +1,60 @@
+{
+  "canonical_identity_approved": false,
+  "data_encoding_approved": true,
+  "generated_encoding_approved": true,
+  "alignment_approved": true,
+  "remaining_vattitten_keys_approved": [
+    "realization/musaf_repetition_vattitten_lanu/he",
+    "realization/musaf_repetition_vattitten_lanu/en"
+  ],
+  "global_order_caption_cleanup_approved": true,
+  "findings": [
+    {
+      "severity": "resolved",
+      "item": "Vattitten canonical identity (the medium finding from encoding-final-v2)",
+      "evidence_read": "siddur.jsonl line 884: urn:x-opensiddur:text:siddur:rosh_hashanah/text/vattitten_lanu now has status=context, references=[urn:x-opensiddur:text:prayer:amidah/vattitten_lanu_hashem], and a note saying it is not a second canonical prayer. prayer.jsonl line 180: vattitten_lanu_hashem is canonical, label_he 'וַתִּתֶּן לָֽנוּ, יְיָ'. I opened project-draft-v4 HE musaf_vattitten_lanu.xml. Every seg carries @source=prayer:amidah/vattitten_lanu_hashem, and the words and segmentation match the closure evidence. I also opened HE rh_qedushat_hayom.xml line 39 (prayer-part corresp is the legacy URN, which now resolves to context) and HE musaf_repetition_vattitten_lanu.xml (div corresp is the canonical P URN). The repetition's words match the quiet Musaf words.",
+      "conclusion": "This implements option (b) from my earlier finding. The legacy URN is a contextual address with an explicit reference to P, so there is no longer a competing canonical identity. No new alias or prayer is needed. Both repetition Vattitten keys are approved.",
+      "not_independently_opened": "I could not find the EN directory under the name I tried, so I did not open the EN quiet Musaf, the Shacharit XML, or the EN repetition Vattitten XML. The Shacharit and EN rows in canonical-identity-closure.json are taken as reported. The EN key approval rests on my earlier full read of its payload plus the registry relationship, which does not depend on language."
+    },
+    {
+      "severity": "medium",
+      "item": "Umippenei: the claim that it already used the same canonical is contradicted by the file I opened",
+      "location": "project-draft-v4/prayerbook_for_the_new_year-heidenheim-1965-he/musaf_umippenei.xml line 38, compared with musaf_repetition_umippenei.xml line 37; siddur.jsonl line 745",
+      "problem": "canonical-identity-closure.json contains no Umippenei evidence at all, despite the request saying 'full text provided'. The accepted quiet Musaf Umippenei in this volume does not cite prayer:amidah/umipenay_chataaynu_galinu. All three of its segs carry @source=urn:x-opensiddur:text:siddur:regalim/musaf/text/umippenei. The registry lists that URN at line 745 as status=canonical with no references to the prayer URN. The repetition sets its div corresp to prayer:amidah/umipenay_chataaynu_galinu. So the same printed Rosh Hashanah Umippenei now has two different canonical identities in one project. The only differences are meteg marks, plus רְצוֹנְךָ/רְצוֹנֶךָ and עַבְדְּךָ/עַבְדֶּךָ. This is exactly the split pattern that made Vattitten a medium finding.",
+      "effect_on_prior_approval": "In encoding-final-v2 I kept the Umippenei keys approved only because I had found no competing identity. That condition no longer holds, so identity approval for realization/musaf_repetition_umippenei/he and /en is suspended until this is resolved. This follows from new evidence; their data, XML and alignment approvals stand.",
+      "required_change": "Choose one. (a) Have the repetition cite or transclude regalim/musaf/text/umippenei, as the quiet Musaf does, and record the printing differences as variants. (b) Change regalim/musaf/text/umippenei in the registry to context with references=[prayer:amidah/umipenay_chataaynu_galinu], or re-source the quiet Musaf to the prayer URN, after checking other users of the regalim URN. Then regenerate and re-run reference validation."
+    },
+    {
+      "severity": "low",
+      "item": "Pre-existing parallel URN regalim/musaf/text/vattitten (siddur.jsonl line 748, canonical)",
+      "problem": "No unit in this volume uses it, so it does not split identity in this project. It is a second master-level Vattitten identity alongside prayer:amidah/vattitten_lanu_hashem.",
+      "required_change": "Non-blocking. It is outside this batch; record it for a later master registry cleanup."
+    },
+    {
+      "severity": "info",
+      "item": "Shofar-calls caption cleanup",
+      "evidence_read": "The project-draft-v4 spine index.xml line 3589 still contains the Codex HE note 'תקיעה, שברים, תרועה, תקיעה.' Lines 3588 (blower role), 3590 (EN cue) and 3591 (literal transclusion) are as described.",
+      "conclusion": "The described change is exactly the change I asked for earlier, and I approve it. I have not seen a regenerated spine that drops line 3589, and I have not verified the new expanded_order_sha256 or that only the order hash changes across 143 payloads."
+    },
+    {
+      "severity": "info",
+      "item": "Other low items",
+      "conclusion": "I accept the clarifications for the context-only numbered milestones, the shared HE variant settings in EN, and the correction id that includes 'shabbat' (Ahallelah is the Shabbat alternative). None changes any words. Correction to my earlier wording: compiler-report.json has 10 fully declared response cases plus 1 partly declared, not 11 fully declared. I did not open compile-qa-v3 compiler-report.json, assertions.json, source-projections.json or verse-projections.json in this pass, so the results for the 79 quote extents and 19 projections are taken as reported. I raise no duplicate warning for Numbers 28 EN."
+    }
+  ],
+  "remaining_gates": [
+    "Resolve the Umippenei split identity (regalim/musaf/text/umippenei vs prayer:amidah/umipenay_chataaynu_galinu), regenerate, re-run reference validation, then re-confirm identity for realization/musaf_repetition_umippenei/he and /en.",
+    "Primary machine: verify that the regenerated spine drops the HE caption (current v4 line 3589) and nothing else, compute the new expanded_order_sha256, and confirm that the semantic payload fields of all 143 payloads are unchanged.",
+    "Primary machine: hash-verify the per-key payload files against the manifest and review-deltas sha256.",
+    "Primary machine: generate the uniqueness proof for the EN numbers/28/9 and numbers/28/10 verse milestones.",
+    "Compile QA, reference validation and names/features tests on the regenerated build.",
+    "Final exports and PDF/HTML visual QA.",
+    "Source custom-order follow-up (separate review).",
+    "No final whole-batch, installation or export acceptance is given by this review."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "12bf138e-812e-48ce-b93a-c43a26c30d0f"
+  }
+}

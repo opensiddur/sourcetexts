@@ -1,0 +1,74 @@
+{
+  "export_qa_approved": false,
+  "pdf_approved": false,
+  "html_approved": true,
+  "images_read": [
+    "/tmp/mahzor-s254/full-pdf-images/he-front-contact-1.png",
+    "/tmp/mahzor-s254/full-pdf-images/he-contact-1.png",
+    "/tmp/mahzor-s254/full-pdf-images/he-contact-2.png",
+    "/tmp/mahzor-s254/full-pdf-images/he-contact-3.png",
+    "/tmp/mahzor-s254/full-pdf-images/he-63.png",
+    "/tmp/mahzor-s254/full-pdf-images/documentary-contact-1.png",
+    "/tmp/mahzor-s254/full-pdf-images/documentary-contact-2.png",
+    "/tmp/mahzor-s254/full-pdf-images/documentary-contact-3.png",
+    "/tmp/mahzor-s254/full-pdf-images/documentary-contact-4.png",
+    "/tmp/mahzor-s254/full-pdf-images/documentary-contact-5.png",
+    "/tmp/mahzor-s254/full-pdf-images/expanded-contact-1.png",
+    "/tmp/mahzor-s254/full-pdf-images/expanded-contact-2.png",
+    "/tmp/mahzor-s254/full-pdf-images/expanded-contact-3.png",
+    "/tmp/mahzor-s254/full-pdf-images/expanded-contact-4.png",
+    "/tmp/mahzor-s254/full-pdf-images/expanded-contact-5.png",
+    "/tmp/mahzor-s254/pdf-images/documentary.html-390.png",
+    "/tmp/mahzor-s254/pdf-images/expanded.html-390.png",
+    "/tmp/mahzor-s254/pdf-images/documentary-hebrew.html-390.png"
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "artifact": "documentary-hebrew PDF (he-63, printed p.55)",
+      "detail": "Notes are out of order. Note 94 (the note on the printed continuation headings, 'כותרות המשך בדפוס…') is attached to the section heading 'חזרת התפלה לשליח צבור' on p.55. Notes 74 and 75 follow it on the same page, and 76–93 run on through p.64, so the reader meets 94 before 74–93. Note 95 (p.67) is in sequence. In the documentary book the same note is numbered 128 and placed in sequence (p.198), so only the Hebrew-only build fails the consecutive-notes requirement."
+    },
+    {
+      "severity": "minor",
+      "artifact": "documentary-hebrew PDF (he-63) footnote 94; documentary p.198 footnote 128",
+      "detail": "In these Hebrew (right-to-left) footnotes the English page references ('PDF 262 (p. 121)'-style) render in a scrambled visual order, e.g. ':(p. 121) 262 PDF', with the segments reversed across the line. The note is legible but hard to read. It is a cosmetic mixed-direction text issue."
+    },
+    {
+      "severity": "minor",
+      "artifact": "all three PDFs (e.g. he-70, documentary-190/202/207, expanded-233/234)",
+      "detail": "In places, pairs of short separator rules are stacked with nothing between them, where an empty alternative or condition block ends. This is cosmetic only. No text is clipped or overlapping."
+    },
+    {
+      "severity": "info",
+      "artifact": "all three PDFs",
+      "detail": "Overfull vbox warnings (documentary-hebrew 15, documentary 20, expanded 45, up to 16.5pt in expanded): in the new-section pages I inspected, none caused visible clipping, overlap or text running into the margin. This agrees with the bounds check (0 of 523 pages with content outside the page). The logs show no missing glyphs, undefined references or missing destinations. Not a blocker."
+    },
+    {
+      "severity": "info",
+      "artifact": "all three PDFs",
+      "detail": "Things that pass: the section sits after Musaf in the Hebrew-only and documentary books, and after Aleinu/Malkhuyot material in the expanded book. Hebrew and English columns stay aligned row by row. Labels and roles are readable (קהל/חזן, the Ark opened and closed, In Frankfurt/Fuerth/Metz, On a weekday / On the Sabbath, Tekiah–Shevarim–Teruah). The alternate weekday and Shabbat poems each run continuously. The cantor repeat is complete through Aleinu, the 'וידעת היום' (Veyadata) verses, Zikhronot/Shofarot excerpts, Hayom Harat Olam and Areshet. Untranslated Hebrew has a blank English column with no invented translation. The Sources page links to the archive.org identifier and URL, licence links are present, and the expanded book keeps both the Birnbaum and Heidenheim–Marmorstein credits. The front pages look correct."
+    },
+    {
+      "severity": "info",
+      "artifact": "HTML (full-html-browser-summary.json)",
+      "detail": "At both 1280 and 390 px, all six runs report no errors, no duplicate IDs and no broken internal links, with scrollWidth equal to the viewport width. Expanded HTML links stop at scan page n272 and has no Shir shel Yom, which matches its PDF."
+    },
+    {
+      "severity": "info",
+      "artifact": "normal-export-proof reports",
+      "detail": "documentary-report.json, expanded-report.json and documentary-hebrew-report.json exist under those exact names. Each reports the XML valid against the schema, 0 pairing errors, and a TeX file identical (same sha256) to the input of the rendered PDF."
+    }
+  ],
+  "scope_limitations": [
+    "The contact sheets cover only the new installment pages (he 62–77 plus front matter, documentary 185–210, expanded 210–236). Earlier pages, including the section heading in the documentary and expanded books, were judged from reports and bounds data only.",
+    "The 390px HTML screenshots show only the top of each page. The new section's HTML rendering and the mobile wrapping of source credits (exporter PR 310) were not checked by eye; HTML approval rests on the browser summary JSON.",
+    "The browser summary JSON is about 132k tokens. I read its entry headers (errors, duplicateIds, brokenInternalLinks, width/scrollWidth) for all six runs and sampled the link lists, not every link.",
+    "Text content was not re-verified (source, encoding, alignment, identity and order were approved separately). Definite-profile compile QA was not reviewed.",
+    "No files were edited."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "071f45e5-5fb1-457a-93bd-6b3fc836e2fd"
+  }
+}

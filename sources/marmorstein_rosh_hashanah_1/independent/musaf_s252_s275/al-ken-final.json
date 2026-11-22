@@ -1,0 +1,26 @@
+{
+  "data_scope_fix_approved": true,
+  "realization_keys_approved": [
+    "realization/musaf_al_ken/he",
+    "realization/musaf_al_ken/en"
+  ],
+  "findings": [
+    "Read the v7 files, not v6. HE and EN musaf_al_ken.xml are back on the original occurrence root: body div corresp=urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/al_ken, with publication idno rosh_hashanah/musaf/al_ken@{project}. No quiet_al_ken remains in either file.",
+    "Documentary pages are kept in the occurrence files. HE has facs n205 and a mid-word tei:pb n=94 (n207). EN has facs n206 and a tei:pb n=94 (n208). biblScope is 93-94 in both. The text is plain literal paragraphs with no seg source, choice or milestone, which matches what literal mode produces.",
+    "HE and EN al_ken_words.xml are a page-free home. They have no publication idno, no root div corresp and no tei:pb. The only indexed word scope is milestone prayer-part corresp=rosh_hashanah/musaf/al_ken/text. Segments point to chol/shacharit/conclusion/aleinu/al_ken, and the conditions are .../musaf/al_ken/text/{he,en}/{quiet_printing,repetition_printing}. All of this matches the previously approved identity and wording. biblScope 93-94 plus 119 covers the repetition printing.",
+    "realizations.py:478 sets context_urn = home_config.get('context_urn', unit['urn']), so removing the override falls back to the original unit URN (M/al_ken). Line 479 still requires a ':siddur:' URN that differs from home_config['urn']. M/al_ken differs from the home URN M/al_ken/word_home, so the check passes. Line 491 puts the context URN into publication_context. The home's identity comes only from its own config (line 481) and from segment identities, and the word scope is unaffected. With map_root=false the home root URN is not added to identities (lines 549-550).",
+    "In literal mode (lines 492-500) the occurrence gets an empty wording_selection and loses its segment identity keys. That keeps occurrence and home separate, so no identity is duplicated in the occurrence file.",
+    "al-ken-root-preservation.json matches what I found: before quiet_al_ken, after al_ken, the two review keys listed above, and the accepted old720 literal baseline unchanged."
+  ],
+  "remaining_gates": [
+    "Not checked here: the readings/config entry itself (that context_urn is gone from canonical_home and that the home urn is M/al_ken/word_home). I relied on the generated XML and the code default.",
+    "Not checked here: the encoding hash diff being limited to the two realization/musaf_al_ken/{he,en} context_urn fields plus the shared order metadata approved separately.",
+    "Not checked here: that the expanded order really targets M/al_ken and that the sequence is unchanged. This needs the full-volume compilation now rerunning on v7 to finish cleanly.",
+    "Separate gates still open: exports, the final batch hash, reference tests and full-batch acceptance. This approval does not grant any of them."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "005ccabd-7304-4386-831f-09e48950cd0e"
+  }
+}
