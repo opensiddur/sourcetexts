@@ -1,0 +1,34 @@
+{
+  "export_qa_approved": true,
+  "pdf_approved": true,
+  "html_approved": true,
+  "files_read": [
+    "/tmp/mahzor-s276/final-export-first-review.json",
+    "/tmp/mahzor-s276/full-pdf-images/documentary-note-fix-206.png",
+    "/tmp/mahzor-s276/full-pdf-images/documentary-final-206.png",
+    "/tmp/mahzor-s276/note-fix-pdf-page-proof.json",
+    "/tmp/mahzor-s276/note-fix-tex-proof.json",
+    "/tmp/mahzor-s276/note-fix-hardened-tex-proof.json",
+    "/tmp/mahzor-s276/exporter-note-fix-final-review.json",
+    "/tmp/mahzor-s276/full-export-final-artifacts.json"
+  ],
+  "blocking_findings": [],
+  "cosmetic_findings": [
+    "documentary PDF 206 (printed 198): the combined '128,129' mark still sits by itself in the right margin under the separator, above the 'Our God and God of our fathers' row, instead of being attached to a word. This is the same position the old colliding marks had. It is readable and overlaps nothing, so it is not blocking.",
+    "documentary PDF 223 (printed 215): marker 130 floats alone in the right margin, and marker 131 is attached to the Hebrew subheading (end-of-scope placement).",
+    "expanded PDF 248 (printed 246): the shofar sequence line has no English, unlike PDF 232.",
+    "expanded PDF 232 and 248: the shofar line has no 'not on Shabbat' qualifier, and the weekday status is not stated under 'On the Sabbath, according to the community's custom'. This follows the accepted-prefix convention; a labelling follow-up is worth considering.",
+    "expanded PDF 233, 234, 249, 250 and the HTML views: doubled empty separator rules.",
+    "HTML, all profiles: a stray space inside brackets ('[the memory of ]', '[זכרון ]', '[כָּל ]').",
+    "HTML: note markers 95 and 130/131 are placed differently than in the PDFs.",
+    "Overfull-vbox warnings in the logs (up to 16.5pt in expanded) are not mapped to pages. No clipping was seen on the pages inspected. The prefix pages outside the supplied sheets were not visually re-inspected in this cycle.",
+    "Exporter review, nonblocking: a head note left in the flow whose heading is not in the current stream can stop grouping with a body note next to it. That would print two overlapping marks but never lose one, and no test covers it. The XTDE0050 stderr line in the 375-test run should be confirmed as an expected-error test.",
+    "Administrative, outside the export: spec header lines 6-8 still describe the old 252-page / PDF 252-275 installment."
+  ],
+  "verdict": "Approved. I looked at the corrected page PDF 206 (printed 198) and compared it with the earlier render. The colliding '12[8/9]' marks are now one readable '128,129' mark that touches no other text. Both footnotes are still complete and in order: 128 is the Hebrew note on the continuation headings (PDF 262-272) and 129 is the English 'Repeated printed continuation headings…' note (PDF 263-273). The prayer text on the page matches the earlier render: the Thou wilt make idols disappear row, the 'As it is written…' row, The Lord will be King, Shema, the separator, Elohenu ve'Elohei avoteinu meloch, the אם שבת bracket and Sanctify us. Each row is in the same Hebrew/English pairing and position, and the running head and page number are unchanged. The machine evidence is taken as reported, not recomputed by me. The 60dpi raster comparison of all 226 pages shows only PDF 206 changed, inside the marker box. The TeX diff changes only the two visible labels and keeps apparatus 128 and 129. The documentary-hebrew and expanded TeX files are byte-identical. The hardening pass leaves all three TeX files unchanged. The exporter review approves the code and the 375 passing tests. The refreshed artifact report shows no outside-page boxes, missing glyphs, overfull hboxes or undefined references. The other PDFs and all HTML are unchanged, so the earlier visual approval still covers them. This closes the only blocking finding from the first review. Its cosmetic findings and the source and encoding limits still stand: the first-day volume and all nine volumes remain incomplete, and nothing is claimed about the source leaves that follow.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "23f695c5-477d-445a-9e65-9fb3fdf5c084"
+  }
+}

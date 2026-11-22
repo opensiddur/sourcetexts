@@ -1,0 +1,203 @@
+{
+  "files_read": [
+    "/tmp/mahzor-s276/review-v3/encoding-pack.json (all 7819 lines, in chunks)",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/schema/JLPTEI-3.md (all 2180 lines)",
+    "/tmp/mahzor-s276/guidelines-v1.json (full)",
+    "All 43 generated_files under /tmp/mahzor-s276/project-draft-v3/ (heidenheim-1965-he: 22; marmorstein-1965-en: 21), each from the start of tei:text, plus headers where they mattered",
+    "/tmp/mahzor-s276/project-draft-v3/prayerbook_for_the_new_year-heidenheim-1965-he/index.xml (lines 1-150 and 850-1193 = header, front and full Musaf Malkhuyot→Zikhronot→gap note)",
+    "/tmp/mahzor-s276/project-draft-v3/prayerbook_for_the_new_year-marmorstein-1965-en/index.xml (lines 770-1006 = Malkhuyot close→Zikhronot→gap note)",
+    "/tmp/mahzor-s276/project-draft-v3/machzor_expanded-opensiddur-he/index.xml (lines 1-60 and 3790-4198 = header and full Zikhronot section)",
+    "/tmp/mahzor-s276/project-qa-v3/prayerbook_for_the_new_year-heidenheim-1965-he/batch_review.xml (full)",
+    "/tmp/mahzor-s276/project-qa-v3/prayerbook_for_the_new_year-marmorstein-1965-en/batch_review.xml (full)",
+    "/tmp/mahzor-s276/project-qa-v3/machzor_expanded-opensiddur-he/batch_review.xml (full)",
+    "/tmp/mahzor-s276/review-v3/realization-bindings.json (lines 1-5420, 6000-6120, 6830-7889; not read: 5420-6000 [Efchad HE payload stanzas 33-46] and 6120-6830 [Efchad EN payload stanzas 14-45])",
+    "/tmp/mahzor-s276/compile-qa-v3/compiler-report.json (full)",
+    "/tmp/mahzor-s276/compile-qa-v3/semantic-assertions.json (full)"
+  ],
+  "data_encoding_approved": false,
+  "generated_encoding_approved": true,
+  "canonical_identity_approved": true,
+  "alignment_approved": true,
+  "recitation_order_approved": true,
+  "realization_bindings_approved": false,
+  "prior141_semantic_renewal_approved": false,
+  "meaningful41_payloads_reviewed": false,
+  "guideline_checklist": [
+    {
+      "rule": "Existing canonical identities reused; siddur: hosts structural only",
+      "result": "PASS",
+      "evidence": "Existing identities reused: prayer:amidah/eloheinu_zokhrenu_bezikhron_tov, prayer:zokher_haberit, prayer:amidah/attah_nigleita, prayer:hayom_harat_olam, prayer:areshet_sefatenu/{opening,conclusion}, poem:zekhor_berit_avraham/stanza_1. Partial Attah Zokher uses parts …/opening and …/vegam_et_noach; no whole-prayer claim."
+    },
+    {
+      "rule": "Pure word libraries make no whole-work claim",
+      "result": "PASS",
+      "evidence": "musaf_attah_zokher_words, musaf_areshet_word_parts and hayom_harat_olam_words have no div@corresp and no publication idno; they carry only part milestones with bare terminators. zekhor_berit_avraham_words publishes stanza_1, which is exactly its content."
+    },
+    {
+      "rule": "Scoped Bible chapter/verse correspondences with terminators; canonical @source; correct verses",
+      "result": "PASS",
+      "evidence": "Every verse has seg@source with the canonical URN. Chapter and verse milestones carry contextual …/quotes/… URNs and are closed by bare verse and chapter terminators. Lev 26:45 is in covenant_verse; Jer 31:19 is a single shared unit. The weekday set is Gen 8:1, Ex 2:24, Lev 26:42, Ps 111:4, 111:5, 106:45, Jer 2:2, Ezek 16:60. The Efchad set is 9 verses."
+    },
+    {
+      "rule": "Quotation/pb continuity: one seg across a page break; word-internal break=no",
+      "result": "PASS",
+      "evidence": "HE Ex 2:24 and EN Lev 26:42 are each one seg with an internal pb n=135. EN Zekher stanza_33 'He re<pb … break=\"no\"/>members'. The EN Efchad 26/27 quotation mark is moved to stanza_27."
+    },
+    {
+      "rule": "Page-marker uniqueness and @facs",
+      "result": "FAIL",
+      "evidence": "facs = scan−1 is consistent everywhere, and Efchad pbs are ed-qualified. But the HE index and HE QA spine emit two extra pb ed=1965 n=136 (in the Hayom and Areshet inclusion divs), after page 136 has already been broken inside zikhronot_close. The EN stream has no primary ed=1965 pb for page 128: the only one is the context-qualified pb inside musaf_repetition_attah_zokher."
+    },
+    {
+      "rule": "Poems complete: weekday 44, Shabbat 46",
+      "result": "PASS",
+      "evidence": "Zekher stanza_1-44 follow the reversed alphabet (תשר״ק), two stanzas per letter. Efchad stanza_1-46 is a doubled aleph-bet ending in four tav stanzas, with 9 verse interludes. The compiled assertions report 44/0 (weekday) and 0/46 (Shabbat)."
+    },
+    {
+      "rule": "No bogus Hayom wording variants",
+      "result": "PASS",
+      "evidence": "There is no tei:choice in hayom_harat_olam_words, and no Hayom condition URN in the registry or wording_variants."
+    },
+    {
+      "rule": "Source Zikhronot Areshet insertion owns areshet_sefatenu/zikhron",
+      "result": "PASS",
+      "evidence": "The zikhron milestone and terminator sit inside the marked Shabbat conditional of musaf_repetition_zikhronot_areshet (HE and EN). The separate word file is gone. The expanded spine references that range, and the old Malkhuyot literal is unchanged."
+    },
+    {
+      "rule": "No DRAFT helper leaked into real indexes",
+      "result": "FAIL",
+      "evidence": "Both real indexes still carry anchor documentary_s199_draft_gap_{he,en} with a standOff note saying digitization reaches only Areshet on p.127 and that Zikhronot has not been included. That is now false. The expanded header note was updated (through Atah Nigleita, PDF293); the source indexes were not."
+    },
+    {
+      "rule": "No unsupported quiet cantor direction",
+      "result": "PASS",
+      "evidence": "HE index: 'הש״ץ (השליח ציבור) אומר אתה זוכר.' The expanded spine has only the role description חזן, with no quietly or לחש."
+    },
+    {
+      "rule": "German language marking",
+      "result": "PASS",
+      "evidence": "The Noah-position note and 'אַם שַׁבָּת.' are xml:lang=de-Hebr, with זַכָר and אֶפְחַד as tei:foreign xml:lang=he. The EN brit instruction tags ברית מילה as he."
+    },
+    {
+      "rule": "Five corrections as sic/corr, source-approved",
+      "result": "PASS",
+      "evidence": "All five are tei:choice sic/corr in the XML and match pack.corrections: censor→censer, death→dearth, cogregation→congregation, unsown!’.→unsown!’’. (Efchad), unsown’.→unsown’’. (weekday)."
+    },
+    {
+      "rule": "No @rend on instructions",
+      "result": "PASS",
+      "evidence": "No @rend in any generated, index or spine file."
+    },
+    {
+      "rule": "Citation labels distinct from recited formulae",
+      "result": "PASS",
+      "evidence": "The ככתוב/ונאמר lead-ins are recited prayer-part ranges closed before the chapter milestones. No book or numeric labels are encoded, consistent with the source gate."
+    },
+    {
+      "rule": "Recitation order",
+      "result": "PASS",
+      "evidence": "All three spines agree: Attah Zokher. Weekday: Zekher, then Noah (zikhronot printing), then verses. Shabbat: Noah (first printing), then Efchad, then ככתוב על יד נביאך. Then Jer 31:19 (once), Eloheinu zokhrenu, Lev 26:45, brit stanza (override), Zokher haberit, TASHAT (weekday, blower role), Hayom (congregation, then a gated cantor repeat), Areshet (congregation, then a gated cantor repeat, zikhronot printing declared), and the Attah Nigleita paragraph through הוֹפָעְתָּ. The response conditions reproduce the Malkhuyot community rules, including ק״ק פפד״מ."
+    },
+    {
+      "rule": "Language alignment / repeated words",
+      "result": "PASS",
+      "evidence": "HE and EN milestone sequences are identical in every paired file. Hebrew-only optional words (שֶׁל יַעֲקֹב, כָּל) get no English. No repeated words found; only double spaces at the Areshet opening/conclusion boundary."
+    },
+    {
+      "rule": "No English invention",
+      "result": "PASS with low notes",
+      "evidence": "All codex-authored rubrics carry @resp. See the low issues on the English Sabbath rubric and the ark-opening rubric."
+    }
+  ],
+  "issues": [
+    {
+      "severity": "high",
+      "file": "project-draft-v3/prayerbook_for_the_new_year-heidenheim-1965-he/index.xml (lines 1127, 1164); same in project-qa-v3/…-he/batch_review.xml",
+      "unit": "documentary_zikhronot_musaf_hayom_inclusion_he; documentary_zikhronot_musaf_areshet_inclusion_he",
+      "issue": "Two extra <tei:pb ed=\"1965\" n=\"136\" facs=…/n291.jpg/> sit before the קו״ח notes. Page 136 is already broken mid-sentence inside zikhronot_close ('וְקַיֶּם־לָנוּ יְיָ |136| אֱלֹהֵינוּ'). On weekdays and on Frankfurt/both_* Sabbaths, page 136 is crossed three times. This is the same class of defect as the V1 high issue, recurring.",
+      "required_fix": "Drop both index pbs: give the קו״ח role notes no page start. Keep only the zikhronot_close pb, regenerate the HE index and QA spine, and add a pb-uniqueness assertion per compiled stream."
+    },
+    {
+      "severity": "high",
+      "file": "…-heidenheim-1965-he/index.xml (lines 1172, 1187-1191); …-marmorstein-1965-en/index.xml (lines 991, 1000-1004)",
+      "unit": "documentary_s199_draft_gap_he / _en",
+      "issue": "The stale draft-gap commentary says digitization ends at Areshet on p.127 (PDF274–275) and that Zikhronot is not included (HE: 'זכרונות והמשך התפילה טרם נכללו'). The indexes now contain Zikhronot through the opening of Shofarot on p.136.",
+      "required_fix": "Update both notes to say the transcription runs through the opening of Attah Nigleita, p.136 (PDF292–293), and that the rest of Shofarot and the later service are not yet included. Keep the anchor after shofarot_open."
+    },
+    {
+      "severity": "medium",
+      "file": "…-marmorstein-1965-en/index.xml (around line 875); project-qa-v3/…-en/batch_review.xml",
+      "unit": "musaf_repetition_attah_zokher (EN page 128)",
+      "issue": "The EN stream has no primary ed=\"1965\" pb n=128. Its only page-128 break is ed=\"1965 rosh_hashanah/musaf/repetition/attah_zokher\", so the 1965 English printing never links page 128. HE has a primary pb n=128 in its index.",
+      "required_fix": "Add <tei:pb ed=\"1965\" n=\"128\" facs=\"…/page/n276.jpg\"/> before the attah_zokher transclusion in the EN index and EN QA spine."
+    },
+    {
+      "severity": "medium",
+      "file": "/tmp/mahzor-s276/compile-qa-v3/semantic-assertions.json",
+      "unit": "known_calendar_and_brit_cases",
+      "issue": "status is 'passed', yet brit_selection_correct is false in 6 of 10 cases (documentary/expanded weekday, shabbat, shabbat_frankfurt). The evidence contradicts itself. The assertions also do not cover pb uniqueness or the Hayom/Areshet response profiles, which is how issue 1 got through.",
+      "required_fix": "Either explain the false values as 'not applicable / override default false' and encode them as such, or fix the check. Add assertions for unique pb per stream and for the five response-practice values plus Frankfurt."
+    },
+    {
+      "severity": "low",
+      "file": "machzor_expanded-opensiddur-he/index.xml lines 3903-3904 (and QA spine)",
+      "unit": "section_musaf_circumcision_insertion",
+      "issue": "'פותחים ארון הקודש.' / 'The Ark is opened.' is a directive (JLPTEI 'Kinds of rubric') but is encoded as tei:note type=\"description\".",
+      "required_fix": "Change both to type=\"instruction\". Keep them inside the conditional, with their @resp."
+    },
+    {
+      "severity": "low",
+      "file": "…-heidenheim-1965-he/musaf_repetition_circumcision.xml",
+      "unit": "musaf_repetition_circumcision",
+      "issue": "The source rubric combines the condition with the ark-opening directive in the conditional's note. With brit-milah=true the note is suppressed, so the documentary edition loses 'open the Ark'.",
+      "required_fix": "Acceptable as a source-literal rubric. Optionally record this limitation, or add a separate source-derived instruction inside the scope, as the expanded spine already does."
+    },
+    {
+      "severity": "low",
+      "file": "machzor_expanded-opensiddur-he/index.xml line 3851",
+      "unit": "section_musaf_shabbat_zikhronot",
+      "issue": "The English condition rubric is the codex-authored 'On the Sabbath.', though the source prints the English heading 'On Sabbath.' (s279), next to the source de-Hebr 'אַם שַׁבָּת.'.",
+      "required_fix": "Prefer the printed English 'On Sabbath.' without codex @resp, or explain why the normalized editorial wording is used."
+    },
+    {
+      "severity": "low",
+      "file": "machzor_expanded-opensiddur-he/index.xml line 4117",
+      "unit": "section_zikhronot_musaf_areshet_cantor_repeat",
+      "issue": "The rubric describes only the weekday custom, but the condition also covers Frankfurt and Sabbath both_cantor_repeat.",
+      "required_fix": "Broaden the rubric wording, e.g. 'The cantor repeats according to the community's custom (weekdays: some do not repeat).'"
+    },
+    {
+      "severity": "low",
+      "file": "encoding-pack.json registry",
+      "unit": "urn:x-opensiddur:text:prayer:hayom_harat_olam/word_home",
+      "issue": "The context URN is registered (and named in canonical_home) but no XML carries it: hayom_harat_olam_words uses the whole-prayer milestone. It is an orphan registry entry.",
+      "required_fix": "Remove the registry entry, or explain where it resolves."
+    },
+    {
+      "severity": "low",
+      "file": "…-he/musaf_areshet_word_parts.xml; …-en/musaf_areshet_word_parts.xml",
+      "unit": "musaf_areshet_word_parts",
+      "issue": "div@facs points only to the p.127 scan, yet the zikhronot_printing option comes from p.136 (s292/s293).",
+      "required_fix": "Optional: put facs on the zikhronot j:option, or drop the div-level facs."
+    },
+    {
+      "severity": "low",
+      "file": "musaf_zekher_techillat_kol_maas.xml (EN note); pack corrections reasons",
+      "unit": "encoding notes",
+      "issue": "Spacing typos: 'strophe28', 'in26', 'Jeremiah2:2', 'Scan287'.",
+      "required_fix": "Cosmetic fix on the next regeneration."
+    }
+  ],
+  "remaining_questions": [
+    "Noah j:option readings differ only in meteg and punctuation (HE) and in a comma and stop (EN). JLPTEI reserves j:option for alternate wordings. I accept these because the pointing is source-settled and this is the only way to keep both printed literals under one identity. Please confirm the project convention accepts orthographic-only printing variants.",
+    "Prior-141 renewal: I did not compute or verify any SHA-256. The 141 global_only_prior entries supply only old and current hashes, with semantic_payload_unchanged=true and no payload bodies, so the claim that only the four global hashes changed is the machine's assertion, not something I verified by reading. Renewal is withheld anyway, because the shared changed contexts (source_order/navigation, i.e. the HE/EN indexes) contain issues 1-3.",
+    "Of the 41 meaningful payloads, 39 were read in full and match the pack units and generated XML. The bodies of realization/musaf_efchad_bemaasai/{he,en} were read only in part (HE stanzas 1-32 plus tail; EN stanzas 5-13 plus tail). The unread parts are claimed identical to the pack Efchad unit, which I read completely, but I did not read them in the bindings file.",
+    "The Attah Nigleita milestone closes after הוֹפָעְתָּ: (end of PDF293). Please confirm that the existing prayer:amidah/attah_nigleita identity denotes only this introductory paragraph elsewhere in the corpus. If it also includes the following verses, the milestone needs a part URN."
+  ],
+  "verdict": "NOT APPROVED at the encoding/order gate. Verified on the actual v3 XML: canonical identities, scoped Bible quote-contexts with terminators, Hebrew–English alignment, both piyyutim complete (44 weekday / 46 Shabbat), and the five sic/corr corrections. Also verified: German and Hebrew language tagging, אומר with no quiet direction, no bogus Hayom variants, Areshet zikhron owned by the source host, pure word libraries, and no @rend. Recitation order is correct in all three spines. Every V1 finding closes on the unit XML: the false pbs on the weekday verses, Shabbat lead-in and Jer 31:19; the ed-qualified Efchad breaks; the zikhron duplicate; the Hayom choice; the 26/27 quotation mark; the split seg@source; break=no; the 843 count; and the supplied arrangements. Blocking: (1) the HE index and HE QA spine add two spurious pb ed=1965 n=136, so page 136 is crossed up to three times, which repeats the V1 false-page-start class; (2) both real indexes keep a stale draft-gap note saying Zikhronot is not yet included; (3) the EN stream has no primary ed=1965 page-128 break. The semantic-assertion report also says 'passed' while showing brit_selection_correct=false in 6 cases. Realization-binding renewal is withheld: the 141 prior hashes cannot be verified by reading, and the shared source-order contexts they depend on contain the blocking defects. This is not an export acceptance.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "4ee555f0-03dd-496f-a42c-1d284993410e"
+  }
+}

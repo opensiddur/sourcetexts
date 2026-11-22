@@ -1,0 +1,63 @@
+{
+  "status": "UNACCEPTED: all bounded source-image reviews done; human431–444 and guideline/export closures pending.",
+  "patches_applied": [
+    {
+      "scan": "s276",
+      "key": "attah_zokher",
+      "old": "מִי לֹא נִפְקַד כְּהַיּוֹם",
+      "new": "מִי לֹא נִפְקָד כְּהַיּוֹם",
+      "image": "/tmp/mahzor-s276/lines-full/s276-line08.png",
+      "reason": "In the corrected full-height crop, the mark under the qof of נפקד is a qamatz: a horizontal bar with a centred vertical stem below it. The same mark shows in s276-band3.png and in the full native s276.jpg. It is not a flat patah. Hiriq under the nun and sheva under the pe confirmed. This agrees with the primary reader's qamatz reading."
+    },
+    {
+      "scan": "s278",
+      "key": "shabbat_rubric",
+      "old": "אַם שַׁבָּת",
+      "new": "אַם שַׁבָּת.",
+      "image": "/tmp/mahzor-s276/lines-full/s278-line14.png",
+      "reason": "A period is clearly printed after שַׁבָּת (also visible in band2 and s278.jpg). This matches the period-final attribution headings and the English 'On Sabbath.'"
+    },
+    {
+      "scan": "s280",
+      "key": "shabbat_rubric",
+      "old": "אַם שַׁבָּת",
+      "new": "אַם שַׁבָּת.",
+      "image": "lines-full/s280-line12.png",
+      "reason": "A period is clearly printed after שבת (also visible in band2), and the facing English reads 'On Sabbath.'"
+    },
+    {
+      "scan": "s282",
+      "key": "shabbat_rubric",
+      "old": "אַם שַׁבָּת",
+      "new": "אַם שַׁבָּת.",
+      "image": "lines-full/s282-line13.png",
+      "reason": "A full stop is clearly printed after שַׁבָּת (also visible in band2)."
+    },
+    {
+      "scan": "s284",
+      "key": "zekhor_techillat",
+      "old": "וְתוֹדוֹת מִשְׁפְּטֵי לַיְלָה.",
+      "new": "וְתוֹדוֹת מִשְׁפְּטֵי לָיְלָה.",
+      "image": "lines-full/s284-line05.png (2nd line of crop); also band2 and s284.jpg",
+      "reason": "The first lamed has qamatz, a vertical stroke under a bar. The לילה after בְּאִישׁוֹן on the same printed line has patah, a plain bar. That contrast shows in all three images, so this is the pausal form לָיְלָה."
+    },
+    {
+      "scan": "s284",
+      "key": "zekhor_techillat",
+      "old": "יַגִּיהַּ בְּלַהַב לַיְלָה.",
+      "new": "יַגִּיהַּ בְּלַהַב לָיְלָה.",
+      "image": "lines-full/s284-line05.png (3rd line of crop); also band2 and s284.jpg",
+      "reason": "Qamatz under the first lamed. The לילה after מִפְקַד on the same line has patah, and so does the one in וָלַיְלָה on the next line."
+    },
+    {
+      "scan": "s290",
+      "key": "shabbat_rubric",
+      "old": "אַם שַׁבָּת",
+      "new": "אַם שַׁבָּת.",
+      "image": "lines-full/s290-line02.png",
+      "reason": "A full stop is clearly printed after שַׁבָּת in the rubric, and the English 'On Sabbath.' has one too. Drop this patch only if the project policy deliberately strips rubric-final punctuation."
+    }
+  ],
+  "primary_adjudication": "s278 ותולדות lamed qamatz, seen by both readers; old narrow-pass log had not been applied.",
+  "unicode_equivalence": "New s292 תלויות uses established host mark order, preserving the same sheva+dagesh; this removes a meaningless byte-order-only variant."
+}

@@ -1,0 +1,218 @@
+{
+  "scan_range": [
+    284,
+    285
+  ],
+  "source_images_read": [
+    "s284.jpg",
+    "s285.jpg",
+    "s284-band1.png",
+    "s284-band2.png",
+    "s284-band3.png",
+    "s284-band4.png",
+    "lines-full/s284-line01.png",
+    "lines-full/s284-line02.png",
+    "lines-full/s284-line03.png",
+    "lines-full/s284-line04.png",
+    "lines-full/s284-line05.png",
+    "lines-full/s284-line06.png",
+    "lines-full/s284-line07.png",
+    "lines-full/s284-line08.png",
+    "lines-full/s284-line09.png",
+    "lines-full/s284-line10.png",
+    "lines-full/s284-line11.png",
+    "lines-full/s284-line12.png",
+    "lines-full/s284-line13.png",
+    "lines-full/s284-line14.png",
+    "lines-full/s284-line15.png",
+    "lines-full/s284-line16.png",
+    "lines-full/s284-line17.png",
+    "lines-full/s284-line18.png",
+    "lines-full/s284-line19.png",
+    "lines-full/s284-line20.png"
+  ],
+  "line_checks": [
+    {
+      "image": "lines-full/s284-line01.png..line04.png + band1",
+      "lines_or_scope": "printed lines 1-6 (זֵכֶר יְלִיד נוּן … טֶבַע)",
+      "checked": true,
+      "issues": []
+    },
+    {
+      "image": "lines-full/s284-line05.png + band1/band2 + s284.jpg",
+      "lines_or_scope": "printed lines 7-10 (מִשְׁפָּטִים … בְּבִצְעִי)",
+      "checked": true,
+      "issues": [
+        "Printed line 8: the first לילה, in מִשְׁפְּטֵי, has qamatz under the first lamed, but the candidate has patah. The second, in בְּאִישׁוֹן, has patah, which matches.",
+        "Printed line 9: לילה in בְּלַהַב has qamatz under the first lamed, but the candidate has patah. The one in מִפְקַד has patah, which matches. The same contrast shows in all three images."
+      ]
+    },
+    {
+      "image": "lines-full/s284-line06.png, line07.png + band2",
+      "lines_or_scope": "printed lines 11-12 (חָבוּל … זֵכֶר וְכַח)",
+      "checked": true,
+      "issues": [
+        "Vowel under the chet of לחבול is unclear, see remaining_questions"
+      ]
+    },
+    {
+      "image": "lines-full/s284-line08.png, line09.png + band2",
+      "lines_or_scope": "Shabbat rubric (small type)",
+      "checked": true,
+      "issues": []
+    },
+    {
+      "image": "lines-full/s284-line10.png, line11.png + band2/band3",
+      "lines_or_scope": "דֶּלֶת … לְזִכָּרוֹן:",
+      "checked": true,
+      "issues": []
+    },
+    {
+      "image": "lines-full/s284-line12.png, line13.png + band3",
+      "lines_or_scope": "Genesis 8:1 small-type verse, including maqafs את־נח, כל־החיה, ואת־כל־, על־הארץ",
+      "checked": true,
+      "issues": []
+    },
+    {
+      "image": "lines-full/s284-line14.png, line15.png + band3",
+      "lines_or_scope": "עֲשֵׂה פֶלֶא … תַּעַשׂ לְזִכָּרוֹן: (the speaker mark ח׳ is metadata and was excluded)",
+      "checked": true,
+      "issues": [
+        "Vowel under the tav of אמתך is unclear, see remaining_questions"
+      ]
+    },
+    {
+      "image": "lines-full/s284-line16.png, line17.png + band3/band4",
+      "lines_or_scope": "Psalms 111:4-5 small-type verses, including defective spelling לְעֹלָם",
+      "checked": true,
+      "issues": []
+    },
+    {
+      "image": "lines-full/s284-line18.png..line20.png + band4",
+      "lines_or_scope": "פְּנֵה אֱלֹהִים … בַּסֵּפֶר לְזִכָּרוֹן: (פָּעֳלָם: qamatz plus hataf-qamatz confirmed; גַנִּים has no gimel dagesh; ח׳ excluded)",
+      "checked": true,
+      "issues": []
+    },
+    {
+      "image": "s285.jpg",
+      "lines_or_scope": "Full English page: every word of all 7 blocks, including the line-break hyphens remem-/bered and He re-, and the italic heading On Sabbath. (The Hebrew margin cues are metadata.)",
+      "checked": true,
+      "issues": []
+    }
+  ],
+  "blocks_checked": [
+    {
+      "scan": "s284",
+      "key": "zekhor_techillat",
+      "status": "two patches (לילה qamatz ×2) plus one open question (לחבול)"
+    },
+    {
+      "scan": "s284",
+      "key": "shabbat_rubric",
+      "status": "matches"
+    },
+    {
+      "scan": "s284",
+      "key": "efchad_bemaasai",
+      "status": "matches"
+    },
+    {
+      "scan": "s284",
+      "key": "shabbat_genesis_8_1",
+      "status": "matches"
+    },
+    {
+      "scan": "s284",
+      "key": "aseh_fela",
+      "status": "open question (אמתך)"
+    },
+    {
+      "scan": "s284",
+      "key": "shabbat_psalms_111_4_5",
+      "status": "matches"
+    },
+    {
+      "scan": "s284",
+      "key": "peneh_elohim",
+      "status": "matches"
+    },
+    {
+      "scan": "s285",
+      "key": "zekhor_techillat",
+      "status": "matches"
+    },
+    {
+      "scan": "s285",
+      "key": "shabbat_rubric",
+      "status": "matches"
+    },
+    {
+      "scan": "s285",
+      "key": "efchad_bemaasai",
+      "status": "matches"
+    },
+    {
+      "scan": "s285",
+      "key": "shabbat_genesis_8_1",
+      "status": "matches"
+    },
+    {
+      "scan": "s285",
+      "key": "aseh_fela",
+      "status": "matches"
+    },
+    {
+      "scan": "s285",
+      "key": "shabbat_psalms_111_4_5",
+      "status": "matches"
+    },
+    {
+      "scan": "s285",
+      "key": "peneh_elohim",
+      "status": "matches"
+    }
+  ],
+  "patches": [
+    {
+      "scan": "s284",
+      "key": "zekhor_techillat",
+      "old": "וְתוֹדוֹת מִשְׁפְּטֵי לַיְלָה.",
+      "new": "וְתוֹדוֹת מִשְׁפְּטֵי לָיְלָה.",
+      "image": "lines-full/s284-line05.png (2nd line of crop); also band2 and s284.jpg",
+      "reason": "The first lamed has qamatz, a vertical stroke under a bar. The לילה after בְּאִישׁוֹן on the same printed line has patah, a plain bar. That contrast shows in all three images, so this is the pausal form לָיְלָה."
+    },
+    {
+      "scan": "s284",
+      "key": "zekhor_techillat",
+      "old": "יַגִּיהַּ בְּלַהַב לַיְלָה.",
+      "new": "יַגִּיהַּ בְּלַהַב לָיְלָה.",
+      "image": "lines-full/s284-line05.png (3rd line of crop); also band2 and s284.jpg",
+      "reason": "Qamatz under the first lamed. The לילה after מִפְקַד on the same line has patah, and so does the one in וָלַיְלָה on the next line."
+    }
+  ],
+  "resolved_prior_disputes": [],
+  "remaining_questions": [
+    {
+      "scan": "s284",
+      "key": "zekhor_techillat",
+      "word": "לְחַבּוּל",
+      "question": "Which vowel is under the chet: patah (candidate) or a single hiriq dot (לְחִבּוּל)? In line07 and band2 the mark under ח looks to me like one dot rather than a bar. The noun חִבּוּל ('in destruction') would also fit. At this resolution I can't rule out a faint bar, so I haven't patched it.",
+      "image": "lines-full/s284-line07.png; s284-band2.png"
+    },
+    {
+      "scan": "s284",
+      "key": "aseh_fela",
+      "word": "אֲמִתְּךָ",
+      "question": "Which vowel is under the tav: sheva (candidate) or segol (אֲמִתֶּךָ, as in the pausal form of Ps 30:10)? The marks under ת in line14 and band3 look like more than two dots to me, but they are too small to settle it. Dagesh in the tav is present in both readings.",
+      "image": "lines-full/s284-line14.png; s284-band3.png"
+    }
+  ],
+  "pointing_approved": false,
+  "whole_source_approved": false,
+  "verdict": "PDF284-285 has been fully proofed against the corrected wide bands, the full-height line crops and both native page images. The English (s285) matches the candidate word for word. The Hebrew consonants, maqafs, defective spellings and dageshes match throughout. No meteg anywhere on the page needed a change. There are two qamatz patches, for the pausal לָיְלָה in printed lines 8 and 9, and two single-vowel questions still open: the vowel under the chet of לחבול and the vowel under the tav of אמתך. Pointing is not approved until those two are settled.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "1c68482c-f2c4-43b2-baea-914ec63d6a3a"
+  }
+}

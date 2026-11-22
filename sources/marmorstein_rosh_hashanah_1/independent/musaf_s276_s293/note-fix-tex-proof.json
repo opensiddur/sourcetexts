@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "profiles": [
+    {
+      "profile": "documentary-hebrew",
+      "tex_byte_identical": true,
+      "before_sha256": "e61a682c40aebc52bc2c5b5854b23b67b1ff30c1145c4326b6924f7132bb7e56",
+      "after_sha256": "e61a682c40aebc52bc2c5b5854b23b67b1ff30c1145c4326b6924f7132bb7e56",
+      "diff": "note-fix-documentary-hebrew.diff"
+    },
+    {
+      "profile": "documentary",
+      "tex_byte_identical": false,
+      "before_sha256": "fc82a3b8799da7879029a5bfa8957a1faffc41ea15b7c71bf74306658320c240",
+      "after_sha256": "bb7a732c9de22fe800b77069e879242c9114dfb6caff8c1b3eca8f1bb79f7306",
+      "diff": "note-fix-documentary.diff"
+    },
+    {
+      "profile": "expanded",
+      "tex_byte_identical": true,
+      "before_sha256": "02ec444e3043b3f1a8f08d8657e7ccc29f4ca3eeb9a4594eec7029d138a26f36",
+      "after_sha256": "02ec444e3043b3f1a8f08d8657e7ccc29f4ca3eeb9a4594eec7029d138a26f36",
+      "diff": "note-fix-expanded.diff"
+    }
+  ],
+  "only_documentary_pdf_needs_rebuild": true,
+  "apparatus128_and129_retained": true
+}

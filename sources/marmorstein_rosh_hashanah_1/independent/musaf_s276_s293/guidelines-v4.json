@@ -1,0 +1,178 @@
+{
+  "files_read": [
+    "/tmp/mahzor-s276/guidelines-v3.json (full)",
+    "/tmp/mahzor-s276/review-v4/encoding-pack.json (lines 1-700, 6000-6400, 6640-6900, 7020-7160, 7400-7836: changed units, registry prayer:/poem:/siddur: entries, generated_files, arrangements, dispositions; not every registry row)",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/schema/JLPTEI-3.md (lines 1-120 this pass, incl. URN/condition-URN rules; the full 2180 lines were read in v3)",
+    "/tmp/mahzor-s276/project-draft-v4/prayerbook_for_the_new_year-heidenheim-1965-he/index.xml (lines 1-140, 840-1191)",
+    "/tmp/mahzor-s276/project-draft-v4/prayerbook_for_the_new_year-marmorstein-1965-en/index.xml (lines 760-1007)",
+    "/tmp/mahzor-s276/project-draft-v4/machzor_expanded-opensiddur-he/index.xml (lines 1-60, 3780-4198)",
+    "/tmp/mahzor-s276/project-qa-v4/prayerbook_for_the_new_year-heidenheim-1965-he/batch_review.xml (full)",
+    "/tmp/mahzor-s276/project-qa-v4/prayerbook_for_the_new_year-marmorstein-1965-en/batch_review.xml (full)",
+    "/tmp/mahzor-s276/project-qa-v4/machzor_expanded-opensiddur-he/batch_review.xml (full)",
+    "project-draft-v4 …-he/musaf_efchad_bemaasai.xml (full)",
+    "project-draft-v4 …-he/musaf_repetition_circumcision.xml (full); …-en/musaf_repetition_circumcision.xml (header bibl + text)",
+    "project-draft-v4 …-he/hayom_harat_olam_words.xml (full); …-en/hayom_harat_olam_words.xml (from line 15)",
+    "project-draft-v4 …-he/musaf_areshet_word_parts.xml (full); …-en/musaf_areshet_word_parts.xml (bibl + text)",
+    "project-draft-v4 …-he/musaf_repetition_zikhronot_areshet.xml, …-he/musaf_repetition_zikhronot_hayom.xml (bibl + text)",
+    "project-draft-v4 …-en/musaf_repetition_attah_zokher.xml (bibl + text)",
+    "project-draft-v4 …-en/musaf_zekher_techillat_kol_maas.xml (lines 20-44, full text)",
+    "project-draft-v4 …-he/musaf_attah_zokher_words.xml (bibl + text)",
+    "project-draft-v4 …-he/ and …-en/musaf_repetition_shofarot_open.xml (bibl + text)",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/musaf_shofarot_open.xml (full)",
+    "/tmp/mahzor-s276/compile-qa-v4/semantic-assertions.json (full)",
+    "/tmp/mahzor-s276/compile-qa-v4/response-page-marker-assertions.json (full)",
+    "/tmp/mahzor-s276/compile-qa-v4/full-service-report.json (full)",
+    "/tmp/mahzor-s276/review-v4/binding-machine-proof.json (full)",
+    "/tmp/mahzor-s276/prepare-binding-proof-v4.py (full)",
+    "/tmp/mahzor-s276/review-v4/meaningful-payload-manifest.json (full)",
+    "/tmp/mahzor-s276/review-v4/realization__musaf_hayom_harat_olam__{he,en}.json (full)",
+    "/tmp/mahzor-s276/review-v4/realization__musaf_repetition_circumcision__{he,en}.json (full)",
+    "/tmp/mahzor-s276/review-v4/realization__musaf_zekher_techillat_kol_maas__{he,en}.json (full)",
+    "/tmp/mahzor-s276/review-v4/realization__musaf_efchad_bemaasai__he__chunk01/02/03.txt (all three, full)",
+    "/tmp/mahzor-s276/review-v4/realization__musaf_efchad_bemaasai__en__chunk01/02/03.txt (all three, full)",
+    "/tmp/mahzor-s276/review-v4/prior-semantic-values.json (lines 1-150 and 18000-18090 of 20795: representative samples only)",
+    "/tmp/mahzor-s276/review-v4/realization-bindings.json (lines 1-80: global_only_prior format)"
+  ],
+  "data_encoding_approved": true,
+  "generated_encoding_approved": true,
+  "canonical_identity_approved": true,
+  "alignment_approved": true,
+  "recitation_order_approved": true,
+  "realization_bindings_approved": true,
+  "prior141_semantic_renewal_approved": true,
+  "meaningful41_payloads_reviewed": true,
+  "guideline_checklist": [
+    {
+      "rule": "V3-1: The Hayom and Areshet role notes add no page start, so there is no redundant primary p136 marker",
+      "result": "PASS (read by model)",
+      "evidence": "HE index lines 1127 and 1163, and the HE QA spine: each קו״ח note carries only @facs n291, and neither inclusion div contains a tei:pb. The real mid-sentence break is unchanged: pack zikhronot_close fragment s292 has page_start=true ('וְקַיֶּם־לָנוּ יְיָ |136| אֱלֹהֵינוּ'). Older Malkhuyot divs (lines 993, 1030) are unchanged and have no pb."
+    },
+    {
+      "rule": "V3-2: Draft-gap notes are current, with no stale claims",
+      "result": "PASS (read by model; low wording note on HE)",
+      "evidence": "HE line 1187: 'התמלול כולל את זכרונות ואת כל פסקת אתה נגלית, פתיחת שופרות (עמ׳ 136; PDF292–293). המשך שופרות והמשך התפילה טרם נכללו.' EN line 1003 says the same in English. The expanded header (line 40) reads 'reaches the end of Atah Nigleita … on PDF293 … Later recitation remains unencoded; the unrelated Psalm24 appendix is documentary only.' Both anchors sit after shofarot_open."
+    },
+    {
+      "rule": "V3-3: A primary EN p128 marker exists without an invented rubric; the qualified break and the HE128 break remain",
+      "result": "PASS (read by model)",
+      "evidence": "EN index line 875 and the EN QA spine have <tei:pb ed=\"1965\" n=\"128\" …/n276.jpg/> directly before the attah_zokher transclusion, with no new note. EN musaf_repetition_attah_zokher.xml line 38 keeps pb ed=\"1965 rosh_hashanah/musaf/repetition/attah_zokher\" n=128. HE index line 1034 keeps pb n=128 (n275) before the הש״ץ אומר אתה זוכר rubric."
+    },
+    {
+      "rule": "V3-4: Semantic, page-marker and response assertions",
+      "result": "PASS (machine assertion files read by model; outputs not recomputed)",
+      "evidence": "semantic-assertions.json: untested cases have brit_selection_checked=false and brit_selection_correct=null; the four brit cases are checked=true and correct=true. response-page-marker-assertions.json: 56 per-language primary-marker entries (28 documentary + 28 expanded), all with all_primary_scan_sources_unique=true. Documentary counts are Shabbat=2 (consistent with 128+136 only) and weekday=9 (128–136). It has 36 response-count entries. The expanded values match the source rules: omit 0/0, hayom_only 1/0, hayom_only_repeat 2/0, both_no_repeat 1/1, both_cantor_hayom 2/1, both_cantor_repeat 2/2, Frankfurt 2/2, weekday Areshet repeat 2/2 and no-repeat 2/1. Documentary output is always single, which is correct. known_brit_retains_ark_instruction=true. full-service-report: four morning selections (weekday/Shabbat × Frankfurt/not) have compiled_to_end_of_new_Musaf=true and no pairing problems."
+    },
+    {
+      "rule": "V3-5/V3-low: Ark rubric typed as instruction; documentary action not suppressed",
+      "result": "PASS (read by model)",
+      "evidence": "Expanded lines 3903-3904: both notes are type=\"instruction\" with @resp, inside the brit conditional. HE circumcision.xml: the verbatim condition rubric 'כשיש ברית מילה פותחים ארון הקודש ומוסיפים זה.' stays in the j:conditional (line 40). A separate <note type=\"instruction\" resp=…codex>פותחים ארון הקודש.</note> sits inside the scope before the stanza (line 49), with a header encoding note. The EN file is unchanged; its source rubric has no Ark clause, so nothing was added. No new prayer words and no English translation."
+    },
+    {
+      "rule": "V3-6: The English Shabbat rubric is the printed 'On Sabbath.'",
+      "result": "PASS (read by model)",
+      "evidence": "Expanded line 3851 and the expanded QA spine have <tei:foreign xml:lang=\"en\">On Sabbath.</tei:foreign> with no @resp, next to the de-Hebr 'אַם שַׁבָּת.'. The EN documentary index (line 894) also has 'On Sabbath.'"
+    },
+    {
+      "rule": "V3-7: The Zikhronot Areshet repeat rubric covers all communities",
+      "result": "PASS (read by model)",
+      "evidence": "Expanded line 4117: 'הש״ץ חוזר לפי מנהג הקהל; בחול יש שאין הש״ץ חוזר.' / 'The cantor repeats according to the community’s custom; on weekdays some do not repeat.' The condition is Frankfurt ∨ (Shabbat ∧ both_cantor_repeat) ∨ (weekday ∧ musaf-areshet-cantor-repeat). The older Malkhuyot rubric outside this batch is untouched (line 3780 region)."
+    },
+    {
+      "rule": "V3-8: Hayom registry entry and canonical home",
+      "result": "PASS (read by model)",
+      "evidence": "The pack registry runs prayer:areshet_sefatenu/* → siddur:… (lines 7092-7134) with no hayom_harat_olam/word_home entry. canonical_home.urn is urn:x-opensiddur:text:prayer:hayom_harat_olam with map_root=false and omit_publication_urn=true. hayom_harat_olam_words.xml (HE and EN) has no publication idno and no div@corresp, and exactly one whole-prayer milestone plus a bare terminator. No duplicate home."
+    },
+    {
+      "rule": "V3-9: Areshet word-library bibliography",
+      "result": "PASS (read by model)",
+      "evidence": "HE and EN musaf_areshet_word_parts.xml headers each carry two biblScopes, 127–127 and 136–136. div@facs stays n273/n274 (initial location only). j:option zikhronot_printing (תְּקִיעָתֵנוּ … זִכְרוֹנוֹתֵינוּ / 'our Tekiah … verses of remembrance') is a real wording variant."
+    },
+    {
+      "rule": "V3-10: Strophe-note spacing",
+      "result": "PASS (read by model; low cosmetic remainder elsewhere)",
+      "evidence": "EN Zekher header note: 'strophe 28 … used in 26 … between scans 285 and 287'. The correction 'reason' strings still contain 'Scan287', 'Scan279', 'Scan291', 'Psalm74:2' and 'Scan289'."
+    },
+    {
+      "rule": "Page-marker uniqueness: the generator dedupes repeated page_start flags",
+      "result": "PASS (read by model)",
+      "evidence": "The Efchad payloads set page_start=true on many fragments within one printed page (e.g. p132: stanza_30 frag 2, the Gen intro, stanza_31, the Ps intro, stanza_33). The generated HE Efchad XML still emits exactly one qualified pb each for n=129,130,131,132,133,134,135, so the flags do not cause repeated breaks."
+    },
+    {
+      "rule": "Noah printing choices under one identity (policy)",
+      "result": "PASS under the stated accepted project convention",
+      "evidence": "musaf_attah_zokher_words.xml line 39: one P milestone, vegam_et_noach, with a tei:choice of two j:option printings that differ only in meteg/pointing/punctuation. The noach_weekday and noach_shabbat hosts and the expanded spine select them with j:declare. This matches the existing qedushah metegs convention I saw in prior-semantic-values (haaretz_with_meteg / without_meteg, kevod_name_with_maqaf). JLPTEI §URNs describes condition URNs as text variants 'some communities add and others do not', not edition-printing selectors. I accept the convention as stated and recommend writing it into the spec."
+    },
+    {
+      "rule": "Atah Nigleita P identity extent",
+      "result": "PASS (read by model)",
+      "evidence": "The current HE and EN shofarot_open milestone runs from אַתָּה נִגְלֵיתָ to 'הוֹפָעְתָּ:' / 'didst Thou appear to them.', then a bare terminator. The earlier musaf_shofarot_open.xml (p.97) attributes the same introductory paragraph with seg@source=prayer:amidah/attah_nigleita; its only extra is the lead-in 'כַּכָּתוּב בְּתוֹרָתֶךָ,'. It holds no verses and no @corresp range. No existing claim extends the identity to the verses, so no part URN is needed."
+    },
+    {
+      "rule": "Recitation order (all three spines)",
+      "result": "PASS (read by model)",
+      "evidence": "HE, EN and expanded index plus QA spines: Attah Zokher; weekday Zekher, Noah (zikhronot printing), verses; Shabbat Noah (first printing), Efchad, Jeremiah intro; then Jer 31:19 once, Eloheinu zokhrenu, Lev 26:45, brit (override), Zokher haberit, shofar note and weekday TASHAT, Hayom, Areshet (zikhronot printing, Shabbat-gated zikhron), Attah Nigleita. Unchanged from v3 apart from the fixes above."
+    },
+    {
+      "rule": "Alignment",
+      "result": "PASS (read by model)",
+      "evidence": "The HE and EN QA spines have identical structure apart from language-specific rubrics: HE has the הש״ץ rubric, the de-Hebr Noah note and קו״ח; EN has none of these. The EN primary pb 128 now aligns with HE."
+    },
+    {
+      "rule": "Binding proof algorithm (deterministic machine proof; model read the code, not the execution)",
+      "result": "PASS with caveats",
+      "evidence": "prepare-binding-proof-v4.py, for each of the 141 global_only_prior keys: (1) rebuilds 'before' from the OLD accepted readings and corrections with review_payloads and asserts review_is_current(reviews[key], before[key]), so the old receipt still matches; (2) pops exactly expanded_order_sha256, source_order_sha256, documentary_instructions_sha256 and navigation_sha256 from both parsed dicts; (3) asserts Python a==b, a deep comparison that is order-sensitive for lists, so every other field is kept and compared; (4) writes the full body to prior-semantic-values.json. The samples I read (amidah_qedushah/he; ahallelah_elohai/en) are full bodies without the four fields. The Efchad chunks are asserted to concatenate to the exact payload text. I did not compute or verify any hash, and I did not read review_is_current's implementation."
+    },
+    {
+      "rule": "Changed and unread meaningful payloads (read by model)",
+      "result": "PASS",
+      "evidence": "Hayom HE and EN: only canonical_home changed (urn now prayer:hayom_harat_olam); the text matches the unit and XML. Circumcision HE: source_notes plus the third instruction (type=instruction, codex resp); EN instructions have only the EN condition rubric. Zekher HE and EN: corrected source note; 44 stanzas each; the EN 'death→dearth' correction and the s285/s287 join_next are intact. Efchad HE and EN, all six chunks: stanzas 1–46 and 9 verse interludes with correct Bible @source, page_context=efchad_bemaasai; corrections censer, congregation and unsown!’’.; the 26/27 quote now opens stanza 27 (“My way is hidden”). No omissions."
+    }
+  ],
+  "issues": [
+    {
+      "severity": "low",
+      "file": "project-draft-v4/prayerbook_for_the_new_year-heidenheim-1965-he/index.xml line 1187",
+      "unit": "documentary_s199_draft_gap_he",
+      "issue": "'המשך התפילה טרם נכללו' is followed in the same index by the encoded Psalm 24 שיר של יום div (PDF350). The EN index has no such appendix, so the EN wording is exact.",
+      "required_fix": "Optional: add e.g. 'מלבד שיר של יום (תהלים כד) שבנספח' at the next regeneration."
+    },
+    {
+      "severity": "low",
+      "file": "encoding-pack corrections / realization payload correction reasons; expanded index.xml line 40",
+      "unit": "musaf_zekher_dearth, musaf_efchad_* reasons; expanded encoding note",
+      "issue": "Remaining missing spaces: 'Scan287', 'Scan279', 'Scan291', 'Psalm74:2', 'Scan289', 'Psalm24'.",
+      "required_fix": "Cosmetic; fix at the next regeneration. Not blocking."
+    },
+    {
+      "severity": "low",
+      "file": "/tmp/mahzor-s276/compile-qa-v4/response-page-marker-assertions.json",
+      "unit": "primary_page_marker_checks",
+      "issue": "Records counts and uniqueness but not which page numbers. '128/136 per stream' follows from Shabbat=2 together with the XML, but is not asserted literally. Only *-print.xml files appear, so electronic outputs are not visible in this file.",
+      "required_fix": "Optional hardening: emit the ordered list of primary n values per stream, and include electronic outputs if they are meant to be covered."
+    },
+    {
+      "severity": "low",
+      "file": "/tmp/mahzor-s276/prepare-binding-proof-v4.py",
+      "unit": "prior-141 renewal proof",
+      "issue": "The proof is sound for what it claims, with two limits. (a) It does not assert key-set completeness (that the 141 global_only_prior keys plus the 41 meaningful keys equal all 182 current keys, with no accepted key dropped); the totals are consistent only by arithmetic. (b) Because it strips all four whole-book context hashes, it cannot detect unintended order, navigation or instruction changes inside already-accepted parts of the arrangements. That rests on the separate frozen-baseline test claim and on my reading of only the new-batch regions of the indexes.",
+      "required_fix": "Optional: assert set(after)==set(global_only_prior)|set(meaningful), and add a sub-hash or diff of the accepted-prefix arrangement in the proof."
+    },
+    {
+      "severity": "low",
+      "file": "…-he/musaf_repetition_shofarot_open.xml line 38",
+      "unit": "musaf_repetition_shofarot_open",
+      "issue": "Double space at 'גַּם  ' before the marked כָּל conditional, the same class as the earlier Areshet boundary double space.",
+      "required_fix": "Cosmetic whitespace normalization; not blocking."
+    }
+  ],
+  "remaining_questions": [
+    "Policy: please record in JLPTEI or the project naming notes that per-language printing selectors (…/he/first_printing, …/zikhronot_printing) are an accepted use of condition URNs for orthography-only printing differences under one canonical identity. The current spec text frames condition URNs as edition-independent community wording variants.",
+    "When the Shofarot verses are encoded: the earlier p.97 attribution puts the 'כַּכָּתוּב בְּתוֹרָתֶךָ,' lead-in inside seg@source=attah_nigleita, while this batch closes the P range at הוֹפָעְתָּ. Please keep the lead-in treatment consistent, either as a separate formula part as in the Zikhronot intros or inside the P range, but not both."
+  ],
+  "verdict": "APPROVED at the encoding/order and binding gate for the dimensions checked; this is not batch-wide or export acceptance. I checked all ten v3 dispositions against the actual v4 XML. (1) No redundant primary p136 in the HE index or QA spine; the real mid-sentence 136 break remains. (2) Both gap notes and the expanded coverage note are current. (3) The EN primary pb 128 (n276) has no invented rubric; the qualified EN break and HE128 remain. (4) The assertion files contain what was claimed: null brit for untested cases, 56 per-language marker cases, 36 correct response counts, Ark retention, four morning end-to-end selections. (5) The Ark rubric is type=instruction, and an attributed in-scope Hebrew action is added to the documentary circumcision. (6) The printed 'On Sabbath.' has no Codex @resp. (7) The broadened Areshet repeat rubric is in place. (8) The orphan Hayom registry entry is gone and the canonical home is the existing whole prayer. (9) The Areshet bibliography covers pp.127 and 136. (10) The strophe note spacing is fixed. Identity questions: I accept the Noah printing choices under the stated existing convention, and the attah_nigleita identity as the opening paragraph, which the earlier p.97 file corroborates. Bindings, separating machine proof from my reading: I read in full the 6 changed meaningful payloads and all 6 lossless Efchad chunks, and found them consistent with the units and generated XML. The other 33 meaningful payloads were read in full in v3; the manifest marks them unchanged since v3 by parsed comparison excluding only the four context hashes. The prior-141 renewal rests on the deterministic proof script, which I read but did not execute and whose hashes I did not compute: it confirms old receipts are current and asserts parsed equality after stripping exactly four context hashes. My approval of the new shared contexts covers the Zikhronot regions of the indexes and spines; the limits of the proof are listed as a low issue. All five issues are low or cosmetic; none blocks.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "395c464f-4d95-4feb-b80f-92188a260dcf"
+  }
+}
