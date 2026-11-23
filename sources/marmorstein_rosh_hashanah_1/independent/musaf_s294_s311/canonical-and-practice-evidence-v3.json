@@ -1,0 +1,853 @@
+{
+  "prior_response_rules": {
+    "musaf_hayom_shabbat_custom": {
+      "text": "יש קהלות שאין אומרים בשבת לא היום ולא ארשת, ויש שאומרים היום אבל לא ארשת. ויש שאומרים שניהם אבל אין הש״ץ חוזר, ויש שהש״ץ חוזר היום ואינו חוזר ארשת, ויש שהש״ץ חוזר שניהם וכן נוהג ק״ק פפד״מ.",
+      "language": "he",
+      "witnesses": [
+        "he"
+      ],
+      "scan": "s274",
+      "printed_page": "127",
+      "page_start": false,
+      "type": "instruction"
+    },
+    "musaf_areshet_custom": {
+      "text": "ואומרים ארשת והש״ץ חוזר, ויש קהלות שא״א בשבת, ויש שאין הש״ץ חוזר.",
+      "language": "he",
+      "witnesses": [
+        "he"
+      ],
+      "scan": "s274",
+      "printed_page": "127",
+      "page_start": false,
+      "type": "instruction"
+    }
+  },
+  "inherited_response_controls": {
+    "hayom": {
+      "all_conditions_and_roles_identical": true,
+      "accepted_zikhronot": {
+        "section": "zikhronot_musaf_hayom_inclusion",
+        "heading": null,
+        "order": [
+          {
+            "section": "zikhronot_musaf_hayom_first",
+            "heading": null,
+            "order": [
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:hayom_harat_olam"
+                }
+              }
+            ],
+            "role": "congregation"
+          },
+          {
+            "section": "zikhronot_musaf_hayom_cantor_repeat",
+            "heading": null,
+            "order": [
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:hayom_harat_olam"
+                }
+              }
+            ],
+            "conditions": [
+              {
+                "operator": "any",
+                "conditions": [
+                  {
+                    "type": "opensiddur:holiday-aggregate",
+                    "features": {
+                      "shabbat": false
+                    }
+                  },
+                  {
+                    "type": "opensiddur:rite",
+                    "features": {
+                      "frankfurt_am_main": true
+                    }
+                  },
+                  {
+                    "operator": "all",
+                    "conditions": [
+                      {
+                        "type": "opensiddur:holiday-aggregate",
+                        "features": {
+                          "shabbat": true
+                        }
+                      },
+                      {
+                        "type": "opensiddur:practice",
+                        "features": {
+                          "musaf-shabbat-responses": "both_cantor_hayom"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "operator": "all",
+                    "conditions": [
+                      {
+                        "type": "opensiddur:holiday-aggregate",
+                        "features": {
+                          "shabbat": true
+                        }
+                      },
+                      {
+                        "type": "opensiddur:practice",
+                        "features": {
+                          "musaf-shabbat-responses": "both_cantor_repeat"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "operator": "all",
+                    "conditions": [
+                      {
+                        "type": "opensiddur:holiday-aggregate",
+                        "features": {
+                          "shabbat": true
+                        }
+                      },
+                      {
+                        "type": "opensiddur:practice",
+                        "features": {
+                          "musaf-shabbat-responses": "hayom_only"
+                        }
+                      },
+                      {
+                        "type": "opensiddur:practice",
+                        "features": {
+                          "musaf-hayom-only-cantor-repeat": true
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "role": "reader",
+            "condition_rubrics": {
+              "he": {
+                "text": "חזרת הש״ץ לפי מנהג הקהל; למנהג שאומר היום בלבד בשבת, הספר אינו מפרש אם הש״ץ חוזר.",
+                "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+              },
+              "en": {
+                "text": "The cantor’s repetition follows the community’s custom. For the Sabbath custom that says Hayom alone, the book does not specify whether the cantor repeats.",
+                "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+              }
+            }
+          }
+        ],
+        "conditions": [
+          {
+            "operator": "any",
+            "conditions": [
+              {
+                "type": "opensiddur:holiday-aggregate",
+                "features": {
+                  "shabbat": false
+                }
+              },
+              {
+                "type": "opensiddur:rite",
+                "features": {
+                  "frankfurt_am_main": true
+                }
+              },
+              {
+                "type": "opensiddur:practice",
+                "features": {
+                  "musaf-shabbat-responses": "hayom_only"
+                }
+              },
+              {
+                "type": "opensiddur:practice",
+                "features": {
+                  "musaf-shabbat-responses": "both_no_cantor_repeat"
+                }
+              },
+              {
+                "type": "opensiddur:practice",
+                "features": {
+                  "musaf-shabbat-responses": "both_cantor_hayom"
+                }
+              },
+              {
+                "type": "opensiddur:practice",
+                "features": {
+                  "musaf-shabbat-responses": "both_cantor_repeat"
+                }
+              }
+            ]
+          }
+        ],
+        "condition_rubrics": {
+          "he": {
+            "text": "בשבת לפי מנהג הקהל.",
+            "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+          },
+          "en": {
+            "text": "On the Sabbath, according to the community’s custom.",
+            "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+          }
+        },
+        "declarations": []
+      },
+      "new_shofarot": {
+        "section": "shofarot_musaf_hayom_inclusion",
+        "heading": null,
+        "order": [
+          {
+            "section": "shofarot_musaf_hayom_first",
+            "heading": null,
+            "order": [
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:hayom_harat_olam"
+                }
+              }
+            ],
+            "role": "congregation"
+          },
+          {
+            "section": "shofarot_musaf_hayom_cantor_repeat",
+            "heading": null,
+            "order": [
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:hayom_harat_olam"
+                }
+              }
+            ],
+            "conditions": [
+              {
+                "operator": "any",
+                "conditions": [
+                  {
+                    "type": "opensiddur:holiday-aggregate",
+                    "features": {
+                      "shabbat": false
+                    }
+                  },
+                  {
+                    "type": "opensiddur:rite",
+                    "features": {
+                      "frankfurt_am_main": true
+                    }
+                  },
+                  {
+                    "operator": "all",
+                    "conditions": [
+                      {
+                        "type": "opensiddur:holiday-aggregate",
+                        "features": {
+                          "shabbat": true
+                        }
+                      },
+                      {
+                        "type": "opensiddur:practice",
+                        "features": {
+                          "musaf-shabbat-responses": "both_cantor_hayom"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "operator": "all",
+                    "conditions": [
+                      {
+                        "type": "opensiddur:holiday-aggregate",
+                        "features": {
+                          "shabbat": true
+                        }
+                      },
+                      {
+                        "type": "opensiddur:practice",
+                        "features": {
+                          "musaf-shabbat-responses": "both_cantor_repeat"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "operator": "all",
+                    "conditions": [
+                      {
+                        "type": "opensiddur:holiday-aggregate",
+                        "features": {
+                          "shabbat": true
+                        }
+                      },
+                      {
+                        "type": "opensiddur:practice",
+                        "features": {
+                          "musaf-shabbat-responses": "hayom_only"
+                        }
+                      },
+                      {
+                        "type": "opensiddur:practice",
+                        "features": {
+                          "musaf-hayom-only-cantor-repeat": true
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "role": "reader",
+            "condition_rubrics": {
+              "he": {
+                "text": "חזרת הש״ץ לפי מנהג הקהל; למנהג שאומר היום בלבד בשבת, הספר אינו מפרש אם הש״ץ חוזר.",
+                "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+              },
+              "en": {
+                "text": "The cantor’s repetition follows the community’s custom. For the Sabbath custom that says Hayom alone, the book does not specify whether the cantor repeats.",
+                "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+              }
+            }
+          }
+        ],
+        "conditions": [
+          {
+            "operator": "any",
+            "conditions": [
+              {
+                "type": "opensiddur:holiday-aggregate",
+                "features": {
+                  "shabbat": false
+                }
+              },
+              {
+                "type": "opensiddur:rite",
+                "features": {
+                  "frankfurt_am_main": true
+                }
+              },
+              {
+                "type": "opensiddur:practice",
+                "features": {
+                  "musaf-shabbat-responses": "hayom_only"
+                }
+              },
+              {
+                "type": "opensiddur:practice",
+                "features": {
+                  "musaf-shabbat-responses": "both_no_cantor_repeat"
+                }
+              },
+              {
+                "type": "opensiddur:practice",
+                "features": {
+                  "musaf-shabbat-responses": "both_cantor_hayom"
+                }
+              },
+              {
+                "type": "opensiddur:practice",
+                "features": {
+                  "musaf-shabbat-responses": "both_cantor_repeat"
+                }
+              }
+            ]
+          }
+        ],
+        "condition_rubrics": {
+          "he": {
+            "text": "בשבת לפי מנהג הקהל.",
+            "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+          },
+          "en": {
+            "text": "On the Sabbath, according to the community’s custom.",
+            "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+          }
+        },
+        "declarations": []
+      }
+    },
+    "areshet": {
+      "all_conditions_and_roles_identical": true,
+      "accepted_zikhronot": {
+        "section": "zikhronot_musaf_areshet_inclusion",
+        "heading": null,
+        "order": [
+          {
+            "section": "zikhronot_musaf_areshet_first",
+            "heading": null,
+            "order": [
+              {
+                "section": "zikhronot_areshet_words_2",
+                "heading": null,
+                "order": [
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:areshet_sefatenu/opening"
+                    }
+                  },
+                  {
+                    "section": "zikhronot_areshet_zikhron_2",
+                    "heading": null,
+                    "order": [
+                      {
+                        "reference": {
+                          "target": "urn:x-opensiddur:text:prayer:areshet_sefatenu/zikhron"
+                        }
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "opensiddur:holiday-aggregate",
+                        "features": {
+                          "shabbat": true
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:areshet_sefatenu/conclusion"
+                    }
+                  }
+                ]
+              }
+            ],
+            "role": "congregation"
+          },
+          {
+            "section": "zikhronot_musaf_areshet_cantor_repeat",
+            "heading": null,
+            "order": [
+              {
+                "section": "zikhronot_areshet_words_2_2",
+                "heading": null,
+                "order": [
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:areshet_sefatenu/opening"
+                    }
+                  },
+                  {
+                    "section": "zikhronot_areshet_zikhron_2_2",
+                    "heading": null,
+                    "order": [
+                      {
+                        "reference": {
+                          "target": "urn:x-opensiddur:text:prayer:areshet_sefatenu/zikhron"
+                        }
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "opensiddur:holiday-aggregate",
+                        "features": {
+                          "shabbat": true
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:areshet_sefatenu/conclusion"
+                    }
+                  }
+                ]
+              }
+            ],
+            "conditions": [
+              {
+                "operator": "any",
+                "conditions": [
+                  {
+                    "type": "opensiddur:rite",
+                    "features": {
+                      "frankfurt_am_main": true
+                    }
+                  },
+                  {
+                    "operator": "all",
+                    "conditions": [
+                      {
+                        "type": "opensiddur:holiday-aggregate",
+                        "features": {
+                          "shabbat": true
+                        }
+                      },
+                      {
+                        "type": "opensiddur:practice",
+                        "features": {
+                          "musaf-shabbat-responses": "both_cantor_repeat"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "operator": "all",
+                    "conditions": [
+                      {
+                        "type": "opensiddur:holiday-aggregate",
+                        "features": {
+                          "shabbat": false
+                        }
+                      },
+                      {
+                        "type": "opensiddur:practice",
+                        "features": {
+                          "musaf-areshet-cantor-repeat": true
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "role": "reader",
+            "condition_rubrics": {
+              "he": {
+                "text": "הש״ץ חוזר לפי מנהג הקהל; בחול יש שאין הש״ץ חוזר.",
+                "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+              },
+              "en": {
+                "text": "The cantor repeats according to the community’s custom; on weekdays some do not repeat.",
+                "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+              }
+            }
+          }
+        ],
+        "conditions": [
+          {
+            "operator": "any",
+            "conditions": [
+              {
+                "type": "opensiddur:holiday-aggregate",
+                "features": {
+                  "shabbat": false
+                }
+              },
+              {
+                "type": "opensiddur:rite",
+                "features": {
+                  "frankfurt_am_main": true
+                }
+              },
+              {
+                "type": "opensiddur:practice",
+                "features": {
+                  "musaf-shabbat-responses": "both_no_cantor_repeat"
+                }
+              },
+              {
+                "type": "opensiddur:practice",
+                "features": {
+                  "musaf-shabbat-responses": "both_cantor_hayom"
+                }
+              },
+              {
+                "type": "opensiddur:practice",
+                "features": {
+                  "musaf-shabbat-responses": "both_cantor_repeat"
+                }
+              }
+            ]
+          }
+        ],
+        "condition_rubrics": {
+          "he": {
+            "text": "בשבת לפי מנהג הקהל.",
+            "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+          },
+          "en": {
+            "text": "On the Sabbath, according to the community’s custom.",
+            "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+          }
+        },
+        "declarations": [
+          {
+            "type": "opensiddur:variant",
+            "features": {
+              "urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/he/first_printing": false,
+              "urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/he/zikhronot_printing": true,
+              "urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/en/first_printing": false,
+              "urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/en/zikhronot_printing": true
+            }
+          }
+        ]
+      },
+      "new_shofarot": {
+        "section": "shofarot_musaf_areshet_inclusion",
+        "heading": null,
+        "order": [
+          {
+            "section": "shofarot_musaf_areshet_first",
+            "heading": null,
+            "order": [
+              {
+                "section": "shofarot_areshet_words_2",
+                "heading": null,
+                "order": [
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:areshet_sefatenu/opening"
+                    }
+                  },
+                  {
+                    "section": "shofarot_areshet_zikhron_2",
+                    "heading": null,
+                    "order": [
+                      {
+                        "reference": {
+                          "target": "urn:x-opensiddur:text:prayer:areshet_sefatenu/zikhron"
+                        }
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "opensiddur:holiday-aggregate",
+                        "features": {
+                          "shabbat": true
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:areshet_sefatenu/conclusion"
+                    }
+                  }
+                ]
+              }
+            ],
+            "role": "congregation"
+          },
+          {
+            "section": "shofarot_musaf_areshet_cantor_repeat",
+            "heading": null,
+            "order": [
+              {
+                "section": "shofarot_areshet_words_2_2",
+                "heading": null,
+                "order": [
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:areshet_sefatenu/opening"
+                    }
+                  },
+                  {
+                    "section": "shofarot_areshet_zikhron_2_2",
+                    "heading": null,
+                    "order": [
+                      {
+                        "reference": {
+                          "target": "urn:x-opensiddur:text:prayer:areshet_sefatenu/zikhron"
+                        }
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "opensiddur:holiday-aggregate",
+                        "features": {
+                          "shabbat": true
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:areshet_sefatenu/conclusion"
+                    }
+                  }
+                ]
+              }
+            ],
+            "conditions": [
+              {
+                "operator": "any",
+                "conditions": [
+                  {
+                    "type": "opensiddur:rite",
+                    "features": {
+                      "frankfurt_am_main": true
+                    }
+                  },
+                  {
+                    "operator": "all",
+                    "conditions": [
+                      {
+                        "type": "opensiddur:holiday-aggregate",
+                        "features": {
+                          "shabbat": true
+                        }
+                      },
+                      {
+                        "type": "opensiddur:practice",
+                        "features": {
+                          "musaf-shabbat-responses": "both_cantor_repeat"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "operator": "all",
+                    "conditions": [
+                      {
+                        "type": "opensiddur:holiday-aggregate",
+                        "features": {
+                          "shabbat": false
+                        }
+                      },
+                      {
+                        "type": "opensiddur:practice",
+                        "features": {
+                          "musaf-areshet-cantor-repeat": true
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "role": "reader",
+            "condition_rubrics": {
+              "he": {
+                "text": "הש״ץ חוזר לפי מנהג הקהל; בחול יש שאין הש״ץ חוזר.",
+                "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+              },
+              "en": {
+                "text": "The cantor repeats according to the community’s custom; on weekdays some do not repeat.",
+                "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+              }
+            }
+          }
+        ],
+        "conditions": [
+          {
+            "operator": "any",
+            "conditions": [
+              {
+                "type": "opensiddur:holiday-aggregate",
+                "features": {
+                  "shabbat": false
+                }
+              },
+              {
+                "type": "opensiddur:rite",
+                "features": {
+                  "frankfurt_am_main": true
+                }
+              },
+              {
+                "type": "opensiddur:practice",
+                "features": {
+                  "musaf-shabbat-responses": "both_no_cantor_repeat"
+                }
+              },
+              {
+                "type": "opensiddur:practice",
+                "features": {
+                  "musaf-shabbat-responses": "both_cantor_hayom"
+                }
+              },
+              {
+                "type": "opensiddur:practice",
+                "features": {
+                  "musaf-shabbat-responses": "both_cantor_repeat"
+                }
+              }
+            ]
+          }
+        ],
+        "condition_rubrics": {
+          "he": {
+            "text": "בשבת לפי מנהג הקהל.",
+            "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+          },
+          "en": {
+            "text": "On the Sabbath, according to the community’s custom.",
+            "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+          }
+        },
+        "declarations": [
+          {
+            "type": "opensiddur:variant",
+            "features": {
+              "urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/he/first_printing": false,
+              "urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/he/zikhronot_printing": false,
+              "urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/teqiot_veseder_shofarot": true,
+              "urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/en/first_printing": false,
+              "urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/en/zikhronot_printing": false
+            }
+          }
+        ]
+      }
+    }
+  },
+  "settings_files": [
+    "/tmp/mahzor-s294/settings/prayerbook_for_the_new_year-heidenheim-1965-he/documentary.yaml",
+    "/tmp/mahzor-s294/settings/prayerbook_for_the_new_year-heidenheim-1965-he/with_translation.yaml",
+    "/tmp/mahzor-s294/settings/machzor_expanded-opensiddur-he/undated.yaml"
+  ],
+  "registered_part": {
+    "verse": "zechariah/9/15",
+    "part": "adonai_tzevaot_yagen",
+    "starts": "יהוה צבאות יגן עליהם",
+    "remainder_part": "veakhelu",
+    "remainder_starts": "ואכלו"
+  },
+  "feature": {
+    "type": "opensiddur:practice",
+    "name": "birkat-kohanim",
+    "kind": "binary"
+  },
+  "literal_baseline_803_unchanged": true,
+  "existing_registry_records": [
+    {
+      "urn": "urn:x-opensiddur:text:prayer:amidah/teqa_beshofar_gadol_lecherutenu",
+      "status": "canonical",
+      "label_en": "amidah/teqa beshofar gadol lecherutenu",
+      "parent": "urn:x-opensiddur:text:prayer:amidah"
+    },
+    {
+      "urn": "urn:x-opensiddur:text:prayer:amidah/shomea_qol_teruat_ammo",
+      "status": "canonical",
+      "label_en": "amidah/shomea qol teruat ammo",
+      "parent": "urn:x-opensiddur:text:prayer:amidah"
+    },
+    {
+      "urn": "urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/birkat_kohanim/birkat_kohanim",
+      "status": "context",
+      "note": "Service occurrence or bounded source quotation; existing canonical identities reused.",
+      "parent": "urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/birkat_kohanim",
+      "references": [
+        "urn:x-opensiddur:text:prayer:amidah/birkat_kohanim_leshatz"
+      ]
+    },
+    {
+      "urn": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/shofarot_close",
+      "status": "context",
+      "label_en": "rosh hashanah/musaf/shofarot close",
+      "parent": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf",
+      "references": [
+        "urn:x-opensiddur:text:prayer:amidah/teqa_beshofar_gadol_lecherutenu"
+      ],
+      "note": "Edition occurrence or bounded quotation; canonical text identity reused."
+    },
+    {
+      "urn": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/shofarot_close/text",
+      "status": "context",
+      "label_en": "rosh hashanah/musaf/shofarot close/text",
+      "parent": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/shofarot_close",
+      "references": [
+        "urn:x-opensiddur:text:prayer:amidah/teqa_beshofar_gadol_lecherutenu"
+      ],
+      "note": "Edition occurrence or bounded quotation; canonical text identity reused."
+    },
+    {
+      "urn": "urn:x-opensiddur:instruction:role/blower",
+      "status": "canonical",
+      "parent": "urn:x-opensiddur:instruction:role",
+      "label_he": "תוקע",
+      "label_en": "Shofar blower"
+    }
+  ]
+}

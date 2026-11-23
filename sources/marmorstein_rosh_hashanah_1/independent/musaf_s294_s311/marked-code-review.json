@@ -1,0 +1,69 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "not specified to reviewer"
+  },
+  "files_read": [
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/opensiddur/importer/marmorstein_rosh_hashanah_1/realizations.py",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/opensiddur/tests/importer/test_marmorstein_realizations.py",
+    "/tmp/mahzor-s294/context-code-review.json"
+  ],
+  "approved": true,
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    {
+      "id": "NB1",
+      "location": "realizations.py:111-119 (occurrence_content)",
+      "title": "The 'exactly one parenthesized fragment' check does not stop parentheses inside the outer pair",
+      "detail": "The check only requires that the single fragment's text starts with '(' and ends with ')'. A printing such as '(a) b (c)' is accepted and projected as 'a) b (c'. It is also accepted when the parentheses are unbalanced, as in '(a (b)'. In practice the canonical comparison at line 345 and the pure-part attestation at line 360 would almost always reject these, because a host would need to contain those exact stray delimiters. So this fails closed in realistic data. Still, the stated rule ('exactly one nonempty parenthesized fragment') is not enforced directly. The risk is that a sloppy marked-up source line is read as one conditional span when the page actually prints two separate optional pieces.",
+      "suggested_fix": "After removing the outer pair, reject the occurrence if the inner text contains '(' or ')'. Add a subtest for '(a) (b)'."
+    },
+    {
+      "id": "NB2",
+      "location": "realizations.py:116",
+      "title": "Text that is only whitespace inside the parentheses counts as 'nonempty'",
+      "detail": "len(text) <= 2 rejects '()' but accepts '( )', which projects to an empty string once normalized. It only passes validation if the canonical host also resolves to empty or whitespace-only text. Neither validate_pure_parts nor canonical_text currently forbids an empty host fragment, so a degenerate empty-to-empty match is possible in theory.",
+      "suggested_fix": "Use `not text[1:-1].strip()` in place of `len(text) <= 2`. Add a '( )' subtest."
+    },
+    {
+      "id": "NB3",
+      "location": "test_marmorstein_realizations.py:46-61",
+      "title": "The positive marked test does not show that the raw delimiters stay out of the generated words",
+      "detail": "The test checks for one j:conditional[@type='marked'], the transclude target, that the input is unchanged, and the hash relationships (resolved == literal_content, resolved != literal). It does not check that neither '(' nor 'memory' appears as literal text in the caller's TEI body, or that no generated note or sic carries the parentheses. That rendering lives in build.py, which is outside this payload, so a regression that also emitted '(memory)' as literal text next to the transclusion would not be caught here.",
+      "suggested_fix": "Assert that ''.join(body.itertext()) contains neither '(' nor 'memory'. Also assert that changing the conditions changes the 'realization/occurrence/en' receipt, as the existing control-binding tests do for unmarked occurrences."
+    },
+    {
+      "id": "NB4",
+      "location": "realizations.py:416-458 (review_payloads)",
+      "title": "review_payloads relies on validate_occurrences having already run for the marked type and conditions checks",
+      "detail": "review_payloads calls occurrence_content() when segment.get('marked') is truthy, but never calls validate_occurrence_controls. With a non-bool truthy marked (for example 'yes') and valid parentheses and conditions, review_payloads would produce a receipt while validate_occurrences rejects the same input. Both failure modes stop the pipeline, and binding still covers the raw value because witness=deepcopy(unit) includes the segment's marked and conditions. This is only a consistency gap if anything ever calls review_payloads without validation.",
+      "suggested_fix": "Optional: call validate_occurrence_controls(segment) before computing fidelity in review_payloads, or document that validate_occurrences must run first."
+    },
+    {
+      "id": "NB5",
+      "location": "realizations.py:440-458, 355-363, 340-346",
+      "title": "Binding and fidelity design confirmed (no action needed)",
+      "detail": "literal_sha256 is still computed from source_text([segment]) with the delimiters, so the printed evidence is unchanged. literal_content_sha256 is added only for marked segments and binds the inner words; the test confirms it equals resolved_sha256. Conditions and marked are bound through the unit witness for the occurrence itself, and through OCCURRENCE_CONTROL_KEYS in attesting_controls for other callers. validate_occurrence_controls requires a bool marked plus conditions (line 27). occurrence_content repeats that check and adds the single-fragment and parenthesis checks. Line 340 independently requires one plain fragment and limits segment keys to CANONICAL_OCCURRENCE_KEYS, so marked occurrences cannot carry fragment interpretations. Hosts stay strictly plain: 'marked' is not in PLAIN_SEGMENT_KEYS, so canonical_text (267), validate_pure_parts (159) and the canonical_home checks (482) all reject markup on a host. The marked status therefore stays on the occurrence. Pure-part attestation (360) compares library words against occurrence_content, so a library word 'memory' can be attested by a marked '(memory)' printing at the same scan and printed_page. That is the intended projection, and malformed marked attesters raise an error rather than being silently accepted. The negative test covers missing conditions, a non-bool marked, missing parentheses, '()', and a wrong inner word."
+    },
+    {
+      "id": "NB6",
+      "location": "realizations.py:443-446, 477, 497-519, 600-612",
+      "title": "Earlier changes in the final files rechecked",
+      "detail": "The context['urn'] = context_urn assignment is gone, and publication_context (510) is the only change to context identity, so the earlier NB1 no longer applies. Instructions are allowed only when context == 'literal' (477), and that path requires a real page transition inside a segment in each language (492-496). The home whitelist (485) excludes instructions. In the pb-position walk, a note's contents are skipped but its tail is still counted (608-610). That is correct, because the tail is literal text outside the rubric. The range_corrections filter applies an option-bound correction only when settings[option] is True. If the option is absent or False, the correction is skipped, so this fails safe. Unconditioned corrections behave as before, and relevant_corrections (459) still binds every correction into the receipt regardless of option. The test now runs validate_occurrences, validate_generated and review_payloads, uses the 'forever continued' fixture, and checks that a rubric change invalidates the receipt, which addresses the earlier NB3. The earlier NB4 is still only partly covered: there is no combined subtest for instructions with context='canonical', or for instructions in a literal context with no page break. The code does enforce both."
+    }
+  ],
+  "required_changes": [],
+  "scope_limitations": [
+    "Per the instructions, I did not read canonical_corrections.py (bind_corrections, corrected_text) or its tests. I assessed only the option-selection filter in review_payloads, not how option bindings are created or checked.",
+    "I did not read build.py. How j:conditional[@type='marked'] is rendered, where unit-level instructions are placed, ROLE_LABELS, and whether raw parentheses are left out of the generated TEI are all taken from the user's description and the test's assertions.",
+    "I did not read or verify /tmp/mahzor-s294/prior-home-identity-and-page-proof.json or the actual56 corpus output. The statement that publication identities and pb/facs labels are unchanged is taken from the user.",
+    "I ran no tests. The reported counts (63 focused tests and 109 subtests passed; 169 importer tests passed) are taken as stated.",
+    "This is static review only; I made no edits."
+  ],
+  "verdict": "Approved. The marked-occurrence change is narrow and fails closed. occurrence_content strips one outer pair of printed parentheses, and only for a marked occurrence that has conditions, a single fragment and nonempty delimited text. The canonical comparison and pure-part attestation then use the inner words, while literal_sha256 still covers the raw delimited source. literal_content_sha256 separately binds the projected words, and the conditions and marked flag stay bound through the unit witness and attesting_controls. Hosts still cannot carry markup. Nothing here blocks the change. Recommended hardening: reject '(' or ')' inside the outer pair and whitespace-only content (NB1, NB2), and assert in the positive test that the delimiters and words never appear as literal caller text (NB3). The earlier context_urn and literal-instruction changes and the option-bound correction filter look correct as written in the final files.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "acad103c-591c-4dad-b31e-b9dfafb9d5d4"
+  }
+}

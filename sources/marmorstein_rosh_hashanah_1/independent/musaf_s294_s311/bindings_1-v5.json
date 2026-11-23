@@ -1,0 +1,101 @@
+{
+  "scope": "bindings_1",
+  "approved": false,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_1-0.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_1-1.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_1-2.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_1-3.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_1-4.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_1-5.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_1-6.json"
+  ],
+  "blocking_findings": [
+    {
+      "id": "B1",
+      "records": [
+        "realization/musaf_shofarot_verses/he",
+        "realization/musaf_shofarot_verses/en"
+      ],
+      "fields": [
+        "unit.languages[*][4].source",
+        "unit.languages[*][4].corresp",
+        "unit.languages[*][4].chapter_corresp"
+      ],
+      "finding": "The verse references mix two numbering systems. Psalms are bound with Hebrew (Masoretic) numbering: psalms/47/6 (עלה אלהים בתרועה, which is 47:5 in English Bibles) and psalms/81/4–5 (תקעו בחדש שופר, which is 81:3–4 in English Bibles). But the verse וכל העם ראים את הקולת ... קול השופר is bound as bible:exodus/20/18. That is the English (KJV-style) number. In Masoretic numbering this verse is Exodus 20:15, and Masoretic 20:18 is a different verse (ויעמד העם מרחק). Neither numbering system gives this set of references, so the exodus/20/18 binding is wrong in at least one of them. Most likely the publication's or translation's printed numbering was carried into a canonical identity. The quote identifiers derived from it (quotes/exodus_20_18/...) have the same problem.",
+      "required_action": "Bind to one numbering system throughout. If it is Masoretic, as the Psalms bindings imply, change the binding to bible:exodus/20/15 and update the corresp/chapter_corresp quote identifiers in both the he and en realizations."
+    },
+    {
+      "id": "B2",
+      "records": [
+        "realization/musaf_areshet_sefatenu/he"
+      ],
+      "fields": [
+        "unit.wording_selection[0].features",
+        "source_fidelity[*].settings"
+      ],
+      "finding": "The wording-variant conditions sit in the shared canonical prayer's namespace (urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/...), and the unit urn itself is the shared urn:x-opensiddur:text:prayer:areshet_sefatenu. However, they are named after this publication's printings and languages: .../en/first_printing, .../en/zikhronot_printing, .../he/first_printing, .../he/zikhronot_printing. Being the 'first printing' or 'zikhronot printing' in a particular language is a fact about this edition, not a liturgical condition. Only teqiot_veseder_shofarot looks like a liturgical condition. Putting edition-specific selectors into a shared canonical prayer's condition URNs would push this edition's layout onto every other user of that canonical.",
+      "required_action": "Restate the conditions in liturgical terms (for example, which section the conclusion follows: malkhuyot, zikhronot or shofarot) without the language split. If the differences only reflect how this edition printed the text, keep them as publication-local realization settings instead of conditions on the canonical prayer. Then re-review the attesting_controls and settings bindings."
+    }
+  ],
+  "nonblocking_findings": [
+    {
+      "id": "N1",
+      "records": [
+        "realization/musaf_yismechu/en"
+      ],
+      "finding": "The canonical identity is urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/yismechu/text. Yismechu is shared with the ordinary Shabbat Musaf. Other shared texts in this set use the prayer: namespace (prayer:amidah/qedushah/kevodo, prayer:ken_tagen_al_ammekha_yisrael, prayer:areshet_sefatenu). The identity is specific to the occasion, not to this publication, but it may prevent sharing. Worth deciding whether that is intended."
+    },
+    {
+      "id": "N2",
+      "records": [
+        "realization/musaf_areshet_sefatenu/he"
+      ],
+      "finding": "The marked Shabbat-conditioned segment (holiday-aggregate shabbat:true, de-Hebr condition_instruction) sits between the canonical opening and conclusion but has no canonical binding and no source_fidelity entry. If the design treats unbound segments as text local to the unit, this is fine. If the Shabbat wording belongs to the liturgical prayer, it has no canonical binding and its fidelity is not attested."
+    },
+    {
+      "id": "N3",
+      "records": [
+        "realization/musaf_areshet_sefatenu/he"
+      ],
+      "finding": "The two later printings (musaf_repetition_zikhronot_areshet, musaf_repetition_shofarot_areshet) are listed as attesting the conclusion target under first_printing=true / zikhronot_printing=false / teqiot_veseder_shofarot=false settings. Because the condition model implies the conclusion wording differs between printings, it is unclear how those controls can attest the first-printing conclusion. Relevant to the re-review required by B2."
+    },
+    {
+      "id": "N4",
+      "records": [
+        "realization/musaf_qedushah_kevodo_repeat/he",
+        "realization/musaf_qedushah_kevodo_repeat/en"
+      ],
+      "finding": "The he realization has the speaker role חזן (abbr ח׳) on both the segment and the attesting control. The en realization and its control have no speaker. This is acceptable if the English page prints no role marker. Noted so the asymmetry is confirmed to be documentary, not a lost role."
+    },
+    {
+      "id": "N5",
+      "records": [
+        "realization/musaf_shofarot_verses/he",
+        "realization/musaf_shofarot_verses/en"
+      ],
+      "finding": "The connective segments (e.g. the 11/17-char ונאמר segments and the 38/44- and 51/60-char introductions) have end_reference:true even though they have no source. This is harmless but semantically odd. Separately, the Scripture source bindings themselves have no source_fidelity entries; only the ken_tagen canonical target does."
+    },
+    {
+      "id": "N6",
+      "records": [
+        "realization/musaf_useir_lekhapper/he"
+      ],
+      "finding": "The rite condition is frankfurt_am_main only. The instruction (expanded as בקהלה קדושה פרנקפורט דמיין ובנותיה) also covers Frankfurt's dependent communities (ובנותיה). Acceptable if the rite feature is defined to include them. The abbreviation expansions are correct, and the different abbreviation spellings (פפ״דמ in the unit vs פפד״מ in the repetition control) are reflected consistently in their own controls."
+    }
+  ],
+  "scope_limitations": [
+    "The previously accepted payloads were not provided. For changed_metadata records with 'unit' and/or 'source_fidelity' in changed_fields (files 0, 3, 4, 5, 6), I reviewed the current values on their own merits but could not identify or confirm the specific delta.",
+    "Text is masked. In several bindings, fragment text_sha256 differs from the fidelity literal/corrected/resolved hash (kevodo he; areshet opening; ken_tagen he and en). Presumably this comes from normalization or exclusion of speaker or punctuation, but it cannot be checked from this projection. Source words are reviewed separately.",
+    "final_sha256 is computed over the full unmasked payload and was not recomputed. Global source/expanded order hashes and documentary instruction hashes are assigned to the order group and were only checked for consistency across records (they are identical in all seven).",
+    "Scan/page consistency was checked (he on even scans, en on odd scans; s214/s216 and s215/s217 page 97→98 transitions with page_start flags; source_scans match the fragment scans). I did not look at the scans themselves."
+  ],
+  "verdict": "Not approved. Two blocking binding problems: (B1) the Shofarot verse bindings mix numbering systems, so Exodus is bound to the English number exodus/20/18 while Psalms use Masoretic numbers (47:6, 81:4–5), in both the he and en records; (B2) areshet_sefatenu puts edition- and language-specific printing selectors (first_printing / zikhronot_printing per en/he) into the shared canonical prayer's condition namespace. The other metadata (conditions, roles, abbreviation expansions, canonical targets, fidelity, scan/page bindings) is internally consistent, apart from the nonblocking notes.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "b28fd2bf-1c11-4da5-b6cd-90392011fe37"
+  }
+}

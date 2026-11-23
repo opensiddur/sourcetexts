@@ -1,0 +1,23 @@
+{
+  "scope": "documentary-v7-export-3",
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/documentary-export-manifest-v7.json",
+    "/tmp/mahzor-s294/full-pdf-images-v7/documentary-240.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "Coverage limit: only one PDF page image was assigned (documentary-240.png, printed page 232). It is the back-matter Metadata page and holds no liturgical text. On this image alone I could not check Hebrew vowels, CGJ, mappiq, English columns, stanza alignment, note order, alternative labels, the priestly-blessing INTRODUCTION batch end on source312, or the label for the missing later source. No HTML desktop or mobile screenshots were listed, so I reviewed none. The manifest reports 241 PDF pages; page 241 was not assigned and I did not read it.",
+    "The running header on this Metadata page reads 'שיר של יום.' (carried over from the last liturgical section) rather than a back-matter header. The RTL period is placed correctly. This is cosmetic only.",
+    "Long monospace URLs in the Sources entry break across lines, including one mid-word break ('archive.org/detail' / 's/...') with no hyphen. Nothing is clipped, the link boxes stay inside the text block, and this is acceptable for URLs.",
+    "The 'visited on 11/08/2026' date is numeric and ambiguous between MM/DD and DD/MM. This is a style point only.",
+    "The manifest shows export_approval_pending: true and encoding_approved: true. Both are consistent with this being the export QA step. The HTML checks at 1280px and 390px report no errors, no duplicate IDs, no broken internal links, and no horizontal overflow (scrollWidth equals width)."
+  ],
+  "verdict": "Approved for the assigned scope. Page 240 (Metadata/Legal/Contributor credits/Sources) has no clipping or overlap. The CC0 license link, the contributor credits (Markup editor and Transcriptionist, Codex), and the full source citation are all present and legible. The citation keeps the Internet Archive identifier and URL, the imaging/library credit, the 'scan is the source' statement, the independent-reader credit, and the note that no translations were supplied for passages absent from the English edition. The manifest has no pending source-pointing questions. This approval does not cover the batch's liturgical pages (the source 294–311 content, the priestly-blessing introduction end point, or the label for the missing later source), because no images of those pages were assigned. They need their own image review if they have not already had one.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "9da4e912-d2bb-4535-9301-ff0a4238a80c"
+  }
+}

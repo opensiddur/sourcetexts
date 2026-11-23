@@ -1,0 +1,31 @@
+{
+  "scope": "expanded_html_final_v8",
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/html-tail-v8/manifest.json",
+    "/tmp/mahzor-s294/full-html-browser-summary-v8.json",
+    "/tmp/mahzor-s294/coverage-labels-v8-closure.json",
+    "/tmp/mahzor-s294/html-tail-v8/expanded-1280-n293.png",
+    "/tmp/mahzor-s294/html-tail-v8/expanded-1280-n309.png",
+    "/tmp/mahzor-s294/html-tail-v8/expanded-390-n293.png",
+    "/tmp/mahzor-s294/html-tail-v8/expanded-390-n309.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "Fix for בקול/כהנים: confirmed visually. In expanded-1280-n309 the Hebrew rubric reads 'כשנושאים כפיים, הש״ץ אומר את המילה כהנים בקול.' and every word is separated. The 390 closing frame starts below this rubric, so it was checked at 1280 only.",
+    "Fix for מסיים/ברוך: I could not check it visually. That phrase does not appear in any of the four assigned frames (the n293 opening at both widths, the n309 closing at both widths). I am relying on the statement that a real text space was added. If you want visual proof, a frame at that location is needed.",
+    "Opening, n293, both widths: the piyyut runs from 'קהל ↗אנוסה לעזרה' / '↗I hasten for aid…'. Text is clean and readable and nothing is clipped. At 1280 the Hebrew column is right-aligned and the English left-aligned, with matching rows lined up. At 390 each Hebrew line is stacked above its English, with thin rules between pairs. Source-link markers (↗) appear in sensible places in both languages (e.g. 'יְדַיִם ↗שְׂעִירוֹת' / 'hairy ↗hands', '↗וְנִלְוָה' / '↗in captivity'). There are no merged words in the Hebrew or English shown. One longer Hebrew line wraps correctly at 390 ('דְּרוֹשׁ טוֹבָה… בְּקוֹל:').",
+    "Closing, n309, both widths: the English rubric 'When there is a priestly blessing, the cantor says the word Kohanim aloud.' comes first, then the parallel introduction, which ends 'כָּאָמוּר:' / 'as it is said:'. No verses from Numbers 6:24–26 appear, which matches coverage-labels-v8-closure. The end labels follow immediately in both languages and stand out in the bold rubric colour. Hebrew: 'התמלול מגיע עד הקדמת ברכת כהנים בחזרת מוסף; פסוקי הברכה והמשך התפילה טרם נכללו.' English: 'Digitization reaches the priestly-blessing introduction in the Musaf repetition (scan311). The priestly verses and following service, beginning on scan312, remain unencoded.' There is no empty row or column between the rubric and the introduction, so the empty p:parallel noted in the closure review is not visible. The book ending (a rule, then the title and front-matter colophon) is clean.",
+    "Cosmetic: at 390 the bold English end label and some colophon items are justified, which leaves wide gaps between words ('Digitization   reaches   the   priestly-blessing'; the CC BY-SA link line; 'Company,   1949.   archive.org:'). The long archive.org identifier and URL break mid-token ('…DailyPrayerB/ook1949'), and nothing overflows. For short bold labels and bibliography items on narrow screens, consider text-align:start, or hyphens/overflow-wrap:anywhere for URLs only.",
+    "Cosmetic: at the top of expanded-1280-n309, one line of earlier content is partly hidden under the sticky header. This is just where the scroll stopped, and the content is not lost.",
+    "Carried over from the closure review, still open: the Hebrew end label has no scan number while the English one names scan311/scan312. Consider making them match.",
+    "Browser summary v8: all 6 runs (3 profiles × 1280/390) report errors=[], duplicateIds=[], brokenInternalLinks=[] and scrollWidth equal to the viewport width, so nothing overflows horizontally. The main_text hash is the same at both widths for each profile."
+  ],
+  "verdict": "APPROVED. All four assigned expanded-profile frames are readable, correctly aligned and free of clipping, both at the n293 batch opening and the n309 closing, at 1280 and 390 wide. Source-link markers are visible, and the words shown, including the fixed בקול/כהנים, are correctly separated. The closing shows only the priestly-blessing introduction, ending 'כָּאָמוּר:' / 'as it is said:'. Visible Hebrew and English labels then say that scan312 onward is not yet encoded, which is accurate for an incomplete book (311 complete leaves, partial 351, 44 incomplete). The browser checks are clean. Two limits: the מסיים/ברוך fix does not appear in the assigned frames and was accepted on your statement, and the other two profiles' screenshots were not part of this review. The remaining findings are cosmetic and do not block approval.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "de65c407-92f5-46d3-b047-1da969654d6f"
+  }
+}

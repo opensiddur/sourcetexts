@@ -1,34 +1,34 @@
 {
-  "scope": "Continue from the beginning, in scan order; pilot acceptance remains separate and complete.",
+  "scope": "Continue in source scan order; accepted Sunday Psalm24 is an excerpt on partial scan351.",
   "current_batch": {
-    "name": "musaf_s276_s293",
+    "name": "musaf_s294_s311",
     "status": "accepted",
     "scan_pages": [
-      276,
-      277,
-      278,
-      279,
-      280,
-      281,
-      282,
-      283,
-      284,
-      285,
-      286,
-      287,
-      288,
-      289,
-      290,
-      291,
-      292,
-      293
+      294,
+      295,
+      296,
+      297,
+      298,
+      299,
+      300,
+      301,
+      302,
+      303,
+      304,
+      305,
+      306,
+      307,
+      308,
+      309,
+      310,
+      311
     ],
-    "complete_before": 276,
-    "complete_after": 294,
-    "acceptance_evidence": "musaf_s276_s293_acceptance.json"
+    "complete_before": 293,
+    "complete_after": 311,
+    "acceptance_evidence": "musaf_s294_s311_acceptance.json"
   },
-  "next_primary_scan": 294,
-  "next_adjudication_scan": 294,
+  "next_primary_scan": 312,
+  "next_adjudication_scan": 312,
   "images": "Cached outside Git; never use OCR to settle a reading.",
   "secondary_review_requirements": {
     "blind_scan_reading": true,
@@ -1117,9 +1117,36 @@
       "complete_before": 276,
       "complete_after": 294,
       "acceptance_evidence": "musaf_s276_s293_acceptance.json"
+    },
+    {
+      "name": "musaf_s294_s311",
+      "status": "accepted",
+      "scan_pages": [
+        294,
+        295,
+        296,
+        297,
+        298,
+        299,
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306,
+        307,
+        308,
+        309,
+        310,
+        311
+      ],
+      "complete_before": 293,
+      "complete_after": 311,
+      "acceptance_evidence": "musaf_s294_s311_acceptance.json"
     }
   ],
-  "next_scan_notes": "The earlier count254 complete was corrected to252: PDF252–253 were partial through HaMelekh HaQadosh. Their remaining tails are included now. All720 prior literal witnesses remain accepted. New252–275 installment has frozen primary and blind readings, but is not yet accepted. Next source after acceptance: PDF276, Zikhronot.",
+  "next_scan_notes": "Next source is scan312, the actual priestly-blessing verses. Scan351 remains partial: Sunday Psalm24 is accepted, Monday Psalm48 is not encoded. See coverage-count-correction-v8.json.",
   "queued_source_checks": [],
   "superseded_status_records": [
     {
@@ -1298,6 +1325,15 @@
       "status": "Closed: enlarged primary and independent source adjudication confirm two hataf-patah readings and the second-lamed meteg. Both source witnesses corrected; baseline amendment preserves before/after hashes.",
       "reason": "Enlargednewmorningprintinghaslamedhataf; inspectolderprintingindependentlyratherthannormalizefromnewcopy.",
       "evidence": "independent/musaf_s238_s253/ashrei-queue-closure/review3.json"
+    }
+  ],
+  "coverage_count_corrections": [
+    {
+      "evidence": "independent/musaf_s294_s311/coverage-count-correction-v8.json",
+      "previous_reported_complete_before": 294,
+      "corrected_complete_before": 293,
+      "complete_after": 311,
+      "partial_leaf": 351
     }
   ]
 }

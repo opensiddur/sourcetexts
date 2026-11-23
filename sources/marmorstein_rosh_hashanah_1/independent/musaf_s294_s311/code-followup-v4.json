@@ -1,0 +1,62 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "medium"
+  },
+  "approved": true,
+  "files_read": [
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/opensiddur/importer/marmorstein_rosh_hashanah_1/baseline.py",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/opensiddur/importer/marmorstein_rosh_hashanah_1/realizations.py",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/opensiddur/tests/importer/test_marmorstein_baseline.py",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/opensiddur/tests/importer/test_marmorstein_realizations.py",
+    "/tmp/mahzor-s294/marked-code-review.json"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    {
+      "id": "NB1",
+      "location": "realizations.py:511-525 (prepare_documents, literal branch)",
+      "title": "New explicit seg/@source change verified: it is safe and only reaches the context",
+      "detail": "segment_identity(segment) is read before the mapping keys are removed. The keys are then stripped, and 'source' is set back to that identity only when one exists. This happens on deepcopy(unit), so the readings stay unchanged; the test confirms this with assertEqual(host, before) at line 103. The literal context does not become a second identity host, for two reasons. First, segment_identity() reads only corresp, source_reference_corresp and source_reference, never 'source'. Second, 'canonical' is not added on this path, so validate_occurrences, attesting_controls and review_payloads do not treat the context segments as occurrences or hosts. validate_generated computes present and identities from readings and home, not from context @source, so this change does not alter the 'one generated home' rule. The test at lines 112-114 asserts that body @corresp is only context_urn, and that both page-split segs carry @source=P/part. That shows the rendering quotes the home instead of duplicating its correspondence."
+    },
+    {
+      "id": "NB2",
+      "location": "realizations.py:516-524",
+      "title": "An existing segment 'source' in a literal context is replaced by the segment identity",
+      "detail": "If a literal-home segment already has a 'source' (for example a separate quotation source) that differs from corresp, the context's @source now becomes the corresp identity. The original value is still kept in the home (home copies prepared segments without stripping), so nothing is lost overall. The documentary context, however, no longer shows the original source attribution. This fails safe. It is only worth noting if any literal-context segment really has corresp != source.",
+      "suggested_fix": "Optional: add a subtest with a segment that has both corresp and a different source, and document the intended @source in that case."
+    },
+    {
+      "id": "NB3",
+      "location": "test_marmorstein_realizations.py:88-122",
+      "title": "The @source test has small coverage gaps",
+      "detail": "No subtest checks that an unidentified segment in a literal context gets no @source. No subtest checks that the bare-URN form of @source (no '@<project>' suffix, unlike transclude targets) is what build.py and downstream consumers expect. build.py's rendering of 'source' could not be inspected because it is out of scope.",
+      "suggested_fix": "Optional: add an unidentified second segment and assert it has no @source."
+    },
+    {
+      "id": "NB4",
+      "location": "baseline.py:31-47; test_marmorstein_baseline.py:57-86",
+      "title": "Rule for enabling review_encoding verified",
+      "detail": "The exemption applies only when unit.get('review_encoding') is True (strict identity). In that case it rebuilds the legacy unit with exactly that one key removed and requires the whole snapshot entry (protected_sha256 and every literal_sha256) to match the accepted entry exactly. No other field is exempted. False, 'yes' and absence all fall through to the error. A missing stem resolves to {} and also fails. snapshot() itself is unchanged. The test covers acceptance after enabling the flag, and shows that a mapping edit (end_reference, which is in SEGMENT_MAPPING_FIELDS) still passes the baseline while changing the fresh realization/old/he payload. It also covers rejection of text, title, disabled and non-boolean values, and rejection of removing the flag against a snapshot taken with the gate on. The test does not separately assert that unit_review_text is unchanged after the end_reference edit, but validate_baseline passing already implies the literal hashes are equal."
+    },
+    {
+      "id": "NB5",
+      "location": "realizations.py:111-121, 455-458, 606-616; tests 46-86",
+      "title": "Earlier scope items rechecked",
+      "detail": "(1) The page proof in walk() skips a note's contents but still appends child.tail. Rubrics in the context are allowed only with context='literal' plus a real page transition in each language (477, 492-496). The test asserts that the home has no note and no pb (110), and that a rubric edit changes the receipt (120-122). (2) occurrence_content now calls validate_occurrence_controls. It rejects whitespace-only content, any '(' or ')' inside the outer pair (which covers both the nested and unbalanced cases), and anything that is not a single fragment. The positive test asserts that the caller body contains neither '(' nor 'memory', and that editing a condition changes the receipt. Receipts bind literal_sha256 (raw text with parentheses), literal_content_sha256 (inner text) and the controls, through the witness and attesting_controls. The earlier review's NB1-NB3 are resolved. Its NB4 is also resolved, because occurrence_content now validates the controls itself."
+    }
+  ],
+  "scope_limitations": [
+    "Following the instructions, I did not read canonical_corrections.py or its tests. review_payloads still imports bind_corrections and corrected_text, and no longer filters on an option. I did not verify that the module was restored to HEAD or that no option-bound support ships.",
+    "I did not read build.py. How the 'source' key is rendered as seg/@source, how notes, pb and marked conditionals are rendered, and ROLE_LABELS are all taken from the test assertions only.",
+    "I did not inspect the baseline fixture files or the integrated accepted_literal_baseline. The claim that 803 frozen entries are unchanged was not verified. The test file checks the 660-hash fixture and its subset relationship to the integrated baseline.",
+    "I ran no tests. The figures of 54 focused tests and 107 subtests passing, and the pending 169-test run, are as reported by the user.",
+    "Static review only. I made no edits."
+  ],
+  "verdict": "Approved. The new literal-context change keeps the documentary witness's pagination and rubric. It strips the mapping keys and sets an explicit seg/@source pointing to the single canonical home, without adding @corresp or canonical pointers. Because it works on a copy and segment_identity() ignores 'source', it creates no second identity host and does not touch the readings or the baseline. The test asserts the expected @corresp and @source values, that the home has no notes or page breaks, that the page proof passes in validate_generated, and that a rubric edit invalidates the receipt. Earlier items still hold: marked-occurrence content validation and hash binding, and baseline acceptance of review_encoding=True only when removing that single flag reproduces the exact accepted snapshot. Disabling the flag, non-boolean values and word or title edits are rejected, and a snapshot taken with the gate on protects against removing it. No blocking issues. Optional hardening: NB2 and NB3.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "f1b33091-d16a-4941-8e3d-419993441d91"
+  }
+}

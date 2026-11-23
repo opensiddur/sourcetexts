@@ -1,0 +1,91 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "medium"
+  },
+  "approved": false,
+  "data_encoding_approved": false,
+  "generated_encoding_approved": false,
+  "canonical_identity_approved": false,
+  "guideline_adherence_approved": false,
+  "realization_bindings_approved": false,
+  "all_requested_checks_completed": false,
+  "files_read": [
+    "/tmp/mahzor-s294/review-delta-v3-manifest.json",
+    "/tmp/mahzor-s294/canonical-and-practice-evidence-v3.json",
+    "/tmp/mahzor-s294/draft-schema-validation-v3-report.json",
+    "/tmp/mahzor-s294/registry-additions-v3.json",
+    "/tmp/mahzor-s294/realization-impact-v3.json",
+    "/tmp/mahzor-s294/bible-source-projection-proof.json",
+    "/tmp/mahzor-s294/header-template-proof-v3.json (lines 1-715 of 1216 only)",
+    "/tmp/mahzor-s294/guidelines-JLPTEI-3-1-180-v3.md",
+    "/tmp/mahzor-s294/guidelines-JLPTEI-3-181-360-v3.md",
+    "/tmp/mahzor-s294/guidelines-JLPTEI-3-361-370-v3.md",
+    "/tmp/mahzor-s294/guidelines-JLPTEI-3-390-569-v3.md",
+    "/tmp/mahzor-s294/guidelines-JLPTEI-3-570-595-v3.md",
+    "/tmp/mahzor-s294/guidelines-JLPTEI-3-1975-2050-v3.md",
+    "/tmp/mahzor-s294/guidelines-SIDDUR_URN_SCHEME-1-180-v3.md",
+    "/tmp/mahzor-s294/guidelines-SIDDUR_URN_SCHEME-181-245-v3.md",
+    "/tmp/mahzor-s294/guidelines-SIDDUR_URN_SCHEME-305-355-v3.md",
+    "/tmp/mahzor-s294/guidelines-SIDDUR_URN_SCHEME-450-490-v3.md",
+    "/tmp/mahzor-s294/guidelines-SIDDUR_URN_SCHEME-640-660-v3.md",
+    "/tmp/mahzor-s294/guidelines-NAMING_SCHEME-1-179-v3.md",
+    "review-deltas-v3: 00,01,02,03,04,05,08,09,10(-00,-01),13,17,18,19,20,21,22,25,29,30,31,32,33,35,36,38,40,41(first 30 lines),42(-00 first 40 lines,-01 first 30 lines),45,50,51,52,53,59,60,61(-00,-01) diffs",
+    "xml-event-review-v3: 22-rh_avodah, 23-rh_hodaah (body), 24-amidah_modim_derabbanan (body), 25-repetition_birkat_kohanim (body), 26-musaf_shofarot_verses (body)",
+    "/tmp/mahzor-s294/review-deltas-v3/00-musaf_repetition_retzeh-header.jsonl"
+  ],
+  "blocking_findings": [
+    {
+      "id": "B1-versification-exodus-20",
+      "severity": "blocking",
+      "scope": "musaf_repetition_shofarot_verses (HE/EN), poem:anusah_leezrah quote contexts (HE/EN), registry-additions-v3 siddur.jsonl and poem.jsonl",
+      "finding": "The verse beginning וכל העם ראים את הקולת is identified as exodus/20/15 in the repetition Shofarot verses and in the Anusah quote contexts. Evidence: the bible-source-projection-proof lists exodus/20/15 for both. It is also in the registry rows shofarot_verses/intro_exodus_20_15, quotes/exodus_20/15, anusah_leezrah/exodus_20_15/... and quotes/exodus_20/15. Under JLPTEI-3 Versification, the canonical (Leningrad) division numbers Exodus 20 with 26 verses: 20:15 is לא תגנב and וכל העם is 20:18. The existing Musaf file musaf_shofarot_verses.xml already uses exodus/20/18 for this same text. The guideline also says: 'Never renumber to paper over a disagreement.'",
+      "required_action": "Remap to exodus/20/18 in both projects. Rename the registry rows that are named after the verse (e.g. exodus_20_18). Rerun the source projection against a canonical-numbered witness."
+    },
+    {
+      "id": "B2-schema-validation-evidence",
+      "severity": "blocking",
+      "scope": "draft-schema-validation-v3-report.json",
+      "finding": "The report does not back up the claim that the 882 XML files pass formal schema validation. It reads status 'UNACCEPTED XML only', counts.actual=1, identical_previously_validated=881, validated_xml_digests=933, and has no pass/fail field. The manifest shows about 40 files changed in V3, so a count of one 'actual' file does not cover the changed set.",
+      "required_action": "Provide a validation receipt that lists, for each V3 changed file, its SHA (matching the manifest) and an explicit pass result."
+    },
+    {
+      "id": "B3-minchah-modim-derabbanan-duplicate-words",
+      "severity": "blocking",
+      "scope": "amidah_modim_derabbanan.xml (siddur:rosh_hashanah/minchah/modim_derabbanan) vs amidah_modim_derabbanan_parts.xml (prayer:amidah/hodaah/modim_derabbanan)",
+      "finding": "Both files carry the identical printed words from pp. 5-6, including the same pb n=6 break. The Minchah context file has the full liturgical text directly in its body, with no j:transclude, no seg/@source and no prayer milestone pointing to the canonical identity. This breaks SIDDUR_URN_SCHEME's 'same text in several contexts' rule (reach shared words by transclusion or milestones) and the siddur: rule ('holds no words of its own'). It also leaves the same printed page encoded twice in one project.",
+      "required_action": "Have the Minchah context transclude the canonical word module, or wrap its words in seg/@source plus milestones to the canonical URN. Keep pagination in only one place."
+    }
+  ],
+  "new_human_questions": [
+    "The EN Musaf kohanim_intro file emits corresp urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/birkat_kohanim/birkat_kohanim, a Shacharit place URN, for text the EN book prints at Musaf. This is the stated design ('first EN counterpart'). Do you accept that a siddur: path naming Shacharit is realized in a Musaf file? The parallel compiler will pair it with the HE Shacharit row.",
+    "The service component 'minchah_maariv' (rh_avodah, rh_hodaah: siddur:rosh_hashanah/minchah_maariv/amidah/...) is not in SIDDUR_URN_SCHEME's closed service list. Is this an already-registered, accepted exception, or does it need a scheme change or a split into minchah/arvit?",
+    "Is the EN conditional rubric 'On Sabbath.' (documentary_musaf_shabbat_shofarot_en) printed in the EN source? If not, it needs @resp like the expanded-edition editorial rubrics.",
+    "The pb @ed second token 'rosh_hashanah/musaf/repetition/anusah_leezrah' names a siddur: path with no corresponding siddur: unit: the spine div around the Anusah transclusion has no corresp. Should a context unit be registered, or should the token reuse an existing siddur: path?"
+  ],
+  "nonblocking_findings": [
+    "Transliteration in new canonical stanza URNs: essa_dei_betzedeq/hakhshal (הָכְשַׁל, hof'al, qamatz qatan) should be 'hokhshal', and essa_dei_betzedeq/haonash (הָעֳנַשׁ, qamatz qatan + hataf qamatz) should be 'hoonash'. Before 1.0 a rename is free, so fix before committing the registry.",
+    "Inconsistent group naming in the Anusah quote contexts: 'psalm_150' vs 'psalms_47_6_98_6' and 'psalms_81_4_5'. Also, these groups are named by reference, not by incipit; acceptable as quotation groupings, but should be consistent.",
+    "Registry status inconsistency: the Anusah quote-context URNs (poem:anusah_leezrah/.../quotes/...) are registered status=canonical, while the equivalent repetition quote contexts are status=context. JLPTEI-3 (lines 220-227) treats quote-context URNs as bounded contextual identities, not canonical verses.",
+    "Header titles of amidah_modim_derabbanan_parts.xml and amidah_modim_derabbanan.xml are 'תפלת מנחה — modim_derabbanan': a raw ASCII identifier inside the Hebrew main title. The canonical word library is also labeled as Minchah.",
+    "realization-impact-v3.json says new_units=18, but it lists about 45 'new' payloads across about 23 distinct units. The count needs reconciling.",
+    "Heidenheim musaf_shofarot_close.xml and musaf_shofarot_blessing.xml (and EN counterparts) are new to review (prior_reviewed=false), but they have no realization payload in realization-impact-v3.json. Confirm that is intended.",
+    "The evidence file's accepted_zikhronot declaration omits the explicit teqiot_veseder_shofarot=false, but the actual Zikhronot XML (21/52) does carry it. The XML matches the stated intent; the evidence summary is stale.",
+    "A pre-existing siddur:regalim/... occasion (veteerav, sheotekha) is not in the closed occasion list (shalosh_regalim). It was not introduced in V3.",
+    "Confirmed and consistent with the guidelines: the V2 literal_intro context is replaced by the existing birkat_kohanim/birkat_kohanim context, ending before the verses. The new teqiot_veseder_shofarot condition replaces both he/ and en/shofarot_printing in all callers I saw (13, 20, 21, 30, 45, 51, 52, 59, 61). All 90 stanza corresp renames go from ordinals to incipits (44 Essa + 46 Anusah). Actor/how rubrics are type=description with role/reader or role/congregation. Repeated Retzeh/Modim/Modim derabbanan/Hodaah/Hayom occurrences are literal with seg/@source. 'sindnesses' is now sic/corr in the Musaf EN occurrence only, and the canonical EN word library keeps its original reading. The 145 biblScope was removed from the canonical libraries."
+  ],
+  "scope_limitations": [
+    "Context budget ran out before every requested input could be read. Not read: the prior reports encoding-guidelines.json, encoding-alignment.json and encoding-order.json; stanza-incpit-decisions-v3.json; alignment-final-v3.json; the three settings files; s306.jpg.",
+    "Not read: header-template-proof-v3.json lines 716-1216 (the EN per-file variable values). Of the 8 representative headers, only 00-musaf_repetition_retzeh-header.jsonl was read. Header uniformity across all 59 files is not verified by me.",
+    "Not read: full event streams 27, 28, 53, 54, 55, 56, 57, 58, 59 (HE/EN canonical close/blessing/avodah/hodaah/verses/hayom/areshet files that are new to review), and diff 58. Only part of the large Essa/Anusah EN diffs (41, 42) was read.",
+    "None of the 224 realization payloads (including the about 45 new and 12 meaningful_existing ones) was read. The canonical realization bindings are therefore unreviewed, not approved.",
+    "Event streams of unchanged, previously reviewed files were not re-read; prior V1 reviews are relied on there, as instructed.",
+    "No export approval is given or implied."
+  ],
+  "verdict": "NOT APPROVED. There are three blocking issues. (1) A versification error: וכל העם ראים is encoded as exodus/20/15 instead of canonical exodus/20/18 in the repetition Shofarot verses, the Anusah quote contexts, the registry additions and the projection proof, contradicting the existing musaf_shofarot_verses.xml. (2) The schema-validation report does not show the V3 changed files were validated. (3) The Minchah Modim derabbanan context duplicates the canonical word module's words with no transclusion or @source. Several requested inputs were not read: the realization payloads, the prior reports, the alignment and stanza tables, the settings, some headers and several new-to-review canonical event streams. So realization bindings and full guideline adherence cannot be approved, and all_requested_checks_completed is false.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "b058dbb2-13cc-4d66-b7ba-7e96a750e9bf"
+  }
+}

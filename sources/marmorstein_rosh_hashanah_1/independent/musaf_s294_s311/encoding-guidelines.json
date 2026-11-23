@@ -1,0 +1,165 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "medium"
+  },
+  "scope": "guidelines",
+  "files_read": [
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/schema/JLPTEI-3.md (all 2180 lines)",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/specs/SIDDUR_URN_SCHEME.md (all)",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/specs/NAMING_SCHEME.md (all)",
+    "/tmp/mahzor-s294/xml-event-review-manifest.json",
+    "/tmp/mahzor-s294/registry-additions.json (all 1287 lines)",
+    "/tmp/mahzor-s294/identity-search.json (all 1275 lines)",
+    "xml-event-review/00..45: every requested chunk was opened, and all text/body events (from <tei:text> or <tei:standOff> to the end) were read for every file, including both chunks of 10 and 33 and all three chunks of 45. Header events were read in full for 00, 01, 02, 12 and 29. For the rest, lines 1-55 (title/respStmt/editionStmt/distributor) were skipped; lines 56-88 (idno/licence/sourceDesc) were read except in 24, 26, 27, 28, 31, 36 and 43."
+  ],
+  "all_requested_checks_completed": false,
+  "approved": false,
+  "blocking_findings": [
+    {
+      "id": "B1-printing-position-wording-selectors",
+      "files": [
+        "17-amidah_avodah_parts",
+        "18-amidah_hodaah_parts",
+        "19-amidah_modim_derabbanan_parts",
+        "41-amidah_hodaah_parts",
+        "00/23 retzeh",
+        "01/24 modim",
+        "02/26 modim_derabbanan",
+        "03/27 hodaah_tail",
+        "08/31 shofarot_hayom",
+        "registry-additions condition.jsonl"
+      ],
+      "offending_xml": [
+        "<j:option corresp=\"urn:x-opensiddur:condition:prayer:amidah/avodah/retzeh/he/first_printing\">…וְהָשֵׁב אֶת־הָעֲבוֹדָה…עַמֶּךָ:</j:option><j:option corresp=\"…/retzeh/he/shofarot_printing\">…וְהָשֵׁב אֶת הָעֲבוֹדָה…עַמֶּךָ.</j:option>",
+        "<j:option corresp=\"…/modim/he/source_fragment_1/first_printing\">…לְדוֹר וָדוֹר נוֹדֶה…שֶׁבְּכָל־יוֹם…</j:option> vs shofarot_printing: 'לְדוֹר וָדוֹר. נוֹדֶה…שֶׁבְּכָל יוֹם'",
+        "<j:option corresp=\"…/modim_derabbanan/he/source_fragment_2/first_printing\">…לְחַצְרֹת…</j:option> vs shofarot_printing: 'לְחַצְרוֹת'",
+        "<j:option corresp=\"…siddur:rosh_hashanah/text/vekhol_hachayyim/he/first_printing\">…סֶּלָה…</j:option> vs shofarot_printing: 'סֶּֽלָה' (meteg only)",
+        "English: <j:option corresp=\"…/modim/en/source_fragment_1/shofarot_printing\">…in Thy hand for our souls…</j:option>",
+        "<j:declare xml:id=\"musaf_repetition_retzeh_wording\"><tei:fs type=\"opensiddur:variant\"><tei:f name=\"…/he/first_printing\">false</tei:f><tei:f name=\"…/he/shofarot_printing\">true</tei:f>…"
+      ],
+      "rule": "Condition URNs name a textual variant. They belong to the text and carry no edition (JLPTEI-3 'condition URNs'; 'a variant belongs to the text rather than to any one edition'). SIDDUR_URN_SCHEME: 'A URN names a text. It does not name a book… or a position'; 'changes of placement and differences of edition do not justify new identities'. For an occurrence that differs only in pointing or punctuation, the documented mechanism is that the 'repeated occurrence may carry its… URN in tei:seg/@source… preserving the printed occurrence without creating a duplicate canonical corresp mapping'. These selectors are named by printing position, embed language codes (/he/, /en/) and source_fragment_N, and gate differences that are almost entirely maqaf, punctuation, plene spelling and meteg.",
+      "note": "The Areshet conclusion selectors (first_printing/zikhronot_printing) were already accepted; this batch extends that pattern to retzeh, modim, modim_derabbanan, vekhol_hachayyim and hayom_harat_olam."
+    },
+    {
+      "id": "B2-kohanim-intro-identity",
+      "files": [
+        "05-musaf_repetition_kohanim_intro",
+        "29-musaf_repetition_kohanim_intro",
+        "registry-additions siddur.jsonl"
+      ],
+      "offending_xml": [
+        "<tei:milestone unit=\"prayer-part\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/birkat_kohanim/birkat_kohanim\"/><tei:seg source=\"urn:x-opensiddur:text:prayer:amidah/birkat_kohanim_leshatz\">אֱלֹהֵינוּ…וּבָנָיו </tei:seg> <tei:note type=\"instruction\" xml:lang=\"he\">הש״ץ בקול</tei:note><tei:seg source=\"urn:x-opensiddur:text:prayer:amidah/birkat_kohanim_leshatz\">כֹּהֲנִים עַם קְדוֹשֶׁךָ כָּאָמוּר:</tei:seg>",
+        "registry: urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/birkat_kohanim/literal_intro (no reviewed file emits it)"
+      ],
+      "rule": "(a) The URN is described as the existing full Shacharit identity. If the Shacharit repetition file in the same project already maps it, this milestone is a second identical @corresp. refdb keeps only the first and warns (DuplicateUrnError per SIDDUR_URN_SCHEME). 'Do not duplicate a canonical URN merely because the text is printed again'. The scheme says identical text is transcluded. (b) Every @source points at prayer:amidah/birkat_kohanim_leshatz, the shorter Birnbaum extent this batch decided not to use. That makes a false quotation claim. (c) A new Shacharit-path identity is registered in a Musaf batch, and nothing reviewed here emits it. (d) The Musaf-specific rubric 'הש״ץ בקול' sits inside the canonical scope."
+    },
+    {
+      "id": "B3-malformed-and-out-of-scope-registry-additions",
+      "file": "registry-additions.json siddur.jsonl",
+      "offending_records": [
+        "\"urn\": \"urn:x-opensiddur:text:siddur:chol/shacharit/pesuqei_dezimrah/az_yashir/quoted_exodus_15_1-/shacharit/pesuqei_dezimrah/az_yashir/quoted_exodus_15_18\"",
+        "\"urn\": \"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/modim_derabbanan\""
+      ],
+      "rule": "NAMING_SCHEME: a path component may not contain '-', which marks a range. Registry URNs name texts, not ranges. Neither URN is emitted by any XML in this PDF294–311 batch. The first is a garbled range expression, and the second is an unrelated Minchah unit."
+    },
+    {
+      "id": "B4-shofarot-close-identity-reuse-unverified",
+      "files": [
+        "06-musaf_repetition_shofarot_close",
+        "30-musaf_repetition_shofarot_close",
+        "45-expanded-spine-tail-00"
+      ],
+      "offending_xml": [
+        "<tei:milestone unit=\"prayer-part\" corresp=\"urn:x-opensiddur:text:prayer:amidah/teqa_beshofar_gadol_lecherutenu\"/>",
+        "<tei:milestone unit=\"prayer-part\" corresp=\"urn:x-opensiddur:text:prayer:amidah/shomea_qol_teruat_ammo\"/>"
+      ],
+      "rule": "Neither URN is in registry-additions. identity-search shows that no corpus file realizes them. It also shows the same project already realizes these words as siddur:rosh_hashanah/musaf/shofarot_close and …/shofarot_close/text (musaf_shofarot_close.xml). 'One text has exactly one URN across every work containing it.' As it stands, the silent and repetition printings of the same berakhah have unrelated identities, and the new ones may be unregistered (urn_registry --check cross-checks every prayer: URN emitted)."
+    },
+    {
+      "id": "B5-rubric-kind-and-actor-labels",
+      "files": [
+        "04-musaf_repetition_veteerav",
+        "05-musaf_repetition_kohanim_intro",
+        "22-…he-spine-tail",
+        "44-…en-spine-tail"
+      ],
+      "offending_xml": [
+        "04: <tei:note type=\"instruction\" xml:lang=\"he\">הש״ץ מסיים</tei:note>",
+        "05: <tei:note type=\"instruction\" xml:lang=\"he\">הש״ץ בקול</tei:note>",
+        "22: <tei:note type=\"instruction\" … xml:lang=\"de-Hebr\">וואֶהרענד דיא כהנים <choice>…</choice> דוכן געהען, בעטעט דיא געמיינדע ותערב.</tei:note>",
+        "44: <tei:note type=\"instruction\" xml:lang=\"en\">While the Kohanim make their way to the <foreign>דוכן</foreign>, the congregation say: <foreign>ותערב</foreign></tei:note>",
+        "22: <tei:note type=\"instruction\" … xml:lang=\"he\">מיוסד ע״ס א״ב מרובע.</tei:note> and <tei:note type=\"instruction\" …>מיוסד ע״ס א״ב כפול בראשי החרוזות.</tei:note>"
+      ],
+      "rule": "JLPTEI-3 'Kinds of rubric': a rubric that says what the passage is, who says it, or how is a description. One that says both when and what is also a description. SIDDUR_URN_SCHEME: 'Speaker labels… are emitted as tei:note type=\"description\" carrying the URN in @corresp' (role/reader, role/congregation). Elsewhere in this batch, ק׳/ח׳/קו״ח are encoded this way, so these notes are inconsistent with the batch's own practice."
+    },
+    {
+      "id": "B6-ordinal-stanza-identities",
+      "files": [
+        "09/32 essa_dei_betzedeq",
+        "10/33 anusah_leezrah",
+        "registry poem.jsonl"
+      ],
+      "offending_xml": [
+        "<tei:milestone unit=\"stanza\" corresp=\"urn:x-opensiddur:text:poem:essa_dei_betzedeq/stanza_1\"/> … stanza_44",
+        "<tei:milestone unit=\"stanza\" corresp=\"urn:x-opensiddur:text:poem:anusah_leezrah/stanza_1\"/> … stanza_46"
+      ],
+      "rule": "SIDDUR_URN_SCHEME poem: 'Stanzas without a canonical numbering are addressed by transliterated incipit'. 'Name by incipit, not by ordinal… Never number it.' JLPTEI-3 gives the same rule (yonah_matzah/hayom). There are 90 new registrations, and they are cheap to rename now but frozen after acceptance and 1.0.",
+      "note": "If the project has a documented exception for this book's piyyutim, cite it and downgrade."
+    },
+    {
+      "id": "B7-duplicate-page-break",
+      "file": "22-prayerbook_for_the_new_year-heidenheim-1965-he-spine-tail",
+      "offending_xml": [
+        "line 24: <tei:pb ed=\"1965\" n=\"137\" facs=\"…/page/n293.jpg\"/> (weekday branch)",
+        "line 47: <tei:pb ed=\"1965\" facs=\"…/page/n293.jpg\" n=\"137\"/> (Shabbat branch)"
+      ],
+      "rule": "The same ed, n and facs appear twice in one file. With Shabbat undefined, both branches survive, so page 137 is emitted and scan-linked twice. The anusah stream's own breaks use ed=\"1965 rosh_hashanah/musaf/repetition/anusah_leezrah\", so the Shabbat-branch break for 137 is inconsistent with the rest of its printing. The English spine has no spine break; there each poem carries its own pb 137."
+    }
+  ],
+  "nonblocking_findings": [
+    "N1 Contextual chapter URNs end in components that are not chapters: <tei:milestone unit=\"chapter\" n=\"19\" corresp=\"…/quotes/exodus_19/occurrence_19\"/> and <tei:milestone unit=\"chapter\" n=\"9\" corresp=\"…/quotes/zechariah_9/partial_15\"/>, each nested under another chapter URN (files 10, 11, 33, 34). The scopes do terminate correctly. For Zechariah, chapter 9 is closed and immediately reopened with nothing in between. Keep one quotes/zechariah_9 scope across verses 14 and 15. The verse-part (adonai_tzevaot_yagen) already marks the partial extent, so the partial_15 layer is redundant. For Exodus 19:19 use a sibling occurrence name rather than nesting.",
+    "N2 Liturgical words are held under siddur: URNs: …/shofarot_verses/intro_* ('כַּכָּתוּב בְּתוֹרָתֶךָ', 'וְנֶאֱמַר') and the …/quotes/* contexts. SIDDUR_URN_SCHEME says siddur: 'holds no words of its own', and the Birnbaum composite-verse extension is scoped to Hodu–Ashrei. The Shofarot verse paragraph is also said in the silent Musaf. Check for, and reuse, any identity the silent printing already has.",
+    "N3 Unused registrations: …/areshet_zikhron_words, …/ken_tagen_words, …/modim_derabbanan_english_words, …/avodah_word_parts and …/hodaah_word_parts. The word-host files (12, 14, 17, 18, 20, 25, 35, 37, 40, 41, 42) emit no div @corresp and no idno for them. Remove them or emit them.",
+    "N4 Registry records lack parent/kind. Labels are mechanical ('stanza 1', 'intro exodus 19 16', '16', 'partial 15'), the ken_tagen label_en is a transliteration, and every note is the same boilerplate. The intermediate nodes (poem:anusah_leezrah/exodus_19_16, …/quotes, siddur:…/shofarot_verses/quotes, …/shofarot_close/quotes) are not registered, which may fail the registry parentage check.",
+    "N5 ken_tagen_weekday and ken_tagen_shabbat are two siddur: units with identical content on the same leaf (n305/n306). If the book prints Ken tagen once, use one unit after both conditionals, as the expanded spine does. Otherwise it prints twice when Shabbat is undefined.",
+    "N6 The ed second token 'rosh_hashanah/musaf/repetition/anusah_leezrah' is not a registered siddur: unit, and anusah is printed only once. SIDDUR_URN_SCHEME reserves the second token for a second printing of the same text, named by its siddur path. Parallel streams on shared pages need a documented convention.",
+    "N7 The English 'Congregation:' description (26) lacks corresp=\"urn:x-opensiddur:instruction:role/congregation\".",
+    "N8 Abbreviations are inconsistent: הש״ץ, ע״ס and א״ב are left unexpanded, while ק׳, ח׳, קו״ח and נ״א are given tei:choice/abbr/expan.",
+    "N9 shofarot_calls (07) contains an empty <tei:p> </tei:p>, and its unit holds only a directive.",
+    "N10 Whitespace inside j:option: ' תְּקִיעָתֵנוּ…' (20) and ' our Teruah.' / ' our Tekiah.' / ' our Tekioth.' (42), plus the double space in 'לְקוֹל  ' and 'sound of  ' that ends areshet_sefatenu/opening.",
+    "N11 The English avodah host (40) has biblScope for p.18 only, although Musaf p.144 transcludes it. The scheme asks for one biblScope per printing.",
+    "N12 Every occurrence file declares both the he and en variant features, so each language's file declares the other language's features. Harmless noise.",
+    "N13 Bare stanza terminators appear between adjacent stanzas. Adjacent units already share a boundary, so these are redundant but harmless.",
+    "N14 The expanded spine adds editorial bilingual rubrics with resp=codex. These are acceptable as editorial, but confirm they are gated or styled as editorial and do not count as filled-in translation.",
+    "Checks that passed: Areshet zikhron is a pure one-word canonical host (12/35), with type=\"marked\" and the Shabbat conditional at each occurrence (13/21/36/43). The previous Zikhronot words are unchanged; only the shofarot_printing=false declaration was added. Veteerav and she'otekha reuse the Birnbaum identities. Ken tagen has a single generic prayer: identity. Facs follow archive leaf n = PDF−1 (Hebrew p.137→n293 … p.145→n309; English p.137→n294 … p.145→n310). The sic/corr cases are proper misprints. de-Hebr, he and en language tags are valid. Licence and contributor headers follow the template in the sampled files. Both piyyutim are each kept whole in one file."
+  ],
+  "new_human_questions": [
+    "Is 'כֵּן תָּגֵן עַל־עַמְּךָ יִשְׂרָאֵל בִּשְׁלוֹמֶךָ' printed once on Hebrew p.143 (English p.143) below both piyyut streams, or once at the end of each stream?",
+    "Does the weekday stream (אשא דעי + plain Shofarot verses) carry any printed rubric on p.137 that would correspond to the Shabbat stream's 'אַם שַׁבָּת.'?"
+  ],
+  "required_changes": [
+    "B1: Remove the new printing-keyed j:options from the canonical hosts for retzeh, modim (he/en), modim_derabbanan, vekhol_hachayyim and hayom_harat_olam, and restore the single canonical (first-printing) reading. In each Musaf occurrence file, replace the declare+transclude with the literal occurrence words wrapped in tei:seg/@source=\"urn:…<canonical>\", with no @corresp, keeping sic/corr such as 'sindnesses' at the occurrence. Drop the matching condition records from registry-additions. Where wording really differs and a selectable variant is truly needed, name it by its content, with no /he/, /en/, source_fragment_N or *_printing components.",
+    "B2: Confirm whether …/birkat_kohanim/birkat_kohanim is already mapped in the Shacharit repetition file of each project. If it is, replace the Musaf milestone and literal text with <j:transclude target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/birkat_kohanim/birkat_kohanim\"/>, or, if the wording differs, keep the literal words in seg/@source with that URN. Remove seg/@source=\"…prayer:amidah/birkat_kohanim_leshatz\" in both languages. Keep 'הש״ץ בקול' as a description at the occurrence. Remove the unused …/literal_intro registry addition, or justify it.",
+    "B3: Delete the az_yashir range record and the rosh_hashanah/minchah/modim_derabbanan record from registry-additions.json.",
+    "B4: Produce the registry records for prayer:amidah/teqa_beshofar_gadol_lecherutenu and prayer:amidah/shomea_qol_teruat_ammo. Then either reuse the project's existing siddur:rosh_hashanah/musaf/shofarot_close/text identity (transclude, or seg/@source), or justify the new identities and make sure the silent printing can align with them.",
+    "B5: Change these to type=\"description\": 'הש״ץ מסיים' and 'הש״ץ בקול' (adding corresp=\"urn:x-opensiddur:instruction:role/reader\"), the Judeo-German and English Veteerav rubrics, and both 'מיוסד ע״ס א״ב…' notes.",
+    "B6: Rename the stanza URNs to transliterated incipits (for example poem:essa_dei_betzedeq/essa, …/ein_qore, poem:anusah_leezrah/anusah, …/asher_baadat), in both projects and in the registry.",
+    "B7: Remove the duplicate Hebrew spine pb for p.137, or give the Shabbat-branch break the same printing token the anusah stream uses. Better, follow the English pattern: move each pb 137 into its poem file.",
+    "Before acceptance, confirm that opensiddur:practice/birkat-kohanim is in features.yaml, that urn:x-opensiddur:instruction:role/blower is registered, and that subverse.py declares zechariah/9/15/adonai_tzevaot_yagen together with a part where the remainder begins."
+  ],
+  "scope_limitations": [
+    "No code inspection was authorized, so I could not check the existing registry contents, features.yaml, subverse.py, refdb duplicate behavior, or the contributor roster.",
+    "The canonical host for prayer:hayom_harat_olam (which carries the new first/shofarot_printing options), the Shacharit birkat_kohanim file, and the silent Musaf shofarot files are not in the payload.",
+    "Header events (lines 1–55) were not read for most files, and lines 56–88 were not read for 24, 26, 27, 28, 31, 36 and 43. The headers I did read (00, 01, 02, 12, 29 in full, and lines 56–88 of most others) were identical boilerplate.",
+    "The expanded spine tail closes #section_musaf_repetition_s220_settings, whose j:declare opens outside the excerpt, so I could not verify the sibling constraint.",
+    "No scan images were viewed. Human source readings were taken as given, and the draft editionStmt was not treated as a defect.",
+    "The schema run was not available to me. This review does not rely on schema validity."
+  ],
+  "verdict": "NOT APPROVED. The Areshet zikhron hosting, Veteerav reuse, generic Ken tagen identity, facs mapping and sic/corr handling follow the guidelines. Seven blocking issues remain: wording selectors keyed to printing position and language that gate punctuation-only differences; Musaf reuse of the Shacharit Birkat Kohanim identity that likely duplicates a mapping and points @source at the rejected Birnbaum extent; malformed and out-of-scope registry records; unverified new Shofarot-close identities alongside an existing project identity for the same text; speaker labels and source notes typed as instructions; ordinal stanza URNs where the scheme requires incipits; and a duplicate p.137 page break.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "9d0481a4-b96d-4d9a-991a-db510e5ab9b2"
+  }
+}

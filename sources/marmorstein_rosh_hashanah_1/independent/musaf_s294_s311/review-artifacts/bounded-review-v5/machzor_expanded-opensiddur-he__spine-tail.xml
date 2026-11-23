@@ -1,0 +1,401 @@
+<t:div xmlns:t="http://www.tei-c.org/ns/1.0" xmlns:j="http://jewishliturgy.org/ns/jlptei/2"><t:div xml:id="section_musaf_weekday_shofarot">
+                      <j:conditional xml:id="section_musaf_weekday_shofarot_condition">
+                        <t:note type="instruction"><t:foreign xml:lang="he" resp="urn:x-opensiddur:contributor:opensiddur.org/codex">בחול.</t:foreign> <t:foreign xml:lang="en" resp="urn:x-opensiddur:contributor:opensiddur.org/codex">On weekdays.</t:foreign> </t:note>
+                        <j:all>
+                          <t:fs type="opensiddur:holiday-aggregate">
+                            <t:f name="shabbat">
+                              <t:binary value="false"/>
+                            </t:f>
+                          </t:fs>
+                        </j:all>
+                      </j:conditional>
+                      <t:div>
+                        <j:transclude type="external" target="urn:x-opensiddur:text:poem:essa_dei_betzedeq"/>
+                        <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/shofarot_verses"/>
+                      </t:div>
+                      <j:endConditional target="#section_musaf_weekday_shofarot_condition"/>
+                    </t:div>
+                    <t:div xml:id="section_musaf_shabbat_shofarot">
+                      <j:conditional xml:id="section_musaf_shabbat_shofarot_condition">
+                        <t:note type="instruction"><t:foreign xml:lang="he" resp="urn:x-opensiddur:contributor:opensiddur.org/codex">בשבת.</t:foreign> <t:foreign xml:lang="en" resp="urn:x-opensiddur:contributor:opensiddur.org/codex">On the Sabbath.</t:foreign> </t:note>
+                        <j:all>
+                          <t:fs type="opensiddur:holiday-aggregate">
+                            <t:f name="shabbat">
+                              <t:binary value="true"/>
+                            </t:f>
+                          </t:fs>
+                        </j:all>
+                      </j:conditional>
+                      <t:div>
+                        <j:transclude type="external" target="urn:x-opensiddur:text:poem:anusah_leezrah"/>
+                      </t:div>
+                      <j:endConditional target="#section_musaf_shabbat_shofarot_condition"/>
+                    </t:div>
+                    <j:transclude type="external" target="urn:x-opensiddur:text:prayer:ken_tagen_al_ammekha_yisrael"/>
+                    <j:transclude type="external" target="urn:x-opensiddur:text:prayer:amidah/teqa_beshofar_gadol_lecherutenu"/>
+                    <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/shofarot_close/quotes/numbers_10/10"/>
+                    <j:transclude type="external" target="urn:x-opensiddur:text:prayer:amidah/shomea_qol_teruat_ammo"/>
+                    <t:div xml:id="section_musaf_shofarot_calls">
+                      <j:conditional xml:id="section_musaf_shofarot_calls_condition">
+                        <j:all>
+                          <t:fs type="opensiddur:holiday-aggregate">
+                            <t:f name="shabbat">
+                              <t:binary value="false"/>
+                            </t:f>
+                          </t:fs>
+                        </j:all>
+                      </j:conditional>
+                      <t:div>
+                        <t:note type="description" corresp="urn:x-opensiddur:instruction:role/blower" xml:lang="he">תוקע</t:note>
+                        <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/shofarot_calls"/>
+                      </t:div>
+                      <j:endConditional target="#section_musaf_shofarot_calls_condition"/>
+                    </t:div>
+                    <t:div xml:id="section_shofarot_musaf_hayom_inclusion">
+                      <j:conditional xml:id="section_shofarot_musaf_hayom_inclusion_condition">
+                        <t:note type="instruction"><t:foreign xml:lang="he" resp="urn:x-opensiddur:contributor:opensiddur.org/codex">בשבת לפי מנהג הקהל.</t:foreign> <t:foreign xml:lang="en" resp="urn:x-opensiddur:contributor:opensiddur.org/codex">On the Sabbath, according to the community’s custom.</t:foreign> </t:note>
+                        <j:all>
+                          <j:any>
+                            <t:fs type="opensiddur:holiday-aggregate">
+                              <t:f name="shabbat">
+                                <t:binary value="false"/>
+                              </t:f>
+                            </t:fs>
+                            <t:fs type="opensiddur:rite">
+                              <t:f name="frankfurt_am_main">
+                                <t:binary value="true"/>
+                              </t:f>
+                            </t:fs>
+                            <t:fs type="opensiddur:practice">
+                              <t:f name="musaf-shabbat-responses">
+                                <t:symbol value="hayom_only"/>
+                              </t:f>
+                            </t:fs>
+                            <t:fs type="opensiddur:practice">
+                              <t:f name="musaf-shabbat-responses">
+                                <t:symbol value="both_no_cantor_repeat"/>
+                              </t:f>
+                            </t:fs>
+                            <t:fs type="opensiddur:practice">
+                              <t:f name="musaf-shabbat-responses">
+                                <t:symbol value="both_cantor_hayom"/>
+                              </t:f>
+                            </t:fs>
+                            <t:fs type="opensiddur:practice">
+                              <t:f name="musaf-shabbat-responses">
+                                <t:symbol value="both_cantor_repeat"/>
+                              </t:f>
+                            </t:fs>
+                          </j:any>
+                        </j:all>
+                      </j:conditional>
+                      <t:div>
+                        <t:div xml:id="section_shofarot_musaf_hayom_first">
+                          <t:div>
+                            <t:note type="description" corresp="urn:x-opensiddur:instruction:role/congregation" xml:lang="he">קהל</t:note>
+                            <j:transclude type="external" target="urn:x-opensiddur:text:prayer:hayom_harat_olam"/>
+                          </t:div>
+                        </t:div>
+                        <t:div xml:id="section_shofarot_musaf_hayom_cantor_repeat">
+                          <j:conditional xml:id="section_shofarot_musaf_hayom_cantor_repeat_condition">
+                            <t:note type="instruction"><t:foreign xml:lang="he" resp="urn:x-opensiddur:contributor:opensiddur.org/codex">חזרת הש״ץ לפי מנהג הקהל; למנהג שאומר היום בלבד בשבת, הספר אינו מפרש אם הש״ץ חוזר.</t:foreign> <t:foreign xml:lang="en" resp="urn:x-opensiddur:contributor:opensiddur.org/codex">The cantor’s repetition follows the community’s custom. For the Sabbath custom that says Hayom alone, the book does not specify whether the cantor repeats.</t:foreign> </t:note>
+                            <j:all>
+                              <j:any>
+                                <t:fs type="opensiddur:holiday-aggregate">
+                                  <t:f name="shabbat">
+                                    <t:binary value="false"/>
+                                  </t:f>
+                                </t:fs>
+                                <t:fs type="opensiddur:rite">
+                                  <t:f name="frankfurt_am_main">
+                                    <t:binary value="true"/>
+                                  </t:f>
+                                </t:fs>
+                                <j:all>
+                                  <t:fs type="opensiddur:holiday-aggregate">
+                                    <t:f name="shabbat">
+                                      <t:binary value="true"/>
+                                    </t:f>
+                                  </t:fs>
+                                  <t:fs type="opensiddur:practice">
+                                    <t:f name="musaf-shabbat-responses">
+                                      <t:symbol value="both_cantor_hayom"/>
+                                    </t:f>
+                                  </t:fs>
+                                </j:all>
+                                <j:all>
+                                  <t:fs type="opensiddur:holiday-aggregate">
+                                    <t:f name="shabbat">
+                                      <t:binary value="true"/>
+                                    </t:f>
+                                  </t:fs>
+                                  <t:fs type="opensiddur:practice">
+                                    <t:f name="musaf-shabbat-responses">
+                                      <t:symbol value="both_cantor_repeat"/>
+                                    </t:f>
+                                  </t:fs>
+                                </j:all>
+                                <j:all>
+                                  <t:fs type="opensiddur:holiday-aggregate">
+                                    <t:f name="shabbat">
+                                      <t:binary value="true"/>
+                                    </t:f>
+                                  </t:fs>
+                                  <t:fs type="opensiddur:practice">
+                                    <t:f name="musaf-shabbat-responses">
+                                      <t:symbol value="hayom_only"/>
+                                    </t:f>
+                                  </t:fs>
+                                  <t:fs type="opensiddur:practice">
+                                    <t:f name="musaf-hayom-only-cantor-repeat">
+                                      <t:binary value="true"/>
+                                    </t:f>
+                                  </t:fs>
+                                </j:all>
+                              </j:any>
+                            </j:all>
+                          </j:conditional>
+                          <t:div>
+                            <t:note type="description" corresp="urn:x-opensiddur:instruction:role/reader" xml:lang="he">חזן</t:note>
+                            <j:transclude type="external" target="urn:x-opensiddur:text:prayer:hayom_harat_olam"/>
+                          </t:div>
+                          <j:endConditional target="#section_shofarot_musaf_hayom_cantor_repeat_condition"/>
+                        </t:div>
+                      </t:div>
+                      <j:endConditional target="#section_shofarot_musaf_hayom_inclusion_condition"/>
+                    </t:div>
+                    <t:div xml:id="section_shofarot_musaf_areshet_inclusion">
+                      <j:conditional xml:id="section_shofarot_musaf_areshet_inclusion_condition">
+                        <t:note type="instruction"><t:foreign xml:lang="he" resp="urn:x-opensiddur:contributor:opensiddur.org/codex">בשבת לפי מנהג הקהל.</t:foreign> <t:foreign xml:lang="en" resp="urn:x-opensiddur:contributor:opensiddur.org/codex">On the Sabbath, according to the community’s custom.</t:foreign> </t:note>
+                        <j:all>
+                          <j:any>
+                            <t:fs type="opensiddur:holiday-aggregate">
+                              <t:f name="shabbat">
+                                <t:binary value="false"/>
+                              </t:f>
+                            </t:fs>
+                            <t:fs type="opensiddur:rite">
+                              <t:f name="frankfurt_am_main">
+                                <t:binary value="true"/>
+                              </t:f>
+                            </t:fs>
+                            <t:fs type="opensiddur:practice">
+                              <t:f name="musaf-shabbat-responses">
+                                <t:symbol value="both_no_cantor_repeat"/>
+                              </t:f>
+                            </t:fs>
+                            <t:fs type="opensiddur:practice">
+                              <t:f name="musaf-shabbat-responses">
+                                <t:symbol value="both_cantor_hayom"/>
+                              </t:f>
+                            </t:fs>
+                            <t:fs type="opensiddur:practice">
+                              <t:f name="musaf-shabbat-responses">
+                                <t:symbol value="both_cantor_repeat"/>
+                              </t:f>
+                            </t:fs>
+                          </j:any>
+                        </j:all>
+                      </j:conditional>
+                      <t:div>
+                        <j:declare xml:id="section_shofarot_musaf_areshet_inclusion_settings">
+                          <t:fs type="opensiddur:variant">
+                            <t:f name="urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/he/first_printing">
+                              <t:binary value="false"/>
+                            </t:f>
+                            <t:f name="urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/he/zikhronot_printing">
+                              <t:binary value="false"/>
+                            </t:f>
+                            <t:f name="urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/teqiot_veseder_shofarot">
+                              <t:binary value="true"/>
+                            </t:f>
+                            <t:f name="urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/en/first_printing">
+                              <t:binary value="false"/>
+                            </t:f>
+                            <t:f name="urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/en/zikhronot_printing">
+                              <t:binary value="false"/>
+                            </t:f>
+                          </t:fs>
+                        </j:declare>
+                        <t:div xml:id="section_shofarot_musaf_areshet_first">
+                          <t:div>
+                            <t:note type="description" corresp="urn:x-opensiddur:instruction:role/congregation" xml:lang="he">קהל</t:note>
+                            <t:div xml:id="section_shofarot_areshet_words_2">
+                              <t:div>
+                                <j:transclude type="external" target="urn:x-opensiddur:text:prayer:areshet_sefatenu/opening"/>
+                                <t:div xml:id="section_shofarot_areshet_zikhron_2">
+                                  <j:conditional xml:id="section_shofarot_areshet_zikhron_2_condition">
+                                    <j:all>
+                                      <t:fs type="opensiddur:holiday-aggregate">
+                                        <t:f name="shabbat">
+                                          <t:binary value="true"/>
+                                        </t:f>
+                                      </t:fs>
+                                    </j:all>
+                                  </j:conditional>
+                                  <t:div>
+                                    <j:transclude type="external" target="urn:x-opensiddur:text:prayer:areshet_sefatenu/zikhron"/>
+                                  </t:div>
+                                  <j:endConditional target="#section_shofarot_areshet_zikhron_2_condition"/>
+                                </t:div>
+                                <j:transclude type="external" target="urn:x-opensiddur:text:prayer:areshet_sefatenu/conclusion"/>
+                              </t:div>
+                            </t:div>
+                          </t:div>
+                        </t:div>
+                        <t:div xml:id="section_shofarot_musaf_areshet_cantor_repeat">
+                          <j:conditional xml:id="section_shofarot_musaf_areshet_cantor_repeat_condition">
+                            <t:note type="instruction"><t:foreign xml:lang="he" resp="urn:x-opensiddur:contributor:opensiddur.org/codex">הש״ץ חוזר לפי מנהג הקהל; בחול יש שאין הש״ץ חוזר.</t:foreign> <t:foreign xml:lang="en" resp="urn:x-opensiddur:contributor:opensiddur.org/codex">The cantor repeats according to the community’s custom; on weekdays some do not repeat.</t:foreign> </t:note>
+                            <j:all>
+                              <j:any>
+                                <t:fs type="opensiddur:rite">
+                                  <t:f name="frankfurt_am_main">
+                                    <t:binary value="true"/>
+                                  </t:f>
+                                </t:fs>
+                                <j:all>
+                                  <t:fs type="opensiddur:holiday-aggregate">
+                                    <t:f name="shabbat">
+                                      <t:binary value="true"/>
+                                    </t:f>
+                                  </t:fs>
+                                  <t:fs type="opensiddur:practice">
+                                    <t:f name="musaf-shabbat-responses">
+                                      <t:symbol value="both_cantor_repeat"/>
+                                    </t:f>
+                                  </t:fs>
+                                </j:all>
+                                <j:all>
+                                  <t:fs type="opensiddur:holiday-aggregate">
+                                    <t:f name="shabbat">
+                                      <t:binary value="false"/>
+                                    </t:f>
+                                  </t:fs>
+                                  <t:fs type="opensiddur:practice">
+                                    <t:f name="musaf-areshet-cantor-repeat">
+                                      <t:binary value="true"/>
+                                    </t:f>
+                                  </t:fs>
+                                </j:all>
+                              </j:any>
+                            </j:all>
+                          </j:conditional>
+                          <t:div>
+                            <t:note type="description" corresp="urn:x-opensiddur:instruction:role/reader" xml:lang="he">חזן</t:note>
+                            <t:div xml:id="section_shofarot_areshet_words_2_2">
+                              <t:div>
+                                <j:transclude type="external" target="urn:x-opensiddur:text:prayer:areshet_sefatenu/opening"/>
+                                <t:div xml:id="section_shofarot_areshet_zikhron_2_2">
+                                  <j:conditional xml:id="section_shofarot_areshet_zikhron_2_2_condition">
+                                    <j:all>
+                                      <t:fs type="opensiddur:holiday-aggregate">
+                                        <t:f name="shabbat">
+                                          <t:binary value="true"/>
+                                        </t:f>
+                                      </t:fs>
+                                    </j:all>
+                                  </j:conditional>
+                                  <t:div>
+                                    <j:transclude type="external" target="urn:x-opensiddur:text:prayer:areshet_sefatenu/zikhron"/>
+                                  </t:div>
+                                  <j:endConditional target="#section_shofarot_areshet_zikhron_2_2_condition"/>
+                                </t:div>
+                                <j:transclude type="external" target="urn:x-opensiddur:text:prayer:areshet_sefatenu/conclusion"/>
+                              </t:div>
+                            </t:div>
+                          </t:div>
+                          <j:endConditional target="#section_shofarot_musaf_areshet_cantor_repeat_condition"/>
+                        </t:div>
+                        <j:endDeclare target="#section_shofarot_musaf_areshet_inclusion_settings"/>
+                      </t:div>
+                      <j:endConditional target="#section_shofarot_musaf_areshet_inclusion_condition"/>
+                    </t:div>
+                    <t:div xml:id="section_musaf_repetition_retzeh">
+                      <t:div>
+                        <t:note type="description" corresp="urn:x-opensiddur:instruction:role/reader" xml:lang="he">חזן</t:note>
+                        <j:transclude type="external" target="urn:x-opensiddur:text:prayer:amidah/avodah/retzeh"/>
+                      </t:div>
+                    </t:div>
+                    <t:div xml:id="section_musaf_priests_avodah">
+                      <j:conditional xml:id="section_musaf_priests_avodah_condition">
+                        <j:all>
+                          <t:fs type="opensiddur:practice">
+                            <t:f name="birkat-kohanim">
+                              <t:binary value="true"/>
+                            </t:f>
+                          </t:fs>
+                        </j:all>
+                      </j:conditional>
+                      <t:div>
+                        <t:note type="description" xml:lang="he" resp="urn:x-opensiddur:contributor:opensiddur.org/codex">כשהכהנים עולים לדוכן, הקהל אומר ותערב והש״ץ מסיים.</t:note>
+                        <t:note type="description" xml:lang="en" resp="urn:x-opensiddur:contributor:opensiddur.org/codex">As the priests go to the dukhan, the congregation says Veteerav and the cantor concludes.</t:note>
+                        <t:div xml:id="section_musaf_veteerav_congregation">
+                          <t:div>
+                            <t:note type="description" corresp="urn:x-opensiddur:instruction:role/congregation" xml:lang="he">קהל</t:note>
+                            <j:transclude type="external" target="urn:x-opensiddur:text:siddur:regalim/musaf/text/veteerav"/>
+                          </t:div>
+                        </t:div>
+                        <t:div xml:id="section_musaf_veteerav_cantor_conclusion">
+                          <t:div>
+                            <t:note type="description" corresp="urn:x-opensiddur:instruction:role/reader" xml:lang="he">חזן</t:note>
+                            <j:transclude type="external" target="urn:x-opensiddur:text:siddur:regalim/musaf/text/sheotekha"/>
+                          </t:div>
+                        </t:div>
+                      </t:div>
+                      <j:endConditional target="#section_musaf_priests_avodah_condition"/>
+                    </t:div>
+                    <t:div xml:id="section_musaf_no_priests_avodah">
+                      <j:conditional xml:id="section_musaf_no_priests_avodah_condition">
+                        <t:note type="instruction"><t:foreign xml:lang="he" resp="urn:x-opensiddur:contributor:opensiddur.org/codex">כשאין ברכת כהנים.</t:foreign> <t:foreign xml:lang="en" resp="urn:x-opensiddur:contributor:opensiddur.org/codex">When there is no priestly blessing.</t:foreign> </t:note>
+                        <j:all>
+                          <t:fs type="opensiddur:practice">
+                            <t:f name="birkat-kohanim">
+                              <t:binary value="false"/>
+                            </t:f>
+                          </t:fs>
+                        </j:all>
+                      </j:conditional>
+                      <t:div>
+                        <j:transclude type="external" target="urn:x-opensiddur:text:prayer:amidah/avodah/vetechezeinah"/>
+                      </t:div>
+                      <j:endConditional target="#section_musaf_no_priests_avodah_condition"/>
+                    </t:div>
+                    <t:div xml:id="section_musaf_repetition_modim">
+                      <t:div>
+                        <t:note type="description" corresp="urn:x-opensiddur:instruction:role/reader" xml:lang="he">חזן</t:note>
+                        <j:transclude type="external" target="urn:x-opensiddur:text:prayer:amidah/hodaah/modim"/>
+                      </t:div>
+                    </t:div>
+                    <t:div xml:id="section_musaf_repetition_modim_derabbanan">
+                      <t:div>
+                        <t:note type="description" corresp="urn:x-opensiddur:instruction:role/congregation" xml:lang="he">קהל</t:note>
+                        <j:transclude type="external" target="urn:x-opensiddur:text:prayer:amidah/hodaah/modim_derabbanan"/>
+                      </t:div>
+                    </t:div>
+                    <j:transclude type="external" target="urn:x-opensiddur:text:prayer:amidah/hodaah/veal_kullam"/>
+                    <j:transclude type="external" target="urn:x-opensiddur:text:prayer:amidah/hodaah/ukhetov"/>
+                    <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/text/vekhol_hachayyim"/>
+                    <t:div xml:id="section_musaf_repetition_kohanim_intro">
+                      <t:div>
+                        <t:note type="description" corresp="urn:x-opensiddur:instruction:role/reader" xml:lang="he">חזן</t:note>
+                        <t:div xml:id="section_musaf_kohanim_aloud">
+                          <j:conditional xml:id="section_musaf_kohanim_aloud_condition">
+                            <j:all>
+                              <t:fs type="opensiddur:practice">
+                                <t:f name="birkat-kohanim">
+                                  <t:binary value="true"/>
+                                </t:f>
+                              </t:fs>
+                            </j:all>
+                          </j:conditional>
+                          <t:div>
+                            <t:note type="description" xml:lang="he" resp="urn:x-opensiddur:contributor:opensiddur.org/codex">כשנושאים כפיים, הש״ץ אומר את המילה כהנים בקול.</t:note>
+                            <t:note type="description" xml:lang="en" resp="urn:x-opensiddur:contributor:opensiddur.org/codex">When there is a priestly blessing, the cantor says the word Kohanim aloud.</t:note>
+                          </t:div>
+                          <j:endConditional target="#section_musaf_kohanim_aloud_condition"/>
+                        </t:div>
+                        <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/birkat_kohanim/birkat_kohanim"/>
+                      </t:div>
+                    </t:div>
+                    <j:endDeclare target="#section_musaf_repetition_s220_settings"/>
+                  </t:div>

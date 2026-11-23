@@ -1,0 +1,30 @@
+{
+  "scope": "documentary-v7-export-0",
+  "approved": false,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/documentary-export-manifest-v7.json",
+    "/tmp/mahzor-s294/full-pdf-images-v7/documentary-222.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/documentary-223.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/documentary-224.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/documentary-225.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/documentary-226.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/documentary-227.png"
+  ],
+  "blocking_findings": [
+    "Coverage gap: the batch end can't be checked from these images. The six images cover printed pages 214–219 (PDF images 222–227 of 241). The last one, printed p. 219, stops partway through the alphabetical shofar piyyut at the ש stanza (שֵׁנָה תְּעוֹרֵר … בְּקוֹל גְּבוּרוֹת שׁוֹפָר). The ת stanza and everything after it are on unassigned pages. None of these images show the priestly-blessing INTRODUCTION, the batch end before the source-312 verses, the label for the missing later source, or the retained sources/credits. Those required checks can't be confirmed, so the batch export can't be approved from this set. The images that cover the end (likely 228 onward) need to be assigned and reviewed."
+  ],
+  "nonblocking_findings": [
+    "Printed p. 215 (image 223), Hebrew column, line 2: 'אִם שַׁבָּת.[זִכְרוֹן]תְּקִיעָתֵנוּ' has no space between the period and '[', or between ']' and 'תְּקִיעָתֵנוּ'. In the English the bracketed text has normal spacing ('[the memory of] our Tekiah'). This looks like a spacing problem from rendering or encoding. Please confirm whether it is deliberate. If it isn't, add the spaces.",
+    "Printed p. 214 (image 222): the rubric lines 'תקיעה: שברים: תקיעה:' and 'קהל וחזן' run full width and are right-aligned. That puts them over the English column, with no English paired to them. The same layout appears on p. 215 for 'קהל וחזן' and 'מיוסד ע\"ס א\"ב מרובע.' It reads clearly and is consistent, so this is only noted as a layout observation.",
+    "Printed p. 214: the English paragraph at the top ('heart. Thus let Thy compassion…') continues from the previous page and has no Hebrew beside it. The last stanza on p. 216 also carries over its English ('of the accuser … of the Shofar.') to the top of p. 217. Both splits are clean, with no clipping and no orphaned Hebrew.",
+    "The ↗ markers appear inline in English and Hebrew (for example 'Thou ↗hast promised', 'קהל ↗אֶשָּׂא', 'human ↗creature', 'sound of the ↗Shofar'). They are placed consistently and don't collide with nearby text. Whether the links point to the right targets can't be checked from raster images. The manifest reports 466 external scan links and 0 broken internal links in the HTML checks.",
+    "No footnotes, source notes or alternative-reading labels appear on printed pp. 214–219, so note ordering and placement couldn't be checked on this set. The bold conditional 'אִם שַׁבָּת' on p. 215 and the bold 'קהל' speaker label render clearly."
+  ],
+  "verdict": "The six assigned pages (printed 214–219) have no export defects: no clipping, no overlap, and the Hebrew vowels and English columns are readable. The Hebrew and English stanza rows line up row by row through the shofar piyyut, and the headers and page numbers alternate correctly. Fine marks like CGJ and mappiq show no visible problems at this resolution. Approval is withheld only because these images end mid-piyyut at printed p. 219. The batch end (the priestly-blessing introduction), the label for the missing later source, and the retained sources/credits aren't in the set. To finish this review, assign the remaining images that cover the batch end and check whether the spacing in '[זִכְרוֹן]' on p. 215 is deliberate.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "2511de09-cb48-4ce0-b55b-a02ee85ed6fa"
+  }
+}

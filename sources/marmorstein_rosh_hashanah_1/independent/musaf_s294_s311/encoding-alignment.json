@@ -1,0 +1,143 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "medium"
+  },
+  "scope": "alignment",
+  "files_read": [
+    "/tmp/mahzor-s294/xml-event-review/06-musaf_repetition_shofarot_close-00.jsonl (lines 57-165 fully; lines 1-56 are the standard header)",
+    "/tmp/mahzor-s294/xml-event-review/09-musaf_essa_dei_betzedeq-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review/10-musaf_anusah_leezrah-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review/10-musaf_anusah_leezrah-01.jsonl",
+    "/tmp/mahzor-s294/xml-event-review/11-musaf_repetition_shofarot_verses-00.jsonl (lines 55-353; lines 1-54 standard header)",
+    "/tmp/mahzor-s294/xml-event-review/12-musaf_repetition_areshet_zikhron_words-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review/13-musaf_repetition_shofarot_areshet-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review/20-musaf_areshet_word_parts-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review/21-musaf_repetition_zikhronot_areshet-00.jsonl (lines 57-182; lines 1-56 standard header)",
+    "/tmp/mahzor-s294/xml-event-review/22-prayerbook_for_the_new_year-heidenheim-1965-he-spine-tail-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review/30-musaf_repetition_shofarot_close-00.jsonl (lines 57-129)",
+    "/tmp/mahzor-s294/xml-event-review/32-musaf_essa_dei_betzedeq-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review/33-musaf_anusah_leezrah-00.jsonl (lines 55-401)",
+    "/tmp/mahzor-s294/xml-event-review/33-musaf_anusah_leezrah-01.jsonl",
+    "/tmp/mahzor-s294/xml-event-review/34-musaf_repetition_shofarot_verses-00.jsonl (lines 57-337)",
+    "/tmp/mahzor-s294/xml-event-review/35-musaf_repetition_areshet_zikhron_words-00.jsonl (lines 57-106)",
+    "/tmp/mahzor-s294/xml-event-review/36-musaf_repetition_shofarot_areshet-00.jsonl (lines 57-179)",
+    "/tmp/mahzor-s294/xml-event-review/42-musaf_areshet_word_parts-00.jsonl (lines 50-128)",
+    "/tmp/mahzor-s294/xml-event-review/43-musaf_repetition_zikhronot_areshet-00.jsonl (lines 57-179)",
+    "/tmp/mahzor-s294/xml-event-review/44-prayerbook_for_the_new_year-marmorstein-1965-en-spine-tail-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review/45-expanded-spine-tail-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review/45-expanded-spine-tail-01.jsonl",
+    "/tmp/mahzor-s294/xml-event-review/45-expanded-spine-tail-02.jsonl",
+    "/tmp/mahzor-s294/xml-event-review-manifest.json",
+    "/tmp/mahzor-s294/candidate-current.json (all 1879 lines, in two reads)",
+    "/tmp/mahzor-s294/alignment-human455.json (all 1654 lines, in two reads)",
+    "/tmp/mahzor-s294/bible-source-projection-proof.json",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/schema/JLPTEI-3.md (lines 1-250 only)",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/specs/SIDDUR_URN_SCHEME.md (lines 1-200 only)",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/specs/NAMING_SCHEME.md (lines 1-180, complete)"
+  ],
+  "all_requested_checks_completed": false,
+  "approved": false,
+  "blocking_findings": [
+    {
+      "id": "B1-he-spine-shabbat-pb137-unconditional-duplicate",
+      "file": "22-prayerbook_for_the_new_year-heidenheim-1965-he-spine-tail (spine-tail.xml)",
+      "evidence": "Event 47: in the Shabbat div, <pb ed='1965' n='137' facs=n293> comes BEFORE the conditional start 'documentary_musaf_shabbat_shofarot_he' (event 50). That puts it outside the Shabbat alternative. The weekday pb 137 (event 24) uses the same ed='1965' and sits inside the weekday conditional. The HE anusah file has no opening pb. Its later pbs (138–143) use ed='1965 rosh_hashanah/musaf/repetition/anusah_leezrah'.",
+      "effect": "In a weekday (shabbat=false) compile, the ed='1965' page sequence becomes 137, 138–142 (essa), 143 (verses), then 137 again (unconditional), then 144 (shofarot_close). That page break is out of order and duplicated. In a Shabbat compile, ed='1965' jumps 137→144, and pages 138–143 exist only under the alternate ed. English does this differently: the Shabbat pb 137 is inside the EN anusah file with the alternate ed (33-00 event 96). So the two languages disagree on how they paginate the same alternative."
+    },
+    {
+      "id": "B2-en-shabbat-rubric-silently-omitted",
+      "file": "44-prayerbook_for_the_new_year-marmorstein-1965-en-spine-tail; 33-musaf_anusah_leezrah (EN)",
+      "evidence": "The EN Shabbat conditional 'documentary_musaf_shabbat_shofarot_en' (events 40-57) has no tei:note. The EN anusah file begins pb→stanza_1 with no rubric. candidate-current lists the printed English rubric 'On Sabbath.' (kind instruction, region shabbat) on s295, s297, s299, s301, s303, s305 and s307. The HE counterpart carries its rubric 'אַם שַׁבָּת.' as the conditional note (22 event 52). The alignment proposal says to encode the rubric once, as the note of the single Shabbat conditional, with both readings 'אַם שַׁבָּת.' / 'On Sabbath.'.",
+      "effect": "Printed English source text is silently missing, and the HE/EN rubrics no longer correspond. This is not a Hebrew cue printed in the English column, so the 'omit printed Hebrew cues from English' policy does not cover it."
+    }
+  ],
+  "nonblocking_findings": [
+    {
+      "id": "N1-alignment-proposal-stale-hebrew",
+      "detail": "alignment-human455.json says every letter is copied from the candidate, but its Hebrew differs from candidate-current and from the actual XML in many rows. Essa: 6 דָּת/דַּת; 14 זֹמְמֵי/זְמַמֵי; 20 יֵקֶשׁ יוּפַר…יְחֻפַּר…יְשֻׁפַּר vs יֹקֶשׁ יוּפָר…יֻחְפָּר…יָשְׁפָּר; 23 כְּיֻקְשַׁב…יְנַשֵּׁב vs כְּיָקְשַׁב…יִנְשַׁב; 24 יִתְחַשֵּׁב/יִתְיַשֵּׁב vs …שַּׁב; 25 לְקַעְקֵעַ/לְקַעֲקֵעַ; 38 עָתוּד/עִתּוּד; 40 לֶהֱיוֹת/לִהְיוֹת. Anusah: 2 מְעַט/מְעָט; 8 אִלֵּם/אֵלֶם; 30 תַּחַת…עוֹרְרֵנִי vs תַּֽחַת…עוֹרְרַֽנִי; 35 מִנִּי/מֶנִּי; 37 קָרַב/קָרֵב; 38 וְאֶתְקַע/וָאֶתְקַע; 41 יַטֵּנוּ/יַטֶּנוּ; 44 יִתֵּנוּ/יִתַּנוּ. In every case the XML matches candidate-current, the accepted human reading, so these are not transcription errors and the XML needs no change. Only the proposal artifact is stale; regenerate it so later reviews don't flag false differences."
+    },
+    {
+      "id": "N2-pb-ed-and-opening-pb-inconsistency",
+      "detail": "essa and shofarot_verses use pb ed='1965'. Both anusah files use ed='1965 rosh_hashanah/musaf/repetition/anusah_leezrah'. The EN essa and EN anusah each carry their own opening pb 137. Neither HE file does: the HE weekday pb 137 comes from the spine, and the HE Shabbat pb 137 is the defect in B1. The first 250 lines of JLPTEI-3 don't define this alternate-ed convention, so please confirm it is intended. Page-break positions inside the text are correct against the source on both sides (details under alignment_spans_reviewed)."
+    },
+    {
+      "id": "N3-quote-context-chapter-reopen-naming",
+      "detail": "Weekday Ex 19:19 reopens chapter 19 as '…/shofarot_verses/quotes/exodus_19/occurrence_19'. That is justified, because the intro 'וְנֶאֱמַר' sits between it and 19:16. Zech 9:15 (part) reopens chapter 9 as '…/quotes/zechariah_9/partial_15' in poem anusah_leezrah and in both shofarot_verses files, with nothing between it and 9:14. Keeping chapter 9 open and adding a verse 15 plus a verse-part milestone would avoid a misleading chapter-level name 'partial_15'. All of these are quote-context URNs, not duplicated canonical bible URNs, which is consistent with JLPTEI-3."
+    },
+    {
+      "id": "N4-areshet-whitespace",
+      "detail": "The areshet_sefatenu/opening tail ends with two spaces ('לְקוֹל  ' / 'the sound of  '). The HE shofarot_printing option starts with a space, while the HE first and zikhronot options do not. All EN options start with a space. Composed output therefore gets runs of 2–3 spaces. This is cosmetic only."
+    },
+    {
+      "id": "N5-zikhron-words-source-metadata",
+      "detail": "musaf_repetition_areshet_zikhron_words (HE and EN) has biblScope 144–144 and facs n307/n308. The Zikhronot Areshet (p136, files 21 and 43) also transcludes areshet_sefatenu/zikhron under its Shabbat conditional. If זִכְרוֹן / 'the memory of' is printed on p136 too, the parts file should also cite p136, as musaf_areshet_word_parts already does (127/136/144). I made no source-image check of p136."
+    },
+    {
+      "id": "N6-expanded-spine-ken-tagen-collapsed",
+      "detail": "The expanded spine has a single unconditional transclude of prayer:ken_tagen_al_ammekha_yisrael after both alternatives. The documentary spines transclude ken_tagen_weekday and ken_tagen_shabbat inside each conditional. The recited output is the same on both paths, so this is acceptable for the expanded spine. It does differ from the proposal's note that each alternative prints its own copy."
+    },
+    {
+      "id": "N7-expanded-spine-variant-selection-policy",
+      "detail": "In the Shofarot section of the expanded spine, Hayom and Areshet declare shofarot_printing=true, but Retzeh, Modim, Modim derabbanan and Vekhol hachayyim declare first_printing=true and shofarot_printing=false. I could not see what those variants contain, because the retzeh/modim/hodaah files were not in the requested set. Please confirm the mixed policy is deliberate. The documentary Areshet variants are selected correctly on each side: Shofarot gets shofarot_printing (שׁוֹפְרוֹתֵינוּ / 'Shofaroth'), Zikhronot keeps zikhronot_printing."
+    },
+    {
+      "id": "N8-malkhuyot-areshet-regression-check",
+      "detail": "musaf_areshet_word_parts now has a third shofarot_printing option. The Zikhronot declares (files 21 and 43) set it to false. The Malkhuyot (p127) Areshet declare was not in the review set. Confirm it also sets he/en shofarot_printing=false, or that an undeclared option resolves to excluded, so the accepted803 baseline still renders only מַלְכֻיּוֹתֵנוּ / 'praises of Thy Kingdom'."
+    },
+    {
+      "id": "N9-printed-punctuation-kept",
+      "detail": "These are kept as printed and are acceptable. HE stanza 31 has no colon after 'בְּחוֹרֵב תַּתָּה קוֹל'. HE Shabbat Ps 150:4 has a period after 'וּמָחוֹל'. EN Shabbat Ps 150 has no quotation marks. EN Shabbat Ex 20:15 and weekday Ps 150:6 have sic/corr for the missing closing quote. Weekday HE Ex 19:16 has plene 'וְקוֹל'. Both copies of Ps 81:4 have 'בַּכֶּסֶה'. The bible projection proof marks all of these as exact."
+    }
+  ],
+  "alignment_spans_reviewed": {
+    "essa_dei_betzedeq": {
+      "result": "44 HE / 44 EN stanzas, stanza_1…stanza_44, each a corresp milestone plus a bare terminator, numbered the same on both sides. Every pairing matches the English text of alignment rows 1–44 and the accepted Hebrew in candidate-current. No gaps, duplicates or drift.",
+      "page_breaks": "HE: 138 inside stanza 8 (after נָכְרִיָּה.); 139 inside 16 (after שְׁנִיָּה); 140 inside 23 (before בְּקוֹל סַעֲרַת); 141 inside 31 (before בְּקוֹל צֶרַח); 142 inside 39 (after לַעֲלִית.). EN: 137 at start; 138 inside 8 ('human | creature'); 139 inside 16 ('sin of | the whole'); 140 inside 23 ('hurricane | through'); 141 inside 31 ('of the | Shofar.'); 142 between 39 and 40. All match the source page splits. Milestones are not moved to fit the page breaks.",
+      "roles": "ק׳ (expanded as קהל) before 1; חזן before 44. Both HE only, as printed.",
+      "metadata": "idno poem:essa_dei_betzedeq@he/en; biblScope 137–142 on both sides. Correct."
+    },
+    "anusah_leezrah": {
+      "result": "46 HE / 46 EN stanzas: 1–30 are the main poem, 31–46 are eight two-stanza pieces. Pairings match the English of alignment rows 1–46. Each two-sentence English block is split at the same boundary as the Hebrew …קוֹל: and the ח׳ label. No gaps or drift.",
+      "page_breaks": "HE: 138 inside 9 (יָדַיִם | שְׂעִירוֹת); 139 inside 19 (בְּעֵינָיו. | וְנִלְוָה); 140 after 29, before ח׳ and 30; 141 after 34, before the Isa 27:13 intro; 142 after Ps 81:5, before 39; 143 inside 43 (before בִּנְעִימוֹת קוֹל:). EN: 137 at start; 138 inside 9; 139 inside 19; 140 after 29; 141 after 34; 142 before 39; 143 inside 43 ('pleasantness of | voice.'). All match the source. No HE opening pb 137 (see B1).",
+      "roles": "ק׳ before 1; ח׳ before 30, 32, 34, 36, 38, 40, 42, 44 and 46. All present and matching candidate source_role_labels.",
+      "embedded_bible_order": "Ex 19:16 after 30; Ps 47:6 + וְנֶאֱמַר/'And it is said:' + Ps 98:6 after 32; Isa 27:13 after 34; Ex 19:19 after 36; Ps 81:4, 81:5 after 38; Isa 18:3 after 40; Ex 20:15 after 42; Ps 150:1–6 after 44; Zech 9:14 + 9:15 verse-part 'adonai_tzevaot_yagen' after 46. Each intro formula is a separate prayer-part outside the verse scopes. Each quotation is a seg@source with quote-context chapter/verse milestones, terminated afterwards. The same on HE and EN.",
+      "metadata": "idno poem:anusah_leezrah@he/en; biblScope 137–143 on both sides. Correct."
+    },
+    "shofarot_verses_weekday": {
+      "result": "The printed order is identical on HE and EN: Ex 19:16; Ex 19:19; Ex 20:15; Ps 47:6; Ps 98:6; Ps 81:4–5; Ps 150:1–6; Isa 18:3; Isa 27:13; Zech 9:14; Zech 9:15 (part 'adonai_tzevaot_yagen' only). Intro formulas pair correctly: כַּכָּתוּב בְּתוֹרָתֶךָ/'As it is written in Thy Torah:'; וְנֶאֱמַר/'And it was said:' ×2; וּבְדִבְרֵי קָדְשְׁךָ כָּתוּב לֵאמֹר/'And in Thy holy words it is written saying:'; וְנֶאֱמַר/'And it is said:'; 'And it was said:' ×2; וְעַל־יְדֵי עֲבָדֶיךָ הַנְּבִיאִים/'And through Thy servants the prophets…'; 'And it was said:' ×2.",
+      "page_breaks": "HE 143 inside the Ex 20:15 seg (קוֹל | הַשֹּׁפָר). EN 143 inside the Ps 47:6 seg ('the | Lord'). Both match the source.",
+      "continuation": "The כֵּן תָּגֵן line is not in this file. Both documentary spines take it from ken_tagen_weekday, a file that was not in the review set.",
+      "metadata": "biblScope 142–143 on both sides. Correct."
+    },
+    "shofarot_close": "Tekaʿ / כְּמִצְוָה|כִּמְצֻוָּה option (נ״א standOff note) / כָּאָמוּר: / Num 10:10 seg / shomea qol teruat ammo. Paired as prayer-part milestones and the Num 10:10 quote scope, the same on HE and EN. pb 144 on both. biblScope 144.",
+    "shofarot_areshet": "HE: opening …לְקוֹל + [Shabbat: note אַם שַׁבָּת., זִכְרוֹן] + תְּקִיעָתֵנוּ…סֵדֶר שׁוֹפְרוֹתֵינוּ: EN: opening …'to the sound of' + [Shabbat: 'the memory of'] + 'our Tekioth… order of our Shofaroth.' Both are selected through a local declare with shofarot_printing=true, and match the source.",
+    "zikhronot_areshet_regression": "The HE and EN declares select zikhronot_printing=true and the new shofarot_printing=false. Unchanged behaviour for p136.",
+    "spines": "HE and EN: the weekday conditional (shabbat=false) holds essa → shofarot_verses → ken_tagen_weekday; the Shabbat conditional (shabbat=true) holds anusah → ken_tagen_shabbat; then shofarot_close, the blowing rubric, calls (weekday), the Hayom and Areshet custom conditionals, retzeh, pb 145, the dukhan rubric (HE sic לום / corr צום), veteerav, modim, modim_derabbanan, hodaah_tail, kohanim_intro. Nothing past s311 is encoded. The HE attributions sit inside their conditionals. Defects are B1 and B2."
+  },
+  "missing_or_misaligned_rows": [
+    "No missing or misaligned stanza rows: essa 44/44 and anusah 46/46.",
+    "No missing or misordered Bible verses in either sequence.",
+    "Missing: the EN 'On Sabbath.' rubric for the Shabbat alternative (B2).",
+    "Misplaced: the HE Shabbat pb 137 is unconditional and duplicates the weekday pb 137 (B1)."
+  ],
+  "new_human_questions": [],
+  "required_changes": [
+    "B1: Move the HE Shabbat-column pb n=137 inside the Shabbat alternative. Preferably put it at the start of the HE anusah file with ed='1965 rosh_hashanah/musaf/repetition/anusah_leezrah', which is what EN does. Alternatively place it after the conditional start with a consistent ed. Then confirm the weekday compile's ed='1965' sequence runs 137…144 with no repeat.",
+    "B2: Add the printed English rubric 'On Sabbath.' as tei:note[@type='instruction'][@xml:lang='en'] inside the EN conditional 'documentary_musaf_shabbat_shofarot_en', parallel to the HE note 'אַם שַׁבָּת.'."
+  ],
+  "scope_limitations": [
+    "JLPTEI-3.md (lines 1–250) and SIDDUR_URN_SCHEME.md (lines 1–200) were read only in part. I may have missed conventions about pb/@ed under alternatives, which is why all_requested_checks_completed is false.",
+    "I viewed no source images. Page-split and rubric checks rely on candidate-current, the accepted human readings and the source-closure records, and I did not reopen any human reading.",
+    "These were not in the requested set and were not reviewed: ken_tagen_words/weekday/shabbat (14–16, 37–39), shofarot_calls (07), shofarot_hayom (08, 31), retzeh/modim/modim_derabbanan/hodaah_tail/veteerav/kohanim_intro (00–05, 23–29), and amidah_*_parts (17–19, 40–41). So I did not verify the כֵּן תָּגֵן text, תקיעה: תרועה: תקיעה:, the Hayom wording or the shared Amidah variants.",
+    "No code inspection, so I did not check whether the subverse remainder declaration for zechariah/9/15/adonai_tzevaot_yagen exists in subverse.py. The bible-source-projection-proof reports exact projections for every context.",
+    "The Malkhuyot (p127) Areshet declare was not in the review set (see N8).",
+    "The schema/validation/registry run is happening separately and was not part of this review."
+  ],
+  "verdict": "NOT APPROVED. Hebrew/English correspondence is sound in the actual XML. Weekday Essa has 44 HE / 44 EN strophes and Shabbat Anusah has 46 HE / 46 EN, all complete, continuous and correctly paired. Both Bible sequences have the right verses, scopes, intros and order, including the Zech 9:15 verse-part. Page breaks inside the text fall where the source breaks and don't move any milestones. The Areshet Shofarot/Zikhronot variants are selected locally and correctly. Two blocking defects remain: (B1) the Hebrew spine puts the Shabbat-column pb 137 outside its conditional with ed='1965', which duplicates page 137 out of order in weekday compiles and differs from the English; (B2) the printed English rubric 'On Sabbath.' is silently missing from the English Shabbat alternative. Approval also needs the guideline reading finished and the excluded ken_tagen/calls/hayom/shared-prayer files reviewed.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "15bf36e8-1da9-4612-a377-fe99cfbcb8db"
+  }
+}

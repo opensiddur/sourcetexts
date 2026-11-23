@@ -1,0 +1,18 @@
+<p:transclude xmlns:p="http://jewishliturgy.org/ns/processing" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:j="http://jewishliturgy.org/ns/jlptei/2" target="urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/birkat_kohanim/birkat_kohanim" type="external" p:project="prayerbook_for_the_new_year-heidenheim-1965-he" p:file_name="repetition_birkat_kohanim.xml">
+  <p:parallel column-order="primary_first">
+    <p:parallelItem role="primary" xml:lang="he" p:project="prayerbook_for_the_new_year-heidenheim-1965-he" p:file_name="repetition_birkat_kohanim.xml"/>
+    <p:parallelItem role="parallel" xml:lang="en" p:project="prayerbook_for_the_new_year-marmorstein-1965-en" p:file_name="musaf_repetition_kohanim_intro.xml"/>
+  </p:parallel>
+  <p:parallel column-order="primary_first">
+    <p:parallelItem role="primary" xml:lang="he" p:project="prayerbook_for_the_new_year-heidenheim-1965-he" p:file_name="repetition_birkat_kohanim.xml">
+      <tei:div corresp="urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/birkat_kohanim" facs="https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n154.jpg">
+        <tei:p><tei:milestone unit="prayer-part" corresp="urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/birkat_kohanim/birkat_kohanim"/><tei:seg source="urn:x-opensiddur:text:prayer:amidah/birkat_kohanim_leshatz">אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ בָּרְכֵנוּ בַבְּרָכָה הַמְשֻׁלֶּשֶׁת בַּתּוֹרָה הַכְּתוּבָה עַל יְדֵי מֹשֶׁה עַבְדֶּךָ הָאֲמוּרָה מִפִּי אַהֲרֹן וּבָנָיו כֹּהֲנִים עַם קְדוֹשֶׁךָ כָּאָמוּר: </tei:seg> </tei:p>
+      </tei:div>
+    </p:parallelItem>
+    <p:parallelItem role="parallel" xml:lang="en" p:project="prayerbook_for_the_new_year-marmorstein-1965-en" p:file_name="musaf_repetition_kohanim_intro.xml">
+      <tei:div corresp="urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/kohanim_intro" facs="https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n310.jpg">
+        <tei:p><tei:milestone unit="prayer-part" corresp="urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/birkat_kohanim/birkat_kohanim"/>Our God and God of our fathers, bless us with the threefold blessing that is written in the Torah through Moses Thy servant and was uttered by the mouth of Aaron and his sons the priests, Thy holy people, as it is said: </tei:p>
+      </tei:div>
+    </p:parallelItem>
+  </p:parallel>
+</p:transclude>

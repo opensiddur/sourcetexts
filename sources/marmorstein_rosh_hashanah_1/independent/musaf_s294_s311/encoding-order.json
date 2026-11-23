@@ -1,0 +1,101 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "medium"
+  },
+  "scope": "order",
+  "files_read": [
+    "/tmp/mahzor-s294/xml-event-review/00-musaf_repetition_retzeh-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review/04-musaf_repetition_veteerav-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review/05-musaf_repetition_kohanim_intro-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review/06-musaf_repetition_shofarot_close-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review/13-musaf_repetition_shofarot_areshet-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review/22-prayerbook_for_the_new_year-heidenheim-1965-he-spine-tail-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review/23-musaf_repetition_retzeh-00.jsonl (lines 88-end; lines 1-87 are a header identical in form to file 00)",
+    "/tmp/mahzor-s294/xml-event-review/28-musaf_repetition_veteerav-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review/29-musaf_repetition_kohanim_intro-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review/30-musaf_repetition_shofarot_close-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review/36-musaf_repetition_shofarot_areshet-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review/44-prayerbook_for_the_new_year-marmorstein-1965-en-spine-tail-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review/45-expanded-spine-tail-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review/45-expanded-spine-tail-01.jsonl",
+    "/tmp/mahzor-s294/xml-event-review/45-expanded-spine-tail-02.jsonl",
+    "SUPPORTING (body only): 17-amidah_avodah_parts (88-end), 20-musaf_areshet_word_parts (88-end), 12-musaf_repetition_areshet_zikhron_words (88-end), 09-musaf_essa_dei_betzedeq (88-167 only), 33-musaf_anusah_leezrah (88-127 only)",
+    "/tmp/mahzor-s294/xml-event-review-manifest.json",
+    "/tmp/mahzor-s294/candidate-current.json (lines 1-150 and 1000-1878: s294-s295 and s305-s311 blocks, source_role_labels, source_sic_corr)",
+    "/tmp/mahzor-s294/source-closure-final-294.json",
+    "/tmp/mahzor-s294/source-closure-final-300.json",
+    "/tmp/mahzor-s294/source-closure-306-placement.json",
+    "/tmp/mahzor-s294/ordered-readings.json (lines 1-200 only; whole-book file, s294+ units not reached)",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/schema/JLPTEI-3.md (lines 1-250 only)"
+  ],
+  "all_requested_checks_completed": false,
+  "approved": false,
+  "blocking_findings": [
+    {
+      "id": "B1-en-documentary-missing-on-sabbath-rubric",
+      "scope": "documentary edition, marmorstein-1965-en spine tail (file 44) / scan s295",
+      "issue": "Scan s295 prints the italic rubric 'On Sabbath.' above the Anusah English. This is candidate block s295 shabbat_rubric, and source-closure-final-294 confirms it against the image. The English documentary spine tail has no such note in its Shabbat conditional (documentary_musaf_shabbat_shofarot_en, events 38-68). The rubric is also missing from the start of the English Anusah file, where the first stanza follows the pb directly (file 33, events 93-100). The Hebrew counterpart does keep its printed rubric: file 22 has a de-Hebr note 'אַם שַׁבָּת.' inside documentary_musaf_shabbat_shofarot_he. So a printed English instruction is missing from the documentary edition. This is a documentary-fidelity defect, not a missing recitation. If the rubric is encoded further into file 33, which I did not read in full, this finding falls away.",
+      "evidence": [
+        "file44 events 38-68",
+        "file33 events 93-100",
+        "file22 events 50-71",
+        "candidate-current s295 shabbat_rubric",
+        "source-closure-final-294 nonblocking item 5"
+      ]
+    }
+  ],
+  "nonblocking_findings": [
+    {
+      "id": "N1-order-verified",
+      "issue": "The expanded spine tail has the right order and conditions. On weekdays (shabbat=false) it has Essa followed by its own Bible chain, shofarot_verses. On Shabbat it has the complete Anusah. The English sic/corr entry for the s305 Exodus quote sits in musaf_anusah_leezrah.xml, and the documentary also transcludes only Anusah, so the interleaved quotations are inside the Anusah file. After either branch comes a single shared Ken Tagen, then Teqa, the Numbers 10:10 verse (its own shofarot_close/quotes/numbers_10/10 URN, seg source bible:numbers/10/10), then Shomea Qol. TaRaT is weekday-only, with a תוקע (blower) role note. Then Hayom, Areshet, Retzeh, Veteerav plus Sheotekha (priests) or Vetechezeinah (no priests), Modim (reader), Modim de-Rabbanan (congregation), Ve'al Kullam, Ukhetov, Vekhol Hachayyim, and the priestly intro (reader). The tail ends at the endDeclare for section_musaf_repetition_s220_settings. Nothing from 312 onward, including the priestly verses, is encoded. I found no page-turn instructions."
+    },
+    {
+      "id": "N2-priests-branch-justified",
+      "issue": "The shared avodah parts encode Retzeh (amidah/avodah/retzeh) and Vetechezeinah (amidah/avodah/vetechezeinah) as separate units, so neither branch duplicates or truncates text. With birkat-kohanim=true, the expanded edition has Veteerav plus Sheotekha, which matches the s310 direction and the הש״ץ מסיים label. With false, it has the standard Vetechezeinah, which carries its own chatimah. Both branches have an ending. The documentary edition keeps the s310 direction verbatim, including sic לום / corr צום, and the English s311 direction."
+    },
+    {
+      "id": "N3-zikhron-semantics",
+      "issue": "Documentary editions (he and en) use j:conditional type='marked' around the zikhron transclusion, and the Hebrew carries the 'אַם שַׁבָּת.' note. The expanded edition uses a plain conditional with shabbat=true and no qualifier rubric. areshet_sefatenu/zikhron contains only the plain word 'זִכְרוֹן', so when Shabbat is known true the word prints plain, and when it is known false the word and its brackets are omitted. This meets the requirement."
+    },
+    {
+      "id": "N4-areshet-weekday-cantor-repeat",
+      "issue": "Scan s308 prints קו״ח (congregation and cantor) before both Hayom and Areshet with no condition. In the expanded edition, Hayom's cantor repeat is unconditional on weekdays, because shabbat=false is a direct disjunct. Areshet's cantor repeat on weekdays needs either rite frankfurt_am_main=true or musaf-areshet-cantor-repeat=true, and its note says 'on weekdays some do not repeat'. Nothing in s294-s311 supports that note. If it carries forward an accepted earlier Zikhronot rule, it is acceptable. Otherwise, a non-Frankfurt profile with the flag false would drop the cantor's printed Areshet on weekdays. I could not verify the earlier rule or the settings values."
+    },
+    {
+      "id": "N5-frankfurt-override",
+      "issue": "In all four expanded Hayom/Areshet conditions, and in both documentary inclusion conditions, rite frankfurt_am_main=true is a bare disjunct. Under that rite on Shabbat, both texts are therefore included and the cantor repeats them, whatever musaf-shabbat-responses says. Please confirm that this matches the earlier Zikhronot/Malkhuyot rules."
+    },
+    {
+      "id": "N6-wording-variant-mix",
+      "issue": "For Retzeh, Modim, Modim de-Rabbanan and Vekhol Hachayyim, the expanded edition sets first_printing=true. For Hayom and Areshet it sets shofarot_printing=true. Only orthography differs, for example את־העבודה versus את העבודה. No rite is substituted, but the choice should be consistent with the earlier sections."
+    },
+    {
+      "id": "N7-veteerav-speaker-markup",
+      "issue": "The expanded priests branch conveys speakers only through a Codex-authored bilingual description: congregation says Veteerav, cantor concludes. Elsewhere the edition uses role notes. Adding role/congregation before Veteerav and role/reader before Sheotekha would be more consistent. This is cosmetic."
+    },
+    {
+      "id": "N8-speakers-carried",
+      "issue": "The essa_dei_betzedeq file encodes the s294 ק׳ label internally as a role/congregation note with abbr/expan. Speaker labels therefore reach both documentary and expanded editions through transclusion. I did not verify Anusah's internal ח׳ labels."
+    }
+  ],
+  "new_human_questions": [],
+  "required_changes": [
+    "B1: add the printed s295 English rubric 'On Sabbath.' (xml:lang en, type instruction, facs n295) inside documentary_musaf_shabbat_shofarot_en, mirroring the Hebrew 'אַם שַׁבָּת.' note. Alternatively, show that it is already encoded inside the English Anusah file."
+  ],
+  "scope_limitations": [
+    "I could not read /tmp/mahzor-s294/settings: it is a directory, and with only the Read tool I could not list it. Guessed filenames did not exist. The documentary and expanded settings review was therefore NOT done, and I do not know the default values of frankfurt_am_main, birkat-kohanim, musaf-shabbat-responses, musaf-areshet-cantor-repeat or musaf-hayom-only-cantor-repeat.",
+    "I did not inspect the full actual index or the earlier Zikhronot/Malkhuyot spine rules. So I could not confirm that Hayom/Areshet reuse those rules exactly (N4, N5), or that inclusion carries continuously through morning, Torah and Musaf.",
+    "I did not inspect the shared shacharit/repetition/birkat_kohanim/birkat_kohanim target used by the expanded intro. I assumed it was previously accepted, including how it handles 'הש״ץ בקול'.",
+    "Supporting files 09, 10/33, 11/34, 14-16 and 37-39 were read only partly or not at all. Ken Tagen part contents, the end of Anusah, and the end of the weekday verse chain were inferred from the documentary transclusion structure and the source-closure reports, not read directly.",
+    "I read ordered-readings.json only to line 200, so I did not cross-check it for s294-s311. I used candidate-current.json as the source evidence instead.",
+    "I read the guideline documents only partly (JLPTEI-3.md lines 1-250). I did not read SIDDUR_URN_SCHEME.md or NAMING_SCHEME.md, so URN and naming conformance is not covered.",
+    "This review covers order and documentary fidelity for s294-s311 only. It is not schema validation, it does not approve export, and it does not claim the whole book is complete."
+  ],
+  "verdict": "NOT APPROVED. I read all 15 requested event files in full. In the expanded edition, recitation order, conditions, the priests and no-priests branches, the timing, and the speakers are supported. I found no unsupported rite substitution and no missing recitation. Approval is withheld for two reasons. First, the English documentary edition omits the printed s295 'On Sabbath.' rubric (B1). Second, I could not do the settings review or verify the earlier Zikhronot rules that the Areshet weekday cantor-repeat and Frankfurt override conditions depend on (N4, N5).",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "d746dfae-4f7c-4ec5-b7be-578ed0313a52"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "medium"
+  },
+  "images_read": [
+    "/tmp/mahzor-s294/s306.jpg",
+    "/tmp/mahzor-s294/s307.jpg",
+    "/tmp/mahzor-s294/s308.jpg",
+    "/tmp/mahzor-s294/s309.jpg",
+    "/tmp/mahzor-s294/s310.jpg",
+    "/tmp/mahzor-s294/s311.jpg"
+  ],
+  "all_blocks_checked": true,
+  "approved": false,
+  "blocking_findings": [
+    {
+      "id": "B1",
+      "scope": "candidate metadata, many blocks",
+      "issue": "Many uncertainty notes are out of date and contradict both the applied human rulings and the candidate's own text. The status line says all human445–470 questions are resolved, but the notes still describe them as pending or blocking. Examples: s306 weekday_verses still says 'CANTILLATION NOT ENCODED (blocking)… not approvable', which contradicts human470 (no cantillation). s306 zechariah_9_14_15 says 'This blocks approval', which also contradicts human470. s306 tevunah_tail says יִתֵּנוּ was 'sent to human_questions… did not change the text', but the text reads יִתַּנוּ (human461). s306 psalm_150 says בִגְבוּרוֹתָיו was 'Sent to human_questions; not changed', but the text reads בִּגְבוּרֹתָיו (human461). s306 weekday_verses notes on הַלֲלוּיָהּ and the Jerusalem form are settled by human462. s308 shofarot_petition still lists qadma on וּבְי֨וֹם and munah on שִׂמְחַתְכֶ֣ם, but the text correctly has pashta and merkha (human466). Its notes on כמצוה, Jerusalem and לָּךְ are 'pending' but were settled by human454, human453 and human465. s308 hayom (יַעֲמִיד), retzeh (אֶת mark, תְקַבֵּל) were settled by human465. s310 veteerav says it 'left the text unchanged' and calls the Jerusalem item pending, but the text has לִירוּשָׁלָֽיִם (human453). s310 modim discusses לְּךָ, but the text is לְךָ (human463). s310 modim_derabbanan (רְצֹנֶךָ, וּלְעָבְדְּךָ) was settled by human463. s310 vealkullam (סֶּלָה) and elohenu_kohanim (בַבְּרָכָה) were settled by human464. The s306 and s310 running_header notes say 'not checked against an image'. I checked both headers against the scans and they match.",
+      "required_action": "Replace or remove the outdated uncertainty notes so that each one matches the applied human ruling. The prayer text strings for these items already match the human rulings and the scans."
+    },
+    {
+      "id": "B2",
+      "scope": "role labels / sic-corr bookkeeping",
+      "issue": "Several notes point to 'role_labels' and 'source_sic_corr' (s306 tevunah_tail, s306 tachat, s308 areshet, s307 weekday_verses, s311 modim). Neither structure exists anywhere in the candidate. The printed role labels on s306, s308 and s310 are therefore not encoded and can't be verified. The 'sindnesses' sic and the missing closing quote after 'Halleluyah.' are also only promised, not recorded. The 451 לום→צום sic/corr is handled separately as you instructed; this finding is not about 451.",
+      "required_action": "Add the source role-label records and the sic/corr records the notes refer to, or remove the references. The labels I see are listed under source_role_labels."
+    },
+    {
+      "id": "B3",
+      "scope": "s311 English, modim_derabbanan",
+      "issue": "The italic English column heading 'Congregation:' above the right-hand column on s311 is not encoded. Its Hebrew counterpart, the s310 modim_derabbanan_heading 'מודים דרבנן.', is encoded as its own block, so the English heading is an omission.",
+      "required_action": "Add an s311 instruction/heading block with the text 'Congregation:', kind and region matching the Hebrew heading block."
+    },
+    {
+      "id": "B4",
+      "scope": "s310 modim_derabbanan, line 13 left column",
+      "issue": "The candidate reads לִשְׁמוֹר, with a vav. On the original scan the word looks narrow and defective: לִשְׁמֹר, with a holam dot over the mem and no vav. No human ruling or candidate note covers this word. I can't settle it confidently at full-page resolution, so I've sent it to human_questions.",
+      "required_action": "Get a human ruling (new_human_questions Q1), then apply it."
+    }
+  ],
+  "new_human_questions": [
+    {
+      "id": "Q1",
+      "scan": "s310",
+      "key": "modim_derabbanan",
+      "location": "left column, line 13 (the line starting קָדְשֶׁךָ), second word",
+      "question": "Is the word printed plene לִשְׁמוֹר (lamed-hiriq, shin-sheva, mem, vav-holam, resh) or defective לִשְׁמֹר (holam on the mem, no vav)?"
+    },
+    {
+      "id": "Q2",
+      "scan": "s310",
+      "key": "veteerav (role labels)",
+      "location": "right margin of line 6, before בָּרוּךְ אַתָּה יְיָ שֶׁאוֹתְךָ; two small labels stacked one above the other",
+      "question": "Please give the exact letters of the upper and lower small labels. My best reading is upper חז״ן and lower מק״ס, with low confidence on the lower one."
+    },
+    {
+      "id": "Q3",
+      "scan": "s308",
+      "key": "hayom / areshet (role labels)",
+      "location": "small superscript label before הַיּוֹם (line 13) and before אֲרֶשֶׁת (line 17)",
+      "question": "Please confirm the exact letters of the label. Is it קו״ח (קהל וחזן) or קו״ה?"
+    }
+  ],
+  "source_role_labels": [
+    {
+      "scan": "s306",
+      "key": "tevunah_tail",
+      "before_word": "תְּהִלָּה",
+      "printed": "ח׳",
+      "confidence": "medium",
+      "note": "Small label inside line 15. It is not prayer text and not encoded in the candidate."
+    },
+    {
+      "scan": "s306",
+      "key": "tachat",
+      "before_word": "תַּרְעֵם",
+      "printed": "ח׳",
+      "confidence": "medium",
+      "note": "Small label on line 22."
+    },
+    {
+      "scan": "s308",
+      "key": "hayom",
+      "before_word": "הַיּוֹם",
+      "printed": "קו״ח (or קו״ה; see Q3)",
+      "confidence": "low-medium"
+    },
+    {
+      "scan": "s308",
+      "key": "areshet",
+      "before_word": "אֲרֶשֶׁת",
+      "printed": "קו״ח (or קו״ה; see Q3)",
+      "confidence": "low-medium"
+    },
+    {
+      "scan": "s310",
+      "key": "veteerav",
+      "before_word": "בָּרוּךְ (line 6)",
+      "printed": "upper חז״ן / lower מק״ס (see Q2)",
+      "confidence": "low"
+    },
+    {
+      "scan": "s310",
+      "key": "elohenu_kohanim",
+      "before_word": "כֹּהֲנִים",
+      "printed": "חז״ן בקול",
+      "confidence": "medium-high",
+      "note": "כֹּהֲנִים is then printed in large type. Keeping it as a prayer word is correct, and the enlarged type is presentational. The label itself is not encoded."
+    }
+  ],
+  "nonblocking_findings": [
+    "I verified every Hebrew prayer string on s306, s308 and s310 against the original scans for letters, vowels, maqaf, punctuation, order and omissions. Apart from B4, I found no discrepancy.",
+    "Num 10:10 on s308 is correctly the only accented verse. Its accent inventory in the text matches human466: pashta on the yod of וּבְי֙וֹם, merkha on שִׂמְחַתְכֶ֥ם, mahpakh on לָכֶ֤ם, merkha on the second yod of יְיָ֥. It also matches the visible zarqa, segolta, yetiv, etnachta, pashta, zaqef and silluq. The s306 verses correctly have no cantillation (human470).",
+    "The Jerusalem forms match human453 and human462: s306 בִּירוּשָׁלָֽ͏ִם (qamatz, meteg, CGJ, hiriq); s308 וְלִירוּשָׁלַֽיִם; s310 לִירוּשָׁלָֽיִם (no CGJ). כְּמִצְוָה (נ״א כִּמְצֻוָּה) matches human454. וְתֶעֱרַב עָלֶֽיךָ עֲתִירָתֵֽנוּ matches human452.",
+    "The kohanim_direction raw reading keeps לום, as instructed. The Rashi-type/German script is documented in the uncertainty note.",
+    "The recurring Rashi-type rubric is printed as 'חַם שַׁבָּת.' and kept as אַם שַׁבָּת per the earlier human rulings. That's correct and I am not reopening it. On s308 the source parenthesis '(אַם שבת. זִכְרוֹן)' contains both the rubric and the word; splitting them and keeping '(זִכְרוֹן)' in the prayer text is acceptable and documented.",
+    "The ותוקעין — ובשבת אין תוקעין. instruction (unpointed semi-cursive) and the תקיעה: תרועה: תקיעה: calls match the scan.",
+    "All English blocks on s307, s309 and s311 match the scans word for word, except the omission in B3. Line-break hyphens are correctly joined (instru-ments, chil-dren, pres-ence, gen-eration, de-livered, Cre-ator, may-est, Bless-ed), and real compounds are kept (whole-offering(s), peace-offerings, court-yards, whole-heartedly, Awe-inspiring, All-benevolent). 'sindnesses' and the missing closing quote after 'Lord, Halleluyah.' are correctly kept as printed.",
+    "The English linkage cues are correctly excluded. Two notes misquote them: s307 psalm_150 gives the cue as 'כככתוב' (printed: ככתוב), and s309 shofarot_petition gives 'א״וא' (printed: או״א). Fix the notes; the text is unaffected.",
+    "The English cue-paragraph breaks (ברוך on s311 veteerav; ועל, וכתוב and וכל on s311 vealkullam) are merged into single blocks, matching the Hebrew block segmentation. That's acceptable.",
+    "All four running headers (s306–s311 Hebrew and English) match the scans."
+  ],
+  "verdict": "NOT APPROVED. I read all six original scans in full and checked every candidate block. The Hebrew and English text matches the scans and all human rulings (445–470), with one exception: the unadjudicated לִשְׁמוֹר/לִשְׁמֹר on s310 (Q1). Closure is still blocked by four issues. (B1) Many uncertainty notes are out of date: several still call the record blocking or unapprovable and describe settled rulings as pending, which contradicts the text. (B2) The role_labels and source_sic_corr records that the notes refer to don't exist, so the printed role labels on s306, s308 and s310 are not encoded. (B3) The English 'Congregation:' heading on s311 is omitted. (B4) The לִשְׁמוֹר/לִשְׁמֹר reading needs a human ruling. Once B1–B4 are fixed and Q1–Q3 are answered, the candidate should be approvable.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "0b0763d5-8b44-43c7-b649-153a1f12e023"
+  }
+}

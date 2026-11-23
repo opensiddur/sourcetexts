@@ -1,0 +1,121 @@
+{
+  "scope": "bindings_0",
+  "approved": false,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_0-0.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_0-1.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_0-2.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_0-3.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_0-4.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_0-5.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_0-6.json"
+  ],
+  "blocking_findings": [
+    {
+      "id": "B1",
+      "records": [
+        "realization/rh_avodah/he",
+        "realization/rh_avodah/en",
+        "realization/rh_hodaah/he",
+        "realization/rh_hodaah/en"
+      ],
+      "fields": [
+        "unit.canonical_home.urn",
+        "unit.canonical_home.omit_publication_urn"
+      ],
+      "finding": "The canonical_home URNs are urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/avodah_word_parts and .../hodaah_word_parts. These units are urn:x-opensiddur:text:siddur:rosh_hashanah/minchah_maariv/amidah/{avodah,hodaah}, and every paragraph is bound to a generic prayer URN (prayer:amidah/avodah/retzeh, prayer:amidah/hodaah/modim, etc.). So the canonical home of shared generic Amidah text sits in a publication-specific namespace, and in the wrong service too (Musaf repetition for a Minchah/Maariv unit). That home URN is also publication-namespaced while omit_publication_urn is true, which contradicts itself. Compare amidah_modim_derabbanan, whose canonical_home.urn is the generic prayer URN.",
+      "required_action": "Move the canonical home to a generic prayer:amidah/... identity, or document and get approval for why a publication- and Musaf-specific home applies to Minchah/Maariv generic text. Then reconcile omit_publication_urn."
+    },
+    {
+      "id": "B2",
+      "records": [
+        "realization/rh_hodaah/he",
+        "realization/rh_hodaah/en"
+      ],
+      "fields": [
+        "unit.languages.*[paragraph=4].corresp"
+      ],
+      "finding": "Paragraph 4 is bound to urn:x-opensiddur:text:siddur:rosh_hashanah/text/vekhol_hachayyim, a publication-namespaced identity. Its sibling paragraphs modim, veal_kullam and even the Rosh Hashanah-specific insertion ukhetov all bind to generic prayer:amidah/hodaah/* URNs. Vekhol hachayyim is the standard closing of Hodaah in every Amidah, so this binding is backwards: a generic text gets a publication-specific canonical identity while the holiday insertion stays generic.",
+      "required_action": "Bind it to a generic prayer:amidah/hodaah/vekhol_hachayyim identity. If the wording here really differs, record that as a variant or condition with a semantic review instead of a publication-scoped canonical URN."
+    },
+    {
+      "id": "B3",
+      "records": [
+        "realization/amidah_modim_derabbanan/he"
+      ],
+      "fields": [
+        "unit.title",
+        "unit.canonical_home.title",
+        "unit.canonical_home.context_urn"
+      ],
+      "finding": "The title is 'Weekday Minchah — modim_derabbanan' / 'תפלת מנחה — modim_derabbanan', in both unit and canonical_home. 'Weekday' is wrong because context_urn is urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/modim_derabbanan, which is Rosh Hashanah, not a weekday. Both titles also contain an unrendered ASCII slug ('modim_derabbanan'), including inside the Hebrew title. This looks like placeholder or template metadata that never got a semantic review.",
+      "required_action": "Give it correct, reviewed en/he titles that fit the context, with no slug placeholder."
+    },
+    {
+      "id": "B4",
+      "records": [
+        "realization/repetition_birkat_kohanim/he"
+      ],
+      "fields": [
+        "unit.review_encoding",
+        "source_fidelity"
+      ],
+      "finding": "The unit still carries review_encoding: true, which looks like an unresolved review or encoding marker left in the final canonical payload. source_fidelity is also empty, even though the record has three biblical quotation bindings (source_reference bible:numbers/6/24–26 with chapter_corresp/source_reference_corresp) and a source attribution to prayer:amidah/birkat_kohanim_leshatz. Nothing shows that these quotation and source bindings were semantically reviewed, and there are two end_reference: true flags (on the introductory segment and on 6:26) whose meaning can't be checked from this metadata.",
+      "required_action": "Resolve or explain review_encoding. Give source_fidelity attestation (or equivalent semantic review) for the quotation and source bindings, and confirm the end_reference semantics."
+    }
+  ],
+  "nonblocking_findings": [
+    {
+      "id": "N1",
+      "records": [
+        "realization/rh_avodah/*",
+        "realization/rh_hodaah/*"
+      ],
+      "finding": "The source_fidelity coverage is inconsistent. rh_avodah has source_fidelity entries for both paragraphs, with literal, corrected and resolved hashes equal to the fragment text hashes. I checked that they match in both he and en. rh_hodaah, a parallel unit in the same service, has an empty source_fidelity even though it has four bound paragraphs. amidah_modim_derabbanan is empty as well. Please confirm that empty source_fidelity is intended when there are no corrections or controls."
+    },
+    {
+      "id": "N2",
+      "records": [
+        "realization/rh_avodah/*",
+        "realization/rh_hodaah/*"
+      ],
+      "finding": "The unit URNs say 'minchah_maariv', but the en titles say 'Evening Prayer for the New Year — …'. If these units are also used at Minchah, the titles are too narrow. canonical_home.context is also inconsistent: 'literal' on hodaah, missing on avodah."
+    },
+    {
+      "id": "N3",
+      "records": [
+        "realization/repetition_birkat_kohanim/he"
+      ],
+      "finding": "title.en is in Hebrew ('ברכת כהנים'), not English. There is no role metadata for the leader (shaliach tzibbur) or for congregational responses. The role is only implied by the source URN name 'birkat_kohanim_leshatz'. There is no condition for when the leader recites it, i.e. when kohanim don't ascend. That's acceptable for diaspora Shacharit, but say so if the record is meant to serve other customs."
+    },
+    {
+      "id": "N4",
+      "records": [
+        "realization/amidah_modim_derabbanan/he"
+      ],
+      "finding": "There is no role metadata for congregational recitation; it's carried only by a 'description' instruction (rashi, 12 chars) that has no placement field, unlike the condition instructions elsewhere."
+    },
+    {
+      "id": "N5",
+      "records": [
+        "realization/musaf_yismechu/he"
+      ],
+      "finding": "The binding target is urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/yismechu/text, a publication-namespaced canonical identity for a text that is otherwise shared with Shabbat Musaf. The condition (holiday-aggregate, shabbat: true) and the instruction placement=condition are appropriate. The record's he condition instruction hash (8698…) matches its own attesting control. The repetition control uses a different he hash (d93d…), and the en hashes match each other. The 'de-Hebr' language tag is plausible for Judeo-German rubrics, but the source-words review should confirm it rather than 'yi'."
+    }
+  ],
+  "scope_limitations": [
+    "Text values were seen only as SHA256 and character counts. I couldn't check that the actual words or rubric content match their bindings (for example, whether rh_avodah paragraph 1 includes or references Ya'aleh veYavo, or what the 1-char separators in birkat_kohanim are).",
+    "final_sha256 is a hash of the full unmasked payload and can't be recomputed from this projection, so I didn't verify it.",
+    "musaf_yismechu is 'changed_metadata' and lists 'unit' in changed_fields, but the previously accepted payload wasn't provided. I couldn't check what changed in unit apart from the order and instruction hashes.",
+    "Global source_order_sha256, expanded_order_sha256, navigation_sha256 and documentary_instructions_sha256 are identical across all records and were taken as reviewed by the order group. I didn't evaluate them.",
+    "No code review, XML body review or export approval was done, per the scope."
+  ],
+  "verdict": "Not approved. I read all seven records in full. There are four blocking metadata problems. (1) The Minchah/Maariv Avodah and Hodaah units have canonical homes in a publication-specific Musaf-repetition namespace, and the same field sets omit_publication_urn to true. (2) Vekhol hachayyim is bound to a publication-scoped URN while its sibling paragraphs use generic ones. (3) Modim derabbanan has a wrong placeholder title ('Weekday Minchah — modim_derabbanan') in a Rosh Hashanah context. (4) Birkat kohanim still has review_encoding: true, and its quotation and source bindings have no source_fidelity attestation. The other bindings are consistent internally: page and scan continuity, fragment hashes against source_fidelity hashes, condition scopes and instruction witnesses.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "fef34199-7b53-4d6e-8c6e-4d435c56e7c1"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "scope": "bindings_4",
+  "approved": false,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_4-0.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_4-1.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_4-2.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_4-3.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_4-4.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_4-5.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_4-6.json"
+  ],
+  "blocking_findings": [
+    {
+      "record": "realization/musaf_repetition_kohanim_intro/he vs realization/musaf_repetition_kohanim_intro/en",
+      "issue": "The Hebrew and English versions of the same paragraph are bound in different ways. In the Hebrew (bindings_4-2), paragraph 1 has no `corresp`. It only has `source` = urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/birkat_kohanim/birkat_kohanim. In the English (bindings_4-3), paragraph 1 has `corresp` set to that same URN and has no `source`. Elsewhere in this batch (shofarot_close, Numbers 10:10), `corresp` is the alignment identity and `source` is a separate field for where a quote comes from. Both are present on both languages there. As encoded now, the Hebrew paragraph has no alignment identity, and the English one has no source binding. So the two languages either won't line up or mean different things.",
+      "required_action": "Make the bindings match in both languages. Either both paragraphs get the same `corresp`, or both get `corresp` plus `source` if this paragraph really reuses the Shacharit text. Then send it for semantic review again."
+    },
+    {
+      "record": "realization/musaf_repetition_shofarot_calls/he",
+      "issue": "The record for the actual shofar blasts during the Musaf repetition has no condition scope. `variants` is empty, and neither the unit nor the instruction has a condition. Shofar is not blown on Shabbat, so this unit needs a Shabbat exclusion somewhere. Nothing in the metadata I was given shows one. If no review confirms it, the blasts could render on a Rosh Hashanah that falls on Shabbat.",
+      "required_action": "Add the Shabbat exclusion to this record, or get the order group to confirm in writing that the expanded order (2ae772ed…) already applies it to this unit."
+    }
+  ],
+  "nonblocking_findings": [
+    {
+      "record": "realization/musaf_repetition_veteerav/he, /en",
+      "issue": "The text is bound to `regalim` identities (urn:x-opensiddur:text:siddur:regalim/musaf/text/veteerav, …/sheotekha) and reused for Rosh Hashanah. That isn't tied to this publication, and sharing it is fine if the canonical text really is the same. Separately, Veteerav and Birkat Kohanim are usually said only when the kohanim bless the congregation, and that depends on custom and on Israel vs. the diaspora. Neither record has a condition. If the printed source gives no condition, that's acceptable as a documentary encoding, but the order group should know about it."
+    },
+    {
+      "record": "realization/musaf_repetition_kohanim_intro/he, /en",
+      "issue": "The Musaf unit is bound to a canonical identity under the Shacharit path (shacharit/repetition/birkat_kohanim/birkat_kohanim). Reusing a text across services is fine. But the path is under Shacharit and is the same for the introduction and the blessing, which may mislead whoever uses it next. Consider a neutral shared identity."
+    },
+    {
+      "record": "realization/musaf_repetition_shofarot_close/he, /en",
+      "issue": "The 448/458-character Shofarot closing passage is bound to urn:x-opensiddur:text:prayer:amidah/teqa_beshofar_gadol_lecherutenu. That name is also the opening of the weekday Amidah blessing for gathering the exiles, which is a different text. If that URN is the weekday blessing's identity, this binding merges two separate texts. Please confirm that the URN is reserved for the Rosh Hashanah Shofarot text."
+    },
+    {
+      "record": "realization/musaf_repetition_shofarot_close/he",
+      "issue": "The variant marker 'נ״א' is encoded twice. It appears inside `alternatives[].printed` and again as a 3-character commentary citation targeting #musaf_repetition_shofarot_command_variant. The target matches the alternative's xml_id, so the binding itself is sound. Check that the export doesn't print the marker twice."
+    },
+    {
+      "record": "realization/musaf_repetition_shofarot_calls/he",
+      "issue": "The paragraph has a single 0-character fragment. Its hash is the correct SHA256 of an empty string. The 20-character instruction sits at unit level, has no position or `corresp` binding, and has no role (such as the shofar blower). This is acceptable as a placeholder for the instruction, but its placement within the unit isn't anchored."
+    },
+    {
+      "record": "all",
+      "issue": "Consistency checks passed. All seven records are kind 'new', with the full `changed_fields` set. The global order, navigation and instruction hashes are identical across records, as expected. Hebrew is on even scans (s308, s310) and English on odd scans (s309, s311), and printed pages 144/145 are consistent. Both role instructions use urn:x-opensiddur:instruction:role/reader with the abbreviation expansion הש״ץ → השליח ציבור. `corrections` and `source_fidelity` are empty everywhere. None of the canonical URNs encode anything specific to this publication."
+    }
+  ],
+  "scope_limitations": [
+    "Text values were reviewed only as hashes and character counts. I did not verify words against the scans, by instruction.",
+    "I did not see the expanded or source order, so I can't tell whether conditions such as the Shabbat exclusion or the kohanim-blessing condition are applied at order level.",
+    "No English record for musaf_repetition_shofarot_calls was assigned. The instruction lists only the 'he' witness, so I couldn't check whether the English page needs a matching record.",
+    "I couldn't check what the shared prayer:amidah, regalim and shacharit canonical URNs are defined to mean outside these records.",
+    "No code review and no export approval, per the scope."
+  ],
+  "verdict": "Not approved. kohanim_intro binds Hebrew and English differently (Hebrew has source but no corresp, English has corresp but no source), and shofarot_calls shows no Shabbat condition scope. Fix the binding mismatch and confirm or add the Shabbat exclusion before approval.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "231f5146-36ae-4c74-aa50-81034902e94c"
+  }
+}

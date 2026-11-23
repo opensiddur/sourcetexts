@@ -1,0 +1,82 @@
+{
+  "scope": "bindings_3_closure",
+  "approved": true,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/bindings_3-v5.json",
+    "/tmp/mahzor-s294/binding-followup-evidence-v6.json",
+    "/tmp/mahzor-s294/validation-source-evidence-v5.json",
+    "/tmp/mahzor-s294/bounded-order-v4.json",
+    "/tmp/mahzor-s294/bounded-prayers-v4.json",
+    "/tmp/mahzor-s294/bounded-identity-v4.json",
+    "/tmp/mahzor-s294/source-closure-306-placement.json",
+    "/tmp/mahzor-s294/bounded-review-v4/rule-verse_numbering.md"
+  ],
+  "resolved_findings": [
+    {
+      "id": "B1",
+      "resolution": "Resolved. The documentary realization is musaf_repetition_modim_derabbanan. It is the record with review_encoding:true, the bilingual description instructions ('מודים דרבנן.' / 'Congregation:') and the canonical:/source: bindings for EN and HE. musaf_repetition_modim_derabbanan_english_words is a canonical_parts library and only defines the canonical English home: its paragraph 1 has corresp=prayer:amidah/hodaah/modim_derabbanan and end_reference:true. The scope_order evidence places the passage exactly once in the expanded order. Section musaf_repetition_modim_derabbanan has one reference to target urn:x-opensiddur:text:prayer:amidah/hodaah/modim_derabbanan, with source_witness=musaf_repetition_modim_derabbanan and role congregation. No order entry points at the english_words stem. The two fragment texts are identical (scan s311, printed page 145). This is expected, because the first English printing is the only place the canonical English can come from. bounded-prayers-v4 confirms: 'The EN modim_derabbanan canonical home is created at its first actual English printing (n310) and transcluded there.' So source_fidelity here checks that the text was reused without loss; it does not claim an independent reading. The independent check against the image comes from source-closure-306-placement, which re-checked every s311 English block, including the 'Congregation:' heading and its placement over the narrow right-hand Modim deRabbanan column, against the original s311.jpg. Nothing is emitted twice."
+    },
+    {
+      "id": "B2",
+      "resolution": "Resolved. review_encoding is an inclusion gate, not a status flag saying a review is pending. canonical_parts:true is a separate inclusion path that itself requires a review payload, so the flag would be redundant on the library record. The library record also got a semantic review: bounded-prayers-v4 lists prayerbook_for_the_new_year-marmorstein-1965-en__musaf_repetition_modim_derabbanan_english_words__body00.jsonl in files_read and approved it, including HE/EN extent alignment for modim_derabbanan via the transclude. Its text is covered by the s306–s311 source closure. The library has no instructions and no source_fidelity because it is a parts library. The documentary record carries the instructions and the fidelity record."
+    },
+    {
+      "id": "B3",
+      "resolution": "Resolved. The only canonical identity bound inside the library is the shared prayer identity urn:x-opensiddur:text:prayer:amidah/hodaah/modim_derabbanan, through paragraph-level corresp. The documentary EN record binds the same URN with canonical:, and the documentary HE record binds it with source:. That fits the rule that edition and language differences share one prayer identity. The language-named ...modim_derabbanan_english_words URN is an internal grouping name for a canonical_parts library. Under the stated rule (map_root:false / omit_publication_urn:true), it is not emitted as a whole-text canonical identity. bounded-identity-v4's list of each canonical corresp occurring once per project contains amidah/hodaah/modim_derabbanan and no english_words identity. The expanded order references the prayer URN, not the library URN. No language-specific structural identity reaches canonical output."
+    }
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    {
+      "id": "N-A",
+      "records": [
+        "musaf_repetition_modim_derabbanan_english_words"
+      ],
+      "finding": "The library excerpt in binding-followup-evidence-v6 shows canonical_parts:true but does not itself show the map_root:false and omit_publication_urn:true fields. Those flags are stated only in the 'interpretation' block. The resolution of B3 rests on that statement together with the indirect evidence: the order references the prayer URN, and the identity review lists no english_words corresp. A follow-up export or registry check should confirm that the english_words URN is never emitted as a div corresp or a registry identity."
+    },
+    {
+      "id": "N-B",
+      "records": [
+        "musaf_repetition_modim_derabbanan_english_words"
+      ],
+      "finding": "This library holds only English text but has the Hebrew title 'מודים דרבנן'. This is cosmetic, since the grouping name is not emitted, but the title could mislead anyone maintaining the library."
+    },
+    {
+      "id": "N-C",
+      "records": [
+        "musaf_repetition_kohanim_intro (compiled)"
+      ],
+      "finding": "The compiled bilingual intro is consistent with the stated alignment model. HE and EN share the documentary context corresp siddur:rosh_hashanah/musaf/repetition/kohanim_intro. HE quotes the existing shacharit birkat_kohanim intro identity via seg/@source, and its reader rubric note sits outside the segs. EN gives the first translation as a prayer-part milestone corresp on the same identity, closed by a bare terminator before the end of the paragraph. HE has no second corresp. Three minor points. (1) The compiled output ends with a second p:parallel containing only empty parallelItems, which looks like a compile artifact. (2) The HE rubric uses <tei:choice> with only <tei:expan>השליח ציבור</tei:expan> and no <tei:abbr>, so the printed abbreviated form is not kept as literal text inside the choice. (3) The expansion 'השליח ציבור' is non-standard, as bounded-prayers-v4 already noted. None of these affects bindings."
+    },
+    {
+      "id": "N-D",
+      "records": [
+        "shofarot_verses / Exodus quotation"
+      ],
+      "finding": "Checked against the repository rule, not traditional numbering. rule-verse_numbering says the canonical division is the Leningrad (WLC) one: Exodus 20 has 26 verses, with לא תרצח through לא תחמד at 20:13–17. The evidence binds urn:x-opensiddur:text:bible:exodus/20/18 to the WLC witness text 'וְכָל־הָעָם֩ רֹאִ֨ים אֶת־הַקּוֹלֹ֜ת ... וַיּֽ͏ַעַמְד֖וּ מֵֽרָחֹֽק׃', which is the correct verse under WLC numbering (JPS/common 20:15). The leftover key exodus_20_15 is documented as a frozen authoring coordinate, and the evidence says it is not emitted. I did not open the WLC witness file itself, so its sha256 79522d67…13b8 was taken as given."
+    },
+    {
+      "id": "N-E",
+      "records": [
+        "realization/musaf_repetition_modim/en"
+      ],
+      "finding": "Prior N1 is carried forward. The EN Modim occurrence is bound with source: and carries the documentary sic/corr 'sindnesses→kindnesses'. bounded-prayers-v4 also notes a word-level difference from the canonical home: 'for our souls' at the occurrence against 'and for our souls' at the home, raised as a human question. A source: binding records no literal/corrected/canonical comparison, so that difference is visible only through the prayers review. It is not a binding defect."
+    },
+    {
+      "id": "N-F",
+      "records": [
+        "realization/musaf_repetition_hodaah_tail/he",
+        "realization/musaf_repetition_hodaah_tail/en"
+      ],
+      "finding": "Prior N3 is carried forward. vekhol_hachayyim is bound to the existing Rosh Hashanah–scoped identity siddur:rosh_hashanah/text/vekhol_hachayyim. bounded-identity-v4 accepted it as an existing canonical home, and it is listed consistently in the literal_contexts for rh_hodaah he/en. I could not verify whether the identity reflects a real textual difference. If it does not, the year-round text has two identities in the registry, but that is a pre-existing registry question outside this binding set. The inherited Shabbat scopes supplied (shofarot_calls under shabbat:false, with a blower-role reference) are consistent with the order review. The modim_derabbanan section correctly has no condition and has role congregation."
+    }
+  ],
+  "verdict": "Approved for bindings_3 closure. B1: the order evidence shows the Modim deRabbanan passage is placed once, through the shared prayer URN with source_witness musaf_repetition_modim_derabbanan. The english_words stem is a canonical_parts library that only defines the canonical English home at its first printing. Matching text hashes are expected there, and the independent check against the image is the s306–s311 source closure. B2: review_encoding is an inclusion gate, not a review-pending flag. canonical_parts is its own inclusion path with a required review payload, and the library body was semantically reviewed in bounded-prayers-v4. B3: the only canonical identity bound is the shared prayer:amidah/hodaah/modim_derabbanan. The language-named grouping URN is not emitted as a whole-text identity. The Exodus 20:18 binding matches the repository's WLC numbering and the WLC text in the evidence. Remaining items are nonblocking: the map_root/omit_publication_urn flags are not shown in the excerpt, the English-only library has a Hebrew title, there are minor compile and rubric artifacts in the kohanim intro, and the source:/sic-corr and vekhol_hachayyim scope questions are carried forward.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "4a689288-4149-4e9a-b2d6-d95ccc7a50ba"
+  }
+}

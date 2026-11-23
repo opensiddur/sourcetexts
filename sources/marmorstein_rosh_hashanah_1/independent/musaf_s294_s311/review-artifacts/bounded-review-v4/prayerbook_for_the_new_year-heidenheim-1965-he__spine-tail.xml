@@ -1,0 +1,134 @@
+<t:div xmlns:t="http://www.tei-c.org/ns/1.0" xmlns:j="http://jewishliturgy.org/ns/jlptei/2"><t:div>
+              <j:conditional xml:id="documentary_musaf_weekday_shofarot_he">
+                <j:all>
+                  <t:fs type="opensiddur:holiday-aggregate">
+                    <t:f name="shabbat">
+                      <t:binary value="false"/>
+                    </t:f>
+                  </t:fs>
+                </j:all>
+              </j:conditional>
+              <t:pb ed="1965" n="137" facs="https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n293.jpg"/>
+              <t:note type="description" facs="https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n293.jpg" xml:lang="he">מיוסד ע״ס א״ב מרובע.</t:note>
+              <j:transclude type="external" target="urn:x-opensiddur:text:poem:essa_dei_betzedeq@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+              <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/shofarot_verses@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+              <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/ken_tagen_weekday@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+              <j:endConditional target="#documentary_musaf_weekday_shofarot_he"/>
+            </t:div>
+            <t:div corresp="urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/anusah_leezrah">
+              <j:conditional xml:id="documentary_musaf_shabbat_shofarot_he">
+                <t:note type="instruction" xml:lang="de-Hebr">אַם שַׁבָּת.</t:note>
+                <j:all>
+                  <t:fs type="opensiddur:holiday-aggregate">
+                    <t:f name="shabbat">
+                      <t:binary value="true"/>
+                    </t:f>
+                  </t:fs>
+                </j:all>
+              </j:conditional>
+              <t:note type="description" facs="https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n293.jpg" xml:lang="he">מיוסד ע״ס א״ב כפול בראשי החרוזות.</t:note>
+              <j:transclude type="external" target="urn:x-opensiddur:text:poem:anusah_leezrah@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+              <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/ken_tagen_shabbat@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+              <j:endConditional target="#documentary_musaf_shabbat_shofarot_he"/>
+            </t:div>
+            <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/shofarot_close@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+            <t:note type="instruction" facs="https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n307.jpg" xml:lang="he">ותוקעין — ובשבת אין תוקעין.</t:note>
+            <t:div>
+              <j:conditional xml:id="documentary_musaf_shofarot_calls_he">
+                <j:all>
+                  <t:fs type="opensiddur:holiday-aggregate">
+                    <t:f name="shabbat">
+                      <t:binary value="false"/>
+                    </t:f>
+                  </t:fs>
+                </j:all>
+              </j:conditional>
+              <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/shofarot_calls@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+              <j:endConditional target="#documentary_musaf_shofarot_calls_he"/>
+            </t:div>
+            <t:div>
+              <j:conditional xml:id="documentary_shofarot_musaf_hayom_inclusion_he">
+                <j:all>
+                  <j:any>
+                    <t:fs type="opensiddur:holiday-aggregate">
+                      <t:f name="shabbat">
+                        <t:binary value="false"/>
+                      </t:f>
+                    </t:fs>
+                    <t:fs type="opensiddur:rite">
+                      <t:f name="frankfurt_am_main">
+                        <t:binary value="true"/>
+                      </t:f>
+                    </t:fs>
+                    <t:fs type="opensiddur:practice">
+                      <t:f name="musaf-shabbat-responses">
+                        <t:symbol value="hayom_only"/>
+                      </t:f>
+                    </t:fs>
+                    <t:fs type="opensiddur:practice">
+                      <t:f name="musaf-shabbat-responses">
+                        <t:symbol value="both_no_cantor_repeat"/>
+                      </t:f>
+                    </t:fs>
+                    <t:fs type="opensiddur:practice">
+                      <t:f name="musaf-shabbat-responses">
+                        <t:symbol value="both_cantor_hayom"/>
+                      </t:f>
+                    </t:fs>
+                    <t:fs type="opensiddur:practice">
+                      <t:f name="musaf-shabbat-responses">
+                        <t:symbol value="both_cantor_repeat"/>
+                      </t:f>
+                    </t:fs>
+                  </j:any>
+                </j:all>
+              </j:conditional>
+              <t:note type="description" facs="https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n307.jpg" xml:lang="he"><t:choice><t:abbr>קו״ח</t:abbr><t:expan>קהל וחזן</t:expan></t:choice></t:note>
+              <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/shofarot_hayom@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+              <j:endConditional target="#documentary_shofarot_musaf_hayom_inclusion_he"/>
+            </t:div>
+            <t:div>
+              <j:conditional xml:id="documentary_shofarot_musaf_areshet_inclusion_he">
+                <j:all>
+                  <j:any>
+                    <t:fs type="opensiddur:holiday-aggregate">
+                      <t:f name="shabbat">
+                        <t:binary value="false"/>
+                      </t:f>
+                    </t:fs>
+                    <t:fs type="opensiddur:rite">
+                      <t:f name="frankfurt_am_main">
+                        <t:binary value="true"/>
+                      </t:f>
+                    </t:fs>
+                    <t:fs type="opensiddur:practice">
+                      <t:f name="musaf-shabbat-responses">
+                        <t:symbol value="both_no_cantor_repeat"/>
+                      </t:f>
+                    </t:fs>
+                    <t:fs type="opensiddur:practice">
+                      <t:f name="musaf-shabbat-responses">
+                        <t:symbol value="both_cantor_hayom"/>
+                      </t:f>
+                    </t:fs>
+                    <t:fs type="opensiddur:practice">
+                      <t:f name="musaf-shabbat-responses">
+                        <t:symbol value="both_cantor_repeat"/>
+                      </t:f>
+                    </t:fs>
+                  </j:any>
+                </j:all>
+              </j:conditional>
+              <t:note type="description" facs="https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n307.jpg" xml:lang="he"><t:choice><t:abbr>קו״ח</t:abbr><t:expan>קהל וחזן</t:expan></t:choice></t:note>
+              <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/shofarot_areshet@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+              <j:endConditional target="#documentary_shofarot_musaf_areshet_inclusion_he"/>
+            </t:div>
+            <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/retzeh@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+            <t:pb ed="1965" n="145" facs="https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n309.jpg"/>
+            <t:note type="description" facs="https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n309.jpg" xml:lang="de-Hebr">וואֶהרענד דיא כהנים <t:choice><t:sic>לום</t:sic><t:corr>צום</t:corr></t:choice> דוכן געהען, בעטעט דיא געמיינדע ותערב.</t:note>
+            <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/veteerav@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+            <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/modim@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+            <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/modim_derabbanan@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+            <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/hodaah_tail@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+            <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/kohanim_intro@prayerbook_for_the_new_year-heidenheim-1965-he"/>
+          </t:div>

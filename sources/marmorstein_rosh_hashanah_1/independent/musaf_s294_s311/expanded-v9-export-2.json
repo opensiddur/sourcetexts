@@ -1,0 +1,30 @@
+{
+  "scope": "expanded-v9-export-2",
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/expanded-export-manifest-v9.json",
+    "/tmp/mahzor-s294/full-pdf-images-v9/expanded-263.png",
+    "/tmp/mahzor-s294/full-pdf-images-v9/expanded-264.png",
+    "/tmp/mahzor-s294/full-pdf-images-v9/expanded-265.png",
+    "/tmp/mahzor-s294/full-pdf-images-v9/expanded-266.png",
+    "/tmp/mahzor-s294/full-pdf-images-v9/expanded-267.png",
+    "/tmp/mahzor-s294/full-pdf-images-v9/expanded-268.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "expanded-263 (printed 261): In the last paired row (וּבְיוֹם שִׂמְחַתְכֶם), the Hebrew finishes on this page, but the English breaks after 'over the sacrifices' and continues at the top of expanded-264 ('of your peace-offerings...'). Nothing is lost or clipped, and the continuation is clear. The row just starts unevenly across the page break.",
+    "expanded-263: Footnote 137 is placed correctly. The superscript sits after חובותינו and before the alternate reading (כמִצְוָה). The note at the foot of the page reads '137 נוסח אחר' and does not overlap the text above it. The space above the row 'The Lord of Hosts will protect them' is somewhat larger than between the other rows. This is cosmetic.",
+    "expanded-264 (printed 262): Two horizontal rules are stacked at the bottom of the page with nothing between them. Most likely an empty section boundary renders as two separators. The same thing happens on expanded-265, after the second Areshet block and before the חזן label for רצה. This is cosmetic and does not overlap anything.",
+    "expanded-264: The instruction 'תוקע תקיעה: תרועה: תקיעה:' is printed in Hebrew only. This is consistent with the deliberate HE-only instruction style, so it is not flagged as missing English.",
+    "expanded-265 (printed 263): The English instruction 'on weekdays some do not re-peat.' hyphenates so that 'peat.' sits alone on a right-aligned line. It is readable. This is a cosmetic line break.",
+    "expanded-267 (printed 265): The instruction 'חזן כשנושאים כפיים...' runs the bold speaker label חזן into the start of the instruction line. It is still readable and the English line pairs with it correctly.",
+    "expanded-268 (printed 266): Link annotations show cyan border boxes, and long URLs break mid-token (creativecommon|s.org, ...DailyPrayerBook|1949). This is normal for monospace URLs, and everything is readable and unclipped. Source [1] (Birnbaum 1949, archive.org) is complete on this page. Pages 269–270 are outside this range and were not reviewed."
+  ],
+  "verdict": "Approved for printed pages 261–266 (PDF images 263–268). In the stanza rows, Hebrew and English are paired and aligned throughout, and the speaker labels (קהל/חזן) and bilingual rubrics are placed correctly. Both Hebrew, with full pointing, and English are readable. Nothing is clipped and no columns overlap. Footnote 137 and its note are placed correctly. On expanded-267 the batch stops correctly at the introduction to the priestly blessing (אלהינו ואלהי אבותינו ברכנו... כאמור). The ending label is there in both Hebrew and English and names scan311 as the last encoded page and scan312 as where the unencoded material begins. Metadata, the licence list, contributor credits and the Sources entry are kept. The findings are all cosmetic: stacked empty separator rules, one row breaking unevenly across pages, and one hyphenation. None of them blocks approval.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "3b43d8e9-2d33-46b5-9ff3-dfb4558c1061"
+  }
+}

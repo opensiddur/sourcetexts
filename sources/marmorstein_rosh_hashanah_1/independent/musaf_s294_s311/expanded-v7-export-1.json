@@ -1,0 +1,30 @@
+{
+  "scope": "expanded-v7-export-1",
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/expanded-export-manifest-v7.json",
+    "/tmp/mahzor-s294/full-pdf-images-v7/expanded-257.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/expanded-258.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/expanded-259.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/expanded-260.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/expanded-261.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/expanded-262.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "Coverage gap: the assigned images end at PDF image 262 (printed page 260), in the middle of Psalm 150. The last row shown is v.5 ('הַלְלוּהוּ בְצִלְצְלֵי שָׁמַע... / praise Him with the clash of cymbals...'). V.6 is not shown, and neither is the priestly-blessing introduction, the source312 stopping point, the label for the missing later source, or any retained source or credit notes. None of these could be checked from the images I was given. Please assign the following page or pages (expanded-263 and later) to confirm the end of the batch.",
+    "No HTML desktop or mobile screenshots were listed, so none were reviewed. The manifest's html_checks report no errors, no duplicate IDs, no broken internal links, and scrollWidth equal to viewport width at both 1280 and 390. I took those as reported and did not check them visually.",
+    "Source links: the ↗ markers show up where expected, matched in the Hebrew and English columns (images 257, 258, 259, 260, 261, 262). Whether they are clickable or where they point can't be checked from PNGs. The manifest reports 554 links and 604 valid named destinations.",
+    "Image 260 (printed 258): the stanza 'עִלִּיתַנִי אֵל. עַל כָּל בָּנוֹת... בְּחוֹרֵב תַּתָּה קוֹל' ends with no closing ':'. Every other stanza row in the batch ends with one. Source and encoding are approved, so this may be faithful to the source. Flagging it only so someone can confirm it is not a lost character.",
+    "Image 257 (printed 255): the gap above the 'יְיָ צְבָאוֹת יָגֵן עֲלֵיהֶם: / The Lord of Hosts will protect them’.' row is a bit larger than the other row gaps. This is cosmetic only, with no clipping or overlap.",
+    "Image 262 (printed 260): the Hebrew/English pair for Exodus 20:15 ('וְכָל־הָעָם רֹאִים...') leaves a tall blank area under the 2-line Hebrew because the English runs to 5 lines. This is expected with paired rows and is not a defect.",
+    "At this image resolution the vowels, dagesh/mappiq (e.g. נְבִיאֶךָ, תּוֹרָתֶךָ, לָהֶם, סֶלָה, יָהּ forms) and maqaf look correct and readable. CGJ is invisible by nature, so I could only check that no stray glyphs, tofu or vowel collisions appear. None were found."
+  ],
+  "verdict": "Approved for the six assigned PDF images (printed pages 255–260). There is no clipping, overlap or column bleed. Hebrew (RTL) and English stay in separate columns, and every stanza pair is top-aligned. Running heads (חזרת התפלה) and page numbers alternate correctly between recto and verso, and printed numbers run 255–260 in order. The rule and the 'בשבת. / On the Sabbath.' heading sit correctly. The order of liturgical labels (חזן/קהל, ככתוב בתורתך / בדברי קדשך / על יד נביאך, ונאמר) is consistent across columns, and the text carries over correctly between pages (image 260 → 261 → 262). One caveat: the end of the batch (priestly-blessing introduction, source312 stopping point, missing-source label, retained credits) is not in the assigned images and still needs a separate check before the whole batch is signed off.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "50d418d6-03c9-4df2-9f78-1d6d582d17a7"
+  }
+}

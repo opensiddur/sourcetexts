@@ -1,0 +1,30 @@
+{
+  "scope": "documentary-v8-export-2",
+  "approved": false,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/documentary-export-manifest-v8.json",
+    "/tmp/mahzor-s294/full-pdf-images-v8/documentary-234.png",
+    "/tmp/mahzor-s294/full-pdf-images-v8/documentary-235.png",
+    "/tmp/mahzor-s294/full-pdf-images-v8/documentary-236.png",
+    "/tmp/mahzor-s294/full-pdf-images-v8/documentary-237.png",
+    "/tmp/mahzor-s294/full-pdf-images-v8/documentary-238.png",
+    "/tmp/mahzor-s294/full-pdf-images-v8/documentary-239.png"
+  ],
+  "blocking_findings": [
+    "documentary-238.png (p.230): A bold Hebrew rubric runs straight into the prayer text with no space: 'השליח ציבור מסייםבָּרוּךְ'. The rubric 'מסיים' and the first word 'בָּרוּךְ' read as one word. This looks like a missing space where the rubric element meets the text in the export, not a question about the source reading.",
+    "documentary-239.png (p.231): Same problem in the priestly-blessing introduction: 'השליח ציבור בקולכֹּהֲנִים'. The rubric 'בקול' is joined to 'כֹּהֲנִים' with no space. Because this is the last encoded line before the ending label, the Hebrew there reads wrong."
+  ],
+  "nonblocking_findings": [
+    "documentary-237.png (p.229): 'אֵם שַׁבָּת.[זִכְרוֹן]' has no space between the full stop and the bracket. The English side shows the bracket correctly. Probably the same joining issue at an element edge, but minor.",
+    "documentary-236.png (p.228): The footnote rule for note 130 sits under the Hebrew (left) column, but the note text '130 נוסח אחר' is printed at the bottom right under the English column. The superscript 130 in the Hebrew paragraph also sits very close to the line above it. It is readable, but the rule and the note don't line up.",
+    "documentary-239.png (p.231): Rows drift out of line. The Hebrew 'וּכְתוֹב לְחַיִּים' and 'וְכֹל הַחַיִּים' rows start about 1–2 lines above their English pairs ('And inscribe…', 'And all the living…'). The Hebrew rows look packed together instead of top-aligned with each English row.",
+    "documentary-239.png (p.231): The 'שִׁיר שֶׁל יוֹם.' heading and the 'היום ראשון בשבת…' rubric sit inside the Hebrew column right under the Hebrew ending label, with no gap. The running header for the whole page also switches to 'שיר של יום.' even though most of the page is the end of the Musaf repetition. The editorial label is still clearly visible. Please confirm that the Shir shel Yom text after the 'remain unencoded' label is intended (for example, from a separately encoded source section)."
+  ],
+  "verdict": "Not approved. Pages 226–231 have no clipping or overlap. The English is readable, the paired stanza rows on pp.226–228 line up, and the ending on p.231 shows a clear bilingual missing-source label: 'Digitization reaches the priestly-blessing introduction in the Musaf repetition (scan311)… beginning on scan312, remain unencoded.' Two Hebrew rubric-to-text joins on pp.230–231 are missing a space ('מסייםבָּרוּךְ', 'בקולכֹּהֲנִים'), which makes the printed Hebrew read wrong. Fix the spacing where rubric elements meet the text and re-export. The other findings are cosmetic.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "666f3333-58ea-4a3b-a6a5-ac36721b0560"
+  }
+}

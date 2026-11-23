@@ -1,0 +1,97 @@
+{
+  "scope": "bindings_6_closure",
+  "approved": true,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/bindings_6-v5.json",
+    "/tmp/mahzor-s294/validation-source-evidence-v5.json",
+    "/tmp/mahzor-s294/bindings_1-closure-v5.json",
+    "/tmp/mahzor-s294/bindings_2-closure-v5.json",
+    "/tmp/mahzor-s294/review-context-v5.json",
+    "/tmp/mahzor-s294/bounded-review-v4/rule-verse_numbering.md"
+  ],
+  "resolved_findings": [
+    {
+      "id": "B6-1",
+      "original_severity": "blocking",
+      "record": "realization/musaf_repetition_shofarot_verses/en",
+      "finding": "The review said exodus/20/18 is the English/KJV number and that the canonical verse is Masoretic 20:15. It also said the record mixes numbering systems because the Psalms use Hebrew numbers.",
+      "resolution": "Withdrawn. The finding used the wrong numbering system. rule-verse_numbering.md:270-271 says the canonical division is the one the Leningrad Codex numbers (tanakh-wlc-he), with 26 verses in Exodus 20. The table at lines 273-282 places לא תגנב at canonical exodus/20/15 and לא תחמד at 20/17. That makes the next verse, וכל העם ראים את הקולת, canonical 20/18. The same table shows that '20:15' is the JPS 1917 number for that verse, and MAM numbers it 20:14. validation-source-evidence-v5.json exodus.actual_canonical_words gives the WLC witness text at exodus/20/18 (exodus.xml, sha256 79522d67…13b8) as וְכָל־הָעָם֩ רֹאִ֨ים אֶת־הַקּוֹלֹ֜ת … ק֣וֹל הַשֹּׁפָ֔ר … וַיּֽ͏ַעַמְד֖וּ מֵֽרָחֹֽק׃. That is exactly the quoted Shofarot verse. WLC Exodus 20 happens to have the same verse count as the KJV, which explains why the reviewer took 20:18 for an English number. WLC also counts Psalm superscriptions as verses, so psalms/47/6 and 81/4-5 are WLC numbers too. The record therefore uses one numbering system throughout, not two. The same evidence file reports all_four_new_quotes_remapped=true. It also says exodus_20_15 is only a frozen authoring key that is never emitted. Rebinding to 20/15 would attach the verse to לא תגנב, which the rule against renumbering forbids (lines 321-323). bindings_1 closure B1 independently reached the same conclusion.",
+      "evidence": [
+        "rule-verse_numbering.md:270-282",
+        "rule-verse_numbering.md:321-323",
+        "validation-source-evidence-v5.json exodus.{canonical_urn,actual_canonical_words,all_four_new_quotes_remapped,historical_source_block_key}",
+        "bindings_1-closure-v5.json resolved_findings[B1]"
+      ]
+    },
+    {
+      "id": "B6-2",
+      "original_severity": "blocking",
+      "downgraded_to": "nonblocking (NB-legacy-selectors)",
+      "records": [
+        "realization/musaf_repetition_shofarot_areshet/he",
+        "realization/musaf_repetition_shofarot_areshet/en"
+      ],
+      "finding": "The condition URNs areshet_sefatenu/conclusion/{en,he}/{first_printing,zikhronot_printing} are named after where this edition printed them and are split by language.",
+      "resolution": "Not introduced by this batch. In review-context-v5.json existing_titles_and_condition_metadata, all four language-specific selector URNs already appear in old_accepted wording_selection: in musaf_areshet_sefatenu (first_printing=true, zikhronot_printing=false) and in musaf_repetition_zikhronot_areshet (first_printing=false, zikhronot_printing=true). In both records the old and new wording_selection are identical apart from one added key, …/conclusion/teqiot_veseder_shofarot=false. That key has no language, edition or fragment part. clarifications.legacy_metadata says three things: the language-specific selectors were already accepted and are unchanged, they are not new canonical prayer identities, and the batch adds only teqiot_veseder_shofarot. When shofarot_areshet uses the selectors, it reuses existing accepted identities, as the user instructed, and creates none. Both realizations setting all four features is harmless. The features are caller-scoped declarations, and each language's option set reads only its own keys. bindings_1 closure (B2) and bindings_2 closure (B3) both downgraded the identical concern for the same reasons. The naming concern itself is real in principle, so it moves to a migration follow-up.",
+      "evidence": [
+        "review-context-v5.json existing_titles_and_condition_metadata[musaf_areshet_sefatenu].old_wording_selection/new_wording_selection",
+        "review-context-v5.json existing_titles_and_condition_metadata[musaf_repetition_zikhronot_areshet].old_wording_selection/new_wording_selection",
+        "review-context-v5.json clarifications.legacy_metadata",
+        "bindings_1-closure-v5.json resolved_findings[B2]",
+        "bindings_2-closure-v5.json resolved_findings[B3]"
+      ]
+    },
+    {
+      "id": "B6-N2",
+      "original_severity": "nonblocking",
+      "finding": "The page 144 words are bound twice: as the marked, Shabbat-conditioned segment and as the standalone areshet_zikhron_words unit, which has no condition.",
+      "resolution": "Intended. zikhron_canonical_home (stem musaf_repetition_areshet_zikhron_words, canonical_parts=true) holds the plain words זִכְרוֹן / 'the memory of' (s308/s309, p.144) with corresp prayer:areshet_sefatenu/zikhron. It deliberately carries no condition, because conditions belong to the context and not to the shared text. marked_literal_occurrences shows that the shofarot_areshet segments in both languages carry the shabbat=true holiday-aggregate condition and point canonical at that URN. So the caller provides the Shabbat scoping wherever the pure unit is used.",
+      "evidence": [
+        "review-context-v5.json zikhron_canonical_home",
+        "review-context-v5.json marked_literal_occurrences[musaf_repetition_shofarot_areshet he/en]",
+        "bindings_2-closure-v5.json resolved_findings[B1]"
+      ]
+    }
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    {
+      "id": "NB-legacy-selectors",
+      "records": [
+        "realization/musaf_areshet_sefatenu/*",
+        "realization/musaf_repetition_zikhronot_areshet/*",
+        "realization/musaf_repetition_shofarot_areshet/*"
+      ],
+      "detail": "The legacy condition URNs condition:prayer:areshet_sefatenu/conclusion/{he,en}/{first_printing,zikhronot_printing} are named after this edition's printings and split by language. A similar legacy pattern exists in condition:bible:numbers/28/9/he/prior_printing in morning_qorbanot. Optional follow-up: an explicitly authorized migration to content-based names that are not split by language, like teqiot_veseder_shofarot. Do not create replacements in this batch."
+    },
+    {
+      "id": "NB-literal-hash-domain",
+      "records": [
+        "realization/musaf_repetition_shofarot_areshet/{he,en}"
+      ],
+      "detail": "For the unmarked opening and conclusion segments, literal_sha256 does not equal the fragment text_sha256. bindings_2 closure N5 cites code-followup-v4 NB5, which says literal_sha256 is taken over the raw text including parentheses for marked occurrences. Nothing in the projection documents what literal_sha256 covers for unmarked segments. Documentation only."
+    },
+    {
+      "id": "NB-correction-id",
+      "records": [
+        "realization/musaf_repetition_shofarot_verses/en"
+      ],
+      "detail": "Unchanged and cosmetic. The correction id 'musaf_weekday_psalm150_missing_quote' says 'weekday', which is misleading here, and it names no explicit target segment or corresp."
+    },
+    {
+      "id": "NB-psalms47-encoding",
+      "records": [
+        "realization/musaf_repetition_shofarot_verses/en"
+      ],
+      "detail": "Unchanged. Psalms 47:6 runs across the s305→s307 page break and uses source_reference/source_reference_corresp instead of corresp/reference_unit. The target quotes/psalms_47/6 follows the WLC pattern. Confirm the Hebrew counterpart uses the same corresp."
+    }
+  ],
+  "verdict": "Approved for bindings_6 closure. B6-1 is withdrawn. The canonical numbering is the WLC division (rule-verse_numbering.md:270-282), and in it וכל העם ראים את הקולת … ויעמדו מרחק is exodus/20/18, as the WLC witness text in validation-source-evidence-v5.json confirms. 20:15 is the JPS 1917 number (MAM has 20:14), and canonical 20/15 is לא תגנב. The Psalms use the same WLC numbering, so the record is internally consistent and the 20/18 bindings are correct. B6-2 is downgraded to nonblocking. The four language-specific first_printing/zikhronot_printing selectors already appear, unchanged, in the accepted old_wording_selection of musaf_areshet_sefatenu and musaf_repetition_zikhronot_areshet. The only new condition in this batch is teqiot_veseder_shofarot, which is not tied to any language. Using the old selectors in shofarot_areshet follows the user's instruction to reuse existing identities. Migrating them is optional follow-up. The double-binding note is resolved. The remaining nonblocking notes are documentation or cosmetic. Limitation: the Exodus wording rests on the witness excerpt and hash in validation-source-evidence-v5.json. exodus.xml itself was not in the assigned file set.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "c0b500dc-089b-4e08-85dd-84c0dc4691e2"
+  }
+}

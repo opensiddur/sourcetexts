@@ -1,0 +1,30 @@
+<review_tail><tei:div xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:j="http://jewishliturgy.org/ns/jlptei/2" xml:id="section_musaf_repetition_kohanim_intro">
+                      <tei:div>
+                        <tei:note type="description" corresp="urn:x-opensiddur:instruction:role/reader" xml:lang="he">חזן</tei:note>
+                        <tei:div xml:id="section_musaf_kohanim_aloud">
+                          <j:conditional xml:id="section_musaf_kohanim_aloud_condition">
+                            <j:all>
+                              <tei:fs type="opensiddur:practice">
+                                <tei:f name="birkat-kohanim">
+                                  <tei:binary value="true"/>
+                                </tei:f>
+                              </tei:fs>
+                            </j:all>
+                          </j:conditional>
+                          <tei:div>
+                            <tei:note type="description" xml:lang="he" resp="urn:x-opensiddur:contributor:opensiddur.org/codex">כשנושאים כפיים, הש״ץ אומר את המילה כהנים בקול.</tei:note>
+                            <tei:note type="description" xml:lang="en" resp="urn:x-opensiddur:contributor:opensiddur.org/codex">When there is a priestly blessing, the cantor says the word Kohanim aloud.</tei:note>
+                          </tei:div>
+                          <j:endConditional target="#section_musaf_kohanim_aloud_condition"/>
+                        </tei:div>
+                        <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/birkat_kohanim/birkat_kohanim"/>
+                      </tei:div>
+                    </tei:div>
+                    <tei:div xmlns:tei="http://www.tei-c.org/ns/1.0" xml:id="section_musaf_digitization_boundary">
+                      <tei:div>
+                        <tei:note type="description" xml:lang="he" resp="urn:x-opensiddur:contributor:opensiddur.org/codex">התמלול מגיע עד הקדמת ברכת כהנים בחזרת מוסף; פסוקי הברכה והמשך התפילה טרם נכללו.</tei:note>
+                        <tei:note type="description" xml:lang="en" resp="urn:x-opensiddur:contributor:opensiddur.org/codex">Digitization reaches the priestly-blessing introduction in the Musaf repetition (scan311). The priestly verses and following service, beginning on scan312, remain unencoded.</tei:note>
+                      </tei:div>
+                    </tei:div>
+                    <j:endDeclare xmlns:j="http://jewishliturgy.org/ns/jlptei/2" target="#section_musaf_repetition_s220_settings"/>
+                  </review_tail>

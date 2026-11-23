@@ -1,0 +1,26 @@
+{
+  "scope": "documentary-v8-export-0",
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/documentary-export-manifest-v8.json",
+    "/tmp/mahzor-s294/full-pdf-images-v8/documentary-222.png",
+    "/tmp/mahzor-s294/full-pdf-images-v8/documentary-223.png",
+    "/tmp/mahzor-s294/full-pdf-images-v8/documentary-224.png",
+    "/tmp/mahzor-s294/full-pdf-images-v8/documentary-225.png",
+    "/tmp/mahzor-s294/full-pdf-images-v8/documentary-226.png",
+    "/tmp/mahzor-s294/full-pdf-images-v8/documentary-227.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "PDF image 223 (printed p. 215), Hebrew עֲרֶשֶׁת שְׂפָתֵינוּ, line 2: the words run together as 'שַׁבָּת.[זִכְרוֹן]תְּקִיעָתֵנוּ'. There is no space after 'שַׁבָּת.' and none after ']'. The text is still readable, but it looks like spaces were lost around the inline bold or bracket markup. Consider adding them.",
+    "PDF images 222–223 (printed pp. 214–215): the HE-only rubrics 'תקיעה: שברים: תקיעה:', 'קהל וחזן' and 'מיוסד ע\"ס א\"ב מרובע.' are set full-width and right-aligned, so they sit over the English column and not the Hebrew one. They read clearly and look consistent with the stylesheet, so this is noted only for awareness.",
+    "PDF images 224→225 (printed pp. 216–217): the English for the וּכְמוֹ מַכְנִיס בְּזוֹ stanza continues onto the next page, while its Hebrew finishes on p. 216. The continuation is clean and sits at the top of p. 217 with nothing overlapping, so this is acceptable split behaviour."
+  ],
+  "verdict": "Approved for the assigned range, PDF images 222–227 (printed pp. 214–219). I found no clipping, overlap or text running outside the page. Hebrew (with vowel points) and English are readable throughout. The paired stanza rows line up across the whole alphabetical Shofar acrostic (אֶשָּׂא דֵעִי through שֵׁנָה תְּעוֹרֵר), and the ↗ source markers appear in both columns. The section rules and running heads/folios are placed correctly. No notes appear on these pages. The range contains neither the priestly-blessing ending nor the bibliography/credits pages, so the missing-source label and credits were not checked here. The only issue is a cosmetic spacing defect on p. 215, which does not block approval.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "6a4b8123-4cbc-4e22-b8dc-84e39fa9a503"
+  }
+}

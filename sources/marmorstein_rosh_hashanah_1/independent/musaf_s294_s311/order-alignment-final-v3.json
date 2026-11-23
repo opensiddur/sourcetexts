@@ -1,0 +1,92 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "medium"
+  },
+  "approved": false,
+  "alignment_approved": true,
+  "recitation_order_approved": true,
+  "conditional_settings_approved": false,
+  "documentary_fidelity_approved": false,
+  "all_requested_checks_completed": false,
+  "files_read": [
+    "/tmp/mahzor-s294/review-delta-v3-manifest.json",
+    "/tmp/mahzor-s294/alignment-final-v3.json",
+    "/tmp/mahzor-s294/stanza-incpit-decisions-v3.json",
+    "/tmp/mahzor-s294/canonical-and-practice-evidence-v3.json",
+    "/tmp/mahzor-s294/s306.jpg",
+    "/tmp/mahzor-s294/xml-event-review-v3/04-musaf_repetition_veteerav-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review-v3/05-musaf_repetition_kohanim_intro-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review-v3/07-musaf_repetition_shofarot_calls-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review-v3/08-musaf_repetition_shofarot_hayom-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review-v3/12-musaf_repetition_areshet_zikhron_words-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review-v3/13-musaf_repetition_shofarot_areshet-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review-v3/14-musaf_repetition_ken_tagen_words-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review-v3/15-musaf_repetition_ken_tagen_weekday-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review-v3/16-musaf_repetition_ken_tagen_shabbat-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review-v3/21-musaf_repetition_zikhronot_areshet-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review-v3/25-repetition_birkat_kohanim-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review-v3/30-musaf_areshet_sefatenu-00.jsonl (lines 56-173; header lines 1-55 not read)",
+    "/tmp/mahzor-s294/xml-event-review-v3/31-prayerbook_for_the_new_year-heidenheim-1965-he-spine-tail-v3-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review-v3/37-musaf_repetition_veteerav-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review-v3/38-musaf_repetition_kohanim_intro-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review-v3/40-musaf_repetition_shofarot_hayom-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review-v3/44-musaf_repetition_areshet_zikhron_words-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review-v3/45-musaf_repetition_shofarot_areshet-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review-v3/46-musaf_repetition_ken_tagen_words-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review-v3/47-musaf_repetition_ken_tagen_weekday-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review-v3/48-musaf_repetition_ken_tagen_shabbat-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review-v3/52-musaf_repetition_zikhronot_areshet-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review-v3/59-musaf_areshet_sefatenu-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review-v3/60-prayerbook_for_the_new_year-marmorstein-1965-en-spine-tail-v3-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review-v3/61-expanded-spine-tail-v3-00.jsonl",
+    "/tmp/mahzor-s294/xml-event-review-v3/61-expanded-spine-tail-v3-01.jsonl",
+    "/tmp/mahzor-s294/xml-event-review-v3/61-expanded-spine-tail-v3-02.jsonl",
+    "/tmp/mahzor-s294/xml-event-review-v3/10-musaf_anusah_leezrah-00.jsonl (partial: lines 88-117)",
+    "/tmp/mahzor-s294/xml-event-review-v3/10-musaf_anusah_leezrah-01.jsonl (full)",
+    "/tmp/mahzor-s294/xml-event-review-v3/42-musaf_anusah_leezrah-00.jsonl (partial: lines 86-400)",
+    "/tmp/mahzor-s294/xml-event-review-v3/41-musaf_essa_dei_betzedeq-00.jsonl (partial: lines 86-110)"
+  ],
+  "blocking_findings": [
+    {
+      "id": "B1",
+      "file": "/tmp/mahzor-s294/expanded-spine-tail-v3.xml (event chunk 61-02, lines 118-139, section_musaf_repetition_kohanim_intro)",
+      "finding": "The new bilingual editorial direction 'הש״ץ אומר את המילה כהנים בקול / The cantor says the word Kohanim aloud' appears outside any condition. The expanded spine itself declares a binary birkat-kohanim practice and has a separate birkat-kohanim=false branch (section_musaf_no_priests_avodah). Calling 'Kohanim' aloud is the summons to the priests, so it only applies when the priestly blessing actually takes place. Under the declared no-priests setting this direction tells the reader to do the wrong thing. The documentary source prints 'הש״ץ בקול' with no condition only because that book assumes priests are present. The expanded book's direction should sit inside a birkat-kohanim=true conditional, or the no-priests branch should suppress it.",
+      "affects": [
+        "conditional_settings_approved"
+      ]
+    }
+  ],
+  "new_human_questions": [
+    "EN Shofarot Areshet (45) and EN Areshet (59): the Hebrew prints the rubric 'אַם שַׁבָּת.' before the Shabbat-only zikhron words, but the EN files have no rubric there. Please confirm against the EN scans (s307 and the s274 English page) that the English printing gives no 'On Sabbath' qualifier at that point. If it does, the rubric is missing from the documentary EN."
+  ],
+  "nonblocking_findings": [
+    "Alignment table: 44 + 46 = 90 rows. Every URN is unique within its poem. The table matches stanza-incpit-decisions-v3.json one-to-one, with no ordinal leftovers. Incipits shared across the two poems (derosh, zeh) are separate URNs under different poem namespaces. Similar stems within Essa ('kol' כָּל vs 'qol' קוֹל, 'sodo' vs 'sod') are distinct.",
+    "Anusah row 31 (illitani): the HE text has no final sof-pasuq colon, unlike the other rows. The source text was accepted, so this is noted only as a check.",
+    "Musaf HE kohanim_intro (05) quotes the Shacharit context identity through seg/@source with the pointing 'בַּבְּרָכָה' (dagesh). The Shacharit occurrence (25) reads 'בַבְּרָכָה'. This fits the stated literal-occurrence policy, but a consumer that compares @source text exactly will see a mismatch.",
+    "Musaf HE kohanim_intro's seg/@source and Musaf EN kohanim_intro's milestone/@corresp both target urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/birkat_kohanim/birkat_kohanim. That registry record has status=context and references amidah/birkat_kohanim_leshatz. The EN file therefore defines its first English text under a context URN, not a canonical one. This matches the stated design but should be checked against the registry policy for context identities that carry translations.",
+    "Page-break placement differs between the languages. HE main pb 137 ed='1965' is in the HE spine inside the weekday conditional, before the Essa transclude. EN main pb 137 ed='1965' is inside the EN Essa poem file. Neither is outside a conditional or unconditional, but someone should confirm that the HE Essa file (09, not read) does not also contain pb 137 ed='1965', which would duplicate it.",
+    "Alternate edition token '1965 rosh_hashanah/musaf/repetition/anusah_leezrah' is used consistently on every alternate page break I read: HE 137, 142, 143 and EN 137, 138, 139, 140, 141. HE 138–141 and EN 142–143 are in parts I did not read.",
+    "Old Shacharit HE birkat_kohanim (25): three whitespace-only <seg source='urn:x-opensiddur:text:prayer:amidah/birkat_kohanim_leshatz'> elements sit between the verse quotations. They are harmless but attribute empty text to a canonical identity.",
+    "HE shofarot_calls (07) has an empty <p> </p> after the instruction note. The file is unchanged.",
+    "The documentary EN spine has no counterpart to the HE shofarot_calls conditional, and the manifest lists no EN shofarot_calls file. I take this as English not printing the calls, which is acceptable.",
+    "Expanded spine: the conditional labels (On weekdays / On the Sabbath / custom / no priestly blessing) are bilingual, but the role labels (קהל / חזן / תוקע) are Hebrew only. The priests-present branch has no explicit bilingual condition label; its bilingual description implies the condition.",
+    "Documentary HE Hayom/Areshet 'קו״ח (קהל וחזן)' description notes have no role corresp. This is acceptable because they name a joint congregation-and-cantor actor.",
+    "Verified as correct: Hayom and Areshet inclusion and cantor-repeat condition trees in the documentary HE and EN spines and in the expanded spine match canonical-and-practice-evidence-v3.json exactly. The variant declarations are correct: first printing (he/en first_printing=true), Zikhronot (zikhronot_printing=true, teqiot=false) and Shofarot (teqiot_veseder_shofarot=true, all others false). The one new bilingual condition URN has no he/en split. The image s306 confirms that Ken Tagen ends both streams and that the Anusah stream closes with Zechariah 9:14 plus the 9:15 part 'adonai_tzevaot_yagen'. The expanded book prints Ken Tagen once after the alternatives. Shofar calls are limited to shabbat=false with the role blower. The priests branch (Veteerav by the congregation, She'otekha by the cantor) and the no-priests branch (Vetechezeinah) are complementary under the binary feature."
+  ],
+  "scope_limitations": [
+    "I read these with only the Read tool. I did not recompute any SHA-256 values, so I cannot confirm that the event streams correspond to the manifest SHAs.",
+    "Not read: draft-schema-validation-v3-report.json, registry-additions-v3.json, realization-impact-v3.json, bible-source-projection-proof.json, candidate-current.json, the expanded index.xml, the three settings YAML files, prior encoding-guidelines/alignment/order reports, and all diff chunks. Because of this I have not checked the claims about the registry (status=context, removal of the Az Yashir range record, no unused literal_intro URN), the settings, or the realization payloads.",
+    "Not read: event files 00-03 and 32-36 (Retzeh, Modim, Modim derabbanan, Hodaah literal @source handling, and the sic/corr 'sindnesses→kindnesses' in EN Modim), 17-20 and 49-51 (word-part libraries, including the areshet conclusion text where the Teqiot/Shofarot wording alternative is actually realized), 06, 09, 11, 22-24, 26-29, 39, 43 and 53-58. I also read only parts of 10, 41 and 42. The prior-unreviewed files rh_avodah, rh_hodaah, amidah_modim_derabbanan, musaf_shofarot_*, musaf_hayom_harat_olam and the old Minchah Modim derabbanan context file were not read, apart from 25 and 30.",
+    "Header lines 1-55 of 30 were skipped. Those lines in every other file I read were standard boilerplate.",
+    "Alignment is approved at the level of the row table and incipit decisions. In the XML I checked stanza milestones and Bible-quote order only for HE Anusah stanzas 35-46 and EN Anusah stanzas 1-36, and their Bible quotes. I did not check them for most of Essa.",
+    "Documentary fidelity is not approved because the files carrying the main fidelity changes (Modim sic/corr, Retzeh/Modim @source, areshet word-part alternatives, Hodaah, Modim derabbanan) were not read. This is a scope limitation, not a finding of error.",
+    "V3 QA is still running. This review makes no claim of export approval."
+  ],
+  "verdict": "NOT APPROVED. One blocking issue: in the expanded book, the new direction 'The cantor says the word Kohanim aloud' has no condition, even though the spine declares a birkat-kohanim=false branch. Without priests, Kohanim is not called out, so the direction must be conditioned on birkat-kohanim=true. The 90-row incipit alignment table is approved as one-to-one. The recitation order in the files I read is correct. The Hayom/Areshet condition trees and the Teqiot/Shofarot variant declarations match the evidence exactly. The parts of the alternate page-break token I read are consistent. Several requested checks are incomplete, mainly the Modim/Retzeh/sic-corr files, the word-part libraries, the registry/settings/realization reports and the SHA verification, so overall approval and documentary-fidelity approval are withheld.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "5ffce14a-72ac-4965-845c-b98dbd21eef5"
+  }
+}

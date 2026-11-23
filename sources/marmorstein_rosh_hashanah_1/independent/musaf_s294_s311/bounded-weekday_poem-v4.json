@@ -1,0 +1,65 @@
+{
+  "scope": "weekday_poem",
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "medium"
+  },
+  "approved": false,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/bounded-review-v4/rule-stanzas.md",
+    "/tmp/mahzor-s294/bounded-review-v4/rule-scope.md",
+    "/tmp/mahzor-s294/bounded-review-v4/rule-verse_numbering.md",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__musaf_essa_dei_betzedeq__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__musaf_essa_dei_betzedeq__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__musaf_repetition_shofarot_verses__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__musaf_repetition_shofarot_verses__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__musaf_repetition_ken_tagen_words__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__musaf_repetition_ken_tagen_words__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__musaf_repetition_ken_tagen_weekday__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__musaf_repetition_ken_tagen_weekday__body00.jsonl",
+    "/tmp/mahzor-s294/rendered-stanza-projection-proof-v3.json",
+    "/tmp/mahzor-s294/bible-source-projection-proof.json",
+    "/tmp/mahzor-s294/stanza-incpit-decisions-v3.json",
+    "/tmp/mahzor-s294/validation-source-evidence-v4.json"
+  ],
+  "blocking_findings": [
+    {
+      "id": "essa-incipit-qamatz-qatan-hakhshal",
+      "location": "HE essa body00 line 60; EN essa body00 line 51; stanza-incpit-decisions-v3.json lines 50-55",
+      "finding": "Stanza URN essa_dei_betzedeq/hakhshal is the incipit הָכְשַׁל. That word is a hof'al perfect, so the qamatz under the heh is a qamatz qatan. The transliteration table in rule-stanzas.md (line 127: qamatz qatan → o) gives 'hokhshal'. The same files already apply this rule correctly in /kol (כָּל), so the URN set is inconsistent within itself.",
+      "required_fix": "Rename to urn:x-opensiddur:text:poem:essa_dei_betzedeq/hokhshal in both HE and EN, and in the incipit decisions record."
+    },
+    {
+      "id": "essa-incipit-qamatz-qatan-haonash",
+      "location": "HE essa body00 line 65; EN essa body00 line 56; stanza-incpit-decisions-v3.json lines 56-61",
+      "finding": "Stanza URN essa_dei_betzedeq/haonash is the incipit הָעֳנַשׁ, also a hof'al. The hataf qamatz under the ayin confirms the qamatz qatan under the heh. The table gives qamatz qatan → o and hataf qamatz → o, so the slug should be 'hoonash'.",
+      "required_fix": "Rename to urn:x-opensiddur:text:poem:essa_dei_betzedeq/hoonash in both HE and EN, and in the incipit decisions record."
+    }
+  ],
+  "new_human_questions": [],
+  "nonblocking_findings": [
+    "Essa is complete in both languages. HE and EN each have 44 stanza milestones in the same order with matching URNs, one-to-one. No ordinal stanza_N URNs are emitted. Every stanza is closed by a bare stanza terminator. The ק׳/קהל and חזן rubric notes sit outside stanza scope. There are no empty or unfilled translations.",
+    "The other 42 stanza slugs check out against the transliteration rules: dagesh doubling, sounded/silent shva, tsere+yod → ei, no apostrophes. Human reading יֹקֶשׁ (holam) is present at HE line 120, and the slug 'yoqesh' matches it.",
+    "Page breaks are consistent. HE pages 137–143 map to n293, n295, …, n305 and EN pages to n294, …, n306, which fits the facs n = PDF scan − 1 convention for facing pages. All pb@n values increase monotonically and match between languages.",
+    "The HE essa file has no explicit opening pb for page 137, only div@facs n293. The EN file opens with pb n=137 at n294. This is probably due to earlier content on HE page 137 in a preceding file, but I could not confirm that within this scope.",
+    "The shofarot chain has exactly 17 verse units in both languages, in the same order as the bible projection proof. Ex 20:18 uses canonical n=18 and source bible:exodus/20/18, not the traditional 15. The HE Ex 20:18 seg crosses pb 143 (n305), so it carries both leaves. Second Ex 19 occurrence uses its own context URN (occurrence_19), so nothing is duplicated.",
+    "Every chapter and verse scope closes with matching bare terminators before the next intro prayer-part. Zech 9:15 is a named verse-part (adonai_tzevaot_yagen) under a partial_15 chapter context. It is closed by verse-part, then verse, then chapter terminators, and makes no claim to the whole chapter or verse.",
+    "Ken tagen appears once as a prayer-part in each language's ken_tagen_words stream (HE n305, EN n306, page 143), closed by a bare terminator. ken_tagen_weekday transcludes it once per language with matching @ids. Slug ken_tagen_al_ammekha_yisrael is correctly transliterated.",
+    "The EN Psalm 150:6 sic/corr adds the closing quotation mark. It is an editorial choice that is visible in the file; it is not drift."
+  ],
+  "scope_limitations": [
+    "I did not compare against the source images. Exactness of words, pointing and punctuation rests on the supplied proofs: rendered-stanza-projection-proof-v3 (essa he/en, 44 stanzas, exact) and bible-source-projection-proof (shofarot_verses he/en, exact). Accepted readings were not reopened.",
+    "The supplied evidence has no separate 180-row compiled-proof file. The two proof files listed above are the evidence I relied on.",
+    "I could not check whether the EN essa omits Cong./Reader rubrics because the English printing lacks them.",
+    "Where ken tagen sits in the shared spine ('expanded once after alternatives') is covered by the separate shared-spine review. Here I only checked that each stream transcludes it exactly once.",
+    "Header metadata, code, export and the other groups are out of scope."
+  ],
+  "verdict": "Not approved. Two stanza URN slugs, essa_dei_betzedeq/hakhshal and /haonash, break the qamatz-qatan transliteration rule and should be renamed to /hokhshal and /hoonash in HE, EN and the incipit decisions record. Everything else in scope passes: 44-stanza HE/EN coverage and boundaries, the 17-verse shofarot chain with canonical Ex 20:18 and its cross-page scope, the bounded Zech 9:15 verse-part, the ken tagen home and single transclusion, page-boundary facs, and complete translations with no drift. Re-review only needs to confirm the two renamed URNs.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "972f2977-4c6c-4c01-ae57-98fea9d0248c"
+  }
+}

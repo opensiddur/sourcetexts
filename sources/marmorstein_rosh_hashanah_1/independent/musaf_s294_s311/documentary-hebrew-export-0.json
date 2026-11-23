@@ -1,0 +1,67 @@
+{
+  "scope": "documentary-hebrew-export-0",
+  "approved": false,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/documentary-hebrew-export-manifest.json",
+    "/tmp/mahzor-s294/full-pdf-images/documentary-hebrew-78.png",
+    "/tmp/mahzor-s294/full-pdf-images/documentary-hebrew-79.png",
+    "/tmp/mahzor-s294/full-pdf-images/documentary-hebrew-80.png",
+    "/tmp/mahzor-s294/full-pdf-images/documentary-hebrew-81.png",
+    "/tmp/mahzor-s294/full-pdf-images/documentary-hebrew-82.png",
+    "/tmp/mahzor-s294/full-pdf-images/documentary-hebrew.html-1280.png",
+    "/tmp/mahzor-s294/full-pdf-images/documentary-hebrew.html-390.png"
+  ],
+  "blocking_findings": [
+    {
+      "id": "B1",
+      "location": "PDF image 81 (printed p.73), footnote 96, marker after the priestly-blessing introduction ending 'כָּאָמוּר:'",
+      "issue": "The note that labels the missing later source is out of date and contradicts the pages before it. It says the transcription covers Zikhronot and the opening of Shofarot (אתה נגלית), and that 'המשך שופרות והמשך התפילה טרם נכללו' (the rest of Shofarot and of the service is not yet included). But pages 78–80 contain the full Shofarot section: verses, Hallelujah, 'כן תגן', אלהינו ואלהי אבותינו תקע, the shofar-blowing instruction, היום הרת עולם, ארשת, רצה, and modim/priestly-blessing introduction. So the missing-source label is not accurate. It should say that the batch ends at the priestly-blessing introduction and that the actual verses (source 312 onward) are not yet included. The mixed Hebrew/Latin page reference in the note also renders with scrambled bidi order ('PDF292–293 (136;'), so it is hard to read.",
+      "fix": "Rewrite the note text to describe the real stopping point (after the priestly-blessing introduction, before the source-312 verses). Wrap the page/PDF reference in an LTR isolate (or put it in Hebrew order) so it displays correctly."
+    },
+    {
+      "id": "B2",
+      "location": "PDF image 81 (printed p.73)",
+      "issue": "Words run together where a bold instruction label meets the text that follows: 'השליח ציבור מסייםבָּרוּךְ' (no space between label and בָּרוּךְ) and 'השליח ציבור בקולכֹּהֲנִים' (בקול fused to כֹּהֲנִים). These are visible text defects in the final export.",
+      "fix": "Add the missing whitespace at the boundary between the label/instruction element and the text in the export transform."
+    }
+  ],
+  "nonblocking_findings": [
+    {
+      "id": "N1",
+      "location": "PDF image 80 (printed p.72), 'קהל וחזן ארשת … לקול אם שבת.[זכרון] תקיעתנו'",
+      "issue": "There is no space between 'שבת.' and the bracketed alternative '[זכרון]'. It is still readable, but tight.",
+      "fix": "Insert a space before the bracketed alternative."
+    },
+    {
+      "id": "N2",
+      "location": "PDF image 80 (printed p.72), footnote 95",
+      "issue": "Marker 95 sits at the left (line-end) margin between the line ending 'חובותינו' and the line starting 'כְּמִצְוָה (כמצוה)'. It looks like it floats between lines, so it is unclear which word it belongs to. It does not overlap the text enough to make it unreadable. The note body is only the label 'נוסח אחר', which presumably refers to the parenthetical alternative; that is acceptable, but the attachment is ambiguous.",
+      "fix": "Attach the marker directly to the parenthetical alternative, or keep it on the same baseline as that word."
+    },
+    {
+      "id": "N3",
+      "location": "PDF image 81 (printed p.73)",
+      "issue": "The marker for footnote 96 prints as a lone '96' on its own line below the 'כָּאָמוּר:' paragraph, not inline with the text.",
+      "fix": "Keep the note reference inline at the end of the paragraph."
+    },
+    {
+      "id": "N4",
+      "location": "PDF image 81 (printed p.73), back matter",
+      "issue": "The 'Metadata' heading has no content; 'Legal' follows it immediately.",
+      "fix": "Remove the empty heading or fill it in."
+    },
+    {
+      "id": "N5",
+      "location": "PDF images 78–80",
+      "issue": "Line spacing in the paired verse rows is uneven. Most rows are widely spaced, but two-line paragraphs (e.g. 'הַלְלוּהוּ כְּרֹב גֻּדְלוֹ…', 'הַלְלוּהוּ בִּגְבוּרֹתָיו…') are set tight. This looks like the result of the deliberate stylesheet choice, so it is cosmetic only.",
+      "fix": "Optional: make the leading consistent."
+    }
+  ],
+  "verdict": "Not approved. On all five PDF pages there is no clipping or overlap of text, and the Hebrew pointing (vowels, CGJ and mappiq) is readable. Source-link arrows (↗) are present, running prose and stanza rows render as the stylesheet intends, and the Sources/credits/license section and archive.org links are kept on PDF image 82. The HTML screenshots at 1280 and 390 show no horizontal overflow (manifest scrollWidth equals width, no broken links or duplicate IDs) and match the PDF content order. These pages are Hebrew-only, so there were no English columns to check. Approval is blocked by two things: (B1) the missing-source note 96 is out of date, still saying the rest of Shofarot is not included when it plainly is, so the end of the batch is mislabelled; and (B2) words are fused at label boundaries ('מסייםברוך', 'בקולכהנים'). Fix those and re-export; the nonblocking items are optional polish.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "0dceac94-e4de-4a73-95d9-43d76f99b803"
+  }
+}

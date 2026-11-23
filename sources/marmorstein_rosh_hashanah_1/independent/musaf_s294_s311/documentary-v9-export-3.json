@@ -1,0 +1,24 @@
+{
+  "scope": "documentary-v9-export-3",
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/documentary-export-manifest-v9.json",
+    "/tmp/mahzor-s294/full-pdf-images-v9/documentary-240.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "Page 240 is a metadata-only page with Legal, Contributor credits and Sources. It has no liturgical text, stanzas or notes, so stanza alignment and note placement don't apply to it. The editorial missing-source label for the ending isn't on this page, so it couldn't be checked here.",
+    "The running header still reads 'שיר של יום.' on the Metadata page. It is carried over from the last liturgical section. It renders correctly as RTL, with the period at the left end. You might want to suppress or change the running head on the metadata pages, but this is cosmetic.",
+    "The printed folio is 232 while the image index is 240. The offset of 8 fits unnumbered or roman-numbered front matter, so this is not an error.",
+    "Long monospace URLs break across lines. One break falls at a real hyphen, 'rosh' then '-hashanah', so the hyphen that starts the next line is part of the URL. The other breaks mid-token with no hyphen, 'detail' then 's/mahzor...'. Both breaks stay inside the text block, with no clipping and no overflow past the right margin. The cyan link boxes line up with the text and don't overlap the next lines.",
+    "Source entry [1] is complete and readable on this page: editors, title, publisher, year, internet_archive id, URL, visit date, digitization credit, holding library, the statement that the scan is the source, the independent-reader note, and the no-translation note. The CC0 license URL and both contributor roles (Markup editor and Transcriptionist, each listed as Codex from opensiddur.org) are present. More entries may continue on page 241, which is outside this range, so their absence here isn't a finding.",
+    "No HTML desktop or mobile screenshots were listed for this range. The manifest's HTML checks report no errors, duplicate IDs or broken internal links, scrollWidth equals viewport width at both 1280 and 390, and the main_text hashes match. I did not check these values independently."
+  ],
+  "verdict": "Approved for the assigned image (page 240 of 241). The metadata page has no clipping or overlap, the English text and Hebrew running header are readable, the section labels are correct, and the license, credits and source bibliography are present and intact. The findings above are cosmetic only.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "28e60794-55bd-41d5-8b21-c8af1e95b030"
+  }
+}

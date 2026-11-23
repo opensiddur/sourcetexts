@@ -1,0 +1,27 @@
+{
+  "scope": "documentary-v7-export-1",
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/documentary-export-manifest-v7.json",
+    "/tmp/mahzor-s294/full-pdf-images-v7/documentary-228.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/documentary-229.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/documentary-230.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/documentary-231.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/documentary-232.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/documentary-233.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "Coverage gap: the six assigned images are printed pages 220–225. They run from the end of one Shofarot section, through the 'On Sabbath' alphabetical piyyut, into the Shofarot verses that follow it. Page 225 (image 233) ends on the Isaiah verse ('And on that day the great Shofar will be blown…'). The batch end you described isn't in these images: the priestly-blessing introduction, the stop before the source312 verses, the 'missing later source' label, and the source links, sources and credits. I could not verify any of those here. They need their own review against the later page images.",
+    "No HTML desktop or mobile screenshots were listed, so none were reviewed. The manifest's html_checks show both viewports (1280 and 390) with scrollWidth equal to width, no errors, no duplicate IDs and no broken internal links. That is noted for context only.",
+    "Pages 221→222 (images 229→230): the paired row for 'And the Lord will appear to them…' is split across the page break. The Hebrew finishes on p.221, and the last two lines of the English ('Lord God will blow the Shofar… whirlwinds of the south.') carry over to the top of p.222 with an empty Hebrew column next to them. Nothing is clipped and the next row ('יְיָ צְבָאוֹת יָגֵן עֲלֵיהֶם' / 'The Lord of Hosts will protect them'.') lines up correctly. This is cosmetic only. Keeping split rows together on one page would be optional polish.",
+    "For awareness only, not reopening anything: on p.225 (image 233) the stanza 'עִלִּיתָנִי אֵל… בְּחוֹרֵב תִּתָּה קוֹל' is the only stanza in the batch printed without a final sof-pasuq ':'. The source and encoding are already approved, so this is logged only so the export reviewer knows it is not a rendering loss."
+  ],
+  "verdict": "Approved for the assigned pages 220–225 (images 228–233). Nothing is clipped. Hebrew and English columns don't overlap, and both stay inside the margins. The running heads and page numbers alternate correctly between recto and verso. Hebrew vowel points, dagesh/mappiq (e.g. וְנִלְוָה, יְהוֹה, עַמְּךָ), maqaf and sof-pasuq render cleanly and are readable at page size. I saw no stray CGJ boxes or detached marks. The ↗ markers appear consistently in both Hebrew and English (e.g. ↗אָנוּסָה / ↗I hasten; ↗כַּכָּתוּב עַל יַד נְבִיאֶךָ / ↗As it is written through Thy prophet). The חזן and קהל rubrics are bold and correctly placed. Stanza rows are paired and top-aligned throughout. The section break before 'אִם שַׁבָּת / On Sabbath.' (rule, then bold heading, then the HE-only note 'מיוסד ע\"ס א\"ב כפול בראשי החרוזות') matches the intended stylesheet. There are no footnotes on these pages, so note order and placement didn't come up. Approval covers only these six pages. The priestly-blessing endpoint, the missing-source label and the sources/credits are outside the assigned images and still need checking separately.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "a5e12a8a-4038-408c-b775-1a74999bdf3b"
+  }
+}

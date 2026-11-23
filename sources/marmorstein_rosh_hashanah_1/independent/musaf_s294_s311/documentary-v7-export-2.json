@@ -1,0 +1,35 @@
+{
+  "scope": "documentary-v7-export-2",
+  "approved": false,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/documentary-export-manifest-v7.json",
+    "/tmp/mahzor-s294/full-pdf-images-v7/documentary-234.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/documentary-235.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/documentary-236.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/documentary-237.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/documentary-238.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/documentary-239.png"
+  ],
+  "blocking_findings": [
+    "documentary-239.png (printed p. 231), footnote area: the number for footnote 132 is on the same line as the English text of footnote 131. The line reads '…(scan311). The priestly 132' and then continues with 'verses and following service, beginning on scan312, remain unencoded.' So the 132 label splits the end-of-batch note's English sentence in two. The body of note 132 does not appear on this page. This note is the one that tells readers the later source is missing, so it has to read cleanly. Note 132 needs its own line with its body, either on this page or clearly carried over to the next.",
+    "documentary-239.png (printed p. 231): the footnote 131 marker sits by itself at the right margin under the English column (about y=753). It is not attached to the Hebrew or English text of the priestly-blessing introduction ('…כָּאָמוּר:' / 'as it is said:'). Readers cannot tell which text the end-of-batch note refers to. Attach the marker to the end of the introduction text."
+  ],
+  "nonblocking_findings": [
+    "documentary-239.png (p. 231): the running header says 'שיר של יום.' but the top half of the page is still the Musaf repetition (end of Modim, Sim Shalom lead-in, priestly-blessing introduction). The header appears to take the last section heading on the page instead of the first.",
+    "documentary-238.png (p. 230): there is no space between the bold rubric and the text in 'השליח ציבור מסיים' + 'בָּרוּךְ', so they run together.",
+    "documentary-239.png (p. 231): same missing space in the priestly-blessing introduction, where 'השליח ציבור בקול' runs into 'כֹּהֲנִים'.",
+    "documentary-237.png (p. 229): no space between 'אִם שַׁבָּת.' and '[זִכְרוֹן]'.",
+    "documentary-239.png (p. 231): paired rows drift apart. 'וּכְתוֹב לְחַיִּים…' (y≈368) sits about 27px above 'And inscribe…' (y≈395), and 'וְכֹל הַחַיִּים…' (y≈410) sits about 60px above 'And all the living…' (y≈470). The rows are still in the right order but no longer top-aligned the way the other paired rows in the batch are.",
+    "documentary-236.png (p. 228): footnote 130 (on 'כְּמִצְוָה') is raised far enough to sit almost between Hebrew lines and crowds the vowel marks above it. It is still legible. The footnote rule is drawn under the left (Hebrew) column, but the note text '130 נוסח אחר' is at the bottom right.",
+    "documentary-237.png (p. 229): the full-width rubrics 'תקיעה: תרועה: תקיעה:' and both 'קהל וחזן' are right-aligned over the English column, away from the Hebrew column on the left. They are readable, but visually cut off from the Hebrew they introduce.",
+    "Source links could not be checked from the page images (there are no visible URLs or link styling on these pages), and no HTML desktop or mobile screenshots were listed for this batch. For coverage I relied only on the manifest: 575 links, 528 valid named destinations, 0 broken internal links, 0 HTML errors at 1280 and 390 widths.",
+    "No clipping found on any of the six pages. Hebrew vowels, cantillation, combining grapheme joiner (CGJ) and mappiq render legibly. Mixed Hebrew/English text in the rubric 'to the דוכן, the congregation say: ותערב' reads correctly. The ↗ alternative-reading markers appear in both the Hebrew and English columns."
+  ],
+  "verdict": "Not approved. Pages 226–230 (images 234–238) are acceptable apart from minor spacing problems. The blocker is on printed p. 231 (image 239): the footnote 132 number lands in the middle of the English text of the end-of-batch note 131, the body of note 132 is not shown, and the note 131 marker is not attached to the priestly-blessing introduction it refers to. Fix the footnote numbering and placement on p. 231, then re-export. Fixing the running header and the missing spaces after rubrics at the same time is recommended.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "709885f5-2bcd-4010-a51d-f8c1493701da"
+  }
+}

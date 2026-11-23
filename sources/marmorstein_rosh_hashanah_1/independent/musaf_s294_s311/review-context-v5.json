@@ -1,0 +1,464 @@
+{
+  "existing_registry_records": [
+    {
+      "urn": "urn:x-opensiddur:text:siddur:rosh_hashanah/text/vekhol_hachayyim",
+      "status": "canonical",
+      "canonical": null,
+      "parent": "urn:x-opensiddur:text:siddur:rosh_hashanah/text",
+      "kind": null,
+      "label_he": null,
+      "label_en": "rosh hashanah — text — vekhol hahayim",
+      "references": [],
+      "note": null,
+      "context_urn": null,
+      "source_file": "siddur.jsonl",
+      "line": 895,
+      "extra": {}
+    },
+    {
+      "urn": "urn:x-opensiddur:text:siddur:rosh_hashanah/minchah_maariv/amidah/uvekhen_ten_kavod",
+      "status": "context",
+      "canonical": null,
+      "parent": "urn:x-opensiddur:text:siddur:rosh_hashanah/minchah_maariv/amidah",
+      "kind": null,
+      "label_he": "ובכן תן כבוד",
+      "label_en": "Evening Prayer for the New Year — Grant honour",
+      "references": [
+        "https://archive.org/details/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965"
+      ],
+      "note": "Edition arrangement or bounded quotation context; not an independent canonical prayer or complete biblical chapter/verse.",
+      "context_urn": null,
+      "source_file": "siddur.jsonl",
+      "line": 2850,
+      "extra": {}
+    }
+  ],
+  "existing_titles_and_condition_metadata": [
+    {
+      "stem": "amidah_modim_derabbanan",
+      "old_accepted_title": {
+        "he": "תפלת מנחה — modim_derabbanan",
+        "en": "Weekday Minchah — modim_derabbanan"
+      },
+      "new_title": {
+        "he": "תפלת מנחה — modim_derabbanan",
+        "en": "Weekday Minchah — modim_derabbanan"
+      },
+      "title_unchanged": true,
+      "old_wording_selection": null,
+      "new_wording_selection": null,
+      "canonical_home": {
+        "file": "amidah_modim_derabbanan_parts",
+        "urn": "urn:x-opensiddur:text:prayer:amidah/hodaah/modim_derabbanan",
+        "title": {
+          "he": "תפלת מנחה — modim_derabbanan",
+          "en": "Weekday Minchah — modim_derabbanan"
+        },
+        "map_root": false,
+        "omit_publication_urn": false,
+        "context_urn": "urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/modim_derabbanan",
+        "context": "literal"
+      },
+      "review_encoding": null
+    },
+    {
+      "stem": "rh_avodah",
+      "old_accepted_title": {
+        "he": "עבודה",
+        "en": "Evening Prayer for the New Year — Service"
+      },
+      "new_title": {
+        "he": "עבודה",
+        "en": "Evening Prayer for the New Year — Service"
+      },
+      "title_unchanged": true,
+      "old_wording_selection": null,
+      "new_wording_selection": null,
+      "canonical_home": {
+        "file": "amidah_avodah_parts",
+        "urn": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/avodah_word_parts",
+        "title": {
+          "he": "עבודה",
+          "en": "Evening Prayer for the New Year — Service"
+        },
+        "map_root": false,
+        "omit_publication_urn": true
+      },
+      "review_encoding": null
+    },
+    {
+      "stem": "rh_hodaah",
+      "old_accepted_title": {
+        "he": "הודאה",
+        "en": "Evening Prayer for the New Year — Thanksgiving"
+      },
+      "new_title": {
+        "he": "הודאה",
+        "en": "Evening Prayer for the New Year — Thanksgiving"
+      },
+      "title_unchanged": true,
+      "old_wording_selection": null,
+      "new_wording_selection": null,
+      "canonical_home": {
+        "file": "amidah_hodaah_parts",
+        "urn": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/hodaah_word_parts",
+        "title": {
+          "he": "הודאה",
+          "en": "Evening Prayer for the New Year — Thanksgiving"
+        },
+        "map_root": false,
+        "omit_publication_urn": true,
+        "context": "literal"
+      },
+      "review_encoding": null
+    },
+    {
+      "stem": "rh_uvekhen_ten_kavod",
+      "old_accepted_title": {
+        "he": "ובכן תן כבוד",
+        "en": "Evening Prayer for the New Year — Grant honour"
+      },
+      "new_title": {
+        "he": "ובכן תן כבוד",
+        "en": "Evening Prayer for the New Year — Grant honour"
+      },
+      "title_unchanged": true,
+      "old_wording_selection": null,
+      "new_wording_selection": null,
+      "canonical_home": {
+        "file": "amidah_uvekhen_ten_kavod_parts",
+        "urn": "urn:x-opensiddur:text:prayer:amidah/uvekhen_ten_kavod",
+        "title": {
+          "he": "ובכן תן כבוד",
+          "en": "Evening Prayer for the New Year — Grant honour"
+        },
+        "context_urn": "urn:x-opensiddur:text:siddur:rosh_hashanah/minchah_maariv/amidah/uvekhen_ten_kavod",
+        "context": "literal",
+        "map_root": false
+      },
+      "review_encoding": null
+    },
+    {
+      "stem": "musaf_areshet_sefatenu",
+      "old_accepted_title": {
+        "he": "ארשת שפתינו",
+        "en": "May the utterance of our lips be pleasing"
+      },
+      "new_title": {
+        "he": "ארשת שפתינו",
+        "en": "May the utterance of our lips be pleasing"
+      },
+      "title_unchanged": true,
+      "old_wording_selection": [
+        {
+          "type": "opensiddur:variant",
+          "features": {
+            "urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/he/first_printing": true,
+            "urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/he/zikhronot_printing": false,
+            "urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/en/first_printing": true,
+            "urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/en/zikhronot_printing": false
+          }
+        }
+      ],
+      "new_wording_selection": [
+        {
+          "type": "opensiddur:variant",
+          "features": {
+            "urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/he/first_printing": true,
+            "urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/he/zikhronot_printing": false,
+            "urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/en/first_printing": true,
+            "urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/en/zikhronot_printing": false,
+            "urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/teqiot_veseder_shofarot": false
+          }
+        }
+      ],
+      "canonical_home": null,
+      "review_encoding": true
+    },
+    {
+      "stem": "musaf_repetition_zikhronot_areshet",
+      "old_accepted_title": {
+        "he": "ארשת שפתינו",
+        "en": "May the utterance of our lips be pleasing"
+      },
+      "new_title": {
+        "he": "ארשת שפתינו",
+        "en": "May the utterance of our lips be pleasing"
+      },
+      "title_unchanged": true,
+      "old_wording_selection": [
+        {
+          "type": "opensiddur:variant",
+          "features": {
+            "urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/he/first_printing": false,
+            "urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/he/zikhronot_printing": true,
+            "urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/en/first_printing": false,
+            "urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/en/zikhronot_printing": true
+          }
+        }
+      ],
+      "new_wording_selection": [
+        {
+          "type": "opensiddur:variant",
+          "features": {
+            "urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/he/first_printing": false,
+            "urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/he/zikhronot_printing": true,
+            "urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/en/first_printing": false,
+            "urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/en/zikhronot_printing": true,
+            "urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/teqiot_veseder_shofarot": false
+          }
+        }
+      ],
+      "canonical_home": null,
+      "review_encoding": true
+    },
+    {
+      "stem": "repetition_birkat_kohanim",
+      "old_accepted_title": {
+        "he": "ברכת כהנים",
+        "en": "ברכת כהנים"
+      },
+      "new_title": {
+        "he": "ברכת כהנים",
+        "en": "ברכת כהנים"
+      },
+      "title_unchanged": true,
+      "old_wording_selection": null,
+      "new_wording_selection": null,
+      "canonical_home": null,
+      "review_encoding": true
+    }
+  ],
+  "zikhron_canonical_home": {
+    "stem": "musaf_repetition_areshet_zikhron_words",
+    "urn": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/areshet_zikhron_words",
+    "title": {
+      "he": "זכרון",
+      "en": "The memory of"
+    },
+    "languages": {
+      "he": [
+        {
+          "paragraph": 1,
+          "corresp": "urn:x-opensiddur:text:prayer:areshet_sefatenu/zikhron",
+          "end_reference": true,
+          "fragments": [
+            {
+              "scan": "s308",
+              "printed_page": "144",
+              "text": "זִכְרוֹן",
+              "page_start": false
+            }
+          ]
+        }
+      ],
+      "en": [
+        {
+          "paragraph": 1,
+          "corresp": "urn:x-opensiddur:text:prayer:areshet_sefatenu/zikhron",
+          "end_reference": true,
+          "fragments": [
+            {
+              "scan": "s309",
+              "printed_page": "144",
+              "text": "the memory of",
+              "page_start": false
+            }
+          ]
+        }
+      ]
+    },
+    "canonical_parts": true
+  },
+  "marked_literal_occurrences": [
+    {
+      "stem": "musaf_areshet_sefatenu",
+      "lang": "he",
+      "segment": {
+        "paragraph": 1,
+        "conditions": [
+          {
+            "type": "opensiddur:holiday-aggregate",
+            "features": {
+              "shabbat": true
+            }
+          }
+        ],
+        "marked": true,
+        "fragments": [
+          {
+            "scan": "s274",
+            "printed_page": "127",
+            "text": "(זִכְרוֹן)",
+            "page_start": false
+          }
+        ],
+        "condition_instruction": "אַם שַׁבָּת.",
+        "condition_instruction_language": "de-Hebr"
+      }
+    },
+    {
+      "stem": "musaf_areshet_sefatenu",
+      "lang": "en",
+      "segment": {
+        "paragraph": 1,
+        "conditions": [
+          {
+            "type": "opensiddur:holiday-aggregate",
+            "features": {
+              "shabbat": true
+            }
+          }
+        ],
+        "marked": true,
+        "fragments": [
+          {
+            "scan": "s275",
+            "printed_page": "127",
+            "text": "(the memory of)",
+            "page_start": false
+          }
+        ]
+      }
+    },
+    {
+      "stem": "musaf_repetition_zikhronot_areshet",
+      "lang": "he",
+      "segment": {
+        "paragraph": 1,
+        "fragments": [
+          {
+            "scan": "s292",
+            "printed_page": "136",
+            "text": "(זִכְרוֹן)",
+            "page_start": false
+          }
+        ],
+        "marked": true,
+        "conditions": [
+          {
+            "type": "opensiddur:holiday-aggregate",
+            "features": {
+              "shabbat": true
+            }
+          }
+        ],
+        "condition_instruction": "אַם שַׁבָּת.",
+        "condition_instruction_language": "de-Hebr",
+        "canonical": "urn:x-opensiddur:text:prayer:areshet_sefatenu/zikhron"
+      }
+    },
+    {
+      "stem": "musaf_repetition_zikhronot_areshet",
+      "lang": "en",
+      "segment": {
+        "paragraph": 1,
+        "fragments": [
+          {
+            "scan": "s293",
+            "printed_page": "136",
+            "text": "(the memory of)",
+            "page_start": false
+          }
+        ],
+        "marked": true,
+        "conditions": [
+          {
+            "type": "opensiddur:holiday-aggregate",
+            "features": {
+              "shabbat": true
+            }
+          }
+        ],
+        "canonical": "urn:x-opensiddur:text:prayer:areshet_sefatenu/zikhron"
+      }
+    },
+    {
+      "stem": "musaf_repetition_shofarot_areshet",
+      "lang": "he",
+      "segment": {
+        "paragraph": 1,
+        "canonical": "urn:x-opensiddur:text:prayer:areshet_sefatenu/zikhron",
+        "fragments": [
+          {
+            "scan": "s308",
+            "printed_page": "144",
+            "text": "(זִכְרוֹן)",
+            "page_start": false
+          }
+        ],
+        "marked": true,
+        "conditions": [
+          {
+            "type": "opensiddur:holiday-aggregate",
+            "features": {
+              "shabbat": true
+            }
+          }
+        ],
+        "condition_instruction": "אַם שַׁבָּת.",
+        "condition_instruction_language": "de-Hebr"
+      }
+    },
+    {
+      "stem": "musaf_repetition_shofarot_areshet",
+      "lang": "en",
+      "segment": {
+        "paragraph": 1,
+        "canonical": "urn:x-opensiddur:text:prayer:areshet_sefatenu/zikhron",
+        "fragments": [
+          {
+            "scan": "s309",
+            "printed_page": "144",
+            "text": "(the memory of)",
+            "page_start": false
+          }
+        ],
+        "marked": true,
+        "conditions": [
+          {
+            "type": "opensiddur:holiday-aggregate",
+            "features": {
+              "shabbat": true
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "page_less_structural_containers": [
+    {
+      "stem": "psalm_24",
+      "actual_body": "<tei:body xmlns:tei=\"http://www.tei-c.org/ns/1.0\" xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\">\n      <tei:div facs=\"https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n350.jpg\">\n        <tei:p><tei:pb ed=\"1965\" facs=\"https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n350.jpg\"/><tei:milestone unit=\"chapter\" n=\"24\" corresp=\"urn:x-opensiddur:text:bible:psalms/24\"/><tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:bible:psalms/24/1\" n=\"1\"/>לְדָוִד מִזְמוֹר. לַ<j:divineName>ייָ</j:divineName> הָאָרֶץ וּמְלוֹאָהּ תֵּבֵל וְיֹשְׁבֵי בָהּ: <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:bible:psalms/24/2\" n=\"2\"/>כִּי הוּא עַל־יַמִּים יְסָדָהּ. וְעַל־נְהָרוֹת יְכוֹנְנֶהָ: <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:bible:psalms/24/3\" n=\"3\"/>מִי־יַעֲלֶה בְהַר <j:divineName>יְיָ</j:divineName>. וּמִי־יָקוּם בִּמְקוֹם קָדְשׁוֹ: <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:bible:psalms/24/4\" n=\"4\"/>נְקִי כַפַּיִם וּבַר לֵבָב. אֲשֶׁר לֹא־נָשָׂא לַשָּׁוְא נַפְשִׁי וְלֹא נִשְׁבַּע לְמִרְמָה: <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:bible:psalms/24/5\" n=\"5\"/>יִשָּׂא בְרָכָה מֵאֵת־<j:divineName>יְיָ</j:divineName>. וּצְדָקָה מֵאֱלֹהֵי יִשְׁעוֹ: <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:bible:psalms/24/6\" n=\"6\"/>זֶה דּוֹר דֹּרְשָׁו. מְבַקְשֵׁי פָנֶיךָ יַעֲקֹב סֶלָה: <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:bible:psalms/24/7\" n=\"7\"/>שְׂאוּ שְׁעָרִים רָאשֵׁיכֶם וְהִנָּשְׂאוּ פִּתְחֵי עוֹלָם. וְיָבוֹא מֶלֶךְ הַכָּבוֹד: <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:bible:psalms/24/8\" n=\"8\"/>מִי זֶה מֶלֶךְ הַכָּבוֹד. <j:divineName>יְיָ</j:divineName> עִזּוּז וְגִבּוֹר <j:divineName>יְיָ</j:divineName> גִּבּוֹר מִלְחָמָה: <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:bible:psalms/24/9\" n=\"9\"/>שְׂאוּ שְׁעָרִים רָאשֵׁיכֶם וּשְׂאוּ פִּתְחֵי עוֹלָם. וְיָבֹא מֶלֶךְ הַכָּבוֹד: <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:bible:psalms/24/10\" n=\"10\"/>מִי הוּא זֶה מֶלֶךְ הַכָּבוֹד. <j:divineName>יְיָ</j:divineName> צְבָאוֹת הוּא מֶלֶךְ הַכָּבוֹד סֶלָה: <tei:milestone unit=\"verse\"/><tei:milestone unit=\"chapter\"/></tei:p>\n      </tei:div>\n    </tei:body>\n  "
+    },
+    {
+      "stem": "first_night_kiddush",
+      "actual_body": "<tei:body xmlns:tei=\"http://www.tei-c.org/ns/1.0\" xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\">\n      <tei:div corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/kiddush\">\n        <tei:pb ed=\"1965\" n=\"22\" facs=\"https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n35.jpg\"/>\n        <tei:head xml:lang=\"he\">סֵדֶר קִדּוּשׁ.</tei:head>\n        <tei:note type=\"instruction\" facs=\"https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n35.jpg\" xml:lang=\"en\">After the evening prayer but before <tei:foreign xml:lang=\"he\">עלינו</tei:foreign> the Kiddush is recited over a glass of wine. At home too, it is recited before the meal, but on the Sabbath preceded by <tei:foreign xml:lang=\"he\">ויכלו</tei:foreign></tei:note>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/text/vayekhulu@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:kiddush/savri@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:borei_peri_hagafen@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:kiddush_rosh_hashanah@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:shehecheyanu@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <tei:note type=\"instruction\" facs=\"https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n35.jpg\" xml:lang=\"en\">After Kiddush at the meal, one recites <tei:foreign xml:lang=\"he\">המוציא</tei:foreign> over the two loaves. After tasting the bread, one dips a piece of sweet apple in honey and says:</tei:note>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:borei_peri_haetz@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <tei:note type=\"instruction\" facs=\"https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n35.jpg\" xml:lang=\"en\">Then one eats the piece of apple and says:</tei:note>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:shetechaddesh_aleinu_shanah_tovah@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <tei:note type=\"instruction\" facs=\"https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n35.jpg\" xml:lang=\"en\">On the eve of the New Year, friends and acquaintances express their good wishes to one another in the following phrase:</tei:note>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/greeting@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n      </tei:div>\n    </tei:body>\n  "
+    },
+    {
+      "stem": "morning_blessings",
+      "actual_body": "<tei:body xmlns:tei=\"http://www.tei-c.org/ns/1.0\" xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\">\n      <tei:div corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/morning_blessings\">\n        <tei:pb ed=\"1965\" n=\"4\" facs=\"https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n43.jpg\"/>\n        <tei:head xml:lang=\"he\">תְּפִלַּת שַׁחֲרִית.</tei:head>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:poem:adon_olam@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:al_netilat_yadayim@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:asher_yatzar@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <tei:note type=\"instruction\" xml:lang=\"en\" facs=\"https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n43.jpg\">In most communities of the German rite <tei:foreign xml:lang=\"he\">אלהי נשמה</tei:foreign> <tei:seg type=\"optional-page-reference\">(P. <tei:ref type=\"page\" target=\"urn:x-opensiddur:text:prayer:elohai_neshamah@prayerbook_for_the_new_year-heidenheim-1965-he\"/>.)</tei:seg> follows here.</tei:note>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:birkhot_hatorah/laasoq@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:birkhot_hatorah/vehaarev@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:birkhot_hatorah/asher_bachar@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:bible:numbers/6/24-/6/26@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:ellu_devarim@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:elohai_neshamah@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:birkhot_hashachar/lasekhvi@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:birkhot_hashachar/shelo_asani_goy@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:birkhot_hashachar/shelo_asani_aved@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <tei:div>\n          <j:conditional xml:id=\"documentary_hashachar_men_he\">\n            <j:all>\n              <tei:fs type=\"opensiddur:person\">\n                <tei:f name=\"gender\">\n                  <tei:symbol value=\"male\"/>\n                </tei:f>\n              </tei:fs>\n            </j:all>\n          </j:conditional>\n          <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:birkhot_hashachar/shelo_asani_ishah@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n          <j:endConditional target=\"#documentary_hashachar_men_he\"/>\n        </tei:div>\n        <tei:div>\n          <j:conditional xml:id=\"documentary_hashachar_women_he\">\n            <tei:note type=\"instruction\" xml:lang=\"en\">In place of the preceding benediction women say:</tei:note>\n            <j:all>\n              <tei:fs type=\"opensiddur:person\">\n                <tei:f name=\"gender\">\n                  <tei:symbol value=\"female\"/>\n                </tei:f>\n              </tei:fs>\n            </j:all>\n          </j:conditional>\n          <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:birkhot_hashachar/sheasani_kirtzono@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n          <j:endConditional target=\"#documentary_hashachar_women_he\"/>\n        </tei:div>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:birkhot_hashachar/poqeach_ivrim@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:birkhot_hashachar/malbish_arummim@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:birkhot_hashachar/mattir_asurim@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:birkhot_hashachar/zoqef_kefufim@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:birkhot_hashachar/roqa_haaretz@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:birkhot_hashachar/sheasah_li@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:birkhot_hashachar/hamekhin@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:birkhot_hashachar/ozer_yisrael@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:birkhot_hashachar/oter_yisrael@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:birkhot_hashachar/hanoten_layaef@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:birkhot_hashachar/hamaavir_shenah@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:birkhot_hashachar/shetargilenu-/gomel_chasadim@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:birkhot_hashachar/shetatzileni@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <tei:note type=\"instruction\" facs=\"https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n49.jpg\" xml:lang=\"he\">לְעוֹלָם יְהֵא אָדָם יְרֵא שָׁמַיִם בְּסֵתֶר וּמוֹדֶה עַל־הָאֱמֶת וְדוֹבֵר אֱמֶת בִּלְבָבוֹ וְיַשְׁכֵּם וְיֹאמַר:</tei:note>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:ribbon_kol_haolamim@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:aval_anachnu@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/morning_blessings/lefikhakh@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/morning_blessings/shema_yisrael@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/morning_blessings/barukh_shem@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:attah_hu/ad_shelo-/uvishuatekha@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:attah_hu/bashamayim@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <tei:note type=\"instruction\" xml:lang=\"en\" facs=\"https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n51.jpg\">In most communities of the German rite the benedictions of the Torah <tei:seg type=\"optional-page-reference\">(page <tei:ref type=\"page\" target=\"urn:x-opensiddur:text:prayer:birkhot_hatorah/laasoq@prayerbook_for_the_new_year-heidenheim-1965-he\"/>)</tei:seg> are inserted here.</tei:note>\n      </tei:div>\n    </tei:body>\n  "
+    },
+    {
+      "stem": "morning_preliminaries",
+      "actual_body": "<tei:body xmlns:tei=\"http://www.tei-c.org/ns/1.0\" xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\">\n      <tei:div corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/morning_preliminaries\">\n        <tei:pb ed=\"1965\" n=\"2\" facs=\"https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n39.jpg\"/>\n        <tei:head xml:lang=\"he\">תְּפִלּוֹת.</tei:head>\n        <tei:note type=\"description\" facs=\"https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n39.jpg\" xml:lang=\"en\">On entering the Synagogue:</tei:note>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/morning_preliminaries/entrance@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/morning_preliminaries/mah_tovu@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:poem:shachar_avaqeshkha_gabirol@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <tei:note type=\"description\" facs=\"https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n39.jpg\" xml:lang=\"en\">Before the morning prayer:</tei:note>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/morning_preliminaries/before_prayer@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:poem:yigdal@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n      </tei:div>\n    </tei:body>\n  "
+    },
+    {
+      "stem": "morning_qorbanot",
+      "actual_body": "<tei:body xmlns:tei=\"http://www.tei-c.org/ns/1.0\" xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\">\n      <tei:div corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/morning_qorbanot\">\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:qorbanot/kiyyor@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:bible:leviticus/6/3-/6/4@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:qorbanot/tamid@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:qorbanot/veshachat@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:qorbanot/attah_hu@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:qorbanot/qetoret@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:qorbanot/pittum_haqetoret@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:qorbanot/pittum_haqetoret/rashbag@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:qorbanot/pittum_haqetoret/rabbi_natan@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:qorbanot/pittum_haqetoret/bar_kappara@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:qorbanot/pesuqim@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:qorbanot/attah_seter@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:qorbanot/vearvah@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:poem:anna_bekhoach@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/morning_qorbanot/barukh_shem@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <tei:div>\n          <j:conditional xml:id=\"documentary_morning_qorbanot_shabbat_he\">\n            <tei:note type=\"instruction\" xml:lang=\"de-Hebr\">אַם <tei:foreign xml:lang=\"he\">שַׁבָּת</tei:foreign> ווירד פֿאָלגענדעז איינגעסאַלטעט:</tei:note>\n            <j:all>\n              <tei:fs type=\"opensiddur:holiday-aggregate\">\n                <tei:f name=\"shabbat\">\n                  <tei:binary value=\"true\"/>\n                </tei:f>\n              </tei:fs>\n            </j:all>\n          </j:conditional>\n          <j:declare xml:id=\"qorbanot_musaf_shabbat_printed_wording_0\">\n            <tei:fs type=\"opensiddur:variant\">\n              <tei:f name=\"urn:x-opensiddur:condition:bible:numbers/28/9/he/prior_printing\">\n                <tei:binary value=\"true\"/>\n              </tei:f>\n              <tei:f name=\"urn:x-opensiddur:condition:bible:numbers/28/9/he/repetition_printing\">\n                <tei:binary value=\"false\"/>\n              </tei:f>\n              <tei:f name=\"urn:x-opensiddur:condition:bible:numbers/28/10/he/prior_printing\">\n                <tei:binary value=\"true\"/>\n              </tei:f>\n              <tei:f name=\"urn:x-opensiddur:condition:bible:numbers/28/10/he/repetition_printing\">\n                <tei:binary value=\"false\"/>\n              </tei:f>\n            </tei:fs>\n          </j:declare>\n          <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:qorbanot/musaf/shabbat@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n          <j:endDeclare target=\"#qorbanot_musaf_shabbat_printed_wording_0\"/>\n          <j:endConditional target=\"#documentary_morning_qorbanot_shabbat_he\"/>\n        </tei:div>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:eizehu_meqoman/1-/8@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:middot/lead-/13@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:middot/yehi_ratzon@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n      </tei:div>\n    </tei:body>\n  "
+    },
+    {
+      "stem": "tallith",
+      "actual_body": "<tei:body xmlns:tei=\"http://www.tei-c.org/ns/1.0\" xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\">\n      <tei:div corresp=\"urn:x-opensiddur:text:prayer:tallith\">\n        <tei:pb ed=\"1965\" n=\"1\" facs=\"https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n38.jpg\"/>\n        <tei:head xml:lang=\"he\">סֵֽדֶר עֲטִיפַת הַטַּלִּית.</tei:head>\n        <tei:note type=\"description\" facs=\"https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n38.jpg\" xml:lang=\"en\">Before draping oneself in the <tei:foreign xml:lang=\"he\">טלית</tei:foreign> the following is said:</tei:note>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:tallith/hineni_mitattef@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <tei:note type=\"description\" facs=\"https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n38.jpg\" xml:lang=\"en\">Then this <tei:foreign xml:lang=\"he\">ברכה</tei:foreign> is recited while standing:</tei:note>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:tallith/lehitattef@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <tei:note type=\"instruction\" facs=\"https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n38.jpg\" xml:lang=\"en\">One then drapes oneself in the <tei:foreign xml:lang=\"he\">טלית</tei:foreign> and says:</tei:note>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:tallith/mah_yaqar@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:tallith/yehi_ratzon@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n        <tei:note type=\"instruction\" facs=\"https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n38.jpg\" xml:lang=\"en\">One then removes the <tei:foreign xml:lang=\"he\">טלית</tei:foreign> from the face and drapes oneself in such a way that there should be one <tei:foreign xml:lang=\"he\">ציצת</tei:foreign> in front and one behind on each side.</tei:note>\n      </tei:div>\n    </tei:body>\n  "
+    }
+  ],
+  "clarifications": {
+    "review_encoding": "A mandatory canonical/encoding review gate. True means require a receipt, NOT review pending. Completion lives in reviews.json and is not encoded in this boolean.",
+    "source_fidelity": "Only canonical occurrence comparisons are auto-listed here. Literal source quotations are independently reviewed as XML and source blocks; an empty auto-comparison list is not an absence of source/semantic review.",
+    "canonical_home": "map_root false and omit_publication_urn true mean the GROUPING URN is not emitted as a whole-text identity or whole-publicationURN. Generic prayer milestones inside are the actual identities. No new prayer identity created for grouping.",
+    "publication_urn": "No requirement that every physical XML fragment have a whole-file publicationURN. Pure word collections containing independently addressed parts omit a false whole-text identity by design. Each emitted part uses generic corresp with project provenance. Structural files may hold only transclusions, with source pages in their children.",
+    "legacy_metadata": "Existing titles and language-specific wording selectors were already accepted and remain unchanged; first-printing wording selectors are not new canonical prayer identities. This batch adds only the shared non-language-specific teqiot_veseder_shofarot condition. Suggestions to migrate legacy names can be nonblocking followup; do not mint replacements contrary to user instruction to reuse existing identities.",
+    "old_minchah": "Weekday Minchah at the start of this festival book is the preparatory weekday Minchah, not the Rosh haShanah festival Amidah. The accepted legacy title has a slug suffix; canonical home title can be improved separately, but it is not pilot installment text.",
+    "areshet_literal": "The first printing keeps its original marked literal fragment; it does not assert that fragment is a canonical pointer. The two later printed occurrences point to the separately attested pure zikhron library. Both literal word and canonical pure word are independently source reviewed; no rule requires every literal prayer word to be replaced by a pointer."
+  }
+}

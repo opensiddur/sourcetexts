@@ -1,0 +1,58 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "medium"
+  },
+  "approved": true,
+  "files_read": [
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/opensiddur/importer/marmorstein_rosh_hashanah_1/baseline.py",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/opensiddur/importer/marmorstein_rosh_hashanah_1/realizations.py",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/opensiddur/tests/importer/test_marmorstein_baseline.py",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/opensiddur/tests/importer/test_marmorstein_realizations.py",
+    "/tmp/mahzor-s294/marked-code-review.json"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    {
+      "id": "NB1",
+      "location": "test_marmorstein_realizations.py:69-86",
+      "title": "The negative tests for marked occurrences use a bare assertRaises(ValueError)",
+      "detail": "I checked the 'whitespace', 'nested' and 'unbalanced' cases by hand. In each one the host text is set to the stripped inner text, so if the new occurrence_content guards were removed, the canonical comparison and the pure-part attestation would both pass. The test would then fail. So these subtests do show the new checks are needed. However, any ValueError counts as a pass, so a rejection raised for some unrelated reason would hide a regression.",
+      "suggested_fix": "Use assertRaisesRegex(ValueError, 'Marked canonical occurrence|Marked occurrence requires') for the delimiter and type cases."
+    },
+    {
+      "id": "NB2",
+      "location": "baseline.py:42-46",
+      "title": "'Previously unflagged' means the key was absent, not that it was explicitly False",
+      "detail": "The legacy branch removes review_encoding and requires the result to match the accepted snapshot exactly. Suppose an accepted snapshot had been taken with review_encoding=False. The accepted protected hash then includes that False, so the copy with the key removed cannot match, and turning the flag on is rejected. This fails closed and fits the scope. Separately, a baseline taken with the flag already True cannot pass the legacy branch either, because the copy without the flag no longer contains it. So a gated baseline does protect against the flag being removed, and against other changes made under it.",
+      "suggested_fix": "None required. If wanted, add a docstring stating that only an absent key can be upgraded."
+    },
+    {
+      "id": "NB3",
+      "location": "test_marmorstein_baseline.py:57-86",
+      "title": "The test shows the literal witness is unchanged only indirectly",
+      "detail": "After end_reference is added, the test calls validate_baseline(reviewed, baseline). That call can only succeed if the legacy snapshot, including literal_sha256 from unit_review_text, still matches exactly. So the claim that the literal witness is unchanged is proven. It is just never asserted directly.",
+      "suggested_fix": "Optional: add assertEqual(unit_review_text(original_unit,'he'), unit_review_text(reviewed_unit,'he')) after the mapping change."
+    },
+    {
+      "id": "NB4",
+      "location": "realizations.py:477, 492-496; tests 262-272, 298-325",
+      "title": "No single subtest combines a rubric with a literal context that has no page break",
+      "detail": "The 'instructions' mutation in test_canonical_home_rejects_context_controls covers a rubric in a canonical (default) context. The 'single_page' and 'same_scan_default' subtests cover a literal context with no real page transition, but they have no instructions. The code checks these two conditions independently, so the behavior is enforced. Only the combined case lacks its own test.",
+      "suggested_fix": "Optional: add the combined subtest."
+    }
+  ],
+  "scope_limitations": [
+    "As instructed, I did not read canonical_corrections.py, its tests, build.py, or any fixture or readings.json. I did not confirm that canonical_corrections.py matches HEAD. I can see that review_payloads (realizations.py:445-447) no longer filters corrections by option setting, which fits 'no option-bound typo support ships', but I did not check how bind_corrections and corrected_text behave.",
+    "I did not diff anything against HEAD. The claim that snapshot() is unchanged and that the frozen 803 baseline entries are unchanged is taken from the user. From the code alone: snapshot() (baseline.py:16-28) is not affected by the review_encoding exemption, which lives only in validate_baseline. The test file checks a fixed fixture of 660 literal witnesses. I did not verify the integrated count of 803.",
+    "How the marked j:conditional, notes, rubrics and source_notes are rendered (build.py) is taken from the test assertions, not from reading the code.",
+    "I ran no tests. The figures of 54 focused tests and 107 subtests passing, and the pending full run of 169, are as reported by the user.",
+    "Static review only; I made no edits."
+  ],
+  "verdict": "Approved. (1) A literal canonical home can keep a unit-level rubric only when context=='literal' (realizations.py:477). That path requires a real page transition inside a segment in every language (492-496). The home's allowed fields (485) leave out instructions, and the test shows the words home has no tei:note or tei:pb. The page-position check skips a note's contents but still counts note.tail (603-610), and a rubric edit changes the receipt. (2) occurrence_content now calls validate_occurrence_controls first and requires marked plus conditions, one fragment, and a single outer pair of parentheses with non-whitespace content and no '(' or ')' inside (111-121). The canonical comparison and pure-part attestation match the inner words. literal_sha256 still hashes the raw parenthesized source, and literal_content_sha256 hashes the inner words. The occurrence's own controls are bound through the unit witness, and other callers' controls through attesting_controls. Tests show no '(' or literal word text in the caller body, and that editing a condition changes the receipt. The earlier NB1-NB4 are resolved. (3) validate_baseline adds exactly one exemption: review_encoding is True (strict identity) and removing only that flag reproduces the exact accepted snapshot, both the protected and literal hashes. Turning the flag off or setting a non-boolean fails, and any other protected change still fails. A snapshot taken with the gate set catches later removal of the gate. Adding review_encoding to an old unit makes review_payloads produce a receipt for it, and a later end_reference change alters that receipt while validate_baseline still passes, which shows the literal hash is unchanged. Text and title edits still fail. No blocking issues. The remaining notes are about test precision and documentation.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "4d1e1c33-c797-4f2b-b21b-43444bd7aca5"
+  }
+}

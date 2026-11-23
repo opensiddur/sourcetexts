@@ -1,0 +1,26 @@
+{
+  "scope": "documentary-v9-export-1",
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/documentary-export-manifest-v9.json",
+    "/tmp/mahzor-s294/full-pdf-images-v9/documentary-228.png",
+    "/tmp/mahzor-s294/full-pdf-images-v9/documentary-229.png",
+    "/tmp/mahzor-s294/full-pdf-images-v9/documentary-230.png",
+    "/tmp/mahzor-s294/full-pdf-images-v9/documentary-231.png",
+    "/tmp/mahzor-s294/full-pdf-images-v9/documentary-232.png",
+    "/tmp/mahzor-s294/full-pdf-images-v9/documentary-233.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "Image 229→230 (printed pp. 221→222): the English for the last 'וַיְיָ עֲלֵיהֶם יֵרָאֶה' row breaks across the page ('...like lightning and the' / 'Lord God will blow the Shofar...'). The Hebrew cell ends on 229, so the top of 230 has an English-only overflow line with an empty Hebrew column. It reads fine and nothing is clipped. Optional polish: keep the row together.",
+    "Image 230 (p. 222): the acrostic heading 'מיוסד ע\"ס א\"ב כפול בראשי החרוזות.' is Hebrew-only with no English beside it. This matches the stated HE-only running-prose stylesheet choice, so it is not a defect.",
+    "Images 228, 230, 231, 232, 233: the ↗ scan-link markers sit at different word positions in the Hebrew and English columns (e.g. 228: before 'הַשֹּׁפָר' in Hebrew but before 'Lord' in a different row in English). This fits markers placed at each language's own source page break. They are legible and don't cause overlap."
+  ],
+  "verdict": "Approved for assigned range 228–233 (printed pp. 220–225, Shofarot section through the Sabbath acrostic and its closing verses). The Hebrew is readable with pointing intact, and the English is readable. No clipping or overlap was found. Stanza rows stay aligned between Hebrew and English throughout, running heads and page numbers are correct and alternate properly, and the section rule and 'אִם שַׁבָּת / On Sabbath.' heading on 230 are placed correctly. No notes or note labels appear in this range. The ending, missing-source label and credits are not in this range, so they were not checked.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "6ada8fc7-b854-4b4c-af26-35425d3827b8"
+  }
+}

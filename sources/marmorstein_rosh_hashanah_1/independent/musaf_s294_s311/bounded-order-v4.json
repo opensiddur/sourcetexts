@@ -1,0 +1,44 @@
+{
+  "scope": "order",
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "medium"
+  },
+  "approved": true,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/bounded-review-v4/rule-identity.md",
+    "/tmp/mahzor-s294/bounded-review-v4/rule-rubrics.md",
+    "/tmp/mahzor-s294/bounded-review-v4/rule-declared_scopes.md",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__spine-tail__00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__spine-tail__00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/machzor_expanded-opensiddur-he__spine-tail__00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/machzor_expanded-opensiddur-he__spine-tail__01.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/machzor_expanded-opensiddur-he__spine-tail__02.jsonl",
+    "/tmp/mahzor-s294/canonical-and-practice-evidence-v3.json",
+    "/tmp/mahzor-s294/bounded-review-v4/ancestor-scopes.json",
+    "/tmp/mahzor-s294/s295.jpg",
+    "/tmp/mahzor-s294/settings/prayerbook_for_the_new_year-heidenheim-1965-he/documentary.yaml",
+    "/tmp/mahzor-s294/settings/prayerbook_for_the_new_year-heidenheim-1965-he/with_translation.yaml",
+    "/tmp/mahzor-s294/settings/machzor_expanded-opensiddur-he/undated.yaml"
+  ],
+  "blocking_findings": [],
+  "new_human_questions": [],
+  "nonblocking_findings": [
+    "Expanded chunk 02 lines 207-215: the Hodaah tail (veal_kullam → ukhetov → vekhol_hachayyim) is in the correct order. But it comes straight after the congregation-labelled Modim derabbanan div and has no role description of its own. In linear output a reader could take the tail as said by the congregation. A reader role description before the tail would make this unambiguous. This does not change the recitation order, so it is not blocking.",
+    "Expanded chunk 02 lines 134-176: the no-priests branch correctly sends the standard Vetechezeinah (amidah/avodah/vetechezeinah) and leaves nothing out. Its scope has no role description of its own. The reader role is implied by the preceding Retzeh div. This is acceptable.",
+    "English documentary spine lines 80-243: the Hayom and Areshet inclusion scopes have no condition note and no description inside. When undecided they print with no delimiters, under the 'neither' rule. This matches the English print, which has no rubric there. The Hebrew counterpart opens each scope with the printed description קו״ח."
+  ],
+  "scope_limitations": [
+    "I did not open the transcluded bodies (anusah_leezrah's interleaved verses, shofarot_verses, the inner conditions of shofarot_hayom/areshet in the documentary text, the Vetechezeinah chatimah, birkat_kohanim_leshatz). I checked order, conditions and roles at the spine level only.",
+    "Expanded chunk 02 line 263: the musaf intro transcludes the shacharit-context URN rosh_hashanah/shacharit/repetition/birkat_kohanim/birkat_kohanim inside a scope where shaharit is declared false and musaf true. I could not see whether that occurrence contains any condition on service-time. That needs checking by whichever group owns that occurrence.",
+    "Header metadata, sourcepointing/wording, translations, code and export are outside this scope and were not reviewed."
+  ],
+  "verdict": "Approved for the order scope. Weekday: the expanded text has Essa plus the Bible-verse chain under shabbat=false, labelled בחול/On weekdays. Sabbath: Anusah under shabbat=true, labelled bilingually. One shared Ken Tagen follows both in the expanded text. The documentary texts keep the printed weekday and Sabbath Ken Tagen separately, and the English keeps 'On Sabbath.', which matches the image of printed page 137. Then come Teqa, Num 10:10 and Shomea, followed by TARAT under shabbat=false with the blower role. The Hayom/Areshet inclusion and cantor-repeat condition trees match the accepted Zikhronot trees in the evidence file exactly. That includes the optional weekday Areshet repeat and Frankfurt saying and repeating both on the Sabbath, as the page-274 custom rules require. The Areshet variant declare (teqiot_veseder_shofarot=true) is closed by a sibling endDeclare. Retzeh is labelled reader. With priests: congregation says Veteerav and the reader says Sheotekha. Without priests: the standard Vetechezeinah. Modim is reader, Modim derabbanan congregation, then the tail. The full intro has the reader role before its parent. The 'Kohanim aloud' direction is a conditional child (birkat-kohanim=true), in both languages, and labels itself when the condition is unknown. The intro itself is unconditional. Scope nesting is consistent with ancestor-scopes.json, and the chunk closes the repetition declare locally. No material beyond printed page 145 / scan n310 is claimed, and there are no leftover navigation or repeat/skip instructions.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "86b4cc7d-38ef-425c-910e-39859a28074c"
+  }
+}

@@ -1,6 +1,6 @@
 # Heidenheim–Marmorstein: first day of Rosh ha-Shanah, 1965
 
-**Status: all 803 encoded Hebrew/English unit witnesses and 182 canonical realization payloads are independently accepted. Complete-page coverage is 294 of 355: PDF 1–293 plus the Hebrew-only pilot on 351. Human source questions through 444, generated encoding, canonical reuse, alignment, recitation order and final PDF/electronic reviews are complete. 61 leaves remain; next is PDF 294. Separate exporter fixes 310/312/313 remain release dependencies.** This contribution belongs to
+**Status: all 837 encoded Hebrew/English unit witnesses and 224 canonical realization payloads are independently accepted. Complete-page coverage is 311 of 355: PDF 1–311. The Sunday Psalm24 excerpt on scan351 is accepted; that leaf remains partial. Human source questions through 472, guidelines, canonical reuse, alignment, recitation order and final PDF/electronic reviews are complete. 44 leaves remain incomplete; next is PDF 312. Exporter fixes are tracked separately in processor PRs 310/312/313/315.** This contribution belongs to
 [opensiddur-processor issue 214](https://github.com/opensiddur/opensiddur-processor/issues/214).
 The complete source is [this 355-leaf Archive item](https://archive.org/details/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965),
 [also described by Open Siddur](https://opensiddur.org/?p=69112).
@@ -743,7 +743,7 @@ existing Hebrew-only ElMelekhNeeman is reused, with its no-minyan condition.
 Independent English comparison covers2,835words across17units plus3citations.
 Seven complete English leaves (111,113,115,117,119,121,123) are accepted, bringing
 the total to100/355. Hebrew is still draft: numbered human snippets1–7 and
-remaining fine marks await adjudication.108/109 and124/125 are partial leaves.
+remaining fine marks await adjudication.108/109 and 124/125 are partial leaves.
 Actual blind Claude Opus5.5 image readings, configured medium effort (self-report
 recorded separately), frozen primary readings, nonblind image follow-ups, and
 structural review/resolutions are retained as separate evidence. No blanket
@@ -957,7 +957,7 @@ eight markers and passes eight source-word comparisons. No fine-point acceptance
 is inferred from those mechanical checks. Questions81–88 remain the only batch
 currently presented for human adjudication.
 
-Latest source closure: scans126and128 are fully accepted. Six Hebrew witnesses
+Latest source closure: scans126and 128 are fully accepted. Six Hebrew witnesses
 affected by human70–75 have actual final source/guideline/alignment approval;
 two shared reader boundaries remain outside both Shabbat alternatives. Existing
 canonical identities are retained. Four actual bilingual word comparisons and
@@ -1027,7 +1027,7 @@ Acceptance now covers183of224encoded leaves;41remain. Allhumanquestions
 ElohaiNetzor, sixShema-sectionHebrewwitnesses, YehiRatzonTemple,
 repetitionAvotOpen andMisodChakhamim bodies now have source/guideline
 acceptance. Their citations and sixdocumentaryrubrics are accepted separately.
-Scans110,122and124becamecomplete. Scan112stillrequiresEmetVeyatziv.
+Scans110,122and 124becamecomplete. Scan112stillrequiresEmetVeyatziv.
 
 Human114–124adds sixoccurrence-specificmetegsandtheBachartaBETdagesh,
 retainsBatachnuwithoutcolonandVehaadamah11:17withmunach. Human125–129
@@ -1124,7 +1124,7 @@ unencoded leaves remain. Current questions211–224 concern distinct HakolYodukh
 occurrences on PDF102, with inspected numbered source crops. No earlier human
 answer is reopened. Twelve exact meteg clusters and four negative readings were
 verified; all646generatedXMLvalidate, and8quotation extents,30day/language/unit
-cases and12conditional stanza cases pass. Evidence and frozen review inputs
+cases and 12conditional stanza cases pass. Evidence and frozen review inputs
 are committed in the source project's completion_review_2026_11 records.
 
 
@@ -1160,7 +1160,7 @@ running,withthecontinuousShabbatalternativeandactualroutingcontextincluded.
 SourceimagesremainoutsideGit;finalPDF/HTMLvisualacceptanceisstillpending.
 
 
-Completion review after human readings 246–263 accepts eight additional Hebrew units, the source variant note, and the rendered directives for the continuous weekday/Shabbat alternatives. The corrected block now has explicit internal speaker alternation and 25 bounded bilingual scripture quotation contexts; canonical text identities are reused. All presented questions through263 are settled. The actual compiler passes50 bilingual quotation-extent checks and12 rite/refrain cases, and all646 generated XML files validate. Current acceptance is193 of224 encoded leaves;31 encoded leaves and final PDF/HTML visual acceptance remain. The next seven-unit review around scans136–144 is being triaged. Historical repeated page labels remain preserved, unaccepted as raw pointing, in superseded records.
+Completion review after human readings 246–263 accepts eight additional Hebrew units, the source variant note, and the rendered directives for the continuous weekday/Shabbat alternatives. The corrected block now has explicit internal speaker alternation and 25 bounded bilingual scripture quotation contexts; canonical text identities are reused. All presented questions through263 are settled. The actual compiler passes50 bilingual quotation-extent checks and 12 rite/refrain cases, and all646 generated XML files validate. Current acceptance is193 of224 encoded leaves;31 encoded leaves and final PDF/HTML visual acceptance remain. The next seven-unit review around scans136–144 is being triaged. Historical repeated page labels remain preserved, unaccepted as raw pointing, in superseded records.
 
 
 Completion review through human277 accepts the remaining morning piyyutim, Avinu Malkenu and full Kaddish, with bounded bilingual scripture contexts and corrected source readings. Current acceptance is202 of224 encoded leaves;22 encoded leaves in the Torah and shofar/cantor sections remain under final review. The source Avinu abbreviation remains explicitly low-certainty after human examination; its faithful critical encoding is accepted without claiming a certain letter. All646XMLvalidate, and current naming, feature and URN-reference checks pass. Final PDF/HTML visual acceptance and the131 unencoded leaves remain outstanding.
@@ -1171,3 +1171,5 @@ The next completion checkpoint accepts206 of224 encoded leaves, including the fu
 The PDF 252–275 installment is **accepted**. `musaf_s252_s275_acceptance.json` records that earlier installment. All 804 XML files validate; 52 compilation cases, 19 canonical source projections, 79 quotation extents and four full morning selections pass. The final review covers the full Hebrew, documentary parallel and expanded PDF/HTML previews. Earlier checkpoint paragraphs are historical; the old 254-complete-page count included two partial leaves and is corrected in the current record. Source images and exports remain outside Git.
 
 The PDF276–293 installment is **accepted**, completing Zikhronot and Atah Nigleita. `musaf_s276_s293_acceptance.json` supersedes historical checkpoint counts. All 843 XML validate;56 batch compilation cases,14 canonical projections,38 quotation extents and four full morning selections pass. The earlier 766 literal witnesses remain unchanged. Source images and exports remain outside Git.
+
+PDF294–311 is **accepted**; `musaf_s294_s311_acceptance.json` supersedes checkpoint counts. The two complete Shofarot alternative piyyutim, scripture chains and response customs continue through the priestly-blessing introduction. All 882 XML validate, 170 importer tests and 157 subtests pass, 180 rendered stanzas and 12 literal prayer projections match the source, and six desktop/mobile electronic checks pass. The previous 803 literal witnesses remain unchanged. Source images and exports stay outside Git.

@@ -1,0 +1,200 @@
+{
+  "scan_range": [
+    294,
+    295
+  ],
+  "blocks": [
+    {
+      "scan": "s294",
+      "key": "running_header",
+      "region": "running_header",
+      "language": "he",
+      "kind": "running_header",
+      "text": "137 מוּסַף לְיוֹם רִאשׁוֹן שֶׁל רֹאשׁ הַשָּׁנָה 137",
+      "uncertainties": [
+        "NOT VERIFIED in this pass: none of the 12 line packs include the Hebrew running header, and no full Hebrew page image was supplied. The candidate text is kept unchanged."
+      ]
+    },
+    {
+      "scan": "s294",
+      "key": "weekday_attribution",
+      "region": "weekday",
+      "language": "he",
+      "kind": "instruction",
+      "text": "מיוסד ע״ס א״ב מרובע.",
+      "uncertainties": [
+        "Line01 is in Rashi script. I count 5 glyphs in the last word and see no separate vav before the מ, so the text stays מרובע and not ומרובע. The second abbreviation reads ע״ס."
+      ]
+    },
+    {
+      "scan": "s294",
+      "key": "essa",
+      "region": "weekday",
+      "language": "he",
+      "kind": "prayer",
+      "text": "אֶשָּׂא דֵעִי בְּצֶדֶק. תֵּת לְפוֹעֲלִי צֶדֶק. אֶשְׁאֲלָה מִשְׁפְּטֵי צֶדֶק. קוֹל לְהָרִים כַּשּׁוֹפָר: אֵין קוֹרֵא בְצֶדֶק. רוֹדֵף צֶדֶק צֶדֶק. אֶקְרָא שִׁמְעָה צֶדֶק. בְּקוֹל בָּלוּל כַּשּׁוֹפָר: בַּנְתִּי בְמַדָּעִי. לְמֵרָחוֹק שְׂאֵת דֵעִי. בִּטּוּי תְּרוּעָה בְּיָדְעִי. בְּקוֹל מַתַּן שׁוֹפָר: בּוֹ בְהָרִיעִי. אֲרַצֶּה לִי רוֹעִי. בְּאָמְצוֹ זְרוֹעִי. בְּקוֹל כֹּחַ שׁוֹפָר: גַּשְׁתִּי בְּיוֹם דִּין. לְהִתְוַכֵּחַ בַּדִּין. גּוֹלֶה עֹמֶק הַדִּין. בְּקוֹל קִפָּאוֹן שֹׁפָר: גְּזֵרַת דַּת וָדִין. אִם חִיַּבְתִּי בַּדִּין. גְּרוֹנִי יְעַכֵּב מוֹרַע דִּין. בְּקוֹל עִם שׁוֹפָר: דְּרֹשׁ וְהַעַל רְטִיָּה. לִפְנֵי טְרִיָּה. דַּעַת לִטְרוּיָה. קוֹל חֲבֵשׁ שׁוֹפָר: דָּחוּי לִכְרוּיָה. בְּעַד נִבְרִיָּה.",
+      "uncertainties": [
+        "Line09: the vowel under the ד of דַּת (after גְּזֵרַת) is a flat bar with no vertical stem. It looks different from the clear qamatz of וָדִין right next to it, so it is patched to patah. I cannot confirm the dagesh in that ד at this resolution, so the candidate's dagesh is kept.",
+        "Line08: defective שֹׁפָר after קִפָּאוֹן is confirmed. It has only three letters (ש פ ר) and no vav.",
+        "Line06: in בּוֹ the first letter's base is rounded and could be read as כּוֹ. Compare it with the ב of בְּקוֹל at the start of the same line. See human_questions.",
+        "Line11: the mark under the נ of נִבְרִיָּה looks more like a qamatz (a T-shape) than a hiriq dot. See human_questions.",
+        "I cannot settle these dageshes at this resolution, so the candidate is kept: the ב of בְצֶדֶק (line03), בְמַדָּעִי (line05), בְהָרִיעִי (line06), and the פ of לְפוֹעֲלִי (line02). The ש of כַּשּׁוֹפָר (lines 03 and 05) shows no clear inner dot.",
+        "Lines 02, 05 and 16 have a small tick after the line-final letter (אֶשְׁאֲלָה, תְּרוּעָה, שֶׂה). I treat it as a line-end flourish and do not encode it.",
+        "There are no printed Bible verses or accents on s294, so no accent encoding applies. Num 10:10 is on s308, which is outside this pair."
+      ]
+    },
+    {
+      "scan": "s294",
+      "key": "shabbat_rubric",
+      "region": "shabbat",
+      "language": "de-Hebr",
+      "kind": "instruction",
+      "text": "אַם שַׁבָּת.",
+      "uncertainties": [
+        "Line12: the first Rashi-script word has patah under its first glyph followed by a final-form glyph. Out of context the shape could be taken for חַזָּן. It is kept as אַם per the repeated human confirmations and the facing 'On Sabbath.' No new question is raised."
+      ]
+    },
+    {
+      "scan": "s294",
+      "key": "shabbat_attribution",
+      "region": "shabbat",
+      "language": "he",
+      "kind": "instruction",
+      "text": "מיוסד ע״ס א״ב כפול בראשי החרוזות.",
+      "uncertainties": [
+        "A human decision is already pending (445–454), so this is not raised again. My observation from line13: I count 6 glyphs in the last word, which supports החרזות (no first vav). The א of בראשי has the Rashi shape that can look like an aleph-lamed form, but there is no extra lamed."
+      ]
+    },
+    {
+      "scan": "s294",
+      "key": "anusah",
+      "region": "shabbat",
+      "language": "he",
+      "kind": "prayer",
+      "text": "אָנוּסָה לְעֶזְרָה. אֶמְצָא נֶגְדִּי. אֵל קָרוֹב לִי. בְּעֵת קָרְאִי בְּקוֹל: אֲשֶׁר בַּעֲדַת אֵל. בְּקִרְבִּי נִצָּב. וּפֹה בְּמִקְדָּשׁ מְעַט. אֲצַפְצֵף לוֹ בְּקוֹל: בַּקְּרֵנִי דָּרְשֵׁנִי. שֶׂה פְזוּרָה אָנִי. נִגְזַרְתִּי וְנֶאֱלַמְתִּי. בְּלִי לְהָרִים קוֹל: בֶּאֱמוֹר גּוֹזְזַי. נִדָּחָה הִיא. שׁוֹמְרָהּ וְצִלָּהּ. לֹא יִשְׁאַג בְּקוֹל: גַּלְתִּי שִׂיחַ בְּחֻקָּיו. וְחִכִּי עָרֵב. הִטָּה אֹזֶן וְשָׂח. הַשְׁמִיעִנִי אֶת קוֹלֵךְ קוֹל: גָּז וּבָרַח מֶנִּי. כְּעֹפֶר עַל הָרֵי בָתֶר. בְּבַקְּשׁוֹ דָת וָאוֹת. בְּמִשְׁכְּנוֹתַי וְאֵין קוֹל: דִּלֵּג מִבֶּתֶר לְבֶתֶר. הֲשִׁיבֵהוּ אֵלַי. אוּלַי יִשָּׂא פָנֶיךָ. עֵקֶב שָׁמְעֵךְ בְּקוֹל: דְּרוֹשׁ טוֹבָה לָמוֹ. וּרְאֵה שֵׂה מוֹרִיָּה. אִלֵּם פִּיהוּ יְהִי צֶדֶק. לְלֹא שָׁמְעָה בְּקוֹל: הָסֵר מֵחָלָק. יָדַיִם",
+      "uncertainties": [
+        "Aleph-lamed ligatures are printed in אֵל (line15, end of strophe), לֹא (line18) and לְלֹא (line24). They are encoded as separate letters plus their vowels. The אֵל on line14 is printed as separate letters.",
+        "Every refrain is printed as קוֹל or בְּקוֹל with no final yod. I checked this on lines 15–24.",
+        "Line16: the vowel under the ע of מְעַט may be a qamatz (מְעָט). See human_questions.",
+        "Line17: the dagesh in the פ of פְזוּרָה is not decidable; the candidate is kept.",
+        "בַּקְּרֵנִי / דָּרְשֵׁנִי and אִלֵּם are already pending human review and are not raised again.",
+        "The page breaks in mid-strophe at יָדַיִם."
+      ]
+    },
+    {
+      "scan": "s295",
+      "key": "running_header",
+      "region": "running_header",
+      "language": "en",
+      "kind": "running_header",
+      "text": "137 Musaph for the New Year 137",
+      "uncertainties": []
+    },
+    {
+      "scan": "s295",
+      "key": "essa",
+      "region": "weekday",
+      "language": "en",
+      "kind": "prayer",
+      "text": "I meditate on righteousness to ascribe righteousness to my Creator; I ask for judgments of righteousness and raise my voice like a Shofar. When none proclaims in righteousness and none pursues righteousness, I call out for a hearing in righteousness in a voice mingled with the Shofar. I understood through my knowledge when I raised my mind far distant and know that the utterance of Teruah sounded at the Revelation through the Shofar. By blowing Teruah I appease my shepherd, who strengthens my arm through the powerful sound of the Shofar. I approached on the day of justice to plead for myself with justice; He reveals the depths of justice through the curdling sound of the Shofar. If I am guilty in justice according to the decree of law and justice, may my throat restrain the severity of justice through my voice together with the Shofar. Seek out and bring healing for the wound, let the mind of the wounded people be soothed by the sound of the Shofar. Let freedom for the banished, who are sold to a strange people, and for every human",
+      "uncertainties": [
+        "The line-break hyphen in 'under-stood' is removed. The linkage cue אשא is excluded."
+      ]
+    },
+    {
+      "scan": "s295",
+      "key": "shabbat_rubric",
+      "region": "shabbat",
+      "language": "en",
+      "kind": "instruction",
+      "text": "On Sabbath.",
+      "uncertainties": [
+        "Printed in italics."
+      ]
+    },
+    {
+      "scan": "s295",
+      "key": "anusah",
+      "region": "shabbat",
+      "language": "en",
+      "kind": "prayer",
+      "text": "I hasten for aid and find God near me at the time when I call with my voice. In the congregation of God, He stands in my midst and here in this miniature sanctuary I mutter to Him with my voice. Test me, examine me, a stray sheep am I, I have been cast off and silenced so that I cannot raise my voice. When my shearers say ‘she is rejected’, her guardian and protector does not roar with His voice. When I conversed of His statutes and my sound was pleasing, He inclined His ear and spoke; ‘Let me hear the sound of your voice’. Swiftly He fled from me like the deer on the rocky mountains, when He desired law and a sign from me and in my dwellings there was no voice. He who leapt from fragment to fragment (Abraham), let him restore Him to me, perhaps He will raise your face because you heard His voice. Plead on their behalf, behold the sheep on Moriah, let his silent submission (Isaac) justify those who did not listen to His voice. Keep far from the smooth one (Jacob) the hairy",
+      "uncertainties": [
+        "The linkage cue אנוסה is excluded. Every word and punctuation mark was compared with the image and matches, including the ‘…’ quotes, the semicolon after 'spoke', and the period after the closing quote of 'voice’'."
+      ]
+    }
+  ],
+  "patches": [
+    {
+      "scan": "s294",
+      "key": "essa",
+      "old": "גְּזֵרַת דָּת וָדִין",
+      "new": "גְּזֵרַת דַּת וָדִין",
+      "reason": "The vowel under the ד is a flat patah bar. It has no qamatz stem, unlike the וָ immediately after it. The dagesh is kept from the candidate but is not confirmed.",
+      "source_image": "/tmp/mahzor-s294/s294-pair05.png"
+    }
+  ],
+  "source_sic_corr": [],
+  "role_labels": [
+    {
+      "scan": "s294",
+      "key": "essa",
+      "label": "ק׳",
+      "placement": "Right margin, before the first word אֶשָּׂא (line02). Unpointed. Not part of the prayer text.",
+      "source_image": "/tmp/mahzor-s294/s294-pair01.png"
+    },
+    {
+      "scan": "s294",
+      "key": "anusah",
+      "label": "ק׳",
+      "placement": "Right margin, before the first word אָנוּסָה (line14). Unpointed. Not part of the prayer text.",
+      "source_image": "/tmp/mahzor-s294/s294-pair07.png"
+    }
+  ],
+  "human_questions": [
+    {
+      "scan": "s294",
+      "key": "essa",
+      "word": "בְּעַד נִבְרִיָּה",
+      "question": "Line11: is the vowel under the נ a hiriq (נִבְרִיָּה, as in the candidate) or a qamatz (נָבְרִיָּה)? The mark looks T-shaped to me.",
+      "source_image": "/tmp/mahzor-s294/s294-pair06.png"
+    },
+    {
+      "scan": "s294",
+      "key": "anusah",
+      "word": "בְּמִקְדָּשׁ מְעַט",
+      "question": "Line16: is the vowel under the ע a patah (מְעַט) or a qamatz (מְעָט)? There seems to be a short stem under the bar.",
+      "source_image": "/tmp/mahzor-s294/s294-pair08.png"
+    },
+    {
+      "scan": "s294",
+      "key": "essa",
+      "word": "בּוֹ בְהָרִיעִי",
+      "question": "Line06: is the first letter ב (with a base stroke) or כ? The glyph looks rounded compared with the ב of בְּקוֹל on the same line.",
+      "source_image": "/tmp/mahzor-s294/s294-pair03.png"
+    }
+  ],
+  "all_hebrew_words_and_marks_checked": false,
+  "all_english_words_checked": true,
+  "source_images_read": [
+    "/tmp/mahzor-s294/s294-pair01.png",
+    "/tmp/mahzor-s294/s294-pair02.png",
+    "/tmp/mahzor-s294/s294-pair03.png",
+    "/tmp/mahzor-s294/s294-pair04.png",
+    "/tmp/mahzor-s294/s294-pair05.png",
+    "/tmp/mahzor-s294/s294-pair06.png",
+    "/tmp/mahzor-s294/s294-pair07.png",
+    "/tmp/mahzor-s294/s294-pair08.png",
+    "/tmp/mahzor-s294/s294-pair09.png",
+    "/tmp/mahzor-s294/s294-pair10.png",
+    "/tmp/mahzor-s294/s294-pair11.png",
+    "/tmp/mahzor-s294/s294-pair12.png",
+    "/tmp/mahzor-s294/s295.jpg"
+  ],
+  "verdict": "NOT APPROVED. All 13 images loaded and were read; none was missing or removed, and the tool did not hit a request limit. Problems found: (1) one patch, דָּת→דַּת in essa; (2) the role labels ק׳ before אֶשָּׂא and before אָנוּסָה were missing from the candidate; (3) three new human questions (נִבְרִיָּה, מְעַט, בּוֹ), plus the questions already pending (Shabbat attribution, בַּקְּרֵנִי דָּרְשֵׁנִי / אִלֵּם); (4) the Hebrew running header could not be checked because no image of it was supplied; (5) a few dagesh points cannot be settled at this resolution. The English on s295 matches the candidate exactly. The page has no Bible accents, so the Num 10:10 accent inventory is not applicable here; that verse is on s308.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "50b46d85-1acc-4384-a49c-4250f5418984"
+  }
+}

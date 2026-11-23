@@ -1,0 +1,136 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "medium"
+  },
+  "images_read": [
+    "/tmp/mahzor-s294/s300.jpg",
+    "/tmp/mahzor-s294/s301.jpg",
+    "/tmp/mahzor-s294/s302.jpg",
+    "/tmp/mahzor-s294/s303.jpg",
+    "/tmp/mahzor-s294/s304.jpg",
+    "/tmp/mahzor-s294/s305.jpg",
+    "/tmp/mahzor-s294/s304-pair04.png"
+  ],
+  "all_blocks_checked": true,
+  "approved": true,
+  "blocking_findings": [],
+  "new_human_questions": [],
+  "source_role_labels": [
+    {
+      "scan": "s300",
+      "block": "anusah_tail",
+      "label": "ח׳",
+      "pointed": false,
+      "after": "the rubric line אַם שַׁבָּת.",
+      "before": "סֶלָה",
+      "verified_against": "s300.jpg"
+    },
+    {
+      "scan": "s300",
+      "block": "illittani",
+      "label": "ח׳",
+      "pointed": false,
+      "after": "תַּתָּה קוֹל (no punctuation)",
+      "before": "עַל כָּל אֱלֹהִים",
+      "verified_against": "s300.jpg"
+    },
+    {
+      "scan": "s300",
+      "block": "paah",
+      "label": "ח׳",
+      "pointed": false,
+      "after": "מֵאַשּׁוּר קוֹל:",
+      "before": "פְּקוֹד",
+      "verified_against": "s300.jpg"
+    },
+    {
+      "scan": "s302",
+      "block": "tzor",
+      "label": "ח׳",
+      "pointed": false,
+      "after": "מַשְׁמִיעֵי קוֹל:",
+      "before": "צְרוּפָה",
+      "verified_against": "s302.jpg"
+    },
+    {
+      "scan": "s302",
+      "block": "qarav",
+      "label": "ח׳",
+      "pointed": false,
+      "after": "לְהִתְחַנֵּן בְּקוֹל:",
+      "before": "קֻדַּשׁ",
+      "verified_against": "s302.jpg"
+    },
+    {
+      "scan": "s304",
+      "block": "essa_tail",
+      "label": "חזן",
+      "pointed": false,
+      "after": "הֲמוֹן שׁוֹפָר:",
+      "before": "תִּצְעַד",
+      "verified_against": "s304.jpg and the enlarged crop s304-pair04.png, which clearly shows חזן. This answers my prior Q1."
+    },
+    {
+      "scan": "s304",
+      "block": "raash",
+      "label": "ח׳",
+      "pointed": false,
+      "after": "מֵעָפָר קוֹל:",
+      "before": "רְאוּ",
+      "verified_against": "s304.jpg"
+    },
+    {
+      "scan": "s304",
+      "block": "shag",
+      "label": "ח׳",
+      "pointed": false,
+      "after": "מִשְּׁמוֹעַ קוֹל:",
+      "before": "שׁוֹבֵב",
+      "verified_against": "s304.jpg"
+    }
+  ],
+  "nonblocking_findings": [
+    {
+      "id": "N1-prior-blockers-closed",
+      "scope": "s300, s302, s304",
+      "issue": "Prior B1 is closed: all eight role labels on scans 300–305 are now in the structured source_role_labels, each with scan, placement and anchor word. Prior B2 and Q1 are closed: the s304 line 7 label is recorded as חזן, and the enlarged crop confirms it. None of the labels appears inside the prayer text."
+    },
+    {
+      "id": "N2-label-metadata-consistency",
+      "scope": "source_role_labels for s300 and s302",
+      "issue": "This is formatting only. The two s302 entries have no 'key' field; the block key is given only inside the placement text (tzor, qarav). The s300 anusah_tail entry says 'line 12', but my prior report said line 11. Its placement wording ('first line after the rubric') is unambiguous either way. I suggest adding explicit key fields and using one line-numbering convention throughout."
+    },
+    {
+      "id": "N3-stale-notes-removed",
+      "scope": "all blocks",
+      "issue": "The stale uncertainty notes and header notes (prior N1 and N2) have been removed. The text of every block is unchanged from the version I verified before, and it still applies human457–460 and human467–469 correctly: יִתְחַשַּׁב and יִתְיַשַּׁב; the meteg in עוֹרְרַֽנִי, תַּֽחַת and עִלִּיתַֽנִי; עִתּוּד; צֹר; שׁוֹכְנִים; וַיֶּחֱרַד with no meteg; תִּשְׁמָֽעוּ and וַיָּנֻֽעוּ."
+    },
+    {
+      "id": "N4-hebrew-text",
+      "scope": "Hebrew prayer and verse blocks on s300, s302 and s304",
+      "issue": "I re-compared each block against the full scans for letters, vowels, dagesh, meteg, punctuation, maqaf and read order. I found no omissions, duplications or reorderings. Source spellings are kept as printed: וְקֹל in Exodus 19:16 on s300 against וְקוֹל on s304, בְּחָסְפּוֹ, מְדוּמֵּי, and בִּירוּשָׁלָֽ͏ִם with qamatz, meteg, CGJ and hiriq (human468). The quoted verses on s300, s302 and s304 carry no cantillation, which matches the scans and human467–469. The weekday text and the Shabbat alternate are kept as separate continuous works. The running headers match the scans."
+    },
+    {
+      "id": "N5-rubric",
+      "scope": "shabbat_rubric on s300, s302 and s304",
+      "issue": "'אַם שַׁבָּת.' is encoded as a de-Hebr instruction, i.e. documentary German in Hebrew script, not prayer text. That is consistent with the earlier settled ruling, and there is no clear contrary evidence, so I have not reopened it."
+    },
+    {
+      "id": "N6-english",
+      "scope": "s301, s303, s305",
+      "issue": "All English blocks, headers and the italic 'On Sabbath.' rubrics match the scans word for word. The Hebrew cue words are correctly left out. Continuation fragments are kept as printed. The quotation on s305 that opens but never closes before 'distance.' is now handled in source_sic_corr (musaf_shabbat_exodus_missing_quote), and the raw text keeps the printed punctuation."
+    },
+    {
+      "id": "N7-out-of-scope-metadata",
+      "scope": "source_role_labels and source_sic_corr entries for s294, s298, s299, s306, s308, s310, s311; human471/472",
+      "issue": "These entries cover scans outside 300–305: the s298 reading יֹקֶשׁ, the s310 reading לִשְׁמֹר, the s310 label הש״ץ / מסיים, the s308 label קו״ח, the s311 heading Congregation:, and the corrections לום→צום and sindnesses. I did not have those images in this round, so I have not verified them and do not approve them. As far as I can see they agree with the human rulings and the stated three-reader agreement. Human471/472 do not touch any block in scans 300–305."
+    }
+  ],
+  "verdict": "APPROVED for source closure of scans 300–305 only. I read all six original scans in full, including headers, rubrics and the small role labels, plus the enlarged s304 crop. I checked every candidate block for these scans in both Hebrew and English. The prayer text, pointing, absence of cantillation, read order, documentary rubrics and English translation all match the source. The two prior blockers, the missing role-label record and the unread s304 label, are resolved: all eight labels are recorded and the s304 one reads חזן. There are no new human questions. This approval does not cover the metadata for scans outside 300–305, and it does not authorize export or implementation.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "90d39b23-15b3-4c07-8632-65673a02873b"
+  }
+}

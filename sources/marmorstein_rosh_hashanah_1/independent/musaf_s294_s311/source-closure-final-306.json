@@ -1,0 +1,103 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "medium"
+  },
+  "images_read": [
+    "/tmp/mahzor-s294/s306.jpg",
+    "/tmp/mahzor-s294/s307.jpg",
+    "/tmp/mahzor-s294/s308.jpg",
+    "/tmp/mahzor-s294/s309.jpg",
+    "/tmp/mahzor-s294/s310.jpg",
+    "/tmp/mahzor-s294/s311.jpg",
+    "/tmp/mahzor-s294/s310-pair03.png",
+    "/tmp/mahzor-s294/s310-pair12.png",
+    "/tmp/mahzor-s294/s308-pair07.png",
+    "/tmp/mahzor-s294/s308-pair09.png"
+  ],
+  "all_blocks_checked": true,
+  "approved": false,
+  "blocking_findings": [
+    {
+      "id": "F1",
+      "scope": "source_role_labels, s311 modim_derabbanan ('Congregation:') record, placement field",
+      "issue": "The placement field says the italic heading is 'centered over the narrow left column'. On scan s311 the English page has two columns below the ברוך paragraph. The wide left column holds the large-type מודים 'We thank Thee for…'. The narrower right column holds the small-type Modim de-Rabbanan, and 'Congregation:' is centered above that right column, directly above 'מודים We thank Thee because'. The record names the wrong side. This mirrors the Hebrew page s310, where Modim de-Rabbanan is in the left column. The s311 'Congregation:' block itself (key modim_derabbanan_heading, kind instruction, text 'Congregation:') is correct.",
+      "required_action": "Change the placement to say the heading is centered over the narrow right-hand column, above 'מודים We thank Thee because'. Nothing else needs to change."
+    }
+  ],
+  "new_human_questions": [],
+  "source_role_labels": [
+    {
+      "scan": "s306",
+      "key": "tevunah_tail",
+      "printed": "ח׳",
+      "verified": true,
+      "note": "Small, unpointed, inline on line 15, between בִּנְעִימוֹת קוֹל: and תְּהִלָּה. The candidate record matches."
+    },
+    {
+      "scan": "s306",
+      "key": "tachat",
+      "printed": "ח׳",
+      "verified": true,
+      "note": "Small, unpointed, inline on line 22, between וַתְּהֻמֵּם בְּקוֹל: and תַּרְעֵם. The candidate record matches."
+    },
+    {
+      "scan": "s308",
+      "key": "hayom",
+      "printed": "קו״ח",
+      "verified": true,
+      "note": "The enlarged crop s308-pair07 (line 14) shows the small unpointed label in the right margin before הַיּוֹם. It is consistent with the agreed קו״ח. The candidate record matches."
+    },
+    {
+      "scan": "s308",
+      "key": "areshet",
+      "printed": "קו״ח",
+      "verified": true,
+      "note": "The enlarged crop s308-pair09 (line 18) shows the same label before אֲרֶשֶׁת. The candidate record matches."
+    },
+    {
+      "scan": "s308",
+      "key": "areshet (parenthetical rubric)",
+      "printed": "אַם שבת. inside the parenthesis before זִכְרוֹן",
+      "verified": true,
+      "note": "Small type inside '( … זִכְרוֹן)', line 19. Keeping it as a separate de-Hebr instruction block, with (זִכְרוֹן) left in the prayer text, is acceptable and was settled earlier."
+    },
+    {
+      "scan": "s310",
+      "key": "veteerav",
+      "printed": "הש״ץ (upper) / מסיים (lower)",
+      "verified": true,
+      "note": "The enlarged crop s310-pair03 (line 06) shows two stacked small unpointed Rashi-type labels in the right margin before בָּרוּךְ. The Rashi shin and tsadi look like square ס and ז, which explains my earlier guess of 'חז״ן/מק״ס'. The enlarged image clearly supports הש״ץ / מסיים, so my prior Q2 is withdrawn. The candidate record matches."
+    },
+    {
+      "scan": "s310",
+      "key": "elohenu_kohanim",
+      "printed": "הש״ץ בקול",
+      "verified": true,
+      "note": "The enlarged crop s310-pair12 (line 24) shows the small inline label between וּבָנָיו and the large-type כֹּהֲנִים. My earlier 'חז״ן בקול' is withdrawn. The candidate record matches."
+    },
+    {
+      "scan": "s311",
+      "key": "modim_derabbanan",
+      "printed": "Congregation:",
+      "verified": "label text and block verified; placement field is wrong (F1)",
+      "note": "Italic, centered above the narrow right-hand column."
+    }
+  ],
+  "nonblocking_findings": [
+    "Prior B1 is resolved. The stale uncertainty notes are gone. The candidate now carries only text, metadata and review_evidence, and the status line correctly says final source and encoding/export reviews are still pending.",
+    "Prior B2 is resolved. source_role_labels and source_sic_corr now exist. Every in-scope label (s306, s308, s310, s311) matches the originals, apart from the F1 placement error. The sic/corr records for 'sindnesses' (s311) and the missing closing quote after 'Lord, Halleluyah.' (s307) match the scans: the quotation opens with ‘Halleluyah and has no closing mark. The 451 לום→צום record keeps לום in sic and in the raw kohanim_direction text, as instructed.",
+    "Prior B3 is resolved. The s311 'Congregation:' block exists and its text matches the scan.",
+    "Prior B4 / Q1 is resolved. s310 modim_derabbanan now reads לִשְׁמֹר (no vav, holam on the mem), matching human472 and the original scan. Q2 and Q3 are closed by the enlarged crops; see source_role_labels.",
+    "I re-checked all Hebrew prayer and instruction blocks on s306, s308 and s310 against the full-page originals: letters, vowels, dagesh, meteg, maqaf, punctuation, order, and no omissions or duplications. They agree with the scans and with human445–472, and I found no new discrepancy. Num 10:10 on s308 is still the only cantillated verse, with the human466 accents (pashta on וּבְי֙וֹם, merkha on שִׂמְחַתְכֶ֥ם, mahpakh on לָכֶ֤ם, merkha on יְיָ֥). The s306 verses correctly have no cantillation (human470).",
+    "I re-checked every English block on s307, s309 and s311 against the scans word for word. Line-break hyphens are correctly joined, real compounds are kept, the English linkage Hebrew cues are correctly left out, and the printed misprints are kept as printed.",
+    "All six running headers match the scans.",
+    "The source_role_labels and source_sic_corr records also cover s294–s305 (the s294 ק׳ labels, s298/s299 rubrics, s300/s302/s304 labels, the s305 Exodus quote) and human471 יֹקֶשׁ on s298. Those pages are outside the six images authorized for this closure, so I did not verify them here. This does not block the s306–s311 closure, but those records need their own image-checked sign-off."
+  ],
+  "verdict": "NOT APPROVED, one small fix away from approval. I read all six original scans and all four enlarged pair crops in full, and checked every candidate block and every in-scope metadata record. Prior blocking findings B1–B4 are all resolved, and every Hebrew and English text string matches the originals and human445–472, including לִשְׁמֹר. The role labels match the scans: ח׳ twice on s306, קו״ח twice on s308, הש״ץ / מסיים and הש״ץ בקול on s310. My earlier guesses for the s308 and s310 labels are withdrawn. The one remaining error (F1) is that the s311 'Congregation:' placement record says the heading is over the 'narrow left column'; on the scan it is over the narrow right-hand column. Once that one field is corrected, I find nothing further that blocks source closure for s306–s311. This review gives no authority over export or code.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "f04d9dc9-d206-4911-a27a-9a95cdba16d2"
+  }
+}

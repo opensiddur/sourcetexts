@@ -1,0 +1,30 @@
+{
+  "scope": "weekday_poem_closure",
+  "approved": true,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/bounded-weekday_poem-v4.json",
+    "/tmp/mahzor-s294/v6-changes.json",
+    "/tmp/mahzor-s294/stanza-incpit-decisions-v6.json",
+    "/tmp/mahzor-s294/draft-projects-v6/prayerbook_for_the_new_year-heidenheim-1965-he/musaf_essa_dei_betzedeq.xml",
+    "/tmp/mahzor-s294/draft-projects-v6/prayerbook_for_the_new_year-marmorstein-1965-en/musaf_essa_dei_betzedeq.xml"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "Prior blocking finding essa-incipit-qamatz-qatan-hakhshal is resolved. stanza-incpit-decisions-v6.json lines 50-55 map stanza_9 (הָכְשַׁל) to urn:x-opensiddur:text:poem:essa_dei_betzedeq/hokhshal. The HE and EN XML (line 38 in both) open that stanza with a milestone carrying the same URN, in the 9th position. The kaf after the silent shva has no dagesh, so 'kh' is correct.",
+    "Prior blocking finding essa-incipit-qamatz-qatan-haonash is resolved. stanza-incpit-decisions-v6.json lines 56-61 map stanza_10 (הָעֳנַשׁ) to urn:x-opensiddur:text:poem:essa_dei_betzedeq/hoonash. The HE and EN XML (line 38 in both) open that stanza with a milestone carrying the same URN, in the 10th position.",
+    "The old slugs 'hakhshal' and 'haonash' no longer appear in any of the three files. v6-changes.json lists only these two stanza URN changes, and their old and new values match what was applied.",
+    "The rest of the essa scope matches the previous review. HE and EN each have 44 stanza milestones in the same order with matching URNs, one to one, from /essa to /titzad. The other 42 slugs are the same as in the v3 decisions record. No ordinal stanza_N URNs are emitted. Every stanza is closed by a bare stanza terminator. The ק׳/קהל note (before /essa) and the חזן note (between the /teyasher close and the /titzad open) sit outside stanza scope. Every EN stanza has a filled translation. יֹקֶשׁ is still pointed with holam in HE, matching /yoqesh.",
+    "Page breaks are unchanged. HE: div@facs n293 (page 137 has no explicit pb, as the previous review noted), then pb 138/n295, 139/n297, 140/n299, 141/n301, 142/n303. EN: pb 137/n294, 138/n296, 139/n298, 140/n300, 141/n302, 142/n304. Both biblScope ranges are 137-142. EN pb 142 falls between the /rachashti and /reviit stanzas while HE pb 142 falls inside /rachashti. This reflects where each printing breaks the page and is not drift.",
+    "Minor wording point in the previous review: it says the HE essa pages run 137–143. The essa files only cover 137–142. Page 143 belongs to the shofarot and ken tagen material, so the files are correct and only the review text is loose.",
+    "Limitation: the previous review worked from bounded-review-v4 jsonl files, which were not assigned here, so I could not diff word for word against them. 'Unchanged' rests on the final files matching every property the previous review recorded. Accepted readings were not reopened, and I did not compare against the scan images.",
+    "Out of scope: v6-changes.json also sets new_canonical_home_title 'מודים דרבנן / Modim derabbanan'. That does not touch the essa files and was not reviewed. The musaf_anusah_leezrah entries in the decisions file were not reviewed either. The shofarot and ken tagen streams were not re-read; they had no findings last time and are not in this closure's file list."
+  ],
+  "verdict": "Approved. Both blocking findings from the previous review are fixed together in HE, EN and the v6 incipit decisions record: essa_dei_betzedeq/hakhshal is now /hokhshal and /haonash is now /hoonash. The old slugs no longer appear. The other 42 stanza URNs, the 44-stanza HE/EN alignment, stanza boundaries, rubric placement, page breaks and translation coverage still match what the previous review recorded.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "bda5a06e-618a-4460-8225-7a4de2c3115d"
+  }
+}

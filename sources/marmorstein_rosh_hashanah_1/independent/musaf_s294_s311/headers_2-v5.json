@@ -1,0 +1,123 @@
+{
+  "scope": "headers_2",
+  "approved": false,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/bounded-review-v5/header-proof-group2.json",
+    "/tmp/mahzor-s294/bounded-review-v5/header-variables-group2.json",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-2.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-6.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-10.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-14.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-18.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-22.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-26.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-30.xml"
+  ],
+  "blocking_findings": [
+    {
+      "id": "B1",
+      "check": "edition-qualified publication URNs",
+      "templates": [
+        "header-template-14.xml",
+        "header-template-18.xml",
+        "header-template-22.xml"
+      ],
+      "finding": "12 of the 124 files have no tei:idno type='urn' in publicationStmt at all. The variables file has no idno record for them either, which matches the templates.",
+      "files": [
+        "prayerbook_for_the_new_year-heidenheim-1965-he/qedushah_shared_parts.xml",
+        "prayerbook_for_the_new_year-marmorstein-1965-en/amidah_avodah_parts.xml",
+        "prayerbook_for_the_new_year-marmorstein-1965-en/amidah_hodaah_parts.xml",
+        "prayerbook_for_the_new_year-marmorstein-1965-en/hayom_harat_olam_words.xml",
+        "prayerbook_for_the_new_year-marmorstein-1965-en/musaf_offering_formula_word_parts.xml",
+        "prayerbook_for_the_new_year-marmorstein-1965-en/musaf_repetition_areshet_zikhron_words.xml",
+        "prayerbook_for_the_new_year-marmorstein-1965-en/musaf_repetition_ken_tagen_words.xml",
+        "prayerbook_for_the_new_year-marmorstein-1965-en/musaf_repetition_modim_derabbanan_english_words.xml",
+        "prayerbook_for_the_new_year-marmorstein-1965-en/musaf_yismechu_word_parts.xml",
+        "prayerbook_for_the_new_year-marmorstein-1965-en/qedushah_shared_parts.xml",
+        "prayerbook_for_the_new_year-marmorstein-1965-en/gevurot_parts.xml",
+        "prayerbook_for_the_new_year-marmorstein-1965-en/musaf_areshet_word_parts.xml"
+      ],
+      "note": "This is inconsistent with comparable *_parts files that do carry edition-qualified URNs, e.g. heidenheim addir_adiraynu_parts.xml, amidah_modim_derabbanan_parts.xml and marmorstein musaf_qedushah_conclusion_parts.xml. If project policy deliberately exempts shared-parts files from URNs, that policy needs to be documented. Otherwise, add URNs."
+    },
+    {
+      "id": "B2",
+      "check": "actual titles, not pilot installment / placeholders",
+      "files": [
+        "prayerbook_for_the_new_year-heidenheim-1965-he/amidah_modim_derabbanan.xml",
+        "prayerbook_for_the_new_year-heidenheim-1965-he/amidah_modim_derabbanan_parts.xml"
+      ],
+      "finding": "The title is 'תפלת מנחה — modim_derabbanan'. It contains a raw ASCII code slug and is prefixed with the service name instead of being a real title. Compare musaf_repetition_modim_derabbanan.xml, which correctly uses 'מודים דרבנן'."
+    },
+    {
+      "id": "B3",
+      "check": "actual titles, not pilot installment",
+      "files": [
+        "prayerbook_for_the_new_year-marmorstein-1965-en/amidah_avodah_parts.xml",
+        "prayerbook_for_the_new_year-marmorstein-1965-en/amidah_hodaah_parts.xml"
+      ],
+      "finding": "The titles are 'Evening Prayer for the New Year — Service' and 'Evening Prayer for the New Year — Thanksgiving', so they carry the installment/section name as a prefix. The parallel Hebrew files covering the same pages (rh_avodah.xml p.18 'עבודה', rh_hodaah.xml pp.18–19 'הודאה') use the actual piece titles. The English files should do the same, e.g. 'Service' / 'Thanksgiving' or the printed English heading."
+    }
+  ],
+  "nonblocking_findings": [
+    {
+      "id": "N1",
+      "check": "credits",
+      "finding": "Every template credits only Codex, for trc 'AI-assisted scan transcription' and mrk 'JLPTEI markup'. Digitization roles are therefore labeled correctly and nothing is misattributed to the source arranger or translator. However, no header names the source arranger (Heidenheim) or the translator (Marmorstein, for the -en files). That attribution exists only through the ptr to index#project_source_bibl. This is acceptable under the JLPTEI convention that keeps source authorship in the bibliography, but see the scope limitation on the index."
+    },
+    {
+      "id": "N2",
+      "check": "titles",
+      "files": [
+        "heidenheim musaf_useir_lekhapper.xml",
+        "heidenheim musaf_repetition_useir_lekhapper.xml"
+      ],
+      "finding": "The title 'נוסח פרנקפורט' is a rite/rubric label, not the text's title (the URN slug is useir_lekhapper). Consider 'ושעיר לכפר' or a compound such as 'ושעיר לכפר — נוסח פרנקפורט'."
+    },
+    {
+      "id": "N3",
+      "check": "titles",
+      "finding": "Some titles are generic or fragmentary: heidenheim musaf_shofarot_verses.xml 'פסוקים' (the repetition counterpart uses 'פסוקי שופרות'); marmorstein musaf_repetition_areshet_zikhron_words.xml 'The memory of'. These are acceptable for word-part files but less informative."
+    },
+    {
+      "id": "N4",
+      "check": "publication URNs",
+      "finding": "Path style is inconsistent within heidenheim musaf/repetition URNs. A few use an underscore ('musaf/repetition_gevurot_close', 'repetition_gevurot_open', 'repetition_veattah_qadosh', 'repetition_yimlokh', 'repetition_uvekhen_lekha_taaleh_qedushah') while the rest use 'musaf/repetition/<name>'. All of them are edition-qualified and no duplicate URNs were found."
+    },
+    {
+      "id": "N5",
+      "check": "publication URNs",
+      "file": "heidenheim musaf_repetition_umippenei.xml",
+      "finding": "The URN 'urn:x-opensiddur:text:siddur:regalim/musaf/text/umippenei@…heidenheim-1965-he' uses a regalim (pilgrimage-festival) path for a Rosh Hashanah musaf repetition text. Confirm this is an intentional reuse of a shared canonical path and not a copy error."
+    },
+    {
+      "id": "N6",
+      "check": "page ranges",
+      "file": "heidenheim amidah_vetimlokh_attah_hashem_parts.xml",
+      "finding": "The biblScope entries run 17, 103, 116, 113, which is not in page order. Each value looks plausible, but sorting them would help."
+    },
+    {
+      "id": "N7",
+      "check": "page ranges",
+      "finding": "Heidenheim qedushah_shared_parts.xml covers pp. 3, 109, 110 and 113, while marmorstein qedushah_shared_parts.xml covers 109–113 with no p. 3. This may be correct if no English shared parts come from p. 3, but should be confirmed. All other ranges have from ≤ to, and parallel weekday/Shabbat poem ranges (e.g. 129–134/129–135, 137–142/137–143) fit side-by-side printing."
+    },
+    {
+      "id": "N8",
+      "check": "edition/status note",
+      "finding": "The Heidenheim (-he) headers' DRAFT edition note points to 'sources/marmorstein_rosh_hashanah_1/'. This is fine if both editions share one physical volume and adjudication directory. The DRAFT note itself is expected and will be removed before final export."
+    }
+  ],
+  "scope_limitations": [
+    "I could not check the bibliography target '/…/index#project_source_bibl' for either project. Whether it exists, and whether it credits Heidenheim as arranger/editor and Marmorstein as translator with the correct edition details, is outside this file set.",
+    "The CC0 dedication appears on every header, but the rights basis for the 1965 source (especially the Marmorstein English translation) is not stated in the headers and could not be verified here.",
+    "Page numbers and titles were checked for internal consistency (Hebrew/English parallels, ordering, from ≤ to) but not against source images.",
+    "I checked the C14N grouping in the proof file by structure only (file counts add up to 124 changed_records; templates match their declared groups). I did not recompute the hashes or open the draft files directly."
+  ],
+  "verdict": "NOT APPROVED. Licensing (CC0, consistent), bibliography pointers (correct per project), digitization credits (correctly scoped to Codex), page ranges and URN edition qualification are otherwise acceptable. Three things block: 12 files have no publication URN (templates 14/18/22); two Heidenheim modim_derabbanan files have a code slug and service prefix in the title ('תפלת מנחה — modim_derabbanan'); and two Marmorstein files have the installment name as a title prefix ('Evening Prayer for the New Year — …').",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "5612582e-ca7a-44c6-a039-54fe2a6ef406"
+  }
+}

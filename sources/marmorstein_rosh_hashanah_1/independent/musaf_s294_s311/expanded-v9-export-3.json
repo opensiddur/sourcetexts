@@ -1,0 +1,21 @@
+{
+  "scope": "expanded-v9-export-3",
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/expanded-export-manifest-v9.json",
+    "/tmp/mahzor-s294/full-pdf-images-v9/expanded-269.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "PDF page 269 (printed folio 267) is back matter, but its running header still reads 'חזרת התפלה', carried over from the last liturgical section. A header like 'מקורות' or 'Sources' would suit this page better. This is cosmetic only.",
+    "The hyperlinks (internet_archive identifier and URL) have cyan link-annotation borders around them. These usually show only on screen, not in print, but some viewers display them. Consider hidelinks or colorlinks if a clean screen look matters. This is cosmetic only.",
+    "The long monospaced identifier and URL break mid-token ('…-rosh' / '-hashanah…', 'detail' / 's/mahzor…'). Nothing is clipped and the text stays inside the text block. The break before '-hashanah' could be misread as a real hyphen in the identifier, but the link targets themselves are unaffected."
+  ],
+  "verdict": "I read the one assigned image, PDF page 269 (printed folio 267). It continues bibliography entry [2] (Heidenheim & Marmorstein, Prayerbook for the New Year [First Day], Basle: Victor Goldschmidt, 1965). The page shows the Internet Archive identifier and URL, the visit date, imaging and preparation credits (Aharon N. Varady; HUC-JIR Klau Library, Cincinnati), the independent-reader credit and the no-translation disclaimer. Nothing is clipped or overlapping, the English text and the Hebrew running header are readable, and the margins and folio are consistent. There are no stanzas, notes or ending on this page, so those checks don't apply here. Sources and credits are kept. The bibliography continuing from the previous page is expected, not a defect. Approved for this range.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "54c2e47a-ce3b-4a89-a544-50b19bddeff7"
+  }
+}

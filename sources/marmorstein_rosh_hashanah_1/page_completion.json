@@ -186,7 +186,8 @@
       "amidah_modim_derabbanan/he",
       "amidah_tefillah/he",
       "amidah_tzaddiqim/he",
-      "amidah_yerushalayim/he"
+      "amidah_yerushalayim/he",
+      "realization/amidah_modim_derabbanan/he"
     ],
     "guideline_review": "guideline_adherence_resolutions.json"
   },
@@ -200,7 +201,8 @@
       "amidah_modim_derabbanan/he",
       "amidah_shalom_rav/he",
       "amidah_yehi_ratzon/he",
-      "instruction/reader_repeats"
+      "instruction/reader_repeats",
+      "realization/amidah_modim_derabbanan/he"
     ],
     "guideline_review": "guideline_adherence_resolutions.json"
   },
@@ -484,6 +486,8 @@
     "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n29.jpg",
     "independent_model": "claude-opus-5-5",
     "reading_keys": [
+      "realization/rh_avodah/he",
+      "realization/rh_hodaah/he",
       "realization/rh_qedushat_hayom/he",
       "rh_avodah/he",
       "rh_hodaah/he",
@@ -497,6 +501,8 @@
     "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n30.jpg",
     "independent_model": "claude-opus-5-5",
     "reading_keys": [
+      "realization/rh_avodah/en",
+      "realization/rh_hodaah/en",
       "realization/rh_qedushat_hayom/en",
       "rh_avodah/en",
       "rh_hodaah/en",
@@ -510,6 +516,7 @@
     "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n31.jpg",
     "independent_model": "claude-opus-5-5",
     "reading_keys": [
+      "realization/rh_hodaah/he",
       "rh_elohai_netzor/he",
       "rh_hodaah/he",
       "rh_shalom/he",
@@ -523,6 +530,7 @@
     "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n32.jpg",
     "independent_model": "claude-opus-5-5",
     "reading_keys": [
+      "realization/rh_hodaah/en",
       "rh_elohai_netzor/en",
       "rh_hodaah/en",
       "rh_shalom/en",
@@ -1542,7 +1550,7 @@
     "completion_review": "completion_review_2026_11_yotzer_english_acceptance.json"
   },
   "s351": {
-    "status": "complete",
+    "status": "partial",
     "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n350.jpg",
     "independent_model": "claude-opus-5-5",
     "reading_keys": [
@@ -1550,7 +1558,8 @@
       "instruction/daily_psalms_heading",
       "psalm_24/he"
     ],
-    "completion_review": "completion_review_2026_11_english_unchanged_acceptance.json"
+    "completion_review": "coverage-count-correction-v8.json; prior complete-leaf classification corrected after inspecting the whole Archive n350 image.",
+    "accepted_excerpt": "Sunday Psalm24 and its headings only; Monday Psalm48 begins below and is not encoded."
   },
   "s110": {
     "status": "complete",
@@ -2126,6 +2135,7 @@
     "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n154.jpg",
     "independent_model": "claude-opus-5-5",
     "reading_keys": [
+      "realization/repetition_birkat_kohanim/he",
       "repetition_birkat_kohanim/he",
       "repetition_hodaah_tail/he",
       "repetition_modim/he",
@@ -2876,7 +2886,8 @@
       "musaf_shofarot_open/he",
       "musaf_shofarot_verses/he",
       "musaf_zikhronot_blessing/he",
-      "musaf_zikhronot_close/he"
+      "musaf_zikhronot_close/he",
+      "realization/musaf_shofarot_verses/he"
     ],
     "completion_review": "musaf_s200_s223_he_except_two_acceptance.json: complete scoped body and source instructions reviewed, all findings resolved. Scans204/220 remain draft because of their excluded units."
   },
@@ -2889,7 +2900,8 @@
       "musaf_shofarot_open/en",
       "musaf_shofarot_verses/en",
       "musaf_zikhronot_blessing/en",
-      "musaf_zikhronot_close/en"
+      "musaf_zikhronot_close/en",
+      "realization/musaf_shofarot_verses/en"
     ],
     "completion_review": "independent/musaf_s200_s223/closure/english.json: all printed English independently checked against actual XML. Hebrew linkage cues excluded by user direction; damaged of our accepted as explicitly marked reconstruction."
   },
@@ -2901,7 +2913,8 @@
       "citation/musaf_shofarot_close/he/0",
       "musaf_shofarot_close/he",
       "musaf_shofarot_verses/he",
-      "musaf_trumpet_verse/he"
+      "musaf_trumpet_verse/he",
+      "realization/musaf_shofarot_verses/he"
     ],
     "completion_review": "musaf_s200_s223_he_except_two_acceptance.json: complete scoped body and source instructions reviewed, all findings resolved. Scans204/220 remain draft because of their excluded units."
   },
@@ -2913,7 +2926,8 @@
       "citation/musaf_shofarot_close/en/0",
       "musaf_shofarot_close/en",
       "musaf_shofarot_verses/en",
-      "musaf_trumpet_verse/en"
+      "musaf_trumpet_verse/en",
+      "realization/musaf_shofarot_verses/en"
     ],
     "completion_review": "independent/musaf_s200_s223/closure/english.json: all printed English independently checked against actual XML. Hebrew linkage cues excluded by user direction; damaged of our accepted as explicitly marked reconstruction."
   },
@@ -4085,5 +4099,278 @@
       "realization/musaf_zekhor_berit_avraham_words/en"
     ],
     "completion_review": "musaf_s276_s293_acceptance.json; independent blind scans, full-vowel-area proof, human415–444, guideline/alignment/identity/order review and final full-book PDF/HTML approval."
+  },
+  "s294": {
+    "status": "complete",
+    "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n293.jpg",
+    "independent_model": "claude-opus-5-5",
+    "reading_keys": [
+      "instruction/musaf_shofarot_shabbat_attribution",
+      "instruction/musaf_shofarot_shabbat_heading",
+      "instruction/musaf_shofarot_weekday_attribution",
+      "musaf_anusah_leezrah/he",
+      "musaf_essa_dei_betzedeq/he",
+      "realization/musaf_anusah_leezrah/he",
+      "realization/musaf_essa_dei_betzedeq/he"
+    ],
+    "completion_review": "musaf_s294_s311_acceptance.json; independent blind images, human445–472, source/guideline/identity/alignment/order and final PDF/electronic acceptance."
+  },
+  "s295": {
+    "status": "complete",
+    "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n294.jpg",
+    "independent_model": "claude-opus-5-5",
+    "reading_keys": [
+      "instruction/musaf_shofarot_shabbat_heading_en",
+      "musaf_anusah_leezrah/en",
+      "musaf_essa_dei_betzedeq/en",
+      "realization/musaf_anusah_leezrah/en",
+      "realization/musaf_essa_dei_betzedeq/en"
+    ],
+    "completion_review": "musaf_s294_s311_acceptance.json; independent blind images, human445–472, source/guideline/identity/alignment/order and final PDF/electronic acceptance."
+  },
+  "s296": {
+    "status": "complete",
+    "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n295.jpg",
+    "independent_model": "claude-opus-5-5",
+    "reading_keys": [
+      "musaf_anusah_leezrah/he",
+      "musaf_essa_dei_betzedeq/he",
+      "realization/musaf_anusah_leezrah/he",
+      "realization/musaf_essa_dei_betzedeq/he"
+    ],
+    "completion_review": "musaf_s294_s311_acceptance.json; independent blind images, human445–472, source/guideline/identity/alignment/order and final PDF/electronic acceptance."
+  },
+  "s297": {
+    "status": "complete",
+    "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n296.jpg",
+    "independent_model": "claude-opus-5-5",
+    "reading_keys": [
+      "musaf_anusah_leezrah/en",
+      "musaf_essa_dei_betzedeq/en",
+      "realization/musaf_anusah_leezrah/en",
+      "realization/musaf_essa_dei_betzedeq/en"
+    ],
+    "completion_review": "musaf_s294_s311_acceptance.json; independent blind images, human445–472, source/guideline/identity/alignment/order and final PDF/electronic acceptance."
+  },
+  "s298": {
+    "status": "complete",
+    "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n297.jpg",
+    "independent_model": "claude-opus-5-5",
+    "reading_keys": [
+      "musaf_anusah_leezrah/he",
+      "musaf_essa_dei_betzedeq/he",
+      "realization/musaf_anusah_leezrah/he",
+      "realization/musaf_essa_dei_betzedeq/he"
+    ],
+    "completion_review": "musaf_s294_s311_acceptance.json; independent blind images, human445–472, source/guideline/identity/alignment/order and final PDF/electronic acceptance."
+  },
+  "s299": {
+    "status": "complete",
+    "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n298.jpg",
+    "independent_model": "claude-opus-5-5",
+    "reading_keys": [
+      "musaf_anusah_leezrah/en",
+      "musaf_essa_dei_betzedeq/en",
+      "realization/musaf_anusah_leezrah/en",
+      "realization/musaf_essa_dei_betzedeq/en"
+    ],
+    "completion_review": "musaf_s294_s311_acceptance.json; independent blind images, human445–472, source/guideline/identity/alignment/order and final PDF/electronic acceptance."
+  },
+  "s300": {
+    "status": "complete",
+    "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n299.jpg",
+    "independent_model": "claude-opus-5-5",
+    "reading_keys": [
+      "musaf_anusah_leezrah/he",
+      "musaf_essa_dei_betzedeq/he",
+      "realization/musaf_anusah_leezrah/he",
+      "realization/musaf_essa_dei_betzedeq/he"
+    ],
+    "completion_review": "musaf_s294_s311_acceptance.json; independent blind images, human445–472, source/guideline/identity/alignment/order and final PDF/electronic acceptance."
+  },
+  "s301": {
+    "status": "complete",
+    "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n300.jpg",
+    "independent_model": "claude-opus-5-5",
+    "reading_keys": [
+      "musaf_anusah_leezrah/en",
+      "musaf_essa_dei_betzedeq/en",
+      "realization/musaf_anusah_leezrah/en",
+      "realization/musaf_essa_dei_betzedeq/en"
+    ],
+    "completion_review": "musaf_s294_s311_acceptance.json; independent blind images, human445–472, source/guideline/identity/alignment/order and final PDF/electronic acceptance."
+  },
+  "s302": {
+    "status": "complete",
+    "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n301.jpg",
+    "independent_model": "claude-opus-5-5",
+    "reading_keys": [
+      "musaf_anusah_leezrah/he",
+      "musaf_essa_dei_betzedeq/he",
+      "realization/musaf_anusah_leezrah/he",
+      "realization/musaf_essa_dei_betzedeq/he"
+    ],
+    "completion_review": "musaf_s294_s311_acceptance.json; independent blind images, human445–472, source/guideline/identity/alignment/order and final PDF/electronic acceptance."
+  },
+  "s303": {
+    "status": "complete",
+    "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n302.jpg",
+    "independent_model": "claude-opus-5-5",
+    "reading_keys": [
+      "musaf_anusah_leezrah/en",
+      "musaf_essa_dei_betzedeq/en",
+      "realization/musaf_anusah_leezrah/en",
+      "realization/musaf_essa_dei_betzedeq/en"
+    ],
+    "completion_review": "musaf_s294_s311_acceptance.json; independent blind images, human445–472, source/guideline/identity/alignment/order and final PDF/electronic acceptance."
+  },
+  "s304": {
+    "status": "complete",
+    "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n303.jpg",
+    "independent_model": "claude-opus-5-5",
+    "reading_keys": [
+      "musaf_anusah_leezrah/he",
+      "musaf_essa_dei_betzedeq/he",
+      "musaf_repetition_shofarot_verses/he",
+      "realization/musaf_anusah_leezrah/he",
+      "realization/musaf_essa_dei_betzedeq/he",
+      "realization/musaf_repetition_shofarot_verses/he"
+    ],
+    "completion_review": "musaf_s294_s311_acceptance.json; independent blind images, human445–472, source/guideline/identity/alignment/order and final PDF/electronic acceptance."
+  },
+  "s305": {
+    "status": "complete",
+    "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n304.jpg",
+    "independent_model": "claude-opus-5-5",
+    "reading_keys": [
+      "musaf_anusah_leezrah/en",
+      "musaf_essa_dei_betzedeq/en",
+      "musaf_repetition_shofarot_verses/en",
+      "realization/musaf_anusah_leezrah/en",
+      "realization/musaf_essa_dei_betzedeq/en",
+      "realization/musaf_repetition_shofarot_verses/en"
+    ],
+    "completion_review": "musaf_s294_s311_acceptance.json; independent blind images, human445–472, source/guideline/identity/alignment/order and final PDF/electronic acceptance."
+  },
+  "s306": {
+    "status": "complete",
+    "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n305.jpg",
+    "independent_model": "claude-opus-5-5",
+    "reading_keys": [
+      "musaf_anusah_leezrah/he",
+      "musaf_repetition_ken_tagen_shabbat/he",
+      "musaf_repetition_ken_tagen_weekday/he",
+      "musaf_repetition_ken_tagen_words/he",
+      "musaf_repetition_shofarot_verses/he",
+      "realization/musaf_anusah_leezrah/he",
+      "realization/musaf_repetition_ken_tagen_shabbat/he",
+      "realization/musaf_repetition_ken_tagen_weekday/he",
+      "realization/musaf_repetition_ken_tagen_words/he",
+      "realization/musaf_repetition_shofarot_verses/he"
+    ],
+    "completion_review": "musaf_s294_s311_acceptance.json; independent blind images, human445–472, source/guideline/identity/alignment/order and final PDF/electronic acceptance."
+  },
+  "s307": {
+    "status": "complete",
+    "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n306.jpg",
+    "independent_model": "claude-opus-5-5",
+    "reading_keys": [
+      "musaf_anusah_leezrah/en",
+      "musaf_repetition_ken_tagen_shabbat/en",
+      "musaf_repetition_ken_tagen_weekday/en",
+      "musaf_repetition_ken_tagen_words/en",
+      "musaf_repetition_shofarot_verses/en",
+      "realization/musaf_anusah_leezrah/en",
+      "realization/musaf_repetition_ken_tagen_shabbat/en",
+      "realization/musaf_repetition_ken_tagen_weekday/en",
+      "realization/musaf_repetition_ken_tagen_words/en",
+      "realization/musaf_repetition_shofarot_verses/en"
+    ],
+    "completion_review": "musaf_s294_s311_acceptance.json; independent blind images, human445–472, source/guideline/identity/alignment/order and final PDF/electronic acceptance."
+  },
+  "s308": {
+    "status": "complete",
+    "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n307.jpg",
+    "independent_model": "claude-opus-5-5",
+    "reading_keys": [
+      "citation/musaf_repetition_shofarot_close/he/0",
+      "instruction/musaf_repetition_shofarot_areshet_role",
+      "instruction/musaf_repetition_shofarot_hayom_role",
+      "instruction/musaf_shofarot_blow_he",
+      "musaf_repetition_areshet_zikhron_words/he",
+      "musaf_repetition_retzeh/he",
+      "musaf_repetition_shofarot_areshet/he",
+      "musaf_repetition_shofarot_calls/he",
+      "musaf_repetition_shofarot_close/he",
+      "musaf_repetition_shofarot_hayom/he",
+      "realization/musaf_areshet_word_parts/he",
+      "realization/musaf_repetition_areshet_zikhron_words/he",
+      "realization/musaf_repetition_retzeh/he",
+      "realization/musaf_repetition_shofarot_areshet/he",
+      "realization/musaf_repetition_shofarot_calls/he",
+      "realization/musaf_repetition_shofarot_close/he",
+      "realization/musaf_repetition_shofarot_hayom/he"
+    ],
+    "completion_review": "musaf_s294_s311_acceptance.json; independent blind images, human445–472, source/guideline/identity/alignment/order and final PDF/electronic acceptance."
+  },
+  "s309": {
+    "status": "complete",
+    "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n308.jpg",
+    "independent_model": "claude-opus-5-5",
+    "reading_keys": [
+      "instruction/musaf_shofarot_blow_en",
+      "musaf_repetition_areshet_zikhron_words/en",
+      "musaf_repetition_retzeh/en",
+      "musaf_repetition_shofarot_areshet/en",
+      "musaf_repetition_shofarot_close/en",
+      "musaf_repetition_shofarot_hayom/en",
+      "realization/musaf_areshet_word_parts/en",
+      "realization/musaf_repetition_areshet_zikhron_words/en",
+      "realization/musaf_repetition_retzeh/en",
+      "realization/musaf_repetition_shofarot_areshet/en",
+      "realization/musaf_repetition_shofarot_close/en",
+      "realization/musaf_repetition_shofarot_hayom/en"
+    ],
+    "completion_review": "musaf_s294_s311_acceptance.json; independent blind images, human445–472, source/guideline/identity/alignment/order and final PDF/electronic acceptance."
+  },
+  "s310": {
+    "status": "complete",
+    "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n309.jpg",
+    "independent_model": "claude-opus-5-5",
+    "reading_keys": [
+      "instruction/musaf_kohanim_direction_he",
+      "musaf_repetition_hodaah_tail/he",
+      "musaf_repetition_kohanim_intro/he",
+      "musaf_repetition_modim/he",
+      "musaf_repetition_modim_derabbanan/he",
+      "musaf_repetition_veteerav/he",
+      "realization/musaf_repetition_hodaah_tail/he",
+      "realization/musaf_repetition_kohanim_intro/he",
+      "realization/musaf_repetition_modim/he",
+      "realization/musaf_repetition_modim_derabbanan/he",
+      "realization/musaf_repetition_veteerav/he"
+    ],
+    "completion_review": "musaf_s294_s311_acceptance.json; independent blind images, human445–472, source/guideline/identity/alignment/order and final PDF/electronic acceptance."
+  },
+  "s311": {
+    "status": "complete",
+    "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n310.jpg",
+    "independent_model": "claude-opus-5-5",
+    "reading_keys": [
+      "instruction/musaf_kohanim_direction_en",
+      "musaf_repetition_hodaah_tail/en",
+      "musaf_repetition_kohanim_intro/en",
+      "musaf_repetition_modim/en",
+      "musaf_repetition_modim_derabbanan/en",
+      "musaf_repetition_modim_derabbanan_english_words/en",
+      "musaf_repetition_veteerav/en",
+      "realization/musaf_repetition_hodaah_tail/en",
+      "realization/musaf_repetition_kohanim_intro/en",
+      "realization/musaf_repetition_modim/en",
+      "realization/musaf_repetition_modim_derabbanan/en",
+      "realization/musaf_repetition_modim_derabbanan_english_words/en",
+      "realization/musaf_repetition_veteerav/en"
+    ],
+    "completion_review": "musaf_s294_s311_acceptance.json; independent blind images, human445–472, source/guideline/identity/alignment/order and final PDF/electronic acceptance."
   }
 }

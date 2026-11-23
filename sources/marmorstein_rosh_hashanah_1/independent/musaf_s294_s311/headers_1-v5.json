@@ -1,0 +1,121 @@
+{
+  "scope": "headers_1",
+  "approved": false,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/bounded-review-v5/header-proof-group1.json",
+    "/tmp/mahzor-s294/bounded-review-v5/header-variables-group1.json",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-1.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-5.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-9.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-13.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-17.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-21.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-25.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-29.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-33.xml"
+  ],
+  "blocking_findings": [
+    {
+      "id": "B1",
+      "check": "edition-qualified publication URNs",
+      "template": "header-template-17.xml (group 06beaa2f…)",
+      "files": [
+        "prayerbook_for_the_new_year-marmorstein-1965-en/al_ken_words.xml",
+        "prayerbook_for_the_new_year-marmorstein-1965-en/musaf_attah_zokher_words.xml"
+      ],
+      "detail": "The publicationStmt has no <tei:idno type=\"urn\"> at all. The template has no [PUBLICATION_URN] slot, and the variables file has no idno xpath for either file. Every other template in this group has an edition-qualified URN, including the Heidenheim '_words' files (musaf_qedushah_mimeqomo_words, qedushah_echad_hu_words). That makes this an inconsistency, not a convention for fragment files.",
+      "required_action": "Add urn:x-opensiddur:text:…@prayerbook_for_the_new_year-marmorstein-1965-en idno to both files."
+    },
+    {
+      "id": "B2",
+      "check": "page ranges",
+      "template": "header-template-13.xml (group 304811eb…)",
+      "files": [
+        "prayerbook_for_the_new_year-heidenheim-1965-he/psalm_24.xml"
+      ],
+      "detail": "sourceDesc/bibl has only the ptr and no <tei:biblScope unit=\"pages\">. Every other Heidenheim text-unit header (template-1, 349 files; template-5, 8 files) has page ranges. psalm_24 is a text unit, not the project index, so it needs a page range. It is also the only Heidenheim header outside template-1 that has no DRAFT note.",
+      "required_action": "Add a biblScope with the scan page range, or show that psalm_24.xml is a page-less structural container."
+    }
+  ],
+  "nonblocking_findings": [
+    {
+      "id": "N1",
+      "check": "page ranges",
+      "template": "header-template-21.xml (group 517b0b5c…)",
+      "files": [
+        "marmorstein-1965-en/first_night_kiddush.xml",
+        "marmorstein-1965-en/morning_blessings.xml",
+        "marmorstein-1965-en/morning_preliminaries.xml",
+        "marmorstein-1965-en/tallith.xml"
+      ],
+      "detail": "None of these four headers has a biblScope. Three use siddur:rosh_hashanah/... section URNs, so they may be structural containers where omitting pages is fine. tallith.xml uses a prayer:tallith URN, which looks like a text unit; if it holds transcribed text, it should get a page range. Confirm."
+    },
+    {
+      "id": "N2",
+      "check": "actual titles",
+      "files": [
+        "marmorstein-1965-en/morning_preliminaries.xml ('Prayers')",
+        "marmorstein-1965-en/morning_blessings.xml ('Morning Prayer')"
+      ],
+      "detail": "These titles are very generic. They are not pilot or installment labels, but I could not check them against the scan. Confirm they match the printed headings."
+    },
+    {
+      "id": "N3",
+      "check": "DRAFT status consistency",
+      "templates": [
+        "header-template-1.xml",
+        "header-template-13.xml"
+      ],
+      "detail": "The editionStmt here has no 'DRAFT: independent adjudication pending.' prefix, while templates 5, 9, 17, 21, 25, 29 and 33 do. Since DRAFT is removed for final export this does not block. It does mean the review build marks its status inconsistently: 350 headers carry no draft marker."
+    },
+    {
+      "id": "N4",
+      "check": "credits",
+      "template": "header-template-9.xml",
+      "detail": "The credits are correctly separated. Source arranger (Wolf Heidenheim, editor role=arranger) and translator (Jenny Marmorstein, editor role=translator) are in the source bibl. Codex transcription and markup are in titleStmt/respStmt. Imaging (Aharon N. Varady, HUC-JIR Klau copy) and the independent reader are in a bibl note. Suggestion: give digital imaging its own respStmt (or a structured element) instead of prose only, so it can be machine-attributed."
+    },
+    {
+      "id": "N5",
+      "check": "licensing",
+      "detail": "Every header has the same CC0 1.0 licence. The licence target 'http://www.creativecommons.org/publicdomain/zero/1.0' is not the canonical form (https://creativecommons.org/publicdomain/zero/1.0/). If this matches the existing Open Siddur corpus convention it is fine; otherwise normalize. See scope limitation S3 on rights basis."
+    },
+    {
+      "id": "N6",
+      "check": "edition-qualified publication URNs",
+      "file": "heidenheim-1965-he/torah_maftir_numbers_29.xml",
+      "detail": "The URN 'urn:x-opensiddur:text:bible:numbers/29/1-/29/6@…' is edition-qualified correctly. Check that the range syntax '29/1-/29/6' matches the project's canonical bible-range URN form."
+    },
+    {
+      "id": "N7",
+      "check": "actual titles",
+      "detail": "Heidenheim Hebrew titles mix pointed and unpointed text: 'וּבְכֵן לְךָ תַעֲלֶה קְדֻשָּׁה' is pointed, while the others, e.g. 'ובכן תן פחדך' and 'קדושת היום', are not. These are style differences, not errors."
+    },
+    {
+      "id": "N8",
+      "check": "page ranges / titles",
+      "file": "marmorstein-1965-en/uvekhen_lekha_taaleh_qedushah.xml",
+      "detail": "The title is Hebrew (xml:lang=he, correctly tagged), and the pages (59, 107) are the same as the Heidenheim counterpart. That fits the bibl note saying no translations were supplied for passages absent from the English edition. Confirm the English edition really prints this passage on those pages, so the page range is not a copy of the Hebrew project's."
+    }
+  ],
+  "verified_ok": [
+    "All 19 changed records were checked. Every URN present has an @prayerbook_for_the_new_year-heidenheim-1965-he or @prayerbook_for_the_new_year-marmorstein-1965-en suffix matching its project directory.",
+    "Both index.xml titles are 'Prayerbook for the New Year — first day', consistent with the source title 'Prayerbook for the New Year [First Day]'. No pilot or installment wording appears in any visible title.",
+    "Every biblScope in the variables has from <= to and unit='pages'. Each two-range file pairs a main-body page with a later page (103–117), which is consistent with a back-of-book section.",
+    "Every ptr target resolves by template to an index with xml:id='project_source_bibl'. Both index files share template-9, so both define the anchor.",
+    "The source bibl has a publisher, place, date, archive.org URL and IA identifier, an access date, and the Open Siddur source record ref."
+  ],
+  "scope_limitations": [
+    "S1: For the 349 template-1 files and psalm_24.xml there are no changed-variable records, so I could not see their actual title, URN or page values. For those files I checked only the template structure, not the masked values.",
+    "S2: I did not check titles or page ranges against the scan images. I checked only internal consistency.",
+    "S3: I did not verify the rights basis for a CC0 dedication covering the 1965 Marmorstein English translation; the referenced Open Siddur source record ?p=69112 was not provided. I checked only that the licence statement is present and consistent.",
+    "S4: Bodies, encoding, code and other header groups are outside this scope, as instructed."
+  ],
+  "verdict": "NOT APPROVED. There are two blocking issues. (B1) The two marmorstein-en '_words' files (template-17) have no publication URN idno. (B2) heidenheim-he/psalm_24.xml (template-13) has no page-range biblScope. Credits correctly separate the source arranger and translator from digitization. The bibliography and licence statements are present and consistent. All URNs present are edition-qualified, and the visible titles are real titles, not pilot labels. Approve once B1 and B2 are fixed and N1 (tallith.xml page range) is confirmed.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "d6747b5a-92ab-4fcf-ac61-e5e94f0c3088"
+  }
+}

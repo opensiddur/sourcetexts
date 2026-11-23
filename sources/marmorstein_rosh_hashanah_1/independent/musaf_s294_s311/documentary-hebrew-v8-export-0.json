@@ -1,0 +1,27 @@
+{
+  "scope": "documentary-hebrew-v8-export-0",
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/documentary-hebrew-export-manifest-v8.json",
+    "/tmp/mahzor-s294/full-pdf-images-v8/documentary-hebrew-78.png",
+    "/tmp/mahzor-s294/full-pdf-images-v8/documentary-hebrew-79.png",
+    "/tmp/mahzor-s294/full-pdf-images-v8/documentary-hebrew-80.png",
+    "/tmp/mahzor-s294/full-pdf-images-v8/documentary-hebrew-81.png",
+    "/tmp/mahzor-s294/full-pdf-images-v8/documentary-hebrew-82.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "PDF p.80 (printed 72): The superscript note marker '95' sits at the far left edge of the line 'כְּמִצְוָה (כמצוה) … חָדְשֵׁכֶם', raised into the space between lines. It is close to the line above but doesn't overlap it and is readable. Footnote 95, labelled 'נוסח אחר', is on the same page below the separator rule, so the marker and its note match.",
+    "PDF p.81 (printed 73): The running header already reads 'שיר של יום.' even though the top of the page is still the end of the חזרת התפילה text. This is the usual last-heading-on-page behaviour and is cosmetic only.",
+    "PDF p.82 (printed 74): The running header 'שיר של יום.' carries over onto the Contributor credits/Sources page. Cosmetic only.",
+    "PDF p.81: The editorial ending label ('התמלול מגיע עד הקדמת ברכת כהנים בחזרת מוסף; פסוקי הברכה והמשך התפילה טרם נכללו.') is followed by the separate 'שיר של יום.' section (Psalm 24). The order is already approved and the label clearly covers the missing priestly-blessing verses and the rest of the Amidah. You could reword it to say explicitly that only the repetition is cut off, so readers don't take the next section as contradicting it. Optional.",
+    "PDF p.82: The archive.org identifier and URL wrap at literal hyphens and slashes ('…rosh' / '-hashanah…', '…detail' / 's/…'). Both are readable and the links are boxed as active. Cosmetic only."
+  ],
+  "verdict": "I read all five pages (printed 70–74) and the manifest. I found no clipping, overlap or text running into the margins. The Hebrew prose, vowel points, bold rubrics, the bracketed '[זכרון]' and the parenthetical 'כמצוה' are all readable. The paired stanza rows ('הללוהו…' blocks on pp. 78 and 80) and the single-line verse rows line up consistently with the reader stylesheet. The verse that spans the p.78→79 page break continues correctly. Note 95 is placed and labelled correctly on its own page. The batch ending on p.81 has a clear editorial missing-source label at the priestly-blessing introduction. The Metadata/Legal section (CC0 link) and, on p.82, the Contributor credits (Markup editor and Transcriptionist, both Codex) and Sources entry [1] are present and readable in English. The manifest shows no HTML errors, no duplicate IDs, no broken internal links and no horizontal overflow at 1280 or 390 px. Approved for this range; the findings above are cosmetic only.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "9b9a349f-f80b-4a7b-affe-4255008ec8e5"
+  }
+}

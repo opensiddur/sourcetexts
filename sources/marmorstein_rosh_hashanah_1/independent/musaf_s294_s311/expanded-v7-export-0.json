@@ -1,0 +1,28 @@
+{
+  "scope": "expanded-v7-export-0",
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/expanded-export-manifest-v7.json",
+    "/tmp/mahzor-s294/full-pdf-images-v7/expanded-251.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/expanded-252.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/expanded-253.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/expanded-254.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/expanded-255.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/expanded-256.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "Coverage gap: the six assigned images are printed pages 249–254. They cover the Shofarot piyyut stanzas and the scriptural verses that follow. They do not reach the end of the batch: the priestly-blessing introduction, the label for the missing later source (source312), source links, notes, alternative labels, or the sources/credits section. None of those could be checked from this image set. A separate pass on the remaining pages, up to the batch end, is needed to confirm them.",
+    "No HTML desktop or mobile screenshots were listed, so none were reviewed. The manifest's html_checks show no errors, no duplicate IDs, no broken internal links, and scrollWidth equal to viewport width at 1280 and 390 px. Main-text hashes match between the two widths.",
+    "Printed page 254 (image expanded-256): the intro line 'וְנֶאֱמַר / And it was said:' is the last row on the page, cut off from the verse it introduces, which is on the next page. Adding keep-with-next to these short intro rows would be better, but it is cosmetic.",
+    "Printed page 249 (image expanded-251): the page opens with English overflow ('judgments of righteousness and raise my voice like a Shofar.') next to an empty Hebrew column, because the paired row was split across the page break. Readable and consistent with the paired-row stylesheet, but a keep-together rule for short stanza rows would avoid it.",
+    "The ↗ source-page milestone markers sometimes appear in only one language column within a row, for example page 252 (Hebrew 'וְעֵינַי') against page 253 (English 'The fourth'). This matches the settled reality that the Hebrew and English sit on different source pages. It is noted only for completeness and is not an error."
+  ],
+  "verdict": "Approved for the assigned images (expanded-251 to 256, printed pages 249–254). Nothing is clipped and nothing overlaps. Hebrew pointing, including the cantor label 'חזן' in bold, renders cleanly and is readable. The English justified column hyphenates correctly. Stanza rows are top-aligned and paired across columns, and the verse rows for Exodus 19, Psalms 47, 98, 81 and 150, and Isaiah 18 are aligned with their intro lines. Page headers and numbers are correct and alternate sides as expected. The only findings are cosmetic page-break orphans. This approval does not extend to the batch end (priestly-blessing introduction), the missing-source label, notes, links, or credits, because none of them appear in the assigned images.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "dfce94dc-5d4d-4f63-9b31-2ef694c1cc3b"
+  }
+}

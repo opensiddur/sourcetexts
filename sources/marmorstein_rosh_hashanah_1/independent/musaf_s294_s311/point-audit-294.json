@@ -1,0 +1,108 @@
+{
+  "scan_range": [
+    294,
+    299
+  ],
+  "patches": [
+    {
+      "scan": "s294",
+      "key": "essa",
+      "old": "גְּזֵרַת דָּת",
+      "new": "גְּזֵרַת דַּת",
+      "source_image": "/tmp/mahzor-s294/s294-line09.png",
+      "reason": "The mark under the dalet is a patah, not a qamatz. This was noted while the image was visible, but the image has since been dropped from context, so look at it again before accepting."
+    },
+    {
+      "scan": "s294",
+      "key": "anusah",
+      "old": "כְּעֹפֶר",
+      "new": "כָּעֹפֶר",
+      "source_image": "/tmp/mahzor-s294/s294-line20.png",
+      "reason": "The kaf carries a qamatz, not a sheva. This was noted while the image was visible, but the image has since been dropped from context, so look at it again before accepting."
+    },
+    {
+      "scan": "s298",
+      "key": "essa",
+      "old": "כְּעֵת הֵם",
+      "new": "כָּעֵת הֵם",
+      "source_image": "/tmp/mahzor-s294/s298-line07.png",
+      "reason": "Under the kaf is a T-shaped qamatz, not a two-dot sheva. A tsere is under the ayin. I checked this on the image."
+    }
+  ],
+  "extra_blocks": [],
+  "role_patches": [
+    {
+      "scan": "s294",
+      "key": "essa",
+      "label": "ק׳",
+      "source_image": "/tmp/mahzor-s294/s294-line02.png",
+      "reason": "A role label ק׳ appears on line 2. The candidate does not have it. Its exact place in the line was not recorded before the image was dropped, so placement at the start of the block is inferred. Check it on the image."
+    },
+    {
+      "scan": "s294",
+      "key": "anusah",
+      "label": "ק׳",
+      "source_image": "/tmp/mahzor-s294/s294-line14.png",
+      "reason": "A role label ק׳ appears on line 14. The candidate does not have it. Its exact place in the line was not recorded before the image was dropped, so placement at the start of the block is inferred. Check it on the image."
+    }
+  ],
+  "source_sic_corr": [],
+  "hebrew_complete_codepoint_audit": false,
+  "english_complete_literal_audit": false,
+  "cantillation_transcriptions": [],
+  "human_questions": [
+    {
+      "scan": "s298",
+      "key": "essa",
+      "word": "וּמֵאֵיל",
+      "question": "The candidate has tsere under the alef. In the zoomed line there seems to be a horizontal bar under the alef, which would be a patah: וּמֵאַיל, with nothing under the yod. Is the mark under the alef a tsere (two dots) or a patah (one bar)?",
+      "source_image": "/tmp/mahzor-s294/s298-line05.png"
+    }
+  ],
+  "source_images_read": [
+    "/tmp/mahzor-s294/candidate-round1.json (lines 1-790 of 1384; this covers every s294-s299 block)",
+    "/tmp/mahzor-s294/s296-line10.png",
+    "/tmp/mahzor-s294/s296-line11.png",
+    "/tmp/mahzor-s294/s296-line12.png",
+    "/tmp/mahzor-s294/s296-line13.png",
+    "/tmp/mahzor-s294/s296-line14.png",
+    "/tmp/mahzor-s294/s296-line15.png",
+    "/tmp/mahzor-s294/s296-line16.png",
+    "/tmp/mahzor-s294/s296-line17.png",
+    "/tmp/mahzor-s294/s296-line18.png",
+    "/tmp/mahzor-s294/s296-line19.png",
+    "/tmp/mahzor-s294/s296-line20.png",
+    "/tmp/mahzor-s294/s296-line21.png",
+    "/tmp/mahzor-s294/s296-line22.png",
+    "/tmp/mahzor-s294/s296-line23.png",
+    "/tmp/mahzor-s294/s298-line01.png",
+    "/tmp/mahzor-s294/s298-line02.png",
+    "/tmp/mahzor-s294/s298-line03.png",
+    "/tmp/mahzor-s294/s298-line04.png",
+    "/tmp/mahzor-s294/s298-line05.png",
+    "/tmp/mahzor-s294/s298-line06.png",
+    "/tmp/mahzor-s294/s298-line07.png",
+    "/tmp/mahzor-s294/s298-line08.png",
+    "/tmp/mahzor-s294/s298-line09.png",
+    "/tmp/mahzor-s294/s298-line10.png",
+    "/tmp/mahzor-s294/s298-line11.png",
+    "/tmp/mahzor-s294/s298-line12.png",
+    "/tmp/mahzor-s294/s298-line13.png",
+    "/tmp/mahzor-s294/s298-line14.png",
+    "/tmp/mahzor-s294/s298-line15.png",
+    "/tmp/mahzor-s294/s298-line16.png",
+    "/tmp/mahzor-s294/s298-line17.png",
+    "/tmp/mahzor-s294/s298-line18.png",
+    "/tmp/mahzor-s294/s298-line19.png",
+    "/tmp/mahzor-s294/s298-line20.png",
+    "/tmp/mahzor-s294/s298-line21.png",
+    "/tmp/mahzor-s294/s298-line22.png",
+    "/tmp/mahzor-s294/s298-line23.png"
+  ],
+  "verdict": "INCOMPLETE, do not accept yet. Hebrew lines s296 10-23 and s298 1-23 were checked word by word against the images. That produced one patch (כָּעֵת) and one human question (וּמֵאֵיל). Everything else in those lines matches the candidate, except two marks that can't be decided at this resolution: possible dagesh in בִי and כָל on s296. No added final yod after קוֹל appears anywhere in the lines checked. The s298 line 6 reading (יחפר/ישר/ישפר) and the rubric word were left alone; both are already covered by human445-454 or the confirmed אַם convention. The s294 lines 1-24 and s296 lines 1-9 were dropped from context by the image limit. The two s294 patches and two role labels rest on notes made while those images were visible and must be looked at again. The English pages s295, s297 and s299 never loaded, so no English proofing was done. No cantillation occurs in 294-299; Numbers 10:10 is on s308, outside this range.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "7fe62509-20b1-46ae-9c2d-0dfc63da62a4"
+  }
+}

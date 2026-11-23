@@ -1,0 +1,21 @@
+{
+  "scope": "documentary-v8-export-3",
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/documentary-export-manifest-v8.json",
+    "/tmp/mahzor-s294/full-pdf-images-v8/documentary-240.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "Running header on the Metadata page (PDF page 240, printed folio 232) still shows the last liturgical heading 'שיר של יום.' including its period. A metadata page would usually have a neutral header or none. This is cosmetic only: nothing is clipped and the header doesn't overlap anything.",
+    "The long archive.org identifier and URL in Sources [1] wrap mid-token ('…rosh / -hashanah…', '…detail / s/…'). Line breaks inside URLs are normal for a bibliography, and the links are still drawn as continuous link boxes. Readers copying from the printed page could take the line-start hyphen or split for part of the URL.",
+    "This page shows only the Legal, Contributor credits and the start of Sources. Neither the end of the liturgical text nor its missing-source label falls on PDF page 240, so I didn't check them in this range. The manifest lists 241 pages, so page 241, which may continue the bibliography, belongs to another review range."
+  ],
+  "verdict": "PDF page 240 (the Metadata page) passes. Nothing is clipped or overlapping. The English and Hebrew text, including the Hebrew running header, is readable and laid out correctly. The CC0 license entry, the Markup editor and Transcriptionist credits (opensiddur.org, Codex) and Sources entry [1] (Heidenheim/Marmorstein 1965, archive.org identifier and URL, visit date, imaging credit, independent-reader note, no-translation statement) are all present and fully legible. This page has no stanzas or notes, so stanza alignment and note placement don't apply here. Approved for this assigned range.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "621a9cdd-1fed-4b24-98e4-c41009454418"
+  }
+}

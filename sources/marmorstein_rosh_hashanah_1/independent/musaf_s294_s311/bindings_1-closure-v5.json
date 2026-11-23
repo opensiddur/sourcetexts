@@ -1,0 +1,117 @@
+{
+  "scope": "bindings_1_closure",
+  "approved": true,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/bindings_1-v5.json",
+    "/tmp/mahzor-s294/review-context-v5.json",
+    "/tmp/mahzor-s294/validation-source-evidence-v5.json",
+    "/tmp/mahzor-s294/bounded-identity-v4.json",
+    "/tmp/mahzor-s294/bounded-areshet-v4.json",
+    "/tmp/mahzor-s294/code-followup-v4.json",
+    "/tmp/mahzor-s294/bounded-review-v4/rule-verse_numbering.md",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/specs/SIDDUR_URN_SCHEME.md"
+  ],
+  "resolved_findings": [
+    {
+      "id": "B1",
+      "original_severity": "blocking",
+      "resolution": "Not a defect. The reviewer assumed the project's 'Masoretic' numbering is a Hebrew printed-Bible numbering where this verse is 20:15. That is the JPS 1917 numbering. The project's canonical numbering is not JPS 1917 or MAM. It is the Leningrad Codex (WLC) division. rule-verse_numbering.md lines 270-282 say that 'The canonical division is the one the Leningrad Codex numbers' and that Exodus 20 has 26 canonical verses. In that table the four short commandments are canonical 20/13-16 and לא תחמד is 20/17, so the next verse, וכל העם ראים את הקולת, is canonical exodus/20/18. The same table puts this verse at JPS 1917 20:15 and MAM 20:14. The WLC numbering also counts Psalm superscriptions as verses, so psalms/47/6 (עלה אלהים בתרועה) and psalms/81/4-5 (תקעו בחדש שופר / כי חק לישראל) are the WLC numbers too. Exodus and Psalms are therefore bound in one system. The reviewer also claimed that 'Masoretic 20:18 is ויעמד העם מרחק'. That is false for the canonical witness: validation-source-evidence-v5.json exodus.actual_canonical_words gives the tanakh-wlc-he exodus/20/18 text (witness sha256 79522d67…13b8) as וְכָל־הָעָם֩ רֹאִ֨ים אֶת־הַקּוֹלֹ֜ת … ק֣וֹל הַשֹּׁפָ֔ר … וַיּֽ͏ַעַמְד֖וּ מֵֽרָחֹֽק׃. This is exactly the quoted Shofarot verse. ויעמד העם מרחק is canonical 20/21. That file also states all_four_new_quotes_remapped=true, and that exodus_20_15 is only a frozen authoring key that is never emitted. All emitted source/corresp URNs use canonical 20/18. bounded-identity-v4 confirms the registry entries shofarot_verses/intro_exodus_20_18 and quotes/exodus_20/18. The quotes/exodus_20_18 identifiers are therefore correct. Changing them to 20/15 would mis-bind the verse to לא תגנב, which breaks the rule against renumbering (rule lines 321-323).",
+      "evidence": [
+        "rule-verse_numbering.md:270-282",
+        "rule-verse_numbering.md:321-323",
+        "validation-source-evidence-v5.json exodus.*",
+        "bounded-identity-v4.json scope_limitations[2]"
+      ]
+    },
+    {
+      "id": "B2",
+      "original_severity": "blocking",
+      "resolution": "Downgraded to nonblocking follow-up (see NB-B2). review-context-v5.json existing_titles_and_condition_metadata shows that musaf_areshet_sefatenu and musaf_repetition_zikhronot_areshet already had the four selectors .../conclusion/{he,en}/{first_printing,zikhronot_printing} in old_wording_selection, which was accepted. The only change in new_wording_selection is the added key .../conclusion/teqiot_veseder_shofarot=false, and all other values are unchanged. Clarification 'legacy_metadata' states that these selectors were already accepted, that they are not new canonical prayer identities, and that the user instructed reuse of existing identities rather than minting replacements. bounded-areshet-v4 (approved) confirms three things. First, the only new condition, teqiot_veseder_shofarot, has no language, edition or fragment component. Second, the conditions are declared at the caller through j:declare/j:endDeclare sibling pairs, and the shared word_parts library holds only milestones and a t:choice of j:options. That matches SIDDUR_URN_SCHEME.md 'Conditions belong to the context, not to the shared text' (lines 284-296). Third, the scheme's 'Partial witnesses are normal' section (lines 489-509) says other users of the prayer are not obliged to set these features. Because the canonical prayer text is not constrained, no edition layout is imposed on other users. What remains is a naming problem in legacy condition URNs. The batch does not introduce it, and fixing it would require a migration the user has deferred.",
+      "evidence": [
+        "review-context-v5.json existing_titles_and_condition_metadata[musaf_areshet_sefatenu, musaf_repetition_zikhronot_areshet]",
+        "review-context-v5.json clarifications.legacy_metadata",
+        "bounded-areshet-v4.json verdict (4),(5)",
+        "SIDDUR_URN_SCHEME.md:284-296, 489-509"
+      ]
+    },
+    {
+      "id": "N2",
+      "original_severity": "nonblocking",
+      "resolution": "Resolved. review-context-v5.json marked_literal_occurrences shows that the first-printing occurrence (s274/s275, p.127) is a marked holiday-aggregate shabbat=true literal '(זִכְרוֹן)' / '(the memory of)'. It deliberately has no canonical pointer. The two later printings point to prayer:areshet_sefatenu/zikhron. Clarification 'areshet_literal' states that the first printing keeps its original marked literal and does not claim to be a canonical pointer, that the literal and the pure canonical word are each source-reviewed, and that no rule requires replacing literals with pointers. Clarification 'source_fidelity' explains that literal quotations are not auto-listed in source_fidelity. bounded-areshet-v4 approved the zikhron library (plain words, primary facs s308) and the marked caller conditionals.",
+      "evidence": [
+        "review-context-v5.json marked_literal_occurrences",
+        "review-context-v5.json clarifications.areshet_literal, source_fidelity",
+        "bounded-areshet-v4.json verdict (3),(7)"
+      ]
+    },
+    {
+      "id": "N5-fidelity",
+      "original_severity": "nonblocking",
+      "resolution": "The second half of N5 is resolved: Scripture source bindings have no source_fidelity entries. Clarification 'source_fidelity' states that only canonical occurrence comparisons are auto-listed there. Literal Scripture quotations are reviewed independently as XML and source blocks, so an empty list does not mean the review was skipped. For Exodus, the canonical wording is also given in validation-source-evidence-v5.json.",
+      "evidence": [
+        "review-context-v5.json clarifications.source_fidelity"
+      ]
+    },
+    {
+      "id": "scope_limitation_delta",
+      "original_severity": "scope_limitation",
+      "resolution": "For areshet_sefatenu, the earlier limitation that the accepted payload delta could not be identified is now resolved. The old_wording_selection/new_wording_selection pair shows that the only delta is the added teqiot_veseder_shofarot=false key, and title_unchanged is true. The text-hash differences that limitation 2 mentions belong to the source group. That group is independently reviewed, and its readings are settled."
+    }
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    {
+      "id": "NB-B2",
+      "records": [
+        "realization/musaf_areshet_sefatenu/he",
+        "realization/musaf_repetition_zikhronot_areshet/*"
+      ],
+      "finding": "These are legacy accepted condition URNs. They live under the shared prayer namespace (condition:prayer:areshet_sefatenu/conclusion/{he,en}/{first_printing,zikhronot_printing}) but are named after this edition's printings and languages. The same pattern exists in other legacy material, e.g. condition:bible:numbers/28/9/he/prior_printing in morning_qorbanot. Optional follow-up: migrate them to liturgical names, such as the section the conclusion follows, without the language split, through a dedicated migration. Do not mint replacements in this batch, because the user instructed reuse."
+    },
+    {
+      "id": "N1",
+      "records": [
+        "realization/musaf_yismechu/en"
+      ],
+      "finding": "Unchanged. The identity is siddur:rosh_hashanah/musaf/yismechu/text. SIDDUR_URN_SCHEME.md:39-42 says siddur: URNs hold no words of their own, and Yismechu is also said at Shabbat Musaf, which suggests prayer:. The supplied pack has no registry record for this URN, so I could not confirm whether it is a reused legacy identity. Worth deciding as a separate follow-up. It does not affect the bindings in this group."
+    },
+    {
+      "id": "N3",
+      "records": [
+        "realization/musaf_areshet_sefatenu/he"
+      ],
+      "finding": "Unchanged and not verifiable from the supplied files. The bindings_1-*.json projections are not in this closure's file set. Two readings are possible. If the zikhronot and shofarot printings are listed as attesting the conclusion target only for the shared opening/zikhron parts, or for the choice element as a whole, the listing is consistent. If they are claimed to attest the first-printing conclusion option wording, that would be wrong, because bounded-areshet-v4 confirms they print different conclusions. The areshet reviewer approved the option bindings in the XML, so this is recorded as a check to confirm in the receipt metadata, not as a blocker."
+    },
+    {
+      "id": "N4",
+      "records": [
+        "realization/musaf_qedushah_kevodo_repeat/he",
+        "realization/musaf_qedushah_kevodo_repeat/en"
+      ],
+      "finding": "Unchanged. The asymmetry is that the he realization carries the role חזן and the en realization has none. Source readings are settled, so this is presumed documentary."
+    },
+    {
+      "id": "N5-end_reference",
+      "records": [
+        "realization/musaf_shofarot_verses/he",
+        "realization/musaf_shofarot_verses/en"
+      ],
+      "finding": "Unchanged and cosmetic: connective segments without a source carry end_reference:true."
+    },
+    {
+      "id": "N6",
+      "records": [
+        "realization/musaf_useir_lekhapper/he"
+      ],
+      "finding": "Unchanged. The rite feature frankfurt_am_main is taken to include ובנותיה, which is acceptable if that is how the feature is defined."
+    }
+  ],
+  "verdict": "Approved for bindings_1 closure. B1 is withdrawn because the reviewer used the wrong reference system. The project's canonical numbering is the WLC division (rule-verse_numbering.md:270-282). In it, וכל העם ראים את הקולת … ויעמדו מרחק is exodus/20/18: the canonical witness text is in validation-source-evidence-v5.json, 20:15 is the JPS 1917 number, and it is 20:14 in MAM. Psalms 47:6 and 81:4-5 use the same WLC system, so the bindings and the quotes/exodus_20_18 identifiers are correct. Changing them to 20/15 would mis-bind the verse to לא תגנב. B2 is downgraded to nonblocking. The edition-named areshet selectors are legacy metadata that was accepted earlier. The batch leaves them unchanged and adds only the language-neutral teqiot_veseder_shofarot condition. They are declared at the caller and do not constrain the shared prayer text. The user has instructed reuse of existing identities, so migration is an optional follow-up. N2 and the source_fidelity half of N5 are resolved by the stated meanings of marked literal occurrences and source_fidelity. N1, N3, N4, N6 and the end_reference half of N5 remain nonblocking. N3 cannot be checked without the bindings projections, which were not part of this closure's file set.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "cac19495-bf4e-499c-9420-f26e9c11a0b7"
+  }
+}

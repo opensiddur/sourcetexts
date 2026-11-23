@@ -1,0 +1,225 @@
+{
+  "scan_range": [
+    300,
+    305
+  ],
+  "patches": [
+    {
+      "scan": "s302",
+      "key": "tzor",
+      "old": "צֹר חֻקִּים מִנִּי.",
+      "new": "צֹר חֻקִּים מֶנִּי.",
+      "source_image": "/tmp/mahzor-s294/s302-line15.png",
+      "reason": "Under the mem there are three dots (segol), not a single hiriq dot. This matches the blind reading מֶנִּי."
+    },
+    {
+      "scan": "s304",
+      "key": "essa_tail",
+      "old": "לִיקוֹד לֶהֱיוֹת.",
+      "new": "לִיקוֹד לִהְיוֹת.",
+      "source_image": "/tmp/mahzor-s294/s304-line02.png",
+      "reason": "The lamed has a single dot (hiriq) and the he has a plain sheva. There is no segol or hataf-segol."
+    },
+    {
+      "scan": "s304",
+      "key": "weekday_verses",
+      "old": "וְקֹל שֹׁפָר חָזָק",
+      "new": "וְקוֹל שֹׁפָר חָזָק",
+      "source_image": "/tmp/mahzor-s294/s304-line10.png",
+      "reason": "The print spells this word with a vav, as וקול. The candidate used the defective Masoretic spelling. The image wins. שֹׁפָר stays defective as printed. The parallel s300 exodus_19_16 was not seen in this pass, so it is not patched here."
+    }
+  ],
+  "extra_blocks": [],
+  "role_patches": [
+    {
+      "scan": "s302",
+      "key": "tzor",
+      "label": "ח׳",
+      "before_word": "צְרוּפָה",
+      "source_image": "/tmp/mahzor-s294/s302-line16.png",
+      "note": "Small Rashi ח׳ (cantor) printed after קוֹל: and before the second line of the strophe. The candidate does not record it."
+    },
+    {
+      "scan": "s302",
+      "key": "qarav",
+      "label": "ח׳",
+      "before_word": "קֻדַּשׁ",
+      "source_image": "/tmp/mahzor-s294/s302-line21.png",
+      "note": "Small ח׳ printed after בְּקוֹל: and before קֻדַּשׁ."
+    },
+    {
+      "scan": "s304",
+      "key": "essa_tail",
+      "label": "חזן",
+      "before_word": "תִּצְעַד",
+      "source_image": "/tmp/mahzor-s294/s304-line07.png",
+      "note": "Small unpointed חזן printed after הֲמוֹן שׁוֹפָר: and before the last strophe."
+    },
+    {
+      "scan": "s304",
+      "key": "raash",
+      "label": "ח׳",
+      "before_word": "רְאוּ",
+      "source_image": "/tmp/mahzor-s294/s304-line14.png",
+      "note": "Small ח׳ printed after מֵעָפָר קוֹל: and before רְאוּ."
+    },
+    {
+      "scan": "s304",
+      "key": "shag",
+      "label": "ח׳",
+      "before_word": "שׁוֹבֵב",
+      "source_image": "/tmp/mahzor-s294/s304-line19.png",
+      "note": "Small ח׳ printed after מִשְּׁמוֹעַ קוֹל: and before שׁוֹבֵב."
+    }
+  ],
+  "source_sic_corr": [],
+  "hebrew_complete_codepoint_audit": false,
+  "english_complete_literal_audit": false,
+  "cantillation_transcriptions": [],
+  "human_questions": [
+    {
+      "scan": "s302",
+      "key": "essa",
+      "word": "פַּחַד",
+      "question": "Is the mark under the het (line 04, second phrase) a patah stroke or two tsere dots? It looked like tsere (פַּחֵד) when zoomed, but the dots touch the baseline.",
+      "source_image": "/tmp/mahzor-s294/s302-line04.png"
+    },
+    {
+      "scan": "s302",
+      "key": "essa",
+      "word": "חֲלָשָׁה",
+      "question": "Under the het of the word after בְּאַרְקָא, is it hataf-patah (ֲ) or hataf-segol (ֱ)? The three dots plus sheva look like hataf-segol.",
+      "source_image": "/tmp/mahzor-s294/s302-line08.png"
+    },
+    {
+      "scan": "s302",
+      "key": "isaiah_27_13",
+      "word": "בִּירוּשָׁלָֽ͏ִם",
+      "question": "I see no yod and a qamatz under the lamed. Is the small mark below the lamed/mem a meteg, or is it only the hiriq? If there is no meteg, the candidate's U+05BD should be removed, giving בִּירוּשָׁלָ͏ִם.",
+      "source_image": "/tmp/mahzor-s294/s302-line14.png"
+    },
+    {
+      "scan": "s302",
+      "key": "tzor",
+      "word": "צֹר",
+      "question": "Is there a holam dot over the right head of the צ in the first word, or none (צַר or unpointed צר)? I see no dot at this resolution.",
+      "source_image": "/tmp/mahzor-s294/s302-line15.png"
+    },
+    {
+      "scan": "s302",
+      "key": "qarav",
+      "word": "קָרַב",
+      "question": "Is the vowel under the resh of the first word a patah or a tsere? Zoomed, it looks like tsere (קָרֵב).",
+      "source_image": "/tmp/mahzor-s294/s302-line20.png"
+    },
+    {
+      "scan": "s302",
+      "key": "psalms_81_4_5",
+      "word": "קָדְשֶׁךָ",
+      "question": "Under the shin, is it segol (קָדְשֶׁךָ) or sheva (קָדְשְׁךָ)?",
+      "source_image": "/tmp/mahzor-s294/s302-line23.png"
+    },
+    {
+      "scan": "s304",
+      "key": "essa_tail",
+      "word": "גָּלֻיּוֹת",
+      "question": "Does the lamed carry qubuts, and does the yod carry a dagesh? I could not see either mark clearly. Is it גָּלֻיּוֹת, or גָּלְיוֹת/גָּלִיוֹת as printed?",
+      "source_image": "/tmp/mahzor-s294/s304-line01.png"
+    },
+    {
+      "scan": "s304",
+      "key": "essa_tail",
+      "word": "שַׁלְהֲבִיוֹת",
+      "question": "Is the vowel under the he hataf-patah or segol? Does the yod have a dagesh?",
+      "source_image": "/tmp/mahzor-s294/s304-line02.png"
+    },
+    {
+      "scan": "s304",
+      "key": "essa_tail",
+      "word": "שׁוֹכְנִים",
+      "question": "Is the third consonant a nun or a bet (שׁוֹכְבִים)? Bet would match 'slumber'. Do not decide from the English; read the glyph.",
+      "source_image": "/tmp/mahzor-s294/s304-line05.png"
+    },
+    {
+      "scan": "s304",
+      "key": "shag",
+      "word": "יַטֵּנוּ",
+      "question": "Is the mark under the tet tsere or segol? Does the nun have a dagesh? It looked like segol without a nun-dagesh (יַטֶּנוּ).",
+      "source_image": "/tmp/mahzor-s294/s304-line18.png"
+    },
+    {
+      "scan": "s304",
+      "key": "isaiah_18_3",
+      "word": "אֶרֶץ / וְכִתְקֹעַ / תִּשְׁמָעוּ",
+      "question": "There are small extra marks next to the vowels: under the alef of אֶרֶץ, under the qof of וְכִתְקֹעַ, and a vertical stroke beside the qamatz of תִּשְׁמָעוּ. Are these accents/meteg/silluq? If so, which ones, so they can be encoded?",
+      "source_image": "/tmp/mahzor-s294/s304-line16.png"
+    },
+    {
+      "scan": "s302",
+      "key": "isaiah_27_13",
+      "word": "בְּאֶרֶץ ×2 / מִצְרָיִם",
+      "question": "There are extra marks under the alef of both בְּאֶרֶץ and under the resh of מִצְרָיִם. Are these meteg/accents? If so, which ones?",
+      "source_image": "/tmp/mahzor-s294/s302-line13.png"
+    },
+    {
+      "scan": "s304",
+      "key": "exodus_20_15",
+      "word": "וַיָּנֻעוּ",
+      "question": "Is the mark under the nun, beside the qubuts, a meteg/silluq-type accent? If so, which one?",
+      "source_image": "/tmp/mahzor-s294/s304-line22.png"
+    }
+  ],
+  "source_images_read": [
+    "/tmp/mahzor-s294/candidate-round1.json",
+    "/tmp/mahzor-s294/s302-line03.png",
+    "/tmp/mahzor-s294/s302-line04.png",
+    "/tmp/mahzor-s294/s302-line05.png",
+    "/tmp/mahzor-s294/s302-line06.png",
+    "/tmp/mahzor-s294/s302-line07.png",
+    "/tmp/mahzor-s294/s302-line08.png",
+    "/tmp/mahzor-s294/s302-line09.png",
+    "/tmp/mahzor-s294/s302-line10.png",
+    "/tmp/mahzor-s294/s302-line11.png",
+    "/tmp/mahzor-s294/s302-line12.png",
+    "/tmp/mahzor-s294/s302-line13.png",
+    "/tmp/mahzor-s294/s302-line14.png",
+    "/tmp/mahzor-s294/s302-line15.png",
+    "/tmp/mahzor-s294/s302-line16.png",
+    "/tmp/mahzor-s294/s302-line17.png",
+    "/tmp/mahzor-s294/s302-line18.png",
+    "/tmp/mahzor-s294/s302-line19.png",
+    "/tmp/mahzor-s294/s302-line20.png",
+    "/tmp/mahzor-s294/s302-line21.png",
+    "/tmp/mahzor-s294/s302-line22.png",
+    "/tmp/mahzor-s294/s302-line23.png",
+    "/tmp/mahzor-s294/s304-line01.png",
+    "/tmp/mahzor-s294/s304-line02.png",
+    "/tmp/mahzor-s294/s304-line03.png",
+    "/tmp/mahzor-s294/s304-line04.png",
+    "/tmp/mahzor-s294/s304-line05.png",
+    "/tmp/mahzor-s294/s304-line06.png",
+    "/tmp/mahzor-s294/s304-line07.png",
+    "/tmp/mahzor-s294/s304-line08.png",
+    "/tmp/mahzor-s294/s304-line09.png",
+    "/tmp/mahzor-s294/s304-line10.png",
+    "/tmp/mahzor-s294/s304-line11.png",
+    "/tmp/mahzor-s294/s304-line12.png",
+    "/tmp/mahzor-s294/s304-line13.png",
+    "/tmp/mahzor-s294/s304-line14.png",
+    "/tmp/mahzor-s294/s304-line15.png",
+    "/tmp/mahzor-s294/s304-line16.png",
+    "/tmp/mahzor-s294/s304-line17.png",
+    "/tmp/mahzor-s294/s304-line18.png",
+    "/tmp/mahzor-s294/s304-line19.png",
+    "/tmp/mahzor-s294/s304-line20.png",
+    "/tmp/mahzor-s294/s304-line21.png",
+    "/tmp/mahzor-s294/s304-line22.png",
+    "/tmp/mahzor-s294/s304-line23.png"
+  ],
+  "verdict": "INCOMPLETE, do not accept. The tool returned 'media removed: request limit' for s301.jpg, s303.jpg, s305.jpg, all of s300-line01 to line23, and s302-line01 and line02, so those were not audited. That means no English proof and no Hebrew check of s300. For s302 lines 03–23 and s304, there are 3 patches, 5 role-label omissions, and 13 human questions. The verses on s302 and s304 show small accent or meteg marks that the candidate does not encode. I could not identify them, so they are raised as questions and not guessed. The rubric אַם שַׁבָּת (s302-line11, s304-line12) follows the confirmed convention and was not questioned. The open items HUMAN445–454 were not duplicated.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "3a6d9c6a-30db-478c-a705-f115c484dc28"
+  }
+}

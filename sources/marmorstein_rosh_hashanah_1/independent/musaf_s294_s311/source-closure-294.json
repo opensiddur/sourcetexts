@@ -1,0 +1,80 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "medium"
+  },
+  "images_read": [
+    "/tmp/mahzor-s294/s294.jpg",
+    "/tmp/mahzor-s294/s295.jpg",
+    "/tmp/mahzor-s294/s296.jpg",
+    "/tmp/mahzor-s294/s297.jpg",
+    "/tmp/mahzor-s294/s298.jpg",
+    "/tmp/mahzor-s294/s299.jpg"
+  ],
+  "all_blocks_checked": true,
+  "approved": false,
+  "blocking_findings": [
+    {
+      "id": "B1",
+      "scan": "s294",
+      "key": "essa",
+      "issue": "A printed source role label is missing. On the original page, line 1 of the weekday poem starts with the role label ק׳ (set right of the text, before אֶשָּׂא). The candidate starts the block at אֶשָּׂא and has no role-label field or note anywhere, so the label is lost.",
+      "required_fix": "Record ק׳ as a source role label for this block. Keep it out of the prayer words."
+    },
+    {
+      "id": "B2",
+      "scan": "s294",
+      "key": "anusah",
+      "issue": "The same problem for the Sabbath poem. Its first line on the page is printed 'ק׳ אָנוּסָה לְעֶזְרָה…'. The candidate leaves out ק׳ and does not record it anywhere.",
+      "required_fix": "Record ק׳ as a source role label for the anusah block. Keep it out of the prayer words."
+    },
+    {
+      "id": "B3",
+      "scan": "s294,s296,s298",
+      "key": "uncertainties (multiple blocks)",
+      "issue": "Many documentary notes are out of date and contradict the final text or the human adjudications. For a final source closure this means the record misstates its own verification status. (a) s294/s296/s298 running_header say 'NOT VERIFIED' or 'kept from the draft without a fresh check'. I checked all three Hebrew headers against the full images and the text is fine, but the notes are false as written. (b) s294 essa says 'נִבְרִיָּה … See human_questions' and 'בּוֹ … See human_questions'. Both were settled by human455/456 (נָכְרִיָּה; bet). (c) s294 anusah says 'מְעַט … See human_questions' (settled by 455 as מְעָט) and calls בַּקְּרֵנִי/דָּרְשֵׁנִי and 'אִלֵּם' 'pending human review'. Human 446/447 settled these, and the note's spelling אִלֵּם is not the adjudicated אֵלֶם. (d) s294 shabbat_attribution calls 445 'pending' and says the image 'supports החרזות'. That contradicts the adjudicated and encoded החרוזות. (e) s296 essa points to human_questions for זְמַמֵי (settled by 456 as zayin). (f) s298 essa notes name 'יְנַשֵּׁב (tsere kept)' and 'יְחֻפָּר', but the encoded text is the human-adjudicated יִנְשַׁב (450) and יֻחְפָּר (449).",
+      "required_fix": "Rewrite these notes so they match the final readings and cite human445–456 as the authority. Remove the 'NOT VERIFIED' and 'pending' claims."
+    }
+  ],
+  "new_human_questions": [
+    {
+      "scan": "s298",
+      "key": "essa",
+      "line": 6,
+      "word": "יֵקֶשׁ",
+      "question": "Is the mark under the yod of the first word on line 6 (before יוּפָר) a tsere (יֵקֶשׁ) or a segol (יֶקֶשׁ)? At this resolution the image looks closer to segol. The candidate says this is covered by human449, but 449 only resolved יֻחְפָּר / יֹשֶׁר / יָשְׁפָּר."
+    }
+  ],
+  "source_role_labels": [
+    {
+      "scan": "s294",
+      "block": "essa",
+      "printed": "ק׳",
+      "position": "before אֶשָּׂא, line 1 of weekday poem",
+      "in_candidate": false
+    },
+    {
+      "scan": "s294",
+      "block": "anusah",
+      "printed": "ק׳",
+      "position": "before אָנוּסָה, line 1 of Sabbath poem",
+      "in_candidate": false
+    }
+  ],
+  "nonblocking_findings": [
+    "I checked every Hebrew prayer block (s294 essa/anusah, s296 essa/anusah, s298 essa/anusah) line by line against the full images. Letters, read order, punctuation (periods, colons at strophe ends) and page-break points (יָדַיִם; שְׁנִיָּה; יָקַרְתִּי בְּעֵינָיו.; יִנְשַׁב.; עַל פְּתָחַי קוֹל:) all match. I found no omissions or duplications.",
+    "The defective spellings match the print: שֹׁפָר (s294 line 7, s296 line 7), קֹל after וַיַּעֲבֶר (s298), and דְּרֹשׁ (s294). The printed spelling וְסוֹטֵן is kept.",
+    "All human-adjudicated readings are applied: נָכְרִיָּה, מְעָט, בּוֹ, זְמַמֵי, אֵלֶם, בַּקְּרֵנִי דָּרְשֵׁנִי, יְלִיזוֹ, יֻחְפָּר יֹשֶׁר יָשְׁפָּר, כְּיָקְשַׁב יָבְעַת יִנְשַׁב, and the 445 attribution text.",
+    "The Rashi-type rubrics are kept as documentary text: מיוסד ע״ס א״ב מרובע., מיוסד ע״ס א״ב כפול בראשי החרוזות., and the Hebrew-script German אַם שַׁבָּת. on s294/s296/s298. The small glyphs can look like חַזָן out of context. I am not re-opening this because of the standing human confirmation.",
+    "There are no scripture verses or citation labels on these six scans, so no cantillation applies. That is consistent with the brief.",
+    "English blocks s295/s297/s299 (headers, both poem translations, the italic 'On Sabbath.' rubrics) were compared in full. Wording, quotation marks (‘…’), semicolons, parentheses (Abraham, Isaac, Jacob, Esau, the Sea of Reeds, before Jericho, on the day of the Revelation, Israel), em dashes and 'Shinear' all match. The line-break hyphens under-stood and moun-tains are correctly joined. The Hebrew linkage cues אשא/אנוסה are correctly left out.",
+    "s294 anusah line 10, וּרְאֵה שֵׂה מוֹרִיָּה: the vowel under the ש (tsere vs. segol) can't be settled at this resolution. I see no clear contrary evidence, so the candidate stays as is.",
+    "The Hebrew running headers on s294/s296/s298 (מוּסַף לְיוֹם רִאשׁוֹן שֶׁל רֹאשׁ הַשָּׁנָה with page numbers 137/138/139) match the images. The problem is only the notes on them (see B3)."
+  ],
+  "verdict": "NOT APPROVED. I read all six original images in full and checked every candidate block. The Hebrew and English texts match the source, and all human445–470 adjudications are applied correctly. But the two printed role labels ק׳ on s294 (before אֶשָּׂא and before אָנוּסָה) are missing from the candidate (B1, B2). Many uncertainty notes are out of date and contradict the adjudicated readings or falsely say the headers were not verified (B3). One new human question remains: s298 יֵקֶשׁ, tsere or segol.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "f9d415db-d9fa-48ce-b356-3578d0e639fe"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "scope": "bindings_3",
+  "approved": false,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_3-0.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_3-1.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_3-2.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_3-3.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_3-4.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_3-5.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_3-6.json"
+  ],
+  "blocking_findings": [
+    {
+      "id": "B1",
+      "records": [
+        "realization/musaf_repetition_modim_derabbanan_english_words/en",
+        "realization/musaf_repetition_modim_derabbanan/en"
+      ],
+      "finding": "Two records point at the same printed text. Both have text_sha256 f67c5430…2229 and 492 characters, from scan s311, printed page 145, paragraph 1. They bind it two different ways: record 2 uses corresp plus end_reference to urn:x-opensiddur:text:prayer:amidah/hodaah/modim_derabbanan with canonical_parts:true; record 4 uses canonical: to the same URN. Both are keyed realization/ and sit under the documentary namespace siddur:rosh_hashanah/musaf/repetition/. Nothing in these records says which one is the documentary occurrence and which one only defines the canonical text. So either the English congregational Modim is emitted twice, or record 4's source_fidelity check compares the text with itself. In record 4, literal = corrected = resolved = f67c…2229, which is its own text hash. If the canonical English comes from record 2, which is the same occurrence on the same scan, the fidelity check proves nothing.",
+      "required_resolution": "Say which record is the documentary realization. Confirm that only one of them is placed in the expanded order. If record 2 only defines canonical parts, show that it has a separate semantic review and that record 4's fidelity is not checked against a canonical taken from the same occurrence. If not, merge or remove the duplicate binding."
+    },
+    {
+      "id": "B2",
+      "records": [
+        "realization/musaf_repetition_modim_derabbanan_english_words/en"
+      ],
+      "finding": "This is the only assigned record without review_encoding:true. The other six all have it. It also has no instructions and no source_fidelity. As far as these records show, its binding (canonical_parts, corresp, end_reference) has had no semantic review.",
+      "required_resolution": "Add the review flag and the review it stands for, or explain in writing why this kind of record doesn't need one."
+    },
+    {
+      "id": "B3",
+      "records": [
+        "realization/musaf_repetition_modim_derabbanan_english_words/en"
+      ],
+      "finding": "The canonical URN urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/modim_derabbanan_english_words puts a language ('english_words') into a structural identity. The other records are language-neutral: one URN per unit, with he and en as language realizations under it. The record also has a Hebrew title (מודים דרבנן) on a unit that exists only in English. This looks like an identity specific to this publication's encoding, not a canonical one.",
+      "required_resolution": "Fold it into urn:…/repetition/modim_derabbanan as that URN's en realization, or explain why it needs its own language-specific identity."
+    }
+  ],
+  "nonblocking_findings": [
+    {
+      "id": "N1",
+      "records": [
+        "realization/musaf_repetition_modim/en",
+        "realization/musaf_repetition_modim_derabbanan/en"
+      ],
+      "finding": "Similar English texts are bound in different ways. English Modim uses source: and has empty source_fidelity, even though it carries a documentary correction and the correction's reason refers to an earlier canonical wording. English Modim deRabbanan uses canonical: and has a full source_fidelity record. If source: only claims 'this is a realization of the work' and not 'this matches the canonical text', this is fine. Please confirm, because a corrected occurrence bound with source: has no recorded literal/corrected/canonical comparison."
+    },
+    {
+      "id": "N2",
+      "records": [
+        "realization/musaf_repetition_modim/en"
+      ],
+      "finding": "The correction musaf_modim_sindnesses is well formed. It has sic/corr, before/after anchors, and its own id. It is scoped to this occurrence through a file path inside the publication (prayerbook_for_the_new_year-marmorstein-1965-en/…). A publication file reference is appropriate for a documentary correction, and the correction does not leak into the canonical identity. No issue."
+    },
+    {
+      "id": "N3",
+      "records": [
+        "realization/musaf_repetition_hodaah_tail/he",
+        "realization/musaf_repetition_hodaah_tail/en"
+      ],
+      "finding": "Paragraph 3 (Vekhol haChayyim) is bound to urn:x-opensiddur:text:siddur:rosh_hashanah/text/vekhol_hachayyim, which is scoped to Rosh Hashanah. Paragraphs 1–2 use generic prayer:amidah/hodaah/* URNs, including ukhetov, the High Holiday insertion. Vekhol haChayyim is normally the year-round text. Please confirm that the Rosh Hashanah scope reflects a real difference in the text, not a mismatch between the two namespaces."
+    },
+    {
+      "id": "N4",
+      "records": [
+        "realization/musaf_repetition_hodaah_tail/he",
+        "realization/musaf_repetition_hodaah_tail/en"
+      ],
+      "finding": "Ukhetov has no condition scope. That is appropriate here, because the containing unit is already a Rosh Hashanah siddur identity. Adding a seasonal condition would be redundant. No issue."
+    },
+    {
+      "id": "N5",
+      "records": [
+        "realization/musaf_repetition_modim_derabbanan/he",
+        "realization/musaf_repetition_modim_derabbanan/en"
+      ],
+      "finding": "No record has structural role metadata. The congregation's role in Modim deRabbanan is carried only by documentary description instructions (he 12 characters, en 13 characters). That is acceptable if the project's convention is to express roles through instructions. Record 4's source_fidelity attesting_controls include both the he and the en instruction for an en record. Each is witnessed only in its own language, so this is consistent."
+    }
+  ],
+  "scope_limitations": [
+    "final_sha256 covers the complete unmasked canonical payload, so it cannot be recomputed from this projection. It was not verified.",
+    "The shared expanded_order, source_order, navigation and documentary_instructions hashes are the same in all seven records. They belong to the order group and were not checked here. That also means I could not see from these records whether both records in B1 appear in the expanded order.",
+    "Text content, the correction's position inside the hashed text, and instruction wording were reviewed only as hash and character count, as the scope requires.",
+    "I checked the meaning of source: versus canonical: versus corresp/canonical_parts only for consistency across these seven records. No schema or code was reviewed."
+  ],
+  "verdict": "Not approved. Five of the seven records have consistent, appropriately scoped metadata. One of those carries a well-formed occurrence-level correction. The block is the pair musaf_repetition_modim_derabbanan_english_words/en and musaf_repetition_modim_derabbanan/en. They bind the same 492-character English text from scan s311 under two documentary identities and two binding mechanisms. The english_words record has no review_encoding flag and a canonical URN that names a language. This means either a duplicated realization or a source-fidelity check that compares the text with itself. It must be resolved (B1–B3) before approval.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "e99275a0-4b2f-4b7d-83db-d0ebd2a0a82c"
+  }
+}

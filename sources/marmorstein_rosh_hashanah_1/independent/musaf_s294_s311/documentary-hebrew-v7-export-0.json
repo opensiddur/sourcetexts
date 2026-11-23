@@ -1,0 +1,32 @@
+{
+  "scope": "documentary-hebrew-v7-export-0",
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/documentary-hebrew-export-manifest-v7.json",
+    "/tmp/mahzor-s294/full-pdf-images-v7/documentary-hebrew-78.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/documentary-hebrew-79.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/documentary-hebrew-80.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/documentary-hebrew-81.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/documentary-hebrew-82.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/documentary-hebrew.html-1280.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/documentary-hebrew.html-390.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "B1 is fixed. On PDF p.73 (image 81), note 96 now reads 'התמלול מגיע עד הקדמת ברכת כהנים בחזרת מוסף; פסוקי הברכה והמשך התפילה טרם נכללו.' It names the priestly-blessing introduction as the stopping point, says the later material is missing, and has no Latin page references.",
+    "B2 is fixed. On PDF p.73, 'השליח ציבור מסיים' and 'בָּרוּךְ' are now separate words, and so are 'השליח ציבור בקול' and 'כֹּהֲנִים'. The bold rubric ends cleanly before the plain text in both places.",
+    "PDF p.73: the note 96 reference number sits alone on a short line after 'כָּאָמוּר:', just above the 'שיר של יום' heading. It reads fine and the note order is correct, but it looks a little cut off from its text. Cosmetic.",
+    "PDF p.72 (image 80): the note 95 reference number before '(כְּמִצְוָה)' sits high in the space between lines at the right margin. It's legible and doesn't collide with any letters or vowel points. The note 95 label 'נוסח אחר' shows correctly at the foot of the page.",
+    "PDF p.72: there's no space between 'אם שַׁבָּת.' and '[זכרון]' in the קהל וחזן אֲרֶשֶׁת line. Spacing only; nothing is fused in a way that hurts reading.",
+    "PDF pp.70–72: line spacing changes within the running prose. Some verse lines are spread wide, while the 'הַלְלוּהוּ כְּרֹב גָּדְלוֹ' blocks are set tight. This is consistent with the layout choices you described and nothing overlaps or gets clipped, but it does look uneven.",
+    "This batch has no English columns or paired stanza rows, so I didn't check stanza alignment. The English back matter on pp.73–74 is fine: the Legal/CC0 link, contributor credits and Sources entry are all there, nothing is clipped, and the links are boxed and readable.",
+    "The HTML screenshots show only the top of the document at 1280 and 390 px wide. Neither has sideways overflow (manifest scrollWidth equals width), and the Hebrew is readable at that scale. I couldn't check note 96 in the HTML because it's outside the captured area, and at 1280 px the dense text is too small to inspect individual vowel points. The manifest reports no errors, duplicate IDs or broken internal links at either width."
+  ],
+  "verdict": "Approved. Both earlier blockers are fixed in the final images. On PDF pp.70–74 (images 78–82) I found no clipping, overlap or unreadable vowel points, the note order and alternative-reading label are correct, and the missing later source is clearly labelled at the priestly-blessing introduction. Sources and credits are kept and the links show. The HTML screenshots don't overflow sideways. The only issues are minor spacing and reference-number placement.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "80137f90-a4be-450e-9373-72fa47c51f27"
+  }
+}

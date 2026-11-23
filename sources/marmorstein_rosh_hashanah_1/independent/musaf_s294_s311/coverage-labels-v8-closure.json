@@ -1,0 +1,29 @@
+{
+  "scope": "coverage_labels_v8_closure",
+  "approved": true,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "all224_semantic_payloads_unchanged": true,
+  "coverage_count_correction_approved": true,
+  "files_read": [
+    "/tmp/mahzor-s294/coverage-labels-v8-review.json",
+    "/tmp/mahzor-s294/coverage-review-v8/actual-compiled-intro-only.xml",
+    "/tmp/mahzor-s294/coverage-intro-extent-evidence-v8.json",
+    "/tmp/mahzor-s294/bounded-identity-v4.json"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "The v8 blocker is resolved. In actual-compiled-intro-only.xml, the transclusion of urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/birkat_kohanim/birkat_kohanim renders exactly one Hebrew seg (line 9). It runs from 'אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ בָּרְכֵנוּ' to 'כָּאָמוּר:'. The English paragraph (line 14) runs from 'Our God and God of our fathers' to 'as it is said:'. Neither column contains Numbers 6:24–26 words, chapter/verse milestones or quotation-context divs. So a reader of the expanded profile sees only the introduction, which ends 'as it is said:', and then the boundary label. The label's statements are therefore true at that point. Hebrew: 'פסוקי הברכה והמשך התפילה טרם נכללו' (the blessing verses and the rest of the service are not yet included). English: 'The priestly verses ... beginning on scan312, remain unencoded'. Both name the exact stopping point: right after כָּאָמוּר / as it is said, before the verses.",
+    "This matches the earlier independently approved identity review (bounded-identity-v4.json, nonblocking finding 3). There, the Shacharit HE home closes the birkat_kohanim/birkat_kohanim part with a bare prayer-part terminator before the Numbers 6:24–26 quotation contexts, and the EN Musaf intro closes the same identity before the end of its paragraph. The compiled output agrees with that bounded extent. The shorter parent .../birkat_kohanim, which carries the verses, is the tei:div corresp and is not the transclusion target.",
+    "Scope limitation: the label text was not re-read in this round. The wording quoted above comes from the v8 review, which read expanded-actual-ending.xml. That is consistent with the statement that no data has changed. The compiled XML has no sha256 or provenance receipt linking it to the current data state. I accepted on the user's statement that it is the actual compiled output of unchanged data. I did not regenerate it.",
+    "Compiled-output noise, not a label problem: the p:transclude has two p:parallel blocks. The first (lines 2–5) has empty parallelItems, and only the second (lines 6–17) has content. If the renderer emits empty column scaffolding, someone checking rendering may want to confirm it produces no visible empty row.",
+    "In the compiled output, the Hebrew column carries facs n154 (the Shacharit printing) and the English carries n310 (Musaf, scan311). This is the expected result of deliberately reusing the Shacharit identity for the Hebrew introduction. It does not affect whether the label is accurate, because the Hebrew introduction text is the same in both places and the label is only about the verses that follow.",
+    "Carried over from v8 and still open, none blocking: (1) the Hebrew label has no scan number while the English names scan311/scan312, so consider making them match; (2) the documentary @target anchors '#documentary_s199_draft_gap_he/en' have legacy 's199' names, so confirm they resolve; (3) coverage-render-v8.json shows only the English label nodes."
+  ],
+  "verdict": "APPROVED. The one v8 blocker is closed by direct evidence. The compiled transclusion of the reused Shacharit-named target …/birkat_kohanim/birkat_kohanim renders only the introduction: it ends כָּאָמוּר: / 'as it is said:' and has no Numbers 6:24–26 content in either language. That agrees with the bounded extent approved in bounded-identity-v4. The expanded-profile boundary labels, in both Hebrew and English, therefore correctly mark the exact stopping point: the introduction is present, and the blessing verses (from scan312) and the rest of the service are not yet encoded. The v8 findings still stand: all 224 semantic payloads are unchanged (only expanded_order_sha256 differs), and the scan351 count correction (311/355 complete, scan351 partial, 44 incomplete) is approved. This approval covers coverage labels only. It is not an export approval.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "679b79e0-2b9f-456b-b964-c6b962a17501"
+  }
+}
