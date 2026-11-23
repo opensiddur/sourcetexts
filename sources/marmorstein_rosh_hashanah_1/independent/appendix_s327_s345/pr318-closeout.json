@@ -1,0 +1,21 @@
+{
+  "pr": "https://github.com/opensiddur/opensiddur-processor/pull/318",
+  "verified_github_state": "closed",
+  "merged": true,
+  "merge_commit": "5ccd55a47218a905ffdb1e42568ee9873f527ff1",
+  "integrated_digitization_commit": "2e1cd5c",
+  "published_branch": "feat/marmorstein-rosh-hashanah-1",
+  "regression_checks": {
+    "tests_passed": 171,
+    "subtests_passed": 157,
+    "command": "uv run pytest -q opensiddur/tests/importer/test_marmorstein_rosh_hashanah_1.py opensiddur/tests/importer/test_marmorstein_baseline.py opensiddur/tests/importer/test_marmorstein_realizations.py opensiddur/tests/importer/test_marmorstein_canonical_corrections.py"
+  },
+  "managed_worktree_cleanup": {
+    "root": "/home/efeins/.codex/worktrees/fix-chapter-mark-spacing/master",
+    "clean": true,
+    "clean_submodules_deinitialized": true,
+    "archive_attempt_result": "The task primary checkout cannot be removed.",
+    "retained_reason": "App-protected primary checkout"
+  },
+  "pr315": "Still open; retain separate QA runtime until its changes merge."
+}
