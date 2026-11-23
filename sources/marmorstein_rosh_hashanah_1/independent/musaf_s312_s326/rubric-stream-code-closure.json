@@ -1,0 +1,26 @@
+{
+  "approved": true,
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "The earlier blocker is closed. `rubric-fix-regression-v2.log` reports 392 passed, 158 subtests passed, with no failures and no skips. `test_reledmac_xslt.py::TestNotesMapping::test_a_cross_direction_instruction_still_gets_its_own_line` now checks the new behaviour. The first regex shows `\\begin{english}` opening before `\\instructionnote{\\pstart`. The second shows `\\pend}` followed by `\\end{english}`, then the next `\\pstart`, so the English scope closes before the Hebrew paragraph that follows. Both regexes are anchored after `\\begin{document}`, so text in the preamble can't produce a false match.",
+    "The negative control is convincing. Under the old exporter, the wrapped last line ('Alpha') started at x=300.299 and the first line ('Then') at x=110.161, a 190pt difference. That is the wrong-direction last line the fix targets. With the fix the same assertion passes. The test compares the first and last lines of the same paragraph, so it doesn't depend on the paper margin. The test also checks that the y-coordinates of Alpha and Gamma match and that Alpha < Beta < Gamma, which confirms the mixed-direction last line runs left to right.",
+    "The `note-anchor-leaves` tunnel is now forwarded explicitly. The stylesheet compiles and the suite passes, so the variable is in scope. No test exercises a rubric containing a nested editorial note, so the anchoring and numbering behaviour there is still unverified.",
+    "The old test also lost its check that `\\OSInstructionBlock`'s definition contains `\\newline`. That's fine for this path, which no longer uses the macro. But `\\OSInstructionBlock` still serves the excluded cases (alt-column, single-pstart, align-verses), and its definition no longer appears to be checked anywhere in this test. Consider moving that check to a test that covers one of those cases.",
+    "You state that `\\instructionnote` is the style derived from the typography settings, so the earlier concern about bypassing `\\OSInstructionBlock` mostly falls away. I didn't check this in the preamble generator. If `\\OSInstructionBlock` can still be customised on its own, standalone rubrics and the excluded cases could now look different.",
+    "Earlier non-blocking points still open, all optional:\n(a) The exclusion check uses `ancestor::tei:p|tei:l|tei:head` instead of the stamped `f:needs-space`/`f:parallel-block` attributes. It is safe today only because `$has-alt-column` excludes the one path that copies leaves.\n(b) Rubrics wrapped in a block `j:conditional` keep the old wrong-direction last line. That is within your stated scope, but worth a follow-up.\n(c) `note-lang` and `text-lang` are still computed for every leaf.",
+    "The new geometry file's second test, `test_own_language_scope_closes_before_following_hebrew_paragraph`, repeats the updated `test_reledmac_xslt.py` assertions almost exactly. Harmless, but one copy could go.",
+    "Unrelated to this change: the log shows a `SyntaxWarning: invalid escape sequence '\\p'` at `test_reledmac_xslt.py:2999`. The fix is a raw string literal."
+  ],
+  "limitations": [
+    "The logs were run without `-v`, so they don't list test names. I accepted your statement that the 392-test run includes the geometry and pairing tests. The summary shows no skips, so if the geometry test was collected, the lualatex and pdftotext checks really ran and weren't skipped by `skipUnless`. The log doesn't record the tool versions.",
+    "The 380-test final run and the 392-test regression run are different selections. I didn't confirm which 12 tests make up the difference.",
+    "Still not covered directly: `type=\"description\"`; the reverse direction (a Hebrew rubric in an English stream, using the `'hebrew'` environment); entering the branch with a `\\pstart` already open, which takes the `\\pend` path; and tests confirming that each excluded case keeps its old output.",
+    "The geometry test turns line numbers off. Two things are still unchecked visually: where margin line numbers land for the rubric's paragraph inside the switched language environment, and how `\\OSKeepAttr=3` keep/widow behaves, along with page breaks inside a long `\\instructionnote{\\pstart...\\pend}`.",
+    "I didn't review the actual book pages. You say they were reviewed separately, so this approval covers only the code, the tests and the logs."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "cdda19df-47a3-4c2f-ac6d-653eabb0d026"
+  }
+}

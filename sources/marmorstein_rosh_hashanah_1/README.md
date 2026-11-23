@@ -1,6 +1,6 @@
 # Heidenheim–Marmorstein: first day of Rosh ha-Shanah, 1965
 
-**Status: all 837 encoded Hebrew/English unit witnesses and 224 canonical realization payloads are independently accepted. Complete-page coverage is 311 of 355: PDF 1–311. The Sunday Psalm24 excerpt on scan351 is accepted; that leaf remains partial. Human source questions through 472, guidelines, canonical reuse, alignment, recitation order and final PDF/electronic reviews are complete. 44 leaves remain incomplete; next is PDF 312. Exporter fixes are tracked separately in processor PRs 310/312/313/315.** This contribution belongs to
+**Status: all 902 encoded Hebrew/English unit witnesses and 289 canonical realization payloads are independently accepted. Complete-page coverage is 326 of 355: PDF 1–326. The Sunday Psalm24 excerpt on scan351 is accepted; that leaf remains partial. Human readings through 489, guidelines, canonical reuse, alignment, recitation order and final PDF/electronic reviews are complete. There are 29 incomplete leaves; next is PDF 327. See musaf_s312_s326_acceptance.json. Exporter corrections remain separate in processor PRs 315/318.** This contribution belongs to
 [opensiddur-processor issue 214](https://github.com/opensiddur/opensiddur-processor/issues/214).
 The complete source is [this 355-leaf Archive item](https://archive.org/details/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965),
 [also described by Open Siddur](https://opensiddur.org/?p=69112).

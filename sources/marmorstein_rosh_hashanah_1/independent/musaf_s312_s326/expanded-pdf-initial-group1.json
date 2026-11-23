@@ -1,0 +1,31 @@
+{
+  "approved": false,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s312/v5-export-review/expanded-final-export-manifest.json",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-307.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-308.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-309.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-310.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-311.png"
+  ],
+  "blocking_findings": [
+    "expanded-309.png (printed p.307): there is an unexplained horizontal rule near the top of the page, roughly centred (about x 510–715, y 205), just above the fullwidth heading 'סוגרים הארון.'. Nothing on this page explains it: there is no footnote entry, no table border and no section divider. It looks like a stray or misplaced footnote/separator rule, and it leaves an unusual empty band at the top of the page. It needs to be found and removed, or shown to be a deliberate ornament, before approval."
+  ],
+  "nonblocking_findings": [
+    "expanded-309.png (printed p.307): in the English column there is a space before the closing single quotation mark in several places: 'all peoples ’.', 'as on this day ’.' and 'He commanded us ’.'. Opening quotes are also left at the end of rows on their own ('through Thy prophet: ‘', 'And it was said: ‘', '...And it was said: ‘'), with the quoted text starting in the next row. The text stays readable and this is probably because the quotations cross row boundaries in the aligned source. The space before the closing quote is still a typographic defect worth tidying.",
+    "expanded-311.png (printed p.309): Hebrew footnote 138 ('משנה סוף מס' תמיד, וסופרים פי\"ח.') is set with the number on the left, the footnote rule on the left, and the text block left of centre rather than right-aligned. That looks like a left-to-right paragraph direction for a Hebrew note. It is readable, the numbering is correct and it does not overlap anything. It is worth checking that this matches how Hebrew footnotes are set on pages already approved.",
+    "expanded-311.png (printed p.309): the footnote mark '138' is a raised mark at the right margin, between the end of the Ein Keloheinu/Pitum paragraph and the 'הַשִּׁיר שֶׁהַלְוִיִּם' line. It does not overlap any text, and it is the only footnote in this range, so number-to-entry order is consistent.",
+    "expanded-311.png (printed p.309): the last line of the 'עָלֵינוּ' paragraph ('זוּלָתוֹ. כַּכָּתוּב...') seems to start slightly inside the right margin compared with the lines above it. This is minor and I'm not confident of it at this resolution."
+  ],
+  "limitations": [
+    "I judged only the five assigned page images and the manifest. I did not reread the source or look at neighbouring pages, so I can't confirm whether the paragraphs at the top of p.305 or the bottom of p.309 continue correctly across the range boundaries.",
+    "The checks are visual, at the resolution of the PNGs provided. I could not measure exact spacing, check how the marks sit at sub-point level, or test whether the hyperlinks work.",
+    "Hebrew-only text on p.309 and the bilingual layout on pp.305–308 were treated as deliberate, as the brief states. On these pages, both columns were readable, I saw no clipping or column overlap, speaker labels (חזן/קהל) stayed with their rows, and the priestly blessing, the English-only peace blessing printed once, and the Kaddish rows were aligned correctly. The brief also asked about the obsolete 'coverage stops at 311' notes and the thirty-blast instruction: no 'coverage stops at 311' note appears in this range, and the thirty-blast instruction is not in it either."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "95ef15ba-b560-407d-920e-9976bea399da"
+  }
+}

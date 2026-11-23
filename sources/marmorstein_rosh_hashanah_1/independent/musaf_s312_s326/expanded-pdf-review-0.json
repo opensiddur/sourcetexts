@@ -1,0 +1,39 @@
+{
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s312/v5-export-review/expanded-final-export-manifest.json",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-302.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-303.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-304.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-305.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-306.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "The image file numbers (302–306) are 2 higher than the printed page numbers (300–304), presumably because of front matter. This matches the manifest's first_new_page=302 and is noted only so the numbering isn't confused later.",
+    "On expanded-303 (printed 301), the first dream prayer ('קהל כשהכהנים מנגנים וישמרך אומרים זה. רבונו של עולם…') has its rubric in Hebrew only, with no English rubric. Its later repeat on expanded-304 (printed 302) has both a Hebrew and an English rubric. Source alignment was already approved and no missing translation should be invented, so this is only an observation. It is not a layout defect."
+  ],
+  "limitations": [
+    "Only the five assigned page images and the manifest were checked. No source files were reread.",
+    "The full-width Hebrew paragraph at the bottom of expanded-306 (printed 304), starting 'קהל בשערי ציון…', runs to the next page mid-sentence, ending at 'וְתַצִּילֵנִי'. The bottom margin is clean, but whether it continues correctly can't be checked because expanded-307 is outside this range.",
+    "The assigned range has no footnotes, so footnote number and entry order could not be checked here.",
+    "None of the visible pages show red hyperref link borders, so their appearance could not be checked on these pages.",
+    "The thirty-blast instruction, the removal of the obsolete 'coverage stops at 311' notes, the early English-only peace blessing and the Musaf/Minchah/Tashlikh material do not appear on these pages, so this range can't confirm them.",
+    "Spacing and clipping were judged by eye from rasterized PNGs, not by measuring the PDF."
+  ],
+  "observations_supporting_approval": [
+    "Nothing is clipped or overlapping on any page. Running heads ('חזרת התפלה') and folios 300–304 alternate correctly between recto and verso.",
+    "Hebrew vowel points are readable throughout, including on short single words (יְבָרֶכְךָ, יְיָ, וְיִשְׁמְרֶךָ, יָאֵר, פָּנָיו, אֵלֶיךָ, וִיחֻנֶּךָּ, יִשָּׂא, וְיָשֵׂם, לְךָ, שָׁלוֹם). There are no visible collisions between letters and points.",
+    "Hebrew is in the left column and English in the right, on every row. Each Hebrew phrase lines up with its English translation, including the multi-line verse rows.",
+    "The speaker labels (חזן / כהנים / קהל) sit right-aligned directly above their rows. None is stranded at a page bottom, and every page change continues the speaker sequence: 302 ends with חזן→303 starts with כהנים, 303 ends with כהנים→304 starts with קהל, 304 ends with כהנים→305 starts with קהל, and 305 ends with קהל→306 starts with חזן.",
+    "The blessing is recited in the correct order: Yevarekhekha, YHWH, Veyishmerekha, Ya'er, YHWH, Panav, Vihuneka, Yisa, YHWH, Panav, Elekha, Veyasem, Lekha, Shalom. Each has its cantor, priests and congregation rows with the matching verse.",
+    "The paired Hebrew rubric ('והכהנים מברכין.') and English label ('The Priests:') on 302, and the paired Hebrew and English rubrics on 302 and 304, sit on the correct sides with sensible spacing.",
+    "Full-width Hebrew paragraphs on 303, 304 and 306 are fully justified right-to-left, with even line spacing and no distorted paragraph spacing. The bold opening rubric runs on correctly into the body text."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "e675757c-e847-47b2-a212-c95eaaee0f53"
+  }
+}

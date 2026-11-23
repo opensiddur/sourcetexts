@@ -1,0 +1,97 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "low"
+  },
+  "scan": "s312",
+  "images_read": [
+    "/tmp/mahzor-s312/audit-s312-strip1.png",
+    "/tmp/mahzor-s312/audit-s312-strip2.png",
+    "/tmp/mahzor-s312/audit-s312-strip3.png",
+    "/tmp/mahzor-s312/audit-s312-strip4.png",
+    "/tmp/mahzor-s312/audit-s312-strip5.png",
+    "/tmp/mahzor-s312/audit-s312-strip6.png",
+    "/tmp/mahzor-s312/audit-s312-strip7.png",
+    "/tmp/mahzor-s312/audit-s312-strip8.png",
+    "/tmp/mahzor-s312/audit-s312-strip9.png",
+    "/tmp/mahzor-s312/audit-s312-strip10.png"
+  ],
+  "decisions": [
+    {
+      "id": 0,
+      "choice": "PENDING",
+      "literal": "",
+      "reason": "Strip 3, line 1 of רבונו של עולם, 'אֲנִי ___'. The word clearly has a mark under the lamed and a mark inside the final kaf. At this resolution I can't tell whether the mark inside the kaf is a shva (B שֶׁלָּךְ) or a qamats (A שֶׁלְּךָ), or whether the lamed mark is qamats+dagesh or shva+dagesh. My weak visual lean is B, but I'm not confident enough, and I won't let my memory of the familiar wording decide it.",
+      "uncertainty": "high"
+    },
+    {
+      "id": 1,
+      "choice": "PENDING",
+      "literal": "",
+      "reason": "Same line, the second occurrence 'וַחֲלוֹמוֹתַי ___'. Same problem as id 0: the vowel inside the final kaf and under the lamed can't be resolved. I judged this occurrence on its own rather than assuming it matches id 0. Weak lean is again B.",
+      "uncertainty": "high"
+    },
+    {
+      "id": 2,
+      "choice": "PENDING",
+      "literal": "",
+      "reason": "Strips 3/4, end of line 2, 'שֶׁיִּהְיוּ כ_ל'. The kaf has a qamats, but I can't confirm from the strip whether there is a dagesh dot inside the kaf. Grammar alone (a vowel-final word before it) doesn't settle what was printed.",
+      "uncertainty": "high"
+    },
+    {
+      "id": 3,
+      "choice": "B",
+      "literal": "וּבָהֶם",
+      "reason": "Strips 4/5 clearly read 'וְיִתְקַיְּמוּ בִי וּבָהֶם כַּחֲלוֹמוֹת יוֹסֵף הַצַּדִּיק'. The word is printed between בִי and כַּחֲלוֹמוֹת, so A really leaves out printed text. This is not a structural split.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 4,
+      "choice": "B",
+      "literal": "רַבֵּינוּ",
+      "reason": "Strip 5, line 3: 'עַל יְדֵי מֹשֶׁה ___ וּכְמֵי'. The printed word has five letters, with a yod after the bet (ר־ב־י־נ־ו). I couldn't see A's meteg-only spelling without the yod. I can't make out whether there is a separate meteg, so the literal has none.",
+      "uncertainty": "medium"
+    },
+    {
+      "id": 5,
+      "choice": "B",
+      "literal": "יְרִחוֹ",
+      "reason": "Strip 5, line 3: 'וּכְמֵי ___ עַל יְדֵי אֱלִישָׁע'. The word is visibly short, four letters with no yod after the resh. This is a defective spelling, not a typo.",
+      "uncertainty": "medium"
+    },
+    {
+      "id": 6,
+      "choice": "B",
+      "literal": "וּמְצָא־חֵן",
+      "reason": "Strips 7/8, line starting the response to יִשָּׂא: a maqaf is clearly printed between וּמְצָא and חֵן.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 7,
+      "choice": "B",
+      "literal": "זְרוֹעָם",
+      "reason": "Strip 8: 'קִוִּינוּ הֱיֵה ___ לַבְּקָרִים'. The word is printed full, with a holam-vav (ז־ר־ו־ע־ם), not the defective זְרֹעָם.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 8,
+      "choice": "B",
+      "literal": "אַף־יְשׁוּעָתֵֽנוּ",
+      "reason": "Strip 8: אַף is the last word on the line, and a small raised stroke after the pe looks like a line-final maqaf. יְשׁוּעָתֵֽנוּ (with meteg) starts the next line. The line break is just layout, not a separation in the text.",
+      "uncertainty": "medium"
+    }
+  ],
+  "additional_source_errors": [],
+  "unresolved": [
+    "ids 0 and 1: vowel under the lamed and inside the final kaf of each שלך occurrence; this needs a higher-zoom crop of strip 3, line 1",
+    "id 2: is there a dagesh in the kaf of כל at the end of line 2 of the רבונו paragraph; this needs a higher-zoom crop",
+    "id 4: is there a meteg in רבינו; I couldn't resolve it and left it out of the literal",
+    "id 8: confirm the line-final maqaf after אף with a higher-zoom crop"
+  ],
+  "scope": "Only these differences; not whole-page acceptance",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "663693dc-215d-4fc8-9226-a8c9f2fe1b4f"
+  }
+}

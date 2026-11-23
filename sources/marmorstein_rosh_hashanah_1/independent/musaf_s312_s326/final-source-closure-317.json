@@ -1,0 +1,44 @@
+{
+  "approved": true,
+  "previous_review_scope_retained": true,
+  "evidence_read": [
+    "/tmp/mahzor-s312/final-source-317-review.json",
+    "/tmp/mahzor-s312/final-source-v5-317.json",
+    "/tmp/mahzor-s312/closure-three-dots-review.json",
+    "/tmp/mahzor-s312/source-last-crops-review.json",
+    "/tmp/mahzor-s312/source-final-dispositions.json",
+    "/tmp/mahzor-s312/human-473-489-resolution.json"
+  ],
+  "blocking_findings": [],
+  "closed_previous_blocker": {
+    "item": "s321 id 72: dagesh in the first bet of בונייך (amar_rabbi, after אֶלָּא)",
+    "evidence": "In closure-three-dots-review.json, snippet 492 is an independent enlarged crop. It reads the dagesh as present ('clear dot inside the initial bet of בוניך … like the dot inside the bet of בניך earlier on the same line'). That matches the primary reading. source-final-dispositions.json lists 492 under retained_dots and 72 under source_difference_ids_closed. In v5, s321 amar_rabbi reads אֶלָּא בּוֹנָֽיִךְ, which is consistent.",
+    "status": "closed"
+  },
+  "scope_reconciliation": [
+    "The earlier page review checked all blocks on s317–s321 for consonants, plene vs defective spelling, maqaf, punctuation, rubrics, catchwords and reading order. Its only blocking item was id 72. That page-level review still stands.",
+    "Of the source changes made since that review, none touches the text of s317–s321. The לְךָ lamed-dagesh change is on s316, the Divine Name holams are in Haazinu on other scans, and וְיִתְרֹמַם is on s325. On s318, v5 already has the defective וְיִתְרֹמַם, and the earlier review verified it that way.",
+    "Human decisions 476 (no dagesh in כִרְעוּתֵהּ, s318) and 477 (Ein Keloheinu kafs, s320) are reflected in v5. human-473-489-resolution.json lists no changed_units on these five scans.",
+    "Ids 2 (snippet 490, כל) and 115 (snippet 497, בית) have enlarged independent readings that agree with the primary (dot present). The 'moderate confidence' note on 497 says the reviewer sees the dagesh. It is not a contrary reading, so it is not an open dispute."
+  ],
+  "remaining_uncertainties": [
+    "s318 qaddish_praise וְנֶחָמָתָא: v5 has qamats under the het. Both readings agreed, so this is not a recorded dispute. The hataf-segol reading on s325 (ledger id 103) is a different occurrence and does not stand as evidence for s318. An enlarged check would still be cheap if anyone wants one. Not blocking.",
+    "s320 daily1 לַייָ: whether there is a shva under the first yod was not reverified at fine resolution. Both readings agreed. The s324 occurrence is not used as evidence. Not blocking.",
+    "s320 pitum נָתַן בָּהּ: the mappiq was not reverified at fine resolution. Both readings agreed. Not blocking.",
+    "s317 sim_shalom_proofs: the closing mark after 'added to you' is encoded as ‘ (U+2018), but the print glyph looks like a grave or backtick. The candidate already flags this. Not blocking.",
+    "s317 kehayom: the hyphen in 'whole-offerings' at the line break is kept as a real compound. A pure line-end hyphen is possible but less likely. Not blocking.",
+    "The page review could not reverify metegs and other fine marks on s318, s320 and s321. These are cases where the page review couldn't recheck marks that were already read, not reading disputes. None of them has a contrary reading on record."
+  ],
+  "limitations": [
+    "I did not open any images in this session. This closure rests on the recorded readings in the review and adjudication files listed above, together with the scope of the earlier page review.",
+    "The files I read do not map snippet numbers to difference IDs explicitly (490→2, 492→72, 497→115). I accepted that mapping from source-final-dispositions.json and the task statement. For 492→72 the snippet's own description (בוניך, with בניך on the same line) confirms it independently.",
+    "I don't have the pre-v5 candidate for s317–s321, so I could not diff it against v5. I relied on the statement that no other source words changed, and checked v5 against the earlier review's verified details, which it matches.",
+    "source-final-dispositions.json still says 'pending full scope closure'. This review is that closure for s317–s321 only.",
+    "This is source-only approval for scans s317–s321. It makes no claim about generated XML, export, other scans, or the batch as a whole."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "0c00ba5c-8ba9-41d5-b64e-dcd8b9adf394"
+  }
+}

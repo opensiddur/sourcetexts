@@ -1,0 +1,32 @@
+{
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s312/v5-export-review/documentary-final-export-manifest.json",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/documentary-278.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/documentary-279.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/documentary-280.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "PDF page 278 (printed 270): The Tashlikh block and the Psalm 24 שיר של יום block are both single-column Hebrew with no English column. This matches the stated deliberate Hebrew-only range 320–326, and no translation was invented. The headings סֵדֶר תַּשְׁלִיךְ. and שיר של יום. are clearly separated from the text above and below. The English rubric 'After מנחה (on the second day if the first falls on a Sabbath)...' shows correct left-to-right flow with the embedded Hebrew word placed correctly. Nothing is clipped or overlapping, and the Hebrew points (vowels and cantillation) are readable at this resolution.",
+    "PDF page 278: Two Tashlikh lines have wide gaps at verse boundaries ('חֶסֶד הוּא:  יָשׁוּב' and 'כָּל־חַטֹּאתָם:  וְכָל־חַטֹּאת'). This looks like normal justification stretch at verse-break spaces, not missing text. It is cosmetic only.",
+    "PDF page 278: The Psalm 24 paragraph starts with a '↗' marker before לְדָוִד מִזְמוֹר. This fits a cross-reference or link marker (the Psalm 24 documentary appendix on 351 is noted as separate). It renders cleanly and does not collide with the text.",
+    "PDF page 278: The page opens with the tail of the previous section ('ישראל.' heading and continuation text through 'אֵל נֵכָר:'). This page transition is clean. The rule and the 'Metadata' / 'Legal' back-matter headings that follow are properly spaced.",
+    "PDF pages 278–279: The running header 'שיר של יום.' carries over onto the Metadata/Legal/Contributor credits pages. This is the usual behavior when the last section mark persists. It is cosmetic only.",
+    "PDF page 279 (printed 271): Contributor credits and the Sources entry [1] render completely. The long URLs and internet_archive identifiers break across lines inside their link borders without overflowing the margins. The cyan link borders are consistent with standard hyperref link borders.",
+    "PDF page 280: There is no running header or page number, and two English bullet points about sacred-text disposal and genizah sit in the lower third of an otherwise empty page. This reads as a deliberate final colophon or vertical-fill notice. The text is complete, readable and unclipped."
+  ],
+  "limitations": [
+    "I judged only the three assigned page images and the manifest. I did not reread any source, per the instructions.",
+    "These pages have no footnotes, so I could not check footnote number/entry order in this range.",
+    "This range does not include the priestly blessing, the Musaf closing, the final thirty-blast instruction, the documentary English-only early peace blessing, the standalone cross-language rubric, or the removed obsolete 'coverage stops at 311' notes. I could not visually confirm those fixes here. Within these pages, no note claiming coverage stops at 311 appears.",
+    "At this image resolution I can confirm that the Hebrew points are legible and not clipped. I cannot confirm the exact glyph-level placement of every diacritic or interlinear mark.",
+    "The manifest reports 'export_approval_pending': true and lists source_batch_pages 268–277. My assigned pages 278–280 are the closing content and back matter only."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "8d9077ec-4cd0-4257-b405-539ea828e01b"
+  }
+}

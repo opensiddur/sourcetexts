@@ -1,0 +1,31 @@
+{
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s312/v5-export-review/documentary-final-export-manifest.json",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/documentary-273.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/documentary-274.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/documentary-275.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/documentary-276.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/documentary-277.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "PDF 273 (printed 265): The English column has a space before each closing quotation mark ('prayer for all peoples ’.', 'as on this day ’.', 'He commanded us ’.'). The opening marks have no matching space before them. This is a small typographic flaw, probably from source whitespace. Text is readable and the rows line up.",
+    "PDF 274 (printed 266): The Hebrew row 'יְהֵא שְׁלָמָא רַבָּא מִן־שְׁמַיָּא וְחַיִּים עָלֵינוּ' is justified with very wide gaps between words on its first line. Cosmetic only.",
+    "PDFs 275–277: Footnote marks 131, 132 and 133 are raised high enough to sit almost on their own line between paragraphs or verses, at the right margin. They don't overlap or clip anything, and 133 clears the enlarged ה. Tightening this is optional.",
+    "PDF 276 (printed 268): Footnote 132's entry is just the page-reference link 'קמה'. It shows a filled cyan/blue highlight inside its border, which looks different from the plain red link rectangles on PDF 277 (89, 89, 120). This may be how the image was rendered rather than the PDF itself. Not a layout defect.",
+    "PDF 277 (printed 269): The running header reads 'קְרִיאַת הַתּוֹרָה לְמִנְחָה...' but the top half of the page is still the end of the Minchah prayer (Uva Letzion and half Kaddish). This is normal LaTeX header-mark behavior, not an error.",
+    "PDF 277: In the English instruction paragraph, the Hebrew list 'קדיש תתקבל, עלינו' breaks across a line after 'קדיש'. In this mixed-direction text the comma and word order are a bit awkward to read in the image, but every item is present and legible."
+  ],
+  "limitations": [
+    "Review was visual only, at the resolution of the PNG renderings. I did not open the PDF or source. Spacing inside fine Hebrew vowel and cantillation marks, and the exact mixed-direction order within single lines, were judged as well as the image resolution allowed.",
+    "Positive checks: Two-column rows on 273–274 line up row by row. The 'חזן'/'קהל' speaker labels stay with their rows. The Minchah and Torah-reading headings have a clear gap before and after. The thirty-blast instruction on 276 keeps the qualification ('אין עכוב בדבר שהרי כבר יצאו ידי חובתם'). Footnotes 131→132→133 are in order, each with its entry on the same page. Page transitions 276→277 and 273→274 are continuous. The English rubric 'The Reader says half Kaddish.' and the instruction paragraph read left-to-right correctly. No obsolete note claiming coverage stops at 311 appears in this range. Hebrew-only pages 275–277 match the stated design.",
+    "The reading of Ha'azinu stops at the bottom of 277. Per the brief, that section continues outside this range or in the appendix, so I didn't treat it as incomplete."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "d036b752-cfc4-47d3-aa98-403711841ccb"
+  }
+}

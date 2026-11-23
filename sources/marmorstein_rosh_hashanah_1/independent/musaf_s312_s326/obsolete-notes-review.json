@@ -1,0 +1,19 @@
+{
+  "approved": true,
+  "blocking_findings": [],
+  "limitations": [
+    "Scope: this approval covers only deleting the two documentary_notes entries documentary_s199_draft_gap_he and documentary_s199_draft_gap_en (after_section musaf_draft_s200). Both were type=description with resp=codex, so they were editorial paratext, not source transcription. Each claimed the encoding stops at scan311, before the priestly-blessing verses. final-encoding-closure.json approved encoding of the scan312–326 material: the Musaf birkat-kohanim sequence, the dream rubrics, the closing through the thirty blasts, Afternoon, and Tashlikh. shofar-qualification-review.json retained that approval. Both notes are therefore false as written. Keeping them would misstate coverage, so deleting them is correct.",
+    "The removal record says all 902 literal witnesses are unchanged. That matches the 837 old plus 65 new witnesses in the earlier reviews. I saw no source words, units or witnesses affected. I did not inspect the readings file or the witnesses directly.",
+    "The two remaining notes (musaf_running_shabbat_labels_he/en) are present and still record source running heads outside the poem's words. I was given only the after-state, so I could not confirm they are byte-identical to before. A deterministic before/after diff should confirm that readings.documentary_notes changed only by losing these two entries.",
+    "Pre-existing and not caused by this change: the Hebrew running-label note cites scan pages 262–272, while the English note cites PDF 263–273. That looks like a 0-based versus 1-based page index. The English note also has 'On the Sabbath' for p.123 against 'On Sabbath' elsewhere, which may match the print. Not blocking, but worth checking separately.",
+    "Coverage disclosure: the deleted notes were the only statement shown of where encoding ends. If the printed volume continues past scan326, consider adding a new Codex description note at the new boundary (after the Tashlikh material) so readers aren't led to think the volume is complete. I can't tell from these files whether the volume continues, so this is not blocking.",
+    "Dangling references: make sure nothing else references the anchors documentary_s199_draft_gap_he/en, such as navigation, the order controls, XML ptr/ref targets, or export manifests. The navigation control reviewed earlier had a single reference (rh_minchah_returns), which suggests there are none, but I did not check the XML.",
+    "Hash and receipt impact: none of the files shows whether readings.documentary_notes is covered by any of the four approved control hashes or by realization receipts. If it is, the affected hash changes and must be recomputed and rebound under the same deterministic-recompute conditions as the earlier closures. If it isn't, those approvals are unaffected. I could not recompute anything (read-only tools).",
+    "This is not full-batch or export acceptance. Export review is still pending, including the conditions left open in shofar-qualification-review.json (instruction-ID resolution, the expanded-order hash recompute, and the rebinding check on 289 payloads)."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "cf550600-8c2f-46a4-a8a6-4a5b550f6794"
+  }
+}

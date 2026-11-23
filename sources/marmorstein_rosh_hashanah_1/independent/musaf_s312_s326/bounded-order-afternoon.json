@@ -1,0 +1,639 @@
+{
+  "scope": "Generated structural XML and final proposed order only; source read separately",
+  "actual_xml": {
+    "expanded_afternoon": "<tei:body xmlns:tei=\"http://www.tei-c.org/ns/1.0\" xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\">\n  <tei:div xml:id=\"section_rh_minchah\">\n    <j:conditional xml:id=\"section_rh_minchah_condition\">\n      <j:all>\n        <tei:fs type=\"opensiddur:service-time\">\n          <tei:f name=\"minha\">\n            <tei:binary value=\"true\"/>\n          </tei:f>\n        </tei:fs>\n        <tei:fs type=\"opensiddur:holiday\">\n          <tei:f name=\"rosh-hashana\">\n            <tei:numeric value=\"1\"/>\n          </tei:f>\n        </tei:fs>\n      </j:all>\n    </j:conditional>\n    <tei:div>\n      <tei:head xml:lang=\"he\">תפלת מנחה ליום ראשון של ראש השנה</tei:head>\n      <tei:head xml:lang=\"en\">Minchah for the first day of Rosh ha-Shanah</tei:head>\n      <j:declare xml:id=\"section_rh_minchah_settings\">\n        <tei:fs type=\"opensiddur:service-time\">\n          <tei:f name=\"shaharit\">\n            <tei:binary value=\"false\"/>\n          </tei:f>\n          <tei:f name=\"minha\">\n            <tei:binary value=\"true\"/>\n          </tei:f>\n          <tei:f name=\"maariv\">\n            <tei:binary value=\"false\"/>\n          </tei:f>\n          <tei:f name=\"musaf\">\n            <tei:binary value=\"false\"/>\n          </tei:f>\n          <tei:f name=\"neila\">\n            <tei:binary value=\"false\"/>\n          </tei:f>\n          <tei:f name=\"slihot\">\n            <tei:binary value=\"false\"/>\n          </tei:f>\n        </tei:fs>\n      </j:declare>\n      <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei\"/>\n      <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:chol/shacharit/conclusion/uva_letziyyon\"/>\n      <tei:div xml:id=\"section_rh_minchah_initial_kaddish\">\n        <j:conditional xml:id=\"section_rh_minchah_initial_kaddish_condition\">\n          <j:all>\n            <tei:fs type=\"opensiddur:quorum\">\n              <tei:f name=\"minyan\">\n                <tei:binary value=\"true\"/>\n              </tei:f>\n            </tei:fs>\n          </j:all>\n        </j:conditional>\n        <tei:div>\n          <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/kaddish_preface\"/>\n          <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/half_kaddish\"/>\n        </tei:div>\n        <j:endConditional target=\"#section_rh_minchah_initial_kaddish_condition\"/>\n      </tei:div>\n      <tei:div xml:id=\"section_rh_minchah_shabbat_vaani\">\n        <j:conditional xml:id=\"section_rh_minchah_shabbat_vaani_condition\">\n          <j:all>\n            <tei:fs type=\"opensiddur:holiday-aggregate\">\n              <tei:f name=\"shabbat\">\n                <tei:binary value=\"true\"/>\n              </tei:f>\n            </tei:fs>\n          </j:all>\n        </j:conditional>\n        <tei:div>\n          <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/vaani_tefillati\"/>\n        </tei:div>\n        <j:endConditional target=\"#section_rh_minchah_shabbat_vaani_condition\"/>\n      </tei:div>\n      <tei:div xml:id=\"section_rh_minchah_shabbat_torah\">\n        <j:conditional xml:id=\"section_rh_minchah_shabbat_torah_condition\">\n          <j:all>\n            <tei:fs type=\"opensiddur:holiday-aggregate\">\n              <tei:f name=\"shabbat\">\n                <tei:binary value=\"true\"/>\n              </tei:f>\n            </tei:fs>\n            <tei:fs type=\"opensiddur:quorum\">\n              <tei:f name=\"minyan\">\n                <tei:binary value=\"true\"/>\n              </tei:f>\n            </tei:fs>\n          </j:all>\n        </j:conditional>\n        <tei:div>\n          <tei:div xml:id=\"section_rh_minchah_takeout_action\">\n            <tei:div>\n              <tei:note type=\"description\" xml:lang=\"en\" resp=\"urn:x-opensiddur:contributor:opensiddur.org/codex\">A Torah scroll is taken from the ark.</tei:note>\n            </tei:div>\n          </tei:div>\n          <tei:div xml:id=\"section_rh_minchah_aliyah_kohen\">\n            <tei:div>\n              <tei:head xml:lang=\"he\">כהן</tei:head>\n              <tei:head xml:lang=\"en\">Kohen</tei:head>\n              <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu\"/>\n              <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/torah/before_blessing\"/>\n              <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/torah/haazinu/aliyah/1\"/>\n              <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/torah/after_blessing\"/>\n            </tei:div>\n          </tei:div>\n          <tei:div xml:id=\"section_rh_minchah_aliyah_levi\">\n            <tei:div>\n              <tei:head xml:lang=\"he\">לוי</tei:head>\n              <tei:head xml:lang=\"en\">Levi</tei:head>\n              <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu\"/>\n              <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/torah/before_blessing\"/>\n              <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/torah/haazinu/aliyah/2\"/>\n              <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/torah/after_blessing\"/>\n            </tei:div>\n          </tei:div>\n          <tei:div xml:id=\"section_rh_minchah_aliyah_yisrael\">\n            <tei:div>\n              <tei:head xml:lang=\"he\">ישראל</tei:head>\n              <tei:head xml:lang=\"en\">Yisrael</tei:head>\n              <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu\"/>\n              <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/torah/before_blessing\"/>\n              <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/torah/haazinu/aliyah/3\"/>\n              <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/torah/after_blessing\"/>\n            </tei:div>\n          </tei:div>\n          <tei:div xml:id=\"section_rh_minchah_return_action\">\n            <tei:div>\n              <tei:note type=\"description\" xml:lang=\"en\" resp=\"urn:x-opensiddur:contributor:opensiddur.org/codex\">The Torah scroll is returned to the ark.</tei:note>\n            </tei:div>\n          </tei:div>\n          <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/half_kaddish\"/>\n        </tei:div>\n        <j:endConditional target=\"#section_rh_minchah_shabbat_torah_condition\"/>\n      </tei:div>\n      <tei:div xml:id=\"section_rh_minchah_silent_amidah\">\n        <tei:div>\n          <j:declare xml:id=\"section_rh_minchah_silent_amidah_settings\">\n            <tei:fs type=\"opensiddur:recitation\">\n              <tei:f name=\"silent\">\n                <tei:binary value=\"true\"/>\n              </tei:f>\n              <tei:f name=\"repetition\">\n                <tei:binary value=\"false\"/>\n              </tei:f>\n            </tei:fs>\n          </j:declare>\n          <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/adonai_sefatai\"/>\n          <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/avot\"/>\n          <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/gevurot\"/>\n          <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/qedushat_hashem\"/>\n          <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/qedushat_hayom\"/>\n          <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/avodah\"/>\n          <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/hodaah\"/>\n          <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/shalom\"/>\n          <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/elohai_netzor\"/>\n          <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/yehi_ratzon_temple\"/>\n          <j:endDeclare target=\"#section_rh_minchah_silent_amidah_settings\"/>\n        </tei:div>\n      </tei:div>\n      <tei:div xml:id=\"section_rh_minchah_repeated_amidah\">\n        <j:conditional xml:id=\"section_rh_minchah_repeated_amidah_condition\">\n          <j:all>\n            <tei:fs type=\"opensiddur:quorum\">\n              <tei:f name=\"minyan\">\n                <tei:binary value=\"true\"/>\n              </tei:f>\n            </tei:fs>\n          </j:all>\n        </j:conditional>\n        <tei:div>\n          <tei:note type=\"description\" corresp=\"urn:x-opensiddur:instruction:role/reader\" xml:lang=\"he\">חזן</tei:note>\n          <j:declare xml:id=\"section_rh_minchah_repeated_amidah_settings\">\n            <tei:fs type=\"opensiddur:recitation\">\n              <tei:f name=\"silent\">\n                <tei:binary value=\"false\"/>\n              </tei:f>\n              <tei:f name=\"repetition\">\n                <tei:binary value=\"true\"/>\n              </tei:f>\n            </tei:fs>\n          </j:declare>\n          <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/avot\"/>\n          <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/gevurot\"/>\n          <tei:div xml:id=\"section_rh_minchah_qedushah\">\n            <tei:div>\n              <j:declare xml:id=\"section_rh_minchah_qedushah_settings\">\n                <tei:fs type=\"opensiddur:variant\">\n                  <tei:f name=\"urn:x-opensiddur:condition:prayer:amidah/qedushah/qadosh/haaretz_without_meteg\">\n                    <tei:binary value=\"true\"/>\n                  </tei:f>\n                  <tei:f name=\"urn:x-opensiddur:condition:prayer:amidah/qedushah/qadosh/haaretz_with_meteg\">\n                    <tei:binary value=\"false\"/>\n                  </tei:f>\n                  <tei:f name=\"urn:x-opensiddur:condition:prayer:amidah/qedushah/barukh_kevod/kevod_name_with_maqaf\">\n                    <tei:binary value=\"true\"/>\n                  </tei:f>\n                  <tei:f name=\"urn:x-opensiddur:condition:prayer:amidah/qedushah/barukh_kevod/kevod_name_without_maqaf\">\n                    <tei:binary value=\"false\"/>\n                  </tei:f>\n                  <tei:f name=\"urn:x-opensiddur:condition:prayer:amidah/qedushah/ledor_vador/dor_plene\">\n                    <tei:binary value=\"true\"/>\n                  </tei:f>\n                  <tei:f name=\"urn:x-opensiddur:condition:prayer:amidah/qedushah/ledor_vador/dor_defective\">\n                    <tei:binary value=\"false\"/>\n                  </tei:f>\n                </tei:fs>\n              </j:declare>\n              <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:amidah/qedushah/neqaddesh\"/>\n              <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:amidah/qedushah/qadosh\"/>\n              <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:amidah/qedushah/leummatam\"/>\n              <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:amidah/qedushah/barukh_kevod\"/>\n              <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:amidah/qedushah/uvedivrei\"/>\n              <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:amidah/qedushah/yimlokh\"/>\n              <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:amidah/qedushah/ledor_vador\"/>\n              <j:endDeclare target=\"#section_rh_minchah_qedushah_settings\"/>\n            </tei:div>\n          </tei:div>\n          <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/qedushat_hashem/uvekhen_ten_pachdekha\" targetEnd=\"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/qedushat_hashem/qadosh_attah\"/>\n          <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/qedushat_hayom\"/>\n          <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/avodah\"/>\n          <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/hodaah/modim\"/>\n          <tei:div xml:id=\"section_rh_minchah_modim_congregation\">\n            <tei:div>\n              <tei:note type=\"description\" corresp=\"urn:x-opensiddur:instruction:role/congregation\" xml:lang=\"he\">קהל</tei:note>\n              <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:amidah/hodaah/modim_derabbanan\"/>\n            </tei:div>\n          </tei:div>\n          <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/hodaah/veal_kullam\" targetEnd=\"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/hodaah/vekhol_hachayyim\"/>\n          <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/shalom\"/>\n          <j:endDeclare target=\"#section_rh_minchah_repeated_amidah_settings\"/>\n        </tei:div>\n        <j:endConditional target=\"#section_rh_minchah_repeated_amidah_condition\"/>\n      </tei:div>\n      <tei:div xml:id=\"section_rh_minchah_avinu_malkenu\">\n        <j:conditional xml:id=\"section_rh_minchah_avinu_malkenu_condition\">\n          <j:all>\n            <tei:fs type=\"opensiddur:holiday-aggregate\">\n              <tei:f name=\"shabbat\">\n                <tei:binary value=\"false\"/>\n              </tei:f>\n            </tei:fs>\n          </j:all>\n        </j:conditional>\n        <tei:div>\n          <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:avinu_malkenu\"/>\n        </tei:div>\n        <j:endConditional target=\"#section_rh_minchah_avinu_malkenu_condition\"/>\n      </tei:div>\n      <tei:div xml:id=\"section_rh_minchah_full_kaddish\">\n        <j:conditional xml:id=\"section_rh_minchah_full_kaddish_condition\">\n          <j:all>\n            <tei:fs type=\"opensiddur:quorum\">\n              <tei:f name=\"minyan\">\n                <tei:binary value=\"true\"/>\n              </tei:f>\n            </tei:fs>\n          </j:all>\n        </j:conditional>\n        <tei:div>\n          <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/conclusion/full_kaddish\"/>\n        </tei:div>\n        <j:endConditional target=\"#section_rh_minchah_full_kaddish_condition\"/>\n      </tei:div>\n      <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/conclusion/aleinu\"/>\n      <tei:div xml:id=\"section_rh_minchah_mourner_kaddish\">\n        <j:conditional xml:id=\"section_rh_minchah_mourner_kaddish_condition\">\n          <j:all>\n            <tei:fs type=\"opensiddur:quorum\">\n              <tei:f name=\"minyan\">\n                <tei:binary value=\"true\"/>\n              </tei:f>\n            </tei:fs>\n          </j:all>\n        </j:conditional>\n        <tei:div>\n          <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:prayer:kaddish/yatom@hasiddur_hashalem-birnbaum-1949-he\"/>\n        </tei:div>\n        <j:endConditional target=\"#section_rh_minchah_mourner_kaddish_condition\"/>\n      </tei:div>\n      <j:endDeclare target=\"#section_rh_minchah_settings\"/>\n    </tei:div>\n    <j:endConditional target=\"#section_rh_minchah_condition\"/>\n  </tei:div>\n</tei:body>\n",
+    "expanded_tashlikh": "<tei:body xmlns:tei=\"http://www.tei-c.org/ns/1.0\" xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\">\n  <tei:div xml:id=\"section_rh_tashlikh\">\n    <j:conditional xml:id=\"section_rh_tashlikh_condition\">\n      <j:all>\n        <tei:fs type=\"opensiddur:service-time\">\n          <tei:f name=\"minha\">\n            <tei:binary value=\"true\"/>\n          </tei:f>\n        </tei:fs>\n        <j:any>\n          <j:all>\n            <tei:fs type=\"opensiddur:holiday\">\n              <tei:f name=\"rosh-hashana\">\n                <tei:numeric value=\"1\"/>\n              </tei:f>\n            </tei:fs>\n            <tei:fs type=\"opensiddur:holiday-aggregate\">\n              <tei:f name=\"shabbat\">\n                <tei:binary value=\"false\"/>\n              </tei:f>\n            </tei:fs>\n          </j:all>\n          <j:all>\n            <tei:fs type=\"opensiddur:holiday\">\n              <tei:f name=\"rosh-hashana\">\n                <tei:numeric value=\"2\"/>\n              </tei:f>\n            </tei:fs>\n            <tei:fs type=\"opensiddur:day-of-week\">\n              <tei:f name=\"hebrew-day\">\n                <tei:numeric value=\"1\"/>\n              </tei:f>\n            </tei:fs>\n          </j:all>\n        </j:any>\n      </j:all>\n    </j:conditional>\n    <tei:div>\n      <tei:head xml:lang=\"he\">סדר תשליך</tei:head>\n      <tei:head xml:lang=\"en\">Tashlikh</tei:head>\n      <tei:note type=\"description\" xml:lang=\"en\" resp=\"urn:x-opensiddur:contributor:opensiddur.org/codex\">After Minchah, go to a brook, stream or pond containing fish.</tei:note>\n      <j:transclude type=\"external\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/tashlikh\"/>\n    </tei:div>\n    <j:endConditional target=\"#section_rh_tashlikh_condition\"/>\n  </tei:div>\n</tei:body>\n"
+  },
+  "order": {
+    "expanded_afternoon": {
+      "section": "rh_minchah",
+      "order": [
+        {
+          "unit": "rh_minchah_ashrei"
+        },
+        {
+          "unit": "rh_minchah_uva_letziyyon"
+        },
+        {
+          "section": "rh_minchah_initial_kaddish",
+          "order": [
+            {
+              "unit": "rh_minchah_kaddish_preface"
+            },
+            {
+              "unit": "rh_minchah_half_kaddish"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "opensiddur:quorum",
+              "features": {
+                "minyan": true
+              }
+            }
+          ]
+        },
+        {
+          "section": "rh_minchah_shabbat_vaani",
+          "order": [
+            {
+              "unit": "rh_minchah_vaani"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "opensiddur:holiday-aggregate",
+              "features": {
+                "shabbat": true
+              }
+            }
+          ]
+        },
+        {
+          "section": "rh_minchah_shabbat_torah",
+          "order": [
+            {
+              "section": "rh_minchah_takeout_action",
+              "order": [],
+              "rubrics": {
+                "en": {
+                  "text": "A Torah scroll is taken from the ark.",
+                  "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+                }
+              }
+            },
+            {
+              "section": "rh_minchah_aliyah_kohen",
+              "order": [
+                {
+                  "unit": "torah_barekhu"
+                },
+                {
+                  "unit": "torah_before_blessing"
+                },
+                {
+                  "unit": "rh_minchah_haazinu_kohen"
+                },
+                {
+                  "unit": "torah_after_blessing"
+                }
+              ],
+              "heads": {
+                "he": "כהן",
+                "en": "Kohen"
+              }
+            },
+            {
+              "section": "rh_minchah_aliyah_levi",
+              "order": [
+                {
+                  "unit": "torah_barekhu"
+                },
+                {
+                  "unit": "torah_before_blessing"
+                },
+                {
+                  "unit": "rh_minchah_haazinu_levi"
+                },
+                {
+                  "unit": "torah_after_blessing"
+                }
+              ],
+              "heads": {
+                "he": "לוי",
+                "en": "Levi"
+              }
+            },
+            {
+              "section": "rh_minchah_aliyah_yisrael",
+              "order": [
+                {
+                  "unit": "torah_barekhu"
+                },
+                {
+                  "unit": "torah_before_blessing"
+                },
+                {
+                  "unit": "rh_minchah_haazinu_yisrael"
+                },
+                {
+                  "unit": "torah_after_blessing"
+                }
+              ],
+              "heads": {
+                "he": "ישראל",
+                "en": "Yisrael"
+              }
+            },
+            {
+              "section": "rh_minchah_return_action",
+              "order": [],
+              "rubrics": {
+                "en": {
+                  "text": "The Torah scroll is returned to the ark.",
+                  "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+                }
+              }
+            },
+            {
+              "unit": "rh_minchah_half_kaddish"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "opensiddur:holiday-aggregate",
+              "features": {
+                "shabbat": true
+              }
+            },
+            {
+              "type": "opensiddur:quorum",
+              "features": {
+                "minyan": true
+              }
+            }
+          ]
+        },
+        {
+          "section": "rh_minchah_silent_amidah",
+          "order": [
+            {
+              "unit": "shacharit_adonai_sefatai"
+            },
+            {
+              "unit": "shacharit_amidah_avot"
+            },
+            {
+              "unit": "shacharit_amidah_gevurot"
+            },
+            {
+              "unit": "shacharit_amidah_qedushat_hashem"
+            },
+            {
+              "unit": "shacharit_amidah_qedushat_hayom"
+            },
+            {
+              "unit": "shacharit_amidah_avodah"
+            },
+            {
+              "unit": "shacharit_amidah_hodaah"
+            },
+            {
+              "unit": "shacharit_amidah_sim_shalom"
+            },
+            {
+              "unit": "shacharit_elohai_netzor"
+            },
+            {
+              "unit": "shacharit_yehi_ratzon_temple"
+            }
+          ],
+          "declarations": [
+            {
+              "type": "opensiddur:recitation",
+              "features": {
+                "silent": true,
+                "repetition": false
+              }
+            }
+          ]
+        },
+        {
+          "section": "rh_minchah_repeated_amidah",
+          "order": [
+            {
+              "unit": "shacharit_amidah_avot"
+            },
+            {
+              "unit": "shacharit_amidah_gevurot"
+            },
+            {
+              "section": "rh_minchah_qedushah",
+              "order": [
+                {
+                  "reference": {
+                    "target": "urn:x-opensiddur:text:prayer:amidah/qedushah/neqaddesh"
+                  }
+                },
+                {
+                  "reference": {
+                    "target": "urn:x-opensiddur:text:prayer:amidah/qedushah/qadosh"
+                  }
+                },
+                {
+                  "reference": {
+                    "target": "urn:x-opensiddur:text:prayer:amidah/qedushah/leummatam"
+                  }
+                },
+                {
+                  "reference": {
+                    "target": "urn:x-opensiddur:text:prayer:amidah/qedushah/barukh_kevod"
+                  }
+                },
+                {
+                  "reference": {
+                    "target": "urn:x-opensiddur:text:prayer:amidah/qedushah/uvedivrei"
+                  }
+                },
+                {
+                  "reference": {
+                    "target": "urn:x-opensiddur:text:prayer:amidah/qedushah/yimlokh"
+                  }
+                },
+                {
+                  "reference": {
+                    "target": "urn:x-opensiddur:text:prayer:amidah/qedushah/ledor_vador"
+                  }
+                }
+              ],
+              "declarations": [
+                {
+                  "type": "opensiddur:variant",
+                  "features": {
+                    "urn:x-opensiddur:condition:prayer:amidah/qedushah/qadosh/haaretz_without_meteg": true,
+                    "urn:x-opensiddur:condition:prayer:amidah/qedushah/qadosh/haaretz_with_meteg": false,
+                    "urn:x-opensiddur:condition:prayer:amidah/qedushah/barukh_kevod/kevod_name_with_maqaf": true,
+                    "urn:x-opensiddur:condition:prayer:amidah/qedushah/barukh_kevod/kevod_name_without_maqaf": false,
+                    "urn:x-opensiddur:condition:prayer:amidah/qedushah/ledor_vador/dor_plene": true,
+                    "urn:x-opensiddur:condition:prayer:amidah/qedushah/ledor_vador/dor_defective": false
+                  }
+                }
+              ]
+            },
+            {
+              "reference": {
+                "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/qedushat_hashem/uvekhen_ten_pachdekha",
+                "targetEnd": "urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/qedushat_hashem/qadosh_attah"
+              }
+            },
+            {
+              "unit": "shacharit_amidah_qedushat_hayom"
+            },
+            {
+              "unit": "shacharit_amidah_avodah"
+            },
+            {
+              "reference": {
+                "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/hodaah/modim"
+              }
+            },
+            {
+              "section": "rh_minchah_modim_congregation",
+              "role": "congregation",
+              "order": [
+                {
+                  "unit": "amidah_modim_derabbanan"
+                }
+              ]
+            },
+            {
+              "reference": {
+                "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/hodaah/veal_kullam",
+                "targetEnd": "urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/hodaah/vekhol_hachayyim"
+              }
+            },
+            {
+              "unit": "shacharit_amidah_sim_shalom"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "opensiddur:quorum",
+              "features": {
+                "minyan": true
+              }
+            }
+          ],
+          "declarations": [
+            {
+              "type": "opensiddur:recitation",
+              "features": {
+                "silent": false,
+                "repetition": true
+              }
+            }
+          ],
+          "role": "reader"
+        },
+        {
+          "section": "rh_minchah_avinu_malkenu",
+          "order": [
+            {
+              "unit": "avinu_malkenu"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "opensiddur:holiday-aggregate",
+              "features": {
+                "shabbat": false
+              }
+            }
+          ]
+        },
+        {
+          "section": "rh_minchah_full_kaddish",
+          "order": [
+            {
+              "unit": "musaf_full_kaddish"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "opensiddur:quorum",
+              "features": {
+                "minyan": true
+              }
+            }
+          ]
+        },
+        {
+          "unit": "musaf_concluding_aleinu"
+        },
+        {
+          "section": "rh_minchah_mourner_kaddish",
+          "order": [
+            {
+              "reference": {
+                "target": "urn:x-opensiddur:text:prayer:kaddish/yatom@hasiddur_hashalem-birnbaum-1949-he"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "opensiddur:quorum",
+              "features": {
+                "minyan": true
+              }
+            }
+          ]
+        }
+      ],
+      "heads": {
+        "he": "תפלת מנחה ליום ראשון של ראש השנה",
+        "en": "Minchah for the first day of Rosh ha-Shanah"
+      },
+      "conditions": [
+        {
+          "type": "opensiddur:service-time",
+          "features": {
+            "minha": true
+          }
+        },
+        {
+          "type": "opensiddur:holiday",
+          "features": {
+            "rosh-hashana": 1
+          }
+        }
+      ],
+      "declarations": [
+        {
+          "type": "opensiddur:service-time",
+          "features": {
+            "shaharit": false,
+            "minha": true,
+            "maariv": false,
+            "musaf": false,
+            "neila": false,
+            "slihot": false
+          }
+        }
+      ]
+    },
+    "expanded_tashlikh": {
+      "section": "rh_tashlikh",
+      "order": [
+        {
+          "unit": "rh_tashlikh"
+        }
+      ],
+      "heads": {
+        "he": "סדר תשליך",
+        "en": "Tashlikh"
+      },
+      "rubrics": {
+        "en": {
+          "text": "After Minchah, go to a brook, stream or pond containing fish.",
+          "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+        }
+      },
+      "conditions": [
+        {
+          "type": "opensiddur:service-time",
+          "features": {
+            "minha": true
+          }
+        },
+        {
+          "operator": "any",
+          "conditions": [
+            {
+              "operator": "all",
+              "conditions": [
+                {
+                  "type": "opensiddur:holiday",
+                  "features": {
+                    "rosh-hashana": 1
+                  }
+                },
+                {
+                  "type": "opensiddur:holiday-aggregate",
+                  "features": {
+                    "shabbat": false
+                  }
+                }
+              ]
+            },
+            {
+              "operator": "all",
+              "conditions": [
+                {
+                  "type": "opensiddur:holiday",
+                  "features": {
+                    "rosh-hashana": 2
+                  }
+                },
+                {
+                  "type": "opensiddur:day-of-week",
+                  "features": {
+                    "hebrew-day": 1
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "proofs": {
+    "runtime-precheck.json": {
+      "status": "UNACCEPTED technical checks only",
+      "refdb_errors": [],
+      "checks": [
+        {
+          "check": "qadosh_attah range contains full RH chatimah",
+          "passed": true
+        },
+        {
+          "check": "Vaani marked source condition",
+          "shabbat": false,
+          "present": false,
+          "passed": true
+        },
+        {
+          "check": "Vaani marked source condition",
+          "shabbat": true,
+          "present": true,
+          "passed": true
+        },
+        {
+          "check": "Vaani marked source condition",
+          "shabbat": null,
+          "present": true,
+          "passed": true
+        },
+        {
+          "check": "expanded Minchah selection",
+          "shabbat": false,
+          "minyan": true,
+          "vaani": false,
+          "haazinu": false,
+          "avinu_malkenu": true,
+          "passed": true
+        },
+        {
+          "check": "expanded Minchah selection",
+          "shabbat": true,
+          "minyan": true,
+          "vaani": true,
+          "haazinu": true,
+          "avinu_malkenu": false,
+          "passed": true
+        },
+        {
+          "check": "expanded Minchah selection",
+          "shabbat": true,
+          "minyan": false,
+          "vaani": true,
+          "haazinu": false,
+          "avinu_malkenu": false,
+          "passed": true
+        },
+        {
+          "check": "Tashlikh selection",
+          "day": 1,
+          "shabbat": false,
+          "hebrew_day": 2,
+          "minha": true,
+          "present": true,
+          "passed": true
+        },
+        {
+          "check": "Tashlikh selection",
+          "day": 1,
+          "shabbat": true,
+          "hebrew_day": 7,
+          "minha": true,
+          "present": false,
+          "passed": true
+        },
+        {
+          "check": "Tashlikh selection",
+          "day": 2,
+          "shabbat": false,
+          "hebrew_day": 1,
+          "minha": true,
+          "present": true,
+          "passed": true
+        },
+        {
+          "check": "Tashlikh selection",
+          "day": 2,
+          "shabbat": false,
+          "hebrew_day": 2,
+          "minha": true,
+          "present": false,
+          "passed": true
+        },
+        {
+          "check": "Tashlikh selection",
+          "day": 1,
+          "shabbat": false,
+          "hebrew_day": 2,
+          "minha": false,
+          "present": false,
+          "passed": true
+        }
+      ]
+    },
+    "musaf-intro-tail-runtime-check.json": {
+      "status": "UNACCEPTED technical runtime proof",
+      "no_priests_complete_three_verses_from_this_volume": true,
+      "source_only_extra_english_blessing_excluded": true,
+      "one_final_english_blessing": true,
+      "no_priestly_berakhah_in_no_priests_branch": true
+    },
+    "page-boundary-precheck.json": {
+      "status": "UNACCEPTED technical source-page audit",
+      "results": [
+        {
+          "language": "he",
+          "scan_pages": [
+            312,
+            314,
+            316,
+            318,
+            320,
+            321,
+            322,
+            323,
+            324,
+            325,
+            326
+          ],
+          "each_boundary_once": true
+        },
+        {
+          "language": "en",
+          "scan_pages": [
+            313,
+            315,
+            317,
+            319
+          ],
+          "each_boundary_once": true
+        }
+      ],
+      "all15_leaves_accounted_for": true
+    },
+    "actual-range-call-check.json": {
+      "status": "UNACCEPTED runtime check",
+      "results": [
+        {
+          "part": "sim_shalom",
+          "english_blessing_count": 0,
+          "starts_sim_shalom": true,
+          "starts_besefer": false,
+          "starts_proofs": false
+        },
+        {
+          "part": "besefer",
+          "english_blessing_count": 0,
+          "starts_sim_shalom": false,
+          "starts_besefer": true,
+          "starts_proofs": false
+        },
+        {
+          "part": "proofs",
+          "english_blessing_count": 0,
+          "starts_sim_shalom": false,
+          "starts_besefer": false,
+          "starts_proofs": true
+        }
+      ]
+    }
+  },
+  "coverage": "Through326 only. Explicit appendix327+ boundary; no complete-volume claim. Existing compatible Birnbaum Hebrew only for unprinted mourner Kaddish; no absent English prayer translation."
+}

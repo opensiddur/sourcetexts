@@ -1,0 +1,96 @@
+{
+  "images_read": [
+    "/tmp/mahzor-s312/archive-cache/marmorstein_rosh_hashanah_1/pages/s322.jpg",
+    "/tmp/mahzor-s312/archive-cache/marmorstein_rosh_hashanah_1/pages/s323.jpg",
+    "/tmp/mahzor-s312/archive-cache/marmorstein_rosh_hashanah_1/pages/s324.jpg",
+    "/tmp/mahzor-s312/archive-cache/marmorstein_rosh_hashanah_1/pages/s325.jpg",
+    "/tmp/mahzor-s312/archive-cache/marmorstein_rosh_hashanah_1/pages/s326.jpg"
+  ],
+  "all_blocks_checked": true,
+  "source_approved": false,
+  "findings": [
+    {
+      "severity": "blocking",
+      "scan": "s326",
+      "keys": [
+        "haazinu",
+        "haazinu_yisrael"
+      ],
+      "issue": "In all three Divine Names outside 32:6 the candidate text has no holam: יְהוָ֖ה in 32:3, 32:9 and 32:12. Four sources disagree with that. The haazinu block's own uncertainty says 'The holam position in יְהוָֹה (line 3) is unclear', so it assumes a holam is printed. Ledger 108 carries יְהוָֹה. Human decision 481 (Deut 32:6, the same passage) reads יהֹוָה with holam. The image prints the Name with a holam elsewhere on s322. The candidate dropped a mark that it, the ledger and the human reading of the same page all treat as present.",
+      "action": "Restore the holam on all three occurrences. Use the same host convention as 481 (holam on he: יְהֹוָ֖ה), or send one targeted crop to the human to fix the host. Do not leave it out."
+    },
+    {
+      "severity": "blocking_pending_check",
+      "scan": "s325",
+      "key": "qaddish_praise",
+      "issue": "The candidate has the full spelling וְיִתְרוֹמַם. On this scan the word looks short and may be printed without the vav (וְיִתְרֹמַם). Ledger 42 found exactly that spelling in the same Kaddish on s318. The candidate records no difference or check for this word. At this resolution I can't settle vav versus no vav.",
+      "action": "Do a crop-level check of the 4th word of line 1 of the long Kaddish paragraph. Keep whatever is printed, with no normalization in either direction."
+    },
+    {
+      "severity": "blocking_pending_check",
+      "scan": "s326",
+      "key": "tashlikh",
+      "issue": "Ledger 115 (dagesh in בית after עַמְּךָ) is still marked PENDING. The candidate outputs בֵּית with a dagesh and calls it 'probable but faint'. None of the human decisions listed in the candidate (478, 481–489) covers it. The resolution file gives 473–477 without saying which item each one answers, so I can't confirm that 115 was closed.",
+      "action": "Confirm which human answer, if any, closes ledger 115. If none does, it needs one."
+    },
+    {
+      "severity": "documentation",
+      "scan": "s325",
+      "key": "cantor_label",
+      "issue": "The text reads חזן with a final nun. That matches the image and the instruction to correct the earlier broad reader's mistaken חז. But the block's changes_from_primary still says 'חזן → חז', and its uncertainty still refers to 'חז'. Ledger 100 also still records 'חז'. The text is correct and the notes are stale.",
+      "action": "Correct the change note, the uncertainty and the ledger entry so the record doesn't contradict the text."
+    },
+    {
+      "severity": "documentation",
+      "scan": "s322/s323/s324/s325/s326",
+      "keys": [
+        "al_ken",
+        "psalm81",
+        "ashrei_intro",
+        "ashrei145",
+        "uva",
+        "uva_cont",
+        "uva(s325)",
+        "veattah",
+        "vani",
+        "tashlikh",
+        "haazinu*"
+      ],
+      "issue": "Several changes_from_primary notes say 'Removed all metegs', but the texts still contain metegs. Examples: אֱלֹהֵֽינוּ and בְּתִפְאֶֽרֶת in al_ken, בֵיתֶֽךָ and סֶּֽלָה in ashrei_intro, חַסְדֶּֽךָ in vani, כָּמֽוֹךָ in tashlikh. The ashrei145 note says the hataf-patahs were changed to shva, but the text keeps hataf-patah. That agrees with ledger 88–91 and the image, so the text is right and the note is wrong. The haazinu notes still say te'amim are 'not transcribed' and the 32:6 vowels are 'unresolved', but the text now has te'amim and the 481 reading. Where human decisions exist, the texts match them; the notes are what's out of date.",
+      "action": "Regenerate the change notes and uncertainties from the final text so the audit trail is consistent."
+    },
+    {
+      "severity": "verified",
+      "detail": "Human decisions are reflected in the text. 478: סֶּ and לּוֹ. 481: הַ לְיהֹוָה֙ (enlarged he with patah, lamed with sheva, holam and pashta on the Name; the star is carried by the footnote anchor, not the Hebrew). 482: יְסֹֽבְבֶ֙נְהוּ֙ (meteg on samekh, pashta on the second bet and on the shuruq). 483: יְהַלְלֽוּךָ. 484: יָמֽוּשׁוּ. 485: כָּמֽוֹךָ. 486: מִֽימֵי. 487: the he meteg in אֱלֹהֵֽינוּ after לְפָנֶֽיךָ יְיָ. 488: וָאֲחַלְּצֶֽךָּ. 489: וְאָעִֽידָה."
+    },
+    {
+      "severity": "verified",
+      "detail": "Consonants, word order, maqaf/space and punctuation match the images line by line for al_ken, qaddish_yatom_rubric, psalm81_rubric (לאמר), psalm81, shofar_final_rubric (ומיהו…לשלום.), ashrei_intro, ashrei145 (including hataf-patah in ברֲכ/הלֲל), uva (דֵּן מִן־דֵּן; the commas after שְׁכִינְתֵּהּ and גְּבוּרְתֵּהּ; וְשִׁמְעֵת; אֹתָם), uva_alt_qaem ((קאם), unpointed), uva_cont (colon after עָלְמַיָּא; אֲבֹתֵינוּ; אֲשֶׁר־נִשְׁבַּעְתָּ; period after הוֹשִׁיעָה), s325 uva, half_qaddish_rubric, veattah, qaddish_open (period after אָמֵן), qaddish_response, the qaddish_praise word sequence (מִן־כָּל־, וְנֶחֱמָתָא), vani (with parentheses and :)), minchah_navigation (English wording and punctuation exact), torah_rubric, the haazinu word sequence and aliyah labels 'לוי.' and 'ישראל.', torah_endnote ('*) ה׳ רבתי, והוא מלה לעצמה.'), tashlikh_heading, tashlikh_rubric, and tashlikh (מִי אֵל and כִּי חָפֵץ without maqaf; עֲוֹנֹתֵינוּ; יִפָּקְדוּ). Reading order and the placement of cues and labels match the page."
+    },
+    {
+      "severity": "verified",
+      "detail": "Classifying the s323 and s326 running headers as running_header_metadata is correct. On s326 the header includes שֶׁל. The s322 running header (מוּסָף לְיוֹם רִאשׁוֹן שֶׁל רֹאשׁ הַשָּׁנָה) has no block, which is consistent with treating it as metadata."
+    }
+  ],
+  "remaining_uncertainties": [
+    "s326 haazinu blocks: apart from the human-adjudicated points (481, 482) and the prominent upper accents I could see (the pashtas on כַּמָּטָר, הַצּוּר, אֱמוּנָה, הוּא, זְכֹר, the double pashta on אָבִ֙יךָ֙, יִמְצָאֵ֙הוּ֙, כְּנֶ֙שֶׁר֙), I could not confirm the lower conjunctive and disjunctive te'amim mark by mark. Ledger 108 also says the carried-forward marks need a word-by-word check. As far as I can see, the candidate's te'amim are the standard Masoretic ones. I can't independently show that the print matches each one.",
+    "s325 qaddish_praise: whether וְיִתְרוֹמַם is spelled with or without the vav (see the findings).",
+    "s326 tashlikh: the dagesh in בֵּית (ledger 115).",
+    "Holam host in the Divine Name: s322 uses יְהוָֹה (holam on vav), 481 uses יהֹוָה (holam on he). I can't resolve the host on s322 at this resolution. The s322 block lists this as its own uncertainty.",
+    "s325 qaddish_open: the dagesh in כ of כִרְעוּתֵהּ at the start of line 2 can't be resolved. The candidate has none.",
+    "s324 uva_alt_qaem: I can only see one parenthesis clearly, as the block already notes.",
+    "Metegs that no human decision covers, especially in the large type of al_ken, ashrei and uva: I can't independently confirm or rule them out at this resolution. I relied on the recorded meteg reviews, which I did not have in the files given."
+  ],
+  "limitations": [
+    "I read each image once at the delivered resolution (1368×2264, shown scaled to 1208×2000). I made no zoomed crops and did not read the snippet PNGs (/tmp/mahzor-s312/snippets/*.png).",
+    "Dagesh, meteg, hataf-versus-shva and accent placement are often at or below what this resolution shows. In those cases I deferred to the human_decisions and the ledger and did not re-adjudicate.",
+    "The individual meteg review records were described as already recorded, but they are not in the two audit files I read. I could not cross-check uncovered metegs against them.",
+    "The resolution file lists answers 473–477 without saying which items they answer. I could not map them to blocks on these scans.",
+    "This review covers the source transcription of scans s322–s326 only. It does not cover the rest of the batch, the generated XML, module boundaries or any export. Even after the blocking items are fixed, approval applies only to these five scans."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "ac32c3bc-3a4d-42d7-a321-79f0719e3c10"
+  }
+}

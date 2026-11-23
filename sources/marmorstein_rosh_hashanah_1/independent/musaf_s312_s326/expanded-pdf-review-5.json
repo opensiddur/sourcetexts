@@ -1,0 +1,30 @@
+{
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s312/v5-export-review/expanded-final-export-manifest.json",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-327.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-328.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-329.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-330.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-331.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "Printed p.328 (expanded-330.png): the combined footnote mark '143,144' on the row 'אבינו מלכנו מנע מגפה מנחלתך' sits a little left of where the Hebrew line ends, and it is raised high enough to add extra vertical space above that row. It reads clearly and it is obvious which row it belongs to. It is only a small spacing difference from the rows around it.",
+    "Printed pp.325-326 (expanded-327/328.png): the running head shows only 'ישראל'. Pages from 327 on show the full section title 'סדר אבינו מלכנו.' Please check that 'ישראל' is the intended mark for the Amidah blessings section and not a fragment picked up from the text. I can't confirm this from the images alone.",
+    "Printed p.325: there is a large blank area in the Hebrew column under the Kedushat HaYom paragraph, because the English translation is longer. This is how row-aligned parallel columns are expected to look, not a defect.",
+    "Printed p.326: the speaker label 'קהל' is set in the outer margin next to the English column, at the top of the Modim deRabbanan row. It stays with its row, as the v5 change intended. No matching label appears on the Hebrew side. That looks deliberate but is noted."
+  ],
+  "limitations": [
+    "The image filenames (expanded-327 to 331) are PDF page indexes. They show printed folios 325-329, and all findings above cite the printed folio numbers.",
+    "I judged only visual layout. I did not compare Hebrew pointing or translations against the source, as instructed.",
+    "Some fixes listed in the brief do not appear on these pages: the thirty-blast instruction, the standalone cross-language rubric, the conditional-boundary spacing, enlarged-letter marks, and the English-only early peace blessing. I could not check them visually here. Neither of the obsolete 'coverage stops at 311' notes appears on these pages.",
+    "In this range: one final peace blessing is recited (Sim Shalom / BeSefer Chayim, p.327). The fullwidth heading 'סדר אבינו מלכנו. / Abinu Malkenu' has a real gap above and below it. Hebrew and English rows line up across the column split. There is no clipping or overlap. Hebrew vowel points and English are readable. Footnotes 142, 143 and 144 are numbered and ordered correctly, with each mark on the same page as its note. Note 142 is Hebrew and laid out right-to-left. Note 144 is English and laid out left-to-right. The transitions from p.325 to 326, 326 to 327 and 328 to 329 do not split any row."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "042d3ce2-90f0-48d6-96ec-04580a7959c3"
+  }
+}

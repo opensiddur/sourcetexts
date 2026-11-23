@@ -1,0 +1,215 @@
+{
+  "scope": "Only changed XML and global-control receipt rebinding; source closure and service-order reviews separate",
+  "old_literal_witnesses_unchanged": 837,
+  "old_units_unchanged": 465,
+  "old_payloads": 224,
+  "current_payloads": 289,
+  "all224_old_receipts_current_before_changes": true,
+  "all224_unit_and_source_fidelity_unchanged": true,
+  "old_payload_change_field_groups": [
+    {
+      "fields": [
+        "documentary_instructions_sha256",
+        "expanded_order_sha256",
+        "navigation_sha256",
+        "source_order_sha256"
+      ],
+      "count": 224
+    }
+  ],
+  "old_literal_units_sha256": "60bbab18e63549d4fc68570d29a26a7379c5e13276a8c041767fd43e55533049",
+  "same_new_prefix_sha256": "60bbab18e63549d4fc68570d29a26a7379c5e13276a8c041767fd43e55533049",
+  "new_appendix_scope": "New42units/65witnesses, no changes to old units; old source order extends existing Musaf repetition and appends Minchah/Tashlikh before existing unrelated appendix. Expanded removes oldMusafboundary, addsMusaf tail/closing and appends afternoon/Tashlikh top-level outside morning gate.",
+  "changed_xml": [
+    {
+      "file": "/tmp/mahzor-s312/integration-projects-v2/project/prayerbook_for_the_new_year-heidenheim-1965-he/musaf_kohanim_dreams.xml",
+      "sha256": "dac1a299ce9366b9e50386944a45a2f015e996d5e8e4314500c6bbcee8d85a9d",
+      "body": "<tei:body xmlns:tei=\"http://www.tei-c.org/ns/1.0\" xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\">\n      <tei:div corresp=\"urn:x-opensiddur:text:siddur:regalim/musaf/text/dream\" facs=\"https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n311.jpg\">\n        <tei:p>רִבּוֹנוֹ שֶׁל עוֹלָם אֲנִי שֶׁלָּךְ וַחֲלוֹמוֹתַי שֶׁלָּךְ חֲלוֹם חָלַֽמְתִּי וְאֵינִי יוֹדֵֽעַ מַה הוּא יְהִי רָצוֹן מִלְּפָנֶֽיךָ <j:divineName>יְיָ</j:divineName> אֱלֹהַי וֵאלֹהֵי אֲבוֹתַי שֶׁיִּהְיוּ כָּל חֲלוֹמוֹתַי עָלַי וְעַל כָּל יִשְׂרָאֵל לְטוֹבָה בֵּין שֶׁחָלַֽמְתִּי עַל עַצְמִי וּבֵין שֶׁחָלַֽמְתִּי עַל אֲחֵרִים וּבֵין שֶׁחָלְמוּ אֲחֵרִים עָלַי אִם טוֹבִים הֵם חַזְּקֵם וְאַמְּצֵם וְיִתְקַיְּמוּ בִי וּבָהֶם כַּחֲלוֹמוֹת יוֹסֵף הַצַּדִּיק. וְאִם צְרִיכִים רְפוּאָה רְפָאֵם כְּחִזְקִיָּהוּ מֶלֶךְ יְהוּדָה מֵחָלְיוֹ וּכְמִרְיָם הַנְּבִיאָה מִצָּרַעְתָּהּ וּכְנַעֲמָן מִצָּרַעְתּוֹ וּכְמֵי מָרָה עַל יְדֵי מֹשֶׁה רַבֵּינוּ וּכְמֵי יְרִחוֹ עַל יְדֵי אֱלִישָׁע. וּכְשֵׁם שֶׁהָפַֽכְתָּ אֶת קִלְלַת בִּלְעָם הָרָשָׁע מִקְּלָלָה לִבְרָכָה כֵּן תַּהֲפֹךְ כָּל חֲלוֹמוֹתַי עָלַי וְעַל כָּל יִשְׂרָאֵל לְטוֹבָה וְתִשְׁמְרֵֽנִי וּתְחָנֵּֽנִי וְתִרְצֵֽנִי: אָמֵן. </tei:p>\n      </tei:div>\n    </tei:body>\n  "
+    },
+    {
+      "file": "/tmp/mahzor-s312/integration-projects-v2/project/prayerbook_for_the_new_year-heidenheim-1965-he/musaf_repetition_sim_shalom.xml",
+      "sha256": "0c478cb79027bf7c808641a33c6a3765626f0923718ae9a4d101d2956f5d711b",
+      "body": "<tei:body xmlns:tei=\"http://www.tei-c.org/ns/1.0\" xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\">\n      <tei:div corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/shalom\" facs=\"https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n315.jpg\">\n        <tei:p><tei:pb ed=\"1965\" facs=\"https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n315.jpg\" n=\"148\"/><tei:milestone unit=\"prayer-part\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/shalom/sim_shalom\"/><tei:seg source=\"urn:x-opensiddur:text:prayer:amidah/shalom/sim_shalom\">שִׂים שָׁלוֹם טוֹבָה וּבְרָכָה חֵן וָחֶֽסֶד וְרַחֲמִים עָלֵֽינוּ וְעַל כָּל־יִשְׂרָאֵל עַמֶּֽךָ בָּרְכֵֽנוּ אָבִֽינוּ כֻּלָּֽנוּ כְּאֶחָד בְּאוֹר פָּנֶֽיךָ כִּי בְאוֹר פָּנֶֽיךָ נָתַֽתָּ לָּֽנוּ <j:divineName>יְיָ</j:divineName> אֱלֹהֵֽינוּ תּוֹרַת חַיִּים וְאַהֲבַת חֶֽסֶד וּצְדָקָה וּבְרָכָה וְרַחֲמִים וְחַיִּים וְשָׁלוֹם. וְטוֹב בְּעֵינֶֽיךָ לְבָרֵךְ אֶת־עַמְּךָ יִשְׂרָאֵל בְּכָל־עֵת וּבְכָל־שָׁעָה בִּשְׁלוֹמֶֽךָ.</tei:seg> <tei:milestone unit=\"prayer-part\"/></tei:p>\n        <tei:p><tei:milestone unit=\"prayer-part\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/shalom/besefer\"/><tei:seg source=\"urn:x-opensiddur:text:prayer:amidah/shalom/besefer_chayyim\">בְּסֵֽפֶר חַיִּים בְּרָכָה וְשָׁלוֹם וּפַרְנָסָה טוֹבָה נִזָּכֵר וְנִכָּתֵב לְפָנֶֽיךָ אֲנַֽחְנוּ וְכָל עַמְּךָ בֵּית יִשְׂרָאֵל לְחַיִּים טוֹבִים וּלְשָׁלוֹם:</tei:seg> <tei:milestone unit=\"prayer-part\"/></tei:p>\n        <tei:p><tei:milestone unit=\"prayer-part\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/shalom/proofs\"/>וְנֶאֱמַר <tei:seg source=\"urn:x-opensiddur:text:bible:proverbs/9/11\" type=\"quotation\"><tei:milestone unit=\"chapter\" n=\"9\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/shalom/proofs/quotation/proverbs/9\"/><tei:milestone unit=\"verse\" n=\"11\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/shalom/proofs/quotation/proverbs/9/11\"/>כִּי בִי יִרְבּוּ יָמֶֽיךָ וְיוֹסִֽיפוּ לְךָ שְׁנוֹת חַיִּים<tei:milestone unit=\"verse\"/><tei:milestone unit=\"chapter\"/></tei:seg>: לְחַיִּים טוֹבִים תִּכְתְּבֵֽנוּ: אֱלֹהִים חַיִּים. כָּתְבֵֽנוּ בְּסֵֽפֶר הַחַיִּים: כַּכָּתוּב <tei:seg source=\"urn:x-opensiddur:text:bible:deuteronomy/4/4\" type=\"quotation\"><tei:milestone unit=\"chapter\" n=\"4\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/shalom/proofs/quotation/deuteronomy/4\"/><tei:milestone unit=\"verse\" n=\"4\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/shalom/proofs/quotation/deuteronomy/4/4\"/>וְאַתֶּם הַדְּבֵקִים בַּ<j:divineName>ייָ</j:divineName> אֱלֹהֵיכֶם חַיִּים כֻּלְּכֶם הַיּוֹם<tei:milestone unit=\"verse\"/><tei:milestone unit=\"chapter\"/></tei:seg>: <tei:milestone unit=\"prayer-part\"/></tei:p>\n      </tei:div>\n    </tei:body>\n  "
+    },
+    {
+      "file": "/tmp/mahzor-s312/integration-projects-v2/project/prayerbook_for_the_new_year-heidenheim-1965-he/rh_minchah_ashrei.xml",
+      "sha256": "66d9943f2b0cbffcbe50aff3fde46b47dd2c4966b2b2a7c40b3665e64b247203",
+      "body": "<tei:body xmlns:tei=\"http://www.tei-c.org/ns/1.0\" xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\">\n      <tei:div corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei\" facs=\"https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n322.jpg\">\n        <tei:p><tei:seg source=\"urn:x-opensiddur:text:bible:psalms/84/5\" type=\"quotation\"><tei:milestone unit=\"chapter\" n=\"84\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei/quotation/psalms/84\"/><tei:milestone unit=\"verse\" n=\"5\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei/quotation/psalms/84/5\"/>אַשְׁרֵי יוֹשְׁבֵי בֵיתֶֽךָ עוֹד יְהַלְלֽוּךָ סֶּֽלָה<tei:milestone unit=\"verse\"/><tei:milestone unit=\"chapter\"/></tei:seg>: <tei:seg source=\"urn:x-opensiddur:text:bible:psalms/144/15\" type=\"quotation\"><tei:milestone unit=\"chapter\" n=\"144\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei/quotation/psalms/144\"/><tei:milestone unit=\"verse\" n=\"15\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei/quotation/psalms/144/15\"/>אַשְׁרֵי הָעָם שֶׁכָּֽכָה לּוֹ אַשְׁרֵי הָעָם שֶׁ<j:divineName>יְיָ</j:divineName> אֱלֹהָיו<tei:milestone unit=\"verse\"/><tei:milestone unit=\"chapter\"/></tei:seg>: </tei:p>\n        <tei:p><tei:milestone unit=\"chapter\" n=\"145\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei/quotation/psalms/145\"/><tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei/quotation/psalms/145/1\" n=\"1\"/><tei:seg source=\"urn:x-opensiddur:text:bible:psalms/145/1\">תְּהִלָּה לְדָוִד. אֲרוֹמִמְךָ אֱלוֹהַי הַמֶּֽלֶךְ וַאֲבָרֲכָה שִׁמְךָ לְעוֹלָם וָעֶד:</tei:seg> <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei/quotation/psalms/145/2\" n=\"2\"/><tei:seg source=\"urn:x-opensiddur:text:bible:psalms/145/2\">בְּכָל־יוֹם אֲבָרֲכֶֽךָּ וַאֲהַלֲלָה שִׁמְךָ לְעוֹלָם וָעֶד:</tei:seg> <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei/quotation/psalms/145/3\" n=\"3\"/><tei:seg source=\"urn:x-opensiddur:text:bible:psalms/145/3\">גָּדוֹל <j:divineName>יְיָ</j:divineName> וּמְהֻלָּל מְאֹד וְלִגְדֻלָּתוֹ אֵין חֵֽקֶר:</tei:seg> <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei/quotation/psalms/145/4\" n=\"4\"/><tei:seg source=\"urn:x-opensiddur:text:bible:psalms/145/4\">דּוֹר לְדוֹר יְשַׁבַּח מַעֲשֶֽׂיךָ וּגְבוּרֹתֶֽיךָ יַגִּֽידוּ:</tei:seg> <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei/quotation/psalms/145/5\" n=\"5\"/><tei:seg source=\"urn:x-opensiddur:text:bible:psalms/145/5\">הֲדַר כְּבוֹד הוֹדֶֽךָ וְדִבְרֵי נִפְלְאֹתֶֽיךָ אָשִֽׂיחָה:</tei:seg> <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei/quotation/psalms/145/6\" n=\"6\"/><tei:seg source=\"urn:x-opensiddur:text:bible:psalms/145/6\">וֶעֱזוּז נוֹרְאֹתֶֽיךָ יֹאמֵֽרוּ וּגְדֻלָּתְךָ אֲסַפְּרֶֽנָּה:</tei:seg> <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei/quotation/psalms/145/7\" n=\"7\"/><tei:seg source=\"urn:x-opensiddur:text:bible:psalms/145/7\">זֵֽכֶר רַב־טוּבְךָ יַבִּֽיעוּ וְצִדְקָתְךָ יְרַנֵּֽנוּ:</tei:seg> <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei/quotation/psalms/145/8\" n=\"8\"/><tei:seg source=\"urn:x-opensiddur:text:bible:psalms/145/8\">חַנּוּן וְרַחוּם <j:divineName>יְיָ</j:divineName> אֶֽרֶךְ אַפַּֽיִם וּגְדָל־חָֽסֶד:</tei:seg> <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei/quotation/psalms/145/9\" n=\"9\"/><tei:seg source=\"urn:x-opensiddur:text:bible:psalms/145/9\">טוֹב־<j:divineName>יְיָ</j:divineName> לַכֹּל וְרַחֲמָיו עַל־כָּל־מַעֲשָׂיו:</tei:seg> <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei/quotation/psalms/145/10\" n=\"10\"/><tei:seg source=\"urn:x-opensiddur:text:bible:psalms/145/10\">יוֹדֽוּךָ <j:divineName>יְיָ</j:divineName> כָּל־מַעֲשֶֽׂיךָ וַחֲסִידֶֽיךָ יְבָרֲכֽוּכָה:</tei:seg> <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei/quotation/psalms/145/11\" n=\"11\"/><tei:seg source=\"urn:x-opensiddur:text:bible:psalms/145/11\">כְּבוֹד מַלְכוּתְךָ יֹאמֵֽרוּ וּגְבוּרָתְךָ יְדַבֵּֽרוּ:</tei:seg> <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei/quotation/psalms/145/12\" n=\"12\"/><tei:seg source=\"urn:x-opensiddur:text:bible:psalms/145/12\">לְהוֹדִֽיעַ לִבְנֵי הָאָדָם גְּבוּרֹתָיו וּכְבוֹד הֲדַר מַלְכוּתוֹ:</tei:seg> <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei/quotation/psalms/145/13\" n=\"13\"/><tei:seg source=\"urn:x-opensiddur:text:bible:psalms/145/13\">מַלְכוּתְךָ מַלְכוּת כָּל־עֹלָמִים וּמֶמְשַׁלְתְּךָ בְּכָל־דּוֹר וָדֹר:</tei:seg> <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei/quotation/psalms/145/14\" n=\"14\"/><tei:seg source=\"urn:x-opensiddur:text:bible:psalms/145/14\">סוֹמֵךְ <j:divineName>יְיָ</j:divineName> לְכָל־הַנֹּפְלִים וְזוֹקֵף לְכָל־הַכְּפוּפִים:</tei:seg> <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei/quotation/psalms/145/15\" n=\"15\"/><tei:seg source=\"urn:x-opensiddur:text:bible:psalms/145/15\">עֵינֵי כֹל אֵלֶֽיךָ יְשַׂבֵּֽרוּ וְאַתָּה נוֹתֵן־לָהֶם אֶת־אָכְלָם בְּעִתּוֹ:</tei:seg> <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei/quotation/psalms/145/16\" n=\"16\"/><tei:seg source=\"urn:x-opensiddur:text:bible:psalms/145/16\">פּוֹתֵחַ אֶת־יָדֶֽךָ וּמַשְׂבִּֽיעַ לְכָל־חַי רָצוֹן:</tei:seg> <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei/quotation/psalms/145/17\" n=\"17\"/><tei:seg source=\"urn:x-opensiddur:text:bible:psalms/145/17\">צַדִּיק <j:divineName>יְיָ</j:divineName> בְּכָל־דְּרָכָיו וְחָסִיד בְּכָל־מַעֲשָׂיו:</tei:seg> <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei/quotation/psalms/145/18\" n=\"18\"/><tei:seg source=\"urn:x-opensiddur:text:bible:psalms/145/18\">קָרוֹב <j:divineName>יְיָ</j:divineName> לְכָל־קֹרְאָיו לְכֹל אֲשֶׁר יִקְרָאֻֽהוּ בֶאֱמֶת:</tei:seg> <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei/quotation/psalms/145/19\" n=\"19\"/><tei:seg source=\"urn:x-opensiddur:text:bible:psalms/145/19\">רְצוֹן־יְרֵאָיו יַעֲשֶׂה וְאֶת־שַׁוְעָתָם יִשְׁמַע וְיוֹשִׁיעֵם:</tei:seg> <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei/quotation/psalms/145/20\" n=\"20\"/><tei:seg source=\"urn:x-opensiddur:text:bible:psalms/145/20\">שׁוֹמֵר <j:divineName>יְיָ</j:divineName> אֶת־כָּל־אֹהֲבָיו וְאֵת כָּל־הָרְשָׁעִים יַשְׁמִיד:</tei:seg> <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei/quotation/psalms/145/21\" n=\"21\"/><tei:seg source=\"urn:x-opensiddur:text:bible:psalms/145/21\">תְּהִלַּת <j:divineName>יְיָ</j:divineName> יְדַבֶּר פִּי וִיבָרֵךְ כָּל־בָּשָׂר שֵׁם קָדְשׁוֹ לְעוֹלָם וָעֶד:</tei:seg> <tei:milestone unit=\"verse\"/><tei:milestone unit=\"chapter\"/><tei:milestone unit=\"chapter\" n=\"115\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei/quotation/psalms/115\"/><tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/ashrei/quotation/psalms/115/18\" n=\"18\"/><tei:seg source=\"urn:x-opensiddur:text:bible:psalms/115/18\">וַאֲנַֽחְנוּ נְבָרֵךְ יָהּ מֵעַתָּה וְעַד־עוֹלָם הַלֲלוּיָהּ:</tei:seg> <tei:milestone unit=\"verse\"/><tei:milestone unit=\"chapter\"/></tei:p>\n      </tei:div>\n    </tei:body>\n  "
+    },
+    {
+      "file": "/tmp/mahzor-s312/integration-projects-v2/project/prayerbook_for_the_new_year-heidenheim-1965-he/rh_minchah_haazinu_levi.xml",
+      "sha256": "0c1047ebcf0f4d6dd94585ee83ecd4694a3c4d2478a7f0122a014cb3227d0e8f",
+      "body": "<tei:body xmlns:tei=\"http://www.tei-c.org/ns/1.0\" xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\">\n      <tei:div corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/torah/haazinu/aliyah/2\" facs=\"https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n325.jpg\">\n        <tei:p><tei:milestone unit=\"chapter\" n=\"32\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/torah/haazinu/aliyah/2/quotation/deuteronomy/32\"/><tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/torah/haazinu/aliyah/2/quotation/deuteronomy/32/4\" n=\"4\"/><tei:seg source=\"urn:x-opensiddur:text:bible:deuteronomy/32/4\">הַצּוּר֙ תָּמִ֣ים פָּעֳל֔וֹ כִּ֥י כָל־דְּרָכָ֖יו מִשְׁפָּ֑ט אֵ֤ל אֱמוּנָה֙ וְאֵ֣ין עָ֔וֶל צַדִּ֥יק וְיָשָׁ֖ר הֽוּא:</tei:seg> <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/torah/haazinu/aliyah/2/quotation/deuteronomy/32/5\" n=\"5\"/><tei:seg source=\"urn:x-opensiddur:text:bible:deuteronomy/32/5\">שִׁחֵ֥ת ל֛וֹ לֹ֖א בָּנָ֣יו מוּמָ֑ם דּ֥וֹר עִקֵּ֖שׁ וּפְתַלְתֹּֽל:</tei:seg> <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/torah/haazinu/aliyah/2/quotation/deuteronomy/32/6\" n=\"6\"/><tei:anchor xml:id=\"haazinu_large_he\"/><tei:seg source=\"urn:x-opensiddur:text:bible:deuteronomy/32/6\"><tei:c rend=\"large\">ה</tei:c>ַ</tei:seg> <tei:seg source=\"urn:x-opensiddur:text:bible:deuteronomy/32/6\">לְ<j:divineName>יהֹוָה֙</j:divineName> תִּגְמְלוּ־זֹ֔את עַ֥ם נָבָ֖ל וְלֹ֣א חָכָ֑ם הֲלוֹא־הוּא֙ אָבִ֣יךָ קָנֶ֔ךָ ה֥וּא עָֽשְׂךָ֖ וַֽיְכֹנְנֶֽךָ:</tei:seg> <tei:milestone unit=\"verse\"/><tei:milestone unit=\"chapter\"/></tei:p>\n      </tei:div>\n    </tei:body>\n  "
+    },
+    {
+      "file": "/tmp/mahzor-s312/integration-projects-v2/project/prayerbook_for_the_new_year-heidenheim-1965-he/rh_minchah_haazinu_yisrael.xml",
+      "sha256": "8de80bec62de1db9206c148dd28ee6a64fdb3ef5e67b22a21db476f32bc06407",
+      "body": "<tei:body xmlns:tei=\"http://www.tei-c.org/ns/1.0\" xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\">\n      <tei:div corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/torah/haazinu/aliyah/3\" facs=\"https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n325.jpg\">\n        <tei:p><tei:milestone unit=\"chapter\" n=\"32\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/torah/haazinu/aliyah/3/quotation/deuteronomy/32\"/><tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/torah/haazinu/aliyah/3/quotation/deuteronomy/32/7\" n=\"7\"/><tei:seg source=\"urn:x-opensiddur:text:bible:deuteronomy/32/7\">זְכֹר֙ יְמ֣וֹת עוֹלָ֔ם בִּ֖ינוּ שְׁנ֣וֹת דֹּר־וָדֹ֑ר שְׁאַ֤ל אָבִ֙יךָ֙ וְיַגֵּ֔דְךָ זְקֵנֶ֖יךָ וְיֹ֥אמְרוּ לָֽךְ:</tei:seg> <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/torah/haazinu/aliyah/3/quotation/deuteronomy/32/8\" n=\"8\"/><tei:seg source=\"urn:x-opensiddur:text:bible:deuteronomy/32/8\">בְּהַנְחֵ֤ל עֶלְיוֹן֙ גּוֹיִ֔ם בְּהַפְרִיד֖וֹ בְּנֵ֣י אָדָ֑ם יַצֵּב֙ גְּבֻלֹ֣ת עַמִּ֔ים לְמִסְפַּ֖ר בְּנֵ֥י יִשְׂרָאֵֽל:</tei:seg> <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/torah/haazinu/aliyah/3/quotation/deuteronomy/32/9\" n=\"9\"/><tei:seg source=\"urn:x-opensiddur:text:bible:deuteronomy/32/9\">כִּ֛י חֵ֥לֶק <j:divineName>יְהֹוָ֖ה</j:divineName> עַמּ֑וֹ יַעֲקֹ֖ב חֶ֥בֶל נַחֲלָתֽוֹ:</tei:seg> <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/torah/haazinu/aliyah/3/quotation/deuteronomy/32/10\" n=\"10\"/><tei:seg source=\"urn:x-opensiddur:text:bible:deuteronomy/32/10\">יִמְצָאֵ֙הוּ֙ בְּאֶ֣רֶץ מִדְבָּ֔ר וּבְתֹ֖הוּ יְלֵ֣ל יְשִׁמֹ֑ן יְסֹֽבְבֶ֙נְהוּ֙ יְב֣וֹנְנֵ֔הוּ יִצְּרֶ֖נְהוּ כְּאִישׁ֥וֹן עֵינֽוֹ:</tei:seg> <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/torah/haazinu/aliyah/3/quotation/deuteronomy/32/11\" n=\"11\"/><tei:seg source=\"urn:x-opensiddur:text:bible:deuteronomy/32/11\">כְּנֶ֙שֶׁר֙ יָעִ֣יר קִנּ֔וֹ עַל־גּוֹזָלָ֖יו יְרַחֵ֑ף יִפְרֹ֤שׂ כְּנָפָיו֙ יִקָּחֵ֔הוּ יִשָּׂאֵ֖הוּ עַל־אֶבְרָתֽוֹ:</tei:seg> <tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/torah/haazinu/aliyah/3/quotation/deuteronomy/32/12\" n=\"12\"/><tei:seg source=\"urn:x-opensiddur:text:bible:deuteronomy/32/12\"><j:divineName>יְהֹוָ֖ה</j:divineName> בָּדָ֣ד יַנְחֶ֑נּוּ וְאֵ֥ין עִמּ֖וֹ אֵ֥ל נֵכָֽר:</tei:seg> <tei:milestone unit=\"verse\"/><tei:milestone unit=\"chapter\"/></tei:p>\n      </tei:div>\n    </tei:body>\n  "
+    },
+    {
+      "file": "/tmp/mahzor-s312/integration-projects-v2/project/prayerbook_for_the_new_year-heidenheim-1965-he/rh_minchah_half_kaddish.xml",
+      "sha256": "3b215bd235e4347eba76e7d5af73177453b9509d3ccc2338fac252522cf6d32e",
+      "body": "<tei:body xmlns:tei=\"http://www.tei-c.org/ns/1.0\" xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\">\n      <tei:div corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/half_kaddish\" facs=\"https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n324.jpg\">\n        <tei:p><tei:note type=\"description\" corresp=\"urn:x-opensiddur:instruction:role/reader\" xml:lang=\"he\">חזן</tei:note> <tei:milestone unit=\"prayer-part\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/half_kaddish/1\"/>יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא בְּעָלְמָא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית־יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב, וְאִמְרוּ אָמֵן. <tei:milestone unit=\"prayer-part\"/></tei:p>\n        <tei:p><tei:milestone unit=\"prayer-part\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/half_kaddish/2\"/>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא. <tei:milestone unit=\"prayer-part\"/></tei:p>\n        <tei:p><tei:milestone unit=\"prayer-part\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/half_kaddish/3\"/>יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא בְּרִיךְ הוּא לְעֵלָּא וּלְעֵלָּא מִן־כָּל־בִּרְכָתָא וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחֱמָתָא דַּאֲמִירָן בְּעָלְמָא, וְאִמְרוּ אָמֵן: <tei:milestone unit=\"prayer-part\"/></tei:p>\n      </tei:div>\n    </tei:body>\n  "
+    }
+  ],
+  "human_adjudications": [
+    {
+      "number": 473,
+      "scan": "s312",
+      "key": "response_veyish",
+      "question": "bet dagesh in בך",
+      "snippet": "/tmp/mahzor-s312/snippets/473.png",
+      "answer": "no dagesh",
+      "adjudication_source": "explicit user reading, 2026-11-23"
+    },
+    {
+      "number": 474,
+      "scan": "s314",
+      "key": "response_veyasem",
+      "question": "bet meteg in אברכם",
+      "snippet": "/tmp/mahzor-s312/snippets/474.png",
+      "answer": "no meteg",
+      "adjudication_source": "explicit user reading, 2026-11-23"
+    },
+    {
+      "number": 475,
+      "scan": "s316",
+      "key": "sim_shalom",
+      "question": "lamed dagesh in לנו",
+      "snippet": "/tmp/mahzor-s312/snippets/475.png",
+      "answer": "lamed dagesh present",
+      "adjudication_source": "explicit user reading, 2026-11-23"
+    },
+    {
+      "number": 476,
+      "scan": "s318",
+      "key": "qaddish_open",
+      "question": "kaf dagesh in כרעותה",
+      "snippet": "/tmp/mahzor-s312/snippets/476.png",
+      "answer": "no kaf dagesh",
+      "adjudication_source": "explicit user reading, 2026-11-23"
+    },
+    {
+      "number": 477,
+      "scan": "s320",
+      "key": "ein_keloheinu",
+      "question": "initial kaf dageshes in אין/מי series",
+      "snippet": "/tmp/mahzor-s312/snippets/477.png",
+      "answer": "אין series: all initial kafs have dagesh; מי series: none",
+      "adjudication_source": "explicit user reading, 2026-11-23"
+    },
+    {
+      "number": 478,
+      "scan": "s323",
+      "key": "ashrei_intro",
+      "question": "samekh dagesh in סלה; lamed dagesh in לו",
+      "snippet": "/tmp/mahzor-s312/snippets/478.png",
+      "answer": "samekh dagesh and lamed dagesh present",
+      "adjudication_source": "explicit user reading, 2026-11-23"
+    },
+    {
+      "number": 479,
+      "scan": "s314",
+      "key": "shem_rubric",
+      "question": "Exact full ShaareiTzion rubric before Yehi ratzon, particularly phrase before הרבון",
+      "snippet": "/tmp/mahzor-s312/rubric314.png",
+      "answer": "בשערי ציון כתוב שלא יאמר אצל שלום הרבון רק יאמר זה:",
+      "adjudication_source": "explicit user reading, 2026-11-23"
+    },
+    {
+      "number": 480,
+      "scan": "s312",
+      "key": "dreams",
+      "question": "Exact pointing of each שלך in אני שלך וחלומותי שלך, lamed/kaf vowels and lamed dagesh",
+      "snippet": "/tmp/mahzor-s312/snippets/480.png",
+      "answer": "אֲנִי שֶׁלָּךְ וַחֲלוֹמוֹתַי שֶׁלָּךְ",
+      "adjudication_source": "explicit user reading, 2026-11-23"
+    },
+    {
+      "number": 481,
+      "scan": "s326",
+      "key": "haazinu_levi",
+      "question": "Exact pointing of enlarged he and following ל-יהוה in Deut32:6",
+      "snippet": "/tmp/mahzor-s312/snippets/481.png",
+      "answer": "הַ לְיהֹוָה (pashta); star above enlarged ה",
+      "adjudication_source": "explicit user reading, 2026-11-23"
+    },
+    {
+      "number": 482,
+      "scan": "s326",
+      "key": "haazinu_yisrael",
+      "question": "Actual lower and upper accents of יסבבנהו in Deut32:10, with hosts and repeated pashta",
+      "snippet": "/tmp/mahzor-s312/snippets/482.png",
+      "answer": "pashta on second bet and shuruq; meteg on samekh",
+      "adjudication_source": "explicit user reading, 2026-11-23"
+    },
+    {
+      "number": 483,
+      "scan": "s323",
+      "key": "ashrei_intro",
+      "question": "Meteg under second lamed in יהללוך",
+      "snippet": "/tmp/mahzor-s312/snippets/483.png",
+      "answer": "second lamed meteg present",
+      "adjudication_source": "explicit user reading, 2026-11-23"
+    },
+    {
+      "number": 484,
+      "scan": "s324",
+      "key": "uva",
+      "question": "Meteg host yod or mem in ימושו",
+      "snippet": "/tmp/mahzor-s312/snippets/484.png",
+      "answer": "mem meteg",
+      "adjudication_source": "explicit user reading, 2026-11-23"
+    },
+    {
+      "number": 485,
+      "scan": "s326",
+      "key": "tashlikh",
+      "question": "Mem meteg in כמוך",
+      "snippet": "/tmp/mahzor-s312/snippets/485.png",
+      "answer": "mem meteg present",
+      "adjudication_source": "explicit user reading, 2026-11-23"
+    },
+    {
+      "number": 486,
+      "scan": "s326",
+      "key": "tashlikh",
+      "question": "Meteg host in מימי",
+      "snippet": "/tmp/mahzor-s312/snippets/486.png",
+      "answer": "first mem meteg",
+      "adjudication_source": "explicit user reading, 2026-11-23"
+    },
+    {
+      "number": 487,
+      "scan": "s322",
+      "key": "al_ken",
+      "question": "He meteg in אלהינו after לפניך יי",
+      "snippet": "/tmp/mahzor-s312/snippets/487.png",
+      "answer": "he meteg present",
+      "adjudication_source": "explicit user reading, 2026-11-23"
+    },
+    {
+      "number": 488,
+      "scan": "s322",
+      "key": "psalm81",
+      "question": "Meteg host in ואחלצך",
+      "snippet": "/tmp/mahzor-s312/snippets/488.png",
+      "answer": "tsadi meteg",
+      "adjudication_source": "explicit user reading, 2026-11-23"
+    },
+    {
+      "number": 489,
+      "scan": "s322",
+      "key": "psalm81",
+      "question": "Meteg host in ואעידה",
+      "snippet": "/tmp/mahzor-s312/snippets/489.png",
+      "answer": "ayin meteg",
+      "adjudication_source": "explicit user reading, 2026-11-23"
+    }
+  ],
+  "prior_reviews": [
+    "markup-closure-review.json",
+    "markup-supplement-review.json",
+    "scan325-host-review.json"
+  ]
+}

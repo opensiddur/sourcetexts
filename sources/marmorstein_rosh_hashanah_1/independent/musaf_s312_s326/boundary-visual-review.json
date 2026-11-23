@@ -1,0 +1,50 @@
+{
+  "approved": false,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s312/v4-export-review/expanded-pdf-review-2.json",
+    "/tmp/mahzor-s312/v4-export-review/expanded-pdf-review-3.json",
+    "/tmp/mahzor-s312/v4-export-review/expanded-pdf-review-5.json",
+    "/tmp/mahzor-s312/boundary-final-images.json",
+    "/tmp/mahzor-s312/boundary-final-3.png",
+    "/tmp/mahzor-s312/boundary-final-4.png",
+    "/tmp/mahzor-s312/boundary-final-5.png",
+    "/tmp/mahzor-s312/boundary-final-6.png",
+    "/tmp/mahzor-s312/boundary-final-7.png",
+    "/tmp/mahzor-s312/boundary-final-11.png",
+    "/tmp/mahzor-s312/boundary-final-12.png",
+    "/tmp/mahzor-s312/boundary-final-22.png"
+  ],
+  "closed_blockers": [
+    "Minchah chapter title crammed under the shofar rubric (review-2, printed p.312): closed. In boundary-final-4 (proof p.2) the page ends with the Hebrew rubric 'ואח\"כ נפטרים לבתיהם לשלום.' and a rule. In boundary-final-5 (proof p.3) 'תפלת מנחה ליום ראשון של ראש השנה' opens a new page with generous space above and below, and the italic English subtitle sits below it.",
+    "Footnote marker on the opening ה of 'הַ לַיהוָה' (review-2, printed p.314): closed. In boundary-final-7 (proof p.5) the ה is now visibly enlarged. Marker 6 sits in the space between the lines above the enlarged ה, clear of the letter and its pointing.",
+    "Marker at the start of a line colliding with the first glyph (review-2, marker 138 type): closed for the instance in this proof. In boundary-final-5, marker 5 above 'תְּהִלָּה לְדָוִד' sits between the lines and touches no glyph.",
+    "Footnote markers sitting on the last letters or pointing (review-5, the '143,144' type): closed. In boundary-final-3, -4 and -22, the markers '1,2', '3,4' and '9,10' after 'מִנַּחֲלָתֶךָ:' sit well clear above the word. In boundary-final-11, marker 7 near 'וּדְבָרְךָ (מלכנו)' sits between the lines, also clear.",
+    "Missing space after a closing bracket (review-3 and review-5): closed for every instance visible in this proof. Hebrew in boundary-final-11 now reads 'בִמְנוּחָתֵנוּ] קַדְּשֵׁנוּ' and 'שְׁמֶךָ.] וְטַהֵר'. English in boundary-final-12 now reads 'in our rest.] Sanctify', 'may rest on it] and purify' and 'the Sabbath and] Israel'. The attached prefix is kept: 'מְקַדֵּשׁ [הַשַּׁבָּת וְ]יִשְׂרָאֵל' (boundary-final-12).",
+    "English footnote set right-to-left (review-5, fn 144): closed. In boundary-final-22, fn 10 ('The final abbreviation remains uncertain. א״ז״וו may represent German und so weiter…') runs left-to-right, with the number at the left margin. The text wraps naturally and the continuation line 'is an editorial interpretation, not a confirmed source reading.' is left-aligned. The embedded Hebrew abbreviation displays in the correct RTL order. Notes 2 and 4 in boundary-final-3 and -4 look the same. The Hebrew/Yiddish notes 1, 3 and 9 next to them are still correctly right-aligned with the number at the right."
+  ],
+  "blocking_findings": [
+    "Aliyah heading separation is NOT fixed (boundary-final-6, proof p.4): the English rubric 'A Torah scroll is taken from the ark.' (left) and the centered heading 'כהן' still share nearly the same vertical band. The heading's baseline is only about half a line below the rubric's, beside it rather than stacked under it. This looks the same as the review-2 blocker for printed p.313.",
+    "Heading jammed under the previous row is NOT fixed (boundary-final-6, proof p.4): the heading 'לוי' sits directly under the last English line 'Torah.' of the Kohen blessing table. The gap is less than one normal line pitch, and no extra half-baseline space is visible.",
+    "Same defect (boundary-final-7, proof p.5): the heading 'ישראל' sits directly under the English line 'Torah.' with the same cramped gap. This is the exact review-2 blocker for printed p.314, and it is unchanged. The claimed 'explicit half-baseline spacing before spanning headings' cannot be seen in any of the three aliyah headings.",
+    "Space still missing between a conditional rubric and its opening bracket (boundary-final-11, proof p.9, Hebrew column): 'אם שַׁבָּת]אֱלֹהֵינוּ' and 'אם שַׁבָּת]וְהַנְחִילֵנוּ' still show the bold rubric 'אם שבת' touching the (mirrored) opening bracket with no word space. Reviews 3 and 5 flagged these exact two strings. The fix only restored spaces after closing brackets. The bracket attaching to the following word is correct, but the space before the bracket is gone."
+  ],
+  "nonblocking_findings": [
+    "Footnote markers placed after a Hebrew row-final word (the '1,2', '3,4' and '9,10' clusters in boundary-final-3, -4 and -22) ride very high, almost a full line above the word. They also push that row's baseline down compared with the neighbouring rows. They are clear and legible, but they look detached from the word.",
+    "All footnote text in the apparatus is set in bold in every image: the Hebrew/Yiddish notes 1/3/9, the English notes 2/4/10, fn 5 'קמה' and fn 6 'ה' רבתי, והוא מלה לעצמה.'. Please confirm this is intended and not a font state leaking in from a heading or rubric.",
+    "Marker 6 in boundary-final-7 clears the enlarged ה, but the space to the descenders of the line above ('…וּפְתַלְתֹּל:') is tight.",
+    "The editorial note in boundary-final-4 still reads 'beginning on scan327', with no space (carried over from review-2; wording issue only).",
+    "Paired Hebrew/English rows, the Hebrew-only Torah passages, the Kaddish, the '(On Sabbath)' rubric and the running heads all render without clipping or overlap. The large Hebrew-column gaps in boundary-final-11 and -12 come from keeping parallel rows aligned, which is expected."
+  ],
+  "limitations": [
+    "Judged only from the rasterized PNGs supplied. I could not measure exact clearances or confirm character-level spacing from the PDF.",
+    "The proof is an excerpt (8 of 28 pages). The English bracket instances from reviews 3 and 5 ('this day]of remembrance', '[in love]for…') fall on pages not provided, so I could not check them directly. Only the instances visible on proof pp.9–10 were checked.",
+    "I assumed the bracket glyph between 'אם שַׁבָּת' and 'אֱלֹהֵינוּ' is the mirrored opening bracket, based on the reading order of the conditional text. The source was not re-read, as instructed.",
+    "The instruction said the role layout was approved separately. Even so, I treated the rubric/'כהן' vertical overlap as a heading-separation defect, because the heading spacing is what this proof was meant to verify."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "668f292b-882c-4cc4-86f9-f9a5bc2eec70"
+  }
+}

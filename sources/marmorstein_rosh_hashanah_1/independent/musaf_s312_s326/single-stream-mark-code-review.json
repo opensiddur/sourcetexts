@@ -1,0 +1,35 @@
+{
+  "approved": false,
+  "files_read": [
+    "/tmp/mahzor-s312/single-stream-mark-code-review.json",
+    "/tmp/mahzor-s312/single-mark-fix-tests-v2.log"
+  ],
+  "blocking_findings": [
+    "The test log is incomplete. /tmp/mahzor-s312/single-mark-fix-tests-v2.log contains only progress dots: one full line marked [ 26%] and a partial second line (about 50% in total). It has no final summary, no pass/fail/skip counts, and no result for the new TestSingleStreamMarkGeometry. Nothing shows the full suite passes, or that the new LuaLaTeX test ran rather than being skipped or failing later in the run. I found no defects in the code itself (see below). I can approve once a complete log shows the full suite passing and the new test running and passing."
+  ],
+  "nonblocking_findings": [
+    "Lua node ownership is correct. collect() calls node.remove(head, n) on the top-level list of tex.box[one@line], updates head (which handles a mark at the start of the box), clears n.next/n.prev, keeps the detached node in OScolumnmarks[side] and writes the new list back with box.head (in LuaTeX, head is an alias for list on hlist/vlist). flush() hands each node to TeX exactly once with node.write, then replaces the queue table. No node is written twice or freed while still referenced. Removing marks does not change box dimensions because marks have no size.",
+    "Only the top level of one@line is scanned. That is correct: TeX moves marks out of paragraph lines into the vertical list after each line, and that is where they block \\lastbox. Marks nested inside the line's hbox are left alone, which is also correct.",
+    "Mark order is preserved. table.insert appends and ipairs/node.write emits in the same order, so marks keep document order within a line and across lines until a flush. The queues stay separate: S is used only by \\do@line, L/R by \\do@lineL/\\do@lineR, and the existing L/R collectors and flush points (\\checkpb@columns, \\checkpageL, \\checkpageR) are unchanged.",
+    "The flush hook is placed correctly. \\pretocmd{\\add@penalties} puts the marks after the printed line box and before reledmac's penalties, so the order is hbox, mark(s), penalty, interline glue. A break at the penalty keeps the marks on the page with their line. A penalty of 10000 still blocks the break, because the following glue is preceded by a penalty (discardable) rather than by the mark. Marks do not change \\prevdepth, so baselineskip is unaffected.",
+    "The section-heading flush (\\apptocmd{\\print@eledsection}) emits the queued marks after everything \\print@eledsection outputs. If that macro ends with \\nobreak followed by glue, a mark placed between them would make the glue a legal breakpoint, so a page could break right after a heading. I could not check this because the reledmac source is not in the dossier. A PDF case with a heading near a page bottom, or a check of the macro body, would settle it.",
+    "If a \\do@line path reaches neither \\add@penalties nor \\print@eledsection (for example a void or skipped line), its marks wait until the next flush. Order is kept, but the marks can drift to a later line or into a later \\beginnumbering block. Marks still queued at the end of the document are never emitted. A flush at \\endnumbering or \\pend would close this gap.",
+    "The reledpar hooks are correctly conditional. \\do@lineL, \\do@lineR, \\checkpb@columns and \\checkpageL/R are patched only when $uses-reledpar is true, so documents without reledpar never reference undefined reledpar macros. \\makeatletter/\\makeatother are balanced in both branches. The preamble is still emitted at the same point after keep-preamble, so the patches apply to the final macro definitions.",
+    "column-marks-preamble is now emitted for every document, so every exported document now contains \\directlua, \\patchcmd and \\pretocmd. That is safe only if the exporter always targets LuaLaTeX and always loads reledmac, which loads etoolbox. If any non-parallel output goes through pdfLaTeX or XeLaTeX, this change breaks it. The diff does not show this either way.",
+    "Each patch reports a \\PackageError if its target text is not found, so a future change to reledmac fails loudly instead of quietly turning the fix off.",
+    "The geometry regression test is meaningful but limited. It compares only yMin/yMax (indices 1::2) of 200 words within 0.05pt, which catches lines moving between vertical positions. It ignores x coordinates and page numbers. 200 words probably fit on one page, so it does not exercise a mark at a page break. That page-break interaction is the main reason for putting the flush before the penalties.",
+    "The running-head test checks only that 'Chapter' and '17' appear, which comes from \\FirstMark on page 1. It does not check the later marks (44 and 106) or the empty milestone at the end of the paragraph, or that marks come out in order. A multi-page case asserting first and last marks per page would verify order and page attribution.",
+    "The TestPreambleIsAllTeX change tracks brace depth for lines starting with \\directlua{. This correctly handles the Lua table constructor ending in '}', and the test now asserts the block is closed. \\patchcmd lines that merely contain \\directlua{...} are left to the ordinary TeX-line check, which is correct. A '{' or '}' inside a Lua string literal would throw the count off, but the current Lua code has none."
+  ],
+  "limitations": [
+    "The reledmac and reledpar source was not available. My statements about \\do@line (a single \\unvbox\\one@line, which \\patchcmd needs because it patches only the first occurrence), \\add@penalties being called once per printed line, and the contents of \\print@eledsection rely on the dossier's description.",
+    "I could not verify from the dossier that collapsed single-language streams go through \\do@line rather than \\do@lineL/R. The statement that the S queue covers collapsed streams is taken from the request, not confirmed.",
+    "I did not compile anything or inspect the reproducer PDFs (with-marks.pdf, without-marks.pdf, single-collector.pdf). Geometry and running-head behaviour were judged from the code and the test source only.",
+    "This review covers only the reledmac.xslt and test_reledmac_xslt.py hunks in the dossier. I did not look at other code. Final PDF review still separately gates batch acceptance."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "6db60584-e351-4ea2-9f23-9114eadf37ea"
+  }
+}

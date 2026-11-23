@@ -1,0 +1,67 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "not exposed to the reviewing model"
+  },
+  "scan": "s323",
+  "images_read": [
+    "/tmp/mahzor-s312/audit-s323-strip1.png",
+    "/tmp/mahzor-s312/audit-s323-strip2.png",
+    "/tmp/mahzor-s312/audit-s323-strip3.png",
+    "/tmp/mahzor-s312/audit-s323-strip4.png",
+    "/tmp/mahzor-s312/audit-s323-strip5.png",
+    "/tmp/mahzor-s312/audit-s323-strip6.png",
+    "/tmp/mahzor-s312/audit-s323-strip7.png",
+    "/tmp/mahzor-s312/audit-s323-strip8.png",
+    "/tmp/mahzor-s312/audit-s323-strip9.png",
+    "/tmp/mahzor-s312/audit-s323-strip10.png"
+  ],
+  "decisions": [
+    {
+      "id": 87,
+      "choice": "A",
+      "literal": "סֶֽלָה:",
+      "reason": "Strip 1, line 1 (large type): the samekh's inside is empty, so there is no dagesh. B's סֶּ adds a dot that isn't printed. The samekh carries a segol, and there seems to be a small vertical stroke next to it, which matches A's meteg.",
+      "uncertainty": "low that there is no dagesh; medium on the meteg because the mark is faint at this resolution"
+    },
+    {
+      "id": 88,
+      "choice": "A",
+      "literal": "וַאֲבָרֲכָה",
+      "reason": "Strips 1 and 2, line 'קמה תְּהִלָּה לְדָוִד': the resh has a hataf-patah under it (a short bar with two dots), not a plain shva. This printing visibly uses hataf-patah for shva in these בר/הל forms. B's וַאֲבָרְכָה turns it into a familiar spelling that isn't printed.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 89,
+      "choice": "A",
+      "literal": "אֲבָרֲכֶֽךָּ וַאֲהַלֲלָה",
+      "reason": "Strip 2, line 2: the resh in אברכך has a hataf-patah, and so does the first lamed in ואהללה. Both are clearly not plain shva. There seems to be a meteg beside the segol under the kaf, which matches A. B's plain shvas and missing meteg don't match the print.",
+      "uncertainty": "low on both hataf-patahs; medium on the meteg under the kaf"
+    },
+    {
+      "id": 90,
+      "choice": "A",
+      "literal": "יְבָרֲכֽוּכָה:",
+      "reason": "Strips 4 and 5, line 'יי כָּל־מַעֲשֶׂיךָ וַחֲסִידֶיךָ': the resh has a hataf-patah. B's יְבָרְכוּכָה doesn't match the print. A's meteg on כֽוּ fits the small mark under that letter.",
+      "uncertainty": "low on the hataf-patah; medium on the meteg's exact position (on the kaf of כוּ, not another letter)"
+    },
+    {
+      "id": 91,
+      "choice": "A",
+      "literal": "הַלֲלוּיָהּ:",
+      "reason": "Strip 9, last line 'עוֹלָם הַלֲלוּיָהּ:': the first lamed has a hataf-patah, not a shva. Both readings have the mappiq in the final he, so that isn't in dispute.",
+      "uncertainty": "low"
+    }
+  ],
+  "additional_source_errors": [],
+  "unresolved": [
+    "Possible meteg on the vav (וַֽ) in וַאֲבָרֲכָה (strip 1/2) and וַאֲהַלֲלָה (strip 2). Neither A nor B has it. A faint mark may be there but I can't confirm it at this resolution, so I'm not asserting it; check it at higher zoom.",
+    "The metegs in ids 87, 89 and 90 are medium-confidence. The choices between letters and vowels (dagesh vs none, hataf-patah vs shva) are high-confidence."
+  ],
+  "scope": "Only these differences; not whole-page acceptance",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "93e19e12-12f2-4513-8627-c3840895d932"
+  }
+}

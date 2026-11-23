@@ -1,0 +1,22 @@
+{
+  "approved": true,
+  "previous_code_review_retained": true,
+  "evidence_read": [
+    "/tmp/mahzor-s312/single-stream-mark-code-review.json: the earlier review. Its only blocker was the incomplete test log. It found no code defects, and its nonblocking findings and limitations are kept unchanged.",
+    "/tmp/mahzor-s312/single-mark-fix-tests-v2.log: the run finished at 100%. Summary line: '445 passed, 1 warning, 202 subtests passed in 46.69s'. No failures, errors, skips or xfails were reported.",
+    "/tmp/mahzor-s312/single-mark-layout-regression.log: '16 passed, 7 subtests passed in 53.31s'. No failures or skips.",
+    "/tmp/mahzor-s312/single-mark-before-regression.log: the negative control on the old exporter. TestSingleStreamMarkGeometry.test_chapter_marks_preserve_every_word_and_its_line_geometry FAILS there (word25 is off by 5.793pt, against a 0.05pt tolerance). test_collected_marks_still_reach_the_running_head passes. The script's closing line says the new exporter passes geometry and keeps the running-head mark. So the new geometry test can tell the old behaviour from the fixed one."
+  ],
+  "blocking_findings": [],
+  "limitations": [
+    "The pytest logs show progress dots and summaries, not test names. Neither log by itself shows that TestSingleStreamMarkGeometry was collected in the new-exporter runs. I am relying on three things together: the layout-regression run of 16 tests with no skips, the full suite with no skips, and the control script's own statement that the new exporter passes. There is no per-test verbose output for the fixed exporter.",
+    "Nonblocking: test_reledmac_xslt.py:3002 raises a SyntaxWarning for the invalid escape '\\p' in a string literal. Using a raw string or '\\\\p' would fix it. It does not affect the results.",
+    "All of the earlier review's limitations and nonblocking findings still apply. In particular: the reledmac/reledpar source was not seen; there is a possible breakpoint after the \\print@eledsection heading flush; marks may stay queued past \\endnumbering or the end of the document; the preamble is emitted for every document, which assumes LuaLaTeX; the geometry test checks only y and does not cover page breaks; the running-head test is limited.",
+    "This approval clears only the test-evidence blocker and covers the same code scope as before (the reledmac.xslt and test_reledmac_xslt.py hunks). I did not reread or recheck the source. I am relying on your statement that it has not changed since the review. The final full-book visual export review is still a separate gate."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "543e8d13-2ab1-47d9-a766-e4111f7da36d"
+  }
+}

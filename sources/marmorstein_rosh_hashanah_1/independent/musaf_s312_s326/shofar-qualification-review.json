@@ -1,0 +1,30 @@
+{
+  "approved": true,
+  "source_approval_retained": true,
+  "encoding_alignment_order_approval_retained": true,
+  "old_realization_rebinding_approved": true,
+  "approved_control_hashes": {
+    "source_order_sha256": "97ea0dbd047a5eb74c858cfcbe1601b92112267a9bc2dafb719c690728862929",
+    "expanded_order_sha256": "7603b8a8100ad8db47b65536921295b21d124829982eeff18f82ec6464b8a4e4",
+    "documentary_instructions_sha256": "b111d753eca9627aa55157d70273edb9a93052431e9a7fdad045886a4f321343",
+    "navigation_sha256": "7df8974825d17361e6cea302721835fa8e9f45f7de36972136b271c16974fc49"
+  },
+  "blocking_findings": [],
+  "limitations": [
+    "Ritual qualification restored. The source (s322, p. 152, Hebrew side) says: 'ותוקעים שלשים קולות כדי לערבב את השטן ומיהו אין מעכבות שאם לא יעשו כן אין עכוב בדבר שהרי כבר יצאו ידי חובתם. ואח״כ נפטרים לבתיהם לשלום.' The old Hebrew editorial summary ('תוקעים שלשים קולות כדי לערבב את השטן, ואחר כך נפטרים לשלום.') dropped the clause 'ומיהו אין מעכבות... שהרי כבר יצאו ידי חובתם', and the old English rubric dropped it too. Both rubrics in musaf_last_thirty_blasts were therefore over-summarized. In the after-state the Hebrew editorial rubric is gone and the section order holds one documentary instruction, batch312_shofar_final_rubric_322. The source Hebrew wording therefore now comes only from the documentary instruction, with no competing editorial paraphrase.",
+    "English editorial rubric is accurate. 'Thirty further shofar blasts are sounded to confound the Accuser. Omitting these additional blasts does not affect the obligation already fulfilled. Afterwards the congregation departs in peace.' This keeps the three parts of the source in source order: (1) thirty blasts to confound השטן, (2) they are not required and the obligation is already fulfilled, (3) then departure in peace. It leaves out 'לבתיהם' (to their homes). That is acceptable for an editorial rubric and does not block approval. It is still attributed to resp=codex, so it stays marked as editorial.",
+    "Condition unchanged. The before and after states have the same single condition: opensiddur:holiday-aggregate with shabbat=false. The weekday (non-Shabbat) gating of the final thirty blasts is preserved.",
+    "Sequence within the section is preserved. Before, the section had an empty order and the instruction existed only as rubrics. After, it has one instruction and no units. Nothing else enters the section, and no source words or units are added, removed or reordered. The dossier shows only this section. My finding that the section still sits in the same place in expanded_musaf_closing (after Kehayom / chatimah, at the end of the closing sequence) and that nothing else in the expanded order changed relies on the dossier's stated scope and on the unchanged source_order, documentary_instructions and navigation hashes. I did not see a full diff of the expanded order.",
+    "Condition 1 (instruction binding): the dossier gives the source_instruction text but does not show the dictionary entry for batch312_shofar_final_rubric_322 or the matching XML note. The unchanged documentary_instructions_sha256 fits the claim that the ID already existed. The earlier closure also listed 'the final shofar instruction' among the 322 rubrics in the documentary order, but without its ID. Before export, confirm that this ID resolves to exactly the source_instruction text above (xml:lang=he, witness he), and that the expanded XML references it once in musaf_last_thirty_blasts, with no leftover Hebrew editorial rubric note.",
+    "Hash comparison: old_control_hashes in the dossier match approved_control_hashes in final-encoding-closure.json exactly for all four controls, so the old expanded value is 649c67aa…2d59. In the new set, only expanded_order_sha256 differs (649c67aa…2d59 → 7603b8a8…a4e4). source_order, documentary_instructions and navigation are byte-identical to the approved values. That fits a change confined to the expanded order.",
+    "Condition 2 (recompute): I could not recompute any SHA-256 in this session. My tools were read-only. A deterministic recompute must confirm that 7603b8a8…a4e4 is the hash of the expanded order as reviewed here, and that the other three values still hold. If any value differs, this approval and the rebinding are void for that control.",
+    "Condition 3 (rebinding scope): the earlier closure approved rebinding for 224 receipts. This request covers 289 realization payloads. The dossier states that the old 837 and new 65 literal witnesses are unchanged, and 224 + 65 = 289 adds up. However, neither file shows the payload count, the payloads themselves, or an earlier approval binding the extra 65 to the old expanded hash. Rebinding is approved only for payloads already approved against the hash set in final-encoding-closure.json. A deterministic check must confirm that each of the 289 payloads differs from its approved state only in expanded_order_sha256 (649c67aa…2d59 → 7603b8a8…a4e4), with every other field, including the other three hashes, unchanged. I did not inspect any payloads.",
+    "Earlier scopes retained unchanged: the source closures for 312, 317 and 322; the Musaf order review (bounded-order-musaf-review.json, session a62b4b69); the Musaf dream-rubric closure; the Afternoon/Tashlikh review (bounded-order-afternoon-review.json, session 8ffd6173); the documentary-control consistency checks; and the non-blocking notes (Judeo-German instruction tagged xml:lang=he; English-language instructions with witness 'he' on scans s325/s326; no priestly blessing when birkat-kohanim is unset). I did not reopen any of them.",
+    "This is not export acceptance. Export stays pending until the final revised expanded artifacts are reviewed: the XML, the full expanded order, and the instruction dictionary entry."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "8eac5f81-c0d2-4458-94b9-2575f97eb858"
+  }
+}

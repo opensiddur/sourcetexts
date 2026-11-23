@@ -1,0 +1,103 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "not exposed to reviewer"
+  },
+  "scan": "s324",
+  "images_read": [
+    "/tmp/mahzor-s312/audit-s324-strip1.png",
+    "/tmp/mahzor-s312/audit-s324-strip2.png",
+    "/tmp/mahzor-s312/audit-s324-strip3.png",
+    "/tmp/mahzor-s312/audit-s324-strip4.png",
+    "/tmp/mahzor-s312/audit-s324-strip5.png",
+    "/tmp/mahzor-s312/audit-s324-strip6.png",
+    "/tmp/mahzor-s312/audit-s324-strip7.png",
+    "/tmp/mahzor-s312/audit-s324-strip8.png",
+    "/tmp/mahzor-s312/audit-s324-strip9.png",
+    "/tmp/mahzor-s312/audit-s324-strip10.png"
+  ],
+  "decisions": [
+    {
+      "id": 92,
+      "choice": "B",
+      "literal": "אֹתָם",
+      "reason": "Strip1, line 2: the word is printed defectively as aleph with a holam dot, then tav with qamats, then final mem. There is no vav after the aleph.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 93,
+      "choice": "B",
+      "literal": "דֵּן מִן־דֵּן",
+      "reason": "Strip3, line 2: both words are printed as dalet with tsere, then final nun. There is no yod in either word. A's דֵּין is the familiar spelling, but it is not what is printed here.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 94,
+      "choice": "B",
+      "literal": "שְׁכִינְתֵּהּ,",
+      "reason": "Strip3, line 3: the mark after the word is a comma, not a period.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 95,
+      "choice": "B",
+      "literal": "גְּבוּרְתֵּהּ,",
+      "reason": "Strip3, line 3: the mark after the word is a comma, not a period. The same comma pattern appears before the next קַדִּישׁ.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 96,
+      "choice": "B",
+      "literal": "וְשִׁמְעֵת",
+      "reason": "Strip4, line 3, left end: the letters are vav, shin, mem, ayin, tav, with no yod. That alone rules out A's וּשְׁמָעִית. Vav has a sheva, not a shuruk, and ayin has a tsere.",
+      "uncertainty": "medium: the vowel under the shin is small at this resolution. The consonants and the vav's sheva are clear."
+    },
+    {
+      "id": 97,
+      "choice": "B",
+      "literal": "דַּיְיָ",
+      "reason": "Strips 4–5: the word is dalet, then two yods. The first yod has a sheva and the second has a qamats. A's דַּייָ leaves out the sheva under the first yod.",
+      "uncertainty": "medium: the dots are small. Two vertical dots under the first yod are visible."
+    },
+    {
+      "id": 98,
+      "choice": "structural_split",
+      "literal": "(קאם) לְעָלַם וּלְעָלְמֵי עָלְמַיָּא. יְיָ אֱלֹהֵי אַבְרָהָם יִצְחָק וְיִשְׂרָאֵל אֲבֹתֵֽינוּ שָׁמְרָה־זֹּאת לְעוֹלָם לְיֵֽצֶר מַחְשְׁבוֹת לְבַב עַמֶּֽךָ וְהָכֵן לְבָבָם אֵלֶֽיךָ: וְהוּא רַחוּם יְכַפֵּר עָוֹן וְלֹא יַשְׁחִית וְהִרְבָּה לְהָשִׁיב אַפּוֹ וְלֹא יָעִיר כָּל־חֲמָתוֹ: כִּי־אַתָּה אֲדֹנָי טוֹב וְסַלָּח וְרַב־חֶֽסֶד לְכָל־קֹרְאֶֽיךָ: צִדְקָתְךָ צֶֽדֶק לְעוֹלָם וְתוֹרָתְךָ אֱמֶת: תִּתֵּן אֱמֶת לְיַעֲקֹב חֶֽסֶד לְאַבְרָהָם אֲשֶׁר נִשְׁבַּֽעְתָּ לַאֲבֹתֵֽינוּ מִֽימֵי קֶֽדֶם: בָּרוּךְ אֲדֹנָי יוֹם יוֹם יַעֲמָס־לָֽנוּ הָאֵל יְשׁוּעָתֵֽנוּ סֶֽלָה: יְיָ צְבָאוֹת עִמָּֽנוּ מִשְׂגָּב־לָֽנוּ אֱלֹהֵי יַעֲקֹב סֶֽלָה: יְיָ צְבָאוֹת אַשְׁרֵי אָדָם בֹּטֵֽחַ בָּךְ: יְיָ הוֹשִֽׁיעָה. הַמֶּֽלֶךְ יַעֲנֵֽנוּ בְיוֹם־קָרְאֵֽנוּ: בָּרוּךְ הוּא אֱלֹהֵֽינוּ שֶׁבְּרָאָֽנוּ לִכְבוֹדוֹ וְהִבְדִּילָֽנוּ מִן־",
+      "reason": "B is empty because a long block was split, not because text was left out. All of this text is printed on s324 (strips 5–9) and the page ends at מִן־ (strip9, then blank strip10). The literal keeps A's remaining words, with three changes where A differs from the print: (1) the bracketed variant is small, unpointed (קאם), and A's vowels were invented; (2) the word after וְיִשְׂרָאֵל is printed אֲבֹתֵֽינוּ with no vav, not A's אֲבוֹתֵֽינוּ; (3) there is a period after הוֹשִֽׁיעָה. Metegs are kept as in A wherever the print does not clearly contradict them.",
+      "uncertainty": "medium: the consonants and punctuation are clear. Not every meteg was checked glyph by glyph at this resolution, and the meteg on the defective אֲבֹתֵֽינוּ is carried over from A."
+    }
+  ],
+  "additional_source_errors": [
+    {
+      "id_ref": 98,
+      "location": "strip5 line 3, end",
+      "A": "(קָאֵם)",
+      "source": "(קאם)",
+      "note": "Small-type bracketed variant word. It is printed without vowels and was not part of the A/B dispute."
+    },
+    {
+      "id_ref": 98,
+      "location": "strip5 line 5 / strip6 line 2, start",
+      "A": "אֲבוֹתֵֽינוּ",
+      "source": "אֲבֹתֵֽינוּ",
+      "note": "Printed without a vav after the bet. This is a defective spelling, not a typo."
+    },
+    {
+      "id_ref": 98,
+      "location": "strip8 line 4 / strip9 line 1",
+      "A": "הוֹשִֽׁיעָה הַמֶּֽלֶךְ",
+      "source": "הוֹשִֽׁיעָה. הַמֶּֽלֶךְ",
+      "note": "There is a printed period after הוֹשִֽׁיעָה."
+    }
+  ],
+  "unresolved": [
+    "id 96: the vowel under the shin of וְשִׁמְעֵת is small. Hiriq is the best reading, but a higher-zoom check is advised.",
+    "id 98: metegs across the block were not checked one by one. Only the consonants, the main vowels and the punctuation were confirmed."
+  ],
+  "scope": "Only these differences; not whole-page acceptance",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "408e4f02-0008-45ac-9765-d676acb1a35c"
+  }
+}

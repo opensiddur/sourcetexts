@@ -1,0 +1,24 @@
+{
+  "approved": true,
+  "previous_approvals_retained": true,
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "Previous scope/guard blocker CLOSED. final-export-boundaries.diff lines 96-98 put the guards back exactly: `($within and not($crosses) and not(@f:parallel-block = 'true') and matches(string(following-sibling::node()[string(.) ne ''][1]), '^[\\p{L}\\p{N}\\p{Ps}]'))`. Apart from the outer instructionnote guard, this disjunct now matches the old run-in separator exactly. So crossing notes and parallel-block notes no longer get a new `\\ ` from it.",
+    "The single-xsl:if structure still holds. All three cases (f:needs-space-after, run-in followed by a word, note nested in an inline j:conditional) are OR-ed together, so each note gets at most one `\\ `. The earlier double-space blocker stays closed.",
+    "Third disjunct, line 99 (`parent::j:conditional[f:is-inline-conditional(.)] and not(matches(string(.), '\\s$'))`): it has no `not($crosses)` / `not(@f:parallel-block='true')` guard and does not require `$within`. If a note inside an inline conditional were ever emitted standalone or as a block, a stray `\\ ` in vertical mode could follow it. In the actual source shape (a run-in rubric at the start of an inline conditional inside p/l) this should not happen. This is the boundary you meant to add, so I am not blocking on it. Defensive option: add `not($crosses) and not(@f:parallel-block = 'true')` there too, or add a fixture that shows the combination cannot occur.",
+    "Outer guard `$command = 'instructionnote'` (line 94): the old run-in separator was not limited to instructionnote. If any other `$command` value can reach this point with `$within` true, that command loses its separator after this change. If the only other value is the block form (e.g. OSInstructionBlock), the change is harmless or even an improvement. Please confirm the set of `$command` values. My previous review should have raised this; I am noting it now for completeness and not blocking on it.",
+    "Carried over, not re-opened: `not(matches(string(.), '\\s$'))` checks the note's own text, not source whitespace after the note. A fixture with a leading space inside the conditional (`<j:conditional><tei:note>R</tei:note> inside…`) would rule out `R [ inside`. Also carried over: the interlinear raisebox adds about 0.2em to line height, and the half-baseline skip after a write whatsit is not discarded at a page top. Both are cosmetic and need checking in the rebuilt PDFs.",
+    "boundary-exact-visual-closure.json approves the rubric-to-bracket gap from rasters only. It did not measure glyph positions, so the full-PDF review should still compare that gap with an ordinary word space."
+  ],
+  "limitations": [
+    "This is a static review of the diff only. The reledmac.xslt source was not available, so I could not check what $within, $crosses, $standalone and the possible $command values mean, or the xsl:if enclosing line 103.",
+    "final-boundaries-regression-v5.log shows only progress dots, ending in a partial line after the 90% marker. It has no final percentage and no 'N passed' summary line. I see no F or E markers, but the log does not prove the run finished or passed.",
+    "final-restored-guard-tests.log contains a single '.', so the run after restoration is still in progress or was cut off. The four PDF boundary cases after restoration are therefore unconfirmed. Since the restoration only narrows the second disjunct back to its original form, the risk looks low, but a finished log is still needed.",
+    "I did not run XSLT, lualatex or pytest. This is code approval only; the full final PDF exports still need rebuilding and independent review."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "2923da22-3826-4235-888b-78e81667af97"
+  }
+}

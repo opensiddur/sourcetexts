@@ -1,0 +1,33 @@
+{
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s312/v5-export-review/expanded-final-export-manifest.json",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-312.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-313.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-314.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-315.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-316.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "expanded-312 (printed folio 310): In the Kaddish table, the English rubric 'During the Ten Days of Repentance, add:' sits inside the Hebrew column as a bold right-aligned block, and 'add:' wraps onto its own line. It is readable and does not overlap anything. The English column gives the matching 'high, yea high' with no rubric or brackets. Consider whether the rubric should be mirrored in the English column, or kept on one line.",
+    "expanded-312 (printed 310): The line 'יְהֵא שְׁלָמָא רַבָּא…' starts with two ↗ marks, while the other marked lines in this range have one. Please confirm the doubled mark is intentional.",
+    "expanded-312 (printed 310): The reader-facing note says 'beginning on scan327', with no space and using the internal word 'scan'. This matches the stated scope (appendix 327+ not complete). It is not one of the two obsolete 'stops at 311' notes, and neither of those appears in this range. A wording polish could help, e.g. 'scan 327' or a page reference.",
+    "expanded-313 (printed 311): Footnote mark 139 is a small raised number in the gap between the first Ashrei verse line and 'תְּהִלָּה לְדָוִד', roughly at the middle of the measure, near where the first line ends. It is legible and not clipped or overlapping, but it is not visually clear which word it belongs to. Its footnote entry (a hyperlinked 'קמה' page reference) matches the number and is in the right order.",
+    "expanded-315 (printed 313): Footnote mark 140 sits above the enlarged ה of 'הַ לַיהוָה', at the right edge of the text block, close to the line above but not touching it. The note 'ה׳ רבתי, והוא מלה לעצמה.' appears correctly as 140 at the page foot, so footnote order runs 139 then 140.",
+    "expanded-316 (printed 314): The Hebrew cell 'אַתָּה גִּבּוֹר לְעוֹלָם אֲדֹנָי מְחַיֵּה מֵתִים אַתָּה רַב' has visibly stretched word spacing from justification before the short last line 'לְהוֹשִׁיעַ.'. This is cosmetic only."
+  ],
+  "limitations": [
+    "Image file numbers are PDF page indices. Printed folios are 2 lower (expanded-312 = folio 310 through expanded-316 = folio 314), and I judged layout by the images as given.",
+    "Visual inspection only, at the rendered PNG resolution. Fine pointing, such as dagesh, meteg and Masoretic accents in the Torah reading, looked legible, but I did not check them glyph by glyph against the source, as instructed.",
+    "Positions of footnote marks relative to specific words were judged by eye. Exact anchor points cannot be confirmed without the source or the PDF text layer.",
+    "Hyperref red link borders (around 'קמה') were treated as deliberate, as stated.",
+    "Only these five pages were reviewed. Paragraph spacing at line_spacing 1.15 looked even and undistorted on all five, but behaviour elsewhere in the book was not assessed."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "4975eeaf-41a1-42f5-bd97-e879976de8c9"
+  }
+}

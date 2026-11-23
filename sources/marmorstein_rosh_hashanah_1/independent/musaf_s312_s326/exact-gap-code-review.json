@@ -1,0 +1,24 @@
+{
+  "approved": false,
+  "previous_approvals_retained": true,
+  "blocking_findings": [
+    "Wider scope than described (reledmac.xslt ~4029-4039, diff lines 94-101). The old run-in separator was `$within and not($crosses) and not(@f:parallel-block = 'true') and matches(following non-empty sibling, '^[\\p{L}\\p{N}\\p{Ps}]')`. Its replacement, the second disjunct, is `$within and matches(...)`. The `not($crosses)` and `not(@f:parallel-block = 'true')` guards are gone. The change was described as adding only the parent::j:conditional disjunct and removing the following-sibling stamping case, so this is an extra change in behaviour. It is unexplained and untested. The note-suffix `\\ ` now also goes after crossing notes and after originals marked parallel-block, when the next text starts with a letter, digit or opening bracket. If either kind is emitted as a block or out of the text flow (for example the `\\instructionnote{\\pstart…}` form accepted in test_keep_together_geometry), a `\\ ` in vertical mode starts a new paragraph that opens with an indent and a space. Fix: put the guards back inside the second disjunct only: `($within and not($crosses) and not(@f:parallel-block = 'true') and matches(...))`. Or, if dropping them was intentional, add one TeX-level test each for a crossing note and a parallel-block note showing no stray `\\ ` after the closing brace."
+  ],
+  "nonblocking_findings": [
+    "Previous blocker (double word space) is closed. All the separator cases are now OR-ed into one xsl:if, so each note gets at most one `\\ `. That covers an in-tree rubric before a conditional, a rubric nested in j:conditional, and the f:needs-space-after copy.",
+    "Third disjunct, nested-in-conditional case: this is right for the actual source shape `<j:conditional><tei:note type=\"instruction\">R</tei:note>text…</j:conditional>`. The note is emitted before the bracket, so the separator belongs after the note's closing brace, not after the bracket.",
+    "Third disjunct edge case: `not(matches(string(.), '\\s$'))` checks the note's own trailing text, not whitespace in the source after the note. (a) If note-content normalises or trims its text, a note ending in a space gets no `\\ ` and the rubric touches the bracket again. (b) In `<j:conditional><tei:note>R</tei:note> inside…`, the separator is emitted before the bracket and the source space also lands inside it, giving `R [ inside`. That depends on whether \\OSCondBeginInline or the scope trims a leading space. Neither case is in the regression; one fixture with a leading space inside the conditional would cover both.",
+    "Retained from earlier reviews, not re-opened: the interlinear raisebox adds about 0.2em to line height, and the extra half-baseline space after a write whatsit is not discarded at a page top on the spanning-heading path. Both are cosmetic and need checking in the rebuilt PDFs.",
+    "Visual closure: the 'אם שבת]' blocker in boundary-visual-closure.json can only be closed from glyph positions. pdftotext prints a doubled or a missing gap the same way as a single space. The rebuilt-PDF review should measure the gap between the rubric and the bracket and compare it with an ordinary word space."
+  ],
+  "limitations": [
+    "Static review of final-export-boundaries.diff only. The repository's reledmac.xslt was not at /tmp/opensiddur or /tmp/mahzor-s312/opensiddur, and I had no directory listing to find it. So I could not check what $within, $crosses and $standalone mean, the enclosing xsl:if around line 102, or what note-content does with trailing whitespace.",
+    "final-exact-boundary-tests.log shows only '4 passed in 22.80s' (the targeted exact-boundary tests). I found no log for the 509-test/218-subtest affected suite or for the final run in progress, so I could not confirm either.",
+    "I did not run XSLT, lualatex or pytest. Code approval only; the full PDFs still need rebuilding and independent review."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "3a715af0-a04f-4c8a-be88-1888693a2601"
+  }
+}

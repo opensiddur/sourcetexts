@@ -1,0 +1,74 @@
+{
+  "images_read": [
+    "/tmp/mahzor-s312/archive-cache/marmorstein_rosh_hashanah_1/pages/s317.jpg",
+    "/tmp/mahzor-s312/archive-cache/marmorstein_rosh_hashanah_1/pages/s318.jpg",
+    "/tmp/mahzor-s312/archive-cache/marmorstein_rosh_hashanah_1/pages/s319.jpg",
+    "/tmp/mahzor-s312/archive-cache/marmorstein_rosh_hashanah_1/pages/s320.jpg",
+    "/tmp/mahzor-s312/archive-cache/marmorstein_rosh_hashanah_1/pages/s321.jpg",
+    "/tmp/mahzor-s312/snippets/473.png",
+    "/tmp/mahzor-s312/snippets/474.png",
+    "/tmp/mahzor-s312/snippets/475.png",
+    "/tmp/mahzor-s312/snippets/478.png"
+  ],
+  "all_blocks_checked": true,
+  "source_approved": false,
+  "findings": [
+    {
+      "severity": "blocking",
+      "scan": "s321",
+      "key": "amar_rabbi",
+      "issue": "In the ledger, s321 id 72 (dagesh in the first bet of בונייך after אֶלָּא) is still choice PENDING with high uncertainty. The candidate has the dagesh (בּוֹנָֽיִךְ) and lists it in changes_from_primary, but no recorded human decision covers it. human_decisions in final-source-317.json lists only 476 and 477. To check whether another answer in 473–489 applied here, I opened snippets 473, 474, 475 and 478. They all come from other pages (Priestly Blessing verses, באור פניך, Ashrei), so the dagesh-related answers do not cover this word. At the resolution I could view, I can't see a dot inside the bet either way.",
+      "action": "Send a high-resolution crop of the bet in בונייך on s321 (paragraph line 3, after אֶלָּא) to the human source reader, or take it out of the candidate's changes until it is adjudicated."
+    },
+    {
+      "severity": "verified",
+      "scan": "s317",
+      "detail": "All English blocks match the print word for word, including: no comma in 'O Lord who makes peace.'; 'this day.' with no closing quote; the seven 'this day / Amen' lines and the wrapped 'our prayer / on this day'; lowercase 'my altar,' with a trailing comma. The Hebrew catchwords שים, בספר, ונאמר and כהיום match and come in the right order."
+    },
+    {
+      "severity": "verified",
+      "scan": "s318",
+      "detail": "Consonants, spelling and punctuation match in every block: no maqaf between תִּהְיֶה and לָּנוּ; defective וְיִתְרֹמַם and עֹשֶׂה, with plene עוֹשֵׂה הַשָּׁלוֹם earlier; מִן־כָּל־בִּרְכָתָא; period after the first Kaddish אָמֵן and in עָלְמַיָּא., colons after the later ones; אֶת־תְּפִלָּתֵנוּ has its maqaf; line-final maqaf in וְעַל־כָּל־ / יִשְׂרָאֵל. The reading order is right: the side-set ק׳ responses come after the paragraph line they sit on. Per human decision 476, כִרְעוּתֵהּ has no dagesh. The role label חזן is consistent with the tiny glyph group. No discrepancy is recorded for it, so it does not need a human."
+    },
+    {
+      "severity": "verified",
+      "scan": "s319",
+      "detail": "All English blocks match the print, including 'short time, and say Amen', 'peoples’.', 'us’.', 'Israel’s', and 'O Lord, who makes peace.' (this one with a comma, unlike s317). The catchwords ועתה and יתגדל match."
+    },
+    {
+      "severity": "verified",
+      "scan": "s320",
+      "detail": "Ein Keloheinu: plene אדונינו in all five places and periods (not colons) where the print has them. The initial kafs match human decision 477: dagesh throughout the אין series, none in the מי series. Pitum: the consonants and the eight recorded changes match the print (מֹר, (הַקָּב)., שֶׁהוּא, אִם without vav, סַמָּנֶיהָ, מַכְנִיסִין). The citation reads 'משנה סוף מס׳ תמיד, וסופרים פי״ח.' and is unpointed. The weekday labels are pointed and end in commas. הַר־קָדְשׁוֹ: runs over onto its own line, and the reading order is right."
+    },
+    {
+      "severity": "verified",
+      "scan": "s321",
+      "detail": "Labels for days 3–7 are pointed and end in commas; בָּרְבִיעִי has qamats under the bet. Comma after the first לָבֵשׁ; defective הָעֹלָמִים. In amar_rabbi: שְׁלוֹם with shva and a colon after it, then בָּנָיִךְ with qamats under the nun. In Aleinu: defective וְגֹרָלֵנוּ and כֹּרְעִים, and commas after אֱלֹהֵינוּ, מַלְכֵּנוּ and בְּתוֹרָתוֹ. Order matches the print: each small label comes before its verse."
+    },
+    {
+      "severity": "note",
+      "scope": "out of scope for this review",
+      "detail": "The guidance on 481 (enlarged ה with patah and a star footnote marker), 482 (two pashtas plus a meteg on the samekh) and the s325 חזן label concerns scans outside s317–s321. Under changed_units in human-473-489-resolution.json, none of the units are on these five scans. I did not verify them here."
+    }
+  ],
+  "remaining_uncertainties": [
+    "Blocking: s321 id 72, dagesh in the bet of בּוֹנָיִךְ. Not adjudicated (see findings).",
+    "s318 qaddish_praise וְנֶחָמָתָא: the candidate has qamats under the het. For the same text on s325, the ledger (id 103) reads hataf-segol, וְנֶחֱמָתָא. On s318 the mark looks like qamats at this resolution, and the two readings agreed so it was never flagged. I am not blocking on it, but a crop check is cheap because a parallel page differs.",
+    "s320 daily1 לַייָ: the candidate has no shva under the first yod, but on s324 (ledger id 97) דַּיְיָ was read with a shva. I can't tell at this resolution. Not blocking, because the readings did not disagree.",
+    "s320 pitum בָּהּ (נָתַן בָּהּ דְּבַשׁ): I can't see the mappiq at this resolution.",
+    "s317 sim_shalom_proofs: the mark after 'added to you' looks like a grave or backtick in the print. The candidate encodes it as ‘ (U+2018), and the candidate already records this as uncertain.",
+    "s317 kehayom: 'whole-offerings' is hyphenated at a line break. Keeping the hyphen is plausible because it is a real compound, but a pure line-end hyphen can't be ruled out.",
+    "Metegs and other fine marks that the candidate already lists as unverifiable (s318 veattah, s320 Ein Keloheinu/Pitum, s321 daily verses and Aleinu) are still unverified. I did not reopen them."
+  ],
+  "limitations": [
+    "I saw the page images downscaled (1368×2264 shown at 1208×2000). I had no crop or zoom tool in this session, so I could not check sub-glyph features such as dagesh dots, metegs, mappiq, and the difference between qamats and patah or shva and hataf. My verification covers consonants, spelling (plene vs defective), maqaf vs space, punctuation, rubrics, catchwords and reading order. For fine pointing I relied on the human decisions and accepted the candidate wherever the image does not contradict it.",
+    "I read only snippets 473, 474, 475 and 478, to work out which human answers apply to these scans. I did not read snippets 476, 477 or 479–489, and I relied on the recorded text of answers 476 and 477.",
+    "This review covers the source text of scans s317–s321 only. It does not cover other scans in the batch, the generated XML (where cues, rubrics and notes are moved out of the prayer-word modules), or the export.",
+    "I did not approve the source because of one unadjudicated difference (s321 id 72). Apart from that, I found no discrepancy between the candidate and the images within what this resolution allows."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "bc584030-ecc7-447b-9ba4-543fe0caa4e6"
+  }
+}

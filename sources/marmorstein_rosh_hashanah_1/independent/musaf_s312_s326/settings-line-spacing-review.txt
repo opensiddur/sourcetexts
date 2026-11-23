@@ -1,0 +1,43 @@
+1336:     current_homes = sorted(str((project_directory/project/(unit['canonical_home']['file']+'.xml')).relative_to(project_directory))
+1337:                            for project in PROJECTS.values() for unit in readings['units']
+1338:                            if unit.get('canonical_home') and project.rsplit('-',1)[-1] in unit['languages'])
+1339:     previous_homes = json.loads(home_manifest.read_text()) if home_manifest.exists() else []
+1340:     for relative in previous_homes:
+1341:         path = Path(relative)
+1342:         if len(path.parts) != 2 or path.parts[0] not in PROJECTS.values() or not re.fullmatch(r'[a-z0-9_]+\.xml',path.name) or path.name == 'index.xml':
+1343:             raise ValueError('Invalid prior canonical home path')
+1344:         candidate = project_directory/path
+1345:         if candidate not in paths_to_write:
+1346:             obsolete.append(candidate)
+1347:     paths = write_documents(documents, validator=validate, obsolete_paths=obsolete)
+1348:     write_if_changed(home_manifest, json.dumps(current_homes, indent=2)+'\n')
+1349:     settings_directory = project_directory.parent/'settings'
+1350:     for project, variant, parallel in [(PROJECTS['he'], 'documentary', False),
+1351:                                        (PROJECTS['he'], 'with_translation', True),
+1352:                                        (EXPANDED, 'undated', True)]:
+1353:         settings = {'description': 'First-day Rosh ha-Shanah mahzor; digitization in progress.',
+1354:                     'requires_processor': '>=0.8.0.dev0',
+1355:                     'book': {'project': project, 'file_name': 'index.xml', 'title': 'Prayerbook for the New Year — first day'},
+1356:                     'annotations': list(PROJECTS.values()) if parallel else [PROJECTS['he']],
+1357:                     'priority': {'transclusion': [project]+[p for p in PROJECTS.values() if p != project],
+1358:                                  'instructions': [project]+[p for p in PROJECTS.values() if p != project]},
+1359:                     'typography': {'instructions': {'from': 'both'},
+1360:                                    'line_numbers': {'enabled': False},
+1361:                                    'paragraphs': {'line_spacing': 1.15}}}
+1362:         if parallel:
+1363:             settings['parallel'] = {'projects': [PROJECTS['en']]}
+1364:         if project != EXPANDED:
+1365:             settings['electronic'] = {'day': 'none'}
+1366:         if project == EXPANDED:
+1367:             settings['readings'] = {'abbreviations': 'expanded'}
+1368:             for dependency in readings.get('dependencies', []):
+1369:                 for kind in ('transclusion', 'instructions'):
+1370:                     # Hebrew dependencies precede translations even when a
+1371:                     # future English witness acquires the same prayer URN.
+1372:                     settings['priority'][kind].insert(-1, dependency['project'])
+1373:         destination = settings_directory/project/(variant+'.yaml')
+1374:         destination.parent.mkdir(parents=True, exist_ok=True)
+1375:         write_if_changed(destination, yaml.safe_dump(settings, allow_unicode=True, sort_keys=False))
+1376:     print(f'{len(paths)} validated JLPTEI files; ' + ('DRAFT review status' if draft else 'reviewed installment'))
+1377:     return paths
+1378:

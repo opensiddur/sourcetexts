@@ -1,0 +1,103 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "low"
+  },
+  "scan": "s326",
+  "images_read": [
+    "/tmp/mahzor-s312/audit-s326-strip1.png",
+    "/tmp/mahzor-s312/audit-s326-strip2.png",
+    "/tmp/mahzor-s312/audit-s326-strip3.png",
+    "/tmp/mahzor-s312/audit-s326-strip4.png",
+    "/tmp/mahzor-s312/audit-s326-strip5.png",
+    "/tmp/mahzor-s312/audit-s326-strip6.png",
+    "/tmp/mahzor-s312/audit-s326-strip7.png",
+    "/tmp/mahzor-s312/audit-s326-strip8.png",
+    "/tmp/mahzor-s312/audit-s326-strip9.png",
+    "/tmp/mahzor-s312/audit-s326-strip10.png"
+  ],
+  "decisions": [
+    {
+      "id": 107,
+      "choice": "B",
+      "literal": "שֶׁל",
+      "reason": "The running head in strip1 reads 'קְרִיאַת הַתּוֹרָה לְמִנְחָה שֶׁל רֹאשׁ הַשָּׁנָה'. 'שֶׁל' is printed between לְמִנְחָה and רֹאשׁ, so A dropped it.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 108,
+      "choice": "structural_split",
+      "literal": "הַצּוּר תָּמִים פָּעֳלוֹ כִּי כָל־דְּרָכָיו מִשְׁפָּט אֵל אֱמוּנָה וְאֵין עָֽוֶל צַדִּיק וְיָשָׁר הוּא: שִׁחֵת לוֹ לֹא בָּנָיו מוּמָם דּוֹר עִקֵּשׁ וּפְתַלְתֹּל: הַֽלְיְהוָֹה תִּגְמְלוּ־זֹאת עַם נָבָל וְלֹא חָכָם הֲלוֹא־הוּא אָבִֽיךָ קָּנֶֽךָ הוּא עָשְׂךָ וַיְכֹנְנֶֽךָ: זְכֹר יְמוֹת עוֹלָם בִּֽינוּ שְׁנוֹת דֹּר־וָדֹר שְׁאַל אָבִֽיךָ וְיַגֵּדְךָ זְקֵנֶֽיךָ וְיֹאמְרוּ לָךְ: בְּהַנְחֵל עֶלְיוֹן גּוֹיִם בְּהַפְרִידוֹ בְּנֵי אָדָם יַצֵּב גְּבֻלֹת עַמִּים לְמִסְפַּר בְּנֵי יִשְׂרָאֵל: כִּי חֵֽלֶק יְהוָֹה עַמּוֹ יַעֲקֹב חֶֽבֶל נַחֲלָתוֹ: יִמְצָאֵֽהוּ בְּאֶֽרֶץ מִדְבָּר וּבְתֹֽהוּ יְלֵל יְשִׁמֹן יְסֹבְבֶֽנְהוּ יְבוֹנְנֵֽהוּ יִצְּרֶֽנְהוּ כְּאִישׁוֹן עֵינוֹ: כְּנֶֽשֶׁר יָעִיר קִנּוֹ עַל־גּוֹזָלָיו יְרַחֵף יִפְרֹשׂ כְּנָפָיו יִקָּחֵֽהוּ יִשָּׂאֵֽהוּ עַל־אֶבְרָתוֹ: יְהוָֹה בָּדָד יַנְחֶֽנּוּ וְאֵין עִמּוֹ אֵל נֵכָר:",
+      "reason": "This whole passage is printed in strips 2-6, from הַצּוּר after the 'לוי.' label down to אֵל נֵכָר: just before the footnote. B being empty comes from splitting the long block at the aliyah labels, not from missing text. Keep the remaining words, which match A's word sequence and order. The literal above is A's string as a carry-forward. It has not been checked mark by mark: the source prints cantillation marks under the line, so some of A's meteg-like marks (e.g. עָֽוֶל, חֵֽלֶק, בִּֽינוּ) may stand in for printed accents, and they need checking word by word.",
+      "uncertainty": "medium (word sequence low; fine pointing medium, see unresolved)"
+    },
+    {
+      "id": 109,
+      "choice": "custom",
+      "literal": "לוי. ישראל.",
+      "reason": "Two small aliyah labels are printed, each followed by a period: 'לוי.' before הַצּוּר (strip2) and 'ישראל.' before זְכֹר (strips 3-4). A has both labels but no periods. B has the period but only 'לוי.'. These are aliyah-division instructions, not prayer words.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 110,
+      "choice": "B",
+      "literal": "*)",
+      "reason": "Strip6 prints the footnote marker '*)' before 'ה׳ רבתי, והוא מלה לעצמה.' It matches the asterisk over the ה of הַלַיהוָה in strip3. A omitted the marker.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 111,
+      "choice": "B",
+      "literal": "רבתי,",
+      "reason": "The unpointed Rashi-script footnote in strip6 clearly reads 'ה׳ רבתי,'. A's 'כה״י,' is not printed. No vowels added.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 112,
+      "choice": "B",
+      "literal": "מִי אֵל",
+      "reason": "Strip7 shows a space and no maqaf between מִי and אֵל. On the same line, the maqaf in עַל־פֶּשַׁע is clearly visible.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 113,
+      "choice": "B",
+      "literal": "כִּי חָפֵץ",
+      "reason": "Strips 7-8 show a plain space between כִּי and חָפֵץ. Compare the visible maqaf in לֹא־הֶחֱזִיק on the same line.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 114,
+      "choice": "B",
+      "literal": "עֲוֹנֹתֵינוּ",
+      "reason": "Strip8 prints the defective spelling without a second vav after the nun (עֲוֹנֹת־), so A's plene עֲוֹנוֹתֵֽינוּ is not what is printed. At this resolution I could not see a meteg under the tav.",
+      "uncertainty": "medium (meteg presence only; spelling low)"
+    },
+    {
+      "id": 115,
+      "choice": "PENDING",
+      "literal": "",
+      "reason": "Strips 8-9 do not show clearly at native resolution whether there is a dagesh dot inside the bet of בית after עַמְּךָ. I won't decide from expectation.",
+      "uncertainty": "high"
+    },
+    {
+      "id": 116,
+      "choice": "B",
+      "literal": "וְלֹא־יִפָּקְדוּ",
+      "reason": "Strips 8-9 show a vertical two-dot shva under the qof (יִפָּקְדוּ), not a tsere with meteg. The maqaf after וְלֹא is printed.",
+      "uncertainty": "low-medium"
+    }
+  ],
+  "additional_source_errors": [],
+  "unresolved": [
+    "115: whether there is a dagesh in בית (וְכָל־חַטֹּאת עַמְּךָ בית יִשְׂרָאֵל). Needs a higher-zoom crop.",
+    "108: A's 'הַֽלְיְהוָֹה'. The source prints an enlarged ה with an asterisk, and the footnote says 'ה׳ רבתי, והוא מלה לעצמה', meaning the ה is a separate word. Whether to encode it as a separate word, and the exact vowel under the lamed, needs a zoomed check. Not changed here.",
+    "108: A's 'קָּנֶֽךָ' has a dagesh in the qof, and A has meteg marks on several words (עָֽוֶל, אָבִֽיךָ, בִּֽינוּ, וַיְכֹנְנֶֽךָ, זְקֵנֶֽיךָ, חֵֽלֶק, חֶֽבֶל, etc.). The page prints cantillation, so each of these marks needs checking word by word against the printed accents. Not dropped wholesale and not confirmed."
+  ],
+  "scope": "Only these differences; not whole-page acceptance",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "cfe7af8b-e1cb-416d-8563-d429ae2a4c01"
+  }
+}

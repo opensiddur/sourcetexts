@@ -1,0 +1,103 @@
+{
+  "source_label_reading": "Read from cantor-label325.png before opening any candidate file: a tiny compressed label printed right before יתגדל. I can clearly see two glyphs, a ח-shaped letter and a final nun (ן). A narrow medial ז between them may be there, ligated into the ח, but I cannot resolve it at this scan resolution. My reading is 'ח[ז?]ן', meaning either חן or a compressed חזן. I am not certifying it. It stays a source point pending the open questions 473–489.",
+  "image_read_before_candidate": true,
+  "files_read": [
+    "/tmp/mahzor-s312/cantor-label325.png",
+    "/tmp/mahzor-s312/identity-guidelines-excerpts.txt",
+    "/tmp/mahzor-s312/markup-closure-dossier.json",
+    "/tmp/mahzor-s312/current-markup-group1-review.json",
+    "/tmp/mahzor-s312/current-markup-group2-review.json",
+    "/tmp/mahzor-s312/current-markup-group3-review.json",
+    "/tmp/mahzor-s312/archive-cache/marmorstein_rosh_hashanah_1/pages/s325.jpg"
+  ],
+  "all_changed_files_read": true,
+  "finding_resolutions": [
+    {
+      "prior_group": 1,
+      "finding_index": 0,
+      "disposition": "fixed",
+      "actual_evidence": "In HE musaf_kohanim_response_2_5.xml (sha 87b34a2b…) the navigation milestone is now urn:x-opensiddur:instruction:rosh_hashanah/musaf/repetition/kohanim/dream_repeat, which uses the instruction type (line 40). It sits after the prayer-part terminator and has its own terminator, so it is outside every prayer-part, chapter and verse scope (lines 211-213). Because it is a printed cue in this edition's own witness, its place inside the edition's div is documentary, not a semantic defect. The EN counterpart (sha 2000f3f7…) has no cue and no invented text."
+    },
+    {
+      "prior_group": 2,
+      "finding_index": 0,
+      "disposition": "fixed",
+      "actual_evidence": "Both the HE (785d1381…) and EN (d41b0204…) musaf_kehayom_hazeh.xml now use the chapter/verse pairs …/24/quotation/24/deuteronomy/6 with …/6/24, and …/24/quotation/25/deuteronomy/6 with …/6/25. The two contexts are told apart above the book/chapter/verse path, and each verse URN is a child of its own chapter URN (line 40). @n stays 6, 24 and 25, and the URN sets are identical in HE and EN."
+    },
+    {
+      "prior_group": 2,
+      "finding_index": 1,
+      "disposition": "fixed",
+      "actual_evidence": "In EN musaf_repetition_sim_shalom.xml (8b9cd009…) the milestone is now …/repetition/shalom/after_besefer/chatimah. That is a child of the enclosing shalom div, the name does not depend on language, and it is distinct from the final …/shalom/chatimah identity. Its seg @source cites urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/shalom/chatimah, the final chatimah. No canonical corresp is duplicated (lines 226-227)."
+    },
+    {
+      "prior_group": 2,
+      "finding_index": 2,
+      "disposition": "fixed",
+      "actual_evidence": "For Deut 4:4 in EN sim_shalom, the seg now ends at 'this day'. The verse terminator comes first, then the chapter terminator, then the seg closes, and only after that comes <choice><sic>.</sic><corr>’.</corr></choice>. This matches how Prov 9:11 is handled in the same paragraph. The punctuation now sits inside the proofs prayer-part and outside the Bible quotation scopes."
+    },
+    {
+      "prior_group": 2,
+      "finding_index": 3,
+      "disposition": "fixed",
+      "actual_evidence": "For Isa 56:7 in EN kehayom, the seg ends at 'for all peoples'. The closing ’. comes after the verse and chapter terminators and before the stanza 23 terminator. The internal pb n=149 (n318) stays inside the single seg. Deut 6:24 and 6:25 use the same pattern."
+    },
+    {
+      "prior_group": 3,
+      "finding_index": 0,
+      "disposition": "confirmed-not-a-defect",
+      "actual_evidence": "The dossier's legacy_micah entries show that rosh_hashanah/text/micah/micah/7/18, /19 and /20 are canonical registry IDs (siddur.jsonl:827-829, parent …/micah/micah/7). Each maps to both the Birnbaum rh_micah_text.xml and this project's rh_tashlikh.xml. The actual Birnbaum body uses exactly these verse corresp values with Micah @source. Renaming them would mint duplicate identities, contrary to lines 46-50 and 226-227. Scope is set by milestone units and explicit terminators (lines 180-187), not by path prefix. So these canonical verses can sit inside the tashlikh div and its bounded chapter contexts …/tashlikh/quotation/{18,19,20}/micah/7. Each of those contexts is closed after its single verse. The inserted vekhol_chattot_ammekha prayer-part lies outside every verse scope."
+    },
+    {
+      "prior_group": 3,
+      "finding_index": 1,
+      "disposition": "fixed",
+      "actual_evidence": "rh_minchah_haazinu.xml (484f78c7…) is now a structural compilation. It transcludes …/haazinu/aliyah/1, /2 and /3, which are separate files (10a6360f…, 65f058be…, 14549e5d…). In each module the div corresp is …/aliyah/N, the chapter is …/aliyah/N/quotation/deuteronomy/32 and the verses are …/aliyah/N/quotation/deuteronomy/32/V, so verse is a child of chapter and chapter a child of aliyah. Together the modules cover verses 1-3, 4-6 and 7-12, all 12 verses, and every module closes its own scopes explicitly. The labels לוי. and ישראל. are notes in the compilation between transclusions, outside every verse scope."
+    },
+    {
+      "prior_group": 3,
+      "finding_index": 2,
+      "disposition": "confirmed-not-a-defect",
+      "actual_evidence": "In rh_minchah_haazinu_levi.xml, Deut 32:6 has one verse milestone (…/aliyah/2/quotation/deuteronomy/32/6) with one terminator, and inside it two adjacent segs carrying @source. Line 227 forbids duplicating a canonical URN in @corresp. A shared @source on two adjacent provenance fragments of one printed verse is not a second correspondence. The verse is resolved once, through the single milestone range. The enlarged standalone ה is printed as its own word, and the single anchor haazinu_large_he plus the standOff commentary identify it. The prior review named no rule that forbids two source fragments. The glyph reading is still pending as question 481."
+    },
+    {
+      "prior_group": 3,
+      "finding_index": 3,
+      "disposition": "fixed",
+      "actual_evidence": "No for_verse_N segments are left in any changed file. Amar_rabbi_elazar (d5db3041…) uses …/quotation/{7,8,9}/psalms/122 with …/122/{7,8,9}. Uva_letziyyon (55507ecb…) uses …/quotation/{20,21}/isaiah/59 with …/59/{20,21}. Tashlikh uses …/quotation/{18,19,20}/micah/7 as bounded chapter contexts around the legacy canonical verses. In each case the contexts are told apart above the book/chapter/verse path and every scope is explicitly terminated. Keeping separate contexts for adjacent Isa 59:20-21, rather than one shared chapter, does not change the range any URN resolves to, so it is a style choice, not a defect."
+    },
+    {
+      "prior_group": 3,
+      "finding_index": 4,
+      "disposition": "fixed",
+      "actual_evidence": "musaf_psalm_81.xml (f0c3e966…) has no pb. Only div/@facs n321 is kept. The HE and EN musaf_repetition_shalom_chatimah.xml (b83f3a14…, 7d486e6d…) also have no mid-page pb. The dossier's page-boundary-precheck reports each_boundary_once=true for HE and EN (technical check only)."
+    },
+    {
+      "prior_group": 3,
+      "finding_index": 5,
+      "disposition": "confirmed-not-a-defect",
+      "actual_evidence": "The source scan s325.jpg visibly prints the italic English '(On Sabbath)' directly above the parenthesized ואני תפלתי. It also prints 'The Reader says half Kaddish.' and a full English navigation rubric ('Then the congregation says the תפלה page 44. (On Sabbath, however, ואני תפלתי is said…'). The note in rh_minchah_vaani.xml (4a710d30…) therefore encodes a printed English instruction. It does not invent a translation."
+    },
+    {
+      "prior_group": 3,
+      "finding_index": 6,
+      "disposition": "confirmed-not-a-defect",
+      "actual_evidence": "The dossier's already_mapped_aleinu entry shows urn:x-opensiddur:text:siddur:chol/shacharit/conclusion/aleinu already mapped once in this same project (aleinu.xml). A second identical corresp in one project would be a duplicate (lines 226-227). The repeated physical printing therefore correctly gets a bounded occurrence context, rosh_hashanah/musaf/conclusion/aleinu, and cites the canonical work through seg @source (as quoted in the group 3 review's own location field). The Uva case is different because it reuses its generic identity directly (see limitations)."
+    }
+  ],
+  "remaining_findings": [],
+  "encoding_approved_except_source_readings": true,
+  "limitations": [
+    "This approval covers only the encoding of the 18 changed files whose exact XML and hashes are in the dossier. It does not certify any source reading or pointing, the role-label reading, or the large-ה glyph. Questions 473-489 remain open, and nothing here is overall or batch acceptance.",
+    "The dossier gives registry and mapping rows for Micah and Aleinu only. It does not show whether chol/shacharit/conclusion/uva_letziyyon, or its subunit IDs (targum_qadosh, targum_barukh, yimlokh, targum_yimlokh, vehu, tzevaot, ashrei, hoshiah, barukh_eloheinu, chafetz), are already mapped elsewhere in prayerbook_for_the_new_year-heidenheim-1965-he. Nor does it show the conclusion_uva_letziyyon.xml definitions that the subunits are said to reuse. I accepted the reuse claim on the dossier's statement plus refdb_errors=[]. Specific evidence that would confirm it: the siddur.jsonl rows and project mappings for those URNs.",
+    "s325 prints the following between the end of Uva (Isa 42:21) and the half-Kaddish: the English 'The Reader says half Kaddish.', then ועתה יגדל־נא כח אדני… (Num 14:17) and זכר רחמיך… (Ps 25:6). Below Vaani it prints the long English navigation rubric. None of these is in rh_minchah_uva_letziyyon.xml, rh_minchah_half_kaddish.xml or rh_minchah_vaani.xml, and no file in the dossier contains them. If they are encoded in unchanged files, those files are outside this review. If they are not, page 155 is incomplete. Evidence needed to settle it: the file(s) holding those three items, or confirmation that they are deliberately out of scope.",
+    "Small non-defect inconsistencies, not raised as findings: the Haazinu compilation has no biblScope and no div/@facs; its role labels have no instruction:role corresp, unlike the half-Kaddish label; and the tashlikh bounded chapter contexts have no child URNs of their own.",
+    "The supplied build, runtime, page-boundary, range and registry-grammar prechecks are technical only. I did not re-run them, did not validate schema (for example tei:note directly inside j:conditional), and did not resolve URN ranges independently. Scope conclusions come from reading the XML against JLPTEI-3.md:179-227.",
+    "I did not view the scans of the EN pages or of pages 146-154 and 156, so the HE-only status of the 2_5 cue and of the page-156 layout is unverified from images."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "bd05fad5-e1d8-4550-8ee4-79545c38dbf5"
+  }
+}

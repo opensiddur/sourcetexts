@@ -1,0 +1,44 @@
+{
+  "approved_product_code_commit": "be8a3a8",
+  "test_only_followups": [
+    "1adc000",
+    "ca95e8c"
+  ],
+  "affected_suite": {
+    "passed": 509,
+    "subtests": 218,
+    "log": "final-boundaries-regression-v5.log"
+  },
+  "post_guard_boundary_cases": {
+    "passed": 4,
+    "log": "final-restored-guard-tests.log"
+  },
+  "typography_defaults": {
+    "passed": 10,
+    "subtests": 296,
+    "log": "typography-defaults-final.log"
+  },
+  "keep_together": {
+    "distinct_cases_accepted": 37,
+    "subtests": 62,
+    "original_complete_run_log": "keep-together-final.log",
+    "original_run_passed": 36,
+    "superseded_failure": "Only the old TestSingleStream negative-control fixture no longer hit a rubric edge after the corrected heading spacing. All protected geometry checks in that run passed.",
+    "replacement_log": "keep-single-final.log",
+    "replacement_class_passed": 8,
+    "replacement_typography": {
+      "paragraphs": {
+        "spacing": "0.6em"
+      }
+    },
+    "negative_control_evidence": "single-control-probe.json",
+    "measured_unprotected_violations": [
+      "widow LP3",
+      "stranded heading LH11",
+      "stranded rubric LI19",
+      "stranded rubric LI24"
+    ],
+    "fixture_change_only": "Changing the test spacing from0.5em to0.6em does not change product code or final book settings."
+  },
+  "all_required_affected_checks_complete": true
+}

@@ -1,0 +1,36 @@
+{
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s312/v5-export-review/expanded-final-export-manifest.json",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-317.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-318.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-319.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-320.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-321.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "PDF images 317–321 show printed folios 315–319. The offset of two is the same on every page, and the running heads and folio placement alternate correctly between odd and even pages.",
+    "Footnote 141 (folio 318): the raised mark sits above the bracketed '(מלכנו)' at the line-end (left) side of the first Hebrew line. It is readable, separate from the enlarged and pointed letters, and not clipped. The matching Hebrew footnote entry at the foot of the same page reads 'הערת המהדיר: מלכנו — תוספת בסוגריים במקור; תנאי אמירתה אינו מצוין.' The footnote rule starts at the left margin while the right-to-left note text is set flush right and runs under the English column. This is a style choice, not a defect.",
+    "Some justified Hebrew lines have wide word gaps, mostly after a sentence-ending period. Examples are folio 316 'מִכָּל הָעַמִּים.   אָהַבְתָּ' and folio 317 'אֲבוֹתֵינוּ.   וְזִכְרוֹן'. The gaps are wide but nothing collides or overflows, so this is cosmetic.",
+    "The paired rows line up correctly on every page. Where one column is much longer, the shorter one has a large blank space, as with the English 'And therefore put the fear' on 315, 'Our God… may there rise' on 317, and 'We thank Thee' on 319. The next row then starts at the same height in both columns, which is expected for this layout and is not distorted paragraph spacing.",
+    "Text carries over between pages without loss. The English 'joy to Thy land happiness to Thy city and' continues on 316 as 'a rise of fortune…'. The bracketed 'a day [of remembrance]' continues on 317 as 'of Teruah [in love]…'. The Hebrew of the paragraph beginning 'אֱלֹהֵינוּ… מְלוֹךְ' continues onto 318, and the paragraph beginning 'מוֹדִים… וְטוֹבוֹתֶיךָ' continues onto 319 as 'שֶׁבְּכָל־עֵת…'.",
+    "The conditional Sabbath boundaries on folio 317 keep their spaces on both sides: 'מָשָׁלָה: אִם שַׁבָּת [אֱלֹהֵינוּ', 'בִּישׁוּעָתֶךָ. אִם שַׁבָּת [וְהִנְחִילֵנוּ' and 'שְׁמֶךָ.] וְטַהֵר'. The bold 'אִם שַׁבָּת' labels are legible, and the English brackets match.",
+    "The ↗ marks on folios 315, 317 and 318, in both the Hebrew and the English, sit cleanly before their paragraphs and do not overlap anything.",
+    "Folio 319 ends with 'Bestow peace' / 'שִׂים שָׁלוֹם… בִּשְׁלוֹמֶךָ.' and no closing benediction. The Hebrew ends in a period rather than a sof pasuq, so the text presumably continues on the next page, which is outside this range."
+  ],
+  "limitations": [
+    "Only PDF pages 317–321 were reviewed. They contain the middle and closing blessings of the Amidah with the Sabbath brackets. None of the content named for the new batch appears here: priestly blessing, Musaf closing, Minchah/Tashlikh, the Hebrew-only section, the documentary early peace blessing, the thirty-blast instruction or the appendix. Those were not checked in this range.",
+    "The obsolete notes saying coverage stops at 311 do not appear on these pages. I could not check whether they are absent from the rest of the document.",
+    "Footnote 141 is the only footnote in this range, so I could check its mark-to-entry match and placement but not the numbering sequence against neighbouring footnotes.",
+    "Hebrew points were judged at the rendered image resolution. I did not check them against the source or compare the PDF text layer.",
+    "No red hyperref link borders appear on these pages, so I could not assess them here.",
+    "The manifest records export_approval_pending: true. I took its checksums and HTML checks as given and did not verify them independently."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "ed08e79a-52b2-409b-93d4-0eeb151dade4"
+  }
+}

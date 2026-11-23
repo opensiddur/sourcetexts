@@ -1,0 +1,32 @@
+{
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s312/v5-export-review/documentary-hebrew-final-export-manifest.json",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/documentary-hebrew-84.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/documentary-hebrew-85.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/documentary-hebrew-86.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/documentary-hebrew-87.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/documentary-hebrew-88.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "Page 84 (folio 76) → 85 (folio 77): the last line on page 84 is the cue word 'יְיָ' by itself. Its verse ('יְיָ חָנֵּנוּ לְךָ קִוִּינוּ…') starts page 85, so the cue word is cut off from the line it introduces at the page break. Every other cue-word/verse pair in the priestly blessing on pages 84–85 stays together. The new keep-together mechanism seems to cover speaker labels but not these cue-word rows. This is a page-break problem only; the text and order are correct.",
+    "Page 86 (folio 78): a short centred horizontal rule appears in the middle of the text block, between 'ויש מוסיפים: היום תתמכנו בימין צדקך: אמן:' and 'סוגרים הארון'. The page has no footnotes, so this is probably a deliberate source separator. Confirm that it is intended and is not a stray footnote rule.",
+    "Footnote separator rules sit in different horizontal positions: roughly centre on page 87 (folio 79) and towards the left on page 88 (folio 80). On both pages the Hebrew footnote entries (96 and 97) sit at the right. This is a cosmetic inconsistency, not a misplaced note.",
+    "Page 88 (folio 80): footnote marker 97 floats about mid-measure, above the first line of 'תְּהִלָּה לְדָוִד…', on the line under the Ashrei verse. Marker 96 on page 87 sits at the start of its line. Without the source I can't confirm that 97 is attached to the intended word, but it is clear, does not overlap anything, and comes before its entry at the bottom of the same page."
+  ],
+  "limitations": [
+    "Only the five assigned PNGs (pages 84–88) and the manifest were reviewed. The manifest lists source_batch_pages 84–89, but page 89 was not assigned or read, so the end of this batch and any footnotes or page transition after page 88 are not covered.",
+    "I judged only the visual result from raster images at the supplied resolution. I did not check against source text, so the content of points and wording was checked only for being readable and not broken, not for being correct.",
+    "There is no English text on pages 84–88. The early English-only peace blessing and the English footnote paragraph-direction fix do not appear in this range, so this review cannot confirm them.",
+    "Checks that passed visually: no clipping or overlap on any page; Hebrew vowel points are readable and interlinear ↗ marks do not collide with letters; bold rubrics, the Yiddish rubric and the speaker labels (חזן/קהל) sit with their rows; the Minchah heading on page 88 has a proper gap above and below; footnotes 96 and 97 are in order, each on the same page as its marker; the red link borders (רבש\"ע on page 84, קמה in footnote 97) are standard hyperref borders and cause no overlap.",
+    "The thirty-blast instruction on page 88 includes the qualification: 'ומיהו אין מעכבות שאם לא יעשו כן אין עכוב בדבר שהרי כבר יצאו ידי חובתם'.",
+    "No editorial note claiming coverage stops at 311 appears on pages 84–88."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "6fdf0bdd-c5ec-4bf7-8ec8-b0050b8e7945"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s312/v4-export-review/documentary-hebrew-html-manifest.json",
+    "/tmp/mahzor-s312/v4-html-images/documentary-hebrew.html-1280.png",
+    "/tmp/mahzor-s312/v4-html-images/documentary-hebrew.html-1280-n322.png",
+    "/tmp/mahzor-s312/v4-html-images/documentary-hebrew.html-1280-n325.png",
+    "/tmp/mahzor-s312/v4-html-images/documentary-hebrew.html-390.png",
+    "/tmp/mahzor-s312/v4-html-images/documentary-hebrew.html-390-n322.png",
+    "/tmp/mahzor-s312/v4-html-images/documentary-hebrew.html-390-n325.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "Layout: this documentary-hebrew edition renders as one right-to-left column at both widths, which looks intended. The Hebrew is right-aligned and justified. English rubrics such as 'The Reader says half Kaddish.' and 'After מנחה (on the second day…)' run left-to-right, and the Hebrew terms inside them (תפלה, ואני תפלתי, ארון הקדש, מנחה) display in the right order.",
+    "Hebrew pointing: vowel points and cantillation-style marks render cleanly with no tofu boxes or broken marks at 1280 or 390. The oversized ה in Ha'azinu (הַ לַיהוָה) is a traditional enlarged letter, not a rendering error.",
+    "Priestly blessing page (1280.png / 390.png): each word of the blessing is set as its own line followed by its verse. The long רבונו של עולם paragraph reflows to full width at 1280 and wraps correctly at 390. The blue underlined 'רבש\"ע.' link is legible.",
+    "No particular day: the '(On Sabbath)' conditional is set off by horizontal rules around ואני תפלתי, so the undecided condition is visible as intended.",
+    "Cross-reference rubrics show 'page →' with no page number, e.g. 'on page →, קדיש תתקבל…'. This is acceptable for HTML but reads a little awkwardly. A section label in the link text would read better.",
+    "The small red page-number markers (97, 98) sit in the space between lines. At 390 (390-n325.png), the '98' marker comes very close to the Hebrew line next to it but does not hide any letters.",
+    "At 1280, paragraphs like the רבונו של עולם prayer, Ashrei and ובא לציון run nearly the full ~1150px width. That is a long line to read; a max-width on the text column would help, but nothing overflows.",
+    "Tail (n325): סדר תשליך is followed by שיר של יום and then the colophon (title, the opensiddur-processor 0.8.0.dev0 build line, contributors, licences with a CC0 link, and the start of Sources). It all renders without clipping. Order is outside this review because it was already approved.",
+    "The sticky Contents/Settings header sits just above the first text line in every screenshot. The first line is fully visible in all six images; nothing is hidden underneath."
+  ],
+  "limitations": [
+    "Each screenshot shows one viewport-sized window, not the full page, so regions outside the six captured windows were not seen.",
+    "The manifest has one entry per viewport (1280 and 390). It does not record the n322/n325 anchored captures separately, so their link, error and duplicate-ID status relies on your statement that the browser checked the whole document.",
+    "scrollWidth equals viewport width at both sizes, which rules out page-level horizontal overflow. It cannot rule out clipping inside an element with overflow:hidden; I saw no such clipping in the captured areas.",
+    "The Contents and Settings controls (menus, settings changes, other day selections) were not exercised. Only the 'No particular day' state was reviewed.",
+    "Only 1280px and 390px widths were reviewed; tablet-range widths were not.",
+    "No screenshot shows the 390px rendering of the 1280-n322 Kaddish / '(On Sabbath)' / English rubric block. Mobile wrapping of mixed English and Hebrew was checked only on the Tashlikh rubric in 390-n325."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "f47dc14b-e61e-487f-9449-3848837fba42"
+  }
+}

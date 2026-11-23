@@ -1,0 +1,40 @@
+{
+  "images_read": [
+    "/tmp/mahzor-s312/archive-cache/marmorstein_rosh_hashanah_1/pages/s312.jpg",
+    "/tmp/mahzor-s312/archive-cache/marmorstein_rosh_hashanah_1/pages/s313.jpg",
+    "/tmp/mahzor-s312/archive-cache/marmorstein_rosh_hashanah_1/pages/s314.jpg",
+    "/tmp/mahzor-s312/archive-cache/marmorstein_rosh_hashanah_1/pages/s315.jpg",
+    "/tmp/mahzor-s312/archive-cache/marmorstein_rosh_hashanah_1/pages/s316.jpg",
+    "/tmp/mahzor-s312/snippets/476.png (only to find which page decision 476 is about)",
+    "/tmp/mahzor-s312/snippets/478.png (only to find which page decision 478 is about)"
+  ],
+  "all_blocks_checked": true,
+  "source_approved": false,
+  "findings": [
+    "Every block in final-source-312.json (s312–s316, Hebrew and English) was compared with the page images. Hebrew letters, word order, spelling (full and defective), maqafs and punctuation all match. This includes: שֶׁלָּךְ twice, וּבָהֶם, רַבֵּינוּ, יְרִחוֹ, וּמְצָא־חֵן, זְרוֹעָם, אַף־ at the line end, הַטֵּה־ at the line end, קְדֻשַּׁת חֲסָדֶֽיךָ, טָהֳרַת after וּלְמַֽעַן, בֶּן־עֶשְׂרִים, שֶׁל־בִּרְכַּת, לָךְ וְתִשְׁמַע, וְאֶנְקָתִי, פַּת, לִלְבּוֹשׁ, the commas after אוֹת and בִּדְרָכַי, וְתֵן, (וִימֵי אִשְׁתִּי, וּבָנַי, וּבְנוֹתַי), בְּרֹב עֹז, אָמֵן סֶֽלָה:, רִבּוֹן הָעוֹלָם … אַף … כַּאֲשֶׁר הִבְטַחְתָּֽנוּ., תְּחַדֵּשׁ, the unpointed היום תתמכנו בימין צדקך: אמן:, and the period after קָדְשִׁי.",
+    "Reading order matches the page. In s312 the dream prayer comes after the response to וישמרך and before יאר, and רבש״ע. comes after שֶׁיְּחָנֵּֽנוּ: and before יִשָּׂא. In s314 the inline rubric ויכוין … הקהל comes before the pointed אָמֵן:. In s316 the היום lines alternate with their אָמֵן: responses, with the ויש מוסיפים line and סוגרים הארון. after them.",
+    "Rubrics match the page and stay unpointed: והכהנים מברכין., החזן מקרא. (it ends in a final nun on s312), הקהל אומר., כשהכהנים מנגנים וישמרך אומרים זה., the Sha'arei Zion rubric with אצל (decision 479), ויכוין לסיים עם הכהנים כדי שיענו הקהל, והכהנים מחזירים פניהם כלפי ההיכל ואומרים:, הכהנים יזהרו … בם בידים … ידיהם., פותחים הארון., ויש מוסיפים:, סוגרים הארון. The Yiddish rubric's pointed כֹּהֲנִים matches.",
+    "English on s313 and s315 matches word for word, including its punctuation and capitals: 'who has sanctified', 'May he receive' with a small h, 'favour', 'Thine O Lord is greatness' with no comma, and the commas after the priest cues ('May He bless you,', 'The Lord,', 'May He raise,'), with full stops after 'and protect you.' and 'And be gracious to you.'. Joining the hyphen-split words com-manded and every-thing is correct. The Hebrew catchwords ברוך and אדיר are recorded.",
+    "The human decisions for these scans are reflected correctly: 473 (no dagesh in בָךְ), 474 (no meteg in אֲבָרְכֵם), 475 (dagesh in the lamed of לָּֽנוּ), 479 (the full rubric text with אצל), 480 (שֶׁלָּךְ twice).",
+    "Decisions 476–478 and 481–489 don't apply to s312–s316. The 476 snippet is the Kaddish (כִּרְעוּתֵהּ) and the 478 snippet is Ashrei (s323). From its answer text, 477 is Ein Keloheinu (s320). 481 and 482 (the large ה with its star, the two pashtas, the meteg on samekh) are on s326, and the חזן label is on s325. None of these have blocks in this file, so their instructions don't affect this check.",
+    "Open issue: ledger item id 2 (s312, end of line 2 of the dream prayer, שֶׁיִּהְיוּ כ_ל) is still marked PENDING, because the earlier reader couldn't tell whether the kaf has a dagesh. The candidate text says כָּל and claims a visible dagesh. No human decision covers this word. At this image resolution I can't confirm or rule out the dagesh. I won't decide it from grammar or the familiar wording, so it needs a human answer.",
+    "Not blocking, cleanup only: several candidate uncertainty notes are now out of date and contradict the final text. shem_rubric still suggests כלל. The dreams notes still ask about רבינו and ירחו and the שלך pointing. response_veyasem still asks about the meteg, sim_shalom about the dagesh in לָּֽנוּ, and response_veyish about the meteg under ס. Ledger id 11 still has כלל, which decision 479 replaced. These should be marked superseded so they don't reach export.",
+    "Not blocking: the running heads of s312 and s313 are recorded as metadata blocks, but those of s314–s316 are not (s316's head reads מוּסָף לְיוֹם רִאשׁוֹן שֶׁל רֹאשׁ הַשָּׁנָה). No prayer text is affected.",
+    "The kehayom block correctly stops at לְרָצוֹן and is marked as continuing on s317."
+  ],
+  "remaining_uncertainties": [
+    "Whether there is a dagesh in the kaf of כָּל after שֶׁיִּהְיוּ (s312, dreams, ledger id 2). This is the only item blocking approval.",
+    "Whether there is a dagesh in the lamed of לְּךָ in וְיוֹסִֽיפוּ לְּךָ (s316, sim_shalom_proofs). The candidate itself flags it, there's no human decision, and I can't settle it from the image. Recommend asking the human about it together with the כל question.",
+    "Fine marks I couldn't check at this resolution, carried over from earlier meteg reviews: most metegs in the dreams, shem22 and kohanim_ribbono paragraphs; the possible meteg in וֶאֱמֶת; the sheva on the first yod of בַּייָ; the maqaf in מַה שֶּׁגָּזַֽרְתָּ; the mappiq in וְסוֹדוֹתֶֽיהָ; ס versus ש and the rafe in ספריכֿט."
+  ],
+  "limitations": [
+    "Images were read at about 1208x2000, scaled down from 1368x2264. The pages are fine for consonants, word division, maqafs, punctuation and rubrics. Small dagesh, meteg and hataf marks often can't be resolved, so for those I relied on earlier reviews and human decisions unless the image clearly contradicted them.",
+    "I didn't open the snippets for 473–475, 477, 479, 480 or 481–489. I took the human answers as given.",
+    "This covers the source for scans s312–s316 only. It is not approval of the generated XML, of where cues and rubrics are placed outside prayer-word modules, of s317 onward, of s325 or s326, or of the full batch or export."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "b140f5a9-a0c1-4417-bd1c-bf23359421a6"
+  }
+}
