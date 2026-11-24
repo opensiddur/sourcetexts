@@ -1,0 +1,64 @@
+{
+  "source_scan": "s339",
+  "approved_source_reading": true,
+  "all_lines_verified": true,
+  "human_application_verified": true,
+  "remaining_reading_disputes": [],
+  "corrections_required": [],
+  "stale_notes_to_remove": [
+    {
+      "location": "source-339-working-snapshot.json blocks[0].uncertainties[0]",
+      "text": "Line 6, יְלַחְצוּךָ: the vowel under the het could be sheva or hataf patah.",
+      "reason": "Settled by the earlier closure review and checked again here. There is a plain sheva under the het, and the patah under the lamed is the separate bar. The snapshot's יְלַחְצוּךָ stands. This was settled by review, not by a human decision."
+    },
+    {
+      "location": "source-339-working-snapshot.json blocks[0].uncertainties[1]",
+      "text": "Line 13: the first word looks like מְקֻוֶּה (qubuts)... I'm not certain.",
+      "reason": "Confirmed. The qubuts dots are clearly different from the patah bars in the two מְקַוֶּה that follow. The snapshot is correct. Settled by review, not by a human decision."
+    },
+    {
+      "location": "source-339-working-snapshot.json blocks[0].uncertainties[2]",
+      "text": "Line 14, הַיְצוּרִים: there may be a dagesh in the yod.",
+      "reason": "Settled. No dagesh is visible in the yod (earlier closure review, checked again here). Human decision 754 separately ruled out a meteg on the he. הַיְצוּרִים stands."
+    },
+    {
+      "location": "source-339-working-snapshot.json blocks[0].uncertainties[3]",
+      "text": "Line 24, וּמִסְמָךְ: qamatz or patah under the second mem.",
+      "reason": "Human decision 757c settled this as patah, and the text now reads וּמִסְמַךְ. The note also quotes the old qamats spelling, which is no longer correct."
+    },
+    {
+      "location": "source-339-working-snapshot.json blocks[0].uncertainties[4]",
+      "text": "Line 17, סָתוּר: printed this way twice. I transcribed it as printed.",
+      "reason": "Confirmed as printed in both places. Nothing is left open."
+    },
+    {
+      "location": "source-339-working-snapshot.json blocks[0].uncertainties[5]",
+      "text": "Line 20, גָּבוֹהַּ: the mappiq appears in both occurrences.",
+      "reason": "Human decision 755 confirmed the mappiq in both occurrences. Nothing is left open."
+    },
+    {
+      "location": "source-339-working-snapshot.json blocks[0].uncertainties[6]",
+      "text": "I didn't individually confirm the metegs on this page.",
+      "reason": "Out of date. The earlier closure checked each inventory meteg one by one. Human decisions 751–758 settled every disputed meteg and every new meteg candidate, and the snapshot reflects all of them."
+    }
+  ],
+  "limitations": [
+    "Without a shell I could not recompute the SHA-256 of the working snapshot. I did not check that the file matches output_working_sha256 ff46edbb…e685. I verified that the changes were applied by comparing the text word by word.",
+    "The pe dagesh readings (מַפְלִיא, תִּפְאַרְתֶּֽךָ, לְהַפְלִיא, וּמִלְּפַרְסְמֵֽהוּ without dagesh; שַׂרְעַפִּים with dagesh) rest on human decisions 758–761, not on reading the glyphs myself. In this typeface pe with and without dagesh look almost the same.",
+    "Dagesh lene in small-type begadkefat letters and metegs beside segol or tsere in the small-type lines are only a few pixels tall. I accepted them at medium confidence where the image does not contradict them. Nothing I saw contradicts the snapshot.",
+    "This covers the source reading only. It does not approve encoding, XML, export, leaf or batch. I made no edits."
+  ],
+  "notes": [
+    "The running head 'שיר היחוד ליום חמישי' and the page number 13 match full-339.png. There is no footnote.",
+    "All 28 lines are present and in the printed order. Every line has a period at the mid-line break and a sof pasuq colon at the end, as printed. The eight detail crops overlap and together cover the whole text block.",
+    "The human changes appear exactly as specified in the snapshot, and in no other occurrence: L2 זְרֽוֹעַ (meteg on the resh, none on the zayin; כִּזְרוֹעוֹתֶֽיךָ unchanged); L6 וְלַֽהַט and יְנַצְּחֽוּךָ; L7 יְנַצְּחֽוּךָ (its own meteg on the het); L14 הַיְצוּרִים with no meteg on the he; L20 גָּבוֹהַּ ×2 with mappiq; L21 דֵּֽעַת; L24 וְעַרְעַר (patah under the second ayin), וְחֶֽבֶר, וּמִסְמַךְ (patah under the second mem); L28 מִלְּשַׁעֲרֵֽהוּ, וּמִלְּהַגְבִּילֵֽהוּ, מִלְּתָאֲרֵֽהוּ, וּמִלְּפַרְסְמֵֽהוּ (meteg on resh, second lamed, resh, mem; פַ without dagesh); L4 מַפְלִיא and תִּפְאַרְתֶּֽךָ with no pe dagesh; L5 לְהַפְלִיא with no pe dagesh; L27 שַׂרְעַפִּים with pe dagesh.",
+    "The confirmations listed under unchanged_confirmations (755, 758pe, 759, 760, 761) match the snapshot. Changes 754, 759a/b, 760 and 761 have identical before and after text, which is correct for decisions that confirmed the existing reading.",
+    "I checked every other word, mark and punctuation sign against the images, including all inventory metegs, the qubuts in מְקֻוֶּה, the shin/sin dots, holam/shuruq, and וָשֶֽׁבַע. I found no differences.",
+    "The 14 disputes and the one correction in source-339-closure.json are now all resolved by human decisions 751–761 and applied in the snapshot. That earlier closure output is superseded by this one."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "bc04d7f5-4b0e-45c7-bd4c-ee76d3824a7a"
+  }
+}
