@@ -1,0 +1,46 @@
+{
+  "source_scan": "s336",
+  "approved_source_reading": true,
+  "all_lines_verified": true,
+  "human_application_verified": true,
+  "remaining_reading_disputes": [],
+  "corrections_required": [],
+  "stale_notes_to_remove": [
+    {
+      "location": "blocks[1].uncertainties[0]",
+      "text": "Line 17: נ vs ג (see unresolved)",
+      "reason": "Settled by human decision 714 (נֵרִי and נֵרוֹ both begin with nun) and by consonant_confirmations 708–712, 714. There is no open unresolved entry left for it to point to."
+    },
+    {
+      "location": "blocks[1].uncertainties[2]",
+      "text": "Metegs are not marked",
+      "reason": "No longer true. Decisions 700a–c, 701, 702a/c/d, 704b/c, 706, 709b, 710, 713, 715a, 716, 717a–d and 721 put metegs into the text, and the snapshot now contains them."
+    },
+    {
+      "location": "blocks[0].uncertainties[0]",
+      "text": "Top cut off; page number 10 is visible at top right",
+      "reason": "Possibly stale; for the user to decide. In full-336.png the running head 'שיר היחוד ליום רביעי' and the page number 10 are both fully visible and nothing is cut off. If kept, the note should just say 'page number 10 at top right'."
+    }
+  ],
+  "limitations": [
+    "This is a visual reading of full-336.png and the 8 detail crops at the supplied resolution. I didn't reopen any of the human decisions 700–722, and I checked them only as applied to their stated line and word.",
+    "I only had the Read tool, so I couldn't check Unicode codepoint order, such as where the meteg U+05BD sits relative to other points or dagesh/shin-dot order. Codepoint normalization hasn't been checked.",
+    "I couldn't confirm that the snapshot's sha256 matches the resolution's output_working_sha256 (1750a9f6…). The text check was done by comparing each change's context_after with the snapshot lines, not by hash.",
+    "This approves the source reading only. It doesn't approve encoding, XML, export, the leaf or the batch. No files were edited."
+  ],
+  "notes": [
+    "I checked all 28 lines against the scan for words, consonants, vowels, dagesh, punctuation (mid-line period and final colon), (יְיָ) in parentheses on lines 7 and 20, and reading order from line 1 (מָקוֹם…) to line 28 (צַח וְאָדוֹם…). The acrostic runs מ (1–10), נ (11–17), ס (18–20), ע (21–23), פ (24–26), צ (27–28). Line sizes alternate small and large as on the page.",
+    "Each human change was confirmed in the snapshot only at its own line and word: L1 לְעוֹלָמֶֽךָ, יוֹדֵֽעַ, מְקוֹמֶֽךָ. L2 יְלָדַֽנִי. L4 מֶֽלֶךְ, מִשְׂגַּב (patah, per 702b), מְחוֹקְקֵֽנוּ, וּמוֹשִׁיעֵֽנוּ. L6 מַלְכוּתֶֽךָ, מֶמְשַׁלְתֶּֽךָ. L9 נֶֽפֶשׁ. L10 לוֹ בּוֹ. L12 נֶאֱמָן (no meteg), נֵֽצַח. L13 נֵֽצַח. L16 וּבַֽעַל. L17 דְבָרוֹ (no dagesh). L18 וְסוֹלֵֽחַ, פִשְׁעִי (pe without dagesh, per 715b; this overrides the earlier reviewer proposal פִּשְׁעִי). L19 סוֹלֵֽחַ (716 follow-up YES). L20 סַלְעֵֽנוּ, וּמְצוּדָתֵֽנוּ, עֶזְרָתֵֽנוּ, וּמְפַלְטֵֽנוּ. L26 צֶֽדֶק.",
+    "The unchanged confirmations are also kept as they were: מִגְדּוֹל (L5), דּוֹר (L6), יִתֶּנְךָ (L7), נֵרִי / בְּהִלּוֹ / נֵרוֹ (L17), גְּמוּל (L23), עַבְדּוֹ (L24, L25), פַּחְדּוֹ (L25), דּוֹד (L28).",
+    "All the nun/gimel glyphs that were in doubt on lines 11–15 and 17 are encoded as נ, matching the human decisions 708–712 and 714.",
+    "The changes didn't spread to other occurrences of the same words. For example, נֶאֱמָן on L12 has no meteg, and הַנֶּאֱמָן on L13, the other נֵֽצַח words and the other דּ/פ words were left as they were except where a decision applied.",
+    "The uncertainty note about the stray dot to the right of פַּחַד (L25) is still accurate: the dot is outside the text column and is an artifact. It isn't stale and should stay.",
+    "The prior source-336-closure.json has disputes and corrections (נ/ג, מִשְׂגָּב, the meteg questions, פִּשְׁעִי) that the human resolution has now superseded. That file is a superseded review record, not snapshot metadata, and isn't listed for removal here.",
+    "completeness_notes (28 lines, ending in blank space, continuing on s337) matches full-336.png."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "13828939-b85b-468c-a843-6573375defed"
+  }
+}
