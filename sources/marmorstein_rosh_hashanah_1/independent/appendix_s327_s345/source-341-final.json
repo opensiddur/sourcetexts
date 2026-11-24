@@ -1,0 +1,40 @@
+{
+  "source_scan": "s341",
+  "approved_source_reading": true,
+  "all_lines_verified": true,
+  "human_application_verified": true,
+  "remaining_reading_disputes": [],
+  "corrections_required": [],
+  "stale_notes_to_remove": [
+    "source-341-working-snapshot.json block0 uncertainty: 'Line 8, וְדַעְתָּךְ: ... The pointing (vav vowel, tav vowel) is not.' The pointing is now settled: by the 779 ruling (no dalet meteg) and by the print.",
+    "source-341-working-snapshot.json block0 uncertainty: 'Line 5, הַשָּׁמָֽיִם: I read qamatz (pausal), but it could be patah.' Prior closure and detail1-right both show qamatz. This was never a human ruling, so it is stale as an uncertainty only.",
+    "source-341-working-snapshot.json block0 uncertainty: 'Line 12, בְּלִי כֹל: I don't see a dagesh. Line 20, פָעָלְתָּ: there may be a dagesh in the pe.' Settled by 782c (no kaf dagesh) and 786c (no pe dagesh).",
+    "source-341-working-snapshot.json block0 uncertainty: 'Line 9: in יָעַֽפְתָּ / יָגַֽעְתָּ, the meteg could be on the first syllable...' Settled by 780a (ayin meteg) and 780b (gimel meteg).",
+    "source-341-working-snapshot.json block0 uncertainty: 'Line 9, בִמְלַאכְתְּךָ: I don't see a dagesh in the bet.' Settled by 780c (no bet dagesh).",
+    "source-341-working-snapshot.json block0 uncertainty: 'I didn't individually confirm the metegs on this page.' Superseded: the prior closure confirmed the meteg inventory and 775–788 settled every unresolved meteg.",
+    "source-341-closure.json: approved_source_reading=false, all_lines_verified=false and all 29 remaining_reading_disputes. All of them are resolved by human rulings 775–790, including the 781c/781d/785c follow-ups.",
+    "source-341-closure.json limitation: 'The prior human authorities file is an empty array...' human-775-790-resolution.json now holds 35 authoritative changes.",
+    "source-341-closure.json notes: the 'Meteg inventory, unresolved' list and the 'Possible meteg candidates... not in the inventory' list (הָאֲרָצוֹת, וְדַעְתָּךְ, עֲשִׂיתָם שׂ host). All are now ruled by 776, 779 and 788a.",
+    "source-341-closure.json note: 'The only open footnote items are הענינים and הנזכרים.' Resolved by 789 and 790.",
+    "human-775-790-resolution.json status: '...final independent source341closurepending'. This closure supersedes it."
+  ],
+  "limitations": [
+    "Read-only check by eye, with no shell. I compared the snapshot strings with the rulings by inspection only. I did not confirm Unicode code points or the order of combining marks (for example dagesh/shin dot/vowel/meteg ordering), and I did not recompute output_working_sha256 (b924d33d…).",
+    "The crops are about 2x zoom. Marks that were never ruled on and that the snapshot already matches (consonants, vowels, and the metegs confirmed in the earlier inventory) were checked again against full-341.png and the 8 crops. Small-type dagesh/meteg detail is still at the edge of what can be read, and I accept it here because the image doesn't contradict it, not because I could see it independently.",
+    "The footnote prints an apostrophe-like mark in ג׳ and ית׳. The snapshot encodes it as geresh. That is an encoding choice, not a different reading.",
+    "No XML, export, leaf or batch approval is made or implied. No files were edited."
+  ],
+  "notes": [
+    "Running head 'שיר היחוד ליום ששי.' and printed page 15 confirmed on full-341.png. The running head is the only Friday boundary. The footnote continuation belongs to the Thursday footnote (from s340).",
+    "Human rulings were applied exactly at their bounded spans. I confirmed each in the snapshot text: L1 כֹּל (775); L2 הָאֲרָצוֹת without meteg (776); L6 עֵֽזֶר (777); L7 הַכֹּל (778); L8 וְדַעְתָּךְ without meteg (779); L9 יָעַֽפְתָּ / יָגַֽעְתָּ / בִמְלַאכְתְּךָ (780a–c); L11 אִחַרְתּוֹ, מִהַרְתּוֹ, עֲשִׂיתוֹ without meteg, הַכֹּל with dagesh (781a–d); L12 כֹּל, הַכֹּל, בְּלִי כֹל, פָּעָלְתָּ (782a–d); L13 יְסוֹד הַכֹּל, רוּחֲךָ כֹּל (783a–b); L14 כֹּל (784); L17 קָדְמָה, עָרְכָה without metegs, הַכֹּל with dagesh (785a–c); L20 הֶחֱסַֽרְתָּ, הֶעֱדַֽפְתָּ, פָעָלְתָּ (786a–c); L21 נִמְצָא with only qamatz, בָם without dagesh, דָּבָר with dagesh (787a–c); L22 עֲשִֽׂיתָם, וּבְדַֽעַת (788a–b); footnote העניינים (789) and הנזכרים (790).",
+    "No ruling was carried to another occurrence. L20 בָּם keeps its dagesh, separate from L21 בָם. L12 פָּעָלְתָּ keeps its dagesh, separate from L20 פָעָלְתָּ. L12 בְּלִי כֹל stays without dagesh, separate from the other כֹּל/הַכֹּל.",
+    "All 22 Friday poem lines checked one by one for words, word order, pointing and punctuation against full-341.png and detail1–3 right/left. That includes the pointed variants (נ״א אַף) in L3 and (מַֽיִם) in L4, the unpointed (נ״א כלי) in L12, the period at every half-line break and the colon at every line end. No differences found.",
+    "All 8 Thursday footnote continuation lines checked one by one for words, order and punctuation against detail3-right/left and detail4-right/left. Line breaks fall after: מקרה / ולא / מהיר: / ג׳ / העניינים / שינויים / וכל / מאומה. The commas after מדבר, וכדומה, והעתיד and והעומק, the colon after מהיר, the semicolon after והגשם and the final period all match. 'הם הם' and 'בחוק'/'בחק' are as printed.",
+    "These notes are still accurate and should be kept: snapshot block0's note on how the parentheticals are pointed, and block1's notes on הם הם, בחוק/בחק and the heavier type being uneven inking."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "891bf351-6358-4838-9f16-2a66fc24a65c"
+  }
+}
