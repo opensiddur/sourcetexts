@@ -1,11 +1,17 @@
 # Appendix scans 327–345 — review in progress
 
-UNACCEPTED. These are frozen primary readings, independent blind image readings, and enlarged-image comparisons for the complete weekly Shir ha-Yihud cycle and Shir ha-Kavod. They contain unresolved readings and must not be treated as approved transcription or used to expand the accepted coverage ledger.
+UNACCEPTED. The source readings, focused fine-mark reports, working transcription and encoding atlas remain under review. Do not treat them as approved transcription or increase the accepted coverage ledger.
 
-Accepted coverage remains scans 1–326 (902 literal witnesses; 289 canonical realizations). No existing accepted reading, generated project, baseline, or completion record is changed here.
+Accepted coverage remains scans 1–326 (902 literal witnesses; 289 canonical realizations). The accepted source, baseline, reviews and completion files are byte-identical to the start of this batch; see accepted-baseline-preservation.json.
 
-Human questions 490–509 are open. The numbered crops and original scan images are cached outside Git; their hashes and crop locations are recorded. All other comparative uncertainties also require adjudication. After source resolution, encoding, canonical-boundary mapping, guideline adherence, alignment/order, and actual PDF/electronic exports still require independent approval before acceptance.
+Human readings 490–509 are applied and independently checked in human-490-509-check.json. Three superseded working uncertainty notes were resolved; the original comparison files remain unchanged. The next questions are 510–529. Followup 529 reconciles the final abbreviation in 509; the literal user text has been preserved pending clarification. Numbered snippets and original images are cached outside Git with hashes and crop locations recorded.
 
-Existing canonical URNs were found for all seven daily poems and Anim Zemirot. Numeric part boundaries differ in granularity between existing witnesses: the boundary proposals are unaccepted algorithmic aids, not identity approvals. Preserve each complete daily poem, Thursday’s philosophical note across scans 340–341, Sunday’s additional closing outside the final canonical stanza, and the separate ark-opening Psalm 24 preparation. Missing English remains absent.
+All 19 focused fine-mark reports are included as unresolved evidence, not source approvals. Other source disagreements still require adjudication. After source resolution, generated encoding, guideline adherence, alignment/order, reference resolution and actual PDF/electronic exports require independent approval before batch acceptance.
 
-Images and raw Claude response envelopes are excluded from Git. The ignored processor checkpoint is `output/marmorstein_s327_s345_pending_review`; `review-invocations.json` binds the committed reports to actual CLI sessions and model identifiers.
+All seven existing Hymn of Divine Unity roots and all 31 Anim Zemirot stanza identities are reused. The original canonical-boundary-proposals.json is an unaccepted algorithmic aid. The corrected manual atlas has independent boundary-only approval in atlas-closure.json, including the Tuesday /28 wording variant and the sole Wednesday /50 at its later matching-wording occurrence. The extra/omitted couplets must not inherit neighboring numeric correspondences. Preserve explicit terminators before uncatalogued additions and before Sunday’s additional closing.
+
+The byte-bound approved atlas snapshot and metadata-hygiene-proof.json show that normalizing work keys and correcting the Tuesday couplet count changed no source words or approved boundary data. Registry presence is proved for 371 existing roots/parts; the registry-only integrity check has zero errors and warnings. Generated XML/reference-database checks remain pending.
+
+Preserve each complete daily poem, Thursday’s philosophical note across scans 340–341 as locally anchored commentary, and the ark-opening Psalm 24 preparation separate from Anim Zemirot. Missing English remains absent.
+
+Images and raw Claude response envelopes are excluded from Git. The ignored processor checkpoint is output/marmorstein_s327_s345_pending_review; review-invocations.json binds reports to actual CLI sessions and model identifiers.
