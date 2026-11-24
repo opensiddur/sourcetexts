@@ -1,0 +1,28 @@
+{
+  "source_scan": "s328",
+  "approved_source_reading": true,
+  "all28_lines_verified": true,
+  "human_application_verified": true,
+  "remaining_reading_disputes": [],
+  "corrections_required": [],
+  "limitations": [
+    "This review covers the source reading only. It does not imply acceptance of the XML, encoding, export, leaf or batch.",
+    "Only the Read tool was used. Text was compared as rendered glyphs. Unicode code points and the order of combining marks (for example, meteg U+05BD placed after the vowel) were not checked at the byte level. That belongs to the separate encoding gate.",
+    "In the small-type (odd) lines, marks only a few pixels wide stay hard to tell apart at this scan resolution. Where no human-numbered question or earlier closure dispute existed, I added no new mark and reopened nothing. One example is the segol under ת in הוֹדָיוֹתֶיךָ and נִפְלְאוֹתֶיךָ on L17. Neither image showed a clear separate stroke there, so I am not raising them as disputes.",
+    "Human adjudications 536–551 and 500–502 were taken as settled. I checked only that each was applied to its own bounded occurrence, not whether the reading itself is right.",
+    "No files were edited."
+  ],
+  "notes": [
+    "Each human mark is applied only at its own occurrence in working-pages.json page s328: 548 (L1) שֶׁלָּךְ keeps the dagesh and is unchanged; 546 (L5) זֶֽבַח; 539/540 (L6) וּמַֽיִם אַֽיִן; 547 (L9) זֶֽבַח; 536/537 (L10) שָּׁאַֽלְתִּי and דָּרַֽשְׁתִּי; 545 (L11) לַעֲבוֹד with holam and final dalet, unchanged; 538 (L19) יָדַֽעְתִּי; 542 (L20) חֵֽקֶר; 549 (L21) כֹחַ with no dagesh in kaf; 541 (L24) עַֽיִן; 544 (L25) יְצִיעֶֽךָ; 550/551 (L27) שִׁבְחֶךָ and כֹּחֶךָ with no meteg; 543 (L28) יוֹדֵֽעַ.",
+    "No mark spread to a similar word on another line. זֶבַח on L13, חֵקֶר on L23 and יוֹדֵעַ on L27 correctly stay without a meteg, because 546/547, 542 and 543 each cover only their own line.",
+    "544 matches what the human ruled: sheva under י, no dagesh in צ, and segol plus meteg under ע. s328-detail3-left.png and s328-detail4-left.png show the colon-shaped sheva under י, and I see no dot in צ.",
+    "All 15 provisional large-type meteg corrections listed in source-328-closure.json appear in the working text on their stated lines: L2, L4, L8, L16, L18, L24, L26 and L28. My view of full-328.png and the 8 detail images agrees with that closure.",
+    "I compared all 28 lines word by word against full-328.png and all 8 detail images (s328-detail{1..4}-{right,left}.png). The consonants, vowel points, defective spellings (for example וְעוֹלֹתֶֽיךָ on L8 and וְעוֹלוֹתֵיכֶם on L9), the parentheses-free layout and the punctuation all match. Each first half-line ends with a period, each line ends with a colon, the running head has no period, and the margin number '2' is left out.",
+    "Every dispute listed in source-328-closure.json is now covered by human items 536–551. No source reading dispute remains open for s328."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "f7ee6dce-28f5-4549-b612-49eabdbc443c"
+  }
+}

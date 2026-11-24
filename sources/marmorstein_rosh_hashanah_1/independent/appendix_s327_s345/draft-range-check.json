@@ -1,0 +1,74 @@
+{
+  "status": "DRAFT structural reference tests, not source/encoding/batch acceptance",
+  "sync": {
+    "action": "project_synced",
+    "added": 0,
+    "updated": 174,
+    "removed": 0,
+    "skipped": 534,
+    "files_added": 0,
+    "files_updated": 7,
+    "files_removed": 0
+  },
+  "checks": [
+    {
+      "check": "unrealized canonical part absent",
+      "day": "monday",
+      "part": 23,
+      "passed": true
+    },
+    {
+      "check": "unrealized canonical part absent",
+      "day": "wednesday",
+      "part": 6,
+      "passed": true
+    },
+    {
+      "check": "soleWednesday50mappedtolatermatchingwording",
+      "file": "hymn_of_divine_unity_for_the_fourth_day_paytan.xml",
+      "element_path": "/tei:TEI/tei:text/tei:body/tei:div/tei:lg/tei:l[54]/tei:milestone",
+      "passed": true
+    },
+    {
+      "check": "actualrange53to54preserves53_50_54sourceorder",
+      "markers": [
+        "urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_fourth_day_paytan/53",
+        "urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_fourth_day_paytan/50",
+        "urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_fourth_day_paytan/54"
+      ],
+      "passed": true
+    },
+    {
+      "check": "wholeShabbatrootcompilespoetryandproseparts1through14once",
+      "passed": true,
+      "markers": [
+        "urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_day_of_shabbat_paytan/1",
+        "urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_day_of_shabbat_paytan/2",
+        "urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_day_of_shabbat_paytan/3",
+        "urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_day_of_shabbat_paytan/4",
+        "urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_day_of_shabbat_paytan/5",
+        "urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_day_of_shabbat_paytan/6",
+        "urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_day_of_shabbat_paytan/7",
+        "urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_day_of_shabbat_paytan/8",
+        "urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_day_of_shabbat_paytan/9",
+        "urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_day_of_shabbat_paytan/10",
+        "urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_day_of_shabbat_paytan/11",
+        "urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_day_of_shabbat_paytan/12",
+        "urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_day_of_shabbat_paytan/13",
+        "urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_day_of_shabbat_paytan/14"
+      ]
+    },
+    {
+      "check": "composite_has_one_page18_and_no_duplicate_page_markers",
+      "pages": [
+        "17",
+        "18"
+      ],
+      "passed": true
+    },
+    {
+      "check": "one_contextual_chapter_with_four_quoted_verses",
+      "passed": true
+    }
+  ]
+}
