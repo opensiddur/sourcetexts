@@ -3,11 +3,11 @@
   "sync": {
     "action": "project_synced",
     "added": 0,
-    "updated": 174,
+    "updated": 229,
     "removed": 0,
-    "skipped": 534,
+    "skipped": 535,
     "files_added": 0,
-    "files_updated": 7,
+    "files_updated": 6,
     "files_removed": 0
   },
   "checks": [
@@ -68,6 +68,17 @@
     },
     {
       "check": "one_contextual_chapter_with_four_quoted_verses",
+      "passed": true
+    },
+    {
+      "check": "namedClosingChildHasOneCanonicalHomeAndSourceAnnotationIsNotIndexed",
+      "file": "barukh_attah_yachid_umeyuchad.xml",
+      "passed": true
+    },
+    {
+      "check": "actualChildTransclusionIsOnlySundayClosingAndParent6RetainsFourCouplets",
+      "closing_text": "ברוך אתה יחיד ומיוחד ה׳ אחד ושמו אחד:",
+      "parent_couplets": 4,
       "passed": true
     }
   ]

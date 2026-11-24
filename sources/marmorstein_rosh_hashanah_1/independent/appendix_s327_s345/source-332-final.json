@@ -1,0 +1,27 @@
+{
+  "source_scan": "s332",
+  "approved_source_reading": true,
+  "all_lines_verified": true,
+  "human_application_verified": true,
+  "remaining_reading_disputes": [],
+  "corrections_required": [],
+  "limitations": [
+    "I checked against the rendered images at their fixed resolution (full-332.png plus all 8 detail crops). Several readings in the small-type odd lines are fixed only by the human decisions 619–641. I did not re-judge them from the image.",
+    "I used only the Read tool. I did not dump Unicode codepoints, so mark order and the sin/shin dot code (U+05C2 vs U+05C1) were checked by how the text renders, not byte by byte. I did not recompute input_working_sha256 or output_working_sha256.",
+    "The top of the running head is cut off. It is marked non-printing, and I did not check it further.",
+    "This is a source reading only. It does not approve XML, export, batch or leaf, and no files were edited."
+  ],
+  "notes": [
+    "Human application check: every one of the 23 decisions (619–641, including sub-items a/b/c) is in the snapshot at the stated line and word. Each one appears in that place only. 619 L28 לָךְ (L16 לְךָ is unchanged). 620 L3 לְפָנֶֽיךָ, with נֶעְלָם unmarked. 621 L4 וְסֵֽתֶר. 622 L16 סֵֽתֶר and יָֽחַד. 623 L19 לְהַשְׁמִיעֶֽךָ, וְסֵֽתֶר and לְהוֹדִיעֶֽךָ. 624 L7 יָֽחַד and בְּרֶֽגַע. 625 L8 בְּרֶֽגַע and זַֽעַק. 626 L9 בְּרֶֽגַע, with מַעֲשֵׂיהֶם unmarked. 627 L10 מַחְשְׁבוֹתֶֽיךָ and עֲצָתֶֽךָ, with תַאֲרִיךְ unmarked. 628 L11 גְּזֵרָתֶֽךָ and קְרִיאָתֶֽךָ. 629 L14 בְיָדְךָ (no dagesh), מֵֽעֲשׂוֹת, and לַעֲשׂוֹת unmarked. 630 L18 דְּרָכֶֽיךָ, עֲבָדֶֽיךָ and וּמַלְאָכֶֽיךָ. 631 L21 מִפִּֽינוּ. 632 L24 לְמֵרָחוֹק unmarked. 633 L28 עָלֶֽיךָ, תַּחְתֶּֽיךָ and בֵּינוֹתֶֽיךָ. 634 L5 אֶת and אֲלֵיהֶם. 635 L12 עוֹדֶף, בֶּאֱמֶת unmarked, and וּבְֽיוֹשֶׁר. 636 L22 יֵחָצֶה unmarked. 637 L23 שִׂיחוֹת with the sin dot. 638 L25 תּוֹךְ and וְלֵב. 639 L6 תַּֽעֲשֶׂה. 640 L20 יַעֲלֶה unmarked. 641 L17 מֵעוֹלָם unmarked.",
+    "No human mark was copied to other occurrences: L16 לְךָ, the L2 and L6 instances of לְבַדְּךָ, and other occurrences of the same words all stay as they were.",
+    "The 5 earlier provisional corrections are in place and match the images: L4 חֽוֹשֶׁךְ and שָֽׁמָּה, L8 וְלַֽחַשׁ, L12 חֽוֹסֶר, L20 בְּטֶֽרֶם.",
+    "I compared all 28 lines word by word with full-332.png and the detail crops, in order from L1 מֵרֹאשׁ to L28 בֵּינוֹתֶֽיךָ. The letters, the word order within each line and the line order all match. Mappiq is present in L10 תִתְמַהְמַהּ and L26 גּוֹבַהּ. L22 פוֹצֶה has no dagesh, while the next word פֶּה has one.",
+    "Punctuation: each line has a period after the first half and a colon at the end, in all 28 lines. The inline variant note (נ״א סובל) in L27 is unvocalized, in parentheses, and in its printed position.",
+    "One metadata issue, which does not affect the reading: block 1's uncertainties still contain 'Metegs are not marked (see unresolved)'. That is now out of date because the decided metegs have been applied. It is a note only and changes no source text."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "e04c057b-d597-497b-bf1b-f7a6fc556679"
+  }
+}

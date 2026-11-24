@@ -1,0 +1,39 @@
+{
+  "approved_identity_decision": true,
+  "canonical_urn": "urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_fifth_day_paytan/6/barukh_attah_yachid_umeyuchad",
+  "required_registry_records": [
+    "poem.jsonl: {\"urn\":\"urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_fifth_day_paytan/6/barukh_attah_yachid_umeyuchad\",\"parent\":\"urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_fifth_day_paytan/6\",\"kind\":\"<the same kind vocabulary value poem.jsonl already uses for sub-stanza or verse-group parts>\",\"label_he\":\"בָּרוּךְ אַתָּה יָחִיד וּמְיֻחָד\",\"label_en\":\"Hymn of Divine Unity for the Fifth Day / 6: Barukh attah yachid umeyuchad (closing couplet)\",\"status\":\"canonical\"}",
+    "No sibling records for the other three couplets of /6. The scheme says validation checks that branches used are registered, never that registered branches are used (SIDDUR_URN_SCHEME.md:504-506). Nothing requires a partition.",
+    "No prayer.jsonl record, no new root, no numeric /6/4, no alias or context record. Existing /6 and /7 stay as they are."
+  ],
+  "required_encoding": [
+    "s327 Sunday (s329): close the first_day/61 scope explicitly before the closing line, either by ending the first_day div or with a same-unit bare terminator milestone. Then encode the closing line with corresp set to the canonical child URN. Close that scope explicitly before the heading ליום שני. This is the project's single canonical realization of the child.",
+    "Keep the Sunday source's own unpointed wording: ה׳, the spelling מיוחד and the closing colon. Do not import the pointing or the יְיָ spelling from the printed Thursday text.",
+    "s327 Thursday (s338): keep the /6 milestone and its scope through L17 unchanged, with its actual pointed words. Do not put a corresp for the child URN on L17. Mark the shared couplet with a non-indexing reference instead, for example tei:seg with @source set to the child URN. This follows the rule that a repeated occurrence carries @source rather than a duplicate canonical corresp (SIDDUR_URN_SCHEME.md:657-659).",
+    "1150 hymn_of_divine_unity_for_the_fifth_day_paytan.xml: no change. Under 'Partial witnesses are normal' it can stay a witness that does not realize the child. Its /6 still covers the couplet by containment.",
+    "Expanded output: transclude the Sunday closing by the child URN only, never by /6 or the poem root, and add no rubric or heading.",
+    "Later checks: urn_registry --check and validate_urn_references. Confirm three things: the child resolves to exactly one realization in s327 (Sunday); /6 still resolves to all four couplets in s338 and in 1150; and the @source annotation creates no refdb mapping."
+  ],
+  "reasoning": [
+    "The registry search closes the gap behind the earlier false verdict. It is a structured search of all 11 JSONL files: 37,669 records, a total that matches the per-file counts, each file with its SHA-256 recorded, aliases and unused entries included. It looked for the /6 root and descendants, the Hebrew consonants with and without the vav, and the variant transliterations. Its only hit was the existing fifth_day/6. No exact identity and no child exists to reuse.",
+    "The corpus search of 18,093 XML files finds this couplet only inside Thursday /6. So the text already has an identity root, and reuse under that root is required. Minting a new prayer: root would give one text two URNs, which breaks the registry's purpose: 'one text has exactly one URN' (SIDDUR_URN_SCHEME.md:578-579).",
+    "The Sunday closing has the same words as the last couplet of /6. The only differences are orthography, the form of the divine Name (ה׳ versus יְיָ), the lack of pointing and punctuation. None of these creates a new identity. All of /6 is too broad, because it would bring in three couplets that Sunday does not print.",
+    "SIDDUR_URN_SCHEME.md:536-542 prefers a named subdivision to a numeric one. A number is the edition's own count, so it can change between editions and claims an alignment that does not exist. The couplet has a natural name, its incipit, so the named child is the correct form and the earlier /6/4 recommendation is replaced.",
+    "One canonical realization per project is consistent with the scheme's rule that each distinct text is mapped canonically once, with repeats carrying @source. s327 holds both occurrences. Making Sunday the canonical home and annotating the Thursday occurrence avoids a duplicate corresp mapping while keeping the Thursday words and the /6 scope intact.",
+    "The new witness does not require editing 1150. The registry records known branches and never asserts that every project realizing the parent implements them. The child stays bound by identity to the last couplet of Thursday /6 through its path and its parent record, even though only the new edition realizes it.",
+    "No partition of /6 is needed. Registering one used child is enough, and inventing sibling names would register branches that nothing uses."
+  ],
+  "limitations": [
+    "I did not re-run the registry or corpus searches or recompute the SHA-256 values. I relied on sunday-closing-registry-search.json and the earlier corpus result as recorded. I did check that the per-file counts add up to 37,669.",
+    "The slug barukh_attah_yachid_umeyuchad has not been checked against the JLPTEI-3 transliteration table, specs/naming/spellings.yaml or validate_names. The final slug may need adjusting, for example attah versus atah, or umeyuchad versus umyuchad.",
+    "The kind value is left as a placeholder. Use whatever poem.jsonl already uses for sub-stanza parts.",
+    "The @source pattern for repeats is documented for bible: URNs (SIDDUR_URN_SCHEME.md:657-659). Applying it to a poem: URN is a reasonable extension, but I did not confirm it against JLPTEI-3.md or refdb behaviour. The 'contextual reference' alternative must not be an aliases.jsonl context record, because those exist for place-specific URNs, which this is not.",
+    "I have not verified that refdb and the compiler accept a child URN realized in a project where it is not nested inside its parent's scope. In Sunday it stands alone, outside /6. The scheme's partial-witness rule supports this, but urn_registry --check and validate_urn_references should confirm it.",
+    "I read only SIDDUR_URN_SCHEME.md lines 420-660 and the two JSON files. I made no edits. This approves only the identity decision. It approves no source, encoding, export or batch."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "c8fb30fa-c6e8-42b7-adfd-791b6b0a636e"
+  }
+}

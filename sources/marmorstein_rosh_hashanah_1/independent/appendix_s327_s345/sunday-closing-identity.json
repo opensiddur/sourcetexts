@@ -1,0 +1,39 @@
+{
+  "approved_identity_decision": false,
+  "decision": "Do not mint a standalone prayer:barukh_attah_yachid_umeyuchad, and do not transclude all of fifth_day/6. The Sunday closing line has the same text as the fourth (closing) couplet of the existing canonical unit hymn_of_divine_unity_for_the_fifth_day_paytan/6. The fit is to expose that couplet as a smaller canonical boundary under the existing poem root, recommended URN urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_fifth_day_paytan/6/4, and have the Sunday closing point to it. approved_identity_decision is false for one reason only: I could not confirm that prayer.jsonl and poem.jsonl have no exact identity for this text already. If a registry search finds one, reuse it. If it finds none, this decision stands as given.",
+  "existing_identity_reused_or_new_urn": "Reuses the existing poem root and its stanza /6, and exposes a smaller child boundary under them: urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_fifth_day_paytan/6/4. This adds no new root and no new prayer identity. If the registry search finds an existing exact URN for ברוך אתה יחיד ומיוחד ה׳ אחד ושמו אחד, that URN replaces /6/4 here.",
+  "reasoning": [
+    "The text is the same. Lines 88–89 of the 1150 Thursday XML read בָּרוּךְ אַתָּה יָחִיד וּמְיֻחָד / יְיָ אֶחָד וּשְׁמוֹ אֶחָד. The s329 closing line reads ברוך אתה יחיד ומיוחד ה׳ אחד ושמו אחד:. Every word matches. ה׳ versus יְיָ, missing vowels and the sof pasuq are differences of writing and edition, and under SIDDUR_URN_SCHEME those never justify a new identity (the same principle as B4).",
+    "An existing identity already covers this text. The search of 18,093 XMLs, allowing both מיחד and מיוחד, found exactly one occurrence, and it is inside fifth_day/6. So the text already sits under a canonical identity. The user's rule (reuse where it fits; mint only if nothing covers the text) rules out a new standalone prayer identity, and the only reason for one here would be the Sunday placement.",
+    "/6 itself does not fit. In the Thursday XML, /6 holds four couplets: זולתך/בלתך, והלאה/נראה, אל/ישראל and מיוחד/אחד. Atlas B8 agrees for this witness (/6 = s338 L14–17, with L17 the ברוך line). Transcluding /6 after Sunday would add three couplets that this source does not print there.",
+    "The closing couplet is a real textual unit of the Thursday poem, not an add-on. It keeps the poem's paired rhyme (‑חד) and ends stanza 6 in both witnesses. A couplet boundary under /6 can be defined without reference to any edition, and it covers exactly the Sunday text. That makes it the smallest existing-root boundary that fits, which is the third option.",
+    "This is not an identity created for a placement. The boundary would be justified by Thursday alone: it marks a couplet of the existing poem. Sunday only reuses it, and the Thursday witness carries it as well.",
+    "This is consistent with B1 and B17. The closing stays outside first_day/61 and gets no first_day part. The scope of /61 has to be closed explicitly before the closing line."
+  ],
+  "required_registry_records": [
+    "Precondition, not a record: search prayer.jsonl and poem.jsonl (and any other registry kinds) for an exact or variant-equivalent identity of ברוך אתה יחיד ומיוחד / ה׳ אחד ושמו אחד, and for any existing sub-stanza children of fifth_day/6. If one exists, reuse it and register nothing below.",
+    "{\"urn\": \"urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_fifth_day_paytan/6/4\", \"status\": \"canonical\", \"label_he\": \"בָּרוּךְ אַתָּה יָחִיד וּמְיֻחָד\", \"label_en\": \"Hymn of Divine Unity for the Fifth Day — stanza 6, couplet 4\", \"parent\": \"urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_fifth_day_paytan/6\"}",
+    "Only if SIDDUR_URN_SCHEME requires a stanza's children to partition the whole stanza (as with the full stanza sets for anna_bekhoach and lekhah_dodi): also register sibling records /6/1, /6/2 and /6/3, each with parent /6, for the couplets beginning וְלֹא נוֹדַע, וְלֹא נִשְׁמַע and וְגַם אַחֲרֶיךָ. If the scheme allows a single child, register /6/4 alone.",
+    "No prayer.jsonl record. No new root. No change to existing /6 or /7."
+  ],
+  "required_encoding": [
+    "1150 Thursday XML (hymn_of_divine_unity_for_the_fifth_day_paytan.xml): put a nested milestone with corresp .../fifth_day_paytan/6/4 inside the /6 lg, immediately before the tei:l at line 88 (בָּרוּךְ אַתָּה יָחִיד וּמְיֻחָד). Its scope runs through line 89 and ends at the /7 milestone. /6 still contains it. Add /6/1–/6/3 milestones only if the partition rule applies.",
+    "s327 project, Thursday (s338): put the /6/4 milestone before L17 inside /6. The /7 milestone at L18 ends both /6/4 and /6. Do not repeat it per line or per page.",
+    "s327 project, Sunday (s329): close first_day/61 explicitly before the closing line, either by ending the first_day root div or with a bare terminator (B17). Then encode the closing line as its own block whose corresp is .../fifth_day_paytan/6/4, and close that scope explicitly before the heading ליום שני. Keep the source's unpointed wording, including ה׳ and the colon. Never substitute the pointed 1150 text.",
+    "Expanded output: transclude the Sunday closing by the edition-independent URN .../fifth_day_paytan/6/4, never by /6 or the poem root. Add no rubric or heading.",
+    "Generated-URN checks to run later: urn_registry --check and validate_urn_references. Confirm that /6/4 resolves to exactly one couplet in each witness, and that /6 still resolves to all four Thursday couplets."
+  ],
+  "limitations": [
+    "I could not search prayer.jsonl. At 6.4 MB it is over the read limit, and I had no grep tool. I read only the first 40 lines of poem.jsonl. So I could not confirm that no exact identity, and no child of fifth_day/6, is already registered. This is the only reason approved_identity_decision is false. The corpus search covers XML usage, not entries that are registered but unused.",
+    "I did not read SIDDUR_URN_SCHEME.md or JLPTEI-3.md for this decision. The child form /6/4 (a third-level numeric couplet), the milestone @unit value and whether children must partition the stanza are recommendations that need to be checked against the scheme.",
+    "For the Thursday s338 extents I relied on atlas B8 (/6 = L14–17, L17 = the ברוך line). The s338 entries fall beyond the part of working-pages.json I read (lines 1–308).",
+    "The corpus needle covered only the first hemistich. I checked the second hemistich (יְיָ אֶחָד וּשְׁמוֹ אֶחָד) only in the 1150 Thursday XML.",
+    "Whether the Sunday closing is historically a borrowing of the Thursday couplet or an independent doxology with the same words does not change the decision under the textual-identity rule. I did not research it.",
+    "I made no edits. This does not accept the source, the encoding, the export or any batch."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "e8c546da-13bd-44d9-bcf4-4258a2f4734d"
+  }
+}
