@@ -1,0 +1,40 @@
+{
+  "source_scan": "s335",
+  "approved_source_reading": true,
+  "all_lines_verified": true,
+  "human_application_verified": true,
+  "remaining_reading_disputes": [],
+  "corrections_required": [],
+  "stale_notes_to_remove": [
+    {
+      "location": "blocks[0] (running_head).uncertainties[0]",
+      "text": "Top cut off; page number 9 is visible at top left",
+      "reason": "full-335.png shows the whole running head 'שיר היחוד ליום רביעי' with the page number 9 at top left; nothing is cut off. If you want to keep the page-number location, reword it as 'Page number 9 at top left'; otherwise remove the note."
+    },
+    {
+      "location": "blocks[1] (prayer).uncertainties[2]",
+      "text": "Metegs are not marked",
+      "reason": "This stopped being true once your resolutions were applied. The snapshot now marks metegs in יְפִירֶֽנָּה, יְשִׁיבֶֽנָּה, כְּנֶֽשֶׁר (lines 5 and 22), כַּנָּֽחַל, כְּנָֽחַל, כְּתַפּֽוּחַ (lines 10 and 11), הַיָּֽעַר, שָֽׁעַר, אֲמִירֶֽנּוּ, הֶאֱמַרְנֽוּהוּ, וְהֶאֱמִירָֽנוּ, וָשַֽׁיִת, זַֽיִת and וְשַֽׁיִת."
+    }
+  ],
+  "limitations": [
+    "I verified visually against full-335.png and the 8 detail images, and read the snapshot text with the file reader. I had no shell, so I could not compute output_working_sha256 (a74504ed…) or list combining-mark codepoints and their order. I checked marks only from the text as read.",
+    "Where you adjudicated a point (metegs, dageshes, small-type vowels), I checked that your reading was applied as written. I did not re-judge it from the images.",
+    "I did not re-judge the earlier applied changes outside 679–699 (יוֹעַץ line 2, יוּכָל line 16, לַדְּבֵקִים line 21). They are in the snapshot and match what the earlier application review found. My earlier review noted that the dagesh in the ד of לַדְּבֵקִים was only probable, but it was never an open dispute."
+  ],
+  "notes": [
+    "Line count, line order and half-line order all match: 28 lines, right half before left in each line, nothing missing, duplicated or reordered. The page ends in blank space.",
+    "Every resolution is applied exactly as given: 679 יְדִידוּת (L1). 680a/b יְפִירֶֽנָּה and יְשִׁיבֶֽנָּה, with 680c וְיַחְתּוֹף unchanged (no meteg, no dagesh in the yod) (L2). 681 וְיֶחֱזוּ unchanged (L3). 682a/b יֵצֵא and לַעֲשׂוֹת unchanged (L4). 683a וְיִשֵׁר with tsere and no dagesh in the shin, and 683b כְּנֶֽשֶׁר (L5). 684 כַּנָּֽחַל (L6). 685 unchanged (L7). 686a וְכַאֲרִי unchanged and 686b כְּנָֽחַל (L8). 687 unchanged (L9). 688a כְּתַפּֽוּחַ, with 688b/c unchanged (L10). 689 כְּתַפּֽוּחַ, בַּעֲצֵי, הַיָּֽעַר, כֵּן, שָֽׁעַר (L11). 690 unchanged (L13). 691a אֲמִירֶֽנּוּ, 691b וְהֶאֱמִירָֽנוּ, and 691c הֶאֱמַרְנֽוּהוּ with the meteg on the NUN and none on the HE (L14). 692 unchanged (L16). 693 וְכַכְּפִיר (L18). 694 וָשַֽׁיִת and זַֽיִת (L19). 695a וְשַֽׁיִת, with 695b unchanged (L20). 696a כְּנֶֽשֶׁר, with 696b/c unchanged (L22). 697 unchanged (L23). 698 וִינַשְּׂאֵם: hiriq under the VAV, patah under the NUN after the YOD, SIN dot plus dagesh, and sheva on the ש (L26). 699 לְךָ with KAF SOFIT (L27).",
+    "No resolution was carried over to a different occurrence of the same word. Line 15 keeps וְכִכְפִיר while line 18 has וְכַכְּפִיר. Line 19 keeps וָשַֽׁיִת while line 20 has וְשַֽׁיִת. Line 20 כְּצִפֳּרִים and line 23 כְּצִפֳּרִים both stay without a meteg. Line 6 כַּנָּֽחַל and line 8 כְּנָֽחַל stay distinct. Line 4 לַעֲשׂוֹת and line 7 לַעֲשׂוֹת both stay without a meteg.",
+    "All other words are unchanged, including the inline (יְיָ) on line 24 and lines 12, 17, 21, 24, 25 and 28.",
+    "The parentheses match the print. Lines 3, 5–7, 9–21, 24 and 28 open with '(' and close with ':)'. Lines 1, 2, 4, 8, 23, 25, 26 and 27 have no parentheses. Line 22 has a closing ':)' but no opening parenthesis. That is how the page is printed, not a doubtful reading, and how it gets encoded is a separate decision outside this source closure. The note on line 22 points to 'source_typos', which isn't in this snapshot; check that it exists wherever the encoding is decided.",
+    "The stray dot after 'יָגֵן.' on line 23 and the speck above 'יָגֵן' on line 20 are print noise. The snapshot correctly leaves them out.",
+    "The open disputes in source-335-application-review.json and source-335-closure.json are all settled by 679–699. The לָהּ/לְהּ corrections and disputes in those two files came from my wrong provisional advice and are replaced by your לְךָ.",
+    "This approves only the source reading of s335. It does not approve the XML, the export, the leaf or the batch. I made no edits."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "0218bd87-d4c0-4e47-8f40-147554cca918"
+  }
+}
