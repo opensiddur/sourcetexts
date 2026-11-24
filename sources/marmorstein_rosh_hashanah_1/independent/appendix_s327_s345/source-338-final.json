@@ -1,0 +1,92 @@
+{
+  "source_scan": "s338",
+  "approved_source_reading": true,
+  "all_lines_verified": true,
+  "human_application_verified": true,
+  "remaining_reading_disputes": [],
+  "corrections_required": [],
+  "stale_notes_to_remove": [
+    {
+      "file": "source-338-working-snapshot.json",
+      "field": "blocks[0].uncertainties[0]",
+      "text": "Line 7, נְבִינוֹתָ: yod vs holam-vav",
+      "reason": "Resolved and confirmed: there is a yod after the bet. The text already reads נְבִינוֹתָ."
+    },
+    {
+      "file": "source-338-working-snapshot.json",
+      "field": "blocks[0].uncertainties[1]",
+      "text": "Line 10, שֶׁאַתָּה: possible qamatz",
+      "reason": "Stale. Human decision 741 settled it as qamatz, and the text already reads שָׁאַתָּה. The note also cites the old reading שֶׁאַתָּה."
+    },
+    {
+      "file": "source-338-working-snapshot.json",
+      "field": "blocks[0].uncertainties[2]",
+      "text": "Line 11, לָחַֽצְתָּ: qamatz or sheva under the lamed",
+      "reason": "Stale. Human decision 742 set the exact form לֻחַֽצְתָּ (qubuts under the lamed, meteg under the het), and the text already has it."
+    },
+    {
+      "file": "source-338-working-snapshot.json",
+      "field": "blocks[0].uncertainties[3]",
+      "text": "Line 28, כִּקְדֻשָּׁתֶֽיךָ yod",
+      "reason": "Resolved: the yod is printed and stays as a source reading. Any normalization is an editorial matter, not a reading uncertainty."
+    },
+    {
+      "file": "source-338-working-snapshot.json",
+      "field": "blocks[0].uncertainties[4]",
+      "text": "Line 22, פֶּֽלֶא: possible dagesh in the pe",
+      "reason": "Human decision 749 resolved it as YES."
+    },
+    {
+      "file": "source-338-working-snapshot.json",
+      "field": "blocks[0].uncertainties[5]",
+      "text": "Lines 10 and 13, כֹּל: holam probable",
+      "reason": "Resolved: the holam is confirmed (decisions 741 and 744 cover these lines)."
+    },
+    {
+      "file": "source-338-working-snapshot.json",
+      "field": "blocks[0].uncertainties[6]",
+      "text": "The parenthetical (נ״א מלאכתך) is printed unpointed in smaller type",
+      "reason": "Human decision 746 confirmed נ״א. This is a layout description, not an open uncertainty. Move it to a layout note or remove it."
+    },
+    {
+      "file": "source-338-working-snapshot.json",
+      "field": "blocks[0].uncertainties[7]",
+      "text": "I didn't individually confirm the metegs on this page.",
+      "reason": "Stale. The disputed metegs were human-resolved in 735–750, and the rest were confirmed in the earlier closure pass."
+    },
+    {
+      "file": "source-338-working-snapshot.json",
+      "field": "completeness_notes[1]",
+      "text": "The page number is cropped. It must be 12 from the sequence.",
+      "reason": "Wrong. full-338.png clearly shows the page number 12 at the top left."
+    },
+    {
+      "file": "source-338-closure.json",
+      "field": "remaining_reading_disputes / corrections_required / approved_source_reading:false / all_lines_verified:false",
+      "reason": "This whole earlier closure state is superseded. Every listed dispute and correction is resolved by human decisions 735–750 and already applied in the working snapshot."
+    },
+    {
+      "file": "human-735-750-resolution.json",
+      "field": "status",
+      "text": "final independent source338 closure pending",
+      "reason": "Becomes stale once this closure is accepted."
+    }
+  ],
+  "limitations": [
+    "I checked the scan visually from full-338.png and the eight detail crops only. For marks no one disputed, point-level features (metegs, dageshes, the small yod in ־ֶיךָ) are confirmed only as far as these crops allow. I found nothing that contradicts the snapshot.",
+    "Line 4 תָעִיד: at crop resolution I can't fully rule out a dot in the tav, but I see no positive evidence for one. I left the snapshot reading unchanged and did not raise a dispute.",
+    "I did not recompute the working-file sha256. I didn't check whether the snapshot I read matches output_working_sha256 f87921db… in the resolution file."
+  ],
+  "notes": [
+    "Page and structure: running head שיר היחוד ליום חמישי, page number 12, 28 lines alternating small and large type, no footnote. Every line has '.' at the half-line break and ':' at the end. On line 19 the parenthetical (נ״א מלאכתך) comes before the final ':'. Word order matches the scan on all 28 lines.",
+    "Human application checked in the snapshot text. 735: line 5 has אֱלֹהֵֽינוּ (he+meteg), עַד, and וַאֲנַֽחְנוּ. 736: line 6 has exactly הִקְדִּימָךְ and וּבִמְלַאכְתֶּֽךָ. 737: line 7 has נוֹעַֽצְתָּ and לֻמַּֽדְתָּ. 738: line 7 has בְּחַדֶּשְׁךָ (bet, dageshed dalet). 739: the yod is removed only on line 8 (מַחְשְׁבוֹתֶֽךָ); line 26 is unchanged (מַחְשְׁבוֹתֶֽיךָ). 740: line 9 has הִכַּֽרְנוּ and יָדַֽעְנוּ. 741: line 10 has שָׁאַתָּה, יָצַֽרְתָּ, נִגְרַֽעְתָּ. 742: line 11 has לֻחַֽצְתָּ and נִצְרַֽכְתָּ. 743: line 12 has הָיִֽיתָ and נִצְרַֽכְתָּ. 744: line 13 has בָּרָֽאתָ. 745: line 14 has כָּמֽוֹךָ. 746: line 19 has נ״א. 747: line 20 has בַכֹּל (no dagesh) and נַעֲלֵֽיתָ (tsere+meteg). 748: line 21 has כָּמֽוֹךָ. 749: line 22 has פֶּֽלֶא. 750: line 23 has כָמֽוֹךָ.",
+    "Bounded application: no human decision spread beyond its scoped line. Line 11 מְלַאכְתְּךָ keeps its sheva and was not changed by 736. Line 26 keeps its yod. Line 22 עוֹשֵׂה (tsere) and line 23 עוֹשֶׂה (segol) both stay as printed.",
+    "These printed anomalies stay as source readings. Possible editorial proposals belong elsewhere and are not corrections here: line 10 שָׁאַתָּה (vs. the expected שֶׁאַתָּה, which 741 says is under separate editorial review); line 28 כִּקְדֻשָּׁתֶֽיךָ (has a yod where the parallel ־ֶךָ endings don't); the line 8 / line 26 ending mismatch (מַחְשְׁבוֹתֶֽךָ vs. מַחְשְׁבוֹתֶֽיךָ); the line 22 / line 23 mismatch (עוֹשֵׂה vs. עוֹשֶׂה).",
+    "Scope: I made no edits, and I am not approving any XML, export, batch or leaf."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "4b61cacb-7f17-4702-a1c9-2fa51450ef24"
+  }
+}
