@@ -1,0 +1,30 @@
+{
+  "approved_draft_closing_encoding": true,
+  "findings": [
+    "Sunday realization: barukh_attah_yachid_umeyuchad.xml:38 has one tei:div whose corresp is exactly urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_fifth_day_paytan/6/barukh_attah_yachid_umeyuchad. It wraps one tei:p (line 39) with the source's unpointed wording: 'ברוך אתה יחיד ומיוחד ה׳ אחד ושמו אחד:'. It keeps ה׳, the spelling מיוחד and the final colon. There is no pointing, no יְיָ and no j:divineName imported from Thursday. No rubric or heading is added.",
+    "Scope outside Sunday /61: hymn_of_divine_unity_for_the_first_day_paytan.xml:99 ends /61 with a bare same-unit terminator <tei:milestone unit=\"stanza\"/> before </tei:l>, and the closing is in a separate file. So the child is not inside first_day/61 or the Sunday poem root. The child's facs (n328) matches the Sunday pb n=3 (n328) and biblScope pages 3–3.",
+    "Thursday occurrence: hymn_of_divine_unity_for_the_fifth_day_paytan.xml:65 marks the couplet only with tei:seg @source set to the child URN. It has no corresp, so there is no second canonical mapping. The pointed wording and <j:divineName>יְיָ</j:divineName> are unchanged.",
+    "/6 still has four couplets: the /6 milestone is at line 62 and the next milestone (/7) is at line 66. That leaves lines 62–65, four tei:l. This matches draft-range-check.json parent_couplets: 4.",
+    "Compiled child: draft-range-check.json check 'actualChildTransclusionIsOnlySundayClosingAndParent6RetainsFourCouplets' passed, with closing_text exactly equal to the Sunday line. Check 'namedClosingChildHasOneCanonicalHomeAndSourceAnnotationIsNotIndexed' also passed.",
+    "Reference checks: draft-range-check.json has 9 checks, all passed: true. Two of them cover the child; the other seven are about unrelated Monday, Wednesday and Shabbat items.",
+    "Schema: draft-schema-report.json has 12 stems, all schema_valid: true with empty errors. barukh_attah_yachid_umeyuchad is one of them.",
+    "Naming: draft-naming-check.log reports '0 naming error(s)'.",
+    "Registry: candidate-registry-check.log reports '37700 record(s): 36054 canonical, 9 alias, 1637 context. 0 error(s), 0 warning(s), 0 note(s).' That is 31 more than the identity follow-up's baseline of 37,669, which fits 1 canonical child plus 30 contexts.",
+    "Candidate record: candidate-canonical-child-record.json has the approved URN, the parent /6, status canonical, and the Hebrew and English labels. It adds no prayer: root, no numeric /6/4 and no alias. However, it has no 'kind' field, which the identity follow-up required to come from poem.jsonl's existing sub-stanza vocabulary. The registry check reports no error about this.",
+    "Cosmetic only: there is a trailing space inside the child's tei:p (line 39) and after the seg (line 65). It does not affect identity or scope."
+  ],
+  "limitations": [
+    "Six evidence files are in /tmp/mahzor-s327/, not the project directory named in the request. I reviewed those copies.",
+    "I did not re-run urn_registry --check, validate_urn_references, validate_names, the schema validation or the compiler. I relied on the logs and reports as written.",
+    "The registry log gives only totals and no diff. I cannot confirm from it which 31 records were added, that exactly one of them is the named child, or that none of the 30 contexts belongs to the child. The identity follow-up forbade a context record for it. I also cannot confirm from it that no prayer: root was added.",
+    "I did not find where the hymns or the child are transcluded in index.xml. I read lines 1–463 and 1250–1385 and could not search the rest. Placement in the expanded output rests only on the range-check result.",
+    "The naming log does not list which slugs it checked. Whether the slug's spelling (attah/atah, umeyuchad/umyuchad) matches the transliteration table is accepted only through the overall 0-error result.",
+    "The Thursday file still has 'Source reading remains unaccepted'. Source readings elsewhere were not reviewed.",
+    "This approves the draft closing encoding only. It does not approve sources, export or the batch."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "8decff8a-8f60-45f8-8b2e-4c4bf00a0f9e"
+  }
+}
