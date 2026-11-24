@@ -1,0 +1,29 @@
+{
+  "approved_draft_scope_termination_encoding": true,
+  "approved_draft_note_page_encoding": true,
+  "required_changes": [],
+  "limitations": [
+    "I only read files. I did not re-run the builder, schema validation, the reference-DB sync or either compile script. Schema validity and the runtime results are taken from draft-schema-report.json, draft-terminal-range-check.json, draft-range-check.json, draft-philosophy-note-pages-runtime-check.json and draft-philosophy-note-pages-compiled.xml, checked against the builder and checker code.",
+    "I looked directly at the actual XML only for Thursday, Wednesday (fourth_day) and Shabbat scripture. For the other moved markers (Sunday, Monday x2, Tuesday x2, Friday, Shabbat poetry, Anim Zemirot) I relied on draft-termination-marker-check.json, the builder's per-marker asserts and the terminal-range checks.",
+    "The terminal-range checks only test a range that starts and ends on the affected unit (plus Shabbat /1-9 and /10-14 through the composite). Multi-stanza ranges ending at a moved terminator from an earlier start (for example Wednesday /30-/32 or Thursday /1-/17) were not compiled. They should behave the same way, but that is not shown.",
+    "I did not open the raw atlas or the page images. The 340/341 readings, the exact join point and keeping the raw asterisk are taken as already approved, as you stated. The builder only reads working-encoding-atlas.json and never writes it, which fits the raw '*'/'*)' staying in source.",
+    "This is a draft-encoding review only. It is not full-source, export or batch acceptance."
+  ],
+  "notes": [
+    "Termination, Thursday: the empty <milestone unit='stanza'/> now sits directly inside lg, after the 5th couplet of /17 ('וְאַתָּה תַעֲמוֹד ... לְעוֹלָם:'). The 5 l elements from the /17 marker to the terminator match the 5 compiled couplets in the runtime output. Logical scope is unchanged: the terminator was the last child of that l, so moving it one level up to the next position changes no text order.",
+    "Termination, Wednesday: the terminator for /32 now sits after the /32 l and before the unnumbered addition l ('כְּדוֹב שַׁכּוּל ... שַׁחַל'). The one for /49 sits after the /49 l and before the seg@source=/50 addition l. In both places the skipped additions stay outside the stanza scope, exactly as before the move. The /103 terminator is at the end of the lg. I see no boundary shift.",
+    "Termination, Shabbat scripture: here the holder is one p carrying stanza starts /10 to /14 inline, so the terminator now follows the whole p. The old terminator was already the p's last child, so /14 still ends at the same printed point. The compile test for /14 checks one p and words for part 14 only, so the compiler trims correctly from the /14 start marker.",
+    "Builder guards (lines 112-119) look sound. The holder must be an l or p. The marker must be the holder's last child with no non-whitespace tail. It is reinserted right after its holder, so it can never jump past unrelated content. printed_text is compared before and after for every unit. lxml moves an element's tail with it, but any such tail is whitespace only and covered by the printed_text check. Only unattributed stanza milestones are moved. No corresp/canonical URN is created or changed, and markers carrying corresp are untouched.",
+    "Possible unintended effect, low risk: terminators now sit at lg/div level while start markers sit inside l/p. Any downstream tool that assumes start and end milestones share a parent could behave differently. The real compiler handles this according to the 13 checks.",
+    "Note pages: the Thursday standOff note has one p with exactly two pb children and nothing else. pb ed=1965 n=14 facs n339.jpg sits at the start of the p, and pb n=15 facs n340.jpg sits between 'מסוג והבדל ' (the trailing space stays in the 340 text) and 'כאמרנו האדם הוא חי מדבר'. That matches the exact_join snippets.",
+    "Page mapping is consistent with the body: the body has pb n=13→n338 and n=14→n339, and the builder uses page_image_url(scan-1), so s340→n339 (page 14) and s341→n340 (page 15). biblScope was widened to pages 11 to 15 and the English encoding note describes the continuation.",
+    "The builder asserts that note_p had no children before the pbs were inserted and that itertext() afterwards equals the old text, which was first_note (with the leading '*)' stripped) + ' ' + continuation. So no children are lost and no word changes. The compiled body text contains no '*' (assert, and visible at XML line 116).",
+    "Placement: there is one anchor (xml:id shir_hayichud_thursday_philosophy) on /17 and one commentary note targeting it. In the compiled output the note is inlined inside the first /17 l, and both pbs are descendants of that note only. No pb appears in the prayer stream, all 5 couplets are kept, and the snippets file reports no duplicate commentary in Friday.",
+    "Downstream caution: the note's pb n=14 repeats the body's page 14 marker, and its pb n=15 appears inside a page-14 poem context while page 15's body content is in the Friday file. Any page-sequence or index consumer that collects every pb[@ed='1965'] in document order needs to skip pbs inside a note. This is valid TEI and was approved as note-scoped documentary pagination, so it is not a required change."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "b5d86b1d-cd85-4c03-9fc6-4ee671b7dc04"
+  }
+}
