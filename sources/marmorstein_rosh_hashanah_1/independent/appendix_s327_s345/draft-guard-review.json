@@ -1,0 +1,33 @@
+{
+  "approved_guard_changes": true,
+  "findings": [
+    {
+      "severity": "low",
+      "file": "metadata-hygiene-proof.json:2; README.md:13",
+      "issue": "Both files say no source words changed (\"all_source_block_texts_unchanged\": true; README: \"changed no source words\"). The current working atlas and the approved snapshot no longer agree on that. Two other_source_blocks texts differ. The s340 footnote reads ז״ח in the snapshot (line 6013) and ז״ל in the working atlas (line 6030); this is human item 529, which README:7 records. The s330 variant_note reads (כ״א ועומק) in the snapshot (line 5929) and (נ״א ועומק) in the working atlas (line 5931). Both atlases still have the status \"human490–509 applied\". The topology guard compares line counts only, not text, so it correctly lets these through. The builder comment at line 15 (\"never words\") is accurate, because approved_other changes only work/work_role. The problem is that the proof and the README make a claim that is no longer true of the current working atlas.",
+      "required_change": "Limit the claim to the moment the snapshot was taken, or list the later source-word edits (529 and the s330 variant-note reading) as separate from the metadata refactor. Update the working atlas status string. This does not block guard approval, since source words are out of scope."
+    }
+  ],
+  "closed_findings": {
+    "anim_incipit_guard": "Closed. build-draft-appendix-modules.py:89-92 asserts 31 Anim lines and 31 Birnbaum ids. It then requires the whole list of (positional urn, two-word consonant incipit) pairs to equal anim-reviewed-incipit-map.json exactly, so order, URN and incipit are all locked and the list lengths must match. I recomputed all 31 incipits by hand from the working atlas s344/s345 text (finals fall inside א-ת; metegs and vowels are stripped). All 31 match the map.",
+    "day_key_equality": "Closed. Line 12 checks set(atlas['works'])==set(approved['works']). Line 31 checks each day's part count. Lines 33-34 check the boundary fields and the (scan, physical_line) fragment positions.",
+    "other_block_topology_guard": "Closed. Line 28 compares kind, work, work_role, scan and line count for every other_source_block, in order. I walked all 20 snapshot blocks through approved_other. The hyphen-to-underscore normalization handles the shir-hayihud-* keys. The *_footnote keys map to roots['thursday'] with work_role source_note. The closing_line maps to work None. shabbat maps to its root. shir_hakavod maps to anim_zemirot for the heading, the instruction and the 10-line and 21-line prayers, and the 4-line prayer maps to psalms/24 with work_role ark_opening_preparation. Every result matches the working atlas (lines 5896-6119). kind, scan and line count pass through unchanged.",
+    "exact_post_fix_counts": "Closed. Line 106 asserts exactly one sourceDesc encoding note per targeted stem, now selected by stem rather than by text prefix. Line 109 asserts exactly one biblScope[@unit='pages'][@from='11'][@to='14'] before setting to=15.",
+    "scope_unit": "Closed. The composite biblScope at line 125 now uses unit='pages'.",
+    "readme_pattern_rationale": "Closed in README.md:15, already present. Single-verse Shabbat quotations keep bounded chapter/verse milestones inside the seg. The adjacent Ps 24:7–10 spans four paragraphs, so its one contextual chapter sits outside the segs and closes after verse 10. The atlas scope_action for Shabbat /10–/14 agrees."
+  },
+  "remaining_limitations": [
+    "approved_other is a hand-written transform built for this snapshot. The Ps 24 block is picked out by kind=prayer plus 4 lines. That is a deterministic function of the frozen approved data, so it is acceptable, but it is a recorded refactor mapping, not a general normalizer.",
+    "The 'roots' maps of the two atlases are not compared. I checked by eye that they are identical (lines 3-11 in both files).",
+    "Line 94 still pairs stanzas with ids using zip(anim, ids). The line 92 guard makes this equivalent to the map. Taking the URNs from the map would be clearer.",
+    "The Ps 24 post-fixes are not count-asserted beyond len(ps)==4 (lines 112-117): how many chapter milestones are removed, and how many seg[@source] get type=quotation. A silent change there would currently be caught only by the schema or range checks.",
+    "The incipit map's URN↔stanza pairing rests on the earlier independent hand verification. The guard freezes that pairing; it does not prove it again.",
+    "I used only a file-read tool. I did not run the builder, the schema, the range check or a SHA-256 recomputation. I took '12 schema passes' from your statement. I compared topology by hand across all 20 other_source_blocks. I did not walk the works fragments for every day in this pass.",
+    "Source words are still under review and were not assessed. No files were edited, and nothing was approved for source, export or batch."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "ad31d053-e836-4ab3-b7ad-5665ab748f51"
+  }
+}

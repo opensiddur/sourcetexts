@@ -1,0 +1,39 @@
+{
+  "source_scan": "s330",
+  "approved_source_reading": true,
+  "all_lines_verified": true,
+  "human_application_verified": true,
+  "remaining_reading_disputes": [],
+  "corrections_required": [
+    {
+      "before": "page330 block0 (prayer) uncertainty: \"L26: the small parenthetical variant note stays inline where it is printed. Its letters are unresolved.\"",
+      "after": "Remove the clause \"Its letters are unresolved\" (keep the note that it stays inline).",
+      "context": "Metadata only, not a reading change",
+      "evidence": "This is still in the working file. Human item 576 settled the letters as נ״א, so the clause is out of date. The previous review flagged it and it has not been fixed."
+    },
+    {
+      "before": "page330 block1 (variant_note, nonprinting) uncertainty: \"Repeated here for indexing; it is printed inline in L26 after וְאוֹרֶךְ. ועומק or ועוסק? כ״א or נ״א?\"",
+      "after": "Remove the ועומק/ועוסק and כ״א/נ״א questions. Optionally change the anchor word to the current reading וְאֽוֹרֶךְ (588).",
+      "context": "Metadata only, not a reading change",
+      "evidence": "This is still in the working file. 576 settled the siglum as נ״א. The text field already reads (נ״א ועומק), which matches the L26 body. The anchor word predates the 588 meteg."
+    }
+  ],
+  "limitations": [
+    "Only the supplied PNGs were used: full-330.png and all 8 detail crops. They are moderate resolution with JPEG-style blur. The 583–598 metegs and the 596 negative were confirmed from the human's enlarged-source decisions. At this resolution the images do not contradict any of them, but they could not have settled the small-type marks on their own.",
+    "At this resolution the L26 siglum still looks like 'כ״ח'. Human decision 576 (נ״א) is authoritative and was not reopened."
+  ],
+  "notes": [
+    "All 33 changes in human-583-598-resolution.json are in page330 at their exact bounded spots: 583 L8 וְלָֽמָּה and הֵֽמָּה; 584 L14 בְּפִֽינוּ, תְּהִלָּתֶֽךָ and תִּפְאַרְתֶּֽךָ (this settles both earlier L14 corrections); 585 L20 כֻלָּֽנוּ and וּבִלְבָבֵֽנוּ; 586 L20 אֱלֹהֵֽינוּ; 587 L18 אֲנַֽחְנוּ; 588 L26 וְאֽוֹרֶךְ (meteg on the alef); 589 L3 two words; 590 L5 three words; 591 L13 לָֽנוּ, נִמְצֵֽאתָ and דוֹרְשֶֽׁיךָ; 592 L15 three words; 593 L19 two words; 594 L21 יִחוּדֶֽךָ and וַעֲבָדֶֽיךָ; 595 L27 two words; 596 L7 בָּהֶם with no meteg; 597 L11 עָשָֽׂנוּ and אֲנַֽחְנוּ; 598 L9 יוֹעִֽילוּ.",
+    "Nothing was carried to other occurrences: L11 אֱלֹהֵינוּ, L21 אֱלֹהֵינוּ and L21 אֲנַחְנוּ are unchanged. 587 and 597 each apply only to their own אנחנו (L18 and L11).",
+    "Human items 573–582 are still in place and were not reopened.",
+    "All 28 source lines were checked against full-330 and the 8 detail crops for consonants, line order, periods and colons: no discrepancies. The L27 parentheses are present on both sides. The L26 inline variant note is in its printed position.",
+    "The running head 'שיר היחוד ליום שני' matches. The margin '4' is correctly left out.",
+    "Source-reading approval is TRUE: no reading disputes remain. The two items under corrections_required are stale nonprinting metadata only and do not affect the reading. They should be cleaned up before any later gate.",
+    "No files were edited. No XML, export, batch or leaf approval is given."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "41261af0-9416-4690-b290-330a77d1a108"
+  }
+}
