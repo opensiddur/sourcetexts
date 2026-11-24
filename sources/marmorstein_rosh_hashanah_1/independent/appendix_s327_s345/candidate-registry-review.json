@@ -1,0 +1,73 @@
+{
+  "approved_draft_context_registry": true,
+  "findings": [
+    {
+      "severity": "info",
+      "topic": "record count and hierarchy",
+      "evidence": "candidate-context-records.json has exactly 30 new_context_records, all with status \"context\". Their URNs are distinct. All 16 directly_required URNs are among them. The other 14 are required ancestors: 10 for the poem (a /quotation node and a book node for each of stanzas /10–/14) and 4 for the siddur path (opening_psalm/quotation, opening_psalm/quotation/psalms, shir_hakavod, hosafot). 16 + 10 + 4 = 30. Each parent field points to the next segment up. The chains run verse → chapter → book → quotation → existing stanza /10–/14, and verse → chapter 24 → psalms → quotation → opening_psalm → shir_hakavod → hosafot → siddur:rosh_hashanah. No verse/chapter path is inverted.",
+      "status": "ok"
+    },
+    {
+      "severity": "info",
+      "topic": "every emitted corresp is covered",
+      "evidence": "hymn_of_divine_unity_for_the_day_of_shabbat_paytan_scripture.xml:38 emits 10 new context corresps, one chapter and one verse for each of /10–/14. The stanza corresps /10–/14 are existing identities. shir_hakavod_opening_psalm.xml emits 6: the div at line 37, the chapter at line 40, and verses at lines 41, 46, 51 and 56. These 16 match directly_required exactly. No extra records are emitted and none are missing.",
+      "status": "ok"
+    },
+    {
+      "severity": "info",
+      "topic": "canonical Bible references and source prose extent",
+      "evidence": "Each quotation seg has type=\"quotation\" and a canonical @source: bible:chronicles_1/16/36, daniel/2/20, nehemiah/9/5, psalms/106/48, chronicles_1/29/10 and psalms/24/7, 24/8, 24/9, 24/10. The consonantal text inside each seg matches the cited verse in full, from the first word to the last. Introductory words stay outside the segs as poem text: כַּכָּתוּב (/10) and וְנֶאֱמַר (/12, /13, /14). /11 starts directly with עָנֵה דָנִיֵּאל, which is part of Dan 2:20. Context milestones close properly: verse then chapter inside each Shabbat seg. In Ps 24 there is one chapter milestone, four verses each closed by its own terminator, and a single chapter terminator after verse 10.",
+      "status": "ok"
+    },
+    {
+      "severity": "info",
+      "topic": "no canonical Bible duplicate mappings, no new prayer identities",
+      "evidence": "None of the new records is canonical or an alias, and none uses a bible: URN as its own identity or as a corresp target. The Bible appears only as seg@source in the XML, plus two book-level 'references' entries (see the low finding below). Every note says 'This is not a new canonical prayer or daily-poem identity'. Stanza identities /10–/14 are reused, not re-created.",
+      "status": "ok"
+    },
+    {
+      "severity": "info",
+      "topic": "status notes and acceptance claims",
+      "evidence": "The candidate file's top-level status is 'UNACCEPTED draft registry proposal only'. Every record note ends 'Source/encoding/export batch acceptance remains pending.' registry-presence-proof.json says 'no source or mapping acceptance asserted'. draft-structure-followup.json limits approved_draft_structure to 'draft modules only' and lists registration as pending_integration. None of these files falsely claims acceptance.",
+      "status": "ok"
+    },
+    {
+      "severity": "low",
+      "topic": "inconsistent book-level 'references'",
+      "evidence": "Only the two 'psalms' book-level contexts (candidate-context-records.json lines 91-93 and 143-145) have references: [urn:x-opensiddur:text:bible:psalms]. The chronicles_1, daniel and nehemiah book-level contexts (lines 37, 58, 169, 218) have none. This looks like a generator artifact.",
+      "required_change": "Either add references to bible:chronicles_1, bible:daniel and bible:nehemiah on their book-level contexts, or remove the two psalms references, so that all book-level contexts are treated the same way. In both cases these should stay references and must not become identity mappings."
+    },
+    {
+      "severity": "low",
+      "topic": "edition-derived siddur context path",
+      "evidence": "siddur:rosh_hashanah/hosafot and …/hosafot/shir_hakavod are new edition-neutral context URNs, but their notes say they come from 'the draft Heidenheim–Marmorstein appendix'. They are context records, not prayer identities, and they match the pending_integration request in draft-structure-followup.json:75. Even so, a 'hosafot → shir_hakavod' grouping in the shared namespace is taken from one edition's layout. The 31 existing Anim Zemirot identities may already sit under a different root, which would create a parallel hierarchy for the same work.",
+      "required_change": "Before integration, confirm that no existing registry root already covers Shir HaKavod / Anim Zemirot (or that one does and this is an intended parallel publication context). Also confirm that siddur:rosh_hashanah/hosafot follows project convention. If it does not, re-parent the context."
+    },
+    {
+      "severity": "low",
+      "topic": "the check log cannot be tied to the candidate",
+      "evidence": "candidate-registry-check.log is a single summary line ('37699 record(s): 36053 canonical, 9 alias, 1637 context. 0 error(s), 0 warning(s)'). It gives no registry file path, hash, timestamp or command line, so nothing in it shows that the 30 candidate records were part of the input that was checked.",
+      "required_change": "Record the command, the candidate registry path or SHA-256, and the record count before and after (context should go from 1607 to 1637), so the 0-error result is tied to this proposal."
+    },
+    {
+      "severity": "low",
+      "topic": "mechanical labels",
+      "evidence": "Every label_en is a generated join of path segments, for example 'hymn of divine unity for the day of shabbat paytan — 14 — quotation — chronicles 1 — 29 — 10'. There are no Hebrew labels and no reader-friendly reference such as '1 Chronicles 29:10'.",
+      "required_change": "Optional for draft context. Before acceptance, consider readable labels such as 'Quotation of 1 Chr 29:10 in stanza 14'."
+    }
+  ],
+  "limitations": [
+    "I only had a file-read tool, so I ran nothing: no urn_registry --check, validate_urn_references, refdb, parser or schema. The 37699-record / 0-error / 0-warning result comes from the log as supplied.",
+    "I did not read the registry itself. That the parents are present (stanzas /10–/14 of the Shabbat poem and urn:x-opensiddur:text:siddur:rosh_hashanah) is inferred from registry-presence-proof.json (371 checked, missing []) and the clean check log. The presence proof gives only counts per day, not URNs, so I could not confirm /10–/14 by name.",
+    "Per your instruction I did not require the range-form publication idnos (…/10-/14@…) to exist as literal registry keys. I did not verify that the parser actually interprets those ranges, or that it accepts a context-status URN as the base of the opening_psalm publication idno.",
+    "I compared the Bible text by hand against standard consonantal readings, from memory. Vowels, metegs, maqaf usage and source-word adjudication are out of scope and not approved.",
+    "I could not check whether these verses already have canonical bible corresp mappings elsewhere in the project. 'No duplicate mappings' is confirmed only for the 30 candidate records and the two XML files.",
+    "This approval covers only the draft context registry proposal. It does not approve source, transcription, encoding, export or any batch, and the README/documentation items from draft-structure-followup.json remain open.",
+    "No files were edited."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "59bedaa5-8bfe-4dd7-a7da-da30d46aaa59"
+  }
+}
