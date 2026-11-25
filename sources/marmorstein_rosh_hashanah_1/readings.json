@@ -90315,302 +90315,765 @@
       ]
     },
     {
-      "section": "morning_preliminaries",
+      "section": "shacharit",
       "heading": null,
+      "editorial_heads": {
+        "he": "שחרית",
+        "en": "Morning service"
+      },
+      "titles": {
+        "he": "שחרית",
+        "en": "Morning service"
+      },
+      "file": "shacharit",
+      "corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit",
       "order": [
         {
-          "section": "tallit_preparation",
+          "section": "morning_preliminaries",
+          "heading": null,
+          "order": [
+            {
+              "section": "tallit_preparation",
+              "heading": {
+                "he": "morning_tallit_heading"
+              },
+              "order": [
+                {
+                  "instruction": "morning_tallit_before"
+                },
+                {
+                  "unit": "tallith_hineni_mitattef"
+                },
+                {
+                  "instruction": "morning_tallit_standing"
+                },
+                {
+                  "unit": "tallith_lehitattef"
+                },
+                {
+                  "instruction": "morning_tallit_draping"
+                },
+                {
+                  "unit": "tallith_mah_yaqar"
+                },
+                {
+                  "unit": "tallith_yehi_ratzon"
+                },
+                {
+                  "instruction": "morning_tallit_after"
+                }
+              ],
+              "file": "tallith",
+              "corresp": "urn:x-opensiddur:text:prayer:tallith",
+              "titles": {
+                "he": "סֵדֶר עֲטִיפַת הַטַּלִּית.",
+                "en": "Wrapping in the tallit"
+              }
+            },
+            {
+              "section": "morning_prayers",
+              "heading": {
+                "he": "morning_prayers_heading_he",
+                "en": "morning_prayers_heading_en"
+              },
+              "order": [
+                {
+                  "instruction": "morning_entering_he"
+                },
+                {
+                  "instruction": "morning_entering_en"
+                },
+                {
+                  "unit": "morning_entrance_verses"
+                },
+                {
+                  "unit": "morning_mah_tovu"
+                },
+                {
+                  "unit": "shachar_avaqeshkha_gabirol"
+                },
+                {
+                  "instruction": "morning_before_he"
+                },
+                {
+                  "instruction": "morning_before_en"
+                },
+                {
+                  "unit": "morning_before_prayer"
+                },
+                {
+                  "unit": "yigdal"
+                }
+              ],
+              "file": "morning_preliminaries",
+              "corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/morning_preliminaries"
+            }
+          ]
+        },
+        {
+          "section": "morning_blessings",
+          "file": "morning_blessings",
+          "corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/morning_blessings",
           "heading": {
-            "he": "morning_tallit_heading"
+            "he": "blessings_heading_he",
+            "en": "blessings_heading_en"
           },
           "order": [
             {
-              "instruction": "morning_tallit_before"
+              "unit": "adon_olam"
             },
             {
-              "unit": "tallith_hineni_mitattef"
+              "unit": "al_netilat_yadayim"
             },
             {
-              "instruction": "morning_tallit_standing"
+              "unit": "asher_yatzar"
             },
             {
-              "unit": "tallith_lehitattef"
+              "navigation": "elohai_neshamah_early"
             },
             {
-              "instruction": "morning_tallit_draping"
+              "unit": "birkhot_hatorah_laasoq"
             },
             {
-              "unit": "tallith_mah_yaqar"
+              "unit": "birkhot_hatorah_vehaarev"
             },
             {
-              "unit": "tallith_yehi_ratzon"
+              "unit": "birkhot_hatorah_asher_bachar"
             },
             {
-              "instruction": "morning_tallit_after"
+              "unit": "numbers_6_24_to_26"
+            },
+            {
+              "unit": "ellu_devarim"
+            },
+            {
+              "unit": "elohai_neshamah"
+            },
+            {
+              "unit": "birkhot_hashachar_lasekhvi"
+            },
+            {
+              "unit": "birkhot_hashachar_shelo_asani_goy"
+            },
+            {
+              "unit": "birkhot_hashachar_shelo_asani_aved"
+            },
+            {
+              "section": "hashachar_men",
+              "heading": null,
+              "conditions": [
+                {
+                  "type": "opensiddur:person",
+                  "features": {
+                    "gender": "male"
+                  }
+                }
+              ],
+              "order": [
+                {
+                  "unit": "birkhot_hashachar_shelo_asani_ishah"
+                }
+              ]
+            },
+            {
+              "section": "hashachar_women",
+              "heading": null,
+              "conditions": [
+                {
+                  "type": "opensiddur:person",
+                  "features": {
+                    "gender": "female"
+                  }
+                }
+              ],
+              "condition_instruction": {
+                "he": "hashachar_women_he",
+                "en": "hashachar_women_en"
+              },
+              "order": [
+                {
+                  "unit": "birkhot_hashachar_sheasani_kirtzono"
+                }
+              ]
+            },
+            {
+              "unit": "birkhot_hashachar_poqeach_ivrim"
+            },
+            {
+              "unit": "birkhot_hashachar_malbish_arummim"
+            },
+            {
+              "unit": "birkhot_hashachar_mattir_asurim"
+            },
+            {
+              "unit": "birkhot_hashachar_zoqef_kefufim"
+            },
+            {
+              "unit": "birkhot_hashachar_roqa_haaretz"
+            },
+            {
+              "unit": "birkhot_hashachar_sheasah_li"
+            },
+            {
+              "unit": "birkhot_hashachar_hamekhin"
+            },
+            {
+              "unit": "birkhot_hashachar_ozer_yisrael"
+            },
+            {
+              "unit": "birkhot_hashachar_oter_yisrael"
+            },
+            {
+              "unit": "birkhot_hashachar_hanoten_layaef"
+            },
+            {
+              "unit": "birkhot_hashachar_hamaavir_shenah"
+            },
+            {
+              "unit": "birkhot_hashachar_shetargilenu"
+            },
+            {
+              "unit": "birkhot_hashachar_shetatzileni"
+            },
+            {
+              "instruction": "hashachar_leolam_he"
+            },
+            {
+              "instruction": "hashachar_leolam_en"
+            },
+            {
+              "unit": "ribbon_kol_haolamim"
+            },
+            {
+              "unit": "aval_anachnu"
+            },
+            {
+              "unit": "lefikhakh"
+            },
+            {
+              "unit": "morning_shema_yisrael"
+            },
+            {
+              "unit": "morning_barukh_shem"
+            },
+            {
+              "unit": "attah_hu_ad_shelo"
+            },
+            {
+              "unit": "attah_hu_bashamayim"
+            },
+            {
+              "navigation": "torah_blessings"
+            }
+          ]
+        },
+        {
+          "section": "morning_qorbanot",
+          "file": "morning_qorbanot",
+          "corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/morning_qorbanot",
+          "heading": null,
+          "titles": {
+            "he": "סדר קרבנות",
+            "en": "Offerings"
+          },
+          "order": [
+            {
+              "unit": "qorbanot_kiyyor"
+            },
+            {
+              "unit": "leviticus_6_3_to_4"
+            },
+            {
+              "unit": "qorbanot_tamid"
+            },
+            {
+              "unit": "qorbanot_veshachat"
+            },
+            {
+              "unit": "qorbanot_attah_hu"
+            },
+            {
+              "unit": "qorbanot_qetoret"
+            },
+            {
+              "unit": "qorbanot_pittum"
+            },
+            {
+              "unit": "qorbanot_rashbag"
+            },
+            {
+              "unit": "qorbanot_rabbi_natan"
+            },
+            {
+              "unit": "qorbanot_bar_kappara"
+            },
+            {
+              "unit": "qorbanot_pesuqim"
+            },
+            {
+              "unit": "qorbanot_attah_seter"
+            },
+            {
+              "unit": "qorbanot_vearvah"
+            },
+            {
+              "unit": "anna_bekhoach"
+            },
+            {
+              "unit": "qorbanot_barukh_shem"
+            },
+            {
+              "section": "morning_qorbanot_shabbat",
+              "heading": null,
+              "conditions": [
+                {
+                  "type": "opensiddur:holiday-aggregate",
+                  "features": {
+                    "shabbat": true
+                  }
+                }
+              ],
+              "condition_instruction": {
+                "he": "qorbanot_shabbat_yiddish"
+              },
+              "order": [
+                {
+                  "unit": "qorbanot_musaf_shabbat"
+                }
+              ]
+            },
+            {
+              "unit": "eizehu_meqoman"
+            },
+            {
+              "unit": "middot"
+            },
+            {
+              "unit": "middot_yehi_ratzon"
             }
           ],
-          "file": "tallith",
-          "corresp": "urn:x-opensiddur:text:prayer:tallith",
-          "titles": {
-            "he": "סֵדֶר עֲטִיפַת הַטַּלִּית.",
-            "en": "Wrapping in the tallit"
+          "witnesses": [
+            "he"
+          ]
+        },
+        {
+          "unit": "barukh_sheamar"
+        },
+        {
+          "unit": "chronicles_1_16_8_to_36"
+        },
+        {
+          "unit": "romemu"
+        },
+        {
+          "unit": "vehu_rachum"
+        },
+        {
+          "unit": "hoshiah_et_ammekha"
+        },
+        {
+          "unit": "psalm_19"
+        },
+        {
+          "unit": "psalm_34"
+        },
+        {
+          "unit": "psalm_90"
+        },
+        {
+          "unit": "psalm_91"
+        },
+        {
+          "unit": "psalm_91_repeat"
+        },
+        {
+          "unit": "psalm_135"
+        },
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:bible:psalms/136/1",
+            "targetEnd": "urn:x-opensiddur:text:bible:psalms/136/24"
           }
         },
         {
-          "section": "morning_prayers",
-          "heading": {
-            "he": "morning_prayers_heading_he",
-            "en": "morning_prayers_heading_en"
+          "reference": {
+            "target": "urn:x-opensiddur:text:bible:psalms/136/25"
           },
-          "order": [
-            {
-              "instruction": "morning_entering_he"
-            },
-            {
-              "instruction": "morning_entering_en"
-            },
-            {
-              "unit": "morning_entrance_verses"
-            },
-            {
-              "unit": "morning_mah_tovu"
-            },
-            {
-              "unit": "shachar_avaqeshkha_gabirol"
-            },
-            {
-              "instruction": "morning_before_he"
-            },
-            {
-              "instruction": "morning_before_en"
-            },
-            {
-              "unit": "morning_before_prayer"
-            },
-            {
-              "unit": "yigdal"
-            }
-          ],
-          "file": "morning_preliminaries",
-          "corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/morning_preliminaries"
-        }
-      ]
-    },
-    {
-      "section": "morning_blessings",
-      "file": "morning_blessings",
-      "corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/morning_blessings",
-      "heading": {
-        "he": "blessings_heading_he",
-        "en": "blessings_heading_en"
-      },
-      "order": [
-        {
-          "unit": "adon_olam"
+          "witnesses": [
+            "he"
+          ]
         },
         {
-          "unit": "al_netilat_yadayim"
+          "reference": {
+            "target": "urn:x-opensiddur:text:bible:psalms/136/26"
+          }
         },
         {
-          "unit": "asher_yatzar"
+          "unit": "psalm_33"
         },
         {
-          "navigation": "elohai_neshamah_early"
+          "unit": "morning_psalm_92"
         },
         {
-          "unit": "birkhot_hatorah_laasoq"
+          "unit": "morning_psalm_93"
         },
         {
-          "unit": "birkhot_hatorah_vehaarev"
+          "unit": "yehi_khevod"
         },
         {
-          "unit": "birkhot_hatorah_asher_bachar"
+          "unit": "morning_ashrei"
         },
         {
-          "unit": "numbers_6_24_to_26"
+          "unit": "psalm_146"
         },
         {
-          "unit": "ellu_devarim"
+          "unit": "psalm_147"
         },
         {
-          "unit": "elohai_neshamah"
+          "unit": "psalm_148"
         },
         {
-          "unit": "birkhot_hashachar_lasekhvi"
+          "unit": "psalm_149"
         },
         {
-          "unit": "birkhot_hashachar_shelo_asani_goy"
+          "unit": "psalm_150"
         },
         {
-          "unit": "birkhot_hashachar_shelo_asani_aved"
+          "unit": "psalm_150_repeat"
         },
         {
-          "section": "hashachar_men",
-          "heading": null,
+          "unit": "barukh_adonai"
+        },
+        {
+          "instruction": "vayevarekh_standing"
+        },
+        {
+          "unit": "vayevarekh_david"
+        },
+        {
+          "unit": "attah_hu"
+        },
+        {
+          "unit": "vayyosha"
+        },
+        {
+          "unit": "az_yashir"
+        },
+        {
+          "unit": "ki_va_sus"
+        },
+        {
+          "unit": "ki_ladonai"
+        },
+        {
+          "unit": "morning_song_shema"
+        },
+        {
+          "unit": "nishmat"
+        },
+        {
+          "unit": "hael_betaatzumot"
+        },
+        {
+          "unit": "shokhen_ad"
+        },
+        {
+          "unit": "befi_yesharim"
+        },
+        {
+          "unit": "uvemaqhalot"
+        },
+        {
+          "unit": "yishtabbach"
+        },
+        {
+          "unit": "morning_numbers_14_17"
+        },
+        {
+          "unit": "morning_psalm_25_6"
+        },
+        {
+          "unit": "morning_kaddish"
+        },
+        {
+          "unit": "morning_barekhu"
+        },
+        {
+          "unit": "yotzer_opening"
+        },
+        {
+          "unit": "or_olam"
+        },
+        {
+          "unit": "melekh_azur_gevurah"
+        },
+        {
+          "instruction": "yotzer_shabbat_below_he"
+        },
+        {
+          "instruction": "yotzer_shabbat_below_en"
+        },
+        {
+          "unit": "yotzer_hameir"
+        },
+        {
+          "unit": "yotzer_el_barukh"
+        },
+        {
+          "unit": "yotzer_hakol_yodukha"
+        },
+        {
+          "unit": "el_adon"
+        },
+        {
+          "unit": "lael_asher_shavat"
+        },
+        {
+          "unit": "yotzer_titbarakh"
+        },
+        {
+          "unit": "yotzer_et_shem"
+        },
+        {
+          "unit": "yotzer_qadosh"
+        },
+        {
+          "unit": "khevodo_ihel"
+        },
+        {
+          "unit": "yotzer_vehaofannim"
+        },
+        {
+          "unit": "yotzer_barukh_kevod"
+        },
+        {
+          "unit": "yotzer_lael_barukh"
+        },
+        {
+          "unit": "yotzer_or_chadash"
+        },
+        {
+          "unit": "ahavah_rabbah"
+        },
+        {
+          "instruction": "shacharit_shema_alone"
+        },
+        {
+          "unit": "shacharit_shema_yisrael"
+        },
+        {
+          "unit": "shacharit_barukh_shem"
+        },
+        {
+          "unit": "shacharit_deuteronomy_6_5_to_9"
+        },
+        {
+          "unit": "shacharit_deuteronomy_11_13_to_21"
+        },
+        {
+          "unit": "shacharit_numbers_15_37_to_41"
+        },
+        {
+          "instruction": "shacharit_shema_emet_join"
+        },
+        {
+          "unit": "emet_veyatziv"
+        },
+        {
+          "unit": "shacharit_adonai_sefatai"
+        },
+        {
+          "unit": "shacharit_amidah_avot"
+        },
+        {
+          "unit": "shacharit_amidah_gevurot"
+        },
+        {
+          "unit": "shacharit_amidah_qedushat_hashem"
+        },
+        {
+          "unit": "shacharit_amidah_qedushat_hayom"
+        },
+        {
+          "unit": "shacharit_amidah_avodah"
+        },
+        {
+          "unit": "shacharit_amidah_hodaah"
+        },
+        {
+          "unit": "shacharit_amidah_sim_shalom"
+        },
+        {
+          "unit": "shacharit_elohai_netzor"
+        },
+        {
+          "unit": "shacharit_yehi_ratzon_temple"
+        },
+        {
+          "instruction": "repetition_heading"
+        },
+        {
+          "instruction": "repetition_open_124"
+        },
+        {
+          "unit": "repetition_avot_open"
+        },
+        {
+          "unit": "misod_chakhamim"
+        },
+        {
+          "instruction": "repetition_close_124"
+        },
+        {
+          "instruction": "repetition_et_acrostic"
+        },
+        {
+          "unit": "at_chil_yom_pequddah"
+        },
+        {
+          "unit": "naalah_vedin"
+        },
+        {
+          "instruction": "repetition_open_126"
+        },
+        {
+          "unit": "repetition_zokhrenu_magen"
+        },
+        {
+          "unit": "repetition_attah_gibbor"
+        },
+        {
+          "unit": "repetition_mekhalkel"
+        },
+        {
+          "instruction": "repetition_close_126"
+        },
+        {
+          "unit": "taalat_zu"
+        },
+        {
+          "unit": "melekh_bedin"
+        },
+        {
+          "instruction": "repetition_open_130"
+        },
+        {
+          "unit": "repetition_mi_khamokha"
+        },
+        {
+          "instruction": "repetition_close_130"
+        },
+        {
+          "unit": "even_chug"
+        },
+        {
+          "unit": "repetition_yimlokh"
+        },
+        {
+          "unit": "repetition_veattah_qadosh"
+        },
+        {
+          "section": "repetition_attah_hu_frankfurt_source",
+          "heading": {},
           "conditions": [
             {
-              "type": "opensiddur:person",
+              "type": "opensiddur:rite",
               "features": {
-                "gender": "male"
+                "frankfurt_am_main": false
               }
             }
           ],
           "order": [
             {
-              "unit": "birkhot_hashachar_shelo_asani_ishah"
+              "instruction": "repetition_open_132"
+            },
+            {
+              "unit": "attah_hu_eloheinu"
+            },
+            {
+              "instruction": "repetition_close_132"
             }
-          ]
+          ],
+          "condition_instruction": {
+            "he": "repetition_german_frankfurt"
+          }
         },
         {
-          "section": "hashachar_women",
-          "heading": null,
+          "section": "complete_weekday_piyyutim",
+          "heading": {},
           "conditions": [
             {
-              "type": "opensiddur:person",
+              "type": "opensiddur:holiday-aggregate",
               "features": {
-                "gender": "female"
+                "shabbat": false
               }
             }
           ],
           "condition_instruction": {
-            "he": "hashachar_women_he",
-            "en": "hashachar_women_en"
+            "he": "complete_weekday_he",
+            "en": "complete_weekday_en"
           },
           "order": [
             {
-              "unit": "birkhot_hashachar_sheasani_kirtzono"
+              "section": "complete_metz_tair_vetaria",
+              "heading": {},
+              "conditions": [
+                {
+                  "type": "opensiddur:rite",
+                  "features": {
+                    "metz": false
+                  }
+                }
+              ],
+              "order": [
+                {
+                  "unit": "tair_vetaria"
+                }
+              ],
+              "condition_instruction": {
+                "he": "repetition_metz"
+              }
+            },
+            {
+              "unit": "adderet_mamlakhah"
+            },
+            {
+              "section": "complete_metz_repetition_tair_repeat",
+              "heading": {},
+              "conditions": [
+                {
+                  "type": "opensiddur:rite",
+                  "features": {
+                    "metz": false
+                  }
+                }
+              ],
+              "order": [
+                {
+                  "unit": "repetition_tair_repeat"
+                }
+              ]
+            },
+            {
+              "unit": "melekh_memallet"
+            },
+            {
+              "unit": "melekh_zokher_achuz_qeren"
+            },
+            {
+              "unit": "aafir_nezer"
+            },
+            {
+              "unit": "teshalesh_shofarot"
+            },
+            {
+              "unit": "repetition_melekh_zokher_repeat"
             }
           ]
         },
         {
-          "unit": "birkhot_hashachar_poqeach_ivrim"
-        },
-        {
-          "unit": "birkhot_hashachar_malbish_arummim"
-        },
-        {
-          "unit": "birkhot_hashachar_mattir_asurim"
-        },
-        {
-          "unit": "birkhot_hashachar_zoqef_kefufim"
-        },
-        {
-          "unit": "birkhot_hashachar_roqa_haaretz"
-        },
-        {
-          "unit": "birkhot_hashachar_sheasah_li"
-        },
-        {
-          "unit": "birkhot_hashachar_hamekhin"
-        },
-        {
-          "unit": "birkhot_hashachar_ozer_yisrael"
-        },
-        {
-          "unit": "birkhot_hashachar_oter_yisrael"
-        },
-        {
-          "unit": "birkhot_hashachar_hanoten_layaef"
-        },
-        {
-          "unit": "birkhot_hashachar_hamaavir_shenah"
-        },
-        {
-          "unit": "birkhot_hashachar_shetargilenu"
-        },
-        {
-          "unit": "birkhot_hashachar_shetatzileni"
-        },
-        {
-          "instruction": "hashachar_leolam_he"
-        },
-        {
-          "instruction": "hashachar_leolam_en"
-        },
-        {
-          "unit": "ribbon_kol_haolamim"
-        },
-        {
-          "unit": "aval_anachnu"
-        },
-        {
-          "unit": "lefikhakh"
-        },
-        {
-          "unit": "morning_shema_yisrael"
-        },
-        {
-          "unit": "morning_barukh_shem"
-        },
-        {
-          "unit": "attah_hu_ad_shelo"
-        },
-        {
-          "unit": "attah_hu_bashamayim"
-        },
-        {
-          "navigation": "torah_blessings"
-        }
-      ]
-    },
-    {
-      "section": "morning_qorbanot",
-      "file": "morning_qorbanot",
-      "corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/morning_qorbanot",
-      "heading": null,
-      "titles": {
-        "he": "סדר קרבנות",
-        "en": "Offerings"
-      },
-      "order": [
-        {
-          "unit": "qorbanot_kiyyor"
-        },
-        {
-          "unit": "leviticus_6_3_to_4"
-        },
-        {
-          "unit": "qorbanot_tamid"
-        },
-        {
-          "unit": "qorbanot_veshachat"
-        },
-        {
-          "unit": "qorbanot_attah_hu"
-        },
-        {
-          "unit": "qorbanot_qetoret"
-        },
-        {
-          "unit": "qorbanot_pittum"
-        },
-        {
-          "unit": "qorbanot_rashbag"
-        },
-        {
-          "unit": "qorbanot_rabbi_natan"
-        },
-        {
-          "unit": "qorbanot_bar_kappara"
-        },
-        {
-          "unit": "qorbanot_pesuqim"
-        },
-        {
-          "unit": "qorbanot_attah_seter"
-        },
-        {
-          "unit": "qorbanot_vearvah"
-        },
-        {
-          "unit": "anna_bekhoach"
-        },
-        {
-          "unit": "qorbanot_barukh_shem"
-        },
-        {
-          "section": "morning_qorbanot_shabbat",
-          "heading": null,
+          "section": "complete_shabbat_piyyutim",
+          "heading": {},
           "conditions": [
             {
               "type": "opensiddur:holiday-aggregate",
@@ -90620,578 +91083,131 @@
             }
           ],
           "condition_instruction": {
-            "he": "qorbanot_shabbat_yiddish"
+            "he": "repetition_german_shabbat",
+            "en": "repetition_shabbat_below_en"
           },
           "order": [
             {
-              "unit": "qorbanot_musaf_shabbat"
+              "unit": "shemo_mefoarim"
+            },
+            {
+              "unit": "repetition_etten_lefoali"
+            },
+            {
+              "unit": "repetition_yishpot_repeat"
             }
           ]
         },
         {
-          "unit": "eizehu_meqoman"
+          "instruction": "repetition_open_142"
         },
         {
-          "unit": "middot"
+          "unit": "uvekhen_namlikhekha"
         },
         {
-          "unit": "middot_yehi_ratzon"
-        }
-      ],
-      "witnesses": [
-        "he"
-      ]
-    },
-    {
-      "unit": "barukh_sheamar"
-    },
-    {
-      "unit": "chronicles_1_16_8_to_36"
-    },
-    {
-      "unit": "romemu"
-    },
-    {
-      "unit": "vehu_rachum"
-    },
-    {
-      "unit": "hoshiah_et_ammekha"
-    },
-    {
-      "unit": "psalm_19"
-    },
-    {
-      "unit": "psalm_34"
-    },
-    {
-      "unit": "psalm_90"
-    },
-    {
-      "unit": "psalm_91"
-    },
-    {
-      "unit": "psalm_91_repeat"
-    },
-    {
-      "unit": "psalm_135"
-    },
-    {
-      "reference": {
-        "target": "urn:x-opensiddur:text:bible:psalms/136/1",
-        "targetEnd": "urn:x-opensiddur:text:bible:psalms/136/24"
-      }
-    },
-    {
-      "reference": {
-        "target": "urn:x-opensiddur:text:bible:psalms/136/25"
-      },
-      "witnesses": [
-        "he"
-      ]
-    },
-    {
-      "reference": {
-        "target": "urn:x-opensiddur:text:bible:psalms/136/26"
-      }
-    },
-    {
-      "unit": "psalm_33"
-    },
-    {
-      "unit": "morning_psalm_92"
-    },
-    {
-      "unit": "morning_psalm_93"
-    },
-    {
-      "unit": "yehi_khevod"
-    },
-    {
-      "unit": "morning_ashrei"
-    },
-    {
-      "unit": "psalm_146"
-    },
-    {
-      "unit": "psalm_147"
-    },
-    {
-      "unit": "psalm_148"
-    },
-    {
-      "unit": "psalm_149"
-    },
-    {
-      "unit": "psalm_150"
-    },
-    {
-      "unit": "psalm_150_repeat"
-    },
-    {
-      "unit": "barukh_adonai"
-    },
-    {
-      "instruction": "vayevarekh_standing"
-    },
-    {
-      "unit": "vayevarekh_david"
-    },
-    {
-      "unit": "attah_hu"
-    },
-    {
-      "unit": "vayyosha"
-    },
-    {
-      "unit": "az_yashir"
-    },
-    {
-      "unit": "ki_va_sus"
-    },
-    {
-      "unit": "ki_ladonai"
-    },
-    {
-      "unit": "morning_song_shema"
-    },
-    {
-      "unit": "nishmat"
-    },
-    {
-      "unit": "hael_betaatzumot"
-    },
-    {
-      "unit": "shokhen_ad"
-    },
-    {
-      "unit": "befi_yesharim"
-    },
-    {
-      "unit": "uvemaqhalot"
-    },
-    {
-      "unit": "yishtabbach"
-    },
-    {
-      "unit": "morning_numbers_14_17"
-    },
-    {
-      "unit": "morning_psalm_25_6"
-    },
-    {
-      "unit": "morning_kaddish"
-    },
-    {
-      "unit": "morning_barekhu"
-    },
-    {
-      "unit": "yotzer_opening"
-    },
-    {
-      "unit": "or_olam"
-    },
-    {
-      "unit": "melekh_azur_gevurah"
-    },
-    {
-      "instruction": "yotzer_shabbat_below_he"
-    },
-    {
-      "instruction": "yotzer_shabbat_below_en"
-    },
-    {
-      "unit": "yotzer_hameir"
-    },
-    {
-      "unit": "yotzer_el_barukh"
-    },
-    {
-      "unit": "yotzer_hakol_yodukha"
-    },
-    {
-      "unit": "el_adon"
-    },
-    {
-      "unit": "lael_asher_shavat"
-    },
-    {
-      "unit": "yotzer_titbarakh"
-    },
-    {
-      "unit": "yotzer_et_shem"
-    },
-    {
-      "unit": "yotzer_qadosh"
-    },
-    {
-      "unit": "khevodo_ihel"
-    },
-    {
-      "unit": "yotzer_vehaofannim"
-    },
-    {
-      "unit": "yotzer_barukh_kevod"
-    },
-    {
-      "unit": "yotzer_lael_barukh"
-    },
-    {
-      "unit": "yotzer_or_chadash"
-    },
-    {
-      "unit": "ahavah_rabbah"
-    },
-    {
-      "instruction": "shacharit_shema_alone"
-    },
-    {
-      "unit": "shacharit_shema_yisrael"
-    },
-    {
-      "unit": "shacharit_barukh_shem"
-    },
-    {
-      "unit": "shacharit_deuteronomy_6_5_to_9"
-    },
-    {
-      "unit": "shacharit_deuteronomy_11_13_to_21"
-    },
-    {
-      "unit": "shacharit_numbers_15_37_to_41"
-    },
-    {
-      "instruction": "shacharit_shema_emet_join"
-    },
-    {
-      "unit": "emet_veyatziv"
-    },
-    {
-      "unit": "shacharit_adonai_sefatai"
-    },
-    {
-      "unit": "shacharit_amidah_avot"
-    },
-    {
-      "unit": "shacharit_amidah_gevurot"
-    },
-    {
-      "unit": "shacharit_amidah_qedushat_hashem"
-    },
-    {
-      "unit": "shacharit_amidah_qedushat_hayom"
-    },
-    {
-      "unit": "shacharit_amidah_avodah"
-    },
-    {
-      "unit": "shacharit_amidah_hodaah"
-    },
-    {
-      "unit": "shacharit_amidah_sim_shalom"
-    },
-    {
-      "unit": "shacharit_elohai_netzor"
-    },
-    {
-      "unit": "shacharit_yehi_ratzon_temple"
-    },
-    {
-      "instruction": "repetition_heading"
-    },
-    {
-      "instruction": "repetition_open_124"
-    },
-    {
-      "unit": "repetition_avot_open"
-    },
-    {
-      "unit": "misod_chakhamim"
-    },
-    {
-      "instruction": "repetition_close_124"
-    },
-    {
-      "instruction": "repetition_et_acrostic"
-    },
-    {
-      "unit": "at_chil_yom_pequddah"
-    },
-    {
-      "unit": "naalah_vedin"
-    },
-    {
-      "instruction": "repetition_open_126"
-    },
-    {
-      "unit": "repetition_zokhrenu_magen"
-    },
-    {
-      "unit": "repetition_attah_gibbor"
-    },
-    {
-      "unit": "repetition_mekhalkel"
-    },
-    {
-      "instruction": "repetition_close_126"
-    },
-    {
-      "unit": "taalat_zu"
-    },
-    {
-      "unit": "melekh_bedin"
-    },
-    {
-      "instruction": "repetition_open_130"
-    },
-    {
-      "unit": "repetition_mi_khamokha"
-    },
-    {
-      "instruction": "repetition_close_130"
-    },
-    {
-      "unit": "even_chug"
-    },
-    {
-      "unit": "repetition_yimlokh"
-    },
-    {
-      "unit": "repetition_veattah_qadosh"
-    },
-    {
-      "section": "repetition_attah_hu_frankfurt_source",
-      "heading": {},
-      "conditions": [
-        {
-          "type": "opensiddur:rite",
-          "features": {
-            "frankfurt_am_main": false
-          }
-        }
-      ],
-      "order": [
-        {
-          "instruction": "repetition_open_132"
+          "unit": "hashem_melekh"
         },
         {
-          "unit": "attah_hu_eloheinu"
+          "unit": "adirei_ayummah"
         },
         {
-          "instruction": "repetition_close_132"
-        }
-      ],
-      "condition_instruction": {
-        "he": "repetition_german_frankfurt"
-      }
-    },
-    {
-      "section": "complete_weekday_piyyutim",
-      "heading": {},
-      "conditions": [
+          "unit": "uvekhen_dayyan_emet_attah"
+        },
         {
-          "type": "opensiddur:holiday-aggregate",
-          "features": {
-            "shabbat": false
-          }
-        }
-      ],
-      "condition_instruction": {
-        "he": "complete_weekday_he",
-        "en": "complete_weekday_en"
-      },
-      "order": [
+          "instruction": "morning_tail_open_144"
+        },
         {
-          "section": "complete_metz_tair_vetaria",
+          "unit": "lael_orekh_din"
+        },
+        {
+          "instruction": "morning_tail_close_146"
+        },
+        {
+          "unit": "uvekhen_lekha_taaleh_qedushah"
+        },
+        {
+          "unit": "melekh_bemishpat_yaamid_aretz"
+        },
+        {
+          "unit": "repetition_qedushah"
+        },
+        {
+          "unit": "repetition_qedushat_hashem"
+        },
+        {
+          "unit": "repetition_qedushat_hayom"
+        },
+        {
+          "unit": "repetition_avodah"
+        },
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/hodaah/modim/modim"
+          },
+          "witnesses": [
+            "he"
+          ]
+        },
+        {
+          "unit": "repetition_modim_derabbanan"
+        },
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/hodaah/modim/modim_end"
+          },
+          "witnesses": [
+            "he"
+          ]
+        },
+        {
+          "unit": "repetition_hodaah_tail"
+        },
+        {
+          "unit": "repetition_birkat_kohanim"
+        },
+        {
+          "unit": "repetition_sim_shalom"
+        },
+        {
+          "section": "morning_avinu_malkenu",
           "heading": {},
           "conditions": [
             {
-              "type": "opensiddur:rite",
+              "type": "opensiddur:holiday-aggregate",
               "features": {
-                "metz": false
+                "shabbat": false
               }
-            }
-          ],
-          "order": [
-            {
-              "unit": "tair_vetaria"
             }
           ],
           "condition_instruction": {
-            "he": "repetition_metz"
-          }
-        },
-        {
-          "unit": "adderet_mamlakhah"
-        },
-        {
-          "section": "complete_metz_repetition_tair_repeat",
-          "heading": {},
-          "conditions": [
-            {
-              "type": "opensiddur:rite",
-              "features": {
-                "metz": false
-              }
-            }
-          ],
+            "he": "morning_tail_shabbat_omission_156",
+            "en": "morning_tail_shabbat_omission_157"
+          },
           "order": [
             {
-              "unit": "repetition_tair_repeat"
+              "instruction": "morning_tail_open_156"
+            },
+            {
+              "instruction": "morning_tail_open_157"
+            },
+            {
+              "unit": "avinu_malkenu"
+            },
+            {
+              "instruction": "morning_tail_close_158"
+            },
+            {
+              "instruction": "morning_tail_close_159"
             }
           ]
         },
         {
-          "unit": "melekh_memallet"
+          "unit": "morning_full_kaddish_preface"
         },
         {
-          "unit": "melekh_zokher_achuz_qeren"
-        },
-        {
-          "unit": "aafir_nezer"
-        },
-        {
-          "unit": "teshalesh_shofarot"
-        },
-        {
-          "unit": "repetition_melekh_zokher_repeat"
+          "unit": "morning_full_kaddish"
         }
       ]
-    },
-    {
-      "section": "complete_shabbat_piyyutim",
-      "heading": {},
-      "conditions": [
-        {
-          "type": "opensiddur:holiday-aggregate",
-          "features": {
-            "shabbat": true
-          }
-        }
-      ],
-      "condition_instruction": {
-        "he": "repetition_german_shabbat",
-        "en": "repetition_shabbat_below_en"
-      },
-      "order": [
-        {
-          "unit": "shemo_mefoarim"
-        },
-        {
-          "unit": "repetition_etten_lefoali"
-        },
-        {
-          "unit": "repetition_yishpot_repeat"
-        }
-      ]
-    },
-    {
-      "instruction": "repetition_open_142"
-    },
-    {
-      "unit": "uvekhen_namlikhekha"
-    },
-    {
-      "unit": "hashem_melekh"
-    },
-    {
-      "unit": "adirei_ayummah"
-    },
-    {
-      "unit": "uvekhen_dayyan_emet_attah"
-    },
-    {
-      "instruction": "morning_tail_open_144"
-    },
-    {
-      "unit": "lael_orekh_din"
-    },
-    {
-      "instruction": "morning_tail_close_146"
-    },
-    {
-      "unit": "uvekhen_lekha_taaleh_qedushah"
-    },
-    {
-      "unit": "melekh_bemishpat_yaamid_aretz"
-    },
-    {
-      "unit": "repetition_qedushah"
-    },
-    {
-      "unit": "repetition_qedushat_hashem"
-    },
-    {
-      "unit": "repetition_qedushat_hayom"
-    },
-    {
-      "unit": "repetition_avodah"
-    },
-    {
-      "reference": {
-        "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/hodaah/modim/modim"
-      },
-      "witnesses": [
-        "he"
-      ]
-    },
-    {
-      "unit": "repetition_modim_derabbanan"
-    },
-    {
-      "reference": {
-        "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/hodaah/modim/modim_end"
-      },
-      "witnesses": [
-        "he"
-      ]
-    },
-    {
-      "unit": "repetition_hodaah_tail"
-    },
-    {
-      "unit": "repetition_birkat_kohanim"
-    },
-    {
-      "unit": "repetition_sim_shalom"
-    },
-    {
-      "section": "morning_avinu_malkenu",
-      "heading": {},
-      "conditions": [
-        {
-          "type": "opensiddur:holiday-aggregate",
-          "features": {
-            "shabbat": false
-          }
-        }
-      ],
-      "condition_instruction": {
-        "he": "morning_tail_shabbat_omission_156",
-        "en": "morning_tail_shabbat_omission_157"
-      },
-      "order": [
-        {
-          "instruction": "morning_tail_open_156"
-        },
-        {
-          "instruction": "morning_tail_open_157"
-        },
-        {
-          "unit": "avinu_malkenu"
-        },
-        {
-          "instruction": "morning_tail_close_158"
-        },
-        {
-          "instruction": "morning_tail_close_159"
-        }
-      ]
-    },
-    {
-      "unit": "morning_full_kaddish_preface"
-    },
-    {
-      "unit": "morning_full_kaddish"
     },
     {
       "section": "morning_torah_prelude_documentary",
@@ -92930,165 +92946,182 @@
       ],
       "order": [
         {
-          "section": "appendix_unity_sunday",
-          "heading": "appendix_sunday_heading",
+          "section": "appendix_shir_hayyichud",
+          "heading": null,
+          "editorial_heads": {
+            "he": "שיר היחוד"
+          },
+          "titles": {
+            "he": "שיר היחוד"
+          },
+          "file": "shir_hayyichud",
+          "corresp": "urn:x-opensiddur:text:siddur:hosafot/hymns_appendix/shir_hayyichud",
           "witnesses": [
             "he"
           ],
           "order": [
             {
-              "unit": "hymn_of_divine_unity_for_the_first_day_paytan"
+              "section": "appendix_unity_sunday",
+              "heading": "appendix_sunday_heading",
+              "witnesses": [
+                "he"
+              ],
+              "order": [
+                {
+                  "unit": "hymn_of_divine_unity_for_the_first_day_paytan"
+                },
+                {
+                  "unit": "barukh_attah_yachid_umeyuchad"
+                }
+              ]
             },
             {
-              "unit": "barukh_attah_yachid_umeyuchad"
-            }
-          ]
-        },
-        {
-          "section": "appendix_unity_monday",
-          "heading": "appendix_monday_heading",
-          "witnesses": [
-            "he"
-          ],
-          "order": [
+              "section": "appendix_unity_monday",
+              "heading": "appendix_monday_heading",
+              "witnesses": [
+                "he"
+              ],
+              "order": [
+                {
+                  "unit": "hymn_of_divine_unity_for_the_second_day_paytan"
+                }
+              ],
+              "declarations": [
+                {
+                  "type": "opensiddur:variant",
+                  "features": {
+                    "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_second_day_paytan/44/veorekh": true,
+                    "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_second_day_paytan/44/veomeq": false
+                  }
+                }
+              ]
+            },
             {
-              "unit": "hymn_of_divine_unity_for_the_second_day_paytan"
-            }
-          ],
-          "declarations": [
+              "section": "appendix_unity_tuesday",
+              "heading": "appendix_tuesday_heading",
+              "witnesses": [
+                "he"
+              ],
+              "order": [
+                {
+                  "unit": "hymn_of_divine_unity_for_the_third_day_paytan"
+                }
+              ],
+              "declarations": [
+                {
+                  "type": "opensiddur:variant",
+                  "features": {
+                    "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_third_day_paytan/49/sovev": true,
+                    "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_third_day_paytan/49/sovel": false
+                  }
+                }
+              ]
+            },
             {
-              "type": "opensiddur:variant",
-              "features": {
-                "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_second_day_paytan/44/veorekh": true,
-                "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_second_day_paytan/44/veomeq": false
-              }
-            }
-          ]
-        },
-        {
-          "section": "appendix_unity_tuesday",
-          "heading": "appendix_tuesday_heading",
-          "witnesses": [
-            "he"
-          ],
-          "order": [
+              "section": "appendix_unity_wednesday",
+              "heading": "appendix_wednesday_heading",
+              "witnesses": [
+                "he"
+              ],
+              "order": [
+                {
+                  "unit": "hymn_of_divine_unity_for_the_fourth_day_paytan"
+                }
+              ],
+              "declarations": [
+                {
+                  "type": "opensiddur:variant",
+                  "features": {
+                    "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_fourth_day_paytan/98/haroim": true,
+                    "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_fourth_day_paytan/98/reim": false
+                  }
+                }
+              ]
+            },
             {
-              "unit": "hymn_of_divine_unity_for_the_third_day_paytan"
-            }
-          ],
-          "declarations": [
+              "section": "appendix_unity_thursday",
+              "heading": "appendix_thursday_heading",
+              "witnesses": [
+                "he"
+              ],
+              "order": [
+                {
+                  "unit": "hymn_of_divine_unity_for_the_fifth_day_paytan"
+                }
+              ],
+              "declarations": [
+                {
+                  "type": "opensiddur:variant",
+                  "features": {
+                    "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_fifth_day_paytan/7/beriatekha": true,
+                    "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_fifth_day_paytan/7/melakhtekha": false
+                  }
+                }
+              ]
+            },
             {
-              "type": "opensiddur:variant",
-              "features": {
-                "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_third_day_paytan/49/sovev": true,
-                "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_third_day_paytan/49/sovel": false
-              }
-            }
-          ]
-        },
-        {
-          "section": "appendix_unity_wednesday",
-          "heading": "appendix_wednesday_heading",
-          "witnesses": [
-            "he"
-          ],
-          "order": [
-            {
-              "unit": "hymn_of_divine_unity_for_the_fourth_day_paytan"
-            }
-          ],
-          "declarations": [
-            {
-              "type": "opensiddur:variant",
-              "features": {
-                "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_fourth_day_paytan/98/haroim": true,
-                "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_fourth_day_paytan/98/reim": false
-              }
-            }
-          ]
-        },
-        {
-          "section": "appendix_unity_thursday",
-          "heading": "appendix_thursday_heading",
-          "witnesses": [
-            "he"
-          ],
-          "order": [
-            {
-              "unit": "hymn_of_divine_unity_for_the_fifth_day_paytan"
-            }
-          ],
-          "declarations": [
-            {
-              "type": "opensiddur:variant",
-              "features": {
-                "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_fifth_day_paytan/7/beriatekha": true,
-                "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_fifth_day_paytan/7/melakhtekha": false
-              }
-            }
-          ]
-        },
-        {
-          "section": "appendix_unity_friday",
-          "heading": null,
-          "witnesses": [
-            "he"
-          ],
-          "order": [
-            {
-              "unit": "hymn_of_divine_unity_for_the_sixth_day_paytan"
-            }
-          ],
-          "declarations": [
-            {
-              "type": "opensiddur:variant",
-              "features": {
-                "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_sixth_day_paytan/3/az": true,
-                "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_sixth_day_paytan/3/af": false,
-                "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_sixth_day_paytan/12/khol": true,
-                "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_sixth_day_paytan/12/kheli": false
-              }
-            }
-          ]
-        },
-        {
-          "section": "appendix_unity_shabbat",
-          "heading": "appendix_shabbat_heading",
-          "witnesses": [
-            "he"
-          ],
-          "order": [
-            {
-              "section": "appendix_unity_shabbat_words",
+              "section": "appendix_unity_friday",
               "heading": null,
               "witnesses": [
                 "he"
               ],
               "order": [
                 {
-                  "reference": {
-                    "target": "urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_day_of_shabbat_paytan/1",
-                    "targetEnd": "urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_day_of_shabbat_paytan/9"
-                  },
-                  "witnesses": [
-                    "he"
-                  ]
-                },
-                {
-                  "reference": {
-                    "target": "urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_day_of_shabbat_paytan/10",
-                    "targetEnd": "urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_day_of_shabbat_paytan/14"
-                  },
-                  "witnesses": [
-                    "he"
-                  ]
+                  "unit": "hymn_of_divine_unity_for_the_sixth_day_paytan"
                 }
               ],
-              "file": "hymn_of_divine_unity_for_the_day_of_shabbat_paytan",
-              "corresp": "urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_day_of_shabbat_paytan",
-              "titles": {
-                "he": "שיר היחוד ליום השבת"
-              }
+              "declarations": [
+                {
+                  "type": "opensiddur:variant",
+                  "features": {
+                    "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_sixth_day_paytan/3/az": true,
+                    "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_sixth_day_paytan/3/af": false,
+                    "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_sixth_day_paytan/12/khol": true,
+                    "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_sixth_day_paytan/12/kheli": false
+                  }
+                }
+              ]
+            },
+            {
+              "section": "appendix_unity_shabbat",
+              "heading": "appendix_shabbat_heading",
+              "witnesses": [
+                "he"
+              ],
+              "order": [
+                {
+                  "section": "appendix_unity_shabbat_words",
+                  "heading": null,
+                  "witnesses": [
+                    "he"
+                  ],
+                  "order": [
+                    {
+                      "reference": {
+                        "target": "urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_day_of_shabbat_paytan/1",
+                        "targetEnd": "urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_day_of_shabbat_paytan/9"
+                      },
+                      "witnesses": [
+                        "he"
+                      ]
+                    },
+                    {
+                      "reference": {
+                        "target": "urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_day_of_shabbat_paytan/10",
+                        "targetEnd": "urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_day_of_shabbat_paytan/14"
+                      },
+                      "witnesses": [
+                        "he"
+                      ]
+                    }
+                  ],
+                  "file": "hymn_of_divine_unity_for_the_day_of_shabbat_paytan",
+                  "corresp": "urn:x-opensiddur:text:poem:hymn_of_divine_unity_for_the_day_of_shabbat_paytan",
+                  "titles": {
+                    "he": "שיר היחוד ליום השבת"
+                  }
+                }
+              ]
             }
           ]
         },
