@@ -21,25 +21,27 @@
   "literal_units": 556,
   "literal_witnesses": 954,
   "canonical_realizations": 355,
-  "generated_xml_files": 1005,
+  "generated_xml_files": 1008,
   "human_questions_open": [],
   "source_approval": "independent/closing_s346_s355/final-source-human-closure.json",
   "encoding_approval": "independent/closing_s346_s355/closing-remedy-review.json",
   "order_approval": "independent/closing_s346_s355/independent-closing-order-season-review.json",
   "registry_approval": "independent/closing_s346_s355/final-registry-actual-reference.json",
   "review_binding_approval": "independent/closing_s346_s355/review-ledger-audit.json",
-  "final_export_approval": "independent/closing_s346_s355/final-export-review.json",
-  "processor_export_dependency": "https://github.com/opensiddur/opensiddur-processor/pull/327",
+  "final_export_approval": "independent/navigation_structure_20261125/presentation-review.json",
+  "processor_export_dependency": "https://github.com/opensiddur/opensiddur-processor/pull/329",
   "pdf_pages": {
     "documentary-hebrew": 113,
     "documentary": 301,
     "expanded": 359
   },
   "limitations": [
-    "I had only a file-reading tool, so I did not recompute the three SHA-256 hashes. I also cannot independently confirm that the 14 screenshots were rendered from exactly those files. Both bindings rest on final-html-closure-artifacts.json and the capture records. The rendered content is consistent with the byte diff: the arrow appears exactly where the diff puts the new anchor.",
-    "This approval covers the 12 refreshed closing viewports and the 2 restored-link viewports only. It supersedes the old HTML-hash visual approval and does not claim that the earlier 492d/85ce/e5b5 files were byte-equivalent to anything. I make no visual claim about other parts of the HTML. Those rest on final-full-html-browser-check.json (IDs, links, overflow, optional-omit) and rubric-fixed-html-equivalence.json (book words unchanged), which I took as reported and did not re-read in this pass.",
-    "final-html-byte-diff.json compares the current non-draft pre-fix build with the post-fix build. It is not a comparison with the older reviewed builds. The fresh screenshots are what close that gap.",
-    "All limitations listed in final-export-review-before-html-closure.json still apply: the PDF pages I did not view, the 359-page expanded PDF accepted by hash binding, registry points accepted on reliance, the provenance of the test logs, schema equivalence for 1,004 of the 1,005 XML files, and the four-file scope of the MAM merge review."
+    "Original source, encoding, alignment and recitation approvals and their limitations remain in force; this follow-up adds navigation and presentation review only.",
+    "Read only. I ran nothing: no test, compile, PDF parse or hash check. Page counts, outlines, link counts, text and conditional equivalence, annotation bounds and the CI results come from the JSON reports as given. I did not open the PDFs, HTML or CI logs myself.",
+    "The CI result (4927 OK, 110 skipped) is taken from validation-status.json. I did not see the CI log itself.",
+    "Visual judgement covers only the 9 PDF PNGs and 5 HTML screenshots listed. I did not view the morning or optional-omitted screenshots.",
+    "I made no new source, glyph or scan reading. The accepted readings and the 355/355 complete source verifier are taken as given. Text on the pages was looked at only for layout, not for accuracy.",
+    "Structural grouping relies on implementation-review.json notes[0], notes[2] and notes[3]. That file's approved=false came from exporter item 2, which test-closure-review.json later resolved. I did not re-review the build structure."
   ],
   "independent_reviewers": [
     {
@@ -52,7 +54,32 @@
       "model": "Codex, based on GPT-6",
       "setting": "Exact deployed variant and reasoning setting not exposed",
       "scope": "Additional independent glyph, order, ledger, merge and visual audits"
+    },
+    {
+      "model": "claude-opus-5-5",
+      "configured_effort": "medium",
+      "scope": "Navigation structure, exporter implementation and PDF/HTML presentation follow-up; no fresh source glyph reading.",
+      "evidence": "independent/navigation_structure_20261125/presentation-review.json"
     }
   ],
-  "postpromotion_verification": "independent/closing_s346_s355/promoted-acceptance-verification.json"
+  "postpromotion_verification": "independent/closing_s346_s355/promoted-acceptance-verification.json",
+  "prior_export_acceptance": {
+    "final_export_approval": "independent/closing_s346_s355/final-export-review.json",
+    "generated_xml_files": 1005,
+    "processor_export_dependency": "https://github.com/opensiddur/opensiddur-processor/pull/327",
+    "limitations": [
+      "I had only a file-reading tool, so I did not recompute the three SHA-256 hashes. I also cannot independently confirm that the 14 screenshots were rendered from exactly those files. Both bindings rest on final-html-closure-artifacts.json and the capture records. The rendered content is consistent with the byte diff: the arrow appears exactly where the diff puts the new anchor.",
+      "This approval covers the 12 refreshed closing viewports and the 2 restored-link viewports only. It supersedes the old HTML-hash visual approval and does not claim that the earlier 492d/85ce/e5b5 files were byte-equivalent to anything. I make no visual claim about other parts of the HTML. Those rest on final-full-html-browser-check.json (IDs, links, overflow, optional-omit) and rubric-fixed-html-equivalence.json (book words unchanged), which I took as reported and did not re-read in this pass.",
+      "final-html-byte-diff.json compares the current non-draft pre-fix build with the post-fix build. It is not a comparison with the older reviewed builds. The fresh screenshots are what close that gap.",
+      "All limitations listed in final-export-review-before-html-closure.json still apply: the PDF pages I did not view, the 359-page expanded PDF accepted by hash binding, registry points accepted on reliance, the provenance of the test logs, schema equivalence for 1,004 of the 1,005 XML files, and the four-file scope of the MAM merge review."
+    ]
+  },
+  "navigation_structure_acceptance": "navigation_structure_20261125.json",
+  "presentation_followup": "independent/navigation_structure_20261125/presentation-followup.json",
+  "source_opening_link_diagnostic": "independent/navigation_structure_20261125/sunday-opening-link-check.json",
+  "non_blocking_presentation_limitations": [
+    "Expanded book, opening of Sunday Shir ha-Yichud: a reader who arrives through the bookmark has no scan arrow for about 26 lines (scan n326), until the n327 break at 'ומה אשיב לך'. The documentary builds are unaffected, because they include the heading's page break. If this is ever fixed, a better approach than resetting state would be to emit an opening link from the transcluded div's own @facs when no page break comes before its first line. That is outside this follow-up.",
+    "The 4 Hebrew and 6 parallel same-URL HTML links kept adjacent at safety boundaries: I accepted these as erring toward access, but I have not looked at where they appear.",
+    "PDF pages beyond the nine samples, and HTML beyond the five screenshots, have not been looked at. Placement there rests on the mechanical checks only."
+  ]
 }

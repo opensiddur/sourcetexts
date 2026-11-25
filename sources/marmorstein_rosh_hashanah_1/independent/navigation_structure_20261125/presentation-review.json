@@ -1,0 +1,61 @@
+{
+  "approved": true,
+  "required_changes": [],
+  "approved_scopes": [
+    "Documentary-hebrew PDF (113 pages), bookmarks: 'שחרית' is a top-level parent on p.20. Under it, at depth 1, are the tallit order, 'תפלות', 'תפלת שחרית' and 'סדר אבינו מלכנו' (p.49). 'שיר היחוד' is a top-level parent on p.90 with exactly six printed day bookmarks under it: Sunday, ליום שני, שלישי, רביעי, חמישי and ליום השבת. Friday has no bookmark of its own, matching the source, which prints no Friday heading. 'שיר הכבוד.' (p.104) is a top-level sibling, not a child.",
+    "Documentary parallel PDF (301 pages), bookmarks: the same hierarchy. The parent reads 'שחרית · Morning service' (p.32) and Avinu is its child at p.128. The Shir ha-Yichud parent is on p.278 with the same six children and no English, because the section is Hebrew only. Shir ha-Kavod is a sibling on p.292.",
+    "PDF margin layout on the sampled pages (hebrew-20/49/90, parallel-32/128/278, expanded-44/253/314). In single-column Hebrew, each arrow sits in the outer (left) margin next to the first line of its paragraph. In parallel pages there is one arrow per column, outside the Hebrew column on the left and outside the English column on the right. Both columns are intact. I saw no arrow overlapping prayer text, taking a line of its own, or showing up as a paragraph. Full-width paragraphs inside the expanded book (p.312, the 'חזן ועתה יגדל-נא' line) also get a margin arrow.",
+    "Expanded PDF (359 pages): margin layout on the three sampled pages, as above. Page 42 (expanded-44) has no arrow at all. That is consistent with suppressing repeated links while the text stays on one scan.",
+    "PDF boundaries visible in the samples: the editorial 'שחרית' head (with italic 'Morning service' in the parallel book) comes directly after the evening service's closing 'קדיש יתום, יגדל.' and before 'סדר עטיפת הטלית'. 'סדר אבינו מלכנו.' comes after the printed rubrics 'On Sabbath אבינו מלכנו is not recited.' and 'פותחים הארון.'. The editorial 'שיר היחוד' head comes after Tashlikh and directly before 'שיר היחוד ליום ראשון.'. The editorial heads are set in a different (sans) face from the source headings, so the credited editorial heads are visibly not the 1965 edition's.",
+    "HTML screenshots of documentary-hebrew and documentary (Avinu, Unity) and expanded (Unity). The arrows sit in the gutter outside the text block: to the right of the Hebrew, and left of the English in the parallel view. Both columns are kept, the arrows do not overlap text, and they are not separate paragraphs or blocks. The H1 'שיר היחוד' / H2 day-heading nesting matches the PDF bookmarks.",
+    "Mechanical HTML checks, as reported in html-captures.json and html-browser-check.json. Scan links equal margin links (240/240, 419/419, 406/406), with 0 invalid, no duplicate IDs, no missing local targets and no horizontal overflow at 1280px. With the optional reading omitted, '[ואיים]' disappears from the visible line.",
+    "Link reduction, as reported in compiled-equivalence.json and pdf-qa.json. PDF links go 289→240, 507→419 and 524→406 while keeping 211, 353 and 292 distinct destinations. The sequence only removes repeats. All annotation and word boxes lie within the page, with 0 missing characters and no undefined references.",
+    "Text and conditional invariance, as reported. Paragraph and line text is exactly unchanged and in order (1604/5464/6670), and the scope events (340/540/676) are unchanged. Page counts are 113/301/359 as stated.",
+    "The conservative links kept at safety boundaries (4 HE / 6 parallel adjacent same-URL HTML links) are acceptable. They err toward access, which matches the implementation review's point that an extra link is safe and a missing one is not.",
+    "Full-suite gate, closed on CI evidence. validation-status.json records all checks SUCCESS on PR 329 (head 84f2ff2) and PR 296 (head 8a08d8b, which matches this branch's current HEAD), with 4927 tests OK and 110 skipped. This satisfies the open gate in test-closure-review.json. The interrupted local run (92%) is correctly not claimed."
+  ],
+  "pending_scopes": [
+    "Expanded book, first line of Sunday Shir ha-Yichud: there is no scan arrow at the first line in either the PDF (p.312) or the HTML (expanded-unity.png). The first arrow appears at 'ומה אשיב לך' (equivalent to the documentary book's second arrow). Both documentary builds do put an arrow on the first line. The equivalence proof says only repeats were removed, so this is either an inherited repeat from the preceding link or a pb that falls outside the transcluded range. Either way, someone who jumps to that bookmark gets no scan link for about 26 lines. This was not determined from my inputs. It should be checked in expanded.print.xml and electronic.xml, either accepted as the cross-boundary effect already noted in implementation-review.json notes[7] or fixed by resetting state at transclusion boundaries. It is not blocking.",
+    "PDF pages beyond the nine samples, and HTML beyond the five screenshots, were not visually inspected. Placement elsewhere rests on the mechanical checks only.",
+    "I did not visually inspect where the 4 HE / 6 parallel safety-boundary duplicate links are."
+  ],
+  "files_read": [
+    "/tmp/mahzor-navigation/test-closure-review.json",
+    "/tmp/mahzor-navigation/validation-status.json",
+    "/tmp/mahzor-navigation/pdf-qa.json",
+    "/tmp/mahzor-navigation/compiled-equivalence.json",
+    "/tmp/mahzor-navigation/conditional-equivalence.json",
+    "/tmp/mahzor-navigation/html-browser-check.json",
+    "/tmp/mahzor-navigation/html-captures.json",
+    "/tmp/mahzor-navigation/review-artifacts.json",
+    "/tmp/mahzor-navigation/implementation-review.json",
+    "/tmp/mahzor-navigation/hebrew-20.png",
+    "/tmp/mahzor-navigation/hebrew-49.png",
+    "/tmp/mahzor-navigation/hebrew-90.png",
+    "/tmp/mahzor-navigation/parallel-32.png",
+    "/tmp/mahzor-navigation/parallel-128.png",
+    "/tmp/mahzor-navigation/parallel-278.png",
+    "/tmp/mahzor-navigation/expanded-44.png",
+    "/tmp/mahzor-navigation/expanded-253.png",
+    "/tmp/mahzor-navigation/expanded-314.png",
+    "/tmp/mahzor-navigation/exports/expanded-unity.png",
+    "/tmp/mahzor-navigation/exports/documentary-unity.png",
+    "/tmp/mahzor-navigation/exports/documentary-hebrew-unity.png",
+    "/tmp/mahzor-navigation/exports/documentary-avinu.png",
+    "/tmp/mahzor-navigation/exports/documentary-hebrew-avinu.png"
+  ],
+  "limitations": [
+    "Read only. I ran nothing: no test, compile, PDF parse or hash check. Page counts, outlines, link counts, text and conditional equivalence, annotation bounds and the CI results come from the JSON reports as given. I did not open the PDFs, HTML or CI logs myself.",
+    "The CI result (4927 OK, 110 skipped) is taken from validation-status.json. I did not see the CI log itself.",
+    "Visual judgement covers only the 9 PDF PNGs and 5 HTML screenshots listed. I did not view the morning or optional-omitted screenshots.",
+    "I made no new source, glyph or scan reading. The accepted readings and the 355/355 complete source verifier are taken as given. Text on the pages was looked at only for layout, not for accuracy.",
+    "Structural grouping relies on implementation-review.json notes[0], notes[2] and notes[3]. That file's approved=false came from exporter item 2, which test-closure-review.json later resolved. I did not re-review the build structure."
+  ],
+  "notes": [
+    "Running heads, not blocking and apparently already the behaviour: headers show the last heading that starts on the page (p.12 'תפלות.', p.41 'סדר אבינו מלכנו.', p.82 'שיר היחוד ליום ראשון.'). As a result, the new parent heads 'שחרית' and 'שיר היחוד' never appear as running heads, because a child heading always follows them on the same page.",
+    "parallel-128 (printed p.120): there is a large vertical gap between the 'Abinu Malkenu' subtitle and the first parallel row. This looks like reledpar column syncing and is cosmetic, not blocking.",
+    "documentary-avinu.png: the English subtitle 'Abinu Malkenu' sits slightly higher than the Hebrew heading. This is cosmetic.",
+    "Expanded keeps its own nesting: Shir ha-Yichud days are at depth 3 inside Musaf, and Avinu is under Minchah on p.349. There is no Shir ha-Yichud parent there, which fits a recitation sequence the user says is unchanged. Only its margin layout was in scope.",
+    "I saw nothing in the samples suggesting that English absent from the source had been filled in. The Shir ha-Yichud sections in the documentary books are Hebrew only."
+  ]
+}

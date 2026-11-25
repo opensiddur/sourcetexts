@@ -1,0 +1,27 @@
+{
+  "approved": true,
+  "required_changes": [],
+  "resolved_diagnostic": {
+    "item": "Expanded book: no scan arrow on the first line of Sunday Shir ha-Yichud (pending_scopes[0] of the presentation review)",
+    "status": "closed: a recorded, non-blocking inherited limitation",
+    "basis": [
+      "sunday-opening-link-check.json shows the same page breaks inside the canonical Sunday poem transclusion in both the old accepted and the new expanded raw XML: only n327 and n328.",
+      "n326 appears in two places, neither inside the transcluded poem. One is the canonical div/@facs metadata. The other is the documentary section's page break before its source heading in shir_hayyichud.xml. The expanded book's transclusion target does not include either.",
+      "The prepass has no n326 page break, so it had nothing to suppress or attach. In the print and electronic builds, before and after the prepass, the last linked page before Sunday is n354 (Numbers 14:17), and the Sunday breaks are n327 and n328, both marked. The repeat suppression in this change did not remove the first-line arrow.",
+      "No prayer words are missing. All the old scan destinations are still there: n326 was never a linked page break in the expanded output, so no distinct destination was lost.",
+      "This matches the second explanation I gave in the presentation review ('a pb that falls outside the transcluded range'). The repeat-suppression explanation is ruled out.",
+      "I agree with not resetting the link state at file boundaries. That would bring back repeated same-page links in exchange for a link the source does not supply inside the target."
+    ]
+  },
+  "remaining_non_blocking_limitations": [
+    "Expanded book, opening of Sunday Shir ha-Yichud: a reader who arrives through the bookmark has no scan arrow for about 26 lines (scan n326), until the n327 break at 'ומה אשיב לך'. The documentary builds are unaffected, because they include the heading's page break. If this is ever fixed, a better approach than resetting state would be to emit an opening link from the transcluded div's own @facs when no page break comes before its first line. That is outside this follow-up.",
+    "The 4 Hebrew and 6 parallel same-URL HTML links kept adjacent at safety boundaries: I accepted these as erring toward access, but I have not looked at where they appear.",
+    "PDF pages beyond the nine samples, and HTML beyond the five screenshots, have not been looked at. Placement there rests on the mechanical checks only."
+  ],
+  "notes": [
+    "Clarification of my margin wording: in my presentation review I wrote 'outer (left) margin' for the Hebrew-only pages. That was wrong. The arrow follows page parity. On re-reading hebrew-20 (printed p.12), hebrew-49 (p.41) and hebrew-90 (p.82), the arrows are in the right margin on the even pages (12, 82) and in the left margin on the odd page (41). That is the outer margin when the book is bound right to left. This corrects the report only. No layout change is asked for, and my judgement that the arrows sit in the margin without overlapping text and are not separate lines or paragraphs is unchanged.",
+    "On hebrew-90 (p.82) the documentary book does have an arrow on the first line of 'שיר היחוד ליום ראשון.'. That agrees with the check: the documentary section includes the n326 page break, and the expanded transclusion does not.",
+    "The scope and limits of my original sampled presentation approval still stand: read only, and the counts, equivalence results and CI results are taken from the reports as given. I made no new source, glyph or scan reading, and none was asked for here.",
+    "Files read for this follow-up: sunday-opening-link-check.json, presentation-review.response.json, hebrew-20.png, hebrew-49.png, hebrew-90.png."
+  ]
+}
