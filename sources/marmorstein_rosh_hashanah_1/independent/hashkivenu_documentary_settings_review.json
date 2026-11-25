@@ -1,0 +1,63 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+  },
+  "status": "pass",
+  "findings": [
+    {
+      "severity": "resolved",
+      "id": "documentary-day-default",
+      "detail": "Both documentary.yaml (lines 21-22) and with_translation.yaml (lines 25-26) now contain electronic: {day: none}. This replaces the ElectronicSettings.day default of 'now' (exporter/settings.py:163), so the device date can no longer suppress the fixed printed Ten Days Kaddish. Per settings.py:160-162, 'none' means every day-dependent passage is shown with its rubric. The other ElectronicSettings fields (columns, psalm_titles) stay at their defaults. The YAML keys fit the model's extra='forbid' schema."
+    },
+    {
+      "severity": "resolved",
+      "id": "generator-authoritative",
+      "detail": "build.py:681-682 sets settings['electronic'] = {'day': 'none'} only when project != EXPANDED. Both documentary variants (documentary and with_translation) use PROJECTS['he'], so they get the setting. EXPANDED/undated does not, so it keeps the existing 'now' default. The generator's output key order (parallel before electronic, electronic last) matches both checked-in YAML files, so a rebuild should not change them."
+    },
+    {
+      "severity": "resolved",
+      "id": "regression-test",
+      "detail": "test_regeneration_keeps_documentary_previews_independent_of_device_day (test_marmorstein_rosh_hashanah_1.py:287-292) regenerates the settings and asserts electronic.day == 'none' for both documentary variants."
+    },
+    {
+      "severity": "non-blocking-observation",
+      "id": "expanded-default-not-asserted",
+      "detail": "No test checks that the expanded undated.yaml leaves out the electronic key. Its existing default is currently guaranteed only by the generator condition at build.py:681. An optional assertNotIn('electronic', settings) in test_sparse_translation_and_shared_expanded_order (around line 103-104) would lock this in. This is not required to resolve the finding."
+    },
+    {
+      "severity": "info",
+      "id": "scope",
+      "detail": "The diff in the files read adds one settings key in data and generator, plus one test. It adds no new features and changes no exporter/runtime code: ElectronicSettings already supported day='none'."
+    }
+  ],
+  "required_changes": [],
+  "files_read": [
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/settings/prayerbook_for_the_new_year-heidenheim-1965-he/documentary.yaml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/settings/prayerbook_for_the_new_year-heidenheim-1965-he/with_translation.yaml",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/opensiddur/importer/marmorstein_rosh_hashanah_1/build.py (lines 660-700)",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/opensiddur/tests/importer/test_marmorstein_rosh_hashanah_1.py (read in full to find the test; relevant lines 287-292, also 103-104)",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/opensiddur/exporter/settings.py (lines 150-180)"
+  ],
+  "limits": [
+    "Only the Read tool was used. No tests, builds, settings-model loading or HTML payload checks were run. The reported local regression and payload results (.start.day == none, Kaddish text present) are taken from the request, not reproduced here. They are local checks, not a live-browser test.",
+    "The expanded settings file (settings/<EXPANDED>/undated.yaml) was not in scope and was not read. Its retained default is inferred from build.py:681-684 only.",
+    "No git diff or history was examined. 'No runtime code changes' is judged from the current content of the files read, not from a diff.",
+    "The electronic exporter's handling of day='none' when rendering the Ten Days Kaddish was not inspected beyond the ElectronicSettings docstring.",
+    "Settled source readings, guideline compliance, alignment and order were not reopened. No claim is made about whole-volume completeness."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "49d30e58-609f-4a2e-a624-7ca9283f0002"
+  },
+  "files_unchanged_during_review": true,
+  "reviewed_file_sha256": {
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/settings/prayerbook_for_the_new_year-heidenheim-1965-he/documentary.yaml": "0485bca5ac00dc5912e82f009c14bd541050ff241dd5dc6bd250c2c93f234086",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/settings/prayerbook_for_the_new_year-heidenheim-1965-he/with_translation.yaml": "922132f2a9c5c543a61d22859c924b6f4a6be2b28fdfc66c64ce7d4a09915adb",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/opensiddur/importer/marmorstein_rosh_hashanah_1/build.py": "16dee7ec973cf36ce2a690ef0442bdc737ab303c55394765232cf169e0fdd9ec",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/opensiddur/tests/importer/test_marmorstein_rosh_hashanah_1.py": "b50c97897633d44f339a37cb41dc8bb50537200aa9a0e06c769431a423fefedd",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/opensiddur/exporter/settings.py": "f768b66142e88b2154d78a966e968e6d6933cc1b7ccb154be6519749ce4176e7"
+  },
+  "authorization": "User explicitly approved settings/code review on 2026-11-09 after earlier transfer was held outside prior authorization."
+}

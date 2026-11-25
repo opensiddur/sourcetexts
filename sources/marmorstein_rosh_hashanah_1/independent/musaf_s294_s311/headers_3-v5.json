@@ -1,0 +1,101 @@
+{
+  "scope": "headers_3",
+  "approved": false,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/bounded-review-v5/header-proof-group3.json",
+    "/tmp/mahzor-s294/bounded-review-v5/header-variables-group3.json",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-3.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-7.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-11.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-15.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-19.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-23.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-27.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-31.xml"
+  ],
+  "blocking_findings": [
+    {
+      "id": "B1",
+      "check": "edition-qualified publication URNs",
+      "template": "header-template-3.xml",
+      "files": [
+        "prayerbook_for_the_new_year-heidenheim-1965-he/al_ken_words.xml",
+        "prayerbook_for_the_new_year-heidenheim-1965-he/musaf_attah_zokher_words.xml"
+      ],
+      "finding": "publicationStmt has no tei:idno type=\"urn\" (template lines 17-24), and the variables records for these files have no idno entry. So these files have no publication URN at all, edition-qualified or not. Other '_words' files in this group (template 27, e.g. musaf_qedushah_mimeqomo_words) do carry URNs like '...@prayerbook_for_the_new_year-marmorstein-1965-en', so this is not a consistent rule for '_words' files."
+    },
+    {
+      "id": "B2",
+      "check": "page ranges",
+      "template": "header-template-7.xml",
+      "files": [
+        "prayerbook_for_the_new_year-heidenheim-1965-he/first_night_kiddush.xml",
+        "prayerbook_for_the_new_year-heidenheim-1965-he/morning_blessings.xml",
+        "prayerbook_for_the_new_year-heidenheim-1965-he/morning_preliminaries.xml",
+        "prayerbook_for_the_new_year-heidenheim-1965-he/morning_qorbanot.xml",
+        "prayerbook_for_the_new_year-heidenheim-1965-he/tallith.xml"
+      ],
+      "finding": "sourceDesc/bibl has only the ptr and no tei:biblScope (template lines 27-29), and none of the five variables records has a biblScope. These files give no source page range."
+    },
+    {
+      "id": "B3",
+      "check": "actual titles not pilot installment",
+      "template": "header-template-19.xml",
+      "files": [
+        "prayerbook_for_the_new_year-marmorstein-1965-en/amidah_uvekhen_ten_kavod_parts.xml"
+      ],
+      "finding": "The title is 'Evening Prayer for the New Year — Grant honour', which puts the service/installment name in front of the actual heading. The file's biblScopes are 16–17, 17 and 115. Page 115 sits in the Musaf range (neighbouring files: musaf_ansikhah_malki 120–125, musaf_qedushah_mimeqomo_words 110–111), so 'Evening Prayer' is wrong for part of the content. This looks like pilot-installment naming carried into the title. The title should be the text's own heading (e.g. 'Grant honour')."
+    }
+  ],
+  "nonblocking_findings": [
+    {
+      "id": "N1",
+      "template": "header-template-3.xml, header-template-7.xml, header-template-11.xml",
+      "finding": "The Heidenheim (Hebrew) editionStmt points to 'sources/marmorstein_rosh_hashanah_1/'. That is fine if both editions come from one bilingual scan set, but it reads like a cross-edition copy-paste. Confirm the path is intended for the heidenheim-1965-he project."
+    },
+    {
+      "id": "N2",
+      "check": "credits",
+      "finding": "In every template, respStmt credits only Codex, for 'AI-assisted scan transcription' (trc) and 'JLPTEI markup' (mrk). Nothing credits Codex with arrangement or translation, so digitization is kept separate from source authorship. Heidenheim (arranger) and Marmorstein (translator) are not credited in the file headers; that is left to the project bibl via ptr '#project_source_bibl'. See scope limitation S2."
+    },
+    {
+      "id": "N3",
+      "template": "header-template-7.xml / variables",
+      "finding": "Heidenheim titles are inconsistent: some are pointed with a trailing period copied from the printed heading ('סֵדֶר קִדּוּשׁ.', 'תְּפִלַּת שַׁחֲרִית.', 'תְּפִלּוֹת.', 'סֵדֶר עֲטִיפַת הַטַּלִּית.') and others are unpointed with no period ('סדר קרבנות', 'על כן נקוה', 'אתה זוכר', 'היה עם פיפיות'). Also, 'תְּפִלּוֹת.' (morning_preliminaries) and 'תְּפִלַּת שַׁחֲרִית.' (morning_blessings) are broad section headings rather than titles specific to these files. Not a pilot-installment problem, but consider normalizing."
+    },
+    {
+      "id": "N4",
+      "file": "prayerbook_for_the_new_year-marmorstein-1965-en/torah_maftir_numbers_29.xml",
+      "finding": "The publication URN 'urn:x-opensiddur:text:bible:numbers/29/1-/29/6@...' has an unusual range form ('1-/29/6'). Check it against the project's bible-range URN convention. The edition qualifier is correct."
+    },
+    {
+      "id": "N5",
+      "template": "header-template-31.xml",
+      "finding": "The encoding note says the word 'remembers' is split 'between scans 285 and 287', skipping 286. That is probably right for a bilingual facing-page layout, but say so, or check the scan numbers."
+    },
+    {
+      "id": "N6",
+      "template": "header-template-15.xml",
+      "finding": "This template has no 'DRAFT:' prefix in editionStmt, unlike the other seven. None of its ~285 files appear in the 15 changed records, so they look like previously accepted, unchanged files. That fits, but the build will contain files with mixed status statements."
+    },
+    {
+      "id": "N7",
+      "check": "licensing",
+      "finding": "Every template uses the same CC0 licence (target 'http://www.creativecommons.org/publicdomain/zero/1.0'), with availability status='free' and distributor Open Siddur Project, so they are consistent with each other. Whether CC0 is allowed for the underlying 1965 source texts, especially the Marmorstein English translation, can't be checked from the headers. It depends on the rights basis recorded at project level."
+    }
+  ],
+  "scope_limitations": [
+    "S1: Variables were supplied only for the 15 changed records. For the roughly 285 template-15 files and the other unchanged files, only the shared masked template structure was checked; their actual titles, URNs and page values were not.",
+    "S2: The referenced project bibls ('/prayerbook_for_the_new_year-{heidenheim-1965-he,marmorstein-1965-en}/index#project_source_bibl') were not provided. Arranger/translator credit, bibliographic accuracy and the rights basis for CC0 could not be checked there.",
+    "S3: Page ranges and titles were checked for internal consistency only, not against the source scans.",
+    "S4: The C14N grouping and masking method described in header-proof-group3.json was taken as given and not independently re-run."
+  ],
+  "verdict": "NOT APPROVED. Three blocking issues: (B1) template 3 files al_ken_words and musaf_attah_zokher_words have no publication URN; (B2) the five template-7 Heidenheim files have no biblScope page ranges; (B3) amidah_uvekhen_ten_kavod_parts uses an installment-prefixed title ('Evening Prayer for the New Year — Grant honour') that doesn't fit its p.115 Musaf content. Credits keep digitization (Codex trc/mrk) separate from the source and never assign authorship or translation to Codex. Licensing is CC0 throughout. Every URN present carries the correct edition qualifier, and the bibl ptrs point to the right edition. The DRAFT notes are as expected.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "39901c5b-a5f3-4fee-8973-c5b14732af64"
+  }
+}

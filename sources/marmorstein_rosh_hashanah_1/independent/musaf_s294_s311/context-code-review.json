@@ -1,0 +1,55 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "not specified to reviewer"
+  },
+  "files_read": [
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/opensiddur/importer/marmorstein_rosh_hashanah_1/realizations.py",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/opensiddur/tests/importer/test_marmorstein_realizations.py"
+  ],
+  "approved": true,
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    {
+      "id": "NB1",
+      "location": "realizations.py:478-494",
+      "title": "context_urn now changes the publication identity for ordinary (non-literal) homes too",
+      "detail": "Line 492 sets context['urn'] = context_urn for every canonical home, not only literal ones. If context_urn is omitted, it defaults to unit['urn'] (line 478), so nothing changes. For a non-literal home whose explicit context_urn differs from a ':siddur:' unit['urn'], the context document's idno moves from unit['urn'] to context_urn. Where unit['urn'] was a prayer URN equal to the home URN, this fixes a latent duplicate-idno collision. That is the intended effect, and test_home_retains_verse_metadata_while_context_pointer_is_plain and test_canonical_home_rejects_context_controls_and_suppresses_old_pb already go down this path. Where unit['urn'] was a different siddur URN, though, any source_order, expanded_order, reuse or transclusion that targets the old unit['urn'] may no longer resolve. I can't check this from the two authorized files.",
+      "suggested_check": "Diff the generated publicationStmt/idno set before and after the change for every unit that has canonical_home with an explicit context_urn != unit['urn'], and confirm nothing still references the old URN."
+    },
+    {
+      "id": "NB2",
+      "location": "realizations.py:495-503",
+      "title": "Literal context removes segment identities while keeping instructions; anchored instructions could lose their placement",
+      "detail": "The literal branch keeps unit['instructions'] in the context and pops corresp, source_reference and the related keys from each segment. If an instruction is placed relative to a segment identity or reference (which would be handled in build.py, outside scope), it could silently move or disappear in the context. The new test uses only an unanchored rubric ('Congregation:'), so it doesn't cover this.",
+      "suggested_check": "Confirm in build.py that instruction placement never depends on segment keys the literal branch pops. Otherwise, reject anchored instructions in literal contexts or add a test that uses the real Modim d'Rabbanan rubric's placement fields."
+    },
+    {
+      "id": "NB3",
+      "location": "test_marmorstein_realizations.py:30-53",
+      "title": "New test checks prepare_documents/unit_document only, not validate_occurrences, validate_generated or review_payloads",
+      "detail": "The test confirms that the two idnos are distinct, the source is unchanged, the note appears only in the context, the context has 2 pb and the home has none, and the only body corresp is context_urn. It never runs validate_generated, so these generated-output guards are not exercised for a prayer-root literal unit with a rubric: 'Canonical home needs exactly its declared publication identity' (count == 1 of config['urn']), 'Duplicate generated publication URN', 'Canonical context duplicates the home identity', and the literal pb-position check (lines 570-594, which now also have to tolerate an interleaved note). It also doesn't run validate_occurrences or review_payloads, so it doesn't show that instruction edits invalidate the realization receipt (lines 416-417 suggest they do). As written, the fixture's caller would fail validate_occurrences anyway, because the host's P/part range now reads 'for ever continued'.",
+      "suggested_check": "Add a validate_generated call over [(project/'host.xml', context_xml), (project/'words.xml', home_xml)] using PROJECTS['en']. Add a review_payloads assertion that changing the rubric text changes 'realization/host/en'. Remove the stale caller from that fixture or update its text."
+    },
+    {
+      "id": "NB4",
+      "location": "test_marmorstein_realizations.py:196-206",
+      "title": "Negative coverage for the relaxed instruction guard is indirect",
+      "detail": "The existing subtest only checks that instructions='forbidden' raises when the home has no 'context' key. Nothing explicitly checks that context='canonical' plus instructions still raises, or that a literal home with instructions but no in-segment page break raises the 'Literal home context requires a source page break' error. The code does enforce both (lines 458 and 473-477), but a regression test would lock down the 'only in a literal-page-transition context' requirement.",
+      "suggested_check": "Add subtests for: instructions plus context='canonical' (expect ValueError); instructions plus context='literal' with every segment on one scan or with page_start=False (expect ValueError)."
+    },
+    {
+      "id": "NB5",
+      "location": "realizations.py:466, 488",
+      "title": "Annotation and scope isolation confirmed (no action needed)",
+      "detail": "The home is built from a whitelist (stem, languages, source_printings, source_notes), so instructions never reach the word home. Citations, conditions, marked, head and wording_selection are still forbidden on any canonical_home unit (line 458-459), so no annotations are lost: they couldn't be present in the first place. Word-scope identities (corresp, source_reference*, chapter_corresp) stay in the home because prepared is a deepcopy and only the context is stripped. The context's wording_selection is [] in literal mode and overlays apply only to the home, so settings stay isolated. The input unit isn't mutated (deepcopy at 465/488, and the test asserts it)."
+    }
+  ],
+  "required_changes": [],
+  "verdict": "Approved. Both changes are narrow and correct. (1) In prepare_documents, context_urn becomes the context's urn as well as its publication_context, which separates the documentary publication from the canonical prayer home. The existing ':siddur:' and distinct-from-home guard ensures a prayer-root unit can't publish the home URN twice. (2) Instructions are allowed only when context == 'literal', and that context must already contain a real page break inside a segment in each language. They are kept in the context and excluded from the home through the key whitelist. Word scopes, overlays and settings isolation are unchanged. Before merging I recommend: checking the generated idno/reference diff for ordinary homes whose explicit context_urn differs from unit['urn'] (NB1); confirming instruction placement doesn't depend on popped segment identities (NB2); and extending the new test to run validate_generated and review_payloads (NB3).",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "33227ce4-e413-4b6e-8230-744bee29cb60"
+  }
+}

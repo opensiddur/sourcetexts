@@ -1,0 +1,43 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Low to medium. I read current.json, current.review.xml, guideline-excerpts.md, the yotzer_et_shem verdict and the rest of review.json, and the whole human_completion_review_2026_11_159_164.json receipt, including its before/after blocks. I viewed the human-160a, 160b and 160c crops, the native s106.jpg, and all nine enlarged s106 rows. Rows 3–5 contain the scope. I compared each word in scope for consonants, pointing, dagesh, meteg, maqaf and punctuation against current.json and the XML. I did not view s107.jpg. I ran no schema, compiler or URN-resolution tools."
+  },
+  "witnesses": [
+    {
+      "stem": "yotzer_et_shem",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "Scope (s106 row3, last line, to row4/row5, first line): it begins at אֶת־שֵׁם, after the titbarakh paragraph that ends ומַמְלִיכִים, and ends at בְּיִרְאָה. The Qadosh quotation (קָדוֹשׁ ׀ קָדוֹשׁ ... כְּבוֹדוֹ:) and Khevodo, with its marginal אופן. ע״ס א״ב., are outside it and are not in this unit.",
+        "Line 1 matches the print word for word: אֶת־שֵׁם (the maqaf is printed) הָאֵל הַמֶּֽלֶךְ הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא קָדוֹשׁ הוּא: with the colon printed.",
+        "Human 160c was applied and not reopened. The crop and row3 show the meteg beside the segol under the mem, and the current text has הַמֶּֽלֶךְ.",
+        "Human 160a was applied and not reopened. The crop and row4 show עֹל, and the current text has עֹל.",
+        "Human 160b was applied and not reopened. The crop shows the dagesh in the initial bet, and the current text has בְּרוּרָה.",
+        "Paragraph 2 matches row4 word for word: וְכֻלָּם מְקַבְּלִים עֲלֵיהֶם עֹל מַלְכוּת שָׁמַיִם זֶה מִזֶּה. וְנוֹתְנִים רְשׁוּת זֶה לָזֶה. לְהַקְדִּישׁ לְיוֹצְרָם בְּנַחַת רוּחַ בְּשָׂפָה בְּרוּרָה וּבִנְעִימָה קְדֻשָּׁה כֻּלָּם כְּאֶחָד עוֹנִים וְאוֹמְרִים בְּיִרְאָה. The printed periods after מִזֶּה, לָזֶה and בְּיִרְאָה are all present. There is no maqaf in this paragraph in either the print or the current text.",
+        "Dagesh in the text matches the print: מְקַבְּלִים, מִזֶּה, לְהַקְדִּישׁ, בְּנַחַת, בְּשָׂפָה, בְּרוּרָה, קְדֻשָּׁה, כֻּלָּם, כְּאֶחָד, בְּיִרְאָה. I saw no extra dagesh in the print.",
+        "The only vertical stroke in scope is the meteg in הַמֶּֽלֶךְ. I saw no other stress or meteg mark in either line, so no new marks need to be listed.",
+        "The only Hebrew change from the receipt's before block to the current text is the 160b/160c pair, and current.json equals the receipt's after block. 160a was confirmed with no change.",
+        "XML: the div keeps corresp urn:x-opensiddur:text:prayer:yotzer_or/et_shem. The Hebrew facs is n105 (s106) and the English facs is n106 (s107). Both JSON fragments are paragraph 1 and are set in one tei:p. There is no j:conditional or Shabbat guard, which is correct because the text is said on both days. There are no instruction or description notes, no English filler and no Hebrew cue words.",
+        "A div corresp is allowed for a whole prayer part under the guideline. No milestone or terminator is needed inside it, and no new URNs were added for variants.",
+        "Citations and instructions: none in scope. The page's marginal citation belongs to khevodo_ihel, and the Qadosh source quotation falls outside the unit.",
+        "English: the text is byte-identical before and after, the same two-fragment paragraph structure, scan s107, page 39. It shares the corresp with the Hebrew. It starts at 'the Name of God', matching where the Hebrew starts, and ends at 'say in fear:', where the Hebrew ends at בְּיִרְאָה. I did not retranslate it."
+      ]
+    }
+  ],
+  "limits": [
+    "I did not view the native s107.jpg. The English was checked only for being unchanged and for matching the Hebrew scope, using the approved prior text.",
+    "Small points such as the shin dots, the tsere in שֵׁם and the pe without dagesh in בְּשָׂפָה were read from the 2200px enlarged rows and the native s106 at display scale. They are consistent with the current text, and I found no conflicting evidence.",
+    "No schema validation, compile, or URN-resolution tools were run.",
+    "I give no approval outside this unit. The titbarakh paragraph, the Qadosh quotation and khevodo_ihel were not reviewed."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "8c8068bb-290b-4b57-80ef-e5c3a2ca5123"
+  }
+}

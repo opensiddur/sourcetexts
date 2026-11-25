@@ -1,0 +1,27 @@
+{
+  "scope": "expanded-v8-export-1",
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/expanded-export-manifest-v8.json",
+    "/tmp/mahzor-s294/full-pdf-images-v8/expanded-257.png",
+    "/tmp/mahzor-s294/full-pdf-images-v8/expanded-258.png",
+    "/tmp/mahzor-s294/full-pdf-images-v8/expanded-259.png",
+    "/tmp/mahzor-s294/full-pdf-images-v8/expanded-260.png",
+    "/tmp/mahzor-s294/full-pdf-images-v8/expanded-261.png",
+    "/tmp/mahzor-s294/full-pdf-images-v8/expanded-262.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "Image 260 (printed p.258): the Hebrew row 'עִלִּיתַנִי אֵל... בְּחוֹרֵב תַּתָּה קוֹל' has no closing sof-pasuq ':', but nearby stanza rows do. If the source has the same thing, leave it. This is only a typography observation, not a request to reopen the reading.",
+    "Image 262 (printed p.260): the English for Ps. 150:1 ('Halleluyah, praise God in His sanctuary...') and the verses after it have no quotation marks, while the other quoted verses on the page do. This is a minor editorial inconsistency. The psalm runs onto the next page, which is outside this range, so the closing quote can't be checked here.",
+    "Images 257 and 262: there is extra vertical space before 'יְיָ צְבָאוֹת יָגֵן עֲלֵיהֶם' (257) and after the Exodus 20:15 row (262). This comes from the taller English column. It looks fine and nothing overlaps.",
+    "The manifest still says export_approval_pending: true. This is expected, since this review is part of the approval step."
+  ],
+  "verdict": "Approved for images 257–262 (printed pp.255–260): end of the Malkhuyot/Shofarot verses, the Sabbath piyyut 'אנוסה לעזרה' (all of the קול stanzas), and Shofarot verses through Ps. 150:5. Nothing is clipped and nothing overlaps. Hebrew (vocalised, with bold חזן/קהל cues) and English are readable throughout. Each stanza row and verse row lines up Hebrew to English, and no rows are orphaned or out of order across page breaks. Running heads ('חזרת התפלה') and page numbers alternate correctly between recto and verso. The ↗ scan-link markers sit inline at matching points in both languages. The rule and the bilingual heading 'בשבת / On the Sabbath' on 257 are placed correctly. This range doesn't include the priestly-blessing introduction, the missing-source label, the ending, or the credits/bibliography, so none of those were checked here.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "9db62be8-41c0-4c5c-ab8e-538fdbe3040e"
+  }
+}

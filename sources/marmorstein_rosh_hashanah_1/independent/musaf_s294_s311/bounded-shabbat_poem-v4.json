@@ -1,0 +1,61 @@
+{
+  "scope": "shabbat_poem",
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "medium"
+  },
+  "approved": false,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/bounded-review-v4/rule-stanzas.md",
+    "/tmp/mahzor-s294/bounded-review-v4/rule-scope.md",
+    "/tmp/mahzor-s294/bounded-review-v4/rule-verse_numbering.md",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__musaf_anusah_leezrah__body00.jsonl (1-351, complete)",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__musaf_anusah_leezrah__body01.jsonl (1-263, complete, ends </t:body>)",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__musaf_anusah_leezrah__body00.jsonl (1-351, complete)",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__musaf_anusah_leezrah__body01.jsonl (1-138, complete, ends </t:body>)",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__musaf_repetition_ken_tagen_shabbat__body00.jsonl (1-14, complete)",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__musaf_repetition_ken_tagen_shabbat__body00.jsonl (1-14, complete)",
+    "/tmp/mahzor-s294/rendered-stanza-projection-proof-v3.json",
+    "/tmp/mahzor-s294/bible-source-projection-proof.json",
+    "/tmp/mahzor-s294/stanza-incpit-decisions-v3.json",
+    "/tmp/mahzor-s294/validation-source-evidence-v4.json"
+  ],
+  "blocking_findings": [
+    {
+      "id": "B1",
+      "location": "HE body00 line 150 and EN body00 line 139: corresp urn:x-opensiddur:text:poem:anusah_leezrah/miyodei; stanza-incpit-decisions-v3.json lines 417-421",
+      "issue": "The stanza slug for מִיּוֹדְעֵי does not follow the transliteration rules. JLPTEI-3 lines 145-146 (rule-stanzas.md) say a shva after a long vowel (holam) is sounded as 'e'. That makes יוֹדְעֵי yo-de-ei, so the slug should be 'miyodeei'. The sister poem in the same decision file already applies this rule: לְיוֹדְעָיו → 'leyodeav' (essa_dei_betzedeq). The dagesh in the yod comes from the mem prefix, so not doubling it ('miy', not 'miyy') is correct. Only the dropped sounded shva is wrong. This is a new canonical identity URN, so it should be fixed before it becomes stable.",
+      "required_fix": "Rename the slug to 'miyodeei' in both HE and EN together, so HE and EN still match one-to-one, and update the incipit decision record. Alternative: if 'miyodei' is a deliberate spelling, record it in specs/naming/spellings.yaml with the reason."
+    }
+  ],
+  "new_human_questions": [],
+  "nonblocking_findings": [
+    {
+      "id": "N1",
+      "issue": "The Psalm 150 context segment is named 'psalm_150' (singular), but every other context uses 'psalms_…' (psalms_47_6_98_6, psalms_81_4_5), and the inner chapter and intro names in the same block use 'psalms_150' / 'intro_psalms_150_1'. It is consistent across HE, EN and bible-source-projection-proof.json, so it resolves correctly. It is only a naming inconsistency; consider 'psalms_150' if URNs are not yet frozen."
+    },
+    {
+      "id": "N2",
+      "issue": "stanza-incpit-decisions-v3.json line 323 records the hebrew_incipit for hosha as 'הוֹשַׁע.' with a trailing period. This is cosmetic, in the evidence record only. The emitted slug 'hosha' is correct."
+    },
+    {
+      "id": "N3",
+      "issue": "bible-source-projection-proof.json line 2 status still reads 'draft source projections pass; final guideline and reference-range review pending'. All 18 anusah_leezrah HE/EN checks report exact_source_projection true. The status wording should be updated once this review round closes."
+    }
+  ],
+  "scope_limitations": [
+    "I did not see the 180-row compiled parallel proof itself. rendered-stanza-projection-proof-v3.json only asserts 46 stanzas per language with exact words, pointing and boundaries. My body-level check gives HE/EN order parity of 46 stanzas, 10 intro prayer-parts and 17 verse/verse-part scopes. I could not confirm the exact row count of 180.",
+    "The 'complete alternative' wrapper and the realized page-context Siddur unit in the spine are outside these body chunks. I checked that all seven pb elements (137-143) in both languages carry the identical ed token '1965 rosh_hashanah/musaf/repetition/anusah_leezrah'. I could not see whether they sit inside the alternative or whether the Ken Tagen siddur unit is non-phantom in the spine.",
+    "validation-source-evidence-v4.json records that 'On Sabbath' is printed above Anusah on PDF295. Neither body contains that rubric, so I assume it lives in the spine or alternative label, which I did not verify.",
+    "I did not inspect the canonical home of prayer:ken_tagen_al_ammekha_yisrael. I only checked the two transclusion stubs (targets have the correct per-edition suffix; div facs n305 HE / n306 EN match page 143).",
+    "Header metadata, other groups, code and export are out of scope. Settled human readings were not reopened: יְיָ/ייָ variants, the hataf-patah in הַלֲלוּיָהּ, metegs, the absence of accents, and the CGJ in בִּירוּשָׁלָֽ͏ִם."
+  ],
+  "verdict": "Not approved, for one blocking issue. Everything else in the shabbat_poem scope checks out. Both languages have exactly 46 stanzas in the same order, using incipit slugs (no ordinal stanza_N), matched one-to-one between HE and EN. All nine Bible insertions are in the right places: after 30 Ex 19:16, after 32 Ps 47:6 + 98:6, after 34 Isa 27:13, after 36 Ex 19:19, after 38 Ps 81:4-5, after 40 Isa 18:3, after 42 Ex 20:18 (canonical WLC numbering per the evidence), after 44 Ps 150:1-6, and after 46 Zech 9:14 plus the 15 verse-part 'adonai_tzevaot_yagen'. Each stanza scope is closed explicitly before the intro prayer-part. The ק׳/ח׳ speaker rubrics sit outside stanza scope. Chapter, verse and verse-part scopes all close before the next unit, with canonical @n values, and the partial Zech 9:15 is namespaced so it does not claim the whole verse. The CGJ in Jerusalem is preserved, and there are no Biblical accents. The EN Ex 20:18 sic/corr adds only the closing quote, and EN Ps 150 is unquoted, as in the source. Page facsimiles are consistent: HE n293-n305 odd, EN n294-n306 even, and the page breaks fall at matching positions in both languages. Ken Tagen is a separate occurrence in both languages. Blocking: the slug 'miyodei' breaks the sounded-shva-after-holam rule; it should be 'miyodeei', consistent with 'leyodeav'. Once that slug is renamed in both languages, or recorded as a deliberate spelling exception, this scope can be approved. This approval would not cover other groups, code or export.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "bbfcc9b3-bc49-43ee-a18d-94836a9068e0"
+  }
+}

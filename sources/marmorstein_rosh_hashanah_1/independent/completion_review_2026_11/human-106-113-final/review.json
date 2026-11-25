@@ -1,0 +1,59 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Low effort setting. I read all of these files: current.json, current.review.xml (4 file blocks: hodaah and sim_shalom, each in HE and EN), guideline-excerpts.md, ordinary-amidah-final-01/review.json, amidah-guideline-closure/review.json, canonical-use-proof.json, human-106-113-manifest.json, and the authoritative human_completion_review_2026_11_106_113.json, including exact_answers, changes, confirmed_unchanged, occurrence_limits, before and after. I looked at native s122.jpg and at enlarged s122-row2 to row7, each one separately. I did not open the human crop PNGs (human-106 to human-113) because the human decisions are authoritative and I was not reopening them. I compared every Hebrew word in both units against the rows by eye: consonants, visible vowels, maqaf, punctuation, word order and line layout. I compared the after-state in the human file with current.json and current.review.xml by reading the strings. I did not run a diff tool, build, validator, URN resolver or XML parser, and I did not check Unicode code-point order byte by byte."
+  },
+  "witnesses": [
+    {
+      "stem": "shacharit_amidah_hodaah",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "HUMAN106–110 and 111 are applied exactly as decided. current.json and the HE seg in current.review.xml match the 'after' state of the authoritative file. אֱלֹהֵֽינוּ has the meteg on the he and אֲבוֹתֵֽינוּ on the tav (106; s122 row2 line 3). The first צוּר חַיֵּֽינוּ has it on the first yod and יִשְׁעֵֽנוּ on the ayin (107; row2 line 4). The later עַל חַיֵּינוּ has no meteg, as the occurrence limit requires. נוֹדֶה לְּךָ keeps the lamed dagesh and gets no meteg (108; row2 line 4 end / line 5 start). The first סֶּֽלָה has the samekh dagesh plus meteg, and the second סֶלָה is unchanged (109; row4 last line / row5 line 2). בְּיָדֶֽךָ has a segol under the dalet with a meteg (110; row2 last line / row3 line 1). הָאֵל has no extra mark, because the raised stroke is the alef-lamed ligature (111; row4 last line). The only differences from 'before' are the 6 meteg insertions in this unit (106 ×2, 107 ×2, 109, 110). No other character changed.",
+        "Word by word against s122 rows2–5: מוֹדִים אֲנַחְנוּ לָךְ שָׁאַתָּה הוּא יְיָ … לְעוֹלָם וָעֶד. (row2 line 3 to row2 line 4), צוּר … לְדוֹר וָדוֹר נוֹדֶה (row2 line 4), לְּךָ וּנְסַפֵּר תְּהִלָּתֶךָ עַל חַיֵּינוּ הַמְּסוּרִים בְּיָדֶֽךָ וְעַל נִשְׁמוֹתֵינוּ (row3 line 1), הַפְּקוּדוֹת לָךְ וְעַל נִסֶּיךָ שֶׁבְּכָל־יוֹם עִמָּנוּ וְעַל נִפְלְאוֹתֶיךָ (row3 line 2), וְטוֹבוֹתֶיךָ שֶׁבְּכָל־עֵת עֶרֶב וָבֹקֶר וְצָהֳרָיִם. הַטּוֹב כִּי לֹא־כָלוּ (row3 line 3), רַחֲמֶיךָ וְהַמְרַחֵם כִּי לֹא־תַמּוּ חֲסָדֶיךָ מֵעוֹלָם קִוִּינוּ לָךְ: (row4 line 1). Consonants, vowels, word order, maqaf and punctuation all match.",
+        "וְעַל־כֻּלָּם יִתְבָּרַךְ וְיִתְרוֹמַם שִׁמְךָ מַלְכֵּנוּ תָּמִיד לְעוֹלָם וָעֶד: (row4 line 2, flush right) matches, including the maqaf and the final colon.",
+        "וּכְתוֹב לְחַיִּים טוֹבִים כָּל־בְּנֵי בְרִיתֶךָ: (row4 line 3, centred) matches, including the maqaf and the colon.",
+        "וְכֹל הַחַיִּים יוֹדוּךָ סֶּֽלָה וִיהַלְלוּ אֶת־שִׁמְךָ בֶּאֱמֶת הָאֵל יְשׁוּעָתֵנוּ (row4 last line) and וְעֶזְרָתֵנוּ סֶלָה. בָּרוּךְ אַתָּה יְיָ הַטּוֹב שִׁמְךָ וּלְךָ נָאֶה לְהוֹדוֹת: (row5 line 2) match, including the maqaf in אֶת־שִׁמְךָ, the period after the second סֶלָה and the final colon.",
+        "The approved structure is unchanged. The modim and veal_kullam milestones share one HE tei:p, the centred ukhetov line is its own tei:p, and vekhol_hachayyim is in a third tei:p closed by a bare prayer-part terminator. Each seg@source is the same as before: modim, veal_kullam, ukhetov and hatov_shimkha. On native s122, מוֹדִים is indented, וְעַל־כֻּלָּם and וְכֹל start flush, and וּכְתוֹב is centred, so the layout still supports this structure.",
+        "Provenance: the HE div facs is n121 (s122) and the EN div facs is n122 (s123). The whole unit is on printed page 47, so no tei:pb is needed. divineName wraps both occurrences of יְיָ.",
+        "English alignment: the four EN prayer-part corresp values (modim, veal_kullam, ukhetov, vekhol_hachayyim) and the seg sources are the same as in HE and the same as in 'before'. The EN text is byte-identical to 'before' as I read it. I did no translation review.",
+        "Citations: the unit has no biblical quotation. Every seg@source points to the existing canonical prayer:amidah/hodaah URNs."
+      ]
+    },
+    {
+      "stem": "shacharit_amidah_sim_shalom",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "HUMAN112–113 are applied exactly as decided. עָלֵֽינוּ has the meteg on the lamed (112; row5 line 3). נָתַֽתָּ has the meteg on the first tav, and the final tav keeps its dagesh and qamatz (113; row5 last line / row6 line 1). לָּֽנוּ keeps the lamed dagesh and gets a meteg (113). The second-paragraph text is unchanged from 'before', as are the other words of the first paragraph, including the later אֱלֹהֵינוּ. That satisfies the no-propagation limit.",
+        "Word by word against s122 rows5–7: שִׂים שָׁלוֹם טוֹבָה וּבְרָכָה חֵן וָחֶסֶד וְרַחֲמִים עָלֵֽינוּ וְעַל (row5 line 3, indented), כָּל־יִשְׂרָאֵל עַמֶּךָ בָּרְכֵנוּ אָבִינוּ כֻּלָּנוּ כְּאֶחָד בְּאוֹר פָּנֶיךָ כִּי (row5 line 4), בְאוֹר פָּנֶיךָ נָתַֽתָּ לָּֽנוּ יְיָ אֱלֹהֵינוּ תּוֹרַת חַיִּים וְאַהֲבַת חֶסֶד (row6 line 1), וּצְדָקָה וּבְרָכָה וְרַחֲמִים וְחַיִּים וְשָׁלוֹם. וְטוֹב בְּעֵינֶיךָ לְבָרֵךְ (row6 line 2), אֶת־עַמְּךָ יִשְׂרָאֵל בְּכָל־עֵת וּבְכָל־שָׁעָה בִּשְׁלוֹמֶךָ. (row6 line 3). Consonants, vowels, word order, maqaf and punctuation all match.",
+        "בְּסֵפֶר חַיִּים בְּרָכָה וְשָׁלוֹם וּפַרְנָסָה טוֹבָה נִזָּכֵר וְנִכָּתֵב (row7 line 1, flush right), לְפָנֶיךָ אֲנַחְנוּ וְכָל עַמְּךָ בֵּית יִשְׂרָאֵל לְחַיִּים טוֹבִים (row7 line 2; no maqaf after וְכָל, which matches the print), and וּלְשָׁלוֹם. בָּרוּךְ אַתָּה יְיָ עוֹשֵׂה הַשָּׁלוֹם: (row7 line 3) all match.",
+        "The approved structure is unchanged. HE is one tei:p holding the sim_shalom milestone, its text, the besefer_chayyim milestone, its text and a bare prayer-part terminator. That matches the indented שִׂים and the flush בְּסֵפֶר on native s122, with the next indented paragraph (אֱלֹהַי נְצוֹר) outside the unit. EN keeps its own two tei:p with the same two corresp values plus the terminator.",
+        "The canonical milestones are used directly, with no invented local identities. canonical-use-proof.json shows prayer:amidah/shalom/sim_shalom and prayer:amidah/shalom/besefer_chayyim used exactly once per language, both in this unit.",
+        "Provenance: the HE div facs is n121 (s122) and the EN div facs is n122 (s123). Everything is on printed page 47, so no tei:pb is needed. divineName wraps both occurrences of יְיָ.",
+        "English alignment: the EN text and corresp values are identical to 'before' as I read them. The HE and EN corresp sets are equal. I did no translation review.",
+        "Citations: the unit has no biblical quotation and no seg@source. The canonical identity is carried by the milestone corresp."
+      ]
+    }
+  ],
+  "limits": [
+    "I followed the human decisions 106–113 as authoritative and did not check them against the human crop images. I did not raise meteg questions about other words, such as the later עַל חַיֵּינוּ, נִשְׁמוֹתֵינוּ, יְשׁוּעָתֵנוּ or the אֱלֹהֵינוּ in Sim Shalom. In the enlarged rows I could not see a distinct separate stroke in any of them that I could report with confidence, and the human limits rule out propagation.",
+    "I did not inspect the Unicode code-point order of the combining marks: the dagesh/vowel/meteg sequence in סֶּֽלָה, לָּֽנוּ and חַיֵּֽינוּ. NFC or other normalization still needs to be confirmed by tooling.",
+    "I did not run the build, an XML validator, validate_urn_references.py or the parallel compiler. I read the URN scopes and alignment statically against JLPTEI rules 2 and 3 and the Alignment section.",
+    "Elohai Netzor and the vetechezeinah lines (rows 2 and 7) appear in the images but I did not review or approve them.",
+    "Outside scope: title.en for hodaah in current.json is the Hebrew string הודאה. It does not affect the source or alignment of the text."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "1b4ef7de-5bc1-4076-b4af-b561fc88874d"
+  }
+}

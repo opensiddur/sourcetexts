@@ -1,0 +1,29 @@
+{
+  "scope": "documentary-hebrew_html_tail",
+  "approved": false,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/html-tail-v7/manifest.json",
+    "/tmp/mahzor-s294/full-html-browser-summary-v7.json",
+    "/tmp/mahzor-s294/html-tail-v7/documentary-hebrew-1280-n293.png",
+    "/tmp/mahzor-s294/html-tail-v7/documentary-hebrew-1280-n309.png",
+    "/tmp/mahzor-s294/html-tail-v7/documentary-hebrew-390-n293.png",
+    "/tmp/mahzor-s294/html-tail-v7/documentary-hebrew-390-n309.png"
+  ],
+  "blocking_findings": [
+    "Instruction-word spacing: in the closing screenshots at both 1280 and 390, the instruction 'השליח ציבור מסיים' runs straight into the next prayer word with no space. It renders as 'מסייםברוך' (start of the מודים line, 'ברוך אתה יי שאותך לבדך ביראה נעבוד').",
+    "Instruction-word spacing: in the closing screenshots at both 1280 and 390, the last priestly-introduction line has the instruction 'השליח ציבור בקול' joined to the next prayer word. It renders as 'בקולכהנים' ('...ובניו השליח ציבור בקולכהנים עם קדושך כאמור:'). The colour change shows where the instruction stops, but the words still read as one, and copied text or a screen reader will merge them too. Both cases look like the same bug: the space between an instruction span and the prayer text after it is being dropped."
+  ],
+  "nonblocking_findings": [
+    "The source page markers next to the text ('95' in the opening view, '96' under the priestly introduction) are very small and faint at both widths. They are present and placed correctly but hard to read. A slightly larger size or more contrast would help.",
+    "The 'ends before source312' incomplete-scope label does not appear in any of the four assigned screenshots. The closing colophon shows only the title 'Prayerbook for the New Year — first day', contributors, licence and sources. The label may be on the title page or elsewhere, so this is not counted as a failure, but these images cannot confirm it.",
+    "Column alignment and responsive flow pass: the Hebrew text is right-aligned and justified evenly at 1280, and wraps cleanly at 390 with no clipped words, overlap or sideways cut-off. The first line sits just under the sticky Contents/Settings bar and is not hidden. This matches scrollWidth == viewport width in the browser summary.",
+    "Source attribution passes: the closing view at both widths shows the colophon with the Heidenheim/Marmorstein 1965 source, the archive.org details link, the scan-as-source statement and the CC0 licence. The manifest records the n293 and n309 archive.org page links being found for documentary-hebrew at both widths."
+  ],
+  "verdict": "Not approved. Layout, alignment, responsive flow, clipping and source attribution all pass in the four screenshots. Two instruction-word spacing errors are blocking: 'מסייםברוך' and 'בקולכהנים' appear at both widths, and the space after an instruction span needs to be restored before approval. Readings, pointing and order were not reopened.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "2536630b-f852-4e49-b144-ae20941b0215"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s312/v5-export-review/expanded-final-export-manifest.json",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-332.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-333.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-334.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-335.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-336.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "Printed page numbers are 2 lower than the image file numbers: expanded-332..336 show printed pages 330..334. This looks like a consistent front-matter offset, not an error.",
+    "Printed p.330 (expanded-332): the Avinu Malkenu rows and the start of Kaddish line up correctly across the Hebrew and English columns. The speaker label 'חזן' stays on its row. Points and English are readable. No clipping or overlap.",
+    "Printed p.331 (expanded-333): the Kaddish rows line up, and the speaker labels 'קהל' stay with their rows. In the row 'יְהֵא שְׁלָמָא רַבָּא מִן־שְׁמַיָּא וְחַיִּים עָלֵינוּ' the first Hebrew line is justified with very wide gaps between words. It is readable but looks loose.",
+    "Printed p.331: Aleinu and 'עַל־כֵּן נְקַוֶּה' are set as full-width Hebrew paragraphs. A '↗' marker comes before the second paragraph. Spacing between the two paragraphs and after the bilingual table looks normal, and paragraph spacing is not distorted.",
+    "Printed p.332 (expanded-334): the bold English rubric 'During the Ten Days of Repentance, add:' sits inside the Hebrew Kaddish column. It is right-aligned, and 'add:' wraps onto its own line. The English reads correctly left to right and does not overlap anything. The bracketed '[לְעֵלָּא]' follows correctly.",
+    "Printed p.332: the full-width Hebrew-only lines 'יְהֵא שְׁלָמָא...' and 'עֹשֶׂה שָׁלוֹם...' after the bilingual Kaddish have no English. This matches the brief's statement that Hebrew-only text is deliberate. The first line starts with a doubled marker '↗↗'. It may be worth checking that two adjacent markers are intended at that point.",
+    "Printed p.332: the Tashlikh heading 'סדר תשליך', the italic subtitle 'Tashlikh' and the English rubric 'After Minchah, go to a brook, stream or pond containing fish.' each have a proper gap above them and do not collide. Inside the Hebrew Tashlikh paragraph there are wide gaps at verse boundaries (after 'כִּי חָפֵץ חֶסֶד הוּא:' and after 'כָּל־חַטֹּאתָם:'). These may be intended verse separators; they are cosmetic only.",
+    "Printed p.332: the running head reads 'סדר תשליך' even though most of the page is still Kaddish. This is normal last-mark behaviour for running heads. The previous running head 'סֵדֶר אָבִינוּ מַלְכֵּנוּ.' ends with a period, which is a stylistic point only.",
+    "Printed pp.332–334: the end-matter (Metadata, Legal, Contributor credits, Sources [1] and [2]) runs in order across the pages, and source [2] continues properly onto p.334. Long URLs break in the middle of words inside their link boxes, which is normal for hyperref/url. The link boxes on these pages are cyan, which is standard for hyperref URL links. They are not debug marks.",
+    "No footnotes appear in this range, so there was no footnote number or entry order to check. Neither obsolete note claiming that coverage stops at 311 appears on any of these pages."
+  ],
+  "limitations": [
+    "This review covers only the five assigned page images and the manifest. I did not reread the source and did not check the PDF text layer or the links.",
+    "The priestly blessing, the Musaf closing, the thirty-blast instruction, the documentary English-only early peace blessing, the standalone rubric before pstart, and the interlinear marks over enlarged letters do not appear on these pages, so I could not check them here.",
+    "I judged the rendered images only at the resolution supplied. Very fine vowel points were checked for readability, not compared letter by letter against the source."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "f9974719-4e31-4087-96b9-26d21750b9a6"
+  }
+}

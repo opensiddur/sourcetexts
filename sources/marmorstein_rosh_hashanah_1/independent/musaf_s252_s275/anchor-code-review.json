@@ -1,0 +1,35 @@
+{
+  "approved": true,
+  "findings": [
+    {
+      "severity": "info",
+      "location": "reledmac.xslt:2884-2896 (f:head-note-div)",
+      "summary": "The logic is correct for the case you described.",
+      "detail": "`anchor-targets` collects `#id` for every `tei:anchor` that is a direct child of the note's parent `tei:div`. The first branch only matches when none of the note's `@target` tokens is one of those ids. So a compiled standoff note placed beside its explicit anchor now stays in the body. Two kinds of note still go to the heading: notes on the whole division (URN targets, which never match `#id`) and notes inside a `tei:head` (second branch, which is unchanged). If `$note` is empty, `anchor-targets` is empty and nothing breaks. Instruction and description notes, and notes still in standOff, are filtered out first, as before."
+    },
+    {
+      "severity": "low",
+      "location": "reledmac.xslt:2891-2893",
+      "summary": "The match only works for a direct-child anchor written as a same-document `#id`.",
+      "detail": "Three kinds of target would still put the note in the heading: a full-URI `doc#id`, a range or pointer form, or an anchor that is not a direct child of the div (for example, inside a `tei:p`, which is not a sibling case). This is fine if the compiler always writes `#id` and places the note beside the anchor, as stated. One more edge: a note whose `@target` lists both the division URN and the anchor `#id` would stay in the body. That is probably the right call, but it is not tested."
+    },
+    {
+      "severity": "low",
+      "location": "test_reledmac_xslt.py:4246-4254",
+      "summary": "The test covers the regression but leaves some gaps.",
+      "detail": "It checks three things: the anchored note is not in the `\\OSheadA` argument, it comes after the earlier in-paragraph note, and the note numbers run 1,2,3 in order. The 1,2,3 check only implies that the division-level NOTE is still in the heading; an explicit `assertIn('About the section', self._arg(body, r'\\OSheadA'))` would make sure the change doesn't weaken the original behaviour. Other gaps: there is no case for a Hebrew-only or parallel layout (the reported mahzor setup), and nothing checks that the note's mark sits right at the anchor rather than just later in the body. Neither gap blocks approval."
+    },
+    {
+      "severity": "info",
+      "location": "/tmp/mahzor-s254/anchor-exporter-tests.log",
+      "summary": "All tests passed (371 passed, 152 subtests passed, 1 unrelated SyntaxWarning at line 2912), but the log can't confirm that the new test ran.",
+      "detail": "The output is dot-only, so it doesn't show test names. Count and result match what you said."
+    }
+  ],
+  "scope": "Read-only review of f:head-note-div (and its caller f:is-head-note) in opensiddur/exporter/tex/reledmac.xslt lines 2876-2896, the regression test test_a_note_targeting_a_body_anchor_is_not_hoisted_to_the_heading and its TestHeadingNotes fixtures in opensiddur/tests/exporter/test_reledmac_xslt.py lines 4179-4254, and the test log at /tmp/mahzor-s254/anchor-exporter-tests.log. No other code reviewed, no tests re-run, no edits made. Checking the rendered PDF (note 94 after 74-93) is out of scope and to be done separately.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "67d83bca-627c-4444-a3ed-67373f819478"
+  }
+}

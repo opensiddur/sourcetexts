@@ -1,0 +1,143 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "medium"
+  },
+  "images_read": [
+    "/tmp/mahzor-s294/s300.jpg",
+    "/tmp/mahzor-s294/s301.jpg",
+    "/tmp/mahzor-s294/s302.jpg",
+    "/tmp/mahzor-s294/s303.jpg",
+    "/tmp/mahzor-s294/s304.jpg",
+    "/tmp/mahzor-s294/s305.jpg"
+  ],
+  "all_blocks_checked": true,
+  "approved": false,
+  "blocking_findings": [
+    {
+      "id": "B1-role-labels-not-recorded",
+      "scope": "s300, s302, s304 (whole candidate)",
+      "issue": "The candidate has no structured record of the source's role labels. The prayer text correctly leaves the labels out, but the labels are only mentioned in scattered uncertainty notes: s300 illittani, s302 tzor and s302 qarav. Five labels are not recorded anywhere: s300 line 11 (ח׳ before סֶלָה), s300 line 22 (ח׳ before פְּקוֹד), s304 line 13 (ח׳ before רְאוּ), s304 line 19 (ח׳ before שׁוֹבֵב), and s304 line 7 (see B2). The s302 tzor note says 'see role_labels', but the candidate has no such field.",
+      "required_action": "Add a role-label record giving scan, block key, line and the exact anchor word (the word right after the label) for every label listed in source_role_labels below."
+    },
+    {
+      "id": "B2-s304-essa_tail-label-undocumented",
+      "scope": "s304 essa_tail, line 7",
+      "issue": "On s304 line 7 a small label is printed between 'הֲמוֹן שׁוֹפָר:' and 'תִּצְעַד', in a different form from the ח׳ used elsewhere (it looks like חזן). The candidate leaves it out of the prayer text, which is correct, but does not document it at all, not even in an uncertainty note. This is an omitted source element.",
+      "required_action": "Document it as a role label, not a prayer word. The exact reading is sent to a human in Q1."
+    }
+  ],
+  "new_human_questions": [
+    {
+      "id": "Q1",
+      "scan": "s304",
+      "block": "essa_tail",
+      "line": 7,
+      "location": "between 'הֲמוֹן שׁוֹפָר:' and 'תִּצְעַד כְּבִישִׁימוֹן'",
+      "question": "What exactly does the small label say: חזן, חז׳, or something else? It is clearly a role label and not a prayer word, but the letters are too small at this resolution to read with confidence."
+    }
+  ],
+  "source_role_labels": [
+    {
+      "scan": "s300",
+      "line": 11,
+      "block": "anusah_tail",
+      "label": "ח׳",
+      "before": "סֶלָה"
+    },
+    {
+      "scan": "s300",
+      "line": 17,
+      "block": "illittani",
+      "label": "ח׳",
+      "after": "תַּתָּה קוֹל (no punctuation)",
+      "before": "עַל כָּל אֱלֹהִים"
+    },
+    {
+      "scan": "s300",
+      "line": 22,
+      "block": "paah",
+      "label": "ח׳",
+      "after": "מֵאַשּׁוּר קוֹל:",
+      "before": "פְּקוֹד"
+    },
+    {
+      "scan": "s302",
+      "line": 16,
+      "block": "tzor",
+      "label": "ח׳",
+      "after": "מַשְׁמִיעֵי קוֹל:",
+      "before": "צְרוּפָה"
+    },
+    {
+      "scan": "s302",
+      "line": 21,
+      "block": "qarav",
+      "label": "ח׳",
+      "after": "לְהִתְחַנֵּן בְּקוֹל:",
+      "before": "קֻדַּשׁ"
+    },
+    {
+      "scan": "s304",
+      "line": 7,
+      "block": "essa_tail",
+      "label": "small label, probably חזן (pending Q1)",
+      "after": "הֲמוֹן שׁוֹפָר:",
+      "before": "תִּצְעַד"
+    },
+    {
+      "scan": "s304",
+      "line": 13,
+      "block": "raash",
+      "label": "ח׳",
+      "after": "מֵעָפָר קוֹל:",
+      "before": "רְאוּ"
+    },
+    {
+      "scan": "s304",
+      "line": 19,
+      "block": "shag",
+      "label": "ח׳",
+      "after": "מִשְּׁמוֹעַ קוֹל:",
+      "before": "שׁוֹבֵב"
+    }
+  ],
+  "nonblocking_findings": [
+    {
+      "id": "N1-hebrew-headers-notes-stale",
+      "scope": "s300, s302, s304 running_header",
+      "issue": "The Hebrew headers are on the full scans. Each matches the candidate's 'NNN מוסף ליום ראשון של ראש השנה NNN' in consonants and page numbers, and the pointing I can see (לְ, שֶׁל, הַשָּׁנָה) agrees. Whether the samekh in מוּסָף has qamatz or patah can't be resolved at this resolution, so I am not raising it. The candidate's notes saying the headers are 'NOT VERIFIED / not in any pack' are now out of date and should be replaced by a note that they were checked against the full scan."
+    },
+    {
+      "id": "N2-stale-uncertainty-notes",
+      "scope": "s300 essa (lines 01–02), s300 anusah_tail and illittani (meteg ticks), s302 essa (עָתוּד note), s302 tzor (צֹר note), s304 essa_tail (שׁוֹכְנִים note), s304 weekday_verses, isaiah_18_3, exodus_20_15 (meteg notes)",
+      "issue": "The text already applies human457/458/459/460/469 correctly: יִתְחַשַּׁב/יִתְיַשַּׁב with patah; meteg in עוֹרְרַֽנִי, תַּֽחַת, עִלִּיתַֽנִי; עִתּוּד; צֹר; nun in שׁוֹכְנִים; וַיֶּחֱרַד without meteg; meteg in תִּשְׁמָֽעוּ and וַיָּנֻֽעוּ. But several notes still say 'left as drafted', 'not encoded' or 'see human_questions'. This is documentation only and the text is right. Update the notes to cite the human ruling."
+    },
+    {
+      "id": "N3-cantillation",
+      "scope": "s300 exodus_19_16 and psalms_47_6_98_6; s302 isaiah_27_13, exodus_19_19 and psalms_81_4_5; s304 weekday_verses, isaiah_18_3 and exodus_20_15",
+      "issue": "None of the quoted verses carries cantillation in the candidate. This matches human467–470 and what I see on the scans. No problem."
+    },
+    {
+      "id": "N4-text-match",
+      "scope": "all Hebrew prayer blocks",
+      "issue": "I compared every Hebrew block word by word against the full scans for letters, punctuation (periods, colons, maqaf), read order and line content. I found no omissions, duplications or reorderings. Checked features include: no punctuation after 'תַּתָּה קוֹל' on s300 line 17; וְקֹל written without vav in s300 Ex 19:16 against וְקוֹל in s304; בִּירוּשָׁלָֽ͏ִם with qamatz-meteg-CGJ-hiriq; and the source spellings בְּחָסְפּוֹ and מְדוּמֵּי kept as printed. Remaining small vowel and dagesh doubts are already listed in the candidate's uncertainties and can't be resolved at this resolution."
+    },
+    {
+      "id": "N5-rubric",
+      "scope": "s300, s302, s304 shabbat_rubric",
+      "issue": "'אַם שַׁבָּת.' (Hebrew-script German, documentary) is kept per the earlier human confirmation. The first glyph looks like ח, but there is no clear contrary evidence, so I have not reopened it."
+    },
+    {
+      "id": "N6-english",
+      "scope": "s301, s303, s305",
+      "issue": "All English blocks match the scans word for word, including headers, the italic 'On Sabbath.', the joined line-break hyphens (redemp-tion, them-selves), the missing closing quote after 'distance.' on s305 kept as printed, and continuation fragments ending in 'of the', 'the' and 'pleasantness of'. The Hebrew cue words (ככתוב, עליתני, פעה, צר, קרב, רגש, שגג, תבונה) are correctly left out. The s305 weekday_verses and the s305 Shabbat blocks have no note about the excluded cue. That is harmless but inconsistent with the other blocks."
+    }
+  ],
+  "verdict": "NOT APPROVED. I read all six scans in full, including headers, rubrics and labels, and checked every candidate block. All Hebrew prayer text, the pointing that applies the human rulings, the uncantillated verses, read order and all English translation match the source, with no text corrections needed. Approval is blocked only because the source's role labels are not documented: five ח׳ labels are unrecorded, and an undocumented label on s304 line 7 needs a human reading (Q1). Once a complete role-label record is added and Q1 is answered, the candidate should be approvable. Refreshing the stale uncertainty and header notes (N1, N2) is advised but not required.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "1c0fa420-6330-44d2-bc92-1e85af7931cb"
+  }
+}

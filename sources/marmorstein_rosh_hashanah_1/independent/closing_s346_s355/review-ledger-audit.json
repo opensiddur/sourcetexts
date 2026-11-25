@@ -1,0 +1,148 @@
+{
+  "approved_bindings": true,
+  "approved_completion_membership": true,
+  "approval_scope": "Proposed SOURCE/ENCODING ledger binding integrity, evidence provenance, carry-forward scope and exact source-page completion membership only. Final export acceptance and full-batch promotion are excluded.",
+  "reviewer": {
+    "identity": "Codex, based on GPT-6",
+    "setting": "Exact deployed variant and reasoning setting are not exposed.",
+    "method": "Read proposal and evidence scopes, inspected selected new/old records, independently checked all429 hashes/history/flags,30 non-global delta records and reconstructed source-page memberships. Historical nested source adjudications were preserved rather than re-reviewed."
+  },
+  "required_changes": [],
+  "counts": {
+    "changed_bindings": 429,
+    "old_encoding_rebindings": 300,
+    "global_only_old": 270,
+    "old_with_reviewed_non_global_changes": 30,
+    "new_encoding": 55,
+    "new_literal": 41,
+    "new_instruction": 27,
+    "new_citation": 6,
+    "new_total": 129,
+    "unchanged_old_records": 1303
+  },
+  "checks": {
+    "current_payload_hashes": "All429 match exact supplied current payload under actual review.reading_hash: SHA256(UTF-8 whitespace-collapsed NFKD text). Manifest and proposed final_sha256 agree.",
+    "assembled_snapshot": "Proposal readings_sha256 matches exact current assembled-complete-draft-readings.json.",
+    "old_records": "All unchanged old records equal baseline objects exactly. All300 replaced records retain complete baseline previous_review plus original primary/independent reader hashes.",
+    "new_reader_hashes": "All129 new keys reproduce primary-frozen.json byte hash and SHA256 of blind-346.json UTF-8 text concatenated directly with blind-351.json UTF-8 text, no extra separator. Exact paths and algorithm are now explicit in new records. These are artifact identifiers, not new per-unit blind transcription claims.",
+    "model_provenance": "Blind artifacts identify claude-opus-5-5; invocation metadata confirms configured medium effort. Codex/GPT-6 primary label is consistent with known family; no exact Codex deployment/setting is invented.",
+    "evidence_chain": "Cited hashes match current artifacts. Initial closing-encoding-review approved=false is superseded only through closing-remedy-review approved=true and final registry remedy/generated proof plus actual-reference closure; it is not treated as standalone approval. Independent full order and seasonal closure cover the changed global sequence scopes.",
+    "non_global_old_deltas": "30 records add reviewed canonical/printing variants, attesting controls/corrections and structural realization metadata. All5 records with changed unit payload retain NFKD/whitespace-equivalent literal main-printing words. rh_avodah HE/EN resolved source-fidelity hashes remain identical. New printing readings are covered by closing source/human closure and complete changed-module review; earlier source acceptance is carried forward only for unchanged earlier words.",
+    "editorial_controls": "New editorial Modim reader description is identifiable as editorial with no source scan; binding indicates reviewed applicability/encoding, not a claim that a blind reader saw it printed.",
+    "export_gate": "All429 changed records retain export_qa_complete=false and explicitly say final exports pending. Nested historical export acceptance is retained as history, not applied to changed output."
+  },
+  "primary_artifact_hash": "6fb755b76a6272941ecabee435173722c4c2e19cede54e6e369ab3250887e256",
+  "independent_artifact_concat_hash": "ca081d024fd45592db107ae0f5b8bb0e3d46ada619f99ac7def90f7e209b8be4",
+  "non_global_delta_keys": [
+    "realization/amidah_modim_derabbanan/he",
+    "realization/rh_avodah/he",
+    "realization/rh_avodah/en",
+    "realization/rh_hodaah/he",
+    "realization/rh_hodaah/en",
+    "realization/musaf_kohanim_berakhah/he",
+    "realization/musaf_kohanim_berakhah/en",
+    "realization/musaf_kohanim_response_1_2/he",
+    "realization/musaf_kohanim_response_1_2/en",
+    "realization/musaf_kohanim_response_1_3/he",
+    "realization/musaf_kohanim_response_1_3/en",
+    "realization/musaf_kohanim_response_2_2/he",
+    "realization/musaf_kohanim_response_2_2/en",
+    "realization/musaf_kohanim_response_2_3/he",
+    "realization/musaf_kohanim_response_2_3/en",
+    "realization/musaf_kohanim_response_2_5/he",
+    "realization/musaf_kohanim_response_2_5/en",
+    "realization/musaf_kohanim_response_3_2/he",
+    "realization/musaf_kohanim_response_3_2/en",
+    "realization/musaf_kohanim_response_3_3/he",
+    "realization/musaf_kohanim_response_3_3/en",
+    "realization/musaf_kohanim_response_3_4/he",
+    "realization/musaf_kohanim_response_3_4/en",
+    "realization/musaf_kohanim_response_3_7/he",
+    "realization/musaf_kohanim_response_3_7/en",
+    "realization/musaf_kohanim_yehi_ratzon/he",
+    "realization/musaf_kohanim_addir_bamarom/he",
+    "realization/musaf_kohanim_addir_bamarom/en",
+    "realization/musaf_repetition_sim_shalom/he",
+    "realization/musaf_repetition_sim_shalom/en"
+  ],
+  "literal_main_printing_equality_keys": [
+    "realization/musaf_kohanim_berakhah/he",
+    "realization/musaf_kohanim_berakhah/en",
+    "realization/musaf_kohanim_yehi_ratzon/he",
+    "realization/musaf_kohanim_addir_bamarom/he",
+    "realization/musaf_kohanim_addir_bamarom/en"
+  ],
+  "completion_membership": {
+    "passed": true,
+    "method": "Reconstructed from unit fragments, citations, documentary opening scans and all continuation source_pages, front-page records and encoding-key scan memberships; compared exact sorted key lists.",
+    "all_proposed_page_lists_match": true,
+    "old_pages_gaining_memberships": 15,
+    "removed_old_keys": 0,
+    "new_source_complete_scans": [
+      346,
+      347,
+      348,
+      349,
+      350,
+      351,
+      352,
+      353,
+      354,
+      355
+    ],
+    "new_page_key_counts": {
+      "s346": 8,
+      "s347": 15,
+      "s348": 18,
+      "s349": 11,
+      "s350": 16,
+      "s351": 10,
+      "s352": 8,
+      "s353": 7,
+      "s354": 8,
+      "s355": 9
+    },
+    "scope": "New membership keys on old leaves are reused accepted provider/encoding coverage, not newly claimed source words. New346–355 completion is source/encoding only; no export promotion."
+  },
+  "audited_artifacts": [
+    {
+      "path": "/tmp/mahzor-s346/review-binding-proposal.json",
+      "sha256": "4003bbcffd7a744d18a110c3107b243cecd718f86dc6d31593fbfcb6b9f1b580"
+    },
+    {
+      "path": "/tmp/mahzor-s346/proposed-reviews.json",
+      "sha256": "a00fc7f76b09ec3f86174512529b6b3286fa01dda5991808189fff537500ea87"
+    },
+    {
+      "path": "/tmp/mahzor-s346/changed-review-payload-manifest.json",
+      "sha256": "7bb88ddfd28dd563ce99c544b836f2401c054253b683d75e7bf29641fe941c62"
+    },
+    {
+      "path": "/tmp/mahzor-s346/changed-review-payloads.json",
+      "sha256": "db550e704a2f2bc9f1d9eac3faa7842327725a7e7c783cba8f6b7225a097b081"
+    },
+    {
+      "path": "/tmp/mahzor-s346/old-encoding-delta-proof.json",
+      "sha256": "883b00f83bc97fbd2b3bd2c806f1b32f535f419840e7c05b3f21740c608b5da4"
+    },
+    {
+      "path": "/tmp/mahzor-s346/completion-key-reconciliation.json",
+      "sha256": "89820d7e474482b0a79b3f789a3283836a0c3a1703dd9bd28eb57b5993953f39"
+    },
+    {
+      "path": "/tmp/mahzor-s346/proposed-page-completion.json",
+      "sha256": "6dcc60045af6af23d559e632963e03de955b822417723efe9b3b8ca47d5b8f82"
+    },
+    {
+      "path": "/tmp/mahzor-s346/final-registry-actual-reference.json",
+      "sha256": "9da9e6dd0b455fe76ab08ac0196ab52aa872d533875811e4226b1cb02c7faf57"
+    }
+  ],
+  "evidence_scope_limitations": [
+    "Registry actual-reference closure checks the last two reference fields and relies on prior full registry review for other records; this audit does not invent a fresh independent review of all139.",
+    "Module/guideline and source conclusions are inherited from their actual independent reviews and human closure; this is binding audit, not a new source or TEI adjudication.",
+    "All prior HTML/season/source/order approvals retain their original limits.",
+    "Final PDFs, final export QA, whole-batch promotion and publication remain outside this approval."
+  ],
+  "data_modified": false
+}

@@ -1,0 +1,106 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "unspecified (not exposed to the reviewer)"
+  },
+  "approved": false,
+  "findings": [
+    {
+      "id": "R1",
+      "severity": "high",
+      "evidence": "machzor_expanded-opensiddur-he/index.xml, all 13 aliyah blocks (e.g. lines 1976-1993, 2335-2353). The Barekhu call (role_0) and the repeated response (role_3) are both labeled <note type=\"description\" corresp=\"…role/reader\">חזן</note>. The printed rubric says the oleh says these words, not the reader: he index line 540 / en index line 431 read 'Before reading from the Torah, the individual called upon says the following:' and 'He then repeats this and continues:'. The Codex rubric between the two labels says 'העולה חוזר על התשובה', which contradicts the חזן label right after it. ROLE_LABELS in build.py:27 has no role for the oleh, so the importer cannot express the correct speaker.",
+      "action": "Add a registered role for the person called up (e.g. role/oleh), use it for the call and for the repetition, and keep role/congregation for the response. Add a test that the call and the repetition are not tagged reader."
+    },
+    {
+      "id": "R2",
+      "severity": "medium",
+      "evidence": "quotation-decisions.json lines 324-337 still contain the old rows for torah_shelosh_esreh_middot (he and en): source 'urn:x-opensiddur:text:bible:exodus/34/7', with the whole printed quote including וְנַקֵּה / 'and purifies.'. They sit alongside the new notzer_chesed and venakeh rows (338-365). No seg in either XML file now has @source=exodus/34/7, so those rows are stale. They also still assert a whole-verse quote, which is the over-reading F5 was meant to remove.",
+      "action": "Delete the two whole-verse rows. Add a check that every quotation-decision row matches exactly one seg @source plus printed text in the emitted XML."
+    },
+    {
+      "id": "R3",
+      "severity": "medium",
+      "evidence": "Gap marker (F7). In the he index (line 566) and the en index (line 457) the editorial gap notice is an inline <tei:note type=\"description\"> carrying the source @facs (n181/n182), even though it is Codex text and not printed on those pages. Guidelines lines 191-226 say a description is a source rubric for what follows, and editorial notes are out-of-line commentary. The English note also says 'The separate daily-psalm appendix follows.', but nothing follows it in the en index (the appendix is he-only, so the en body ends at line 458). Only one marker is present per index, not two.",
+      "action": "Remove @facs from the editorial notice, or move it to standOff commentary / tei:gap with resp=codex. Make the English wording true for the English witness (no appendix follows). If a 'both ends' marker is intended, add the closing end explicitly."
+    },
+    {
+      "id": "R4",
+      "severity": "medium",
+      "evidence": "build.py:447-481. qere_ketiv is one branch of an if/elif chain, so a fragment that also has uncertain_characters, abbreviations, enlarged_letters or expansion silently loses those features and gets no error. The pending 1 Sam fine readings include uncertain marks. Also, `text.count(written) != 1` / `partition` matches a substring with no word-boundary check, so a written form could bind inside a longer word. The test (test_qere_ketiv_preserves_printed_form_and_invalidates_review, lines 1236-1254) covers only the single-word case and the duplicate-span error. It does not assert that the body's printed text still equals the source, and it does not test multiple readings in order, rejection of combined features, or rejection of a partial-word match.",
+      "action": "Raise if qere_ketiv is combined with another fragment-level feature (or support the combination). Require a match at word boundaries (letters and points). Extend the test to assert the printed text, two ordered readings, rejection of a combined feature, and rejection of a mid-word match."
+    },
+    {
+      "id": "R5",
+      "severity": "low",
+      "evidence": "build.py:314-319. end_reference_before_instructions closes active_reference but does not require the segment to open a new reference (segment['corresp']). On a continuation segment, the words after the rubric would fall outside every verse and drop silently out of verse-range transclusions. The test (test_aliyah_rubric_ends_verse_without_cutting_chapter, lines 1256-1276) checks only the positive path. It has no test for the 'requires an instruction' error, the missing-corresp case, or find_end_of_mapping of the preceding verse excluding the label.",
+      "action": "Raise unless the segment has a verse corresp. Add negative tests and a scope test using find_end_of_mapping."
+    },
+    {
+      "id": "R6",
+      "severity": "medium",
+      "evidence": "The expanded torah section (lines 1958-1997) leaves out the printed rubrics that the documentary indexes keep: 'Before reading from the Torah, the individual called upon says the following:', 'He then repeats this and continues:', 'Then the reading of the Torah begins…' and 'וקוראים בס״ת ראשון וה׳ פקד את שרה בפרשת וירא.'. It substitutes Codex rubrics ('העולה חוזר על התשובה ומברך' and others). The same applies to lines 2328/2330: the source prints a bilingual Maftir rubric (he index 550, en index 441), but Codex rubrics are used. Editorial rubrics are authorized, but F15 set the precedent of restoring native rubrics, and these printed ones would also have prevented R1.",
+      "action": "Use the native printed rubrics where they fit (at least once, before the first aliyah). Keep Codex rubrics only where the printed sentence cannot be split around the Half Kaddish."
+    },
+    {
+      "id": "R7",
+      "severity": "low",
+      "evidence": "Pending source readings found while spot-checking s182 (not accepted; recorded only). (a) The bottom note on s182 appears to read 'יקום פרקן' (no vav), while he index line 564 encodes 'יקום פורקן'. The en page s183 does print 'יקום פורקן', so the he witness may have been copied from the English. (b) The Al haTorah opening on s182 appears to print 'עַל־הַתּוֹרָה' with a maqaf, but haftarah_al_hatorah.xml (he) has 'עַל הַתּוֹרָה'. The image resolution is limited.",
+      "action": "Add both to the pending fine-reading list for adjudication. Do not change them on this reviewer's reading alone."
+    },
+    {
+      "id": "R8",
+      "severity": "low",
+      "evidence": "F3 residue. The join fix is confirmed: 'הַשַּׁבָּת וְ<j:endConditional/>יִשְׂרָאֵל'. Doubled whitespace remains before every marked conditional in he and en ('וְעַל־יוֹם  <j:conditional', 'אֱלֹהֵינוּ  <j:conditional', 'מְקַדֵּשׁ  <j:conditional', 'for this  <j:conditional', 'sanctifies  <j:conditional', 'לָעַד.  <milestone'). Also, 'וְיוֹם <j:endConditional/> הַזִּכָּרוֹן' leaves two spaces when the condition is true. The Shelosh Esreh notzer_chesed seg ends with a space inside the seg and is followed by another space outside it.",
+      "action": "Normalize to a single space at each seam, or confirm in a selector test that the renderer collapses whitespace in both Shabbat states."
+    },
+    {
+      "id": "R9",
+      "severity": "low",
+      "evidence": "Optional navigation (he index 564). If the seg is suppressed, the remaining note text is 'On Sabbath the following passages are omitted', with no final punctuation. The sentence is grammatical, but its period sits inside the suppressed seg. The en counterpart (455) leaves 'After the Haphtora the Shofar is blown.', which is complete.",
+      "action": "Move the period outside the optional seg in the he witness, or record it as an accepted rendering artifact."
+    },
+    {
+      "id": "R10",
+      "severity": "low",
+      "evidence": "In quotation-decisions.json the new rows give local_verse at verse level only ('…/notzer/7', '…/venakeh/7'). The XML carries local verse-part milestones ('…/notzer/7/notzer_chesed', '…/venakeh/7/venakeh') that the decisions file does not record. In subverse.py:100-110 the comment explains venakeh and lo_yenakeh but not why notzer_chesed exists.",
+      "action": "Record the local verse-part URN in the decisions rows. Extend the subverse.py comment to explain that notzer_chesed bounds the prefix clause."
+    },
+    {
+      "id": "R11",
+      "severity": "low",
+      "evidence": "'הש״ץ אומר בקול רם' (expanded 1943, he index 524) is encoded as type=\"instruction\". The guidelines (lines 285-296) say a rubric that says who says the passage or how is a description, placed inside the passage's scope.",
+      "action": "Consider type=\"description\" (optionally with role/reader) before the Shema transclusion."
+    }
+  ],
+  "checks": [
+    "F1: In the expanded index, the torah notes at 1949/1951/1953/1956/1958 each have a single xml:lang=\"en\" text with no duplicated foreign. Resolved.",
+    "F2: Weekday aliyah 2 is genesis/21/5–8 then 21/9–12; weekday aliyah 3 is 21/13–17 then 21/18–21 (expanded 2024-2025, 2053-2054). The ranges are consecutive with no gap or overlap, and the cuts fall exactly at the Shabbat label seams before v9 and v18. All 5 weekday and 7 Shabbat ranges together cover 1–34. Resolved structurally. Rendered output was not inspected.",
+    "F3: The he seal now reads '<cond>הַשַּׁבָּת וְ<endCond/>יִשְׂרָאֵל' with no whitespace at the join. This matches s182 '(הַשַּׁבָּת וְ)יִשְׂרָאֵל'. The en segments match s183 '(Sabbath day and this)', '(for holiness and rest)' and '(the Sabbath) Israel'. Whitespace residue is in R8.",
+    "F4: The final word of the neeman blessing is now 'אָתָּה' (qamats). s182 appears consistent with this, and the first 'אַתָּה הוּא' stays patach as printed. Still subject to the pending fine-reading adjudication.",
+    "F5: Both he and en torah_shelosh_esreh_middot have two segs with @source exodus/34/7/notzer_chesed and exodus/34/7/venakeh. Each has its own local chapter/verse/verse-part milestones, closed verse-part → verse → chapter. subverse.py VERSE_PARTS has notzer_chesed, venakeh and lo_yenakeh in that order. The notzer_chesed incipit 'נצר חסד' starts 34:7, so the prefix runs from the start of the verse up to venakeh. This conforms to guideline lines 72-83. Stale decision rows are in R2.",
+    "F6: he torah_barekhu has <note type=description corresp=role/congregation xml:lang=en>Cong.</note> before the response prayer-part milestone, so it is outside the response scope. en has 'The congregation responds:' in the same position. The expanded blocks carry explicit קהל markers on the response. The caller role is wrong (R1).",
+    "F7: A credited (resp=codex) editorial notice now sits before the appendix div in he, and in en at the end of the body. The navigation notes carry facs n181/n182. Problems are in R3.",
+    "F8: he index line 557 emits the head 'הפטרה ליום א׳ של ראש השנה.' before the Samuel range. en index lines 438/448 emit 'Reading from the First Torah Scroll' and 'Haphtarah' before the Genesis and Samuel transclusions.",
+    "F9: Not verified. haftarah_samuel_1.xml (en) was not in the requested file list and was not read.",
+    "F14: Not verifiable by reading. The expanded index line 2329 transcludes the bare 'prayer:kaddish/chatzi'. The claim that compiled binding selects this mahzor's kaddish_chatzi under the Ten Days condition is taken from the user and not independently verified.",
+    "F15: 'הש״ץ אומר בקול רם' is restored at expanded 1943, between Berikh Shemeh and Shema inside the Frankfurt/variant gate. Kind is discussed in R11.",
+    "Vezot haTorah appears in the expanded index only at line 2360, after Maftir and under the printed rubric. It does not appear at the first-scroll lifting (line 2330). This matches the stated resolution of the open custom question.",
+    "Threefold recitation: shelosh_esreh_middot/torah_opening/text and malle_mishalot/vaani are each transcluded 3 times (lines 1917-1924). The ג״פ note sits after the prayer-part end, so it is excluded.",
+    "Qere/ketiv emission follows guideline lines 116-124 (tei:choice with j:read and j:written, in that order). The review payload includes '[written …; read …]', so changing a reading invalidates review.",
+    "test_marmorstein_rosh_hashanah_1.py was read in full (lines 1-1294), including both named tests."
+  ],
+  "limitations": [
+    "Read only: no tests, builds, renderer or compiler were run. The '250 occurrence/language comparisons' and '102 tests + 14 subtests' counts were not verified.",
+    "build.py was read only for lines 1-799. Index and expanded-index assembly, the gap-note and settings emission, write paths and the word-check code after line 799 were not read.",
+    "Partial reads of indexes: the he documentary index lines 440-577, the en documentary index lines 395-462, and the expanded index lines 1900-2378. Earlier prayers were not reread, as instructed.",
+    "These files were not read: genesis_21, numbers_29 and haftarah_samuel_1 (he/en); en haftarah_after_blessings; torah_vezot_hatorah; torah_before/after_blessing; kaddish_chatzi; readings.json; reviews; pending-source-readings; subverse tests; canonical Bible provider outputs (so 'providers preserve every scripture character' is unverified); compiled or rendered output.",
+    "Images: only s182 and s183 were inspected. 'English Maftir instruction printed on scan173' and the en Barekhu 'The congregation responds:' rubric were not checked against images. R7 readings are from a downscaled image and need adjudication.",
+    "The guideline excerpt (encoding-guidelines-excerpt.md) was read in full. Nothing outside the excerpt in the general encoding guide was read.",
+    "No source text is accepted by this review. 100/355 remain accepted and the 92 fine-reading entries stay pending. All new material stays DRAFT."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "9c358c00-23e9-4db0-8eaf-1bb12e3343d7"
+  }
+}

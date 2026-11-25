@@ -1,0 +1,50 @@
+{
+  "approved": true,
+  "code_approved": true,
+  "required_changes": [],
+  "files_read": [
+    "/tmp/mahzor-s346/closing-encoding-review.json",
+    "/tmp/mahzor-s346/closing-citation-scope-remedies.json",
+    "/tmp/mahzor-s346/closing-guideline-remedies.json",
+    "/tmp/mahzor-s346/candidate-registry-records.json (all 1065 lines)",
+    "/tmp/mahzor-s346/context-description-code.diff",
+    "/tmp/mahzor-s346/context-description-tests.log",
+    "integration/project/prayerbook_for_the_new_year-heidenheim-1965-he/psalm_94.xml",
+    ".../vehu_rachum.xml",
+    ".../psalm_92.xml",
+    ".../psalm_93.xml (standOff + body)",
+    ".../daily_psalm_92.xml",
+    ".../daily_psalm_93.xml",
+    ".../psalm_81.xml",
+    ".../psalm_48.xml",
+    ".../psalm_82.xml",
+    ".../psalm_24.xml",
+    ".../daily_psalm_24.xml",
+    ".../kohanim_appendix_retzeh.xml",
+    ".../kohanim_appendix_modim_derabbanan.xml",
+    ".../kohanim_appendix_responses_1.xml",
+    ".../kohanim_appendix_responses_3.xml",
+    ".../kohanim_appendix_invitation.xml",
+    "opensiddur/importer/marmorstein_rosh_hashanah_1/realizations.py (lines 1-540)",
+    "opensiddur/tests/importer/test_marmorstein_intrinsic_optionals.py (whole file)"
+  ],
+  "limitations": [
+    "Read-only review. I ran no compile, refdb sync, schema validation, validate_features or validate_names. So 'exactly one citation per occurrence' is shown only by the module encoding, not by compiled output. In particular, I did not verify that a standoff note targeting psalms/92/1 or 93/1 is emitted through the *inline* verse transclusions in daily_psalm_92/93. That compile check is what would confirm that the s354 צב/צג still prints once.",
+    "I did not read the emitting code in build.py (only its 2-line diff). That emission honours `type` is shown by the new test asserting t:note[@type='description'] in the host, and by the generated context files.",
+    "The test log shows 258 passed / 344 subtests. It does not say which test selection was run, so I cannot treat it as the full `uv run pytest` / `unittest discover` suite.",
+    "I did not establish which caller or default selects the `heidenheim_1965_earlier` option for 94/1–2 at the p.16–17 VehuRachum. vehu_rachum.xml declares only Psalm 25:6 features. This predates the reviewed changes and is outside the three items, but the spine/compile check should confirm it.",
+    "Not checked: whether any annotation-project document (for example an EN translation) carries corresp=bible:psalms/94, 81, 48 or 82 at chapter level. The with_translation settings list both projects as annotations, so a chapter-level HE citation would attach there too.",
+    "The registry is still an UNACCEPTED proposal. No approval is given for spines, recitation order, runtime/compiler behaviour, HE/EN exports, PDF/electronic output or promotion. Source readings were taken as approved; no scans were inspected."
+  ],
+  "notes": [
+    "REQUIRED 1 (duplicated/leaking citations) — CLOSED. psalm_94.xml's note now targets urn:...bible:psalms/94. In psalm_94.xml the only corresp carrying that URN is the chapter milestone. vehu_rachum.xml's Psalm 94 chapter milestone has no corresp (`<tei:milestone unit=\"chapter\" n=\"94\"/>`), and 94/1–2 there are verse-level choices. So צד can no longer attach at the earlier VehuRachum. psalm_81/48/82 likewise target chapter URNs that only their own chapter milestones carry. daily_psalm_92.xml and daily_psalm_93.xml no longer have a standOff. The single provider notes (psalm_92 → 92/1 'צב', psalm_93 → 93/1 'צג') remain. daily_psalm_24's note targets its own context div (hosafot/daily_psalms/sunday), so the inline 24:5 reuse in kohanim_appendix_responses_3 does not pick up כד.",
+    "REQUIRED 2 (description vs instruction) — CLOSED. The generated files now have t:note type=\"description\" xml:lang=\"he\" in the context files only: retzeh 'הש״ץ.', modim_derabbanan 'הקהל.', responses_1 'הש״ץ מקרא.' and 'הקהל אומר.', invitation 'הש״ץ בקול', set directly before the prayer:amidah/kohanim call it describes. All four sit in the hosafot context documents, not in the shared prayer providers they transclude. The speaker roles (reader, congregation) and the manner ('בקול') match JLPTEI-3's definition of a description.",
+    "REQUIRED 3 (registry labels) — CLOSED for this scope. bible:psalms/24/5/heidenheim_1965_printing/earlier is gone. It is replaced by .../daily_appendix ('Sunday daily-psalm appendix printing (scan351)… physically later than the priestly-blessing appendix'), which is truthful. psalm_24.xml's options, daily_psalm_24 (daily_appendix=true) and responses_3 (kohanim_appendix=true) all use the new name consistently. yehi_ratzon_printing is now labelled as the main-service printing context. The invitation/word_parts record is kept deliberately as status=context, kind=library. Its note says map_root=False and omit_publication_urn=True. This matches prepare_unit(), which forces those flags on canonical_parts, and validate_pure_parts()/check_target(), which reject the library root as a target. It is therefore metadata required by canonical-home validation, not a whole-prayer provider. Acceptable as explained.",
+    "CODE — approved. The validate_occurrence_controls change requires language and text, allows only the extra key `type`, and restricts `type` (defaulting to 'instruction') to {'instruction','description'}. It correctly rejects other strings, non-strings (True, None) and unexpected keys such as 'target'. Short-circuit order is safe: isinstance(dict) is checked before set(i). The same validator guards the canonical_text and prepare_documents paths, so the restriction also applies to instructions in a canonical home. The edition/settings text edits only remove 'in progress' wording. Draft output still carries 'DRAFT: independent adjudication pending.', so the metadata stays truthful.",
+    "TESTS — adequate. The new test covers description emission into the host, no note leaking into the shared words document, three invalid type values and an unexpected key. OPTIONAL: also call r.validate_generated(docs,data) and b.validate() on the description output, as the sibling test does, and add an explicit type='instruction' case.",
+    "OPTIONAL: citation targets are now mixed. 48/81/82/94 target the chapter, 92/93 target verse 1. This is justified because daily_psalm_92/93 transclude verse by verse with no chapter milestone. Record the reason in the remedy notes, or have the daily callers carry a chapter-level context, if a uniform rule is wanted.",
+    "OPTIONAL: kohanim_appendix_responses_1 puts both 'הש״ץ מקרא.' and 'הקהל אומר.' before the first priest line. If the scan prints them as a column header this is faithful. If 'הקהל אומר' heads only the response lines, move it to before the first response paragraph.",
+    "OPTIONAL (registry cosmetics before promotion): missing spaces in labels — 'the22-letterName', 'Psalm24:5 … (scan351)', 'Marmorstein Psalm25:6'. The hosafot structural labels ('Closing-volume structural context — 92/sunday/…') are truthful but uninformative. Condition-name schemes are still mixed (_earlier, _opening, _printing/earlier, _printing_1/earlier, printing/main); the prior review already raised this.",
+    "OPTIONAL (carried over, not re-raised as required): psalm_24.xml's n350 pb comes before the chapter milestone, so the external bible:psalms/24 transclusion may not emit it. psalm_94's pb uses a different @ed form ('1965 rosh_hashanah/hosafot/daily_psalms/94') from its siblings ('1965'). Leave both to the spine review."
+  ]
+}

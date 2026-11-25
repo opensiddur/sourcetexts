@@ -1,0 +1,36 @@
+{
+  "scope": "bindings_7",
+  "approved": true,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_7-0.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_7-1.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_7-2.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_7-3.json"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "Canonical identity: all four records bind to urn:x-opensiddur:text:prayer:ken_tagen_al_ammekha_yisrael. That URN does not depend on any one publication and is the same for the weekday and Shabbat stems, which is right for one prayer text used in two places. The realization URNs (urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/ken_tagen_{weekday,shabbat}) are structural siddur paths. I found no publication-specific identifier, such as a Birnbaum, edition or page token, in any canonical or realization identity.",
+    "Source binding is internally consistent. In each record the fragment text_sha256 equals source_fidelity literal_sha256, corrected_sha256 and resolved_sha256 (he cec608f4…4614 with 49 characters; en ed817a9e…b0c with 56 characters). corrections is [] at both the unit and fidelity level, which agrees with literal == corrected == resolved. Hebrew binds to scan s306 and English to s307. Both are printed_page '143', paragraph 1, page_start false, and source_scans matches the fragment scan in every record.",
+    "The weekday and Shabbat realizations bind the same physical fragment (s306/s307, p.143, paragraph 1). Each one's attesting_controls lists both stems, so the shared binding looks deliberate and the two records agree. Whether the book prints this text once and applies it in two contexts, or prints it twice, can only be settled from the order/navigation data, which this scope cannot see.",
+    "Neither stem carries a condition scope: enclosing_scopes is [] and settings is {} in every attesting control, and variants is []. So no inappropriate condition is encoded. The weekday/Shabbat distinction appears only in the stem and URN names, so it must be enforced by the enclosing order or navigation structure.",
+    "page_context ('rosh_hashanah/musaf/repetition/anusah_leezrah') appears only on the two Shabbat records, not the weekday ones. The he and en records agree with each other, but the semantic reason for the asymmetry cannot be confirmed from this projection. navigation_sha256 is identical in all four records, so it does not separately attest this field.",
+    "One attesting control points at musaf_shofarot_verses segment_index 26. That claims the same canonical text also occurs inside the Shofarot verses, which supports sharing one canonical identity across contexts. Whether that segment's words actually match is a matter for the source-word review, not this one.",
+    "The English title 'So mayest Thou protect' follows the translation's wording. It is display metadata, not canonical identity, so it is acceptable. The Hebrew title 'כן תגן' fits the canonical incipit.",
+    "All four records are kind 'new', so having every field listed in changed_fields is expected. None of them is an unchanged-arrangement record, so the byte-identity check against a previously accepted payload does not apply."
+  ],
+  "scope_limitations": [
+    "The global hashes (expanded_order_sha256, source_order_sha256, navigation_sha256, documentary_instructions_sha256) are identical in all four records. They were checked only for consistency, because their content belongs to the order group's review.",
+    "final_sha256 hashes the complete unmasked canonical payload. I could not recompute or verify it from this projection.",
+    "Where the weekday/Shabbat condition is actually enforced, and the placement behind page_context, depend on the order/navigation structure, which is not in this scope.",
+    "Text values appear only as SHA256 hashes and character counts. Checking source words, including the cross-context match with musaf_shofarot_verses segment 26, is outside this scope.",
+    "This is not a code review and does not approve export."
+  ],
+  "verdict": "Approved. All four ken_tagen records (weekday and Shabbat, he and en) have neutral canonical identities, source and fidelity hashes that agree, and no corrections or variants. No condition is encoded, so none is inappropriate. There are no blocking findings. The weekday/Shabbat distinction is not encoded in these records, and the Shabbat-only page_context and the shared physical fragment cannot be checked here; both depend on the order/navigation review.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "2511848f-18dd-4b4a-90b6-12dd377f5d34"
+  }
+}

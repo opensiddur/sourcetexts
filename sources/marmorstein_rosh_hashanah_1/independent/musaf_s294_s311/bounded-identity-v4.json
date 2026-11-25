@@ -1,0 +1,69 @@
+{
+  "scope": "identity",
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "medium"
+  },
+  "approved": true,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/bounded-review-v4/rule-identity.md",
+    "/tmp/mahzor-s294/bounded-review-v4/rule-scope.md",
+    "/tmp/mahzor-s294/bounded-review-v4/rule-verse_numbering.md",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__amidah_modim_derabbanan__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__amidah_modim_derabbanan_parts__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__rh_uvekhen_ten_kavod__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__rh_uvekhen_ten_kavod__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__amidah_uvekhen_ten_kavod_parts__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__amidah_uvekhen_ten_kavod_parts__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__rh_hodaah__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__rh_hodaah__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__amidah_hodaah_parts__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__amidah_hodaah_parts__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__musaf_al_ken__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__musaf_al_ken__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__al_ken_words__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__al_ken_words__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__repetition_birkat_kohanim__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__musaf_repetition_kohanim_intro__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__musaf_repetition_kohanim_intro__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__musaf_repetition_shofarot_close__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__musaf_repetition_shofarot_close__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__musaf_shofarot_close__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__musaf_shofarot_close__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__musaf_shofarot_blessing__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__musaf_shofarot_blessing__body00.jsonl",
+    "/tmp/mahzor-s294/validation-source-evidence-v4.json",
+    "/tmp/mahzor-s294/schema-changed-files-v4.json",
+    "/tmp/mahzor-s294/registry-context-prayer-additions-v4.json",
+    "/tmp/mahzor-s294/canonical-and-practice-evidence-v3.json",
+    "/tmp/mahzor-s294/s295.jpg",
+    "/tmp/mahzor-s294/review-s275-000.jpg",
+    "/tmp/mahzor-s294/s309.jpg"
+  ],
+  "blocking_findings": [],
+  "new_human_questions": [],
+  "nonblocking_findings": [
+    "Canonical homes have no page breaks: amidah_modim_derabbanan_parts (HE), amidah_uvekhen_ten_kavod_parts (HE/EN), amidah_hodaah_parts (HE/EN) and al_ken_words (HE/EN) contain no t:pb. Each opens with one prayer-part milestone carrying a corresp and ends with a bare terminator. The matching documentary contexts (amidah_modim_derabbanan, rh_uvekhen_ten_kavod, rh_hodaah, musaf_al_ken) each keep exactly one t:pb. Their seg/@source values quote exactly the URNs listed in validation-source-evidence-v4.json literal_contexts.",
+    "No duplicate canonical corresp was found in the assigned files. Each canonical home appears as a milestone corresp exactly once per project: amidah/hodaah/{modim,veal_kullam,ukhetov}, siddur:rosh_hashanah/text/vekhol_hachayyim, amidah/hodaah/modim_derabbanan, amidah/uvekhen_ten_kavod, siddur:rosh_hashanah/musaf/al_ken/text, amidah/teqa_beshofar_gadol_lecherutenu, amidah/shomea_qol_teruat_ammo, and the Shacharit birkat_kohanim/birkat_kohanim intro. The earlier silent-Musaf printings (musaf_shofarot_close and musaf_shofarot_blessing, n215–218) quote the canonical identities through seg/@source under their own .../text context corresp and do not repeat the canonical corresp.",
+    "Birkat Kohanim intro: the Shacharit HE home (repetition_birkat_kohanim) opens the identity and closes it with a bare prayer-part terminator before the Numbers 6:24–26 quotation-context chapter/verse milestones. The HE Musaf intro quotes that identity through seg/@source, with the reader rubric outside the segs. The EN Musaf intro is the first translated occurrence and reuses the same existing identity as a milestone corresp, closed before the end of the paragraph. Nothing here claims that English was printed for Shacharit.",
+    "Verse numbering in assigned files: Numbers 6:24/25/26 and 10:10 quotation contexts carry the canonical chapter/verse @n values (6/24–26 and 10/10). Both inner scopes close before the next content, and seg/@source points to the canonical bible URN. Each quotation is a whole verse, so no partial-verse over-claim. The registry entries for shofarot_close/quotes/numbers_10 and numbers_10/10 are present with status=context.",
+    "Registry: new siddur context rosh_hashanah/minchah/modim_derabbanan (status=context) matches the outer div corresp in amidah_modim_derabbanan. musaf/repetition/kohanim_intro and musaf/repetition/shofarot_close are registered as context. The new prayer ken_tagen_al_ammekha_yisrael and the condition teqiot_veseder_shofarot are each registered once with no same-prayer duplicate. The pre-existing records for musaf/shofarot_close(/text), teqa_beshofar and shomea_qol are listed in the v3 evidence.",
+    "The source images confirm the stated observations. On PDF295 (p.137) 'On Sabbath.' is printed directly above the Anusah paragraph. On PDF275 (p.127) and PDF309 (p.144) the Areshet parenthesis reads '(the memory of)' with no Sabbath qualifier inside it. PDF309 also prints 'Tekioth … order of our Shofaroth', which is consistent with the separate teqiot_veseder_shofarot wording condition. The EN musaf_repetition_shofarot_close text, including the quotation marks around the Numbers 10:10 verse, matches PDF309.",
+    "Not an identity issue: EN musaf_shofarot_close splits the opening into three seg/@source pieces around supplied 'of our'. With the inter-seg tails, a naive render produces doubled spaces ('God  of our  fathers'). Leave this to the text/rendering reviewers.",
+    "Pre-existing file, not changed since V3: repetition_birkat_kohanim (HE) contains whitespace-only seg/@source=amidah/birkat_kohanim_leshatz elements between the verse quotations. This is harmless for identity but adds noise."
+  ],
+  "scope_limitations": [
+    "The supplied evidence lists only minchah_maariv/amidah/avodah and .../hodaah as legacy registry records. The div corresp minchah_maariv/amidah/uvekhen_ten_kavod used in rh_uvekhen_ten_kavod (HE/EN) is not shown in any supplied registry excerpt. I accepted it as an existing registered context on the user's instruction; I could not verify it independently.",
+    "Registry records for some other URNs used in the assigned bodies are also not shown in the supplied excerpts: musaf/al_ken, musaf/al_ken/text, musaf/shofarot_blessing(/text), siddur:rosh_hashanah/text/vekhol_hachayyim, the Shacharit birkat_kohanim quotations/numbers_6_2x contexts, and the al_ken/uvekhen printing conditions. These appear in files that are mostly unchanged since V3, so I assumed they were previously accepted.",
+    "The Exodus 20:18 canonical remap (musaf_repetition_shofarot_verses) and the anusah_leezrah files are not among the assigned body chunks. I checked them only through validation-source-evidence-v4.json and the registry entries (shofarot_verses/intro_exodus_20_18 and quotes/exodus_20/18 both present). I did not inspect their XML.",
+    "Schema validity is taken from the per-file SHA/pass receipts in schema-changed-files-v4.json. I did not re-run any validation, and per instructions I inspected no code. Header metadata, other groups and export are out of scope."
+  ],
+  "verdict": "APPROVED for the identity scope only. I read all 23 assigned body chunks in full, plus the three rule sections, the four evidence files and the three source images. I found no blocking identity problems. Each canonical home is a single, coherent, page-break-free identity. Documentary contexts keep their pagination and quote the canonical homes with seg/@source. No canonical corresp is duplicated. Quotation contexts keep canonical chapter/verse numbering and close their scopes. The birkat_kohanim identity is reused across the Shacharit and Musaf placements as instructed. The registry additions use context status and introduce no new same-prayer identities. The source images support the Sabbath rubric observations. This approval does not cover other groups, code, header metadata or export.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "ca9b259e-8c46-4f35-a5ba-8659f1209717"
+  }
+}

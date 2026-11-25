@@ -1,0 +1,65 @@
+{
+  "verdict": "changes_required",
+  "findings": [
+    {
+      "priority": "high",
+      "file": "opensiddur/importer/marmorstein_rosh_hashanah_1/realizations.py",
+      "line": 68,
+      "reason": "This check binds unrelated segments into the receipt. `selected_ids` (built at line 415 as `{segment_identity(v) for v in selected}`) contains None whenever the host range includes a segment with no identity. Two common cases do this: a whole-text host (line 288 only allows biblical sub-identities, so most of its segments have no identity) and a multi-segment range with unidentified segments in the middle. When `selected_ids` contains None, `part.get('canonical') in identities` is True for every non-pointer segment in every other unit of that language, and `not part.get('canonical_end')` is True too. Those segments are all recorded as attesters. The callers' payloads fill up with unrelated segment indices and scopes, and an edit to any unit in that language marks every such caller stale. No current test covers this because the fixture ranges have no unidentified segments.",
+      "required_fix": "Only count real pointers: `if part.get('canonical') and part['canonical'] in identities and not part.get('canonical_end')`, or remove None from `selected_ids` at line 415. Add a test where the host range has an unidentified segment and an unrelated unit has plain segments. Assert that `attesting_controls` returns only real canonical pointers, and that editing the unrelated unit leaves the caller's realization payload unchanged."
+    },
+    {
+      "priority": "medium",
+      "file": "opensiddur/tests/importer/test_marmorstein_realizations.py",
+      "line": 462,
+      "reason": "The byte-identical test doesn't exercise the case the flag is meant for. In the fixture the pointer has no open `active_reference` before it, so `build.py:479` could never fire, with or without the flag. The flag is inert in the code because `close_references()` at `build.py:352` runs before line 479 for every canonical segment. But the two accepted witnesses (`musaf_repetition_gevurot_close/he/0`, `musaf_uvekhen_lekha_taaleh_qedushah/he/0`) are likely to come right after an open prayer-part or verse reference. The test as written can't detect a regression if line 352 is moved or made conditional.",
+      "required_fix": "Put a literal segment with `corresp` (an open prayer-part milestone) before the canonical pointer, and ideally one with a biblical `corresp` that opens a chapter too. Then assert the XML is byte-identical with and without `speaker_before_reference`. Also assert that the closing milestone(s) come before the speaker note."
+    },
+    {
+      "priority": "medium",
+      "file": "opensiddur/tests/importer/test_marmorstein_baseline.py",
+      "line": 73,
+      "reason": "One of the tests the previous review required is still missing: (d) `validate_redirection` accepts a segment with `speaker`, plus `speaker_before_reference` for the two named witnesses. The redirection tests only cover conditions with an instruction. Nothing shows that a bad speaker on a redirection source is rejected (through `validate_occurrence_controls` at `baseline.py:51`), or that a lone `speaker_before_reference` is rejected there. There is also no passing test for the `{role, label}` speaker form; only the `abbr`/`expan` form is tested.",
+      "required_fix": "Add subtests to `ControlledRedirectionTest`: (1) a segment with `speaker={'abbr','expan'}` and `speaker_before_reference=True` passes `validate_redirection`, and `validate_baseline` still passes after `corresp` is changed to `canonical`; (2) `speaker_before_reference` without `speaker` raises; (3) an unknown expansion raises. Add a passing canonical-pointer case with `{role, label}` where the role is in `ROLE_LABELS`."
+    },
+    {
+      "priority": "low",
+      "file": "opensiddur/tests/importer/test_marmorstein_realizations.py",
+      "line": 487,
+      "reason": "The citation test has no passing baseline. It never shows that `validate_occurrences(r)` passes on the same modified fixture before `citations` is added. If the setup (`canonical_parts=True`, copied fragments, empty `wording_selection`) already raised 'whole-library target' or 'attested canonical pointers' for another reason, the test would pass without ever reaching `check_citations`. The same weakness applies to `test_invalid_conditions_and_orphan_condition_rubric_fail`, which uses bare `assertRaises(ValueError)`.",
+      "required_fix": "Call `validate_occurrences(r)` once successfully, before the subtest loop and with no citations. In the invalid-conditions test, match the specific messages ('typed feature structures', 'requires conditions', or 'one plain source fragment' for the string case)."
+    },
+    {
+      "priority": "low",
+      "file": "opensiddur/importer/marmorstein_rosh_hashanah_1/realizations.py",
+      "line": 353,
+      "reason": "`check_citations` only looks at `target` and `targetEnd`. But `build.py:306` also renders `citation['reference']` as `<ref target=…>`. A `reference` pointing at a library root or a pure part identity isn't checked. It doesn't attach the apparatus the way `note@target` does, but it is a second path from printing-specific apparatus to shared words.",
+      "required_fix": "Run `reference` through the same `check_target(..., literal=True)` when it is an `urn:x-opensiddur:` URN, or record that `reference` is limited to external or biblical links and check that during data integration."
+    },
+    {
+      "priority": "low",
+      "file": "opensiddur/importer/marmorstein_rosh_hashanah_1/realizations.py",
+      "line": 56,
+      "reason": "`attesting_controls` differs from the build's model in a few small ways. (a) It opens scopes on `transclude` segments that carry `conditions`, but `build.py:334` skips those before any scope handling. (b) It doesn't skip a unit whose `reuse[lang]` is set, although `_range_segments` (line 214) treats such a language as not rendered. (c) It leaves out ranged attesters (`canonical_end`) whose range covers a selected identity. (a) and (b) only cause false staleness. (c) means a control change on a ranged printing over a non-pure host won't mark the callers stale, but pure parts already reject ranges, so the redirected-witness case is still covered.",
+      "required_fix": "Skip `transclude` segments when opening scopes, and skip units with `reuse.get(lang)`. Either include ranged pointers whose range covers a selected identity, or document that range attesters are deliberately unbound because only non-pure hosts allow them."
+    }
+  ],
+  "remaining_integration_checks": [
+    "A full importer and build test-suite run, with the exact command line and the list of collected files recorded (not only the two touched test modules).",
+    "Against the real, unchanged readings.json: `validate_occurrences` passes. An inventory shows that no explicit canonical pointer and no context pointer generated from a canonical_home carries a key outside CANONICAL_OCCURRENCE_KEYS. Generated context pointers need particular care because `source_reference_end` and `source_reference_part` survive in `prepare_documents` (realizations.py:497-498).",
+    "An inventory showing that `speaker_before_reference` appears only on `musaf_repetition_gevurot_close/he/0` and `musaf_uvekhen_lekha_taaleh_qedushah/he/0`, that each has a valid `speaker`, and that each witness's generated XML is byte-identical with and without the flag in its real context (open reference before it).",
+    "After the None-identity fix: for every realization payload, the `attesting_controls` entries are real canonical pointers only. The payload sizes look sane, especially for whole-text (text_corresp / canonical_whole) and multi-segment range callers.",
+    "`validate_redirection` run on each real witness stem and identity before re-pointing: yismechu/text, offering_formula/text, offering_formula/ushenei_seirim, offering_formula/useir_lekhapper/text. Afterwards `validate_baseline` passes against the unchanged accepted baseline. A readings diff shows only UNIT_MAPPING_FIELDS and SEGMENT_MAPPING_FIELDS changed. List any redirected segment that carries `end_reference` or `source_reference*`, because `validate_redirection` allows those (PLAIN_SEGMENT_KEYS) but `validate_occurrences` rejects them on the new pointer. Each such segment must be explicitly placed on either the host or the pointer.",
+    "Every citation in the real data has `target`, `targetEnd` and `reference` values outside the pure roots and pure part identities. `check_citations` passes, and any `reference` values are confirmed to be external or biblical links.",
+    "The real canonical_parts libraries pass `validate_pure_parts` and the literal-attestation check. The generated library XML has no pb, note, conditional, declare, head, div@corresp or publication idno.",
+    "Actual compile projections, not only validator runs. Yismechu with the shabbat setting unknown, true and false. Uminchatam/ushenei_seirim with rite unknown, frankfurt_am_main=true and frankfurt_am_main=false. Show the exact word sequences and that the condition rubric appears only when the setting is unknown. Each library's words appear exactly once per project.",
+    "Generated context XML keeps the exact pb n and facs positions, including a conditioned pointer that starts a new page (pb before j:conditional, no duplicate pb).",
+    "Receipts: list the realization reviews made stale by the new `attesting_controls` field and re-review each one by hand, with no bulk re-stamping. On real data, changing an attester's segment condition or enclosing-scope condition makes every caller of that part stale. Reordering units or editing an unrelated unit does not. Changing the library words changes every caller's `resolved_sha256`.",
+    "Still pending and outside this diff: the scope-fidelity check from generated XML against `canonical_text` for every part identity (he and en), and the audit of the Aleinu `end_reference` callers. Do not treat either as done or claim accepted data until all of the above evidence exists."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "6d37b1ce-9398-4b2d-bd3d-ff561f740911"
+  }
+}

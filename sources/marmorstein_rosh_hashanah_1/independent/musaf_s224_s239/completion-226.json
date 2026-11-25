@@ -1,0 +1,102 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "scan_pair": [
+    226,
+    227
+  ],
+  "source_approved": false,
+  "findings": [
+    {
+      "scan": "s226",
+      "key": "af",
+      "old": "שַׂרְעַף קִרְבֵיהֶם",
+      "proposed": "סַרְעַף קִרְבֵיהֶם",
+      "reason": "Both the source and band 2 show a closed samekh (ס) with patah. There is no shin/sin. The printed spelling is סרעף, not שרעף."
+    },
+    {
+      "scan": "s226",
+      "key": "af",
+      "old": "וְנִקְמַת קֵץ",
+      "proposed": "וְנִקִימַת קֵץ",
+      "reason": "Band 3 shows a yod between qof and mem, so the consonants read ונקימת. The consonant change is the confident part. The exact vowel under qof is listed under uncertainties."
+    },
+    {
+      "scan": "s226",
+      "key": "af",
+      "old": "כַּסֵּא לְהַקְפּוֹרַת",
+      "proposed": "כֶּסֶא לְהַקְפּוֹרַת",
+      "reason": "Band 3 shows segol under kaf and segol under samekh. It is not patah plus tsere, and no dagesh is visible in the samekh."
+    },
+    {
+      "scan": "s226",
+      "key": "yimlokh",
+      "old": "יִמְלוֹךְ",
+      "proposed": "יִמְלֹךְ",
+      "reason": "Bands 3 and 4 show four letters, י־מ־ל־ך, with holam on the lamed. There is no vav. The English cue on s227 also prints ימלך, but it was only used as a cross-check, not encoded."
+    },
+    {
+      "scan": "s226",
+      "key": "lehasir_reader",
+      "old": "speaker ח׳ ordered after block 'lehasir'",
+      "proposed": "move speaker ח׳ before 'lehasir'",
+      "reason": "The siglum ח׳ is printed at the start of the לְהָסִיר line, right of the first word, so it introduces that line. In the candidate it comes after lehasir, as if it introduced יִמְלֹךְ, and yimlokh has no siglum in the source. The text is correct; only the order is wrong."
+    },
+    {
+      "scan": "s227",
+      "key": "af",
+      "old": "though his offspring have erred through lust",
+      "proposed": "though his offsprings have erred through lust",
+      "reason": "Band 2 clearly prints 'offsprings'. The source's nonstandard plural must be kept, not normalized."
+    }
+  ],
+  "uncertainties": [
+    {
+      "scan": "s226",
+      "key": "af",
+      "word": "שִׁמַּעֲנוּךָ",
+      "question": "At this resolution the mark under the ayin looks more like a plain sheva (שִׁמַּעְנוּךָ) than hataf-patah. The hiriq under shin is also faint. This needs a higher-resolution crop before deciding."
+    },
+    {
+      "scan": "s226",
+      "key": "af",
+      "word": "וְנִקִימַת",
+      "question": "The yod is fairly clear. The vowels are not: it could be וְנִקִימַת or וּנְקִימַת. I can't confirm whether the mark under vav/nun is sheva or shuruk, or whether qof has hiriq."
+    },
+    {
+      "scan": "s226",
+      "key": "af",
+      "word": "תְּעַתְעוּ",
+      "question": "A mark may sit under the second tav (sheva or dagesh, as in תְּעַתְּעוּ), and the vowel under ayin could be qamats rather than patah. I can't resolve this from the band."
+    },
+    {
+      "scan": "s226",
+      "key": "gevurot_close",
+      "word": "כָמוֹךָ",
+      "question": "There may be a faint dot in the kaf (כָּמוֹךָ). It could be ink noise. The candidate's reading without dagesh is plausible but not confirmed."
+    },
+    {
+      "scan": "s226",
+      "key": "af",
+      "word": "קִרְבֵיהֶם / לְבָבֵיהֶם",
+      "question": "I can't confirm whether there is a dagesh in the bet. The candidate has none, and I don't see one, but these words are small at this size."
+    }
+  ],
+  "coverage_notes": [
+    "Running heads and page numbers (103, 'מוסף ליום ראשון של ראש השנה', 'Musaph for the New Year') are ignored as instructed.",
+    "Rubrics פותחים הארון., סוגרים הארון. and ע״ס א״ת ב״ש. all match the source in text and punctuation.",
+    "Sigla checked: ח׳ before מי כמוך matches. ק׳ before אף ארח matches. ח׳ before לְהָסִיר is present but in the wrong order (see findings). No siglum appears before ימלך or ואתה.",
+    "No Rashi notes, condition/alternative rubrics or footnotes appear on either page. Below ואתה קדוש on s226 and below the English on s227 the pages are blank, so there is no omitted bottom text.",
+    "English printed Hebrew cues (מי, אף ארח, ימלך, ואתה) are left out as instructed. Apart from 'offsprings', all English text on s227 matches word for word, including the parentheses (Joseph) and (sinners) and the punctuation.",
+    "Splitting the acrostic: the line לְהָסִיר … וּלְיַעֲקֹב: finishes the כ stanza that starts in block 'af'. Encoding it as a separate block is fine, but s227 renders it inside one English 'af' block. This is a pairing question, not a reading error.",
+    "There is no unencoded source content beyond what is listed above.",
+    "The 6 findings and 5 open questions remain unresolved, so source_approved is false."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "727823a7-c53d-4c7b-9d66-5adee658d7b8"
+  }
+}

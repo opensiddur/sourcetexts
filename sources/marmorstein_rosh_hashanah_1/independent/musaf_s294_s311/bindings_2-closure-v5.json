@@ -1,0 +1,92 @@
+{
+  "scope": "bindings_2_closure",
+  "approved": true,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/bindings_2-v5.json",
+    "/tmp/mahzor-s294/review-context-v5.json",
+    "/tmp/mahzor-s294/validation-source-evidence-v5.json",
+    "/tmp/mahzor-s294/bounded-identity-v4.json",
+    "/tmp/mahzor-s294/bounded-areshet-v4.json",
+    "/tmp/mahzor-s294/code-followup-v4.json",
+    "/tmp/mahzor-s294/bounded-review-v4/rule-verse_numbering.md",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/specs/SIDDUR_URN_SCHEME.md"
+  ],
+  "resolved_findings": [
+    {
+      "id": "B1",
+      "original_severity": "blocking",
+      "resolution": "Resolved. /zikhron is declared, just not in a file the bindings_2 scope was given. The declaration is in a separate pure-part host. review-context-v5.json zikhron_canonical_home shows stem musaf_repetition_areshet_zikhron_words, urn siddur:rosh_hashanah/musaf/repetition/areshet_zikhron_words, canonical_parts=true. Its HE paragraph 1 has corresp=urn:x-opensiddur:text:prayer:areshet_sefatenu/zikhron with text 'זִכְרוֹן' (s308, p144), and its EN paragraph 1 has the same corresp with 'the memory of' (s309, p144). The areshet reviewer read both bodies of that library and approved it (bounded-areshet-v4.json verdict items 3 and 7). It holds only the plain words, with no parentheses, condition or rubric, and its primary facs n307/n308 (printed 144) is genuine. So musaf_areshet_word_parts does not need to declare /zikhron. Under clarifications.canonical_home and publication_urn, pure word collections hold independently addressed parts, and /zikhron's host is the zikhron_words library. The unbound segment 1 in musaf_areshet_sefatenu is deliberate. clarifications.areshet_literal says the first printing (p127) keeps its original marked literal fragment and makes no claim to be a canonical pointer. Only the two later printings (zikhronot p136 and shofarot p144) point to the pure library. marked_literal_occurrences confirms this: both musaf_areshet_sefatenu segments (he s274, en s275) have no 'canonical' key, and the zikhronot and shofarot segments do. Leaving musaf_areshet_sefatenu out of attesting_controls is therefore correct. Attesting controls list occurrences that carry 'canonical', and code-followup-v4 NB1 shows that occurrence/host logic is driven by 'canonical' and corresp. No rule requires a literal prayer word to be replaced by a pointer. SIDDUR_URN_SCHEME 'Where a shared text lives is revisited' lets the realisation move while the URN stays fixed. No duplicate canonical corresp exists: bounded-identity-v4 found none, and the literal segment has no corresp."
+    },
+    {
+      "id": "B2",
+      "original_severity": "blocking",
+      "resolution": "Resolved. source_fidelity is not the only review mechanism. clarifications.source_fidelity says only canonical occurrence comparisons are auto-listed. Literal source quotations are reviewed separately as XML and source blocks, so an empty or partial auto list does not mean the segment went unreviewed. Segment 1 is a non-canonical literal (see B1), so no auto entry is expected for it. Its semantic and condition review exists. bounded-areshet-v4 read musaf_areshet_sefatenu HE and EN body00 and verified the following against the s275 image: EN uses j:conditional type='marked' on shabbat=true with no invented English rubric; HE carries the printed 'אַם שַׁבָּת.' as the conditional's own instruction note; the declare/conditional pairs are matched siblings. validation-source-evidence-v5 source_observations.areshet_memory_parentheses_have_no_english_shabbat_rubric_on_pdf275_or309=true settles the reading. The changed_fields 'unit'/'source_fidelity' entry for this record is explained by the wording_selection change. In existing_titles_and_condition_metadata, the old and new wording_selection for musaf_areshet_sefatenu are identical except that the new non-language-specific flag teqiot_veseder_shofarot=false was added. review_encoding=true is a mandatory receipt gate, not a 'review pending' flag (clarifications.review_encoding). code-followup-v4 NB4 also confirms that the baseline accepts review_encoding=true only when removing that one key reproduces the accepted snapshot exactly, including every literal_sha256. So segment 1's literal text is unchanged from the accepted payload."
+    },
+    {
+      "id": "B3",
+      "original_severity": "blocking",
+      "downgraded_to": "nonblocking (see NB-B3)",
+      "resolution": "Not a blocker for this batch. The first_printing and zikhronot_printing conditions, split by language, are legacy identities that were already accepted. existing_titles_and_condition_metadata shows old_accepted wording_selection for both musaf_areshet_sefatenu and musaf_repetition_zikhronot_areshet containing exactly these four per-language features with the same values as now. clarifications.legacy_metadata says they remain unchanged, are not new canonical prayer identities, and must not be replaced, by user instruction to reuse existing identities. This batch adds only one condition, …/conclusion/teqiot_veseder_shofarot. It is not split by language and is named after the printed wording 'our Tekioth … order of our Shofaroth', not after where it sits in the layout. bounded-areshet-v4 item 4 and bounded-identity-v4 confirm this, and it is registered once. The design concern the finding raised is real in principle: SIDDUR_URN_SCHEME says 'differences of edition do not justify new identities'. It belongs in legacy-migration followup, not in a blocker against this binding set."
+    },
+    {
+      "id": "N4",
+      "original_severity": "nonblocking",
+      "resolution": "Resolved. The source readings are settled, and the language tag is applied consistently. The same 'אַם … שַׁבָּת' Judeo-German rubric is tagged xml:lang='de-Hebr' in the accepted morning_qorbanot structural container (review-context-v5 page_less_structural_containers). The areshet reviewer accepted the HE caller rubric at each occurrence."
+    }
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    {
+      "id": "NB-B3",
+      "records": [
+        "realization/musaf_areshet_sefatenu/{he,en}",
+        "realization/musaf_repetition_zikhronot_areshet/{he,en}",
+        "realization/musaf_areshet_word_parts/{he,en}"
+      ],
+      "detail": "Legacy conditions urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/{he,en}/{first_printing,zikhronot_printing} encode this edition's printing layout and are split by language. That conflicts in spirit with SIDDUR_URN_SCHEME, which says differences of edition do not justify identities. They were accepted earlier and are deliberately reused under user instruction. Recommended followup: a separate, explicitly authorized migration to liturgical-distinction names (for example malkhuyot/zikhronot conclusion wording) that are not split by language, like the new teqiot_veseder_shofarot. Do not mint replacements in this batch."
+    },
+    {
+      "id": "NB-B1",
+      "records": [
+        "realization/musaf_areshet_sefatenu/{he,en}"
+      ],
+      "detail": "Optional: later, the first-printing literal '(זִכְרוֹן)' / '(the memory of)' segment could be pointed to areshet_sefatenu/zikhron, the way the zikhronot and shofarot printings are. Then all three occurrences would be treated the same. Current policy (clarifications.areshet_literal) does not require it."
+    },
+    {
+      "id": "N1",
+      "records": [
+        "realization/musaf_repetition_retzeh/{he,en}"
+      ],
+      "detail": "The meaning of 'source' is now confirmed. It is quotation attribution rendered as seg/@source and does not assert identity. segment_identity() ignores 'source', and no corresp or canonical is added (code-followup-v4 NB1). An empty source_fidelity list is expected for non-canonical literals (clarifications.source_fidelity). This closure did not see the Retzeh XML/source review receipt itself, so the finding stays as a pointer. Make sure the XML/source group's receipt covers these two new records."
+    },
+    {
+      "id": "N2",
+      "records": [
+        "realization/musaf_areshet_word_parts/{he,en}"
+      ],
+      "detail": "Unchanged: document that the variant 'printed' field means the host lemma (it matches the first_printing readings, he 70 / en 99). Consider renaming the variant ids '…_conclusion_zikhronot', since they now hold three readings including teqiot_veseder_shofarot."
+    },
+    {
+      "id": "N3",
+      "records": [
+        "realization/musaf_areshet_word_parts/{he,en}"
+      ],
+      "detail": "Unchanged: source_scans lists only scans in the record's own language, while the variants cite printings in both languages. Cosmetic projection inconsistency."
+    },
+    {
+      "id": "N5",
+      "records": [
+        "all source_fidelity entries"
+      ],
+      "detail": "Partly explained by code-followup-v4 NB5: literal_sha256 is the raw text with parentheses and literal_content_sha256 is the inner text, for marked occurrences. The hashing domain of literal_sha256 compared with fragment text_sha256 for unmarked segments is still undocumented in the projection."
+    }
+  ],
+  "verdict": "Approved for the bindings_2 scope. None of the three blockers stands once the full evidence is in view. B1: /zikhron is declared by the separate pure-part host musaf_repetition_areshet_zikhron_words, which has corresp areshet_sefatenu/zikhron in HE (s308) and EN (s309), canonical_parts=true, and was approved by the areshet review. The first-printing segment is deliberately an unbound literal, so leaving it out of attesting_controls is correct. B2: source_fidelity auto-lists only canonical occurrences. The literal segment's text and its Shabbat marked condition were reviewed as XML and against the s275 image. The record's change is only the added non-language-specific teqiot flag, and the baseline gate proves the literal hashes are unchanged. B3: the printing-layout and per-language conditions are already-accepted legacy identities that must be reused. The only new condition, teqiot_veseder_shofarot, is not language-specific and is named after its wording. Migrating the legacy names is nonblocking followup. N1–N3 and N5 remain nonblocking; N4 is resolved. This closure covers only binding consistency. It does not cover code, export or the receipt that review_encoding=true requires in reviews.json.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "ca2d380d-e04e-4fc9-be38-1a100794052e"
+  }
+}

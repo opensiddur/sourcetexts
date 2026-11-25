@@ -1,0 +1,79 @@
+{
+  "batch": "Musaf pending snippets25–32",
+  "authority": "User adjudication in this chat",
+  "answers": {
+    "25": "Ayin meteg in BOTH occurrences of לעלא, PDF200",
+    "26": "Vav sheva and sin qamatz in both ושעיר occurrences, PDF206",
+    "27": "No bet dagesh in בראשית, PDF206",
+    "28": "Pe dagesh in פעלתו, PDF208",
+    "29": "Yod meteg in יחד; no qof meteg in קדשך, PDF208",
+    "30": "כֹּל with dagesh and holam, PDF210 opening word",
+    "31a": "Nun qamatz and meteg in ונפש, PDF210",
+    "31b": "Dalet qamatz and meteg in הודעת, PDF210",
+    "32": "Jerusalem defective spelling; lamed patah+meteg+CGJ+hiriq, PDF212"
+  },
+  "changes": [
+    {
+      "stem": "musaf_half_kaddish",
+      "scan": "s200",
+      "old": "לְעֵלָּא",
+      "new": "לְעֵֽלָּא",
+      "count": 2
+    },
+    {
+      "stem": "musaf_useir_lekhapper",
+      "scan": "s206",
+      "old": "וּשְׂעִיר",
+      "new": "וְשָׂעִיר",
+      "count": 2
+    },
+    {
+      "stem": "musaf_malkhuyot_close",
+      "scan": "s208",
+      "old": "פְעַלְתּוֹ",
+      "new": "פְּעַלְתּוֹ",
+      "count": 1
+    },
+    {
+      "stem": "musaf_malkhuyot_verses",
+      "scan": "s208",
+      "old": "יַחַד",
+      "new": "יַֽחַד",
+      "count": 1
+    },
+    {
+      "stem": "musaf_zikhronot_open",
+      "scan": "s210",
+      "old": "וָנָפֶשׁ",
+      "new": "וָנָֽפֶשׁ",
+      "count": 1
+    },
+    {
+      "stem": "musaf_zikhronot_open",
+      "scan": "s210",
+      "old": "הוֹדַעְתָּ",
+      "new": "הוֹדָֽעְתָּ",
+      "count": 1
+    },
+    {
+      "stem": "musaf_zikhronot_verses",
+      "scan": "s212",
+      "old": "יְרוּשָׁלָם",
+      "new": "יְרוּשָׁלַֽ͏ִם",
+      "count": 1
+    }
+  ],
+  "jerusalem_rule": {
+    "pattern": "lamed + source patah or qamatz + meteg + CGJ + hiriq",
+    "codepoints_for_this_occurrence": [
+      "U+05DC",
+      "U+05B7",
+      "U+05BD",
+      "U+034F",
+      "U+05B4"
+    ],
+    "scope": "Compound vowel on the lamed of Jerusalem when printed with both vowel marks. Do not infer patah vs qamatz or transfer a reading to another occurrence without scan evidence."
+  },
+  "open_questions": [],
+  "snippet_manifest": "independent/musaf_s200_s223/closure/manifest-25-32.json"
+}

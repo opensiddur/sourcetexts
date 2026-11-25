@@ -1,0 +1,42 @@
+{
+  "applied_readings_375_377_378_correct": true,
+  "application_findings": [
+    "375 (s254 umipnei): the candidate text has וְלִירוּשָׁלַֽיִם. As displayed, the order is lamed + patah + meteg, then printed yod + hiriq, as the human reading and jerusalem_rule require. question-375.png matches: the yod is printed and the hiriq sits under it. LIMITATION: I could only use the Read tool, which cannot show code points, so I have not checked at byte level that no U+034F (CGJ) is present. CGJ is invisible, so 'no CGJ' is a visual check only. A code-point dump of this word (e.g. python3 -I with unicodedata.name per character) is needed before this counts as verified.",
+    "375 metadata is out of date: the unresolved list still asks whether the lamed vowel in וְלִירוּשָׁלַיִם is patah or qamats. The human has settled this, so remove the entry. The open חַי question is separate and stays.",
+    "377 (s260 shabbat_alternate_instruction): the text is exactly אַם שַׁבָּת ווירד דאַ: אונטענסטעהענטע אַהַלֲלָה געבעטעט. as supplied. The instruction's אַהַלֲלָה is correctly kept separate from the poem's own heading word אֲהַלְלָה in the ahallelah block. Neither has been normalized from the other.",
+    "377 metadata is out of date: the changes list still says 'דיא אונטענשטעהענדע→אונטענשטעהענדע' (with שט/נדע), and the unresolved list still asks about ש vs ס, נדע vs נטע, and whether the mark under the first ל of אהללה is a point. The human has settled all of these. The change notes should show the final form and those unresolved entries should be removed.",
+    "378 (s256 elohenu_pifiyyot): the text has שֶׁיִּשְׁאֲלוּ. יַדְּעֵם הֵיךְ יְפָאֵֽרוּ: exactly as supplied. The shin has no dagesh, the alef has hataf-patah, and the alef in יְפָאֵֽרוּ has tsere + meteg. This matches s256-line13.png.",
+    "378 metadata is out of date: the change note 'וְיַדְּעֵם דֶּרֶךְ יְפָאֲרוּךָ → יַדְּעֵם הֵיךְ יְפָאֵרוּ' leaves out the meteg. The unresolved entry 'שֶּׁיִּשְׁאָלוּ qamats vs hataf-patah' is settled and should be removed. The shin-dagesh entry should drop שֶּׁיִּשְׁאָלוּ but stay open for שֶּׁיֹּאמְרוּ and שֶּׁיְּדַבֵּרוּ, which the human did not adjudicate. I have not re-opened those two.",
+    "376 (s256 atah_horeta_instruction): the text matches the human line, without the (?) markers, and the two tentative words are recorded under human_uncertainties. Stale metadata contradicts settled human marks: the changes list still has 'הנ״ל → א״ג״ו (tentative)', the 'דיא' note, and 'פֿאָלגענדע: no rafe… qamats'. The human has פֿאַלגענדע with rafe and patah. The unresolved list still asks about וואהרענד, דיא/דיה and ג/ז in א״ז״וו, all of which the human has settled. These should be cleaned up. The text itself is not wrong on any settled mark."
+  ],
+  "question376": {
+    "resolved": true,
+    "words": [
+      {
+        "human_tentative": "רוזן",
+        "source_reading": "חזן (ח ז ן; I could see no vowel points or rafe on any of the three letters)",
+        "confidence": "medium-high (~0.8)",
+        "image_evidence": "In human376-complete-line.png the word after דער takes up about three glyph widths, not four. Its first glyph is the closed two-legged Rashi ח shape. It does not match the open hook-shaped Rashi ר found in the same line in דער, ספריכֿט and וואֶהרענד. Rashi ח is drawn as a ר-like stroke joined to a ו-like leg, which would explain a reading of רו. The middle glyph matches the ז in זאַגט in the same line, and the last is a long final ן. If the word were רוזן there should be a separate ו, and I can see no gap for one. חזן (Chasan) is also the standard Hebrew loanword in Judeo-German rubrics, and it fits 'spricht der …'."
+      },
+      {
+        "human_tentative": "ליידע",
+        "source_reading": "לייזע (ל י י ז ע; I could see no points)",
+        "confidence": "medium-high (~0.8)",
+        "image_evidence": "The fourth glyph of the final word, just before the ע and the colon, has the same form as the Rashi ז in זאַגט and in the abbreviation א״ז״וו in the same line. It does not have the broad flat-topped Rashi ד shape of the ד in דער and וואֶהרענד. German 'leise' (quietly) is spelled לייזע. 'Leide' makes no sense here."
+      }
+    ],
+    "german_rendering": "Während die Gemeinde הוא אלהינו u.s.w. sagt, spricht der Chasan folgende: leise:",
+    "english_translation": "While the congregation says 'He is our God' etc., the cantor says the following quietly:",
+    "remaining_uncertainties": [
+      "The crop is low resolution, with glyph bodies only about 20 px high. My reading rests on comparing glyph shapes within the same line, not on fine detail. I cannot rule out at this resolution a small point or rafe stroke on חזן or לייזע.",
+      "My readings overturn the two words the human marked tentative. I recommend the human confirm חזן and לייזע on a native-resolution crop before the candidate text is changed. Until then the human_uncertainties entries should stay.",
+      "'folgende' is printed without a final -s. Keep it as printed and do not normalize it to 'Folgendes'."
+    ]
+  },
+  "verdict": "Readings 375, 377 and 378 are correctly applied in the candidate text. For 375, the absence of CGJ is visual only and has not been checked at byte level. Several blocks still have out-of-date changes or unresolved metadata that contradicts the settled human readings and should be cleaned up. For 376, the image supports חזן (not רוזן) and לייזע (not ליידע), at medium-high confidence; these need human confirmation before they are applied. This review covers only these four questions. The source candidate is still UNACCEPTED, and this does not imply acceptance of the full batch. Reviewer invocation: Opus 5.5 (claude-opus-5-5), medium reasoning effort.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "c8999769-88e3-44ee-b035-dd535f6c54e6"
+  }
+}

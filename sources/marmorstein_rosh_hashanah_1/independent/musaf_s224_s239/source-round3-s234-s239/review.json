@@ -1,0 +1,154 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "source_approved": false,
+  "files_read": [
+    "/tmp/mahzor-s224/source-round3-s234-s239/candidate.json",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s234.jpg",
+    "/tmp/mahzor-s224/s234-detail0.png",
+    "/tmp/mahzor-s224/s234-detail1.png",
+    "/tmp/mahzor-s224/s234-detail2.png",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s235.jpg",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s236.jpg",
+    "/tmp/mahzor-s224/s236-detail0.png",
+    "/tmp/mahzor-s224/s236-detail1.png",
+    "/tmp/mahzor-s224/s236-detail2.png",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s237.jpg",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s238.jpg",
+    "/tmp/mahzor-s224/s238-detail0.png",
+    "/tmp/mahzor-s224/s238-detail1.png",
+    "/tmp/mahzor-s224/s238-detail2.png",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s239.jpg"
+  ],
+  "findings": [
+    {
+      "scan": "s236",
+      "key": "unetaneh",
+      "old": "(וּמִי בַצָּמָא.) וּמִי בָרַעַשׁ.",
+      "proposed": "(וּמִי בַצָּמָא.) מִי בָרַעַשׁ.",
+      "reason": "Confident. On line 10 of s236, the word right after the closing parenthesis of the צמא gloss is bare מִי (hiriq under the mem, no ו). The candidate adds a vav that isn't printed. The next word, וּמִי בַמַּגֵּפָה, does have its vav."
+    },
+    {
+      "scan": "s236",
+      "key": "unetaneh",
+      "old": "מִי יָרוּם (כ״י יָרוּם.)",
+      "proposed": "מִי יָרוּם (כ״א יוּרָם.)",
+      "reason": "Confident about the consonants and the qamats. The variant word at the start of the last line has the letters י-ו-ר-ם with a qamats under the resh. It is not a repeat of יָרוּם, so as written the candidate's variant is identical to the main text and says nothing. The dot on the vav looks like it sits at mid-height (shuruk, יוּרָם) rather than on top (holam, יוֹרָם); see the uncertainties. For the siglum, see the next finding."
+    },
+    {
+      "scan": "s236/s238",
+      "key": "unetaneh / ein_qitzvah (variant sigla)",
+      "old": "כ״י",
+      "proposed": "כ״א",
+      "reason": "Probable rather than confident (the reading behind all three changes below). All three sigla in scope (s236 before יַעַבְרוּן, s236 before the יוּרָם variant, s238 before קֵץ) show the gershayim followed by a full-height letter whose shape matches א. It is not a small, half-height yod. The out-of-scope siglum before מַרְעִישׁוֹת lower on s238 has the same form. The proposed changes are: s236 '(כ״י יַעַבְרוּן)' → '(כ״א יַעַבְרוּן)'; s236 '(כ״י יָרוּם.)' → '(כ״א יוּרָם.)'; s238 '(כ״י קֵץ)' → '(כ״א קֵץ)'. See the uncertainties for the first letter."
+    },
+    {
+      "scan": "s236",
+      "key": "unetaneh",
+      "old": "לִפְקוֹד עַל צְבָא מָרוֹם בַּדִּין. כִּי לֹא יִזְכּוּ בְּעֵינֶיךָ בַּדִּין.",
+      "proposed": "לִפְקוֹד עַל צְבָא מָרוֹם כַּדִּין. כִּי לֹא יִזְכּוּ בְּעֵינֶיךָ כַּדִּין.",
+      "reason": "Probable rather than confident: this is a consonant reading, not a pointing question. In both places (end of line 1 and line 2 of s236) the first letter has a rounded lower-right corner like the כ of כִּי at the end of line 1. It lacks the flat base that sticks out to the right, which the bet has in this font (compare בָּאֵי and בְּעֵינֶיךָ on the same line). The usual liturgy reads בדין, but per the brief I'm not normalizing. I recommend a high-resolution crop of both words before accepting or rejecting this."
+    }
+  ],
+  "uncertainties": [
+    {
+      "scan": "s234",
+      "key": "melekh_9",
+      "word": "עֹז (first, after פְּאֵרוֹ)",
+      "question": "At crop resolution I can't confirm a holam dot over the ayin. Compare it with הָעֹז on the same line, which shows a faint dot. I lean towards the holam being present (keeping the candidate), but it isn't verified."
+    },
+    {
+      "scan": "s234",
+      "key": "melekh_10",
+      "word": "מֵי",
+      "question": "There is a two-dot vowel under the mem, consistent with tsere. There also seems to be an extra mark beside it and under the following רַ (possibly a meteg or accent). I need a higher-resolution crop to rule out מִי or an extra mark."
+    },
+    {
+      "scan": "s234",
+      "key": "melekh_10",
+      "word": "בָּאֹהַב",
+      "question": "The vowel under the bet looks like a vertical pair (sheva-like, i.e. בְּ) rather than a clear qamats. The vowel on the aleph is unclear: it could be a holam or a hataf-qamats under it. The candidate reads בָּאֹהַב. Please verify with a higher-resolution crop."
+    },
+    {
+      "scan": "s234",
+      "key": "melekh_8..melekh_12 refrain",
+      "word": "לַעֲדֵי",
+      "question": "In all five refrains I see only patah / hataf-patah / tsere and no separate meteg stroke. That agrees with the candidate, which has no metegs. However, a thin meteg next to the patah can't be ruled out at this resolution."
+    },
+    {
+      "scan": "s234",
+      "key": "uvekhen_qedushah",
+      "word": "תַעֲלֶה",
+      "question": "I see no dagesh in the tav, which agrees with the candidate, but the patah sits close to the letter body. This isn't verified at high magnification."
+    },
+    {
+      "scan": "s236",
+      "key": "unetaneh",
+      "word": "בְּעֵינֶיךָ",
+      "question": "The bet's dagesh isn't clearly visible in the crop. The candidate has בְּ."
+    },
+    {
+      "scan": "s236",
+      "key": "unetaneh",
+      "word": "יִתְיַסַּר",
+      "question": "The mark under the samekh looks like it may have a stem (qamats, i.e. pausal יִתְיַסָּר) rather than a plain patah. Please verify."
+    },
+    {
+      "scan": "s236",
+      "key": "unetaneh",
+      "word": "יוּרָם (variant)",
+      "question": "Is the dot on the vav at mid-height (shuruk, יוּרָם) or on top (holam, יוֹרָם)? I lean towards shuruk."
+    },
+    {
+      "scan": "s236/s238",
+      "key": "variant sigla",
+      "word": "כ״א",
+      "question": "Is the first letter כ or נ (נ״א, 'נוסח אחר', is the more common siglum)? The glyph looks like כ to me. I'm only fairly sure the second letter isn't a yod."
+    },
+    {
+      "scan": "s236",
+      "key": "ki_khishimkha",
+      "word": "לּוֹ (after תְּחַכֶּה)",
+      "question": "I can't see a dagesh dot inside the lamed in the crop. The candidate has לּוֹ. I lean towards no dagesh (לוֹ), but at this size I can't be sure it's absent."
+    },
+    {
+      "scan": "s236",
+      "key": "teshuvah",
+      "word": "רוֹעַ",
+      "question": "It looks like three letters, ר-ו(holam)-ע, i.e. plene, which agrees with the candidate. I'm noting it as checked, not as a problem."
+    },
+    {
+      "scan": "s238",
+      "key": "adam",
+      "word": "כַּחֶרֶס",
+      "question": "Under the het there may be a small vertical stroke next to the segol (possibly a meteg). The candidate has none."
+    },
+    {
+      "scan": "s238",
+      "key": "adam",
+      "word": "וְכֶעָנָן",
+      "question": "Under the kaf there may be a meteg next to the segol. The candidate has none."
+    },
+    {
+      "scan": "s238",
+      "key": "ein_qitzvah",
+      "word": "קָצֶה",
+      "question": "The vowel under the qof looks like two horizontal dots (tsere, קֵצֶה), with no qamats stem visible. It looks like the vowel under קֵץ in the gloss. The candidate has qamats. I lean towards tsere, but the crop isn't conclusive."
+    }
+  ],
+  "coverage_notes": [
+    "The English on s235, s237 and s239 matches the candidate word for word within scope. On s239 I stopped before 'According to the mystic utterance…' (כסוד).",
+    "On s238 I stopped at the end of the עֲשֵׂה לְמַעַן שְׁמֶךָ line. The חזן label for כסוד שיח, the Kedushah and the piyyut below are outside this review's scope.",
+    "Checked and matching the candidate: the s234 'חזן.' label (with its period) before וּבְכֵן, 'סוגרים הארון.', both קהל בעטעט rubrics, the קו״ח label before תָּקְפּוֹ in stanza 12, the צום/קול/ממון superscripts, the 'חזן' label before כְּבַקָּרַת on s236, the ח׳ before אֱמֶת on s236, the ח׳ before אֵין on s238, and the קו״ח before עֲשֵׂה.",
+    "Small ק׳ labels appear before לַעֲדֵי in the stanza 8, 9, 10 and 11 refrains on s234. They have no entries in the candidate inventory. Per the brief I'm treating them as encoded in the XML, but the encoding reviewer should confirm they're there.",
+    "Everything else in the Hebrew on s234, s236 and s238 within scope matches the candidate, after letter-by-letter comparison at the detail-crop resolution.",
+    "source_approved is false because of the two confident findings (מִי בָרַעַשׁ, and the יוּרָם/יוֹרָם variant word), the probable כ״א siglum and כַּדִּין readings, and several pointing marks that need higher-resolution crops (קֵצֶה, בְּאֹהַב, מֵי, לוֹ, יִתְיַסָּר, possible metegs)."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "1e6acc91-e056-4ac4-8f75-d9994e6de8f2"
+  }
+}

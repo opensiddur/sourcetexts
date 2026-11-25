@@ -1,0 +1,89 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "scan_pair": [
+    238,
+    239
+  ],
+  "source_approved": false,
+  "findings": [
+    {
+      "scan": "s238",
+      "key": "adam",
+      "old": "כְּחֶרֶס",
+      "proposed": "כַּחֶרֶס",
+      "reason": "The kaf at the start of line 2 has a patah (a horizontal bar), not a sheva. The dagesh is present."
+    },
+    {
+      "scan": "s238",
+      "key": "adam",
+      "old": "וּכְעָנָן",
+      "proposed": "וְכֶעָנָן",
+      "reason": "At the start of line 3 the print shows a sheva under the vav (no shuruk dot) and a segol under the kaf. It does not show וּכְ."
+    },
+    {
+      "scan": "s238",
+      "key": "ein_qitzvah",
+      "old": "קָצֶה",
+      "proposed": "קֵצֶה",
+      "reason": "The qof in וְאֵין קֵצֶה has a tsere (two horizontal dots), not a qamats. It matches the tsere of the Rashi-script variant קֵץ."
+    },
+    {
+      "scan": "s238",
+      "key": "ein_qitzvah",
+      "old": "לְּךָ",
+      "proposed": "לְךָ",
+      "reason": "I see no dagesh in the lamed of נָאֶה לְךָ in the print."
+    },
+    {
+      "scan": "s238",
+      "key": "ein_qitzvah",
+      "old": "בִשְׁמֶךָ",
+      "proposed": "בִּשְׁמֶךָ",
+      "reason": "In the enlarged band 1/2, the bet of קָרָאתָ בִּשְׁמֶךָ: has a dagesh dot inside it, with a hiriq below."
+    }
+  ],
+  "uncertainties": [
+    {
+      "scan": "s238",
+      "key": "adam",
+      "word": "כַּחֶרֶס",
+      "question": "There is a small extra mark at the het, beside the segol, possibly a meteg or an accent. Should it be encoded? I could not settle this at band resolution."
+    },
+    {
+      "scan": "s238",
+      "key": "adam",
+      "word": "וְכֶעָנָן",
+      "question": "There may also be a meteg under the kaf next to the segol. Check this at higher zoom."
+    },
+    {
+      "scan": "s238",
+      "key": "ein_qitzvah",
+      "word": "קֵצֶה",
+      "question": "The vowel under the qof is small and close to the ein's tsere. I read it as a tsere at band resolution; a higher-zoom crop would confirm it."
+    },
+    {
+      "scan": "s238",
+      "key": "veattah_hu",
+      "word": "אֵל",
+      "question": "The print sets אֵל as an alef-lamed ligature in the large display type. Writing it as separate letters אֵל is correct as text. Confirm the project does not want the ligature preserved."
+    }
+  ],
+  "coverage_notes": [
+    "I checked all candidate blocks against the full page images s238.jpg and s239.jpg and the enlarged bands s238-band1 and s238-band2. I did not open s238-band3/4 or s239-band1–4. The English was read from the full-page s239 image, which was legible at that size.",
+    "Speaker cues: ח׳ before אין קצבה and קו״ח before עשה למען שמך match the print.",
+    "veattah_hu (he) matches: וְאַתָּה הוּא מֶלֶךְ אֵל חַי וְקַיָּם: with the colon.",
+    "The Rashi-script annotation (כ״י קֵץ) is encoded inline and matches the print.",
+    "All other words and punctuation in adam (he) and ein_qitzvah (he) match the print, apart from the findings above.",
+    "The English blocks adam, veattah_hu and ein_qitzvah match s239 word for word. veattah_hu correctly has no final period (the italic line has none), and Name’s uses the curly apostrophe. The printed Hebrew cue אין at the start of the English is correctly omitted.",
+    "The English adam block starts mid-sentence ('his end is dust'), which matches the top of s239. The beginning of that sentence is on the previous scan and is outside this batch.",
+    "Excluded as instructed and not reviewed: the running heads and page numbers (109), the Kedushah from כסוד שיח onward, the small-type rubric (Rashi script) above the piyyut, the piyyut וחיות on s238, and the English Kedushah on s239. Within the supplied scope, I found no source content that is not encoded."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "7d766c74-0739-4468-a640-6d9978b2d488"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "scope": "shabbat_poem",
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "medium"
+  },
+  "approved": true,
+  "all_assigned_files_read": false,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/bounded-review-v5/prayerbook_for_the_new_year-heidenheim-1965-he__musaf_anusah_leezrah__body00.jsonl (lines 1-351, full)",
+    "/tmp/mahzor-s294/bounded-review-v5/prayerbook_for_the_new_year-heidenheim-1965-he__musaf_anusah_leezrah__body01.jsonl (lines 1-263, full)",
+    "/tmp/mahzor-s294/bounded-review-v5/prayerbook_for_the_new_year-marmorstein-1965-en__musaf_anusah_leezrah__body00.jsonl (lines 1-351, full)",
+    "/tmp/mahzor-s294/bounded-review-v5/prayerbook_for_the_new_year-marmorstein-1965-en__musaf_anusah_leezrah__body01.jsonl (lines 1-138, full)",
+    "/tmp/mahzor-s294/bounded-review-v5/prayerbook_for_the_new_year-heidenheim-1965-he__musaf_repetition_ken_tagen_shabbat__body00.jsonl (lines 1-14, full)",
+    "/tmp/mahzor-s294/bounded-review-v5/prayerbook_for_the_new_year-marmorstein-1965-en__musaf_repetition_ken_tagen_shabbat__body00.jsonl (lines 1-14, full)",
+    "/tmp/mahzor-s294/rendered-stanza-projection-proof-v3.json (full)",
+    "/tmp/mahzor-s294/bible-source-projection-proof.json (full)",
+    "/tmp/mahzor-s294/stanza-incpit-decisions-v5.json (full)",
+    "/tmp/mahzor-s294/validation-source-evidence-v4.json (full)"
+  ],
+  "blocking_findings": [],
+  "new_human_questions": [],
+  "nonblocking_findings": [
+    "B1 resolved: stanza 26 (מִיּוֹדְעֵי) uses urn:x-opensiddur:text:poem:anusah_leezrah/miyodeei in HE (he body00 line 150) and EN (en body00 line 139). This matches stanza-incpit-decisions-v5.json lines 417-421. The old 'miyodei' form does not appear anywhere in the assigned bodies.",
+    "Stanza sequence checked: 46 stanza milestones in each language, in the same order, matching the registry (anusah … sos, selah[30], illitani, al, paah, peqod, tzor, tzerufah, qarev, quddash, regesh, reu, shegeg, shovev, tevunah, tehillah, tachat, tarem[46]). HE and EN pair one-to-one. No ordinal stanza_N URIs are emitted. Every stanza is closed by an empty unit=stanza milestone before the next stanza, rubric or Bible intro begins.",
+    "Bible quote positions checked, all correct in both languages: Ex 19:16 after selah(30); Ps 47:6 + 98:6, each with its own intro, after al(32); Isa 27:13 after peqod(34); Ex 19:19 after tzerufah(36); Ps 81:4–5 after quddash(38); Isa 18:3 after reu(40); Ex 20:18 after shovev(42); Ps 150:1–6 after tehillah(44); Zech 9:14 + 9:15 verse-part adonai_tzevaot_yagen after tarem(46). The intro prayer-parts close before the chapter/verse milestones, and chapter/verse milestones open and close in balanced pairs. Seg @source URNs match the verse corresp numbers, and the Ex 20:18 numbering follows the canonical WLC home per validation-source-evidence-v4.",
+    "Rubrics and speakers checked: the ק׳/קהל note and each ח׳/חזן note sit outside the stanza scopes. The Ken Tagen occurrence is a separate div (siddur ken_tagen_shabbat) that transcludes prayer:ken_tagen_al_ammekha_yisrael for each language. Its facs are n305 (HE) and n306 (EN), which agree with PB 143.",
+    "Page breaks checked: PB 137–143 carry the same ed token '1965 rosh_hashanah/musaf/repetition/anusah_leezrah' in both languages. HE facs run through the odd pages n293–n305 and EN facs through the even pages n294–n306. The breaks fall at matching points in both languages: 138 inside haser, 139 inside yaqarti, 140 before selah, 141 before the Isa 27:13 intro, 142 before regesh, 143 inside tevunah.",
+    "EN quotation marks checked: the Ex 20:18 missing closing quote uses choice/sic('stood at a distance.')/corr('stood at a distance’.'). Ps 150 EN has no quote marks, as in the source. Quotes spanning two verses (Ps 81:4–5, Zech 9:14–15) open in the first seg and close in the last.",
+    "Pointing checked: HE Bible quotes have no te'amim, only the human-entered meteg. The CGJ in בִּירוּשָׁלָֽ͏ִם (Isa 27:13) is preserved. I did not reopen any settled reading: the illitani stanza ending without a sof-pasuq colon, the period in Ps 150:4, the variant divine-name pointings ייָ/יְיָ/יֱהֹוִה, and הַלֲלוּיָהּ were all left as accepted.",
+    "Context naming is inconsistent: the Ps 150 context is 'psalm_150' while all its children and the sibling contexts use 'psalms_*'. It is consistent with bible-source-projection-proof.json, so this is cosmetic only.",
+    "The registry hebrew_incipit for stanza 10 is 'הוֹשַׁע.' and includes the trailing period. The URN slug 'hosha' is unaffected; this is a display-field matter only.",
+    "bible-source-projection-proof.json gives its status as 'draft source projections pass; final guideline and reference-range review pending'. All 18 anusah_leezrah contexts report exact_source_projection=true."
+  ],
+  "scope_limitations": [
+    "Three required guideline files do not exist on disk; the Read tool returned 'File does not exist' for /tmp/mahzor-s294/bounded-review-v5/rule-stanzas.md, rule-scope.md and rule-verse_numbering.md. I checked against the explicit checklist in the assignment only, not the text of those guidelines. This is why all_assigned_files_read=false. The orchestrator should supply them, or accept checklist-only conformance.",
+    "rendered-stanza-projection-proof-v3.json contains only 4 summary rows (46 stanzas, exact=true for HE and EN anusah_leezrah). I could not inspect a 180-row compiled proof row by row, and I could not independently confirm the 803+34=837 witness count from the material provided.",
+    "I did not examine the content of the transcluded Ken Tagen prayer or the spine realization of the ken_tagen_shabbat siddur unit, because no bodies for them were assigned. I verified only the occurrence divs.",
+    "No source images were re-examined, per instruction. Header metadata, other groups, code and export are out of scope and not approved here."
+  ],
+  "verdict": "Approved for the bounded shabbat_poem scope. The single blocking B1 is fixed: miyodeei is used in both languages and in the registry. The 46-stanza HE/EN alignment, all nine Bible-quote positions and scopes, rubric and speaker exclusion, the Ex 20:18 EN sic/corr, the unquoted Ps 150 EN, and the PB 137–143 ed and facs alignment all check out against the fully read body chunks. Caveat: the three rule-*.md guideline files were missing, so conformance was checked against the assignment's checklist, not the guideline text.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "e4cdee2f-bc43-4da7-a83f-e3f8600b0af3"
+  }
+}

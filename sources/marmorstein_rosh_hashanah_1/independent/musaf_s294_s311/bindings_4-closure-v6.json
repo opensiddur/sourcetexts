@@ -1,0 +1,76 @@
+{
+  "scope": "bindings_4_closure",
+  "approved": true,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/bindings_4-v5.json",
+    "/tmp/mahzor-s294/binding-followup-evidence-v6.json",
+    "/tmp/mahzor-s294/validation-source-evidence-v5.json",
+    "/tmp/mahzor-s294/bounded-order-v4.json",
+    "/tmp/mahzor-s294/bounded-prayers-v4.json",
+    "/tmp/mahzor-s294/bounded-identity-v4.json",
+    "/tmp/mahzor-s294/source-closure-306-placement.json",
+    "/tmp/mahzor-s294/bounded-review-v4/rule-verse_numbering.md"
+  ],
+  "resolved_findings": [
+    {
+      "record": "realization/musaf_repetition_kohanim_intro/he vs /en",
+      "prior_issue": "The Hebrew had seg/@source and no corresp. The English had a corresp and no source.",
+      "resolution": "Resolved by the compiled bilingual output, not by the stated interpretation. In the compiled p:transclude, both parallel items have a tei:div with the same corresp, urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/kohanim_intro. That is the shared alignment identity, and the parallel compiler pairs the two languages by it. Inside the div, the Hebrew quotes the canonical intro identity (…/shacharit/repetition/birkat_kohanim/birkat_kohanim) through two seg/@source elements. The reader rubric 'השליח ציבור בקול' (role/reader) sits outside both segs. The Hebrew canonical home of that identity is the Shacharit repetition_birkat_kohanim file, which the identity review confirmed opens it once and closes it before the Numbers 6 quotations. The English is the first English printing of that identity. It opens the identity with a prayer-part milestone corresp and closes it with a bare prayer-part terminator inside the paragraph. Adding a corresp to the Hebrew would give that canonical identity a second home in the Hebrew project, which breaks the 'exactly once per project' rule. The asymmetry is therefore correct: the Hebrew quotes an existing home and the English creates the first English home. Both cover the same extent: the whole paragraph from 'אלהינו/Our God' to 'כאמור/as it is said'."
+    },
+    {
+      "record": "realization/musaf_repetition_shofarot_calls/he",
+      "prior_issue": "No Shabbat exclusion was visible.",
+      "resolution": "Resolved by the inherited scopes in scope_order. The documentary unit musaf_repetition_shofarot_calls is in section musaf_shofarot_calls, under condition opensiddur:holiday-aggregate {shabbat:false}. The expanded reference to urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/shofarot_calls is under the same shabbat:false condition, with role 'blower'. This matches the approved order review: TARAT under shabbat=false with the blower role. The exclusion is inherited from the enclosing scope, so the record itself does not need a condition."
+    },
+    {
+      "record": "realization/musaf_repetition_veteerav/he, /en (prior nonblocking: no condition for whether the kohanim bless)",
+      "prior_issue": "No condition for whether the kohanim bless the congregation.",
+      "resolution": "Resolved at order level. The approved order review shows a with-priests branch (congregation says Veteerav, reader says Sheotekha) and a no-priests branch (standard Vetechezeinah). The 'Kohanim aloud' direction is a child under birkat-kohanim=true. The occurrence records do not need their own condition."
+    },
+    {
+      "record": "modim_derabbanan identities (prayers review human question; english_words library)",
+      "prior_issue": "Edition differences between occurrences and canonical homes: English 'and', Hebrew לחצרות vs לחצרת. Also, whether the english_words library creates a separate prayer identity.",
+      "resolution": "Resolved. Edition differences use shared prayer identities, and each occurrence keeps its literal text through seg/@source, so the different wordings are not a binding defect. The library musaf_repetition_modim_derabbanan_english_words has canonical_parts:true and map_root:false/omit_publication_urn:true. Its collection URN is therefore not emitted as a whole-text canonical identity. Its single English paragraph is bound to the shared prayer identity urn:x-opensiddur:text:prayer:amidah/hodaah/modim_derabbanan, the same identity the Hebrew documentary occurrence quotes through 'source' and the English occurrence reaches through 'canonical'. The two English text strings are identical. The order step targets the same shared URN with role congregation. 'review_encoding: true' on the documentary occurrence is an inclusion gate, not a pending flag, and canonical_parts enforces inclusion on the library. Neither is open work."
+    },
+    {
+      "record": "Exodus quotation canonical numbering (urn:x-opensiddur:text:bible:exodus/20/18)",
+      "prior_issue": "Verify the actual WLC text bound to the canonical URN.",
+      "resolution": "Verified against the repository rule, not against a memorized numbering. JLPTEI-3.md lines 270–282 say the canonical division is the Leningrad Codex division (Exodus 20 has 26 verses) and that canonical 20:17 (לא תחמד) = JPS 20:14. The text bound to exodus/20/18 in the WLC witness (sha256 79522d67…) is 'וְכָל־הָעָם֩ רֹאִ֨ים אֶת־הַקּוֹלֹ֜ת … וַיַּֽעַמְד֖וּ מֵֽרָחֹֽק׃'. That is the verse after לא תחמד plus the following verse, so it is canonical 20:18, which corresponds to the traditional/JPS 20:15. The block key 'exodus_20_15' is a frozen authoring coordinate and is not emitted, which is consistent with the rule against renumbering. Evidence states that all four new quotes use exodus/20/18."
+    }
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    {
+      "record": "realization/musaf_repetition_kohanim_intro (compiled)",
+      "issue": "The compiled transclude ends with a second, empty p:parallel (two empty parallelItems, he and en). It is harmless for alignment but is noise in the output. Separately, the first Hebrew seg ends with a trailing space and is followed by another space before the note, which may render as a double space."
+    },
+    {
+      "record": "realization/musaf_repetition_kohanim_intro/he, /en",
+      "issue": "Naming suggestion carried over: the shared intro identity lives under the shacharit/… path but is reused in Musaf. That is valid reuse, but a service-neutral identity would be clearer for whoever uses it next."
+    },
+    {
+      "record": "realization/musaf_repetition_shofarot_close/he, /en",
+      "issue": "Carried over, unverified. The identity review confirms urn:x-opensiddur:text:prayer:amidah/teqa_beshofar_gadol_lecherutenu as a single pre-existing canonical home for the Shofarot closing passage. I did not see the registry definition, so I could not confirm that it is distinct from the weekday gathering-of-exiles blessing. Not blocking, because the identity group approved it."
+    },
+    {
+      "record": "realization/musaf_repetition_shofarot_close/he",
+      "issue": "Carried over: 'נ״א' appears both in alternatives[].printed and as a commentary citation targeting #musaf_repetition_shofarot_command_variant. Check that the export does not print it twice."
+    },
+    {
+      "record": "realization/musaf_repetition_shofarot_calls/he",
+      "issue": "The 'blower' role is on the expanded reference scope only. The documentary section scope has the shabbat:false condition but no role, and the unit is an empty-text placeholder with an unanchored 20-character instruction. This is acceptable as a documentary encoding."
+    },
+    {
+      "record": "Exodus 20:18 quotations",
+      "issue": "I checked the canonical text and the remap through the evidence file and the WLC witness hash. I did not open the XML of the four remapped quotation milestones, so the claim that all four use exodus/20/18 is accepted from validation-source-evidence-v5.json."
+    }
+  ],
+  "verdict": "Approved for bindings_4 closure. Both prior blocking findings are resolved by the supplied evidence. (1) In the compiled output, the kohanim_intro Hebrew and English both sit under the shared contextual corresp musaf/repetition/kohanim_intro. The Hebrew quotes the existing Shacharit canonical intro through seg/@source, and the English opens that same identity once as its first English home. A Hebrew corresp would duplicate the canonical home, so the asymmetry is correct. (2) shofarot_calls, in both the documentary and the expanded order, inherits holiday-aggregate shabbat:false. The modim_derabbanan library and its occurrences use the shared prayer identity amidah/hodaah/modim_derabbanan, and the grouping URN is not emitted. review_encoding and canonical_parts are inclusion gates, not open work. exodus/20/18 is bound to the WLC verse 'וכל העם ראים את הקולת', which matches the repository's Leningrad numbering. Six nonblocking findings remain, covering naming, cosmetic and export issues. This does not cover code or export.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "0b70b7b6-0289-4cdc-a126-fc3f0074c3c1"
+  }
+}

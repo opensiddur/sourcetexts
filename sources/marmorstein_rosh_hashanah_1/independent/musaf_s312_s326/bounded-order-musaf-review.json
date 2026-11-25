@@ -1,0 +1,26 @@
+{
+  "approved": false,
+  "all_group_order_and_xml_read": true,
+  "alignment_approved": true,
+  "blocking_findings": [
+    "Dream prayer, second placement (section_musaf_dream_7): the order reuses the same instruction ID (batch312_dream_rubric_312) from section_musaf_dream_2, so the instruction text 'כשהכהנים מנגנים וישמרך אומרים זה' ('when the priests chant וישמרך, say this') prints twice. The second copy sits after the five-word verse 2 sequence ending in ויחנך (kohanim_response_2_5), so the printed instruction names the wrong word for that place. Saying the dream prayer at both ויחנך and וישמרך is correct practice. But reusing one printed instruction ID means either (a) a single printed source instruction is shown twice, with misleading text the second time, or (b) the source prints a second instruction that should have its own ID and its own wording. Either way the encoding needs fixing, or a source check that the second printing really reads וישמרך."
+  ],
+  "limitations": [
+    "This bounded group holds only the Musaf tail and closing. It contains no afternoon XML or order: Vaani on Shabbat with or without a minyan, three Torah aliyot with blessings on Shabbat with a minyan, two half Kaddishes, the quiet and repeated RH Amidah and its third blessing, the Modim congregation role, Avinu Malkenu on weekdays, the full Kaddish, Aleinu and mourner's Kaddish, and Tashlikh after Minchah. The runtime-precheck.json checks for these passed (Tashlikh: day 1 on a weekday present, day 1 on Shabbat absent, day 2 on Sunday present, day 2 on Monday absent, absent without Minchah). Those are technical proofs only. No independent XML review of the afternoon was possible in this group.",
+    "Musaf checks against the XML that were satisfied: the priests and no-priests branches are opposite birkat-kohanim conditions, each opened and closed correctly. Reader prompt, priests' repetition, congregation reply is followed for 3+5+7 words, matching the verse word counts (3_1 targets /verse rather than /response; it resolves with no refdb errors). The congregation says the dream prayer after וישמרך and after ויחנך. At שלום the dream prayer is replaced by יהי רצון per the Sha'arei Tziyon instruction. Next come Addir Bamarom (congregation), the priests' Ribbono (kohanim role) and the shoes instruction, all inside the priests branch. The no-priests branch has the reader say Numbers 6:24–26 with no project suffix, meaning this edition's own text, and has no priestly blessing in it. Sim Shalom, Besefer and the verses ending in 'כי בי ירבו' are each called once with zero English blessings. Then ark open, Hayom Teamtseinu and Titmekhenu, ark closed, Kehayom Hazeh, and the closing blessing exactly once. After that: full Kaddish (minyan), Ein Keloheinu, Pittum, the daily-psalm passage, Amar Rabbi Elazar, Aleinu, mourner's Kaddish (minyan), the appendix boundary note, Psalm 81, and the thirty blasts (not on Shabbat).",
+    "If birkat-kohanim has no value, neither branch shows, so no priestly blessing appears at all. Whether the runtime always sets this practice was not checked.",
+    "The Judeo-German post-blessing instruction (נאכֿדעם דיא כֹּהֲנִים…) is tagged xml:lang=\"he\". This is probably done so it lands in the Hebrew column, but it isn't accurate language metadata. Not treated as blocking.",
+    "Each dream placement sits after the congregation's reply rather than during the priests' chanting. This is acceptable for a linear layout because the instruction states the timing.",
+    "Psalm 81, Aleinu and the full Kaddish are transcluded through edition-specific rosh_hashanah/musaf/conclusion paths, not canonical bible: or prayer: URNs. I couldn't list the generated project directory to confirm that these units carry canonical milestones inside. refdb reports no errors.",
+    "No Kaddish d'Rabbanan comes after Amar Rabbi Elazar. Whether the source calls for one can only be checked against the source, which is outside this XML-and-order scope.",
+    "The mourner's Kaddish is Hebrew only, borrowed from Birnbaum, and the edition provides no English for it. This matches the stated coverage.",
+    "The appendix boundary at scan327 and later is an honest statement of incomplete-volume scope and claims nothing about Shir ha-Yihud or the daily psalm.",
+    "The encoded sequence contains no pb or page-turn dependencies: it is one shared bilingual sequence. page-boundary-precheck.json, a supplementary proof only, accounts for all 15 leaves.",
+    "This review covers only this bounded group. It is not acceptance of the source, the export or the batch."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "a62b4b69-a056-43e2-90dd-b3549e22e6b0"
+  }
+}

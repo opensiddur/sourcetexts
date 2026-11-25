@@ -1,0 +1,282 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "One pass over all 18 third-page images. Checked against current-readings.json and the human-decisions file. I did not open the full-page originals (sN.jpg) or the independent blind JSON files. Accents, dagesh and meteg were judged only where the thirds made them legible."
+  },
+  "pages": [
+    {
+      "scan": "s104",
+      "complete_body_accounted": true,
+      "source_findings": [
+        {
+          "unit": "lael_asher_shavat",
+          "language": "he",
+          "printed": "לְהוֹדוֹת לַיְיָ:",
+          "current": "טוֹב לְהֹדוֹת לַייָ: ",
+          "correction": "טוֹב לְהוֹדוֹת לַייָ: ",
+          "reason": "The printed word clearly has a vav after the he (full holam spelling, ל־ה־ו־ד־ו־ת). The current reading drops it (short holam), which looks like normalization to the Masoretic spelling of Ps 92:2. The vowel under the second yod of the divine-name abbreviation is not clear enough to confirm.",
+          "certainty": "high for the vav; low for the pointing of לַייָ",
+          "location": "s104-part3, line 2 (line beginning לְיוֹם הַשַּׁבָּת)"
+        },
+        {
+          "unit": "lael_asher_shavat",
+          "language": "he",
+          "printed": "זֶה שֶׁבַח שֶׁלַּיּוֹם הַשְּׁבִיעִי",
+          "current": "זֶה שֶׁבַח שֶׁל יוֹם הַשְּׁבִיעִי",
+          "correction": "זֶה שֶׁבַח שֶׁלַּיּוֹם הַשְּׁבִיעִי",
+          "reason": "The print shows one word, with no space between של and יום. The lamed appears to carry a patah. The dagesh in the lamed and yod could not be confirmed at this resolution.",
+          "certainty": "medium for the joined word; low for the dagesh",
+          "location": "s104-part2, line 10 (line beginning קָרָא לְיוֹם הַשַּׁבָּת)"
+        },
+        {
+          "unit": "el_adon",
+          "language": "he",
+          "printed": "נָאֶה זִיוָם בְּכָל־הָעוֹלָם: שְׂמֵחִים",
+          "current": "נָאֶה זִיוָם בְּכָל־הָעוֹלָם. שְׂמֵחִים",
+          "correction": "נָאֶה זִיוָם בְּכָל־הָעוֹלָם: שְׂמֵחִים",
+          "reason": "The mark after הָעוֹלָם looks like a two-dot sof pasuq (:), not a period. The other stanzas follow the same pattern (colon after the second half-line).",
+          "certainty": "medium",
+          "location": "s104-part2, line 3"
+        },
+        {
+          "unit": "lael_asher_shavat",
+          "language": "he",
+          "printed": "בְּיוֹם שַׁבַּת קֹדֶשׁ:",
+          "current": "בְּיוֹם שַׁבָּת קֹדֶשׁ:",
+          "correction": "בְּיוֹם שַׁבַּת קֹדֶשׁ:",
+          "reason": "The vowel under the bet looks more like a patah (construct form) than a qamats. It is small and somewhat blurred, so confirm against the full scan before applying.",
+          "certainty": "low-medium",
+          "location": "s104-part3, line 4 (end of line, before שִׁמְךָ)"
+        }
+      ],
+      "unresolved": [
+        {
+          "unit": "el_adon",
+          "word": "אַם שַׁבָּת.",
+          "mark": "vowel under the first letter of the instruction",
+          "location": "s104-part1, centred instruction line under the horizontal rule",
+          "reason": "The current reading has a patah (אַם), which is not the expected form (אִם). The small print does not show for certain whether the mark is a hiriq or a patah, and the first glyph is also degraded. I am neither certifying the current reading nor correcting it."
+        },
+        {
+          "unit": "el_adon",
+          "word": "וַיִּזְרַח־אוֹר",
+          "mark": "maqaf between וַיִּזְרַח and אוֹר",
+          "location": "s104-part2, line 7 (start of line)",
+          "reason": "The gap looks like an ordinary space. I cannot see a maqaf with any confidence."
+        },
+        {
+          "unit": "yotzer_el_barukh / lael_asher_shavat",
+          "word": "סֶּלָה",
+          "mark": "dagesh in the samekh (both occurrences)",
+          "location": "s104-part1, last line before the rule; s104-part3, last line",
+          "reason": "A dagesh in the samekh is unusual. It may be a dehiq dagesh, but it cannot be seen clearly at this resolution."
+        },
+        {
+          "unit": "lael_asher_shavat",
+          "word": "לַייָ",
+          "mark": "vowels under the yods",
+          "location": "s104-part3, line 2",
+          "reason": "The patah under the lamed is visible. The rest is not legible enough to certify."
+        }
+      ],
+      "citation_and_instruction_findings": [
+        "Running head 'שַׁחֲרִית לְיוֹם רִאשׁוֹן שֶׁל רֹאשׁ הַשָּׁנָה' and folio 38/38 are present. The dossier does not model running heads, so this was not compared.",
+        "The 'If Sabbath' instruction is carried as condition_instruction. Its pointing is unresolved (see above)."
+      ]
+    },
+    {
+      "scan": "s105",
+      "complete_body_accounted": true,
+      "source_findings": [
+        {
+          "unit": "lael_asher_shavat",
+          "language": "en",
+          "printed": "Thy Name. O Lord our God, be sanctified",
+          "current": "Thy Name. O Lord our God, be sanctified",
+          "correction": "Thy Name<sic>.</sic><corr>,</corr> O Lord our God, be sanctified",
+          "reason": "The period after 'Name' is a printing error (a comma is required). The current text keeps it correctly but without a sic/corr marker. Add one, as the brief requires.",
+          "certainty": "high (the printed period is clearly visible)",
+          "location": "s105-part3, line 6"
+        }
+      ],
+      "unresolved": [],
+      "citation_and_instruction_findings": [
+        "'On Sabbath.' (italic) matches the current condition_instruction.",
+        "The Hebrew cue לאל beside the English was deliberately left out; this is acceptable.",
+        "All other English matches the current text word for word: el_barukh, el_adon stanzas 2-6 (fragment), lael_asher_shavat."
+      ]
+    },
+    {
+      "scan": "s106",
+      "complete_body_accounted": true,
+      "source_findings": [
+        {
+          "unit": "khevodo_ihel",
+          "language": "he",
+          "printed": "הַיּוֹצֵר יַחַד לִבָּם יָחוֹן מֶלֶךְ.",
+          "current": "הַיּוֹצֵר יַחַד לִבָּם יָחֹן מֶלֶךְ.",
+          "correction": "הַיּוֹצֵר יַחַד לִבָּם יָחוֹן מֶלֶךְ.",
+          "reason": "The word is printed with a vav (יחון). The current reading uses the short holam, which looks like normalization.",
+          "certainty": "high",
+          "location": "s106-part3, line 1"
+        },
+        {
+          "unit": "khevodo_ihel",
+          "language": "he",
+          "printed": "יִזְכּוֹר לְעוֹלָם בְּרִיתוֹ בְּזִכְרוֹן טוֹב מֶלֶךְ:",
+          "current": "יִזְכֹּר לְעוֹלָם בְּרִיתוֹ בְּזִכְרוֹן טוֹב מֶלֶךְ:",
+          "correction": "יִזְכּוֹר לְעוֹלָם בְּרִיתוֹ בְּזִכְרוֹן טוֹב מֶלֶךְ:",
+          "reason": "The word is printed with a vav (יזכור). The current reading uses the short holam.",
+          "certainty": "high",
+          "location": "s106-part3, line 4"
+        },
+        {
+          "unit": "khevodo_ihel",
+          "language": "he",
+          "printed": "בּוֹחֵן כָּל־עֶשְׁתּוֹנוֹת צָעִיר וָרַב, מֶלֶךְ.",
+          "current": "בּוֹחֵן כָּל־עֶשְׁתּוֹנוֹת צָעִיר וָרַב. מֶלֶךְ.",
+          "correction": "בּוֹחֵן כָּל־עֶשְׁתּוֹנוֹת צָעִיר וָרַב, מֶלֶךְ.",
+          "reason": "The mark after וָרַב is a comma (same shape as the comma after כְּבוֹדוֹ, which the current text already keeps), not a period.",
+          "certainty": "medium-high",
+          "location": "s106-part2, line 7"
+        },
+        {
+          "unit": "yotzer_et_shem",
+          "language": "he",
+          "printed": "עוֹנִים וְאוֹמְרִים בְּיִרְאָה.",
+          "current": "עוֹנִים וְאוֹמְרִים בְּיִרְאָה:",
+          "correction": "עוֹנִים וְאוֹמְרִים בְּיִרְאָה.",
+          "reason": "The final mark at the end of the line looks like a single dot, not a colon.",
+          "certainty": "medium",
+          "location": "s106-part2, line 4 (end)"
+        }
+      ],
+      "unresolved": [
+        {
+          "unit": "yotzer_et_shem",
+          "word": "עֹל",
+          "mark": "vowel on the ayin",
+          "location": "s106-part2, line 2",
+          "reason": "Printed as ע־ל. I cannot tell whether there is a holam dot or a patah (עַל). Not certified."
+        },
+        {
+          "unit": "yotzer_qadosh",
+          "word": "full verse",
+          "mark": "accents and paseq",
+          "location": "s106-part2, line 5",
+          "reason": "Covered by human decision #4 (scan 106); not reopened. What I can see (paseq after the first קָדוֹשׁ) is consistent with it."
+        },
+        {
+          "unit": "khevodo_ihel",
+          "word": "ח׳ (both sigla)",
+          "mark": "the siglum's letter shape",
+          "location": "s106-part2, line 6 (end); s106-part3, line 2",
+          "reason": "Very small superscript. It is consistent with ח׳, but the letter cannot be read with certainty at this resolution."
+        }
+      ],
+      "citation_and_instruction_findings": [
+        "Marginal 'אופן.' and centred 'ע״ס א״ב.' match the current citation 'אופן. ע״ס א״ב.'",
+        "אִהֵל is per human decision #3; I confirm it.",
+        "Running head 'אוֹפַן לְיוֹם רִאשׁוֹן שֶׁל רֹאשׁ הַשָּׁנָה' at folio 39 is not modelled in the dossier."
+      ]
+    },
+    {
+      "scan": "s107",
+      "complete_body_accounted": true,
+      "source_findings": [],
+      "unresolved": [
+        {
+          "unit": "yotzer_titbarakh",
+          "word": "fear the",
+          "mark": "stray acute-like tick between 'fear' and 'the'",
+          "location": "s107-part1, line 8",
+          "reason": "Looks like a print or scan artefact, not text. Recorded but should not be transcribed."
+        }
+      ],
+      "citation_and_instruction_findings": [
+        "All English on s107 matches the current text word for word: titbarakh, et_shem, qadosh (two indented lines), and khevodo_ihel stanzas 1-3 up to 'implore'.",
+        "Hebrew cues תתברך, כבודו, היוצר, כלה were deliberately left out; this is acceptable."
+      ]
+    },
+    {
+      "scan": "s108",
+      "complete_body_accounted": true,
+      "source_findings": [
+        {
+          "unit": "khevodo_ihel",
+          "language": "he",
+          "printed": "נָא נְצוֹר חֶסֶד לְנִינֵי שָׁלְחוּ לוֹ שְׁלֹשֶׁת אֵילֵי מֶלֶךְ.",
+          "current": "נָא נְצֹר חֶסֶד לְנִינֵי שָׁלְחוּ לוֹ שְׁלֹשֶׁת אֵילֵי מֶלֶךְ.",
+          "correction": "נָא נְצוֹר חֶסֶד לְנִינֵי שָׁלְחוּ לוֹ שְׁלֹשֶׁת אֵילֵי מֶלֶךְ.",
+          "reason": "The word is printed with a vav (נצור). The current reading uses the short holam. This matches the same full-spelling pattern as יָחוֹן and יִזְכּוֹר on s106.",
+          "certainty": "high",
+          "location": "s108-part1, line 1"
+        }
+      ],
+      "unresolved": [
+        {
+          "unit": "khevodo_ihel",
+          "word": "אֵילֵי",
+          "mark": "first letter and its vowel",
+          "location": "s108-part1, line 2 (start)",
+          "reason": "The first glyph is physically damaged (smudged or broken type). The reading is plausible from context but not visually confirmed."
+        },
+        {
+          "unit": "khevodo_ihel",
+          "word": "בְתַחַן",
+          "mark": "dagesh in the bet",
+          "location": "s108-part1, line 2",
+          "reason": "A possible dot inside the bet. Cannot tell whether the print reads בְּתַחַן or בְתַחַן."
+        },
+        {
+          "unit": "khevodo_ihel",
+          "word": "מִלְּחַיְּבֵם",
+          "mark": "dagesh in the lamed and the yod",
+          "location": "s108-part1, line 5",
+          "reason": "Not confirmable at this resolution."
+        },
+        {
+          "unit": "khevodo_ihel",
+          "word": "(אם שבת ...)",
+          "mark": "pointing of the small instruction",
+          "location": "s108-part1, last line, inside the parenthesis",
+          "reason": "The current text is unpointed (אם שבת). The print may carry small vowels (it resembles the s104 instruction). Not resolvable at this size."
+        },
+        {
+          "unit": "yotzer_barukh_kevod",
+          "word": "כְּבוֹד־יְיָ",
+          "mark": "possible accent under the divine-name abbreviation",
+          "location": "s108-part2, line 7 (centred verse)",
+          "reason": "There may be extra marks under the yods beyond the qamats. The current text has no accents, and that cannot be certified either way."
+        }
+      ],
+      "citation_and_instruction_findings": [
+        "The note 'וי״א קשוב קול זכירה מזוכרי' (small type, after the parenthetical) matches the current citation.",
+        "The parenthetical '(קְשׁוֹב זִכְרוֹן תְּקִיעָה מְזוֹכְרֵי)' and the sigla ח׳ (2×) and קו״ח match the current text.",
+        "The remaining s108 Hebrew matches the current text in letters and visible vowels: vehaofannim, lael_barukh, or_chadash, and ahavah_rabbah up to בְךָ."
+      ]
+    },
+    {
+      "scan": "s109",
+      "complete_body_accounted": true,
+      "source_findings": [],
+      "unresolved": [],
+      "citation_and_instruction_findings": [
+        "All English on s109 matches the current text word for word. The weekday/Sabbath split '...this day (heed ... this day) O King.' follows the printed order.",
+        "Hebrew cues פדם, שעה, והאופנים, לאל, אהבה were deliberately left out; this is acceptable."
+      ]
+    }
+  ],
+  "coverage_limits": [
+    "I read only the third-page crops. I did not open the full-page originals (sN.jpg) to settle low-certainty points; I did not read the independent blind JSON files.",
+    "Findings and corrections are given only where letters or punctuation were visibly legible. Dagesh, meteg and accents in small or blurred type are listed as unresolved, not certified.",
+    "Running heads and folios were seen but not compared, because the dossier does not model them.",
+    "Human decisions #3 (אִהֵל) and #4 (qadosh accents/paseq) were accepted without reopening; nothing I saw contradicts them.",
+    "Source acceptance is NOT claimed for s104, s106 or s108 while their findings and unresolved items stay open. s105 is clean apart from the missing sic/corr marker. s107 and s109 are clean, though s107 has one noted artefact."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "d576a4cb-a53f-4cde-816d-d5dd5d449edc"
+  }
+}

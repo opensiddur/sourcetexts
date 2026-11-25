@@ -1,0 +1,63 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Low reasoning effort. This is a structural and encoding review only. I read all of current.json, current.review.xml (the raw XML snapshot of all three HE files and both actual_order_context blocks), guideline-excerpts.md, repetition-tail-final-01/review.json, amidah-guideline-closure/review.json and completion_review_2026_11_repetition_tail_clear_corrections.json (before/after/changes). Source images I opened, from repetition-tail-final-01: s153-row8, s154-row4, s154-row8 and s155-row2. I used them only for word placement, page and column position, parentheses and punctuation placement. I did not look at fine pointing. I did not open the native sN.jpg pages or the registry, and I did not run the build, validate_urn_references.py or the parallel compiler. No English body exists for these units and none was looked for or assumed."
+  },
+  "witnesses": [
+    {
+      "stem": "repetition_qedushat_hayom",
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved_structural_questions": [],
+      "verified": [
+        "The prior guideline issue is resolved. The standOff note is now tei:note type=commentary target=\"#repetition_malkeinu_alternative\", and an empty <tei:anchor xml:id=\"repetition_malkeinu_alternative\"/> sits immediately before the literal (מלכנו), after וּדְבָרְךָ, inside the melokh paragraph. It is no longer on the whole-unit URN. This follows Annotations > Comments and Notes: 'a tei:anchor element indicates a location that can be targeted… A target attribute references the point in the text where the note applies.' The anchor is a point (URN scope rule 4), so it opens no reference scope and does not affect the prayer-part milestones.",
+        "Word placement on s154-row4 line 3: the order וּדְבָרְךָ (מלכנו) אֱמֶת, with (מלכנו) in small type inside parentheses between the two words, matches the XML order and anchor position. Nothing is printed with it: no rubric, siglum or occasion, unlike the '(אם שבת.' parentheticals on row4 lines 1–2, which stay j:conditional type=marked with their own instruction note.",
+        "Policy check against the actual structure. (מלכנו) is literal running text, not a j:conditional, which would need an occasion feature structure the source does not give. It is also not tei:choice/j:option, because there is only one printed wording and 'A tei:choice containing j:option must contain at least two of them.' This is the same documentary policy amidah-guideline-closure/review.json approved for silent shacharit_amidah_qedushat_hayom, and that final-candidate-scope-followup applied to (וְנוֹרָא) and (הוּא). No calendar condition and no translation have been invented. The commentary claims only that no condition is printed.",
+        "Punctuation placement on s153-row8: the printed period at the line end after חוּס וְחָנֵּנוּ. is now present in the XML inside the yaaleh_veyavo seg, followed by וְרַחֵם, which begins the next printed line. Per the completion record, the changes are exactly 'חוּס וְחָנֵּנוּ וְרַחֵם' → 'חוּס וְחָנֵּנוּ. וְרַחֵם' and '(מַלְכֵּנוּ)' → '(מלכנו)', and nothing else in this unit differs between before and after apart from the split and anchor around (מלכנו).",
+        "The milestones and scopes are unchanged. There are four prayer-part milestones (attah_vechartanu, vattitten, yaaleh_veyavo, melokh) and one bare prayer-part terminator at the end of p4. The (מלכנו) text and the anchor are inside the melokh scope. The pb n=64 facs n152 and pb n=65 facs n153 come before their milestones, and the div facs n152 is consistent.",
+        "Hebrew-only: there is no EN body and none was invented. The (מלכנו) span carries no corresp, so there is no alignment boundary to which a future counterpart would need to conform."
+      ]
+    },
+    {
+      "stem": "repetition_modim",
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved_structural_questions": [],
+      "verified": [
+        "The prior empty-seg issue is resolved. The XML is now: milestone …/hodaah/modim/modim + seg@source 'מוֹדִים … הַפְּקוּדוֹת לָךְ'; milestone …/hodaah/modim/modim_end + seg@source 'וְעַל'; pb n=66 facs n154; seg@source 'נִסֶּיךָ … קִוִּינוּ לָךְ:'; bare prayer-part terminator. Every seg carrying source=\"urn:x-opensiddur:text:prayer:amidah/hodaah/modim\" now has content, so URN scope rule 1 is satisfied. The old <tei:seg …/> with no content is gone.",
+        "Resolved scopes under rules 2 and 3: …/modim/modim runs from its milestone to the modim_end milestone, the next milestone of the same unit, and so ends at לָךְ. …/modim/modim_end runs from וְעַל through the pb and נִסֶּיךָ… to קִוִּינוּ לָךְ: and is closed by the bare terminator. The pb is a different unit and ends neither scope. Neither scope now ends on a dangling וְעַל. The second scope opens with a complete clause, וְעַל נִסֶּיךָ שֶׁבְּכָל יוֹם עִמָּנוּ, which answers the prior 'split in the middle of a phrase' finding. Each milestone sits before its seg, per 'place its milestone before the semantic span'.",
+        "Placement on the source: s154-row8, right column, last line ends הַפְּקוּדוֹת לָךְ וְעַל, and s155-row2 line 1 begins נִסֶּיךָ. So וְעַל is printed on 154 and belongs before pb 66, as encoded. No letters are omitted or repeated. The before/after concatenation of the three fragments is identical apart from the boundary move and the separate שֶׁבְּכָל־עֵת maqaf change. The left column on s154-row8 (Modim deRabbanan, ending בָּרוּךְ אֵל הַהוֹדָאוֹת:) is not in this unit.",
+        "The documentary order requires both contexts. In the prayerbook_for_the_new_year-heidenheim-1965-he running order, one context transcludes …/hodaah/modim/modim, then …/hodaah/modim_derabbanan, then …/hodaah/modim/modim_end. Another context transcludes modim_derabbanan, modim/modim_end, then hodaah/tail. This matches the right column / left column / right-column continuation layout across 154–155. Both URMs are actual transclusion targets, so collapsing to one milestone (the prior suggestion, made without this order evidence) would break the edition order. Both URMs keep their existing values.",
+        "In machzor_expanded-opensiddur-he, the transclusion is the whole div …/hodaah/modim, followed by modim_derabbanan and tail. That yields the continuous text מוֹדִים … לָךְ וְעַל נִסֶּיךָ … לָךְ: with no break, and the boundary move does not affect it.",
+        "The prior condition 'only justified if the English body carries the same …/modim_end boundary' does not apply. No EN counterpart exists in the data or the project, and the boundary is justified by the documentary order instead. The Alignment section only governs joins between texts that both carry the URN.",
+        "Paragraph and page structure: one tei:p, unchanged, spans pb 65 (div facs n153) and pb 66 (n154), and the closing terminator is present. The maqaf placement is consistent with the image: s155-row2 line 1 ends שֶׁבְּכָל־ at the line end, continuing with עֵת, and the XML has שֶׁבְּכָל־עֵת. The earlier שֶׁבְּכָל יוֹם on the same line has no maqaf, and the XML has none. That is placement only, not certification of the glyph."
+      ]
+    },
+    {
+      "stem": "repetition_hodaah_tail",
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved_structural_questions": [],
+      "verified": [
+        "Local scope: …/hodaah/tail/veall_kullam is a prayer-part milestone. It is followed by seg source=\"urn:x-opensiddur:text:prayer:amidah/hodaah/veal_kullam\" holding וְעַל־כֻּלָּם … לְעוֹלָם וָעֶד: and then a bare prayer-part terminator, so the local scope is exactly that sentence. ukhetov and vekhol_hachayyim follow the same pattern, each in its own tei:p with its own terminator. vekhol_hachayyim's seg source is amidah/hodaah/hatov_shimkha.",
+        "Canonical bounded source: each canonical URN is on a seg with content, so it references exactly that content (rule 1). The local corresp and the canonical seg@source are different kinds of identity: the local occurrence URN against the reusable prayer URN. No quoted guideline requires them to share a slug, and 'Do not duplicate a canonical URN merely because the text is printed again elsewhere' is satisfied by using the canonical URN as the source rather than as the corresp. The spelling difference veall_kullam/veal_kullam is therefore not a violation, and renaming existing IDs is not called for.",
+        "Hebrew-only: there is no EN body and none was invented, so the prior 'acceptable if the English body uses the identical local URN' condition has nothing to apply to. Any future EN must reuse the existing local corresp values (…/tail/veall_kullam, …/tail/ukhetov, …/tail/vekhol_hachayyim) to align, per Alignment ('The join is on exact URN equality').",
+        "Placement on the source: s155-row2 shows וְעַל־כֻּלָּם indented on a new line directly after the Modim line that ends קִוִּינוּ לָךְ:. That is consistent with the tail being a separate unit and file, transcluded after modim/modim_end in the book order context. The pb n=66 facs n154 and the div facs n154 match the Modim continuation page.",
+        "No rubric or citation is printed, and none is encoded. The first סֶּלָה dagesh is a source-glyph question pending human item 105 and is not adjudicated here."
+      ]
+    }
+  ],
+  "limits": [
+    "encoding_guidelines_approved=true is structural only. No Hebrew word, glyph, pointing, maqaf or punctuation is accepted as a source reading here. All source-fine questions stay pending separate human adjudication, including items 98–105: the 152 vowels in אחת, the 153 נקדש dalet, the 154 bet/lamed dageshes in בִמְנוּחָתֵנוּ/בִּיקָרֶךָ/לְּךָ, and the 155 first סלה dagesh.",
+    "Resolved URN ranges were checked only by reading the XML statically against URN scope rules 1–4. I did not run the reference database, validate_urn_references.py or the parallel compiler. The order contexts come from current.review.xml as supplied; I did not re-enumerate the index files.",
+    "Optional, not a guideline issue: the raw XML has doubled whitespace around the anchor ('וּדְבָרְךָ  <tei:anchor/>(מלכנו)  אֱמֶת') and before the last conditional ('מְקַדֵּשׁ  <j:conditional'). Normal whitespace handling should collapse it, but I did not verify the rendered output.",
+    "Optional, not a guideline issue: the slug modim_end now names a scope that begins with וְעַל. No quoted rule binds prayer-part slugs (the first-word naming rule is stated for Tanakh verse-parts), and renaming would break the existing transclusion targets, so no change is recommended.",
+    "The (מלכנו) commentary note is xml:lang=en in a Hebrew-only project. The silent-Amidah precedent note was Hebrew. No guideline in the excerpts governs note language, and I did not evaluate the note's wording as a source claim beyond 'no printed condition', which matches s154-row4."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "6b5c092d-8fc7-4fbe-859e-044075a04be0"
+  },
+  "serialization_repair": "Escaped 2 unescaped URI quote pairs within JSON string values. Raw provider response retained unchanged."
+}

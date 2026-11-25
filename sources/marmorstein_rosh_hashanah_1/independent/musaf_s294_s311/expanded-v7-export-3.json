@@ -1,0 +1,24 @@
+{
+  "scope": "expanded-v7-export-3",
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/expanded-export-manifest-v7.json",
+    "/tmp/mahzor-s294/full-pdf-images-v7/expanded-269.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "Only one PDF page image was assigned (PDF page 269 of 270, printed folio 267). It is a bibliography or sources page. It has no Hebrew liturgical text, vowels, CGJ, mappiq, stanza rows, alternative labels or English parallel columns, so those checks could not be done on this page. The previous and following pages, including the priestly-blessing introduction and the label for the missing later source, were not in this batch and have not been checked here.",
+    "The running header on this bibliography page reads 'חזרת התפלה' (the section title from before it) and not a bibliography or sources heading. It is readable and does not clip, but it may be a leftover header from the previous section. Please check whether this is intended.",
+    "The hyperlinks show cyan link-border boxes in the rendered image. Most viewers don't print these, but if the PDF is meant for print-faithful display, consider turning link borders off or using colored link text instead (e.g. hidelinks/colorlinks).",
+    "The monospace identifier and URL break mid-token across lines ('…shel-rosh' / '-hashanah…', 'detail' / 's/mahzor…'). The hyphen at the start of the second line is part of the identifier, but a reader could take it for a hyphenation mark. This doesn't block approval, and the link targets are separate from how the text wraps.",
+    "The access date '11/08/2026' is ambiguous (US vs. day-first format). An ISO date (2026-11-08 or 2026-08-11) would avoid this.",
+    "The manifest still shows export_approval_pending: true. It reports 270 pages, 554 links, 604 valid named destinations, and no HTML errors, duplicate IDs or broken internal links at either 1280 or 390 px. Desktop and mobile main-text hashes are identical (7eae1fcc…), and scrollWidth equals the viewport width at both sizes, so there is no horizontal overflow. No HTML screenshots were listed, so none were reviewed."
+  ],
+  "verdict": "I approve the one assigned page. PDF page 269 (folio 267) shows bibliography entry [2] in full: the Heidenheim/Marmorstein 1965 Basle edition, its internet_archive identifier and URL, the visited date, the digitization credit (Aharon N. Varady; HUC-JIR Klau Library, Cincinnati), 'The scan is the source', the independent-reader credit, and the note that no translations were supplied for passages missing from the English edition. Nothing is clipped or overlapping, the margins are correct, and the source links and credits are kept. None of the findings block approval. This approval covers only this page and does not certify the batch's liturgical pages, stanza alignment or note placement, because no images of those were assigned.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "99c0c0bd-7ab1-4fc7-b97e-44ba38bc2624"
+  }
+}

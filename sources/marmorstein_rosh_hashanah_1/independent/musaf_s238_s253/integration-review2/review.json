@@ -1,0 +1,97 @@
+{
+  "data_encoding_approved": false,
+  "generated_encoding_approved": false,
+  "alignment_approved": true,
+  "recitation_order_approved": true,
+  "canonical_identity_approved": true,
+  "small_code_changes_approved": true,
+  "previous_findings_closed": [
+    "R1-1 / X-1 Frankfurt feature: both spines use only frankfurt_am_main (both-sequences.json musaf_adir_first, musaf_tisgav_custom, musaf_veyeetayu_custom). feature-check-structured.json validates frankfurt_am_main, metz and fuerth, with no stray 'frankfurt'. Closed in the data; the index XML itself is not in this package (see remaining checks).",
+    "R1-2 / X-4 edition-named pseudo-rites: replaced by the text-owned variants urn:x-opensiddur:condition:prayer:amidah/tisgav_levaddekha/recite and …:poem:v_yeetayu_kol_leavdekha/recite. Both are registered and pass the feature check. The rite parts are kept and the variants are undefined by default.",
+    "R1-3 Ani: the existing prayer:amidah/qedushah/ani is reused. Birnbaum shabbat_musaf_qedushah_ani_text.xml already uses it with the same extent, 'אני יי אלהיכם.'. The word home (qedushah_ani_words.xml, HE and EN) has no speaker. Its quote-context chapter/verse/verse-part milestones sit under qedushah/ani/quotations/numbers_15/41 with source=bible:numbers/15/41/b, and it has no Bible URN on the root. resolved-scope-checks shows 0 owners of numbers/15/41/b and exactly 1 owner of qedushah/ani per project. The documentary wrapper carries no actor. The index instruction musaf_ani_reader_and_congregation and the expanded rubric each supply קו״ח once.",
+    "R1-4 Vetimlokh range: there are now two separate references, vetimlokh followed by psalms/146/10, with no cross-namespace range. In the HE and EN parts files the vetimlokh prayer-part ends before the chapter milestone. The resolved scope ends at 'בְּדִבְרֵי קָדְשֶׁךָ' / 'in Thy holy word,'. psalms/146/10 has exactly 1 owner per project. The Musaf declare selects plene+sheva / shall_reign.",
+    "R1-5a Psalm 8:10 in Adir: now a quote-context verse (addir_adiraynu/quotations/psalms_8/10) with source=bible:psalms/8/10, closed before Zechariah. 0 canonical owners of bible:psalms/8/10.",
+    "R1-5b / X-2 inner prayer parts: addir, echad_hu, tisgav, kakatuv, qadosh_attah and vetimlokh each end with a bare prayer-part terminator immediately before their verse milestones, in both languages. The repeat ranges addir→zechariah_14/9 and echad_hu→numbers_15/41 cover exactly the printed text. In rh_qadosh_attah and rh_vetimlokh the verse appears once (resolved-scope-checks, HE and EN).",
+    "R1-6 printing-named variants: renamed to descriptive names that are independent per language: chai_qamatz/chai_patah (HE) and father_full_stop_king_capital/father_comma_king_lowercase (EN), and proclaim_day_without_comma/proclaims_day_with_comma. The variant entries, the unit declarations and the expanded declarations agree.",
+    "R1-7 coverage notes: the HE, EN and expanded notes now say transcription ends at HaMelekh HaQadosh (p.116) and that Attah Vechartanu onward is not included. No acceptance beyond that is claimed. The expanded note now has xml:lang=en (code diff).",
+    "R1-8 / X-12 Od Yizkor: now prayer:amidah/od_yizkor_lanu, with its conditions od_yizkor_lanu/ayom|hayom and parent prayer:amidah. The source text 'עוֹד יִזְכָּר' is unchanged.",
+    "R1-9 context hierarchy: all Kedushah contexts now use siddur:rosh_hashanah/musaf/repetition/qedushah/<part>[_first|_repeat]. No 'first_printing' labels remain.",
+    "R1-10 / X-6 English titles and labels: they are English now, and the Musaf Uvekhen contexts are 'Put the fear of Thee' / 'Grant honour' / 'The righteous shall rejoice' with no 'Evening Prayer'. addir_first is spelled 'addir'. (Several are truncated; see the new finding.)",
+    "R1-11 qedushah_shared_parts: map_root:false and omit_publication_urn:true. It carries only the four prayer:amidah/qedushah/* parts.",
+    "R1-12 variant facsimile/printings: variants 4/5 (Psalm 146:10) now list s28/s226/s252/s246 and s29/s227/s253/s247. Variants 9–17 each list both attested printings, and every reading has a facs. Each reading's single facs points to its first attestation, which is acceptable.",
+    "R1-13 identity search: normalized-identity-search.json covers תשגב לבדך (only hit: the new record), אני יי אלהיכם (existing qedushah/ani and ani_hashem_elohaykhem; the existing qedushah/ani was chosen), אדיר אדירנו (the existing root; the Birnbaum hit has no identity, so no subpart of a different extent collides) and כסוד שיח (Birnbaum qedushah/naaritz is a different identity with a different start).",
+    "R1-14 punctuation: 'fortyeight' is now <sic>fortyeight</sic><corr>forty-eight</corr> in the EN Veattah XML. The 'land' comma stays a variant, with a recorded reason (punctuation-decision.json). This is consistent with the project's existing comma variants (gevurot …_with_comma/_without_comma).",
+    "R1-15 inner rite declarations: the recorded reason not to add them (plain word homes have no rite conditions, so a local declaration adds no behaviour) is accepted.",
+    "R1-16a literal '\\n': stays as protected source evidence. The generated XML collapses it to whitespace and creates no structure (he-musaf_qedushah_kevodo_repeat.xml).",
+    "R1-16b Kesod quotation: renamed to quotations/isaiah_6/3 with source bible:isaiah/6/3/veqara. Resolution notes say subverse.py declares veqara and qadosh, and urn-reference-check ran cleanly.",
+    "X-3 Veyeetayu custom statement: in the documentary spine the regional prose is now the conditional's condition_instruction (relevant_instructions musaf_veyeetayu_custom_he/_en, type instruction). The expanded spine still marks it as a description (see the new finding).",
+    "X-5 n-only chapter milestones: every chapter milestone now has a corresp. Partial chapters point to quotation-context chapter URNs, never a canonical whole chapter. Isaiah 5:16 and Psalm 146:10 stay full canonical verse witnesses inside a contextual chapter container, as the resolution notes describe.",
+    "X-7 orphan psalms_8 record: now used by the Adir XML. The veattah_qadosh/quotation record has references and a parent.",
+    "X-8 index-level actor notes: every index instruction and expanded rubric carries role/congregation, role/reader or role/reader_and_congregation, through the build.py rubric-corresp helper. Fragment-level speaker notes also carry corresp (addir_repeat, kevodo_repeat, echad_repeat, yimlokh).",
+    "X-9 EN Vechayyot gap: two tei:note type=encoding entries already sit in the EN header (lines 31–32). The earlier reviewer read a body-only aggregate.",
+    "X-10 EN accentual half-verse: removed. The EN Ani uses a context verse-part (…/numbers_15/41/ani) whose source is bible:numbers/15/41/b.",
+    "X-11 Shema actor inside the quotation: the note is removed from the unit, and the actor comes only from index instruction musaf_shema_reader_and_congregation.",
+    "X-13 Veyeetayu legacy stem: reused deliberately, with a corpus-wide alias migration deferred. No parallel identity was minted.",
+    "X-14 second ed token: explained as the established printing discriminator used by scan_links.py. facs and n are unchanged. Accepted.",
+    "X remaining check 'Chamol': I viewed the image s246-band3.png directly. Ledor Vador ends 'כִּי אֵל מֶלֶךְ גָּדוֹל וְקָדוֹשׁ אָתָּה.' and is followed immediately by 'כִּי מַקְדִּישֶׁיךָ בִּקְדֻשָּׁתְךָ (נ״א כערכך) קִדַּשְׁתָּ. נָאֶה'. No Chamol is printed, so nothing is omitted. The band also confirms the order ק׳ Adir (repeat) → ח׳ Uvedivrei → קו״ח Yimlokh → ח׳ Ledor."
+  ],
+  "findings": [
+    {
+      "file": "both-sequences.json (expanded_sequence)",
+      "location": "section musaf_veyeetayu_custom, condition_rubrics.de-Hebr.type and condition_rubrics.en.type (lines ~905, ~916)",
+      "severity": "medium",
+      "problem": "In the expanded spine the Fuerth/Frankfurt/Metz statement is still type \"description\". The documentary spine (relevant_instructions musaf_veyeetayu_custom_he/_en) and the parallel expanded Tisgav condition_rubrics both use \"instruction\". This is the X-3 problem: a statement about when the text is read must be the conditional's own instruction. So X-3 is closed only for the documentary books. The added editorial חזן rubric (resp codex, role/reader) is correct and keeps the singer when the condition is decided.",
+      "required_fix": "Set type \"instruction\" on both expanded Veyeetayu condition_rubrics without changing the text. Regenerate machzor_expanded-opensiddur-he/index.xml and check that the statement renders as the j:conditional's tei:note type=\"instruction\"."
+    },
+    {
+      "file": "xml/he-musaf_repetition_kesod_siach.xml (and the EN counterpart)",
+      "location": "prayer-part kesod_siach and kakatuv: tei:note type=description 'חזן' / 'ח׳' placed after the part milestones",
+      "severity": "low",
+      "problem": "This file is the canonical home of prayer:amidah/naaritzekha_venaqdishkha_kesod; its root div corresp is the canonical URN. Its speaker notes sit inside the canonical part scopes, so any transclusion of …/kesod_siach or …/kakatuv brings this edition's actor cue with it. That conflicts with the rule this package applies elsewhere: Ani, Echad, the shared parts and the Shema keep word homes free of actors. It does not cause duplication in the current outputs, because the expanded spine adds no separate Kesod rubric. The module was accepted earlier.",
+      "required_fix": "At minimum, move each note in front of its prayer-part milestone so part-level scopes carry no actor. Alternatively, split the file into a speaker-free word home plus a documentary wrapper that carries חזן/ח׳, and give the expanded Kesod row explicit role rubrics. If you defer this, record it."
+    },
+    {
+      "file": "new-registry-records.json; unit titles / generated tei:title",
+      "location": "label_en/title.en of …/qedushah/kevodo_repeat ('His glory fills the world, His'), barukh_kevod ('Blessed be the glory of the'), ledor_vador ('From generation to generation we will'), mimeqomo_repeat ('From His dwelling place may He'), uvedivrei ('And in Thy holy words it')",
+      "severity": "low",
+      "problem": "The English labels and titles were cut off at a fixed word count and end mid-phrase. One example is in the generated en-musaf_qedushah_kevodo_repeat.xml <tei:title>.",
+      "required_fix": "End each label at a natural phrase boundary, e.g. 'His glory fills the world', 'Blessed be the glory of the Lord', 'From generation to generation', 'From His dwelling place', 'And in Thy holy words'. Then regenerate the headers and the registry."
+    },
+    {
+      "file": "new-registry-records.json",
+      "location": "parent of every siddur:rosh_hashanah/musaf/repetition/qedushah/* context record and of …/repetition/uvekhen_*, …/repetition/vetimlokh, …/repetition/qadosh_attah",
+      "severity": "low",
+      "problem": "The parent jumps straight to siddur:rosh_hashanah/musaf and skips …/repetition and …/repetition/qedushah. Child quotation records such as …/qedushah/shema/quotations/deuteronomy_6 do use their immediate parent, so the hierarchy is inconsistent.",
+      "required_fix": "Register …/musaf/repetition and …/musaf/repetition/qedushah, if they are not already registered, and point parents at the immediate container. Alternatively, record that the registry convention allows the nearest registered ancestor."
+    }
+  ],
+  "remaining_export_checks": [
+    "The package has no generated index.xml (Heidenheim, Marmorstein or expanded). The manifest lists fragments only. In the actual index XML, confirm: all six conditionals test only frankfurt_am_main, plus the recite variants; the Adir, Tisgav and Veyeetayu statements are j:conditional tei:note type=instruction (expanded Veyeetayu after the fix above); and every index actor note has its role corresp.",
+    "Re-run the 36 compiled states after the Veyeetayu type fix. For frankfurt_am_main=true, confirm the first Adir, Tisgav and Veyeetayu are omitted and Shacharit Attah Hu / Berikh Shemeh are unchanged. For metz=true, Tisgav and Veyeetayu are omitted. For fuerth=true alone, Veyeetayu stays undefined, with its instruction. The repeated Adir always stays.",
+    "In the rendered expanded and documentary outputs, check that each Kedushah row shows exactly one actor cue, especially Ani, Shema, Kesod and the Veyeetayu editorial חזן.",
+    "Check the page breaks for pp.109–116 in corrected-state renders. That includes the displaced s252 break after the optional וְיִזְבְּחוּ clause, in both the clause-included and clause-omitted states, and the EN s253 break in stanza 2.",
+    "Render sic/corr (fortyeight/forty-eight, together with the earlier corrections) in printed and corrected modes.",
+    "Optional source check, outside this review's image authorization: in the same s246 band the Yimlokh 'הללויה' looks like it may have a chataf under the first lamed. The Yimlokh declaration is name_abbreviated_halleluyah_sheva, which source acceptance already adjudicated. If anyone re-opens readings, check this on a higher-resolution crop."
+  ],
+  "coverage": [
+    "Read both earlier reviews (review.json for the data and for the XML), both resolution-note files, both-sequences.json in full, new-registry-records.json in full (1432 lines), small-code-diff.patch, xml-manifest.json, resolved-scope-checks.json, feature-check-structured.json, normalized-identity-search.json, punctuation-decision.json, compiler-report.json (36 states, no pairing problems), final-build-schema-report.json (756 files), urn-reference-check.log, registry-feature-tests.log (125 passed) and importer-tests-final.log (143 passed).",
+    "Read variant-4, 5 and 9–17 in full.",
+    "Read these units: musaf_qedushah_ani_adonai, musaf_qedushah_shema, musaf_v_yeetayu_kol_leavdekha, musaf_qedushah_kevodo_repeat, musaf_veattah_ezon_qol, qedushah_shared_parts, musaf_repetition_uvekhen_ten_kavod, musaf_repetition_vetimlokh.",
+    "Read these generated XML files, including headers where relevant: HE/EN qedushah_ani_words, HE/EN musaf_qedushah_ani_adonai, HE/EN amidah_vetimlokh_attah_hashem_parts, HE/EN amidah_qadosh_attah_venora_parts, HE rh_vetimlokh, HE rh_qadosh_attah, HE/EN addir_adiraynu_parts, HE musaf_qedushah_addir, HE/EN musaf_qedushah_addir_repeat, HE/EN qedushah_echad_hu_words, HE musaf_qedushah_echad_hu_repeat, HE/EN musaf_tisgav_levaddekha, HE musaf_qedushah_shema, HE/EN musaf_qedushah_conclusion_parts, HE musaf_v_yeetayu_kol_leavdekha, EN musaf_vechayyot_asher_hennah (full header), HE/EN musaf_qedushah_kevodo_repeat, HE musaf_repetition_kesod_siach, HE/EN musaf_repetition_vetimlokh, HE musaf_repetition_qadosh_attah, EN musaf_veattah_ezon_qol, EN musaf_repetition_uvekhen_ten_kavod, EN amidah_uvekhen_ten_kavod_parts, HE musaf_qedushah_yimlokh.",
+    "Viewed s246-band3.png directly.",
+    "Not read individually: the other roughly 29 unit JSONs, the remaining XML fragments (poem modules, Uvekhen parts, ledor/uvedivrei/barukh/qadosh wrappers), page-boundary-decisions.json and JLPTEI-3.md. For those I relied on the earlier reviews' accepted state and on the clean schema, URN-reference and compiler runs."
+  ],
+  "notes": [
+    "Small code change: the build.py diff only (a) copies rubric['corresp'] onto the rubric note, (b) shows the corresp in the instruction review text and (c) adds xml:lang=en to the expanded coverage note. None of these changes text or structure, and the rubric-corresp change is what closes X-8. Approved separately.",
+    "Approving canonical identity does not depend on the low label and parent findings, which are registry polish. The identity decisions all hold: reuse qedushah/ani; mint only tisgav_levaddekha (verified as new), od_yizkor_lanu (correct placement and qamatz-qatan name), echad_hu_eloheinu, the new parts and the quotation contexts; reuse the legacy Veyeetayu stem without a parallel identity; keep Isaiah 5:16 and Psalm 146:10 as single canonical owners.",
+    "data_encoding and generated_encoding are false only because of the expanded Veyeetayu instruction type (medium). Generated-index approval also needs the index XML, which this package does not include. Once both are resolved, I see no other blockers in what I reviewed.",
+    "Documentary behaviour, for the record: if the Veyeetayu condition is decided true in a documentary build, the conditional instruction (and with it the source's 'the reader sings') is dropped. That is consistent with how decided conditionals render. The default/unknown documentary state keeps the full prose.",
+    "The 'PDF253' in the coverage notes refers to the last scan of the interleaved facsimile, which is the EN page. The HE page for the same text is scan 252. That is accurate, not an error.",
+    "This is not final export approval. Corrected-state re-render checks run separately."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "b99ca676-1d86-46f8-9d4b-3d40bb344bf1"
+  }
+}

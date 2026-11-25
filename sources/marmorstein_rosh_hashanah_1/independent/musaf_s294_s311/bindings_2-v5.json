@@ -1,0 +1,102 @@
+{
+  "scope": "bindings_2",
+  "approved": false,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_2-0.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_2-1.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_2-2.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_2-3.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_2-4.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_2-5.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_2-6.json"
+  ],
+  "blocking_findings": [
+    {
+      "id": "B1",
+      "records": [
+        "realization/musaf_areshet_sefatenu/en",
+        "realization/musaf_repetition_zikhronot_areshet/en",
+        "realization/musaf_repetition_zikhronot_areshet/he",
+        "realization/musaf_areshet_word_parts/he",
+        "realization/musaf_areshet_word_parts/en"
+      ],
+      "title": "The same Shabbat-marked segment is bound to a canonical identity in one record and left unbound in the canonical host",
+      "detail": "In musaf_areshet_sefatenu/en, the record whose urn is the canonical prayer urn:x-opensiddur:text:prayer:areshet_sefatenu, segment index 1 is marked and has the condition holiday-aggregate {shabbat:true}. Its text_sha256 is 19565795d1f0…, 15 characters, but the segment has no 'canonical' attribute. In musaf_repetition_zikhronot_areshet/en, a segment with the same hash, same character count, same condition and same marked status is bound canonical=urn:x-opensiddur:text:prayer:areshet_sefatenu/zikhron. Its source_fidelity attesting_controls list only musaf_repetition_shofarot_areshet and musaf_repetition_zikhronot_areshet; musaf_areshet_sefatenu is left out, in both he and en. The canonical_parts host musaf_areshet_word_parts declares only the /opening and /conclusion parts, with no /zikhron part. So inside this scope, /zikhron is used as a canonical identity, but neither the canonical host nor the canonical-parts host declares it, and the canonical prayer realization contains a conditional segment with no part identity at all."
+    },
+    {
+      "id": "B2",
+      "records": [
+        "realization/musaf_areshet_sefatenu/en"
+      ],
+      "title": "A conditional segment in the canonical host has no source-fidelity review",
+      "detail": "source_fidelity in musaf_areshet_sefatenu/en covers only segment_index 0 (/opening) and 2 (/conclusion). Segment index 1 is marked and conditioned on Shabbat, and no fidelity or attestation entry covers it, even though the matching segment in the zikhronot record is attested. That segment's binding (or deliberate non-binding) and its condition scope have had no semantic review. This record's changed_fields include 'unit' and 'source_fidelity', so this is a current change, not carried forward from an accepted payload."
+    },
+    {
+      "id": "B3",
+      "records": [
+        "realization/musaf_areshet_sefatenu/en",
+        "realization/musaf_areshet_word_parts/he",
+        "realization/musaf_areshet_word_parts/en",
+        "realization/musaf_repetition_zikhronot_areshet/he",
+        "realization/musaf_repetition_zikhronot_areshet/en"
+      ],
+      "title": "Canonical prayer-namespace conditions are named after this publication's printing layout",
+      "detail": "Wording-selection and variant-reading conditions sit in the canonical prayer namespace, for example urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/{he,en}/first_printing and …/{he,en}/zikhronot_printing. 'first_printing' and 'zikhronot_printing' describe where this mahzor happens to print each wording, not a liturgical distinction, and they mean nothing for any other publication. The conditions are also split by language (he/en are always set together in every settings and wording_selection block), while the third condition, …/conclusion/teqiot_veseder_shofarot, is not split by language. This is the kind of publication-specific canonical identity and inappropriate condition encoding this review is supposed to catch. The conditions should express the liturgical distinction (the section context or wording variant) without publication-layout or per-language terms, or be moved to a publication-scoped namespace."
+    }
+  ],
+  "nonblocking_findings": [
+    {
+      "id": "N1",
+      "records": [
+        "realization/musaf_repetition_retzeh/he",
+        "realization/musaf_repetition_retzeh/en"
+      ],
+      "detail": "These new records bind via 'source'=urn:x-opensiddur:text:prayer:amidah/avodah/retzeh with source_fidelity=[] and corrections=[]. If 'source' only asserts derivation, not identity, this is acceptable. If it implies textual identity with the shared canonical Retzeh, a fidelity or attestation entry is needed. Please confirm what 'source' means. The he/en pair is otherwise consistent: same urn, stem, title and source, and scans s308/s309 both on p144."
+    },
+    {
+      "id": "N2",
+      "records": [
+        "realization/musaf_areshet_word_parts/he",
+        "realization/musaf_areshet_word_parts/en"
+      ],
+      "detail": "The variant 'printed' fields are not masked (they contain full Hebrew and English text), unlike the rest of the projection. Their lengths (he 70, en 99 characters) match the first_printing readings, not the zikhronot_printing readings (71 and 98), even though 'printings' lists p136/p144. This is consistent if 'printed' means the host lemma, but the field's meaning should be documented. The variant ids end in '_conclusion_zikhronot' yet each holds three readings, including teqiot_veseder_shofarot."
+    },
+    {
+      "id": "N3",
+      "records": [
+        "realization/musaf_areshet_word_parts/he",
+        "realization/musaf_areshet_word_parts/en"
+      ],
+      "detail": "source_scans lists only same-language scans (he: s274/s292/s308; en: s275/s293/s309), but each record's variants array also cites the other language's printings."
+    },
+    {
+      "id": "N4",
+      "records": [
+        "realization/musaf_repetition_zikhronot_areshet/he"
+      ],
+      "detail": "condition_instruction 'אַם שַׁבָּת.' is tagged condition_instruction_language='de-Hebr' (German in Hebrew script). That is plausible for a Judeo-German rubric and is consistent between the segment, the enclosing_scopes and the attesting_controls. I could not confirm the tag against the scan in this scope."
+    },
+    {
+      "id": "N5",
+      "records": [
+        "all source_fidelity entries"
+      ],
+      "detail": "For unmarked segments, literal_sha256 differs from the fragment text_sha256 (for example opening: 2fda3f… vs f7dc3b…). For marked segments, literal_sha256 equals the fragment hash and literal_content_sha256 is a separate value. The scheme is applied consistently across records, but the projection does not document which hashing domain each field uses."
+    }
+  ],
+  "scope_limitations": [
+    "final_sha256 hashes the complete unmasked payload, which I did not have, so I could not verify it.",
+    "Text values appear only as SHA256 and character counts, so I checked binding consistency by matching hashes across records, not by reading words.",
+    "The records for musaf_repetition_shofarot_areshet, musaf_areshet_sefatenu/he and any declaration of …/areshet_sefatenu/zikhron outside these seven files were not assigned. B1 is judged from the assigned records only.",
+    "I did not check global order, documentary-instruction and navigation hashes beyond confirming they are identical in all seven records. Those belong to the order group.",
+    "Out of scope: no code review and no export approval."
+  ],
+  "verdict": "Not approved. The global hashes, settings, wording-selection blocks, page/scan parity between he and en, and variant reading hashes are internally consistent: first_printing, zikhronot_printing and teqiot readings each match their host fragments. However, the Shabbat 'zikhron' segment is bound to a canonical identity in the zikhronot realizations, while the identical segment in the canonical host is unbound and has no fidelity review, and the canonical-parts host does not declare that identity (B1, B2). The canonical prayer-namespace conditions also encode this publication's printing layout and are split by language (B3). Those three issues need fixing or explicit justification before these bindings can be accepted.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "ab96a20f-071b-43aa-b3ac-91f653e23dcc"
+  }
+}

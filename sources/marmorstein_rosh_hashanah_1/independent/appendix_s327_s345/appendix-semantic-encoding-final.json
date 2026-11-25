@@ -1,0 +1,34 @@
+{
+  "approved_draft_semantic_encoding": true,
+  "required_changes": [],
+  "remaining_disputes": [],
+  "export_checks_still_required": [
+    "Check whitespace in the rendered output itself, not through the runtime check. The text() helper in check-appendix-semantics.py collapses all whitespace before comparing, so the 51 passing cases cannot detect a stray space before the colon or a double space. Test s334 L7 with the condition false (XML line 78 renders as 'גּוֹיִם :'), s336 L7 false (line 134, 'הוֹשַׁע  כִּי'), s336 L20 false (line 147), s340 L8, s341 L4 and s342 L13. Also check that a whole-line scope set to false does not leave an empty tei:l that shows as a blank poetry line.",
+    "s335 L22 with the condition undefined is not covered by the runtime check, which tests only true and false. Confirm that the anchor and the sic/corr note are kept, the note appears exactly once, and the generated delimiters show without a doubled opener.",
+    "The six נ״א apparatus notes were tested only with the main reading selected. Test them with the alternate selected and with no reading selected. Each note should still resolve to its choice@xml:id and appear exactly once.",
+    "Not every L24 combination was tested. The tested ones are both true, outer true with inner false, and outer false with inner true. Still to test: outer undefined with the inner condition in each state, and outer true with inner undefined. Each should produce correctly nested delimiters within the single line.",
+    "Check at export that /50 resolves only to the L28 milestone scope (XML line 127, up to the /54 milestone on line 128). The L24 tei:seg/@source=/50 (line 123) must not be pulled in, and setting /50/optional false while the L24 conditions are true must leave L24 unchanged. The current L28 removal test would not catch L24 being included, because L24 would be equally present in the true and false outputs.",
+    "Confirm that L6 (line 104) and L24 (line 123) do not resolve under any canonical URN. The bare milestones on lines 103 and 122 should close /32 and /49 before the null lines. This is correct in the XML structure but no runtime assertion checks it.",
+    "The byte-identity check compares the inventory text with the fragment strings in draft-appendix-units.json, not with the generated XML. Fidelity of the XML text is covered only indirectly, by the word-match and removal assertions. Run a direct check that the generated XML matches the source text after NFKD normalization and with delimiters removed."
+  ],
+  "limitations": [
+    "Read the Wednesday XML in full and the rules JSON, appendix_semantics.py, check-appendix-semantics.py, the runtime check JSON, the schema report and the previous review. I did not reread the other day modules for this pass.",
+    "Did not run the schema, the exporter or any scripts. Runtime and schema results are taken from the reported JSON, after checking that the check script's logic produces the reported cases: 36 rule cases, 6 apparatus cases, 6 inline cases, 2 missing-opener cases and 1 byte check, totalling 51.",
+    "Did not view any scans. Human rulings 834 and 835 are treated as authoritative. The source reading s335 L24/L28 was not reopened."
+  ],
+  "notes": [
+    "The blocking change is fixed. The condition URN is now 'kedov_shakkul_ukhenamer_shachal' in appendix_semantics.py:17, in the Wednesday XML header note (line 35), in the conditional at line 104 and in draft-appendix-semantic-rules.json (line 145). The misspelled 'ukhename_' form no longer appears in any file I read.",
+    "The counts are confirmed from the actual rule list. There are 30 optional fragments, user834's s335 L22 among them. There are 6 explicit נ״א choices: s330 L26, s332 L27, s337 L17, s338 L19, s341 L3 and s341 L12. There is 1 nested Divine Name scope, s335 L24 '/divine_name'. My earlier counts of 29 and 7 were wrong.",
+    "The missing-opener anchor is placed correctly. On line 120, tei:anchor xml:id='appendix_s335_line_22_source_error' comes right after the opening j:conditional (…_optional_47_0_0) and before the text, inside the scope. The /48 milestone stays outside the scope, earlier in the same tei:l. The standoff note targets #appendix_s335_line_22_source_error, so it keeps or drops with the scope. The code (appendix_semantics.py:73-74) moves the conditional's tail onto the anchor, so no text is reordered.",
+    "The conditional boundaries on lines 100-127 are correct. Each j:endConditional sits inside its own tei:l before the trailing space. No scope crosses a tei:l or a milestone. On line 123, the inner Divine Name pair sits entirely inside the outer L24 pair, and both are children of the tei:seg.",
+    "Standoff targeting resolves. In the Wednesday file, the s337 commentary note targets #appendix_s337_line_17, which matches the tei:choice xml:id on line 172. The colon is placed after the choice, so it is shared by both readings.",
+    "The inline fallback is correctly tested. With no settings and inline transclusion, the main reading appears exactly once. When the alternate is set, replacing main with alternate gives exactly the selected-alternate output.",
+    "Optional cleanup, not blocking: the header encoding notes still read as build instructions ('preserve … once'). The s337 note puts Hebrew inside an xml:lang='en' note. The L22 note's wording 'Supplied delimiter: (' may not match the delimiter the exporter actually draws.",
+    "This approves the draft semantic encoding only. Assembly, settings, export and batch acceptance are still pending. I made no file edits."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "b85cdc2d-904d-4b06-998f-82b7a59c9c9c"
+  }
+}

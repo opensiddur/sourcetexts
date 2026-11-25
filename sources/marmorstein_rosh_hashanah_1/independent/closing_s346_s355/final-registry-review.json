@@ -1,0 +1,40 @@
+{
+  "approved_registry": false,
+  "records_reviewed": 139,
+  "required_changes": [
+    "Two conditions have the same Hebrew label. urn:x-opensiddur:condition:siddur:regalim/musaf/text/kohanim_response_2_5/priest/heidenheim_1965_printing/earlier and .../kohanim_appendix both have label_he 'וִיחֻנֶּֽךָּ', which looks the same in both. In the registry, a wording condition selects exactly the reading in its label_he (see condition.jsonl lines 81–120). Two separate conditions that claim the same reading do not make sense. kohanim_appendix_responses_2.xml declares the pair (earlier=false, kohanim_appendix=true), but no difference between the two printings is recorded. Check the two conditional readings in the shared kohanim_response_2_5/priest provider. If they are the same, remove both records and their two features from the responses_2 declaration. If they differ (for example in character or mark order), correct label_he and label_en so the difference shows.",
+    "One Bible quotation in the new prayer has no quotation record. yehi_ratzon_shekol_tippah.xml covers four Bible quotations. Three of them (Deuteronomy 30:3, Deuteronomy 30:4, Job 20:15) use prayer-scoped quotation URNs, and those six records are proposed. The fourth, Isaiah 63:9 (באהבתו ובחמלתו…), puts corresp='urn:x-opensiddur:text:bible:isaiah/63/9/b' straight on a half-verse milestone, and its seg has no type='quotation'. That makes the prayer a provider of bible:isaiah/63/9/b in the heidenheim-1965-he project, which the batch's own notes say a quotation must not be. Either add context records for .../yehi_ratzon_shekol_tippah/quotation/isaiah/63 and .../quotation/isaiah/63/9 (or /9/b), referencing bible:isaiah/63/9, and switch the corresp to them, or point to the approval that accepted this direct corresp on purpose. If such an approval exists, this item can be dropped."
+  ],
+  "files_read": [
+    "/tmp/mahzor-s346/candidate-registry-records.json (all 1065 lines, 139 records)",
+    "/tmp/mahzor-s346/existing-identity-corpus-search.json (all 554 lines)",
+    "/tmp/mahzor-s346/legacy-identity-evidence.json",
+    "/tmp/mahzor-s346/closing-architecture-proposal.json",
+    "/tmp/mahzor-s346/closing-remedy-review.json",
+    "/tmp/mahzor-s346/kaddish-closing-provider-uniqueness.json",
+    "/tmp/mahzor-s346/closing-review-module-manifest.json",
+    "/tmp/mahzor-s346/candidate-registry/condition.jsonl (all 122 lines)",
+    "/tmp/mahzor-s346/integration/project/prayerbook_for_the_new_year-heidenheim-1965-he/yehi_ratzon_shekol_tippah.xml",
+    "/tmp/mahzor-s346/integration/project/prayerbook_for_the_new_year-heidenheim-1965-he/kohanim_invitation_words.xml",
+    "/tmp/mahzor-s346/integration/project/prayerbook_for_the_new_year-heidenheim-1965-he/kohanim_appendix_responses_2.xml",
+    "/tmp/mahzor-s346/integration/project/prayerbook_for_the_new_year-heidenheim-1965-he/kohanim_appendix_yehi_ratzon.xml (body)",
+    "/tmp/mahzor-s346/integration/project/prayerbook_for_the_new_year-heidenheim-1965-he/kaddish_derabbanan_al_yisrael.xml (body)",
+    "specs/naming/spellings.yaml"
+  ],
+  "limitations": [
+    "I could only read files: I could not list directories, search, or run anything. I found only candidate-registry/condition.jsonl, and it holds none of the 139 proposed records. It is the baseline as it stood before this batch, so I reviewed the proposal file against it, not records already merged in. I could not find the text-identity registry file (text.jsonl does not exist), so I did not check directly that the reused parents exist there: prayer:amidah/kohanim, prayer:amidah/amirah_leshatz_lifnay_birkat_kohanim, siddur:rosh_hashanah/musaf/repetition/kohanim/yehi_ratzon, the regalim kohanim_response_* holders, and asher_qiddeshanu_biqdushato / addir_bamarom_shokhen. The legacy evidence and corpus search back up the first three and the Kaddish identities.",
+    "I could not find the shared provider file for kohanim_response_2_5/priest, so the first required change is based on the registry labels and the module's declaration only.",
+    "I did not run validate_features, validate_names, refdb or a compile. I did not check exactly which code points the Hebrew labels use.",
+    "I did not establish which earlier caller (if any) selects the psalms/24/5 wording outside the two appendices. Only kohanim_appendix and daily_appendix are proposed.",
+    "This approves registry identities and metadata only: not spines, recitation order, export, PDF or electronic output, or promotion. Source readings, encoding and order were taken as already approved."
+  ],
+  "notes": [
+    "Count: 52 wording conditions for Psalms 92:2–16, 93:1–5, 94:1/2/14 and 81:4/5/11. 1 new whole prayer. 8 quotation-context records. 1 new part of yehi_ratzon (/prayer). 2 printing conditions for yehi_ratzon. 24 Amidah/blessing printing conditions. 2 optional Kaddish additions. 4 conditions for Psalm 25:6. 18 conditions for the regalim responses. 2 for Psalm 24:5. optional_umetza. The 2 invitation parts (before_call / after_call). The yehi_ratzon_printing structure. 21 hosafot structure records and the word_parts library record. Total 139.",
+    "Reuse is sound. Every wording condition sits on an existing Bible verse, prayer or siddur word holder. None makes an edition or placement into a new prayer. The preparation formula, the dream prayer, the departure prayer, Vete'erav, She'otekha and al_yisrael reuse prayer identities the corpus search and legacy evidence back up. The Kaddish closings have exactly one provider in each project.",
+    "There is exactly one new whole prayer: prayer:yehi_ratzon_shekol_tippah. The corpus search (with and without the extra yod in טיפה) and the legacy evidence found no match. 'shekol' follows the spellings.yaml rule against doubling after a prefix (compare lakol and mikol). 'tippah' is doubled and keeps its final heh. The module carries the URN on its div and idno, as a canonical provider should.",
+    "Invitation: kohanim_invitation_words.xml has no root corresp and no publication idno. It exposes before_call, the existing prayer:amidah/kohanim, and after_call as three coherent prayer-part ranges. So invitation/word_parts (status=context, kind=library) is metadata only and not a transclusion target, as intended. Non-blocking: the proposal's 'additional_new_prayer_roots' list includes before_call and after_call. They are parts (kind=prayer-part, with a parent), not roots. Correct the list so it does not suggest three new prayers.",
+    "The Deuteronomy 30:3, Deuteronomy 30:4, Job 20:15 and Deuteronomy 26:15 quotation records follow the existing kohanim_ribbon/quotation/deuteronomy/26[/15] pattern: a chapter-level and a verse-level context, each referencing only the quoted verse. Their milestones close inside the seg. 'second' tells apart the two separate Deuteronomy 30 quotations.",
+    "The optional Kaddish additions match the module: ולכון and וְאַרְעָא are each marked as a separate conditional and replace no neighbouring words. The yehi_ratzon printing/main and printing/appendix conditions work alongside the existing parents and wife_and_children conditions (condition.jsonl lines 77–78).",
+    "Labels and naming, non-blocking (cosmetic issues also raised in the earlier review): printing/main has the truncated label 'Main-service'. Spaces are missing in 'Psalm24:5', 'Marmorstein Psalm25:6' and 'the22-letterName'. The structural labels ('Closing-volume structural context — 1') say little. Condition naming is mixed: _earlier, _opening, _printing/earlier, _printing_1/earlier. All of these are true and none affects any identity."
+  ]
+}

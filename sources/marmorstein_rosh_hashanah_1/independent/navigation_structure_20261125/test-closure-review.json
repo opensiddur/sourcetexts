@@ -1,0 +1,24 @@
+{
+  "approved": true,
+  "required_changes": [],
+  "files_read": [
+    "/tmp/mahzor-navigation/remedy-review.json",
+    "/tmp/mahzor-navigation/completed-selected-tests.log",
+    "/tmp/mahzor-navigation/selected-test-invocation.json",
+    "/home/efeins/.codex/worktrees/scan-page-change-links/master/opensiddur/exporter/compiler.py (lines 1565-1609)"
+  ],
+  "limitations": [
+    "Required gate, still open: the full exporter run (and the whole suite, `uv run pytest`) has to finish green before the PR is ready. I did not read its log because it is still running. This approval covers the implementation review only, on the selected tests.",
+    "No visual approval of PDF or HTML: no output was inspected. The point carried over from the last review still applies. A print compile treats rubrics and undecided scopes as optional, so the PDF may show duplicate scan-link symbols, though none should be missing. Check this during visual review.",
+    "The log was run with -q, so it does not name tests. That all 71 test_scan_links tests ran, including the electronic compiler integration test, comes from the invocation record's 'includes' field. The log does not show it independently. The record also does not give the working directory, so I am relying on it for which worktree's .venv/bin/python and source the run used.",
+    "The selection is six files: test_scan_links, test_typography_tex, test_html_book, test_pdf, test_latex and common/test_text_encoding. It is not the whole of opensiddur/tests/exporter, which is why the full run remains a required gate.",
+    "The integration test still calls mark_scan_links directly on compiler output, not through prepare_compiled_tree, so the relocate_colophons ordering is still untested. As noted before, this cannot break pairing.",
+    "I read only lines 1565-1609 of the compile CLI. I did not check whether load_settings or load_default_settings could reset defer_reader_settings on the LinearData passed in, though the code reads as if both keep and return that instance."
+  ],
+  "notes": [
+    "The earlier blocker is resolved. completed-selected-tests.log reaches [100%] and ends with '408 passed, 168 subtests passed in 14.77s'. The invocation record shows exit_code 0 and the same summary. The earlier partial log stopped at 66% plus 25 dots, which fits as a prefix of this run.",
+    "Electronic CLI path confirmed at compiler.py:1571-1573. It calls reset_linear_data() and get_linear_data(), then sets linear_data.defer_reader_settings = (args.destination == 'electronic') before loading settings. With no settings file, project_priority falls back to [args.project] (lines 1581-1583). compiler.py:1592-1594 then builds ExternalCompilerProcessor(args.project, args.file_name, linear_data=linear_data) and calls .process().",
+    "compiler.py:1602-1603 sets p:destination='electronic' on the result when defer_reader_settings is on, and :1604-1605 then runs check_pairing. The integration test's setup (defer_reader_settings=True, a project priority, a direct ExternalCompilerProcessor call) therefore matches what the CLI does. This resolves the main limitation of the remedy review.",
+    "No code changed since the remedy review, which found no remaining logic defects. Its non-blocking notes still apply: crossing scopes clear state coarsely, and scan-link state carries across top-level divisions."
+  ]
+}

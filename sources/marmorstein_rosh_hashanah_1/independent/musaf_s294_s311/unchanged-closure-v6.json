@@ -1,0 +1,38 @@
+{
+  "scope": "unchanged_bindings_closure",
+  "approved": true,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/bindings_unchanged-v5.json",
+    "/tmp/mahzor-s294/bounded-order-v4.json",
+    "/tmp/mahzor-s294/unchanged-proof-v6-00.jsonl",
+    "/tmp/mahzor-s294/unchanged-proof-v6-01.jsonl",
+    "/tmp/mahzor-s294/unchanged-proof-v6-02.jsonl",
+    "/tmp/mahzor-s294/unchanged-proof-v6-03.jsonl",
+    "/tmp/mahzor-s294/unchanged-proof-v6-04.jsonl",
+    "/tmp/mahzor-s294/unchanged-proof-v6-05.jsonl",
+    "/tmp/mahzor-s294/unchanged-proof-v6-06.jsonl",
+    "/tmp/mahzor-s294/unchanged-proof-v6-07.jsonl",
+    "/tmp/mahzor-s294/unchanged-proof-v6-08.jsonl",
+    "/tmp/mahzor-s294/unchanged-proof-v6-09.jsonl",
+    "/tmp/mahzor-s294/unchanged-proof-v6-10.jsonl",
+    "/tmp/mahzor-s294/unchanged-proof-v6-11.jsonl"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "Coverage: there are 171 records in total. Files 00 through 10 hold 15 each and file 11 holds 6. That matches the 171 files listed in bindings_unchanged-v5.json. Every record uses the same schema: key, prior_accepted_payload_sha256, prior_review_complete, prior_review_final_sha256, prior_acceptance_evidence, prior_source_evidence, semantic_fields{unit, variants, corrections, source_fidelity, navigation_sha256}{old_sha256, new_sha256}, changed_fields, new_final_sha256.",
+    "Semantic equality: in all 171 records, old_sha256 equals new_sha256 for each of the five semantic fields (unit, variants, corrections, source_fidelity, navigation_sha256). That is 855 pairs, and none differ. Only the Read tool was available, so I compared the pairs by reading them, not with a script. A mechanical diff would be a cheap way to confirm this.",
+    "Acceptance binding: in all 171 records, prior_review_complete is true and prior_review_final_sha256 equals prior_accepted_payload_sha256. All records cite the same acceptance evidence (independent/musaf_s276_s293/guidelines-v4.json) and the same source evidence (independent/musaf_s276_s293/source-corrections-close.json). Those two evidence files were not in this packet. So I checked that each record is consistent with itself. I did not check that these payload hashes actually appear in the earlier acceptance receipt. As instructed, I took that link as established.",
+    "Changed fields: in all 171 records, changed_fields is exactly [documentary_instructions_sha256, expanded_order_sha256, source_order_sha256]. In every record new_final_sha256 differs from prior_accepted_payload_sha256, which is what changing only the arrangement hashes should produce. The packet does not give OLD and NEW values for those three hashes, or a complete list of the payload's fields. So 'only these three changed' rests on the changed_fields list the generator wrote, plus the per-field equality of the five semantic fields.",
+    "Link to the order review: bounded-order-v4.json is approved, with no blocking findings. However, it does not cite any expanded_order_sha256, source_order_sha256 or documentary_instructions_sha256 values, and it is version v4 while this proof is v6. Nothing in the packet ties the new arrangement hashes to the exact spine material that review approved. That review's own open item also remains: the birkat_kohanim URN in shacharit context, transcluded at expanded chunk 02 line 263, is still unresolved there. This is outside this scope, but whoever closes ordering should confirm the hash link.",
+    "Repeated hashes, not a defect: 4f53cda1…b945 appears in many records for variants, corrections and source_fidelity. It is the SHA-256 of the canonical empty array '[]'. navigation_sha256 is the same value (20649d7d…a3c9) in all 171 records. Some different keys share a source_fidelity hash: rh_uvekhen_tzaddiqim/he and musaf_repetition_uvekhen_tzaddiqim/he (3c19c4fd…), rh_uvekhen_tzaddiqim/en and musaf_repetition_uvekhen_tzaddiqim/en (ae6ee7bb…), musaf_hayom_harat_olam and musaf_repetition_zikhronot_hayom in both languages (5f599aaa…, 84e70891…). Shared liturgical text explains this. It also matches in old and new, so it has no effect here.",
+    "Carried over from v5, still open: seven records are in one language only: amidah_qedushah/he, qorbanot_musaf_shabbat/he, musaf_useir_lekhapper_word_parts/he, musaf_repetition_useir_lekhapper/he, musaf_repetition_shofar_calls/he, musaf_numbers_28_words/en and musaf_repetition_zikhronot_shofar_calls/he. Please confirm that either the partner record is in another scope or a single-language realization is intended."
+  ],
+  "verdict": "APPROVED for unchanged-bindings closure. I read all 171 proof records. In each one, all five semantic fields have the same OLD and NEW hash, the prior review is complete and its final hash equals the prior accepted payload hash, and the only changed fields are the three reviewed arrangement hashes (documentary_instructions_sha256, expanded_order_sha256 and source_order_sha256). This closes the gap that blocked v5, which had nothing to show the records were unchanged. Limits of this approval: I could not recompute any hash or open the cited acceptance evidence files, and nothing in the packet ties the new arrangement hash values to bounded-order-v4. Rereading source texts, order content and export are outside this scope. This is not an export approval.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "a1d3e9ae-c027-491a-9627-5ca9a77b2f4f"
+  }
+}

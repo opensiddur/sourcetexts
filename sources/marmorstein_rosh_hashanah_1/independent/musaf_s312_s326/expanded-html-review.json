@@ -1,0 +1,35 @@
+{
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s312/v4-export-review/expanded-html-manifest.json",
+    "/tmp/mahzor-s312/v4-html-images/expanded-v4-priests-1280.png",
+    "/tmp/mahzor-s312/v4-html-images/expanded-v4-priests-390.png",
+    "/tmp/mahzor-s312/v4-html-images/expanded-v4-minchah-1280.png",
+    "/tmp/mahzor-s312/v4-html-images/expanded-v4-minchah-390.png",
+    "/tmp/mahzor-s312/v4-html-images/expanded-v4-torah-1280.png",
+    "/tmp/mahzor-s312/v4-html-images/expanded-v4-torah-390.png",
+    "/tmp/mahzor-s312/v4-html-images/expanded-v4-tashlikh-1280.png",
+    "/tmp/mahzor-s312/v4-html-images/expanded-v4-tashlikh-390.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "Priests, 390px: each Hebrew-only speaker label (חזן / כהנים / קהל) is followed by about 2–3 empty bordered rows (blank cells with only rules) before the line it introduces, so roughly 100px of empty space sits between a label and its text. The label ends up visually closer to the block before it than to its own line. Speaker order is still right (label then text: חזן → יְבָרֶכְךָ, כהנים → יְבָרֶכְךָ, קהל → יְבָרֶכְךָ יְיָ מִצִּיּוֹן…), but hiding or collapsing the empty cells would tighten which label goes with which line and shorten the page a lot.",
+    "Priests, 1280px: each speaker label sits about halfway between the row before it and the row it introduces, with large gaps on both sides. You can still read it correctly, but the link to the following row is weak; less space above the label, or more below the row before it, would help.",
+    "Torah, 390px: the same stacked empty-rule pattern shows up in smaller amounts between bilingual rows (for example after the קהל response and before the Levi heading). It's only cosmetic.",
+    "Tashlikh end matter, 390px: justified text in narrow list items creates very wide word gaps (for example 'Creative     Commons     Attribution-ShareAlike 4.0'). The long Birnbaum archive.org identifier and URL break mid-word ('…TheDailyPrayerB / ook1949'). Nothing overflows (scrollWidth 390 = width), but left-aligning list items in the colophon on narrow screens would read better.",
+    "Minchah, 1280px: '(On Sabbath)' is right-aligned in the accent colour above the ruled ואני תפלתי block, so the undecided-condition marker shows as intended under 'No particular day'. The following English-only instruction 'A Torah scroll is taken from the ark.' has no visible condition marker of its own; it depends on the reader seeing the earlier Sabbath marker. This is noted for awareness only, since source and order are already approved."
+  ],
+  "limitations": [
+    "The screenshots are viewport crops, not full-page captures. Overflow and clipping are judged from the visible area plus the manifest's scrollWidth == width at both 1280 and 390. Text that runs past the bottom edge (for example the end of Minchah at 390px) is crop edge, not clipping.",
+    "Priests crops at both widths start at the Kohanim blessing (ברוך…באהבה). The page heading or start of the first new priest page is not in view, so I couldn't visually confirm its heading.",
+    "The manifest covers only expanded.html at 1280 and 390. No other widths, files, or print styles were checked.",
+    "No interaction was tested (Contents/Settings menus, day selection other than 'No particular day', link navigation). Link, duplicate-ID and console-error results come from the manifest, which shows empty arrays at both widths.",
+    "Hebrew pointing was checked visually at screenshot resolution: vowels and cantillation-free niqqud are legible, יְיָ renders consistently, and the enlarged ה in Deut 32:6 (Levi reading) renders. Fine diacritic stacking at higher zoom was not checked."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "69a0e18a-e71c-49e6-af76-e0b93dfa3c4a"
+  }
+}

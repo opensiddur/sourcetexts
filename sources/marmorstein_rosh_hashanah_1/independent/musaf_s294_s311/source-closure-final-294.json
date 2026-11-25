@@ -1,0 +1,53 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "medium"
+  },
+  "images_read": [
+    "/tmp/mahzor-s294/s294.jpg",
+    "/tmp/mahzor-s294/s295.jpg",
+    "/tmp/mahzor-s294/s296.jpg",
+    "/tmp/mahzor-s294/s297.jpg",
+    "/tmp/mahzor-s294/s298.jpg",
+    "/tmp/mahzor-s294/s299.jpg"
+  ],
+  "all_blocks_checked": true,
+  "approved": true,
+  "blocking_findings": [],
+  "new_human_questions": [],
+  "source_role_labels": [
+    {
+      "scan": "s294",
+      "block": "essa",
+      "printed": "ק׳",
+      "position": "Right of the text, before אֶשָּׂא (first poem line under the attribution). Unpointed.",
+      "in_candidate": true,
+      "matches_image": true
+    },
+    {
+      "scan": "s294",
+      "block": "anusah",
+      "printed": "ק׳",
+      "position": "Right of the text, before אָנוּסָה (first Shabbat poem line under the attribution). Unpointed.",
+      "in_candidate": true,
+      "matches_image": true
+    }
+  ],
+  "nonblocking_findings": [
+    "Prior B1 and B2 are resolved. The candidate's source_role_labels now records ק׳ before אֶשָּׂא and ק׳ before אָנוּסָה on s294, kept out of the prayer text. Placement and lack of pointing match the full image. On s296 and s298 the Hebrew poems continue across the page break and print no new role labels, and the candidate invents none.",
+    "Prior B3 is resolved. No candidate block for s294–s299 now has a stale 'NOT VERIFIED', 'pending' or 'See human_questions' note, or a note that contradicts the adjudicated readings.",
+    "Human471 is applied. s298 essa reads יֹקֶשׁ יוּפָר, with yod-holam and qof-segol. At full-page resolution the mark could pass for a vowel under the yod, but the human ruling covers exactly this occurrence and I see no clear contrary evidence. Human472 (לִשְׁמֹר) applies to s310 modim_derabbanan, which is outside these six scans and has no block in this candidate.",
+    "I compared every Hebrew prayer block (s294/s296/s298 essa and anusah) against the full images again. The text is unchanged from the version I verified in source-closure-294.json, apart from יֹקֶשׁ. All of these match: letters, vowels, dagesh, read order, periods and strophe colons, the defective spellings שֹׁפָר (s294, s296), דְּרֹשׁ, קֹל after וַיַּעֲבֶר, and וְסוֹטֵן, and the page-break points (יָדַיִם / שְׁנִיָּה / יָקַרְתִּי בְּעֵינָיו. / יִנְשַׁב. / עַל פְּתָחַי קוֹל:). There are no omissions or duplications. The human445–456 readings are all applied: נָכְרִיָּה, מְעָט, בּוֹ, זְמַמֵי, אֵלֶם, בַּקְּרֵנִי דָּרְשֵׁנִי, יְלִיזוֹ, יֻחְפָּר יֹשֶׁר יָשְׁפָּר, כְּיָקְשַׁב יָבְעַת יִנְשַׁב, and the 445 attribution.",
+    "The rubrics are recorded as documentary instructions, not prayer words. These are the Rashi-type attributions מיוסד ע״ס א״ב מרובע. and מיוסד ע״ס א״ב כפול בראשי החרוזות., and the Hebrew-script German אַם שַׁבָּת. on s294, s296 and s298 (language de-Hebr). At full-page scale the small glyphs can look like חַזָן; per the standing confirmation I am not re-opening this.",
+    "These six scans print no scripture citations or verses, so no cantillation applies.",
+    "I compared all of the English in s295/s297/s299 in full: the running headers, both poem translations, and the italic 'On Sabbath.' rubrics. Wording, punctuation, quotation marks, parenthetical glosses and em dashes all match, and the line-break hyphens (under-stood, moun-tains) are correctly joined. The Hebrew linkage cues אשא and אנוסה are correctly left out.",
+    "Metadata consistency (does not change any text): source_role_labels includes the s298 rubric 'אַם שַׁבָּת.' and the s299 rubric 'On Sabbath.' but not the identical rubrics on s294/s295/s296/s297. These are headings that are already encoded as instruction blocks, not role labels. Better to drop them from the list or add the rest, so the list stays consistent.",
+    "Scope: the source_role_labels entries for s300–s311 (ח׳, חזן, קו״ח, הש״ץ / מסיים, הש״ץ בקול, Congregation:) and the source_sic_corr entries (לום→צום, sindnesses, the missing closing quotes on s305 and s307) belong to scans outside the six images I was authorized to read. The full-resolution pair crops mentioned as 'provided below' were not in the message. I did not verify these entries against originals; they need their own scan closures. I see nothing in them that contradicts the brief: the labels before Veteerav, Hayom/Areshet and Titzad are הש״ץ מסיים, קו״ח and חזן, and the raw reading keeps לום with צום as the correction."
+  ],
+  "verdict": "APPROVED FOR SOURCE CLOSURE OF SCANS 294–299 ONLY. I read all six original images in full and checked every candidate block for these scans against them. The Hebrew and English texts, rubrics, headers and the two ק׳ role labels match the source. Human445–472 rulings are applied where they bear on these scans, including יֹקֶשׁ on s298. The prior findings B1–B3 are fixed, and there are no new human questions. Two limits: I did not verify the candidate entries for s300–s311 here, and this verdict does not approve export or code.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "ec15d840-6ad3-4db8-b63e-36b69114aea1"
+  }
+}

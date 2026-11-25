@@ -1,0 +1,107 @@
+{
+  "source_scan": "s345",
+  "approved_source_reading": false,
+  "all_lines_verified": false,
+  "corrections_required": [
+    {
+      "field": "running_head",
+      "context": "page header above line 1, beside page number 19",
+      "old": "[top crop shows only letter bottoms; drafts give שיר הכבוד — not verified]",
+      "new": "שיר הכבוד",
+      "image": "images/full-345.png",
+      "reason": "The full-page image clearly shows the page number 19 and the running head שיר הכבוד. The 'top crop' caveat came from the detail crops only."
+    }
+  ],
+  "remaining_reading_disputes": [
+    {
+      "word": "יתפאר",
+      "current": "יִתְפָּאֵר",
+      "alternative": "יִתְפָּאַר",
+      "context": "line 4: יִתְפָּאֵר בִּי כִּי חָפֵץ בִּי. וְהוּא יִהְיֶה לִי לַעֲטֶֽרֶת צְבִי:",
+      "question": "Is the vowel under the א a tsere or a patah? In the detail image the mark looks like one horizontal stroke. The tsere in חָפֵץ on the same line shows as two separate dots, and so does the one in לְהִתְפָּאֵר (line 14). Both drafts have tsere. The image does not settle it.",
+      "image": "images/s345-detail1-right.png (compare images/s345-detail2-left.png, line 14)"
+    },
+    {
+      "word": "יקרו",
+      "current": "יָקְרוּ",
+      "alternative": "יָֽקְרוּ",
+      "context": "line 10: מֵאֲשֶׁר יָקְרוּ בְעֵינָיו כִּבְּדָם:",
+      "question": "Is the small mark next to the qamats under the י a meteg? Neither draft has one. At this resolution I cannot tell it apart from the qamats or from a print speck.",
+      "image": "images/s345-detail2-left.png"
+    },
+    {
+      "word": "יערב",
+      "current": "יֶֽעֱרַב",
+      "alternative": "יֶעֱרַב",
+      "context": "line 21: יֶֽעֱרַב נָא שִׂיחִי עָלֶֽיךָ. כִּי נַפְשִׁי תַעֲרוֹג אֵלֶֽיךָ:",
+      "question": "Is there a meteg next to the segol under the י? The drafts disagree: the primary has none and the comparison has one. The marks under the י and ע run together in the image.",
+      "image": "images/s345-detail3-right.png"
+    }
+  ],
+  "stale_notes_to_remove": [
+    {
+      "location": "snapshot running_head",
+      "note": "[top crop shows only letter bottoms; drafts give שיר הכבוד — not verified]",
+      "reason": "Settled by images/full-345.png. See corrections_required."
+    },
+    {
+      "location": "snapshot uncertainties",
+      "note": "Line 2: dagesh in לוֹ.",
+      "reason": "No dot inside the ל of לוֹ (הוֹשִֽׁיעָה לוֹ יְמִינוֹ). Both drafts have no dagesh. Settled by images/s345-detail1-left.png."
+    },
+    {
+      "location": "snapshot uncertainties",
+      "note": "Line 4: dagesh in לִי.",
+      "reason": "Hiriq only, with no dot in the ל (יִהְיֶה לִי לַעֲטֶֽרֶת). Settled by images/s345-detail1-left.png."
+    },
+    {
+      "location": "snapshot uncertainties",
+      "note": "Line 8: dagesh in נָּא.",
+      "reason": "A dot is visible inside the נ (יַעֲלֶה נָּא עַל). Settled by images/s345-detail1-left.png."
+    },
+    {
+      "location": "snapshot uncertainties",
+      "note": "Line 15: printed with a wide gap after מֵרֹאשׁ and the period after וָדוֹר. Transcribed as printed. Dagesh in דְרוֹשׁ is not visible.",
+      "reason": "The gap and the period after וָדוֹר are confirmed as printed (images/s345-detail2-right.png, images/s345-detail2-left.png). Keep this only as a documentary note, not as an open uncertainty."
+    },
+    {
+      "location": "snapshot uncertainties",
+      "note": "Line 16: the separator after עָלֶֽיךָ is comma-shaped.",
+      "reason": "Confirmed as printed (images/s345-detail2-right.png). The current text's comma is correct. Documentary only."
+    },
+    {
+      "location": "snapshot uncertainties",
+      "note": "Line 17: dagesh in תִכּוֹן.",
+      "reason": "A dagesh is visible in the כ (images/s345-detail3-left.png). Settled."
+    },
+    {
+      "location": "snapshot uncertainties",
+      "note": "Line 18: whether it is כְּשִׁיר (sheva) or כַּשִּׁיר, and whether a yod is present in קָרְבָּנֶֽיךָ.",
+      "reason": "Sheva under the כּ, no dagesh in the שׁ, and the yod is present in קָרְבָּנֶֽיךָ (images/s345-detail3-left.png). The current text is correct. Settled."
+    },
+    {
+      "location": "fine-345.json limitations",
+      "note": "The running head is not shown in any detail image, so שיר הכבוד is not verified.",
+      "reason": "Superseded by images/full-345.png, which shows it clearly."
+    }
+  ],
+  "limitations": [
+    "The detail images were not at the paths given in the request. I found and read them under /tmp/mahzor-s327/images/.",
+    "images/s345-detail4-right.png and images/s345-detail4-left.png are completely blank. This matches the page being empty below line 21 and the short rule.",
+    "Metegs I confirmed directly from a visible vertical stroke: עָלֶֽיךָ and אֵלֶֽיךָ in lines 16 and 21, and קָרְבָּנֶֽיךָ in line 18. The other metegs in the current text are הוֹשִֽׁיעָה, רְסִֽיסֵי, לָֽיְלָה, לַעֲטֶֽרֶת, כֶּֽתֶם, מֵֽצַח, הַצֶּֽדֶק, עֲטֶֽרֶת (lines 9, 10, 17), תִפְאֶֽרֶת, קֶֽשֶׁר, לְנֶֽגֶד, קְטֹֽרֶת and בְּעֵינֶֽיךָ. Both drafts agree on these and the images fit them, but at this resolution I cannot fully separate a meteg from the dots next to it. I am not raising them as disputes.",
+    "Missing dagesh lene after a word ending in a vowel (בְחֻרוֹת l7, בְיָדוֹ l9, בְעַמּוֹ l14, דְרוֹשׁ l15, תְנַעֲנַע l20), and no dagesh in רָב (l1). Nothing in the images contradicts this and both drafts agree, but I cannot positively confirm it at this resolution. In this font, ת and פ have inner strokes that look like a dagesh.",
+    "A small mark above the final ה of עֲטָרָה (line 6) looks like a print speck. It is above the letter, not inside it, so it is not a mappiq. The dotted diagonal below אֻ in אֻמָּתוֹ is the qubbuts plus a print artifact.",
+    "This is a source-reading check only. It does not approve the encoding, XML, export, leaf or batch. No files were edited."
+  ],
+  "notes": [
+    "I read all 21 couplets against images/full-345.png and detail images 1–3 (right and left), word by word in printed order. Apart from the three disputes and the limits above, the current snapshot text matches the print in letters, vowels, dageshes, mappiq, the Divine Name, punctuation and line order.",
+    "Rejected primary readings, confirmed from the image: the missing ו in וּקְוֻצּוֹתָיו (l3); לִּי (l4); the order עֲטָרָה עִטְּרָה, where the print has עִטְּרָה עֲטָרָה (l6); plene בְחוּרוֹת, where the print is defective בְחֻרוֹת (l7); the period after מֵרֹאשׁ and the form דּוֹרְשֶֽׁךָ, where the print has דּוֹר וָדוֹר. עַם דּוֹרֶשְׁךָ (l15); a period after עָלֶֽיךָ, where the print has a comma (l16); כַּשִּׁיר and קָרְבָּנֶֽךָ, where the print has כְּשִׁיר and קָרְבָּנֶֽיךָ (l18); תְנַעְנַע, where the print has תְנַעֲנַע (l20); and defective תַעֲרֹג, where the print has plene תַעֲרוֹג (l21).",
+    "Confirmed specific marks: וְחַק has a patah (l5). לֶעָנָו is segol, qamats, qamats (l13). The Divine Name is יְיָ, with sheva and qamats (l13). The mappiq in וְאוֹתָהּ is visible (l20). Sin dots are on the left in שִׂמְחָתוֹ, נְשָׂאָם, כִּבְשָׂמִים and שִׂיחִי. אָדֹם is defective and וְאָדוֹם / מֵאֱדוֹם are plene (l12).",
+    "The three disputes are unnumbered. If they are made into human questions, numbering would start at 831."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "41321dbe-03d8-4d14-8b01-c7c17c0a0e03"
+  }
+}

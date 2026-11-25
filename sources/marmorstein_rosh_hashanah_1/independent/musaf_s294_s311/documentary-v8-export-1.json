@@ -1,0 +1,26 @@
+{
+  "scope": "documentary-v8-export-1",
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/documentary-export-manifest-v8.json",
+    "/tmp/mahzor-s294/full-pdf-images-v8/documentary-228.png",
+    "/tmp/mahzor-s294/full-pdf-images-v8/documentary-229.png",
+    "/tmp/mahzor-s294/full-pdf-images-v8/documentary-230.png",
+    "/tmp/mahzor-s294/full-pdf-images-v8/documentary-231.png",
+    "/tmp/mahzor-s294/full-pdf-images-v8/documentary-232.png",
+    "/tmp/mahzor-s294/full-pdf-images-v8/documentary-233.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "PDF p.229 → p.230 (printed 221→222): the last paired row (Hebrew 'וַיְיָ עֲלֵיהֶם יֵרָאֶה…') finishes its Hebrew on p.229, but the English runs over onto p.230 ('Lord God will blow the Shofar…') with an empty Hebrew column next to it. Nothing is clipped and it reads correctly. It is a split paired row across a page break, and the gap after it on p.230 is a little larger than the gaps between other rows. A keep-together rule for short rows is optional polish.",
+    "PDF p.230 (printed 222): the Hebrew-only heading line 'מיוסד ע\"ס א\"ב כפול בראשי החרוזות' has no English next to it. This matches the deliberate HE-only stylesheet choice and is noted here for information only.",
+    "PDF p.228 and p.233 (printed 220, 225): the ↗ scan-link markers sit in different rows in the Hebrew and English columns (for example, Hebrew '↗הַשֹּׁפָר' versus English '↗Lord' on p.228). This is consistent with the approved encoding, where each column marks its own source page. They don't overlap anything and they read clearly."
+  ],
+  "verdict": "I read all six assigned pages (PDF 228–233, printed 220–225). Nothing is clipped and nothing overlaps. Hebrew, including the vowel points, and English are sharp and readable. Running heads and page numbers alternate correctly between even and odd pages. Stanza rows line up across the two columns throughout the Shofar verse sequence and the Sabbath alphabetical acrostic (קהל/חזן labels, verse-final ':'). The section rule and the bold 'אם שבת. / On Sabbath.' heading are placed correctly. There are no footnotes in this range. The ending, the missing-source label and the credits are not in this range, so I did not check them. Approved for this range.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "1fdc57d5-44e3-4b5f-84e5-e30b8c78d546"
+  }
+}

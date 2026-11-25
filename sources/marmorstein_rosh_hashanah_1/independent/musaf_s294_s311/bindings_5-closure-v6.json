@@ -1,0 +1,80 @@
+{
+  "scope": "bindings_5_closure",
+  "approved": true,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/bindings_5-v5.json",
+    "/tmp/mahzor-s294/binding-followup-evidence-v6.json",
+    "/tmp/mahzor-s294/validation-source-evidence-v5.json",
+    "/tmp/mahzor-s294/bounded-order-v4.json",
+    "/tmp/mahzor-s294/bounded-prayers-v4.json",
+    "/tmp/mahzor-s294/bounded-identity-v4.json",
+    "/tmp/mahzor-s294/source-closure-306-placement.json",
+    "/tmp/mahzor-s294/bounded-review-v4/rule-verse_numbering.md"
+  ],
+  "resolved_findings": [
+    {
+      "id": "B1-mixed-versification-exodus-20",
+      "resolution": "Withdrawn. The finding was wrong. rule-verse_numbering.md (JLPTEI-3.md lines 270-271) says the canonical division is the one the Leningrad Codex numbers: tanakh-wlc-he needs no mapping, and Exodus 20 has 26 canonical verses. That division splits lo tirtzach, lo tinaf, lo tignov and lo taaneh into exodus/20/13-16 (lines 277-280), which moves every later verse up by three compared with MAM ta'am tachton. validation-source-evidence-v5.json gives the actual WLC text bound to urn:x-opensiddur:text:bible:exodus/20/18 (witness tanakh-wlc-he/exodus.xml, sha256 79522d67…): 'וְכָל־הָעָם֩ רֹאִ֨ים אֶת־הַקּוֹלֹ֜ת … וַיַּֽעַמְד֖וּ מֵֽרָחֹֽק׃'. That is the shofarot verse itself. The reviewer's claim that canonical 20:18 is 'ויעמד העם מרחק' is incorrect. Masoretic 20:15 is a MAM edition number and is not the repository's canonical number. Psalms 47/6 and 81/4-5 also follow WLC numbering, so all the records use one convention and none is mixed. The leftover key exodus_20_15 is a frozen authoring coordinate and is not emitted. All four new quotes are reported as remapped to 20:18, and the URNs recorded in bindings_5-v5 (exodus/20/18, exodus_20_18) already match. Under the rule, a MAM 20:15 label could only appear as an edition-verse display marker with no @corresp. No rebinding is needed."
+    },
+    {
+      "id": "N1-correction-id-implies-shabbat-scope",
+      "resolution": "Resolved by inherited scope. bounded-order-v4 (approved) places Anusah under the holiday-aggregate condition shabbat=true, labelled in both languages, and places Essa under shabbat=false. The evidence also confirms 'On Sabbath.' is printed above Anusah on PDF295. The correction id 'musaf_shabbat_exodus_missing_quote' therefore matches the inherited Shabbat scope of the anusah record. No rename is required."
+    },
+    {
+      "id": "scope_limitation-essa-anusah-condition-scoping",
+      "resolution": "Resolved. The approved order review checks the parallel paths at the spine. Weekday: Essa plus the verse chain under shabbat=false. Sabbath: Anusah under shabbat=true. Both paths share Ken Tagen in Expanded. The documentary texts keep the printed weekday and Sabbath Ken Tagen separately. The bindings records correctly carry no condition fields of their own and inherit their scope."
+    },
+    {
+      "id": "followup-kohanim-intro-alignment",
+      "resolution": "Verified in the compiled bilingual transclude. The HE and EN divs share corresp musaf/repetition/kohanim_intro and align at that unit. The HE quotes the existing canonical identity shacharit/repetition/birkat_kohanim/birkat_kohanim through seg/@source only. The reader note sits between the segs, outside the canonical words, with corresp instruction:role/reader. The EN opens that same identity as a prayer-part milestone and closes it with a bare terminator. It is the first translation of the identity, and the HE has no duplicate corresp. This matches the identity review."
+    },
+    {
+      "id": "followup-modim-derabbanan-library",
+      "resolution": "Verified. musaf_repetition_modim_derabbanan_english_words has canonical_parts:true. Its only content is a paragraph with corresp prayer:amidah/hodaah/modim_derabbanan, and its fragment text and scan (s311, p.145) are identical to the documentary EN occurrence. Under the map_root false / omit_publication_urn true convention, the library URN is a grouping name and is not emitted as a whole-text canonical identity, so no edition-specific prayer identity is created. The documentary HE uses source and the documentary EN uses canonical, both pointing to the shared prayer identity. Edition differences stay attached to that shared identity. review_encoding:true on the occurrence is an inclusion gate and not a pending flag. canonical_parts enforces inclusion of the library. The order reference to prayer:amidah/hodaah/modim_derabbanan with role congregation is consistent."
+    }
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    {
+      "id": "N2-speaker-encoding-inconsistent",
+      "status": "carried",
+      "description": "Speaker labels are still mixed. Most use abbr/expan with no role. Essa's titzad uses role 'reader'. Anusah stanzas after a chazan-plus-verse group have no speaker reset. This does not affect any binding."
+    },
+    {
+      "id": "N3-shofarot-verses-exodus-20-binding-shape",
+      "status": "carried, partly explained",
+      "description": "Under the rule 'one milestone per canonical verse, exactly once per project', the shofarot_verses/he copy of exodus/20/18 would correctly quote rather than repeat the corresp that anusah/he already carries in the same HE project. However, bindings_5-v5 reports that other whole verses in shofarot_verses do carry corresp. That would repeat corresp across the two HE records for those verses, and the parallel compiler would keep only the first. The owner should confirm which treatment is intended, quote via source or carry corresp, and apply it the same way to every verse shared between anusah and shofarot_verses."
+    },
+    {
+      "id": "N4-occurrence-chapter-corresp-naming",
+      "status": "carried",
+      "description": "The context name '.../quotes/exodus_19/occurrence_19' reuses a verse number as an occurrence label. A neutral ordinal would be clearer."
+    },
+    {
+      "id": "N5-page_context-asymmetry",
+      "status": "carried",
+      "description": "Anusah has page_context and Essa does not. The owner should confirm this is intended."
+    },
+    {
+      "id": "N6-page_start-first-fragment-asymmetry",
+      "status": "carried",
+      "description": "Essa's first fragment has page_start false in HE (s294) and true in EN (s295). The order/source group should confirm this."
+    },
+    {
+      "id": "N7-kohanim-intro-rubric-choice-lacks-abbr",
+      "description": "In the compiled HE intro the reader note contains <tei:choice><tei:expan>השליח ציבור</tei:expan></tei:choice> with no <tei:abbr>. The printed abbreviation is therefore not recorded, and the expansion is the colloquial form; the prayers review also noted this. There is also a trailing empty p:parallel pair. Neither affects bindings."
+    },
+    {
+      "id": "N8-out-of-scope-open-items-noted",
+      "description": "These are noted here, not decided. The prayers scope still has a human question about EN 'and' and HE plene לְחַצְרוֹת versus defective לְחַצְרֹת between occurrences and canonical homes. The s294–s305 role-label and sic/corr records, including the s305 Exodus missing-quote record, still need image-checked source sign-off according to source-closure-306-placement. The order review left open whether the Shacharit birkat_kohanim intro identity carries any service-time condition when it is transcluded into Musaf."
+    }
+  ],
+  "verdict": "Approved for bindings_5 closure. The only blocking finding, B1, is withdrawn. The repository's canonical bible numbering is WLC/Leningrad (Exodus 20 has 26 verses). The WLC text bound to exodus/20/18 in the supplied evidence is 'וכל העם ראים את הקולת … ויעמדו מרחק', which is the shofarot verse. The Psalm bindings use the same WLC numbering, so the records use one consistent convention. The Shabbat-named correction id matches Anusah's inherited shabbat=true scope, and the Essa/Anusah condition scoping is confirmed by the approved order review. The compiled kohanim intro aligns HE and EN at the shared context unit, and the canonical identity has only one home. The Modim derabbanan English library is a grouping container, with map_root false and omit_publication_urn true, holding parts keyed to the shared prayer identity, so it creates no new whole-text identity. Its review_encoding and canonical_parts flags act as inclusion gates and are satisfied. The remaining items are nonblocking. N3 should be settled consistently for all verses shared between anusah and shofarot_verses. This approval does not cover source-image sign-off for s294–s305, code or export.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "46f0cfbf-4e04-4472-ad36-46b9095afd65"
+  }
+}

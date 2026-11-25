@@ -1,0 +1,20 @@
+{
+  "literal_source_approved": true,
+  "human_application_approved": true,
+  "source_corrections_approved": true,
+  "unicode_evidence_accepted": true,
+  "all18pages_reviewed": true,
+  "guideline_path_read": "/home/efeins/.codex/worktrees/marmorstein-processor/master/schema/JLPTEI-3.md lines 704-713: 'A clear misprint in the source edition -- a misspelled or garbled word, a wrong citation number, an unmatched quotation mark -- keeps the printed form in tei:sic beside its correction in tei:corr. ... Archaic spellings are not errors, and a problem of fact or wording is not a misprint; leave both as printed.'",
+  "unresolved": [],
+  "issues": [
+    "Unicode evidence is accepted as supplied in source-unicode-proof.json, which records primary Python ord checks. This session did not run those checks again. The listed code points show patah U+05B7, meteg U+05BD, CGJ U+034F and hiriq U+05B4 after lamed U+05DC in both Jerusalem occurrences (musaf_efchad_bemaasai and musaf_repetition_zikhronot_verses), and Hayom_old_new_literal_bytes_identical is true. The SHA-256 values in that file (candidate 641006f3…74c8, source_review 62433e3d…f0b1) are copied from it. This session did not compute them.",
+    "Block bindings in source-final.json are still excerpts or literals, apart from the candidate SHA-256 recorded in source-unicode-proof.json. They are not per-block cryptographic bindings.",
+    "Invocation: the actual modelUsage key is claude-opus-5-5. The effort is recorded as CLI-configured --effort medium, as reported by the invoker. The model cannot observe that setting itself."
+  ],
+  "verdict": "Source gate closed for scans 276-293. The guideline at the absolute path explicitly lists an unmatched quotation mark as a sic/corr misprint, which settles the only reason source_corrections_approved was withheld. All five corrections in new-source-corrections.json are approved. censor->censer (s279), death->dearth (s287) and cogregation->congregation (s291) are clear misprints. In the two nested Jeremiah 2:2 quotations, s289 'unsown!’.' becomes 'unsown!’’.' and s291 'unsown’.' becomes 'unsown’’.'. The image evidence in source-final.json (s289.jpg, s291.jpg, english-jeremiah-punctuation.png) shows two opening marks and one closing mark in each. Each correction adds only the missing outer closing mark and keeps the printed openings and the s289 exclamation point. candidate-round6 keeps the printed forms, and the corrections live only in the sic/corr list. The source evidence conclusions in source-final.json stand: literal source approved, human answers 415-444 applied exactly, all 18 pages reviewed. Source reading was not restarted and the human answers were not reopened. This is source acceptance only, not encoding, export or batch acceptance.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "c6036915-e701-49e9-85f6-5b344f66366c"
+  }
+}

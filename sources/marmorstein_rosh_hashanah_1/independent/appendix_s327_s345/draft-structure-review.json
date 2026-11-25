@@ -1,0 +1,139 @@
+{
+  "approved_draft_structure": false,
+  "scope": "draft modules only",
+  "findings": [
+    {
+      "severity": "medium",
+      "file": "hymn_of_divine_unity_for_the_day_of_shabbat_paytan_scripture.xml (and build-draft-appendix-modules.py make())",
+      "location": "/tei:TEI/tei:text/tei:body/tei:div/tei:p/tei:pb[@n='18'] (line 38)",
+      "issue": "Page 18 (scan s344, leaf n343) gets two page breaks. The poetry module already sets <tei:pb n=\"18\"> before the third line of /9 (s344 L1). The scripture module sets a second one at the start of /10. This happens because make() resets seen_pages for each unit, and first['s344'] is the Shabbat root, so both halves of the composite think they own the page. When the composite root transcludes /1–/9 and then /10–/14, the output contains page 18 twice.",
+      "required_change": "Track page ownership once per root across the poetry and scripture halves, for example by sharing seen_pages between the two make() calls for Shabbat. That way only the poetry module sets pb n=18. Keep @facs on the scripture div. Then re-run the range and render check on the composite and confirm exactly one pb per printed page from 16 to 18."
+    },
+    {
+      "severity": "medium",
+      "file": "shir_hakavod_opening_psalm.xml",
+      "location": "each tei:p, lines 39–42: tei:milestone[@unit='chapter']",
+      "issue": "Chapter 24 is opened and closed four times, with four different contextual chapter URNs (…/opening_psalm/verse/7/quotation/psalms/24 … /verse/10/quotation/psalms/24). The path also puts a verse component before the chapter. That creates four chapter identities for one quoted chapter extent, and the hierarchy is inverted. The milestones also sit outside a seg that has no type, while the Shabbat module uses a different pattern: quote-context milestones inside seg type=\"quotation\".",
+      "required_change": "Use a single quote-context chapter milestone for the Ps 24:7–10 block, for example …/opening_psalm/quotation/psalms/24 with n=\"24\". Under it put verse milestones …/quotation/psalms/24/7–10 with canonical @n. Close with one verse terminator and one chapter terminator after verse 10. Add type=\"quotation\" to the segs, or choose and document one pattern for both modules: milestones before the span, or bounded milestones inside it. Whether to use canonical bible corresp here, and which contextual identities to register, is still pending."
+    },
+    {
+      "severity": "medium",
+      "file": "build-draft-appendix-modules.py",
+      "location": "line 6: atlas=json.load(open(p/'working-encoding-atlas.json'))",
+      "issue": "The builder reads the mutable working atlas, not working-encoding-atlas-boundary-approved.json. The text in the generated XML differs from the approved snapshot: for example Sunday /1 has וַאֲזַֽמְּרָה / מֵעֽוֹדִי in the XML and draft-appendix-units.json, but וַאֲזַמְּרָה / מֵעוֹדִי in the approved file. So the two inputs are not the same file. Every boundary I checked in the XML matches atlas-closure B1–B17, but nothing ties the draft to the approved boundaries.",
+      "required_change": "Build canonical_part, null and terminator entries, and source_reference from the boundary-approved snapshot. Alternatively, assert that every work's boundary fields (canonical_part, source_couplet_index, source_reference, bible_source) are identical between the two files before writing anything. Record the snapshot's hash in the status of draft-appendix-units.json."
+    },
+    {
+      "severity": "low",
+      "file": "hymn_of_divine_unity_for_the_fifth_day_paytan.xml; barukh_attah_yachid_umeyuchad.xml",
+      "location": "tei:sourceDesc/tei:bibl/tei:note[@type='encoding'] (line 31 in Thursday; line 30 in the closing-line file)",
+      "issue": "These encoding notes are in English but are marked xml:lang=\"he\". The builder passes source_notes under the 'he' key, and that key becomes the language attribute.",
+      "required_change": "Emit xml:lang=\"en\" on English encoding notes, separately from the key of the module's language."
+    },
+    {
+      "severity": "low",
+      "file": "hymn_of_divine_unity_for_the_fifth_day_paytan.xml",
+      "location": "tei:biblScope from=\"11\" to=\"14\"; tei:standOff/tei:note[@target='#shir_hayichud_thursday_philosophy']",
+      "issue": "The standoff commentary joins s340 and s341 text, but the file's page scope stops at 14 and the note itself gives no locator for the continuation on printed page 15. The builder's source_scans ['s340','s341'] is not output anywhere. The continuation appears only in the English bibl note.",
+      "required_change": "Extend biblScope to 15, or add a page or facsimile locator for the s341 continuation that cannot be rendered as a page break in the Friday text flow. Keep the note attached only to the Thursday /17 anchor, as it is now."
+    },
+    {
+      "severity": "low",
+      "file": "hymn_of_divine_unity_for_the_day_of_shabbat_paytan.xml",
+      "location": "j:transclude/@targetEnd (lines 37–38)",
+      "issue": "JLPTEI-3 (Inclusions) documents a transclusion range only as target=\"START-END\". targetEnd on j:transclude is not described there. It passes the schema, and draft-range-check reports /1–/14 compiled once.",
+      "required_change": "Confirm that targetEnd on j:transclude is a supported compiler convention, or switch to the documented START-END form inside target. Also consider adding a biblScope (16–18) to the composite root's header."
+    },
+    {
+      "severity": "low",
+      "file": "hymn_of_divine_unity_for_the_fourth_day_paytan.xml",
+      "location": "tei:lg/tei:l[50]/tei:seg[@source] (line 88, s335 L24)",
+      "issue": "The source-only /50 occurrence is a seg with @source and no @type. That is structurally acceptable, and B6 holds: there is no corresp and it sits after the /49 terminator. But nothing in the markup says what kind of span it is.",
+      "required_change": "Optional: add a documented @type, or document in the README that a bare seg with @source is a source-only variant occurrence. Include the B4/B6 consistency rule that atlas-closure requires."
+    },
+    {
+      "severity": "low",
+      "file": "build-draft-appendix-modules.py",
+      "location": "line 64: zip(anim, ids)",
+      "issue": "The 31 Anim Zemirot identities are assigned by position from the Birnbaum file. I checked the generated stanzas by hand and all 31 incipits match their URNs (anim … yeerav, rotzeh before rosh). The builder itself has no guard if the source order or count ever differs.",
+      "required_change": "Assert that each stanza's incipit matches its URN before writing, or assert an explicit mapping table."
+    },
+    {
+      "severity": "pass",
+      "file": "all 7 daily-poem modules",
+      "location": "div/@corresp and every tei:milestone[@unit='stanza']/@corresp",
+      "issue": "Root and part reuse is correct. Each module's div corresp is its registered root, and every stanza corresp is a registered numeric part. There are no extra numbers, sub-parts or roots. No corresp exists for second_day/23 or fourth_day/6. fourth_day/50 appears exactly once, on s335 L28 (l[54]). The source order /53 → /50 → /54 is preserved, and pb n=10 falls at /54. Counts: Sunday 61, Monday 47 (47 = 48 − /23), Tuesday 77, Wednesday 102 (103 − /6, with the extra L6 and L24 lines left uncorresponded), Thursday 17, Friday 46, Shabbat 9 + 5.",
+      "required_change": "none"
+    },
+    {
+      "severity": "pass",
+      "file": "second_day, third_day, fourth_day, first_day",
+      "location": "bare tei:milestone[@unit='stanza'] terminators",
+      "issue": "Every uncatalogued addition is explicitly terminated. Monday: terminator after /22, s330 L5 left bare, /24 resumes. Tuesday: terminator after /52, s333 L3 left bare, /53 resumes; the split /20 couplet is carried over two tei:l with one milestone. Wednesday: terminator after /32 before the bare s335 L6, then /33; terminator after /49 before the L24 source-only seg, then /51. Sunday: terminator after /61, with the closing line in a separate module that has no corresp and no publication URN (B17). Every module ends its last unit with a terminator.",
+      "required_change": "none"
+    },
+    {
+      "severity": "pass",
+      "file": "hymn_of_divine_unity_for_the_fifth_day_paytan.xml",
+      "location": "/2, /9, /14 across tei:pb; tei:anchor before כָּל* in /17",
+      "issue": "Thursday's grouped extents each have one milestone, at the point where the label changes. /2, /9 and /14 continue across pb 12, 13 and 14 without being repeated. ברוך אתה יחיד ומיוחד stays inside /6. The internal anchor sits after the /17 milestone and before כָּל. The commentary is in a standOff of type notes, has type=\"commentary\", and targets the local anchor, not the shared URN. Nothing is attributed to sixth_day.",
+      "required_change": "none (but see the low finding on continuation locators)"
+    },
+    {
+      "severity": "pass",
+      "file": "Shabbat _poetry / _scripture / root",
+      "location": "lg vs p; seg[@type='quotation'] contents",
+      "issue": "The poetry/prose composite follows the one-hierarchy-per-text rule: /1–/9 use lg/l and /10–/14 use a single p. In the prose, each stanza milestone and its introducer (ככתוב, ונאמר) sit outside the seg. The chapter and verse quote-context milestones with canonical @n sit inside the seg, and both are closed by bare verse and chapter terminators before the seg ends. /11 (Daniel 2:20) has no introducer, and its seg covers the whole printed unit (B12). The whole module ends with a stanza terminator.",
+      "required_change": "none (but see the duplicate pb finding)"
+    },
+    {
+      "severity": "pass",
+      "file": "all 12 modules",
+      "location": "tei:pb/@n, @ed, @facs; div/@facs",
+      "issue": "Facsimile links consistently use zero-based archive.org leaves: scan sN maps to page/n(N−1), so printed p maps to n(325+p) for p = 1…19, and every one I checked matches. pb/@n holds the printed page and @ed=\"1965\". @facs is not used for anything else. Pages shared between poems are owned by the first prayer block on the page, and each non-owning module carries the page only on its div/@facs. The one exception is the duplicate pb n=18 reported above.",
+      "required_change": "none"
+    },
+    {
+      "severity": "pass",
+      "file": "anim_zemirot.xml",
+      "location": "tei:lg",
+      "issue": "There are 31 stanza milestones reusing the registered anim_zemirot identities: 10 on s344 and 21 on s345, with pb n=19 at ziqnah. The scope starts at anim, and Ps 24:7–10 is a separate module. No new identities are created.",
+      "required_change": "none"
+    }
+  ],
+  "pending_integration": [
+    "Quote-context identities created for the drafts are not registered yet: …day_of_shabbat_paytan/{10..14}/quotation/<book>/<ch>[/<v>] and …siddur:rosh_hashanah/hosafot/shir_hakavod/opening_psalm/… (the opening_psalm structure needs the restructuring in the medium finding first). When registered, they must be classed as quote-context and not as new daily-poem parts.",
+    "The publication context urn:x-opensiddur:text:siddur:rosh_hashanah/hosafot/shir_hakavod/opening_psalm, and the range-form publication idnos (…/1-/9@, …/10-/14@), need new registry contexts.",
+    "Whether Ps 24:7–10 and the five Shabbat verses get canonical bible corresp is undecided until it is known whether they are already mapped elsewhere in the project.",
+    "The whole documentary and expanded spines are not built yet: headings (שיר היחוד ליום …, שיר הכבוד), the ark-opening instruction (כשפותחין ארון הקדש…), running order, day-of-week conditionals, and the weekly-cycle siddur container.",
+    "Optional parentheses and variant choices are still printed inline as plain text: (…) lines, נ״א/כ״א readings, the unmatched ')' at Wednesday s335 L22 (/48), the inline (יְיָ), and the * reference mark in כָּל* at Thursday /17.",
+    "The independent identity of the Sunday closing line ברוך אתה יחיד ומיוחד has not been researched.",
+    "README: record the B4 Tuesday /28 second-hemistich divergence and the B4/B6 rule (incipit plus placement versus exact wording), and qualify line locators by work or block (B16). The registry-presence-proof wording for Wednesday L24 also needs aligning (B15).",
+    "Generated-URN checks not yet run: urn_registry --check, validate_urn_references, and refdb resolution for terminator scopes, the Thursday anchor, quote-context ranges, and ranges across /49–/51 or /50–/54 (B7)."
+  ],
+  "guidelines_reviewed": [
+    "JLPTEI-3 URNs and linkages; URN versus file/fragment pointers",
+    "JLPTEI-3 URN scope rules 1–4, preferring milestones for repeating units, terminating a scope, matching units exactly",
+    "JLPTEI-3 bounded quotation: quote-context chapter/verse milestones inside seg type=quotation, canonical @n, enclosing correspondence outside, no duplicated canonical URNs",
+    "JLPTEI-3 Versification and sub-verse scope (chapter/verse units, bare terminators)",
+    "JLPTEI-3 Hierarchy: one p or lg/l hierarchy per text; divisions",
+    "JLPTEI-3 Header sourceDesc/biblScope (printed designations), pb/@n/@ed/@facs, att.global.facs absolute URLs",
+    "JLPTEI-3 Anchors (internal/external), standOff type=notes, commentary target/targetEnd",
+    "JLPTEI-3 Inclusions: transclusion ranges, both ends in one file",
+    "JLPTEI-3 special inline segs, j:divineName, choice/option (for the pending variant work)",
+    "atlas-closure.json findings B1–B17 as the approved boundary reference"
+  ],
+  "limitations": [
+    "This is a structural and guideline review only. Source transcription, vowels, metegs, fine marks, human readings, exports and batch acceptance are not reviewed or approved.",
+    "I had only a file-read tool, so I could not run the schema, refdb, urn_registry, validate_urn_references or a diff. Schema validity and the /53→/50→/54 and Shabbat 1–14 results are taken from draft-schema-report.json and draft-range-check.json, checked against the XML by hand.",
+    "I read only the first 80 lines of working-encoding-atlas-boundary-approved.json and the first 40 of draft-appendix-units.json. Boundaries were checked by comparing the generated XML with the atlas-closure approved boundary findings, not line by line against the full snapshot. I did not compare the working atlas with the approved snapshot, beyond seeing that their texts differ.",
+    "For Friday I read lines 27–46 and 58–90 in full; the remaining /9–/19 milestones were not inspected line by line. All other modules were read in full from the body onward. The first_day, second_day and third_day headers were read only from line 18 or 27 onward.",
+    "None of the 541 symlinked accepted files were read. Registration status of the reused roots and parts relies on atlas-closure B14 and the registry-presence proof.",
+    "No files were edited."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "89ca5899-896b-4054-95bf-10202c926cb5"
+  }
+}

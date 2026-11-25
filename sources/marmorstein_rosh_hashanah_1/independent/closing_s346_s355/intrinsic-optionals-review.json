@@ -1,0 +1,43 @@
+{
+  "approved": false,
+  "required_changes": [
+    "Fail-closed gap in realizations.prepare_unit (realizations.py:224-242): reading-level optional_spans are only checked when the host fragment has its own optional_spans. Suppose a wording overlay's readings carry optional_spans but the host fragment has none, or the home lacks preserve_intrinsic_optionals. The check is skipped and the readings pass into alternatives unchanged. build.unit_document (build.py diff, the j:option branch) then emits marked j:conditional scopes for them. Neither the explicit flag nor the shape check (printed == '('+text+')', keys {printed,text,condition}, consistent conditions) is enforced. Raise if any reading has optional_spans unless the fragment has intrinsic optional_spans and the home flag is true.",
+    "Old behaviour changed in build.optional_words: the existing fragment-level path (formerly an inline loop at build.py:685-697) found each span with a sequential partition. It now requires text.count(printed) == 1 over the remaining text, and also rejects a span with empty or missing text. Accepted source with two identical printed spans in one fragment, e.g. '(x) … (x)' with spans [(x),(x)], built before and now raises. The xml:id scheme is unchanged. Either keep the sequential semantics for fragment-level spans and apply the stricter rule only to the new printing-overlay path, or regenerate every accepted Marmorstein project and show a byte-identical diff apart from the intended reprint change."
+  ],
+  "test_gaps": [
+    "No test for a printing overlay whose readings carry optional_spans while the host fragment has none, or the home flag is absent. This is the bypass above.",
+    "No test for duplicate identical printed optional spans in one fragment, the old-behaviour regression case.",
+    "The flag test only removes the flag. Nothing tests non-True values (False, 'true', 1) for preserve_intrinsic_optionals or instructions_in_context, though prepare_documents rejects them.",
+    "No mutation tests for: span conditions in a different order between readings; extra span keys; a span text containing parentheses; choices[0].optional_spans differing from the fragment's spans; choices[0].text differing from the printed text.",
+    "Nothing asserts that the generated context/caller document has no marked j:conditional and no optional annotations. The test only counts conditionals in the home and checks that the home has no tei:note.",
+    "Nothing compiles the original main-service context (printing/main) across the four wife_children × parents profiles to show its output is unchanged apart from the new /prayer milestone. Both the unit test and compile-parnassah-optional-proof.py compile only the reprint caller (reading B).",
+    "The external-caller path is untested: a canonical occurrence carrying 'instructions' in a unit without canonical_home should be rejected.",
+    "Intrinsic optional_spans in a home with no wording overlay (fragment path plus the '(' ')' insertion in canonical_printings._selected_prefix) is untested. The shape printed == '('+text+')' is not enforced there; the prefix comparison probably fails closed, but only with an unclear error.",
+    "The new opensiddur:person kohen feature is not used or tested anywhere in this diff. No validate_features run covers a document that declares it."
+  ],
+  "notes": [
+    "Otherwise the fail-closed design holds up. Both flags must be literally True, are stripped from the home config, and are listed in the allowed keys. The fragment and segment allow-lists widen only under their own flag. Instructions are validated as literal {language,text} in prepare_documents, canonical_text and validate_occurrence_controls, then removed from the home only. The generated pointer drops optional_spans and keeps instructions, which pass the CANONICAL_OCCURRENCE_KEYS check.",
+    "Adding 'instructions' to OCCURRENCE_CONTROL_KEYS does not change existing review hashes in attesting_controls, because canonical occurrence segments could not carry instructions before. It does newly add instructions to the payload for generated contexts that use the flag, which is intended.",
+    "In validate_occurrences (realizations.py:375 and :380) the instructions gate is written twice, and the second copy is unreachable. It reads the occurrence unit's own canonical_home. That is right for the generated context and stricter than needed (still fail-closed) for external callers.",
+    "The xml:ids generated for the fragment path are unchanged (stem_optional_<seg>_<idx>_<n>). The option path adds _optional_option_<seg>_<idx>_<reading>_<n>, and the test confirms the ids are unique.",
+    "The _selected_prefix handling is sound: it tracks nesting, ignores unselected options because their subtree is skipped, and refuses a page boundary inside optional words. It hardcodes '(' and ')' as the delimiters, which is valid only where the shape check has run.",
+    "No markup is duplicated in the home: the overlay pops fragment optional_spans after copying them into the readings, so each optional is emitted once per j:option and not again at fragment level.",
+    "Adding corresp …/yehi_ratzon/prayer to the old host paragraph changes structure but leaves the words alone, and the root URN is reused. Run validate_names on the new 'prayer' component.",
+    "I can't confirm the 'missing opener convention preserved' claim from the code reviewed. Neither the diff nor the draft shows a related change."
+  ],
+  "limitations": [
+    "Read-only review of the diff, realizations.py, the relevant part of features.yaml and the supplied artefacts. I did not read build.py or canonical_printings.py beyond the diff hunks, did not run tests or regeneration, and did not grep for other users of OCCURRENCE_CONTROL_KEYS.",
+    "The test log shows 242 tests and 323 subtests passing, but not which suites ran, and does not show a full-project regeneration diff.",
+    "I can't tell whether the kohen feature is justified from here; it has no consumer in this diff. opensiddur:practice birkat-kohanim exists but means something else. Per AGENTS.md, check the Birnbaum encoding for a priest/congregation precedent.",
+    "The whole-fragment printing overlay stores two full copies of a roughly 1000-character prayer to record a handful of word differences (מְזוֹנֹתֵֽינוּ/מְזוֹנָתֵֽנוּ, פַּת/פִּסַּת, לִלְבּוֹשׁ/לִלְבֹּשׁ, נָתַֽתָּ/נָתַתָּ, one comma). That is coarse for parallel alignment and later corrections, but it follows the agreed design.",
+    "Acceptance of the source transcription, the sequence and the batch export is outside this review, as is the draft's own UNACCEPTED status."
+  ],
+  "invocation": {
+    "model_usage": [
+      "claude-opus-5-5"
+    ],
+    "configured_model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "d42f307c-b1f9-477c-80f7-141f7f76a383"
+  }
+}

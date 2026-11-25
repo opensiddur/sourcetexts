@@ -1,0 +1,64 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "not specified to reviewer"
+  },
+  "files_read": [
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/opensiddur/importer/marmorstein_rosh_hashanah_1/realizations.py",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/opensiddur/tests/importer/test_marmorstein_realizations.py",
+    "/tmp/mahzor-s294/context-code-review.json"
+  ],
+  "approved": true,
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    {
+      "id": "F1",
+      "location": "realizations.py:490-493",
+      "title": "Earlier finding NB1 is resolved: the context URN no longer changes",
+      "detail": "The context is a deepcopy of the unit. The code only sets map_root=False, publication_context=context_urn and pops additional_printings. It no longer sets context['urn']. Ordinary and literal homes therefore keep unit['urn'] as the context identity, so earlier publication identities are unchanged. This matches the stated design, where unit_urn() reads publication_context (build.py was not read). I relied on the user's actual56 identity/pb proof file and did not re-verify it."
+    },
+    {
+      "id": "F2",
+      "location": "realizations.py:460-466, 468, 475-479",
+      "title": "Instruction guard is narrow and enforced",
+      "detail": "Unit-level instructions are rejected unless canonical_home.context == 'literal'. The literal mode also requires a real page transition inside a segment in every language: a different scan where page_start is not False. Segment-level 'instructions' are still rejected by the PLAIN_SEGMENT_KEYS check at line 465, and fragment-level ones by PLAIN_FRAGMENT_KEYS. The home is built from a whitelist (stem, languages, source_printings, source_notes), so instructions never reach the word home. The context keeps them. The input unit is not mutated."
+    },
+    {
+      "id": "F3",
+      "location": "realizations.py:583-597",
+      "title": "The page-position walk skips note contents correctly",
+      "detail": "walk() returns on a tei:note before it appends node.text or descends. The parent still appends child.tail, so literal text after a note is still counted. Literal contexts forbid head, citations and segment speakers or conditions, so the only tei:note that can appear in the body is the unit rubric. Skipping every tei:note therefore drops no prayer words. In the new test, the rubric is rendered before the first pb. Without the skip, the first pb's expected prefix '' would fail to match, so the test really exercises this path."
+    },
+    {
+      "id": "F4",
+      "location": "test_marmorstein_realizations.py:32-63",
+      "title": "Earlier finding NB3 is addressed",
+      "detail": "The test now runs validate_occurrences, validate_generated and review_payloads. The 'forever continued' caller fixture is consistent: overlay fragment=0 with settings {A:False,B:True} resolves to 'forever', and the literal home is allowed to cross to 'continued' on s3. validate_generated covers several guards: one P idno in the project from the home (expected 1, because omit_publication_urn is unset), no pb in the home, no div@corresp==P in the context, and the literal pb-position check with the interleaved note. The receipt check shows that changing the rubric invalidates realization/host/en, through witness['instructions'] at line 416."
+    },
+    {
+      "id": "F5",
+      "location": "realizations.py:430-434",
+      "title": "Option-bound correction filter is correct as written",
+      "detail": "A binding with no item.option behaves as before. A binding with an option applies only when settings.get(option) is True. If the option is False or not declared, the correction is not applied, so it does not affect corrected_sha256 or the fidelity corrections list for that caller. That is the right result, because the caller does not output that wording. Unselected corrections still enter the host receipt through relevant_corrections (lines 442-447), which does not filter by option. I did not review how bind_corrections validates that item.option is a real wording-option URN for that range; that is out of scope. A misspelled option would therefore be silently skipped here rather than rejected."
+    },
+    {
+      "id": "F6",
+      "location": "test_marmorstein_realizations.py:206-216, 259-269",
+      "title": "Negative tests for the relaxed guard are indirect",
+      "detail": "Instructions on a canonical-default home are covered by the existing subtest at line 213. A literal home without a page transition is covered by the single_page and same_scan_default mutations, but those cases have no instructions. No explicit subtest combines context='literal' with instructions and no page transition, and none sets context='canonical' explicitly together with instructions. The code enforces both cases, so this is only about locking in the behaviour against regressions."
+    }
+  ],
+  "required_changes": [],
+  "scope_limitations": [
+    "I read only realizations.py, its test file, and my earlier review JSON. I read no other source code, as instructed.",
+    "I could not verify that build.py renders unit instructions at the start of the context and never anchors them to segment identities that the literal branch pops. I relied on the user's statement for this (earlier finding NB2).",
+    "I did not review bind_corrections, corrected_text, or the code and tests that validate option binding. I assessed only the selection filter at realizations.py:430-433.",
+    "I did not run tests, so the claim that all 169 importer tests pass is the user's, not mine. I did not independently inspect /tmp/mahzor-s294/prior-home-identity-and-page-proof.json."
+  ],
+  "verdict": "Approved. The final code has no context['urn'] override, so earlier publication identities are kept through publication_context, and NB1 is resolved. Unit-level instructions are allowed only in a literal context that has a verified page transition. The context keeps them, the home's whitelist excludes them, and segment and fragment instructions are still forbidden. The literal pb-position proof correctly skips note contents and keeps the literal tails. The updated test runs validate_occurrences, validate_generated and review_payloads on a consistent fixture, and it shows that a rubric edit invalidates the host receipt. The option-bound correction filter applies a correction only when its option is explicitly selected and leaves ordinary corrections unchanged. None of the remaining findings blocks approval.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "82142d14-e9a3-46eb-9a0d-ec1856d92734"
+  }
+}

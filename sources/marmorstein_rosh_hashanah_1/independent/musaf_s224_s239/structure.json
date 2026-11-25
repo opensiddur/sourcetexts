@@ -1,0 +1,136 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "scope": "DRAFT structural guidelines/alignment/order only",
+  "approved": false,
+  "files_read": [
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/AGENTS.md",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/schema/JLPTEI-3.md (complete)",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/specs/SIDDUR_URN_SCHEME.md (complete)",
+    "/tmp/mahzor-s224/actual-xml.xml (complete: 13 he + 13 en units, he index spine noted as empty, expanded he spine excerpt)",
+    "/tmp/mahzor-s224/identity-search.json",
+    "/tmp/mahzor-s224/ready.json (PARTIAL: lines 1-120 only; 2.3 MB)",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/opensiddur-projects/project/u_ntaneh_toqef_in_hebrew-mayer-en/unetaneh_toqef_in_hebrew.xml",
+    "s224.jpg",
+    "s228.jpg",
+    "s232.jpg",
+    "s234.jpg",
+    "s236.jpg",
+    "s238.jpg"
+  ],
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "high",
+      "location": "he+en musaf_repetition_gevurot_open.xml, musaf_repetition_gevurot_close.xml, musaf_repetition_yimlokh.xml, musaf_repetition_veattah_qadosh.xml, musaf_uvekhen_lekha_taaleh_qedushah.xml (all div corresp=siddur:rosh_hashanah/musaf/…)",
+      "problem": "These siddur: context files hold prayer words directly, wrapped only in tei:seg/@source. SIDDUR_URN_SCHEME says a siddur: URN 'holds no words of its own' and gives a test: remove every j:transclude and nothing liturgical may be left. All five fail it. The Birnbaum composite-paragraph exception is limited to Hodu–Ashrei and does not cover these files. The words also get a new identity (…/text) under the siddur: path.",
+      "fix": "Make each siddur: unit a skeleton holding only its transclusion(s), its rubrics and a tei:pb carrying a second @ed token (e.g. ed=\"1965 rosh_hashanah/musaf/repetition_gevurot_open\"), as set out in 'One text, printed on several pages'. Gevurot: transclude a range of the edition's single existing realisation of prayer:amidah/gevurot. Open = start of gevurot through ומצמיח ישועה; close = מי כמוך אב הרחמים through מחיה המתים, using sub-part milestones in that one realisation. Where the repetition's wording really differs from the silent printing, record the difference inside that one realisation (tei:choice/j:option, or a j:conditional on opensiddur:recitation/repetition). Do not create a second mapping or substitute another occurrence. Do the same for the English realisation. Yimlokh and Ve'attah qadosh: see F2. Uvekhen lekha: see F3."
+    },
+    {
+      "id": "F2",
+      "severity": "high",
+      "location": "he+en musaf_repetition_yimlokh.xml and musaf_repetition_veattah_qadosh.xml: chapter/verse milestones",
+      "problem": "The verse and chapter milestones carry new siddur: URNs (…/text/quotation and …/text/quotation/chapter) instead of canonical bible: URNs. JLPTEI-3 Versification requires @corresp on unit=\"verse\" to be the canonical URN. These are new placement identities that join nothing, and they would need siddur.jsonl registration. The boundaries themselves are right: Ps 22:4 ends before אֵל נָא in the Hebrew and before ', O God' in the English, and both are terminated.",
+      "fix": "Remove the …/quotation identities. If the edition does not yet map psalms/146/10 or psalms/22/4, use chapter n=\"146\"/\"22\" corresp=bible:psalms/146 (or 22) and verse corresp=bible:psalms/146/10 (or 22/4), keeping the bare terminators. If it already maps them (e.g. Yimlokh in an earlier Kedushah), have the siddur: unit transclude bible:psalms/146/10 from that realisation where the wording is identical. Otherwise keep only seg/@source plus bare chapter/verse bounds, with no duplicate canonical corresp. Keep אֵל נָא / ', O God' outside the verse in the context unit."
+    },
+    {
+      "id": "F3",
+      "severity": "high",
+      "location": "he+en musaf_uvekhen_lekha_taaleh_qedushah.xml seg/@source",
+      "problem": "seg/@source cites urn:x-opensiddur:text:prayer:uvekhen_lekha_taaleh_qedushah. The identity search found no such canonical identity and no realisation of it, so the citation cannot resolve.",
+      "fix": "Treat it as a recurring shared text: register it once in prayer.jsonl, realise it once (he and en) in a file whose div carries that prayer: corresp, and have the siddur: unit transclude it. Alternatively, drop the unresolvable @source. Either way, verify it with validate_urn_references."
+    },
+    {
+      "id": "F4",
+      "severity": "high",
+      "location": "he musaf_tefen_bemakhon.xml, musaf_af_orach_mishpatekha_qivvinukha.xml, musaf_ometz_adirei_kol_chefetz.xml: prayer-part …/text terminators",
+      "problem": "The Hebrew …/text scope is terminated at the first ח׳ rubric and never reopened. As a result, these lines fall outside any alignment scope: the Tefen lines from דברות אלה through טללי שנה, the Af Orach lines from להסיר מכשול through וליעקב, and the Ometz lines from ראה כי אין איש through בזה ראש השנה. Each English counterpart's …/text runs to the end of the poem, so the shared alignment scope ends early in the Hebrew, in Af Orach and Ometz in the middle of a same-paragraph continuation. In addition, 'text' is a generic name, not an incipit.",
+      "fix": "Pick one approach and apply it to both languages. (a) Drop the …/text milestones and let the poem's div corresp align the whole piyyut. (b) Split each poem at its speaker changes into prayer-part milestones named by incipit (e.g. poem:tefen_bemakhon/dibberot_elleh, …/olam_bevaqqorkha, …/asumah; poem:af_orach_mishpatekha_qivvinukha/lehasir_mikhshol; poem:ometz_adirei_kol_chefetz/reeh_ki_ein_ish), with matching milestones at the corresponding English points. Place each role description first inside its own segment's scope and terminate only at the end of the poem."
+    },
+    {
+      "id": "F5",
+      "severity": "high",
+      "location": "he+en musaf_melekh_elyon.xml stanza milestones",
+      "problem": "In the Hebrew, every stanza is terminated before its ק׳ refrain, so the 11 refrains sit outside any stanza scope. Stanza /12 covers only 'מֶלֶךְ עֶלְיוֹן.', which leaves קו״ח תָּקְפּוֹ לָעַד … לַעֲדֵי עַד יִמְלוֹךְ unidentified and unaligned. Each English stanza does include 'He will reign forever', and English /12 includes 'His might is eternal…', so the Hebrew and English extents differ in every stanza. (All 12 refrains are present, and the joint label stands before תקפו only, as the source prints it.)",
+      "fix": "Remove the eleven mid-stanza terminators and the one after /12's 'מֶלֶךְ עֶלְיוֹן.'. Keep each ק׳ (and the final קו״ח) description inside its stanza's scope, so the stanza runs through its refrain. The refrains must not get their own repeated URN. Keep a single terminator after the last refrain, in both languages."
+    },
+    {
+      "id": "F6",
+      "severity": "medium",
+      "location": "he musaf_melekh_elyon.xml start / spine before Melekh Elyon",
+      "problem": "s232 prints 'חזן. פותחים הארון.' The spine keeps the Ark direction, but the reader label חזן appears neither in the unit nor in the spine.",
+      "fix": "Add <tei:note type=\"description\" corresp=\"urn:x-opensiddur:instruction:role/reader\"> as the first thing inside stanza /1's scope. Keep the Ark directive in the spine before the transclusion; the exact typography stays pending."
+    },
+    {
+      "id": "F7",
+      "severity": "medium",
+      "location": "he musaf_unetaneh_toqef.xml before stanza /7",
+      "problem": "The de-Hebr directive 'קהל בעטעט ביז ושמנו קראת בשמך' sits inside /6's scope because no terminator precedes it. A transclusion of the existing canonical /6 (whose Mayer realisation ends with ותשובה…) would therefore carry this edition's directive. The guide requires terminating before rubrics.",
+      "fix": "Insert <tei:milestone unit=\"stanza\"/> after the ותשובה … הגזרה paragraph and before the directive. The /1–/6 ranges otherwise match the existing project: /2 begins at אמת, /4 at לפקוד, and /6 includes ותשובה. /7–/10 need registry lines as extensions of the root."
+    },
+    {
+      "id": "F8",
+      "severity": "medium",
+      "location": "he musaf_unetaneh_toqef.xml standOff note target=/6 'צום — קול — ממון'",
+      "problem": "The three superscript glosses (צום over ותשובה, קול over ותפלה, ממון over וצדקה, as printed on s236) are recorded as one note targeting the whole stanza /6.",
+      "fix": "Place three anchors (xml:id) at ותשובה, ותפלה and וצדקה, and write three standOff notes, each with target=\"#anchor\" and its own gloss."
+    },
+    {
+      "id": "F9",
+      "severity": "medium",
+      "location": "he musaf_tefen_bemakhon.xml (3 notes → whole poem); musaf_unetaneh_toqef.xml (notes → /4, /6, /9)",
+      "problem": "The variant documentary notes target a whole poem or stanza, not the varied word, so they are not tied to their tei:choice. The Unetaneh /6 note reads 'כ״י יָרוּם.', which is the main reading; the inline choice and the source give the alternative as יוּרָם, so note and choice disagree. Keeping the documentary notes beside the j:option choices is acceptable.",
+      "fix": "Place an anchor immediately before each varied tei:choice and target it with target=\"#…\". Correct the /6 note text to the alternative reading. The siglum's typography (נ״א on s224 per human288/289, and the forms on s236/s238) remains a source question."
+    },
+    {
+      "id": "F10",
+      "severity": "medium",
+      "location": "he musaf_tefen_bemakhon.xml paragraphs; he+en musaf_ometz_adirei_kol_chefetz.xml and musaf_unetaneh_toqef.xml at tei:pb",
+      "problem": "The encoding adds paragraph breaks the source does not have. Tefen is split before ח׳ דברות and before ח׳ אסומה, but on s224 both sigla fall mid-line inside the printed paragraph; the source has two paragraphs. Ometz and Unetaneh close and reopen tei:p at page turns mid-sentence (לריב | בעמדו; הנה | יום הדין; אדם | יסודו), in both languages.",
+      "fix": "Follow the printed paragraphing: Tefen is two paragraphs (break before ק׳ עולם). Put tei:pb inline in the running paragraph, not as a new paragraph. Paragraphs stay independent of milestones."
+    },
+    {
+      "id": "F11",
+      "severity": "medium",
+      "location": "he musaf_af_orach_mishpatekha_qivvinukha.xml opening; he musaf_uvekhen_vayehi_vishurun_melekh.xml",
+      "problem": "Direct Biblical quotations are unmarked. אַף אֹרַח מִשְׁפָּטֶיךָ יְיָ קִוִּינוּךָ is Isaiah 26:8 (partial), and וַיְהִי בִישֻׁרוּן מֶלֶךְ is Deuteronomy 33:5 (partial).",
+      "fix": "Wrap each in tei:seg source=\"urn:x-opensiddur:text:bible:isaiah/26/8\" or \"…:deuteronomy/33/5\". If the project's bounded-verse convention applies, add chapter/verse milestones with a declared verse-part for the quoted portion plus bare terminators. Do not let a partial quotation claim the whole-verse corresp, and do not duplicate an existing mapping. The English quotation spans may carry the same @source."
+    },
+    {
+      "id": "F12",
+      "severity": "low",
+      "location": "he musaf_ometz_adirei_kol_chefetz.xml closing conditional",
+      "problem": "The structure is sound: shabbat=false → בְּשׁוֹפָר; marked shabbat=true → בְּזִכְרוֹן שׁוֹפָר. The English mirrors it with no invented rubric. The no-Shabbat branch is unmarked and the parenthesis is marked, which matches the print. However, the Hebrew conditional's instruction text 'אם שבת' paraphrases the printed parenthetical rubric rather than transcribing it.",
+      "fix": "Make the instruction note the printed rubric's wording. Its exact reading belongs to the pending typography questions."
+    },
+    {
+      "id": "F13",
+      "severity": "low",
+      "location": "he musaf_ometz_adirei_kol_chefetz.xml div-level note type=\"description\" (כוונת הפייטן…)",
+      "problem": "This is editorial commentary in small type, not a rubric saying what the passage is, who says it or how it is said. As an inline description it travels with every transclusion of the canonical poem.",
+      "fix": "Move it to <tei:standOff type=\"notes\"><tei:note type=\"commentary\" target=\"urn:x-opensiddur:text:poem:ometz_adirei_kol_chefetz\">. The ע״ס acrostic lines may stay as descriptions."
+    },
+    {
+      "id": "F14",
+      "severity": "low",
+      "location": "musaf_el_emunah_beorkekha_din, musaf_im_lo_lemaano_yaas, musaf_uvekhen_vayehi_vishurun_melekh (prayer: namespace)",
+      "problem": "These are piyyut strophes, and the scheme files piyyutim under poem:. Also, the reader sigla are encoded as tei:choice abbr=חזן/expan=חזן (identical); the printed form (חז׳) is pending.",
+      "fix": "Reconsider poem: vs prayer: before registering. Once the typography is settled, encode the true abbreviation or drop the empty choice."
+    }
+  ],
+  "notes": [
+    "Recitation order in the expanded spine matches the scans I saw: …gevurot_open → close Ark → Tefen → open Ark → gevurot_close → close Ark → Af Orach → Yimlokh → Ve'attah qadosh → El emunah → Im lo → Ometz → Vayehi → open Ark → Melekh Elyon → close Ark → Uvekhen lekha → Unetaneh. Ark directives on s224 and s232/s234 are placed correctly. s225–s227 and s237 (Af Orach / gevurot_close placement, English pages) were not supplied and are unchecked.",
+    "The minyan conditional and the recitation silent=false/repetition=true declaration are local to the repetition div, and their end markers are siblings. I could not check that the quiet Amidah is unchanged or that the morning continues through Musaf: the spine excerpt covers only this section.",
+    "English: no Hebrew linkage cues and no invented rubrics were found. The Shabbat substitution is rendered as a mirrored conditional. Unetaneh's parenthetical optional passages ((צום), (ומי בחיה), etc.) carry no invented condition, and none of the variant readings carries a Shabbat condition. No source-navigation references remain in the expanded sequence.",
+    "Af Orach gets a distinct poem: URN and is not conflated with the Asher Esther-fast selichah identities; this is consistent with the different-ofan evidence supplied.",
+    "Unetaneh reuses the canonical root and /1–/6 consistently with the Mayer realisation; /7–/10 extend it. F7 is the one range defect.",
+    "Not done: I did not read schema/jlptei.odd.xml, and read only the first 120 lines of ready.json (2.3 MB). I ran no validation, refdb, registry check or compile/export. This verdict is structural only and makes no claim about source fidelity; human questions 291–298 and the sigla/pointing typography remain pending. The Kedushah lower on s238–239 is intentionally out of scope."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "9fb5ab5f-b029-4bbb-95c3-a1ea2c64f9ab"
+  }
+}

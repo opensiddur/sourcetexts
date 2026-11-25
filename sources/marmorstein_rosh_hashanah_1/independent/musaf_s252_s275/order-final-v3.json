@@ -1,0 +1,69 @@
+{
+  "recitation_order_approved": true,
+  "conditionals_approved": true,
+  "documentary_preservation_approved": true,
+  "findings": [
+    {
+      "severity": "resolved",
+      "prior": "HIGH weekday Areshet repeat cannot be switched off",
+      "evidence": "machzor_expanded-opensiddur-he/index.xml:3749-3784. The condition is now any(frankfurt_am_main=true, all(shabbat=true, musaf-shabbat-responses=both_cantor_repeat), all(shabbat=false, musaf-areshet-cantor-repeat=true)). compile-qa-v3/expanded-weekday_repeat_no.yaml:36-43 sets shabbat=false, frankfurt_am_main=false, metz=false and musaf-areshet-cantor-repeat=false. Nothing relies on a default. In expanded-weekday_repeat_no-print.xml:1974-2057 the order is: קהל Hayom, חזן Hayom, קהל Areshet, end of body. There is no reader Areshet and no j:conditional wrapper. expanded-weekday_repeat_yes-print.xml:2028-2084 is the same, plus exactly one חזן Areshet, also with no wrapper. In both outputs Areshet reads 'לְקוֹל תְּרוּעָתֵנוּ' with no זִכְרוֹן, and the conclusion reads 'מְקַדֵּשׁ יִשְׂרָאֵל'. Both are correct for a weekday."
+    },
+    {
+      "severity": "resolved",
+      "prior": "Hayom-only cantor repeat must be tied to Shabbat",
+      "evidence": "index.xml:3679-3695 is all(shabbat=true, hayom_only, musaf-hayom-only-cantor-repeat=true). The both_cantor_hayom and both_cantor_repeat branches are each gated on shabbat=true (3655-3678). expanded-shabbat_hayom_only_repeat_no-print.xml:2083-2113 gives one קהל Hayom, no Areshet, no wrapper. The _yes output (2085-2140) gives קהל Hayom and חזן Hayom, no Areshet, no wrapper. This matches s274 ויש שאומרים היום אבל לא ארשת. The outer inclusion conditions (3600-3630, 3711-3738) still have symbol branches that are not gated on shabbat. I checked this and it is logically sound: in each case the shabbat=false branch gives the same result (true). An undecided Shabbat state therefore can only wrongly resolve when the outcome would be the same either way. omit_both and hayom_only still leave Areshet undecided when Shabbat is unknown, which is correct."
+    },
+    {
+      "severity": "resolved",
+      "prior": "Undecided region must still show the alternatives",
+      "evidence": "expanded-unknown.yaml declares nothing. expanded-unknown-print.xml:3340-3404 keeps section_musaf_areshet_cantor_repeat as a j:conditional around the חזן Areshet, with the HE/EN rubric. Within Areshet it also keeps the de-Hebr 'אַם שַׁבָּת.' זִכְרוֹן segment. Both inclusion and repeat endConditionals are present."
+    },
+    {
+      "severity": "low",
+      "location": "compile-qa-v3/assertions.json:8-19 (profile 'weekday'); expanded-weekday.yaml:36-40; expanded-weekday-print.xml:2065-2128",
+      "problem": "The 'weekday' profile declares only shabbat=false. Its rite and practice blocks are empty. Its output therefore correctly keeps the Areshet cantor repeat as a labeled conditional (2069-2104). assertions.json still lists it among the definite profiles with Areshet count 2, so the count mixes resolved and wrapped occurrences. This is not a data defect. The genuinely definite weekday cases are weekday_repeat_yes and weekday_repeat_no, and both are correct. The QA claim of '11 definite profiles' is slightly overstated: 10 are fully definite for these gates, and 'weekday' is partly definite.",
+      "required_change": "Optional, QA tooling only. Either rename the profile (e.g. weekday_region_unknown) or make the assertion counts report resolved and conditional occurrences separately. No change to the data."
+    },
+    {
+      "severity": "resolved",
+      "prior": "LOW Hayom-only-specific rubric printed for unrelated undecided inputs",
+      "evidence": "index.xml:3642 is now generic: 'חזרת הש״ץ לפי מנהג הקהל; למנהג שאומר היום בלבד בשבת, הספר אינו מפרש אם הש״ץ חוזר.' The EN equivalent carries Codex resp."
+    },
+    {
+      "severity": "resolved",
+      "prior": "MEDIUM stale draft-gap notes",
+      "evidence": "heidenheim index.xml:1040-1044 (HE), marmorstein-en index.xml:875-879 (EN) and expanded index.xml:40 (sourceDesc) all now say the text runs through Areshet Sefatenu, p.127 (PDF274–275), and that Zikhronot is next. This agrees with the pb/facs mapping, where PDF = n+1: Areshet HE is n273 and EN is n274."
+    },
+    {
+      "severity": "resolved",
+      "prior": "LOW running-label note: printed pages and language",
+      "evidence": "heidenheim index.xml:1036-1038 and en index.xml:871-873 now give printed pages 121–126 alongside the PDF numbers. These agree with the in-text pb (e.g. p.122 = n263/n264). The quoted label is still plain text inside an xml:lang=he note, not wrapped in foreign de-Hebr. That was explicitly optional, and the documentary preservation approach is unchanged, so this is accepted as is."
+    },
+    {
+      "severity": "resolved",
+      "prior": "LOW detached veYisrael join",
+      "evidence": "expanded-shabbat_hayom_only_repeat_no-print.xml:2069 reads 'מְקַדֵּשׁ הַשַּׁבָּת וְיִשְׂרָאֵל וְיוֹם הַזִּכָּרוֹן'. expanded-weekday_repeat_no-print.xml:1947 reads 'מְקַדֵּשׁ יִשְׂרָאֵל וְיוֹם הַזִּכָּרוֹן'. Both shabbat=true and shabbat=false render correctly."
+    },
+    {
+      "severity": "info",
+      "location": "expanded-shabbat_hayom_only_repeat_no-print.xml:2084",
+      "problem": "An empty <tei:div/> is left behind where the omitted section was resolved away. It has no effect on recitation or order.",
+      "required_change": "None required here. The visual/PDF QA can check that it does not produce blank spacing."
+    },
+    {
+      "severity": "info",
+      "scope_note": "Not independently re-verified in this review: the Attah terminator in the old rh_qedushat_hayom first segment and the Vattitten overrun fix, the 19 source projections and 79 verse projections, the schema validity of 804 files, readings.json, and build.py and the JLPTEI-3 text. These were not needed to decide the three approvals, and they belong to the separately closed source-words and encoding gates. They are taken as reported."
+    }
+  ],
+  "remaining_gates": [
+    "Separate encoding/payload review (new 56 encodings) and the old 87 bindings/exports review. These are outside this approval.",
+    "PDF/electronic visual review of the expanded and documentary outputs, including the residual empty div and the Attah/Vattitten scope fix.",
+    "Optional QA-tooling cleanup: in assertions.json, report the partly declared 'weekday' profile's conditional occurrences separately from resolved ones.",
+    "Batch not accepted as a whole. This review approves only recitation order, the conditionals for the Hayom/Areshet inclusion and repeat gates, and documentary preservation."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "6fce964f-751f-4b1d-b7e7-2a2fc8d6c2c7"
+  }
+}

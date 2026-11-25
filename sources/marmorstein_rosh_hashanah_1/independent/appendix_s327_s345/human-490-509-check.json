@@ -1,0 +1,56 @@
+{
+  "approved_human_application": true,
+  "all20_numbers_checked": true,
+  "findings": [
+    {
+      "severity": "non-blocking",
+      "number": 502,
+      "issue": "The resolution record marks 502 changed:true, but its before and after strings look identical (אַחְבִּירָה). The difference is probably in codepoint order or an invisible character. In working-pages.json (s328 block 0 line 18) the word reads as the user's אַחְבִּירָה, but I could only read the files, so I could not compare the bytes. A codepoint check of before, after and the final working text would settle it."
+    },
+    {
+      "severity": "non-blocking",
+      "number": 498,
+      "issue": "Stale note: s327 block 1 still has the uncertainty 'L25: אחת appears unpointed in the band; left as printed.' The text now correctly reads אַחַת."
+    },
+    {
+      "severity": "non-blocking",
+      "number": 508,
+      "issue": "Stale note: s337 block 0 still has the uncertainty 'Line 9, last word: I read נֶחֱמוּדִים with no conjunctive vav...'. The text now correctly reads וַחֲמוּדִים."
+    }
+  ],
+  "remaining_followup": [
+    529
+  ],
+  "notes": [
+    "Every edit is at the intended occurrence in working-pages.json. apply-human-490-509.py also stops with an error unless the target appears exactly once (or once together with its context), so a repeated word could not have been edited by mistake.",
+    "490: s327 b1 L2 בְּיָדִי unchanged.",
+    "491: s327 b1 L2 הֶחֱזַֽקְתָּ. The first he has segol and no meteg; the meteg is after the patah on the zayin.",
+    "492: s327 b1 L8 בְּרִבֲבוֹת. The hataf-patah is on the second bet (the one after the resh).",
+    "493: s327 b1 L9 בְשָׂמִים unchanged.",
+    "494: s327 b1 L16 כֻּלָּהּ, with mappiq added.",
+    "495: s327 b1 L16 בָעֵר unchanged.",
+    "496: s327 b1 L21 כֹּל, the occurrence after לְעַבְדְּךָ, unchanged.",
+    "497: s327 b1 L23 matches חֻיָּֽבְתִּי exactly. חִיַּבְתָּ on L24 is a different word and was correctly left alone.",
+    "498: s327 b1 L25 אַחַת.",
+    "499: s327 b1 L26 כְמוֹ unchanged.",
+    "500: s328 b0 L10 שָּׁאַלְתִּי and דָּרַשְׁתִּי both keep their dagesh.",
+    "501: s328 b0 L15 עֵינָי with qamatz under the nun. בְּעֵינַי on s327 L20 is a different occurrence and was correctly left alone.",
+    "502: s328 b0 L18 אַחְבִּירָה.",
+    "503: s329 b0 L1 תְּבוֹרַךְ unchanged.",
+    "504: s329 b0 L3 פִלְאֲךָ, pe dagesh removed as the user specified.",
+    "505: s329 b3 L4 אֱלוֹהַּ unchanged.",
+    "506: s329 b3 L4 תִּקָּצֶה.",
+    "507: s330 b0 L19 וְהִנֵּֽנוּ, with nun (not gimel) and dagesh plus meteg on the first nun.",
+    "508: s337 b0 L9 וַחֲמוּדִים.",
+    "509: The s340 footnote now opens with the user's text exactly: 'הל׳ הזה בעצמו הוא ל׳ ר׳ סעד׳ גאון ז״ח במאמר שני מספרו האמונות,'. ז״ח and סעד׳ were kept as written, not changed to ז״ל or סעדי׳.",
+    "Applying the user's literal 509 text does not close the source question. ז״ח differs from both earlier readers' ז״ל, so it stays open as followup 529.",
+    "The script only reads compare-{327,332,337,342}.json and works on deep copies. It writes only human-490-509-resolution.json, working-pages.json and continuation-state.json. It writes nothing to the frozen blind/comparison evidence or to the accepted 902 literal witnesses. I checked this from the code, not from file hashes.",
+    "The script sets continuation-state.json human_questions_required_before_acceptance=[]. I did not read that file. Check that 529 is still tracked as open there or somewhere else, so the empty list isn't taken to mean 509 is settled.",
+    "This confirms only that the 490–509 adjudications were applied. It is not acceptance of the full source or the batch. No files were edited."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "084708da-a940-4a16-9c58-b3b09a5be154"
+  }
+}

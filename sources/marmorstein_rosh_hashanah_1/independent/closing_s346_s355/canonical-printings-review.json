@@ -1,0 +1,43 @@
+{
+  "approved": false,
+  "required_changes": [
+    "The new page break is lost when the book is compiled. The caller turns the shared text into a j:transclude with type=\"inline\" (build.py:614). Inline transclusion keeps only text: InlineCompilerProcessor._process_element_contents (inline_compiler.py:187-336) turns a tei:pb child into an empty p:transcludeInline and puts nothing from the element itself into the output. _annotate gives a pb with an xml:id no KEEP; it only looks for notes pointing at that id. So the s347 break apply() adds to the shared file never shows up in the compiled appendix, and the caller has lost its own s347 fragment to collapse(). Result: page s347 disappears from the appendix. Fix one of two ways: (a) have the inline compiler keep tei:pb as an element, the same way it already keeps j:divineName, carrying ed/n/facs and joining text across it correctly; or (b) transclude this caller externally. Either way, add a test that compiles the caller and shows the pb inside the transcluded wording.",
+    "Scan links will not be suppressed in the other places that use the shared text. Every break this book already has is written with a bare ed='1965' and no printing token (build.py:170, 302, 308, 427, 436, 494). In the book-wide set of printings for edition 1965, the new appendix break would be the only one with a siddur path. In a context such as rosh_hashanah/shacharit/..., no enclosing level matches that path, and there is no earlier break with a printing token, so scan_links._choose reaches rule 3. The appendix path and the context share the leading segment 'rosh_hashanah', which scores above 0, so the appendix break gets linked inside Shacharit. If an enclosing transclude or div names the root siddur:rosh_hashanah, rule 2 links it even sooner, by prefix match. test_scan_links_choose_only_the_current_printing passes only because its fake first-page break is ed='1965 example/source'; the book never writes that. Fix: give every other context that reaches the shared text, including the expanded spine, its own printing token (at least on its first break), or refuse to build until the edition names each of those contexts. Then rewrite the test to use the bare ed='1965' breaks the book really produces.",
+    "collapse() keeps only the first fragment, so build.unit_document believes the caller is still on s346 after the transclusion. If more of the caller follows on s347, line 493 adds a second, bare s347 break. That page is then marked twice: once with the sigil inside the shared text and once in the caller. The caller's last page (biblScope 'to', lines 268-271) is also taken from the collapsed fragment and comes out wrong. Fix: keep track of the last scan and printed page of the collapsed fragments and pass them to the page tracking and biblScope.",
+    "apply() places the break by finding item['before'] exactly once anywhere in the home body. It never checks that the match is (a) inside the shared text's corresp scope or (b) inside the reading the caller selected rather than an unselected option. bindings() checks that the phrase is unique and at the right offset in the caller's resolved text, not in the XML. Counterexample: fragment 'p alpha alpha beta', printed 'alpha beta', readings A='alpha beta' and B='beta y', the caller selects B, before='alpha beta'. In the resolved text the match straddles shared text and option B, so no single text node holds it there. Option A's text holds it exactly once, so the break lands in the unselected option. Fix: walk the shared text's scope with the caller's settings, rebuild the prefix before the chosen node, and require it to equal the normalized join of the fragments before the boundary. Also reject a match inside a j:option whose corresp the caller does not set to true.",
+    "bindings() accepts a provider with no canonical_home. It then uses file = host['stem'] and apply() writes a sigiled break into an ordinary source file, which already has bare breaks. validate_generated only checks the break set for canonical-home files, so nothing would catch a stray break there. Since the design says only canonical homes get these breaks, require host.get('canonical_home') in bindings().",
+    "A boundary where the word is split across pages (the previous fragment has join_next) passes bindings(), because whitespace is normalized away. apply() then puts a pb in the middle of the word without break='no', which is inconsistent with build.py:497-498. Either reject join_next on the fragments of a declared printing, or set break='no' on the marker."
+  ],
+  "test_gaps": [
+    "No end-to-end compile test showing the caller's inline transclusion of the shared text keeps the sigiled pb (this would have caught required change 1).",
+    "The scan-link test uses invented ed='1965 <context>' first-page breaks. It needs a version with bare ed='1965' breaks, the way the book writes them, and with the real path shape (shared 'rosh_hashanah/' prefix, plus a root-level transclude or div), for the source context and the expanded spine.",
+    "No test where the caller continues on the second page after the collapsed transclusion (duplicate s347 break, wrong biblScope 'to').",
+    "No test with two printings in one home (two callers, or two boundaries in one caller, e.g. a three-page span), covering the order of the breaks and xml:id uniqueness.",
+    "No test where the before phrase also occurs in an unselected j:option or elsewhere in the home (should fail closed), and none for the wrong-option counterexample above.",
+    "No test where the before phrase is split by markup (divineName, choice, an existing pb) in the generated home. It should be rejected with a clear error.",
+    "No test where the provider has no canonical_home.",
+    "No Hebrew fixture. The Hebrew path wraps Divine Names in j:divineName, which is exactly what can split the before phrase across nodes in the real Modim.",
+    "No staleness test for changing only the caller's urn or page_context. That changes the ed on the break in the home, but the host's review payload holds just the raw entries, not the derived context."
+  ],
+  "notes": [
+    "No recursion risk: collapse() → bindings() → canonical_text()/_range_segments() never call prepare_unit() or prepare_documents() again. The cost is that bindings() re-runs on every prepare_unit, review payload and permitted_breaks call. That is roughly quadratic, but only a performance concern.",
+    "bindings() validates the fields strictly: exact key set, unique ids, s<N> scans, the fragment index matched to the caller's scan and printed page, and every boundary of a multi-fragment canonical occurrence must be declared. No existing checks were loosened; validate_generated now accepts an exact set of breaks instead of none.",
+    "Review staleness is mostly right. Both host and caller payloads get canonical_printings only when an entry names them, so unrelated reviews keep their hashes. But context is derived from the caller's urn or page_context and is not in the host payload (see test gaps).",
+    "I can't tell from the diff whether 'page_context' is an existing unit field. If it is new, it isn't validated anywhere. Also, bindings() builds the context from caller['urn'], while unit_urn() and publication_context decide the div corresp that scan_links actually reads. The two disagree for a caller with publication_context or start/end.",
+    "Building the break in the generated XML is sound: lxml splits text and tail correctly, and tei:pb is model.global, so it is allowed inside j:option and most inline containers. Validity is checked again after apply in the test, and also in the build if it validates each document before writing."
+  ],
+  "limitations": [
+    "I used Read only and did not run the tests or a compile. The finding that inline compilation drops the pb comes from reading inline_compiler.py and compiler._annotate. A compile test should confirm it.",
+    "I couldn't search, so I didn't check how the real Modim callers, the expanded spine, or ROOT_URN-level divs appear in compiled output. The rule-2/rule-3 analysis assumes siddur paths that start with 'rosh_hashanah/'.",
+    "I didn't look at the real readings data (canonical_printings entries, page_context usage), only the code and the synthetic fixture.",
+    "The test logs show only pass counts (50 + 99 subtests; 196 + 194 subtests), not which tests ran."
+  ],
+  "invocation": {
+    "model_usage": [
+      "claude-opus-5-5"
+    ],
+    "configured_model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "03051be3-b432-4e34-96fa-857ee40727c6"
+  }
+}

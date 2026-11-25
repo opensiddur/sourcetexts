@@ -1,0 +1,29 @@
+{
+  "scope": "documentary-v9-export-2",
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/documentary-export-manifest-v9.json",
+    "/tmp/mahzor-s294/full-pdf-images-v9/documentary-234.png",
+    "/tmp/mahzor-s294/full-pdf-images-v9/documentary-235.png",
+    "/tmp/mahzor-s294/full-pdf-images-v9/documentary-236.png",
+    "/tmp/mahzor-s294/full-pdf-images-v9/documentary-237.png",
+    "/tmp/mahzor-s294/full-pdf-images-v9/documentary-238.png",
+    "/tmp/mahzor-s294/full-pdf-images-v9/documentary-239.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "documentary-236.png (p.228): Footnote 130 is placed and labelled correctly ('130 נוסח אחר' at the page foot, marker after חוֹבוֹתֵינוּ). Two cosmetic issues: the footnote rule sits under the left (Hebrew) column while the note text sits flush right under the English column, and the raised marker '130' sits close to the line above it. Neither is clipped or overlapping.",
+    "documentary-236.png → 237.png (pp.228–229): The Hebrew of the final Shofarot blessing (כִּי אַתָּה שׁוֹמֵעַ … בְּרַחֲמִים) finishes on p.228, but its English runs onto p.229 ('who | hearest the Teruah sound…'). The row splits across the page break, but the text flows without a gap and nothing is lost.",
+    "documentary-237.png (p.229): The Hebrew-only rubrics 'תקיעה: תרועה: תקיעה:' and 'קהל וחזן' (twice) are right-aligned across the full width, so they sit over the English column. This fits the deliberate Hebrew-only row style and is readable with no collision.",
+    "documentary-238.png (p.230): Some paired rows leave large blank areas in the Hebrew column (after ותערב and after מודים) because the English is longer. This follows from the deliberate fully paired row layout and is not a defect. The mixed-direction rubric 'to the דוכן, the congregation say: ותערב' displays correctly.",
+    "documentary-239.png (p.231): The 'שיר של יום.' heading block and its subheading 'היום ראשון בשבת…' share a paired row with the Hebrew missing-source label, so there is no separate row for the heading. Taller Hebrew text in that row makes the English line spacing uneven (bigger gap before 'repetition (scan311).'). The label wording clearly limits its scope to the priestly verses and the service that follows, so this is cosmetic. A separate row for the heading would read better.",
+    "documentary-239.png (p.231): The running head changes to 'שיר של יום.' even though most of the page is still the Musaf repetition. This is consistent with a last-heading-on-page running-head rule. A horizontal rule with nothing beneath it follows Psalm 24 at the foot of the page, which looks like a section or end divider and is harmless."
+  ],
+  "verdict": "Approved for pages 234–239. Hebrew and English are readable throughout, with no clipping or overlap. Stanza pairs (piyyut line ↔ translation; each 'ככתוב' introduction ↔ its verse) line up correctly. Footnote 130 is placed and labelled correctly. The ending is on p.231 (image 239), and its two-language missing-source label is present and clear: digitization reaches the priestly-blessing introduction (scan311), and the priestly verses and the service after them (scan312 onward) are not encoded. Credits and bibliography are outside this range and were not checked. All findings are cosmetic.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "165baffb-2fa4-4660-bb59-3be7f0ba7d0d"
+  }
+}

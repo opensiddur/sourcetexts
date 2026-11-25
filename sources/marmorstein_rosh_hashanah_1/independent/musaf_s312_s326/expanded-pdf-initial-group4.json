@@ -1,0 +1,37 @@
+{
+  "approved": false,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s312/v5-export-review/expanded-final-export-manifest.json",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-322.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-323.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-324.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-325.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-326.png"
+  ],
+  "blocking_findings": [
+    "expanded-324.png (printed p.322): the standalone Hebrew rubric '[קהל וחזן יִמְלֹךְ יְיָ לְעוֹלָם אֱלֹהַיִךְ צִיּוֹן לְדֹר וָדֹר הַלְלוּיָהּ:]' in the English column starts about 35px left of that column's left edge. English text starts at x≈572; the rubric starts at x≈537, which puts it in the gutter, roughly 7px from the Hebrew column's right edge (x≈530). Nothing overlaps on that line because the Hebrew column is empty there, but it breaks the column boundary.",
+    "expanded-324.png (printed p.322): the two standalone Hebrew rubrics in the English column are aligned inconsistently and neither is flush right. '[חזן לְעֻמָּתָם בָּרוּךְ יֹאמֵרוּ.]' sits flush left at the column edge (x≈572). '[קהל וחזן יִמְלֹךְ…]' starts in the gutter, as noted above. A paragraph that opens right-to-left in its own language, as the 'cross-language rubric' fix intends, should be flush right at x≈922. Flush-left placement suggests the paragraph is still being set left-to-right, or the rubric is being placed outside the column. The fix does not show as working in this output."
+  ],
+  "nonblocking_findings": [
+    "File names are offset from printed page numbers: expanded-322..326.png show printed pages 320–324. The sequence is continuous and the running headers ('ישראל' and page number) alternate correctly between even and odd pages.",
+    "expanded-323.png (p.321): the speaker label 'חזן' stands on its own line, flush right at full width, above the row that starts 'בָּרוּךְ אַתָּה'. It stays with its row and has a visible gap before it, matching the full-width rubric on p.322. Acceptable.",
+    "expanded-324.png (p.322): the full-width rubric '[חזן נְקַדֵּשׁ…]' fits the full text width with no clipping and has a real gap before the next row.",
+    "Page transitions: the row 'אַתָּה בְחַרְתָּנוּ' / 'Thou hast chosen us' ends its Hebrew on p.323, and its English carries over to the top of p.324 ('service and proclaimed…') with the Hebrew side left empty. The last row on p.324 continues past this range in both columns. Both are acceptable parallel-column splits.",
+    "The ↗ interlinear marks match on the Hebrew and English sides (p.320 'עֲשֵׂה' / 'me'; p.324 'אֱלֹהֵינוּ' / 'Our God') and do not collide with text.",
+    "Several justified Hebrew lines have wide gaps between words (p.320 'אֱלֹהַי.   נְצוֹר'; p.322 'מְתִים.   בָּרוּךְ'; p.323 'הָעַמִּים.   אָהַבְתָּ'). These look like justification or deliberately kept spaces at conditional boundaries, not paragraph-spacing distortion. The line spacing looks even throughout.",
+    "p.320: the English 'for the sake of Thy Torah' has no final period and continues in the next row ('so that those who love Thee…'). This matches the Hebrew row split and is noted only.",
+    "Hebrew vowel points, the bracketed conditional insertions (p.324 '[הַשַּׁבָּת הַזֶּה וְאֶת יוֹם]' etc.), and the English are clear and readable. No clipping at page edges and no overlap between the columns' text."
+  ],
+  "limitations": [
+    "This range (printed pp.320–324, Musaf Amidah repetition) has no footnotes, so footnote numbering and entry order could not be checked here.",
+    "The priestly blessing, Musaf closing, the thirty-blast instruction, Minchah/Tashlikh, the Hebrew-only pages, the early English-only peace blessing, any enlarged Hebrew letters, and any hyperref link borders do not appear in the assigned images, so those fixes could not be checked here. The removed obsolete 'coverage stops at 311' notes do not appear on these pages.",
+    "Positions are estimates measured from PNGs at the supplied resolution, not from PDF geometry. The gutter overhang (~35px) should be confirmed against the PDF.",
+    "Only the assigned images and the manifest were read. No source or other page ranges were checked."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "8f5747a7-d62a-4f67-841f-225a62ab84d0"
+  }
+}

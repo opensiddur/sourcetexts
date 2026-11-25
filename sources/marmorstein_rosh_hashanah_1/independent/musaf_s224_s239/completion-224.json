@@ -1,0 +1,128 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "scan_pair": [
+    224,
+    225
+  ],
+  "source_approved": false,
+  "findings": [
+    {
+      "scan": "s224",
+      "key": "tifen",
+      "old": "לִיבַב תְּרוּעָתָם",
+      "proposed": "לִיבּוּב תְּרוּעָתָם",
+      "reason": "The print has a vav with a shuruq dot between the two bets (ליבוב), and there is no patah under the bet. The candidate dropped a whole letter."
+    },
+    {
+      "scan": "s224",
+      "key": "dibberot",
+      "old": "בְּזִכְרוֹן שָׁלֹשׁ בְּרִית:",
+      "proposed": "בְּזִכְרוֹן שְׁלוֹשׁ בְּרִית:",
+      "reason": "The print spells it in full with a holam-vav (שלוש), and the shin takes a sheva, not a qamats. The candidate normalized it to defective שָׁלֹשׁ."
+    },
+    {
+      "scan": "s224",
+      "key": "olam",
+      "old": "(כ״י תַּעֲטֹר)",
+      "proposed": "(כ״א תְּעַטֵּר)",
+      "reason": "In the alternative reading, the tav has a sheva, the ayin a patah and the tet a tsere. There is no holam and no hataf-patah. Pi'el form. See the uncertainties for the siglum letter and the dageshim."
+    },
+    {
+      "scan": "s224",
+      "key": "tifen_reader_1",
+      "old": "ח׳",
+      "proposed": "ק׳",
+      "reason": "The siglum before עוֹלָם בְּבַקֶּרְךָ, at the start of the paragraph after the line break, has a descender: it is ק׳, not ח׳. ח׳ is correct before דִּבְּרוֹת and before אֲסוּמָה."
+    },
+    {
+      "scan": "s224",
+      "key": "dibberot",
+      "old": "(no speaker block; dibberot placed after the English blocks)",
+      "proposed": "Add a speaker block ח׳ just before dibberot, and move dibberot to directly after the tifen block (before the ק׳ olam block)",
+      "reason": "In the print, ח׳ דִּבְּרוֹת אֵלֶּה... comes inline right after הַבֵּט לַבְּרִית. and ends the Tifen stanza before the new ק׳ paragraph. The candidate leaves out this ח׳ siglum, and its block order puts dibberot after עולם/אסומה, which does not match the print."
+    },
+    {
+      "scan": "s224",
+      "key": "dibberot",
+      "old": "(כ״י גֹּל)",
+      "proposed": "(כ״א גֹּל)",
+      "reason": "The second letter of the small siglum looks like an aleph, with the same shape in all three alternative-reading annotations on the page. Confidence is moderate; see uncertainties."
+    },
+    {
+      "scan": "s224",
+      "key": "admatam",
+      "old": "(כ״י שָׁנָה)",
+      "proposed": "(כ״א שָׁנָה)",
+      "reason": "Same siglum glyph as the other two annotations. It reads as כ״א, not כ״י."
+    },
+    {
+      "scan": "s225",
+      "key": "gevurot_1",
+      "old": "O Lord, the reviver",
+      "proposed": "O Lord the reviver",
+      "reason": "There is no comma after 'Lord' in the print. The candidate added punctuation."
+    },
+    {
+      "scan": "s225",
+      "key": "tifen",
+      "old": "exchanging the throne of judgment",
+      "proposed": "exchange the throne of judgment",
+      "reason": "The print reads 'exchange' (imperative). 'judg-ment' is split by a line-end hyphen; joining it is fine."
+    }
+  ],
+  "uncertainties": [
+    {
+      "scan": "s224",
+      "key": "olam/dibberot/admatam",
+      "word": "כ״א / כ״י",
+      "question": "The siglum letter in the three small parenthetical alternative readings looks like an aleph. Please confirm on a higher-resolution scan before choosing between כ״א and כ״י."
+    },
+    {
+      "scan": "s224",
+      "key": "olam",
+      "word": "תְּעַטֵּר",
+      "question": "Is there a dagesh in the tav and in the tet? The small type is not clear. The vowels (sheva, patah, tsere) are clear enough."
+    },
+    {
+      "scan": "s224",
+      "key": "tifen",
+      "word": "לִיבּוּב",
+      "question": "Is there a dagesh in the first bet? The vav with shuruq is certain."
+    },
+    {
+      "scan": "s224",
+      "key": "tifen",
+      "word": "בְרִית (after עָבְרוּ)",
+      "question": "There may be a dot (dagesh/sheva) on the bet. The candidate's בְרִית with no dagesh is plausible but not confirmed."
+    },
+    {
+      "scan": "s224",
+      "key": "tifen",
+      "word": "נוֹעָדִים",
+      "question": "The vowel under the ayin looks like a qamats. Hataf-patah was not ruled out at this resolution."
+    },
+    {
+      "scan": "s224",
+      "key": "gevurot_open",
+      "word": "גִּבּוֹר / כָמוֹךָ",
+      "question": "Dagesh in the gimel of גִּבּוֹר, and the absence of dagesh in the kaf of כָמוֹךָ, could not be confirmed at this resolution. The candidate's readings are plausible."
+    }
+  ],
+  "coverage_notes": [
+    "I ignored the running heads and page numbers on both pages (102, the Hebrew title, 'Musaph for the New Year').",
+    "Everything else in gevurot_open checked against the print. The rubric סוגרים הארון. at the end of the gevurot line and the attribution ע״ס תשר״ק. both match.",
+    "Everything else in the Tifen stanzas checked. Speaker ק׳ before תֵּפֶן is correct, and ח׳ before אֲסוּמָה is correct.",
+    "Unencoded source content: the ח׳ siglum before דִּבְּרוֹת is missing from the candidate.",
+    "Both pages end after the last text line: no footnotes, extra rubrics or condition/alternative text at the bottom.",
+    "The English facing page has four paragraphs (אתה, מכלכל, תפן, עולם). The printed Hebrew cue words are omitted, as intended. No English paragraph for אסומה or the dibberot lines appears separately; they are folded into the תפן and עולם paragraphs, and the candidate keeps it that way.",
+    "Line-end hyphens in the English ('judg-ment', 'Cove-nant', 'remem-berest') are correctly joined. Apart from the two findings above, the English matches word for word, including the 'plea:' colon and both parentheticals."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "996e1157-518d-40c1-86fe-1bd309a5adc4"
+  }
+}

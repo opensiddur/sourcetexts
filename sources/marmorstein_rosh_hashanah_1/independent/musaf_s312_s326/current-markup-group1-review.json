@@ -1,0 +1,54 @@
+{
+  "files_read": [
+    "/tmp/mahzor-s312/identity-guidelines-excerpts.txt",
+    "/tmp/mahzor-s312/current-markup-group1.json"
+  ],
+  "all_group_files_read": true,
+  "guideline_lines_applied": [
+    "40 (URN types; @project only on references, never on @corresp)",
+    "42 (@corresp carries the URN)",
+    "46-66 (project-root-relative file/fragment pointer for project_source_bibl, no extension)",
+    "174 (named subdivisions)",
+    "179 (rule 1: content-element scope)",
+    "180-184 (milestone scope termination; UNIT_CONTAINED_BY)",
+    "187 (terminator = unit without corresp)",
+    "193-199 (milestones for repeating units; independent of p structure; div for whole prayers)",
+    "209-215 (consistent units; explicit termination before unrelated material)",
+    "217-227 (seg for bounded quotation with source; milestone before span or quote-context milestones inside seg type=quotation; canonical @n; contextual URNs must not advertise partial quotation as the whole verse; no duplicated canonical URN)"
+  ],
+  "findings": [
+    {
+      "severity": "low (conditional; convention unverified)",
+      "file": "/tmp/mahzor-s312/integration-projects-v2/project/prayerbook_for_the_new_year-heidenheim-1965-he/musaf_kohanim_response_2_5.xml",
+      "location": "div[@corresp='urn:x-opensiddur:text:siddur:regalim/musaf/text/kohanim_response_2_5']/p[2]: milestone unit='navigation' corresp='urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/kohanim/dream_repeat' wrapping note type='instruction' with ref to 'urn:x-opensiddur:text:siddur:regalim/musaf/text/dream@prayerbook_for_the_new_year-heidenheim-1965-he' ('רבש״ע.')",
+      "problem": "The span this milestone covers holds only an instruction note, a printed cue to say the dream prayer, but it gets a `text:` URN. Line 40 lists `instruction` as its own URN type. Its `rosh_hashanah/...` path also sits inside a div whose correspondence is the generic `regalim/...` one. Because of rule 1 (line 179), the div's content scope therefore includes this HE-only cue whenever `kohanim_response_2_5@heidenheim` is resolved or transcluded. The cue is correctly outside every prayer-part, chapter and verse scope, and it is explicitly terminated.",
+      "guideline_evidence": "Line 40: the hierarchical URN starts with the type of the thing identified ('text', 'note', 'instruction', ...). Line 179: a URN on a non-empty element covers all of its content. Lines 211-213: terminate before unrelated material.",
+      "required_change": "Check against the existing project convention for navigation milestones; the supplied excerpts do not show one. If there is no established `text:`-typed navigation convention, use an `instruction:` URN for this cue. If the generic regalim div scope must not include it, move the navigation and note outside the div. Make no change to the English file unless the English page actually prints a matching cue (unverified)."
+    }
+  ],
+  "verified": [
+    "28 files: 14 HE/EN pairs (kohanim_berakhah, kohanim_response_1_1–1_3, 2_1–2_5, 3_1–3_5). Each pair has the same div @corresp and the same prayer-part, chapter and verse milestone @corresp set, apart from the HE-only navigation note in 2_5.",
+    "Headers: every idno type='urn' has @project and matches its file's div @corresp. No @corresp anywhere has a project suffix (line 40). sourceDesc uses ptr '/{project}/index#project_source_bibl' with no extension (lines 57-66).",
+    "Facsimiles follow page/n(scan−1).jpg under the 146–149 ↔ 312–319 pairing. Page 146: HE n311, EN n312. Page 147: HE n313, EN n314. The div @facs, pb @facs and biblScope agree in every file.",
+    "pb n='147' ed='1965' appears only at the start of kohanim_response_3_3, in both HE and EN, before any milestone. It does not split any scope.",
+    "Every opened prayer-part, chapter and verse milestone is explicitly terminated inside its own p, inner units first (verse → chapter → prayer-part), per lines 187 and 211-213. No scope relies on a closing p or div tag.",
+    "Priest single-word quotations (Num 6:24/25/26) and response verses use quote-context chapter/verse milestones with canonical @n placed before the source-bearing seg (line 219). The contextual corresp paths (…/priest/quotation/numbers/6/24, …/response/quotation/psalms/134/3, and so on) do not reuse the canonical bible URN, so partial words are not advertised as whole verses (lines 223-227).",
+    "kohanim_response_3_1 uses the line 220-223 variant: chapter/verse milestones inside seg type='quotation' with canonical @n (Ps 24:5, Prov 3:4), closed before the seg ends, while the enclosing prayer-part correspondence stays outside the seg. Both quoted verses are complete as printed, so the full-verse @source is accurate.",
+    "Within each project, the 14 div URNs are distinct and every milestone @corresp is prefixed by its own file's div URN. No duplicate identity was seen within either project.",
+    "No English linkage cues, labels or citations are encoded as prayer words in this group. The one instruction (HE 2_5) is a tei:note outside every word scope and has no @rend."
+  ],
+  "limitations": [
+    "Only the two permitted files were read. I could not check whether the regalim/musaf/text/kohanim_* URNs, the sub-IDs …/priest, …/response and …/verse with …/verse/1 and …/verse/2, or the ref target regalim/musaf/text/dream@heidenheim exist in the registry or reference database. So I cannot confirm that no new child duplicates an existing ID, or that this ref resolves.",
+    "kohanim_response_3_1 alone uses prayer-part '…/verse' with verse-unit corresp '…/verse/1' and '…/verse/2'. These are not children of its own chapter corresp '…/verse/quotation/psalms/24' and '…/verse/quotation/proverbs/3', and the pattern differs from the other files' '…/quotation/<book>/<ch>/<v>'. The guidelines allow this and it resolves through UNIT_CONTAINED_BY (line 182), but I could not check whether it reflects existing registry IDs. This is not reported as a finding.",
+    "No scans were viewed. The page-break position, HE-only status of the 2_5 cue, punctuation and sic/corr needs, and all word readings are unverified. Source readings and pointing are out of scope and remain UNACCEPTED (questions 473–489 open).",
+    "Group 1 contains none of the following, so they could not be reviewed here: the Hayom stanzas (1–4, 21–24, techaddesh/teqabbel, Amen placement), the cross-page Isa 56:7, Deut 6:25 as a variant of stanza 24, optional-clause condition controls, the two EN peace blessings, Hebrew-only late pages, printed labels 150–156 (sequential scans 320–326), and labels or citations as notes.",
+    "I did not run the 945-file validation or resolve URN ranges. Scope conclusions come from reading the XML against lines 179-187.",
+    "encoding_approved_except_source_readings is false because the registry and convention questions above cannot be resolved from the permitted files. It does not mean a definite encoding error was shown beyond the one conditional low finding. No overall batch or source acceptance is given."
+  ],
+  "encoding_approved_except_source_readings": false,
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "35a77030-9524-49df-a6ad-19feac48b0c9"
+  }
+}

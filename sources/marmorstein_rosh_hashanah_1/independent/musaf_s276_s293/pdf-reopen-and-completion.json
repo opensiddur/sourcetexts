@@ -1,0 +1,29 @@
+{
+  "artifacts": [
+    {
+      "profile": "documentary-hebrew",
+      "pages": 80,
+      "strict_reader_reopened": true,
+      "complete_EOF": true,
+      "exporter_reported_completion": true,
+      "english_new_end_present": false
+    },
+    {
+      "profile": "documentary",
+      "pages": 226,
+      "strict_reader_reopened": true,
+      "complete_EOF": true,
+      "exporter_reported_completion": true,
+      "english_new_end_present": true
+    },
+    {
+      "profile": "expanded",
+      "pages": 253,
+      "strict_reader_reopened": true,
+      "complete_EOF": true,
+      "exporter_reported_completion": true,
+      "english_new_end_present": true
+    }
+  ],
+  "execution_note": "The documentary exec wrapper returned143 after exporter PDF-complete messages; its finished artifact independently reopens in strict mode, has a complete EOF, and contains the new closing paragraph. Hebrew and expanded commands exited0. Artifact acceptance rests on these checks and visual review, not the wrapper status."
+}

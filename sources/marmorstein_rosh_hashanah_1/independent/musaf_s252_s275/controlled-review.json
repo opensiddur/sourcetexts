@@ -1,0 +1,56 @@
+{
+  "verdict": "changes_required",
+  "summary": "The diff stays within the minimal scope. canonical_home.contextual_controls is not added. prepare_documents still rejects segment controls in canonical_home units, and canonical_text and validate_pure_parts keep word hosts strictly plain. The rendering order is correct: close_references, then the segment pb (build.py:392), then the conditional with its note, then the speaker note, then the inline transclude, then endConditional. The new key check in validate_occurrences (set(segment) - CANONICAL_OCCURRENCE_KEYS) is stricter than the old denylist, which allowed marked, instructions, anchor and similar keys on pointers. Four things block approval: a whitelist key that was never approved, speaker support that is neither validated nor tested, receipt binding that misses enclosing condition scopes, and citation targets that check_target still doesn't cover.",
+  "findings": [
+    {
+      "priority": "medium",
+      "file": "opensiddur/importer/marmorstein_rosh_hashanah_1/realizations.py",
+      "line": 11,
+      "reason": "OCCURRENCE_CONTROL_KEYS adds 'speaker_before_reference'. The approved whitelist was exactly {conditions, condition_instruction, condition_instruction_language, speaker}, with 'all others stay rejected'. The key does nothing on a pointer: build.py:352 calls close_references() for canonical segments, so active_reference is None at build.py:479 and reference_marker is None at build.py:556. Through baseline.py:52 the same whitelist also lets validate_redirection accept it. Allowing an inert, unreviewed key widens the guard without any modeled meaning.",
+      "required_fix": "Remove 'speaker_before_reference' from OCCURRENCE_CONTROL_KEYS. If an accepted witness that must be redirected actually carries it, which matters because it is a protected baseline field, keep it only when 'speaker' is also present. In that case add a test showing the generated XML is byte-identical with and without the flag on a canonical pointer, and name the witness in the commit."
+    },
+    {
+      "priority": "medium",
+      "file": "opensiddur/importer/marmorstein_rosh_hashanah_1/realizations.py",
+      "line": 17,
+      "reason": "speaker is now whitelisted on canonical occurrence segments, but validate_occurrence_controls does no shape check on it, and no test covers it. A bad role or expansion is caught only at build time (build.py:533-543), not by the draft gate validate_occurrences. The review's tests_required explicitly asks for a passing speaker case.",
+      "required_fix": "In validate_occurrence_controls, require speaker to be a dict with either {role, label} where role is in ROLE_LABELS, or {abbr, expan} where expan resolves to a known role. Add tests: (a) a canonical pointer with speaker validates, and the rendered output has note[@type='description'][@corresp='urn:x-opensiddur:instruction:role/...'] immediately before the inline j:transclude; (b) with both conditions and speaker, that note sits inside the j:conditional, before the transclude and before endConditional; (c) an unknown role or expansion raises in validate_occurrences; (d) validate_redirection accepts a segment with speaker."
+    },
+    {
+      "priority": "medium",
+      "file": "opensiddur/importer/marmorstein_rosh_hashanah_1/realizations.py",
+      "line": 363,
+      "reason": "attesting_controls binds only the attesting pointer's own segment controls and its unit's controls. It misses conditional scopes opened by an earlier segment's condition_end_corresp that extend over the pointer (build.py:402-421). validate_redirection rejects condition_end_corresp only when it names the redirected identity (baseline.py:76), not when a scope spans it. So a part redirected from inside a multi-segment rite or holiday scope has its effective source condition left out of every caller's receipt, and changing that scope won't make the callers stale. This misses constraint 15 ('bind the stripped host controls into each caller's realization payload'). The list also follows readings['units'] order and has no segment position, so reordering units causes false staleness and two pointers in one attester can't be told apart.",
+      "required_fix": "For each attesting pointer, include its language, its segment index and the full stack of enclosing segment conditional scopes. Compute the stack the same way unit_document does: each earlier segment's conditions, marked, condition_instruction(_language) and condition_end_corresp whose end index is at or after the pointer's index. Sort entries by (stem, lang, segment index). Add a test where an earlier segment's condition_end_corresp scope covers a canonical pointer in another printing, and changing that scope's features changes the caller's realization payload."
+    },
+    {
+      "priority": "medium",
+      "file": "opensiddur/importer/marmorstein_rosh_hashanah_1/realizations.py",
+      "line": 305,
+      "reason": "Approved constraints 7 and 9 say check_target must reject library roots in citations, and that occurrence citations must not target a part identity, otherwise one printing's apparatus follows the shared words into every caller. The target-check loop covers reuse, repeat, transclude and repeat_cue, plus orders through check_order, but not unit['citations']. validate_redirection checks citations only once, before redirection, and only for the identities being redirected. Once these pointers carry printing-specific controls, nothing stops a later citation from targeting a pure root or part identity. The gap predates this diff, but it is part of the constraint set this change was approved under.",
+      "required_fix": "In validate_occurrences, walk every unit's citations (all languages, every 'target' and 'targetEnd' string) and call check_target(target, endpoint, literal=True). That rejects pure_roots, ranges over pure_ids and any pure_ids target. Add tests where a citation targeting a library root and one targeting a part identity both raise."
+    },
+    {
+      "priority": "low",
+      "file": "opensiddur/importer/marmorstein_rosh_hashanah_1/realizations.py",
+      "line": 363,
+      "reason": "Receipts will go stale: every fidelity entry now has an 'attesting_controls' key, even when it's an empty list. So every existing realization/* payload with a canonical pointer changes hash and all previously accepted realization reviews become stale. That is correct behaviour, but it must not be cleared by bulk re-stamping. Separately, adding any new attester to a shared part invalidates every caller of that part.",
+      "required_fix": "No code change. The data integration must list the realization reviews made stale by this change, and re-review each one against its new payload. Do not regenerate receipts automatically."
+    }
+  ],
+  "required_integration_evidence": [
+    "A full test-suite run (importer and build tests, not only the two touched files) with the exact command line recorded. /tmp/mahzor-s254/controlled-occurrences-tests.log shows '41 passed' but neither the command nor which files were run.",
+    "Against the real readings.json, unchanged: validate_occurrences passes, and an inventory shows that no existing explicit canonical pointer and no canonical_home-generated context pointer carries a key outside CANONICAL_OCCURRENCE_KEYS. This matters because marked, instructions, language, anchor, edition_label and deferred_page_boundary used to be tolerated, and prepare_documents (realizations.py:446-447) leaves source_reference_end and source_reference_part on generated context pointers, which are now rejected. Also list every accepted witness that carries speaker_before_reference.",
+    "validate_redirection run on each real witness stem and identity before re-pointing (yismechu/text, offering_formula/text, offering_formula/ushenei_seirim, offering_formula/useir_lekhapper/text), and validate_baseline passing against the unchanged accepted baseline file afterwards. Also a readings diff showing only UNIT_MAPPING_FIELDS and SEGMENT_MAPPING_FIELDS changed.",
+    "Real canonical_parts libraries pass validate_pure_parts and the literal-attestation check, and the generated library XML has no pb, note, conditional, declare, head, div@corresp or publication idno.",
+    "Actual compile projections, not only validator runs. Yismechu with the shabbat setting unknown, true and false. Uminchatam/ushenei_seirim with rite unknown, frankfurt_am_main=true and frankfurt_am_main=false. Show the exact word sequences and that the rubric appears only when the setting is unknown. Each library's words appear exactly once per project.",
+    "Generated context XML keeps the exact pb n and facs positions, including a conditioned pointer that starts a new page (pb before j:conditional, with no duplicate pb).",
+    "Receipt evidence: the list of realization reviews made stale by the new attesting_controls field, each re-reviewed. On real data, changing an attester's segment or enclosing-scope condition makes every caller of that part stale, and changing library words changes every caller's resolved_sha256.",
+    "Still pending and outside this diff: scope-fidelity checks from generated XML against canonical_text for every part identity (he and en), and the audit of Aleinu end_reference callers. Neither should be treated as done."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "f1e2769f-6ac6-47a3-8564-b170982e90ac"
+  }
+}

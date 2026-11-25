@@ -1,0 +1,78 @@
+{
+  "scope": "bindings_6",
+  "approved": false,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_6-0.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_6-1.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_6-2.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_6-3.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_6-4.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_6-5.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_6-6.json"
+  ],
+  "blocking_findings": [
+    {
+      "file": "bindings_6-0.json",
+      "record": "realization/musaf_repetition_shofarot_verses/en",
+      "issue": "Probable wrong canonical scripture identity: the verse 'And all the people perceived the thunderings…' is bound as source urn:x-opensiddur:text:bible:exodus/20/18, with corresp .../quotes/exodus_20/18 and intro id intro_exodus_20_18. That is the English/KJV verse number. In Hebrew (Masoretic) numbering this verse is Exodus 20:15, and Hebrew 20:18 is a different verse. The same record uses Hebrew numbering for the Psalms (psalms/47/6, psalms/81/4, psalms/81/5; in KJV numbering these are 47:5, 81:3 and 81:4). So the versification is mixed within one record, and the Exodus binding most likely follows the publication's or the English versification instead of the canonical one.",
+      "required_action": "Confirm which versification the canonical bible namespace uses. If it is Masoretic, rebind source, corresp, chapter wrapper and intro id to exodus/20/15, and fix the Hebrew counterpart and any shared canonical ids to match."
+    },
+    {
+      "files": [
+        "bindings_6-3.json",
+        "bindings_6-4.json"
+      ],
+      "records": [
+        "realization/musaf_repetition_shofarot_areshet/he",
+        "realization/musaf_repetition_shofarot_areshet/en"
+      ],
+      "issue": "Canonical condition identities look publication-specific and language-specific. Both wording_selection and source_fidelity.settings use urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/{en,he}/first_printing and .../{en,he}/zikhronot_printing. These sit in the canonical prayer condition namespace but are named after where the variant was printed in this edition ('first_printing', 'zikhronot_printing'), and they are split by translation language (en/he). As a result the Hebrew realization sets English-language conditions and the English realization sets Hebrew ones. Only teqiot_veseder_shofarot reads like a liturgical variant identity.",
+      "required_action": "Either show that these condition URNs were already accepted as canonical identities and describe a real liturgical or wording distinction, or rename them to content-based canonical variant identities. Translation-specific wording choices should live in the translation or publication layer, not as language-keyed canonical prayer conditions."
+    }
+  ],
+  "nonblocking_findings": [
+    {
+      "files": [
+        "bindings_6-3.json",
+        "bindings_6-4.json"
+      ],
+      "issue": "I could not reconcile some source_fidelity hashes with the fragment hashes from this projection alone. For the marked zikhron segment, literal_sha256 equals the fragment text_sha256 (he 43b58ded…, en 19565795…). For the opening and conclusion segments it does not: he opening literal fe434c06… vs fragment 04ce6978…; he conclusion d1e23c51… vs df454d9a…; en opening 2fda3fe4… vs f7dc3b5f…; en conclusion 0ddf0d7f… vs 252a8bda…. This may be legitimate, for example if the literal hash is taken over a normalized or wording-resolved form, but nothing in the projection shows that.",
+      "suggested_action": "Have whoever reviews the full payload confirm what literal_sha256 covers for unmarked segments."
+    },
+    {
+      "files": [
+        "bindings_6-1.json",
+        "bindings_6-2.json",
+        "bindings_6-3.json",
+        "bindings_6-4.json"
+      ],
+      "issue": "The same printed words on page 144 (s308 he / s309 en) are bound twice: once as the marked, Shabbat-conditioned zikhron segment inside shofarot_areshet, and once as the standalone areshet_zikhron_words unit (fragment hashes 718d1a…/b5cc04… equal the literal_content hashes). The standalone unit has no Shabbat condition. That is only correct if the order layer supplies the condition wherever the unit is used.",
+      "suggested_action": "Confirm the double binding is intended and that the order group checked the Shabbat scoping around areshet_zikhron_words."
+    },
+    {
+      "file": "bindings_6-0.json",
+      "issue": "Correction id 'musaf_weekday_psalm150_missing_quote' says 'weekday', which is misleading for a Rosh Hashanah musaf shofarot correction. The correction also names no target segment or corresp, so it can only be tied to Psalms 150:6 through text (the sic length of 48 matches the 150:6 fragment's 48 characters).",
+      "suggested_action": "Consider renaming the id and adding an explicit segment binding."
+    },
+    {
+      "file": "bindings_6-0.json",
+      "issue": "The Psalms 47:6 entry, which runs across the s305→s307 page break, is encoded differently from the other verses: no corresp and no reference_unit, with source_reference/source_reference_corresp used instead. The identity it points to (.../quotes/psalms_47/6) matches the pattern, so I see no semantic error.",
+      "suggested_action": "Confirm the Hebrew counterpart uses the same canonical corresp for Psalms 47:6."
+    }
+  ],
+  "scope_limitations": [
+    "Only the metadata projections were reviewed. Text values are hashes and were not checked against source words, as the scope requires.",
+    "I could not verify the versification convention of the canonical bible namespace directly. The Exodus 20:18 finding rests on Masoretic numbering and on the record mixing numbering systems internally.",
+    "I had no access to the Hebrew counterpart of shofarot_verses, the musaf_areshet_sefatenu or zikhronot_areshet records, or the order and navigation payloads. Cross-record identity agreement and order-level condition scoping are taken from the attesting_controls as given.",
+    "Whether the areshet_sefatenu condition URNs were previously accepted canonically cannot be determined from these files.",
+    "final_sha256 could not be recomputed because the full canonical payload was not provided."
+  ],
+  "verdict": "Not approved. I read all seven files and completed every assigned metadata check. There are two blocking issues. (1) The shofarot verses record binds 'all the people perceived the thunderings' to bible:exodus/20/18, which is the English/KJV number, while using Masoretic numbering for the Psalms in the same record; the canonical verse is most likely Exodus 20:15. (2) The areshet_sefatenu wording conditions are canonical prayer conditions named after where this edition printed the variant and split by language (en/he first_printing / zikhronot_printing). The ken_tagen_words and areshet_zikhron_words records show no binding or identity defects on their own.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "2dd2ea85-4a6f-4123-972c-a246230e2f3f"
+  }
+}

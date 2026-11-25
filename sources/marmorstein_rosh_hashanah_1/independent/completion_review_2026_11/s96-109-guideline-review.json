@@ -1,0 +1,104 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "scope": "Structural and JLPTEI-3 guideline audit of physical scans 96–109 (printed pp. 34–41). Covered the HE (prayerbook_for_the_new_year-heidenheim-1965-he) and EN (prayerbook_for_the_new_year-marmorstein-1965-en) bodies and standOff in /tmp/mahzor-backlog/s96-109-current-xml.xml, both current-readings.json dossiers, the human decisions file human_morning_s96_s109_snippets_1_to_5.json, and the morning sequence in machzor_expanded-opensiddur-he/index.xml lines 1480–1529. This does not accept source wording, fine marks or citation wording.",
+  "approved_for_guidelines": false,
+  "findings": [
+    {
+      "severity": "major",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/el_adon.xml and prayerbook_for_the_new_year-marmorstein-1965-en/el_adon.xml",
+      "location": "Bundle line 23 (HE): j:conditional xml:id=\"el_adon_segment_2\" with its note \"אַם שַׁבָּת.\", up to j:endConditional target=\"#el_adon_segment_2\" before stanza 3. Bundle line 325 (EN): the same id with note \"On Sabbath.\", inserted between \"merit and equity are\" and \"before His throne\".",
+      "problem": "This nested conditional repeats the whole poem's own condition (el_adon_condition, shabbat=true), so it adds no liturgical meaning. The printed \"אם שבת\" here is a running marker at the top of p. 38 for the Shabbat layer, not a condition on one couplet. Encoding it as a conditional causes three problems. (1) When Shabbat is undefined, the instruction and a closing delimiter print in the middle of stanza el_adon/2. (2) The HE and EN scopes differ: HE covers the whole couplet זכות…כבודו, while EN starts mid-sentence and leaves \"merit and equity are\" outside. (3) It suggests that only this line depends on Shabbat.",
+      "fix": "Delete the el_adon_segment_2 j:conditional, including its tei:note, and its j:endConditional in both files. Keep the tei:pb n=\"38\" exactly where it is. If the top-of-page marker must be kept, record it in the source README or dossier as page furniture, not as a condition."
+    },
+    {
+      "severity": "major",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/yotzer_barukh_kevod.xml and prayerbook_for_the_new_year-marmorstein-1965-en/yotzer_barukh_kevod.xml",
+      "location": "Bundle line 189 (HE) and line 469 (EN): tei:seg source=\"urn:x-opensiddur:text:bible:ezekiel/3/12\"",
+      "problem": "The quotation covers only בָּרוּךְ כְּבוֹד־ה׳ מִמְּקוֹמוֹ, which is the part of Ezekiel 3:12 after the etnachta on גָּדוֹל. A whole-verse source claims וַתִּשָּׂאֵנִי רוּחַ… as well, which is not printed. This breaks the sub-verse scope rules.",
+      "fix": "In both files, set source=\"urn:x-opensiddur:text:bible:ezekiel/3/12/b\". Keep the local corresp quoted_ezekiel_3_12. The EN seg may keep the /b reference; a translation that lacks half-verses resolves to the whole verse with a logged warning. Then run validate_urn_references."
+    },
+    {
+      "severity": "major",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/yotzer_qadosh.xml and prayerbook_for_the_new_year-marmorstein-1965-en/yotzer_qadosh.xml",
+      "location": "Bundle line 284 (HE) and line 564 (EN): tei:seg source=\"urn:x-opensiddur:text:bible:isaiah/6/3\"",
+      "problem": "The quotation starts at קָדוֹשׁ and leaves out וְקָרָא זֶה אֶל־זֶה וְאָמַר. It also runs past the etnachta on צְבָאוֹת, so neither /a nor /b fits. A whole-verse source over-claims.",
+      "fix": "Point source at a verse-part that starts at קדוש, e.g. urn:x-opensiddur:text:bible:isaiah/6/3/qadosh. A verse-part runs to the end of the verse, and a half-verse milestone does not end it. Check that opensiddur/common/subverse.py already declares isaiah/6/3/qadosh, which Kedushah needs; if not, declare it there. Apply the same source in both files."
+    },
+    {
+      "severity": "major",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/lael_asher_shavat.xml and prayerbook_for_the_new_year-marmorstein-1965-en/lael_asher_shavat.xml",
+      "location": "Bundle line 71 (HE) and line 356 (EN): second quotation, tei:seg source=\"urn:x-opensiddur:text:bible:psalms/92/2\" (טוֹב לְהֹדוֹת לַייָ / \"it is good to thank the Lord.\")",
+      "problem": "Only the first half of Psalms 92:2 is quoted, up to the etnachta on לַיהוָה. וּלְזַמֵּר לְשִׁמְךָ עֶלְיוֹן is not printed. The verse has no ole-we-yored, so the accentual half-verse applies.",
+      "fix": "In both files, set source=\"urn:x-opensiddur:text:bible:psalms/92/2/a\". The local corresp quoted_psalms_92_2 can stay."
+    },
+    {
+      "severity": "medium",
+      "file": "machzor_expanded-opensiddur-he/index.xml",
+      "location": "Lines 1509–1511: bare j:transclude of prayer:yotzer_or/hakol_yodukha, poem:el_adon and prayer:yotzer_or/lael_asher_shavat. Compare section_yotzer_weekday at lines 1492–1508.",
+      "problem": "The weekday block is wrapped in a labelled conditional (ביום חול / On a weekday). The Shabbat block is not wrapped at all. When Shabbat is undefined, only Hakol Yodukha carries a rubric (its own \"אם שבת\" plus a closing delimiter). El Adon and La-El Asher Shavat sit in self-gated conditionals with no instruction, so they print with no delimiters and look unconditional. The Shabbat alternative breaks into three differently marked pieces, and the sequence is not symmetrical.",
+      "fix": "Wrap lines 1509–1511 in a tei:div xml:id=\"section_yotzer_shabbat\". Give it a j:conditional whose instruction note reads (he) אם שבת and (en) On the Sabbath, testing holiday-aggregate shabbat=true, and put a j:declare of shabbat=true inside it. The declaration settles the files' own Shabbat conditions inside the block, so Hakol Yodukha's own rubric is not printed twice."
+    },
+    {
+      "severity": "minor",
+      "file": "machzor_expanded-opensiddur-he/index.xml",
+      "location": "Lines 1492–1508: section_yotzer_weekday",
+      "problem": "This running-order conditional sets shabbat to a single value (false) but declares nothing inside it. Other gated sections in the index, such as section_maariv_veshamru and section_morning_qorbanot_shabbat, include a j:declare. The guideline says to declare the fixed value so that the section's own conditions are settled.",
+      "fix": "Add a j:declare xml:id=\"section_yotzer_weekday_settings\" with holiday-aggregate shabbat=false around the two transclusions, closed by a matching j:endDeclare."
+    },
+    {
+      "severity": "minor",
+      "file": "All HE and EN files in scope that quote a verse inside a prayer (morning_numbers_14_17, morning_psalm_25_6, morning_barekhu, lael_asher_shavat, yotzer_qadosh, yotzer_barukh_kevod, yotzer_lael_barukh)",
+      "location": "For example, bundle line 146: tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/morning_numbers_14_17/1\" n=\"17\"",
+      "problem": "Under Versification, a unit=\"verse\" milestone must carry a canonical bible URN. These carry local siddur/prayer URNs; the canonical identity is only in seg/@source. Avoiding a second copy of a canonical URN is correct, but the unit name implies a canonical verse. This pattern appears to be project-wide.",
+      "fix": "If the project has no ruling on this yet, use a non-canonical unit for these local quotation anchors (e.g. unit=\"quotation\"), or keep the convention and document it in the project README. Either way, apply it the same way in HE and EN. Optionally rename the local URN suffix .../morning_numbers_14_17/1 and .../morning_psalm_25_6/1 to the quoted_<book>_<ch>_<v> pattern used elsewhere."
+    },
+    {
+      "severity": "minor",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/yotzer_hameir.xml and prayerbook_for_the_new_year-marmorstein-1965-en/yotzer_hameir.xml",
+      "location": "Bundle line 251 (HE) and line 531 (EN): tei:milestone unit=\"verse\" corresp=\"urn:x-opensiddur:text:bible:psalms/104/24\"",
+      "problem": "This is the only quotation inside a prayer in scope that uses the canonical bible URN as its corresp. Every sibling quotation uses a local quoted_* URN. It is valid only if Psalms 104:24 appears nowhere else in either project; if it does, only one copy can be reached by that URN.",
+      "fix": "Confirm Psalms 104:24 is unique in both projects. If it is not, or if you want the files consistent, change the corresp to urn:x-opensiddur:text:prayer:yotzer_or/hameir/quoted_psalms_104_24 in both files and keep source=\"…psalms/104/24\"."
+    },
+    {
+      "severity": "cosmetic",
+      "file": "HE and EN lael_asher_shavat, morning_*, yotzer_* files with quotations",
+      "location": "Pairs such as tei:milestone unit=\"chapter\" n=\"92\"/ … tei:milestone unit=\"chapter\"/, repeated for each verse (bundle lines 71 and 356)",
+      "problem": "A chapter milestone with no corresp is a terminator under rule 3, even when it has n. It opens nothing, so these pairs are purely for display and are redundant. In lael_asher_shavat the chapter is closed and reopened between two verses of the same chapter.",
+      "fix": "Optional: remove the bare chapter pairs, or use one per quotation group. This does not change resolution."
+    },
+    {
+      "severity": "cosmetic",
+      "file": "Several HE and EN files",
+      "location": "Trailing double spaces, e.g. after וּמַמְלִיכִים (bundle line 292), after מְשַׁבֵּחַ וְאוֹמֵר (line 71) and after the el_adon stanzas",
+      "problem": "Uneven whitespace before milestones and at the end of paragraphs.",
+      "fix": "Optional: normalize to a single space."
+    }
+  ],
+  "verified": [
+    "HE and EN share the same correspondences, unit by unit: ahavah_rabbah (div plus prayer-parts ahavah and vahavienu, closed by a terminator), melekh_azur_gevurah stanzas 1–26, el_adon stanzas 1–6, khevodo_ihel stanzas 1–6, morning_barekhu call/response/yitbarakh plus quoted_psalms_113_2, morning_kaddish yitgaddal/yehe_shemeh/yitbarakh, and the div-level URNs for the other yotzer components, or_olam_beotzar_chayyim and yishtabbach. Every milestone sequence that needs a terminator has one.",
+    "All five human decisions are reflected in the XML: (1) the melekh_azur_gevurah commentary text, as a standOff note targeting the poem; (2) תִחֵת in stanza 24 and תָּר in stanza 25; (3) אִהֵל in khevodo_ihel/1; (4) the Isaiah 6:3 accents darga and tevir on dalet, merkha on the second yod, etnachta on alef, merkha on lamed, tipcha on alef, siluk on dalet, and a paseq after the first קדוש; (5) קַנֹּא קִנֵּא גָּאֹה גָאָה. The canonical Ofan URN poem:khevodo_ihel is used in both languages and in the index.",
+    "Scope checked against the canonical verses, as written in the source: Numbers 14:17, Psalms 25:6, Psalms 113:2, Psalms 104:24, Psalms 136:7 and Psalms 92:1 are whole verses and correctly cited as whole verses.",
+    "Notes and descriptions: the source citations (the melekh_azur_gevurah author/acrostic note, אופן. ע״ס א״ב., and וי״א קשוב קול זכירה מזוכרי) are tei:standOff type=\"notes\" commentary. The וי״א note has j:condition as its first child. Speaker rubrics (ח׳, קו״ח, פֿאָרבעטער:, געמיינדע:, Reader:, Congregation:, חזן) are type=\"description\" with role instruction URNs. The condition rubrics (אַם שַׁבָּת. / On the Sabbath. on hakol_yodukha, אם שבת on khevodo) are the conditional's own tei:note type=\"instruction\". \"The Reader says half Kaddish.\" is a description placed after the minyan conditional.",
+    "Marked variants in khevodo_ihel stanza 5 behave correctly. HE segment_18 (weekday, no rubric, no type) prints bare when undefined. HE segment_19 and EN segment_6 are type=\"marked\" and match the printed parentheses: when Shabbat is undefined they print in brackets, with the HE instruction אם שבת; when true they print without brackets; when false they are omitted. Descriptions inside the conditioned scope come and go with it.",
+    "The minyan conditionals on morning_numbers_14_17, morning_psalm_25_6, morning_kaddish and morning_barekhu have no instruction and no type, so they are processor directions, as the running-order rule requires.",
+    "Page references: every tei:pb has ed=\"1965\" and the printed page in n (34–41), and facs follows the scan scheme consistently (HE n95–n109 = scans 96–110, EN n96–n110). The weekday stream (hameir pb 37 and 38) and the Shabbat stream (hakol_yodukha pb 37, el_adon pb 38) each carry their own page breaks, so page navigation still works whichever stream survives. Page numbers are not reused as corresp.",
+    "Expanded sequence at index.xml lines 1480–1520: Yishtabbach → Numbers 14:17 → Psalms 25:6 → half Kaddish → Barekhu → Yotzer opening → Or Olam → Melekh Azur Gevurah → weekday (hameir, el_barukh) → Hakol Yodukha → El Adon → La-El Asher Shavat → Titbarakh → Et Shem → Qadosh → Kevodo Ihel → Veha-ofannim → Barukh Kevod → La-El Barukh → Or Chadash → Ahavah Rabbah. Every unit from scans 96–109 appears once, in source order, by canonical URN.",
+    "There is no rite-specific text and no opensiddur:rite condition in scans 96–109, so this range has no edition-rite question."
+  ],
+  "limits": [
+    "This review does not accept source wording, vocalization, punctuation, sic/corr choices (EN \"Name.\"→\"Name,\" and \"prophesy\"→\"prophecy\"), language tags on rubrics, or citation text; those belong to the separate image review.",
+    "I had only a file reader, with no search or validator, so I did not run the schema, refdb, validate_urn_references or validate_versification. I could not confirm against the registry or subverse.py that isaiah/6/3/qadosh is declared, or that Psalms 104:24 is unique in either project.",
+    "The bundle has bodies and standOff only, no headers. The standOff blocks appear before tei:text in the bundle; I assume that is extraction order and did not check the order inside the actual files.",
+    "The dossier's documentary_instructions (s102 \"אם שבת ווירד דאס אונטענשטעהענדע הכל יודוך געבעטעט\" and s103 \"On the Sabbath הכל יודוך which is printed below, is said here\") are not in any bundled file. I did not inspect the source projects' own index.xml running order, so I could not check how, or whether, those directives and any page reference are encoded there.",
+    "I inspected the expanded index only around the morning sequence (lines 1–150, 700–1000 and 1380–2000). Outside this scope, I noticed that the index uses inconsistent rite feature names (frankfurt at line 982, frankfurt_am_main at lines 1625 and 1949); this needs a separate review.",
+    "I checked half-verse placement (Ezekiel 3:12 /b, Psalms 92:2 /a) against standard Masoretic accentuation, not by opening the tanakh-wlc-he project."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "68f6dea5-598f-4409-9e9f-e180326f0302"
+  }
+}

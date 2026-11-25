@@ -1,0 +1,29 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "approved": false,
+  "issues": [
+    {
+      "file": "/tmp/mahzor-s86/index-excerpts.xml",
+      "location": "documentary_index_tail[@project='prayerbook_for_the_new_year-heidenheim-1965-he'], final j:transclude (bible:psalms/24), compared with documentary_index_tail[@project='prayerbook_for_the_new_year-marmorstein-1965-en'] and the expanded_morning_section transclusion of prayer:yishtabbach",
+      "problem": "The Hebrew documentary sequence puts psalms/24 straight after yishtabbach, with nothing between them. The English documentary tail and the expanded section both end at yishtabbach, and neither contains psalms/24. The unit is meant to stop before the half Kaddish on pp. 96/97, but the excerpt does not show whether Psalm 24 is printed before that Kaddish (in this unit's scope) or belongs to a later unit. As it stands, the 'one bilingual sequence' claim and the stopping point are not consistent with the Hebrew index.",
+      "required_fix": "Confirm where psalms/24 sits relative to the half Kaddish. If it comes before the Kaddish, add it to the expanded section after yishtabbach (with a j:conditional if it is occasion-specific), using the existing canonical identity. If it belongs to a later unit, say so in the unit record so the Hebrew-only tail item is explained and the expanded section's end point is justified."
+    }
+  ],
+  "observations": [
+    "Expanded order from vayevarekh_david to yishtabbach matches both documentary tails item for item. The differences are intended: the Hebrew-only exodus/15/19 is present, and the az_yashir module is broken into a range plus a separate 15:18. No English 15:19 or other translator was added.",
+    "Line 351: the range starts at a canonical Bible URN (bible:exodus/15/1) and ends at a module-internal siddur URN (az_yashir/quoted_exodus_15_18). I could not check this against the module XML, which was out of scope. Please confirm that both endpoints resolve in the same text stream in both projects, that the English az_yashir module has an equivalent end point so parallel rendering is not cut short, and that the separate bible:exodus/15/18 transclusion resolves to one occurrence of 15:18, so the verse appears exactly twice and not once or three times.",
+    "The standing rubric is a point tei:note[@type='instruction'] placed just before vayevarekh_david. That matches the guideline's 'Rise.' example, and because it opens no range, its 'until after ברכו' wording can run past the end of this unit without any scope problem. In the documentary index it appears only in the Hebrew project, with facs n85, as instructed. You could optionally add an urn:x-opensiddur:instruction: corresp so the rubric can be swapped between sources.",
+    "Structure is sound: one div root (section_morning), j:declare/j:endDeclare correctly nested in the inner div, and j:endConditional for section_morning_condition placed after it. The German-rite Torah-blessing conditionals (laasoq through ellu_devarim earlier for other rites, later for German) and the Shabbat qorbanot conditional with its declare are unchanged. No Birnbaum rite substitutions appear.",
+    "All new transclusions reuse existing canonical identities. The numeric Bible references (exodus/15/1, 15/18, 15/19) are used as canonical references, not new identities.",
+    "Pre-existing and outside this sequence: the expanded section repeats Psalm 150 with canonical bible:psalms/150/6, while the Hebrew index uses siddur:rosh_hashanah/psalm_150_repeat, and the Psalm 91 repeat uses a siddur identity. This is an inconsistency to look at separately.",
+    "Hebrew marks and pointing were not assessed. That belongs to the separate source-image review, and the user's questions there are still open."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "8e53e75f-9217-4553-9a11-4202ea57935c"
+  }
+}

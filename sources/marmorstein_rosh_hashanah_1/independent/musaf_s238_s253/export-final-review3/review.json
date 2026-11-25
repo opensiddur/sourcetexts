@@ -1,0 +1,40 @@
+{
+  "exporter_fix_approved": true,
+  "export_qa_approved": true,
+  "source_amendment_approved": true,
+  "previous_findings_closed": [
+    "Medium finding from review2 (documentary Tisgav/Veyeetayu regression caused by the M1 direction-run break): closed. In reledmac.xslt, the note-direction-runs template (lines 4116–4129) now separates runs only when four things are all true: $separate is set (OSInstructionBlock only); the note has no non-whitespace direct text; it has at least one tei:foreign[@xml:lang]; and every child element is a tei:foreign[@xml:lang]. Every other note goes to the plain apply-templates branch, unchanged. A \\newline is emitted only before the second and later foreign children, so a note that is one whole-span foreign child gets no break. Whitespace-only text nodes are skipped there, which is the 'trims structural whitespace' behaviour. An EN instruction with direct prose and one embedded he word fails the empty(text()[normalize-space()]) test, so it stays fully inline. This is the narrowing review2 asked for.",
+    "Render check of the documentary PDF: closure-documentary-11.png (printed p. 9) shows the English Tisgav rubric inline as 'In Frankfurt a. M. and many congre-gations תשגב is not said.' (bold, two lines, natural wrap only). closure-documentary-12.png (printed p. 10) shows the Veyeetayu rubric inline as 'In Fuerth and other communities the reader now sings: ויאתיו but in Frankfurt a. M., Metz and many communities this prayer is omitted.' Neither has a forced break around the Hebrew word, and no words are lost or reordered. The facing Judeo-German rubrics, the סוגרים הארון cue, the standalone חזן cue and the [ ]/↗ optional-clause marks on p. 10 are unchanged from the accepted state. Both rubrics read as they did before the broad fix.",
+    "TeX and evidence check: narrow-rule-projection-check.json gives the actual documentary TeX as 'In Frankfurt a. M. and many congregations \\texthebrew{\\OSForeign{תשגב}} is not said.' with no \\newline (english_foreign_word_stays_inline=true). expanded-closure-unchanged.json records expanded_tex_byte_identical=true (sha256 28429414…). So the expanded-final-review.pdf and accepted-expanded-03..14 approvals from review2 still hold. documentary-closure-log-evidence.json gives the new PDF sha256 92d173b5… with no overfull hboxes and no missing glyphs, plus sha256 for closure-documentary-03..14.",
+    "Tests: standalone-rubric-tests-closure.log shows 471 passed and 179 subtests passed. That is one more than review2's 470, which matches the added negative test.",
+    "M1 (bilingual rubric reading order): now closed for both views. The expanded side was closed in review2 and its TeX is byte-identical. The documentary side no longer regresses.",
+    "M2, M3, L4, L5, L6, L8, L9, L10 stay closed as recorded in review2. L7 stays a non-blocking cosmetic acknowledgement. None was reopened. The source amendment approval (Ps 84:5 יְהַלֲלֽוּךָ, Ps 145:2 וַאֲהַלֲלָה) is carried forward from review2. The 36-state, 12 page-break, 24 browser and 4 morning-case approvals in review2 still stand."
+  ],
+  "findings": [],
+  "inspected_files": [
+    "/tmp/mahzor-s238/export-final-review2/review.json",
+    "/home/efeins/.codex/worktrees/conditional-rubric-keep/master/opensiddur/exporter/tex/reledmac.xslt (lines 1–1080, 3000–3600, 3900–4400; in particular the instruction-note emit template 3900–3946, note-content 4077–4111, note-direction-runs 4113–4129, tei:foreign emit templates 3516–3566)",
+    "/tmp/mahzor-s238/integration-v1/qa/closure-documentary-11.png",
+    "/tmp/mahzor-s238/integration-v1/qa/closure-documentary-12.png",
+    "/tmp/mahzor-s238/integration-v1/qa/documentary-closure-log-evidence.json",
+    "/tmp/mahzor-s238/integration-v1/qa/narrow-rule-projection-check.json",
+    "/tmp/mahzor-s238/integration-v1/qa/expanded-closure-unchanged.json",
+    "/tmp/mahzor-s238/standalone-rubric-tests-closure.log"
+  ],
+  "nonblocking_limitations": [
+    "I did not read the test source. The positive test that mirrors the actual two-foreign expanded blocks and the negative test for the embedded documentary word are accepted on the strength of the 471-passed log and the actual TeX and render evidence, which shows exactly the asserted behaviour.",
+    "The projection proof quotes only the Tisgav TeX. Veyeetayu inline behaviour is verified from the render (closure-documentary-12.png) and from the code path, which is the same: direct EN prose plus one he foreign falls to the inline branch.",
+    "I did not open documentary-closure-review.pdf directly or closure-documentary-03..10/13/14. The verdict rests on the two affected pages and the clean log evidence. I did not recompute any sha256, and I did not verify that final-screenshot-manifest.json was updated to point at the closure-documentary set.",
+    "A whole-span single-foreign block note now drops its surrounding whitespace text nodes. That is harmless in TeX, and the expanded output is byte-identical. I did not separately diff documentary TeX against the pre-broad-fix documentary TeX for other single-foreign notes.",
+    "Cosmetic: the justified bold Veyeetayu rubric on documentary p. 10 has visibly loose word spacing around 'a. M., Metz'. It reads correctly.",
+    "Optional cosmetic issues from review2 remain non-blocking: the placement of the standalone actor cue column and the gap after 'קהל וחזן' in the expanded view, the RTL-inherited right alignment of English rubric lines in expanded pp. 9–10, the general layout of the documentary p. 10/11 row split, and the empty 'Metadata' heading in the back matter.",
+    "PR310 (separate final commit 3105362fa4) and the combined QA commit 699377f are still unmerged release dependencies. Merging them is not a condition of content acceptance.",
+    "The full cumulative PDFs, now rendering with the same final exporter, are not covered here. Their log and destination checks are to be recorded separately.",
+    "No settled reading, encoding, alignment, order, canonical scope or other pointing was reopened, and there is no unresolved source question."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "16ab1c6a-0add-4f64-a309-74b4580836bd"
+  }
+}

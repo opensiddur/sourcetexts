@@ -1,0 +1,34 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "crops": [
+    {
+      "file": "/tmp/psalms-s70/earlier-hallelu-s8.jpg",
+      "first_lamed_vowel": "hataf-patah",
+      "evidence": "In הללויה, the he has a patah bar under it. Under the next letter, the rightmost lamed, there is a second horizontal bar with two dots stacked vertically beside it, which is the hataf-patah shape. A plain sheva would be just the two dots with no bar. The second lamed has no mark of its own and is followed by shuruq vav."
+    },
+    {
+      "file": "/tmp/psalms-s70/earlier-hallelu-s9.jpg",
+      "first_lamed_vowel": "hataf-patah (low-medium confidence)",
+      "evidence": "This crop is smaller and blurrier. The he has a patah bar. Under the first lamed there seems to be a short bar with dots next to it, so it reads as hataf-patah rather than two dots alone. The marks are close together and partly merge with the patah under the he."
+    },
+    {
+      "file": "/tmp/psalms-s70/earlier-hallelu-s28.jpg",
+      "first_lamed_vowel": "hataf-patah (medium confidence)",
+      "evidence": "Below the he and the first lamed there is a clear run of marks: bar, vertical pair of dots, bar. One bar is the patah of the he. The pair of dots comes with a second bar, which only makes sense as hataf-patah on the first lamed. A plain sheva would leave the extra bar unexplained."
+    }
+  ],
+  "uncertainties": [
+    "I could only view each image at the size it was given. I had no pixel-level zoom or measurement, so I judged the marks by eye.",
+    "In s28 the marks run left to right as bar, dots, bar. In a standard hataf-patah the dots sit to the left of the bar, so this order doesn't exactly fit a plain patah followed by a hataf-patah. It might be how the typeface spaces the marks, or a meteg/ga'ya mixed in. Even so, the second bar is hard to explain as plain sheva.",
+    "s9 is the weakest reading because of its resolution. A higher-resolution or tighter crop of just the he and first lamed would settle it.",
+    "The patah bar under the he sits right next to the marks under the first lamed in every image. That makes it hard to tell which bar belongs to which letter, and it's the main reason a plain sheva could be misread as hataf-patah, or the reverse."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "f2418a1f-57fb-4cca-a220-109bd7379ff9"
+  }
+}

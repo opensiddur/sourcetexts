@@ -1,0 +1,125 @@
+{
+  "verdict": "changes_required",
+  "findings": [
+    {
+      "severity": "high",
+      "location": "order-review-bundle.json phase.expanded_sequence > musaf_hayom_inclusion > musaf_hayom_cantor_repeat conditions; phase.mode_interpretation.hayom_only",
+      "problem": "The cantor's repeat of Hayom is switched on for musaf_shabbat_responses=hayom_only, and mode_interpretation records hayom_only as [1,0,1,0]. The source does not say this. s274 gives this custom only as ויש שאומרים היום אבל לא ארשת and says nothing about a repeat. The list can be read either way: as a rising sequence, which would put no repeat in mode 2, or as 'repeat unless stated otherwise', which is how mode 3 qualifies itself. Neither reading is stated. So hayom_only does not imply a repeat, and the encoding claims more than the printed rule.",
+      "required_change": "Take hayom_only out of the definite-repeat 'any' list. Keep the five enum values exactly as printed. Gate the repeat under hayom_only on all(musaf_shabbat_responses=hayom_only, a separate declared binary such as musaf-hayom-only-cantor-repeat) with no default. When undecided, it should print with a Codex rubric saying the source does not state whether the cantor repeats under this custom. Change mode_interpretation.hayom_only to [1,0,null,0]. Leave Frankfurt and both_cantor_hayom/both_cantor_repeat as definite repeats.",
+      "evidence": "s274 rule: יש קהלות שאין אומרים בשבת לא היום ולא ארשת, ויש שאומרים היום אבל לא ארשת. ויש שאומרים שניהם אבל אין הש״ץ חוזר, ויש שהש״ץ חוזר היום ואינו חוזר ארשת, ויש שהש״ץ חוזר שניהם וכן נוהג ק״ק פפד״מ."
+    },
+    {
+      "severity": "medium",
+      "location": "expanded_sequence > musaf_hayom_first / musaf_areshet_first (role reader_and_congregation) plus the *_cantor_repeat sections (role reader)",
+      "problem": "Who says what is double-counted. The first recitation is assigned to reader_and_congregation, and a reader repeat follows. Under the repeat modes the cantor therefore says the text twice. The repeat on a weekday is also printed only for Areshet (והש״ץ חוזר). For Hayom the only weekday rubric is קו״ח. The settled expansion is קהל וחזן, and its חזן component is naturally the cantor's turn after the congregation. In the Shabbat list, אין הש״ץ חוזר means the congregation alone says it.",
+      "required_change": "Give the first recitation of each piece role=congregation, and make the cantor's turn the conditional reader section. Keep the printed קו״ח description inside the inclusion conditional, as it is now. Then the no-repeat modes produce congregation only, and the repeat modes produce congregation then cantor. Record in the adjudication log that the weekday Hayom repeat rests on קו״ח (קהל וחזן), not on a separate printed rule.",
+      "evidence": "Bundle documentary_instructions musaf_hayom_role and musaf_areshet_role both read קו״ח, expanded as קהל וחזן; musaf_areshet_custom reads ואומרים ארשת והש״ץ חוזר."
+    },
+    {
+      "severity": "medium",
+      "location": "expanded_sequence > musaf_areshet_cantor_repeat condition (any: weekday | frankfurt | both_cantor_repeat)",
+      "problem": "The weekday Areshet repeat is unconditional. The printed rule ends ויש שאין הש״ץ חוזר after ויש קהלות שא״א בשבת, and that last clause is not limited to the Sabbath on its face. It may be a general custom of no repeat. The current encoding silently drops a printed custom for weekdays.",
+      "required_change": "Get a user adjudication on the scope of the clause, unless it was already settled in 375–412, in which case cite it. If the clause is general, gate the weekday repeat on a declared binary (e.g. musaf-areshet-cantor-repeat), undecided by default and printed with the source rule as rubric. If it is Sabbath-only, record that reading and leave the weekday repeat unconditional.",
+      "evidence": "s274: ואומרים ארשת והש״ץ חוזר, ויש קהלות שא״א בשבת, ויש שאין הש״ץ חוזר."
+    },
+    {
+      "severity": "medium",
+      "location": "opensiddur/exporter/features.yaml opensiddur:rite.features.musaf_shabbat_responses",
+      "problem": "opensiddur:rite is declared as 'One binary per rite, any number of which may be true at once', with open names that take binary values, and it is common:true. A symbol-valued local custom about Hayom/Areshet is not a rite and breaks the type's stated meaning. Common types must also be documented in JLPTEI-3.md, and a test holds that document to features.yaml. The guidelines I read do not document this feature.",
+      "required_change": "Move it to opensiddur:practice, which is common:false and declared and already holds custom choices such as kapparot-object and uminchatam-after-each-day. Use that type's hyphen naming: musaf-shabbat-responses: {symbol: {values: [omit_both, hayom_only, both_no_cantor_repeat, both_cantor_hayom, both_cantor_repeat]}}, plus the hayom-only repeat binary (and the Areshet weekday binary if needed). Update every condition. If it stays under rite, update the rite description and JLPTEI-3.md and pass the doc-sync test.",
+      "evidence": "features.yaml lines 269–288 (rite comment and enum) and lines 8–13 (meaning of common:true and the doc test)."
+    },
+    {
+      "severity": "medium",
+      "location": "expanded_sequence: aleinu/text/hu_eloheinu → instruction → musaf_cantor_quiet_verses → aleinu/text/kakkatuv_betorato → repetition/aleinu/quotes/deuteronomy_4_39",
+      "problem": "The cantor's quiet verses are placed inside the congregation's paragraph, between אפס זולתו and ככתוב בתורתו. The source says the cantor says these verses while the congregation says הוא אלהינו וכו׳, which is the whole paragraph through Veyadata (the same extent human413 fixes for the aloud repeat). A linear rendering now runs יהי שם יי מבורך … עולם straight into ככתוב בתורתו. The congregation's segment also has no role.",
+      "required_change": "Make one contiguous section with role=congregation: hu_eloheinu + kakkatuv_betorato + Deut 4:39 context. Follow it with the source direction (de-Hebr) and the Codex English simultaneity instruction, then the musaf_cantor_quiet_verses section (role=reader), then close the Ark, then musaf_cantor_hu_aloud. Alternatively encode the two as parallel or simultaneous if the compiler supports it. Do not split the paragraph.",
+      "evidence": "s256 direction: וואֶהרענד ד״א געמיינדע הוּא אֱלֹהֵינוּ א״ז״וו זאַגט, ספריכט דער חזן פאלגענדע … לייזע; human413 extent through Veyadata."
+    },
+    {
+      "severity": "medium",
+      "location": "units > musaf_repetition_malkhuyot_verses > en > Isaiah 44:6 fragments (s273)",
+      "problem": "The English Isaiah 44:6 quote scope ends at 'the King of Israel'. The rest of the verse ('and its redeemer, the Lord of Hosts: I am the first … no God’.') is in an uncorresponded lead-in fragment together with 'And it was said:'. The verse context URN covers only part of the verse, and the next connective is fused into it.",
+      "required_change": "Split it into a verse fragment holding the whole verse text (‘Thus says the Lord … there is no God’.) and a separate lead-in fragment holding 'And it was said:'. Check the parallel row against the Hebrew isaiah_44_6.",
+      "evidence": "Bundle lines ~8457–8484."
+    },
+    {
+      "severity": "low",
+      "location": "units > musaf_repetition_malkhuyot_close (מלכנו) condition; registry-decisions.json; units > rh_qedushat_hayom paragraph 4",
+      "problem": "Musaf conditions the printed (מלכנו) on variant urn:x-opensiddur:condition:prayer:amidah/melokh_al_kol_haolam/malkenu. That URN is not in this registry batch; the batch's condition entries are only heyeh/12, al_ken and offering_formula. The guideline says a variant path mirrors the text URN of the passage that varies, and that passage is the /conclusion child. The Maariv occurrence of the same parenthetical (s30) carries only an editorial note with no condition.",
+      "required_change": "Register urn:x-opensiddur:condition:prayer:amidah/melokh_al_kol_haolam/conclusion/malkenu (or confirm an existing master entry). Apply it the same way in Maariv and Musaf: either both carry the undecided variant or both stay documentary-only. Keep English unsupplemented.",
+      "evidence": "JLPTEI-3.md lines 68–76 (condition URN path rule); registry-decisions.json condition entries at lines 1–71."
+    },
+    {
+      "severity": "low",
+      "location": "registry-decisions.json urn:x-opensiddur:condition:prayer:heyeh_im_pifiyot/12/include_other_communities",
+      "problem": "Scoping the variant under /12 matches the guideline's 'wording some communities add', but the name is relative to this edition. 'Other communities' only means something next to this volume's Frankfurt/Metz rubric, and the guideline says the variant belongs to the text, not to an edition.",
+      "required_change": "Rename it after the text, e.g. …/heyeh_im_pifiyot/12/veneemar (true = recited). Keep the rite tests frankfurt_am_main=false and metz=false and the printed condition rubric on the service occurrence.",
+      "evidence": "JLPTEI-3.md lines 68–76; s258 rubric בפפד״מ, מעץ ורוב קהלות אין אומרים."
+    },
+    {
+      "severity": "low",
+      "location": "expanded_sequence > musaf_cantor_hu_aloud rubrics",
+      "problem": "The expanded order replaces the printed direction הש״ץ חוזר בקול רם הוא אלהינו וכו׳ (musaf_repeat_hu_aloud, which is kept in the documentary order) with a Codex Hebrew rubric בקול רם. That is an invented Hebrew rubric where a source one exists. The Codex English rubric is fine.",
+      "required_change": "Use the musaf_repeat_hu_aloud source instruction as the Hebrew rubric for the repeat section. Keep the Codex English 'Aloud.' or a fuller Codex rendering.",
+      "evidence": "Bundle documentary_instructions.musaf_repeat_hu_aloud; expanded lines ~412–443."
+    },
+    {
+      "severity": "low",
+      "location": "phase.running_source_labels (s262–s273)",
+      "problem": "All 12 running אַם שַׁבָּת / 'On (the) Sabbath' labels are kept in the inventory but emitted nowhere, so the documentary output loses printed page furniture. This is not a recitation error. The works are correctly continuous.",
+      "required_change": "Emit the labels as documentary-only page furniture (tei:fw type='header' or equivalent) at the matching pb in each language's Ahallelah file, with no condition and not repeated in the expanded order. Leave the single occurrence-level Shabbat condition as it is. (Cosmetic: the s267/s268 inventory order is swapped.)",
+      "evidence": "Bundle lines 933–1017."
+    },
+    {
+      "severity": "low",
+      "location": "expanded_sequence > Aleinu Ark instruction; musaf_malkhuyot_shofar_calls rubrics",
+      "problem": "These are preferences, not errors. (a) The compound Ark rubric (open at Aleinu, close at שלא שם, reopen at ואנחנו כורעים) is set once before the opening. That is acceptable unless the opening part is split. (b) The shofar section repeats the printed calls as a Codex rubric, and the Codex English rubric adds call names the English source does not print.",
+      "required_change": "Optional: drop the duplicate Hebrew Codex rubric, and keep the English Codex rubric only if flagged as editorial.",
+      "evidence": "s256 header rubric; s274/s275 shofar directions."
+    },
+    {
+      "severity": "low",
+      "location": "units > musaf_heyeh_im_pifiyot stanza 11 quotation (Exodus 33:19b)",
+      "problem": "This is correctly modelled as a half-verse: source_reference_part unit=half-verse, n=b, corresp=bible:exodus/33/19/b, with no quote-context verse milestone. But source_reference is still the whole verse, exodus/33/19. If the builder copies it to tei:seg/@source, the partial quotation will claim the full verse. I could not check this because build.py was not at any path I tried.",
+      "required_change": "Make sure the emitted @source / milestone is urn:x-opensiddur:text:bible:exodus/33/19/b, with no context verse URN. Expect the documented whole-verse fallback warning for the English and other unaccented projects. Keep the source_note about the missing 19a.",
+      "evidence": "JLPTEI-3.md lines 217–227 and 326–392."
+    },
+    {
+      "severity": "low",
+      "location": "units > musaf_repetition_malkhuyot_verses (quote fields)",
+      "problem": "These quotes use corresp=context-quote URN + source with no source_reference / source_reference_corresp. Ahallelah and the quiet verses use the full set of fields. This may compile to a different structure.",
+      "required_change": "Make the fields consistent, or confirm the builder emits the same tei:seg type='quotation' with chapter/verse context milestones and canonical @n for all three units.",
+      "evidence": "Bundle ~7911–8226 compared with ~5563 and ~2958."
+    }
+  ],
+  "approved_aspects": [
+    "The documentary spine matches s256–s261/s274–s275: Aleinu with Ark rubric → cantor's quiet verses → close Ark → aloud Hu → Pifiyot tune → Heyeh 1–11 → Lo Yevoshu (conditional) → open Ark → Ochilah 13–16 → close Ark → Al Ken → weekday/Shabbat alternative → Melokh → shofar direction → weekday calls → Hayom rule → Hayom → Areshet rule → Areshet.",
+    "human413 is applied: the aloud repeat runs from hu_eloheinu through kakkatuv_betorato and Deut 4:39, with role (not speaker) reader.",
+    "The quiet verse chain (Deut 4:35, 4:39, 6:4, 10:14, 10:17, 32:3, Ps 113:2) is all full verses with context-only /quotes/ URNs.",
+    "Lo Yevoshu reuses existing heyeh_im_pifiyot/12. The condition (rite frankfurt_am_main=false and metz=false, plus an undecided variant) is on the service occurrence, outside the canonical words. The Hebrew source rubric is kept, a Codex English rubric with resp is added, and Ps 69:7 is quoted in full.",
+    "Heyeh 1–16 reuse the existing identity, not a new poem root. Ochilah is mapped to 13–16 and not to the larger Goldman arrangement. Prov 16:1, Ps 51:17 and Ps 19:15 are full-verse context quotes.",
+    "The weekday alternative (Ansikhah + its own Malkhuyot verse chain on s272) and the Shabbat Ahallelah (continuous, with its own interwoven verses through Deut 6:4) are separate continuous works, mutually exclusive on shabbat. The weekday chain is not appended to Ahallelah.",
+    "Melokh: the five child scopes (opening, retzeh_vimnuchatenu [shabbat], qaddeshenu, vehanchilenu [shabbat], conclusion) sit under the existing root, which is unchanged. (השבת ו) is conditioned on shabbat in both languages. English has no Malkenu, and none is supplied.",
+    "One shofar sounding, on weekdays only, and the Sabbath note ובשבת אין תוקעין are kept. The omitted shofar sounding does not suppress Hayom or Areshet.",
+    "Hayom/Areshet inclusion: the four modes that include Areshet are right, Areshet is correctly excluded under hayom_only, and Frankfurt alone forces both with both repeats. both_cantor_hayom gives Hayom repeat without Areshet repeat. If the mode is undefined on the Sabbath, the condition stays undecided and prints with its rubric.",
+    "(זכרון) in Areshet is conditioned on the Sabbath, with the de-Hebr rubric kept.",
+    "The registry marks all /quotes/ chapter and verse URNs as context, not as new Bible identities.",
+    "Unresolved custom labels are kept, Codex editorial rubrics carry resp, absent English is not supplemented (e.g. the Ansikhah stanza לכל גבה), and the נ״א variant is kept as an annotation."
+  ],
+  "remaining_acceptance_gates": [
+    "Apply the high and medium findings above and get user adjudication on the scope of the Areshet clause ויש שאין הש״ץ חוזר (unless already settled in 375–412) and on the role reading of קו״ח.",
+    "Settle where musaf_shabbat_responses lives in features.yaml (move it to practice, or document it under rite in JLPTEI-3.md) and pass feature_registry validation and the doc-sync test.",
+    "Read build.py expanded_order (~856) and documentary_order (~1050). I could not find it at /tmp/mahzor-s254/{,integration-v1/,scripts/,tools/}build.py or in the sources/marmorstein_rosh_hashanah_1 trees. Confirm it emits role and not speaker, and check the Exodus 33:19b @source.",
+    "Confirm the role vocabulary accepts congregation, reader, reader_and_congregation (if kept) and blower.",
+    "Register or confirm the Malkenu condition URN and the renamed heyeh/12 variant; run urn_registry --check and validate_urn_references.",
+    "Compile both languages for weekday, Sabbath with each of the five modes, Sabbath with mode undefined, and Sabbath with Frankfurt. Diff the rendered recitation against s274 and check that no Hayom or Areshet copy is duplicated or dropped.",
+    "Check the parallel rows: the Isaiah 44:6 English fix, the Ahallelah/Ansikhah page-turn fragments, and the documentary emission of the running labels.",
+    "Run the refdb resolution check that the Aleinu child parts (repetition file) and the parent aleinu/text (s206 file) resolve without duplicate-corresp warnings, and that the Melokh children resolve under the Maariv-mapped root."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "0e20e16c-375b-4bf9-9e2c-dd5a02edf89a"
+  }
+}

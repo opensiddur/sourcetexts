@@ -1,0 +1,75 @@
+{
+  "scope": "Single restored ritual qualification; source words/units and prior documentary/alignment/order/source approvals otherwise unchanged",
+  "change": [
+    {
+      "before": {
+        "section": "musaf_last_thirty_blasts",
+        "order": [],
+        "conditions": [
+          {
+            "type": "opensiddur:holiday-aggregate",
+            "features": {
+              "shabbat": false
+            }
+          }
+        ],
+        "rubrics": {
+          "he": {
+            "text": "תוקעים שלשים קולות כדי לערבב את השטן, ואחר כך נפטרים לשלום.",
+            "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+          },
+          "en": {
+            "text": "Thirty further shofar blasts are sounded to confound the Accuser. The congregation then departs in peace.",
+            "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+          }
+        }
+      },
+      "after": {
+        "section": "musaf_last_thirty_blasts",
+        "order": [
+          {
+            "instruction": "batch312_shofar_final_rubric_322"
+          }
+        ],
+        "conditions": [
+          {
+            "type": "opensiddur:holiday-aggregate",
+            "features": {
+              "shabbat": false
+            }
+          }
+        ],
+        "rubrics": {
+          "en": {
+            "text": "Thirty further shofar blasts are sounded to confound the Accuser. Omitting these additional blasts does not affect the obligation already fulfilled. Afterwards the congregation departs in peace.",
+            "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+          }
+        }
+      }
+    }
+  ],
+  "source_instruction": {
+    "scan": "s322",
+    "printed_page": "152",
+    "language": "he",
+    "witnesses": [
+      "he"
+    ],
+    "text": "ותוקעים שלשים קולות כדי לערבב את השטן ומיהו אין מעכבות שאם לא יעשו כן אין עכוב בדבר שהרי כבר יצאו ידי חובתם. ואח״כ נפטרים לבתיהם לשלום.",
+    "page_start": false
+  },
+  "control_hashes": {
+    "source_order_sha256": "97ea0dbd047a5eb74c858cfcbe1601b92112267a9bc2dafb719c690728862929",
+    "expanded_order_sha256": "7603b8a8100ad8db47b65536921295b21d124829982eeff18f82ec6464b8a4e4",
+    "documentary_instructions_sha256": "b111d753eca9627aa55157d70273edb9a93052431e9a7fdad045886a4f321343",
+    "navigation_sha256": "7df8974825d17361e6cea302721835fa8e9f45f7de36972136b271c16974fc49"
+  },
+  "old_control_hashes": {
+    "source_order_sha256": "97ea0dbd047a5eb74c858cfcbe1601b92112267a9bc2dafb719c690728862929",
+    "expanded_order_sha256": "649c67aa0824b8bef02dd393245655862f913c603349ce35f8569c487ca92d59",
+    "documentary_instructions_sha256": "b111d753eca9627aa55157d70273edb9a93052431e9a7fdad045886a4f321343",
+    "navigation_sha256": "7df8974825d17361e6cea302721835fa8e9f45f7de36972136b271c16974fc49"
+  },
+  "old_837_and_new65_literal_witnesses_unchanged": true,
+  "source_approval_retained": true
+}

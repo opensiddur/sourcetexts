@@ -1,0 +1,30 @@
+{
+  "scope": "expanded_html_tail",
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/html-tail-v7/manifest.json",
+    "/tmp/mahzor-s294/full-html-browser-summary-v7.json",
+    "/tmp/mahzor-s294/html-tail-v7/expanded-1280-n293.png",
+    "/tmp/mahzor-s294/html-tail-v7/expanded-1280-n309.png",
+    "/tmp/mahzor-s294/html-tail-v7/expanded-390-n293.png",
+    "/tmp/mahzor-s294/html-tail-v7/expanded-390-n309.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "expanded-1280-n293 and expanded-390-n293: the n293 source link opens partway through the 'kol' refrain piyyut (קהל ↗אנוסה לעזרה / '↗I hasten for aid'). This matches the manifest href and scrollY, but no Shofarot section heading is in view. So these images show the n293 source link and the text around it. They do not show the start of the section itself, and from these screenshots alone I could not check how the heading looks.",
+    "expanded-1280-n293: the two columns line up correctly at 1280. Each English verse (justified, left) sits level with its Hebrew line (right-aligned, ragged left) in all 23 visible pairs. The inline ↗ source links appear in both languages (e.g. 'hairy ↗hands', '↗in captivity' matching ↗שעירות and ↗ונלוה). There is no clipping, and the spacing around those links looks normal.",
+    "expanded-390-n293: the mobile layout stacks correctly. Each Hebrew line is followed by its English, and each pair is separated by a rule. Long Hebrew lines (דרוש טובה למו…) wrap cleanly to the right. There is no horizontal overflow, which agrees with scrollWidth=390 in the summary.",
+    "expanded-1280-n309: the instruction pair does not sit side by side. The Hebrew instruction 'חזן' / 'כשנושאים כפיים, הש״ץ אומר את המילה כהנים בקול.' spans full width at right (y≈95–123), and the English 'When there is a priestly blessing, the cantor says the word Kohanim aloud.' comes after it at left (y≈151). Both are outdented past the body columns, to x≈1216 and x≈64. The result is readable and the word spacing is normal ('Kohanim aloud', 'הש״ץ'), so this looks like the intended full-width instruction style rather than a defect. The standalone 'חזן' label has no English equivalent, which fits the colophon note that no translations were added for passages missing from the English edition.",
+    "expanded-1280-n309: the top line ('…salvation and of our aid, Selah…' with its Hebrew) is partly hidden under the sticky header. This comes from the scroll position, not from clipped content.",
+    "expanded-1280-n309 and expanded-390-n309: the last priestly-blessing introduction ('…Thy holy people, as it is said:' / '…עם קדושך כאמור:') is complete and properly aligned. A blank gap and a rule follow it, then the colophon. Source attribution is present: Heidenheim and Marmorstein (eds.), 1965, with the archive.org details link, imaging credit, copy holder, independent-reader note and the Birnbaum source. The licence links (CC BY-SA 4.0, CC0) and the software and pyluach credits are there too.",
+    "Scope labelling: these closing screenshots do not show any 'incomplete' or 'ends before source312' label. The text stops at 'as it is said:', and the colophon is titled simply 'Prayerbook for the New Year — first day'. The label you mention is not in these images, so I could not confirm it. If it appears only on the title or contents page, consider repeating it near the end as well.",
+    "expanded-390-n309: in the narrow colophon, the justified text leaves large gaps between words ('Creative    Commons    Attribution-ShareAlike  4.0', 'Company,      1949.      archive.org:'). The identifier 'PhilipBirnbaumHaSiddurHaShalemTheDailyPrayerB|ook1949' also breaks mid-word. Both are cosmetic only and cause no overflow. Left-aligning the colophon on mobile would fix the gaps."
+  ],
+  "verdict": "Approved for the expanded HTML tail. In all four screenshots the columns line up and are readable at 1280, the mobile layout stacks correctly at 390, the inline source links and colophon attribution are present, instruction spacing is normal, and nothing is clipped beyond the expected sticky-header overlap. The browser summary reports no errors, duplicate IDs, broken internal links or overflow. The findings above are cosmetic or limits of what these screenshots can show. I did not reopen the source, pointing or order checks.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "a742ce6a-9a9f-4107-b0fc-30bb46c3260e"
+  }
+}

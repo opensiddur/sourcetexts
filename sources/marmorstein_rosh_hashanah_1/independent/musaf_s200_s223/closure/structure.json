@@ -1,0 +1,46 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low (Read only: JLPTEI-3.md in full, closure-resolutions.json, variant-checks.json, and the 4 project XML files)"
+  },
+  "scope": "current structural guideline closure only; source marks pending",
+  "approved": true,
+  "findings": [
+    {
+      "severity": "low",
+      "location": "/tmp/mahzor-s200/closure/closure-resolutions.json:61-66 (applied[], stem musaf_malkhuyot_close, scan s210)",
+      "problem": "The applied list still has the old replacement \"וּדְבָרְךָ (מלכנו)\". That string is no longer in musaf_malkhuyot_close.xml, because the variant conversion replaced it with an unparenthesised seg inside j:conditional[@type='marked']. The printed parentheses are correctly kept in variant_conditions[].printed. However, an applied entry that no longer matches the file could mislead a later replay or audit script into re-inserting the parentheses as literal text.",
+      "fix": "Mark this entry as superseded by variant_conditions[0], for example with \"superseded_by\": \"variant_conditions\", or move it to a history section. Keep the printed form \"(מלכנו)\" only in variant_conditions."
+    },
+    {
+      "severity": "low",
+      "location": "/tmp/mahzor-s200/closure/variant-checks.json (all 9 cases)",
+      "problem": "The proof records only the booleans common_words_once and optional_words_correct. For selected=null it does not show that the compiled output puts the standard delimiters around the optional words. Under JLPTEI-3 §'How an undecided scope is set off', @type='marked' guarantees this, so the encoding is correct. The check file just does not demonstrate the 'visibly conditional' property you asked me to confirm. It also does not record the compiler command or revision.",
+      "fix": "For the 3 undefined cases, add a field such as \"delimiters_rendered\": true, or the rendered string itself. Also record the compiler invocation and commit, so the proof can be reproduced."
+    },
+    {
+      "severity": "info",
+      "location": "musaf_malkhuyot_close.xml:34, musaf_zikhronot_blessing.xml:34, musaf_shofarot_open.xml:34 (whitespace around each new variant conditional)",
+      "problem": "Each optional span has whitespace on three sides: a trailing space in the preceding seg, inter-element text nodes before j:conditional and after j:endConditional, and a leading space in the following seg. So the uncollapsed output has runs of 2–3 spaces in both the true and false cases. This is harmless if the exporter collapses whitespace, which the passing common_words_once checks suggest, but it is not stated.",
+      "fix": "No change needed if the exporter normalises whitespace. If it does not, drop the inter-element spaces or the seg-edge spaces so that exactly one separator survives in each state."
+    }
+  ],
+  "notes": [
+    "Condition URNs follow the guideline (JLPTEI-3 §URNs, §'Setting attribute values', opensiddur:variant). Each one mirrors the source URN of the enclosing seg with the variant name appended and no @project: prayer:amidah/melokh_al_kol_haolam → condition:…/malkenu, prayer:zokher_haberit → condition:…/shel_yaaqov, prayer:amidah/attah_nigleita → condition:…/kol. The slugs follow the transliteration table: ayin unwritten, quf = q, kaf = k.",
+    "Using a condition rather than j:option is correct. §j:option says text some communities add and others omit is a condition, not an alternate. The old word-choice duplication of the common prefix is gone, and each conditional now contains only the optional words: מלכנו / שֶׁל יַעֲקֹב / כָּל.",
+    "type='marked' fits printed parentheses. The marked type alone gives delimiters when the condition is undefined, so leaving out an instruction note is acceptable. By the truth tables, a single fs/f with binary true gives true → include and false → exclude, and an unset variant is undefined → kept and delimited.",
+    "Scope is preserved. In all three files, j:conditional and j:endConditional are siblings inside the same tei:p, between the opening prayer-part milestone and its bare terminator. Every split seg keeps the same @source, and div/@corresp and the milestone corresp are unchanged. xml:ids are unique within each file and the endConditional targets resolve.",
+    "The printed parentheses are kept in the raw data at closure-resolutions.json variant_conditions[].printed: (מלכנו), (שֶׁל יַעֲקֹב), (כָּל).",
+    "Repetition heading (musaf_repetition_avot_open.xml:34): a native tei:head as the first child of the div is allowed by §Hierarchy/§Divisions. It comes before the directive note and the prayer-part milestone, so it is inside the div's corresp but outside the …/text prayer-part scope, which is appropriate for a heading. No structural or guideline problem. One design point for later, not a defect: the heading names the whole repetition, which spans several files. If a running order later gates the repetition on opensiddur:recitation/repetition, the gate should enclose this file so the heading goes with it.",
+    "I agree with rejecting the Exodus 20/15 suggestion. The JLPTEI-3 versification section says Exodus 20 has 26 canonical verses, and its table gives exodus/20/15 = לא תגנב. So exodus/20/18 is the correct URN for וכל העם ראים. I did not open tanakh-wlc-he or MAM; this agreement rests on the guideline table only.",
+    "Zechariah 9:15 verse-parts: common/subverse.py and the Bible projects were not on the list I was given to read, so I have not checked this myself. I accept it as stated, given the earlier validation.",
+    "Earlier material I did not re-examine: the Shabbat conditional segment_8 ('הַשַּׁבָּת וְ') closes inside a word, before יִשְׂרָאֵל. The guideline forbids word-internal breaks only for sub-verse milestones, not for conditionals, and this predates the current corrections.",
+    "Not accepted in this review: source pointing, all Hebrew vowel and dagesh marks (including the unpointed printed מלכנו, the unpointed 'פותחים הארון', the 'אַם שַׁבָּת' rubrics and the withheld_corrections list), printed Torah cantillation, and the source pointers. These stay pending, as the editionStmt DRAFT statement says.",
+    "Structure is approved with faint marks still outstanding. None of the three findings blocks approval."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "ce6303bb-03bd-47ab-b006-513b326da771"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "scope": "coverage_labels_v8",
+  "approved": false,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "all224_semantic_payloads_unchanged": true,
+  "coverage_count_correction_approved": true,
+  "files_read": [
+    "/tmp/mahzor-s294/coverage-review-v8/prayerbook_for_the_new_year-heidenheim-1965-he-actual-boundary-note.xml",
+    "/tmp/mahzor-s294/coverage-review-v8/prayerbook_for_the_new_year-marmorstein-1965-en-actual-boundary-note.xml",
+    "/tmp/mahzor-s294/coverage-review-v8/expanded-actual-ending.xml",
+    "/tmp/mahzor-s294/coverage-review-v8/change-summary.json",
+    "/tmp/mahzor-s294/coverage-review-v8/payload-equality-00.jsonl",
+    "/tmp/mahzor-s294/coverage-review-v8/payload-equality-01.jsonl",
+    "/tmp/mahzor-s294/coverage-review-v8/payload-equality-02.jsonl",
+    "/tmp/mahzor-s294/coverage-review-v8/payload-equality-03.jsonl",
+    "/tmp/mahzor-s294/coverage-review-v8/payload-equality-04.jsonl",
+    "/tmp/mahzor-s294/coverage-review-v8/payload-equality-05.jsonl",
+    "/tmp/mahzor-s294/coverage-review-v8/payload-equality-06.jsonl",
+    "/tmp/mahzor-s294/coverage-review-v8/payload-equality-07.jsonl",
+    "/tmp/mahzor-s294/coverage-review-v8/payload-equality-08.jsonl",
+    "/tmp/mahzor-s294/coverage-count-correction-v8.json",
+    "/tmp/mahzor-s294/review-s351.jpg",
+    "/tmp/mahzor-s294/importer-tests-v8.log",
+    "/tmp/mahzor-s294/coverage-render-v8.json",
+    "/tmp/mahzor-s294/encoding-closure-v6.json"
+  ],
+  "blocking_findings": [
+    "Expanded profile: the claim in the new label conflicts with the content placed right before it. In expanded-actual-ending.xml, section_musaf_digitization_boundary (lines 23-28) comes immediately after section_musaf_repetition_kohanim_intro. That section ends with an unconditional <j:transclude target='urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/birkat_kohanim/birkat_kohanim'/> (line 20). If that transclusion renders the priestly-blessing text, which its name and the renewed receipt for realization/repetition_birkat_kohanim/he suggest, then the expanded reader sees the priestly blessing and then a label saying it is missing. The Hebrew label 'פסוקי הברכה והמשך התפילה טרם נכללו' says flatly that the blessing verses are not included and has no scan qualifier. The English 'The priestly verses ... beginning on scan312, remain unencoded' is only correct if read narrowly as being about the source pages. I cannot confirm what the transclusion contains without inspecting material outside my scope, so I cannot certify the label as accurate for the expanded profile. To fix: either (a) show evidence that the transclusion renders only the introduction and not the verses, or (b) reword the expanded-profile label in both languages to say that this edition's own priestly-blessing text from scan312 onward and the rest of the service are not yet encoded, and that any blessing shown above comes from Shacharit. The documentary-profile notes are not affected."
+  ],
+  "nonblocking_findings": [
+    "Payload equality: the 9 files hold 224 rows (8×25 + 24). Every row has old_semantic_fields_sha256 equal to new_semantic_fields_sha256 and changed_fields equal to ['expanded_order_sha256'] only. The key set and order match the 224 entries in current_payload_hashes in encoding-closure-v6.json. I compared old_accepted_review_sha256 against v6 for more than 15 keys, including amidah_modim_derabbanan/he, rh_gevurot/he, uvekhen_lekha_taaleh_qedushah/en, repetition_birkat_kohanim/he, musaf_numbers_28_words/en, musaf_qedushah_addir/en, musaf_repetition_veteerav/en, musaf_repetition_kohanim_intro/he and /en, and musaf_repetition_ken_tagen_shabbat/en. All matched; I did not compare every hash by hand. On semantic grounds this supports renewing the metadata receipts, subject to the blocking finding on the label itself.",
+    "The labels are editorial and are not prayer words. All four notes are tei:note type='description' with resp 'urn:x-opensiddur:contributor:opensiddur.org/codex' and the correct xml:lang. The new expanded div adds no j:conditional, no settings, no transclusion and no reference. The existing kohanim condition and endDeclare are unchanged in the excerpt.",
+    "The two languages differ slightly: the English names scan311 and scan312, the Hebrew has no scan numbers. Otherwise they are equivalent. Consider adding the scan reference to the Hebrew, or removing it from the English, so they match.",
+    "The documentary notes use @target values '#documentary_s199_draft_gap_he' and '#documentary_s199_draft_gap_en'. These IDs contain 's199' while the text refers to scan311. This is probably a legacy anchor name, but please confirm that the targets resolve to the right place after the change from commentary to description.",
+    "coverage-render-v8.json only shows English label nodes for the documentary and expanded profiles. The render evidence does not show the Hebrew label. This is preview-only and not an export approval.",
+    "importer-tests-v8.log: 170 passed, 157 subtests passed.",
+    "Count correction check: in the image, the upper part of scan351 has the שיר של יום heading, the Sunday heading (היום ראשון בשבת) and all of Psalm 24 (ending 'הכבוד סלה'). The lower part has the Monday heading (היום שני בשבת) and Psalm 48 from 'שיר מזמור לבני קרח' to 'כשמך אלהים כן תהלתך על־קצוי־', which breaks off mid-verse and continues on the next leaf. So 'partial' is the correct status. The arithmetic holds: 294 − 1 = 293 complete before this batch, plus 18 = 311 (scans 1–311), and 355 − 311 = 44 incomplete. Leaf n350 matching scan 351 fits the zero-based IA leaf numbering. The current accepted psalm_24/he witness is unaffected. I could not recompute the image sha256 because only a file reader was available."
+  ],
+  "verdict": "Not approved. All 224 semantic payloads are unchanged; the only changed field is expanded_order_sha256. The scan351 count correction (311/355 complete, scan351 partial, 44 incomplete) is approved and matches the source image. The new boundary labels are correctly marked as editorial and change no conditions, references or order. The documentary-profile wording is acceptable. The blocking issue is the expanded profile: the label says the priestly verses are not included, but it sits directly after a transclusion of the Shacharit priestly-blessing block. Either show that the transclusion does not render the verses, or reword the expanded label in both languages. After that, approval needs only a recheck of the label text.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "f1df6651-2ab5-4697-a9c5-77c554ad8c0d"
+  }
+}

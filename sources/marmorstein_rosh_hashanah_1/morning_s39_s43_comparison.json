@@ -1,0 +1,1819 @@
+{
+  "s39/tallit_heading": {
+    "primary": "סֵדֶר עֲטִיפַת הַטַּלִּית.",
+    "independent": "סֵדֶר עֲטִיפַת הַטַּלִּית.",
+    "primary_keys": [
+      "tallit_heading"
+    ],
+    "independent_keys": [
+      "s39.heading"
+    ],
+    "comparison": {
+      "primary_sha256": "94a2176856bec65d8ba719db31c74b8c48ddcd5c1acccace000ed94ca2dca35a",
+      "independent_sha256": "94a2176856bec65d8ba719db31c74b8c48ddcd5c1acccace000ed94ca2dca35a",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [],
+      "decisions": {},
+      "unresolved": [],
+      "complete": true
+    }
+  },
+  "s39/tallit_before": {
+    "primary": "Before draping oneself in the טלית the following is said:",
+    "independent": "Before draping oneself in the טלית the following is said:",
+    "primary_keys": [
+      "tallit_before"
+    ],
+    "independent_keys": [
+      "s39.rubric.1"
+    ],
+    "comparison": {
+      "primary_sha256": "fa54b5a4af348d7488570674af3b408e6bb990020226759ba3e106626af7f6f2",
+      "independent_sha256": "fa54b5a4af348d7488570674af3b408e6bb990020226759ba3e106626af7f6f2",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [],
+      "decisions": {},
+      "unresolved": [],
+      "complete": true
+    }
+  },
+  "s39/hinneni_tzitzit": {
+    "primary": "הִנְנִי מִתְעַטֵּף בְּמִצְוַת צִיצִית כְּדֵי לְקַיֵּם מִצְוַת בּוֹרְאִי כַּכָּתוּב בַּתּוֹרָה וְעָשׂוּ לָהֶם צִיצִת עַל־כַּנְפֵי בִגְדֵיהֶם לְדֹרֹתָם. וּכְשֵׁם שֶׁאֲנִי מִתְכַּסֶּה בַּטַּלִּית בָּעוֹלָם הַזֶּה כֵּן תִּתְכַּסֶּה נִשְׁמָתִי לְהִתְלַבֵּשׁ בְּטַלִּית נָאָה לְעוֹלָם הַבָּא בְּגַן עֵדֶן, אָמֵן:",
+    "independent": "הִנְנִי מִתְעַטֵּף בְּטַלִּית שֶׁל־צִיצִת כְּדֵי לְקַיֵּם מִצְוַת בּוֹרְאִי כַּכָּתוּב בַּתּוֹרָה וְעָשׂוּ לָהֶם צִיצִת עַל־כַּנְפֵי בִגְדֵיהֶם לְדֹרֹתָם. וּכְשֵׁם שֶׁאֲנִי מִתְכַּסֶּה בְטַלִּית בָּעוֹלָם הַזֶּה כֵּן תִּזְכֶּה נִשְׁמָתִי לְהִתְלַבֵּשׁ בְּטַלִּית נָאָה לָעוֹלָם הַבָּא בְּגַן עֵדֶן, אָמֵן:",
+    "primary_keys": [
+      "hinneni_tzitzit"
+    ],
+    "independent_keys": [
+      "s39.hineni"
+    ],
+    "comparison": {
+      "primary_sha256": "58dfa99d0b6171fa99e0e3fb4eaf6bb179a364edd912b3e1e15c5422ced1d36d",
+      "independent_sha256": "768152427903fa6fe014cd157d22b279491ea34cdebfaa7399795e54ccfa6d9b",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [
+        {
+          "bucket": "consonants",
+          "ours": "בְּמִצְוַת צִיצִית",
+          "theirs": "בְּטַלִּית שֶׁל צִיצִת",
+          "at": 2,
+          "size": 3,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:2:בְּמִצְוַת צִיצִית|בְּטַלִּית שֶׁל צִיצִת"
+        },
+        {
+          "bucket": "vowels",
+          "ours": "בַּטַּלִּית",
+          "theirs": "בְטַלִּית",
+          "at": 20,
+          "size": 4,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "vowels:20:בַּטַּלִּית|בְטַלִּית"
+        },
+        {
+          "bucket": "consonants",
+          "ours": "תִּתְכַּסֶּה",
+          "theirs": "תִּזְכֶּה",
+          "at": 24,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:24:תִּתְכַּסֶּה|תִּזְכֶּה"
+        },
+        {
+          "bucket": "vowels",
+          "ours": "לְעוֹלָם",
+          "theirs": "לָעוֹלָם",
+          "at": 29,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "vowels:29:לְעוֹלָם|לָעוֹלָם"
+        }
+      ],
+      "decisions": {},
+      "unresolved": [
+        "consonants:2:בְּמִצְוַת צִיצִית|בְּטַלִּית שֶׁל צִיצִת",
+        "vowels:20:בַּטַּלִּית|בְטַלִּית",
+        "consonants:24:תִּתְכַּסֶּה|תִּזְכֶּה",
+        "vowels:29:לְעוֹלָם|לָעוֹלָם"
+      ],
+      "complete": false
+    }
+  },
+  "s39/tallit_standing": {
+    "primary": "Then this ברכה is recited while standing:",
+    "independent": "Then this ברכה is recited while standing:",
+    "primary_keys": [
+      "tallit_standing"
+    ],
+    "independent_keys": [
+      "s39.rubric.2"
+    ],
+    "comparison": {
+      "primary_sha256": "289c711b1bae861b308392412b7dca130e0a7db8d13b39d8bb4a0ebc3e8928b2",
+      "independent_sha256": "289c711b1bae861b308392412b7dca130e0a7db8d13b39d8bb4a0ebc3e8928b2",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [],
+      "decisions": {},
+      "unresolved": [],
+      "complete": true
+    }
+  },
+  "s39/tallit_blessing_he": {
+    "primary": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהִתְעַטֵּף בַּצִּיצִת:",
+    "independent": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהִתְעַטֵּף בַּצִּיצִת:",
+    "primary_keys": [
+      "tallit_blessing_he"
+    ],
+    "independent_keys": [
+      "s39.berakhah"
+    ],
+    "comparison": {
+      "primary_sha256": "b8251c02c97b8a4f52d2dc32d1a413afdc3dec7e910fa85c26092a3b4ad92764",
+      "independent_sha256": "b8251c02c97b8a4f52d2dc32d1a413afdc3dec7e910fa85c26092a3b4ad92764",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [],
+      "decisions": {},
+      "unresolved": [],
+      "complete": true
+    }
+  },
+  "s39/tallit_draping": {
+    "primary": "One then drapes oneself in the טלית and says:",
+    "independent": "One then drapes oneself in the טלית and says:",
+    "primary_keys": [
+      "tallit_draping"
+    ],
+    "independent_keys": [
+      "s39.rubric.3"
+    ],
+    "comparison": {
+      "primary_sha256": "1f0d91d4c6887135cbcc1adf08ea443ef63f7b5641c55b2cf84fabd20ccd56b4",
+      "independent_sha256": "1f0d91d4c6887135cbcc1adf08ea443ef63f7b5641c55b2cf84fabd20ccd56b4",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [],
+      "decisions": {},
+      "unresolved": [],
+      "complete": true
+    }
+  },
+  "s39/yehi_ratzon_tzitzit": {
+    "primary": "יְהִי רָצוֹן מִלְּפָנֶיךָ יְיָ אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ שֶׁתְּהֵי חֲשׁוּבָה מִצְוַת צִיצִית זוֹ כְּאִלּוּ קִיַּמְתִּיהָ בְּכָל־פְּרָטֶיהָ וְדִקְדּוּקֶיהָ וְכַוָּנוֹתֶיהָ וְתַרְיַ״ג מִצְוֹת הַתְּלוּיִם בָּהּ. אָמֵן:",
+    "independent": "יְהִי רָצוֹן מִלְּפָנֶיךָ יְיָ אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ שֶׁתְּהֵי חֲשׁוּבָה מִצְוַת צִיצִת זוֹ כְּאִלּוּ קִיַּמְתִּיהָ בְּכָל־פְּרָטֶיהָ וְדִקְדּוּקֶיהָ וְכַוָּנוֹתֶיהָ ותרי״ג מִצְוֹת־הַתְּלוּיִם בָּהּ. אָמֵן:",
+    "primary_keys": [
+      "yehi_ratzon_tzitzit"
+    ],
+    "independent_keys": [
+      "s39.yehi_ratzon"
+    ],
+    "comparison": {
+      "primary_sha256": "4eb780e15a303fce0cd87d58281ea28ef9edde7c5aeea1456e0eccc073467adf",
+      "independent_sha256": "3b3afb45ee3e9a9f75b6f493621ca33d8f567ed2a72f422230cc542ff71a82ed",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [
+        {
+          "bucket": "consonants",
+          "ours": "צִיצִית",
+          "theirs": "צִיצִת",
+          "at": 10,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:10:צִיצִית|צִיצִת"
+        },
+        {
+          "bucket": "vowels",
+          "ours": "וְתַרְיַ״ג",
+          "theirs": "ותרי״ג",
+          "at": 18,
+          "size": 4,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "vowels:18:וְתַרְיַ״ג|ותרי״ג"
+        },
+        {
+          "bucket": "whitespace",
+          "ours": "' '",
+          "theirs": "'־'",
+          "at": 19,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "after מִצְוֹת",
+          "key": "whitespace:19:' '|'־'"
+        }
+      ],
+      "decisions": {},
+      "unresolved": [
+        "consonants:10:צִיצִית|צִיצִת",
+        "vowels:18:וְתַרְיַ״ג|ותרי״ג",
+        "whitespace:19:' '|'־'"
+      ],
+      "complete": false
+    }
+  },
+  "s39/tallit_after": {
+    "primary": "One then removes the טלית from the face and drapes oneself in such a way that there should be one ציצית in front and one behind on each side.",
+    "independent": "One then removes the טלית from the face and drapes oneself in such a way that there should be one ציצת in front and one behind on each side.",
+    "primary_keys": [
+      "tallit_after"
+    ],
+    "independent_keys": [
+      "s39.rubric.4"
+    ],
+    "comparison": {
+      "primary_sha256": "587b906a51b8c5c923e7fc7f3d8092c03f7d1580b77adcdba8de4c68a134e524",
+      "independent_sha256": "39aa98ab08f798126e924ef4651105f065ce902f0baa002c1a0779713957a58c",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [
+        {
+          "bucket": "consonants",
+          "ours": "ציצית",
+          "theirs": "ציצת",
+          "at": 20,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:20:ציצית|ציצת"
+        }
+      ],
+      "decisions": {},
+      "unresolved": [
+        "consonants:20:ציצית|ציצת"
+      ],
+      "complete": false
+    }
+  },
+  "s39/tallit_blessing_en": {
+    "primary": "Blessed art Thou, O Lord our God, King of the World, who has sanctified us with His commandments and ordered us to drape ourselves with show-fringes.",
+    "independent": "Blessed art Thou, O Lord our God, King of the World, who has sanctified us with His commandments and ordered us to drape ourselves with show-fringes.",
+    "primary_keys": [
+      "tallit_blessing_en"
+    ],
+    "independent_keys": [
+      "s39.en.berakhah"
+    ],
+    "comparison": {
+      "primary_sha256": "5a85f5c0cd1872bcbb31c8e4ac0dd72a0c73193700c9f787075e1aa4d3d48b29",
+      "independent_sha256": "5a85f5c0cd1872bcbb31c8e4ac0dd72a0c73193700c9f787075e1aa4d3d48b29",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [],
+      "decisions": {},
+      "unresolved": [],
+      "complete": true
+    }
+  },
+  "s39/psalm_36_en": {
+    "primary": "How precious is Thy grace, O God, and the children of man shelter in the shadow of Thy wings. They are refreshed by the felicity of Thy house and with the brook of Thy bliss dost Thou water them. For with Thee is the source of life, in Thy light do we behold light. Extend Thy grace to those who acknowledge Thee and Thy charity to those who are of upright heart.",
+    "independent": "How precious is Thy grace, O God, and the children of man shelter in the shadow of Thy wings. They are refreshed by the felicity of Thy house and with the brook of Thy bliss dost Thou water them. For with Thee is the source of life, in Thy light do we behold light. Extend Thy grace to those who acknowledge Thee, and Thy charity to those who are of upright heart.",
+    "primary_keys": [
+      "psalm_36_en"
+    ],
+    "independent_keys": [
+      "s39.en.mah_yakar"
+    ],
+    "comparison": {
+      "primary_sha256": "0971b6f09d8d3aac18f8aad074f28febabbb0c54cdc9f8d9114c3b458d5c3cfb",
+      "independent_sha256": "9b672e314daed47ef14f20a3227ed09e10a5bcae3d5979226a280efdde75797c",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [
+        {
+          "bucket": "consonants",
+          "ours": "Thee",
+          "theirs": "Thee,",
+          "at": 61,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:61:Thee|Thee,"
+        }
+      ],
+      "decisions": {},
+      "unresolved": [
+        "consonants:61:Thee|Thee,"
+      ],
+      "complete": false
+    }
+  },
+  "s39/psalm_36_he": {
+    "primary": "מַה־יָּקָר חַסְדְּךָ אֱלֹהִים וּבְנֵי אָדָם בְּצֵל כְּנָפֶיךָ יֶחֱסָיוּן: יִרְוְיֻן מִדֶּשֶׁן בֵּיתֶךָ וְנַחַל עֲדָנֶיךָ תַשְׁקֵם: כִּי־עִמְּךָ מְקוֹר חַיִּים, בְּאוֹרְךָ נִרְאֶה־אוֹר: מְשֹׁךְ חַסְדְּךָ לְיֹדְעֶיךָ וְצִדְקָתְךָ לְיִשְׁרֵי־לֵב:",
+    "independent": "מַה־יָּקָר חַסְדְּךָ אֱלֹהִים וּבְנֵי אָדָם בְּצֵל כְּנָפֶיךָ יֶחֱסָיוּן:\nיִרְוְיֻן מִדֶּשֶׁן בֵּיתֶךָ וְנַחַל עֲדָנֶיךָ תַשְׁקֵם:\nכִּי עִמְּךָ מְקוֹר חַיִּים, בְּאוֹרְךָ נִרְאֶה־אוֹר:\nמְשֹׁךְ חַסְדְּךָ לְיֹדְעֶיךָ וְצִדְקָתְךָ לְיִשְׁרֵי־לֵב:",
+    "primary_keys": [
+      "psalm_36_8",
+      "psalm_36_9",
+      "psalm_36_10",
+      "psalm_36_11"
+    ],
+    "independent_keys": [
+      "s39.mah_yakar"
+    ],
+    "comparison": {
+      "primary_sha256": "52c31b6faeed8989ffa3b5e5dae023a2b2c656d469fc6b745b52cc07dfe1c0a2",
+      "independent_sha256": "ff8679d3948c4d5ff6c35950de08898633f02a302dde62ef993c0285377b3926",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [
+        {
+          "bucket": "whitespace",
+          "ours": "' '",
+          "theirs": "'\\n'",
+          "at": 8,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "after יֶחֱסָיוּן:",
+          "key": "whitespace:8:' '|'\\n'"
+        },
+        {
+          "bucket": "whitespace",
+          "ours": "' '",
+          "theirs": "'\\n'",
+          "at": 14,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "after תַשְׁקֵם:",
+          "key": "whitespace:14:' '|'\\n'"
+        },
+        {
+          "bucket": "whitespace",
+          "ours": "'־'",
+          "theirs": "' '",
+          "at": 15,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "after כִּי",
+          "key": "whitespace:15:'־'|' '"
+        },
+        {
+          "bucket": "whitespace",
+          "ours": "' '",
+          "theirs": "'\\n'",
+          "at": 21,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "after אוֹר:",
+          "key": "whitespace:21:' '|'\\n'"
+        }
+      ],
+      "decisions": {},
+      "unresolved": [
+        "whitespace:8:' '|'\\n'",
+        "whitespace:14:' '|'\\n'",
+        "whitespace:15:'־'|' '",
+        "whitespace:21:' '|'\\n'"
+      ],
+      "complete": false
+    }
+  },
+  "s40/prayers_heading": {
+    "primary": "תְּפִלּוֹת.",
+    "independent": "תְּפִלּוֹת.",
+    "primary_keys": [
+      "prayers_heading"
+    ],
+    "independent_keys": [
+      "s40.heading"
+    ],
+    "comparison": {
+      "primary_sha256": "9c7d69f6770f994fca3ebeb13e544019a6831f4d7ed3f2863aaa0887478cf75b",
+      "independent_sha256": "9c7d69f6770f994fca3ebeb13e544019a6831f4d7ed3f2863aaa0887478cf75b",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [],
+      "decisions": {},
+      "unresolved": [],
+      "complete": true
+    }
+  },
+  "s40/entering_instruction": {
+    "primary": "On entering the Synagogue:",
+    "independent": "On entering the Synagogue:",
+    "primary_keys": [
+      "entering_instruction"
+    ],
+    "independent_keys": [
+      "s40.rubric.1"
+    ],
+    "comparison": {
+      "primary_sha256": "62c82369bcca5181dcd7f4b379ad29e79a30521c8b230c3c39c225d7a68871f2",
+      "independent_sha256": "62c82369bcca5181dcd7f4b379ad29e79a30521c8b230c3c39c225d7a68871f2",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [],
+      "decisions": {},
+      "unresolved": [],
+      "complete": true
+    }
+  },
+  "s40/mah_tovu": {
+    "primary": "מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל: וַאֲנִי בְרֹב חַסְדְּךָ אָבוֹא בֵיתֶךָ אֶשְׁתַּחֲוֶה אֶל־הֵיכַל קָדְשְׁךָ בְּיִרְאָתֶךָ: יְיָ אָהַבְתִּי מְעוֹן בֵּיתֶךָ וּמְקוֹם מִשְׁכַּן כְּבוֹדֶךָ: וַאֲנִי אֶשְׁתַּחֲוֶה וְאֶכְרָעָה אֶבְרְכָה לִפְנֵי יְיָ עֹשִׂי: וַאֲנִי תְפִלָּתִי־לְךָ יְיָ עֵת רָצוֹן אֱלֹהִים בְּרָב־חַסְדֶּךָ עֲנֵנִי בֶּאֱמֶת יִשְׁעֶךָ:",
+    "independent": "מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל: וַאֲנִי בְּרֹב חַסְדְּךָ אָבֹא בֵיתֶךָ אֶשְׁתַּחֲוֶה אֶל־הֵיכַל קָדְשְׁךָ בְּיִרְאָתֶךָ: יְיָ אָהַבְתִּי מְעוֹן בֵּיתֶךָ וּמְקוֹם מִשְׁכַּן כְּבוֹדֶךָ: וַאֲנִי אֶשְׁתַּחֲוֶה וְאֶכְרָעָה אֶבְרְכָה לִפְנֵי־יְיָ עֹשִׂי: וַאֲנִי תְפִלָּתִי־לְךָ יְיָ עֵת רָצוֹן אֱלֹהִים בְּרָב־חַסְדֶּךָ עֲנֵנִי בֶּאֱמֶת יִשְׁעֶךָ:",
+    "primary_keys": [
+      "mah_tovu"
+    ],
+    "independent_keys": [
+      "s40.mah_tovu"
+    ],
+    "comparison": {
+      "primary_sha256": "ec7fc8a41c7aa63bb69c23f783eefd8879531021e6fcf3f353eeda275e91b800",
+      "independent_sha256": "219880d3569f49608261a6e971f9e81eb30d6cb067b463d7b4bb53ce6a0e4d27",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [
+        {
+          "bucket": "vowels",
+          "ours": "בְרֹב",
+          "theirs": "בְּרֹב",
+          "at": 7,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "vowels:7:בְרֹב|בְּרֹב"
+        },
+        {
+          "bucket": "consonants",
+          "ours": "אָבוֹא",
+          "theirs": "אָבֹא",
+          "at": 9,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:9:אָבוֹא|אָבֹא"
+        },
+        {
+          "bucket": "whitespace",
+          "ours": "' '",
+          "theirs": "'־'",
+          "at": 27,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "after לִפְנֵי",
+          "key": "whitespace:27:' '|'־'"
+        }
+      ],
+      "decisions": {},
+      "unresolved": [
+        "vowels:7:בְרֹב|בְּרֹב",
+        "consonants:9:אָבוֹא|אָבֹא",
+        "whitespace:27:' '|'־'"
+      ],
+      "complete": false
+    }
+  },
+  "s40/shachar_attribution": {
+    "primary": "נקסם לר׳ שלמה בן גבירול. ד׳ תנועות ויתד וג׳ תנועות.",
+    "independent": "בקשה לר׳ שלמה בן גבירול. ד׳ תנועות ויתד וד׳ תנועות.",
+    "primary_keys": [
+      "shachar_attribution"
+    ],
+    "independent_keys": [
+      "s40.shachar.attribution"
+    ],
+    "comparison": {
+      "primary_sha256": "1e6788f92339c0288088dd38af1f19c8a5ecf5fe2d1075d609ade400c9b46c17",
+      "independent_sha256": "5ab66467e6707f3c9b6e4b98f1f4470a0bb8300d82c6bfba58eded0bae501542",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [
+        {
+          "bucket": "consonants",
+          "ours": "נקסם",
+          "theirs": "בקשה",
+          "at": 0,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:0:נקסם|בקשה"
+        },
+        {
+          "bucket": "consonants",
+          "ours": "וג׳",
+          "theirs": "וד׳",
+          "at": 8,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:8:וג׳|וד׳"
+        }
+      ],
+      "decisions": {},
+      "unresolved": [
+        "consonants:0:נקסם|בקשה",
+        "consonants:8:וג׳|וד׳"
+      ],
+      "complete": false
+    }
+  },
+  "s40/shachar_avaqeshkha": {
+    "primary": "שַׁחַר אֲבַקֶּשְׁךָ. צוּרִי וּמִשְׂגַּבִּי. אֶעֱרֹךְ לְפָנֶיךָ. שַׁחְרִי וְגַם־עַרְבִּי: לִפְנֵי גְדֻלָּתְךָ. אֶעֱמוֹד וְאֶבָּהֵל. כִּי־עֵינְךָ תִרְאֶה. כָּל־מַחְשְׁבוֹת לִבִּי: מַה־זֶּה אֲשֶׁר יוּכַל. הַלֵּב וְהַלָּשׁוֹן לַעֲשׂוֹת. וּמַה־כֹּחַ רוּחִי. בְּתוֹךְ קִרְבִּי: הִנֵּה לְךָ תִיטַב. זִמְרַת אֱנוֹשׁ. עַל־כֵּן אוֹדְךָ. בְּעוֹד תִּהְיֶה. נִשְׁמַת אֱלוֹהַּ בִּי:",
+    "independent": "שַׁחַר אֲבַקֶּשְׁךָ. צוּרִי וּמִשְׂגַּבִּי. אֶעְרוֹךְ לְפָנֶיךָ. שַׁחְרִי וְגַם־עַרְבִּי: לִפְנֵי גְדֻלָּתְךָ. אֶעְמֹד וְאֶבָּהֵל. כִּי־עֵינְךָ תִרְאֶה. כָּל־מַחְשְׁבוֹת לִבִּי: מַה־זֶּה אֲשֶׁר יוּכַל. הַלֵּב וְהַלָּשׁוֹן לַעֲשׂוֹת, וּמַה־כֹּחִי. רוּחִי בְּתוֹךְ קִרְבִּי: הִנֵּה לְךָ תִיטַב. זִמְרַת אֱנוֹשׁ, עַל־כֵּן אוֹדְךָ בְּעוֹד תִּהְיֶה. נִשְׁמַת אֱלוֹהַּ בִּי:",
+    "primary_keys": [
+      "shachar_avaqeshkha"
+    ],
+    "independent_keys": [
+      "s40.shachar"
+    ],
+    "comparison": {
+      "primary_sha256": "53752251b34769b82574bb342243d7bc9f4391ef797b0a262823ff1932974341",
+      "independent_sha256": "9033240398e122dac1b86b633b84b08af739bab6c6430a590098cc9896a4a55c",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [
+        {
+          "bucket": "consonants",
+          "ours": "אֶעֱרֹךְ",
+          "theirs": "אֶעְרוֹךְ",
+          "at": 4,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:4:אֶעֱרֹךְ|אֶעְרוֹךְ"
+        },
+        {
+          "bucket": "consonants",
+          "ours": "אֶעֱמוֹד",
+          "theirs": "אֶעְמֹד",
+          "at": 11,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:11:אֶעֱמוֹד|אֶעְמֹד"
+        },
+        {
+          "bucket": "consonants",
+          "ours": "לַעֲשׂוֹת.",
+          "theirs": "לַעֲשׂוֹת,",
+          "at": 25,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:25:לַעֲשׂוֹת.|לַעֲשׂוֹת,"
+        },
+        {
+          "bucket": "consonants",
+          "ours": "כֹּחַ רוּחִי.",
+          "theirs": "כֹּחִי. רוּחִי",
+          "at": 27,
+          "size": 2,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:27:כֹּחַ רוּחִי.|כֹּחִי. רוּחִי"
+        },
+        {
+          "bucket": "consonants",
+          "ours": "אֱנוֹשׁ.",
+          "theirs": "אֱנוֹשׁ,",
+          "at": 35,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:35:אֱנוֹשׁ.|אֱנוֹשׁ,"
+        },
+        {
+          "bucket": "consonants",
+          "ours": "אוֹדְךָ.",
+          "theirs": "אוֹדְךָ",
+          "at": 38,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:38:אוֹדְךָ.|אוֹדְךָ"
+        }
+      ],
+      "decisions": {},
+      "unresolved": [
+        "consonants:4:אֶעֱרֹךְ|אֶעְרוֹךְ",
+        "consonants:11:אֶעֱמוֹד|אֶעְמֹד",
+        "consonants:25:לַעֲשׂוֹת.|לַעֲשׂוֹת,",
+        "consonants:27:כֹּחַ רוּחִי.|כֹּחִי. רוּחִי",
+        "consonants:35:אֱנוֹשׁ.|אֱנוֹשׁ,",
+        "consonants:38:אוֹדְךָ.|אוֹדְךָ"
+      ],
+      "complete": false
+    }
+  },
+  "s40/before_morning": {
+    "primary": "Before the morning prayer:",
+    "independent": "Before the morning prayer:",
+    "primary_keys": [
+      "before_morning"
+    ],
+    "independent_keys": [
+      "s40.rubric.2"
+    ],
+    "comparison": {
+      "primary_sha256": "68d4298c189d6ca95e479d2a93f9baed1f084a501ef8743e242ed3790a0be962",
+      "independent_sha256": "68d4298c189d6ca95e479d2a93f9baed1f084a501ef8743e242ed3790a0be962",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [],
+      "decisions": {},
+      "unresolved": [],
+      "complete": true
+    }
+  },
+  "s40/entrance_prefix": {
+    "primary": "וַאֲנִי בְּרֹב חַסְדְּךָ אָבוֹא בֵיתֶךָ אֶשְׁתַּחֲוֶה אֶל־הֵיכַל קָדְשְׁךָ בְּיִרְאָתֶךָ: בְּבֵית אֱלֹהִים נְהַלֵּךְ בְּרָגֶשׁ:",
+    "independent": "וַאֲנִי בְּרֹב חַסְדְּךָ אָבֹא בֵיתֶךָ אֶשְׁתַּחֲוֶה אֶל־הֵיכַל קָדְשְׁךָ בְּיִרְאָתֶךָ:\nבְּבֵית אֱלֹהִים נְהַלֵּךְ בְּרָגֶשׁ:",
+    "primary_keys": [
+      "psalm_5_8",
+      "psalm_55_15_b"
+    ],
+    "independent_keys": [
+      "s40.vaani_large"
+    ],
+    "comparison": {
+      "primary_sha256": "06ed5f2f3e85278497b2b2e02bc521e8b934dddba57f5a0e388c2f4ae23325b9",
+      "independent_sha256": "1141e6b75f50dcd1079deacd2a4947a941cb3ebfc62fae54e4d9f6429f41f1a1",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [
+        {
+          "bucket": "consonants",
+          "ours": "אָבוֹא",
+          "theirs": "אָבֹא",
+          "at": 3,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:3:אָבוֹא|אָבֹא"
+        },
+        {
+          "bucket": "whitespace",
+          "ours": "' '",
+          "theirs": "'\\n'",
+          "at": 9,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "after בְּיִרְאָתֶךָ:",
+          "key": "whitespace:9:' '|'\\n'"
+        }
+      ],
+      "decisions": {},
+      "unresolved": [
+        "consonants:3:אָבוֹא|אָבֹא",
+        "whitespace:9:' '|'\\n'"
+      ],
+      "complete": false
+    }
+  },
+  "s40/before_morning_verses": {
+    "primary": "אֲנִי־קְרָאתִיךָ כִי־תַעֲנֵנִי אֵל הַט־אָזְנְךָ לִי שְׁמַע אִמְרָתִי: אֲנִי בְּצֶדֶק אֶחֱזֶה פָנֶיךָ אֶשְׂבְּעָה בְהָקִיץ תְּמוּנָתֶךָ: וַאֲנִי עָלֶיךָ בָטַחְתִּי יְיָ אָמַרְתִּי אֱלֹהַי אָתָּה: שְׁמַע קוֹל תַּחֲנוּנַי בְּשַׁוְּעִי אֵלֶיךָ בְּנָשְׂאִי יָדַי אֶל־דְּבִיר קָדְשֶׁךָ: יְיָ אֱלֹהָי שִׁוַּעְתִּי אֵלֶיךָ וַתִּרְפָּאֵנִי: אֵלֶיךָ יְיָ אֶקְרָא וְאֶל־אֲדֹנָי אֶתְחַנָּן: הָאִירָה פָנֶיךָ עַל־עַבְדֶּךָ הוֹשִׁיעֵנִי בְחַסְדֶּךָ: כִּי־לְךָ יְיָ הוֹחָלְתִּי אַתָּה תַעֲנֶה אֲדֹנָי אֱלֹהָי. שִׁמְעָה",
+    "independent": "אֲנִי קְרָאתִיךָ כִּי־תַעֲנֵנִי אֵל הַט־אָזְנְךָ לִי שְׁמַע אִמְרָתִי: אֲנִי בְּצֶדֶק אֶחֱזֶה פָנֶיךָ אֶשְׂבְּעָה בְהָקִיץ תְּמוּנָתֶךָ: וַאֲנִי עָלֶיךָ בָטַחְתִּי יְיָ אָמַרְתִּי אֱלֹהַי אָתָּה: שְׁמַע קוֹל תַּחֲנוּנַי בְּשַׁוְּעִי אֵלֶיךָ בְּנָשְׂאִי יָדַי אֶל־דְּבִיר קָדְשֶׁךָ: יְיָ אֱלֹהָי שִׁוַּעְתִּי אֵלֶיךָ וַתִּרְפָּאֵנִי: אֵלֶיךָ יְיָ אֶקְרָא וְאֶל־אֲדֹנָי אֶתְחַנָּן: הָאִירָה פָנֶיךָ עַל־עַבְדֶּךָ הוֹשִׁיעֵנִי בְחַסְדֶּךָ: כִּי־לְךָ יְיָ הוֹחָלְתִּי אַתָּה תַעֲנֶה אֲדֹנָי אֱלֹהָי: שְׁמָעָה",
+    "primary_keys": [
+      "psalm_17_6",
+      "psalm_17_15",
+      "psalm_31_15",
+      "psalm_28_2",
+      "psalm_30_3",
+      "psalm_30_9",
+      "psalm_31_17",
+      "psalm_38_16"
+    ],
+    "independent_keys": [
+      "s40.ani_kraticha"
+    ],
+    "comparison": {
+      "primary_sha256": "6df8ff3658222f694194ea661c7d669fa345e89932a2c934adc52807980beb4d",
+      "independent_sha256": "6a33e9911e57ece371bec10959e1d09e6bce706370a750094aa84cf897138eb3",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [
+        {
+          "bucket": "vowels",
+          "ours": "כִי",
+          "theirs": "כִּי",
+          "at": 2,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "vowels:2:כִי|כִּי"
+        },
+        {
+          "bucket": "whitespace",
+          "ours": "'־'",
+          "theirs": "' '",
+          "at": 0,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "after אֲנִי",
+          "key": "whitespace:0:'־'|' '"
+        },
+        {
+          "bucket": "consonants",
+          "ours": "אֱלֹהָי.",
+          "theirs": "אֱלֹהָי:",
+          "at": 58,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:58:אֱלֹהָי.|אֱלֹהָי:"
+        },
+        {
+          "bucket": "vowels",
+          "ours": "שִׁמְעָה",
+          "theirs": "שְׁמָעָה",
+          "at": 59,
+          "size": 3,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "vowels:59:שִׁמְעָה|שְׁמָעָה"
+        }
+      ],
+      "decisions": {},
+      "unresolved": [
+        "vowels:2:כִי|כִּי",
+        "whitespace:0:'־'|' '",
+        "consonants:58:אֱלֹהָי.|אֱלֹהָי:",
+        "vowels:59:שִׁמְעָה|שְׁמָעָה"
+      ],
+      "complete": false
+    }
+  },
+  "s41/entering_instruction": {
+    "primary": "On entering the Synagogue:",
+    "independent": "On entering the Synagogue:",
+    "primary_keys": [
+      "entering_instruction"
+    ],
+    "independent_keys": [
+      "s41.rubric.1"
+    ],
+    "comparison": {
+      "primary_sha256": "62c82369bcca5181dcd7f4b379ad29e79a30521c8b230c3c39c225d7a68871f2",
+      "independent_sha256": "62c82369bcca5181dcd7f4b379ad29e79a30521c8b230c3c39c225d7a68871f2",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [],
+      "decisions": {},
+      "unresolved": [],
+      "complete": true
+    }
+  },
+  "s41/psalm_5_8": {
+    "primary": "And I through the abundance of Thy grace enter Thy house and bow down before Thy holy place in awe of Thee.",
+    "independent": "And I through the abundance of Thy grace enter Thy house and bow down before Thy holy place in awe of Thee.",
+    "primary_keys": [
+      "psalm_5_8"
+    ],
+    "independent_keys": [
+      "s41.en.vaani"
+    ],
+    "comparison": {
+      "primary_sha256": "c78a29ab524496d788efb81cfab3091f3ed0632334b2af32a4e085c785b6001a",
+      "independent_sha256": "c78a29ab524496d788efb81cfab3091f3ed0632334b2af32a4e085c785b6001a",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [],
+      "decisions": {},
+      "unresolved": [],
+      "complete": true
+    }
+  },
+  "s41/psalm_55_15_b": {
+    "primary": "In the house of God let us walk in throngs.",
+    "independent": "In the house of God let us walk in throngs.",
+    "primary_keys": [
+      "psalm_55_15_b"
+    ],
+    "independent_keys": [
+      "s41.en.bevet"
+    ],
+    "comparison": {
+      "primary_sha256": "f4984b69031b19179ee3dcb0bd64c4ce523702f49fc6e1f16a11e69c2031b7c6",
+      "independent_sha256": "f4984b69031b19179ee3dcb0bd64c4ce523702f49fc6e1f16a11e69c2031b7c6",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [],
+      "decisions": {},
+      "unresolved": [],
+      "complete": true
+    }
+  },
+  "s41/mah_tovu": {
+    "primary": "How becoming are your tents, O Jacob, your dwellings, O Israel! And I through the abundance of Thy grace enter Thy house and bow down before Thy holy place in awe of Thee. O Lord, I love the site of Thy house, the place of the dwelling of Thy glory. I bow, throw myself down and kneel before the Lord my Maker. And as for me, my prayer is to Thee, O Lord, at a time of favour. O God, in the abundance of Thy grace respond to me with the truth of Thy salvation.",
+    "independent": "How becoming are your tents, O Jacob, your dwellings, O Israel. And I through the abundance of Thy grace enter Thy house and bow down before Thy holy place in awe of Thee. O Lord, I love the site of Thy house, the place of the dwelling of Thy glory. I bow, throw myself down and kneel before the Lord, my Maker. And as for me, my prayer is to Thee, O Lord, at a time of favour. O God, in the abundance of Thy grace respond to me with the truth of Thy salvation.",
+    "primary_keys": [
+      "mah_tovu"
+    ],
+    "independent_keys": [
+      "s41.en.mah_tovu"
+    ],
+    "comparison": {
+      "primary_sha256": "ebd8c08c2499d48fbd006a2ebbb6dce6404ad918431a78845f0526741790ebc8",
+      "independent_sha256": "cf7d689e72576a9bd1f11ef05490e61b408d8d171ef5fbef69196e74741d085a",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [
+        {
+          "bucket": "consonants",
+          "ours": "Israel!",
+          "theirs": "Israel.",
+          "at": 10,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:10:Israel!|Israel."
+        },
+        {
+          "bucket": "consonants",
+          "ours": "Lord",
+          "theirs": "Lord,",
+          "at": 59,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:59:Lord|Lord,"
+        }
+      ],
+      "decisions": {},
+      "unresolved": [
+        "consonants:10:Israel!|Israel.",
+        "consonants:59:Lord|Lord,"
+      ],
+      "complete": false
+    }
+  },
+  "s41/shachar_avaqeshkha": {
+    "primary": "In the morning I seek Thee, my rock and my fortress. I order my morning and also my evening prayer before Thee. Before Thy grandeur I stand and tremble, for Thine eye sees all the thoughts of my heart. What can heart and tongue accomplish, what can my strength, what can the spirit within me. Behold, man’s song pleases Thee. Therefore, I wish to thank Thee as long as God’s breath is in me.",
+    "independent": "In the morning I seek Thee, my rock and my fortress. I order my morning and also my evening prayer before Thee. Before Thy grandeur I stand and tremble, for Thine eye sees all the thoughts of my heart. What can heart and tongue accomplish, what can my strength, what can the spirit within me. Behold, man's song pleases Thee. Therefore, I wish to thank Thee as long as God's breath is in me.",
+    "primary_keys": [
+      "shachar_avaqeshkha"
+    ],
+    "independent_keys": [
+      "s41.en.shachar"
+    ],
+    "comparison": {
+      "primary_sha256": "801b617d485ed77ecc2e298c4f190e657408ac5976efd533f9230aa699f14896",
+      "independent_sha256": "a955145bfafceea679f8fb306011d0f43fe1965bc27a24b8cb27a6e2241f5c9c",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [
+        {
+          "bucket": "consonants",
+          "ours": "man’s",
+          "theirs": "man's",
+          "at": 56,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:56:man’s|man's"
+        },
+        {
+          "bucket": "consonants",
+          "ours": "God’s",
+          "theirs": "God's",
+          "at": 69,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:69:God’s|God's"
+        }
+      ],
+      "decisions": {},
+      "unresolved": [
+        "consonants:56:man’s|man's",
+        "consonants:69:God’s|God's"
+      ],
+      "complete": false
+    }
+  },
+  "s41/before_morning": {
+    "primary": "Before the morning prayer:",
+    "independent": "Before the morning prayer:",
+    "primary_keys": [
+      "before_morning"
+    ],
+    "independent_keys": [
+      "s41.rubric.2"
+    ],
+    "comparison": {
+      "primary_sha256": "68d4298c189d6ca95e479d2a93f9baed1f084a501ef8743e242ed3790a0be962",
+      "independent_sha256": "68d4298c189d6ca95e479d2a93f9baed1f084a501ef8743e242ed3790a0be962",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [],
+      "decisions": {},
+      "unresolved": [],
+      "complete": true
+    }
+  },
+  "s41/before_morning_verses": {
+    "primary": "I call to Thee, for Thou dost respond to me, O God, incline Thine ear to me, hear my word. In righteousness may I behold Thy countenance, I am satisfied on waking with Thy likeness. I trust in Thee, O Lord, I say, Thou art my God. Hear the voice of my prayer when I implore Thee, when I raise my hands toward Thy inmost sanctuary. O Lord my God, I implore Thee and Thou healest me. Unto Thee, O Lord, do I call and my Master do I entreat. Let Thy countenance shine upon Thy servant, help me in Thy grace. For I wait for Thee, O Lord, Thou dost respond, O Lord my God.",
+    "independent": "I call to Thee, for Thou dost respond to me, O God, incline Thine ear to me, hear my word. In righteousness may I behold Thy countenance, I am satisfied on waking with Thy likeness. I trust in Thee, O Lord, I say, Thou art my God. Hear the voice of my prayer when I implore Thee, when I raise my hands toward Thine inmost sanctuary. O Lord my God, I implore Thee and Thou healest me. Unto Thee, O Lord, do I call and my Master do I entreat. Let Thy countenance shine upon Thy servant, help me in Thy grace. For I wait for Thee, O Lord, Thou dost respond, O Lord my God.",
+    "primary_keys": [
+      "before_morning_verses"
+    ],
+    "independent_keys": [
+      "s41.en.ani_kraticha"
+    ],
+    "comparison": {
+      "primary_sha256": "31b549ed5e98f86da8dbd60f29376bc362d0358805d86087276878762495e326",
+      "independent_sha256": "d0d63cb781b897c5b63021fda56d5d18e05e1e030e45d019b2f503a3758c375a",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [
+        {
+          "bucket": "consonants",
+          "ours": "Thy",
+          "theirs": "Thine",
+          "at": 63,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:63:Thy|Thine"
+        }
+      ],
+      "decisions": {},
+      "unresolved": [
+        "consonants:63:Thy|Thine"
+      ],
+      "complete": false
+    }
+  },
+  "s42/before_morning_cont": {
+    "primary": "תְפִלָּתִי יְיָ וְשַׁוְעָתִי הַאֲזִינָה אֶל־דִּמְעָתִי אַל־תֶּחֱרַשׁ: שְׁמַע־יְיָ וְחָנֵּנִי יְיָ הֱיֵה עֹזֵר לִי:",
+    "independent": "תְּפִלָּתִי יְיָ וְשַׁוְעָתִי הַאֲזִינָה אֶל־דִּמְעָתִי אַל־תֶּחֱרַשׁ: שְׁמַע־יְיָ וְחָנֵּנִי יְיָ הֱיֵה עֹזֵר לִי:",
+    "primary_keys": [
+      "psalm_39_13_shimah_end",
+      "psalm_30_11"
+    ],
+    "independent_keys": [
+      "s42.ani_kraticha.cont"
+    ],
+    "comparison": {
+      "primary_sha256": "bdfa9a8063bdd4394a0ef4440bcb90d65817faad3b7d9e9314e2d57ba2bef89a",
+      "independent_sha256": "a2557078ba555e9a13d34c3db8ec80bd19e5a6dd56c56d0f52bb672569bfd2d7",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [
+        {
+          "bucket": "vowels",
+          "ours": "תְפִלָּתִי",
+          "theirs": "תְּפִלָּתִי",
+          "at": 0,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "vowels:0:תְפִלָּתִי|תְּפִלָּתִי"
+        }
+      ],
+      "decisions": {},
+      "unresolved": [
+        "vowels:0:תְפִלָּתִי|תְּפִלָּתִי"
+      ],
+      "complete": false
+    }
+  },
+  "s42/second_paragraph": {
+    "primary": "שִׁיר הַמַּעֲלוֹת לְדָוִד שָׂמַחְתִּי בְּאֹמְרִים לִי בֵּית יְיָ נֵלֵךְ: שָׂשׂ אָנֹכִי עַל־אִמְרָתֶךָ כְּמוֹצֵא שָׁלָל רָב: הַקְשִׁיבָה לְקוֹל שַׁוְעִי מַלְכִּי וֵאלֹהָי כִּי אֵלֶיךָ אֶתְפַּלָּל: יְיָ בֹּקֶר תִּשְׁמַע קוֹלִי בֹּקֶר אֶעֱרָךְ־לְךָ וַאֲצַפֶּה: אֲנִי־קְרָאתִיךָ כִי־תַעֲנֵנִי אֵל הַט־אָזְנְךָ לִי שְׁמַע אִמְרָתִי: רַגְלִי עָמְדָה בְמִישׁוֹר בְּמַקְהֵלִים אֲבָרֵךְ יְיָ:",
+    "independent": "שִׁיר הַמַּעֲלוֹת לְדָוִד שָׂמַחְתִּי בְּאֹמְרִים לִי בֵּית יְיָ נֵלֵךְ: שָׂשׂ אָנֹכִי עַל־אִמְרָתֶךָ כְּמוֹצֵא שָׁלָל רָב: הַקְשִׁיבָה לְקוֹל שַׁוְעִי מַלְכִּי וֵאלֹהָי כִּי־אֵלֶיךָ אֶתְפַּלָּל: יְיָ בֹּקֶר תִּשְׁמַע קוֹלִי בֹּקֶר אֶעֱרָךְ־לְךָ וַאֲצַפֶּה: אֲנִי קְרָאתִיךָ כִּי־תַעֲנֵנִי אֵל הַט־אָזְנְךָ לִי שְׁמַע אִמְרָתִי: רַגְלִי עָמְדָה בְמִישׁוֹר בְּמַקְהֵלִים אֲבָרֵךְ יְיָ:",
+    "primary_keys": [
+      "psalm_122_1",
+      "psalm_119_162",
+      "psalm_5_3",
+      "psalm_5_4",
+      "psalm_17_6_repeat",
+      "psalm_26_12"
+    ],
+    "independent_keys": [
+      "s42.shir_hamaalot"
+    ],
+    "comparison": {
+      "primary_sha256": "fafa6c31d8b7d48cdc66857885a48d4457a86187f7b25bc6ca6874d3750b83e0",
+      "independent_sha256": "1d6015e70fe0940fb735e232a02924079e6bd26c682e7f41a05d359002a2daaf",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [
+        {
+          "bucket": "vowels",
+          "ours": "כִי",
+          "theirs": "כִּי",
+          "at": 34,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "vowels:34:כִי|כִּי"
+        },
+        {
+          "bucket": "whitespace",
+          "ours": "' '",
+          "theirs": "'־'",
+          "at": 21,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "after כִּי",
+          "key": "whitespace:21:' '|'־'"
+        },
+        {
+          "bucket": "whitespace",
+          "ours": "'־'",
+          "theirs": "' '",
+          "at": 32,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "after אֲנִי",
+          "key": "whitespace:32:'־'|' '"
+        }
+      ],
+      "decisions": {},
+      "unresolved": [
+        "vowels:34:כִי|כִּי",
+        "whitespace:21:' '|'־'",
+        "whitespace:32:'־'|' '"
+      ],
+      "complete": false
+    }
+  },
+  "s42/yigdal_description": {
+    "primary": "שלשה עשר עקרים, בחרוזים מסודרים.",
+    "independent": "שלשה עשר עקרים, בחרוזים מסדורים.",
+    "primary_keys": [
+      "yigdal_description"
+    ],
+    "independent_keys": [
+      "s42.yigdal.heading"
+    ],
+    "comparison": {
+      "primary_sha256": "de6825e16b34ad77fb6943ee45b387327081ec7e222df92c2d0d8efcf7bc8520",
+      "independent_sha256": "a96e54b4c415696e5b701b78f7d6712f525628dca0c06540adc46d81c382ffd3",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [
+        {
+          "bucket": "consonants",
+          "ours": "מסודרים.",
+          "theirs": "מסדורים.",
+          "at": 4,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:4:מסודרים.|מסדורים."
+        }
+      ],
+      "decisions": {},
+      "unresolved": [
+        "consonants:4:מסודרים.|מסדורים."
+      ],
+      "complete": false
+    }
+  },
+  "s42/yigdal": {
+    "primary": "יִגְדַּל אֱלֹהִים חַי וְיִשְׁתַּבַּח נִמְצָא וְאֵין עֵת אֶל־מְצִיאוּתוֹ: אֶחָד וְאֵין יָחִיד כְּיִחוּדוֹ נֶעְלָם וְגַם אֵין־סוֹף לְאַחְדּוּתוֹ: אֵין לוֹ דְמוּת הַגּוּף וְאֵינוֹ גוּף לֹא נַעֲרוֹךְ אֵלָיו קְדֻשָּׁתוֹ: קַדְמוֹן לְכָל־דָּבָר אֲשֶׁר נִבְרָא רִאשׁוֹן וְאֵין רֵאשִׁית לְרֵאשִׁיתוֹ: הִנּוֹ אֲדוֹן עוֹלָם וְכָל־נוֹצָר יוֹרֶה גְדֻלָּתוֹ וּמַלְכוּתוֹ: שֶׁפַע נְבוּאָתוֹ נְתָנוֹ אֶל־אַנְשֵׁי סְגֻלָּתוֹ וְתִפְאַרְתּוֹ: לֹא־קָם בְּיִשְׂרָאֵל כְּמשֶׁה עוֹד נָבִיא וּמַבִּיט אֶת־תְּמוּנָתוֹ: תּוֹרַת אֱמֶת נָתַן לְעַמּוֹ אֵל עַל־יַד נְבִיאוֹ נֶאֱמַן בֵּיתוֹ: לֹא יַחֲלִיף הָאֵל וְלֹא יָמִיר דָּתוֹ לְעוֹלָמִים לְזוּלָתוֹ: צוֹפֶה וְיוֹדֵעַ סְתָרֵינוּ מַבִּיט לְסוֹף־דָּבָר בְּקַדְמָתוֹ: גּוֹמֵל לְאִישׁ חֶסֶד כְּמִפְעָלוֹ יִתֵּן לְרָשָׁע רָע כְּרִשְׁעָתוֹ: יִשְׁלַח לְקֵץ יָמִין מְשִׁיחֵנוּ לִפְדּוֹת מְחַכֵּי קֵץ יְשׁוּעָתוֹ: מֵתִים יְחַיֶּה אֵל בְּרוֹב חַסְדּוֹ בָּרוּךְ עֲדֵי־עַד שֵׁם תְּהִלָּתוֹ:",
+    "independent": "יִגְדַּל אֱלֹהִים חַי וְיִשְׁתַּבַּח נִמְצָא וְאֵין עֵת אֶל־מְצִיאוּתוֹ:\nאֶחָד וְאֵין יָחִיד כְּיִחוּדוֹ נֶעְלָם וְגַם אֵין סוֹף לְאַחְדוּתוֹ:\nאֵין לוֹ דְּמוּת הַגּוּף וְאֵינוֹ גוּף לֹא נַעֲרוֹךְ אֵלָיו קְדֻשָּׁתוֹ:\nקַדְמוֹן לְכָל־דָּבָר אֲשֶׁר נִבְרָא רִאשׁוֹן וְאֵין רֵאשִׁית לְרֵאשִׁיתוֹ:\nהִנּוֹ אֲדוֹן עוֹלָם וְכָל־נוֹצָר יוֹרֶה גְדֻלָּתוֹ וּמַלְכוּתוֹ:\nשֶׁפַע נְבוּאָתוֹ נְתָנוֹ אֶל אַנְשֵׁי סְגֻלָּתוֹ וְתִפְאַרְתּוֹ:\nלֹא קָם בְּיִשְׂרָאֵל כְּמֹשֶׁה עוֹד נָבִיא וּמַבִּיט אֶת־תְּמוּנָתוֹ:\nתּוֹרַת אֱמֶת נָתַן לְעַמּוֹ אֵל עַל־יַד נְבִיאוֹ נֶאֱמַן בֵּיתוֹ:\nלֹא יַחֲלִיף הָאֵל וְלֹא יָמִיר דָּתוֹ לְעוֹלָמִים לְזוּלָתוֹ:\nצוֹפֶה וְיוֹדֵעַ סְתָרֵינוּ מַבִּיט לְסוֹף דָּבָר בְּקַדְמָתוֹ:\nגּוֹמֵל לְאִישׁ חֶסֶד כְּמִפְעָלוֹ נוֹתֵן לְרָשָׁע רָע כְּרִשְׁעָתוֹ:\nיִשְׁלַח לְקֵץ יָמִין מְשִׁיחֵנוּ לִפְדּוֹת מְחַכֵּי קֵץ יְשׁוּעָתוֹ:\nמֵתִים יְחַיֶּה אֵל בְּרֹב חַסְדּוֹ בָּרוּךְ עֲדֵי־עַד שֵׁם תְּהִלָּתוֹ:",
+    "primary_keys": [
+      "yigdal_1",
+      "yigdal_2",
+      "yigdal_3",
+      "yigdal_4",
+      "yigdal_5",
+      "yigdal_6",
+      "yigdal_7",
+      "yigdal_8",
+      "yigdal_9",
+      "yigdal_10",
+      "yigdal_11",
+      "yigdal_12",
+      "yigdal_13"
+    ],
+    "independent_keys": [
+      "s42.yigdal"
+    ],
+    "comparison": {
+      "primary_sha256": "a3e2a1f1da498579b3509e8e65c4e29d27640c319f0fbe0d44855d7db61eb6f0",
+      "independent_sha256": "30cb7ed1e5b5ed3d9e9912456223bf2e78009261b2693ca992f5dadd87880668",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [
+        {
+          "bucket": "vowels",
+          "ours": "לְאַחְדּוּתוֹ:",
+          "theirs": "לְאַחְדוּתוֹ:",
+          "at": 17,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "vowels:17:לְאַחְדּוּתוֹ:|לְאַחְדוּתוֹ:"
+        },
+        {
+          "bucket": "vowels",
+          "ours": "דְמוּת",
+          "theirs": "דְּמוּת",
+          "at": 20,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "vowels:20:דְמוּת|דְּמוּת"
+        },
+        {
+          "bucket": "vowels",
+          "ours": "כְּמשֶׁה",
+          "theirs": "כְּמֹשֶׁה",
+          "at": 55,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "vowels:55:כְּמשֶׁה|כְּמֹשֶׁה"
+        },
+        {
+          "bucket": "whitespace",
+          "ours": "' '",
+          "theirs": "'\\n'",
+          "at": 8,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "after מְצִיאוּתוֹ:",
+          "key": "whitespace:8:' '|'\\n'"
+        },
+        {
+          "bucket": "whitespace",
+          "ours": "'־'",
+          "theirs": "' '",
+          "at": 15,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "after אֵין",
+          "key": "whitespace:15:'־'|' '"
+        },
+        {
+          "bucket": "whitespace",
+          "ours": "' '",
+          "theirs": "'\\n'",
+          "at": 17,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "after לְאַחְדּוּתוֹ:",
+          "key": "whitespace:17:' '|'\\n'"
+        },
+        {
+          "bucket": "whitespace",
+          "ours": "' '",
+          "theirs": "'\\n'",
+          "at": 27,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "after קְדֻשָּׁתוֹ:",
+          "key": "whitespace:27:' '|'\\n'"
+        },
+        {
+          "bucket": "whitespace",
+          "ours": "' '",
+          "theirs": "'\\n'",
+          "at": 36,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "after לְרֵאשִׁיתוֹ:",
+          "key": "whitespace:36:' '|'\\n'"
+        },
+        {
+          "bucket": "whitespace",
+          "ours": "' '",
+          "theirs": "'\\n'",
+          "at": 44,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "after וּמַלְכוּתוֹ:",
+          "key": "whitespace:44:' '|'\\n'"
+        },
+        {
+          "bucket": "whitespace",
+          "ours": "'־'",
+          "theirs": "' '",
+          "at": 48,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "after אֶל",
+          "key": "whitespace:48:'־'|' '"
+        },
+        {
+          "bucket": "whitespace",
+          "ours": "' '",
+          "theirs": "'\\n'",
+          "at": 51,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "after וְתִפְאַרְתּוֹ:",
+          "key": "whitespace:51:' '|'\\n'"
+        },
+        {
+          "bucket": "whitespace",
+          "ours": "'־'",
+          "theirs": "' '",
+          "at": 52,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "after לֹא",
+          "key": "whitespace:52:'־'|' '"
+        },
+        {
+          "bucket": "whitespace",
+          "ours": "' '",
+          "theirs": "'\\n'",
+          "at": 60,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "after תְּמוּנָתוֹ:",
+          "key": "whitespace:60:' '|'\\n'"
+        },
+        {
+          "bucket": "whitespace",
+          "ours": "' '",
+          "theirs": "'\\n'",
+          "at": 70,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "after בֵּיתוֹ:",
+          "key": "whitespace:70:' '|'\\n'"
+        },
+        {
+          "bucket": "whitespace",
+          "ours": "' '",
+          "theirs": "'\\n'",
+          "at": 78,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "after לְזוּלָתוֹ:",
+          "key": "whitespace:78:' '|'\\n'"
+        },
+        {
+          "bucket": "whitespace",
+          "ours": "'־'",
+          "theirs": "' '",
+          "at": 83,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "after לְסוֹף",
+          "key": "whitespace:83:'־'|' '"
+        },
+        {
+          "bucket": "whitespace",
+          "ours": "' '",
+          "theirs": "'\\n'",
+          "at": 85,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "after בְּקַדְמָתוֹ:",
+          "key": "whitespace:85:' '|'\\n'"
+        },
+        {
+          "bucket": "consonants",
+          "ours": "יִתֵּן",
+          "theirs": "נוֹתֵן",
+          "at": 90,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:90:יִתֵּן|נוֹתֵן"
+        },
+        {
+          "bucket": "whitespace",
+          "ours": "' '",
+          "theirs": "'\\n'",
+          "at": 93,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "after כְּרִשְׁעָתוֹ:",
+          "key": "whitespace:93:' '|'\\n'"
+        },
+        {
+          "bucket": "whitespace",
+          "ours": "' '",
+          "theirs": "'\\n'",
+          "at": 101,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "after יְשׁוּעָתוֹ:",
+          "key": "whitespace:101:' '|'\\n'"
+        },
+        {
+          "bucket": "consonants",
+          "ours": "בְּרוֹב",
+          "theirs": "בְּרֹב",
+          "at": 105,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:105:בְּרוֹב|בְּרֹב"
+        }
+      ],
+      "decisions": {},
+      "unresolved": [
+        "vowels:17:לְאַחְדּוּתוֹ:|לְאַחְדוּתוֹ:",
+        "vowels:20:דְמוּת|דְּמוּת",
+        "vowels:55:כְּמשֶׁה|כְּמֹשֶׁה",
+        "whitespace:8:' '|'\\n'",
+        "whitespace:15:'־'|' '",
+        "whitespace:17:' '|'\\n'",
+        "whitespace:27:' '|'\\n'",
+        "whitespace:36:' '|'\\n'",
+        "whitespace:44:' '|'\\n'",
+        "whitespace:48:'־'|' '",
+        "whitespace:51:' '|'\\n'",
+        "whitespace:52:'־'|' '",
+        "whitespace:60:' '|'\\n'",
+        "whitespace:70:' '|'\\n'",
+        "whitespace:78:' '|'\\n'",
+        "whitespace:83:'־'|' '",
+        "whitespace:85:' '|'\\n'",
+        "consonants:90:יִתֵּן|נוֹתֵן",
+        "whitespace:93:' '|'\\n'",
+        "whitespace:101:' '|'\\n'",
+        "consonants:105:בְּרוֹב|בְּרֹב"
+      ],
+      "complete": false
+    }
+  },
+  "s43/before_morning_cont": {
+    "primary": "Hear my prayer, O Lord, listen to my entreaty, at my tears do not be silent. Hear, O Lord, and be gracious to me, O Lord, be my aid.",
+    "independent": "Hear my prayer, O Lord, listen to my entreaty, at my tears do not be silent. Hear, O Lord, and be gracious to me, O Lord, be my aid.",
+    "primary_keys": [
+      "psalm_39_13_shimah",
+      "psalm_30_11"
+    ],
+    "independent_keys": [
+      "s43.en.ani_kraticha.cont"
+    ],
+    "comparison": {
+      "primary_sha256": "85b88a55b8570fd6b2f0ac27767a8ec2873d16d9546e1cd6ed881a9d177ed1b1",
+      "independent_sha256": "85b88a55b8570fd6b2f0ac27767a8ec2873d16d9546e1cd6ed881a9d177ed1b1",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [],
+      "decisions": {},
+      "unresolved": [],
+      "complete": true
+    }
+  },
+  "s43/second_paragraph": {
+    "primary": "Song of the ascents by David: I am glad when they say to me: Let us go into the House of the Lord. I rejoice at Thy word as one who has found abundant booty. Listen to the sound of my cry, my King and my God, for to Thee do I pray. O Lord, in the morning listen to my voice, in the morning I address Thee and I have hope. I called to Thee for Thou dost respond to me, O God, incline Thine ear to me, hear my word. My foot has stood on level ground. In assemblies will I praise the Lord.",
+    "independent": "Song of the ascents by David: I am glad when they say to me: Let us go into the House of the Lord. I rejoice at Thy word as one who has found abundant booty. Lister to the sound of my cry, my King and my God, for to Thee do I pray. O Lord, in the morning listen to my voice, in the morning I address Thee and I have hope. I called to Thee for Thou dost respond to me. O God, incline Thine ear to me, hear my word. My foot has stood on level ground. In assemblies will I praise the Lord.",
+    "primary_keys": [
+      "verses_second_paragraph"
+    ],
+    "independent_keys": [
+      "s43.en.shir_hamaalot"
+    ],
+    "comparison": {
+      "primary_sha256": "55560e1a0dea49014b1978a7f35ae58c0083846a12aa1647f805b5a2fd6de0a1",
+      "independent_sha256": "b403292828985641109aba27b0cb105deda3535243f0302926910a6fae05bcf1",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [
+        {
+          "bucket": "consonants",
+          "ours": "Listen",
+          "theirs": "Lister",
+          "at": 35,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:35:Listen|Lister"
+        },
+        {
+          "bucket": "consonants",
+          "ours": "me,",
+          "theirs": "me.",
+          "at": 81,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:81:me,|me."
+        }
+      ],
+      "decisions": {},
+      "unresolved": [
+        "consonants:35:Listen|Lister",
+        "consonants:81:me,|me."
+      ],
+      "complete": false
+    }
+  },
+  "s43/yigdal_heading": {
+    "primary": "The Thirteen Principles",
+    "independent": "The Thirteen Principles",
+    "primary_keys": [
+      "yigdal_heading"
+    ],
+    "independent_keys": [
+      "s43.yigdal.heading"
+    ],
+    "comparison": {
+      "primary_sha256": "d3b8bc76e2e0c314f30137b7fc4deab84393aa70f1bfed688ba2e35d6cfbe46f",
+      "independent_sha256": "d3b8bc76e2e0c314f30137b7fc4deab84393aa70f1bfed688ba2e35d6cfbe46f",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [],
+      "decisions": {},
+      "unresolved": [],
+      "complete": true
+    }
+  },
+  "s43/yigdal_1": {
+    "primary": "Exalted is the living God and praised. He exists and timeless is His existence.",
+    "independent": "Exalted is the living God and praised. He exists and timeless is His existence.",
+    "primary_keys": [
+      "yigdal_1"
+    ],
+    "independent_keys": [
+      "s43.en.yigdal.1"
+    ],
+    "comparison": {
+      "primary_sha256": "d75f3a2113d831553e5e067681549ecfd979bac839071cb185bc0a37d043daf9",
+      "independent_sha256": "d75f3a2113d831553e5e067681549ecfd979bac839071cb185bc0a37d043daf9",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [],
+      "decisions": {},
+      "unresolved": [],
+      "complete": true
+    }
+  },
+  "s43/yigdal_2": {
+    "primary": "He is unique and there is nought unique like His uniqueness. He is hidden and infinite too is His unity.",
+    "independent": "He is unique and there is nought unique like His uniqueness. He is hidden and infinite too is His unity.",
+    "primary_keys": [
+      "yigdal_2"
+    ],
+    "independent_keys": [
+      "s43.en.yigdal.2"
+    ],
+    "comparison": {
+      "primary_sha256": "0829af392dfffa6a4553ca5838bb2276f2826a4a02c69deea52dafda01602341",
+      "independent_sha256": "0829af392dfffa6a4553ca5838bb2276f2826a4a02c69deea52dafda01602341",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [],
+      "decisions": {},
+      "unresolved": [],
+      "complete": true
+    }
+  },
+  "s43/yigdal_3": {
+    "primary": "He has not the shape of a body nor is He a body. We cannot estimate His sanctity.",
+    "independent": "He has not the shape of a body nor is He a body. We cannot estimate His sanctity.",
+    "primary_keys": [
+      "yigdal_3"
+    ],
+    "independent_keys": [
+      "s43.en.yigdal.3"
+    ],
+    "comparison": {
+      "primary_sha256": "1358e8b35392da799c45ca2d43da053ebd253629a5fcca218fbbbef2cb062355",
+      "independent_sha256": "1358e8b35392da799c45ca2d43da053ebd253629a5fcca218fbbbef2cb062355",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [],
+      "decisions": {},
+      "unresolved": [],
+      "complete": true
+    }
+  },
+  "s43/yigdal_4": {
+    "primary": "He was there before anything that was created; He is the first and there was no beginning to His beginning.",
+    "independent": "He was there before anything that was created; He is the first and there was no beginning to His beginning.",
+    "primary_keys": [
+      "yigdal_4"
+    ],
+    "independent_keys": [
+      "s43.en.yigdal.4"
+    ],
+    "comparison": {
+      "primary_sha256": "ed7650d034bd7a0407987553fe363ed9ec5cf86a851e847a11f7e5d49efb5d5e",
+      "independent_sha256": "ed7650d034bd7a0407987553fe363ed9ec5cf86a851e847a11f7e5d49efb5d5e",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [],
+      "decisions": {},
+      "unresolved": [],
+      "complete": true
+    }
+  },
+  "s43/yigdal_5": {
+    "primary": "Behold He is the Master of the world and every creature indicates His grandeur and His rule.",
+    "independent": "Behold He is the Master of the world and every creature indicates His grandeur and His rule.",
+    "primary_keys": [
+      "yigdal_5"
+    ],
+    "independent_keys": [
+      "s43.en.yigdal.5"
+    ],
+    "comparison": {
+      "primary_sha256": "facc251289304015641421c02729600d7e3d831e460d671b1cd7671d30a3b0a2",
+      "independent_sha256": "facc251289304015641421c02729600d7e3d831e460d671b1cd7671d30a3b0a2",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [],
+      "decisions": {},
+      "unresolved": [],
+      "complete": true
+    }
+  },
+  "s43/yigdal_6": {
+    "primary": "The wealth of His prophecy did He bestow upon men of His possession and His glory.",
+    "independent": "The wealth of His prophecy did He bestow upon men of His possession and His glory.",
+    "primary_keys": [
+      "yigdal_6"
+    ],
+    "independent_keys": [
+      "s43.en.yigdal.6"
+    ],
+    "comparison": {
+      "primary_sha256": "7d54a8b427ac1b55ee6c8f0f04a59ba309d2e4f2b829ff10e3591ba0c6c0e259",
+      "independent_sha256": "7d54a8b427ac1b55ee6c8f0f04a59ba309d2e4f2b829ff10e3591ba0c6c0e259",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [],
+      "decisions": {},
+      "unresolved": [],
+      "complete": true
+    }
+  },
+  "s43/yigdal_7": {
+    "primary": "No other prophet arose in Israel like Moses, who perceived His likeness.",
+    "independent": "No other prophet arose in Israel like Moses, who perceived His likeness.",
+    "primary_keys": [
+      "yigdal_7"
+    ],
+    "independent_keys": [
+      "s43.en.yigdal.7"
+    ],
+    "comparison": {
+      "primary_sha256": "a364fa01cf4d3ae7767cfde0e5344c3981e975c53dda9ecd116a0ef34a52aa39",
+      "independent_sha256": "a364fa01cf4d3ae7767cfde0e5344c3981e975c53dda9ecd116a0ef34a52aa39",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [],
+      "decisions": {},
+      "unresolved": [],
+      "complete": true
+    }
+  },
+  "s43/yigdal_8": {
+    "primary": "The true Torah has God given to His people through His prophet, the faithful one of His house.",
+    "independent": "The true Torah has God given to His people through His prophet, the faithful one of His house.",
+    "primary_keys": [
+      "yigdal_8"
+    ],
+    "independent_keys": [
+      "s43.en.yigdal.8"
+    ],
+    "comparison": {
+      "primary_sha256": "34e466e43b434589ff03e50d20b5bb87b7c3aae3d6a3148aa4453c8521e3083b",
+      "independent_sha256": "34e466e43b434589ff03e50d20b5bb87b7c3aae3d6a3148aa4453c8521e3083b",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [],
+      "decisions": {},
+      "unresolved": [],
+      "complete": true
+    }
+  },
+  "s43/yigdal_9": {
+    "primary": "God will not alter nor will He change His law for another unto eternity.",
+    "independent": "God will not alter nor will He change His law for another unto eternity.",
+    "primary_keys": [
+      "yigdal_9"
+    ],
+    "independent_keys": [
+      "s43.en.yigdal.9"
+    ],
+    "comparison": {
+      "primary_sha256": "8cd6726fe905d6c378fea71006a57bf366ad9a1677b04b23337a3a34eed400a4",
+      "independent_sha256": "8cd6726fe905d6c378fea71006a57bf366ad9a1677b04b23337a3a34eed400a4",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [],
+      "decisions": {},
+      "unresolved": [],
+      "complete": true
+    }
+  },
+  "s43/yigdal_10": {
+    "primary": "He observes and knows our secrets, perceiving even at its beginning the end of a matter.",
+    "independent": "He observes and knows our secrets, perceiving even at its beginning the end of a matter.",
+    "primary_keys": [
+      "yigdal_10"
+    ],
+    "independent_keys": [
+      "s43.en.yigdal.10"
+    ],
+    "comparison": {
+      "primary_sha256": "03330911999ffcf648710ade1bd0c67117a147941627683f13f87c4f71254dd5",
+      "independent_sha256": "03330911999ffcf648710ade1bd0c67117a147941627683f13f87c4f71254dd5",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [],
+      "decisions": {},
+      "unresolved": [],
+      "complete": true
+    }
+  },
+  "s43/yigdal_11": {
+    "primary": "He treats man kindly according to his conduct and sends disaster to the wicked according to his wickedness.",
+    "independent": "He treats man kindly according to his conduct and sends disaster to the wicked according to his wickedness.",
+    "primary_keys": [
+      "yigdal_11"
+    ],
+    "independent_keys": [
+      "s43.en.yigdal.11"
+    ],
+    "comparison": {
+      "primary_sha256": "af47cd833ad82d779381b960e24aede2fbc1874910ec8ec773ad0e408a72f87c",
+      "independent_sha256": "af47cd833ad82d779381b960e24aede2fbc1874910ec8ec773ad0e408a72f87c",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [],
+      "decisions": {},
+      "unresolved": [],
+      "complete": true
+    }
+  },
+  "s43/yigdal_12": {
+    "primary": "He will send our Messiah at the end of days to redeem those who wait for the finality of His salvation.",
+    "independent": "He will send our Messiah at the end of days to redeem those who wait for the finality of His salvation.",
+    "primary_keys": [
+      "yigdal_12"
+    ],
+    "independent_keys": [
+      "s43.en.yigdal.12"
+    ],
+    "comparison": {
+      "primary_sha256": "fcd46c4126f991068a4e52b936b390eba694adda514b3613a002e0d155820615",
+      "independent_sha256": "fcd46c4126f991068a4e52b936b390eba694adda514b3613a002e0d155820615",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [],
+      "decisions": {},
+      "unresolved": [],
+      "complete": true
+    }
+  },
+  "s43/yigdal_13": {
+    "primary": "God will revive the dead in the abundance of His grace. Blessed for ever and ever be His renowned Name.",
+    "independent": "God will revive the dead in the abundance of His grace. Blessed for ever and ever be His renowned Name.",
+    "primary_keys": [
+      "yigdal_13"
+    ],
+    "independent_keys": [
+      "s43.en.yigdal.13"
+    ],
+    "comparison": {
+      "primary_sha256": "61d1431cc6ec675d295b22858b0d85a99e7c61bdd0a78b4ae707eb0b6fe0fccd",
+      "independent_sha256": "61d1431cc6ec675d295b22858b0d85a99e7c61bdd0a78b4ae707eb0b6fe0fccd",
+      "primary_model": "Codex (GPT-6)",
+      "independent_model": "claude-opus-5-5",
+      "evidence": [
+        "Primary/blind source images; enlarged adjudication pending."
+      ],
+      "differences": [],
+      "decisions": {},
+      "unresolved": [],
+      "complete": true
+    }
+  }
+}

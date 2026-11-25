@@ -1,0 +1,130 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Low reasoning effort, but full coverage of the inputs. I read all of current.json, all 198 lines of current-xml.xml (in two reads), page-audits.json, english-rest-resolutions.json, guideline-excerpts.md and english-routing-proof.xml. I compared every English word of the 8 witnesses with the full original English page images s193, s195, s197 and s199 at display resolution (1208x2000 from 1368x2264). Where punctuation was ambiguous I used the existing crop /tmp/mahzor-backlog/s198-199/s199-part2.png. I did not make any new crops of s193, s195 or s197."
+  },
+  "scope": [
+    "torah_hanoten_teshuah",
+    "torah_ashrei",
+    "torah_yehallelu",
+    "torah_return_psalm_24",
+    "torah_return_psalm_29",
+    "torah_uvenuchoh",
+    "cantor_el_melekh_neeman",
+    "cantor_hineni"
+  ],
+  "witnesses": [
+    {
+      "stem": "torah_hanoten_teshuah",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "torah_ashrei",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        {
+          "severity": "advisory",
+          "location": "s195, Psalm 145:1 seg ('Hymn by David I exalt Thee…')",
+          "problem": "The print sets 'Hymn by David' as a separate centred italic line with no period. The accepted correction removed the added period and now runs the words straight into the verse text. As text this matches the print, but the line break and italics are not kept. The two verse segs agree with the Hebrew, which also keeps תהלה לדוד inside 145:1, so alignment is not affected.",
+          "fix": "Not required for approval. A later typographic pass could mark the superscription (for example with an hi/lb), but don't add any punctuation."
+        }
+      ],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "torah_yehallelu",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        {
+          "severity": "low",
+          "location": "English and Hebrew torah_yehallelu.xml, the psalms/148/14 seg",
+          "problem": "The seg text starts with a space (' When He raises…', ' וַיָּרֶם…'), so whitespace from the source has ended up inside the bounded quotation.",
+          "fix": "Move the leading space so it sits before the seg, in both projects. The words themselves stay as they are."
+        }
+      ],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "torah_return_psalm_24",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "torah_return_psalm_29",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        {
+          "severity": "advisory",
+          "location": "s197 left column, Psalm 29:6 to 29:8",
+          "problem": "The printed English leaves out verse 7, and the image confirms this ('young unicorns. The voice of the Lord makes the wilderness tremble'). The encoding does not renumber, which is correct. Because the English has no …/psalms_29/7, Hebrew verses 6 and 7 will both be set against English verse 6 when aligned. This is the expected behaviour for a division the translation does not carry.",
+          "fix": "None. Don't supply a missing translation and don't renumber."
+        }
+      ],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "torah_uvenuchoh",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        {
+          "severity": "advisory",
+          "location": "torah_uvenuchoh.xml (en and he), div-initial note 'When the scroll of the Torah is returned to the Holy Ark:'",
+          "problem": "The rubric is encoded as a free-standing type=\"instruction\". It tells you when the passage is said and also what it is for. There is no actual condition here, because the passage is always said at this point. Under the Kinds of rubric section, a rubric that says both when and what is a description. It already sits first in the div's scope, so only the type value is debatable.",
+          "fix": "Optionally change it to type=\"description\". This doesn't block approval. The text matches the italic rubric on s197 exactly."
+        }
+      ],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "cantor_el_melekh_neeman",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "cantor_hineni",
+      "english_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        {
+          "severity": "high",
+          "location": "s199, Hineni paragraph 1, prayer-part /3, line 'of my transgressions, let them not be disgraced through me nor I' (in crop /tmp/mahzor-backlog/s198-199/s199-part2.png, about y≈365)",
+          "problem": "The current text has 'because of my transgressions; let them not be disgraced'. The print has a comma after 'transgressions'. You can tell this from the clear semicolon after 'transgressor' two lines above and the one in 'Love truth and peace;'. The full-page audit missed this when it said every punctuation mark matched.",
+          "fix": "Make an accepted transcription correction (not sic/corr) changing 'my transgressions; let them' to 'my transgressions, let them' in current.json and in the English cantor_hineni.xml."
+        }
+      ],
+      "remaining_source_questions": []
+    }
+  ],
+  "verified": [
+    "s193 English matches torah_hanoten_teshuah word for word, including 'our lord . . . May' and 'come to Zion, Thus'.",
+    "s195 English matches torah_ashrei word for word. All three corrections are in place: no comma after 'everlasting kingdom'; 'Hymn by David I exalt'; 'Wis' kept as sic with corr 'His'. The citation 'Psalm 145.' without parentheses is the existing convention. 'tell of Thy might' has no punctuation before 'to make known', and that is what the print has.",
+    "s197 English matches torah_yehallelu, psalm_24, psalm_29 and uvenuchoh, including 'He is the Lord strong and mighty' (correction applied), 'Arise, O Lord,', 'resting-place', and the stray mark after 'near Him,' (print noise). The running head 'Prayer while returning the Scrolls of the Torah to the Ark' equals head.en.",
+    "The s197 rubrics 'On the Sabbath:' and 'On weekdays:' are in english-routing-proof.xml as section condition_rubrics on documentary_torah_return_29 (shabbat=true) and documentary_torah_return_24 (shabbat=false). Those are holiday-aggregate conditions on the running order with their rubrics, so the psalm files correctly carry no conditional of their own. The audit's complete_body_accounted=false is therefore resolved.",
+    "s199 English matches cantor_el_melekh_neeman word for word, including 'Moses (Menasseh)' encoded as j:option Moses/Menasseh, 'my Redeemer, Amen, Selah.' and the curly quotes around the Exodus verse-part outside the seg. It also matches cantor_hineni except for the semicolon/comma issue above, including 'whose name is: “I am that I am”,'. The Hebrew incipit cues are left out as intended. The ידעתי section that follows is outside this scope.",
+    "Milestones follow the guidelines. Each verse/half-verse/verse-part/chapter/prayer-part scope ends with a bare terminator of the exact same unit. Subverse terminators come before the verse and chapter terminators. Adjacent prayer-parts in Hineni share boundaries. The open el_melekh 'text' prayer-part ends at a final prayer-part terminator, with the nested quotation verses bounded inside it.",
+    "Shared correspondence: every corresp URN on the English side has the same value and order in the matching Hebrew file for all 8 stems. The only exception is Psalm 29:7, which is Hebrew-only, as the print requires. Chapter/verse context for repeated scripture follows the established local-corresp convention, and seg/@source carries the canonical reference.",
+    "In Yehallelu, the speaker description notes ('Reader:', 'Congregation:') come before the prayer-part milestones and are identical in both projects. This fits the guideline that milestone sequences end before speaker rubrics. The /13/a and /13/b split follows the printed speaker division, not accents.",
+    "Citation standOff notes for Ashrei and Psalms 24 and 29 point to the first verse of each local chapter context in both languages."
+  ],
+  "limits": [
+    "I did not read the Hebrew source images. Hebrew fine marks and Hebrew source acceptance were not reviewed and are not implied.",
+    "The s193, s195 and s197 comparisons used the full-page image at display resolution with no new enlarged crops. Very fine punctuation there relies on that view plus the existing audits and adjudicated corrections.",
+    "This is a source and markup audit only. I did not run any validators, the compiler or the renderer, or any settings."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "dc96a361-37ad-4944-8518-ed88fdea077b"
+  }
+}

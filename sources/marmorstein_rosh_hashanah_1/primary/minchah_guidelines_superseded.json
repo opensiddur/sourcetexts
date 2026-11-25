@@ -1,0 +1,264 @@
+{
+  "amidah_modim_derabbanan": {
+    "primary_sha256": "5b402d251c1ba0f835073830255d580b6ea3b8f23cbc13a9f8589003dab6be14",
+    "independent_sha256": "08acafaff1cc446d00391772f6c3a5d3ec7546fd07c9bad70e0017b482fd4692",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/opening_s7_s14.json",
+      "independent/opening_s7_s14.json",
+      "independent/minchah_enlarged.json",
+      "minchah_resolutions.json"
+    ],
+    "differences": [
+      {
+        "bucket": "consonants",
+        "ours": "וְתֶאֱסֹף",
+        "theirs": "וְתֶאֱסוֹף",
+        "at": 28,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:28:וְתֶאֱסֹף|וְתֶאֱסוֹף"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "הַהוֹדָאוֹת:",
+        "theirs": "הַהוֹדָאוֹת׃",
+        "at": 45,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:45:הַהוֹדָאוֹת:|הַהוֹדָאוֹת׃"
+      }
+    ],
+    "decisions": {
+      "consonants:28:וְתֶאֱסֹף|וְתֶאֱסוֹף": {
+        "accepted": "independent",
+        "evidence": "Enlarged source-image inspection confirms the independent pointing/wording; the two-dot punctuation remains a colon in this transcription."
+      },
+      "consonants:45:הַהוֹדָאוֹת:|הַהוֹדָאוֹת׃": {
+        "accepted": "primary",
+        "evidence": "Enlarged source-image inspection confirms the independent pointing/wording; the two-dot punctuation remains a colon in this transcription."
+      }
+    },
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "f7339938fcc13f0b84174dc40e67eb1fe90da43b3fa70376fa0c08e4413a9877",
+    "pending_ambiguities": [],
+    "enlarged_adjudication": {
+      "primary_sha256": "94680db61285245785252383bb65e413d797679a6ef35e1231bc8aecf6da0293",
+      "independent_sha256": "b814f58b1ce35c0a77ecab381c2199d4280cebc539f747066568d57efe92625f",
+      "primary_model": "Codex (GPT-6) adjudication",
+      "independent_model": "claude-opus-5-5",
+      "evidence": "Enlarged images",
+      "differences": [
+        {
+          "bucket": "consonants",
+          "ours": "הַהוֹדָאוֹת:",
+          "theirs": "הַהוֹדָאוֹת׃",
+          "at": 43,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:43:הַהוֹדָאוֹת:|הַהוֹדָאוֹת׃"
+        }
+      ],
+      "decisions": {
+        "consonants:43:הַהוֹדָאוֹת:|הַהוֹדָאוֹת׃": {
+          "accepted": "primary",
+          "evidence": "Checked the enlarged original image; preserve the source reading and two-dot punctuation."
+        }
+      },
+      "unresolved": [
+        "consonants:43:הַהוֹדָאוֹת:|הַהוֹדָאוֹת׃"
+      ],
+      "complete": false
+    },
+    "ambiguity_resolutions": [
+      "Readings compared against the original and enlarged scan; line wraps and two-dot punctuation codepoint choices are documentary conventions."
+    ]
+  },
+  "amidah_yehi_ratzon": {
+    "primary_sha256": "6ea3e8613d7e89fb0dbb41da7b3af843bde47a44807651d27fbe63beb37c363d",
+    "independent_sha256": "8691981c1ff994e8753f9177501e2224741c989b50e434da08329dd190a5f857",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "primary/opening_s7_s14.json",
+      "independent/opening_s7_s14.json",
+      "independent/minchah_enlarged.json",
+      "minchah_resolutions.json"
+    ],
+    "differences": [
+      {
+        "bucket": "consonants",
+        "ours": "מִלְּפָנֶיךָ",
+        "theirs": "לְפָנֶיךָ",
+        "at": 2,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:2:מִלְּפָנֶיךָ|לְפָנֶיךָ"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "בֵית",
+        "theirs": "בֵּית",
+        "at": 8,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:8:בֵית|בֵּית"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "בְּתוֹרָתֶךָ:",
+        "theirs": "בְּתוֹרָתֶךָ׃",
+        "at": 14,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:14:בְּתוֹרָתֶךָ:|בְּתוֹרָתֶךָ׃"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "קַדְמוֹנִיּוֹת:",
+        "theirs": "קַדְמוֹנִיּוֹת׃",
+        "at": 21,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:21:קַדְמוֹנִיּוֹת:|קַדְמוֹנִיּוֹת׃"
+      },
+      {
+        "bucket": "vowels",
+        "ours": "וִירוּשָׁלָם",
+        "theirs": "וִירוּשָׁלָםִ",
+        "at": 26,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:26:וִירוּשָׁלָם|וִירוּשָׁלָםִ"
+      },
+      {
+        "bucket": "consonants",
+        "ours": "קַדְמוֹנִיּוֹת:",
+        "theirs": "קַדְמוֹנִיּוֹת׃",
+        "at": 30,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "consonants:30:קַדְמוֹנִיּוֹת:|קַדְמוֹנִיּוֹת׃"
+      }
+    ],
+    "decisions": {
+      "consonants:2:מִלְּפָנֶיךָ|לְפָנֶיךָ": {
+        "accepted": "independent",
+        "evidence": "The source prints לְפָנֶיךָ without mem, a dotted bet in בֵּית, and defective ירושלים with its printed hiriq. Retain the first-independent prefix לַייָ."
+      },
+      "vowels:8:בֵית|בֵּית": {
+        "accepted": "independent",
+        "evidence": "The source prints לְפָנֶיךָ without mem, a dotted bet in בֵּית, and defective ירושלים with its printed hiriq. Retain the first-independent prefix לַייָ."
+      },
+      "consonants:14:בְּתוֹרָתֶךָ:|בְּתוֹרָתֶךָ׃": {
+        "accepted": "primary",
+        "evidence": "The source prints לְפָנֶיךָ without mem, a dotted bet in בֵּית, and defective ירושלים with its printed hiriq. Retain the first-independent prefix לַייָ."
+      },
+      "consonants:21:קַדְמוֹנִיּוֹת:|קַדְמוֹנִיּוֹת׃": {
+        "accepted": "primary",
+        "evidence": "The source prints לְפָנֶיךָ without mem, a dotted bet in בֵּית, and defective ירושלים with its printed hiriq. Retain the first-independent prefix לַייָ."
+      },
+      "vowels:26:וִירוּשָׁלָם|וִירוּשָׁלָםִ": {
+        "accepted": "independent",
+        "evidence": "The source prints לְפָנֶיךָ without mem, a dotted bet in בֵּית, and defective ירושלים with its printed hiriq. Retain the first-independent prefix לַייָ."
+      },
+      "consonants:30:קַדְמוֹנִיּוֹת:|קַדְמוֹנִיּוֹת׃": {
+        "accepted": "primary",
+        "evidence": "The source prints לְפָנֶיךָ without mem, a dotted bet in בֵּית, and defective ירושלים with its printed hiriq. Retain the first-independent prefix לַייָ."
+      }
+    },
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "ca3d7db463cd1348d35aee8aa1fc01cb9326527f9ecd87a61d515a57a51b8132",
+    "pending_ambiguities": [],
+    "enlarged_adjudication": {
+      "primary_sha256": "0665a66c20ef655bc7696b9e0cb38561401a8569a1e26f869350e6684126ec02",
+      "independent_sha256": "d31c3b27de31697d6008e595c4600988f8adf2c2cd1ea00c91e0b024e45b14de",
+      "primary_model": "Codex (GPT-6) adjudication",
+      "independent_model": "claude-opus-5-5",
+      "evidence": "Enlarged images",
+      "differences": [
+        {
+          "bucket": "consonants",
+          "ours": "בְּתוֹרָתֶךָ:",
+          "theirs": "בְּתוֹרָתֶךָ׃",
+          "at": 14,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:14:בְּתוֹרָתֶךָ:|בְּתוֹרָתֶךָ׃"
+        },
+        {
+          "bucket": "consonants",
+          "ours": "קַדְמוֹנִיּוֹת:",
+          "theirs": "קַדְמוֹנִיּוֹת׃",
+          "at": 21,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:21:קַדְמוֹנִיּוֹת:|קַדְמוֹנִיּוֹת׃"
+        },
+        {
+          "bucket": "vowels",
+          "ours": "לַייָ",
+          "theirs": "לַיְיָ",
+          "at": 23,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "vowels:23:לַייָ|לַיְיָ"
+        },
+        {
+          "bucket": "consonants",
+          "ours": "קַדְמוֹנִיּוֹת:",
+          "theirs": "קַדְמוֹנִיּוֹת׃",
+          "at": 30,
+          "size": 1,
+          "verdict": "unresolved",
+          "note": "",
+          "key": "consonants:30:קַדְמוֹנִיּוֹת:|קַדְמוֹנִיּוֹת׃"
+        }
+      ],
+      "decisions": {
+        "consonants:14:בְּתוֹרָתֶךָ:|בְּתוֹרָתֶךָ׃": {
+          "accepted": "primary",
+          "evidence": "The source prints לְפָנֶיךָ without mem, a dotted bet in בֵּית, and defective ירושלים with its printed hiriq. Retain the first-independent prefix לַייָ."
+        },
+        "consonants:21:קַדְמוֹנִיּוֹת:|קַדְמוֹנִיּוֹת׃": {
+          "accepted": "primary",
+          "evidence": "The source prints לְפָנֶיךָ without mem, a dotted bet in בֵּית, and defective ירושלים with its printed hiriq. Retain the first-independent prefix לַייָ."
+        },
+        "vowels:23:לַייָ|לַיְיָ": {
+          "accepted": "primary",
+          "evidence": "The source prints לְפָנֶיךָ without mem, a dotted bet in בֵּית, and defective ירושלים with its printed hiriq. Retain the first-independent prefix לַייָ."
+        },
+        "consonants:30:קַדְמוֹנִיּוֹת:|קַדְמוֹנִיּוֹת׃": {
+          "accepted": "primary",
+          "evidence": "The source prints לְפָנֶיךָ without mem, a dotted bet in בֵּית, and defective ירושלים with its printed hiriq. Retain the first-independent prefix לַייָ."
+        }
+      },
+      "unresolved": [
+        "consonants:14:בְּתוֹרָתֶךָ:|בְּתוֹרָתֶךָ׃",
+        "consonants:21:קַדְמוֹנִיּוֹת:|קַדְמוֹנִיּוֹת׃",
+        "vowels:23:לַייָ|לַיְיָ",
+        "consonants:30:קַדְמוֹנִיּוֹת:|קַדְמוֹנִיּוֹת׃"
+      ],
+      "complete": false
+    },
+    "ambiguity_resolutions": [
+      "The source prints לְפָנֶיךָ without mem, a dotted bet in בֵּית, and defective ירושלים with its printed hiriq. Retain the first-independent prefix לַייָ.",
+      "A tight crop of the prefixed Name confirms the printed sheva on its first yod."
+    ]
+  }
+}

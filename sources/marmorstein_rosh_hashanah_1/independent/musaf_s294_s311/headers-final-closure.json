@@ -1,0 +1,124 @@
+{
+  "scope": "headers_final",
+  "approved": true,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/headers-closure-v5.json",
+    "/tmp/mahzor-s294/appendix-page-evidence.json",
+    "/tmp/mahzor-s294/review-s351.jpg"
+  ],
+  "resolved_findings": [
+    {
+      "id": "C-B1",
+      "origin": "headers_1/B2",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/psalm_24.xml",
+      "correction_acknowledged": "The earlier context pack was wrong to list psalm_24.xml under page_less_structural_containers. The v5 closure was right to say it is a literal text module, not a transclusion container: its body holds the full text of Psalm 24, verses 1–10, and has no j:transclude.",
+      "independent_verification": "I inspected review-s351.jpg (scan 351, IA leaf n350) directly. The page is the 'שיר של יום' daily-psalm appendix. It holds Psalm 24, then the start of Psalm 48, with the day rubrics 'היום ראשון / היום שני בשבת שהו הלויים אומרים במקדש'. No printed page number appears anywhere on the leaf: not in the top margin around the heading, not in the bottom margin, and not in either outer margin. The marginal 'כד' and 'מח' mark psalm chapters 24 and 48, not pages. The small marks at the left of each rubric line are rubric/day labels, not folio numbers. appendix-page-evidence.json agrees: printed_page:null, printed_label:null, english_counterpart:false.",
+      "disposition": "Resolved; no longer blocking. The required_action in C-B1 assumed a printed page existed to record. None does, so leaving out pb/@n and biblScope unit='pages' faithfully reflects the source and fabricates nothing. Supplying '351' (a scan ordinal) or '24' / 'chapter24' (a psalm number) as a printed label would be wrong. The pb's unique facs …/page/n350.jpg (ed='1965') gives exact, unambiguous provenance for the leaf. No English counterpart is printed, so there is no parallel file to recheck."
+    },
+    {
+      "ids": [
+        "headers_0/B1",
+        "headers_1/B1",
+        "headers_2/B1",
+        "headers_3/B1"
+      ],
+      "disposition": "Resolved earlier in headers-closure-v5 (omit_publication_urn policy for word collections). Unchanged."
+    },
+    {
+      "ids": [
+        "headers_3/B2",
+        "headers_1/N1"
+      ],
+      "disposition": "Resolved earlier in headers-closure-v5. The kiddush, morning_blessings, morning_preliminaries, morning_qorbanot and tallith files contain only transclusions and are genuine structural containers. Unchanged. psalm_24 is now handled separately above."
+    },
+    {
+      "ids": [
+        "headers_2/B3",
+        "headers_3/B3"
+      ],
+      "disposition": "Resolved earlier in headers-closure-v5 (accepted legacy titles). Unchanged."
+    },
+    {
+      "ids": [
+        "headers_2/B2"
+      ],
+      "disposition": "Downgraded to nonblocking in headers-closure-v5 (C-N2). Unchanged."
+    },
+    {
+      "ids": [
+        "headers_1/N6",
+        "headers_3/N4",
+        "headers_0/scope_limitation (areshet_zikhron p.144)",
+        "headers_2/N8",
+        "headers_3/N1"
+      ],
+      "disposition": "Resolved earlier in headers-closure-v5. Unchanged."
+    }
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    {
+      "id": "F-N1",
+      "origin": "C-B1 closure",
+      "finding": "Optional: add a short sourceDesc/bibl note to psalm_24.xml saying the text comes from an unnumbered daily-psalm appendix leaf, located by facsimile (IA leaf n350). This would stop future reviewers from raising the missing biblScope again. Do not add biblScope unit='pages' or pb/@n. Consider recording this unnumbered-leaf convention in SIDDUR_URN_SCHEME.md or the encoding guidelines too, next to the C-N1 documentation item."
+    },
+    {
+      "id": "F-N2",
+      "origin": "C-B1 closure / context-pack accuracy",
+      "finding": "Fix the context pack so psalm_24 is no longer listed under page_less_structural_containers. If useful, add a separate 'literal modules on unnumbered leaves' category, so the generator and later reviews don't reuse the wrong classification."
+    },
+    {
+      "id": "C-N1",
+      "finding": "Carried forward: document the omit_publication_urn policy in SIDDUR_URN_SCHEME.md."
+    },
+    {
+      "id": "C-N2",
+      "finding": "Carried forward: the legacy title 'תפלת מנחה — modim_derabbanan' / 'Weekday Minchah — modim_derabbanan' contains a raw slug and should be retitled."
+    },
+    {
+      "id": "C-N3",
+      "finding": "Carried forward: consider service-neutral titles to replace the 'Evening Prayer for the New Year — …' titles on cross-service shared parts files."
+    },
+    {
+      "id": "C-N4",
+      "finding": "Carried forward, required before final export: remove the batch-progress wording ('This installment additionally prints…', 'newly printed/transcribed…', '…remain outside this batch') from the index notes, along with the DRAFT notes. This does not block header approval, but it does block export."
+    },
+    {
+      "id": "C-N5",
+      "finding": "Carried forward: tallith.xml uses prayer:tallith on a container of transclusions only. Existing identity kept; followup only."
+    },
+    {
+      "id": "C-N6",
+      "finding": "Carried forward: morning_qorbanot.xml has no pb/facs anchor for its printed rubric."
+    },
+    {
+      "id": "C-N7",
+      "finding": "Carried forward: the 'נוסח פרנקפורט' title on the useir_lekhapper files is a rite label, not the passage name. Optional retitle."
+    },
+    {
+      "id": "C-N8",
+      "finding": "Carried forward: confirm that English-file page ranges reflect the English edition's own pages where the title is Hebrew-only."
+    },
+    {
+      "id": "C-N9",
+      "finding": "Carried forward: path styles are mixed, and the regalim/musaf/text/umippenei path is used for a Rosh Hashanah text. Harmonize only if these are not established identities."
+    },
+    {
+      "id": "C-N10",
+      "finding": "Carried forward: assorted cosmetic and consistency items (respStmt, CC0 URL form, DRAFT markers, biblScope ordering, qedushah_shared_parts p.3, scan gap 285→287, pointed vs unpointed titles, generic section titles)."
+    },
+    {
+      "id": "F-N3",
+      "origin": "review limitation",
+      "finding": "In this pass I did not re-open psalm_24.xml. Its body state (pb ed='1965', facs …/page/n350.jpg, no @n, no biblScope, literal Psalm 24:1–10) comes from the v5 closure's direct inspection. I matched review-s351.jpg to IA leaf n350 using the file name, the evidence file's scan_page 351 / ia_leaf 350 mapping and its facs URL. I did not separately download it from archive.org."
+    }
+  ],
+  "verdict": "APPROVED. All header findings are resolved and nothing is blocking. C-B1 was the only remaining blocker. Correction acknowledged: the earlier context pack wrongly called psalm_24.xml a structural container. It is a literal text module. I checked the actual scan (scan 351 / IA leaf n350) directly, and the daily-psalm appendix leaf has no printed page label. 'כד' and 'מח' are psalm chapter numbers, not pages. Leaving out pb/@n and a printed-page biblScope therefore matches the source. The unique facs n350 is exact provenance, and inventing '351' or 'chapter24' as a printed label would be wrong. No English counterpart is printed, so there is nothing more to check. The remaining items are nonblocking followups. C-N4 (batch-progress wording in the index notes) and the DRAFT notes must still be removed before final export.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "34db2eb4-bf19-4e9f-8d0a-7b18544b79f0"
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "scope": "headers_closure",
+  "approved": false,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/headers_0-v5.json",
+    "/tmp/mahzor-s294/headers_1-v5.json",
+    "/tmp/mahzor-s294/headers_2-v5.json",
+    "/tmp/mahzor-s294/headers_3-v5.json",
+    "/tmp/mahzor-s294/review-context-v5.json",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/specs/SIDDUR_URN_SCHEME.md"
+  ],
+  "resolved_findings": [
+    {
+      "ids": [
+        "headers_0/B1",
+        "headers_1/B1",
+        "headers_2/B1",
+        "headers_3/B1"
+      ],
+      "topic": "Missing publicationStmt idno[@type='urn'] on _parts/_words/shared_parts files (Heidenheim: 10 files from headers_0 plus al_ken_words, musaf_attah_zokher_words, qedushah_shared_parts; Marmorstein: 10 files from headers_2 plus al_ken_words, musaf_attah_zokher_words)",
+      "disposition": "Resolved; no longer blocking. No rule requires every physical file to have a whole-file publication URN. These are word collections whose parts are each addressed separately through generic corresp with project provenance. Emitting a whole-file URN would create a shared-prayer identity that does not exist, and a filename is not a canonical text identity. The context pack supports this directly: amidah_avodah_parts and amidah_hodaah_parts are flagged omit_publication_urn:true, and the areshet_zikhron_words paragraphs carry the generic corresp prayer:areshet_sefatenu/zikhron. Comparable _parts files that do carry URNs (addir_adiraynu_parts, musaf_qedushah_conclusion_parts, amidah_modim_derabbanan_parts) are whole texts, so the difference is the policy working as designed, not an inconsistency."
+    },
+    {
+      "ids": [
+        "headers_3/B2",
+        "headers_1/N1"
+      ],
+      "topic": "No biblScope on Heidenheim first_night_kiddush, morning_blessings, morning_preliminaries, morning_qorbanot and tallith, and on their Marmorstein counterparts",
+      "disposition": "Resolved; no longer blocking. I checked the actual bodies. Each holds only j:transclude elements plus a head, rubrics, conditionals, declarations and pb. With the transclusions removed, no liturgy remains, so these are structural containers and their source provenance comes through their children. The tallith 'text unit' concern is answered the same way: its body contains transclusions only (see the nonblocking note on its prayer: namespace). The Marmorstein counterpart bodies were not in the pack. They are resolved on the same structure, assuming they are parallel."
+    },
+    {
+      "ids": [
+        "headers_2/B3",
+        "headers_3/B3"
+      ],
+      "topic": "'Evening Prayer for the New Year — Service / Thanksgiving / Grant honour' titles described as pilot-installment prefixes",
+      "disposition": "Resolved as blockers. These are accepted legacy titles and were not changed in this batch (title_unchanged:true). The registry label_en for siddur:rosh_hashanah/minchah_maariv/amidah/uvekhen_ten_kavod is exactly 'Evening Prayer for the New Year — Grant honour'. No pilot installment title exists. Accuracy concerns are kept as a nonblocking item below."
+    },
+    {
+      "ids": [
+        "headers_2/B2"
+      ],
+      "topic": "'תפלת מנחה — modim_derabbanan' / 'Weekday Minchah — modim_derabbanan'",
+      "disposition": "Downgraded to nonblocking. This is an accepted legacy title, unchanged in this batch, and is not installment wording. 'Weekday Minchah' is correct: this is the preparatory weekday Minchah. The raw slug suffix is a real cosmetic defect and stays open as a followup (see nonblocking)."
+    },
+    {
+      "ids": [
+        "headers_1/N6",
+        "headers_3/N4"
+      ],
+      "topic": "Range syntax 'bible:numbers/29/1-/29/6'",
+      "disposition": "Resolved. The actual bodies in the pack use the same form (bible:numbers/6/24-/6/26, bible:leviticus/6/3-/6/4), so this is the corpus convention."
+    },
+    {
+      "ids": [
+        "headers_0/scope_limitation (areshet_zikhron p.144)"
+      ],
+      "topic": "Page for musaf_repetition_areshet_zikhron_words",
+      "disposition": "Resolved. The zikhron canonical home places both fragments on printed page 144 (he s308, en s309)."
+    },
+    {
+      "ids": [
+        "headers_2/N8",
+        "headers_3/N1"
+      ],
+      "topic": "Heidenheim editionStmt points to sources/marmorstein_rosh_hashanah_1/",
+      "disposition": "Resolved. Both editions are one physical bilingual volume: the Heidenheim body pb/facs point to the same archive.org item, mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965."
+    }
+  ],
+  "blocking_findings": [
+    {
+      "id": "C-B1",
+      "origin": "headers_1/B2",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/psalm_24.xml",
+      "finding": "This file is not a page-less structural container, although the context pack lists it under page_less_structural_containers. Its actual body contains no j:transclude at all. It holds the full literal text of Psalm 24, verses 1–10, with bible:psalms/24 chapter and verse milestones. It is therefore a literal text module, and the stated rule says source page scopes belong to exactly these modules. The header has no tei:biblScope unit='pages'. The body does not supply the printed page either: its only pb has ed='1965' and facs .../page/n350.jpg but no @n.",
+      "required_action": "Add sourceDesc/bibl/tei:biblScope unit='pages' with the printed page(s) for scan n350, and add @n to the pb. Then recheck its Marmorstein counterpart, if there is one, for the same gap."
+    }
+  ],
+  "nonblocking_findings": [
+    {
+      "id": "C-N1",
+      "origin": "headers_0/B1, headers_2/B1 notes",
+      "finding": "SIDDUR_URN_SCHEME.md does not yet document the omit_publication_urn policy: that pure word collections of separately addressed parts carry no whole-file publication URN. Two of the reviewers asked for it to be documented. Add a short section so future reviews don't raise the same finding again."
+    },
+    {
+      "id": "C-N2",
+      "origin": "headers_2/B2",
+      "finding": "Legacy title 'תפלת מנחה — modim_derabbanan' / 'Weekday Minchah — modim_derabbanan' (amidah_modim_derabbanan, amidah_modim_derabbanan_parts) contains a raw ASCII slug. Recommended followup: retitle to 'מודים דרבנן' / 'Modim derabbanan' (with the Minchah prefix if wanted), as musaf_repetition_modim_derabbanan already does."
+    },
+    {
+      "id": "C-N3",
+      "origin": "headers_2/B3, headers_3/B3",
+      "finding": "The legacy 'Evening Prayer for the New Year — …' English titles are on shared parts files whose content spans services. amidah_avodah_parts and amidah_hodaah_parts have musaf/repetition canonical-home URNs, and amidah_uvekhen_ten_kavod_parts includes p.115 Musaf material. As a later legacy-metadata cleanup, consider service-neutral titles ('Service', 'Thanksgiving', 'Grant honour'). Do not mint new identities."
+    },
+    {
+      "id": "C-N4",
+      "origin": "headers_0/N3",
+      "finding": "The index source/encoding notes still contain batch-progress wording ('This installment additionally prints…', 'The newly printed maḥzor Half Kaddish…', 'The newly transcribed maḥzor Yigdal…', '…remain outside this batch'). This is not title text, but it must be removed with the DRAFT notes before final export."
+    },
+    {
+      "id": "C-N5",
+      "origin": "headers_1/N1",
+      "finding": "tallith.xml uses corresp prayer:tallith on a container that holds only transclusions. Under SIDDUR_URN_SCHEME.md (remove every transclusion; if no liturgy remains, the URN is siddur:), it would be a siddur: unit. It is an existing identity and the user's reuse-existing-identities instruction applies, so this is a followup only."
+    },
+    {
+      "id": "C-N6",
+      "origin": "structural-container bodies",
+      "finding": "morning_qorbanot.xml has no pb or facs at all, and its printed de-Hebr Shabbat rubric has no facsimile anchor. The other containers anchor their heads and rubrics with pb@n and facs. Consider adding a pb for consistency."
+    },
+    {
+      "id": "C-N7",
+      "origin": "headers_0/N1, headers_2/N2",
+      "finding": "The legacy title 'נוסח פרנקפורט' on the useir_lekhapper files is a rite label, not the passage name. Optional: retitle to 'ושעיר לכפר — נוסח פרנקפורט'."
+    },
+    {
+      "id": "C-N8",
+      "origin": "headers_0/N2, headers_1/N8",
+      "finding": "Some English-edition files (repetition_veattah_qadosh, uvekhen_lekha_taaleh_qedushah, repetition_birkat_kohanim) have Hebrew titles. These are acceptable where no English translation is printed. Confirm that their English-file page ranges reflect the English edition's own pages."
+    },
+    {
+      "id": "C-N9",
+      "origin": "headers_0/N6, headers_2/N4, headers_2/N5",
+      "finding": "Path styles are mixed (musaf/repetition_X vs musaf/repetition/X). The regalim/musaf/text/umippenei path is used for a Rosh Hashanah text. Harmonize only if these are not already established registry identities."
+    },
+    {
+      "id": "C-N10",
+      "origin": "headers_0/N4, headers_1/N4, headers_1/N5, headers_1/N3, headers_3/N6, headers_0/N5, headers_2/N6, headers_2/N7, headers_3/N5, headers_1/N7, headers_3/N3, headers_0/N7, headers_1/N2",
+      "finding": "These cosmetic or consistency items carry forward unchanged: machine-readable respStmt for imaging and the independent reader; canonical CC0 URL form; mixed DRAFT markers between changed and unchanged templates; biblScope ordering (17, 103, 116, 113); qedushah_shared_parts p.3 Hebrew-only; scan gap 285→287 note; pointed vs unpointed Hebrew titles; generic section titles ('Prayers', 'Morning Prayer', 'תְּפִלּוֹת.')."
+    }
+  ],
+  "verdict": "NOT APPROVED. One blocker remains. The facts provided resolve most of the earlier blockers: every missing-publication-URN finding across the four scopes follows the deliberate omit_publication_urn policy for word collections; the page-range findings on the kiddush, morning-blessings, preliminaries, qorbanot and tallith containers fail because their bodies hold only transclusions; and the 'Evening Prayer…' and 'Weekday Minchah — modim_derabbanan' titles are accepted legacy metadata, not pilot installment titles (the slug title is downgraded to a nonblocking followup). The exception is heidenheim-1965-he/psalm_24.xml. It is listed as a page-less structural container, but its body is the literal text of Psalm 24 with no transclusions, so under the stated rule it needs a source biblScope page range. It has none, and its pb lacks @n. Once that is fixed, the headers can be approved. Before final export, also remove the batch-progress wording from the index notes along with the DRAFT notes.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "9e831e16-1bb6-41c0-8dc4-68bfe08e7cae"
+  }
+}

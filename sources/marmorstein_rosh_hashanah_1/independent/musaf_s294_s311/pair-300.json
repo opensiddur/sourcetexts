@@ -1,0 +1,289 @@
+{
+  "scan_range": [
+    300,
+    301
+  ],
+  "blocks": [
+    {
+      "scan": "s300",
+      "key": "running_header",
+      "region": "running_header",
+      "language": "he",
+      "kind": "running_header",
+      "text": "140 מוּסָף לְיוֹם רִאשׁוֹן שֶׁל רֹאשׁ הַשָּׁנָה 140",
+      "uncertainties": [
+        "The Hebrew running header is not in any of the 12 supplied line packs, so I could not check it against the source in this pass. The text is carried over from the draft without verification."
+      ]
+    },
+    {
+      "scan": "s300",
+      "key": "essa",
+      "region": "weekday",
+      "language": "he",
+      "kind": "prayer",
+      "text": "בְּקוֹל סַעֲרַת שׁוֹפָר: לְיוֹדְעָיו יוּשַׁב. לְאוֹת טוֹב יִתְחַשֵּׁב. לְעֵת יִתְיַשֵּׁב. בְּקוֹל טַעַם שׁוֹפָר: מוֹאֲסָיו לְהַבְקִיעַ. בּוֹגְדָיו לְקַעֲקֵעַ. מוֹרְדָיו לְהַשְׁקִיעַ. בְּקוֹל חִזּוּק שׁוֹפָר: מַאֲרִיךְ בְּהִתָּקֵעַ. מְקַצֵּר בְּהִבָּקֵעַ. מֵרִיעַ וְתוֹקֵעַ. בְּקוֹל שִׁלּוּשׁ שׁוֹפָר: נוֹתֵן אֵימוֹת. מַחְפִּיז אֻמּוֹת. נוּסוּ נוֹאֲמוֹת. מִקּוֹל בּוֹךְ שׁוֹפָר: נוֹתֵץ חוֹמוֹת. מַשְׁבִּית מִלְחָמוֹת. נוֹהֵם כַּהֲמוֹת. קוֹל שַׁאַג שׁוֹפָר: סוֹדוֹ כְּגִלָּה. בְּסִין לְסֶגֻלָּה. סִים מְגִלָּה. בְּקוֹל הִלּוּךְ שׁוֹפָר: סוֹד יוֹם גְּאֻלָּה. בְּחָסְפּוֹ לִדְגוּלָה. שָׂשׂוֹן וְגִילָה. קוֹל יַשְׁמִיעַ שׁוֹפָר: עָשׂוֹר דּוֹחֶה. עֹנֶג מַדְחֶה. עֲבֵרוֹת מְמַחֶה.",
+      "uncertainties": [
+        "Lines 01–02, the vowel under the shin in יִתְחַשֵּׁב and יִתְיַשֵּׁב: at this resolution it may be a single horizontal stroke (patah, which would rhyme with יוּשַׁב) rather than tsere. I can't tell which, so it is left as drafted (see human_questions).",
+        "Line 05, שִׁלּוּשׁ: I can't confirm the dagesh in the lamed.",
+        "Line 06, בּוֹךְ: holam-vav vs shuruq is not clearly resolved.",
+        "Line 08, לְסֶגֻלָּה: the marks under the lamed and samekh (sheva+segol vs hiriq+sheva) are faint. Left as drafted.",
+        "Line 09, לִדְגוּלָה: hiriq vs sheva under the lamed is faint. Left as drafted.",
+        "Line 09, בְּחָסְפּוֹ: the source clearly prints a samekh. This is a possible misprint but I did not normalise it."
+      ]
+    },
+    {
+      "scan": "s300",
+      "key": "shabbat_rubric",
+      "region": "shabbat",
+      "language": "de-Hebr",
+      "kind": "instruction",
+      "text": "אַם שַׁבָּת.",
+      "uncertainties": [
+        "At this size the small first word looks like ח-plus-final letter. It is kept as אַם per the repeated human confirmation of this recurring rubric, and this is not raised as a new question."
+      ]
+    },
+    {
+      "scan": "s300",
+      "key": "anusah_tail",
+      "region": "shabbat",
+      "language": "he",
+      "kind": "prayer",
+      "text": "סֶלָה יְשִׂימֵנִי. כַּחוֹתָם עַל לֵב. כְּאָז תַּחַת הַתַּפּוּחַ. עוֹרְרַנִי בְּקוֹל:",
+      "uncertainties": [
+        "Line 13, the vowel under the second resh in עוֹרְרַנִי looks like one horizontal stroke (patah), not the two dots of tsere. On line 12, the tsere in לֵב shows as two separate dots, which supports patah. A small vertical tick sits next to the stroke and could be a meteg or a print artefact; I have not encoded it.",
+        "Line 12, a similar vertical tick appears next to the patah under the first tav of תַּחַת. I have not encoded it."
+      ]
+    },
+    {
+      "scan": "s300",
+      "key": "exodus_19_16",
+      "region": "shabbat",
+      "language": "he",
+      "kind": "prayer",
+      "text": "כַּכָּתוּב בְּתוֹרָתֶךָ וַיְהִי בַיּוֹם הַשְּׁלִישִׁי בִּהְיֹת הַבֹּקֶר וַיְהִי קֹלֹת וּבְרָקִים וְעָנָן כָּבֵד עַל־הָהָר וְקֹל שֹׁפָר חָזָק מְאֹד וַיֶּחֱרַד כָּל־הָעָם אֲשֶׁר בַּמַּחֲנֶה:",
+      "uncertainties": [
+        "Lines 14–15 are a Bible quotation (Exodus 19:16; the label is a note, not prayer text). At the supplied resolution I cannot see clear cantillation marks. A few small extra strokes (near the first וַיְהִי, הָהָר and וַיֶּחֱרַד) may be accents or meteg, or may be noise. I have not added accents from memory of the Masoretic text, but I also cannot confirm that the source has none."
+      ]
+    },
+    {
+      "scan": "s300",
+      "key": "illittani",
+      "region": "shabbat",
+      "language": "he",
+      "kind": "prayer",
+      "text": "עִלִּיתַנִי אֵל. עַל כָּל בָּנוֹת. כִּי בַעֲבוּרִי. בְּחוֹרֵב תַּתָּה קוֹל עַל כָּל אֱלֹהִים מְאֹד נִתְעַלֵּיתָ. נֶצַח תִּתְעַלֶּה. בִּתְרוּעַת קוֹל:",
+      "uncertainties": [
+        "Line 17 confirms there is no colon after the first קוֹל; the role label ח׳ follows it directly.",
+        "Line 16, בַעֲבוּרִי: I see no dagesh, but it is faint.",
+        "Line 16, a small tick next to the patah in עִלִּיתַנִי, like the one in עוֹרְרַנִי. I have not encoded it."
+      ]
+    },
+    {
+      "scan": "s300",
+      "key": "psalms_47_6_98_6",
+      "region": "shabbat",
+      "language": "he",
+      "kind": "prayer",
+      "text": "כַּכָּתוּב בְּדִבְרֵי קָדְשֶׁךָ עָלָה אֱלֹהִים בִּתְרוּעָה יְיָ בְּקוֹל שׁוֹפָר: וְנֶאֱמַר בַּחֲצֹצְרוֹת וְקוֹל שׁוֹפָר הָרִיעוּ לִפְנֵי הַמֶּלֶךְ יְיָ:",
+      "uncertainties": [
+        "Line 19, קָדְשֶׁךָ: segol vs sheva under the shin is not resolved. Left as drafted.",
+        "Bible quotations (Psalms 47:6 and 98:6, labels as notes only): I can't see any cantillation at this resolution. The text is spelled plene (שׁוֹפָר, קוֹל) exactly as printed, not normalised."
+      ]
+    },
+    {
+      "scan": "s300",
+      "key": "paah",
+      "region": "shabbat",
+      "language": "he",
+      "kind": "prayer",
+      "text": "פָּעָה מִמִּדְבָּר. צִפּוֹר מִמִּצְרַיִם. וְיוֹנָה הִשְׁמִיעָה. מֵאַשּׁוּר קוֹל: פְּקוֹד צִפּוֹר בַּיִת. דְּרוֹשׁ יוֹנַת אֵלֶם. תְּקַע לָמוֹ בַּשּׁוֹפָר. וּשְׁרֹק לָמוֹ בְּקוֹל:",
+      "uncertainties": [
+        "Line 23, בַּשּׁוֹפָר: I can't confirm the dagesh in the bet at this resolution."
+      ]
+    },
+    {
+      "scan": "s301",
+      "key": "running_header",
+      "region": "running_header",
+      "language": "en",
+      "kind": "running_header",
+      "text": "140 Musaph for the New Year 140",
+      "uncertainties": []
+    },
+    {
+      "scan": "s301",
+      "key": "essa",
+      "region": "weekday",
+      "language": "en",
+      "kind": "prayer",
+      "text": "through the stormy sound of the Shofar. For those who know Him, there is comfort, it is reckoned a good sign for the establishment of peace through the pleasant sound of the Shofar. They who reject Him will be cut down, the faithless will be uprooted, rebels will sink down through the powerful sound of the Shofar. It sounds long drawn-out blasts and then short sharp notes, Teruah and Tekiah are included in the threefold sound of the Shofar. It spreads fear, shakes nations so that they speak of flight from the menacing sound of the Shofar. It tears down walls and makes an end of wars, like the roaring of the waves is the roaring sound of the Shofar. When the Lord revealed His will to His own people on Mount Sinai, the Revelation concluded with the long drawn out sound of the Shofar. When once the secret of redemption will be revealed to those exalted, jubilation and rejoicing He will proclaim through the sound of the Shofar. On the tenth of Tishri was it sounded, even on the day of the Sabbath rest, sins were obliterated through the ringing sound of the",
+      "uncertainties": []
+    },
+    {
+      "scan": "s301",
+      "key": "shabbat_rubric",
+      "region": "shabbat",
+      "language": "en",
+      "kind": "instruction",
+      "text": "On Sabbath.",
+      "uncertainties": []
+    },
+    {
+      "scan": "s301",
+      "key": "anusah_tail",
+      "region": "shabbat",
+      "language": "en",
+      "kind": "prayer",
+      "text": "Truly He will bear me as a seal on the heart as once when beneath the apple tree He roused me with His voice.",
+      "uncertainties": []
+    },
+    {
+      "scan": "s301",
+      "key": "exodus_19_16",
+      "region": "shabbat",
+      "language": "en",
+      "kind": "prayer",
+      "text": "As it is written in Thy Torah: ‘And it happened on the third day during the morning that there was thunder and lightning and a heavy cloud lay over the mountain and there was a very powerful sound of the Shofar and all the people in the camp were afraid’.",
+      "uncertainties": [
+        "The Hebrew cue word ככתוב at the start of this paragraph links it to the Hebrew text and is not included as prayer text."
+      ]
+    },
+    {
+      "scan": "s301",
+      "key": "illittani",
+      "region": "shabbat",
+      "language": "en",
+      "kind": "prayer",
+      "text": "Thou hast raised me, O God, over all daughters since on my behalf on Horeb didst Thou give voice. Over all gods art Thou greatly exalted, to eternity shalt Thou be exalted with the Teruah’s voice.",
+      "uncertainties": [
+        "The Hebrew cue word עליתני is not included as prayer text."
+      ]
+    },
+    {
+      "scan": "s301",
+      "key": "psalms_47_6_98_6",
+      "region": "shabbat",
+      "language": "en",
+      "kind": "prayer",
+      "text": "As it is written in Thy holy words: ‘God has arisen with Teruah, the Lord with a Shofar sound’. And it is said: ‘With trumpets and a Shofar sound cry out before the King, the Lord’.",
+      "uncertainties": [
+        "The Hebrew cue word ככתוב is not included as prayer text."
+      ]
+    },
+    {
+      "scan": "s301",
+      "key": "paah",
+      "region": "shabbat",
+      "language": "en",
+      "kind": "prayer",
+      "text": "A bird from Egypt (Israel) cooed from the wilderness and a dove from Assyria sounded its voice. Take note of the bird of Thy household, seek out the patient dove, blow the Shofar for them and whistle to them with Thy voice.",
+      "uncertainties": [
+        "The Hebrew cue word פעה is not included as prayer text."
+      ]
+    }
+  ],
+  "patches": [
+    {
+      "scan": "s300",
+      "key": "essa",
+      "old": "בּוֹגְדָיו לְקַעְקֵעַ.",
+      "new": "בּוֹגְדָיו לְקַעֲקֵעַ.",
+      "reason": "Line 03: the mark under the first ayin is a hataf patah (a horizontal stroke with two dots), not a simple sheva.",
+      "source_image": "/tmp/mahzor-s294/s300-pair02.png"
+    },
+    {
+      "scan": "s300",
+      "key": "anusah_tail",
+      "old": "עוֹרְרֵנִי בְּקוֹל:",
+      "new": "עוֹרְרַנִי בְּקוֹל:",
+      "reason": "Line 13: the vowel under the second resh prints as one horizontal stroke (patah), not the two dots of tsere. Compare the clear tsere in לֵב on line 12. This matches the blind reading. The adjacent vertical tick is not encoded (see uncertainties).",
+      "source_image": "/tmp/mahzor-s294/s300-pair07.png"
+    }
+  ],
+  "source_sic_corr": [
+    {
+      "scan": "s300",
+      "key": "essa",
+      "word": "בְּחָסְפּוֹ",
+      "note": "Printed with a samekh. Kept as printed; no correction applied."
+    },
+    {
+      "scan": "s300",
+      "key": "illittani",
+      "word": "קוֹל",
+      "note": "No colon is printed after the first קוֹל (before the role label ח׳). Kept as printed."
+    }
+  ],
+  "role_labels": [
+    {
+      "scan": "s300",
+      "key": "anusah_tail",
+      "label": "ח׳",
+      "pointed": false,
+      "placement": "Right margin at the start of line 12, immediately before סֶלָה, on the first line after the rubric אַם שַׁבָּת.",
+      "source_image": "/tmp/mahzor-s294/s300-pair06.png"
+    },
+    {
+      "scan": "s300",
+      "key": "illittani",
+      "label": "ח׳",
+      "pointed": false,
+      "placement": "Inside line 17, between the first קוֹל and עַל כָּל אֱלֹהִים.",
+      "source_image": "/tmp/mahzor-s294/s300-pair09.png"
+    },
+    {
+      "scan": "s300",
+      "key": "paah",
+      "label": "ח׳",
+      "pointed": false,
+      "placement": "Inside line 22, between מֵאַשּׁוּר קוֹל: and פְּקוֹד.",
+      "source_image": "/tmp/mahzor-s294/s300-pair11.png"
+    }
+  ],
+  "human_questions": [
+    {
+      "scan": "s300",
+      "key": "essa",
+      "word": "יִתְחַשֵּׁב / יִתְיַשֵּׁב",
+      "question": "Lines 01–02: under the shin, is the vowel tsere (two dots) or patah (one stroke)? The enlarged lines are not clear enough to decide.",
+      "source_image": "/tmp/mahzor-s294/s300-pair01.png"
+    },
+    {
+      "scan": "s300",
+      "key": "anusah_tail",
+      "word": "עוֹרְרַנִי",
+      "question": "Line 13: please confirm patah (as patched) under the second resh. Is the small vertical stroke beside it a meteg that should be encoded? The same tick appears in תַּחַת (line 12) and עִלִּיתַנִי (line 16).",
+      "source_image": "/tmp/mahzor-s294/s300-pair07.png"
+    },
+    {
+      "scan": "s300",
+      "key": "exodus_19_16",
+      "word": "whole verse (Exodus 19:16); also Psalms 47:6 and 98:6",
+      "question": "Lines 14–15 and 19–20: does the source print cantillation on these Bible quotations? I can't see any clearly at this resolution, apart from a few ambiguous small strokes. A higher-resolution crop is needed before accents can be encoded or ruled out.",
+      "source_image": "/tmp/mahzor-s294/s300-pair07.png"
+    }
+  ],
+  "all_hebrew_words_and_marks_checked": false,
+  "all_english_words_checked": true,
+  "source_images_read": [
+    "/tmp/mahzor-s294/s300-pair01.png",
+    "/tmp/mahzor-s294/s300-pair02.png",
+    "/tmp/mahzor-s294/s300-pair03.png",
+    "/tmp/mahzor-s294/s300-pair04.png",
+    "/tmp/mahzor-s294/s300-pair05.png",
+    "/tmp/mahzor-s294/s300-pair06.png",
+    "/tmp/mahzor-s294/s300-pair07.png",
+    "/tmp/mahzor-s294/s300-pair08.png",
+    "/tmp/mahzor-s294/s300-pair09.png",
+    "/tmp/mahzor-s294/s300-pair10.png",
+    "/tmp/mahzor-s294/s300-pair11.png",
+    "/tmp/mahzor-s294/s300-pair12.png",
+    "/tmp/mahzor-s294/s301.jpg"
+  ],
+  "verdict": "PARTIAL / NOT APPROVED. I read all 13 supplied images; none was removed or unreadable, and no media limit was hit. The English on s301 matches the draft exactly, including punctuation and curly quotes. I made two Hebrew patches: לְקַעֲקֵעַ, and עוֹרְרַנִי (to be confirmed by a human). Three role labels (ח׳, unpointed) are recorded with their placement. The Hebrew is not fully cleared for four reasons: (1) the Hebrew running header is not in any supplied pack; (2) I can't confirm whether the Bible quotations on lines 14–15 and 19–20 carry cantillation; (3) the shin vowel in יִתְחַשֵּׁב/יִתְיַשֵּׁב and some small ticks are unresolved; (4) several dagesh and sheva-versus-vowel points remain faint. Num 10:10 is on s308, outside this pair, so no accent or host-letter inventory applies here. I did not repeat any of the pending human questions from 445–454.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "d1da8f68-b3aa-4cb5-884b-58fc588e19a3"
+  }
+}

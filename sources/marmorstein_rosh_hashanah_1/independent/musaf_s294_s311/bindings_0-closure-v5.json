@@ -1,0 +1,125 @@
+{
+  "scope": "bindings_0_closure",
+  "approved": true,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/bindings_0-v5.json",
+    "/tmp/mahzor-s294/review-context-v5.json",
+    "/tmp/mahzor-s294/validation-source-evidence-v5.json",
+    "/tmp/mahzor-s294/bounded-identity-v4.json",
+    "/tmp/mahzor-s294/bounded-areshet-v4.json",
+    "/tmp/mahzor-s294/code-followup-v4.json",
+    "/tmp/mahzor-s294/bounded-review-v4/rule-verse_numbering.md",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/specs/SIDDUR_URN_SCHEME.md"
+  ],
+  "resolved_findings": [
+    {
+      "id": "B1",
+      "original_severity": "blocking",
+      "resolution": "Resolved: the original finding misread how the canonical_home fields work. In rh_avodah and rh_hodaah, canonical_home has map_root=false and omit_publication_urn=true (review-context-v5.json existing_titles_and_condition_metadata). review-context-v5.json clarifications.canonical_home says this combination means the grouping URN (siddur:rosh_hashanah/musaf/repetition/{avodah,hodaah}_word_parts) is never emitted as a whole-text or publication identity. clarifications.publication_urn says pure word collections leave out a false whole-text identity on purpose. So the URN is an internal grouping/file key, not a canonical home for shared Amidah text. It also makes no claim about Musaf, and it does not contradict omit_publication_urn: it is exactly the URN that the flag suppresses. The real identities are the generic prayer:amidah/... milestones inside, which the paragraphs bind to. validation-source-evidence-v5.json literal_contexts shows the documentary context quoting prayer:amidah/hodaah/{modim,ukhetov,veal_kullam} through explicit seg/@source. bounded-identity-v4.json (approved) found each canonical corresp emitted exactly once per project and none duplicated. The unit identities siddur:rosh_hashanah/minchah_maariv/amidah/{avodah,hodaah} are registered legacy records (siddur.jsonl lines 795 and 798). The titles are unchanged from the accepted metadata (title_unchanged=true). This matches SIDDUR_URN_SCHEME.md 'The same text in several contexts': a siddur: context with milestones carrying the shared prayer: identity.",
+      "evidence": [
+        "review-context-v5.json clarifications.canonical_home",
+        "review-context-v5.json clarifications.publication_urn",
+        "review-context-v5.json existing_titles_and_condition_metadata[rh_avodah, rh_hodaah].canonical_home",
+        "validation-source-evidence-v5.json legacy_existing_context_records (lines 795, 798)",
+        "validation-source-evidence-v5.json literal_contexts[rh_hodaah he/en]",
+        "bounded-identity-v4.json nonblocking_findings[0-1], verdict"
+      ]
+    },
+    {
+      "id": "B2",
+      "original_severity": "blocking",
+      "resolution": "Resolved as a blocker; kept as nonblocking follow-up NB-F2. urn:x-opensiddur:text:siddur:rosh_hashanah/text/vekhol_hachayyim is an existing registry record with status=canonical (siddur.jsonl line 895, review-context-v5.json existing_registry_records). It is not newly minted. clarifications.legacy_metadata applies the user's instruction to reuse existing identities and not mint replacements, and says migrating legacy names can only be nonblocking follow-up. Binding paragraph 4 to the registered identity is that required reuse. Binding it to an unregistered prayer:amidah/hodaah/vekhol_hachayyim would mint a second identity for the same text against that instruction. Before 1.0 the scheme also says a rename replaces the URN outright (no aliases), which would be a separate, deliberate registry change. bounded-identity-v4.json confirmed this identity is emitted as a milestone corresp exactly once per project, and validation-source-evidence-v5.json shows the documentary context quoting it through seg/@source.",
+      "evidence": [
+        "review-context-v5.json existing_registry_records[0]",
+        "review-context-v5.json clarifications.legacy_metadata",
+        "bounded-identity-v4.json nonblocking_findings[1]",
+        "validation-source-evidence-v5.json literal_contexts[rh_hodaah]",
+        "SIDDUR_URN_SCHEME.md 'The registry' (no aliases before 1.0)"
+      ]
+    },
+    {
+      "id": "B3",
+      "original_severity": "blocking",
+      "resolution": "Resolved as a blocker; kept as nonblocking follow-up NB-F3. The main premise of the finding is wrong. clarifications.old_minchah says the Minchah at the start of this festival book is the preparatory weekday Minchah (erev Rosh haShanah), not the festival Amidah. So 'Weekday Minchah' is correct. siddur:rosh_hashanah/... in context_urn names the book's occasion and running order (SIDDUR_URN_SCHEME.md: siddur: names a place in a book's order), not the calendar status of that service. The title is the accepted legacy title, unchanged (old_accepted_title == new_title, title_unchanged=true). The canonical home inherits it as-is, and the clarification marks improving it as separate work. It is header display metadata, not identity or pilot installment text. The identity binding itself is correct: the canonical home is the generic prayer:amidah/hodaah/modim_derabbanan, and the new context siddur:rosh_hashanah/minchah/modim_derabbanan is registered as status=context (bounded-identity-v4.json). The ASCII slug suffix is a real cosmetic defect in both titles, the Hebrew one included, and stays as follow-up.",
+      "evidence": [
+        "review-context-v5.json clarifications.old_minchah",
+        "review-context-v5.json existing_titles_and_condition_metadata[amidah_modim_derabbanan]",
+        "bounded-identity-v4.json nonblocking_findings[4] (registry context record)",
+        "SIDDUR_URN_SCHEME.md 'Telling siddur: from prayer:'"
+      ]
+    },
+    {
+      "id": "B4",
+      "original_severity": "blocking",
+      "resolution": "Resolved. (a) review_encoding: clarifications.review_encoding defines true as a mandatory canonical/encoding review gate that requires a receipt. It is not a pending marker, and completion is recorded in reviews.json, not in this boolean. code-followup-v4.json NB4 (approved) checked that the baseline accepts review_encoding=True only when removing exactly that key reproduces the accepted snapshot (protected_sha256 and every literal_sha256). It also rejects disabling the flag, non-boolean values, and text or title edits. So the flag is the intended gate, not leftover metadata. (b) Empty source_fidelity: clarifications.source_fidelity says that list holds only automatically generated canonical-occurrence comparisons, and literal source quotations are reviewed independently as XML and source blocks. The Numbers 6:24-26 quotation bindings were reviewed and approved in bounded-identity-v4.json: canonical chapter/verse @n, whole verses with no partial-verse over-claim, seg/@source pointing to the canonical bible URN, inner scopes closed before the next content, and the birkat_kohanim intro identity reused across the Shacharit and Musaf placements. This conforms to rule-verse_numbering.md (canonical @n, one milestone per canonical verse). (c) end_reference: true is a segment mapping field (code-followup-v4.json NB4 SEGMENT_MAPPING_FIELDS). It produces the bare same-unit terminator milestone defined in SIDDUR_URN_SCHEME.md 'Ending a scope'. bounded-identity-v4.json observed exactly this: the intro identity closes with a bare prayer-part terminator before the Numbers milestones, and the verse scopes close before the following content. The zikhron canonical home uses end_reference: true the same way on a single bounded word.",
+      "evidence": [
+        "review-context-v5.json clarifications.review_encoding",
+        "review-context-v5.json clarifications.source_fidelity",
+        "code-followup-v4.json NB4",
+        "bounded-identity-v4.json nonblocking_findings[2-3]",
+        "bounded-review-v4/rule-verse_numbering.md lines 290-323",
+        "SIDDUR_URN_SCHEME.md 'Ending a scope: the unit-terminating milestone'",
+        "review-context-v5.json zikhron_canonical_home.languages.*[0].end_reference"
+      ]
+    },
+    {
+      "id": "N1",
+      "original_severity": "nonblocking",
+      "resolution": "Explained. rh_avodah is bound through canonical occurrences, so its source_fidelity comparisons are listed automatically. rh_hodaah and amidah_modim_derabbanan are literal documentary contexts (canonical_home.context='literal'; both appear in validation-source-evidence-v5.json literal_contexts with page-break and seg/@source checks). Per clarifications.source_fidelity, an empty list there is expected and does not mean the review is missing. This also explains the 'context' difference noted in N2."
+    }
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    {
+      "id": "NB-F1",
+      "records": [
+        "realization/rh_avodah/*",
+        "realization/rh_hodaah/*"
+      ],
+      "finding": "The non-emitted grouping keys siddur:rosh_hashanah/musaf/repetition/{avodah,hodaah}_word_parts carry a misleading Musaf-repetition path for material printed in Minchah/Maariv. They create no identity, but a neutral grouping key would be clearer. The en titles say 'Evening Prayer for the New Year' while the unit URNs say minchah_maariv; these are accepted legacy titles. Optional follow-up only."
+    },
+    {
+      "id": "NB-F2",
+      "records": [
+        "realization/rh_hodaah/*"
+      ],
+      "finding": "Under SIDDUR_URN_SCHEME.md, Vekhol hachayyim is shared Amidah liturgy and would ideally live under prayer:. Migrating the registered siddur:rosh_hashanah/text/vekhol_hachayyim needs a deliberate registry rename decision by the user. It must not be minted as a replacement in this batch."
+    },
+    {
+      "id": "NB-F3",
+      "records": [
+        "realization/amidah_modim_derabbanan/he"
+      ],
+      "finding": "The accepted legacy title, inherited by canonical_home.title, contains an unrendered ASCII slug ('modim_derabbanan') in both he and en. A separate metadata pass should replace it with proper titles. 'Weekday Minchah' itself is correct."
+    },
+    {
+      "id": "NB-F4",
+      "records": [
+        "realization/repetition_birkat_kohanim/he"
+      ],
+      "finding": "title.en is in Hebrew (accepted legacy, unchanged). There is no speaker-role metadata, although SIDDUR_URN_SCHEME.md defines role/reader and role/kohanim, and the leader context is implied only by the source URN birkat_kohanim_leshatz. The whitespace-only seg/@source elements between the verses (noted by bounded-identity-v4.json) add noise. Optional follow-up."
+    },
+    {
+      "id": "NB-F5",
+      "records": [
+        "realization/amidah_modim_derabbanan/he"
+      ],
+      "finding": "Congregational recitation is carried only by a 'description' instruction with no role URN or placement field. Optional role-vocabulary follow-up."
+    },
+    {
+      "id": "NB-F6",
+      "records": [
+        "realization/musaf_yismechu/he"
+      ],
+      "finding": "The binding target siddur:rosh_hashanah/musaf/yismechu/text is publication-namespaced for text shared with Shabbat Musaf. This is legacy and covered by the reuse instruction, so any migration is follow-up. The de-Hebr rubric language matches the settled source/XML reviews of the same 'אַם שַׁבָּת.' rubrics. The difference between the record's own condition-instruction hash and the repetition control's is not explained by the evidence here. The original reviewer did not mark it as blocking, and the record matches its own attesting control."
+    }
+  ],
+  "verdict": "Approved for the bindings_0 closure scope. None of the four original blockers holds up against the registry and clarification evidence. B1: the Musaf-namespaced URNs are non-emitted grouping keys (map_root=false, omit_publication_urn=true). The real identities are generic prayer:amidah milestones, emitted once each and quoted from the registered legacy minchah_maariv contexts. B2: vekhol_hachayyim reuses an existing registered canonical identity (siddur.jsonl:895), as the user required; renaming it is follow-up. B3: 'Weekday Minchah' correctly names the preparatory erev-Rosh-haShanah Minchah, and the title is unchanged accepted legacy metadata; the slug suffix is cosmetic follow-up. B4: review_encoding=true is a mandatory receipt gate, not a pending flag, and its baseline behaviour is code-verified. The empty source_fidelity list is expected for literal quotations, which the approved identity review covered for Numbers 6:24-26 (canonical numbering, whole verses, closed scopes). end_reference is the scheme's bare scope terminator, and its emitted effect was seen in the XML review. Limits: I did not see reviews.json, so this approval relies on the gate's definition and the code review that it requires a receipt, not on inspecting the receipt. final_sha256 was not recomputed. Code, XML body and export approval stay with their own groups.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "5cebb598-e353-4bb5-b72f-e2fd819850ff"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "approved": true,
+  "previous_approvals_retained": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s312/boundary-visual-closure.json",
+    "/tmp/mahzor-s312/boundary-exact-11.png",
+    "/tmp/mahzor-s312/boundary-exact-12.png"
+  ],
+  "closed_blockers": [
+    "Conditional rubric touching the opening bracket (reviews 3 and 5; boundary-visual-review blocker 4; boundary-visual-closure blocking finding): CLOSED. Proof p.9, Hebrew column, boundary-exact-11, has two occurrences. (1) Line 6 of the lower block reads 'וּמַלְכוּתוֹ בַּכֹּל מָשָׁלָה: אַם שַׁבָּת [אֱלֹהֵינוּ וֵאלֹהֵי'. A clear word-width gap now separates the bold rubric 'אם שבת' from the bracket glyph. The bracket stays tight against 'אֱלֹהֵינוּ', so the prefix join is still correct. (2) The line beginning 'אַם שַׁבָּת [וְהַנְחִילֵנוּ יְיָ אֱלֹהֵינוּ' has the same visible gap between 'שבת' and the bracket, with the bracket again tight against 'וְהַנְחִילֵנוּ'. In boundary-refined-11 both clusters ran together with no space. The new explicit control space produces a visible, normal-looking word space in both places. Line justification looks even, with no stretched or collapsed spacing next to the rubric."
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "Approved closing-bracket spacing still holds on the pages shown again. Hebrew: 'בִמְנוּחָתֵנוּ] קַדְּשֵׁנוּ' and 'שְׁמֶךָ.] וְטַהֵר' (exact-11). English: 'of Teruah [in love] for' (exact-11), plus 'in our rest.] Sanctify', 'on it] and purify' and '[the Sabbath and] Israel' (exact-12). The prefix join 'מְקַדֵּשׁ [הַשַּׁבָּת וְ]יִשְׂרָאֵל' is still in place (exact-12).",
+    "Still approved in exact-12: marker 7 above '(מלכנו)' is clear of the glyphs, and footnote 7 (Hebrew editorial note) stays right-aligned and right-to-left.",
+    "Carried over unchanged from boundary-visual-closure: (a) the footnote markers after Hebrew row-final words ride high; (b) apparatus note text is bold, which needs confirming as intended; (c) marker 6 is tight against the descenders of the line above; (d) the editorial note reads 'beginning on scan327' with no space.",
+    "The colon after 'מָשָׁלָה' is followed by a slightly wider justified gap before 'אם שבת'. That is normal for a justified line, and it does make the rubric easier to pick out."
+  ],
+  "limitations": [
+    "This is a visual check of rasterized PNGs at page resolution only. The PDF glyph positions and text layer were not inspected, so the gap width was not measured. It is plainly visible, though, where before there was none.",
+    "Only the two newly assigned images were read for this check. The approvals for the 'כהן', 'לוי' and 'ישראל' heading spacing, the Minchah title, marker placement on pages 3, 4, 5, 7 and 22, and the English footnote direction are kept as recorded in boundary-visual-closure.json. Those pages were not re-rendered or re-read here. The only change described was the control space before OSCondStartInline, which should not affect them.",
+    "I did not try to check the mirrored shape of the bracket glyphs in the right-to-left text at this resolution. They render the same way as in the earlier approved closing-bracket instances.",
+    "Other bracket instances from reviews 3 and 5 that are not in this excerpt (e.g. 'this day]of remembrance') still need checking in the full-book review.",
+    "This approves the reduced proof only. The final full PDFs are still pending review.",
+    "No output file was written; this JSON is returned inline."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "b73b2213-197a-4131-b652-b5935561da68"
+  }
+}

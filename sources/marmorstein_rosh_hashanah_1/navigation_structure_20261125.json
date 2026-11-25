@@ -1,0 +1,41 @@
+{
+  "status": "accepted",
+  "source_complete_scan_leaves": 355,
+  "pending_source_readings": [],
+  "generated_xml_files": 1008,
+  "changes": [
+    "Documentary Shacharit file and parent heading enclose Avinu Malkenu and full Kaddish; original condition preserved.",
+    "Documentary Shir ha-Yichud file and parent enclose all seven daily sections; Shir ha-Kavod stays sibling.",
+    "Book settings choose existing margin placement for scan links."
+  ],
+  "source_and_condition_controls_unchanged": true,
+  "structural_approval": "independent/navigation_structure_20261125/implementation-review.json (item1 separately approved in notes0)",
+  "review_rebinding_scope": "Only source_order_sha256 changed for355 existing realization payloads; original source/encoding reader hashes preserved.",
+  "exporter_pr": "https://github.com/opensiddur/opensiddur-processor/pull/329",
+  "exporter_implementation_approval": "independent/navigation_structure_20261125/test-closure-review.json",
+  "presentation_review_status": "independently-accepted",
+  "prior_full_volume_acceptance": "closing_s346_s355_acceptance.json",
+  "preview_directory": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/navigation-preview",
+  "pdf_pages": {
+    "documentary-hebrew": 113,
+    "documentary": 301,
+    "expanded": 359
+  },
+  "source_and_processor_ci": "all checks pass on PR329/84f2ff2 and PR296/8a08d8b",
+  "presentation_approval": "independent/navigation_structure_20261125/presentation-review.json",
+  "accepted_output_directory": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1",
+  "presentation_limitations": [
+    "Read only. I ran nothing: no test, compile, PDF parse or hash check. Page counts, outlines, link counts, text and conditional equivalence, annotation bounds and the CI results come from the JSON reports as given. I did not open the PDFs, HTML or CI logs myself.",
+    "The CI result (4927 OK, 110 skipped) is taken from validation-status.json. I did not see the CI log itself.",
+    "Visual judgement covers only the 9 PDF PNGs and 5 HTML screenshots listed. I did not view the morning or optional-omitted screenshots.",
+    "I made no new source, glyph or scan reading. The accepted readings and the 355/355 complete source verifier are taken as given. Text on the pages was looked at only for layout, not for accuracy.",
+    "Structural grouping relies on implementation-review.json notes[0], notes[2] and notes[3]. That file's approved=false came from exporter item 2, which test-closure-review.json later resolved. I did not re-review the build structure."
+  ],
+  "presentation_followup": "independent/navigation_structure_20261125/presentation-followup.json",
+  "source_opening_link_diagnostic": "independent/navigation_structure_20261125/sunday-opening-link-check.json",
+  "non_blocking_presentation_limitations": [
+    "Expanded book, opening of Sunday Shir ha-Yichud: a reader who arrives through the bookmark has no scan arrow for about 26 lines (scan n326), until the n327 break at 'ומה אשיב לך'. The documentary builds are unaffected, because they include the heading's page break. If this is ever fixed, a better approach than resetting state would be to emit an opening link from the transcluded div's own @facs when no page break comes before its first line. That is outside this follow-up.",
+    "The 4 Hebrew and 6 parallel same-URL HTML links kept adjacent at safety boundaries: I accepted these as erring toward access, but I have not looked at where they appear.",
+    "PDF pages beyond the nine samples, and HTML beyond the five screenshots, have not been looked at. Placement there rests on the mechanical checks only."
+  ]
+}

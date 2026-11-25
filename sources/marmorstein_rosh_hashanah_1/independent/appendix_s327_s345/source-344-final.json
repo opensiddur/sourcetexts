@@ -1,0 +1,80 @@
+{
+  "source_scan": "s344",
+  "approved_source_reading": true,
+  "all_lines_verified": true,
+  "human_application_verified": true,
+  "remaining_reading_disputes": [],
+  "corrections_required": [],
+  "stale_notes_to_remove": [
+    {
+      "where": "snapshot.blocks[0].uncertainties[0]",
+      "note": "Dagesh in בוֹרְאִי (no dagesh is expected after a vowel-final word).",
+      "reason": "Settled by human decision 820 (bet has a dagesh). The snapshot now reads בּוֹרְאִי. The note also argued from grammar, not from the source."
+    },
+    {
+      "where": "snapshot.blocks[1].uncertainties[0]",
+      "note": "How לַייָ is written: whether there is a sheva between the two yods.",
+      "reason": "Settled by human decision 821 (no sheva under the first yod)."
+    },
+    {
+      "where": "snapshot.blocks[1].uncertainties[1]",
+      "note": "Dagesh in וּגְבוּרְתָא and in פְתַחְיָה.",
+      "reason": "Settled by human decisions 822 (tav has a dagesh, applied as וּגְבוּרְתָּא) and 823 (no dagesh in the pe)."
+    },
+    {
+      "where": "snapshot.blocks[1].uncertainties[3]",
+      "note": "Small marks in this dense paragraph are only partly verified.",
+      "reason": "Every open small mark in the paragraph (820–825) now has a human decision. This scan checked the rest of the paragraph against the images."
+    },
+    {
+      "where": "snapshot.blocks[5].uncertainties[0]",
+      "note": "Dagesh in בְךָ (line 10) is not visible; I followed the expected form.",
+      "reason": "Settled by human decision 827 (no dagesh in the bet). It now rests on the user's reading of the source, not on the expected form."
+    },
+    {
+      "where": "snapshot.blocks[1].uncertainties[2]",
+      "note": "The stop after the first וְעַד הָעוֹלָם is printed as a raised dot.",
+      "reason": "Do not delete this fact. Move it from 'uncertainty' to a documentary observation: the print has a raised mid-height dot (·), encoded as '.'."
+    },
+    {
+      "where": "fine-344.json limitations[0]",
+      "note": "The running head is not in any of the 8 detail images, so it is not verified here.",
+      "reason": "Superseded. The running head שיר הכבוד and page number 18 were read from full-344.png."
+    },
+    {
+      "where": "fine-344.json unresolved[] (all 11 entries)",
+      "note": "בּוֹרְאִי, לַייָ, וּגְבוּרְתָּא, דִּי, פְתַחְיָה, כְּבוֹדְךָ, בְךָ, הִמְשִׁילוּךָ, וַיְשַׁוּֽוּךָ, וַיֶּחֱזוּ, נַפְשִׁי",
+      "reason": "Nine are closed by human decisions 820–830. דִּי (with dagesh, all 3 places) and the plain pe in נַפְשִׁי were confirmed by source-344-closure and again here."
+    },
+    {
+      "where": "source-344-closure.json remaining_reading_disputes[] and running-head correction",
+      "note": "11 disputes, plus the running-head correction",
+      "reason": "Superseded. All 11 disputes are now human decisions 820–830, and the running head is already applied in the snapshot."
+    },
+    {
+      "where": "human-820-830-resolution.json status",
+      "note": "final independent source344closurepending",
+      "reason": "This scan completes the source closure."
+    }
+  ],
+  "limitations": [
+    "Only the Read tool was available. I could not check code points or byte order (for example, meteg U+05BD placed after the dagesh/holam in וַיֹּֽאמֶר and וַיְשַׁוּֽוּךָ), and I did not recompute output_working_sha256. Placement was checked from the rendered text and the JSON before/after context strings.",
+    "Human decisions 820–830 were taken as authoritative and not re-judged from the images. Where they overlap, the images agree: dot in the bet of בּוֹרְאִי, dot in the tav of וּגְבוּרְתָּא, dot in the kaf of כְּבוֹדְךָ, a stroke under the line-final וַיֹּאמֶר.",
+    "Meteg hosts for the 5 מֶֽלֶךְ (mem) are still a judgement from position, the same as the fine and closure reports. Accepted, not disputed.",
+    "The instruction line is in small Rashi-style type, where ש looks like ם and alef has the Rashi shape. I read it as יש and ארון/אלו/לאמר from the letter forms and context.",
+    "This approves the source reading only. It is not acceptance of the XML, encoding, export, leaf or batch."
+  ],
+  "notes": [
+    "Running head: the full image shows שיר הכבוד centred at the top with page number 18 in the outer corner. This matches snapshot.running_head and printed_page.",
+    "Reading order and blocks were checked against full-344.png and all 8 detail crops: (1) the last 2 Shabbat poem couplets; (2) one 8-line scripture paragraph with 5 quotations (כַּכָּתוּב; עָנֵה דָנִיֵּאל; three introduced by וְנֶאֱמַר); a horizontal rule; (3) the heading שיר הכבוד. with a diamond-shaped stop, encoded as '.' (documentary); (4) the small-type instruction; (5) the 4 Psalm 24 verses; (6) the first 10 Anim Zemirot lines. The page is blank below them. Line breaks in blocks 0, 4 and 5 match the print.",
+    "Each decision appears exactly once, at its stated place: 820 בּוֹרְאִי (block 0); 822 וּגְבוּרְתָּא (block 1, and חָכְמְתָא correctly left without a dagesh); 825 וַיֹּֽאמֶר with the meteg on the yod, only in the last ויאמר before דָּוִיד. (no meteg on the vav, and the two earlier וַיֹּאמְרוּ are untouched); 826 כְּבוֹדְךָ (poem line 5 only; כְּבוֹד in line 6 and בִּכְבוֹדֶֽךָ in line 3 are untouched); 829 וַיְשַׁוּֽוּךָ with the meteg on the first of the two adjacent vavs.",
+    "The 'no' and 'keep' decisions are left as they were: 821 לַייָ without a sheva; 823 פְתַחְיָה without a dagesh; 824 הַלְלוּיָהּ keeps its mappiq; 827 בְךָ without a dagesh (בְּךָ in poem line 4 untouched); 828 הִמְשִׁילוּךָ without a meteg; 830 וַיֶּחֱזוּ without a meteg. No human point was reopened or copied elsewhere.",
+    "Readings confirmed again from the images: מְבוֹרָךְ, וַיֹּאמְרוּ (twice), בָּנִי, כְּבֹדֶךָ, וְאָמַר כָּל־הָעָם, דָּוִיד. (full stop), maqafs in אֶת־יְיָ ×2, כָּל־הָעָם and כָּל־הַקָּהָל, וְיָבוֹא (verse 1) against וְיָבֹא (verse 3), עִזּוּז וְגִבּוֹר, גְּדֻלָּתְךָ, לְתֹקֶף, דַבְּרִי, יֶשְׁךָ, הִנְּךָ, and the 17 metegs confirmed by the fine report.",
+    "Documentary observation, no text change: in poem line 2 a small dot is printed above, at the end of סוֹדֶֽךָ:. It is not a letter or point that belongs to the word. It looks like a stray print mark."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "7fb6a3cd-86f4-4e4b-a29a-c1ad02b38625"
+  }
+}

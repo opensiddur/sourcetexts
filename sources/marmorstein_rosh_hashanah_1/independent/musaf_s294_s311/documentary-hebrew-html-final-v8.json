@@ -1,0 +1,32 @@
+{
+  "scope": "documentary-hebrew_html_final_v8",
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/html-tail-v8/manifest.json",
+    "/tmp/mahzor-s294/full-html-browser-summary-v8.json",
+    "/tmp/mahzor-s294/coverage-labels-v8-closure.json",
+    "/tmp/mahzor-s294/html-tail-v8/documentary-hebrew-1280-n293.png",
+    "/tmp/mahzor-s294/html-tail-v8/documentary-hebrew-1280-n309.png",
+    "/tmp/mahzor-s294/html-tail-v8/documentary-hebrew-390-n293.png",
+    "/tmp/mahzor-s294/html-tail-v8/documentary-hebrew-390-n309.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "Both spacing defects are fixed in both widths. In 1280-n309 and 390-n309 the text reads 'השליח ציבור מסיים ברוך אתה יי שאותך לבדך ביראה נעבוד:' and '...ובניו השליח ציבור בקול כהנים עם קדושך כאמור:', each with a visible gap between the words. I found no other run-together words in the new text.",
+    "The end label is visible in the documentary-hebrew profile at both widths. It sits directly after 'כָּאָמוּר:' and reads 'התמלול מגיע עד הקדמת ברכת כהנים בחזרת מוסף; פסוקי הברכה והמשך התפילה טרם נכללו.' It is in a bold rubric colour. At 390 it wraps cleanly onto two lines with nothing cut off. It matches the introduction-only extent verified in coverage-labels-v8-closure. I only read the documentary-hebrew screenshots, so I have not visually confirmed the label in the documentary and expanded profiles.",
+    "The Hebrew label does not name a scan number, so the 'from scan312' boundary is only implied. The same point is still open in the closure review. Consider adding the scan number so the Hebrew matches the English.",
+    "Right after the end label, 'שיר של יום.' (the Sunday Psalm 24, presumably the accepted excerpt on partial scan351) follows with no note marking the jump. A reader who has just been told 'והמשך התפילה טרם נכללו' may not realise this is a separate later excerpt. A short marker before it would help, such as 'קטע מדף 351; הדפים שבינתיים טרם נכללו'.",
+    "At 1280 the n293 shofar-piyyut block uses very long lines (roughly 150+ characters) and a small font. It is readable, but justified Hebrew at this width is hard to scan. A max-width on the main column would help.",
+    "In 1280-n293 a small '95' marker sits in the left margin next to the 'אלהינו ואלהי אבותינו תקע בשופר' paragraph. It does not overlap any text, but it is unlabelled. Please confirm it is an intended printed-page or note marker and not stray output.",
+    "The links back to the scans are shown only as small '⁄' glyphs in the body colour. The manifest confirms that the archive.org n293 and n309 page links resolve at the captured positions, but the markers are hard to spot. Consider giving them a link colour or underline.",
+    "Layout is clean in all four screenshots. Hebrew text is right-aligned and justified, with nothing horizontally clipped and nothing hidden under the sticky Contents/Settings bar. The 390 screenshots stay inside the viewport, which agrees with the browser summary (scrollWidth equals width, no errors, no duplicate IDs, no broken internal links).",
+    "The colophon in the documentary-hebrew profile is entirely in English. This is acceptable, but may not be what users of a Hebrew profile expect."
+  ],
+  "verdict": "APPROVED for the documentary-hebrew HTML closing of this batch at desktop 1280 and mobile 390. Both reported spacing defects (מסיים ברוך, בקול כהנים) now show real word gaps. The end label is visible right after the introduction ends with כאמור:, and correctly says that the blessing verses and the rest of the service are not yet included. That matches the verified introduction-only extent and the incomplete-book status (311 complete, partial 351, 44 incomplete). Readability, alignment, clipping and scan links are acceptable, and the browser checks are clean. The remaining points are polish and are not blocking.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "229bcf0c-8e98-4f3f-9ffb-419144ce8e5f"
+  }
+}

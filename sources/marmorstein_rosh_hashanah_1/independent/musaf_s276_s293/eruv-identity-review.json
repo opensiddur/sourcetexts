@@ -1,0 +1,19 @@
+{
+  "canonical_migration_approved": true,
+  "scope_and_alignment_approved": true,
+  "all_existing_source_acceptance_preserved": true,
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "The build manifest /tmp/mahzor-s276/integration-v1/upstream-build-manifest.json does not exist (the integration-v1 directory does). So the build evidence (upstream main 307d80d, 843 files passing RNG+Schematron, exact XML comparison) and the matching Birnbaum and common Eruv migration were not checked independently. They are accepted only as machine assertions. Please supply or regenerate the manifest for the record.",
+    "The counts of 803 literal/protected snapshots, 182 realization payloads and current review receipts come only from the true/false flags in eruv-identity-migration.json. They were not recomputed here, and no hashes were computed.",
+    "Registry entry urn:x-opensiddur:text:prayer:eruv/blessing (prayer.jsonl:23393) is canonical, with parent prayer:eruv (prayer.jsonl:23392). It has only label_en 'eruv / blessing' and no label_he or opening words. The finding that it covers this formula is reasoned, not written in the registry: the blessing 'אשר קדשנו במצותיו וצונו על מצות ערוב' is the same for every kind of eruv. The registry agrees with this: eruv_chatzerot (23398–23399) and eruv_techumin (23400–23401) each have only a separate /declaration part and no blessing of their own. Consider adding label_he to eruv/blessing.",
+    "Whether the old prayer:eruv_tavshilin/blessing is still in the registry was not checked. If no current file uses it after this migration, upstream may want to mark it as an alias or deprecated. That is outside this batch.",
+    "After the change, a part milestone inside div[@corresp='prayer:eruv_tavshilin'] points to a part of a different parent work (prayer:eruv). The user says upstream uses the same pattern for Birnbaum. The section of JLPTEI-3.md that was read raises no objection, but not all of it was read."
+  ],
+  "verdict": "APPROVED. I read the old and new eruv_tavshilin.xml side by side, for both the Hebrew (heidenheim-1965-he) and the English (marmorstein-1965-en). In each, the only difference is on line 38: the first milestone's @corresp changes from urn:x-opensiddur:text:prayer:eruv_tavshilin/blessing to urn:x-opensiddur:text:prayer:eruv/blessing. Nothing else changes. That includes the header, the idno (prayer:eruv_tavshilin@project), the div @corresp and @facs for the whole work, the English pb n=7, the paragraphs, the Hebrew words with vowels and divineName, the xml:lang='arc' on the declaration, and the declaration milestone (prayer:eruv_tavshilin/declaration) with the empty milestone that closes it. Scope is the same as before: the blessing part starts at the beginning of the first paragraph and ends where the declaration milestone begins the next paragraph, so the declaration is not pulled into it. Both languages have the same order of milestones (blessing, declaration, close) and the same paragraphs, so length and alignment between the languages are unchanged. The new identifier is an existing canonical registry entry, and no new text identity is created. No source image reading is involved.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "d68f6974-1f84-43bb-ac16-356b0ace6862"
+  }
+}

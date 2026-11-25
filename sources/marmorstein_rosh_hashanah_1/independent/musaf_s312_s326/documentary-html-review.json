@@ -1,0 +1,30 @@
+{
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s312/v4-export-review/documentary-html-manifest.json",
+    "/tmp/mahzor-s312/v4-html-images/documentary.html-1280.png",
+    "/tmp/mahzor-s312/v4-html-images/documentary.html-1280-n322.png",
+    "/tmp/mahzor-s312/v4-html-images/documentary.html-1280-n325.png",
+    "/tmp/mahzor-s312/v4-html-images/documentary.html-390.png",
+    "/tmp/mahzor-s312/v4-html-images/documentary.html-390-n322.png",
+    "/tmp/mahzor-s312/v4-html-images/documentary.html-390-n325.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "390px priest page (documentary.html-390.png): several empty bordered rows stack up as groups of 2–5 thin horizontal rules with no text, for example between 'Congregation:' and 'יְבָרֶכְךָ', and before 'יְיָ'. At 1280px the same places show as extra vertical gaps between paired rows. The text is still readable and in order, but on mobile it looks cluttered. These look like empty paired rows or anchor-only rows getting row styling. Consider not drawing borders or padding on rows that have no visible content.",
+    "1280px tail (documentary.html-1280-n325.png): the source page marker '133' sits low, between the lines near 'בָּנָיו מוּמָם', and comes close to the pointing of the line below. It doesn't cover any letters. On mobile (390-n325) it sits correctly as a superscript.",
+    "At 1280px the Hebrew-only sections (n322, n325) fill only the right half of the content area and the left English column is empty. This is expected because these source pages have no English. Hebrew size at 1280 is small but readable, and the pointing displays."
+  ],
+  "limitations": [
+    "Screenshot resolution allows checking that pointing is present and readable in general, but not every individual vowel and cantillation mark.",
+    "Each screenshot shows one viewport, so content between and below the captured places was not seen. The mobile n322 capture ends mid-section at the bottom of the screen; that is the screenshot edge, not clipping. The manifest's scrollWidth equals the viewport width at both 1280 and 390, which confirms there is no horizontal overflow.",
+    "I could not tell from the screenshots alone whether the empty rows on mobile are page and anchor markers or something hidden by a condition. I relied on the manifest and your statement that 'No particular day' shows all undecided conditions.",
+    "I relied on the manifest for the results on internal links, duplicate IDs and console errors (all empty) and did not check them again myself."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "70cbbc74-758c-4c4f-bee6-92eecbc1e010"
+  }
+}

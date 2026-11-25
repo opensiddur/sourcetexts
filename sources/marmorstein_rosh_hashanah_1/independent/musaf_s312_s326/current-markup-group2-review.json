@@ -1,0 +1,82 @@
+{
+  "files_read": [
+    "/tmp/mahzor-s312/identity-guidelines-excerpts.txt",
+    "/tmp/mahzor-s312/current-markup-group2.json"
+  ],
+  "all_group_files_read": true,
+  "guideline_lines_applied": [
+    "JLPTEI-3.md:40 (URNs are hierarchical; @corresp carries no project; @project only on references/idno)",
+    "JLPTEI-3.md:46-50 (a URN names a text that more than one project could represent)",
+    "JLPTEI-3.md:52-66 (plain /{PROJECT_ID}/{FILE_STEM}#{XML_ID} pointer for the project bibliography)",
+    "JLPTEI-3.md:68-76 (condition URN mirrors the text URN plus a variant name, no project)",
+    "JLPTEI-3.md:174 (named divisions use transliterated first words)",
+    "JLPTEI-3.md:179-189 (milestone scope, terminators, containment)",
+    "JLPTEI-3.md:193-199 (milestones for repeating units, kept separate from p/lg/l)",
+    "JLPTEI-3.md:209-215 (unit naming, explicit terminators before unrelated material)",
+    "JLPTEI-3.md:217-227 (quotation seg, quote-context chapter/verse milestones, canonical @n, no partial passed off as a whole verse, no duplicated canonical URN)"
+  ],
+  "findings": [
+    {
+      "severity": "low",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/musaf_kehayom_hazeh.xml AND prayerbook_for_the_new_year-marmorstein-1965-en/musaf_kehayom_hazeh.xml",
+      "location": "stanza urn:x-opensiddur:text:poem:hayom_teamtseinu/24: chapter milestones corresp=\".../24/quotation/deuteronomy/6/for_verse_24\" and \".../24/quotation/deuteronomy/6/for_verse_25\"; verse milestones \".../24/quotation/deuteronomy/6/24\" and \".../6/25\"",
+      "problem": "The quote-context chapter URNs are not the parent path of their verse URNs. Each chapter URN has an extra synthetic segment (for_verse_NN) at the same depth as the verse, so .../deuteronomy/6/24 sits as a sibling of its own chapter's URN, not a child. The path .../24/quotation/deuteronomy/6 is never assigned. The two chapter milestones were clearly made different to avoid giving one identity twice (the intervening וְנֶאֱמַר / 'And it was said' cue is correctly kept outside), but the workaround breaks the hierarchy. I have not checked how refdb's UNIT_CONTAINED_BY or its component-count fallback (line 182) handles a chapter URN with as many components as a verse.",
+      "guideline_evidence": "JLPTEI-3.md:40 ('The remainder of the URN is hierarchical'); :220-223 (quote-context chapter and verse milestones keep canonical chapter/verse values); :182 (scope fallback counts '/'-separated components)",
+      "required_change": "Tell the two quotation contexts apart at a level above the book/chapter/verse path, so each verse URN is a child of its chapter URN. For example: .../24/quotation/1/deuteronomy/6 + .../24/quotation/1/deuteronomy/6/24, and .../24/quotation/2/deuteronomy/6 + .../24/quotation/2/deuteronomy/6/25, or whatever the project's established form is. Make the same change in both HE and EN so the parallel rows still pair up. Keep @n=6/24/25 unchanged."
+    },
+    {
+      "severity": "low",
+      "file": "prayerbook_for_the_new_year-marmorstein-1965-en/musaf_repetition_sim_shalom.xml",
+      "location": "third tei:p inside div urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/shalom: milestone corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/english_extra_chatimah\"",
+      "problem": "This prayer-part milestone sits inside the shalom div, but its URN is a sibling of .../repetition/shalom, not a child. The name also describes the edition ('english_extra') rather than the text (the peace chatimah). Giving the documentary EN blessing its own identity, separate from the final one used by the expanded text, is correct (line 226-227). The problem is only where the URN sits and how it is named. Practical effect: resolving the URN places this part outside the shalom section even though the document contains it there, and the name ties a reusable text identity to one project's language. Whether to register it is the separate registry review and is not judged here.",
+      "guideline_evidence": "JLPTEI-3.md:40 (hierarchical URNs); :46-50 (a URN names a text that could have several project representations); :226-227 (do not duplicate a canonical URN merely because it is printed again)",
+      "required_change": "Move the identity under the enclosing division, e.g. .../repetition/shalom/<text-descriptive-name>, and name it after the text rather than the English edition. Keep it separate from the final chatimah's URN. Pass the new name to the separate registry review."
+    },
+    {
+      "severity": "low",
+      "file": "prayerbook_for_the_new_year-marmorstein-1965-en/musaf_repetition_sim_shalom.xml",
+      "location": "shalom/proofs, quotation of deuteronomy/4/4: <tei:choice><tei:sic>this day.</tei:sic><tei:corr>this day’.</tei:corr></tei:choice> placed inside tei:seg and before the verse/chapter terminators",
+      "problem": "The corrected closing quotation mark (’) and the period fall inside the Deut 4:4 seg and inside the quote-context verse and chapter scopes. In the same paragraph, the opening ‘ and the Prov 9:11 closing-quote choice (‘. → ’.) are correctly kept outside the seg. The result: the corrected reading's verse scope includes English quotation punctuation, and the two quotations in one paragraph are bounded inconsistently. The words 'this day' are needlessly duplicated in sic and corr.",
+      "guideline_evidence": "JLPTEI-3.md:217-226 (the quotation seg and its contextual URNs identify only the bounded quoted extent; close inner scopes exactly at that extent); task brief: English linkage cues are excluded from prayer words",
+      "required_change": "Keep 'this day' as plain seg content. Close the verse, then the chapter, then the seg. After the seg, encode <tei:choice><tei:sic>.</tei:sic><tei:corr>’.</tei:corr></tei:choice>. This still preserves the printed punctuation error."
+    },
+    {
+      "severity": "low",
+      "file": "prayerbook_for_the_new_year-marmorstein-1965-en/musaf_kehayom_hazeh.xml",
+      "location": "stanza poem:hayom_teamtseinu/23, seg source=urn:x-opensiddur:text:bible:isaiah/56/7: text ends '...for all peoples’. ' inside the seg, before the verse/chapter terminators",
+      "problem": "The closing English quotation mark is inside the Isa 56:7 seg and its verse scope. The opening ‘ is outside, and in the same file the Deut 6:24/6:25 closing ’. is correctly placed after the terminators. The bounded extent of Isa 56:7 therefore takes in a linkage cue, inconsistently with the neighbouring quotations. The cross-page tei:pb inside the seg is correct and should stay where it is.",
+      "guideline_evidence": "JLPTEI-3.md:217-226; task brief: English linkage cues are excluded from prayer words",
+      "required_change": "End the seg at 'for all peoples' (with or without the final period, matching the house style used for Deut 6:24/25) and move ’ outside, after the verse and chapter terminators. Leave the single bound quotation and the internal pb unchanged."
+    }
+  ],
+  "verified": [
+    "Headers: every file's idno URN matches its div @corresp plus @project for that project; div @corresp carries no project (line 40). sourceDesc uses /{PROJECT}/index#project_source_bibl with no extension (lines 52-66).",
+    "Facsimile links follow /page/n(scan-1).jpg. Printed 146 HE → n311. 147 HE n313 / EN n314. 148 HE n315 / EN n316. 149 HE n317 / EN n318 (kehayom pb 149 HE n317, EN n318; kaddish_preface and full_kaddish divs HE n317 / EN n318). 150 (sequential scan 320) → n319 for ein_keloheinu and pittum_haqetoret. Each file's biblScope page numbers match its facsimile pages.",
+    "Hayom: stanzas run poem:hayom_teamtseinu/1-4, techaddesh, 21, teqabbel (musaf_hayom_teamtseinu); /22 (musaf_hayom_titmekhenu); /23 and /24 (musaf_kehayom_hazeh). Not numbered 1-7. Every Amen prayer-part milestone opens after the stanza terminator, so Amen is outside stanza scope. HE and EN use identical stanza and Amen URNs.",
+    "Stanza 22 (titmekhenu) is conditional, and that is backed by the printed instruction ויש מוסיפים. Its condition URN is condition:poem:hayom_teamtseinu/22/recite: it mirrors the text URN plus a variant name and has no project (lines 68-76).",
+    "Deut 6:25 is encoded unconditionally inside stanza 24 in both HE and EN. No optional control was invented for it.",
+    "Isa 56:7 is one seg in both languages with the tei:pb inside it. The quotation is not split at the page break. The verse and chapter terminators close before the stanza terminator.",
+    "Quote-context URNs are contextual (…/quotation/<book>/<ch>/<v>) with canonical @n. The canonical bible URN appears only as seg @source, never as a duplicated @corresp (lines 220-227). The partial quotations (Num 6:26 single words in kohanim_response_3_6/3_7; Isa 57:19 without בורא ניב שפתים) carry only contextual corresp URNs, so they do not present themselves as the canonical whole verse.",
+    "Inner quote-context milestones inside seg type=quotation (kohanim_ribbon Deut 26:15, sim_shalom proofs, kaddish_preface, full_kaddish/6 and /8) close both scopes before the seg ends. Milestones placed before the span (kohanim_response, kehayom) are closed right after it. The enclosing prayer-part or stanza milestone always stays outside the span.",
+    "Role labels (חזן, ק׳/קהל with abbr/expan) in HE full_kaddish are tei:note type=description with instruction:role corresp, placed before the prayer-part milestone, so they sit outside the word scopes. In yehi_ratzon, the instruction ויכוין לסיים… precedes the amen prayer-part milestone. Labels and instructions are notes, not prayer text, and carry no rend.",
+    "yehi_ratzon optional clauses (wife_and_children, parents) are well-formed: j:conditional type=marked with an xml:id, a matching j:endConditional @target, and condition URNs that mirror the text URN with no project.",
+    "EN sim_shalom Prov 9:11 sic/corr (‘. → ’.) preserves the printed punctuation error and sits outside the seg.",
+    "Partial-translation alignment: EN files exist only for parts the EN prints; the late Hebrew-only parts (ein_keloheinu, pittum_haqetoret on page 150) have no EN substitute; and corresponding HE/EN files use identical prayer-part, stanza, chapter and verse URNs.",
+    "Prayer-part, stanza, chapter and verse milestones all have explicit terminators. None depends on a paragraph or line closing tag (lines 209-215).",
+    "Biblical citations checked against the verse text: numbers/6/26, chronicles_1/29/11, isaiah/57/19, deuteronomy/26/15, proverbs/9/11, deuteronomy/4/4, isaiah/56/7, deuteronomy/6/24, deuteronomy/6/25, numbers/14/17, psalms/25/6, psalms/113/2, psalms/121/2 all match the quoted wording."
+  ],
+  "limitations": [
+    "I read only the two permitted files. The JSON holds 22 files (20 distinct stems, HE+EN). 'all_group_files_read' means every entry in that JSON; I cannot independently confirm the JSON lists the whole group.",
+    "No scans were viewed. I cannot confirm whether the yehi_ratzon wife/children and parents clauses are visibly marked as optional in print, so type=marked is accepted as encoded, not verified. Likewise I cannot confirm whether the printed parentheses around (הַקָּב) in pittum_haqetoret mark a variant that needs a control; it is currently left as plain text, which avoids inventing a condition.",
+    "The EN counterparts for dream, kohanim_ribbon, yehi_ratzon and titmekhenu are not in this JSON. I cannot verify whether the EN prints them or whether they live in another group.",
+    "Not checked against the reference database or schema: whether the existing registry already holds IDs for ein_keloheinu/{ein,mi,nodeh,barukh,attah,incense}, hayom_teamtseinu/{techaddesh,teqabbel}, kohanim_response_3_6/3_7, or the shalom chatimah; whether prayer:qorbanot/pittum_haqetoret refers to exactly the printed extent; whether a tei:note is allowed directly inside j:conditional (as in musaf_hayom_titmekhenu); and how refdb treats the for_verse_NN chapter URNs.",
+    "Seg @type=quotation is present in some files (kohanim_ribbon, sim_shalom, kaddish files) and absent in others (kohanim_response, kehayom). Lines 217-219 do not require it, so this is not raised as a finding.",
+    "Source readings, pointing and transcription accuracy (e.g. ייָ vs יְיָ in HE Deut 4:4, unpointed titmekhenu) are outside this review's scope. Questions 473-489 remain open. Nothing here certifies the source or the overall batch."
+  ],
+  "encoding_approved_except_source_readings": false,
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "4f61b887-e90d-43c4-b070-420465b319be"
+  }
+}

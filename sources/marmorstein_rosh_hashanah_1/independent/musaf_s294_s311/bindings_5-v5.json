@@ -1,0 +1,88 @@
+{
+  "scope": "bindings_5",
+  "approved": false,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_5-0.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_5-1.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_5-2.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_5-3.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_5-4.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_5-5.json",
+    "/tmp/mahzor-s294/bounded-review-v5/bindings_5-6.json"
+  ],
+  "blocking_findings": [
+    {
+      "id": "B1-mixed-versification-exodus-20",
+      "records": [
+        "realization/musaf_anusah_leezrah/he",
+        "realization/musaf_anusah_leezrah/en",
+        "realization/musaf_repetition_shofarot_verses/he"
+      ],
+      "fields": [
+        "source = urn:x-opensiddur:text:bible:exodus/20/18",
+        "source_reference = urn:x-opensiddur:text:bible:exodus/20/18 (shofarot_verses/he)",
+        "corresp/chapter_corresp/source_reference_corresp ids containing exodus_20_18 and exodus_20/18"
+      ],
+      "description": "In these records the canonical Bible bindings use two different numbering systems. Psalm verses use Hebrew (Masoretic) numbering: psalms/47/6 (English 47:5) and psalms/81/4-5 (English 81:3-4). But the shofarot verse 'וכל העם ראים את הקולת' is bound to exodus/20/18, which is the English (KJV-style) number. In Masoretic numbering that verse is Exodus 20:15. Under Masoretic numbering, exodus/20/18 is a different verse ('ויעמד העם מרחק'). So at least one of the two conventions puts a canonical source URN on the wrong verse. This is a canonical-identity error, not a publication quirk. It recurs in three records, and because the en record shares the same URNs, the translation is bound to the same wrong target.",
+      "required_action": "Check which numbering the project's urn:x-opensiddur:text:bible:* scheme uses. Then rebind every Exodus 20 shofarot-verse reference (source, source_reference, and derived corresp/intro ids) to match, or document an explicit mapping. Re-run the order and binding reviews for the affected records."
+    }
+  ],
+  "nonblocking_findings": [
+    {
+      "id": "N1-correction-id-implies-shabbat-scope",
+      "record": "realization/musaf_anusah_leezrah/en",
+      "description": "Correction id 'musaf_shabbat_exodus_missing_quote' includes 'shabbat', but no record in this set carries a Shabbat condition. The binding itself is correct: the reason cites Scan305, and the Exodus 20 quote fragment is on s305. The sic/corr pair only restores the closing quote mark. Renaming the id (for example 'musaf_anusah_exodus_20_missing_quote') would stop the name implying a condition scope that isn't encoded."
+    },
+    {
+      "id": "N2-speaker-encoding-inconsistent",
+      "records": [
+        "realization/musaf_essa_dei_betzedeq/he",
+        "realization/musaf_anusah_leezrah/he"
+      ],
+      "description": "Speakers are encoded in two different ways. Most use {abbr, expan} with no role (ק׳/קהל, ח׳/חזן). Essa's final stanza (titzad) uses {label:'חזן', role:'reader'}. As a result, the chazan carries a machine-readable role in only one place, and the congregation never does. Also, in anusah/he, the stanzas after each chazan-plus-verse group (illitani, paah, tzor, qarev, regesh, shegeg, tachat) have no speaker reset, so a consumer would assume the chazan continues. Confirm this matches the print and the intended role semantics."
+    },
+    {
+      "id": "N3-shofarot-verses-exodus-20-binding-shape",
+      "record": "realization/musaf_repetition_shofarot_verses/he",
+      "description": "The Exodus 20 verse entry has no 'corresp' and no 'reference_unit'. Instead it uses the partial-verse mechanism (source == source_reference, with source_reference_corresp) but no source_reference_part. Every other whole verse in this record, and the same verse in anusah, uses corresp + reference_unit:'verse'. Crossing a page doesn't explain the difference, because other page-crossing segments keep corresp. Confirm this is intentional and the verse can still be addressed individually."
+    },
+    {
+      "id": "N4-occurrence-chapter-corresp-naming",
+      "record": "realization/musaf_repetition_shofarot_verses/he",
+      "description": "Exodus 19:19 is wrapped in chapter_corresp '.../quotes/exodus_19/occurrence_19' so it stays separate from the earlier exodus_19 quote block. The name takes a verse number for an occurrence label. This is acceptable, but a neutral ordinal would be clearer."
+    },
+    {
+      "id": "N5-page_context-asymmetry",
+      "records": [
+        "realization/musaf_anusah_leezrah/he",
+        "realization/musaf_anusah_leezrah/en",
+        "realization/musaf_essa_dei_betzedeq/he",
+        "realization/musaf_essa_dei_betzedeq/en"
+      ],
+      "description": "Anusah has page_context 'rosh_hashanah/musaf/repetition/anusah_leezrah', but essa, a canonical poem in the same position, has none. The value is liturgical, not tied to this publication, but the asymmetry should be confirmed as intended."
+    },
+    {
+      "id": "N6-page_start-first-fragment-asymmetry",
+      "records": [
+        "realization/musaf_essa_dei_betzedeq/he",
+        "realization/musaf_essa_dei_betzedeq/en"
+      ],
+      "description": "Essa's first fragment has page_start:false in he (s294) but page_start:true in en (s295). On s295, the first fragments of both essa/en and anusah/en are page_start:true. Elsewhere page_start:true repeats on the same page after verse interruptions (for example anusah s300), so the flag seems to mean 'emit page anchor or resume' rather than 'top of page'. The he/en difference for essa should be confirmed by the order/source group."
+    }
+  ],
+  "scope_limitations": [
+    "None of the assigned records has a condition-scope field, and all variants arrays are empty. On pp. 137–143, essa_dei_betzedeq (followed in he by the plain shofarot_verses unit) and anusah_leezrah (with the shofarot verses woven into it) are printed in parallel. That looks like alternative paths, which would need day or occasion conditions. Any such scoping would sit in expanded_order/navigation/documentary-instruction data, which I could only see as hashes. I could not verify that the scoping exists or is appropriate. This belongs to the order group.",
+    "Text values were seen only as SHA256 hashes and character counts, so source-word fidelity, sic/corr wording, and differences between the two printings of Psalm 150 on s306 were not reviewed.",
+    "final_sha256 can't be recomputed from this projection, so payload integrity was not checked.",
+    "The project's Bible URN numbering convention wasn't available in scope, so B1 rests on the internal inconsistency plus standard Masoretic numbering.",
+    "No code review or export approval was done, as the scope required."
+  ],
+  "verdict": "Not approved. I read all seven records and checked every field. Canonical poem and prayer identities (poem:essa_dei_betzedeq, poem:anusah_leezrah, prayer:hayom_harat_olam, siddur:rosh_hashanah/musaf/repetition/*) aren't tied to this publication. Stanza corresp sets match between he and en, scan and page bindings look consistent, and the single correction is bound to the right scan. The blocker is the Exodus 20 shofarot verse: it is bound to bible:exodus/20/18 (English numbering) while Psalm verses in the same records use Hebrew numbering, so at least one canonical source URN points at the wrong verse. Condition scoping for the parallel essa and anusah paths could not be checked from these records.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "28cca3b4-2e9d-44bc-ae73-dcba6677b1c2"
+  }
+}

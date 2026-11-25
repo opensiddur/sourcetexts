@@ -1,0 +1,43 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "source_approved": true,
+  "scope": "Source fidelity only, scans228–233",
+  "files_read": [
+    "/tmp/mahzor-s224/source-round4-s228-s233/candidate.json",
+    "/tmp/mahzor-s224/source-round4-s228-s233/human310_316.json",
+    "/tmp/mahzor-s224/source-round3-s228-s233/candidate.json",
+    "/tmp/mahzor-s224/source-round3-s228-s233/review.json",
+    "/tmp/mahzor-s224/question-311-v1.png",
+    "/tmp/mahzor-s224/question-312-v1.png",
+    "/tmp/mahzor-s224/question-313-v1.png",
+    "/tmp/mahzor-s224/question-314-v1.png",
+    "/tmp/mahzor-s224/question-315-v3.png",
+    "/tmp/mahzor-s224/question-316-v1.png",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s232.jpg"
+  ],
+  "findings": [],
+  "uncertainties": [],
+  "coverage_notes": [
+    "Round3 finding s228 amitz_description, resolved by human 311: the text now reads 'ומזה יבינו כל יצורי ארץ,'. The question-311 crop agrees.",
+    "Round3 finding s232 amitz_reader ק׳, withdrawn: human 312 confirms ח׳ and rejects ק׳. The candidate keeps ח׳. I did not reopen this question.",
+    "Round3 finding s232 melekh_1..melekh_7 refrain cues, resolved: all seven stanzas carry refrain_speaker {abbr:'ק׳', expan:'קהל'}. s232.jpg shows exactly seven ק׳ cues, one before each לַעֲדֵי עַד יִמְלוֹךְ. As the request states, these cues were already in the generated XML. The defect was inventory coverage only.",
+    "Round3 finding s232 second חזן., resolved: melekh_reader 'חזן.' is recorded with before:'open_ark'. On s232.jpg it is the cue on the line 'חזן. פותחים הארון.'. The inventory lists it after the s233 blocks. That is acceptable because array order is a keyed inventory, not recitation order.",
+    "Round3 uncertainty s232 melekh_5, human 313: טֹפֵחַ became טִפַּח. The candidate matches, and so does the question-313 crop.",
+    "Round3 uncertainty s232 Shabbat rubric, human 314: '(אם שבת' became '(אַם שַׁבָּת', with patah under the aleph. The candidate matches. The question-314a crop shows the patah.",
+    "Round3 uncertainty s232 uvekhen_king, human 314: בִישֻׁרוּן became בִּישֻׁרוּן. The candidate matches.",
+    "Round3 uncertainty s230 amitz, human 315: 'נַעֲשָׂה בוֹ' became 'נַעֲשֶׂה בּוֹ', with sin dot plus segol and a dagesh in the bet. 'יְכֻפַּר' became 'יְכֻפָּר', with qamatz under the pe. The candidate matches all three. The question-315 crops agree.",
+    "Round3 uncertainty s230 amitz, human 316: in 'וְאַחֲרֵי כָל זֹאת' the kaf has no dagesh and the text is unchanged. In 'יָבִינוּ כָּל יְצוּרֵי אָרֶץ' a dagesh was added to the kaf. In s228 'כְּלֹא נִמְצָא בָהֶם' the bet has no dagesh and the text is unchanged. The candidate matches all three.",
+    "Human 310 applies only to s224 and was not applied here, which is correct. Humans 288–309 stand as reviewed in round3.",
+    "Delta check: I compared round3 and round4 block by block by eye. The only changes are the ones listed above plus the added refrain_speaker and melekh_reader entries. All English blocks (s229, s231, s233) are unchanged, as are the s228 prayer text and the rest of s230/s232. This was not a programmatic diff.",
+    "Page coverage for unchanged readings rests on the round3 full audit: all six pages and all enlarged details, with running headers and page numbers excluded. In this round I re-read only s232.jpg, to confirm the cue inventory.",
+    "This approval covers source fidelity for s228–s233 only. It does not cover XML guideline conformance, exports, or the rest of the batch."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "931e8f39-d794-4ca8-a369-93b2b267ae85"
+  }
+}

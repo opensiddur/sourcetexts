@@ -1,0 +1,83 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "source_approved": false,
+  "pages_read": [
+    "s246",
+    "s247",
+    "s248",
+    "s249"
+  ],
+  "findings": [],
+  "uncertainties": [
+    {
+      "scan": "s246",
+      "key": "adir_adirenu_1",
+      "word": "אַדִּיר (the first word after ק׳)",
+      "question": "In both Adir Adirenu lines, the first אדיר right after ק׳ looks like it may have no patah under the alef, and possibly no dagesh in the dalet. The second word אַדִּירֵנוּ and the later אַדִּיר after מָה clearly have the patah. Is the first אדיר printed as אַדִּיר, or with less pointing (for example אדִּיר or אדיר)? Crop box is in /tmp/mahzor-s238/s246-band1.png pixel coordinates.",
+      "crop_box": [
+        1820,
+        540,
+        1990,
+        625
+      ]
+    },
+    {
+      "scan": "s246",
+      "key": "adir_adirenu_2",
+      "word": "אַדִּיר (the first word after ק׳)",
+      "question": "This is the same question for the second, larger-type Adir Adirenu. Is there a patah and a dagesh in the first אדיר after ק׳? Crop box is in /tmp/mahzor-s238/s246-band3.png pixel coordinates.",
+      "crop_box": [
+        1800,
+        150,
+        1990,
+        245
+      ]
+    },
+    {
+      "scan": "s246",
+      "key": "adir_adirenu_1",
+      "word": "עַל (in 'לְמֶלֶךְ עַל כָּל הָאָרֶץ')",
+      "question": "In the first, smaller-type Adir Adirenu, the עַל before כָּל looks unpointed (על). In the second, larger-type repeat it clearly reads עַל. Is the first one printed with a patah under the ayin? Crop box is in /tmp/mahzor-s238/s246-band1.png pixel coordinates.",
+      "crop_box": [
+        1660,
+        635,
+        1780,
+        705
+      ]
+    },
+    {
+      "scan": "s246",
+      "key": "tehillot_kevodecha",
+      "word": "תַּחְתִּיּוֹת",
+      "question": "In the last line of the piyyut ('יָרִיעוּ תַּחְתִּיּוֹת אָרֶץ:'), is there a vav with holam between the yod and the final tav (תַּחְתִּיּוֹת)? Or is it defective, with a holam only (תַּחְתִּיֹּת / תַּחְתִּיּת)? At this resolution I can't tell how many letters there are. Crop box is in /tmp/mahzor-s238/s246-band2.png pixel coordinates.",
+      "crop_box": [
+        1520,
+        480,
+        1730,
+        570
+      ]
+    }
+  ],
+  "untranslated_extent_notes": [
+    "s246: the Hebrew rubric 'בפֿפֿד״מ אין אומרים כאן אדיר אדירנו.' has no English counterpart on s247. This is expected for a direction and is already settled by answer 330.",
+    "s248: the Hebrew direction 'פותחים הארון. חזן. ע״ס א״ב כפול. קהל.' has no English counterpart on s249. The bare חזן and קהל headings over the two columns are role and column labels for the alphabetical responsive piyyut.",
+    "s249: the English begins mid-sentence ('over Zion the dwelling...') and continues ki_maqdish from s247. The candidate keeps the same key, ki_maqdish, across both scans, which matches the printed continuation."
+  ],
+  "notes": [
+    "I compared every candidate block on s246–s249 word by word with the full page and its four enlarged bands. Apart from the 4 open questions above, all Hebrew consonants, vowels, dagesh, mappiq (הַלְלוּיָהּ), maqaf (כָּל־חַי, כָּל־חָי, כָּל־דּוֹר), punctuation, role prefixes (ח׳, ק׳, קו״ח) and variant parentheses match the scan as far as the image resolution allows.",
+    "Settled human marks were left unchanged: 330 (rubric), 331 (יֻרְשׁוּ), 332 and 359 (וּמַעֲלִים, מִסּוֹרֲרִים), 355 (שִׁמְעֲךָ), 356 (holam in לֵאלֹהִים), 357 (סוּרוּ מִנִּי), 360 (וְכֹלֲלָם), and the נ״א readings of the small-type variant abbreviation. 358 is in confirmed_unchanged but its question isn't recorded in the inputs. I assume it is the faint mark between בְּחוּנָיו and לְפָאֲרוֹ on s246, which the candidate rightly leaves out. If 358 is about something else, that mark should be checked again.",
+    "s246 echad_hu_eloheinu: the vowel under the chet of כָּל־חַי looks like a patah on this page, as the candidate has it. This is a different line from the s242 instance settled by answer 350 (qamatz).",
+    "s248: the candidate's חק (unpointed), מָגִּיד, אֲדוֹנֵינוּ (plene) and אֲדֹנֵינוּ (defective) each match the print. The abbreviation is printed וְ״מַ, except in the hehagui line, where it is וְמַ״ right before שֶׁהָיָה. The candidate records both forms correctly.",
+    "The English on s247 and s249 matches the print exactly, including the curly quotes, the parenthetical names (Abraham), (Isaac), (Jacob), 'Awe-inspiring', 'the inwards' and 'long suffering' with no hyphen. I found no source mistake that needs a sic/corr.",
+    "The German Frankfurt/Metz rubric questions (324/325) belong to s250, which is outside this assignment, so I didn't adjudicate them here.",
+    "Crop boxes are in pixel coordinates of the named band PNG, not of the full-page JPG."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "eb568ae6-ea37-4425-8e7a-ffc420249262"
+  }
+}

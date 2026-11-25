@@ -1,0 +1,136 @@
+{
+  "approved_boundary_atlas": true,
+  "root_reuse_approved": true,
+  "tuesday28_variant_approved": true,
+  "wednesday50_choice_approved": true,
+  "findings": [
+    {
+      "id": "B1",
+      "severity": "pass",
+      "subject": "Sunday: first_day /1–/61",
+      "detail": "The atlas gives 61 one-to-one entries: s327 L1–26 = /1–26, s328 L1–28 = /27–54 and s329 L1–7 = /55–61. The parenthesized L10–L11 are /10–/11. This matches F1. The unpointed closing line ברוך אתה יחיד ומיוחד appears only in other_source_blocks. It has no canonical_part, no corresp, and no link to fifth_day/6, so it stays outside first_day/61, and no independent prayer identity is assigned to it."
+    },
+    {
+      "id": "B2",
+      "severity": "pass",
+      "subject": "Monday: second_day, required change applied",
+      "detail": "s329 L1–18 = /1–18 and s330 L1–4 = /19–22. s330 L5 (וְאַזְכִּיר טוּבְךָ…) has canonical_part null and a terminator scope_action. s330 L6–28 = /24–46, including L27 (in parentheses) = /45. s331 L1–2 = /47–48. No atlas entry points at /23. Its canonical text, וּזְרוֹעֲךָ וֶאֱמוּנָתֶךָ אוֹדִיעַ כְּפִי גְדֻלָּתֶךָ, appears nowhere in the source. /23 is therefore unrealized, which is a valid partial witness, and registry-presence-proof lists it as omitted. No new number or sub-part is minted for L5."
+    },
+    {
+      "id": "B3",
+      "severity": "pass",
+      "subject": "Tuesday: third_day, required change applied",
+      "detail": "s331 L1–23 hold 22 couplets; the couplet at L20–21 is split over two lines, and the entries are /1–22. s332 L1–28 = /23–50. s333 L1–2 = /51–52. s333 L3 (וְאֵינְךָ נֶאֱצָל מִכֹּל וְנִבְדָּל…) is null with a terminator. /53 resumes at s333 L4 (מִקְרֶה וְשִׁנּוּי, which matches canonical /53), and L4–28 = /53–77. The neighbors confirm it: L2 matches the first hemistich of /52 exactly, and L4 matches /53."
+    },
+    {
+      "id": "B4",
+      "severity": "pass",
+      "subject": "Tuesday /28: identity adjudication",
+      "detail": "Approved as the same identity with a wording variant. Source s332 L6 reads כִּי אֶת הַכֹּל כְּאַחַת תִּרְאֶה. לְבַדְּךָ תַּעֲשֶׂה וְאֵינְךָ נִלְאֶה; canonical /28 reads כִּי אֶת הַכֹּל בְּאֶחָד תִּרְאֶה רָחוֹק וְקָרוֹב וְאֵינְךָ נִרְאֶה. Five points support this. (1) The incipit is the same, with only the minor variant כאחת/באחד. (2) The placement is the same: it sits between L5 = /27 and L7 = /29, and both of those match canonical. (3) The rhyme is the same (‑אֶה) and so is the ending וְאֵינְךָ נ…אֶה. (4) This witness prints the couplet only once, and no other text competes for the slot. (5) The other source in the 1150 projects has no counterpart couplet with this wording. Under SIDDUR_URN_SCHEME, a canonical incipit stands for the logically equivalent wordings of one text, and edition differences do not justify a new identity. The scheme's 'go further down' rule applies to two distinct texts that coexist under one incipit, such as the yanchilenu Shabbat/Tov pair, and that is not the case here. Keep the source's own second hemistich, and never substitute the 1150 wording. Record the divergence of the second hemistich in the README or the mapping notes."
+    },
+    {
+      "id": "B5",
+      "severity": "pass",
+      "subject": "Wednesday: fourth_day, required change applied",
+      "detail": "s334 L1–5 = /1–5 and L6 = /7, so /6 (אל ארך אפים) is unrealized and listed as omitted in the proof. s334 L6–26 = /7–27. s335 L1–5 = /28–32. s335 L6 (כְּדוֹב שַׁכּוּל וּכְנָמֵר שַׁחַל…) is null with a terminator. L7 = /33 (שׁוֹקֵד, which matches canonical) and L7–23 = /33–49. L24 is null with source_reference /50 and no canonical milestone. L25–27 = /51–53, and L28 = /50, which is the only /50 corresp. s336 L1–28 = /54–81 and s337 L1–22 = /82–103, despite the Thursday running head. The count is 104 source couplets = 103 canonical units − /6 + L6 + L24 (a duplicate of /50), which reconciles."
+    },
+    {
+      "id": "B6",
+      "severity": "pass",
+      "subject": "Wednesday /50: choice adjudication",
+      "detail": "Approved: the only /50 milestone goes on s335 L28. L28 reproduces canonical /50 (לְבַדּוֹ יְיָ הוּא וְנִפְלָאוֹת. גְּדוֹלוֹת עוֹשֶׂה וְרַב נוֹרָאוֹת) word for word. L24 shares only the incipit, and its second hemistich differs (עוֹשֶׂה אֵל נוֹרָא עֲלִילוֹת). L24 carries only @source pointing to /50, keeps its full wording including the inline (יְיָ), and is closed by a terminator after /49. There is no second corresp, and the one-milestone rule holds. This is consistent with B4 under an explicit rule: incipit plus placement is enough when there is one candidate, but when two printed occurrences compete for one canonical unit, exact canonical wording beats position. Write this rule into the README so the B4 and B6 decisions are visibly consistent."
+    },
+    {
+      "id": "B7",
+      "severity": "warning",
+      "subject": "Wednesday /50 out of canonical order",
+      "detail": "The milestone order in the witness is /49 ⊣ (L24, source only) /51 /52 /53 /50 /54. Under JLPTEI-3 rule 2, /53 ends at the /50 milestone and /50 ends at /54, so each scope is still correct. But a range reference that spans /49–/51 or /50–/54 will resolve oddly. The pending generated-URN checks must confirm that /50 resolves only to L28 and that range resolution across this inversion behaves as intended."
+    },
+    {
+      "id": "B8",
+      "severity": "pass",
+      "subject": "Thursday: fifth_day grouped extents",
+      "detail": "The atlas labels match F5: /1 = s337 L1–3; /2 = s337 L4 + s338 L1–3; /3 = L4–5; /4 = L6–8; /5 = L9–13; /6 = L14–17; /7 = L18–22; /8 = L23–26; /9 = s338 L27–28 + s339 L1–5; /10 = L6–10; /11 = L11–15; /12 = L16–21; /13 = L22–25; /14 = s339 L26–28 + s340 L1–4; /15 = L5–8; /16 = L9–11; /17 = L12–16. s338 L17 ברוך אתה יחיד ומיוחד stays inside /6. mapping_basis says the labels are enclosures. The XML must emit one milestone where the label changes, carry /2, /9 and /14 across the page breaks without repeating the marker per line or per page, and terminate explicitly at every null entry."
+    },
+    {
+      "id": "B9",
+      "severity": "pass",
+      "subject": "Thursday footnote",
+      "detail": "The footnote (s340 continuing onto s341) is held in other_source_blocks, outside every works sequence and outside sixth_day. The approved boundary treatment is one standOff note of type commentary. Its target is a local tei:anchor placed before כָּל at the start of fifth_day/17, not the shared URN. Physically it continues onto s341 but it stays out of the Friday flow, and it is never attributed to sixth_day /1–22."
+    },
+    {
+      "id": "B10",
+      "severity": "pass",
+      "subject": "Friday: sixth_day /1–/46",
+      "detail": "s341 L1–22 = /1–22 and s342 L1–24 = /23–46, a sequential one-to-one mapping. s341 L1 has the /1 incipit (אַתָּה לְבַדְּךָ יוֹצֵר כֹּל הוּא; canonical has הַכֹּל), and Thursday /17 ends at s340 L16. The canonical count of 46 couplets confirms that Friday starts on s341 without an internal heading. The reversed hemistichs in /31 are a variant inside the unit."
+    },
+    {
+      "id": "B11",
+      "severity": "pass",
+      "subject": "Shabbat: day_of_shabbat /1–/14",
+      "detail": "/1 = s342 L1–2 + s343 L1; /2 = L2–5; /3 = L6–9; /4 = L10–13; /5 = L14–17; /6 = L18–20; /7 = L21–23; /8 = L24–26; /9 = s343 L27–28 + s344 L1–2. /10–/14 are the five quotations in the s344 paragraph, and their bible_source values are chronicles_1/16/36, daniel/2/20, nehemiah/9/5, psalms/106/48 and chronicles_1/29/10. These are canonical references; the wrong ו:לו citation in the 1150 text was not imported. I checked all five texts against the verses and each is a whole verse. The intended layout is one prose paragraph: the poem-part milestone sits outside a seg type=\"quotation\", the contextual chapter and verse milestones with canonical @n go inside the seg, and both inner scopes close before the seg ends. The count is 32 couplets + 5 quotations = 37, which matches the proof."
+    },
+    {
+      "id": "B12",
+      "severity": "warning",
+      "subject": "Shabbat /11 has no introducer",
+      "detail": "The introducers ככתוב (/10) and ונאמר (/12–/14) stay outside the seg and inside the poem part. /11 has no printed introducer, because the verse itself begins עָנֵה דָנִיֵּאל. So for /11 the seg should cover the whole printed unit, and no introducer should be supplied."
+    },
+    {
+      "id": "B13",
+      "severity": "pass",
+      "subject": "Shir HaKavod",
+      "detail": "The heading שיר הכבוד., the instruction כשפותחין ארון הקדש… ד׳ פסוקים אלו., and Ps 24:7–10 each stand as separate blocks before the stanza anim. Ps 24:7–10 is a separate unit from the 31 Anim Zemirot stanzas (s344: 10, s345: 21, which matches F9). The anim_zemirot scope starts at anim."
+    },
+    {
+      "id": "B14",
+      "severity": "pass",
+      "subject": "Root and part reuse",
+      "detail": "registry-presence-proof reports all 7 roots registered, 371 identities checked and none missing. The count reconciles: 7 roots + (61+48+77+103+17+46+14 = 366 parts) − 2 unrealized parts (/23 Monday, /6 Wednesday) = 371. Root and numeric-part reuse is approved as identity only. The proof is a presence summary; it is not a check of the generated URNs."
+    },
+    {
+      "id": "B15",
+      "severity": "warning",
+      "subject": "Wording mismatch between the proof and the atlas",
+      "detail": "registry-presence-proof lists Wednesday source_index 50 (s335 L24) under uncatalogued_additions. The atlas treats it as a source-only variant occurrence of /50 with @source. Both describe the same boundary result (no corresp), but the proof's wording should be aligned so that L24 is not later mistaken for a fresh addition that needs an identity."
+    },
+    {
+      "id": "B16",
+      "severity": "warning",
+      "subject": "Line locators are relative to blocks",
+      "detail": "physical_line restarts after each internal heading. So s329, s331, s337 and s342 each have two different couplets addressed as the same L1–Ln, for example Friday s342 L1 and Shabbat s342 L1. The prior review used the same convention, and the boundaries are not ambiguous because each entry sits under its own work key. But any generated locator or README table should qualify the line by work or block."
+    },
+    {
+      "id": "B17",
+      "severity": "warning",
+      "subject": "Sunday termination must be explicit in the XML",
+      "detail": "The closing line is not a null entry inside works.sunday, so the 'terminate at each None' instruction does not cover it automatically. The XML must close the /61 scope before the closing line, either by ending the first_day root div or with a bare terminator."
+    }
+  ],
+  "remaining_outside_scope": [
+    "Source transcription, vowels, metegs, fine marks, the inline variant notes (נ״א/כ״א), the parentheses (including the unmatched one at s335 L22), the * mark in כָּל* at s340 L12, and the footnote's text",
+    "Human readings and their acceptance",
+    "Export acceptance and batch or source acceptance",
+    "Actual generated-URN checks (urn_registry --check, validate_urn_references, refdb resolution), including /50 resolving only to s335 L28, range resolution across the /53→/50→/54 inversion, and the fact that no corresp exists for second_day/23 or fourth_day/6",
+    "Checking whether 1 Chr 16:36, Dan 2:20, Neh 9:5, Ps 106:48, 1 Chr 29:10 or Ps 24:7–10 is already mapped canonically elsewhere in the project, before any canonical bible corresp is given",
+    "Day-of-week selection, conditionals, twilight or after-nightfall behavior, and any whole-cycle custom. None of this is approved here, and nothing here asserts that twilight makes all seven undecided.",
+    "Researching an independent identity for the Sunday closing line",
+    "The weekly-cycle siddur: container and its registration",
+    "Editorial headings in the expanded output, and keeping the documentary output free of rubrics",
+    "Data hygiene from the prior review: working-pages.json still gives 21 Tuesday couplets for s331, and the work keys in working-pages and other_source_blocks (shir-hayihud-tuesday, shabbat, shir_hakavod, shir-hayihud-thursday-footnote) are not yet normalized to canonical roots",
+    "Incipit-search evidence for fourth_day and sixth_day (F11)"
+  ],
+  "notes": [
+    "Scope: exact canonical boundary mapping only. This approval does not accept the source transcription, fine marks, human readings, exports, or any batch.",
+    "I read identity-review.json, working-encoding-atlas.json (all 6102 lines), registry-presence-proof.json, existing-unity-canonical-map.json (all canonical parts used for the comparison), canonical-identity-proposal.json, the first 280 lines of working-pages.json, the scope and quotation rules in JLPTEI-3.md, and the variant/incipit/nesting rules in SIDDUR_URN_SCHEME.md.",
+    "Every atlas canonical_part was compared with the F1–F9 extents, and every changed or null entry was checked against the canonical text of its neighbors. I found no mapping derived by sequential count.",
+    "The Tuesday /28 and Wednesday /50 decisions mint no identity. The source's own wording is kept in both places, and no wording from the 1150 projects is substituted.",
+    "s333 L3 repeats the second hemistich of /52 (אֵין מָקוֹם … מִמְּךָ נֶחְדָּל) but not its incipit. Per your instruction it gets no correspondence and no @source; that is consistent with the B6 rule, which needs a shared incipit.",
+    "No files were edited."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "0dc70db0-97b1-4743-aab8-d208e857dbd8"
+  }
+}

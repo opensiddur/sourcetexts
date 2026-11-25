@@ -1,0 +1,55 @@
+{
+  "approved": false,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s312/v4-export-review/expanded-pdf-review-2.json",
+    "/tmp/mahzor-s312/v4-export-review/expanded-pdf-review-3.json",
+    "/tmp/mahzor-s312/v4-export-review/expanded-pdf-review-5.json",
+    "/tmp/mahzor-s312/boundary-visual-review.json",
+    "/tmp/mahzor-s312/boundary-refined-images.json",
+    "/tmp/mahzor-s312/boundary-refined-3.png",
+    "/tmp/mahzor-s312/boundary-refined-4.png",
+    "/tmp/mahzor-s312/boundary-refined-5.png",
+    "/tmp/mahzor-s312/boundary-refined-6.png",
+    "/tmp/mahzor-s312/boundary-refined-7.png",
+    "/tmp/mahzor-s312/boundary-refined-11.png",
+    "/tmp/mahzor-s312/boundary-refined-12.png",
+    "/tmp/mahzor-s312/boundary-refined-22.png",
+    "/tmp/mahzor-s312/boundary-final-6.png (comparison only)",
+    "/tmp/mahzor-s312/boundary-final-7.png (comparison only)",
+    "/tmp/mahzor-s312/boundary-final-11.png (comparison only)"
+  ],
+  "closed_blockers": [
+    "Rubric and heading 'כהן' sharing the same vertical band (review-2 p.313; boundary-visual-review blocker 1): CLOSED. In boundary-refined-6, 'A Torah scroll is taken from the ark.' now ends on its own line (baseline ≈y541). 'כהן' sits clearly below it on a separate line (≈y580), with 'Kohen' below that. In boundary-final-6, 'כהן' had been at ≈y563, beside the rubric. The two are now stacked, not side by side.",
+    "Heading 'לוי' jammed under 'Torah.' (boundary-visual-review blocker 2): CLOSED. In boundary-refined-6 the gap from 'Torah.' to 'לוי' is about 44px, more than one body line pitch (~35px). In boundary-final-6 it was about 28px. The extra half-baseline space is visible.",
+    "Heading 'ישראל' jammed under 'Torah.' (review-2 p.314; boundary-visual-review blocker 3): CLOSED. In boundary-refined-7 the gap from 'Torah.' to 'ישראל' is about 43px, against about 25px in boundary-final-7. The heading now has the same clearance as 'לוי'.",
+    "Minchah chapter title crammed under the shofar rubric (review-2 p.312): stays CLOSED. boundary-refined-4 ends with the rubric and a rule. boundary-refined-5 opens with 'תפלת מנחה ליום ראשון של ראש השנה', with generous space around it.",
+    "Footnote marker on the enlarged ה (review-2 p.314): stays CLOSED. In boundary-refined-7, marker 6 sits above the enlarged ה of 'הַ לַיהוָה' and is clear of the letter and its pointing.",
+    "Line-initial marker collision (review-2, marker-138 type): stays CLOSED. In boundary-refined-5, marker 5 above 'תְּהִלָּה לְדָוִד' touches no glyph.",
+    "Markers sitting on last letters or pointing (review-5): stays CLOSED. Markers '1,2' (refined-3), '3,4' (refined-4), '9,10' (refined-22) and '7' (refined-12) are all clear of the glyphs.",
+    "Missing space after a closing bracket (reviews 3 and 5): stays CLOSED for the visible instances. Hebrew: 'בִמְנוּחָתֵנוּ] קַדְּשֵׁנוּ', 'שְׁמֶךָ.] וְטַהֵר' (refined-11). English: 'in our rest.] Sanctify', 'on it] and purify', '[the Sabbath and] Israel', 'of Teruah [in love] for' (refined-11/12). The prefix join '[הַשַּׁבָּת וְ]יִשְׂרָאֵל' is kept (refined-12).",
+    "English footnote set right-to-left (review-5 fn 144): stays CLOSED. Notes 2, 4 and 10 (refined-3, -4, -22) are left-to-right, with the number at the left and the continuation line left-aligned. The embedded Hebrew abbreviation is in the correct order. The Hebrew/Yiddish notes 1, 3, 9 and 7 stay right-aligned."
+  ],
+  "blocking_findings": [
+    "Conditional rubric and opening bracket still run together (reviews 3/5; boundary-visual-review blocker 4): NOT CLOSED. In boundary-refined-11 (proof p.9, Hebrew column), the line 'מֶלֶךְ וּמַלְכוּתוֹ בַּכֹּל מָשָׁלָה: אַם שַׁבָּת]אֱלֹהֵינוּ וֵאלֹהֵי' still shows the bold rubric 'אם שבת', the bracket glyph and 'אֱלֹהֵינוּ' as one unbroken cluster, with no visible word space anywhere in it. The same holds for 'אַם שַׁבָּת]וְהַנְחִילֵנוּ' at the start of the later line. I compared these two lines against boundary-final-11. Their line breaks, justification and the look of the cluster are the same at this resolution. The claimed preservation of the rubric boundary before j:conditional is not visible in the output. The rubric→bracket gap is not visible in the rendered PDF; check the actual glyph positions in the PDF before calling it fixed."
+  ],
+  "nonblocking_findings": [
+    "Carried over: the footnote markers after Hebrew row-final words ('1,2', '3,4', '9,10') ride almost a full line high. They are legible but look detached from the word.",
+    "Carried over: all apparatus note text is bold (Hebrew and English). Confirm this is intended.",
+    "Carried over: marker 6 in refined-7 clears the enlarged ה, but it is tight against the descenders of the line above ('…וּפְתַלְתֹּל:').",
+    "Carried over: the editorial note in refined-4 reads 'beginning on scan327' (no space).",
+    "The new spacing before the headings is consistent across 'כהן', 'לוי' and 'ישראל'. It adds no visible awkwardness, and the italic English subtitles keep their own spacing."
+  ],
+  "limitations": [
+    "Judged only from the rasterized PNGs. I could not crop or zoom, so the 'אם שבת]' result is a visual read at page resolution. A thin space (well under a normal word space) might exist but not be visible. Checking the PDF text layer or glyph positions would settle it.",
+    "The heading gaps are pixel estimates from the images, compared against the earlier boundary-final images of the same pages.",
+    "I accepted the stated fact that nothing else changed since the first proof. Pages 3, 4, 5, 12 and 22 were still re-read, and they match the earlier approvals.",
+    "Not all bracket instances from reviews 3 and 5 appear in this excerpt (e.g. 'this day]of remembrance'). Those cases must be checked in the full-book review.",
+    "No output file was written; this JSON is returned inline."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "7324e2a2-73f2-4c9c-b0e3-d3d618147925"
+  }
+}

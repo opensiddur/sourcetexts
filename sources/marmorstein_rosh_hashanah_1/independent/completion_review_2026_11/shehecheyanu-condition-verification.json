@@ -1,0 +1,66 @@
+{
+  "status": "pass",
+  "checks": [
+    {
+      "holiday_day": 1,
+      "hebrew_day_of_week": 1,
+      "expected": true,
+      "language_presence": {
+        "he": true,
+        "en": true
+      },
+      "condition_settled": true
+    },
+    {
+      "holiday_day": 1,
+      "hebrew_day_of_week": 5,
+      "expected": true,
+      "language_presence": {
+        "he": true,
+        "en": true
+      },
+      "condition_settled": true
+    },
+    {
+      "holiday_day": 2,
+      "hebrew_day_of_week": 1,
+      "expected": true,
+      "language_presence": {
+        "he": true,
+        "en": true
+      },
+      "condition_settled": true
+    },
+    {
+      "holiday_day": 2,
+      "hebrew_day_of_week": 2,
+      "expected": false,
+      "language_presence": {
+        "he": false,
+        "en": false
+      },
+      "condition_settled": true
+    },
+    {
+      "holiday_day": 0,
+      "hebrew_day_of_week": 1,
+      "expected": false,
+      "language_presence": {
+        "he": false,
+        "en": false
+      },
+      "condition_settled": true
+    },
+    {
+      "holiday_day": null,
+      "hebrew_day_of_week": null,
+      "expected": null,
+      "language_presence": {
+        "he": true,
+        "en": true
+      },
+      "condition_settled": false
+    }
+  ],
+  "limits": "Source day-two exception only; does not independently certify source points."
+}

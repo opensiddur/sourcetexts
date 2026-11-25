@@ -1,0 +1,63 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Low reasoning effort. This was an adjudication of the human 195–210 decisions, not a new blind read. Files read in full: current.json, current.review.xml, guideline-excerpts.md, and human_completion_review_2026_11_195_210.json (exact answers, change list, confirmed negatives, host disambiguation, full before/after, snippet list). Prior reports read in full: yotzer-after-human165-171-restarted-20261117/review.json, yotzer-three-after-human172-194/review.json, yotzer-sin-host-followup/review.json and yotzer-english-scope-final/review.json. Images viewed: native s102.jpg and s104.jpg; the enlarged rows that carry text from these two units, s102-row8, s102-row9 and s104-row3 through s104-row9; and all 16 original-source human crops, human-195.png through human-210.png. I did not open s102-row1 to row7 or s104-row1 and row2. Checked against the native pages, those rows hold only the out-of-scope Hameir, Hakol and El Barukh, plus the top of the El Adon paragraph, which s102-row8 also shows. I compared word by word, by eye, in three places: current.json against the after-state, after against before, and current.review.xml against current.json. I ran no diff, codepoint or normalization tool, and no validator, schema, compiler, refdb or URN tool."
+  },
+  "witnesses": [
+    {
+      "stem": "el_adon",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "Before against after: the only Hebrew differences are the 11 El Adon changes the human record lists (195, 197, 201–209), each in the stated segment and occurrence. current.json matches the after-state exactly. In current.review.xml the HE <tei:p> contains the same words.",
+        "195 דַּֽעַת (stanza 1, s102 row9; crop 195): the vertical stroke sits beside the pataḥ under the DALET. Encoded there.",
+        "197 הַקֹּֽדֶשׁ, first occurrence (stanza 2, s102 row9; crop 197): the stroke is under the QOF, beside the segol cluster. Encoded on the QOF of this occurrence only.",
+        "201 חֶֽסֶד (s104 row3; crop 201): the stroke is beside the segol under the ḤET. Encoded there.",
+        "202 אֱלֹהֵֽינוּ (stanza 3, s104 row3; crop 202): the stroke is beside the tsere under the HE, not under the alef or lamed. Encoded on the HE.",
+        "203 בְּדַֽעַת (s104 row3; crop 203): the stroke is beside the pataḥ under the DALET, not under the bet. Encoded on the DALET.",
+        "204 בְּקֶֽרֶב (s104 row4; crop 204): the stroke is beside the segol under the QOF. Encoded there.",
+        "205 לְזֵֽכֶר (s104 row5; crop 205): the stroke is beside the tsere under the ZAYIN, not under the lamed's shva. Encoded on the ZAYIN.",
+        "206 לַשֶּֽׁמֶשׁ (s104 row5; crop 206): the stroke is beside the segol under the FIRST ש, which comes right after the lamed and carries a dagesh and the shin dot. The final ש has no stroke. In the encoding the meteg is a combining mark on the first ש's cluster (dagesh, segol, meteg, shin dot), so it is the first SHIN with segol, as decided, not the final ש.",
+        "207 שֶֽׁבַח, stanza 6 occurrence (s104 row5; crop 207): the stroke is beside the segol under the initial ש, which has a right-hand (shin) dot. Encoded on that SHIN. This is a separate occurrence from the El Barukh and Lael שֶֽׁבַח decisions and was decided on its own.",
+        "208 תִּפְאֶֽרֶת (s104 row5/6; crop 208): the stroke is beside the segol under the ALEF, not under the pe or the resh. Encoded on the ALEF.",
+        "209 הַקֹּֽדֶשׁ, final occurrence (s104 row5/6; crop 209): the stroke is under the QOF. Encoded at the end of stanza 6, separately from 197.",
+        "The four negative decisions are kept unchanged: 196 הַמֶּרְכָּבָה (no meteg on the MEM; crop 196 shows segol dots only), 198 גָּדְלוֹ (GIMEL), 199 וְנֶהְדָּר (NUN) and 200 הַמִּתְגָּאֶה (GIMEL). I did not reopen them.",
+        "Apart from the decided marks, every consonant, visible vowel, dagesh, maqaf, period and colon in stanzas 1–6, in printed order, matches s102 rows 8–9 and s104 rows 3–6. That includes the earlier direct corrections סֹבְבִים, טֹבִים, the colon in בְּכָל־הָעוֹלָם:, and וַיִּזְרַח אוֹר with no maqaf, as well as נוֹתְנִים־לוֹ (human 171), כָּל־נְשָׁמָה (158a) and מָלֵא with no encoded raised mark (158b). Nothing is carried over to other words.",
+        "Structure is unchanged from the approved closure. Stanza milestones /1–/6 are identical in HE and EN and closed by one bare stanza terminator. pb n=38 (facs n103 HE, n104 EN) comes before the nested Shabbat rubric conditional, and there is no obsolete opening pb 37. The rubric (אַם שַׁבָּת., de-Hebr; 'On Sabbath.', en) is the conditional's own instruction note. It sits at its source position in each language and runs through stanza 6 in both languages before the terminator. condition_end_corresp is el_adon/6. The outer shabbat=true guard and div@facs are kept.",
+        "English: the EN text and corresp set in current.json and the XML are identical to both the before and after records. No translation was filled in. Out-of-scope Hameir, Hakol and El Barukh words are not assigned to this unit."
+      ]
+    },
+    {
+      "stem": "lael_asher_shavat",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "Before against after: the only Hebrew difference is 210, מִמַּעַל → מִמַּֽעַל, in segment 3. current.json matches the after-state, and the XML <tei:p> matches apart from the j:divineName wrappers.",
+        "210 מִמַּֽעַל (s104 row8/9; crop 210): the vertical stroke sits beside the pataḥ under the SECOND MEM, which has a dagesh. The first mem (ḥiriq) has no stroke. The encoding puts the meteg on the dageshed second MEM with pataḥ.",
+        "The earlier human 172–194 decisions are still in place and were not reopened. 194 שֶׁעָשִֽׂיתָ: the meteg is on the SIN (ḥiriq), and the initial שֶׁ has none. Row9 shows the stroke beside the ḥiriq of the second ש. 193 יְפָאֲרֽוּךָ: the meteg is on the RESH, with none on the PE. Also present at their own occurrences: יָדֶֽיךָ, עַל־שֶֽׁבַח, זֶה שֶֽׁבַח, שֶֽׁבַח יְקָר, מוֹשִׁיעֵֽנוּ, אֱלֹהֵֽינוּ, מַלְכֵּֽנוּ, תִּפְאֶֽרֶת, הָאָֽרֶץ and סֶּֽלָה:. 191 יְפָאֲרוּ and 192 וִיבָרְכוּ remain without a meteg.",
+        "Apart from the decided marks, every consonant, visible vowel, dagesh, maqaf and punctuation mark matches s104 rows 6–9 in printed order. That includes מִכָּל־הַמַּעֲשִׂים, עַל־כִּסֵּא כְבוֹדוֹ., שֶׁלַּיּוֹם, מִכָּל־מְלַאכְתּוֹ:, הַשַּׁבָּת טוֹב with no stop between, לַייָ:, כָּל־יְצוּרָיו., שַׁבַּת קֹדֶשׁ:, יִתְקַדַּשׁ., יִתְפָּאַר., וְעַל־הָאָֽרֶץ מִתָּחַת: and וְעַל־מְאוֹרֵי־אוֹר. The extent runs from לָאֵל to the final סֶּֽלָה:, and El Adon and El Barukh words are not mixed in.",
+        "Citations and structure are unchanged from the approved scope review. Ps 92:1 is a full-verse occurrence context with seg@source psalms/92/1. Ps 92:2a has nested chapter, verse/2 and half-verse n=a context milestones with seg@source psalms/92/2/a, followed by bare half-verse, verse and chapter terminators and then a bare prayer-part terminator before לְפִיכָךְ. These are registry contexts, not new canonical identities. HE and EN carry the same corresp sets.",
+        "English: identical to the before and after records, including tei:sic 'Name.' / tei:corr 'Name,'. The shabbat=true guard and div@facs n103/n104 are unchanged."
+      ]
+    }
+  ],
+  "limits": [
+    "I compared the text by eye only. I ran no codepoint, diff or normalization tool, so I do not certify Unicode normalization or the order of combining marks within a cluster (for example dagesh, segol, meteg, shin dot in 206). Host-letter placement was checked against the printed crops and the rendered text.",
+    "I did not open the EN page images (s103, s105). 'English unchanged' rests on comparing the current files with the before/after records and on the earlier English scope review, which checked those pages.",
+    "Canonical half-verse resolution and the registry-context status are taken from the earlier scope review's proof files. I did not reproduce them, and I ran no validator, schema, compiler, refdb or UrnResolver.",
+    "Hameir, Hakol and El Barukh are out of scope and were not re-reviewed."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "420fe652-c16d-4bf0-ae45-1593f2f271d4"
+  }
+}

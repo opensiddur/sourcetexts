@@ -1,0 +1,57 @@
+{
+  "scope": "prayers",
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "medium"
+  },
+  "approved": true,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/bounded-review-v4/rule-rubrics.md",
+    "/tmp/mahzor-s294/bounded-review-v4/rule-scope.md",
+    "/tmp/mahzor-s294/bounded-review-v4/rule-identity.md",
+    "/tmp/mahzor-s294/literal-rendered-source-projections-v3.json",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__musaf_repetition_retzeh__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__musaf_repetition_retzeh__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__musaf_repetition_modim__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__musaf_repetition_modim__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__musaf_repetition_modim_derabbanan__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__musaf_repetition_modim_derabbanan__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__musaf_repetition_modim_derabbanan_english_words__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__musaf_repetition_hodaah_tail__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__musaf_repetition_hodaah_tail__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__musaf_repetition_veteerav__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__musaf_repetition_veteerav__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__amidah_avodah_parts__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__amidah_avodah_parts__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__amidah_hodaah_parts__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__amidah_hodaah_parts__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__amidah_modim_derabbanan_parts__body00.jsonl"
+  ],
+  "blocking_findings": [],
+  "new_human_questions": [
+    "Two repeated occurrences differ from their canonical homes by more than pointing or punctuation. The literal text is still kept at each occurrence via seg/@source, and no wording feature was added. (1) In EN musaf_repetition_modim the line reads 'for our souls that are entrusted'. The canonical home in amidah_hodaah_parts reads 'and for our souls that are entrusted', so the repetition lacks the word 'and'. (2) In HE musaf_repetition_modim_derabbanan the word is spelled 'לְחַצְרוֹת', with the vowel letter vav (full spelling). The canonical home in amidah_modim_derabbanan_parts spells it 'לְחַצְרֹת', without the vav (defective spelling). Please confirm that a letter-level or word-level difference like these is acceptable under 'one coherent canonical identity'. If it is, an expanded or canonical rendering would show 'and' or 'לְחַצְרֹת' at a place where the printing does not have it."
+  ],
+  "nonblocking_findings": [
+    "EN musaf_repetition_modim_derabbanan: the description 'Congregation:' names who says the passage (an actor label). It correctly appears first in the div as a type=description note. Unlike the HE Veteerav reader label, it has no role corresp (for example instruction:role/congregation). The brief only asked for role/reader, so this is optional.",
+    "HE Veteerav description: the abbreviation הש״ץ is expanded as 'השליח ציבור'. This is a common colloquial form but not the standard one; the standard is 'שליח הציבור'. This is an editorial expansion, not source text. Cosmetic.",
+    "These pointing and punctuation differences between literal occurrences and canonical homes are acceptable under the brief. Retzeh: 'אֶת הָעֲבוֹדָה' and the final '.' at the occurrence, against 'אֶת־הָעֲבוֹדָה' and ':' at the home. HE Modim: the extra '.' after 'וָדוֹר' and 'שֶׁבְּכָל יוֹם' at the occurrence, against 'שֶׁבְּכָל־יוֹם' at the home. Vekhol hachayyim: 'סֶּֽלָה' with a meteg at the occurrence, against 'סֶּלָה' at the home. All stay literal at their seg/@source occurrences, and none adds a wording option.",
+    "Confirmed: EN Modim has the sic/corr sindnesses→kindnesses at the literal occurrence (musaf_repetition_modim). The canonical home in amidah_hodaah_parts has plain 'kindnesses' with no sic/corr.",
+    "Confirmed: HE Veteerav's 'הש״ץ מסיים' is a type=description note with corresp instruction:role/reader. It sits after the bare prayer-part milestone that ends veteerav and before the sheotekha milestone, so it is outside both canonical scopes. Veteerav and sheotekha both reuse the siddur:regalim/musaf/text identities. The EN Veteerav has no label, and none was added.",
+    "Confirmed: HE and EN extents match for all five repetition stems: retzeh (1 seg), modim (1 seg), modim_derabbanan (whole paragraph; in EN through the transclude), hodaah_tail (3 segs: veal_kullam, ukhetov, vekhol_hachayyim), and veteerav (2 prayer-part scopes). No RashiRend, no added English linkage cues, and no filled-in missing translation. The EN modim_derabbanan canonical home is created at its first actual English printing (n310) and transcluded there.",
+    "Confirmed: the canonical prayer-part sequences in the parts files are closed by bare terminators of the same unit at the end of each sequence, which follows rule-scope."
+  ],
+  "scope_limitations": [
+    "The projection report gives only a boolean for each stem/language (exact_literal_projection_after_sic_corr: true). It does not contain the compared strings, so I could not independently check exactness from that file. I accepted the booleans as reported.",
+    "The projection report has no entry for musaf_repetition_veteerav or for the modim_derabbanan_english_words stem. Veteerav uses in-place milestones, so its printed text is the projection, and I did not treat the missing entry as a gap. The report does include shofarot_hayom and kohanim_intro, which belong to other groups; I did not review them.",
+    "I did not consult any source images. Source readings, including 'שָׁאַתָּה', were treated as settled, as instructed.",
+    "No headers, code, other groups or export were reviewed. I could not verify from this payload that the siddur:regalim identities are the existing Birnbaum identities; I took the URN namespace as evidence of that."
+  ],
+  "verdict": "Approved for the prayers scope only. I read all 16 assigned body chunks in full; none was truncated. Literal source text is preserved at each repeated occurrence with seg/@source, and the sic/corr is at the literal occurrence. Rubrics are classified correctly as descriptions, with the reader label excluded from canonical scopes. HE/EN extents and alignment match, and no new meteg, maqaf, punctuation or wording features were added. One human question remains about two non-pointing differences (EN 'and'; HE plene vs. defective spelling of לחצרות) between occurrences and canonical homes. It does not affect literal fidelity. This approval says nothing about other groups, code or export.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "e4cdde0d-48c7-4867-a105-cc3cc7e554c4"
+  }
+}

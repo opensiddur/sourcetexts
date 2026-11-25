@@ -1,0 +1,78 @@
+{
+  "source_scan": "s343",
+  "approved_source_reading": true,
+  "all_lines_verified": true,
+  "human_application_verified": true,
+  "remaining_reading_disputes": [],
+  "corrections_required": [],
+  "stale_notes_to_remove": [
+    {
+      "file": "source-343-working-snapshot.json",
+      "field": "blocks[0].uncertainties",
+      "reason": "All 9 entries are resolved and should be removed. Line 3 הַחִלּוֹתָ was settled by human 806. Line 8 עָבָר (qamats) was confirmed by the image and the prior closure. Line 12 שָֽׁמֶן was settled by 812. Line 13 בְּנוּחָם was settled by 813. Line 16 יְזַמְּרוּ was settled by consensus and 815. Line 23 נִזְבְּחָה / וְכִֽימֵי was settled by 817. Line 25 כֻּלָּֽנוּ was settled by 818. Line 26 בִרְכָתֶֽךָ / סֶּֽלָה was settled by 819. Line 28 אֶת was settled by consensus. The line 16 and line 23 entries also still quote forms that have since been replaced (יְזַמֵּֽרוּ, נִזְבָּֽחָה)."
+    },
+    {
+      "file": "source-343-working-snapshot.json",
+      "field": "completeness_notes[1]",
+      "reason": "'The running head is only partly visible in the top crop' is stale. full-343.png shows the whole running head, 'שיר היחוד ליום השבת' with page 17, and it matches running_head."
+    },
+    {
+      "file": "source-343-provisional-application.json",
+      "field": "status",
+      "reason": "'mem dagesh in יזמרו still open, samekh-dagesh proposal held for human' is superseded. Human 815 confirmed the mem dagesh. Human 819 kept the samekh dagesh and overrode the removal proposal."
+    },
+    {
+      "file": "source-343-closure.json",
+      "field": "remaining_reading_disputes",
+      "reason": "All 19 disputes are closed by human rulings 806–819. This includes 807, where the dot between שְׁפָטִים and גְּדוֹלִים is a printing blemish."
+    },
+    {
+      "file": "source-343-closure.json",
+      "field": "corrections_required[2] (סֶּֽלָה→סֶֽלָה)",
+      "reason": "This was not applied, and human 819 overrode it by keeping the samekh dagesh. It must not be carried forward."
+    },
+    {
+      "file": "source-343-closure.json",
+      "field": "corrections_required[0..1]",
+      "reason": "Line 16 יְזַמְּרוּ and line 28 אֶת are already applied and kept, so they are no longer pending."
+    },
+    {
+      "file": "source-343-closure.json",
+      "field": "notes (meteg_inventory accepted list)",
+      "reason": "The inventory cites בִּרְכָתֶֽךָ with a bet dagesh and סֶֽלָה without a samekh dagesh. Human 819 set these as בִרְכָתֶֽךָ and סֶּֽלָה."
+    },
+    {
+      "file": "source-343-closure.json",
+      "field": "notes (meteg_inventory unresolved list), notes (כְּנוּחָם not accepted), limitations[1] (patah/qamats under מ open)",
+      "reason": "Superseded by human 808, 809, 810, 811, 812, 813, 814 and 817."
+    },
+    {
+      "file": "source-343-closure.json",
+      "field": "approved_source_reading:false / all_lines_verified:false",
+      "reason": "Superseded by this final closure."
+    },
+    {
+      "file": "human-806-819-resolution.json",
+      "field": "status",
+      "reason": "'final independent source343 closure pending' becomes stale once this closure is accepted."
+    }
+  ],
+  "limitations": [
+    "I could not compute SHA-256 (no shell available), so I did not check that the working snapshot's hash equals the output_working_sha256 3297660a…014cc in human-806-819-resolution.json. I verified the snapshot by its content: all 19 human 'after' strings and both consensus corrections appear in it verbatim.",
+    "Even at the detail scale, the small-type lines do not fully resolve dageshes, mappiqs, or metegs against qamats/patah. For the 806–819 points, the human rulings are authoritative and I did not re-adjudicate them. The other small-type marks are consistent with the images but were not each positively confirmed.",
+    "Nothing was edited. This closure does not approve XML, export, a leaf, or a batch."
+  ],
+  "notes": [
+    "All 28 lines were checked word by word for consonants, points, punctuation, and word order against full-343.png and all 8 detail crops. Apart from the human-adjudicated points, there were no discrepancies. The snapshot has exactly 28 lines, and nothing is printed below line 28.",
+    "These human applications are present and match their rulings exactly. 806: הַחִלּוֹתָ. 807: no punctuation between שְׁפָטִים and גְּדוֹלִים. 808: וַיִּירָֽאוּ. 809: גָּדְלֶךָ with no meteg. 810: הַשָּׁמָֽיִם and נָֽטְפוּ. 811: שָׁמָֽיִם on line 9. 812: שָֽׁמֶן. 813: בְּנוּחָם, קָדְשֶֽׁךָ, מִקְדָּשֶֽׁךָ. 814: וַתֹּֽאמֶר and צֵידָהּ. 815: יְזַמְּרוּ. 816: line-final תֵיטִיב on line 20 with no dagesh. 817: exactly נִזְבְּחָה וְכִֽימֵי קֶֽדֶם. 818: כֻּלָּֽנוּ. 819: בִרְכָתֶֽךָ סֶּֽלָה.",
+    "The applications stayed within their bounds and were not copied to other occurrences. Line 18 כֵּן תֵּיטִיב keeps its tav dagesh. Line 28 וּמִבִּרְכָתְךָ keeps its bet dagesh. Line 12 שָׁמֵן (tsere, no meteg) is unchanged. Line 7 and line 9 מָֽיִם are unchanged. Line 26 סְגֻלָּה is unchanged.",
+    "The two consensus corrections are kept: line 16 יְזַמְּרוּ (mem sheva) and line 28 אֶת (alef segol).",
+    "The punctuation matches the print. Line 3 has a comma after לְהוֹדִֽיעַ. Line 14 has a comma after יָמִים. Line 15 ends with a period. Line 25 has a maqaf in הַבֶּט־נָא. All other lines have a mid-line period and a final colon.",
+    "The running head 'שיר היחוד ליום השבת' and printed page 17 match the snapshot."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "d49f3b1f-8dd4-4202-85f1-7dffc1f2245d"
+  }
+}

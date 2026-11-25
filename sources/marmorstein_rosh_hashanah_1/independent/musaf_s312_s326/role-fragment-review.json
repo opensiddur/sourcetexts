@@ -1,0 +1,26 @@
+{
+  "approved": true,
+  "all_assigned_images_read": true,
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "Stranded-role blocker: closed on all five revised pages. Pages 1-4 each end on a text row: 'and protect you.' (p.1, from חזן), 'His countenance' (p.2, from כהנים), 'May He raise,' (p.3, from כהנים) and 'Towards Thee do I lift up my eyes…' (p.4, from קהל). Page 5 ends on the final קהל row 'Peace, peace…'. Pages 2-5 each start with their speaker label (כהנים, קהל, קהל, חזן) directly followed by that label's row. No label sits at the foot of a page away from its row.",
+    "Role-gap blocker: the extra empty line is gone. In v4 there was about 35px from the row above to the label and about 70px from the label to its own row. In the revised pages both gaps measure about 37px, for example p.1: 'May He bless you,' at y≈693, then כהנים at ≈730, then the next row at ≈768. The same holds on every page and for every role, including after multi-line rows (p.1 'cre-/ator of heaven and earth.' at ≈872, then חזן at ≈909, then 'The Lord,' at ≈946).",
+    "Label association: correct in structure and sequence. Each label comes directly before its own row: חזן prompt, כהנים repeat, קהל verse, which fits the liturgy (חזן/כהנים 'יברכך', then קהל 'יברכך יי מציון…'; חזן/כהנים 'וישמרך', then קהל 'שמרני אל…'; and so on through 'שלום'). Every page starts with a label and ends with a row, so readers get a consistent label-then-row rhythm. However, the spacing is now equal above and below the label, not tight to the following row. Spacing no longer points to the wrong row, but it doesn't actively point to the right one either. The v4 reviewer asked for 'little or no space between label and row'. I'd recommend a later polish pass that shrinks the label-to-row space, but it is no longer a blocker.",
+    "As the brief says, the English column has no speaker labels; the bold Hebrew labels serve both columns. Each label is right-aligned across the full measure, so it sits above the English column's right edge rather than above the Hebrew column. It still reads as a heading for the whole row. Acceptable.",
+    "Other rubrics look right. On p.1 the Hebrew 'והכהנים מברכין.' is right-aligned and the English 'The Priests:' sits on its own line, both directly above the Hebrew/English 'ברוך…' row. On p.2 the run-in קהל rubric and dream prayer are not cut off and follow straight after 'שמרני אל כי חסיתי בך'. On p.3 the Hebrew rubric, English rubric and full-width prayer follow the 'הנה כעיני עבדים' row with no gap.",
+    "Code: the diff is small and narrowly targeted. In full-width (non-single-pstart) streams, f:block-break now closes any open pstart and defers \\pstart, passing in-pstart=false. Paired columns keep opening eagerly, so paragraph counts across columns stay in sync. The structural test confirms 105 \\pstart (3 per block × 35) and 35 chapter marks, so the chapter-only fragment no longer adds a paragraph.",
+    "Test coverage: the geometry test checks that the role and the following Left text are on the same page and less than 30pt apart. That covers stranding and the old 70px gap. It does not check that the label is closer to the following row than to the preceding one, so the equal-spacing observation above is not guarded. Consider adding that assertion if the spacing is tightened later. The log shows 2 passed.",
+    "Out of scope, for the separate final-export review: Hebrew is in the left column and English in the right throughout this proof. Confirm this matches the intended column order for the full export. Page 5 also has a full-width horizontal rule at about y≈1113 with nothing beneath it, which may be an empty footnote/apparatus rule or a document-end rule."
+  ],
+  "limitations": [
+    "I reviewed a reduced proof, not the full final export. Page breaks will fall in different places in the full book, so stranding at the actual printed pp. 300–304 boundaries still needs checking in the regenerated final export. The tests and these pages show the mechanism works, but they don't guarantee those exact positions.",
+    "I reviewed raster images only. Pixel distances are estimates read off 5 PNGs, and I did not inspect the PDF or run the tests myself; I relied on the provided log.",
+    "I checked liturgical order and speaker sequence against the visible text only, not against the source XML.",
+    "My approval covers only the role-label layout and the deferred-block-break code. Other final-export blockers are outside this review."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "4cd876d0-964f-421d-b4b3-f528dd34db17"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "approved": false,
+  "required_changes": [
+    {
+      "file": "opensiddur/importer/marmorstein_rosh_hashanah_1/canonical_corrections.py",
+      "issue": "A literal_provider owner may carry text_corresp, and the reuse, transclude, repeat and spine checks miss any reference to that URN. The literal_provider check rejects canonical_home, canonical_whole and reuse on the owner, but it lets text_corresp through. The attester loop does catch canonical_whole callers, because _range_segments resolves text_corresp to the owner's segments. touches() does not. It treats only owner['urn'], the corrected identity and the owner's segment identities as hits. So a transclude or repeat to the owner's text_corresp, a reuse value naming it, or an expanded_order/source_order reference with that target returns False. That reference then reaches the corrected generated file with no source_witness and no rejection. Dedicated homes have the same gap, because canonical_home.text_corresp is not in touches() either. The new mode extends it to ordinary mixed files.",
+      "evidence": "canonical_corrections.py:99-101 has no text_corresp check on the owner. canonical_corrections.py:173-179 is touches(): the only whole-unit target is canonical_home.urn or owner['urn'], and text_corresp is never compared. realizations.py:275-278 shows that _range_segments treats text_corresp (or canonical_home.text_corresp) as a whole-text identity for the owner. test_whole_text_host_and_shared_literal_target_do_not_bypass_old_guard only covers the unbound path; no test combines literal_provider with text_corresp.",
+      "remedy": "In touches(), count as a hit any target equal to owner.get('text_corresp') or owner.get('canonical_home', {}).get('text_corresp'). Alternatively, and more simply, add owner.get('text_corresp') to the rejection list at line 100. Add a test: a literal_provider owner with text_corresp, plus a unit with a transclude to that URN, or a spine reference to it with no source_witness. bind_corrections must raise."
+    },
+    {
+      "file": "opensiddur/importer/marmorstein_rosh_hashanah_1/canonical_corrections.py",
+      "issue": "The literal-part check runs only on items that carry literal_provider. Once one such item puts a mixed file into homes, any other item for the same file without the flag takes the classic path, and nothing checks its part. That second item can name a part whose segment_identity comes from a corresp that sits alongside transclude, repeat or canonical. The stated invariant is that every correction to a mixed controlled file goes through an explicit literal binding. That invariant then depends on the input order and on apply_corrections happening to fail later, not on the binder.",
+      "evidence": "canonical_corrections.py:90-92 skips items without 'literal_provider'. Line 103 adds the path to homes for the whole file. At lines 107-112, a later item for that path finds it in homes and goes straight to the classic binding at lines 116-162. Those lines check only that the identity is unique and the context matches, never the part's canonical/transclude/repeat keys.",
+      "remedy": "In the main loop, when path is in literal_paths, require item.get('literal_provider') is True. Otherwise raise 'Literal provider correction requires one explicit source file'. Equivalently, keep a map from path to the set of approved identities and require item['identity'] to be in it. Add a test: one valid literal_provider item, plus a second item for the same file without the flag. It must fail."
+    }
+  ],
+  "notes": [
+    "Remedy 1 is mostly sound. _unaffected_literal is gone. The unbound guard at line 109 is the old guard, extended to reject `wording`, so no unbound item gets past it. A file that is a canonical_home, or the context file of a unit with canonical_home, cannot become a literal provider: the check is at lines 94 and 100. The part must be the only part with that identity, and it cannot carry canonical, transclude or repeat. The owner cannot have canonical_whole or reuse. Literal-provider bindings then get the same pattern check, overlay-overlap check, caller attestation via _range_segments, exact attestation-set equality, and reuse/transclude/repeat/spine touches() checks as dedicated homes. touches() falls back to owner['urn'], so a reference to the whole mixed unit counts as a hit, and a spine reference has to name the owner or an attesting caller. The tests cover a new caller that must be attested, a pointer identity being rejected, and both unbound text_corresp and realized-mixed cases staying blocked.",
+    "Remedy 2 is sound for the restricted mode. With exactly one overlay on the identity, covering the whole single fragment, every unit that selects `wording` must be a printing-binding owner for (host, lang, identity). canonical_printings.apply only places such an owner's pb inside an option the owner selects True (canonical_printings.py:110). canonical_text allows exactly one chosen option per overlay. So the pb sits in the corrected option, and guards() reports `wording` as a guarded feature with that owner as caller. `not expected` rejects the case where nothing selects the wording, so no unguarded wording can bind. The prior required change is resolved without a post-apply guard check.",
+    "A literal_provider item that also carries `wording` fails closed. printing bindings require the host to be a canonical_home, so the owners set is empty and expected is empty.",
+    "follows: _pattern, corrected_text and the raw/projection checks all include follows. apply_bound_corrections compares the corr projection with corrected_text(original), so the follows text must survive unchanged in the output. That holds as long as authoring.apply_corrections handles follows as context, as described. I did not read that code.",
+    "Minor, not required: in _bind_printing_correction, other_texts leaves out every choice whose corresp equals `wording`, including choices in overlays on other identities in the same host. If another identity's overlay reused the same condition URN and its text contained the pattern, binding would succeed. apply_bound_corrections would then fail closed, because corrected_text needs count == 1 over the whole-file projection, and the xpath would match two options. A tighter rule would leave out only options[0]'s choice, and require the xpath to resolve to exactly one j:option in the generated file.",
+    "Optional hardening, carried over from the prior review: touches() does not look at repeat_cue target/corresp or citations, for dedicated homes or literal providers. If any generator turns those into transclusions of the target's words, add them, following the check_citations walk at realizations.py:418-440.",
+    "Older gap, unchanged and outside this fix: a file with no pointers of its own is not 'realized', so it is not guarded, even when other units point at it with canonical. Unbound corrections to such a file still pass the old guard. The new code neither widens nor closes this."
+  ],
+  "limitations": [
+    "Read-only review. I ran nothing. The 255-test, 341-subtest pass and the both-printings and 857 proofs come from the artifacts you supplied; I did not re-read them for this pass.",
+    "I did not read authoring.apply_corrections, which handles follows and multiple xpath matches, or the rest of validate_generated after line 749, which enforces the guards. My claims about failing closed in those places rest on their documented behaviour and the prior review.",
+    "I did not read /tmp/mahzor-s346/combined-draft-corrections.json or combined-draft-readings.json, so I have not checked that the five migrated corrections use the literal_provider shape correctly, or that none of their owners has text_corresp.",
+    "Full source, spines, registry and export integration are out of scope and not approved."
+  ],
+  "invocation": {
+    "model_usage": [
+      "claude-opus-5-5"
+    ],
+    "configured_model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "8981d99f-072b-46da-8061-2a2d23a5dfaa"
+  }
+}

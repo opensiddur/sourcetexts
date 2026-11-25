@@ -1,0 +1,39 @@
+You are the required independent second reader performing a FINAL targeted non-Torah source-fidelity and JLPTEI guideline audit. Earlier blind readings and full-page audits he-1..he-4 already exist; this is final adjudication, not a blind reading. Record actual model and actual self-reported reasoning setting separately from CLI configured medium. Read CURRENT source units and images, not stale excerpts in old reports. Compare the non-Torah prayer words, rubrics, speaker cues, pointing, punctuation, omissions, variants, and source quotation extents against the images. Check adherence to the general encoding guidelines in JLPTEI-3.md, including instruction handling, variant conditions, milestones and bounded quote scopes, sic/corr, and supplied text. Do NOT reopen any exact-occurrence human adjudication, even if unusual or it differs from standard liturgical wording. Human decisions override earlier AI guesses. Crops60–62/71 were primary-only adjudication, not unanswered questions. The seven TORAH quotations have been image-adjudicated and their printed cantillation encoded; do not transcribe/audit those again in this pass. Other pointed-only passages must NOT acquire familiar canonical accents. Do not propose synthetic normalization from memory. No generic 'fine marks remain' findings: give specific word, letter, current reading, proposed exact reading, confidence and image location. Do not assert a source typo without evidence. The documentary heading of the repetition already occurs exactly once in the structural spine index.xml; no duplicate module head is needed. The correct repository canonical reference for 'וכל העם ראים' is Exodus20:18, verified in both local Bible projects and schema division table; earlier proposal20:15 is rejected. Mark this as resolved, not an issue. Optional מלכנו/של יעקב/כל are marked variant CONDITIONS now, with true/false/unset compiler checks. The raw historical he-X proposals are not a count of unresolved readings. Hebrew scan208 and seven Hebrew witnesses wholly within206/208/210 have just been accepted after all original scoped findings were resolved; only identify a NEW concrete error there if actually present. No acceptance counters or status mutations are authorized for you. Your role is an independent review report only.
+IMPORTANT remaining detail204 items: inspect the full lines omitted by the earlier split crops (בבחירתך line, and later לפניך/חובותינו line), יהי, and the complete ארץ word. A prior detail reader could not read split/missing crops. Do not infer meteg from suffix patterns; identify its actual host. Human42a confirms PLENE ירושלים with patah/meteg under lamed, hiriq under actual yod and NO CGJ. Human42b confirms defective spelling in Isaiah27:13, qamatz/meteg/CGJ/hiriq under lamed. General Jerusalem compound pattern is vowel+meteg+CGJ+hiriq only when BOTH vowels belong under lamed.
+Read these files:
+/tmp/mahzor-s200/closure/final-non-torah-input.json
+/home/efeins/.codex/worktrees/marmorstein-processor/master/schema/JLPTEI-3.md
+/tmp/mahzor-s200/closure/closure-resolutions.json
+/tmp/mahzor-s200/closure/heading-resolution.json
+/tmp/mahzor-s200/closure/torah-four-resolutions.json
+ALL human adjudications (exact occurrences only):
+/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/musaf_s200_s223_snippets_17_24_adjudication.json
+/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/musaf_s200_s223_snippets_1_8_adjudication.json
+/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/musaf_s200_s223_snippets_25_32_adjudication.json
+/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/musaf_s200_s223_snippets_33_40_adjudication.json
+/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/musaf_s200_s223_snippets_41_48_adjudication.json
+/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/musaf_s200_s223_snippets_49_51_adjudication.json
+/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/musaf_s200_s223_snippets_52_59_adjudication.json
+/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/musaf_s200_s223_snippets_63_70_adjudication.json
+/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/musaf_s200_s223_snippets_9_16_adjudication.json
+Earlier audits for disposition checking:
+/tmp/mahzor-s200/closure/he-1.json
+/tmp/mahzor-s200/closure/he-2.json
+/tmp/mahzor-s200/closure/he-3.json
+/tmp/mahzor-s200/closure/he-4.json
+/tmp/mahzor-s200/closure/detail204.json
+SOURCE IMAGES:
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s204.jpg
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s206.jpg
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s208.jpg
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s210.jpg
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s212.jpg
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s214.jpg
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s216.jpg
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s218.jpg
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s220.jpg
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_1/pages/s222.jpg
+Generated XML directory (read index.xml and relevant files matching the unit stems above):
+/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/
+Inspect at least musaf_uppad_meaz.xml, musaf_misod_chakhamim.xml, musaf_shofarot_verses.xml, musaf_zikhronot_verses.xml, musaf_malkhuyot_close.xml, musaf_umippenei.xml, and musaf_repetition_avot_open.xml.
+Return ONLY valid JSON object with reviewer:{model,effort}, scope, findings:[{scan,stem,current,replacement,reason,image_location,confidence}], questions:[{scan,stem,word,letter,question,image_location}], guideline_findings:[{file,finding,severity}], resolved_previous_findings:[...], pages:[{scan,non_torah_body_checked,source_complete,remaining_specific_findings}], approved:boolean. You may approve only when no substantive unresolved source/guideline findings remain in this scoped audit. Human-displayed snippets63–70 are resolved; never ask them again.

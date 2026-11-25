@@ -1,0 +1,100 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "low: exact-delta adjudication. I re-read 3 enlarged crops (halleluyah, alah-comma, ps47-maqaf). I did not re-read whole pages."
+  },
+  "witnesses": [
+    {
+      "stem": "shofar_ribbon_haolamim_banekha",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "Only change is the comma in 'הָעוֹלָמִים, בָּנֶיךָ' (s184), confirmed by both the full review and the enlarged crop. Every other byte matches the frozen 'before' receipt. The Ps 47:6 quotation on s184 keeps its printed no-comma form.",
+        "Quotation-scoped chapter/verse milestones for alah/6 and yihyu/15 are each followed by their own terminators, and the prayer-part terminator closes the paragraph. HE and EN carry the same corresp set.",
+        "EN matches the receipt and shard-08 byte for byte."
+      ]
+    },
+    {
+      "stem": "shofar_yehi_ratzon",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "Only changes: 'כָּל־הַמְּסָכִים' and 'בֵּינְךָ' (nun sheva). The full review and the enlarged crop agree on both. All other words are unchanged from the receipt.",
+        "The prayer-part opens and terminates cleanly. The editorial omission note is unchanged.",
+        "EN, including the accepted sic/corr by→be, is identical to shard-08."
+      ]
+    },
+    {
+      "stem": "shofar_alah_elohim",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "Comma after בִּתְרוּעָה in this s186 printing only. The crop shows hiriq under the bet, so 'בַּתְּרוּעָה' in the enlarged review is a reviewer slip, not a source reading. The s184/s188 printings still have no comma, so nothing was propagated.",
+        "The occurrence URN alah_elohim/psalms_47/6 carries source=psalms/47/6 and does not duplicate the canonical verse. It has verse and chapter terminators.",
+        "EN is identical to shard-09."
+      ]
+    },
+    {
+      "stem": "shofar_psalm_47",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "Human 282 (maqaf in 'כִּי־יְיָ', v.3) is applied in both JSON and XML as 'כִּי־<j:divineName>יְיָ</j:divineName>'. The crop shows the stroke. No other verse changed. v.8 'כִּי מֶלֶךְ' and v.6 without a comma are kept as printed.",
+        "The canonical psalms/47 chapter and v.1–10 milestones each appear once, with terminators. The whole chapter is printed, so complete_chapters is valid. pb 83 falls before אֲשֶׁר־אָהֵב in HE and before 'Shofar.' in EN.",
+        "EN is identical to shard-09."
+      ]
+    },
+    {
+      "stem": "shofar_harei_ani",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "Only change: comma after בַּתּוֹרָה, placed before the quotation milestones. All other words match the receipt.",
+        "Num 29:1/b half-verse, verse and chapter terminators come before the prayer-part terminator.",
+        "This unit is Hebrew only. No English was added."
+      ]
+    }
+  ],
+  "citations": [],
+  "instructions": {
+    "shofar_s184_continue_189_he": {
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "note": "The crop reads 'ויאמר מזמור קמ״ט הללויה שירו' with one yod, which matches the current text. 'קפ״ט' in the enlarged review is a reviewer misreading: the crop shows קמ״ט, and the full review verified קמ״ט. The rest of the line was already verified in the full review. וכו׳ has abbr/expan, and the numeral has no abbreviation markup. It is a directive with no page reference, and the structure is unchanged."
+    }
+  },
+  "prior_full_review_used": true,
+  "limits": [
+    "current.json has no raw attached or standoff notes, so citations is empty. Each unit's inline instruction note was checked under its witness, as were the biblical source attributes.",
+    "I compared the English to the receipts and the proof file by eye. I did not hash it.",
+    "Whether psalms/47 verse URNs are unique across the whole project is still unchecked. I did not scan outside these files.",
+    "The enlarged review left vowels away from the mem in הַמְּסָכִים outside its target. The full review's word-by-word match covers them, and I did not reopen them."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "bf3d0668-99ef-4b4c-9896-fb2d2eb90530"
+  }
+}

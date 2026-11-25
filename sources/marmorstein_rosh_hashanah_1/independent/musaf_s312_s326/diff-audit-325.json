@@ -1,0 +1,88 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "low"
+  },
+  "scan": "s325",
+  "images_read": [
+    "/tmp/mahzor-s312/audit-s325-strip1.png",
+    "/tmp/mahzor-s312/audit-s325-strip2.png",
+    "/tmp/mahzor-s312/audit-s325-strip3.png",
+    "/tmp/mahzor-s312/audit-s325-strip4.png",
+    "/tmp/mahzor-s312/audit-s325-strip5.png",
+    "/tmp/mahzor-s312/audit-s325-strip6.png",
+    "/tmp/mahzor-s312/audit-s325-strip7.png",
+    "/tmp/mahzor-s312/audit-s325-strip8.png",
+    "/tmp/mahzor-s312/audit-s325-strip9.png",
+    "/tmp/mahzor-s312/audit-s325-strip10.png"
+  ],
+  "decisions": [
+    {
+      "id": 99,
+      "choice": "B",
+      "literal": "אֲבֹתֵינוּ",
+      "reason": "Strip 2, line 3 (start of the line): 'וֵאלֹהֵי אֲבֹתֵינוּ שֶׁנִּשְׁמוֹר'. The word is printed defective, with a holam on the bet and no vav. A's 'אֲבוֹתֵֽינוּ' adds a vav that isn't printed.",
+      "uncertainty": "low for the missing vav; medium on whether there is a meteg under the tav. I see none at this resolution, but it's small enough that I could have missed it."
+    },
+    {
+      "id": 100,
+      "choice": "B",
+      "literal": "חז",
+      "reason": "Strips 5 and 6: a small two-letter marker 'חז' is printed before 'יִתְגַּדַּל'. There is no final nun. It is a speaker label (instruction), not prayer text.",
+      "uncertainty": "low-medium; the glyphs are small, but they show two letters."
+    },
+    {
+      "id": 101,
+      "choice": "B",
+      "literal": "אָמֵן.",
+      "reason": "Strip 6, line 3: 'וּבִזְמַן קָרִיב, וְאִמְרוּ אָמֵן.' It ends with a period-like dot, not a sof-pasuq colon. The next line ('עָלְמַיָּא.') ends with the same mark. The closing amen at strip 7 does have a colon ('אָמֵן:'), which shows the printer used the two marks differently.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 102,
+      "choice": "B",
+      "literal": "מִן־כָּל־בִּרְכָתָא",
+      "reason": "Strip 7, line 4: 'וּלְעֵלָּא מִן־כָּל־בִּרְכָתָא'. A separate 'מִן' with a final nun and a maqaf is clearly printed. A's 'מִכָּל' is the familiar Rosh Hashana form, not what this page prints.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 103,
+      "choice": "B",
+      "literal": "וְנֶחֱמָתָא",
+      "reason": "Strip 7, line 4 (end): the het carries a hataf-segol ('וְנֶחֱמָתָא'), not a qamats/patah.",
+      "uncertainty": "low-medium; the hataf is small, but it looks like segol plus shewa."
+    },
+    {
+      "id": 104,
+      "choice": "B",
+      "literal": "(On Sabbath)",
+      "reason": "Strips 7 and 8: the italic rubric is printed in parentheses. It is an instruction, not prayer text. Kept with its printed punctuation.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 105,
+      "choice": "B",
+      "literal": "(וַאֲנִי",
+      "reason": "Strip 8: the whole verse line is enclosed in parentheses. The opening '(' is printed directly before 'וַאֲנִי'. The parenthesis is printed punctuation and could be kept as markup outside the word if the schema prefers.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 106,
+      "choice": "B",
+      "literal": "יִשְׁעֶךָ:)",
+      "reason": "Strip 8: the line ends 'בֶּאֱמֶת יִשְׁעֶךָ:)', so it has a colon and then a closing parenthesis. I see no meteg under the ayin, which supports B over A's 'יִשְׁעֶֽךָ'.",
+      "uncertainty": "medium on the meteg's absence at this resolution; low on the parentheses and colon."
+    }
+  ],
+  "additional_source_errors": [],
+  "unresolved": [
+    "id 99: confirm there is no meteg under the tav of אֲבֹתֵינוּ with a higher-zoom crop",
+    "id 106: confirm there is no meteg under the ayin of יִשְׁעֶךָ with a higher-zoom crop"
+  ],
+  "scope": "Only these differences; not whole-page acceptance",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "30f9388f-eaf3-4bd9-b560-0f67d28511c6"
+  }
+}

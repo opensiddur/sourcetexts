@@ -1,0 +1,56 @@
+[
+  {
+    "element": "t:div",
+    "attributes": {
+      "{http://www.w3.org/XML/1998/namespace}id": "section_musaf_weekday_shofarot"
+    },
+    "direct_scope_nodes": [
+      "<j:conditional xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\" xmlns:tei=\"http://www.tei-c.org/ns/1.0\" xml:id=\"section_musaf_weekday_shofarot_condition\">\n                        <tei:note type=\"instruction\"><tei:foreign xml:lang=\"he\" resp=\"urn:x-opensiddur:contributor:opensiddur.org/codex\">בחול.</tei:foreign> <tei:foreign xml:lang=\"en\" resp=\"urn:x-opensiddur:contributor:opensiddur.org/codex\">On weekdays.</tei:foreign> </tei:note>\n                        <j:all>\n                          <tei:fs type=\"opensiddur:holiday-aggregate\">\n                            <tei:f name=\"shabbat\">\n                              <tei:binary value=\"false\"/>\n                            </tei:f>\n                          </tei:fs>\n                        </j:all>\n                      </j:conditional>",
+      "<j:endConditional xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\" xmlns:tei=\"http://www.tei-c.org/ns/1.0\" target=\"#section_musaf_weekday_shofarot_condition\"/>"
+    ]
+  },
+  {
+    "element": "t:div",
+    "attributes": {},
+    "direct_scope_nodes": [
+      "<j:declare xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\" xmlns:tei=\"http://www.tei-c.org/ns/1.0\" xml:id=\"section_musaf_repetition_s220_settings\">\n                      <tei:fs type=\"opensiddur:recitation\">\n                        <tei:f name=\"silent\">\n                          <tei:binary value=\"false\"/>\n                        </tei:f>\n                        <tei:f name=\"repetition\">\n                          <tei:binary value=\"true\"/>\n                        </tei:f>\n                      </tei:fs>\n                    </j:declare>",
+      "<j:endDeclare xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\" xmlns:tei=\"http://www.tei-c.org/ns/1.0\" target=\"#section_musaf_repetition_s220_settings\"/>"
+    ]
+  },
+  {
+    "element": "t:div",
+    "attributes": {
+      "{http://www.w3.org/XML/1998/namespace}id": "section_musaf_repetition_s220"
+    },
+    "direct_scope_nodes": [
+      "<j:conditional xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\" xmlns:tei=\"http://www.tei-c.org/ns/1.0\" xml:id=\"section_musaf_repetition_s220_condition\">\n                    <j:all>\n                      <tei:fs type=\"opensiddur:quorum\">\n                        <tei:f name=\"minyan\">\n                          <tei:binary value=\"true\"/>\n                        </tei:f>\n                      </tei:fs>\n                    </j:all>\n                  </j:conditional>",
+      "<j:endConditional xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\" xmlns:tei=\"http://www.tei-c.org/ns/1.0\" target=\"#section_musaf_repetition_s220_condition\"/>"
+    ]
+  },
+  {
+    "element": "t:div",
+    "attributes": {},
+    "direct_scope_nodes": [
+      "<j:declare xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\" xmlns:tei=\"http://www.tei-c.org/ns/1.0\" xml:id=\"section_musaf_draft_s200_settings\">\n                  <tei:fs type=\"opensiddur:service-time\">\n                    <tei:f name=\"shaharit\">\n                      <tei:binary value=\"false\"/>\n                    </tei:f>\n                    <tei:f name=\"musaf\">\n                      <tei:binary value=\"true\"/>\n                    </tei:f>\n                    <tei:f name=\"minha\">\n                      <tei:binary value=\"false\"/>\n                    </tei:f>\n                    <tei:f name=\"maariv\">\n                      <tei:binary value=\"false\"/>\n                    </tei:f>\n                    <tei:f name=\"neila\">\n                      <tei:binary value=\"false\"/>\n                    </tei:f>\n                    <tei:f name=\"slihot\">\n                      <tei:binary value=\"false\"/>\n                    </tei:f>\n                  </tei:fs>\n                </j:declare>",
+      "<j:endDeclare xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\" xmlns:tei=\"http://www.tei-c.org/ns/1.0\" target=\"#section_musaf_draft_s200_settings\"/>"
+    ]
+  },
+  {
+    "element": "t:div",
+    "attributes": {},
+    "direct_scope_nodes": [
+      "<j:declare xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\" xmlns:tei=\"http://www.tei-c.org/ns/1.0\" xml:id=\"section_morning_settings\">\n              <tei:fs type=\"opensiddur:service-time\">\n                <tei:f name=\"shaharit\">\n                  <tei:binary value=\"true\"/>\n                </tei:f>\n                <tei:f name=\"minha\">\n                  <tei:binary value=\"false\"/>\n                </tei:f>\n                <tei:f name=\"maariv\">\n                  <tei:binary value=\"false\"/>\n                </tei:f>\n                <tei:f name=\"musaf\">\n                  <tei:binary value=\"false\"/>\n                </tei:f>\n                <tei:f name=\"neila\">\n                  <tei:binary value=\"false\"/>\n                </tei:f>\n                <tei:f name=\"slihot\">\n                  <tei:binary value=\"false\"/>\n                </tei:f>\n              </tei:fs>\n              <tei:fs type=\"opensiddur:holiday\">\n                <tei:f name=\"rosh-hashana\">\n                  <tei:numeric value=\"1\"/>\n                </tei:f>\n              </tei:fs>\n            </j:declare>",
+      "<j:endDeclare xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\" xmlns:tei=\"http://www.tei-c.org/ns/1.0\" target=\"#section_morning_settings\"/>"
+    ]
+  },
+  {
+    "element": "t:div",
+    "attributes": {
+      "{http://www.w3.org/XML/1998/namespace}id": "section_morning"
+    },
+    "direct_scope_nodes": [
+      "<j:conditional xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\" xmlns:tei=\"http://www.tei-c.org/ns/1.0\" xml:id=\"section_morning_condition\">\n            <j:all>\n              <tei:fs type=\"opensiddur:service-time\">\n                <tei:f name=\"shaharit\">\n                  <tei:binary value=\"true\"/>\n                </tei:f>\n              </tei:fs>\n              <tei:fs type=\"opensiddur:holiday\">\n                <tei:f name=\"rosh-hashana\">\n                  <tei:numeric value=\"1\"/>\n                </tei:f>\n              </tei:fs>\n            </j:all>\n          </j:conditional>",
+      "<j:endConditional xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\" xmlns:tei=\"http://www.tei-c.org/ns/1.0\" target=\"#section_morning_condition\"/>"
+    ]
+  }
+]

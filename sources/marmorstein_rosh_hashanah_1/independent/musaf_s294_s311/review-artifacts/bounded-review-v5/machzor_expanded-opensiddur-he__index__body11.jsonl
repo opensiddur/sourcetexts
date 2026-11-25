@@ -1,0 +1,350 @@
+{"text":"\n                "}
+{"start":"t:head","attrs":{"{http://www.w3.org/XML/1998/namespace}lang":"he"}}
+{"text":"ברכות קריאת שמע"}
+{"end":"t:head"}
+{"tail":"\n                "}
+{"start":"t:head","attrs":{"{http://www.w3.org/XML/1998/namespace}lang":"en"}}
+{"text":"Blessings before the Shema"}
+{"end":"t:head"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:prayer:yotzer_or/opening"}}
+{"end":"j:transclude"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:poem:or_olam_beotzar_chayyim"}}
+{"end":"j:transclude"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:poem:melekh_azur_gevurah"}}
+{"end":"j:transclude"}
+{"tail":"\n                "}
+{"start":"t:div","attrs":{"{http://www.w3.org/XML/1998/namespace}id":"section_yotzer_weekday"}}
+{"text":"\n                  "}
+{"start":"j:conditional","attrs":{"{http://www.w3.org/XML/1998/namespace}id":"section_yotzer_weekday_condition"}}
+{"text":"\n                    "}
+{"start":"t:note","attrs":{"type":"instruction"}}
+{"start":"t:foreign","attrs":{"{http://www.w3.org/XML/1998/namespace}lang":"he"}}
+{"text":"ביום חול"}
+{"end":"t:foreign"}
+{"tail":" "}
+{"start":"t:foreign","attrs":{"{http://www.w3.org/XML/1998/namespace}lang":"en"}}
+{"text":"On a weekday"}
+{"end":"t:foreign"}
+{"tail":" "}
+{"end":"t:note"}
+{"tail":"\n                    "}
+{"start":"j:all","attrs":{}}
+{"text":"\n                      "}
+{"start":"t:fs","attrs":{"type":"opensiddur:holiday-aggregate"}}
+{"text":"\n                        "}
+{"start":"t:f","attrs":{"name":"shabbat"}}
+{"text":"\n                          "}
+{"start":"t:binary","attrs":{"value":"false"}}
+{"end":"t:binary"}
+{"tail":"\n                        "}
+{"end":"t:f"}
+{"tail":"\n                      "}
+{"end":"t:fs"}
+{"tail":"\n                    "}
+{"end":"j:all"}
+{"tail":"\n                  "}
+{"end":"j:conditional"}
+{"tail":"\n                  "}
+{"start":"t:div","attrs":{}}
+{"text":"\n                    "}
+{"start":"j:declare","attrs":{"{http://www.w3.org/XML/1998/namespace}id":"section_yotzer_weekday_settings"}}
+{"text":"\n                      "}
+{"start":"t:fs","attrs":{"type":"opensiddur:holiday-aggregate"}}
+{"text":"\n                        "}
+{"start":"t:f","attrs":{"name":"shabbat"}}
+{"text":"\n                          "}
+{"start":"t:binary","attrs":{"value":"false"}}
+{"end":"t:binary"}
+{"tail":"\n                        "}
+{"end":"t:f"}
+{"tail":"\n                      "}
+{"end":"t:fs"}
+{"tail":"\n                    "}
+{"end":"j:declare"}
+{"tail":"\n                    "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:prayer:yotzer_or/hameir"}}
+{"end":"j:transclude"}
+{"tail":"\n                    "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:prayer:yotzer_or/el_barukh"}}
+{"end":"j:transclude"}
+{"tail":"\n                    "}
+{"start":"j:endDeclare","attrs":{"target":"#section_yotzer_weekday_settings"}}
+{"end":"j:endDeclare"}
+{"tail":"\n                  "}
+{"end":"t:div"}
+{"tail":"\n                  "}
+{"start":"j:endConditional","attrs":{"target":"#section_yotzer_weekday_condition"}}
+{"end":"j:endConditional"}
+{"tail":"\n                "}
+{"end":"t:div"}
+{"tail":"\n                "}
+{"start":"t:div","attrs":{"{http://www.w3.org/XML/1998/namespace}id":"section_yotzer_shabbat"}}
+{"text":"\n                  "}
+{"start":"j:conditional","attrs":{"{http://www.w3.org/XML/1998/namespace}id":"section_yotzer_shabbat_condition"}}
+{"text":"\n                    "}
+{"start":"t:note","attrs":{"type":"instruction"}}
+{"start":"t:foreign","attrs":{"{http://www.w3.org/XML/1998/namespace}lang":"he"}}
+{"text":"בשבת:"}
+{"end":"t:foreign"}
+{"tail":" "}
+{"start":"t:foreign","attrs":{"{http://www.w3.org/XML/1998/namespace}lang":"en"}}
+{"text":"On Shabbat:"}
+{"end":"t:foreign"}
+{"tail":" "}
+{"end":"t:note"}
+{"tail":"\n                    "}
+{"start":"j:all","attrs":{}}
+{"text":"\n                      "}
+{"start":"t:fs","attrs":{"type":"opensiddur:holiday-aggregate"}}
+{"text":"\n                        "}
+{"start":"t:f","attrs":{"name":"shabbat"}}
+{"text":"\n                          "}
+{"start":"t:binary","attrs":{"value":"true"}}
+{"end":"t:binary"}
+{"tail":"\n                        "}
+{"end":"t:f"}
+{"tail":"\n                      "}
+{"end":"t:fs"}
+{"tail":"\n                    "}
+{"end":"j:all"}
+{"tail":"\n                  "}
+{"end":"j:conditional"}
+{"tail":"\n                  "}
+{"start":"t:div","attrs":{}}
+{"text":"\n                    "}
+{"start":"j:declare","attrs":{"{http://www.w3.org/XML/1998/namespace}id":"section_yotzer_shabbat_settings"}}
+{"text":"\n                      "}
+{"start":"t:fs","attrs":{"type":"opensiddur:holiday-aggregate"}}
+{"text":"\n                        "}
+{"start":"t:f","attrs":{"name":"shabbat"}}
+{"text":"\n                          "}
+{"start":"t:binary","attrs":{"value":"true"}}
+{"end":"t:binary"}
+{"tail":"\n                        "}
+{"end":"t:f"}
+{"tail":"\n                      "}
+{"end":"t:fs"}
+{"tail":"\n                    "}
+{"end":"j:declare"}
+{"tail":"\n                    "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:prayer:yotzer_or/hakol_yodukha"}}
+{"end":"j:transclude"}
+{"tail":"\n                    "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:poem:el_adon"}}
+{"end":"j:transclude"}
+{"tail":"\n                    "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:prayer:yotzer_or/lael_asher_shavat"}}
+{"end":"j:transclude"}
+{"tail":"\n                    "}
+{"start":"j:endDeclare","attrs":{"target":"#section_yotzer_shabbat_settings"}}
+{"end":"j:endDeclare"}
+{"tail":"\n                  "}
+{"end":"t:div"}
+{"tail":"\n                  "}
+{"start":"j:endConditional","attrs":{"target":"#section_yotzer_shabbat_condition"}}
+{"end":"j:endConditional"}
+{"tail":"\n                "}
+{"end":"t:div"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:prayer:yotzer_or/titbarakh"}}
+{"end":"j:transclude"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:prayer:yotzer_or/et_shem"}}
+{"end":"j:transclude"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:prayer:yotzer_or/qadosh"}}
+{"end":"j:transclude"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:poem:khevodo_ihel"}}
+{"end":"j:transclude"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:prayer:yotzer_or/vehaofannim"}}
+{"end":"j:transclude"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:prayer:yotzer_or/barukh_kevod"}}
+{"end":"j:transclude"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:prayer:yotzer_or/lael_barukh"}}
+{"end":"j:transclude"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:prayer:yotzer_or/or_chadash"}}
+{"end":"j:transclude"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:prayer:ahavah_rabbah"}}
+{"end":"j:transclude"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:prayer:shema/el_melekh_neeman"}}
+{"end":"j:transclude"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/shema_yisrael"}}
+{"end":"j:transclude"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/barukh_shem"}}
+{"end":"j:transclude"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/shema/deuteronomy_6"}}
+{"end":"j:transclude"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/shema/deuteronomy_11"}}
+{"end":"j:transclude"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/shema/numbers_15"}}
+{"end":"j:transclude"}
+{"tail":"\n                "}
+{"start":"t:note","attrs":{"type":"instruction","{http://www.w3.org/XML/1998/namespace}lang":"he"}}
+{"text":"יש לצרף אלהיכם לאמת, אכן יתן רוח מעט שלא יבולע הא׳."}
+{"end":"t:note"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:prayer:emet_veyatziv"}}
+{"end":"j:transclude"}
+{"tail":"\n              "}
+{"end":"t:div"}
+{"tail":"\n            "}
+{"end":"t:div"}
+{"tail":"\n            "}
+{"start":"t:div","attrs":{"{http://www.w3.org/XML/1998/namespace}id":"section_morning_silent_amidah"}}
+{"text":"\n              "}
+{"start":"j:conditional","attrs":{"{http://www.w3.org/XML/1998/namespace}id":"section_morning_silent_amidah_condition"}}
+{"text":"\n                "}
+{"start":"j:all","attrs":{}}
+{"text":"\n                  "}
+{"start":"t:fs","attrs":{"type":"opensiddur:recitation"}}
+{"text":"\n                    "}
+{"start":"t:f","attrs":{"name":"silent"}}
+{"text":"\n                      "}
+{"start":"t:binary","attrs":{"value":"true"}}
+{"end":"t:binary"}
+{"tail":"\n                    "}
+{"end":"t:f"}
+{"tail":"\n                  "}
+{"end":"t:fs"}
+{"tail":"\n                "}
+{"end":"j:all"}
+{"tail":"\n              "}
+{"end":"j:conditional"}
+{"tail":"\n              "}
+{"start":"t:div","attrs":{}}
+{"text":"\n                "}
+{"start":"t:head","attrs":{"{http://www.w3.org/XML/1998/namespace}lang":"he"}}
+{"text":"תפילת לחש"}
+{"end":"t:head"}
+{"tail":"\n                "}
+{"start":"t:head","attrs":{"{http://www.w3.org/XML/1998/namespace}lang":"en"}}
+{"text":"Silent Amidah"}
+{"end":"t:head"}
+{"tail":"\n                "}
+{"start":"j:declare","attrs":{"{http://www.w3.org/XML/1998/namespace}id":"section_morning_silent_amidah_settings"}}
+{"text":"\n                  "}
+{"start":"t:fs","attrs":{"type":"opensiddur:recitation"}}
+{"text":"\n                    "}
+{"start":"t:f","attrs":{"name":"silent"}}
+{"text":"\n                      "}
+{"start":"t:binary","attrs":{"value":"true"}}
+{"end":"t:binary"}
+{"tail":"\n                    "}
+{"end":"t:f"}
+{"tail":"\n                    "}
+{"start":"t:f","attrs":{"name":"repetition"}}
+{"text":"\n                      "}
+{"start":"t:binary","attrs":{"value":"false"}}
+{"end":"t:binary"}
+{"tail":"\n                    "}
+{"end":"t:f"}
+{"tail":"\n                  "}
+{"end":"t:fs"}
+{"tail":"\n                "}
+{"end":"j:declare"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/adonai_sefatai"}}
+{"end":"j:transclude"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/avot"}}
+{"end":"j:transclude"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/gevurot"}}
+{"end":"j:transclude"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/qedushat_hashem"}}
+{"end":"j:transclude"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/qedushat_hayom"}}
+{"end":"j:transclude"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/avodah"}}
+{"end":"j:transclude"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/hodaah"}}
+{"end":"j:transclude"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/shalom"}}
+{"end":"j:transclude"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/elohai_netzor"}}
+{"end":"j:transclude"}
+{"tail":"\n                "}
+{"start":"j:transclude","attrs":{"type":"external","target":"urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/silent_amidah/yehi_ratzon_temple"}}
+{"end":"j:transclude"}
+{"tail":"\n                "}
+{"start":"j:endDeclare","attrs":{"target":"#section_morning_silent_amidah_settings"}}
+{"end":"j:endDeclare"}
+{"tail":"\n              "}
+{"end":"t:div"}
+{"tail":"\n              "}
+{"start":"j:endConditional","attrs":{"target":"#section_morning_silent_amidah_condition"}}
+{"end":"j:endConditional"}
+{"tail":"\n            "}
+{"end":"t:div"}
+{"tail":"\n            "}
+{"start":"t:div","attrs":{"{http://www.w3.org/XML/1998/namespace}id":"section_morning_repetition"}}
+{"text":"\n              "}
+{"start":"j:conditional","attrs":{"{http://www.w3.org/XML/1998/namespace}id":"section_morning_repetition_condition"}}
+{"text":"\n                "}
+{"start":"j:all","attrs":{}}
+{"text":"\n                  "}
+{"start":"t:fs","attrs":{"type":"opensiddur:recitation"}}
+{"text":"\n                    "}
+{"start":"t:f","attrs":{"name":"repetition"}}
+{"text":"\n                      "}
+{"start":"t:binary","attrs":{"value":"true"}}
+{"end":"t:binary"}
+{"tail":"\n                    "}
+{"end":"t:f"}
+{"tail":"\n                  "}
+{"end":"t:fs"}
+{"tail":"\n                  "}
+{"start":"t:fs","attrs":{"type":"opensiddur:quorum"}}
+{"text":"\n                    "}
+{"start":"t:f","attrs":{"name":"minyan"}}
+{"text":"\n                      "}
+{"start":"t:binary","attrs":{"value":"true"}}
+{"end":"t:binary"}
+{"tail":"\n                    "}
+{"end":"t:f"}
+{"tail":"\n                  "}
+{"end":"t:fs"}
+{"tail":"\n                "}
+{"end":"j:all"}
+{"tail":"\n              "}
+{"end":"j:conditional"}
+{"tail":"\n              "}
+{"start":"t:div","attrs":{}}
+{"text":"\n                "}
+{"start":"t:head","attrs":{"{http://www.w3.org/XML/1998/namespace}lang":"he"}}
+{"text":"חזרת התפלה לשליח צבור"}
+{"end":"t:head"}
+{"tail":"\n                "}
+{"start":"t:head","attrs":{"{http://www.w3.org/XML/1998/namespace}lang":"en"}}
+{"text":"Repetition of the Amidah"}
+{"end":"t:head"}
+{"tail":"\n                "}
+{"start":"j:declare","attrs":{"{http://www.w3.org/XML/1998/namespace}id":"section_morning_repetition_settings"}}
+{"text":"\n                  "}
+{"start":"t:fs","attrs":{"type":"opensiddur:recitation"}}
+{"text":"\n                    "}
+{"start":"t:f","attrs":{"name":"repetition"}}
+{"text":"\n                      "}
+{"start":"t:binary","attrs":{"value":"true"}}
+{"end":"t:binary"}

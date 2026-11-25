@@ -1,0 +1,107 @@
+{
+  "reviews": [
+    {
+      "file": "independent/morning8_s52_s55.json",
+      "saved_result_sha256": "d64e619fdd940bd7caf0a6c52e70761e81aaedd2238e233017381de8a8e21bab",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "3466aaa7-6921-453c-ae44-8e52195957d0"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "effort": "low"
+      },
+      "response_model_identifiers": [
+        "claude-opus-5-5"
+      ],
+      "raw_response_sha256": "c7ba3083e2dc6ecc48958b411c1fcde601e85900440516b4456e73a67cc526f9"
+    },
+    {
+      "file": "independent/morning8_s52_s55_enlarged.json",
+      "saved_result_sha256": "f6be06c689c86efb7f786ab01bba66a3c87c57fce7c39b7b62c88bce02e55636",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "276e089f-62c9-4cac-883b-bc523e37d72b"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "effort": "low"
+      },
+      "response_model_identifiers": [
+        "claude-opus-5-5"
+      ],
+      "raw_response_sha256": "090ddca4ff37585acd2315f99f5515e00a39e1da7a7ec4b8ff06478dd6433085"
+    },
+    {
+      "file": "independent/morning8_s52_s55_accents.json",
+      "saved_result_sha256": "ce99e7c48eb67d0674c6bde88523ae7457823b4d8beb8b759552b617165e6c69",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "cb8a6a27-4f08-4247-8613-a84ea742d6f9"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "effort": "low (single visual pass over three crops plus full scan s55; no enlarged sub-crops possible without code)"
+      },
+      "response_model_identifiers": [
+        "claude-opus-5-5"
+      ],
+      "raw_response_sha256": "4a2c9604bb6a4a4546b72301c27f8afbc0a9fd6aa3f32af0ee43d0ccffde4b01"
+    },
+    {
+      "file": "independent/morning8_s52_s55_tight.json",
+      "saved_result_sha256": "367c333c965527b3d2ea903515dff9fad45fa08ba9c76a3d4c269d56126a45e4",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "baf9d3fa-499e-4bf0-9b18-09ce4647a719"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "effort": "low (visual pass over all 10 tight crops plus s52-0/1/2; no enlargement beyond the supplied crops)"
+      },
+      "response_model_identifiers": [
+        "claude-opus-5-5"
+      ],
+      "raw_response_sha256": "d5c63aea4639e4ca0ddb296f96668517d90f775c1dc38fbdfd86a2532a64ed5a"
+    },
+    {
+      "file": "independent/morning8_s52_s55_final_micro.json",
+      "saved_result_sha256": "eafae525d45f3328fb79e730fdaaded5890a2205354ede2801441b0c068f707e",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "96e1d0ea-202f-4c8a-87a5-ff714185cd0f"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "effort": "low"
+      },
+      "response_model_identifiers": [
+        "claude-opus-5-5"
+      ],
+      "raw_response_sha256": "240a1de3da2409702973d14b784cf41357ed92ecb8369ae355388f90e93d4be9"
+    },
+    {
+      "file": "independent/morning8_guideline_audit.json",
+      "saved_result_sha256": "1facbb707f3c624f51c9fc518c41e294c997adc79c887f6a3704610f2054ec1a",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "f146aee2-c87e-4800-9015-22569f57a20f"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "effort": "medium (read every listed XML and evidence file in full and the JLPTEI-3 guidelines; no code, settings or YAML read; marks were checked by reading the text, with no byte-level Unicode tooling)"
+      },
+      "response_model_identifiers": [
+        "claude-opus-5-5"
+      ],
+      "raw_response_sha256": "ada5d69a53a5313e0024acb8f77b469ea9f0318b5005bf447ba06eb4bca6017a"
+    }
+  ],
+  "effort_policy": "CLI configured medium and reader self-report are separately retained; self-reported low is not substituted for observed invocation, nor does invocation reveal hidden reasoning."
+}

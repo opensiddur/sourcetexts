@@ -1,0 +1,80 @@
+review:
+  model_identity: "System identifies me as Codex, an agent based on GPT-6. Exact deployed model variant and reasoning setting are not exposed to me."
+  task: /root/independent_pointing
+  independence: "Blind source-image review. No repository transcripts, OCR, prior reviews, or other readers' output inspected."
+  images_inspected:
+    - /tmp/mahzor-s346/adjudication-crops/s346-preparation.png
+    - /tmp/mahzor-s346/adjudication-crops/s347-retzeh.png
+    - /tmp/mahzor-s346/adjudication-crops/s347-veteerav.png
+    - /tmp/mahzor-s346/adjudication-crops/s347-modim.png
+  inspection_method: "Original images plus enlarged crops made from those same pixels in /tmp/mahzor-s346/third-reader-crops."
+preparation:
+  visible_metegs:
+    - {word: "מִלְּפָנֶֽיךָ", host: "נ", vowel: segol}
+    - {word: "אֱלֹהֵֽינוּ", host: "ה", vowel: tsere}
+    - {word: "אֲבוֹתֵֽינוּ", host: "ת", vowel: tsere}
+    - {branch: לכהנים, word: "שֶׁצִּוִּיתָֽנוּ", host: "ת", vowel: qamatz}
+    - {branch: להעם, word: "שֶׁצִּוִּֽיתָ", host: "ו", vowel: hiriq}
+    - {branch: להעם, word: "לְבָרְכֵֽנוּ", host: "כ", vowel: tsere}
+  transcription:
+    common_opening: "יְהִי רָצוֹן מִלְּפָנֶֽיךָ יְיָ אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ שֶׁתְּהִי הַבְּרָכָה הַזֹּאת"
+    kohanim_branch: "שֶׁצִּוִּיתָֽנוּ לְבָרֵךְ אֶת־עַמְּךָ יִשְׂרָאֵל"
+    people_branch: "שֶׁצִּוִּֽיתָ הַכֹּהֲנִים לְבָרְכֵֽנוּ"
+    common_ending: "בְּרָכָה שְׁלֵמָה וְלֹא־יִהְיֶה בָהּ מִכְשׁוֹל וְעָוֹן מֵעַתָּה וְעַד עוֹלָם:"
+  useful_absences:
+    - "No meteg visible in וֵאלֹהֵי."
+    - "No meteg visible in the common ending."
+  qualification: "The opening divine-name glyphs are the printed paired-yod form; their Unicode representation above is descriptive."
+retzeh:
+  visible_metegs:
+    - {word: "אֱלֹהֵֽינוּ", host: "ה", vowel: tsere}
+    - {word: "בֵּיתֶֽךָ", host: "ת", vowel: segol}
+    - {word: "עַמֶּֽךָ", location: last word, host: "מ", vowel: segol}
+  useful_absences:
+    - "No meteg visible in the earlier בְּעַמְּךָ."
+    - "No meteg visible in וְהָשֵׁב, בְּאַהֲבָה, or either יִשְׂרָאֵל."
+veteerav:
+  visible_metegs:
+    - {word: "עָלֶֽיךָ", host: "ל", vowel: segol}
+    - {word: "עֲתִירָתֵֽנוּ", host: "ת", vowel: tsere}
+    - {word: "בְּרַחֲמֶֽיךָ", host: "מ", vowel: segol}
+    - {word: "הָֽרַבִּים", host: "ה", vowel: qamatz}
+    - {word: "וְסֵֽדֶר", host: "ס", vowel: tsere}
+    - {word: "לִירוּשָׁלָֽ͏ִם", host: "ל", vowel: "qamatz; hiriq also beneath this lamed"}
+    - {word: "וְתֶחֱזֶֽינָה", host: "ז", vowel: segol}
+    - {word: "עֵינֵֽינוּ", host: "נ", vowel: tsere}
+  jerusalem:
+    consonants: לירושלם
+    printed_yod_before_final_mem: false
+    lamed_points: "Qamatz, meteg, and hiriq. The qamatz has a visible central downward stem; I read qamatz rather than patah."
+    requested_encoding: "ל + U+05B8 + U+05BD + U+034F + U+05B4"
+  useful_absences:
+    - "No meteg visible in the last line: נַעֲבָדְךָ בְּיִרְאָה כִּימֵי עוֹלָם וּכְשָׁנִים קַדְמֹנִיּוֹת."
+    - "No meteg visible in the second בְּרַחֲמִים."
+modim:
+  right_column:
+    visible_metegs:
+      - {word: "אֲנַֽחְנוּ", host: "נ", vowel: patah}
+      - {word: "אֱלֹהֵֽינוּ", host: "ה", vowel: tsere}
+      - {word: "אֲבוֹתֵֽינוּ", host: "ת", vowel: tsere}
+      - {word: "חַיֵּֽינוּ", location: "צוּר חַיֵּינוּ", host: "י", vowel: tsere}
+      - {word: "יִשְׁעֵֽנוּ", host: "ע", vowel: tsere}
+      - {word: "תְּהִלָּתֶֽךָ", host: "ת", vowel: segol}
+      - {word: "חַיֵּֽינוּ", location: "עַל חַיֵּינוּ", host: "י", vowel: tsere}
+      - {word: "בְּיָדֶֽךָ", host: "ד", vowel: segol}
+      - {word: "נִשְׁמוֹתֵֽינוּ", host: "ת", vowel: tsere}
+    nodeh_lekha: {reading: "נוֹדֶה לְךָ", dagesh_in_dalet: false, dagesh_in_lamed: false, meteg: false}
+  left_column:
+    visible_metegs:
+      - {word: "אֲנַֽחְנוּ", location: opening line, host: "נ", vowel: patah}
+      - {word: "אֱלֹהֵֽינוּ", host: "ה", vowel: tsere}
+      - {word: "אֲבוֹתֵֽינוּ", host: "ת", vowel: tsere, appearance: "Stroke touches or nearly touches the tav's descending left foot; enlarged pixels support reading a meteg beside the tsere."}
+      - {word: "תְּחַיֵּֽנוּ", host: "י", vowel: tsere}
+    veleavdekha: {reading: "וּלְעָבְדְּךָ", dagesh_in_bet: false, dagesh_in_dalet: true, initial_vav: shuruk, meteg: false}
+    useful_absences:
+      - "No meteg visible in the final שֶׁאֲנַחְנוּ."
+      - "No meteg visible in שֶׁהֶחֱיִיתָנוּ or וְקִיַּמְתָּנוּ."
+      - "No additional meteg visible in the lower lines through הַהוֹדָאוֹת."
+uncertainties:
+  - "Left-column אֲבוֹתֵינוּ has joined ink around the tav foot and meteg. I judge the meteg present, with lower confidence than the detached right-column occurrence."
+  - "The preparation word הַזֹּאת has an ink/scan defect within its letters. Its full pointing is less cleanly preserved than the surrounding words."

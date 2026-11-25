@@ -1,0 +1,96 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "scope": "Round 2 independent code audit of the canonical-realization importer (realizations.py, build.py, verify.py, tests.py), checked against the frozen data.json extract, payloads.json and the round1 findings",
+  "approved": true,
+  "files_read": [
+    "/tmp/mahzor-s224/canonical-code-round1/review.json",
+    "/tmp/mahzor-s224/canonical-code-round2/realizations.py",
+    "/tmp/mahzor-s224/canonical-code-round2/build.py",
+    "/tmp/mahzor-s224/canonical-code-round2/verify.py",
+    "/tmp/mahzor-s224/canonical-code-round2/tests.py",
+    "/tmp/mahzor-s224/canonical-code-round2/data.json",
+    "/tmp/mahzor-s224/canonical-code-round2/payloads.json"
+  ],
+  "findings": [
+    {
+      "severity": "medium",
+      "blocking": false,
+      "location": "realizations.py:286-322 (validate_generated: groups keyed by item identity, lookup by node @target only)",
+      "problem": "Caller defaults and the partial-selection check look only at the transclusion's start @target. A range transclusion (@targetEnd) whose later or intermediate segments carry overlays gets no default for those overlays and no completeness check. A range that starts on a segment without an overlay but covers one is also missed. In the current data every range caller (the expanded gevurot open/close references and the musaf units) declares all four features, so no output is wrong today. Still, the claim that every direct caller gets local defaults does not hold for ranges in general.",
+      "fix": "Resolve each j:transclude (target plus targetEnd) to the ordered host segments, with the same logic as _range_segments, and collect the overlay groups of every segment in the range. Require all of them to be decided, or add defaults for them. Add a test where a range starts on a segment without an overlay and ends on one with an overlay."
+    },
+    {
+      "severity": "medium",
+      "blocking": false,
+      "location": "data.json expanded_order musaf_repetition_*_canonical sections (lines 7379-7519); build.py:832-838, 862-863",
+      "problem": "The expanded edition re-declares each musaf occurrence's wording selection as section 'declarations' around a bare 'reference'. These copies are not checked against the reviewed unit wording_selection or the image reading, and no review payload binds them. Unused or non-boolean variant features in them are not rejected either. Today they match the units exactly. If one drifts (for example forever→true flipped), the expanded wording changes silently, and validate_generated does not flag it because the selection still looks complete.",
+      "fix": "Do one of these: (a) build these sections from the unit (transclude the musaf context, or generate the declarations from unit.wording_selection); (b) assert that each variant declaration in a section equals the wording_selection of the unit whose canonical range it wraps, with the same unused/boolean rules; or (c) hash expanded_order into a review payload."
+    },
+    {
+      "severity": "low",
+      "location": "realizations.py:293-297",
+      "problem": "Default targets cover the item identity, host.urn (hosts without a home) and home text_corresp, but not canonical_home.urn when the home emits a div@corresp and idno for it (the veattah home: urn:x-opensiddur:text:prayer:veattah_qadosh_el_na). A whole-file caller of that URN would get no printed-wording default. No such caller exists today.",
+      "fix": "Add home_config['urn'] to the targets whenever the home keeps map_root or an idno."
+    },
+    {
+      "severity": "low",
+      "location": "realizations.py:274-276",
+      "problem": "The uniqueness check builds its identity set from the raw canonical, canonical_end and canonical_whole values only. Canonical targets that prepare_documents creates for canonical_home contexts are checked only when some other unit also references them. All four gevurot parts are referenced today, so the gap is general rather than current.",
+      "fix": "Collect the targets from the prepared contexts, or scan every generated j:transclude target, and check those for uniqueness."
+    },
+    {
+      "severity": "low",
+      "location": "realizations.py:280",
+      "problem": "The expanded project is skipped by the hard-coded string 'machzor_expanded-opensiddur-he' rather than the EXPANDED constant, so the skip can drift if the name changes.",
+      "fix": "Import EXPANDED and compare against it."
+    },
+    {
+      "severity": "low",
+      "location": "realizations.py:239-241 (home.update(home_config))",
+      "problem": "The unit side of the home is whitelisted, but canonical_home itself is copied verbatim. Keys such as conditions, instructions, publication_context, reuse, start/end or wording_selection placed inside canonical_home would flow into the home file. The edit is gated, because canonical_home is part of the realization payload, but it is not validated.",
+      "fix": "Whitelist the canonical_home keys: file, urn, title, map_root, omit_publication_urn, text_corresp, join_source_fragments."
+    },
+    {
+      "severity": "low",
+      "location": "build.py:1185-1195; realizations.py:40-52, 222",
+      "problem": "Draft labelling misses some dependencies. An occurrence file is labelled pending only from its own keys, not from staleness of its host or home. The context file in one language declares features from every language, through selection(), while its realization key binds only that language's overlays. Overlay 'printings' scans (s225/s226/s227/s234/s235) are not attached to the host realization keys in verify page accounting. Non-draft builds still fail globally on any stale key, so this affects draft labels and per-page completion only.",
+      "fix": "Include the host's realization and literal keys when computing an occurrence's pending state, and add overlay printings scans to the host key's scans."
+    },
+    {
+      "severity": "low",
+      "location": "build.py:1145-1152",
+      "problem": "The registry traversal covers wording_variants and unit wording_selection/conditions/citations, but not variant condition URNs inside source_order or expanded_order conditions and declarations (for example ein_kamokha/prelude, berikh_shemeh/torah_opening, and the canonical section declarations).",
+      "fix": "Run urn_strings over source_order and expanded_order as well."
+    },
+    {
+      "severity": "low",
+      "location": "tests.py",
+      "problem": "No test covers: range callers in validate_generated, whole-file callers of the home URN, drift between expanded declarations and units, or an end-to-end build() into a temporary directory (manifest cleanup, the correction guard, the collision guard).",
+      "fix": "Add these cases."
+    }
+  ],
+  "unread_inputs": [
+    "opensiddur/importer/scan/authoring.py (write_documents, apply_corrections, element)",
+    "opensiddur/importer/scan/review.py (review_is_current hashing)",
+    "Exporter, compiler and refdb sources (inline range resolution across p boundaries, declare scoping, how undecided options are displayed)",
+    "JLPTEI schema and specs/SIDDUR_URN_SCHEME.md (pb@ed and targetEnd rules accepted as stated, not verified)",
+    "Full sourcetexts readings.json, reviews.json, page_completion.json, corrections.json (data.json holds a 9-unit extract)",
+    "Generated XML outputs, features.yaml, the URN registry"
+  ],
+  "notes": [
+    "Round1 fixes confirmed in code: the payload binds the whole witness unit plus that language's overlays; the home is built from a whitelist and rejects occurrence controls; host-range segments and fragments are limited to plain keys; orphan, duplicate and overlapping overlays are rejected; wording_selection must be opensiddur:variant and every option must be explicit, exactly one true, boolean, and used; joining honours punctuation, leading spaces, maqaf and join_next; whole formulas reject nested prayer-part identities; canonical_text rejects page-crossing ranges; corrections to guarded stems and home files are refused; stale home-manifest paths are made obsolete after validation; output paths are checked for uniqueness; verify runs validate_occurrences; the registry traversal now covers wording_variants and selection URNs.",
+    "payloads.json matches review_payloads() for the 9 extract units × 2 languages.",
+    "Checked by hand against data.json: under the declared selections, canonical_text reproduces the image reading for gevurot open (he/en), gevurot close (he/en), yimlokh (he/en), veattah whole (he/en) and uvekhen (he/en, with the optional הוּא false). The rh_gevurot and veattah contexts reproduce their own printed readings under the printed defaults from selection().",
+    "The expanded musaf canonical section declarations currently equal the corresponding unit wording_selection values exactly.",
+    "Following your instruction, I did not raise pb@ed='1965 <context>', the unqualified targetEnd, or the omitted idno on the multi-part home.",
+    "Approval covers code only. It does not accept any literal source reading, adjudication, XML output or export, and I inferred none from the passing tests or the comparisons you reported."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "1dae6f6d-6336-40ea-9bab-852101dee6ac"
+  }
+}

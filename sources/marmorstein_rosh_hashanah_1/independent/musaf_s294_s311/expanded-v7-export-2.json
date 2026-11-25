@@ -1,0 +1,36 @@
+{
+  "scope": "expanded-v7-export-2",
+  "approved": false,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/expanded-export-manifest-v7.json",
+    "/tmp/mahzor-s294/full-pdf-images-v7/expanded-263.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/expanded-264.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/expanded-265.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/expanded-266.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/expanded-267.png",
+    "/tmp/mahzor-s294/full-pdf-images-v7/expanded-268.png"
+  ],
+  "blocking_findings": [
+    "expanded-267.png (printed p.265): The batch ends on the priestly-blessing introduction (אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ בָּרְכֵנוּ ... כָּאָמוּר: / '...Thy holy people, as it is said:'). After it comes only a full-width rule, and the next page (expanded-268, printed p.266) begins Metadata. No page shows a label saying the later source (source312 onward, the actual blessing verses) is missing or not yet encoded. The brief requires that label, so it fails here. The reader is left at 'as it is said:' with nothing following.",
+    "expanded-268.png (printed p.266), Sources: The only entry is Philip Birnbaum, ha-Siddur ha-Shalem: The Daily Prayer Book (1949), followed by 'The scan cited here is the source of the text … every word was read off it, page by page.' The pages in this batch are Rosh Hashanah Musaf repetition material (Shofaroth, היום הרת עולם, ארשת שפתינו), and the English differs from Birnbaum's Daily Prayer Book wording (e.g. 'Take delight, O Lord our God' for רצה). The export path is 'marmorstein_s311_v7'. Unless this bibliography entry was approved on purpose, the printed source credit looks wrong or incomplete. Please confirm the Sources section names the scan this text was actually transcribed from."
+  ],
+  "nonblocking_findings": [
+    "Page mapping for the record: image 263→printed 261, 264→262, 265→263, 266→264, 267→265, 268→266.",
+    "expanded-263 (p.261): Footnote 137 is placed correctly, attached to the parenthetical (כְּמִצְוָה) and printed at the page foot as '137 נוסח אחר'. The alternative label is present. The note gives only the label, but the alternative reading is in the main text in parentheses, so this is acceptable.",
+    "expanded-263 (p.261): The Hebrew of the וּבְיוֹם שִׂמְחַתְכֶם verse is justified with very wide word gaps on its first line. The English of the same row runs onto p.262. The row is still paired and readable.",
+    "expanded-263 (p.261): There is an extra vertical gap before the last row, יְיָ צְבָאוֹת יָגֵן עֲלֵיהֶם / 'The Lord of Hosts will protect them'. Cosmetic only.",
+    "expanded-264 (p.262): The instruction 'תוקע תקיעה: תרועה: תקיעה:' has no English line, while the nearby instructions are bilingual. This may be a deliberate HE-only rubric. Please confirm.",
+    "expanded-264 (p.262) and expanded-265 (p.263): Two horizontal rules are stacked with empty space between them. This suggests an empty division or a doubled separator. Cosmetic only.",
+    "expanded-265 (p.263): The bold English heading 'The cantor repeats … some do not re-/peat.' breaks with a hyphen, leaving 'peat.' alone on its own line. Better to turn hyphenation off in headings.",
+    "expanded-267 (p.265): The speaker label 'חזן' runs inline into the Hebrew instruction ('חזן כשנושאים כפיים…'). Everywhere else in the batch, speaker labels sit on their own line. Minor inconsistency.",
+    "Clipping, overlap and pairing: no clipping or column overlap on any assigned page. Hebrew and English rows stay aligned, and the קהל/חזן duplicate blocks (היום הרת עולם, ארשת שפתינו) are paired line by line. Hebrew vowels and dagesh look correct at this resolution. CGJ ordering and mappiq can't be fully confirmed at this resolution. No visible defects.",
+    "expanded-268 (p.266): The Legal section (CC BY-SA 4.0 and CC0 links), Contributor credits (Codex; Efraim Feinstein) and the archive.org links are all present, boxed as links, and wrap without clipping. No per-page scan links are visible on the content pages 261–265. The manifest reports 464 external scan links, but I can't tell from these images whether any belong on these pages."
+  ],
+  "verdict": "NOT APPROVED. Layout, pairing, footnote placement and Hebrew rendering on printed pp.261–266 are acceptable. However, the batch ends at the priestly-blessing introduction ('as it is said:') with no label saying the later source is missing, which the brief requires. The Sources page also credits only Birnbaum's Daily Prayer Book and states every word was read from it, which seems inconsistent with this Rosh Hashanah material. Add the missing-source label and confirm or correct the source credit, then re-export.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "f8fc72ad-0661-4d3b-ac67-eb1a43f07cc2"
+  }
+}

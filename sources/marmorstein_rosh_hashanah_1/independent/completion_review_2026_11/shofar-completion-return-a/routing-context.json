@@ -1,0 +1,3488 @@
+{
+  "source_order": [
+    {
+      "index": 177,
+      "entry": {
+        "section": "shofar_weekday",
+        "heading": {},
+        "conditions": [
+          {
+            "type": "opensiddur:holiday-aggregate",
+            "features": {
+              "shabbat": false
+            }
+          }
+        ],
+        "order": [
+          {
+            "unit": "shofar_ribbon_haolamim_banekha"
+          },
+          {
+            "unit": "shofar_yehi_ratzon"
+          },
+          {
+            "unit": "shofar_qera_satan"
+          },
+          {
+            "unit": "shofar_alah_elohim"
+          },
+          {
+            "unit": "shofar_psalm_47"
+          },
+          {
+            "unit": "shofar_harei_ani"
+          },
+          {
+            "unit": "shofar_blessing"
+          },
+          {
+            "unit": "shofar_shehecheyanu"
+          },
+          {
+            "unit": "shofar_tashrat"
+          },
+          {
+            "instruction": "shofar_sit_after_tashrat"
+          },
+          {
+            "unit": "shofar_yehi_ratzon_qashraq"
+          },
+          {
+            "unit": "shofar_tashat"
+          },
+          {
+            "instruction": "shofar_sit_after_tashat"
+          },
+          {
+            "unit": "shofar_yehi_ratzon_tashat"
+          },
+          {
+            "unit": "shofar_tarat"
+          },
+          {
+            "unit": "shofar_uvkhen_yehi_ratzon"
+          },
+          {
+            "instruction": "shofar_s184_continue_189_he"
+          },
+          {
+            "unit": "shofar_ashrei_haam"
+          },
+          {
+            "navigation": "shofar_to_ashrei"
+          }
+        ]
+      }
+    },
+    {
+      "index": 178,
+      "entry": {
+        "section": "shabbat_community_prayers",
+        "heading": {},
+        "conditions": [
+          {
+            "type": "opensiddur:holiday-aggregate",
+            "features": {
+              "shabbat": true
+            }
+          }
+        ],
+        "condition_instruction": {
+          "he": "shofar_s184_shabbat_intro_190_en",
+          "en": "shofar_s184_shabbat_intro_191_en"
+        },
+        "order": [
+          {
+            "unit": "torah_yequm_purqan_scholars"
+          },
+          {
+            "unit": "torah_yequm_purqan_congregation"
+          },
+          {
+            "unit": "torah_mi_sheberakh_kol_haqahal"
+          },
+          {
+            "unit": "torah_hanoten_teshuah"
+          }
+        ]
+      }
+    },
+    {
+      "index": 179,
+      "entry": {
+        "unit": "torah_ashrei"
+      }
+    },
+    {
+      "index": 180,
+      "entry": {
+        "unit": "torah_yehallelu"
+      }
+    },
+    {
+      "index": 181,
+      "entry": {
+        "section": "documentary_torah_return_29",
+        "heading": {},
+        "order": [
+          {
+            "unit": "torah_return_psalm_29"
+          }
+        ],
+        "conditions": [
+          {
+            "type": "opensiddur:holiday-aggregate",
+            "features": {
+              "shabbat": true
+            }
+          }
+        ],
+        "condition_rubrics": {
+          "he": "בשבת",
+          "en": "On the Sabbath:"
+        }
+      }
+    }
+  ],
+  "expanded_order": [
+    {
+      "index": 6,
+      "entry": {
+        "section": "first_night_home_appendix",
+        "order": [
+          {
+            "section": "home_shabbat_vayekhulu",
+            "order": [
+              {
+                "unit": "kiddush_vayekhulu"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "opensiddur:holiday-aggregate",
+                "features": {
+                  "shabbat": true
+                }
+              }
+            ],
+            "declarations": [
+              {
+                "type": "opensiddur:holiday-aggregate",
+                "features": {
+                  "shabbat": true
+                }
+              }
+            ],
+            "condition_rubrics": {
+              "de-Hebr": "אַם שַׁבָּת:"
+            }
+          },
+          {
+            "unit": "kiddush_savri"
+          },
+          {
+            "unit": "borei_peri_hagafen"
+          },
+          {
+            "unit": "kiddush_rosh_hashanah"
+          },
+          {
+            "unit": "shehecheyanu"
+          },
+          {
+            "section": "home_hamotzi",
+            "order": [
+              {
+                "instruction": "close_home_hamotzi"
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:hamotzi@hasiddur_hashalem-birnbaum-1949-he"
+                }
+              }
+            ]
+          },
+          {
+            "instruction": "close_home_apple"
+          },
+          {
+            "unit": "borei_peri_haetz"
+          },
+          {
+            "instruction": "close_eating_he"
+          },
+          {
+            "unit": "shetechaddesh_aleinu_shanah_tovah"
+          },
+          {
+            "instruction": "close_greeting_he"
+          },
+          {
+            "unit": "new_year_greeting"
+          }
+        ],
+        "conditions": [
+          {
+            "type": "opensiddur:holiday",
+            "features": {
+              "rosh-hashana": 1
+            }
+          },
+          {
+            "type": "opensiddur:service-time",
+            "features": {
+              "maariv": true
+            }
+          }
+        ],
+        "declarations": [
+          {
+            "type": "opensiddur:holiday",
+            "features": {
+              "rosh-hashana": 1
+            }
+          },
+          {
+            "type": "opensiddur:service-time",
+            "features": {
+              "shaharit": false,
+              "minha": false,
+              "maariv": true,
+              "musaf": false,
+              "neila": false,
+              "slihot": false
+            }
+          },
+          {
+            "type": "opensiddur:holiday-aggregate",
+            "features": {
+              "aseret-ymei-tshuva": true
+            }
+          }
+        ],
+        "heads": {
+          "he": "נספח: קידוש בבית ומנהגי ליל ראש השנה",
+          "en": "Appendix: Kiddush at home and New Year customs"
+        }
+      }
+    },
+    {
+      "index": 7,
+      "entry": {
+        "section": "morning",
+        "heads": {
+          "he": "תפילת שחרית",
+          "en": "Morning service"
+        },
+        "conditions": [
+          {
+            "type": "opensiddur:service-time",
+            "features": {
+              "shaharit": true
+            }
+          },
+          {
+            "type": "opensiddur:holiday",
+            "features": {
+              "rosh-hashana": 1
+            }
+          }
+        ],
+        "order": [
+          {
+            "section": "morning_tallit",
+            "heads": {
+              "he": "סדר עטיפת הטלית",
+              "en": "Wrapping in the tallit"
+            },
+            "order": [
+              {
+                "instruction": "morning_tallit_before"
+              },
+              {
+                "unit": "tallith_hineni_mitattef"
+              },
+              {
+                "instruction": "morning_tallit_standing"
+              },
+              {
+                "unit": "tallith_lehitattef"
+              },
+              {
+                "instruction": "morning_tallit_draping"
+              },
+              {
+                "unit": "tallith_mah_yaqar"
+              },
+              {
+                "unit": "tallith_yehi_ratzon"
+              },
+              {
+                "instruction": "morning_tallit_after"
+              }
+            ]
+          },
+          {
+            "section": "morning_entrance",
+            "heads": {
+              "he": "תפלות",
+              "en": "Prayers"
+            },
+            "order": [
+              {
+                "instruction": "morning_entering_he"
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:bible:psalms/5/8"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:bible:psalms/55/15/b"
+                }
+              },
+              {
+                "unit": "morning_mah_tovu"
+              },
+              {
+                "unit": "shachar_avaqeshkha_gabirol"
+              },
+              {
+                "instruction": "morning_before_he"
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:bible:psalms/17/6"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:bible:psalms/17/15"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:bible:psalms/31/15"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:bible:psalms/28/2"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:bible:psalms/30/3"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:bible:psalms/30/9"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:bible:psalms/31/17"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:bible:psalms/38/16"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:bible:psalms/39/13/shimah"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:bible:psalms/30/11"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:bible:psalms/122/1"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:bible:psalms/119/162"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:bible:psalms/5/3"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:bible:psalms/5/4"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:bible:psalms/17/6"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:bible:psalms/26/12"
+                }
+              },
+              {
+                "unit": "yigdal"
+              }
+            ]
+          },
+          {
+            "section": "morning_opening_blessings",
+            "heads": {
+              "he": "תפלת שחרית",
+              "en": "Morning Prayer"
+            },
+            "order": [
+              {
+                "unit": "adon_olam"
+              },
+              {
+                "unit": "al_netilat_yadayim"
+              },
+              {
+                "unit": "asher_yatzar"
+              },
+              {
+                "section": "morning_neshamah_german",
+                "conditions": [
+                  {
+                    "type": "opensiddur:rite",
+                    "features": {
+                      "german": true
+                    }
+                  }
+                ],
+                "condition_rubrics": {
+                  "he": "למנהג גרמניה אומרים כאן אלהי נשמה לאחר אשר יצר:",
+                  "en": "In the German rite, אלהי נשמה follows Asher Yatzar here:"
+                },
+                "order": [
+                  {
+                    "unit": "elohai_neshamah"
+                  }
+                ]
+              },
+              {
+                "section": "morning_torah_other_rites",
+                "conditions": [
+                  {
+                    "type": "opensiddur:rite",
+                    "features": {
+                      "german": false
+                    }
+                  }
+                ],
+                "condition_rubrics": {
+                  "he": "לשאר המנהגים אומרים כאן את ברכות התורה ואת קטעי הלימוד:",
+                  "en": "In other rites, say the Torah blessings and study passages here:"
+                },
+                "order": [
+                  {
+                    "unit": "birkhot_hatorah_laasoq"
+                  },
+                  {
+                    "unit": "birkhot_hatorah_vehaarev"
+                  },
+                  {
+                    "unit": "birkhot_hatorah_asher_bachar"
+                  },
+                  {
+                    "unit": "numbers_6_24_to_26"
+                  },
+                  {
+                    "unit": "ellu_devarim"
+                  }
+                ]
+              },
+              {
+                "section": "morning_neshamah_other_rites",
+                "conditions": [
+                  {
+                    "type": "opensiddur:rite",
+                    "features": {
+                      "german": false
+                    }
+                  }
+                ],
+                "condition_rubrics": {
+                  "he": "לשאר המנהגים אומרים אלהי נשמה לאחר ברכות התורה וקטעי הלימוד:",
+                  "en": "In other rites, אלהי נשמה follows the Torah blessings and study passages:"
+                },
+                "order": [
+                  {
+                    "unit": "elohai_neshamah"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "section": "morning_hashachar_continuation",
+            "order": [
+              {
+                "unit": "birkhot_hashachar_lasekhvi"
+              },
+              {
+                "unit": "birkhot_hashachar_shelo_asani_goy"
+              },
+              {
+                "unit": "birkhot_hashachar_shelo_asani_aved"
+              },
+              {
+                "section": "hashachar_men",
+                "conditions": [
+                  {
+                    "type": "opensiddur:person",
+                    "features": {
+                      "gender": "male"
+                    }
+                  }
+                ],
+                "condition_rubrics": {
+                  "he": "לאנשים:",
+                  "en": "Men say:"
+                },
+                "order": [
+                  {
+                    "unit": "birkhot_hashachar_shelo_asani_ishah"
+                  }
+                ]
+              },
+              {
+                "section": "hashachar_women",
+                "conditions": [
+                  {
+                    "type": "opensiddur:person",
+                    "features": {
+                      "gender": "female"
+                    }
+                  }
+                ],
+                "condition_rubrics": {
+                  "he": "לנשים:",
+                  "en": "Women say:"
+                },
+                "order": [
+                  {
+                    "unit": "birkhot_hashachar_sheasani_kirtzono"
+                  }
+                ]
+              },
+              {
+                "unit": "birkhot_hashachar_poqeach_ivrim"
+              },
+              {
+                "unit": "birkhot_hashachar_malbish_arummim"
+              },
+              {
+                "unit": "birkhot_hashachar_mattir_asurim"
+              },
+              {
+                "unit": "birkhot_hashachar_zoqef_kefufim"
+              },
+              {
+                "unit": "birkhot_hashachar_roqa_haaretz"
+              },
+              {
+                "unit": "birkhot_hashachar_sheasah_li"
+              },
+              {
+                "unit": "birkhot_hashachar_hamekhin"
+              },
+              {
+                "unit": "birkhot_hashachar_ozer_yisrael"
+              },
+              {
+                "unit": "birkhot_hashachar_oter_yisrael"
+              },
+              {
+                "unit": "birkhot_hashachar_hanoten_layaef"
+              },
+              {
+                "unit": "birkhot_hashachar_hamaavir_shenah"
+              },
+              {
+                "unit": "birkhot_hashachar_shetargilenu"
+              },
+              {
+                "unit": "birkhot_hashachar_shetatzileni"
+              },
+              {
+                "instruction": [
+                  "hashachar_leolam_he",
+                  "hashachar_leolam_en"
+                ]
+              },
+              {
+                "unit": "ribbon_kol_haolamim"
+              },
+              {
+                "unit": "aval_anachnu"
+              }
+            ]
+          },
+          {
+            "section": "morning_prelude_continued",
+            "order": [
+              {
+                "unit": "lefikhakh"
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/morning_blessings/shema_yisrael"
+                }
+              },
+              {
+                "unit": "morning_barukh_shem"
+              },
+              {
+                "unit": "attah_hu_ad_shelo"
+              },
+              {
+                "unit": "attah_hu_bashamayim"
+              }
+            ]
+          },
+          {
+            "section": "morning_torah_german_later",
+            "conditions": [
+              {
+                "type": "opensiddur:rite",
+                "features": {
+                  "german": true
+                }
+              }
+            ],
+            "condition_rubrics": {
+              "he": "למנהג גרמניה אומרים כאן את ברכות התורה ואת קטעי הלימוד עד סוף אלו דברים:",
+              "en": "In the German rite, say the Torah blessings through the end of Elu Devarim at this later position:"
+            },
+            "order": [
+              {
+                "unit": "birkhot_hatorah_laasoq"
+              },
+              {
+                "unit": "birkhot_hatorah_vehaarev"
+              },
+              {
+                "unit": "birkhot_hatorah_asher_bachar"
+              },
+              {
+                "unit": "numbers_6_24_to_26"
+              },
+              {
+                "unit": "ellu_devarim"
+              }
+            ]
+          },
+          {
+            "section": "morning_qorbanot",
+            "heads": {
+              "he": "קרבנות",
+              "en": "Offerings"
+            },
+            "order": [
+              {
+                "unit": "qorbanot_kiyyor"
+              },
+              {
+                "unit": "leviticus_6_3_to_4"
+              },
+              {
+                "unit": "qorbanot_tamid"
+              },
+              {
+                "unit": "qorbanot_veshachat"
+              },
+              {
+                "unit": "qorbanot_attah_hu"
+              },
+              {
+                "unit": "qorbanot_qetoret"
+              },
+              {
+                "unit": "qorbanot_pittum"
+              },
+              {
+                "unit": "qorbanot_rashbag"
+              },
+              {
+                "unit": "qorbanot_rabbi_natan"
+              },
+              {
+                "unit": "qorbanot_bar_kappara"
+              },
+              {
+                "unit": "qorbanot_pesuqim"
+              },
+              {
+                "unit": "qorbanot_attah_seter"
+              },
+              {
+                "unit": "qorbanot_vearvah"
+              },
+              {
+                "unit": "anna_bekhoach"
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/morning_qorbanot/barukh_shem"
+                }
+              },
+              {
+                "section": "morning_qorbanot_shabbat",
+                "conditions": [
+                  {
+                    "type": "opensiddur:holiday-aggregate",
+                    "features": {
+                      "shabbat": true
+                    }
+                  }
+                ],
+                "order": [
+                  {
+                    "unit": "qorbanot_musaf_shabbat"
+                  }
+                ],
+                "condition_rubrics": {
+                  "he": "בשבת:",
+                  "en": "On Shabbat:"
+                },
+                "declarations": [
+                  {
+                    "type": "opensiddur:holiday-aggregate",
+                    "features": {
+                      "shabbat": true
+                    }
+                  }
+                ]
+              },
+              {
+                "unit": "eizehu_meqoman"
+              },
+              {
+                "unit": "middot"
+              },
+              {
+                "unit": "middot_yehi_ratzon"
+              }
+            ]
+          },
+          {
+            "unit": "barukh_sheamar"
+          },
+          {
+            "unit": "chronicles_1_16_8_to_36"
+          },
+          {
+            "unit": "romemu"
+          },
+          {
+            "unit": "vehu_rachum"
+          },
+          {
+            "unit": "hoshiah_et_ammekha"
+          },
+          {
+            "unit": "psalm_19"
+          },
+          {
+            "unit": "psalm_34"
+          },
+          {
+            "unit": "psalm_90"
+          },
+          {
+            "unit": "psalm_91"
+          },
+          {
+            "unit": "psalm_91_repeat"
+          },
+          {
+            "unit": "psalm_135"
+          },
+          {
+            "reference": {
+              "target": "urn:x-opensiddur:text:bible:psalms/136/1",
+              "targetEnd": "urn:x-opensiddur:text:bible:psalms/136/24"
+            }
+          },
+          {
+            "reference": {
+              "target": "urn:x-opensiddur:text:bible:psalms/136/25"
+            }
+          },
+          {
+            "reference": {
+              "target": "urn:x-opensiddur:text:bible:psalms/136/26"
+            }
+          },
+          {
+            "unit": "psalm_33"
+          },
+          {
+            "unit": "psalm_92"
+          },
+          {
+            "unit": "psalm_93"
+          },
+          {
+            "unit": "yehi_khevod"
+          },
+          {
+            "unit": "ashrei"
+          },
+          {
+            "unit": "psalm_146"
+          },
+          {
+            "unit": "psalm_147"
+          },
+          {
+            "unit": "psalm_148"
+          },
+          {
+            "unit": "psalm_149"
+          },
+          {
+            "unit": "psalm_150"
+          },
+          {
+            "reference": {
+              "target": "urn:x-opensiddur:text:bible:psalms/150/6"
+            }
+          },
+          {
+            "unit": "barukh_adonai"
+          },
+          {
+            "instruction": "vayevarekh_standing"
+          },
+          {
+            "unit": "vayevarekh_david"
+          },
+          {
+            "unit": "attah_hu"
+          },
+          {
+            "unit": "vayyosha"
+          },
+          {
+            "reference": {
+              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/pesuqei_dezimrah/az_yashir/quoted_exodus_15_1-/shacharit/pesuqei_dezimrah/az_yashir/quoted_exodus_15_18"
+            }
+          },
+          {
+            "reference": {
+              "target": "urn:x-opensiddur:text:bible:exodus/15/18"
+            }
+          },
+          {
+            "unit": "ki_va_sus"
+          },
+          {
+            "unit": "ki_ladonai"
+          },
+          {
+            "unit": "morning_song_shema"
+          },
+          {
+            "unit": "nishmat"
+          },
+          {
+            "reference": {
+              "target": "urn:x-opensiddur:text:prayer:hael_betaatzumot/opening"
+            }
+          },
+          {
+            "section": "cantor_four_verses_before_hamelekh",
+            "conditions": [
+              {
+                "type": "opensiddur:quorum",
+                "features": {
+                  "minyan": true
+                }
+              }
+            ],
+            "role": "reader",
+            "rubrics": {
+              "he": "קודם המלך",
+              "en": "Before Hamelekh"
+            },
+            "order": [
+              {
+                "unit": "cantor_four_verses"
+              }
+            ]
+          },
+          {
+            "reference": {
+              "target": "urn:x-opensiddur:text:prayer:hael_betaatzumot/hamelekh"
+            }
+          },
+          {
+            "unit": "shokhen_ad"
+          },
+          {
+            "unit": "befi_yesharim"
+          },
+          {
+            "unit": "uvemaqhalot"
+          },
+          {
+            "unit": "yishtabbach"
+          },
+          {
+            "unit": "morning_numbers_14_17"
+          },
+          {
+            "unit": "morning_psalm_25_6"
+          },
+          {
+            "unit": "morning_kaddish"
+          },
+          {
+            "unit": "morning_barekhu"
+          },
+          {
+            "section": "morning_shema_blessings",
+            "heads": {
+              "he": "ברכות קריאת שמע",
+              "en": "Blessings before the Shema"
+            },
+            "order": [
+              {
+                "unit": "yotzer_opening"
+              },
+              {
+                "unit": "or_olam"
+              },
+              {
+                "unit": "melekh_azur_gevurah"
+              },
+              {
+                "section": "yotzer_weekday",
+                "conditions": [
+                  {
+                    "type": "opensiddur:holiday-aggregate",
+                    "features": {
+                      "shabbat": false
+                    }
+                  }
+                ],
+                "condition_rubrics": {
+                  "he": "ביום חול",
+                  "en": "On a weekday"
+                },
+                "order": [
+                  {
+                    "unit": "yotzer_hameir"
+                  },
+                  {
+                    "unit": "yotzer_el_barukh"
+                  }
+                ],
+                "declarations": [
+                  {
+                    "type": "opensiddur:holiday-aggregate",
+                    "features": {
+                      "shabbat": false
+                    }
+                  }
+                ]
+              },
+              {
+                "section": "yotzer_shabbat",
+                "conditions": [
+                  {
+                    "type": "opensiddur:holiday-aggregate",
+                    "features": {
+                      "shabbat": true
+                    }
+                  }
+                ],
+                "declarations": [
+                  {
+                    "type": "opensiddur:holiday-aggregate",
+                    "features": {
+                      "shabbat": true
+                    }
+                  }
+                ],
+                "condition_rubrics": {
+                  "he": "בשבת:",
+                  "en": "On Shabbat:"
+                },
+                "order": [
+                  {
+                    "unit": "yotzer_hakol_yodukha"
+                  },
+                  {
+                    "unit": "el_adon"
+                  },
+                  {
+                    "unit": "lael_asher_shavat"
+                  }
+                ]
+              },
+              {
+                "unit": "yotzer_titbarakh"
+              },
+              {
+                "unit": "yotzer_et_shem"
+              },
+              {
+                "unit": "yotzer_qadosh"
+              },
+              {
+                "unit": "khevodo_ihel"
+              },
+              {
+                "unit": "yotzer_vehaofannim"
+              },
+              {
+                "unit": "yotzer_barukh_kevod"
+              },
+              {
+                "unit": "yotzer_lael_barukh"
+              },
+              {
+                "unit": "yotzer_or_chadash"
+              },
+              {
+                "unit": "ahavah_rabbah"
+              },
+              {
+                "unit": "el_melekh_neeman"
+              },
+              {
+                "unit": "shacharit_shema_yisrael"
+              },
+              {
+                "unit": "shacharit_barukh_shem"
+              },
+              {
+                "unit": "shacharit_deuteronomy_6_5_to_9"
+              },
+              {
+                "unit": "shacharit_deuteronomy_11_13_to_21"
+              },
+              {
+                "unit": "shacharit_numbers_15_37_to_41"
+              },
+              {
+                "instruction": "shacharit_shema_emet_join"
+              },
+              {
+                "unit": "emet_veyatziv"
+              }
+            ]
+          },
+          {
+            "section": "morning_silent_amidah",
+            "heads": {
+              "he": "תפילת לחש",
+              "en": "Silent Amidah"
+            },
+            "conditions": [
+              {
+                "type": "opensiddur:recitation",
+                "features": {
+                  "silent": true
+                }
+              }
+            ],
+            "declarations": [
+              {
+                "type": "opensiddur:recitation",
+                "features": {
+                  "silent": true,
+                  "repetition": false
+                }
+              }
+            ],
+            "order": [
+              {
+                "unit": "shacharit_adonai_sefatai"
+              },
+              {
+                "unit": "shacharit_amidah_avot"
+              },
+              {
+                "unit": "shacharit_amidah_gevurot"
+              },
+              {
+                "unit": "shacharit_amidah_qedushat_hashem"
+              },
+              {
+                "unit": "shacharit_amidah_qedushat_hayom"
+              },
+              {
+                "unit": "shacharit_amidah_avodah"
+              },
+              {
+                "unit": "shacharit_amidah_hodaah"
+              },
+              {
+                "unit": "shacharit_amidah_sim_shalom"
+              },
+              {
+                "unit": "shacharit_elohai_netzor"
+              },
+              {
+                "unit": "shacharit_yehi_ratzon_temple"
+              }
+            ]
+          },
+          {
+            "section": "morning_repetition",
+            "heads": {
+              "he": "חזרת התפלה לשליח צבור",
+              "en": "Repetition of the Amidah"
+            },
+            "order": [
+              {
+                "instruction": "repetition_open_124"
+              },
+              {
+                "unit": "repetition_avot_open"
+              },
+              {
+                "unit": "misod_chakhamim"
+              },
+              {
+                "instruction": "repetition_close_124"
+              },
+              {
+                "unit": "at_chil_yom_pequddah"
+              },
+              {
+                "unit": "naalah_vedin"
+              },
+              {
+                "instruction": "repetition_open_126"
+              },
+              {
+                "unit": "repetition_zokhrenu_magen"
+              },
+              {
+                "unit": "repetition_attah_gibbor"
+              },
+              {
+                "unit": "repetition_mekhalkel"
+              },
+              {
+                "instruction": "repetition_close_126"
+              },
+              {
+                "unit": "taalat_zu"
+              },
+              {
+                "unit": "melekh_bedin"
+              },
+              {
+                "instruction": "repetition_open_130"
+              },
+              {
+                "unit": "repetition_mi_khamokha"
+              },
+              {
+                "instruction": "repetition_close_130"
+              },
+              {
+                "unit": "even_chug"
+              },
+              {
+                "unit": "repetition_yimlokh"
+              },
+              {
+                "unit": "repetition_veattah_qadosh"
+              },
+              {
+                "section": "repetition_attah_hu_custom",
+                "order": [
+                  {
+                    "instruction": "repetition_open_132"
+                  },
+                  {
+                    "unit": "attah_hu_eloheinu"
+                  },
+                  {
+                    "instruction": "repetition_close_132"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "opensiddur:rite",
+                    "features": {
+                      "frankfurt_am_main": false
+                    }
+                  }
+                ],
+                "condition_rubrics": {
+                  "he": "חוץ מפרנקפורט אם מיין",
+                  "en": "Outside Frankfurt am Main"
+                }
+              },
+              {
+                "section": "morning_repetition_weekday_poems",
+                "conditions": [
+                  {
+                    "type": "opensiddur:holiday-aggregate",
+                    "features": {
+                      "shabbat": false
+                    }
+                  }
+                ],
+                "condition_rubrics": {
+                  "he": "כשאינו שבת",
+                  "en": "On a weekday"
+                },
+                "order": [
+                  {
+                    "section": "metz_tair_vetaria_expanded_1",
+                    "heading": {},
+                    "conditions": [
+                      {
+                        "type": "opensiddur:rite",
+                        "features": {
+                          "metz": false
+                        }
+                      }
+                    ],
+                    "order": [
+                      {
+                        "unit": "tair_vetaria"
+                      }
+                    ],
+                    "condition_rubrics": {
+                      "he": "חוץ ממנהג מיץ",
+                      "en": "Outside the Metz custom"
+                    }
+                  },
+                  {
+                    "unit": "adderet_mamlakhah"
+                  },
+                  {
+                    "section": "metz_tair_vetaria_expanded_2",
+                    "heading": {},
+                    "conditions": [
+                      {
+                        "type": "opensiddur:rite",
+                        "features": {
+                          "metz": false
+                        }
+                      }
+                    ],
+                    "order": [
+                      {
+                        "unit": "tair_vetaria"
+                      }
+                    ],
+                    "condition_rubrics": {
+                      "he": "חוץ ממנהג מיץ",
+                      "en": "Outside the Metz custom"
+                    }
+                  },
+                  {
+                    "unit": "melekh_memallet"
+                  },
+                  {
+                    "unit": "melekh_zokher_achuz_qeren"
+                  },
+                  {
+                    "unit": "aafir_nezer"
+                  },
+                  {
+                    "unit": "teshalesh_shofarot"
+                  },
+                  {
+                    "unit": "melekh_zokher_achuz_qeren"
+                  }
+                ]
+              },
+              {
+                "section": "morning_repetition_shabbat_poems",
+                "conditions": [
+                  {
+                    "type": "opensiddur:holiday-aggregate",
+                    "features": {
+                      "shabbat": true
+                    }
+                  }
+                ],
+                "condition_rubrics": {
+                  "he": "אם שבת",
+                  "en": "On Sabbath"
+                },
+                "order": [
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/shemo"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/shomerei"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/shapru"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/shivtei"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/shevutenu"
+                    }
+                  },
+                  {
+                    "section": "expanded_metz_kol_1",
+                    "conditions": [
+                      {
+                        "type": "opensiddur:rite",
+                        "features": {
+                          "metz": false
+                        }
+                      }
+                    ],
+                    "condition_rubrics": {
+                      "he": "חוץ ממנהג מיץ",
+                      "en": "Outside the Metz custom"
+                    },
+                    "order": [
+                      {
+                        "reference": {
+                          "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/kol_yoshvei"
+                        }
+                      }
+                    ],
+                    "declarations": [
+                      {
+                        "type": "opensiddur:rite",
+                        "features": {
+                          "metz": false
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/adar"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/shemo"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/dea"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/varasham"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/shomerei"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/zevach"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/shapru"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/yarum"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/shivtei"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/motot"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/shevutenu"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/qiryat"
+                    }
+                  },
+                  {
+                    "section": "expanded_metz_kol_2",
+                    "conditions": [
+                      {
+                        "type": "opensiddur:rite",
+                        "features": {
+                          "metz": false
+                        }
+                      }
+                    ],
+                    "condition_rubrics": {
+                      "he": "חוץ ממנהג מיץ",
+                      "en": "Outside the Metz custom"
+                    },
+                    "order": [
+                      {
+                        "reference": {
+                          "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/kol_yoshvei"
+                        }
+                      }
+                    ],
+                    "declarations": [
+                      {
+                        "type": "opensiddur:rite",
+                        "features": {
+                          "metz": false
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/yishpot"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/vehu"
+                    }
+                  },
+                  {
+                    "unit": "repetition_etten_lefoali"
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:poem:shemo_mefoarim/yishpot"
+                    }
+                  }
+                ]
+              },
+              {
+                "instruction": "repetition_open_142"
+              },
+              {
+                "unit": "uvekhen_namlikhekha"
+              },
+              {
+                "unit": "hashem_melekh"
+              },
+              {
+                "unit": "adirei_ayummah"
+              },
+              {
+                "unit": "uvekhen_dayyan_emet_attah"
+              },
+              {
+                "instruction": "morning_tail_open_144"
+              },
+              {
+                "unit": "lael_orekh_din"
+              },
+              {
+                "instruction": "morning_tail_close_146"
+              },
+              {
+                "unit": "uvekhen_lekha_taaleh_qedushah"
+              },
+              {
+                "unit": "melekh_bemishpat_yaamid_aretz"
+              },
+              {
+                "unit": "repetition_qedushah"
+              },
+              {
+                "unit": "repetition_qedushat_hashem"
+              },
+              {
+                "unit": "repetition_qedushat_hayom"
+              },
+              {
+                "unit": "repetition_avodah"
+              },
+              {
+                "unit": "repetition_modim"
+              },
+              {
+                "unit": "repetition_modim_derabbanan"
+              },
+              {
+                "unit": "repetition_hodaah_tail"
+              },
+              {
+                "unit": "repetition_birkat_kohanim"
+              },
+              {
+                "unit": "repetition_sim_shalom"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "opensiddur:recitation",
+                "features": {
+                  "repetition": true
+                }
+              },
+              {
+                "type": "opensiddur:quorum",
+                "features": {
+                  "minyan": true
+                }
+              }
+            ],
+            "declarations": [
+              {
+                "type": "opensiddur:recitation",
+                "features": {
+                  "repetition": true,
+                  "silent": false
+                }
+              },
+              {
+                "type": "opensiddur:quorum",
+                "features": {
+                  "minyan": true
+                }
+              }
+            ]
+          },
+          {
+            "section": "morning_avinu_malkenu_expanded",
+            "conditions": [
+              {
+                "type": "opensiddur:holiday-aggregate",
+                "features": {
+                  "shabbat": false
+                }
+              }
+            ],
+            "condition_rubrics": {
+              "en": "On Sabbath אבינו מלכנו is not recited."
+            },
+            "order": [
+              {
+                "instruction": [
+                  "morning_tail_open_156",
+                  "morning_tail_open_157"
+                ]
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/chatanu"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/ein_lanu"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/aseh_immanu"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/chaddesh"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/batel_gezerot"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/batel_machshevot"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/hafer"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/kaleh_tzar"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/kaleh_dever"
+                }
+              },
+              {
+                "section": "avinu_printed_order",
+                "conditions": [
+                  {
+                    "type": "opensiddur:rite",
+                    "features": {
+                      "fuerth": false
+                    }
+                  }
+                ],
+                "condition_rubrics": {
+                  "he": "כסדר הדפוס, חוץ ממנהג פירטה",
+                  "en": "In the printed order, outside the Fuerth custom"
+                },
+                "order": [
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/mena"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/shelach"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/hachazirenu"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/selach"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/mecheh"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/qera"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/mechoq"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/zekhor"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/zokhrenu"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/kotvenu_chayyim"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/kotvenu_zekhuyyot"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/kotvenu_parnasah"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/kotvenu_geullah"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/kotvenu_selichah"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/hatzmach"
+                    }
+                  }
+                ]
+              },
+              {
+                "section": "avinu_fuerth_order",
+                "conditions": [
+                  {
+                    "type": "opensiddur:rite",
+                    "features": {
+                      "fuerth": true
+                    }
+                  }
+                ],
+                "condition_rubrics": {
+                  "he": "כמנהג פירטה וכמה קהלות",
+                  "en": "According to Fuerth and some other congregations"
+                },
+                "order": [
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/mena"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/hachazirenu"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/selach"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/mecheh"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/mechoq"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/qera"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/shelach"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/zekhor"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/zokhrenu"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/kotvenu_chayyim"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/kotvenu_zekhuyyot"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/kotvenu_parnasah"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/kotvenu_selichah"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/kotvenu_geullah"
+                    }
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/hatzmach"
+                    }
+                  }
+                ]
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/harem_yisrael"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/harem_meshichekha"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/shema"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/qabbel"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/al_teshivenu"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/aseh_harugim"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/aseh_tevuchim"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/aseh_baei"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/neqom"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/aseh_lemaankha"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/aseh_vehoshienu"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/aseh_rachamekha"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/aseh_shimkha"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:avinu_malkenu/chonnenu"
+                }
+              },
+              {
+                "instruction": [
+                  "morning_tail_close_158",
+                  "morning_tail_close_159"
+                ]
+              }
+            ]
+          },
+          {
+            "section": "morning_full_kaddish_expanded",
+            "conditions": [
+              {
+                "type": "opensiddur:quorum",
+                "features": {
+                  "minyan": true
+                }
+              }
+            ],
+            "condition_rubrics": {
+              "he": "בצבור",
+              "en": "With a minyan"
+            },
+            "order": [
+              {
+                "unit": "morning_full_kaddish_preface"
+              },
+              {
+                "unit": "morning_full_kaddish"
+              }
+            ]
+          },
+          {
+            "section": "morning_torah_prelude",
+            "order": [
+              {
+                "unit": "torah_ein_kamokha"
+              },
+              {
+                "unit": "torah_av_harachamim"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "opensiddur:quorum",
+                "features": {
+                  "minyan": true
+                }
+              },
+              {
+                "type": "opensiddur:variant",
+                "features": {
+                  "urn:x-opensiddur:condition:prayer:ein_kamokha/prelude": true
+                }
+              }
+            ],
+            "condition_rubrics": {
+              "he": "בצבור, לפי מנהג המקום, לפני הוצאת התורה",
+              "en": "With a minyan, according to local custom, before taking out the Torah"
+            }
+          },
+          {
+            "section": "torah_service",
+            "heads": {
+              "he": "קריאת התורה וההפטרה",
+              "en": "Torah and Haphtarah"
+            },
+            "order": [
+              {
+                "unit": "torah_vayehi_binsoa"
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:shelosh_esreh_middot/torah_opening/text"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:shelosh_esreh_middot/torah_opening/text"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:shelosh_esreh_middot/torah_opening/text"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:ribbono_shel_olam/malle_mishalot/opening"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:ribbono_shel_olam/malle_mishalot/yehi"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:ribbono_shel_olam/malle_mishalot/vaani"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:ribbono_shel_olam/malle_mishalot/vaani"
+                }
+              },
+              {
+                "reference": {
+                  "target": "urn:x-opensiddur:text:prayer:ribbono_shel_olam/malle_mishalot/vaani"
+                }
+              },
+              {
+                "section": "torah_berikh_shema_expanded",
+                "conditions": [
+                  {
+                    "type": "opensiddur:rite",
+                    "features": {
+                      "frankfurt_am_main": false
+                    }
+                  },
+                  {
+                    "type": "opensiddur:variant",
+                    "features": {
+                      "urn:x-opensiddur:condition:prayer:berikh_shemeh/torah_opening": true
+                    }
+                  }
+                ],
+                "condition_rubrics": {
+                  "he": "לפי מנהג המקום, חוץ מפרנקפורט דמיין",
+                  "en": "According to local custom, outside Frankfurt am Main"
+                },
+                "order": [
+                  {
+                    "unit": "torah_berikh_shemeh"
+                  },
+                  {
+                    "instruction": "torah_s162_shema_rubric_164"
+                  },
+                  {
+                    "unit": "torah_shema"
+                  },
+                  {
+                    "unit": "torah_echad_eloheinu"
+                  }
+                ]
+              },
+              {
+                "unit": "torah_gaddelu"
+              },
+              {
+                "unit": "torah_lekha_adonai"
+              },
+              {
+                "unit": "torah_al_hakol"
+              },
+              {
+                "unit": "torah_av_harachamim_hu_yerachem"
+              },
+              {
+                "instruction": [
+                  "torah_s162_call_rubric_166"
+                ]
+              },
+              {
+                "unit": "torah_vayaazor"
+              },
+              {
+                "unit": "torah_veattem"
+              },
+              {
+                "instruction": "torah_s162_reading_intro_168"
+              },
+              {
+                "section": "torah_aliyot_weekday",
+                "conditions": [
+                  {
+                    "type": "opensiddur:holiday-aggregate",
+                    "features": {
+                      "shabbat": false
+                    }
+                  }
+                ],
+                "condition_rubrics": {
+                  "he": "כשאינו שבת",
+                  "en": "On a weekday"
+                },
+                "order": [
+                  {
+                    "section": "weekday_aliyah_1",
+                    "heads": {
+                      "he": "עלייה לתורה",
+                      "en": "Torah reading"
+                    },
+                    "order": [
+                      {
+                        "instruction": "torah_s162_before_reading_168"
+                      },
+                      {
+                        "section": "weekday_aliyah_1_role_0",
+                        "role": "oleh",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/call"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "section": "weekday_aliyah_1_role_1",
+                        "role": "congregation",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/response"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "instruction": [
+                          "torah_s162_repeat_169"
+                        ]
+                      },
+                      {
+                        "section": "weekday_aliyah_1_role_3",
+                        "role": "oleh",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/response"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "unit": "torah_before_blessing"
+                      },
+                      {
+                        "instruction": "torah_s162_after_reading_169"
+                      },
+                      {
+                        "reference": {
+                          "target": "urn:x-opensiddur:text:bible:genesis/21/1",
+                          "targetEnd": "urn:x-opensiddur:text:bible:genesis/21/4"
+                        }
+                      },
+                      {
+                        "unit": "torah_after_blessing"
+                      }
+                    ]
+                  },
+                  {
+                    "section": "weekday_aliyah_2",
+                    "heads": {
+                      "he": "עלייה לתורה",
+                      "en": "Torah reading"
+                    },
+                    "order": [
+                      {
+                        "section": "weekday_aliyah_2_role_0",
+                        "role": "oleh",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/call"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "section": "weekday_aliyah_2_role_1",
+                        "role": "congregation",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/response"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "instruction": [
+                          "torah_s162_repeat_169"
+                        ]
+                      },
+                      {
+                        "section": "weekday_aliyah_2_role_3",
+                        "role": "oleh",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/response"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "unit": "torah_before_blessing"
+                      },
+                      {
+                        "instruction": "torah_s162_after_reading_169"
+                      },
+                      {
+                        "reference": {
+                          "target": "urn:x-opensiddur:text:bible:genesis/21/5",
+                          "targetEnd": "urn:x-opensiddur:text:bible:genesis/21/8"
+                        }
+                      },
+                      {
+                        "reference": {
+                          "target": "urn:x-opensiddur:text:bible:genesis/21/9",
+                          "targetEnd": "urn:x-opensiddur:text:bible:genesis/21/12"
+                        }
+                      },
+                      {
+                        "unit": "torah_after_blessing"
+                      }
+                    ]
+                  },
+                  {
+                    "section": "weekday_aliyah_3",
+                    "heads": {
+                      "he": "עלייה לתורה",
+                      "en": "Torah reading"
+                    },
+                    "order": [
+                      {
+                        "section": "weekday_aliyah_3_role_0",
+                        "role": "oleh",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/call"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "section": "weekday_aliyah_3_role_1",
+                        "role": "congregation",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/response"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "instruction": [
+                          "torah_s162_repeat_169"
+                        ]
+                      },
+                      {
+                        "section": "weekday_aliyah_3_role_3",
+                        "role": "oleh",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/response"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "unit": "torah_before_blessing"
+                      },
+                      {
+                        "instruction": "torah_s162_after_reading_169"
+                      },
+                      {
+                        "reference": {
+                          "target": "urn:x-opensiddur:text:bible:genesis/21/13",
+                          "targetEnd": "urn:x-opensiddur:text:bible:genesis/21/17"
+                        }
+                      },
+                      {
+                        "reference": {
+                          "target": "urn:x-opensiddur:text:bible:genesis/21/18",
+                          "targetEnd": "urn:x-opensiddur:text:bible:genesis/21/21"
+                        }
+                      },
+                      {
+                        "unit": "torah_after_blessing"
+                      }
+                    ]
+                  },
+                  {
+                    "section": "weekday_aliyah_4",
+                    "heads": {
+                      "he": "עלייה לתורה",
+                      "en": "Torah reading"
+                    },
+                    "order": [
+                      {
+                        "section": "weekday_aliyah_4_role_0",
+                        "role": "oleh",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/call"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "section": "weekday_aliyah_4_role_1",
+                        "role": "congregation",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/response"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "instruction": [
+                          "torah_s162_repeat_169"
+                        ]
+                      },
+                      {
+                        "section": "weekday_aliyah_4_role_3",
+                        "role": "oleh",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/response"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "unit": "torah_before_blessing"
+                      },
+                      {
+                        "instruction": "torah_s162_after_reading_169"
+                      },
+                      {
+                        "reference": {
+                          "target": "urn:x-opensiddur:text:bible:genesis/21/22",
+                          "targetEnd": "urn:x-opensiddur:text:bible:genesis/21/27"
+                        }
+                      },
+                      {
+                        "unit": "torah_after_blessing"
+                      }
+                    ]
+                  },
+                  {
+                    "section": "weekday_aliyah_5",
+                    "heads": {
+                      "he": "עלייה לתורה",
+                      "en": "Torah reading"
+                    },
+                    "order": [
+                      {
+                        "section": "weekday_aliyah_5_role_0",
+                        "role": "oleh",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/call"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "section": "weekday_aliyah_5_role_1",
+                        "role": "congregation",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/response"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "instruction": [
+                          "torah_s162_repeat_169"
+                        ]
+                      },
+                      {
+                        "section": "weekday_aliyah_5_role_3",
+                        "role": "oleh",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/response"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "unit": "torah_before_blessing"
+                      },
+                      {
+                        "instruction": "torah_s162_after_reading_169"
+                      },
+                      {
+                        "reference": {
+                          "target": "urn:x-opensiddur:text:bible:genesis/21/28",
+                          "targetEnd": "urn:x-opensiddur:text:bible:genesis/21/34"
+                        }
+                      },
+                      {
+                        "unit": "torah_after_blessing"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "section": "torah_aliyot_shabbat",
+                "conditions": [
+                  {
+                    "type": "opensiddur:holiday-aggregate",
+                    "features": {
+                      "shabbat": true
+                    }
+                  }
+                ],
+                "condition_rubrics": {
+                  "he": "בשבת",
+                  "en": "On Shabbat"
+                },
+                "order": [
+                  {
+                    "section": "shabbat_aliyah_1",
+                    "heads": {
+                      "he": "עלייה לתורה",
+                      "en": "Torah reading"
+                    },
+                    "order": [
+                      {
+                        "instruction": "torah_s162_before_reading_168"
+                      },
+                      {
+                        "section": "shabbat_aliyah_1_role_0",
+                        "role": "oleh",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/call"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "section": "shabbat_aliyah_1_role_1",
+                        "role": "congregation",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/response"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "instruction": [
+                          "torah_s162_repeat_169"
+                        ]
+                      },
+                      {
+                        "section": "shabbat_aliyah_1_role_3",
+                        "role": "oleh",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/response"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "unit": "torah_before_blessing"
+                      },
+                      {
+                        "instruction": "torah_s162_after_reading_169"
+                      },
+                      {
+                        "reference": {
+                          "target": "urn:x-opensiddur:text:bible:genesis/21/1",
+                          "targetEnd": "urn:x-opensiddur:text:bible:genesis/21/4"
+                        }
+                      },
+                      {
+                        "unit": "torah_after_blessing"
+                      }
+                    ]
+                  },
+                  {
+                    "section": "shabbat_aliyah_2",
+                    "heads": {
+                      "he": "עלייה לתורה",
+                      "en": "Torah reading"
+                    },
+                    "order": [
+                      {
+                        "section": "shabbat_aliyah_2_role_0",
+                        "role": "oleh",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/call"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "section": "shabbat_aliyah_2_role_1",
+                        "role": "congregation",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/response"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "instruction": [
+                          "torah_s162_repeat_169"
+                        ]
+                      },
+                      {
+                        "section": "shabbat_aliyah_2_role_3",
+                        "role": "oleh",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/response"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "unit": "torah_before_blessing"
+                      },
+                      {
+                        "instruction": "torah_s162_after_reading_169"
+                      },
+                      {
+                        "reference": {
+                          "target": "urn:x-opensiddur:text:bible:genesis/21/5",
+                          "targetEnd": "urn:x-opensiddur:text:bible:genesis/21/8"
+                        }
+                      },
+                      {
+                        "unit": "torah_after_blessing"
+                      }
+                    ]
+                  },
+                  {
+                    "section": "shabbat_aliyah_3",
+                    "heads": {
+                      "he": "עלייה לתורה",
+                      "en": "Torah reading"
+                    },
+                    "order": [
+                      {
+                        "section": "shabbat_aliyah_3_role_0",
+                        "role": "oleh",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/call"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "section": "shabbat_aliyah_3_role_1",
+                        "role": "congregation",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/response"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "instruction": [
+                          "torah_s162_repeat_169"
+                        ]
+                      },
+                      {
+                        "section": "shabbat_aliyah_3_role_3",
+                        "role": "oleh",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/response"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "unit": "torah_before_blessing"
+                      },
+                      {
+                        "instruction": "torah_s162_after_reading_169"
+                      },
+                      {
+                        "reference": {
+                          "target": "urn:x-opensiddur:text:bible:genesis/21/9",
+                          "targetEnd": "urn:x-opensiddur:text:bible:genesis/21/12"
+                        }
+                      },
+                      {
+                        "unit": "torah_after_blessing"
+                      }
+                    ]
+                  },
+                  {
+                    "section": "shabbat_aliyah_4",
+                    "heads": {
+                      "he": "עלייה לתורה",
+                      "en": "Torah reading"
+                    },
+                    "order": [
+                      {
+                        "section": "shabbat_aliyah_4_role_0",
+                        "role": "oleh",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/call"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "section": "shabbat_aliyah_4_role_1",
+                        "role": "congregation",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/response"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "instruction": [
+                          "torah_s162_repeat_169"
+                        ]
+                      },
+                      {
+                        "section": "shabbat_aliyah_4_role_3",
+                        "role": "oleh",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/response"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "unit": "torah_before_blessing"
+                      },
+                      {
+                        "instruction": "torah_s162_after_reading_169"
+                      },
+                      {
+                        "reference": {
+                          "target": "urn:x-opensiddur:text:bible:genesis/21/13",
+                          "targetEnd": "urn:x-opensiddur:text:bible:genesis/21/17"
+                        }
+                      },
+                      {
+                        "unit": "torah_after_blessing"
+                      }
+                    ]
+                  },
+                  {
+                    "section": "shabbat_aliyah_5",
+                    "heads": {
+                      "he": "עלייה לתורה",
+                      "en": "Torah reading"
+                    },
+                    "order": [
+                      {
+                        "section": "shabbat_aliyah_5_role_0",
+                        "role": "oleh",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/call"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "section": "shabbat_aliyah_5_role_1",
+                        "role": "congregation",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/response"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "instruction": [
+                          "torah_s162_repeat_169"
+                        ]
+                      },
+                      {
+                        "section": "shabbat_aliyah_5_role_3",
+                        "role": "oleh",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/response"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "unit": "torah_before_blessing"
+                      },
+                      {
+                        "instruction": "torah_s162_after_reading_169"
+                      },
+                      {
+                        "reference": {
+                          "target": "urn:x-opensiddur:text:bible:genesis/21/18",
+                          "targetEnd": "urn:x-opensiddur:text:bible:genesis/21/21"
+                        }
+                      },
+                      {
+                        "unit": "torah_after_blessing"
+                      }
+                    ]
+                  },
+                  {
+                    "section": "shabbat_aliyah_6",
+                    "heads": {
+                      "he": "עלייה לתורה",
+                      "en": "Torah reading"
+                    },
+                    "order": [
+                      {
+                        "section": "shabbat_aliyah_6_role_0",
+                        "role": "oleh",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/call"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "section": "shabbat_aliyah_6_role_1",
+                        "role": "congregation",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/response"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "instruction": [
+                          "torah_s162_repeat_169"
+                        ]
+                      },
+                      {
+                        "section": "shabbat_aliyah_6_role_3",
+                        "role": "oleh",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/response"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "unit": "torah_before_blessing"
+                      },
+                      {
+                        "instruction": "torah_s162_after_reading_169"
+                      },
+                      {
+                        "reference": {
+                          "target": "urn:x-opensiddur:text:bible:genesis/21/22",
+                          "targetEnd": "urn:x-opensiddur:text:bible:genesis/21/27"
+                        }
+                      },
+                      {
+                        "unit": "torah_after_blessing"
+                      }
+                    ]
+                  },
+                  {
+                    "section": "shabbat_aliyah_7",
+                    "heads": {
+                      "he": "עלייה לתורה",
+                      "en": "Torah reading"
+                    },
+                    "order": [
+                      {
+                        "section": "shabbat_aliyah_7_role_0",
+                        "role": "oleh",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/call"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "section": "shabbat_aliyah_7_role_1",
+                        "role": "congregation",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/response"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "instruction": [
+                          "torah_s162_repeat_169"
+                        ]
+                      },
+                      {
+                        "section": "shabbat_aliyah_7_role_3",
+                        "role": "oleh",
+                        "order": [
+                          {
+                            "reference": {
+                              "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/response"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "unit": "torah_before_blessing"
+                      },
+                      {
+                        "instruction": "torah_s162_after_reading_169"
+                      },
+                      {
+                        "reference": {
+                          "target": "urn:x-opensiddur:text:bible:genesis/21/28",
+                          "targetEnd": "urn:x-opensiddur:text:bible:genesis/21/34"
+                        }
+                      },
+                      {
+                        "unit": "torah_after_blessing"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "instruction": [
+                  "expanded_torah_place_second_he",
+                  "expanded_torah_place_second_en"
+                ]
+              },
+              {
+                "unit": "kaddish_chatzi"
+              },
+              {
+                "instruction": [
+                  "expanded_torah_lift_first_he",
+                  "expanded_torah_lift_first_en"
+                ]
+              },
+              {
+                "section": "maftir_aliyah",
+                "heads": {
+                  "he": "עלייה לתורה",
+                  "en": "Torah reading"
+                },
+                "order": [
+                  {
+                    "instruction": "torah_s162_before_reading_168"
+                  },
+                  {
+                    "section": "maftir_aliyah_role_0",
+                    "role": "oleh",
+                    "order": [
+                      {
+                        "reference": {
+                          "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/call"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "section": "maftir_aliyah_role_1",
+                    "role": "congregation",
+                    "order": [
+                      {
+                        "reference": {
+                          "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/response"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "instruction": [
+                      "torah_s162_repeat_169"
+                    ]
+                  },
+                  {
+                    "section": "maftir_aliyah_role_3",
+                    "role": "oleh",
+                    "order": [
+                      {
+                        "reference": {
+                          "target": "urn:x-opensiddur:text:siddur:chol/shacharit/torah/barekhu/response"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "unit": "torah_before_blessing"
+                  },
+                  {
+                    "instruction": "torah_s162_after_reading_169"
+                  },
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:bible:numbers/29/1",
+                      "targetEnd": "urn:x-opensiddur:text:bible:numbers/29/6"
+                    }
+                  },
+                  {
+                    "unit": "torah_after_blessing"
+                  }
+                ]
+              },
+              {
+                "instruction": [
+                  "torah_s162_hagbah_intro_174",
+                  "torah_s162_hagbah_intro_175"
+                ]
+              },
+              {
+                "unit": "torah_vezot_hatorah"
+              },
+              {
+                "section": "haftarah_service",
+                "heads": {
+                  "he": "הפטרה ליום א׳ של ראש השנה.",
+                  "en": "Haphtarah"
+                },
+                "order": [
+                  {
+                    "instruction": [
+                      "torah_s162_haft_before_intro_174",
+                      "torah_s162_haft_before_intro_175"
+                    ]
+                  },
+                  {
+                    "unit": "haftarah_before_blessing"
+                  },
+                  {
+                    "unit": "haftarah_samuel_1"
+                  },
+                  {
+                    "instruction": [
+                      "torah_s162_after_haft_intro_182",
+                      "torah_s162_after_haft_intro_183"
+                    ]
+                  },
+                  {
+                    "unit": "haftarah_after_blessings"
+                  },
+                  {
+                    "unit": "haftarah_al_hatorah"
+                  }
+                ]
+              }
+            ],
+            "conditions": [
+              {
+                "type": "opensiddur:quorum",
+                "features": {
+                  "minyan": true
+                }
+              }
+            ],
+            "condition_rubrics": {
+              "he": "בצבור",
+              "en": "With a minyan"
+            }
+          },
+          {
+            "section": "shofar_service",
+            "order": [
+              {
+                "unit": "shofar_ribbon_haolamim_banekha"
+              },
+              {
+                "unit": "shofar_yehi_ratzon"
+              },
+              {
+                "unit": "shofar_qera_satan"
+              },
+              {
+                "unit": "shofar_alah_elohim"
+              },
+              {
+                "unit": "shofar_psalm_47"
+              },
+              {
+                "unit": "shofar_harei_ani"
+              },
+              {
+                "unit": "shofar_blessing"
+              },
+              {
+                "unit": "shofar_shehecheyanu"
+              },
+              {
+                "unit": "shofar_tashrat"
+              },
+              {
+                "instruction": "shofar_sit_after_tashrat"
+              },
+              {
+                "unit": "shofar_yehi_ratzon_qashraq"
+              },
+              {
+                "unit": "shofar_tashat"
+              },
+              {
+                "instruction": "shofar_sit_after_tashat"
+              },
+              {
+                "unit": "shofar_yehi_ratzon_tashat"
+              },
+              {
+                "unit": "shofar_tarat"
+              },
+              {
+                "section": "shofar_congregation_after_sounds",
+                "order": [
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/shofar/ashrei_haam/psalms_89/16"
+                    }
+                  }
+                ],
+                "role": "congregation",
+                "rubrics": {
+                  "he": "בזמן שהתוקע אומר בלחש את תפילתו",
+                  "en": "While the blower says the quiet prayer"
+                }
+              },
+              {
+                "section": "shofar_blower_quiet",
+                "order": [
+                  {
+                    "unit": "shofar_uvkhen_yehi_ratzon"
+                  }
+                ],
+                "rubrics": {
+                  "he": "בלחש",
+                  "en": "The blower, quietly"
+                },
+                "role": "blower"
+              },
+              {
+                "section": "shofar_blower_psalm_149",
+                "rubrics": {
+                  "en": "The Shofar blower"
+                },
+                "order": [
+                  {
+                    "reference": {
+                      "target": "urn:x-opensiddur:text:bible:psalms/149"
+                    }
+                  }
+                ],
+                "role": "blower"
+              },
+              {
+                "section": "shofar_blower_ashrei_aloud",
+                "role": "blower",
+                "order": [
+                  {
+                    "unit": "shofar_ashrei_haam"
+                  }
+                ]
+              }
+            ],
+            "heads": {
+              "he": "סדר התקיעות",
+              "en": "Shofar service"
+            },
+            "conditions": [
+              {
+                "type": "opensiddur:holiday-aggregate",
+                "features": {
+                  "shabbat": false
+                }
+              }
+            ],
+            "condition_rubrics": {
+              "he": "בחול",
+              "en": "On a weekday"
+            },
+            "role": "blower"
+          },
+          {
+            "section": "shabbat_community_prayers",
+            "order": [
+              {
+                "unit": "torah_yequm_purqan_scholars"
+              },
+              {
+                "unit": "torah_yequm_purqan_congregation"
+              },
+              {
+                "unit": "torah_mi_sheberakh_kol_haqahal"
+              },
+              {
+                "unit": "torah_hanoten_teshuah"
+              }
+            ],
+            "heads": {
+              "he": "תפילות לקהל",
+              "en": "Prayers for the community"
+            },
+            "conditions": [
+              {
+                "type": "opensiddur:holiday-aggregate",
+                "features": {
+                  "shabbat": true
+                }
+              },
+              {
+                "type": "opensiddur:quorum",
+                "features": {
+                  "minyan": true
+                }
+              }
+            ],
+            "condition_rubrics": {
+              "he": "בשבת",
+              "en": "On Shabbat"
+            }
+          },
+          {
+            "unit": "torah_ashrei"
+          },
+          {
+            "section": "torah_return_service",
+            "order": [
+              {
+                "unit": "torah_yehallelu"
+              },
+              {
+                "section": "torah_return_shabbat_psalm",
+                "order": [
+                  {
+                    "unit": "torah_return_psalm_29"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "opensiddur:holiday-aggregate",
+                    "features": {
+                      "shabbat": true
+                    }
+                  }
+                ],
+                "condition_rubrics": {
+                  "he": "בשבת",
+                  "en": "On Shabbat"
+                }
+              },
+              {
+                "section": "torah_return_weekday_psalm",
+                "order": [
+                  {
+                    "unit": "torah_return_psalm_24"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "opensiddur:holiday-aggregate",
+                    "features": {
+                      "shabbat": false
+                    }
+                  }
+                ],
+                "condition_rubrics": {
+                  "he": "בחול",
+                  "en": "On weekdays"
+                }
+              },
+              {
+                "unit": "torah_uvenuchoh"
+              }
+            ],
+            "heads": {
+              "he": "סדר הכנסת ספר התורה",
+              "en": "Returning the Torah"
+            },
+            "conditions": [
+              {
+                "type": "opensiddur:quorum",
+                "features": {
+                  "minyan": true
+                }
+              }
+            ]
+          },
+          {
+            "section": "musaf_cantor_prelude",
+            "order": [
+              {
+                "unit": "cantor_el_melekh_neeman"
+              },
+              {
+                "unit": "cantor_hineni"
+              },
+              {
+                "unit": "cantor_four_verses"
+              }
+            ],
+            "heads": {
+              "he": "תפלה לשליח צבור",
+              "en": "Prayers for the Reader"
+            },
+            "role": "reader",
+            "declarations": [
+              {
+                "type": "opensiddur:service-time",
+                "features": {
+                  "shaharit": false,
+                  "musaf": true,
+                  "minha": false,
+                  "maariv": false,
+                  "neila": false,
+                  "slihot": false
+                }
+              }
+            ],
+            "conditions": [
+              {
+                "type": "opensiddur:quorum",
+                "features": {
+                  "minyan": true
+                }
+              }
+            ]
+          },
+          {
+            "section": "musaf_draft_s200",
+            "heads": {
+              "he": "תפלת מוסף",
+              "en": "Musaf"
+            },
+            "declarations": [
+              {
+                "type": "opensiddur:service-time",
+                "features": {
+                  "shaharit": false,
+                  "musaf": true,
+                  "minha": false,
+                  "maariv": false,
+                  "neila": false,
+                  "slihot": false
+                }
+              }
+            ],
+            "order": [
+              {
+                "section": "musaf_half_kaddish",
+                "conditions": [
+                  {
+                    "type": "opensiddur:quorum",
+                    "features": {
+                      "minyan": true
+                    }
+                  }
+                ],
+                "order": [
+                  {
+                    "unit": "musaf_half_kaddish"
+                  }
+                ]
+              },
+              {
+                "section": "musaf_quiet_amidah_s200",
+                "declarations": [
+                  {
+                    "type": "opensiddur:recitation",
+                    "features": {
+                      "silent": true,
+                      "repetition": false
+                    }
+                  }
+                ],
+                "order": [
+                  {
+                    "unit": "musaf_adonai_sefatai"
+                  },
+                  {
+                    "unit": "musaf_avot"
+                  },
+                  {
+                    "unit": "musaf_gevurot"
+                  },
+                  {
+                    "unit": "musaf_attah_qadosh"
+                  },
+                  {
+                    "unit": "musaf_uvekhen_ten_pachdekha"
+                  },
+                  {
+                    "unit": "musaf_uvekhen_ten_kavod"
+                  },
+                  {
+                    "unit": "musaf_uvekhen_tzaddiqim"
+                  },
+                  {
+                    "unit": "musaf_vetimlokh"
+                  },
+                  {
+                    "unit": "musaf_qadosh_attah"
+                  },
+                  {
+                    "unit": "musaf_attah_vechartanu"
+                  },
+                  {
+                    "unit": "musaf_vattitten_lanu"
+                  },
+                  {
+                    "unit": "musaf_umippenei"
+                  },
+                  {
+                    "unit": "musaf_sabbath_offering"
+                  },
+                  {
+                    "unit": "musaf_festival_offering"
+                  },
+                  {
+                    "unit": "musaf_offering_formula"
+                  },
+                  {
+                    "unit": "musaf_useir_lekhapper"
+                  },
+                  {
+                    "unit": "musaf_yismechu"
+                  },
+                  {
+                    "unit": "musaf_aleinu"
+                  },
+                  {
+                    "unit": "musaf_al_ken"
+                  },
+                  {
+                    "unit": "musaf_malkhuyot_verses"
+                  },
+                  {
+                    "unit": "musaf_malkhuyot_close"
+                  },
+                  {
+                    "unit": "musaf_zikhronot_open"
+                  },
+                  {
+                    "unit": "musaf_zikhronot_verses"
+                  },
+                  {
+                    "unit": "musaf_zikhronot_close"
+                  },
+                  {
+                    "unit": "musaf_covenant_verse"
+                  },
+                  {
+                    "unit": "musaf_zikhronot_blessing"
+                  },
+                  {
+                    "unit": "musaf_shofarot_open"
+                  },
+                  {
+                    "unit": "musaf_shofarot_verses"
+                  },
+                  {
+                    "unit": "musaf_shofarot_close"
+                  },
+                  {
+                    "unit": "musaf_trumpet_verse"
+                  },
+                  {
+                    "unit": "musaf_shofarot_blessing"
+                  },
+                  {
+                    "unit": "musaf_avodah"
+                  },
+                  {
+                    "unit": "musaf_hodaah"
+                  },
+                  {
+                    "unit": "musaf_sim_shalom"
+                  },
+                  {
+                    "unit": "musaf_elohai_netzor"
+                  },
+                  {
+                    "unit": "musaf_yehi_ratzon_temple"
+                  }
+                ]
+              },
+              {
+                "section": "musaf_repetition_s220",
+                "conditions": [
+                  {
+                    "type": "opensiddur:quorum",
+                    "features": {
+                      "minyan": true
+                    }
+                  }
+                ],
+                "declarations": [
+                  {
+                    "type": "opensiddur:recitation",
+                    "features": {
+                      "silent": false,
+                      "repetition": true
+                    }
+                  }
+                ],
+                "heads": {
+                  "he": "חזרת התפלה",
+                  "en": "Repetition of the Amidah"
+                },
+                "order": [
+                  {
+                    "unit": "musaf_repetition_avot_open"
+                  },
+                  {
+                    "unit": "musaf_misod_chakhamim"
+                  },
+                  {
+                    "unit": "musaf_uppad_meaz"
+                  },
+                  {
+                    "unit": "musaf_repetition_avot_close"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "declarations": [
+          {
+            "type": "opensiddur:service-time",
+            "features": {
+              "shaharit": true,
+              "minha": false,
+              "maariv": false,
+              "musaf": false,
+              "neila": false,
+              "slihot": false
+            }
+          },
+          {
+            "type": "opensiddur:holiday",
+            "features": {
+              "rosh-hashana": 1
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

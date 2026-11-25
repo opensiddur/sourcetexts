@@ -1,0 +1,187 @@
+{
+  "status": "Currentbatchscopeaccepted: all12displayedquestionsresolved andindependentlyverified.",
+  "settled_patches": "psalms_s76_s87_source_patches.json",
+  "pending_human": [],
+  "editorial_decisions": [
+    "Printed nur is a typo for nor: retain in source evidence, encode sic/corr separately.",
+    "Unpointed כל in both150:6occurrences is preserved literally without supplying vowels. The secondary suggestion to correct missing pointing is not adopted: a legible unpointed word does not itself establish a textual mistake.",
+    "Jerusalem has CGJ between both lamed vowels; vowel choice on82remains pending.",
+    "Existing canonical Hebrew92/93/Ashrei retain their independently accepted earlier book printing. Native morning variants use structural occurrence correspondences and canonical source quotation links. Expanded canonical transclusions select the first Hebrew printing and the newly printed morning English; no translation is inserted into earlier documentary positions.",
+    "Expanded150:6is repeated in both languages from the already printed canonical verse. Documentary English has no invented second occurrence."
+  ],
+  "scope": "76–85full primary scope;86/87throughBarukhonly. NextVayvarekhDavidwithstandingrubric.",
+  "canonical_collision_resolution": {
+    "ashrei/144:15": "Both original Hebrew and new English use one contextual quoted_144_15 boundary, with canonical source link. Existing canonical144:15is already in Hoshiah et Ammekha. Original Hebrew words and physical source unchanged.",
+    "psalm146:10": "Native verse uses morning_psalm_146/10context; existing canonical verse remains in rh_vetimlokh. Whole146chapter remains a complete native chapter witness.",
+    "yehi/ex15:18": "New occurrence quote uses quoted_exodus_15_18; canonical verse remains in Emet veemunah.",
+    "baseline": "Other duplicate Bible mappings predate this batch and remain outside its acceptance claims; this change introduces none."
+  },
+  "guideline_round1_fixes": [
+    "Restore printed Psalm115:18citation קטו יח on s80, targeting morning_ashrei/24 and linking canonical Bible115/18. Blind first reading already recorded it; primary encoding had omitted it. Earlier s8has no115:18label and is unchanged.",
+    "Remove false openingpagebreak fromcanonicalEnglish92; source77begins withPsalm33. KeepcanonicalENAshrei page25breakinside145:5deliberately for expanded canonical-witness provenance. Native context has samephysicalboundaryatitsownprinting.",
+    "The two s78Ashrei clusters84:5and145:2remain plain sheva pending independent enlarged crop confirmation; do not generalize the separateHalleluyah ruling.",
+    "Round1broadclaim thatprojecthasnoduplicateBibleURNswasoverstated: automatedwholeprojectaudit foundpreexistingduplicates. NewEx15:18,146:10andnewAshrei144:15collisions are now explicitly fixed. Finalreviewmustauditactualfilesanddistinguishbaseline."
+  ],
+  "compiled_documentary_translation_fix": {
+    "finding": "Runtime compilation disproved the earlier index-only argument: filtering the English index does not stop the Hebrew transclusion from discovering a canonical English counterpart.",
+    "fix": "Earlier source positions now transclude three Hebrew-only occurrence contexts, with per-verse canonical source links, original readings and citation notes. Their roots have no English counterpart, so parallel compilation cannot insert later translations. Shared canonical HE+EN witnesses remain available for expanded recitation.",
+    "expanded_policy": "Expanded canonical reuse may use an English translation printed elsewhere in this same volume. Documentary order alone preserves local absence. No translation is invented.",
+    "source_review": "New earlier-context words exactly inherit independently accepted source readings; new context/citation routing needs separate XML/runtime audit.",
+    "psalm24": "Existing independently reviewed Hebrew-only appendix at scan351, after current unfilled main-text gap; expandednamedappendixunchanged. Not a new passage inserted into morningrecitation."
+  },
+  "guideline_round2_fixes": [
+    "Apply exactly the two enlarged-source lamed hataf-patah readings in new morning Ashrei84:5and145:2. No oldp2pointingchange.",
+    "Recordbaselinepotentialp2lamedpointingquestionforlaterfocusedreview, not silently normalize acceptedsource."
+  ],
+  "human_resolutions": [
+    {
+      "snippet": 11,
+      "scan": "s82",
+      "verse": "147:2",
+      "before": "בֹּנֵה יְרוּשָׁלַ͏ִם יְהֹוָה נִדְחֵי יִשְׂרָאֵל יְכַנֵּס:",
+      "after": "בֹּנֵה יְרוּשָׁלַֽ͏ִם יְהֹוָה נִדְחֵי יִשְׂרָאֵל יְכַנֵּס:",
+      "authority": "User: patah + meteg, needs cgj, then hiriq",
+      "status": "settled",
+      "other_jerusalem_occurrence": "147:12 remains pending; recropped snippet12 includes vowel row."
+    },
+    {
+      "scan": "s82",
+      "verse": "Psalm147:12",
+      "snippet": 12,
+      "user_answer": "patah-meteg (needs cgj) hiriq",
+      "lamed_codepoints": [
+        "U+05DC",
+        "U+05B7",
+        "U+05BD",
+        "U+034F",
+        "U+05B4"
+      ],
+      "evidence_image": "/tmp/mahzor-s76/snippet-12-complete-vowels.png",
+      "status": "settled",
+      "before": "שַׁבְּחִי יְרוּשָׁלַ͏ִם אֶת־יְהֹוָה הַלֲלִי אֱלֹהַיִךְ צִיּוֹן:",
+      "after": "שַׁבְּחִי יְרוּשָׁלַֽ͏ִם אֶת־יְהֹוָה הַלֲלִי אֱלֹהַיִךְ צִיּוֹן:"
+    },
+    {
+      "snippet": 1,
+      "stem": "yehi_khevod",
+      "scan": "s78",
+      "reference": "urn:x-opensiddur:text:bible:psalms/132/13",
+      "before": "כִּי־בָחַר יְיָ בְּצִיּוֹן אִוָּה לְמוֹשָׁב לוֹ:",
+      "after": "כִּי־בָחַר יְיָ בְּצִיּוֹן אִוָּהּ לְמוֹשָׁב לוֹ:",
+      "changed": true
+    },
+    {
+      "snippet": 2,
+      "stem": "yehi_khevod",
+      "scan": "s78",
+      "reference": "urn:x-opensiddur:text:bible:psalms/94/14",
+      "before": "כִּי לֹא־יִטֹּשׁ יְיָ עַמּוֹ וְנַחֲלָתוֹ לֹא יַעֲזֹב:",
+      "after": "כִּי לֹא־יִטֹּשׁ יְיָ עַמּוֹ וְנַחֲלָתוֹ לֹא יַעֲזוֹב:",
+      "changed": true
+    },
+    {
+      "snippet": 3,
+      "stem": "morning_ashrei",
+      "scan": "s78",
+      "reference": "urn:x-opensiddur:text:siddur:rosh_hashanah/morning_ashrei/2",
+      "before": "אַשְׁרֵי הָעָם שֶׁכָּכָה לּוֹ אַשְׁרֵי הָעָם שֶׁיְיָ אֱלֹהָיו:",
+      "after": "אַשְׁרֵי הָעָם שֶׁכָּכָה לּוֹ אַשְׁרֵי הָעָם שֶׁיְיָ אֱלֹהָיו:",
+      "changed": false
+    },
+    {
+      "snippet": 4,
+      "stem": "psalm_146",
+      "scan": "s80",
+      "reference": "urn:x-opensiddur:text:bible:psalms/146/6",
+      "before": "עֹשֶׂה שָׁמַיִם וָאָרֶץ אֶת־הַיָּם וְאֶת־כָּל־אֲשֶׁר־בָּם הַשֹּׁמֵר אֱמֶת לְעוֹלָם:",
+      "after": "עֹשֶׂה שָׁמַיִם וָאָרֶץ אֶת־הַיָּם וְאֶת־כָּל־אֲשֶׁר־בָּם הַשֹּׁמֵר אֱמֶת לְעוֹלָם:",
+      "changed": false
+    },
+    {
+      "snippet": 5,
+      "stem": "psalm_147",
+      "scan": "s82",
+      "reference": "urn:x-opensiddur:text:bible:psalms/147/6",
+      "before": "מְעוֹדֵד עֲנָוִים יְהֹוָה מַשְׁפִּיל רְשָׁעִים עֲדֵי־אָרֶץ:",
+      "after": "מְעוֹדֵד עֲנָוִים יְהֹוָה מַשְׁפִּיל רְשָׁעִים עֲדֵי־אָֽרֶץ:",
+      "changed": true
+    },
+    {
+      "snippet": 6,
+      "stem": "psalm_147",
+      "scan": "s82",
+      "reference": "urn:x-opensiddur:text:bible:psalms/147/9",
+      "before": "נוֹתֵן לִבְהֵמָה לַחְמָהּ לִבְנֵי עֹרֵב אֲשֶׁר יִקְרָאוּ:",
+      "after": "נוֹתֵן לִבְהֵמָה לַחְמָהּ לִבְנֵי עֹרֵב אֲשֶׁר יִקְרָֽאוּ:",
+      "changed": true
+    },
+    {
+      "snippet": 7,
+      "stem": "psalm_147",
+      "scan": "s82",
+      "reference": "urn:x-opensiddur:text:bible:psalms/147/15",
+      "before": "הַשֹּׁלֵחַ אִמְרָתוֹ אָרֶץ עַד־מְהֵרָה יָרוּץ דְּבָרוֹ:",
+      "after": "הַשֹּׁלֵחַ אִמְרָתוֹ אָֽרֶץ עַד־מְהֵרָה יָרוּץ דְּבָרוֹ:",
+      "changed": true
+    },
+    {
+      "snippet": 8,
+      "stem": "psalm_148",
+      "scan": "s84",
+      "reference": "urn:x-opensiddur:text:bible:psalms/148/1",
+      "before": "בַמְּרוֹמִים:",
+      "after": "בַּמְּרוֹמִים:",
+      "changed": true
+    },
+    {
+      "snippet": 9,
+      "stem": "psalm_149",
+      "scan": "s84",
+      "reference": "urn:x-opensiddur:text:bible:psalms/149/7",
+      "before": "לַעֲשׂוֹת נְקָמָה בַגּוֹיִם תּוֹכֵחוֹת בַּלְאֻמִּים:",
+      "after": "לַעֲשׂוֹת נְקָמָה בַגּוֹיִם תּוֹכֵחוֹת בַּלְאֻמִּים:",
+      "changed": false
+    },
+    {
+      "snippet": 10,
+      "scan": "s86",
+      "reference": "urn:x-opensiddur:text:bible:psalms/72/19",
+      "before": "וּבָרוּךְ שֵׁם כְּבוֹדוֹ לְעוֹלָם וְיִמָּלֵא כְבוֹדוֹ אֶת־כָּל־הָאָרֶץ אָמֵן וְאָמֵן:",
+      "after": "וּבָרוּךְ שֵׁם כְּבוֹדוֹ לְעוֹלָם וְיִמָּלֵא כְבוֹדוֹ אֶת־כָּל־הָאָֽרֶץ אָמֵן וְאָמֵן:",
+      "user_clarification": "maqaf after kol and haaretz has a meteg",
+      "decision": "Kol retains qamatz and following maqaf. Haaretz has meteg on alef beside qamatz; none is added to kaf.",
+      "image": "/tmp/mahzor-s76/haaretz-s86-meteg.png",
+      "crop_source": "s86-b1.jpg",
+      "crop_box": [
+        1220,
+        210,
+        1650,
+        365
+      ],
+      "crop_scale": 3,
+      "status": "settled"
+    }
+  ],
+  "jerusalem_147_status": "Both147:2and147:12 settled by user: lamed+patah+meteg+CGJ+hiriq. Other displayed questions remain pending.",
+  "naming_check_resolution": "Naming validator requires qabbalat, not kabbalat. Two newly introduced documentary-only context stems/URNs renamed mechanically to qabbalat_psalm_92/93; words, citations, order and scoping unchanged. Prior audit reports retain historical spellings.",
+  "export_verification": "psalms_s76_s87_export_verification.json",
+  "draft_exports_verified": true,
+  "human_snippets_1_to_9_status": "Resolved by user; changes applied with scan boundaries unchanged. 3/4/9confirmexistingreading.",
+  "current_batch_human_status": "All displayed snippets1–12resolved. Old57andqueuedold8reviewremainseparate.",
+  "source_acceptance": true,
+  "full_batch_acceptance": true,
+  "accepted_scan_pages": [
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85
+  ],
+  "pending_unit_reviews": [],
+  "guideline_review": "independent/psalms_s76_s87_human10_audit.json"
+}

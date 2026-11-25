@@ -1,0 +1,70 @@
+{
+  "adjudications": {
+    "primary_sha256": "147800554d2f95b6d62cc6e2206aea2f95d5354fd87f749086b00a0521d16678",
+    "independent_sha256": "219880d3569f49608261a6e971f9e81eb30d6cb067b463d7b4bb53ce6a0e4d27",
+    "decisions": {
+      "vowels:7:בְרֹב|בְּרֹב": {
+        "accepted": "primary",
+        "evidence": "The enlarged s7 crop shows no dagesh in the bet of בְרֹב and a space, without maqaf, between לִפְנֵי and the abbreviated Divine Name. Preserve the primary reading."
+      },
+      "whitespace:27:' '|'־'": {
+        "accepted": "primary",
+        "evidence": "The enlarged s7 crop shows no dagesh in the bet of בְרֹב and a space, without maqaf, between לִפְנֵי and the abbreviated Divine Name. Preserve the primary reading."
+      }
+    },
+    "scan_evidence": [
+      "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n6.jpg"
+    ]
+  },
+  "review": {
+    "primary_sha256": "147800554d2f95b6d62cc6e2206aea2f95d5354fd87f749086b00a0521d16678",
+    "independent_sha256": "219880d3569f49608261a6e971f9e81eb30d6cb067b463d7b4bb53ce6a0e4d27",
+    "primary_model": "Codex (GPT-6)",
+    "independent_model": "claude-opus-5-5",
+    "evidence": [
+      "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n6.jpg",
+      "primary/opening_s7_s14.json",
+      "independent/opening_s7_s8_enlarged.json"
+    ],
+    "differences": [
+      {
+        "bucket": "vowels",
+        "ours": "בְרֹב",
+        "theirs": "בְּרֹב",
+        "at": 7,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "",
+        "key": "vowels:7:בְרֹב|בְּרֹב"
+      },
+      {
+        "bucket": "whitespace",
+        "ours": "' '",
+        "theirs": "'־'",
+        "at": 27,
+        "size": 1,
+        "verdict": "unresolved",
+        "note": "after לִפְנֵי",
+        "key": "whitespace:27:' '|'־'"
+      }
+    ],
+    "decisions": {
+      "vowels:7:בְרֹב|בְּרֹב": {
+        "accepted": "primary",
+        "evidence": "The enlarged s7 crop shows no dagesh in the bet of בְרֹב and a space, without maqaf, between לִפְנֵי and the abbreviated Divine Name. Preserve the primary reading."
+      },
+      "whitespace:27:' '|'־'": {
+        "accepted": "primary",
+        "evidence": "The enlarged s7 crop shows no dagesh in the bet of בְרֹב and a space, without maqaf, between לִפְנֵי and the abbreviated Divine Name. Preserve the primary reading."
+      }
+    },
+    "unresolved": [],
+    "complete": true,
+    "final_sha256": "147800554d2f95b6d62cc6e2206aea2f95d5354fd87f749086b00a0521d16678",
+    "pending_ambiguities": [],
+    "ambiguity_resolutions": [
+      "The existing Mah Tovu/varani identity covers the adapted first-person Psalm 95:6 wording; its bounded source reference does not advertise this wording as the canonical biblical verse. No English translation is printed."
+    ]
+  },
+  "reason": "Superseded: the first adjudication missed the visible bet dagesh and maqaf. The independent encoding audit correctly challenged both; narrower 6× crops of original s7 pixels settle them in favor of the independent reading."
+}

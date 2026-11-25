@@ -1,0 +1,64 @@
+{
+  "recitation_order_approved": true,
+  "conditionals_approved": false,
+  "documentary_preservation_approved": true,
+  "findings": [
+    {
+      "severity": "high",
+      "location": "machzor_expanded-opensiddur-he/index.xml:3729-3764 section_musaf_areshet_cantor_repeat condition; compile-qa-v2/expanded-weekday_repeat_no-print.xml:2084-2140",
+      "problem": "The 'no repeat' weekday profile does not turn the cantor's Areshet repeat off. The output still prints the reader's second Areshet, wrapped in an unresolved j:conditional with the Codex rubric. The weekday_repeat_yes output resolves correctly at lines 2084-2110. So the gate fails in only one direction, and the 'no repeat' custom (ויש שאין הש״ץ חוזר) cannot be produced on a weekday. Likely cause: the outer any() has two branches not tied to the day: rite frankfurt_am_main=true and practice musaf-shabbat-responses=both_cantor_repeat. A weekday profile reasonably leaves the Shabbat-only symbol unset and may leave Frankfurt unset. Then any(undecided, undecided, false) stays undecided, even though musaf-areshet-cantor-repeat=false. Reviewer's inference from the emitted XML; the compiler was not run and the profile was not seen.",
+      "required_change": "Tie each branch to its day. any( rite frankfurt_am_main=true, all(shabbat=true, musaf-shabbat-responses=both_cantor_repeat), all(shabbat=false, musaf-areshet-cantor-repeat=true) ). Gate the Shabbat symbol branches of section_musaf_hayom_cantor_repeat on shabbat=true in the same way. Make sure the weekday_repeat_no profile declares frankfurt_am_main=false, or that undeclared rite binaries resolve to false. Then recompile. weekday_repeat_no must contain exactly one Hayom (congregation) + one Hayom (cantor) + one Areshet (congregation) and no conditional wrapper. weekday_repeat_yes must add exactly one Areshet (cantor). Also confirm the profile with Frankfurt left undecided still prints the alternatives explicitly."
+    },
+    {
+      "severity": "medium",
+      "location": "prayerbook_for_the_new_year-heidenheim-1965-he/index.xml:1025,1040-1044 (anchor documentary_s199_draft_gap_he + standOff note); machzor_expanded-opensiddur-he/index.xml:40 (sourceDesc encoding note)",
+      "problem": "Two draft-gap notes are now false. Both say transcription ends at HaMelekh HaQadosh, p.116 (PDF253), and that Attah Vechartanu and the rest of Musaf are not yet included. The same files now contain Attah Vechartanu through Areshet, p.127 (PDF274/275). Readers are told the content in front of them does not exist. Presumably the EN counterpart has the same problem.",
+      "required_change": "Update both notes, and the EN equivalents, to the actual end point: after Areshet Sefatenu, p.127, PDF274/275. Name the next gap correctly: from the material after Malkhuyot. This is a data/readings change only."
+    },
+    {
+      "severity": "low",
+      "location": "machzor_expanded-opensiddur-he/index.xml:3642 section_musaf_hayom_cantor_repeat condition rubric",
+      "problem": "One rubric specific to Hayom-only prints whenever the condition is undecided. That includes cases where the open input is Frankfurt or the Shabbat mode itself, where 'For the Sabbath custom that says Hayom alone…' does not describe the open choice.",
+      "required_change": "Optional. Either word the rubric generically ('On the Sabbath the cantor's repeat follows the community's custom; for the custom that says Hayom alone the book does not specify'), or attach it to an inner conditional on the hayom_only branch if the compiler supports that. No change to which alternatives are kept."
+    },
+    {
+      "severity": "low",
+      "location": "prayerbook_for_the_new_year-heidenheim-1965-he/index.xml:1036-1038 standOff note musaf_running_shabbat_labels_he",
+      "problem": "The note is tagged xml:lang=he. The quoted label אַם שַׁבָּת. is Judeo-German (de-Hebr), the same language as the conditional rubric at line 916. It also cites PDF scan numbers only, while the rest of the documentary layer gives printed page n as well.",
+      "required_change": "Optional. Wrap each quoted label in foreign xml:lang='de-Hebr' if the words() helper allows it. Add printed page numbers next to the PDF numbers. The note can be kept as is if the encoding reviewer prefers plain text."
+    },
+    {
+      "severity": "low",
+      "location": "compile-qa-v2/expanded-shabbat_hayom_only_repeat_no-print.xml:2085 (melokh conclusion)",
+      "problem": "With the (השבת ו) segment resolved, the output reads 'מְקַדֵּשׁ הַשַּׁבָּת וְ יִשְׂרָאֵל'. There is a space between the conjunction and the word it attaches to. In the scan, ו is printed inside the parenthesis immediately before ישראל, so the expected reading is 'הַשַּׁבָּת וְיִשְׂרָאֵל'. This is a rendering/encoding join issue, not a recitation-order error.",
+      "required_change": "Pass to the separate encoding/payload review. Check the segment boundary whitespace for the shabbat-conditioned 'הַשַּׁבָּת וְ' fragment in both shabbat=true and shabbat=false renderings (the false rendering must give 'מְקַדֵּשׁ יִשְׂרָאֵל')."
+    }
+  ],
+  "resolved_prior_findings": [
+    "HIGH hayom_only repeat: resolved. The cantor repeat under hayom_only is all(musaf-shabbat-responses=hayom_only, musaf-hayom-only-cantor-repeat=true) with no default (index.xml:3665-3676). shabbat_hayom_only_repeat_yes gives congregation + cantor Hayom. shabbat_hayom_only_repeat_no gives congregation Hayom only. Both omit Areshet, which matches s274 ויש שאומרים היום אבל לא ארשת.",
+    "MEDIUM role double-count: resolved. musaf_hayom_first and musaf_areshet_first are role=congregation. The cantor turn is a separate conditional section with role=reader. The documentary layer keeps the printed קו״ח expansion (heidenheim index.xml:982,1019).",
+    "MEDIUM weekday Areshet 'ויש שאין הש״ץ חוזר': the encoding approach is resolved. The printed optional custom is kept as the undecided binary musaf-areshet-cantor-repeat, and the source rule is kept verbatim in the documentary layer (heidenheim index.xml:986). No human adjudication is needed, because the book itself leaves it optional. The compiled 'no' case still fails: see the new high finding.",
+    "MEDIUM features type: resolved. The five symbols are under opensiddur:practice as musaf-shabbat-responses, with binaries musaf-hayom-only-cantor-repeat and musaf-areshet-cantor-repeat. Conditions were migrated in both the expanded and documentary layers. features.yaml/JLPTEI-3 doc sync and registry pass are taken as reported; the reviewer did not re-run them.",
+    "MEDIUM split Aleinu paragraph: resolved. section_musaf_congregation_hu_complete (role=congregation) holds hu_eloheinu + kakkatuv_betorato + Deut 4:39 together. It is followed by the de-Hebr source direction with the Codex English simultaneity rendering, then the reader's quiet verses, then the Ark closing, then the aloud repeat with the identical human413 extent (index.xml:3431-3457).",
+    "MEDIUM Isaiah 44:6 English scope: resolved. The seg holds the whole verse through 'there is no God’.', and 'And it was said:' is a separate lead-in outside the milestones (EN musaf_repetition_malkhuyot_verses.xml:38). It aligns with the Hebrew isaiah_44_6 row.",
+    "LOW Malkenu condition: resolved as a clarification. urn:x-opensiddur:condition:prayer:amidah/melokh_al_kol_haolam/malkenu is canonical in specs/urn_registry/condition.jsonl:19 and is reused, which is acceptable. Not reopening accepted Maariv without a source error is accepted.",
+    "LOW edition-relative variant name: resolved. The name is now urn:x-opensiddur:condition:prayer:heyeh_im_pifiyot/12/veneemar, with the rite tests and the printed rubric unchanged (index.xml:3460-3483; heidenheim index.xml:873-892).",
+    "LOW invented Hebrew aloud rubric: resolved. The source instruction 'הש״ץ חוזר בקול רם הוא אלהינו וכו׳.' is the Hebrew rubric, with Codex English carrying resp (index.xml:3451-3452).",
+    "LOW running page labels: resolved by equivalent preservation. Documentary-only standOff commentary is anchored after the whole Ahallelah conditional (heidenheim index.xml:928,1035-1039). It is outside the poem's words, unconditioned, and absent from the expanded order. The continuous work is not interrupted. Accepted as closing the item; minor tagging is in the low finding above.",
+    "LOW Exodus 33:19b @source: resolved as a clarification. The emitted XML (heidenheim musaf_heyeh_im_pifiyot.xml:39) has chapter/verse milestones without corresp, the half-verse milestone corresp=bible:exodus/33/19/b, and seg @source=bible:exodus/33/19. build.py:105-126 enforces that a partial quotation carries no chapter/verse correspondence. @source as provenance (the verse the excerpt comes from) does not claim equality, and no whole-verse mapping exists. No code change is required unless the encoding reviewer finds an explicit JLPTEI-3 rule requiring @source to name the part. The reviewer could not locate JLPTEI-3.md at the tried paths to re-check the wording. The source_note about the missing 19a is present (line 31).",
+    "LOW malkhuyot_verses field shape: resolved. The emitted HE and EN XML uses the same structure as the other quotation units: chapter milestone with n and context corresp, verse milestone with n and context corresp, seg @source=bible verse, and proper verse/chapter terminators. This matches build.py:499-524. The different readings field shape is not an error.",
+    "LOW Ark/shofar rubric preferences: no change required (optional in prior review)."
+  ],
+  "remaining_gates": [
+    "Fix the weekday Areshet-repeat gate (high finding) and recompile all 13 profiles. Verify control counts: weekday no-repeat 3 recitations (Hayom congregation, Hayom cantor, Areshet congregation) with no unresolved wrapper; weekday repeat 4; Shabbat omit_both 0; hayom_only 1 or 2 per binary; both_no_cantor_repeat 2; both_cantor_hayom 3; both_cantor_repeat 4; Frankfurt 4; Shabbat with mode undefined prints all alternatives with rubrics.",
+    "Correct the stale draft-gap notes in the HE/EN documentary endnotes and the expanded sourceDesc.",
+    "Separate encoding/payload review (the 143 payloads), including the 'הַשַּׁבָּת וְ יִשְׂרָאֵל' join and, optionally, the de-Hebr tagging of the running-label note.",
+    "PDF/electronic visual review of the expanded and documentary outputs.",
+    "Batch not accepted: only the recitation order and the documentary label preservation are approved here."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "af722545-f692-4036-ba28-3ca5ef49fb26"
+  }
+}

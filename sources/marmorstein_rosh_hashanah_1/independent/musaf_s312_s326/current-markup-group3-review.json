@@ -1,0 +1,136 @@
+{
+  "files_read": [
+    "/tmp/mahzor-s312/identity-guidelines-excerpts.txt",
+    "/tmp/mahzor-s312/current-markup-group3.json"
+  ],
+  "all_group_files_read": true,
+  "guideline_lines_applied": [
+    40,
+    42,
+    57,
+    60,
+    66,
+    71,
+    72,
+    179,
+    180,
+    182,
+    187,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    210,
+    211,
+    212,
+    213,
+    214,
+    215,
+    217,
+    218,
+    219,
+    220,
+    221,
+    222,
+    223,
+    224,
+    225,
+    226,
+    227
+  ],
+  "findings": [
+    {
+      "severity": "high",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/rh_tashlikh.xml",
+      "location": "tei:milestone[@unit='verse'] corresp values urn:x-opensiddur:text:siddur:rosh_hashanah/text/micah/micah/7/18, .../7/19 and .../7/20",
+      "problem": "The verse identities are malformed. They sit outside the file's own text URN (rosh_hashanah/tashlikh), contain the bogus path segment 'text/micah/micah', and are not children of their own chapter milestones (rosh_hashanah/tashlikh/quotation/micah/7/for_verse_18 and so on). Every other quote-context verse URN in this group follows the pattern <div URN>/quotation/<book>/<chapter>/<verse>.",
+      "guideline_evidence": "JLPTEI-3.md:40 (URNs are hierarchical); :220-225 (quote-context chapter/verse milestones identify the bounded extent inside the enclosing liturgical context); :182 (scope resolution depends on URN component structure)",
+      "practical_effect": "Resolving these verses gives a phantom 'rosh_hashanah/text/micah' identity that no div owns. Alignment with any parallel Tashlikh encoding fails, and the verse URNs can collide with whatever later uses that path.",
+      "required_change": "Rename the three verse corresp values to urn:x-opensiddur:text:siddur:rosh_hashanah/tashlikh/quotation/micah/7/18, /19 and /20, and keep the chapter URNs consistent with them (see the next finding)."
+    },
+    {
+      "severity": "medium",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/rh_minchah_haazinu.xml",
+      "location": "chapter milestones .../torah/haazinu/aliyah/{1,2,3}/quotation/deuteronomy/32 against verse milestones .../torah/haazinu/quotation/deuteronomy/32/{1..12}",
+      "problem": "The chapter and verse URN hierarchies don't match. The chapters are minted under 'aliyah/N/' but the verses aren't, so no verse URN is a descendant of the chapter milestone that contains it. The file also has no aliyah-unit milestone, so the 'aliyah/N' identities exist only as path fragments of chapter URNs.",
+      "guideline_evidence": "JLPTEI-3.md:40 (hierarchical URNs); :193-195 (use consistent units for repeating reference units); :220-225 (contextual chapter/verse URNs)",
+      "practical_effect": "A lookup of .../haazinu/quotation/deuteronomy/32 (the parent of every verse) finds nothing. Aliyah-level references can't be resolved, and aliyah-level alignment with other projects has no anchor.",
+      "required_change": "Pick one hierarchy. Either (a) put an aliyah-unit milestone with corresp .../haazinu/aliyah/N before each role note's following passage and nest chapter and verse under it (.../aliyah/N/quotation/deuteronomy/32/V), or (b) drop 'aliyah/N' from the chapter URNs and give each re-opened chapter a distinct but verse-consistent identity. Keep the role notes outside the scopes, as they are now."
+    },
+    {
+      "severity": "low",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/rh_minchah_haazinu.xml",
+      "location": "Deut 32:6: two sibling <tei:seg source='urn:x-opensiddur:text:bible:deuteronomy/32/6'>, the first containing only <tei:c rend='large'>ה</tei:c>ַ, plus <tei:anchor xml:id='haazinu_large_he'/>",
+      "problem": "One verse is encoded as two separate quotation spans with the same @source, which splits the verse into two quotation instances. The large letter is a typographic and commentary feature and doesn't justify a second source span. The commentary note already marks the standalone word through its anchor.",
+      "guideline_evidence": "JLPTEI-3.md:217-218 (a tei:seg is for a bounded quotation carrying source); :227 (don't duplicate a reference just because text is repeated or split)",
+      "practical_effect": "Exporters and quotation indexes will report Deut 32:6 as quoted twice: once as a single letter, once without its first word.",
+      "required_change": "Use a single seg with source deuteronomy/32/6 containing <tei:anchor xml:id='haazinu_large_he'/><tei:c rend='large'>ה</tei:c>ַ followed by a space and the rest of the verse."
+    },
+    {
+      "severity": "low",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/musaf_amar_rabbi_elazar.xml; rh_minchah_uva_letziyyon.xml; rh_tashlikh.xml",
+      "location": "chapter corresp values .../psalms/122/for_verse_{7,8,9} (amar_rabbi_elazar); .../isaiah/59/for_verse_{20,21} (uva_letziyyon); .../micah/7/for_verse_{18,19,20} (tashlikh)",
+      "problem": "The chapter identities are minted as siblings of their own verses (122/for_verse_7 next to 122/7) instead of parents. In uva_letziyyon (Isa 59:20-21) and tashlikh (Mic 7:18-19) the milestones sit outside the segs and the verses are contiguous, so one chapter milestone with consecutive verse milestones that share boundaries would work. Amar_rabbi_elazar does need separate inner scopes because each verse is its own quotation seg (:221-223), but its 'for_verse_N' naming still breaks the chapter-to-verse hierarchy.",
+      "guideline_evidence": "JLPTEI-3.md:193-195 and :210-211 (successive verses as milestones; adjacent units share a boundary); :40 (hierarchy)",
+      "practical_effect": "The chapter-level contextual URN (for example uva_letziyyon/quotation/isaiah/59) never resolves, and the verse URNs have no parent. Mostly cosmetic for parallel rendering, but it fragments reference lookup.",
+      "required_change": "In uva_letziyyon, use one chapter milestone .../quotation/isaiah/59 followed by verse milestones 20 and 21 (the verse 20 seg ends at the verse 21 milestone), with a single terminator after 59:21. In tashlikh, do the same for 7:18-19; 7:20, after the interrupting prayer-part, needs a re-opened chapter whose identity doesn't break hierarchy. For amar_rabbi_elazar, the naming needs a project-level decision. Not verified against the URN scheme spec, which wasn't provided."
+    },
+    {
+      "severity": "low",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/musaf_psalm_81.xml",
+      "location": "first child of tei:p: <tei:pb ed='1965' n='152' facs='.../page/n321.jpg'/>",
+      "problem": "This file asserts a page break before Psalm 81, but page 152 already began inside musaf_concluding_aleinu.xml (that file's pb n='152' precedes עַל־כֵּן, and its biblScope is 151-152). Psalm 81 starts mid-page, so this second page-152 break is false. The div @facs already carries the scan link.",
+      "guideline_evidence": "Page/paragraph independence principle, JLPTEI-3.md:196-198 (printed structure is retained as printed). Pb semantics come from TEI generally, not from the excerpt.",
+      "practical_effect": "A concatenated Musaf rendering shows page 152 starting twice. Page-number navigation and facsimile alignment are off by one break.",
+      "required_change": "Remove the pb from musaf_psalm_81.xml and keep div/@facs n321. Related, unverified: shir_shel_yom (p.150) and ashrei (p.153) have no opening pb even though they appear to start new pages, and the he/en shalom_chatimah pb n='149' may also be mid-page. Check these against the scans."
+    },
+    {
+      "severity": "medium",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/rh_minchah_vaani.xml",
+      "location": "j:conditional[@xml:id='rh_minchah_vaani_condition']/tei:note[@type='instruction'][@xml:lang='en'] '(On Sabbath)'",
+      "problem": "An English instruction appears inside the Hebrew project, on page 155, which belongs to the sequentially numbered Hebrew-only run (150-156 → scans 320-326). Hebrew-only pages don't have English text. Unless page 155 actually prints this English rubric, the note is invented. If the Hebrew page marks the Shabbat condition only with the parentheses that are already transcribed, the j:conditional/fs is justified but the English note text isn't.",
+      "guideline_evidence": "Review constraint: Hebrew-only late pages have no English substitutes. Notes and labels should encode only printed content.",
+      "practical_effect": "If unprinted, the Hebrew edition displays a fabricated English rubric and misrepresents the source.",
+      "required_change": "Check scan n324. If no English rubric is printed, remove the note or replace it with the Hebrew rubric actually printed, and keep the holiday-aggregate shabbat condition. Unverified: I had no image access."
+    },
+    {
+      "severity": "low",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/musaf_concluding_aleinu.xml vs rh_minchah_uva_letziyyon.xml",
+      "location": "aleinu: div corresp rosh_hashanah/musaf/conclusion/aleinu with seg source=chol/shacharit/conclusion/aleinu; uva_letziyyon: div corresp and idno = chol/shacharit/conclusion/uva_letziyyon",
+      "problem": "The same group treats two equivalent cases differently. Uva Letziyyon reuses the existing generic identity directly, while Aleinu mints a new rosh_hashanah/musaf/conclusion/aleinu identity and points to the generic text only through @source. The transcribed concluding Aleinu is the standard daily text, and edition wording alone doesn't justify a new prayer identity.",
+      "guideline_evidence": "JLPTEI-3.md:46-50 (a URN names a text that may have several variant representations; the project suffix selects one); :226-227",
+      "practical_effect": "If rosh_hashanah/musaf/conclusion/aleinu isn't already a registered identity, alignment and transclusion with other editions' concluding Aleinu goes through an unnecessary wrapper identity. The same may apply to rosh_hashanah/minchah/ashrei and half_kaddish.",
+      "required_change": "Confirm against the registry, which is reviewed separately and which I didn't see. If the RH-specific identity isn't pre-existing, use the existing generic concluding-Aleinu identity as div corresp, matching uva_letziyyon. If it is pre-existing, no change is needed. Qualified: unverified."
+    }
+  ],
+  "verified": [
+    "Facsimile links match /page/n(scan−1).jpg for every file: HE p.149 → n317 and EN p.149 → n318 (paired scans 318/319); p.150 → n319, 151 → n320, 152 → n321, 153 → n322, 154 → n323, 155 → n324, 156 → n325 (sequential scans 320-326). Div @facs and internal pb @facs agree with the printed @n.",
+    "The biblScope page ranges in every header agree with the pb placements and div facs.",
+    "Each publicationStmt idno equals the div corresp plus the @project suffix, and no @corresp carries a project suffix (:40, :42).",
+    "sourceDesc bibliography uses project-root-relative file/fragment pointers (/PROJECT/index#project_source_bibl) rather than URNs (:57-66).",
+    "Role labels sit outside all prayer-part and verse scopes: half_kaddish 'חז' before the first prayer-part milestone; haazinu 'לוי.' and 'ישראל.' after verse and chapter terminators.",
+    "Printed citation and labels are standOff notes, not prayer text: shir_shel_yom (Mishnah Tamid/Soferim) and ashrei 'קמה'. Neither uses parentheses.",
+    "Inline quotation segs (shir_shel_yom, amar_rabbi_elazar, aleinu, ashrei 84:5/144:15, kaddish_preface, vaani) open quote-context chapter and verse milestones inside the seg with canonical @n and close both before the seg ends. The enclosing div correspondence is outside (:219-225).",
+    "Milestone-outside-seg sequences (psalm_81, ashrei Ps 145 and 115:18, uva_letziyyon, haazinu, tashlikh) are explicitly terminated before prayer-part switches and at sequence end; no paragraph close is relied on as a terminator (:211-214).",
+    "uva_letziyyon prayer-part milestones (targum_*, yimlokh, vehu, tzevaot, ashrei, hoshiah, barukh_eloheinu, chafetz) open and close properly around their nested chapter and verse scopes. The barukh_eloheinu text crosses the p.154/155 pb without being split on the page break.",
+    "Generic canonical bible URNs are used only as @source, never minted as project-owned corresp.",
+    "The English shalom_chatimah (p.149, n318) is a single documentary final peace blessing aligned to the same corresp as the Hebrew file."
+  ],
+  "limitations": [
+    "I read only the two files I was told to read. I had no scans, registry, schema, URN scheme spec, refdb UNIT_CONTAINED_BY table or other group files, so existence of identities, schema validity and printed layout claims are unverified.",
+    "Source wording, pointing and the open questions 473-489 are out of scope and not assessed. Nothing here certifies source readings or the overall batch.",
+    "Hayom (stanzas 1-4, 21-24, techaddesh/teqabbel, Amen placement), the cross-page Isa 56:7 quotation, Deut 6:25 as an edition variant of stanza 24, and the expanded-English-peace-blessing selection don't appear in group 3, so I couldn't check them here.",
+    "uva_letziyyon optional 'קאם' (condition .../targum_yimlokh/qaem): its unpointed form suggests it is printed as a marked optional, but I couldn't confirm from the scan. If it is printed unmarked and unconditionally, the conditional is invented and should be removed.",
+    "rh_minchah_haazinu has no Shabbat condition, while the adjacent rh_minchah_vaani has one. Whether page 156 prints a Shabbat rubric for the reading (possibly in another file) is unverified, so I don't treat this as a finding.",
+    "Partial-verse quotations (Ps 24:1 without לְדָוִד מִזְמוֹר, Ps 82:1 without מִזְמוֹר לְאָסָף) use the canonical verse @source and @n with bounded contextual URNs. I treat that as permitted by :224-226 but didn't check it against exporter behaviour.",
+    "Whether the musaf_concluding_aleinu paragraph split at עַל־כֵּן is printed, rather than introduced at the page break, is unverified."
+  ],
+  "encoding_approved_except_source_readings": false,
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "782e4aea-5139-47f6-8a33-aadefb9183c0"
+  }
+}

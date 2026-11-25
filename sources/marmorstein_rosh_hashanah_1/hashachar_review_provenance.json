@@ -1,0 +1,127 @@
+{
+  "repository_metadata": "Added reviewer envelope from actual invocation/self-report for coverage reporting; all source-reading payloads preserved, raw response hash recorded.",
+  "reviewer": "Claude Opus5.5; CLI configured medium reasoning",
+  "effort_limits": "Invocation and self-report preserved separately; hidden effective reasoning effort is not independently observable.",
+  "blind_order": "Primary transcription saved before primary inspected blind reading; later adjudication reviews saw prior readings.",
+  "reviews": [
+    {
+      "file": "independent/hashachar_s48_s51.json",
+      "saved_result_sha256": "78727fba1716377d19dcc43f69a2bf369afa78b08328d008a02729d32f349d46",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "d714c6e7-539f-495b-88fc-68fa6d73ce46"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "effort": "low"
+      },
+      "response_model_identifiers": [
+        "claude-opus-5-5"
+      ],
+      "raw_response_sha256": "b0f2802706d442fa6ae4b20c801fdf3f530ca7184e5f543edd7c62645003b9f0"
+    },
+    {
+      "file": "independent/hashachar_s48_s51_enlarged.json",
+      "saved_result_sha256": "2a95891bfa59ebccd2fe3355bb5322175d0ac1b3f0fa87f9e69c9274e88a13b9",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "a97c3ff4-e7a7-45b5-aec6-c512bd3bad59"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "effort": "low"
+      },
+      "response_model_identifiers": [
+        "claude-opus-5-5"
+      ],
+      "raw_response_sha256": "93c1f8d02296edb182434e700a448b2aa501c88608136b93b069d5c8860126a4"
+    },
+    {
+      "file": "independent/hashachar_s48_s51_tight.json",
+      "saved_result_sha256": "273b446ab186d0b8392c020e941d0c855caa955ef427fe1ca3a6d7098fe16802",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "ba0702b0-6e53-49b8-ab0f-8df066fa7c8a"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "effort": "low"
+      },
+      "response_model_identifiers": [
+        "claude-opus-5-5"
+      ],
+      "raw_response_sha256": "0aad03ef6ba2aded33266175dfaba4e89c121e3e00ba468f37da7cf601e5658d"
+    },
+    {
+      "file": "independent/hashachar_s48_s51_final_source.json",
+      "saved_result_sha256": "b15517c4f5c44b65e8bdc10436dc030441805f3567c7fde497d28201a6a15cb0",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "9eed7b24-d47f-4c93-81f5-9ca759701e58"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "effort": "low"
+      },
+      "response_model_identifiers": [
+        "claude-opus-5-5"
+      ],
+      "raw_response_sha256": "c16061cfb02e7dd2cbf6a8e6ecc6222a8c624d63c4061f04ddfcbaa0608da714"
+    },
+    {
+      "file": "independent/hashachar_guideline_audit_round1.json",
+      "saved_result_sha256": "d00d87755dab6d2c378a1ae141a93ac42025b743786c838ee922906c6998ca09",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "c9753b33-8fdd-4ccc-ae14-b35fe4ce5e11"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "effort": "low"
+      },
+      "response_model_identifiers": [
+        "claude-opus-5-5"
+      ],
+      "raw_response_sha256": "668525465beb80cf29911b6dff76ac089fe26f45b4a4c7f21e7abc97d9cd0c9a"
+    },
+    {
+      "file": "independent/hashachar_guideline_audit_round2.json",
+      "saved_result_sha256": "676c06c38ff21abf23a04c3ee93f806541705b2148b3ad051e52ceb243f45d6a",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "d1003dfa-9457-41de-861b-d498d8c210ea"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "effort": "self-report: low; the CLI-configured value is not visible to this reviewer, and the effective reasoning effort cannot be independently observed"
+      },
+      "response_model_identifiers": [
+        "claude-opus-5-5"
+      ],
+      "raw_response_sha256": "4651aba8a2832f3e016c3385e8ddc34341713ab205a67a78c575df52203b9b6c"
+    },
+    {
+      "file": "independent/hashachar_final_human_verification.json",
+      "saved_result_sha256": "9cc1bab94cd27d6a2116f8966c26d0653b6038dbf6ea77bfa767ec5a8bde3588",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "0da98d53-ffbf-4f02-a23d-c0c8cc85e2b8"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "effort": "self-report: low (configured value not visible to reviewer)"
+      },
+      "response_model_identifiers": [
+        "claude-opus-5-5"
+      ],
+      "raw_response_sha256": "12a80a3b652f71104bf5265511ceb0c4023373cde3044b0b3da31d51292c95a0"
+    }
+  ]
+}

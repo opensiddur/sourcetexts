@@ -1,0 +1,48 @@
+{
+  "scope": "areshet",
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "medium"
+  },
+  "approved": true,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/bounded-review-v4/rule-identity.md",
+    "/tmp/mahzor-s294/bounded-review-v4/rule-rubrics.md",
+    "/tmp/mahzor-s294/bounded-review-v4/rule-declared_scopes.md",
+    "/tmp/mahzor-s294/canonical-and-practice-evidence-v3.json",
+    "/tmp/mahzor-s294/review-s275-000.jpg",
+    "/tmp/mahzor-s294/s309.jpg",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__musaf_repetition_shofarot_hayom__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__musaf_repetition_shofarot_hayom__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__musaf_repetition_shofarot_areshet__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__musaf_repetition_shofarot_areshet__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__musaf_repetition_areshet_zikhron_words__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__musaf_repetition_areshet_zikhron_words__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__musaf_areshet_word_parts__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__musaf_areshet_word_parts__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__musaf_areshet_sefatenu__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__musaf_areshet_sefatenu__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__musaf_repetition_zikhronot_areshet__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__musaf_repetition_zikhronot_areshet__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-heidenheim-1965-he__musaf_hayom_harat_olam__body00.jsonl",
+    "/tmp/mahzor-s294/bounded-review-v4/prayerbook_for_the_new_year-marmorstein-1965-en__musaf_hayom_harat_olam__body00.jsonl"
+  ],
+  "blocking_findings": [],
+  "new_human_questions": [],
+  "nonblocking_findings": [
+    "Whitespace is inconsistent in musaf_areshet_word_parts (HE). The teqiot_veseder_shofarot option text starts with a space (line 21: ' תְּקִיעָתֵנוּ…'), but the first_printing and zikhronot_printing options do not (lines 15, 18). The opening part also ends with two spaces ('לְקוֹל  ', line 8). In EN the opening ends with two spaces ('sound of  ', line 8) and every option starts with a space. Combined with the ' ' tails after the zikhron transclusion and conditional, this produces repeated spaces. It is cosmetic only and harmless if whitespace is normalized when rendering. No wording is affected."
+  ],
+  "scope_limitations": [
+    "No Hebrew page images were supplied. Hebrew wording (opening, זִכְרוֹן, the three conclusion options, the Hayom text, and the 'אַם שַׁבָּת.' rubric) was checked only for internal consistency and parallel extent with the English, not against an image. As instructed, settled readings were not reopened.",
+    "facs mapping was checked only for consistency: EN n274 matches scan s275 (printed 127) and EN n308 matches scan s309 (printed 144). HE n273 and n307 follow the same pattern. The facs targets were not resolved online.",
+    "The inherited running-order controls (hayom/areshet inclusion, cantor-repeat conditions, condition_rubrics) were checked only as they appear in the evidence JSON. The running-order XML that uses them is not in this scope. Header metadata, code, export, and other groups were not reviewed."
+  ],
+  "verdict": "Approved for the areshet scope only. (1) Images: the English Areshet on s275 (printed 127) and s309 (printed 144) prints '(the memory of)' with no English Sabbath rubric. All three EN callers match this. They use j:conditional type='marked' on shabbat=true with no tei:note, so only the source parentheses are reproduced and no English rubric is invented. The HE callers carry the printed 'אַם שַׁבָּת.' as the conditional's own instruction note, at the occurrence. (2) Text: the EN opening, the Malkhuyot conclusion ('our Teruah … praises of Thy Kingdom'), the Shofarot conclusion ('our Tekioth … order of our Shofaroth') and the Hayom text all match the images word for word. HE and EN parts cover the same clauses: opening ends at לְקוֹל / 'to the sound of'; zikhron is זִכְרוֹן / 'the memory of'; conclusion is תְּקִיעָתֵנוּ…שׁוֹפְרוֹתֵינוּ / 'our Tekioth…Shofaroth'. Nothing spills into Hayom or Retzeh. (3) Word libraries: the zikhron library holds only the plain words, with no parentheses, condition or rubric, so the false/true/unknown behaviour comes from the marked conditional at each occurrence. The word_parts libraries hold only part milestones and a t:choice of j:options. (4) Variant: teqiot_veseder_shofarot is a single condition URN with no he/en, edition or source-fragment component. It is bound to the matching option in both the HE and EN word_parts files. (5) Bindings: the new Shofarot callers declare teqiot=true and the other four false, exactly as in the evidence JSON. The older Malkhuyot caller (musaf_areshet_sefatenu: first_printing=true) and Zikhronot caller (zikhronot_printing=true) keep their selector names unchanged and declare the new flag false. Every j:declare/j:endDeclare and j:conditional/j:endConditional pair is a sibling pair with matching targets. (6) Hayom: the new shofarot_hayom occurrences are literal quoted text marked with t:seg @source=urn:x-opensiddur:text:prayer:hayom_harat_olam, with no new pointing variant. The old malkhuyot_hayom caller is an unchanged transclusion. (7) Attestation: the zikhron library's primary facs (n307/n308, printed 144) is genuine. The older Malkhuyot occurrence keeps its own facs (n273/n274, printed 127). This approval does not cover other groups, code, headers or export.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "2f87e563-8129-4dbc-86b7-e421906fc9d1"
+  }
+}

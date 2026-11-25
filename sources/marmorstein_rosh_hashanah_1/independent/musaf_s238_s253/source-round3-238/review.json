@@ -1,0 +1,70 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "source_approved": false,
+  "pages_read": [
+    "s238",
+    "s239",
+    "s240",
+    "s241"
+  ],
+  "findings": [],
+  "uncertainties": [
+    {
+      "scan": "s238",
+      "key": "chashot_beratzo",
+      "word": "מֵרְעִישׁוֹת",
+      "question": "Under the mem of the main word (before the parenthesis), is there a meteg beside the tsere, which would give מֵֽרְעִישׁוֹת? At the band enlargement there seems to be an extra stroke next to the tsere, but I can't tell whether it is a meteg or a blemish. The variant in the parenthesis, מַרְעִישׁוֹת, is clearly patah with no meteg.",
+      "crop_box": [
+        1240,
+        1900,
+        1360,
+        1995
+      ]
+    },
+    {
+      "scan": "s240",
+      "key": "kaf_regel",
+      "word": "יְפַרְשֵׁז",
+      "question": "In יפרשז (line 6, after יַסְטִין), does the pe carry a dagesh (יְפַּרְשֵׁז) or not (יְפַרְשֵׁז)? Compare it with פְּשָׁעִים on the line above, where the pe clearly has a dagesh.",
+      "crop_box": [
+        560,
+        590,
+        680,
+        655
+      ]
+    },
+    {
+      "scan": "s240",
+      "key": "mimekomo",
+      "word": "עֶרֶב",
+      "question": "In שְׁמוֹ עֶרֶב, is there a meteg under the ayin next to the segol (עֶֽרֶב)? The cluster under the ayin looks denser than a plain segol. Answer 349 confirmed a meteg here on the parallel s242 mimekomo, but this is a separate printing and must be decided from the s240 scan itself.",
+      "crop_box": [
+        285,
+        1565,
+        370,
+        1640
+      ]
+    }
+  ],
+  "untranslated_extent_notes": [
+    "s238: the rubric 'ע״ס א״ב ובסוף חתום שם המחבר אלעזר.' and the section from וְחַיּוֹת to the end of the page (חָשׁוֹת … מְקוֹם כִּסֵּא:) have no English on s239. The English page ends at 'Blessed . . .'.",
+    "s240: the sections from כַּף רֶגֶל to the end of the alphabet (אַרְבַּע חַיּוֹת … עִם כִּסֵּא:) and לְבִלְתִּי לְנַבֵּל … בַּכִּסֵּא:, plus the variant note (נ״א …) and the rubric 'ע״ס תשר״ק …', are not translated on s241. s241 resumes at רחם."
+  ],
+  "notes": [
+    "I checked every remaining candidate word on s238 and s240 against the band enlargements: consonants, vowels, dagesh, maqaf and punctuation. Apart from the three uncertainties above, nothing material differs from the print. Verified items include כְּסוֹד שִׂיחַ שַׂרְפֵי, הַמַּקְדִּישִׁים, וּמְשַׁלְּשִׁים בְּשִׁלּוּשׁ, נְבִיאֶךָ, מְלֹא כָל־הָאָֽרֶץ, מְרֻבָּעוֹת, מַכְנִיפוֹת, גּוֹעֲשׁוֹת, בְּרָאשָׁם, הַקֶּרַח, שְׁבִיב, כַּבָּזָק, מְזִיזוֹת, קוֹפְצוֹת, מִתְעַלְּפוֹת, נְשׂוּאוֹת, עֲתִירַת, תְּרַפֶּינָה, מַשִּׁיקוֹת, מְאַחֵז, רְשׁוּמִים, וּמְנֻשָּׂאוֹת, וַיִּפְגַּע, נְטָעִים, שַׂמְתָּ הֲדוֹם, לִכְרוּב, לְעֻמַּת, וְיָחֹן, הַמְיַחֲדִים, בִּתְשׁוּבָה, לְהִתְיַחֵד, רַחֵץ בְּנִקְיוֹן, נְשׂוֹא.",
+    "I applied the settled human answers without reopening them: 326 בְּסוֹכֲכָם פָּנִים בְּפָנִים, 327 מֵחִיל, 328 תֵרָשֶׁינה, 337 יִפֶן (kaf_regel), 338 יִֽפֶן (mimekomo), 339/340 יִתְרַעַם … וְיִתְרַעַשׁ, 343 הָאָֽרֶץ and 361 כְּאַחַד לְאֶחָד. The candidate already matches all of them.",
+    "Speaker and rubric marks match the print: חזן, ח׳, קו״ח, ק׳. In the Rashi-script rubrics, the glyph that looks like סס is שם, and the bet of ובסוף looks like a kaf in that typeface. The candidate's ובסוף and שם are correct. The small-type variant abbreviation is נ״א (its Rashi-style nun looks like a kaf), and the candidate's נ״א is correct.",
+    "Structure only, not a text error: the s240 rahem_metsukim block runs on to לְעֻמַּת כִּסֵּא:. In the print, the variant (נ״א וּכְרוּב לִכְרוּב וְחַיָּה לְחַיָּה) stands between לִכְרוּב and לְעֻמַּת כִּסֵּא:. The variant_ka block should be anchored at that point and not read as following the colon.",
+    "Formatting consistency: s238 kevodo_male prints across two lines (break after לָזֶה) just like s240, but only the s240 block has a \\n. The text itself is identical in both.",
+    "English s239 and s241: the candidate text matches the print word for word, punctuation included. The s239 kesod block has the printed 'once calls to the other', which should stay as printed and get a sic/corr ('one') later. The s241 'that proclaim the unity' is printed exactly as the candidate gives it.",
+    "Not approved: three single-mark readings above are still open. If each is answered 'no extra mark', the s238 and s240 Hebrew needs no changes."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "40c525d0-2907-4847-930b-6cec614da640"
+  }
+}

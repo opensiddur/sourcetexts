@@ -1,0 +1,143 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Low. Before opening any transcription, I read each of the seven named crops once at the size supplied. I had no shell or zoom tool, so I could not enlarge them further or measure pixels; every reading below comes only from looking at those images. After that I opened manifest.json and review.json to find the target sites. That is how I found that veyippatechu.png does not contain its target. I did not open naqi_second.png or any XML, and I did not open the human 269–276 material."
+  },
+  "readings": [
+    {
+      "name": "ktohu",
+      "source_reading": "כַּתֹּהוּ",
+      "confident": true,
+      "visible_marks": [
+        "KAF: a dot inside the letter (dagesh) and a horizontal stroke under it (patah). The stroke is one bar, not two vertical dots, so it is not a sheva.",
+        "TAV: a dot inside the letter (dagesh) and a holam dot above at its upper left.",
+        "HE: no mark of its own.",
+        "VAV: a dot at the side at mid-height (shuruk), followed by the sof pasuq ':'."
+      ],
+      "issues": [
+        "The crop supports the primary reader: the KAF has a patah, not a sheva, and the TAV has a dagesh. The text currently encoded as כְּתֹהוּ needs both the KAF vowel and the TAV dagesh corrected."
+      ],
+      "unresolved": [
+        "Minor: the shuruk dot on the VAV sits close to the sof pasuq. I read it as a separate dot, but I could not measure the gap."
+      ]
+    },
+    {
+      "name": "veyechredu",
+      "source_reading": "וְיֶחֱרְדוּ",
+      "confident": false,
+      "visible_marks": [
+        "VAV (first letter): two vertical dots (sheva).",
+        "YOD: three dots in a triangle (segol).",
+        "CHET: a three-dot triangle with two vertical dots right next to it. I read the pair as hataf-segol.",
+        "RESH: two vertical dots (sheva).",
+        "DALET: no mark.",
+        "VAV (last letter): shuruk dot."
+      ],
+      "issues": [
+        "This differs from the encoded וְיֶחְרְדוּ. A plain sheva under CHET does not fit what I see: there is a three-dot triangle under CHET.",
+        "The neighbouring word וְיֵחַתּוּ has its own sheva, tsere and patah close by, so the marks under these two words crowd together."
+      ],
+      "unresolved": [
+        "I cannot settle the CHET vowel. The question is whether the two vertical dots next to the CHET triangle belong to CHET, which would make it hataf-segol (וְיֶחֱרְדוּ), or are the RESH sheva, which would leave a plain segol under CHET (וְיֶחֶרְדוּ). At this size the gap between that pair and the triangle looks tight, which favours hataf-segol, but I could not zoom in or count dot spacing to rule out segol. The only thing I can rule out is a sheva alone under CHET. A human, or a crop enlarged further on CHET and RESH only, should decide."
+      ]
+    },
+    {
+      "name": "vadin",
+      "source_reading": "וָדִין",
+      "confident": true,
+      "visible_marks": [
+        "VAV: qamatz (a T-shaped mark) under it.",
+        "DALET: one dot under it (hiriq).",
+        "YOD and final NUN: no marks.",
+        "A period follows the word."
+      ],
+      "issues": [
+        "The crop supports the primary reader: VAV has qamatz, not sheva. The text currently encoded as וְדִין needs correcting."
+      ],
+      "unresolved": []
+    },
+    {
+      "name": "ladaat",
+      "source_reading": "לָדַעַת",
+      "confident": true,
+      "visible_marks": [
+        "LAMED: qamatz (T-shaped) under it.",
+        "DALET: horizontal stroke (patah).",
+        "AYIN: horizontal stroke (patah).",
+        "TAV: no dagesh and no vowel."
+      ],
+      "issues": [
+        "The crop supports the primary reader: LAMED has qamatz, not sheva. The text currently encoded as לְדַעַת needs correcting."
+      ],
+      "unresolved": []
+    },
+    {
+      "name": "naqi_first",
+      "source_reading": "נָקִי",
+      "confident": true,
+      "visible_marks": [
+        "NUN: qamatz (T-shaped) under it.",
+        "QOF: one dot (hiriq) under its right-hand body, separate from the stem that drops below the line.",
+        "YOD: no mark.",
+        "A period follows the word."
+      ],
+      "issues": [
+        "The crop supports the primary reader: NUN has qamatz and QOF has hiriq. The text currently encoded as נְקֵי needs correcting."
+      ],
+      "unresolved": []
+    },
+    {
+      "name": "veyippatechu",
+      "source_reading": "וְיִפָּתְחוּ",
+      "confident": false,
+      "visible_marks": [
+        "These come from the top row of hammelitzim.png, between יִגְזוֹר and אוֹתָן. The tops of the letters in that row are cut off, but the lower marks are present.",
+        "VAV: sheva.",
+        "YOD: hiriq.",
+        "PE: a dot inside the letter (dagesh) and qamatz (T-shaped) under it.",
+        "TAV: no dot inside (no dagesh) and a sheva under it.",
+        "CHET: no mark.",
+        "Last VAV: shuruk dot."
+      ],
+      "issues": [
+        "veyippatechu.png does not show the target. Its bbox (y 990–1110) covers the row above the target. It shows 'צוֹן לְהִפָּתֵחַ וּלְהֵעָנוֹת.' with 'צְפוּנוֹת. בֵּין' above, and no ויפתחו. Do not apply its marks (PE qamatz/dagesh, TAV tsere, CHET patah) to the target.",
+        "The target row (s151-band2 row5, 'יִגְזוֹר וְיִפְתְּחוּ' in the encoded text) shows up only at the top edge of hammelitzim.png. There I see PE with qamatz and dagesh, and TAV without dagesh. This matches the primary reader, and it rules out the encoded וְיִפְתְּחוּ, which has PE with sheva and TAV with dagesh."
+      ],
+      "unresolved": [
+        "Not confident, for two reasons. The dot inside the PE could be the inner curl of this typeface's pe rather than a dagesh. And the only view of this word comes from the edge of a crop made for a different word, with the letter tops cut off. A crop of s151 at about y 1120–1200 centred on this word would settle it."
+      ]
+    },
+    {
+      "name": "hammelitzim",
+      "source_reading": "הַמְּלִיצִים",
+      "confident": true,
+      "visible_marks": [
+        "HE: horizontal stroke (patah).",
+        "MEM: a dot inside the letter (dagesh). Under it the marks stack vertically (sheva). There is no side-by-side pair, so it is not tsere.",
+        "LAMED: hiriq.",
+        "YOD: no mark.",
+        "TSADI: hiriq.",
+        "YOD and final MEM: no marks."
+      ],
+      "issues": [
+        "The crop supports the primary reader: MEM has sheva, not tsere. The text currently encoded as הַמֵּלִיצִים needs correcting."
+      ],
+      "unresolved": [
+        "Minor: the lower dot of the sheva sits near the bottom edge of the crop. I read it as present and stacked vertically, but I could not measure it."
+      ]
+    }
+  ],
+  "limits": [
+    "This only decides the seven words named above, from the crops supplied. It does not approve any schema, compiler, XML, alignment or whole-poem source result.",
+    "I had no way to zoom past the supplied 4× crops or measure pixels, so every reading rests on looking at the images.",
+    "veyippatechu.png is mispositioned by one row. I read the target from the cut-off top row of hammelitzim.png instead, and marked it not confident.",
+    "veyechredu is still open: hataf-segol or segol under CHET. Only a sheva alone is ruled out.",
+    "I did not open naqi_second.png, as instructed, and did not reopen or change human 269–275 or tentative 276.",
+    "I read the primary reader's suggestions only after reading all seven crops. My readings agree with them for ktohu, vadin, ladaat, naqi_first, hammelitzim and (from the substitute view) veyippatechu."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "4018f8fc-453b-495a-b9fa-a8b10f2a6294"
+  }
+}

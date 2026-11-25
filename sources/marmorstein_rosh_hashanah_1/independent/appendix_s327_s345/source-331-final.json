@@ -1,0 +1,26 @@
+{
+  "source_scan": "s331",
+  "approved_source_reading": true,
+  "all_lines_verified": true,
+  "human_application_verified": true,
+  "remaining_reading_disputes": [],
+  "corrections_required": [],
+  "limitations": [
+    "I checked everything by eye against full-331.png and the eight s331-detail PNGs at the size they were supplied. I could not zoom or measure pixels.",
+    "I had no shell, so I did not recompute input_working_sha256 (17f17876…) or output_working_sha256 (27c057a5…). I checked that the 599–618 changes were applied by comparing each 'after' form and its context in human-599-618-resolution.json with the text in source-331-working-snapshot.json.",
+    "Human rulings 599–618 are authoritative. I confirmed only that each one was applied as specified. I did not reopen any of them or carry them over to other words by analogy."
+  ],
+  "notes": [
+    "Each of the 30 change entries (599, 600, 601, 602, 603a, 603b, 604, 605, 606, 607, 608, 609, 610, 611, 612a, 612b, 613both, 614a–c, 615a–b, 616, 617a–c, 618) sits at the stated block and line in the snapshot and touches only the intended occurrence. Examples: 599 אָֽתָּה is on block 2 line 5 only. 611 leaves אַתָּה on line 1 without a meteg. 603a/603b leave הַיְצוּרִים without a yod dagesh on lines 14 and 23. 608 is מֵאלָהוּתְךָ, with the alef unpointed and the other vowels kept. 609 is לִבְרִיוֹתֶֽיךָ, with no yod dagesh and a meteg on tav. 610 is וְעֶֽצֶב. 612 is חָֽלוּ and קֶֽצֶב. 613 is גֹּֽשֶׁם then נֹֽשֶׁם, two different words with no normalization.",
+    "The 13 earlier provisional changes are all still in the text and match what is printed: בָּרָֽאתָ, יָדַֽעְתִּי, יָצַֽרְתָּ, נִבְרֵֽאתָ, נוֹצַֽרְתָּ, אָֽתָּה (line 4), הוֹדַֽעְתָּ, נוֹלַֽדְתָּ, the meteg in חֻלִֽיתָ, מִקֶּֽדֶם, אָֽתָּה (line 8), נִמְצֵֽאתָ, חֻדַּֽשְׁתָּ.",
+    "I compared every word and its points with the images in reading order. Monday ends with two lines: וְלֹא יַשִּׂיג…וְיֵדָע: and מִמְּךָ…כֹּל בָּרָֽאתָ:. Next comes the heading 'ליום שלישי.' Tuesday then has 22 couplets in 23 printed lines, ending on this scan with כָּל הַיְצוּרִים וְכָל מַעֲשֵׂיהֶם. וְכָל דִּבְרֵיהֶם וּמַחְשְׁבוֹתֵיהֶם:. The only split couplet is רֵאשִׁית…עֲרוּכִים. / אַתָּה בָם…שְׂרוּכִים:, and it is kept on two lines as printed. The running head is שיר היחוד ליום שלישי. The margin '5' is correctly left out.",
+    "I found no new discrepancy in any word, letter, vowel, dagesh, meteg, punctuation mark or line order. The disputes listed in source-331-application-review.json have all been settled by human rulings 599–618.",
+    "The snapshot's note about the stray dot between לֹא and נִשְׁתַּנֵּֽיתָ (line 8) is consistent with the image: the dot is a print artifact and should not be encoded.",
+    "This covers the source reading of s331 only. It is not an XML, encoding, export, batch or leaf approval. I edited no files."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "82fa08bd-b6f0-46ad-9f37-e24f4eae4d08"
+  }
+}

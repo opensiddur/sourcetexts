@@ -1,0 +1,84 @@
+Independent final review of PDF294–311 maḥzor batch, V3 actual generated XML, Claude Opus5.5 medium. Source text independently accepted, all human445–472 resolved; no further source questions known. Formal882XML schema validation passes. Priorreports: /tmp/mahzor-s294/encoding-guidelines.json, /tmp/mahzor-s294/encoding-alignment.json, /tmp/mahzor-s294/encoding-order.json. V1/V2 remain frozen; V3 actualfiles referenced by SHA in /tmp/mahzor-s294/review-delta-v3-manifest.json. No code inspection in this XML/encoding payload. Read actualXML via bounded lossless event streams/deltas, not raw long mixed-contentlines (Read can truncate). Rule excerpts below retain exact source lines and SHA; original documents remain readable if morecontext needed. Do not assume extra URNs are unregistered: existingrecords and affectedolderfiles are provided. Returnscopehonestly, neverapprove unreadchanges.
+Changes responding to priorfindings: no new printing/language/source_fragment condition URNs. Retzeh/Modim/Modimderabbanan(Hebrew)/Hodaah/Hayom repeatedpointings remainLITERAL in source occurrence with seg/@source toexistingcanonicalidentity. Sharedwordhomeskeep originalcanonicalreading; expandedreuses ownbook'scanonicalwords andtherefore isnotforcedtoeachlaterprinting'spunctuation. Printed sindnesses→kindnesses is now sic/corr in literalMusafmodimENoccurrence, no typooption. Areshet actualworddifference Teqiot/Shofarot uses ONE new contentnamedBILINGUAL condition urn:x-opensiddur:condition:prayer:areshet_sefatenu/conclusion/teqiot_veseder_shofarot; existingacceptedMalkhuyot/Zikhronot alternatives unchanged andexplicitnewFalse. 90stanzaURIs nowincipits (notordinals), see /tmp/mahzor-s294/stanza-incpit-decisions-v3.json, exactcurrentrowtable /tmp/mahzor-s294/alignment-final-v3.json (earlyalignmentproposal obsoleteguesseschangedbyhumans, intentionallyhistorical). OriginalShacharitfullintro identitystaysdefinedONCEinitsoldHEfile, endsBEFOREBibleverses. NewMusafHEliteralquotesit via@source (withinteriorsourceactor/how description); ENfullintro suppliesitsfirstENcounterpart underexistingidentity. Expandedreusesexistingfullintro and addsbilingualeditorialdirectionthatwordKohanimissaidaloud. Nounusedliteral_introURN. ExistingMinchahModimderabbanancontextisactuallyemittedwhenmovingolderHEwordstoa separatewordlibrary; affectedoldfileprovided. Itisnotnewprayeridentity. MalformedAzYashirrange recordREMOVED; rangesexpandedtoexistingendpoints beforeproposedregistrycollection. Allservicecontexts markedstatus=context. Actor/how andmetreattributionnotes nowdescription; actorscarryrole/reader. EnglishOnSabbathrubricaddedatfirstAnusahcondition; firstalternate137PBnowINSIDEAnusahinBOTHlanguagesunderitsown edtoken. Nooutside/unconditionalreset137. Newexpandedweekday/Shabbat/no-priestsunknownalternativeshavebilingualconditionalrubriclabels; knownconditionssuppressqualifiers. No prayer text beyondscan311. Readsourceimage /tmp/mahzor-s294/s306.jpg if needed: KenTagenprintsattheendofEACHstream; metadataacceptedsourceconfirmsboth. Theuserexplicitlyrequestedweekday vsShabbatcompletealternatives, so nofabricatedweekdayrubricisinsertedinthe documentaryedition.
+Read /tmp/mahzor-s294/canonical-and-practice-evidence-v3.json: EXISTING registryrecords for teqa/shomea identities are canonical; oldquietMusaf/textrecords are CONTEXTwithreferences tothose canonicalprayers, notcompetingcanonicalidentities. Actualpartanditsremainder declaration, blowerrole andbinarybirkat-kohanimfeatureverifiedlocally. Exactacceptedsource274Hayom/Areshetrules andconditiontreespriorZikhronotvsnewShofarot areincluded; allconditions/rolesequal. ReadALLexplicitsettingsfiles listedthere (notdirectory).
+Read /tmp/mahzor-s294/draft-schema-validation-v3-report.json, /tmp/mahzor-s294/registry-additions-v3.json, /tmp/mahzor-s294/realization-impact-v3.json (224currentrealizationpayloads), and /tmp/mahzor-s294/bible-source-projection-proof.json. Existing803rawsourcewitnessesunchanged; onlynewmetadata-reviewgateenabledforoldintrosofutureboundariesarehashed. Newlychangedreceipts arenotapprovedbyhashrefresh: actualsource, actualXML changes andnewarrangements arereviewedhere.
+
+Read guideline excerpts fully:
+/tmp/mahzor-s294/guidelines-JLPTEI-3-1-180-v3.md
+/tmp/mahzor-s294/guidelines-JLPTEI-3-181-360-v3.md
+/tmp/mahzor-s294/guidelines-JLPTEI-3-361-370-v3.md
+/tmp/mahzor-s294/guidelines-JLPTEI-3-390-569-v3.md
+/tmp/mahzor-s294/guidelines-JLPTEI-3-570-595-v3.md
+/tmp/mahzor-s294/guidelines-JLPTEI-3-1975-2050-v3.md
+/tmp/mahzor-s294/guidelines-SIDDUR_URN_SCHEME-1-180-v3.md
+/tmp/mahzor-s294/guidelines-SIDDUR_URN_SCHEME-181-245-v3.md
+/tmp/mahzor-s294/guidelines-SIDDUR_URN_SCHEME-305-355-v3.md
+/tmp/mahzor-s294/guidelines-SIDDUR_URN_SCHEME-450-490-v3.md
+/tmp/mahzor-s294/guidelines-SIDDUR_URN_SCHEME-640-660-v3.md
+/tmp/mahzor-s294/guidelines-NAMING_SCHEME-1-179-v3.md
+Review ALL these bounded XML diff/full/header files:
+/tmp/mahzor-s294/review-deltas-v3/00-musaf_repetition_retzeh-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/01-musaf_repetition_modim-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/02-musaf_repetition_modim_derabbanan-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/03-musaf_repetition_hodaah_tail-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/04-musaf_repetition_veteerav-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/05-musaf_repetition_kohanim_intro-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/08-musaf_repetition_shofarot_hayom-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/09-musaf_essa_dei_betzedeq-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/10-musaf_anusah_leezrah-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/10-musaf_anusah_leezrah-diff-01.txt
+/tmp/mahzor-s294/review-deltas-v3/13-musaf_repetition_shofarot_areshet-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/17-amidah_avodah_parts-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/18-amidah_hodaah_parts-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/19-amidah_modim_derabbanan_parts-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/20-musaf_areshet_word_parts-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/21-musaf_repetition_zikhronot_areshet-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/22-rh_avodah-diff-00.txt
+/tmp/mahzor-s294/xml-event-review-v3/22-rh_avodah-00.jsonl
+/tmp/mahzor-s294/xml-event-review-v3/23-rh_hodaah-00.jsonl
+/tmp/mahzor-s294/xml-event-review-v3/24-amidah_modim_derabbanan-00.jsonl
+/tmp/mahzor-s294/review-deltas-v3/25-repetition_birkat_kohanim-diff-00.txt
+/tmp/mahzor-s294/xml-event-review-v3/25-repetition_birkat_kohanim-00.jsonl
+/tmp/mahzor-s294/xml-event-review-v3/26-musaf_shofarot_verses-00.jsonl
+/tmp/mahzor-s294/xml-event-review-v3/27-musaf_shofarot_close-00.jsonl
+/tmp/mahzor-s294/xml-event-review-v3/28-musaf_shofarot_blessing-00.jsonl
+/tmp/mahzor-s294/review-deltas-v3/29-musaf_hayom_harat_olam-diff-00.txt
+/tmp/mahzor-s294/xml-event-review-v3/29-musaf_hayom_harat_olam-00.jsonl
+/tmp/mahzor-s294/review-deltas-v3/30-musaf_areshet_sefatenu-diff-00.txt
+/tmp/mahzor-s294/xml-event-review-v3/30-musaf_areshet_sefatenu-00.jsonl
+/tmp/mahzor-s294/review-deltas-v3/31-prayerbook_for_the_new_year-heidenheim-1965-he-spine-tail-v3-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/32-musaf_repetition_retzeh-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/33-musaf_repetition_modim-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/35-musaf_repetition_modim_derabbanan-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/36-musaf_repetition_hodaah_tail-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/38-musaf_repetition_kohanim_intro-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/40-musaf_repetition_shofarot_hayom-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/41-musaf_essa_dei_betzedeq-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/42-musaf_anusah_leezrah-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/42-musaf_anusah_leezrah-diff-01.txt
+/tmp/mahzor-s294/review-deltas-v3/45-musaf_repetition_shofarot_areshet-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/50-amidah_hodaah_parts-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/51-musaf_areshet_word_parts-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/52-musaf_repetition_zikhronot_areshet-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/53-rh_avodah-diff-00.txt
+/tmp/mahzor-s294/xml-event-review-v3/53-rh_avodah-00.jsonl
+/tmp/mahzor-s294/xml-event-review-v3/54-rh_hodaah-00.jsonl
+/tmp/mahzor-s294/xml-event-review-v3/55-musaf_shofarot_verses-00.jsonl
+/tmp/mahzor-s294/xml-event-review-v3/56-musaf_shofarot_close-00.jsonl
+/tmp/mahzor-s294/xml-event-review-v3/57-musaf_shofarot_blessing-00.jsonl
+/tmp/mahzor-s294/review-deltas-v3/58-musaf_hayom_harat_olam-diff-00.txt
+/tmp/mahzor-s294/xml-event-review-v3/58-musaf_hayom_harat_olam-00.jsonl
+/tmp/mahzor-s294/review-deltas-v3/59-musaf_areshet_sefatenu-diff-00.txt
+/tmp/mahzor-s294/xml-event-review-v3/59-musaf_areshet_sefatenu-00.jsonl
+/tmp/mahzor-s294/review-deltas-v3/60-prayerbook_for_the_new_year-marmorstein-1965-en-spine-tail-v3-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/61-expanded-spine-tail-v3-diff-00.txt
+/tmp/mahzor-s294/review-deltas-v3/61-expanded-spine-tail-v3-diff-01.txt
+/tmp/mahzor-s294/review-deltas-v3/00-musaf_repetition_retzeh-header.jsonl
+/tmp/mahzor-s294/review-deltas-v3/12-musaf_repetition_areshet_zikhron_words-header.jsonl
+/tmp/mahzor-s294/review-deltas-v3/20-musaf_areshet_word_parts-header.jsonl
+/tmp/mahzor-s294/review-deltas-v3/27-musaf_shofarot_close-header.jsonl
+/tmp/mahzor-s294/review-deltas-v3/32-musaf_repetition_retzeh-header.jsonl
+/tmp/mahzor-s294/review-deltas-v3/34-musaf_repetition_modim_derabbanan_english_words-header.jsonl
+/tmp/mahzor-s294/review-deltas-v3/51-musaf_areshet_word_parts-header.jsonl
+/tmp/mahzor-s294/review-deltas-v3/56-musaf_shofarot_close-header.jsonl
+Read /tmp/mahzor-s294/header-template-proof-v3.json to cover all59headers:8exacttemplates retainidenticalcredits/licences/bibliography/encodingmetadata aftermaskingONLYtitle,publicationURNandpages; alloriginalvariablevalues listed. Forpriorreviewedunchangedbodyparts, V1reviewsstand; reviewallV3delta. Check sourcecorresp scopes, source/targetextents, metadata/roles/rubrickinds, noforbiddennewidentities, stanzanaming, bilingualcounterparts, allnewcanonicalrealizationbindings includingmeaningfuloldcontexts. ReturnSTRICTJSON {reviewer:{model,configured_effort},approved:boolean,data_encoding_approved:boolean,generated_encoding_approved:boolean,canonical_identity_approved:boolean,guideline_adherence_approved:boolean,realization_bindings_approved:boolean,all_requested_checks_completed:boolean,files_read:[],blocking_findings:[],new_human_questions:[],nonblocking_findings:[],scope_limitations:[],verdict}. Noexportapprovalclaim. Noedits.

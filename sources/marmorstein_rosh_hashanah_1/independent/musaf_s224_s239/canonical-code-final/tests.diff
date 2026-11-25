@@ -1,0 +1,22 @@
+--- 
++++ 
+@@ -178,3 +178,19 @@
+         self.assertEqual(caller.xpath('//tei:f/@name',namespaces=NS),[A,B])
+         with self.assertRaisesRegex(ValueError,'one generated home'):
+             validate_generated(docs+[(Path('/project/example-en/duplicate.xml'),deepcopy(root))],r)
++
++    def test_range_caller_selects_overlay_after_an_unvaried_start(self):
++        from pathlib import Path
++        from lxml import etree
++        from opensiddur.importer.marmorstein_rosh_hashanah_1.realizations import validate_generated
++        r=fixture();u=r['units'][0];u['languages']['en'].insert(0,dict(paragraph=1,corresp=P+'/before',fragments=[dict(scan='s2',printed_page='1',text='Beginning',page_start=True)]))
++        root=unit_document(prepare_unit(u,r),'en',True);caller,body=document('en','example','Example',P+'/caller')
++        etree.SubElement(body,'{'+NS['j']+'}transclude',target=P+'/before',targetEnd=P+'/part',type='inline')
++        validate_generated([(Path('/project/example-en/host.xml'),root),(Path('/project/example-en/caller.xml'),caller)],r)
++        self.assertEqual(caller.xpath('//tei:f/@name',namespaces=NS),[A,B])
++
++    def test_expanded_selector_edits_invalidate_realization_review(self):
++        r=fixture();before=dict((k,v) for k,v,_ in review_payloads(r))
++        r['expanded_order']=[dict(reference={'target':P+'/part'},declarations=[dict(type='opensiddur:variant',features={A:True,B:False})])]
++        after=dict((k,v) for k,v,_ in review_payloads(r))
++        self.assertNotEqual(before['realization/occurrence/en'],after['realization/occurrence/en'])

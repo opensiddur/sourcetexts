@@ -1,0 +1,65 @@
+{
+  "status": "Accepted evening conclusion and home customs s34–s38; no pending source/encoding/alignment/order disputes.",
+  "source_order": [
+    "s35/printed20",
+    "s34/printed21",
+    "s36/printed22he",
+    "s37/printed22en",
+    "s38/printed23"
+  ],
+  "source_identification": "original_pdf_page_identity.json:355physical pages/355embeddedimages;54cachedimages match corresponding ordinalPDFpages by nearest-image comparison. Physical35/printed20/Archive n34 verified visually.",
+  "review_rounds": [
+    "independent/maariv_close_guideline_audit_round1.json",
+    "independent/maariv_close_guideline_audit_round2.json",
+    "independent/maariv_close_guideline_audit_round3.json"
+  ],
+  "fixed_findings": [
+    "S1correctspeakerexpansion",
+    "S2citationformula punctuation before Bible scopes",
+    "S3Germanlanguage",
+    "G2editionlabels outside Mishnahscopes",
+    "G4emptyEnglishconditionalremoved",
+    "O1verbatimsourceinstructions atHamotzi/appleactions",
+    "O2Germanconditionalrubric",
+    "O3Sabbathwhenrubrics",
+    "O4sourceKaddish/Kiddushinstructions"
+  ],
+  "withdrawn_findings": [
+    "G1whole-witnessTenDaysguard: priorcomparisonwithHalfKaddish wasfactuallywrong; guardretained andapproved inround2.",
+    "G3existingregisteredcanonicalpartnames retained."
+  ],
+  "pending_human": [],
+  "reviewer_invocation": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "medium",
+    "cli_flags": [
+      "--model",
+      "claude-opus-5-5",
+      "--effort",
+      "medium"
+    ],
+    "model_verified_by": "Claude CLI modelUsage canonicalModel=claude-opus-5-5, provider=firstParty; rawresponse retainedoutsideGit.",
+    "effort_discrepancy": "Some reviewer JSON self-reports low effort despite the medium CLI flag. Both self-report and configured invocation are preserved; effective internal effort cannot be independently observed."
+  },
+  "validation": {
+    "schema": "148XMLfiles pass RNG/Schematron in guarded accepted build; all review hashes current.",
+    "tests": "112importer tests+41subtests",
+    "registry_features_names_references": "Pass",
+    "runtime": "maariv_close_runtime_verification.json",
+    "marked_html": "maariv_close_html_state_verification.json: all20documentary/28expanded actualfinalHTMLscopes pass false/true/unknown.",
+    "selected_print_words": "maariv_close_print_word_verification.json",
+    "heading_alignment": "maariv_close_heading_alignment_verification.json: actualaccepted documentaryprintXML aligns bothheadings afterHE-onlyBameh.",
+    "post_audit_changes": "maariv_close_post_audit_verification.json: all27frozen targets match after reversing only acceptance metadata and the explicit human-confirmed final word. All148files have no DRAFT metadata.",
+    "previous_accepted_units": "All122previously tracked language-module files are unchanged; only the three prior indices change.",
+    "exports": "maariv_close_export_verification.json:38-page documentaryPDF,37-page expandedPDF; bothfinalHTMLexports haveuniqueIDs andresolvinginternalanchors. FinalLaTeXpasses havenoundefinedreferences. AffectedPDFpages andcredits renderedandvisuallyinspected."
+  },
+  "post_audit_human_edit": {
+    "from": " וויא אַם שבת.",
+    "to": " וויא אַם שַׁבָּת.",
+    "files": [
+      "prayerbook_for_the_new_year-heidenheim-1965-he/index.xml",
+      "machzor_expanded-opensiddur-he/index.xml"
+    ],
+    "authority": "Human confirmation of tight crop after round3, recorded in human_maariv_close_confirmation.json."
+  }
+}

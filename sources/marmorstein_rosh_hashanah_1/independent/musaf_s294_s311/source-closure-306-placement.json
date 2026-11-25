@@ -1,0 +1,19 @@
+{
+  "approved": true,
+  "all_prior_blocks_verified": true,
+  "corrected_finding_confirmed": true,
+  "blocking_findings": [],
+  "new_human_questions": [],
+  "scope_limitations": [
+    "This approval covers source closure for scans s306–s311 only. My final source report (source-closure-final-306.json) already checked every block on s306–s311 against the six original scans and the four enlarged pair crops. For this pass I re-read only the original s311.jpg, the fix file and the current candidate.",
+    "The source_role_labels and source_sic_corr records for s294–s305 (the s294 ק׳ labels, the s298/s299 rubrics, the s300/s302/s304 labels, the s305 Exodus missing-quote record) and the human471 יֹקֶשׁ reading on s298 were not checked against their images here. They still need their own image-checked sign-off.",
+    "I could not diff against the earlier candidate version. 'No prayer strings changed' rests on text_changed:false in source-role-placement-fix.json, plus my re-check that all s311 English blocks in candidate-current.json still match the scan. That includes the s311 'Congregation:' block (key modim_derabbanan_heading, kind instruction) and the printed misprint 'sindnesses', which is kept and recorded in source_sic_corr.",
+    "I did not review code, XML encoding or export, and this approval does not cover them. The candidate status line itself says encoding/export review is still pending."
+  ],
+  "verdict": "APPROVED for s306–s311 source closure. F1 is fixed: in candidate-current.json, source_role_labels for s311 modim_derabbanan now reads 'Italic heading centered over the narrow right-hand column, above 'מודים We thank Thee because''. The original s311.jpg confirms this. Below the ברוך paragraph the page splits into two columns. The wide left column has the large-type 'מודים We thank Thee for…'. The narrow right column has the small-type Modim de-Rabbanan, with the italic 'Congregation:' centered above it. The fix touched only the placement field. The other s311 English blocks still match the scan, and my final source report had no other open findings or human questions. Nothing else blocks source closure for s306–s311. This is not a code or export approval.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "0f947f1a-d580-48d1-b9a8-062612d0fc14"
+  }
+}

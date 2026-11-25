@@ -1,0 +1,119 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Exact-delta adjudication only, with no new blind reading. I read the fresh final287-return-a current.json, current.review.xml, english-preservation-proof.json, routing-context.json (lines 1–2294 of 3489) and human-authorities.json, plus guideline-excerpts.md. I also read the prior full reviews (shofar-completion-return-a and -b), return-details/review.json, the return_source_corrections receipt (changes list plus BEFORE payloads for these 6 units) and the fine_source_corrections receipt (changes, BEFORE and AFTER). I diffed each receipt BEFORE against current, word by word, for all 6 units. I opened no bands or native scans, because no new question needed them."
+  },
+  "witnesses": [
+    {
+      "stem": "torah_yequm_purqan_scholars",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "All 3 receipt changes are in current: קַדִּישְׁתָּא. דִּי / בְבָבֶל. לְרֵישֵׁי / מָן־דְּעָסְקִין. No other word changed from BEFORE. The missing colon after בִּישִׁין matches what the prior full review accepted.",
+        "One prayer-part milestone (yequm_purqan/scholars/text) with a bare terminator. HE and EN share the same corresp. EN is byte-identical to BEFORE."
+      ]
+    },
+    {
+      "stem": "torah_yequm_purqan_congregation",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "All 4 receipt changes are in current: לָא־יִבְטוּל / וּנְשַׁיָּא. / בִּישִׁין. / בְסַעְדְּכוֹן. No other word changed. As printed, there is no colon after מְעַלְיָא in this occurrence, and nothing was carried over from the scholars text.",
+        "Canonical /congregation/text milestone with a terminator. EN unchanged."
+      ]
+    },
+    {
+      "stem": "torah_mi_sheberakh_kol_haqahal",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "From the main receipt: וְיַעֲקֹב, הוּא / כָּל־מַחֲלָה / לְכָל־גּוּפָם. From the agreed fine-word receipt: yod dagesh only, כְנֵסִיּוֹת, with no kaf dagesh added. The kaf dagesh in the enlarged reading came from an unproofread crop, so it was correctly not applied. No other word changed.",
+        "HE pb n=86 facs n191 (s192). EN pb n192 (s193). EN unchanged."
+      ]
+    },
+    {
+      "stem": "torah_hanoten_teshuah",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "וְעִם כָּל־יִשְׂרָאֵל is applied. The small-script פלוני is a he tei:note type=instruction (directive) at its exact printed spot between אֲדוֹנֵנוּ and יָרוּם. It is not read aloud as text, and no ruler's name was added. The double space before the note is whitespace only. All other words match BEFORE.",
+        "EN 'our lord . . .' kept byte-identical. No placeholder was added to the English."
+      ]
+    },
+    {
+      "stem": "torah_ashrei",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "Applied: וּגְדָל־חָסֶד and יְדַבֶּר פִּי. Human283: לּוֹ is unchanged with its lamed dagesh, so the enlarged-crop disagreement is closed. אֲבָרְכֶךָּ already has its final-kaf dagesh (unchanged). The other 22 verses are identical to BEFORE.",
+        "Milestones: verses 84/5, 144/15, 145/1–21 and 115/18. Each chapter switch has bare verse and chapter terminators. Chapter corresps are local occurrence URNs, not bible-chapter correspondences. The seg sources are verse-level. EN keeps sic Wis / corr His at 145:9, unchanged."
+      ]
+    },
+    {
+      "stem": "torah_yehallelu",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "citations_source_approved": true,
+      "issues": [],
+      "unresolved": [],
+      "verified": [
+        "Human284: תְּהִלָּה (tav dagesh) is applied. The HE head 'סֵדֶר הַכְנָסַת סֵפֶר הַתּוֹרָה' no longer has the unprinted period. It stays at this first module, and the expanded spine's section head governs the whole return section, as decided. No words were moved and no canonical identity was split.",
+        "Ps 148:13 a/b half-verses follow the printed reader/congregation split, with half-verse, verse, chapter and prayer-part terminators. 'Reader:' and 'Congregation:' are English description notes. The leading space in the 148:14 seg is whitespace only. EN unchanged."
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "stem": "torah_ashrei",
+      "language": "he",
+      "index": 0,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "torah_ashrei",
+      "language": "en",
+      "index": 0,
+      "source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    }
+  ],
+  "instructions": {},
+  "prior_full_review_used": true,
+  "limits": [
+    "The supplied top-level instructions object is {}. The פלוני note is a generated inline instruction inside the unit, not an indexed raw instruction or citation, so it is judged under the witness.",
+    "English byte identity rests on english-preservation-proof.json and on exact agreement between current.json, current.review.xml and the receipt BEFORE payloads. I did not open the english-shard-09 or -10 payloads myself.",
+    "Human285–287 and the Psalm 24, Psalm 29, Uvenuchoh and cantor units are outside this scope. I did not re-read routing-context.json lines 2295–3489 because no routing changed.",
+    "No claim about schema, compiler, PDF or HTML. Final export QA is separate."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "b68ab2d3-892e-4876-9d77-76640a1a914d"
+  }
+}

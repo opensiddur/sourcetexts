@@ -1,0 +1,54 @@
+{
+  "status": "implementation decisions pending source and encoding review",
+  "coverage": {
+    "partial_openings": [
+      252,
+      253
+    ],
+    "full_pages": [
+      254,
+      275
+    ],
+    "excluded_next_opening": 276,
+    "accepted_complete_before": 252,
+    "expected_complete_after": 276,
+    "remaining_after_acceptance": 79
+  },
+  "page_boundaries": [
+    "Do not emit a second leading pb for252/253: those pages already begin in accepted Veyeetayu material. Their Attah Vechartanu tails are new content on the same source leaf.",
+    "The verse/petition/stanza scope must survive physical page turns without pretending English and Hebrew turn at the same words.",
+    "Inspect the repeated zer at262/264 as a possible catchword. Retain source evidence; do not recite twice without evidence."
+  ],
+  "recitation": [
+    "Weekday Anassekhah Malki begins260 and concludes270. Its Malkhuyot verse chain on272 is part of the weekday alternative.",
+    "Shabbat Ahallelah Elohai runs continuously below the rules260–272, with biblical verses interwoven. Keep one reusable work file per language; do not interleave with the weekday poem at each printed page.",
+    "Each alternative reaches its own Shema conclusion before shared Melokh on274. Do not append the weekday biblical chain to the Shabbat work.",
+    "Shofar sounding is excluded on Shabbat. Hayom Harat Olam and Areshet contain distinct source directions about local customs and cantor repetitions; shofar absence alone must not remove all following prayers."
+  ],
+  "identity_search": "identity-search.json",
+  "reuse": {
+    "attah_vechartanu": "urn:x-opensiddur:text:prayer:amidah/attah_vechartanu_mikol",
+    "vattitten": "urn:x-opensiddur:text:prayer:amidah/vattitten_lanu_hashem",
+    "umipnei": "urn:x-opensiddur:text:prayer:amidah/umipenay_chataaynu_galinu",
+    "pifiyyot": "urn:x-opensiddur:text:prayer:heyeh_im_pifiyot",
+    "lo_yevoshu": "urn:x-opensiddur:text:bible:psalms/69/7",
+    "melokh": "urn:x-opensiddur:text:prayer:amidah/melokh_al_kol_haolam",
+    "pifiyyot_stanzas": "urn:x-opensiddur:text:prayer:heyeh_im_pifiyot/1 through /12 (source12 is regionally conditional)",
+    "ochilah_traditional_core": "urn:x-opensiddur:text:prayer:ochilah_lael_goldman/6"
+  },
+  "identity_questions": [
+    "Ochilah search finds existing Goldman identity whose /6 contains this traditional prayer but whose whole root is a larger personal-prayer arrangement. Reuse the actual matching extent or resolve the historical canonical identity; do not transclude the larger arrangement as this source prayer.",
+    "Aleinu has legacy Siddur part identities already used by this project and a prayer root attached to a modern adaptation. Inspect actual scopes before choosing canonical parts. Repeated printing does not justify a new identity.",
+    "No matching complete Anassekhah or Ahallelah work found in the incipit search. Register only after broader spelling/alias search and independent identity review."
+  ],
+  "identity_scope_evidence": [
+    {
+      "file": "project/ochilah_lael-goldman-2018-he/ochilah_lael_goldman.xml",
+      "finding": "The canonical /6 stanza contains the traditional six-line Ochilah, ending Proverbs16:1. Root includes a preceding repeated opening and cannot substitute for just this printed core."
+    },
+    {
+      "file": "project/heyeh_im_pifiyot-200bce-he/heyeh_im_pifiyot.xml",
+      "finding": "Established stanza12 contains veneemar and Psalm69:7. New volume places an omission rubric immediately before it. Reuse /12 with local rite condition rather than creating a new prayer identity."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "approved_draft_note_marker_encoding": true,
+  "required_changes": [],
+  "limitations": [
+    "I only had Read access, so I ran nothing. I did not re-run the TEI validation myself. 'Valid TEI' rests on draft-schema-report.json, which says hymn_of_divine_unity_for_the_fifth_day_paytan has schema_valid=true with no errors.",
+    "I compared the note text to the two source snapshots by reading them closely, not with a byte-level diff. The builder reads the footnote text from working-encoding-atlas.json, which I did not open. My confirmation that no words were lost comes from comparing the generated note XML directly with the source-340 and source-341 snapshot footnote blocks.",
+    "The snippets file has no Friday (sixth_day) XML, only the flag commentary_not_duplicated_in_friday=true. My 'Friday gets no note' finding is based on the builder code: citations/source_notes are set only on the Thursday unit at lines 82-86, and the anchor xpath at line 128 finds exactly one."
+  ],
+  "notes": [
+    "Separation of poem and commentary: the poem line is encoded as <tei:l> with milestone stanza .../hymn_of_divine_unity_for_the_fifth_day_paytan/17, then <tei:anchor xml:id='shir_hayichud_thursday_philosophy'/>, then the text 'כָּל הַנִּרְאִים וְהַנִּשְׂכָּלִים. וְהַמַּדָּעִים בְּעֶֽשֶׂר כְּלוּלִים:'. No commentary text is in the poem line, and the separate <tei:note type='commentary' target='#shir_hayichud_thursday_philosophy' xml:lang='he'> holds no poem text.",
+    "Asterisk scope: the builder removes 'כָּל*' only when the fragment is scan s340 with physical_line 12, and first asserts that the string occurs exactly once (build-draft-appendix-modules.py:52-54). The pointing is untouched and no other character changes. A further guard asserts there is no '*' anywhere in the Thursday body text (line 131).",
+    "The raw source asterisk is kept: source-340-working-snapshot.json still reads 'כָּל* הַנִּרְאִים'. The builder only changes the generated fragment copy (f is a deepcopy), not the source.",
+    "Note marker: re.sub(r'^\\*\\)\\s*','',...) is anchored at the start of the string, so only the leading '*) ' is removed. The generated note starts 'כל הנראים וכו׳', with nothing else dropped.",
+    "Join point: s340 ends '...אשר יתחבר מסוג והבדל' and s341 begins 'כאמרנו האדם הוא חי מדבר'. The generated note reads 'מסוג והבדל כאמרנו האדם הוא חי מדבר', joined with one space and in the right order. The note ends 'ואין כח ברעיון לתפוס בו כל מאומה.', matching the end of s341. The readings that the s341 snapshot keeps as printed ('הם הם', 'בחוק' vs 'בחק') are preserved.",
+    "Anchor position: the anchor attaches to the first segment whose corresp is Thursday/17 (line 82). In the generated XML it sits right after the /17 stanza milestone, at the start of the line that was printed with the asterisk.",
+    "Page boundaries: page_start is computed before the asterisk is removed and doesn't depend on the text, and s340 line 12 is not a page-start line. The only page-related metadata change is biblScope to='15' (lines 126-127), which reflects the note continuing onto printed page 15 / scan s341. It does not move any pb in the poem.",
+    "The note itself has no internal pb/scan marker at the s340→s341 changeover. The continuation is recorded only in the citation's source_scans list and in the English source_note. That is acceptable for this draft, but a future reviewer may want an inline page marker in the note.",
+    "Scope: this approves only the note-marker encoding of the draft. It does not approve the source-341 readings: the s341 snapshot's footnote and Friday-poem uncertainties are still open, and the builder's own source_note says 'Source reading remains unaccepted.' It also does not approve the full module, source, export, or batch. I made no edits."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "4fb142d2-89c8-4c46-9d74-9ece4404838c"
+  }
+}

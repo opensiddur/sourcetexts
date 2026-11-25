@@ -1,0 +1,31 @@
+{
+  "scope": "documentary_html_final_v8",
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/html-tail-v8/manifest.json",
+    "/tmp/mahzor-s294/full-html-browser-summary-v8.json",
+    "/tmp/mahzor-s294/coverage-labels-v8-closure.json",
+    "/tmp/mahzor-s294/html-tail-v8/documentary-1280-n293.png",
+    "/tmp/mahzor-s294/html-tail-v8/documentary-1280-n309.png",
+    "/tmp/mahzor-s294/html-tail-v8/documentary-390-n293.png",
+    "/tmp/mahzor-s294/html-tail-v8/documentary-390-n309.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "Both earlier spacing defects are fixed in documentary-1280-n309. The words 'השליח ציבור מסיים ברוך אתה' now have a space between מסיים and ברוך. The words 'אַהֲרֹן וּבָנָיו … בקול … כֹּהֲנִים עַם קְדוֹשֶׁךָ כָּאָמוּר:' now have a space between the rubric and כֹּהֲנִים. Mobile n309 also shows the מסיים/ברוך space. The בקול/כהנים line falls below the mobile crop. Spacing is a property of the text, not the screen width, and main_text_sha256 is the same at both widths, so the desktop check covers it.",
+    "The end label shows in both columns in documentary-1280-n309. It appears right after the introduction that ends 'as it is said:' / 'כָּאָמוּר:'. English: 'Digitization reaches the priestly-blessing introduction in the Musaf repetition (scan311). The priestly verses and following service, beginning on scan312, remain unencoded.' Hebrew: 'התמלול מגיע עד הקדמת ברכת כהנים בחזרת מוסף; פסוקי הברכה והמשך התפילה טרם נכללו.' The rows line up, the bold editorial colour can be told apart from the text, and nothing is clipped. This matches the intro-only extent confirmed in coverage-labels-v8-closure.json.",
+    "Evidence gap: documentary-390-n309 ends at Modim d'Rabbanan / 'Congregation:'. That is before the priestly introduction, so this screenshot does not show the end label at 390px. The label text is in the main text (the hash is the same at both widths) and the 1280 render shows it, but I have not seen it visibly at mobile width. I recommend one more 390px capture scrolled to the label to close this. I am not counting it as a defect.",
+    "In documentary-1280-n309 a Hebrew-only 'שִׁיר שֶׁל יוֹם' section (היום ראשון בשבת, Psalm 24) follows the label, with an empty English column. This is presumably the accepted excerpt on partial scan351. Because nothing visible explains the jump from scan312 to scan351, a reader may think it contradicts 'והמשך התפילה טרם נכללו'. Consider a short note such as 'excerpt from scan351' or an English placeholder. I am not blocking on this, since the excerpt was accepted and you said not to demand the later service.",
+    "In documentary-390-n309, two pairs of empty rows appear between parallel blocks. One is after 'Blessed art Thou… in awe.' and the other is after '…ever have we trusted in Thee.' On desktop these match small blank gaps in the Hebrew column. This is probably the empty p:parallel scaffolding noted in the closure review. It is only cosmetic.",
+    "The opening screenshots (n293 at 1280 and 390) read well. In the desktop two-column view the English text is justified and the Hebrew is right-aligned, and the rows line up. On mobile each Hebrew row comes before its English row, with rules between them. Pointed text renders cleanly, the word boundaries are correct (for example 'קהל ↗אֶשָּׁא', 'בְּקוֹל כְּשׁוֹפָר') and nothing runs into the gutter. The bottom row of the desktop crop is cut off only by the screenshot's viewport edge.",
+    "The ↗ source-link markers are visible at the start of segments. The manifest records that the documentary profile reaches archive.org page/n293.jpg and page/n309.jpg, so the source links resolve. The Contents and Settings buttons do not cover any text at either width.",
+    "Carried over, not re-checked here: the Hebrew label still has no scan number, while the English names scan311 and scan312."
+  ],
+  "verdict": "APPROVED for the documentary HTML final v8, on the four screenshots assigned. Both earlier HTML spacing defects (מסיים/ברוך and בקול/כהנים) are fixed with real spaces. The end label after the priestly introduction is visible, readable, aligned and accurate at 1280px in both languages, and it agrees with the intro-only extent confirmed in coverage-labels-v8-closure. The browser summary reports no errors, duplicate IDs, broken internal links or horizontal overflow in any profile at 1280 or 390. I found no clipping, alignment or word-boundary defects. The remaining items do not block approval: the end label is not visibly captured at 390px, there is no visible note before the Hebrew-only scan351 שיר של יום excerpt, and empty parallel rows appear on mobile. This approval covers only the documentary profile. The documentary-hebrew and expanded screenshots listed in the manifest were not assigned and were not reviewed.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "721fef52-ee97-4829-a1b5-ae8378fba0fd"
+  }
+}

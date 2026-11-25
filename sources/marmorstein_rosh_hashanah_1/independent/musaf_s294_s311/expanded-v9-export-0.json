@@ -1,0 +1,25 @@
+{
+  "scope": "expanded-v9-export-0",
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/expanded-export-manifest-v9.json",
+    "/tmp/mahzor-s294/full-pdf-images-v9/expanded-251.png",
+    "/tmp/mahzor-s294/full-pdf-images-v9/expanded-252.png",
+    "/tmp/mahzor-s294/full-pdf-images-v9/expanded-253.png",
+    "/tmp/mahzor-s294/full-pdf-images-v9/expanded-254.png",
+    "/tmp/mahzor-s294/full-pdf-images-v9/expanded-255.png",
+    "/tmp/mahzor-s294/full-pdf-images-v9/expanded-256.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "expanded-256.png (printed p.254): the last row is the label 'וְנֶאֱמַר / And it was said:' alone at the bottom of the page. The verse it introduces starts on the next page. This is an orphaned heading; a keep-with-next rule on these intro labels would fix it. It's cosmetic: nothing is clipped or misaligned.",
+    "expanded-254.png → expanded-255.png (printed pp.252–253): the scan-page marker (↗) for the 'רָחַשְׁתִּי' / 'רְבִיעִית' change is in the HE column on p.252 but in the EN column at the start of p.253 ('↗The fourth'). In the same way, the HE marker before 'הַשֹּׁפָר' at the bottom of p.253 has no matching EN marker in that row. The markers seem to follow each language's own page breaks rather than being placed in pairs. That fits with 'source/encoding/order approved'. I'm noting it only in case markers were meant to be symmetric."
+  ],
+  "verdict": "I checked printed pages 249–254 (images 251–256), which cover the rest of the Shofar piyyut and the scriptural verses for the Shofar section. Nothing is clipped or overlapping, and nothing runs into the margins. Hebrew, including vowel points and the bold חזן cue, and English are clear and readable. The page numbers and the running head 'חזרת התפלה' alternate correctly between recto and verso. The stanza rows line up across languages on every page. Intro labels (כַּכָּתוּב בְּתוֹרָתֶךָ, וְנֶאֱמַר, וּבְדִבְרֵי קָדְשְׁךָ, וְעַל־יְדֵי עֲבָדֶיךָ) are paired correctly with their verses, and the Psalm 150 verses are each on their own row. This range has no notes, ending, missing-source label, or credits, so I didn't check for them. I found no blocking problems. Approved, with the two minor notes above.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "b00e9712-dead-46e5-b693-603f80198378"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "files_read": [
+    "/tmp/mahzor-s312/markup-closure-review.json",
+    "/tmp/mahzor-s312/markup-supplement.json"
+  ],
+  "uva_identity_reuse_verified": true,
+  "scan325_items_accounted_for": false,
+  "remaining_findings": [],
+  "limitations": [
+    "Uva reuse: the supplement gives registry rows for chol/shacharit/conclusion/uva_letziyyon (siddur.jsonl:102) and all ten subunits: barukh_eloheinu :103, targum_barukh :104, targum_qadosh :105, targum_yimlokh :106, ashrei :124, chafetz :125, hoshiah :126, tzevaot :127, vehu :128, yimlokh :129. All are canonical, and each subunit's parent is the uva_letziyyon URN. In prayerbook_for_the_new_year-heidenheim-1965-he each URN is mapped exactly once, to rh_minchah_uva_letziyyon.xml, so the project has no duplicate correspondence. The Birnbaum conclusion_uva_letziyyon.xml body defines every one of these 11 URNs as a div or prayer-part corresp, which confirms the definitions being reused. Caveats: I took the registry and mapping rows as supplied and did not query siddur.jsonl or the project mapping files myself. This supplement does not repeat the Heidenheim rh_minchah_uva_letziyyon.xml body, so my check that it uses these URNs rests on the earlier dossier review.",
+    "Scan 325 verses (Num 14:17 ועתה יגדל־נא and Ps 25:6 זכר רחמיך): these are encoded in rh_minchah_kaddish_preface.xml (project prayerbook_for_the_new_year-heidenheim-1965-he). It has div corresp rosh_hashanah/minchah/kaddish_preface and div/@facs n324. Each verse has its own bounded chapter/verse context (…/kaddish_preface/quotation/numbers/14 with …/14/17, and …/quotation/psalms/25 with …/25/6). Each verse milestone is a child of its chapter, both scopes are closed explicitly, and the closing ':' sits outside the quotation seg. These two items are accounted for.",
+    "Scan 325 English instructions ('The Reader says half Kaddish.' and the long 'Then the congregation says the תפלה page …' rubric): the supplement gives both as tei:note type=instruction xml:lang=en with facs n324, but only as standalone fragments. It does not say which file contains them or where they sit relative to the Uva ending, the kaddish_preface verses, the half Kaddish and Vaani. So I cannot confirm that they are actually encoded in the project or that they are in the printed order. This is why scan325_items_accounted_for is false. To settle it, provide the host file path(s) and the surrounding XML.",
+    "I also cannot see whether rh_minchah_kaddish_preface.xml is transcluded into the Minchah compilation in the right place, between the Uva ending and the half Kaddish. It was not among the 18 files in the dossier, and no registry row or mapping was supplied for rosh_hashanah/minchah/kaddish_preface.",
+    "Things in the rubric note I could not check: the printed page number has been replaced by a page ref, and both 'page' refs in the rubric point to rosh_hashanah/shacharit/silent_amidah/adonai_sefatai. I could not confirm against the scan that both printed numbers refer to that place. One ref uses the text:prayer: namespace (urn:x-opensiddur:text:prayer:avinu_malkenu) where the others use text:siddur:, and I have no registry row showing that URN exists. I am not raising these as findings without registry or scan evidence.",
+    "Not certified: any source reading or pointing (including the Hebrew of the kaddish_preface verses), the role-label reading, or the large ה glyph. Questions 473-489 stay open. This is not overall or batch acceptance, and the supplement itself is marked UNACCEPTED. I did not evaluate its intro_scope runtime claims, which are outside the two questions asked."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "f4280f23-e865-454a-baaf-89adea891ca2"
+  }
+}

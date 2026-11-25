@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "host": "musaf_kohanim_berakhah",
+      "caller_defaults_explicit": true,
+      "earlier_source_words_exact": true,
+      "appendix_options_absent": true
+    },
+    {
+      "host": "musaf_kohanim_addir_bamarom",
+      "caller_defaults_explicit": true,
+      "earlier_source_words_exact": true,
+      "appendix_options_absent": true
+    },
+    {
+      "host": "shacharit_amidah_sim_shalom",
+      "caller_defaults_explicit": true,
+      "earlier_source_words_exact": true,
+      "appendix_options_absent": true
+    },
+    {
+      "host": "musaf_repetition_sim_shalom",
+      "caller_defaults_explicit": true,
+      "earlier_source_words_exact": true,
+      "appendix_options_absent": true
+    }
+  ],
+  "scope": "Synthetic external callers of four actual accepted source units, processed through normal validate_generated and compiler. This proves default injection and source-word preservation; actual service spines remain untested until integration.",
+  "registry_limitation": "Candidate variant IDs are not yet registered; draft proof bypasses variant registry."
+}

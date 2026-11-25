@@ -1,0 +1,196 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "medium (read every listed XML and evidence file in full and the JLPTEI-3 guidelines; no code, settings or YAML read; marks were checked by reading the text, with no byte-level Unicode tooling)"
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "low",
+      "kind": "encoding/guideline",
+      "files": [
+        "heidenheim/morning_shema_yisrael.xml:35",
+        "marmorstein/morning_shema_yisrael.xml:35",
+        "heidenheim/attah_hu_bashamayim.xml:34",
+        "marmorstein/attah_hu_bashamayim.xml:34",
+        "heidenheim/qorbanot_kiyyor.xml:41",
+        "heidenheim/leviticus_6_3_to_4.xml:41",
+        "heidenheim/qorbanot_tamid.xml:41",
+        "heidenheim/qorbanot_veshachat.xml:41",
+        "heidenheim/qorbanot_qetoret.xml:41"
+      ],
+      "issue": "These files contain chapter milestones like <tei:milestone unit=\"chapter\" n=\"30\"/>, which carry @n but no @corresp. Under URN-scope rule 3, any milestone with a unit and no corresp is a terminator, so these open no chapter scope and their @n means nothing. The guideline also says bare terminators carry no @n. In qorbanot_qetoret.xml the chapter-n=30 + verse + bare verse + bare chapter group is repeated five times. These milestones are harmless to resolution, because a bare chapter milestone does not close verses (the unit must match exactly). They are still non-standard.",
+      "action": "If this is not an established house convention from earlier installments, drop the n-bearing chapter milestones that have no corresp, or use edition-verse-style display units. In qetoret, only the explicit terminator before וְנֶאֱמַר and at the end is needed, since adjacent verses 34–36 share boundaries. Not blocking."
+    },
+    {
+      "id": "F2",
+      "severity": "info",
+      "kind": "encoding/refdb",
+      "files": [
+        "heidenheim/morning_shema_yisrael.xml:35",
+        "marmorstein/morning_shema_yisrael.xml:35"
+      ],
+      "issue": "In each project, the morning Shema repeats the verse milestone urn:x-opensiddur:text:bible:deuteronomy/6/4, which the evening Shema already uses. Per the Versification rules, the refdb and parallel compiler keep the first occurrence and warn. This is the intended design: the printing differs, and the expanded edition selects the structural morning URN. It is listed only so that the expected warning is not mistaken for a regression.",
+      "action": "None. Optionally note the expected duplicate-verse warning in the README or resolutions."
+    },
+    {
+      "id": "F3",
+      "severity": "low",
+      "kind": "source fidelity (citation placement)",
+      "files": [
+        "heidenheim/qorbanot_kiyyor.xml:32-36",
+        "heidenheim/leviticus_6_3_to_4.xml:32-36"
+      ],
+      "issue": "Page 9 prints one citation line, 'שמות ל׳. ויקרא ו׳.' (both readers' kiyyor_citation block). The encoding splits it into two standoff notes: 'שמות ל׳.' targets qorbanot/kiyyor and 'ויקרא ו׳.' targets leviticus/6/3. The text is exact and no outer parentheses are added, but 'ויקרא ו׳.' will now render at Lev 6:3 rather than on the shared line at the head of the page. Neither resolutions.json nor the enlarged decisions record this split.",
+      "action": "Accept the split as a deliberate per-passage attribution and record it in resolutions.json, or keep one note targeting the start of kiyyor. The text itself needs no change."
+    },
+    {
+      "id": "F4",
+      "severity": "low",
+      "kind": "provenance bookkeeping (not a source dispute)",
+      "files": [
+        "morning8_s52_s55_comparison.json",
+        "morning8_s52_s55_resolutions.json"
+      ],
+      "issue": "Every difference in comparison.json still has verdict 'unresolved' with empty 'decisions'. resolutions.json's 'settled' list covers only the Divine Name, the qetoret order, Num28:4 אחד, Thou has, the metegs and the תמימם dagesh. The XML also adopts these decisions from independent/morning8_s52_s55_enlarged.json: וּלְפָאֶרְךָ; תרים over תרום (consonant; only the tav dagesh is pending); the mappiq in וְתַגְבִּיהַּ; the maqaf changes (וְאֶת־הָאָרֶץ, כָּל־אֲשֶׁר בָּם, וְקַיֶּם־לָנוּ, מַה־שֶּׁכָּתוּב) and the dagesh in שֶּׁ; עַל יְדֵי over עַל־יַד; the period after קַיָּם; and no colon after וְנֶאֱמַר. The adjudication of Name’s versus Name's in s53 is not recorded anywhere. All the adopted readings are image-based and the XML matches them. Only the cross-reference in the formal record is missing.",
+      "action": "List these in resolutions.json 'settled', pointing to the evidence in enlarged.json, or mark the comparison verdicts. Record the apostrophe choice (the XML uses ’)."
+    },
+    {
+      "id": "F5",
+      "severity": "low",
+      "kind": "provenance (documented reader uncertainty not closed)",
+      "files": [
+        "independent/morning8_s52_s55_enlarged.json remaining_source_ambiguities[0]",
+        "heidenheim/lefikhakh.xml:35"
+      ],
+      "issue": "The enlarged layer leaves the vowel in the final kaf of וּלְפָאֶרְךָ (qamats or shva) as uncertain. The tight layer later reads qamats with medium confidence from the image. resolutions.json neither lists it as settled nor includes it in pending_human_questions. This is not reopening a confirmed mark: the confirmed marks are the Numbers ones. It is an image-based reading whose closure has not been recorded.",
+      "action": "Record it as settled on the evidence of the tight crop, or add it to the pending snippet set. Do not settle it from grammar."
+    }
+  ],
+  "alignment_findings": [
+    {
+      "status": "ok",
+      "item": "lefikhakh",
+      "detail": "Both sides have the div corresp siddur:rosh_hashanah/morning_blessings/lefikhakh, the prayer-part milestones prayer:lefikhakh and prayer:lefikhakh/ashreinu, and a closing bare prayer-part terminator. Hebrew ashreinu opens at 'אַשְׁרֵינוּ שֶׁאֲנַחְנוּ'; English opens at 'Fortunate are we that early and late'. These match. Each side keeps its printed paragraph."
+    },
+    {
+      "status": "ok",
+      "item": "attah_hu_ad_shelo",
+      "detail": "Both sides have prayer-part attah_hu/ad_shelo, then attah_hu/uvishuatekha, then a terminator. Hebrew splits at 'וּבִישׁוּעָתְךָ'; English at 'and through Thy salvation'. These match. The file idno range ad_shelo-/uvishuatekha uses the correct absolute range form."
+    },
+    {
+      "status": "ok",
+      "item": "attah_hu_bashamayim",
+      "detail": "Both sides have the div corresp prayer:attah_hu/bashamayim and a bounded Zephaniah 3:20 verse milestone plus seg source, with an explicit verse terminator before the closing. Zeph 3:20 is printed in full on both sides, with no fabricated citation note. English keeps sic 'Thou has' and corr 'Thou hast'."
+    },
+    {
+      "status": "ok",
+      "item": "shema_yisrael / barukh_shem",
+      "detail": "Both projects use the same structural div URNs. The Deut 6:4 milestone appears on both sides (see F2). Barukh Shem in each language is an inline transclusion of that project's own earlier witness, which is correct: no cross-language or cross-witness filling."
+    },
+    {
+      "status": "ok",
+      "item": "Hebrew-only pp. 9–10",
+      "detail": "morning_qorbanot and its six modules exist only in the Hebrew project. No English file, transclusion or substitute translation was added."
+    },
+    {
+      "status": "ok",
+      "item": "page/facs",
+      "detail": "Hebrew p8 is pb n=8 at n51.jpg (scan52) and English p8 is pb n=8 at n52.jpg (scan53). pb n=9 at n53.jpg is in kiyyor. pb n=10 at n54.jpg falls between 'אֶחָ֖ד' and 'תַּעֲשֶׂ֣ה' inside Num 28:4, with one verse milestone, as required."
+    }
+  ],
+  "order_findings": [
+    {
+      "status": "ok",
+      "detail": "Expanded index lines 1341→1385: aval_anachnu → section_morning_prelude_continued (lefikhakh→ashreinu, the structural morning Shema, barukh_shem, ad_shelo→uvishuatekha, bashamayim) → section_morning_torah_german_later (german=true) → section_morning_qorbanot (kiyyor, Lev 6:3–4, tamid, veshachat, qorbanot/attah_hu, qetoret) → barukh_sheamar. This matches the requested sequence."
+    },
+    {
+      "status": "ok",
+      "detail": "Other rites (german=false): the whole Torah/study block (lines 1251–1270) comes after asher_yatzar and before elohai_neshamah (1271–1286). The German Neshamah comes directly after asher_yatzar."
+    },
+    {
+      "status": "ok",
+      "detail": "Morning Shema targets the edition-independent structural URN siddur:rosh_hashanah/morning_blessings/shema_yisrael, not bare bible:deuteronomy/6/4, so the evening witness cannot be picked up. barukh_shem intentionally uses the bare canonical URN."
+    },
+    {
+      "status": "ok",
+      "detail": "The expanded edition has no page-turn or later-German navigation instruction. In both edition files, morning_blessings.xml:96 keeps the custom wording at the true end of p8, with only '(page …)' wrapped in seg type=optional-page-reference, a tei:ref type=page to birkhot_hatorah/laasoq in the same project, and the outer parentheses kept as printed. The Hebrew-page direction is printed in English, which is correct per the enlarged reading."
+    },
+    {
+      "status": "ok",
+      "detail": "Qetoret runs Exod 30:34, 35, 36, then 'וְנֶאֱמַר' outside every verse scope, then 30:7, 30:8. No 30:37–38. The qetoret preface 'אַתָּה הוּא … כַּכָּתוּב בְּתוֹרָתֶךָ.' is encoded as a prayer tei:p, not an instruction."
+    },
+    {
+      "status": "ok",
+      "detail": "None of the reused word modules gained a conditional. The offerings section is unconditional within the shaharit gate, which is correct for all rites."
+    }
+  ],
+  "remaining_source_ambiguities": [
+    {
+      "word": "לְבַדְּךָ",
+      "location": "printed p8 (scan52), attah_hu_bashamayim.xml:34",
+      "question": "Is there a dagesh in the dalet?",
+      "current_encoding": "dagesh present (provisional, following the independent/enlarged reading; the primary read לְבַדֶּךָ)",
+      "status": "pending the human answer on the corrected isolated snippets; update the XML if the answer is 'no dagesh'. Not to be settled by grammar."
+    },
+    {
+      "word": "תָּרִים",
+      "location": "printed p8 (scan52), attah_hu_ad_shelo.xml:34",
+      "question": "Is there a dagesh in the tav? (The consonant reading תרים over תרום is already settled from the image.)",
+      "current_encoding": "dagesh present (provisional; tight-layer confidence low)",
+      "status": "pending the human answer; update the XML if the answer is 'no dagesh'. Not to be settled by grammar."
+    }
+  ],
+  "checks": [
+    "Human-confirmed marks verified in qorbanot_tamid.xml:41. Num 28:3 בְּנֵֽי־שָׁנָ֧ה has darga U+05A7 on שָׁנָה; תְמִימִ֛ם has tevir U+059B and no tav dagesh. Num 28:2 תִּשְׁמְר֕וּ has zaqef gadol U+0595; נִֽיחֹחִ֔י has meteg U+05BD beside the hiriq under the nun. All PASS.",
+    "The other settled Num 28:3 metegs are present: בְּנֵֽי, הָֽאִשֶּׁ֔ה, לַֽיהֹוָ֑ה (the meteg sits on the lamed outside j:divineName). PASS.",
+    "Num 28:4 reads 'אֶת־הַכֶּ֥בֶשׂ אֶחָ֖ד' with no article, matching the settled reading. 28:5 בְּלוּלָ֛ה/בְּשֶׁ֥מֶן and 28:8 כְּמִנְחַ֨ת הַבֹּ֤קֶר וּכְנִסְכּוֹ֙ תַּעֲשֶׂ֔ה אִשֵּׁ֛ה match the tight adjudicated candidates. Lev 1:11 accents match the candidate. PASS.",
+    "Only Num 28:1–8 and Lev 1:11 carry te'amim. Exod 30:17–21, Lev 6:3–4 and Exod 30:34–36/7–8 have points only, consistent with the enlarged inventory. PASS.",
+    "Scripture Divine Name is יְהֹוָה with holam, wrapped in j:divineName. Prayer text uses יְיָ in j:divineName. Prefixed לַ stays outside the element. PASS.",
+    "Page 8 Hebrew text matches the enlarged adjudicated layer in all words, maqafs, the mappiq and punctuation. Pages 9–10 match the primary/independent consensus plus the settled decisions. PASS (subject to the two pending dageshes).",
+    "Page 8 English matches the agreed readings for all six blocks. Only English Name’s versus Name's is unrecorded (F4). PASS.",
+    "Printed citations (שמות ל׳. / ויקרא ו׳. / במדבר כ״ח. / ויקרא א׳ י״א. / שמות ל׳.) are standoff tei:note type=citation, without outer parentheses, and none is added for Zeph 3:20. PASS, with F3 on the split.",
+    "Running heads and the printer signature 'IV · 3' are not encoded as text. Acceptable.",
+    "URN reuse: no new prayer identity. The only structural contexts are morning_blessings/lefikhakh, morning_blessings/shema_yisrael, morning_blessings/barukh_shem and morning_qorbanot. PASS.",
+    "Not verified with tooling: NFKD and canonical combining-mark order of the Hebrew, schema validity, refdb resolution of the targetEnd ranges, and whether the Hebrew project index transcludes morning_qorbanot. These were outside the listed files."
+  ],
+  "reviewed_files": [
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/schema/JLPTEI-3.md",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/lefikhakh.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/morning_shema_yisrael.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/morning_barukh_shem.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/attah_hu_ad_shelo.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/attah_hu_bashamayim.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/qorbanot_kiyyor.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/leviticus_6_3_to_4.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/qorbanot_tamid.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/qorbanot_veshachat.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/qorbanot_attah_hu.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/qorbanot_qetoret.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/morning_blessings.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/morning_qorbanot.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/lefikhakh.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/morning_shema_yisrael.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/morning_barukh_shem.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/attah_hu_ad_shelo.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/attah_hu_bashamayim.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/morning_blessings.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/machzor_expanded-opensiddur-he/index.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/morning8_s52_s55_resolutions.json",
+    "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/morning8_s52_s55_comparison.json",
+    "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/morning8_s52_s55_accent_comparison.json",
+    "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/primary/morning8_s52_s55.json",
+    "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/independent/morning8_s52_s55_enlarged.json",
+    "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/independent/morning8_s52_s55_tight.json"
+  ],
+  "not_read": [
+    "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/readings.json (not opened; this installment's readings were covered by the primary, independent and adjudication files above)",
+    "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/independent/morning8_s52_s55.json (the raw blind reading; its text was reviewed through the 'independent' fields of comparison.json)"
+  ],
+  "verdict": "No blocking encoding, alignment or order defects. Accept once the two pending human answers (dalet dagesh in לבדך, tav dagesh in תרים on p8) are applied; both are currently encoded with a dagesh, provisionally. F1, F3, F4 and F5 are low-severity bookkeeping and convention fixes, and none changes the transcribed text.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "f146aee2-c87e-4800-9015-22569f57a20f"
+  }
+}

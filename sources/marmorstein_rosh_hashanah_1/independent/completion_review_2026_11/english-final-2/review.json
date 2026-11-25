@@ -1,0 +1,127 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Low reasoning effort, bounded. I read all of english-final-2/current.json and current.xml, english-final-fixes.json, guideline-excerpts.md, and the prior reports english-shard-06, -07 and -10. I did not open shard-01 or shard-05, because none of the 9 stems in scope depend on them. I viewed the full English page images s165, s167, s169 and s197 at 1208x2000 and made no enlarged crops. In readings.json I read only lines 1–80. I did not search it for source_order, because I have no search tool and the file is very large. I ran no validators, compiler or renderer."
+  },
+  "scope": "English word-for-word source accuracy, source punctuation and encoding, shared EN/HE correspondence boundaries, and rubric placement and kind for torah_gaddelu, torah_lekha_adonai, torah_al_hakol, torah_veattem, torah_uvenuchoh, torah_barekhu, torah_berikh_shemeh, torah_shema and torah_echad_eloheinu. Hebrew source accuracy is not approved.",
+  "witnesses": [
+    {
+      "stem": "torah_gaddelu",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "torah_lekha_adonai",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        {
+          "severity": "cosmetic",
+          "location": "en torah_lekha_adonai.xml, after the romemu_hadom and romemu_har prayer-part milestones",
+          "problem": "There is a double space before each chapter milestone. This affects nothing if whitespace collapses on output. The word boundaries are correct.",
+          "fix": "Optional: reduce to a single space."
+        }
+      ],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "torah_al_hakol",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        {
+          "severity": "low",
+          "location": "en torah_al_hakol.xml: 'as it is written: ‘ <milestone…>Sing', 'And it was said: ‘ <milestone…>And' and '…spoken</seg>…<milestone unit=\"chapter\"/> ’.'",
+          "problem": "Shard-06 reported this and it is still unfixed. Mixed-content spaces sit between each quotation mark and the quoted word, which could render as '‘ Sing', '‘ And' and 'spoken ’.'. The scan s167 prints '‘Sing', '‘And' and 'spoken’.'. The words and the marks themselves are exact. Whether the renderer removes these spaces has not been verified.",
+          "fix": "Remove the space between ‘ and the following milestone in both places. Remove the space between the final chapter terminator and ’."
+        }
+      ],
+      "remaining_source_questions": [
+        "The opening ‘ before 'Sing to God' is never closed in the print. It is kept as printed, with no sic/corr and no guessed closing point. I accept that, because there is no single unambiguous place to close it. It is an editorial choice left open, not a transcription error."
+      ]
+    },
+    {
+      "stem": "torah_veattem",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "torah_uvenuchoh",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "torah_barekhu",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": [
+        "s169 prints 'Before reading from the Torah, the individual called upon says the following:' above Barekhu. The fixes say this called-to-Torah rubric is now classified as a description, but it is not in the barekhu module, so it must sit in the running order. I could not check its placement or type from the materials given. This does not affect the module text: keeping it out of the module is defensible, because the module is reused at 'He then repeats this'."
+      ]
+    },
+    {
+      "stem": "torah_berikh_shemeh",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        {
+          "severity": "cosmetic",
+          "location": "en torah_berikh_shemeh.xml, berikh/velehevei boundary",
+          "problem": "'life <milestone/> and' produces a double space. The boundary matches the Hebrew break at בטיבותא, | ולהוי.",
+          "fix": "Optional."
+        }
+      ],
+      "remaining_source_questions": [
+        "The Frankfurt omission rubric on s165 should cover Berikh Shemeh, Shema and, by implication, Echad Eloheinu, since the reader 'begins with גדלו'. I was told the condition exists at service-order level but did not verify it in source_order. I also could not confirm whether shard-06's בריך שמיה→שמה finding in that rubric's English text has been applied."
+      ]
+    },
+    {
+      "stem": "torah_shema",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": [
+        "Same as the Berikh Shemeh note: whether the Frankfurt service-order condition covers this module has not been verified by me."
+      ]
+    },
+    {
+      "stem": "torah_echad_eloheinu",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": [
+        "The Frankfurt rubric names only בריך שמה and שמע ישראל, but saying the reader 'begins with גדלו' also implies Echad Eloheinu is left out. I have not verified that the service-order condition includes this module."
+      ]
+    }
+  ],
+  "verified": [
+    "s165, Berikh Shemeh: the English matches the scan word for word. The scan prints 'blessed by Thy crown'. The encoding has <choice><sic>by</sic><corr>be</corr></choice>, which keeps the printed form, and the correction is justified by בריך כתרך and the guideline's 'misspelled or garbled word'. 'Thy Sanctuary;', 'happy life and may I', 'His holy, honoured Name' and 'for life and for peace.' all match.",
+    "s165, Shema and Echad Eloheinu: they match, including '(and awe-inspiring)' kept as literal printed parentheses and the final '!'.",
+    "s165, Gaddelu: the italic rubric 'The reader, holding the scroll of the Torah in front of him, says:' matches exactly. It is now a tei:note type=\"description\" first in the div of the reusable module, in both witnesses, and no longer a standalone index entry. 'Magnify the Lord with me, and let us exalt His Name together.' matches.",
+    "s165, Lekha: 'The congregation responds:' matches, and it is now a description in the module in both witnesses. The English is now one tei:p, matching the single printed paragraph. The three prayer-part milestones (lekha, romemu_hadom, romemu_har), the chapter/verse milestones and their terminators are kept, with the same URNs as the Hebrew, which keeps its own three paragraphs. 'Exalt the Lord, our God,' and 'Holy is He.' match.",
+    "s165–s167, Al Hakol: the rubric 'While the reader carries a Torah scroll to the reading desk, the congregation says:' matches and is a description in the module in both witnesses. pb n=72 falls between 'God' and 'of all souls', as on the page. 'Hayoth', 'primaeval', 'eye to eye shall they behold when the Lord returns to Zion.', the Isaiah 52:8/b half-verse milestone with its bare half-verse terminator, the dangling ‘ and the final '’.' all match.",
+    "s167, Veattem: 'The congregation responds:' matches and is now a description in the module in both witnesses, which resolves shard-07's medium issue. 'You who adhere to the Lord your God, are all alive this day.' matches, including the comma.",
+    "s169, Barekhu: the call and the response match. The English 'The congregation responds:' and the Hebrew 'Cong.' are the speaker description inside the response paragraph, before the prayer-part milestone, and both carry role/congregation.",
+    "s197, Uvenuchoh: 'When the scroll of the Torah is returned to the Holy Ark:' matches and is now type=\"description\" first in the div, which resolves shard-10's advisory. All 8 verse segments match the scan, including 'resting-place', 'Thine anointed.' and 'delightful ways'. The verse and chapter milestones and terminators are the same in EN and HE.",
+    "For all 9 stems, every div, prayer-part, chapter, verse and half-verse corresp in the English file has the same value and order as in the Hebrew file, and every opened scope is closed by a terminator of the same unit.",
+    "No standalone duplicate of the four moved rubrics remains inside these module files. Each module has exactly one description note."
+  ],
+  "limits": [
+    "No Hebrew text, pointing or Hebrew image was reviewed, and Hebrew source acceptance is not implied.",
+    "I viewed the scans at full-page display resolution without enlarged crops.",
+    "I did not inspect source_order or the documentary index. These are unverified: (a) the Frankfurt omission condition and how far it reaches, including Echad Eloheinu; (b) the English text of the Frankfurt rubric (שמיה/שמה); (c) the placement and type of the s169 called-to-Torah rubric; (d) whether the old standalone order entries for the four moved rubrics were really removed.",
+    "The out-of-scope changes listed in english-final-fixes.json were not reviewed here: Naalah/Melekh Bedin, Et Chil, the Hineni comma, the Melekh Bemishpat comma and the incomplete s149 translator note.",
+    "No renderer was run, so whether whitespace collapses at the Al Hakol quotation marks and at the double spaces is unverified."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "049b438c-175b-47a2-bd54-3c5ad2a08f2d"
+  }
+}

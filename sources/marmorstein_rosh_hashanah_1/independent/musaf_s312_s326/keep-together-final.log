@@ -1,0 +1,17 @@
+.......F.............................                                              [100%]
+=================================== FAILURES ===================================
+_____________ TestSingleStream.test_the_sweep_reaches_a_page_edge ______________
+
+self = <opensiddur.tests.exporter.test_keep_together_geometry.TestSingleStream testMethod=test_the_sweep_reaches_a_page_edge>
+
+    def test_the_sweep_reaches_a_page_edge(self):
+        # Without the protection the same document breaks somewhere it should not, and a
+        # rubric is among what it parts.
+        broken = _violations(self.unprotected, self.SIDES, self.FACING_PAGES)
+>       self.assertTrue(any(v.startswith("stranded rubric") for v in broken), broken)
+E       AssertionError: False is not true : ['stranded heading LH9', 'orphan LQ11', 'widow LQ16', 'stranded heading LH19']
+
+opensiddur/tests/exporter/test_keep_together_geometry.py:282: AssertionError
+=========================== short test summary info ============================
+FAILED opensiddur/tests/exporter/test_keep_together_geometry.py::TestSingleStream::test_the_sweep_reaches_a_page_edge
+1 failed, 36 passed, 62 subtests passed in 483.52s (0:08:03)

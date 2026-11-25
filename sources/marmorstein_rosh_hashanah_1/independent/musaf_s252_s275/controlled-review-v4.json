@@ -1,0 +1,65 @@
+{
+  "code_verdict": "CONDITIONALLY APPROVED, code only (not data integration). I read the full bundle: realizations.py, baseline.py, build.py, test_marmorstein_realizations.py and test_marmorstein_baseline.py. Every v3 finding is resolved. (1) MEDIUM v3: prepare_documents only accepts PLAIN_SEGMENT_KEYS on the host. It then removes every mapping key, checks that the pointer's keys are within CANONICAL_OCCURRENCE_KEYS, and runs validate_occurrence_controls. validate_occurrences also checks the effective context returned first by prepare_documents, so generated pointers now get the full canonical-occurrence validation. test_home_retains_verse_metadata_while_context_pointer_is_plain covers removal from the pointer, retention on the home, a verse-part milestone in the home XML, deep-copy isolation, and an unknown key raising an error. (2) LOW v3, condition_end_corresp: build.py and attesting_controls both resolve the endpoint only through corresp and skip transcludes. validate_redirection rejects any condition_end_corresp, repeat, transclude, repeat_cue, citation or order target that names a redirected identity, and test_redirection_preflight_checks_controls_and_interpretations tests this. I accept this as consistent. (3) LOW v3, citations: there is now a passing baseline, a passing external `reference`, and target/targetEnd/reference failures checked against specific messages. (4) LOW v3, flag test: I confirmed in build.py that a bare biblical corresp opens a chapter milestone automatically (the `if biblical:` branch calls close_references() and then emits milestone unit=chapter n=…). The test's filter (no @corresp, no @n) therefore correctly isolates the verse+chapter or prayer-part closures before the note, and the note sits right before the pointer. One new MEDIUM gap blocks unconditional approval: attesting_controls does not bind attesters of whole-text targets (see below). Fix it, or add a hard guard, before final approval. The other items are LOW.",
+  "findings": [
+    {
+      "priority": "medium",
+      "file": "opensiddur/importer/marmorstein_rosh_hashanah_1/realizations.py",
+      "line": 51,
+      "reason": "attesting_controls (about lines 46-78) walks the raw `unit['languages']` segments, not the effective documents, even though its docstring says it binds 'effective occurrence scopes'. This misses attesters in two ways. (a) A unit-level `canonical_whole` occurrence only turns into a `canonical` segment inside prepare_unit. Its raw segments have no `canonical`, so it never shows up as an attester, and neither do its unit conditions, instructions or head. (b) Explicit pointers whose target is a whole-text identity (text_corresp or canonical_home.text_corresp) get `covered = {target}` (about line 69). review_payloads (about line 410) passes `selected_ids = {segment_identity(v) for v in selected}`, which holds only the host's segment identities (Bible ids or None) and never the text_corresp. The intersection is always empty. So when another attester's condition changes for a whole formula, the caller's receipt stays valid without any warning. Segment-identity targets, ranges and pure parts work correctly.",
+      "required_fix": "In review_payloads, add `target` to the identities passed to attesting_controls when _range_segments matched by whole-text identity. Alternatively, compute `covered` the same way for both sides. In attesting_controls, walk effective segments, for example `prepare_documents(unit, readings)[0]['languages']`, instead of raw segments, and keep the raw segment indexes for scope endpoints. Add a test: host with text_corresp, one caller using canonical_whole and one using an explicit canonical=text_corresp pointer, each with a condition; changing either condition must change the other caller's realization payload. If you defer the fix, make attesting_controls raise when any canonical_whole or whole-text target exists, so it cannot be silently wrong."
+    },
+    {
+      "priority": "low",
+      "file": "opensiddur/importer/marmorstein_rosh_hashanah_1/baseline.py",
+      "line": 51,
+      "reason": "validate_redirection's docstring says it rejects 'controls that a new pointer would lose'. It only rejects source_reference_part plus keys outside PLAIN_SEGMENT_KEYS ∪ OCCURRENCE_CONTROL_KEYS. So a segment carrying source, source_reference, source_reference_corresp, chapter_corresp or source_reference_end passes the preflight. A redirected pointer cannot keep any of these, because CANONICAL_OCCURRENCE_KEYS excludes them. In build.py they render quotation seg, chapter and verse milestones, so dropping them loses markup unless someone moves them to the host by hand. end_reference and reference_unit are harmless to drop, since a canonical segment always calls close_references. As a result, `allowed_mapping_only: true` does not prove that the mapping is preserved.",
+      "required_fix": "In validate_redirection, reject the redirected segment if it has any of source, source_reference, source_reference_corresp, chapter_corresp or source_reference_end (allow corresp, end_reference, reference_unit and paragraph). Or return the list of mapping keys that must be moved to the host, so the integration step can assert that the host has them. Add a preflight test case with source_reference on PARTS[0]."
+    },
+    {
+      "priority": "low",
+      "file": "opensiddur/tests/importer/test_marmorstein_realizations.py",
+      "line": 470,
+      "reason": "The claim that 'non-pure ranged attesters included' has no test. The `canonical_end` branch of `covered` in attesting_controls is never run against a non-pure host. test_enclosing_scope_is_bound_and_attester_order_is_stable and test_other_attesters_condition_change_invalidates_caller_review only use single-identity pointers. The pure-range rejection is tested only through validate_occurrences (test_pure_parts_require_attestations_and_never_become_a_service, the 'range' mutation).",
+      "required_fix": "Add a test with a non-pure host that has two identified segments. One caller points at segment 2. A second unit attests through canonical=segment1, canonical_end=segment2 and has a condition. Assert that the first caller's attesting_controls includes the ranged attester, and that changing its condition changes the caller's payload."
+    },
+    {
+      "priority": "low",
+      "file": "opensiddur/tests/importer/test_marmorstein_realizations.py",
+      "line": 430,
+      "reason": "test_invalid_conditions_and_orphan_condition_rubric_fail uses one alternation regex for all cases, 'typed feature structures|requires conditions|one plain source fragment'. None of the three cases can reach 'one plain source fragment', because conditions and condition_instruction are in CANONICAL_OCCURRENCE_KEYS. The extra alternative lets a regression that rejects these at the key gate still pass.",
+      "required_fix": "Expect a specific message per case: conditions=[{}] and conditions='unmodeled' should give 'typed feature structures', and the orphan condition_instruction should give 'requires conditions'."
+    },
+    {
+      "priority": "low",
+      "file": "opensiddur/importer/marmorstein_rosh_hashanah_1/build.py",
+      "line": 1085,
+      "reason": "In build()'s per-unit document loop: `pending = pending or any(not review_is_current(reviews.get(key, {}), payload) for key, payload in realization_payloads.items())`. Any stale realization anywhere in the book puts the DRAFT label on every unit that has a realization payload, instead of checking that unit's own `realization_key`. This only affects the labelling in --draft mode, and it errs on the side of caution, but it contradicts the per-unit realization_key computed on the line before.",
+      "required_fix": "Use `not review_is_current(reviews.get(realization_key, {}), realization_payloads[realization_key])`. If the broad check is deliberate, add a comment saying so."
+    },
+    {
+      "priority": "info",
+      "file": "/tmp/mahzor-s254/controlled-source-bundle.json",
+      "line": 1,
+      "reason": "Evidence does not match the request. The bundle has 5 files and only 2 test modules (test_marmorstein_realizations.py with 40 tests, test_marmorstein_baseline.py with 8), not four, and no list of module names. importer-tests-v4.log shows only '156 passed, 146 subtests passed', with no command and no collected-file list, so 108 of the tests come from modules I could not read. Also absent from the bundle: canonical_corrections.py (bind_corrections, corrected_text, apply_bound_corrections are used in review_payloads and build) and opensiddur.exporter.urn.split_range. So I have not reviewed the correction binding or the parsing of ranges and external targets in check_target.",
+      "required_fix": "Re-run with `pytest -v` (or `--collect-only -q`) and record the exact command and the per-module counts. Include the other two test modules and canonical_corrections.py if they are in scope for this approval."
+    }
+  ],
+  "remaining_data_gates": [
+    "The redirection of musaf_yismechu, musaf_offering_formula and musaf_useir_lekhapper has not been run. Run it, then validate_baseline against the unchanged accepted baseline. Show a readings diff that touches only UNIT_MAPPING_FIELDS and SEGMENT_MAPPING_FIELDS, and show where any source/source_reference*/chapter_corresp on the redirected segments ends up (see the baseline.py finding).",
+    "Baseline counts conflict. The audit reports accepted_literal_baseline 403 units / 720 witnesses, but test_all660 and the fixture marmorstein_accepted_660.json hold 660 witnesses. test_integrated_source_baseline_matches_fixed_importer_fixture requires the integrated baseline to equal the 660 fixture once canonical_parts exist. Settle which baseline governs, and state that witnesses outside the fixture (about 60) are not protected by validate_baseline.",
+    "Audit evidence for the Ani host: the audit lists the musaf_qedushah_ani_adonai he/en context pointers as {canonical, fragments, paragraph}, but shows nothing about the home/word host. Add the home segment key sets, including source_reference_part, and the verse-part milestone in the generated home XML.",
+    "Check real data for canonical_whole and text_corresp callers that have other-unit attesters with controls. Until the medium finding is fixed, any such case has unbound receipts.",
+    "Independent review, not bulk re-stamping, of the 61 changed realization receipts listed in the audit (v3 said 62; the current list has 61). Re-generate them after any attesting_controls fix, because payloads will change.",
+    "Real canonical_parts libraries: validate_pure_parts, literal attestation, and generated library XML with no pb/note/conditional/declare/head/div@corresp/publication idno.",
+    "Compiled projections: yismechu with shabbat unknown/true/false, and ushenei_seirim with rite unknown/frankfurt_am_main true/false. Show exact word sequences, that the rubric appears only when the setting is unknown, and that library words appear exactly once per project.",
+    "Page fidelity in the generated context XML: a conditioned pointer that starts a page has its pb before j:conditional, with no duplicate. Literal contexts keep raw pb positions (validate_generated checks this, but show it on real data).",
+    "Receipt behaviour on real data: changing an attester's condition or an enclosing scope marks callers stale; reordering or unrelated edits do not; library word edits change resolved_sha256.",
+    "Check every real citation `reference` value: it is external or biblical and passes check_citations.",
+    "Outstanding and outside this diff: the scope-fidelity check of generated XML against canonical_text for every part identity (he and en), and the audit of the Aleinu end_reference callers."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "3d6ae023-64a7-46ba-9287-cee7a5e02665"
+  }
+}

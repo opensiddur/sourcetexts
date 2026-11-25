@@ -1,0 +1,72 @@
+{
+  "status": "Accepted after blind image readings, enlarged adjudication, human custom and repetition clarifications, frozen-file independent guideline/alignment/order review, runtime settings checks and rendered export inspection.",
+  "source_scans": [
+    "s13",
+    "s14",
+    "s15",
+    "s16",
+    "s17"
+  ],
+  "models": {
+    "primary": "Codex (GPT-6)",
+    "independent": "claude-opus-5-5",
+    "actual_independent_effort": "medium"
+  },
+  "evidence": [
+    "primary/preparations_kabbalat_s13_s17.json",
+    "independent/preparations_kabbalat_s13_s17.json",
+    "independent/preparations_kabbalat_enlarged.json"
+  ],
+  "human_clarification": {
+    "question": "Does the marginal לכה beside the full opening refrain require a congregational repeat?",
+    "answer": "Yes—repeat the opening refrain there",
+    "result": "One opening rendition plus ten cue-driven repetitions: eleven full refrains. Source retains all ten literal לכה cues."
+  },
+  "adjudications": [
+    "Aramaic: enlarged images confirm בְּדֵן, יְהֵא, שְׁרֵא, kaf dagesh in צָרְכָּנָא and final לָנוּ rather than לָנָא. The pe vowel in למיפא follows the primary/enlarged qamatz reading, not the first secondary tsere.",
+    "Psalm96:2 has sheva in ברכו; 96:8 has a space at the disputed maqaf. Psalm97:11 has the visible maqaf in אור־זרע.",
+    "Psalm99:2 restores the initial Divine Name omitted by the primary reader. Verses2 and5-8 follow the small labels in the enlarged s15 crop, not assumed responsorial patterns; verse9 has the combined label קו״ח.",
+    "Psalm29:6 is plene שריון, as confirmed by the tight source crop. Preserve defective תבשי in the poem and להדות in Psalm92:2. Source punctuation and maqaf placements follow the independent reading where shown in the source crops.",
+    "Full Divine Names are יהוה with the printed sheva/qamatz and no visible holam. Prefixed full forms have no yod sheva. For prefixed double-yod forms retain the no-sheva reading visible in the primary enlarged image, rather than inserting the secondary tentative sheva.",
+    "Tiny poem notes read הש״ץ מנגן בנעימה. and ראשי החרוזים שלמה הלוי.; the garbled first primary reading is superseded. Literary attribution remains separate from recitation directions.",
+    "The English-column Hebrew linkage cues remain outside the transcribed English prayer words, per user instruction. A possible broken-letter cue is retained only in raw evidence, not invented as a prayer-word correction.",
+    "No festival-omission rubric appears in these leaves. Preserve the printed Kabbalat Shabbat sequence rather than borrowing Birnbaum’s omission policy.",
+    "The combined Shabbat festival-light blessing is a distinct calendar variant, absent here. Reuse a calendar-fixed extraction of Birnbaum’s existing option rather than silently changing the documentary text."
+  ],
+  "pending_required_readings": [],
+  "human_festival_policy": {
+    "question": "Retain full Kabbalat Shabbat or omit the opening psalms and poem on RH-Shabbat?",
+    "answer": "the custom here is different from the one in Birnbaum. this one should include both - since inclusion is controlled at a higher transclusion level, that is ok",
+    "decision": "Retain the full printed Psalms and Lekhah Dodi for this edition; inclusion is controlled in the expanded structural spine, not inside reusable text modules."
+  },
+  "audit_fixes": [
+    "Psalm29:6 plene ושריון restored; first secondary/adjudicated defective reading superseded.",
+    "Stanza8 בן has no line-final maqaf; source pointing/wording otherwise retained.",
+    "Restored source pb n=11 at stanza8, Archive n16.",
+    "No whitespace inserted between a line-final maqaf and the next page continuation.",
+    "Expanded literary attribution and performance description are separate notes. All ten cue-driven responses are marked congregation, explicitly editorial from human clarification.",
+    "Sabbath/festival light extraction uses an inline pinned self-source, preventing accidental ordinary English fallback and nested parent corresp duplication."
+  ],
+  "final_guideline_review": "independent/preparations_kabbalat_followup2.json",
+  "followup_resolutions": [
+    "Selectable הש״ץ/השליח ציבור in both documentary and expanded poem performance notes; abbreviation and expansion are both review-hashed.",
+    "Candle-lighting gates cover Elul29 preparations and Friday before RH-Shabbat; the combined blessing is excluded once Shabbat has begun. Eleven actual compiler cases verify this, including before sunset.",
+    "The separate combined Birnbaum witness resolves only the printed Sabbath insertion; no incoming-day declaration can acquire an automatic gate against Friday. The original parent is unchanged.",
+    "The canonical calendar wording variant is explicitly documented in the registry and URN scheme; it identifies distinct combined words, not an edition or placement.",
+    "The outer candle gate equals the blessing-branch union, so no orphaned instruction remains. Twilight and RH-Shabbat morning are checked explicitly.",
+    "Editorial role interpretations are explicitly recorded in the source structural occurrences."
+  ],
+  "guideline_sha256": {
+    "AGENTS.md": "8604ed140e56efa30fcf00cc7c3ee5fe9dbc5922572cd242c8cb1644855576da",
+    "schema/JLPTEI-3.md": "6c0cc3cd0be63f37a4986847eb66067fdcea73ecdb1d8006471fe56ebc8a5131",
+    "schema/jlptei.odd.xml": "688bac1dd3d6a7eb8a1f43c057a1d5249a610659de45a27d0496d22b4874e016",
+    "specs/SIDDUR_URN_SCHEME.md": "e97800b6ae06286a2ae3421f04ed9e9debd67c55861ad4c3a7316e6e097b9886",
+    "opensiddur/exporter/features.yaml": "f3e435f621f1dfb9d292e061142a4fc107ec2aec6d96cb0a79b68e08ddff3813"
+  },
+  "audit_fixes_status": "Historical rounds retained; the final separate combined wording extraction supersedes the earlier inline/calendar-declaration adapter.",
+  "runtime_verification": "preparations_kabbalat_verification.json",
+  "exports": {
+    "pdf": "Documentary PDF pages11–14 and expanded pages7–11 rendered and visually inspected after all corrections. English alignment, cues/repetitions, verse citation order and missing English checked.",
+    "html": "Both HTML files built; local fragment targets resolve; expanded colophon retains CC0 and Birnbaum CC BY-SA 4.0. No new interactive browser review claimed."
+  }
+}

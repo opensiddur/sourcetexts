@@ -1,0 +1,370 @@
+{
+  "canonical_identity_decisions": [
+    {
+      "blocks": [
+        "s346-opening_rubric",
+        "s346-laws_ascent",
+        "s346-laws_blessing + s347-laws_continuation",
+        "s346 heading סדר נשיאת כפים."
+      ],
+      "decision": "Documentary instructions. No text identity.",
+      "encoding": "Put them in readings.documentary_instructions with witnesses ['he']. The heading is the section heading, with page_start true and printed_page '20'. laws_blessing becomes one instruction with source_pages [{scan s346, printed_page '20', text …ישפיע}, {scan s347, printed_page '21', text הברכה על ישראל…}]. Its text is the two page texts joined by a single space. rubric_source_pages does not allow abbreviations together with source_pages, so the paginated laws keep their abbreviations unexpanded."
+    },
+    {
+      "blocks": [
+        "s346-yehi_ratzon_tikkun"
+      ],
+      "decision": "Probably a new shared identity, but only after a gate. No match exists in the corpus. Before registering it, search the registry for aliases (tippah/tipah/tipa/qeri) and search the git history of the legacy files (for example git log -S 'טפה וטפה').",
+      "urn_candidate": "urn:x-opensiddur:text:prayer:yehi_ratzon_shekol_tippah",
+      "status": "new-candidate (gated)",
+      "provider_in_project": "A new Hebrew-only unit whose root corresp is the prayer URN. English is absent.",
+      "encoding": "Mark Deuteronomy 30:3 and 30:4 (complete verses quoted inline) as fragment quotations, each with chapter_corresp and source_reference_corresp. Those two are new context URNs under the prayer path, following the project's established quotation pattern, so this prayer does not become the project's home for those verses. Isaiah 63:9b (באהבתו…ימי עולם) and Job 20:15a (״חיל ״בלע ״ויקיאנו) use quotation source_reference_part half-verse b and a respectively, with no chapter or verse corresp. Count the four explicit ה׳ as Names. Do not tag בי״ט or חב״ו as j:divineName."
+    },
+    {
+      "blocks": [
+        "s346-kohanim_prep_common_open",
+        "s346-branch_label_kohanim",
+        "s346-branch_kohanim",
+        "s346-branch_label_am",
+        "s346-branch_am",
+        "s346-kohanim_prep_common_close"
+      ],
+      "decision": "Reuse the legacy identity. Its legacy body (שתהא הברכה הזאת שצוית לברך את עמך ישראל ברכה שלמה ולא יהיה בה שום מכשול ועון…) proves it is the shared preparation formula, despite the label 'of the congregation'. The two branches are role-conditioned wordings of one text, not separate prayers.",
+      "urn": "urn:x-opensiddur:text:prayer:amidah/yehi_ratzon_shel_haqahal",
+      "status": "reuse (first emission in this project)",
+      "encoding": "One Hebrew unit with the root corresp at this URN, and all segments in one paragraph. Segment A is the common opening. Segment B1 carries conditions [{type opensiddur:person, features {kohen: true}}] and condition_instruction 'לכהנים'. Segment B2 carries kohen: false and condition_instruction 'להעם'. Segment C is the common close. The documentary output prints the shared words once, with both labeled branches. The expanded output resolves to one complete role-specific prayer. The 'kohen' feature needs a registry addition (see required_code_changes). Do not use the yehi_ratzon_milefaneykha URN here: its legacy body is the Temple-building request."
+    },
+    {
+      "blocks": [
+        "s347-retzeh"
+      ],
+      "decision": "Reuse the existing identity as a canonical caller. Do not create a new provider.",
+      "urn": "urn:x-opensiddur:text:prayer:amidah/avodah/retzeh",
+      "host": "amidah_avodah_parts (home of rh_avodah)",
+      "status": "reuse; printing differences need overlay(s)",
+      "encoding": "A caller unit with siddur context urn:x-opensiddur:text:siddur:rosh_hashanah/nesiat_kappayim/avodah. Its one segment is canonical retzeh, with speaker {label 'הש״ץ.', role reader} and wording_selection. The differences are metegs in אֱלֹהֵֽינוּ, בֵּיתֶֽךָ and עַמֶּֽךָ, and the missing maqaf in אֶת הָעֲבוֹדָה. Under the current API this needs one overlay spanning almost the whole paragraph. Under extension E1 it needs four small overlays. First check whether the retzeh segment already carries an overlay; if it does, E1 is mandatory."
+    },
+    {
+      "blocks": [
+        "s347-veteerav",
+        "s347-avodah_chatimah",
+        "s347-footnote_veteerav"
+      ],
+      "decision": "Reuse the Metsudah shared identity for the ותערב paragraph, if the registry lists it as canonical and this project emits it nowhere yet (check readings.json first). The printed reading עָלֶיךָ (the footnote defends it) is a wording variant of the same text. The chatimah שאותך לבדך ביראה נעבוד has no confirmed identity.",
+      "urn": "urn:x-opensiddur:text:prayer:vetearev_lefanekha_atiratenu",
+      "urn_candidate_chatimah": "urn:x-opensiddur:text:prayer:amidah/avodah/sheotkha_levaddekha (gated; run validate_names)",
+      "status": "reuse-pending-verification; chatimah gated",
+      "encoding": "A provider unit with map_root false and segment-level corresp, so that the role labels stay outside the identity range. Segment 1 has speaker {label 'הקהל והש״ץ.', role reader_and_congregation} with speaker_before_reference. Segment 2 is the chatimah, with speaker {label 'הש״ץ מסיים.', role reader} and speaker_before_reference; it needs its own identity, otherwise that label falls inside the vetearev range. Take the '*)' mark out of the words and replace it with an anchor at the start of segment 1. The footnote becomes a unit citation with note_type commentary and target '#<anchor>', unpointed, with ור״יצ kept exactly as printed.",
+      "caveat": "The Metsudah file under this URN appears to run on through the chatimah and the preparation formula (see its first_words). Fix that extent separately, because it overlaps prayer:amidah/yehi_ratzon_shel_haqahal."
+    },
+    {
+      "blocks": [
+        "s347-modim_shatz_right_column",
+        "s348-modim_continuation"
+      ],
+      "decision": "Reuse the existing identity as a canonical caller.",
+      "urn": "urn:x-opensiddur:text:prayer:amidah/hodaah/modim",
+      "host": "amidah_hodaah_parts (literal home of rh_hodaah, two host fragments s30/s32)",
+      "status": "reuse; blocked for exact pagination without E2",
+      "encoding": "The caller segment needs two fragments (s347 and s348, with the break before נִסֶּֽיךָ). The current API requires one fragment per canonical occurrence. You need one overlay per host fragment (this works today but makes each overlay nearly the whole text), or E1. Speaker: none printed (right column)."
+    },
+    {
+      "blocks": [
+        "s347-role_kahal",
+        "s347-modim_derabbanan_left_column"
+      ],
+      "decision": "Reuse as a canonical caller.",
+      "urn": "urn:x-opensiddur:text:prayer:amidah/hodaah/modim_derabbanan",
+      "host": "amidah_modim_derabbanan_parts (literal home; host fragments s11/s12)",
+      "status": "reuse",
+      "encoding": "Speaker {label 'הקהל.', role congregation}. The occurrence is a single s347 fragment. The current API needs two overlays with explicit fragment indexes 0 and 1, which it allows because the host is literal-context. The differences are metegs, כָל־בָּשָׂר, לְחַצְרוֹת, לִשְׁמוֹר and רְצוֹנֶֽךָ. E1 would make them precise."
+    },
+    {
+      "blocks": [
+        "s348-veal_kulam",
+        "s348-rh_yk_rubric",
+        "s348-ukhetov",
+        "s348-vekhol_hachayim"
+      ],
+      "decision": "Reuse all three as canonical callers, each with one contiguous overlay. This works with the current API.",
+      "urns": [
+        "urn:x-opensiddur:text:prayer:amidah/hodaah/veal_kullam (overlay 'מַלְכֵּנוּ תָּמִיד לְעוֹלָם וָעֶד:' → 'מַלְכֵּֽנוּ תָּמִיד לְעוֹלָם וָעֶד.')",
+        "urn:x-opensiddur:text:prayer:amidah/hodaah/ukhetov (overlay 'בְרִיתֶךָ' → 'בְרִיתֶֽךָ'; occurrence conditions plus condition_instruction 'בר״ה ויו״כ.')",
+        "urn:x-opensiddur:text:siddur:rosh_hashanah/text/vekhol_hachayyim (existing host identity; one overlay from סֶּלָה through סֶלָה)"
+      ],
+      "note": "validate_occurrence_controls accepts only typed feature structures, not operators. For ukhetov, use the single structure opensiddur:holiday-aggregate {high-holidays: true}, provided JLPTEI-3 defines it as RH and YK. Otherwise see RC-G. The vekhol caller points at a legacy siddur identity: this is tolerated, not perpetuated."
+    },
+    {
+      "blocks": [
+        "s348-elohenu_a"
+      ],
+      "decision": "Reuse. The legacy body is exactly the Elohenu…ובניו intro.",
+      "urn": "urn:x-opensiddur:text:prayer:amidah/amirah_leshatz_lifnay_birkat_kohanim",
+      "status": "reuse (first corresp emission; the earlier s155 and s310 printings use legacy siddur/source mappings and stay untouched)",
+      "encoding": "Provider segment with corresp and end_reference."
+    },
+    {
+      "blocks": [
+        "s348-shatz_aloud_inline",
+        "s348-kohanim_call",
+        "s348-elohenu_b"
+      ],
+      "decision": "Gated. The registry label for prayer:amidah/kohanim ('כֹּהֲנִים') matches the word, but there is no legacy body. Retrieve its legacy div before mapping. If the body is 'כֹּהֲנִים עַם קְדוֹשֶׁךָ כָּאָמוּר', segments B and C form one identity. If it is 'כֹּהֲנִים' alone, C stays unidentified (a terminating milestone without corresp). C cannot reopen the amirah corresp.",
+      "urn_candidate": "urn:x-opensiddur:text:prayer:amidah/kohanim",
+      "encoding": "'הש״ץ בקול' becomes the speaker {label, role reader} with speaker_before_reference, so it stays outside the call's range."
+    },
+    {
+      "blocks": [
+        "s348-kohanim_bless",
+        "s348-kohanim_berakhah"
+      ],
+      "decision": "The instruction is documentary. The berakhah identity is gated. Do not infer it from the generic label of prayer:amidah/birkat_kohanim; retrieve its legacy body. Also search readings.json for an existing provider (search for בִּקְדֻשָּׁתוֹ שֶׁל). Mint a new URN only if both searches come up empty.",
+      "status": "gated"
+    },
+    {
+      "blocks": [
+        "s348-role_shatz",
+        "s348-role_kahal",
+        "cue_1..3/verse_1..3 (s348)",
+        "s349 cue/verse pairs",
+        "s349-verse_umetza"
+      ],
+      "decision": "Gated on the legacy body of prayer:amidah/birkat_kohanim_pesuqim. If that body is the congregational verses, use it as the parent. The dream insertion (s348) and the ribbono cue (s349) fall between groups, so the verses must be split by verse group of the blessing. A single unit cannot be split across order positions, and one corresp cannot be emitted twice.",
+      "urn_candidates": [
+        "urn:x-opensiddur:text:prayer:amidah/birkat_kohanim_pesuqim/yevarekhekha",
+        "urn:x-opensiddur:text:prayer:amidah/birkat_kohanim_pesuqim/yaer",
+        "urn:x-opensiddur:text:prayer:amidah/birkat_kohanim_pesuqim/yissa"
+      ],
+      "encoding": "Cue words: segments with source urn:x-opensiddur:text:bible:numbers/6/24 (or /25, /26) and fragment text_type 'cue'. This is attribution only, with no new URNs. Column headers become speaker_before_reference on the first cue (role reader) and on the first verse (role congregation). Verses become quotations with context URNs under the group path, following the accepted legacy kohanim_response pattern. Use source_reference_part half-verse b where the quotation is partial: Exodus 34:6b, Psalm 16:1b, Isaiah 57:19b. Use Psalm 8:10, which is complete, for ה׳ אדנינו. Psalm 25:1 and Psalm 123:1 drop their superscriptions, so give them context URNs without a part. Do not put an unqualified whole-verse corresp on partial verses. Psalm 24:5 also uses the quotation pattern, as in the legacy 3_1, not a pointer. Proverbs 3:4 '(…)' becomes a marked conditional segment with an opensiddur:variant condition URN (register it)."
+    },
+    {
+      "blocks": [
+        "s348-dream_rubric",
+        "s348-ribbono_dreams",
+        "s349-ribbono_cue"
+      ],
+      "decision": "The rubric is documentary. The dream prayer gets a prayer identity whose first provider is the appendix. It is gated by a possible duplicate: Metsudah's prayer:ribbono_shel_olam_ani versus the legacy prayer:amidah/ribbono_shel_olam (label 'רִבּוֹנוֹ שֶׁל עוֹלָם,'). Retrieve the legacy body and the registry status of both, then choose one. Before 1.0, a renamed URN replaces the old one everywhere.",
+      "provider_in_project": "A new Hebrew unit from s348. The legacy musaf_kohanim_dreams (siddur:regalim/musaf/text/dream) stays a protected legacy holder. Optionally it gains segment source=<chosen URN>, a mapping-only field that the baseline allows. It does not gain a corresp.",
+      "why_not_overlays": "There are about 15 scattered typographic differences, and the legacy holder has no prayer identity to host overlays.",
+      "cue": "s349 'רִבּוֹנוֹ שֶׁל עוֹלָם.' becomes readings.navigation (documentary) targeting the dream URN. The expanded output repeats the full prayer through a reference entry, so no navigation remains."
+    },
+    {
+      "blocks": [
+        "s349-yehi_ratzon_parnassah",
+        "s350-parnassah_continuation",
+        "s350-end_with_kohanim",
+        "s350-amen_response"
+      ],
+      "decision": "Gated identity. Do not treat the generic label 'יְהִי רָצוֹן' on prayer:amidah/yehi_ratzon as proof: yehi_ratzon_milefaneykha is the precedent for a misleading label. Retrieve its legacy body. If it is not this text, mint an incipit-based name. The appendix becomes the first prayer provider.",
+      "encoding": "A new Hebrew unit with map_root false. One segment carries the corresp and end_reference, with fragments for s349 and s350. The page break falls between שֶׁנָּתַתָּ and פִּסַּת, and multi-fragment literal segments already handle it. Raw fragment optional_spans on the s350 fragment reuse the existing condition URNs …/kohanim/yehi_ratzon/wife_and_children and …/parents, so both printings share one setting. A trailing segment holds the instruction 'ויכוין לסיים…' and 'אָמֵן:', with no corresp. The legacy musaf_kohanim_yehi_ratzon may optionally gain segment source=<URN>, mapping-only.",
+      "blocker": "The proposal says the parentheses here are mother-only, but working-pages shows '(וִימֵי אָבִי וְאִמִּי)', identical to s314. Reconcile this before reusing the parents condition."
+    },
+    {
+      "blocks": [
+        "s350-german_rubric"
+      ],
+      "decision": "Documentary instruction, language de-Hebr. Use the same text as a rubric in the expanded output."
+    },
+    {
+      "blocks": [
+        "s350-adir_bamarom"
+      ],
+      "decision": "The identity is gated (search the registry and the legacy history). Recommended route, with no code change: add segment corresp=<addir URN> to the existing he and en segments of musaf_kohanim_addir_bamarom (a mapping field the baseline allows). It then becomes the canonical host, and the existing same-edition English aligns. The appendix becomes a caller (siddur:rosh_hashanah/nesiat_kappayim/addir_bamarom) with one overlay: 'וְעַל עַמְּךָ' → 'וְעַל־עַמְּךָ', printings [{scan s350, printed_page '24'}].",
+      "status": "reuse-pending-identity"
+    },
+    {
+      "blocks": [
+        "s350-kohanim_turn",
+        "s350-kohanim_departure",
+        "s350-shoes_rubric"
+      ],
+      "decision": "The rubrics are documentary. The departure prayer is gated by a possible duplicate: Metsudah prayer:ribbono_shel_olam_asinu versus legacy prayer:amidah/ribbono_shel_olam_lakohanim. The appendix becomes the first provider. The legacy host cannot take an overlay today, because its fragment carries quotations (E8). Its differences fall in one span, so E8 would allow it, but that is not needed under this plan.",
+      "encoding": "Deuteronomy 26:15 (complete verse) becomes an inline quotation with context URNs under the chosen prayer path. The legacy musaf_kohanim_ribbon_haolam optionally gains segment source=<URN>."
+    },
+    {
+      "blocks": [
+        "s350-sim_shalom",
+        "s350-rh_yk_rubric",
+        "s350-besefer"
+      ],
+      "decision": "Sim Shalom: find its existing provider in readings.json (not included in the supplied extract). If one exists, make this a canonical caller with overlays; otherwise the appendix provides it. Besefer: this printing ends before the chatimah. The only host in the project, siddur:rosh_hashanah/text/besefer, includes the chatimah, and its fragment is protected. A canonical pointer is therefore impossible, and a corresp would duplicate it.",
+      "status": "sim_shalom gated; besefer needs a human decision (see human_questions)"
+    },
+    {
+      "blocks": [
+        "s351-heading",
+        "s351-sunday_rubric (German part)",
+        "s351-psalm_24_citation",
+        "s351-psalm_24"
+      ],
+      "decision": "Psalm 24 is accepted. Keep its words and points (working-pages differs, for example לַיְיָ against לַייָ, and must not override it). Add the German label as a separate new documentary instruction (de-Hebr), and leave the accepted Hebrew rubric untouched. The citation 'כד' becomes a documentary instruction of type 'citation' (witnesses ['he'], scan s351, page_start false), placed before the existing psalm_24 transclusion. The citations field would change the baseline-protected snapshot, so it is not used.",
+      "urn": "urn:x-opensiddur:text:bible:psalms/24",
+      "alternative": "A single-stem baseline re-acceptance of psalm_24 that adds unit citations, provided the literal hash is unchanged. It matches the psalm_92/93 pattern, but it changes the baseline file."
+    },
+    {
+      "blocks": [
+        "psalm_48_begin + psalm_48_end",
+        "psalm_82",
+        "psalm_94_begin + psalm_94_end",
+        "psalm_81"
+      ],
+      "decision": "New biblical providers, which this project does not yet emit. Use unit URNs bible:psalms/48, 82, 94 and 81, one segment per verse with corresp bible:psalms/N/v. The chapter milestone corresp is emitted automatically, because each chapter is complete.",
+      "encoding": "Psalm 48:11 has fragments s351 'עַל־קַצְוֵי־' and s352 'אֶֽרֶץ…'. Because the first ends in a maqaf, they join with no space. Psalm 94:23 splits at s352 'עַד־יִכָּרֶה' / s353 'לָרָשָׁע'. Those pages have no printed_page, so the pb carries no n. Unit citations use the psalm_92 pattern {scan, printed_page null, text 'מח' / 'פב' / 'צד' / 'פא', target …/1, reference chapter}."
+    },
+    {
+      "blocks": [
+        "s354-psalm_93",
+        "s354-psalm_92"
+      ],
+      "decision": "Reuse both through canonical callers. Every verse differs in at most one contiguous span (יְיָ against יְהֹוָה, metegs, periods), so the current API is enough: one overlay per verse segment on hosts psalm_92 and psalm_93.",
+      "encoding": "Each caller is one segment: canonical bible:psalms/92/1 with canonical_end …/16 (and 93/1 to 93/5), as one s354 fragment with wording_selection. The caller URNs are siddur:rosh_hashanah/shir_shel_yom/<friday> and /<shabbat> (spelling to be settled with validate_names). Caller citations are 'צג' and 'צב'. Do not add overlay 'printings' for s354, because printed_page null breaks biblScope (RC-E)."
+    },
+    {
+      "blocks": [
+        "day labels (de-Hebr) and Hebrew day rubrics s351–s354"
+      ],
+      "decision": "Documentary instructions: each German label separate (de-Hebr), each Hebrew rubric separate. Put the Thursday label before the Hebrew sentence, consistent with the other days."
+    },
+    {
+      "blocks": [
+        "s355 heading קדיש.",
+        "s355-veattah"
+      ],
+      "decision": "A preface caller unit, siddur:rosh_hashanah/kaddish/preface, with two segments. The first is canonical bible:numbers/14/17 (an exact match). The second is canonical bible:psalms/25/6, with one overlay 'רַחֲמֶיךָ יְיָ וַחֲסָדֶיךָ כִּי מֵעוֹלָם הֵמָּה' → the metegged printing, on host psalm_25_6. The current API is enough."
+    },
+    {
+      "blocks": [
+        "s355-role",
+        "kaddish_1",
+        "kaddish_2",
+        "kaddish_3",
+        "kaddish_4",
+        "s355-oseh_shalom"
+      ],
+      "decision": "A new provider of the whole identity, which this project does not yet emit. The three opening paragraphs are already emitted, by kaddish_chatzi, so here they carry source attribution only. kaddish_chatzi cannot serve as a canonical host, because it has speaker, language and unit conditions. The two closings are emitted for the first time in this project.",
+      "urn": "urn:x-opensiddur:text:prayer:kaddish/yatom",
+      "encoding": "Root corresp kaddish/yatom (map_root). The segments: yitgaddal, yehe_shemeh and yitbarakh with source=prayer:kaddish/<part> and language arc; yehe_shelama with corresp prayer:kaddish/yatom/yehe_shelama and an anchor at the start replacing the printed '* '; oseh_shalom with corresp prayer:kaddish/yatom/oseh_shalom. Mirror kaddish_chatzi's accepted Ten Days guard with unit conditions opensiddur:holiday-aggregate {aseret-ymei-tshuva: true}, because this printing also doubles לְעֵֽלָּא. 'יתו' becomes a documentary instruction in source_order before the unit, not a speaker, so it is not inside the identity div."
+    },
+    {
+      "blocks": [
+        "s355-after_study",
+        "s355-al_yisrael",
+        "s355-resume_cue"
+      ],
+      "decision": "al_yisrael gets its first emission in this project. Do not emit prayer:kaddish/derabbanan/yehe_shelama or derabbanan/oseh_shalom: the printed return is to the yatom paragraphs.",
+      "urn": "urn:x-opensiddur:text:prayer:kaddish/derabbanan/al_yisrael",
+      "encoding": "The English instruction gets language_spans [{text 'קדיש דרבנן', language he}] and witnesses ['he']. The al_yisrael unit has map_root true, with raw fragment optional_spans for '(ולכון)' and '(וְאַרְעָא)', each with its own registered opensiddur:variant condition URN. The resume cue becomes readings.navigation (documentary only), targeting prayer:kaddish/yatom/yehe_shelama@{project}, with page_start false."
+    },
+    {
+      "blocks": [
+        "ornaments (s350 end, s354 rule, s355 rule)",
+        "running heads s347–s350 and s352–s354"
+      ],
+      "decision": "Not encoded as text. The page breaks carry the pagination."
+    }
+  ],
+  "documentary_plan": [
+    "Append three top-level source_order sections after the last accepted section. Do not touch existing entries. Any source_order edit changes source_order_sha256 inside every realization payload, so make all the edits in one change and re-review once.",
+    "Section A, corresp siddur:rosh_hashanah/nesiat_kappayim, heading 'סדר נשיאת כפים.' (s346, printed_page '20', page_start true). Order: instruction s346_opening_rubric → unit tikkun → instruction laws_ascent → unit yehi_ratzon_shel_haqahal → instruction laws_blessing (source_pages s346→s347, which emits the s347 pb n=21 inside the note) → caller np_avodah (retzeh, speaker הש״ץ.) → provider vetearev (with chatimah) → caller np_hodaah [Modim derabbanan (speaker הקהל., s347), Modim (s347 → s348 break before נִסֶּֽיךָ, which needs E2), veal_kullam, ukhetov (conditional with label 'בר״ה ויו״כ.'), vekhol_hachayyim] → provider elohenu/kohanim call → instruction 'הכהנים מברכין.' → provider kohanim berakhah → pesuqim group yevarekhekha (s348) → instruction dream_rubric → unit dream prayer → pesuqim group yaer (opens s349, so its first fragment emits pb n=23) → navigation ribbono_cue → pesuqim group yissa (with the marked Proverbs 3:4) → unit parnassah (s349 → pb n=24 inside → s350, then the instruction and the amen) → instruction german_rubric → caller addir_bamarom → instruction kohanim_turn → provider departure → instruction shoes_rubric → sim_shalom (a caller or a provider, after the gate) → instruction 'בר״ה וי״כ.' followed by besefer (pending the human decision).",
+    "Modim / Modim derabbanan linearization: Modim derabbanan (left column, entirely on s347) comes before the chazan's Modim (right column, s347 continuing to s348). This keeps the page sequence monotone. The proposal's alternative, a caller-owned 'page_break' s348 placed after a whole-Modim transclusion, puts about 35 words of s348 on s347. Reject it.",
+    "Section B, corresp siddur:rosh_hashanah/shir_shel_yom, heading 'שיר של יום.' (s351, no n). A flat order: [German label, Hebrew rubric, citation note 'כד', existing unit psalm_24], [Monday label and rubric, psalm_48 (pb s352 inside verse 11)], [Tuesday, psalm_82], [Wednesday, psalm_94 (pb s353 inside verse 23)], [Thursday label and rubric, psalm_81], [Friday label (instruction page_start true, s354, no n), rubric, caller for Psalm 93], [Shabbat label and rubric, caller for Psalm 92]. Do not give day sub-sections a corresp equal to a caller URN, because a duplicate corresp in the project fails validation. Do not use 'page_break' entries on s351–s355, because they pass n=None.",
+    "Section C, corresp siddur:rosh_hashanah/kaddish, heading 'קדיש.' (s355, no n): caller kaddish/preface → instruction 'יתו' (description) → provider kaddish/yatom → instruction after_study (English with a Hebrew span) → provider al_yisrael → navigation kaddish_resume.",
+    "Mapping-only edits to protected legacy units, all fields in SEGMENT_MAPPING_FIELDS: add corresp=<addir URN> to the he and en segments of musaf_kohanim_addir_bamarom. Optionally add source=<chosen URN> to musaf_kohanim_dreams, musaf_kohanim_ribbon_haolam and segment 1 of musaf_kohanim_yehi_ratzon. These units are review_encoding, so their realization payloads go stale and need re-review. That gate is the intended one.",
+    "Leave validate_baseline and the 518-stem baseline file unchanged. After acceptance, snapshot only the new stems.",
+    "Hebrew only: no English units for s346–s355, and no substitute translations."
+  ],
+  "expanded_plan": [
+    "Kaddish Yatom: a section whose order is [reference prayer:kaddish/yatom] (the whole s355 unit). Include the preface only where the book prints it, before the appendix Kaddish.",
+    "Kaddish Derabbanan: a section with no navigation. Order: rubric (instruction after_study, without source_pages) → reference {target prayer:kaddish/yitgaddal, targetEnd prayer:kaddish/yitbarakh}, which resolves to kaddish_chatzi, the only corresp home → reference prayer:kaddish/derabbanan/al_yisrael → reference {target prayer:kaddish/yatom/yehe_shelama, targetEnd prayer:kaddish/yatom/oseh_shalom}, which is the s355 printing. Before acceptance, verify by compiling that a range starting inside kaddish_chatzi's unit-level j:conditional resolves correctly, and that the speaker_before_reference note stays outside it. Settings for the optional spans: caller defaults are injected automatically; the section may declare them explicitly instead.",
+    "Shir shel yom: one section per day, with conditions opensiddur:day-of-week {hebrew-day: N}. Content: the Hebrew day rubric, then reference bible:psalms/N@<he project>. Psalms 92 and 93 resolve to the canonical host, and the host default wording is injected. Day 1 of Rosh Hashanah can only fall on days 2, 3, 5 or 7, so the others resolve false, but encode them anyway. Place it where the expanded order already places psalm_24, if it does; otherwise this needs the human decision on placement.",
+    "Priestly blessing material, guarded by opensiddur:practice {birkat-kohanim: true}. The preparation formula becomes complete per role through the kohen condition. The dream prayer is repeated in full at ויחנך through a reference entry, not navigation. Use canonical identities only, never the appendix caller units' own copies. Whether to splice this material into the accepted Musaf repetition or keep it as an appendix section is a human question. Where the Musaf repetition already sets a text (dreams, parnassah, addir, departure, third-verse responses), do not set it twice.",
+    "English parallel: alignment comes only from existing same-edition English providers that share the prayer: or bible: identity (retzeh, modim, veal_kullam, ukhetov, Psalms 92/93, the kaddish_chatzi parts, and addir after its corresp is added). Everything else stays absent.",
+    "Any expanded_order edit invalidates every realization review, because expanded_order_sha256 is in every payload. Land it together with the source_order edit."
+  ],
+  "required_code_changes": [
+    {
+      "id": "RC-A (registry, required)",
+      "change": "Add 'kohen: binary' to opensiddur:person in opensiddur/exporter/features.yaml. Before that, check whether hasiddur_hashalem-birnbaum-1949-he (festival musaf kohanim files) already encodes a priest/congregation condition, and follow it if so. The fallback is two registered opensiddur:variant condition URNs.",
+      "tests": "Run uv run python -m opensiddur.exporter.validate_features on the generated project. Add a unit test that the preparation formula emits two j:conditional branches with their labels."
+    },
+    {
+      "id": "RC-B (URN registry, required)",
+      "change": "Register: siddur contexts …/nesiat_kappayim, …/nesiat_kappayim/avodah, …/hodaah and …/addir_bamarom; …/shir_shel_yom and the two day callers; …/kaddish and …/kaddish/preface. Also the condition URNs for the overlay printings (for example urn:x-opensiddur:condition:siddur:rosh_hashanah/nesiat_kappayim/printing and its counterpart for each host), for (ולכון), (וארעא) and Proverbs 3:4; the quotation context URNs; and the gated new prayer identities, only after their gates. Run validate_names for every new path component, and add settled spellings to specs/naming/spellings.yaml."
+    },
+    {
+      "id": "RC-C (code, required only for exact Modim pagination under the overlay route), E2: printing page breaks in canonical homes",
+      "change": "This implements the SIDDUR_URN_SCHEME 'One text, printed on several pages' mechanism for homes. Add readings.canonical_printings items {id, host stem, lang, identity, fragment index if the host has several, caller stem, scan, printed_page|null, before: an exact host substring that occurs once}. In realizations.validate_occurrences, allow a canonical occurrence with N fragments when exactly N−1 printings are declared for that caller and identity. The joined caller text must equal canonical_text, and each caller fragment boundary must map to its declared 'before' offset in the resolved text, which must not fall inside an overlay's printed span. In home generation, emit <pb ed='1965 <caller page_context>' n? facs> before 'before'. The caller emits no pb for fragments after the first. In validate_generated, replace 'no pb in canonical home' with: allowed only when ed has a second token equal to a declaring caller's context, matched one-to-one with the declared printings. Include the printings in the realization payloads of host and caller.",
+      "risk": "Homes stop being pb-free, so exporter scan_links must suppress pbs whose sigil belongs to another printing.",
+      "tests": "The documentary appendix compile shows the s348 pb exactly before נִסֶּֽיךָ. The rh_hodaah context still shows only its s32 pb. The expanded output shows no appendix pb. Home XML is unchanged when no printings are declared. A misplaced 'before' or an overlap with an overlay is rejected."
+    },
+    {
+      "id": "RC-D (code, recommended for the overlay route), E1: several disjoint overlays per host fragment",
+      "change": "In realizations.prepare_unit, replace 'len(spans) != 1' with this check: every printed span occurs once, and the spans do not overlap by offset. Sort the alternatives by offset before build's sequential split. canonical_text applies replacements by offset, right to left, instead of chained str.replace. bind_corrections already iterates every overlay.",
+      "tests": "Two disjoint overlays produce two choices in text order. Overlapping overlays are rejected. Every selection combination round-trips the literal. Existing single-overlay outputs are byte-identical."
+    },
+    {
+      "id": "RC-E (small fix, required if overlay 'printings' are used for unnumbered pages)",
+      "change": "In build.unit_document, skip the biblScope for source_printings whose printed_page is None. Today it passes from/to=None to lxml."
+    },
+    {
+      "id": "RC-F (optional)",
+      "change": "Printed reference marks: add an optional citation key 'n', emitted as note/@n and included in instruction_review_text, and include a segment's 'anchor' in unit_review_text only when a new 'printed_mark' key is present, so existing review texts stay stable. Without this, the '*)' and '*' glyphs are represented only by anchors, and no review sees them."
+    },
+    {
+      "id": "RC-G (optional)",
+      "change": "Let validate_occurrence_controls accept operator structures {operator, conditions} recursively. This is needed only if 'high-holidays' does not mean RH and YK, so that ukhetov can carry any(holiday.rosh-hashana, holiday.yom-kippur)."
+    },
+    {
+      "id": "Deferred, not recommended now",
+      "change": "Three extensions are not needed under this plan. E9: allow canonical hosts that carry language, speaker_before_reference and unit conditions (kaddish_chatzi); this would weaken the Ten Days guard. E8: allow host fragments with quotations; not needed while the appendix provides the departure prayer. E3: partial-segment canonical occurrences for besefer; a human decision comes first. Do not change validate_baseline, and do not add fields to UNIT_MAPPING_FIELDS."
+    }
+  ],
+  "review_concerns": [
+    "The proposal says the s350 parentheses are 'mother-only', but working-pages (with human836–845 applied) shows '(וִימֵי אָבִי וְאִמִּי)', the same as s314. Settle this before binding optional controls.",
+    "Under the current one-overlay-per-segment rule, the meteg-heavy reprints (Retzeh, Modim, Modim derabbanan) need near-whole-paragraph overlays. These put both full printings inside the canonical home as j:option. That is legal but misleading, so prefer E1, or get an explicit policy decision.",
+    "Generic registry labels have not been checked against legacy bodies: prayer:amidah/yehi_ratzon, prayer:amidah/birkat_kohanim, prayer:amidah/kohanim, prayer:amidah/birkat_kohanim_pesuqim, prayer:amidah/ribbono_shel_olam and prayer:amidah/ribbono_shel_olam_lakohanim. Retrieve them, for example with git show 4043f874^:<legacy file>, before mapping anything.",
+    "There may be duplicate prayer identities across the corpus: Metsudah prayer:ribbono_shel_olam_ani and _asinu against the legacy amidah/ribbono_shel_olam and amidah/ribbono_shel_olam_lakohanim.",
+    "Metsudah's prayer:vetearev_lefanekha_atiratenu extent appears to include the chatimah and the preparation formula, which overlaps prayer:amidah/yehi_ratzon_shel_haqahal.",
+    "The registry has separate prayer:kaddish/derabbanan/yehe_shelama and oseh_shalom alongside the yatom ones. The Ashkenaz text is the same, which may violate the nesting rule. Do not emit the derabbanan versions here.",
+    "Role labels inside provider ranges leak into every transclusion. Use speaker_before_reference at identity boundaries. The ותערב chatimah needs its own identity for this to work.",
+    "The day rubric 'היום … שבו הלוים היו אומרים במקדש' is recited aloud in practice, but it was accepted as an instruction. That is fine for the documentary output; the expanded output may need it as recited text.",
+    "In the laws, 'ה׳ אוירים' (five), 'בג׳ עשה' and 'כ״ט ב׳' (footnote) are numerals and must not be tagged as Names. 'ישא ה׳ פניו' and 'בסוד ה׳' are Names. In instructions, tag each one explicitly, never by a global rule.",
+    "The segment-level source_reference_part still puts the whole verse URN on the verse milestone when no source_reference_corresp is given (a latent bug; quotation_words already guards against it). For partial verses, use explicit context URNs or quotation_words.",
+    "The overlay 'printings' (printed_page null) and the order entries 'page_break' (n=None) both fail on the unnumbered pages s351–s355.",
+    "The appendix pagination (20–24) repeats page numbers from the main sequence. Only the facs value tells them apart.",
+    "Expanded Derabbanan takes the kaddish_chatzi wording for its first three paragraphs (דִּי־בְרָא, not this printing's דִּבְרָא). This is acceptable for an editorial expanded text, but it must be stated in the expanded coverage note.",
+    "'(ולכון)' is small and unpointed, while '(וְאַרְעָא)' is normal size and pointed. The different typography may mean a variant reading rather than an optional word; both are encoded as optional for now.",
+    "vekhol_hachayyim and besefer have only legacy siddur: identities as hosts. Callers to them are tolerated, but no new siddur holders are created."
+  ],
+  "human_questions": [
+    "Policy for typographic reprints of identities already emitted (Retzeh, Modim, Modim derabbanan): approve (A) canonical callers with overlays (recommended: with E1, and E2 for the Modim page break), or (B) a narrowly guarded documentary-printing exception, a literal witness with seg@source and a consonantal-skeleton equality check that is never used in the expanded book. B conflicts with the stated rule against new literal siddur holders, so it needs your explicit approval. Without approval, A applies.",
+    "After the legacy bodies are retrieved: which identity survives for the dream prayer (prayer:ribbono_shel_olam_ani or prayer:amidah/ribbono_shel_olam) and for the departure prayer (prayer:ribbono_shel_olam_asinu or prayer:amidah/ribbono_shel_olam_lakohanim)?",
+    "Besefer (s350) prints the paragraph without its chatimah. Should a prayer identity be registered for the paragraph alone, with the appendix as its first provider? Or do you prefer a partial-occurrence extension?",
+    "Expanded placement: should the kohanim-specific appendix texts (tikkun at 'ומפני חטאינו', preparation formula, ותערב, kohanim berakhah, first and second verse groups) be spliced into the accepted Musaf repetition, or kept as a separate appendix section? And where should shir shel yom go, if the expanded order has no existing placement for it?",
+    "Is it acceptable for the documentary output to put Modim derabbanan (left column) before the chazan's Modim (right column), so that s347 precedes s348?",
+    "Confirm that the s349 cue 'רִבּוֹנוֹ שֶׁל עוֹלָם.' means the full dream prayer is repeated during ויחנך.",
+    "Only if this is outside the resolved human836–845: does the s355 marker 'יתו' denote the mourner? That would need a new role. Or should it stay an uninterpreted documentary note?"
+  ],
+  "notes": [
+    "Zero-code paths that already fit the APIs: new biblical units (Psalms 48, 82, 94, 81); canonical callers with one overlay per verse for Psalms 92/93 and Psalm 25:6; an exact pointer for Numbers 14:17; single-span overlays for veal_kullam, ukhetov, vekhol and addir; Modim derabbanan with one overlay per host fragment; first-emission providers for kaddish/yatom, its closings, al_yisrael and yehi_ratzon_shel_haqahal; paginated laws through source_pages; navigation entries for the documentary cues.",
+    "General rule applied: when a prayer identity is not yet emitted in this project, the appendix printing provides it (corresp), and earlier legacy siddur-holder printings may gain only source attribution. When the identity is already emitted, or the earlier printing differs in a single span and has same-edition English (addir), the earlier printing hosts and the appendix calls.",
+    "Caller units have siddur: URNs and no words of their own, so they pass the scheme's 'remove transclusions' test. Their page breaks get the ed sigil automatically from unit_urn.",
+    "Every mapping change proposed for protected units uses fields in UNIT_MAPPING_FIELDS or SEGMENT_MAPPING_FIELDS. Those units are review_encoding, so their realization payloads still force re-review."
+  ],
+  "limitations": [
+    "I did not read readings.json, reviews.json, the current source_order, expanded_order, navigation or wording_variants. So I cannot confirm that no existing overlay sits on retzeh, modim or the psalm hosts, where Sim Shalom and ותערב already live, or where the expanded order places psalm_24.",
+    "relevant-registry-records.json was read only in part (its first and last portions). Registry status of the Metsudah prayer URNs, of addir, sim shalom and besefer, and the definition of 'high-holidays' are unverified.",
+    "Legacy bodies were supplied for three URNs only.",
+    "Exporter scan_links behavior for sigiled pbs in homes, and range resolution inside unit-level conditionals, were not tested. I ran no build, validator or test.",
+    "The proposed URN spellings have not been checked against specs/naming/spellings.yaml or validate_names.",
+    "Source words were used only for identity and sequence. I made no pointing judgments."
+  ],
+  "invocation": {
+    "model_usage": [
+      "claude-opus-5-5"
+    ],
+    "configured_model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "a2256446-f806-4fe4-873b-3fb2652b9557"
+  }
+}

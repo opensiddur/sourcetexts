@@ -1,0 +1,64 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "unspecified (not exposed to the reviewer)"
+  },
+  "scan": "s316",
+  "images_read": [
+    "/tmp/mahzor-s312/audit-s316-strip1.png",
+    "/tmp/mahzor-s312/audit-s316-strip2.png",
+    "/tmp/mahzor-s312/audit-s316-strip3.png",
+    "/tmp/mahzor-s312/audit-s316-strip4.png",
+    "/tmp/mahzor-s312/audit-s316-strip5.png",
+    "/tmp/mahzor-s312/audit-s316-strip6.png",
+    "/tmp/mahzor-s312/audit-s316-strip7.png",
+    "/tmp/mahzor-s312/audit-s316-strip8.png",
+    "/tmp/mahzor-s312/audit-s316-strip9.png",
+    "/tmp/mahzor-s312/audit-s316-strip10.png"
+  ],
+  "decisions": [
+    {
+      "id": 33,
+      "choice": "B",
+      "literal": "בידים",
+      "reason": "Strip 1, unpointed Rashi-script rubric line: 'הכהנים יזהרו בנעילת מנעליהם שלא יגעו בם בידים ואם נגעו יחזרו ליטול ידיהם.' The word after בם has four letters (ב־י־ד־י) and then a final mem drawn in Rashi form. There is no second yod-he, so it is not בידיהם. The rubric's last word, ידיהם, does have the ה, which shows the two words were printed differently. The rubric is unpointed, so no vowels are added. It is a ritual instruction, not prayer text.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 34,
+      "choice": "B",
+      "literal": "תְּחַדֵּשׁ",
+      "reason": "Strips 6–7, line 'הַיּוֹם תְּחַדֵּשׁ עָלֵינוּ שָׁנָה טוֹבָה: אָמֵן:'. The printed verb is clearly ת־ח־ד־ש: tav with sheva, chet with patach, dalet with tsere and dagesh, then shin. Reading A, 'תָּחוּשׁ', has no ד and its vowels don't match the print. A is a misreading.",
+      "uncertainty": "low (the letters are certain; the dagesh in the tav is small but appears present)"
+    },
+    {
+      "id": 35,
+      "choice": "B",
+      "literal": "ויש",
+      "reason": "Strips 7–8, small unpointed line: 'ויש מוסיפים: היום תתמכנו בימין צדקך: אמן:'. The first word is spelled out as ויש, with no gershayim abbreviation (וי״מ). 'ויש מוסיפים:' is an instruction rubric, not recited text.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 36,
+      "choice": "B",
+      "literal": "היום תתמכנו בימין צדקך:",
+      "reason": "Strips 7–8: this optional line is printed in small type with no vowels. Reading A added vowels (תִּתְמְכֵֽנוּ, צִדְקֶֽךָ, and so on) that the page doesn't have. The line is recited text even though it is in small type, so it belongs in the text, but it must stay unpointed. The printed response at the far left of the line is also unpointed: 'אמן:'.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 37,
+      "choice": "B",
+      "literal": "קָדְשִׁי.",
+      "reason": "Strips 8–9, end of line 'כַּכָּתוּב עַל יַד נְבִיאֶךָ וַהֲבִיאוֹתִים אֶל הַר קָדְשִׁי.' A clear full-stop dot follows קדשי at the line end, and 'וְשִׂמַּחְתִּים בְּבֵית תְּפִלָּתִי.' starts the next line. The period was printed, so it is kept.",
+      "uncertainty": "low"
+    }
+  ],
+  "additional_source_errors": [],
+  "unresolved": [],
+  "scope": "Only these differences; not whole-page acceptance",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "e4f2e6b5-b0ab-4123-b59a-a42a528f9432"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "conditional_and_missing_translation_checks": [
+    {
+      "case": "expanded-shabbat-True-priests-False.xml",
+      "loud_kohanim_direction": false,
+      "expected": false
+    },
+    {
+      "case": "expanded-shabbat-True-priests-True.xml",
+      "loud_kohanim_direction": true,
+      "expected": true
+    },
+    {
+      "context": "urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/modim_derabbanan",
+      "absent_source_english_remains_absent": true
+    },
+    {
+      "context": "urn:x-opensiddur:text:siddur:rosh_hashanah/shacharit/repetition/birkat_kohanim",
+      "absent_source_english_remains_absent": true
+    }
+  ],
+  "v4_to_v5_only_stanza_slug_changes": [
+    "prayerbook_for_the_new_year-marmorstein-1965-en/musaf_anusah_leezrah.xml",
+    "prayerbook_for_the_new_year-heidenheim-1965-he/musaf_anusah_leezrah.xml"
+  ]
+}

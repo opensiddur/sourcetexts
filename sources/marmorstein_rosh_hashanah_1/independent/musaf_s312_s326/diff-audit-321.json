@@ -1,0 +1,159 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "low"
+  },
+  "scan": "s321",
+  "images_read": [
+    "/tmp/mahzor-s312/audit-s321-strip1.png",
+    "/tmp/mahzor-s312/audit-s321-strip2.png",
+    "/tmp/mahzor-s312/audit-s321-strip3.png",
+    "/tmp/mahzor-s312/audit-s321-strip4.png",
+    "/tmp/mahzor-s312/audit-s321-strip5.png",
+    "/tmp/mahzor-s312/audit-s321-strip6.png",
+    "/tmp/mahzor-s312/audit-s321-strip7.png",
+    "/tmp/mahzor-s312/audit-s321-strip8.png",
+    "/tmp/mahzor-s312/audit-s321-strip9.png",
+    "/tmp/mahzor-s312/audit-s321-strip10.png"
+  ],
+  "decisions": [
+    {
+      "id": 63,
+      "choice": "B",
+      "literal": "בַּשְּׁלִישִׁי הָיוּ אוֹמְרִים,",
+      "reason": "Strip1: the label is printed with vowels and ends in a comma, not a period. A is unpointed and has the wrong punctuation. Per the brief, the weekday label is recited text. The patach under the first ב and the hiriqs are visible.",
+      "uncertainty": "medium: the small label font means I can't confirm the dageshes in ב and in the first ש at this resolution"
+    },
+    {
+      "id": 64,
+      "choice": "B",
+      "literal": "בָּרְבִיעִי הָיוּ אוֹמְרִים,",
+      "reason": "Strips 1–2: there is a visible kamatz under the first ב, the label is pointed, and it ends in a comma.",
+      "uncertainty": "low-medium: dagesh in the first ב is not clearly resolvable"
+    },
+    {
+      "id": 65,
+      "choice": "B",
+      "literal": "בַּחֲמִישִׁי הָיוּ אוֹמְרִים,",
+      "reason": "Strip2: patach under ב and hataf-patach under ח are visible, and the label ends in a comma.",
+      "uncertainty": "low-medium: dagesh in ב is not clearly resolvable"
+    },
+    {
+      "id": 66,
+      "choice": "B",
+      "literal": "בַּשִּׁשִּׁי הָיוּ אוֹמְרִים,",
+      "reason": "Strip2: the label is pointed with a patach under ב and hiriqs under both ש, and it ends in a comma.",
+      "uncertainty": "medium: I can't confirm the dageshes in both ש at native resolution"
+    },
+    {
+      "id": 67,
+      "choice": "B",
+      "literal": "לָבֵשׁ,",
+      "reason": "Strip2: a comma is clearly printed after the first לָבֵשׁ (מָלָךְ גֵּאוּת לָבֵשׁ, לָבֵשׁ יְיָ). The second לָבֵשׁ has no comma.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 68,
+      "choice": "B",
+      "literal": "בַּשַּׁבָּת הָיוּ אוֹמְרִים,",
+      "reason": "Strip3: patach under ש and kamatz under the ב of שבת are visible, and the label ends in a comma.",
+      "uncertainty": "low-medium: dagesh in the initial ב is not clearly resolvable"
+    },
+    {
+      "id": 69,
+      "choice": "B",
+      "literal": "הָעֹלָמִים:",
+      "reason": "Strip3: the line ends לְחַיֵּי הָעֹלָמִים: and is spelled defectively, with no ו after ע and a holam on ע. This is printed defective spelling, not a typo.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 70,
+      "choice": "B",
+      "literal": "שְׁלוֹם בָּנָֽיִךְ:",
+      "reason": "Strip4: וְרַב שְׁלוֹם בָּנָיִךְ: has a shva under ש of שלום (not a kamatz) and a colon after בָּנָיִךְ, not a period.",
+      "uncertainty": "low for the shva and the colon. Medium for the meteg under נ, which is not clearly distinguishable at this resolution. I kept it as both A and B have it."
+    },
+    {
+      "id": 71,
+      "choice": "B",
+      "literal": "בָּנָֽיִךְ",
+      "reason": "Strip4: in אַל תִּקְרָא ___ there is a kamatz under ב and a kamatz under נ. That matches the first occurrence, so A's patach under נ is not what is printed.",
+      "uncertainty": "medium: dagesh in ב and the meteg are not definitively resolvable"
+    },
+    {
+      "id": 72,
+      "choice": "PENDING",
+      "literal": "",
+      "reason": "Strip4: the word is בונָיִךְ: with holam male and a kamatz under נ, followed by a colon. A and B differ only in whether the initial ב has a dagesh, and at this resolution I can't tell whether a dot is inside the ב. I'm not deciding it on grammatical or liturgical expectation.",
+      "uncertainty": "high: needs a higher-resolution crop of the ב after אֶלָּא"
+    },
+    {
+      "id": 73,
+      "choice": "B",
+      "literal": "וְגֹרָלֵֽנוּ",
+      "reason": "Strip7: printed וְגֹרָלֵנוּ, spelled defectively with no ו after ג and a holam dot. That is not a typo.",
+      "uncertainty": "low for spelling. Medium for the meteg under ל, which I can't verify at this resolution. I kept it as both A and B have it."
+    },
+    {
+      "id": 74,
+      "choice": "B",
+      "literal": "כֹּרְעִים",
+      "reason": "Strip7: printed כֹּרְעִים, spelled defectively with no ו after כ.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 75,
+      "choice": "B",
+      "literal": "אֱלֹהֵֽינוּ,",
+      "reason": "Strip8: a comma is clearly printed after אֱלֹהֵינוּ, before אֵין עוֹד.",
+      "uncertainty": "low (I didn't verify the meteg independently; both readings have it)"
+    },
+    {
+      "id": 76,
+      "choice": "B",
+      "literal": "מַלְכֵּֽנוּ,",
+      "reason": "Strip8: a comma is clearly printed after מַלְכֵּנוּ, before אֶפֶס.",
+      "uncertainty": "low (I didn't verify the meteg independently; both readings have it)"
+    },
+    {
+      "id": 77,
+      "choice": "B",
+      "literal": "בְּתוֹרָתוֹ,",
+      "reason": "Strips 8–9: a comma, not a period, follows בְּתוֹרָתוֹ before וְיָדַעְתָּ.",
+      "uncertainty": "low"
+    }
+  ],
+  "additional_source_errors": [],
+  "unresolved": [
+    {
+      "id": 72,
+      "issue": "Whether the initial ב of בונָיִךְ after אֶלָּא has a dagesh. This needs a higher-resolution crop."
+    },
+    {
+      "ids": [
+        63,
+        64,
+        65,
+        66,
+        68
+      ],
+      "issue": "The rubric labels are in small type, so the dageshes in initial letters (ב, ש) are only partly resolvable. B's pointing is accepted as consistent with the visible vowels."
+    },
+    {
+      "ids": [
+        70,
+        71,
+        73,
+        75,
+        76
+      ],
+      "issue": "I didn't independently confirm the metegs at this resolution. They were kept because both readings agree, not removed as a category."
+    }
+  ],
+  "scope": "Only these differences (ids 63–77); not acceptance of the whole page",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "25b7ff49-2943-4c82-be43-8f445fcd6959"
+  }
+}

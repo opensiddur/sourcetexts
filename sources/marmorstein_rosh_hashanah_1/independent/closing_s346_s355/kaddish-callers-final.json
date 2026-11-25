@@ -1,0 +1,33 @@
+{
+  "approved": true,
+  "required_changes": [],
+  "notes": [
+    "Required 1 is closed. The earlier review read context files instead of the word homes. amidah_hodaah_parts.xml:37-40 and amidah_modim_derabbanan_parts.xml:38 now give every fragment a same-unit prayer-part milestone/@corresp, with a closing terminator, and a tei:choice of j:option earlier and kohanim_appendix. The s348 page break (printing_kohanim_appendix_modim_s348) sits only inside the kohanim_appendix option. Neither parts file has an idno, a div corresp or a note. The literal contexts rh_hodaah.xml:39-42 and amidah_modim_derabbanan.xml:40 keep their raw seg/@source text byte-identical, with their own pb n=19 / n=6 and no milestone corresp. So each target has one home, and the context page breaks correctly stay out of the earlier options. Each of the 5 callers (kohanim_appendix_modim, _veal_kullam, _ukhetov, _vekhol_hachayyim, _modim_derabbanan) declares every printing_N feature its target uses (earlier=false, kohanim_appendix=true).",
+    "Required 2 is closed. kaddish_yatom.xml:36-41 no longer has any j:conditional. The doubled לְעֵֽלָּא וּלְעֵֽלָּא is printed unconditionally, as the source prints it, and the yehe_shelama and oseh_shalom milestone extents are outside any season scope. The place still has to declare the season.",
+    "Required 3 is closed. The callers now carry source titles: מודים, מודים דרבנן, וכתוב לחיים טובים, בספר חיים, רצה, אמן, ברכת הכהנים, יהי רצון — שם בן עשרים ושתים, and so on. The English titles in draft-kohanim-callers.json match, for example 'Congregational thanksgiving' and 'Inscribe for a good life'. No Minchah or Evening labels are left in the 14 modules.",
+    "Required 4 is closed by mechanism. In realizations.py:729-801 (validate_generated), groups are keyed by each overlay identity, plus the host URN when there is no canonical_home. Any transclusion that leaves a group undecided gets a local j:declare whose first reading is true. In every wording_variants entry, readings[0] is the earlier printing, equal to 'printed'. A caller that decides only part of a group raises an error. printing_guards also raises if a kohanim_appendix feature is selected outside its attested caller. For both part and whole-host targets, an original context therefore resolves to the earlier printing. actual-original-printing-defaults.json reports exact earlier words and no appendix options for all four hosts.",
+    "English closing identities are not duplicated. kaddish_yatom_closings.xml:38-39 is the only en file carrying prayer-part milestones for prayer:kaddish/yatom/yehe_shelama and prayer:kaddish/yatom/oseh_shalom. The existing morning_full_kaddish.xml:44,46 uses the legacy IDs siddur:rosh_hashanah/shacharit/full_kaddish/yatom_* as milestone corresp and points to the proper IDs only through seg/@source. validate_generated's one-home-per-project check also passed.",
+    "The ukhetov and besefer guards are unchanged and correct. In each, one j:conditional (high-holidays) holds both the rubric and the inline transclusion. actual-closing-holiday-guards.json gives exact words for true, false and undecided.",
+    "Accepted: the role labels הש״ץ. (kohanim_appendix_retzeh.xml:48) and הקהל. (kohanim_appendix_modim_derabbanan.xml:54) are plain unqualified instruction notes in the place, not shared generic role URNs. This keeps the source wording and follows the place rule.",
+    "Non-blocking: validate_generated groups overlays without regard to language. closing_kaddish_preface.xml:47, a Hebrew file, received an injected declare of the English-only features psalms/25/6/marmorstein_translation/{preface,morning_psalms}. It does no harm, but it is noise and may matter once feature-use checks are strict. Consider filtering groups by the caller's xml:lang.",
+    "Non-blocking: in draft-kohanim-callers.json candidate_registry, the two psalms/25/6/marmorstein_translation entries put English text in label_he. Fix this at registry promotion.",
+    "Non-blocking and outside the 14 modules: the context host amidah_modim_derabbanan.xml:5 still has the debris title 'תפלת מנחה — modim_derabbanan'.",
+    "Non-blocking: kaddish_yatom.xml, kaddish_derabbanan_al_yisrael.xml and closing_kaddish_preface.xml have no biblScope page range, while the other callers do. kaddish_yatom_closings.xml is still a literal copy of the p.69 English rather than a pointer, as noted before. The printed asterisk before יְהֵא שְׁלָמָא is still represented only by an anchor.",
+    "Pending source readings, not defects: Q855 (לְחַצְרוֹת / רְצוֹנֶֽךָ in the modim_derabbanan kohanim_appendix option) and Q858 (besefer rubric וי״כ vs ukhetov rubric ויו״כ)."
+  ],
+  "limitations": [
+    "This approval covers only these 14 modules and their word-provider changes. The batch and transcription stay UNACCEPTED. Source questions 854–859, registry promotion of the candidate condition IDs, integration of the whole service and expanded spines, Hebrew/English alignment and order, and all exports are still open.",
+    "The compile proofs of the original-context defaults do not use the real service spines. check-original-printing-defaults.py builds synthetic callers, <stem>_original_proof.xml, which transclude each host URN. They run the normal validate_generated injection and the compiler, so the mechanism is proven, but actual-original-printing-defaults.json's wording 'actual external source-context callers' overstates this. The real callers must be re-checked once the spines are integrated.",
+    "The proofs ran with unchecked_registry(). Registry validity of the new variant and holiday-aggregate features has not been shown.",
+    "This was a read-only review. No commands, schema validation, refdb sync or compile were run. Results in combined-draft-validation.json, combined-draft-state.json and the two compile-proof JSONs are taken as reported. No scan images were examined, so source fidelity was not checked against the images.",
+    "draft-kohanim-callers.json was read only through line 719 of 981, and draft-kaddish-modules.json was not opened. The conclusions rest on the generated XML and realizations.py."
+  ],
+  "invocation": {
+    "model_usage": [
+      "claude-opus-5-5"
+    ],
+    "configured_model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "ef9a4ca9-34c4-44fc-a218-b407b1005a67"
+  }
+}

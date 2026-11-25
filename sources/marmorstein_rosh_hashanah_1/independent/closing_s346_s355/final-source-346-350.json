@@ -1,0 +1,134 @@
+{
+  "approved": false,
+  "page_coverage": [
+    {
+      "scan": "s346",
+      "printed_page": "20",
+      "bands_read": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "blocks_checked": 9,
+      "result": "No discrepancies at band resolution. This covers the Rashi-script rubrics, the unpointed יהי רצון (including בי״ט, חב״ו, ״חיל ״בלע ״ויקיאנו), the column order לכהנים on the right and להעם on the left, and the maqafs in את־עמך and ולא־יהיה."
+    },
+    {
+      "scan": "s347",
+      "printed_page": "21",
+      "bands_read": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "blocks_checked": 12,
+      "result": "Two items are unresolved (U1, U2). Everything else agrees, including both Modim columns (קהל on the left), the footnote and the role rubrics."
+    },
+    {
+      "scan": "s348",
+      "printed_page": "22",
+      "bands_read": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "blocks_checked": 20,
+      "result": "One item is unresolved (U3). The cue/verse columns, the inline הש״ץ בקול / כֹּהֲנִים and the commas in the blessing all agree."
+    },
+    {
+      "scan": "s349",
+      "printed_page": "23",
+      "bands_read": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "blocks_checked": 28,
+      "result": "No discrepancies. The parenthesis around the whole of (וּמְצָא־חֵן … וְאָדָם:) is confirmed. The cue שלום is unpointed. בְצִמְצוּם / בְאִסּוּר / בְצַעַר and מְזוֹנָתֵֽנוּ agree with the image."
+    },
+    {
+      "scan": "s350",
+      "printed_page": "24",
+      "bands_read": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "blocks_checked": 12,
+      "result": "Two items are unresolved (U4, U5). Both parenthetical extents, the German rubric, the end ornament and the block order agree."
+    }
+  ],
+  "required_corrections": [],
+  "unresolved": [
+    {
+      "id": "U1",
+      "scan": "s347",
+      "key": "s347-laws_continuation",
+      "working": "ובמלת ישא ה׳ פניו … ובמלת וישם לך שלום",
+      "observed": "On band 1, lines 3 and 4, both of these instances look one glyph wider than the ובמלת on lines 1 and 2. They read as ובמלות. The other three instances (וישמרך, יאר, ויחנך) read ובמלת.",
+      "crop_needed": "s347, band 1, lines 3–4, the word at the start of each clause before ישא and before וישם. Crop it beside the ובמלת on line 1 for comparison.",
+      "status": "Leaning toward ובמלות, but not certain at this resolution. Not changed."
+    },
+    {
+      "id": "U2",
+      "scan": "s347",
+      "key": "s347-modim_derabbanan_left_column",
+      "working": "לְחַצְרוֹת",
+      "observed": "At the end of the 6th line of the left column (bands 3/4) the word looks like five letters with a holam over the resh: לְחַצְרֹת. A holam male cannot be excluded.",
+      "crop_needed": "s347, left column, the last word of the line beginning וּתְקַיְּמֵֽנוּ.",
+      "status": "Unresolved."
+    },
+    {
+      "id": "U3",
+      "scan": "s348",
+      "key": "ribbono_dreams",
+      "working": "וּכְמֵי יְרִיחוֹ",
+      "observed": "Band 4, line 4. The word looks short, as if there is no yod after the resh: יְרִחוֹ. This would be the defective biblical spelling, not a typo.",
+      "crop_needed": "s348, band 4, the word after וּכְמֵי near the end of the line that ends with אֱלִישָׁע.",
+      "status": "Unresolved. Human answer 852 settles only רַבֵּינוּ."
+    },
+    {
+      "id": "U4",
+      "scan": "s350",
+      "key": "parnassah_continuation",
+      "working": "לִלְבֹּשׁ",
+      "observed": "Band 1, line 1. The word after וּבֶגֶד looks like five letters, as if spelled with a vav: לִלְבּוּשׁ or לִלְבּוֹשׁ.",
+      "crop_needed": "s350, band 1, the first line, the word between וּבֶגֶד and לְיַעֲקֹב, at a size where the points can be read.",
+      "status": "Unresolved."
+    },
+    {
+      "id": "U5",
+      "scan": "s350",
+      "key": "rh_yk_rubric",
+      "working": "בר״ה וי״כ.",
+      "observed": "At band resolution this looks like וי״כ. But the s348 rubric looked the same to me, and human answer 838 settled that one as ויו״כ. So my reading here is not reliable, and 838 does not cover s350.",
+      "crop_needed": "s350, band 3, the small centred rubric above בְּסֵפֶר חַיִּים.",
+      "status": "Unresolved."
+    }
+  ],
+  "verified_source_word_count": 1600,
+  "notes": [
+    "No required corrections are listed because nothing I saw is certain at band resolution. The five unresolved items are where the image and the working text may differ.",
+    "Provenance mismatch, separate from the source reading: s347-veteerav has הָֽרַבִּים (with a meteg) in working-pages.json, but the before and after texts of human answer 836 both have הָרַבִּים. The meteg cannot be settled at band resolution. Confirm which source added it, or check it on a crop.",
+    "The human answers 836–853 are accepted only for their narrow glyphs: וי״יצ, the s348 ויו״כ, וִיחֻנֶּֽךָּ, עָלַי, no dagesh in the bet after וְלֹא, פִּסַּת, the German rubric, the s348 printed yod in רבינו, and the s349 מְזוֹנָתֵֽנוּ.",
+    "Agree as transcribed: חכמה at the head of s347 (not הברכה), the s346 heading period, the s349 cue שלום unpointed, the s349 זְרֹעָם, and the Rashi readings of יוצק, באלו, מציץ and לרצה (rendered rashi tsadi = ל-like and alef = ח-like glyphs)."
+  ],
+  "limitations": [
+    "The verified word count is approximate: a total over the s346–s350 blocks, not counted token by token.",
+    "I could only view the bands as given (about 1240 px wide) and could not zoom or crop. Metegs and most fine dageshes in small-type cues, column text and Rashi rubrics could not be confirmed or ruled out one by one. They were accepted where nothing visible contradicts them.",
+    "Rashi-script vav and yod are hard to tell apart at this resolution, for example יוצק on s346. They were not flagged unless the word's length differed.",
+    "This covers only reading the source. Encoding, sequence and exports are not covered."
+  ],
+  "invocation": {
+    "model_usage": [
+      "claude-opus-5-5"
+    ],
+    "configured_model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "065a8fb0-a622-4496-ae65-b130986db846"
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "decisions": [
+    {
+      "scan": "s122",
+      "ours": "לְדֹר וָדֹר",
+      "theirs": "לְדוֹר וָדוֹר",
+      "verdict": "independent",
+      "exact_text": "לְדוֹר וָדוֹר",
+      "evidence": "Band1, Modim line 2 (the line starting לְעוֹלָם וָעֶד): both words show a full-height vav between ד and ר. Each is a real vertical stroke, not a lone dot over ד. The full page shows the same thing.",
+      "confidence": "high"
+    },
+    {
+      "scan": "s122",
+      "ours": "לְּךָ",
+      "theirs": "לְךָ",
+      "verdict": "independent",
+      "exact_text": "לְךָ",
+      "evidence": "Band1, start of Modim line 3: shva under ל and qamatz in final ך. I see no dot inside the ל, on either the band or the full page.",
+      "confidence": "medium"
+    },
+    {
+      "scan": "s122",
+      "ours": "בְרִיתֶךָ:",
+      "theirs": "בְּרִיתֶךָ:",
+      "verdict": "independent",
+      "exact_text": "בְּרִיתֶךָ:",
+      "evidence": "Band2, centered וּכְתוֹב line: the ב of בריתך has an inner dot like the one in בְּנֵי next to it, and a colon follows. The source prints dagesh after בני, which is grammatically unusual. Keep it literally. A sic/corr to בְרִיתֶךָ is optional; do not change the base text silently.",
+      "confidence": "medium"
+    },
+    {
+      "scan": "s122",
+      "ours": "עַמֶּךָ.",
+      "theirs": "עַמֶּךָ",
+      "verdict": "independent",
+      "exact_text": "עַמֶּךָ",
+      "evidence": "Band2, Sim Shalom line 2: there is no dot or other mark between עַמֶּךָ and בָּרְכֵנוּ. The period belongs only in the English (s123 'Thy people. Bless'). It cannot be carried over to the Hebrew.",
+      "confidence": "high"
+    },
+    {
+      "scan": "s122",
+      "ours": "לָּנוּ",
+      "theirs": "לָנוּ",
+      "verdict": "unresolved",
+      "exact_text": "",
+      "evidence": "Band2, Sim Shalom line 3, after נָתַתָּ: there may be a speck inside the ל, but at this resolution I can't tell a dagesh from ink noise. The full page doesn't settle it. Needs a higher-zoom crop of this word.",
+      "confidence": "low"
+    },
+    {
+      "scan": "s122",
+      "ours": "תִּהְיֶה.",
+      "theirs": "תִּהְיֶה:",
+      "verdict": "independent",
+      "exact_text": "תִּהְיֶה:",
+      "evidence": "Band3, Elohai Netzor line 2: two dots stacked vertically (sof pasuq/colon) before פְּתַח. This is clearly not a single period. The full page agrees.",
+      "confidence": "high"
+    },
+    {
+      "scan": "s123",
+      "ours": "aid.",
+      "theirs": "aid,",
+      "verdict": "independent",
+      "exact_text": "aid,",
+      "evidence": "s123 band2: 'of our salvation and of our aid, Selah!' The mark after 'aid' has a comma tail.",
+      "confidence": "high"
+    }
+  ],
+  "remaining_uncertainties": [
+    {
+      "scan": "s122",
+      "key": "avodah_vetechezenah_conclusion",
+      "word": "וְתֶחֱזֶינָה",
+      "mark": "vowel under ז",
+      "evidence": "Band1 line 1: a three-dot cluster under ז fits segol. It is crowded next to the hataf segol under ח but readable. Probably segol; I would not mark it as a problem."
+    },
+    {
+      "scan": "s122",
+      "key": "avodah_vetechezenah_conclusion",
+      "word": "לְצִיּוֹן (x2)",
+      "mark": "dagesh in י",
+      "evidence": "There is a faint dot in the yod in both places. It is too faint to confirm at band resolution. Isolate it as faint."
+    },
+    {
+      "scan": "s122",
+      "key": "modim",
+      "word": "שָׁאַתָּה",
+      "mark": "qamatz under ש",
+      "evidence": "Band1, Modim line 1: the mark under ש has a T shape (qamatz), not a segol. Keep the source form. A sic/corr to שָׁאַתָּה is optional, but don't normalize it silently."
+    },
+    {
+      "scan": "s122",
+      "key": "modim",
+      "word": "שֶׁבְּכָל־יוֹם",
+      "mark": "maqaf",
+      "evidence": "Band1 line 4: there is a short raised stroke between כל and יום, consistent with a maqaf. The words are run together, but the stroke appears present. Medium confidence."
+    },
+    {
+      "scan": "s122",
+      "key": "modim",
+      "word": "הַפְּקוּדוֹת",
+      "mark": "dagesh in פ",
+      "evidence": "The dot is faint but appears present inside the פ. Isolate it as faint."
+    },
+    {
+      "scan": "s122",
+      "key": "vekhol_hachayim_hodaah_chatimah",
+      "word": "וְכֹל",
+      "mark": "holam over כ",
+      "evidence": "Band2: I can't confirm a dot above the left edge of כ at this resolution. Faint or absent. Do not supply it from memory."
+    },
+    {
+      "scan": "s122",
+      "key": "vekhol_hachayim_hodaah_chatimah",
+      "word": "הָאֵל",
+      "mark": "tick over/after א",
+      "evidence": "There is a small apostrophe-like stroke after the א. It may be a print accent or an artifact. Do not add or drop it without a zoomed crop."
+    },
+    {
+      "scan": "s122",
+      "key": "sim_shalom",
+      "word": "בְּאוֹר (second, start of line 3)",
+      "mark": "dagesh in ב",
+      "evidence": "Band2 line 3 start: possible inner dot, not clearly resolved. Faint."
+    },
+    {
+      "scan": "s122",
+      "key": "sim_shalom",
+      "word": "וְאַהֲבַת",
+      "mark": "meteg beside patah under א",
+      "evidence": "A small vertical stroke appears next to the patah under א. It looks like a meteg hosted on א, but this is low certainty."
+    },
+    {
+      "scan": "s122",
+      "key": "elohai_netzor_part1",
+      "word": "תִדּוֹם",
+      "mark": "dagesh in ת",
+      "evidence": "Band3 line 2: I don't see a clear dot in ת. Keep it unpointed unless a zoom shows one."
+    },
+    {
+      "scan": "s122",
+      "key": "elohai_netzor_part1",
+      "word": "וְכָל",
+      "mark": "qamatz under כ",
+      "evidence": "Band3 line 3: the qamatz is faint but its shape is visible. Probably present."
+    }
+  ],
+  "additional_clear_corrections": [],
+  "notes": [
+    "Confirmed from pixels: the first עַל before חַיֵּינוּ has no vav. וּבְמִצְוֹתֶיךָ is spelled defectively (מצותיך, holam vav, no yod after ו). Sim Shalom ends with a period after בִּשְׁלוֹמֶךָ, not sof pasuq. בְּסֵפֶר is not indented. וּכְתוֹב is centered.",
+    "s122 ends with מַחֲשַׁבְתָּם followed by a printed period. The continuation is on the next scan.",
+    "s123: 'O Lord who makes peace.' has no comma after Lord in the print. Keep it literally. A comma is only a sic/corr candidate. 'All-benevolent' has a real mid-line hyphen, so keep it.",
+    "These scans don't touch any of the four questions pending with the human (junction rubric s112, Mi Khamokha s116, זכרוננו/ופקדננו s120, Jerusalem lower points s124). None are settled here.",
+    "I only had band images and the full-page jpg to work from. Every mark marked unresolved or faint needs a higher-zoom crop to settle."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "2e94b144-2fd3-42fd-a2b6-c594e69a1cff"
+  }
+}

@@ -1,0 +1,809 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Jewish Liturgy TEI 2</title>
+        <author>Efraim Feinstein</author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>TEI Consortium</publisher>
+        <availability status="free">
+          <licence target="http://creativecommons.org/licenses/by-sa/3.0/"> Distributed under a Creative Commons
+            Attribution-ShareAlike 3.0 Unported License </licence>
+          <licence target="http://www.opensource.org/licenses/BSD-2-Clause">
+            <p>Copyright 2013 TEI Consortium.</p>
+            <p>All rights reserved.</p>
+            <p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that
+              the following conditions are met:</p>
+            <list>
+              <item>Redistributions of source code must retain the above copyright notice, this list of conditions and the
+                following disclaimer.</item>
+              <item>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and
+                the following disclaimer in the documentation and/or other materials provided with the
+                distribution.</item>
+            </list>
+            <p>This software is provided by the copyright holders and contributors "as is" and any express or implied
+              warranties, including, but not limited to, the implied warranties of merchantability and fitness for a
+              particular purpose are disclaimed. In no event shall the copyright holder or contributors be liable for any
+              direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to,
+              procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however
+              caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence
+              or otherwise) arising in any way out of the use of this software, even if advised of the possibility of such
+              damage.</p>
+          </licence>
+          <p>TEI material can be licensed differently depending on the use you intend to make of it. Hence it is made
+            available under both the CC+BY and BSD-2 licences. The CC+BY licence is generally appropriate for usages which
+            treat TEI content as data or documentation. The BSD-2 licence is generally appropriate for usage of TEI content
+            in a software environment. For further information or clarification, please contact the <ref target="mailto:info@tei-c.org">TEI Consortium</ref>. </p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Created with TEI Roma by Efraim Feinstein.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <appInfo>
+        <application ident="RomaJS" version="1.1.2" when="2025-06-08T06:26:38.320Z">
+          <desc>File edited with <ref target="https://github.com/TEIC/romajs">RomaJS</ref></desc>
+        </application>
+        <application ident="RomaJS" version="1.1.2" when="2025-06-22T06:00:07.280Z">
+          <desc>File edited with <ref target="https://github.com/TEIC/romajs">RomaJS</ref></desc>
+        </application>
+      </appInfo>
+      <constraintDecl scheme="schematron" xml:lang="en">
+        <sch:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>
+        <sch:ns prefix="j" uri="http://jewishliturgy.org/ns/jlptei/2"/>
+        <sch:ns prefix="xs" uri="http://www.w3.org/2001/XMLSchema"/>
+        <sch:ns prefix="rng" uri="http://relaxng.org/ns/structure/1.0"/>
+        <sch:ns prefix="rna" uri="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+        <sch:ns prefix="sch" uri="http://purl.oclc.org/dsdl/schematron"/>
+        <sch:ns prefix="sch1x" uri="http://www.ascc.net/xml/schematron"/>
+      </constraintDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <head>Jewish Liturgy XML Schema</head>
+      <!-- Project Structure -->
+      <p id="project-structure">
+        <head>Project Structure</head>
+        <p>Each project in the Jewish Liturgy TEI schema must contain a TEI document called <code>index.xml</code> that serves as the main entry point for the project. This file must include:</p>
+        <list>
+          <item><gi>teiHeader</gi> containing:</item>
+          <list>
+            <item>Project metadata in <gi>fileDesc</gi></item>
+            <item>Bibliographic information in <gi>sourceDesc</gi></item>
+          </list>
+          <item><gi>front</gi> for front matter</item>
+          <item><gi>body</gi> for the main content</item>
+          <item><gi>back</gi> for back matter</item>
+        </list>
+        <p>The <gi>index.xml</gi> file serves as the central organizing document for the project, linking to other TEI documents through <gi>ptr</gi> or <gi>ref</gi> elements as needed.</p>
+      </p>
+
+      <!-- Biblical Texts -->
+      <p id="biblical-texts">
+        <head>Biblical Texts</head>
+        <p>Biblical texts in this schema follow these structural and markup conventions:</p>
+        
+        <p><hi>Paragraph Structure:</hi>
+          <list>
+            <item>The primary structural unit is the paragraph (<gi>tei:p</gi>)</item>
+            <item>Paragraphs are typed using the <att>type</att> attribute with values:
+              <list>
+                <item><val>open-N</val>: Paragraph starts with N open parashah markers (פתוחות)</item>
+                <item><val>closed-N</val>: Paragraph starts with N closed parashah markers (סתומות)</item>
+                <item>Where N is a number indicating the quantity of markers</item>
+              </list>
+            </item>
+          </list>
+        </p>
+
+        <p><hi>Division Markers:</hi>
+          <list>
+            <item>Chapters are marked with <gi>milestone</gi> element with <att>unit</att>="chapter" and <att>n</att> indicating the chapter number</item>
+            <item>Verses are marked with <gi>milestone</gi> element with <att>unit</att>="verse" and <att>n</att> indicating the verse number</item>
+          </list>
+        </p>
+
+        <p><hi>Kri/Ktiv Handling:</hi>
+          <list>
+            <item>When both Kri (read) and Ktiv (written) forms exist, they are marked up as:
+              <code>&lt;choice&gt;
+  &lt;j:read&gt;...&lt;/j:read&gt;
+  &lt;j:written&gt;...&lt;/j:written&gt;
+&lt;/choice&gt;</code>
+            </item>
+            <item>When only Kri or only Ktiv form exists, the <gi>choice</gi> element is optional</item>
+            <item>Kri text is always wrapped in <gi>j:read</gi></item>
+            <item>Ktiv text is always wrapped in <gi>j:written</gi></item>
+          </list>
+        </p>
+      </p>
+      
+      <div id="biblical-texts">
+        <head>Biblical Texts</head>
+      </div>
+      <schemaSpec ident="jlptei" start="TEI" prefix="tei_" targetLang="en" docLang="en">
+        
+        <!-- required minimal header elements -->
+        <moduleRef key="header" include="teiHeader fileDesc titleStmt publicationStmt sourceDesc licence availability distributor edition editionStmt idno"/>
+        
+        <!-- required core elements (p and title for use in titleStmt) -->
+        <moduleRef key="core" include="p title cb choice corr sic date divGen foreign gb head lb milestone note pb ptr ref reg abbr expan author bibl biblScope editor email emph hi item l label lg list name publisher pubPlace resp respStmt series"/>
+        
+        <!-- required textstructure elements (TEI, text, and body), plus the title page
+             elements used in front matter -->
+        <moduleRef key="textstructure" include="TEI text body div front back titlePage docTitle titlePart byline docAuthor docEdition docImprint docDate imprimatur epigraph"/>
+        
+        <!-- required module tei instantiates lots of classes used for further expansion of this odd -->
+        <moduleRef key="tei"/>
+        
+        <!-- feature structures for settings -->
+        <moduleRef key="iso-fs" include="fs f binary default numeric string symbol vAlt vNot"/>
+        
+
+        <!-- Custom jlptei module -->
+        <moduleSpec ident="jlptei">
+          <desc>Custom elements for the Open Siddur Jewish Liturgy Project TEI schema</desc>
+        </moduleSpec>
+        
+        <moduleRef key="linking" include="ab anchor link seg standOff linkGrp"/><moduleRef key="analysis" include="c pc w"/><moduleRef key="msdescription" include="incipit"/><classRef key="att.anchoring"/><classRef key="model.standOffPart"/><moduleRef key="tagdocs" include="code"/><moduleRef key="gaiji" include="g"/><moduleRef key="textcrit" include="lem"/><classRef key="att.global.facs"/>
+
+      <!-- Custom element specifications -->
+      <elementSpec ident="transclude" ns="http://jewishliturgy.org/ns/jlptei/2" module="jlptei" mode="add">
+        <desc>An element that includes content from another part of the document.</desc>
+        <classes>
+          <memberOf key="model.phrase"/>
+          <memberOf key="model.global"/>
+        </classes>
+        <attList>
+          <attDef ident="target" usage="req" mode="add">
+            <datatype>
+              <dataRef key="teidata.pointer"/>
+            </datatype>
+            <desc>Specifies the path of the target to be included.</desc>
+          </attDef>
+          <attDef ident="targetEnd" usage="rec" mode="add">
+            <datatype>
+              <dataRef key="teidata.pointer"/>
+            </datatype>
+            <desc>Specifies where the transclusion should end (inclusive). If not provided, anything enclosed by target will be transcluded.</desc>
+          </attDef>
+          <attDef ident="type" usage="opt" mode="add">
+            <desc>Specifies the type of transclusion to perform. If no type is specified, the default is external.</desc>
+            <defaultVal>external</defaultVal>
+            <valList type="closed">
+              <valItem ident="external">
+                <desc>Include both XML hierarchy and text content.</desc>
+              </valItem>
+              <valItem ident="inline">
+                <desc>Include only text content, without XML hierarchy.</desc>
+              </valItem>
+            </valList>
+          </attDef>
+        </attList>
+        <constraintSpec ident="transclude-constraints" scheme="schematron">
+          <desc>
+            Schematron rule ensuring <att>targetEnd</att> names a single point, not a range:
+            a transclusion spanning a range is written as <att>target</att> alone (itself
+            possibly a range) or <att>target</att>/<att>targetEnd</att> naming two points,
+            never as a ranged <att>targetEnd</att>.
+          </desc>
+          <constraint>
+            <sch:rule context="j:transclude" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+              <sch:assert test="not(@targetEnd) or not(starts-with(@targetEnd, 'urn:x-opensiddur:'))
+                  or not(some $t in tokenize(@targetEnd, '/')[position() gt 1] satisfies contains($t, '-'))">
+                <att>targetEnd</att> must not itself be a ranged URN; split this into two
+                <gi>transclude</gi> elements instead.
+              </sch:assert>
+            </sch:rule>
+          </constraint>
+        </constraintSpec>
+      </elementSpec>
+      
+      <elementSpec ident="standOff" module="linking" mode="change">
+        <attList>
+          <attDef ident="type" mode="replace">
+            <valList type="closed">
+              <valItem ident="notes"/>
+              <valItem ident="settings"/>
+              <valItem ident="conditions"/>
+            </valList>
+          </attDef>
+        </attList>
+      </elementSpec>
+      
+      <elementSpec ident="p" module="core" mode="change">
+        <attList>
+          <attDef ident="type" mode="add">
+            <desc>Characterizes the element in some sense, using any convenient classification scheme or typology.</desc>
+            <valList type="closed">
+              <valItem ident="open-1">
+                <desc>parsha petukha, marked <mentioned>פ</mentioned></desc>
+              </valItem>
+              <valItem ident="open-2">
+                <desc>parsha petukha, marked <mentioned>פפ</mentioned></desc>
+              </valItem>
+              <valItem ident="open-3">
+                <desc>parsha petukha, marked <mentioned>פפפ</mentioned></desc>
+              </valItem>
+              <valItem ident="closed-1">
+                <desc>parsha setumah, marked <mentioned>ס</mentioned></desc>
+              </valItem>
+              <valItem ident="closed-2">
+                <desc>parsha setumah, marked <mentioned>סס</mentioned></desc>
+              </valItem>
+              <valItem ident="closed-3">
+                <desc>parsha setumah, marked <mentioned>ססס</mentioned></desc>
+              </valItem>
+            </valList>
+          </attDef>
+        </attList>
+      </elementSpec>
+
+      <elementSpec ident="divineName" module="jlptei" ns="http://jewishliturgy.org/ns/jlptei/2" mode="add">
+        <desc>
+          Indicates that the enclosed text is a divine name (e.g., the Tetragrammaton or other epithet) for special handling by downstream processors.
+        </desc>
+        <classes>
+          <memberOf key="model.phrase"/>
+          <memberOf key="model.global"/>
+          <memberOf key="model.nameLike.agent"/>
+        </classes>
+        <content>
+          <macroRef key="macro.paraContent"/>
+        </content>
+      </elementSpec>
+      
+      <elementSpec ident="title" module="core" mode="change">
+        <attList>
+          <attDef ident="type" mode="replace">
+            <valList type="closed">
+              <valItem ident="main"/>
+              <valItem ident="sub"/>
+              <valItem ident="alt"/>
+              <valItem ident="alt-sub"/>
+            </valList>
+          </attDef>
+        </attList>
+      </elementSpec>
+      
+      <!-- Elements for representing kri/ktiv (read/written) pairs in Hebrew text -->
+      <elementSpec ident="read" module="jlptei" ns="http://jewishliturgy.org/ns/jlptei/2" mode="add">
+        <desc>Contains the text as it is read (kri) when it differs from the written form (ktiv).
+          Used in Hebrew text to represent the traditional pronunciation of words that are written differently in the text.
+          Typically appears within a &lt;choice&gt; element alongside a &lt;written&gt; element.</desc>
+        <classes>
+          <memberOf key="model.choicePart"/>
+          <memberOf key="model.phrase"/>
+          <memberOf key="model.global"/>
+        </classes>
+        <content>
+ <macroRef key="macro.paraContent"/>
+</content>
+      </elementSpec>
+      
+      <elementSpec ident="written" module="jlptei" ns="http://jewishliturgy.org/ns/jlptei/2" mode="add">
+        <desc>Contains the text as it is written (ktiv) when it differs from the read form (kri).
+          Used in Hebrew text to represent the written form of words that are pronounced differently.
+          Typically appears within a &lt;choice&gt; element alongside a &lt;read&gt; element.</desc>
+        <classes>
+          <memberOf key="model.choicePart"/>
+          <memberOf key="model.phrase"/>
+          <memberOf key="model.global"/>
+        </classes>
+        <content>
+          <macroRef key="macro.paraContent"/>
+        </content>
+      </elementSpec>
+
+      <!-- Alternate wordings: one of several readings is chosen, rather than text being
+           added or omitted (which is what j:conditional expresses). -->
+      <elementSpec ident="option" module="jlptei" ns="http://jewishliturgy.org/ns/jlptei/2" mode="add">
+        <desc>One of several alternate wordings of the same text, exactly one of which is
+          read. Appears within a &lt;choice&gt; element alongside one or more other
+          &lt;option&gt; elements. Use <att>xml:lang</att> when the options differ in language,
+          and <att>corresp</att> to carry a URN by which a setting may select an option.
+          Contrast <gi>conditional</gi>, which governs text that is either said or omitted.</desc>
+        <classes>
+          <memberOf key="att.global"/>
+          <memberOf key="model.choicePart"/>
+        </classes>
+        <content>
+          <macroRef key="macro.paraContent"/>
+        </content>
+        <constraintSpec ident="option-constraints" scheme="schematron">
+          <desc>
+            Schematron rules to ensure <gi>option</gi> is used as a set of mutually exclusive
+            alternates, and is not mixed with the kri/ktiv vocabulary.
+          </desc>
+          <constraint>
+            <sch:rule context="j:option" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+              <sch:assert test="count(../j:option) &gt;= 2">
+                A <gi>choice</gi> containing <gi>option</gi> must contain at least two of them:
+                an alternate is a choice between readings.
+              </sch:assert>
+              <sch:assert test="not(../j:read) and not(../j:written)">
+                <gi>option</gi> must not appear beside <gi>read</gi> or <gi>written</gi>:
+                alternate wordings and kri/ktiv pairs are different things.
+              </sch:assert>
+            </sch:rule>
+          </constraint>
+        </constraintSpec>
+      </elementSpec>
+
+    <elementSpec ident="declare" module="jlptei" ns="http://jewishliturgy.org/ns/jlptei/2" mode="add">
+      <desc>
+        Associates a set of conditional attribute declarations with a range of text. 
+        Used to specify that the following content is to be processed with the given declarations in effect, until the corresponding
+        <gi>endDeclare</gi> element, which is required. Contains one or more feature structures representing the declarations,
+        each with a <att>type</att> and at least one feature, and nothing else. A declaration gives values, never
+        alternatives: <gi>vAlt</gi> and <gi>vNot</gi> belong in conditions.
+      </desc>
+      <classes>
+        <memberOf key="att.global"/>
+        <memberOf key="model.global"/>
+      </classes>
+      <content>
+        <classRef key="model.featureVal.complex" minOccurs="1" maxOccurs="unbounded"/>
+      </content>
+    </elementSpec>
+
+    <elementSpec ident="endDeclare" module="jlptei" ns="http://jewishliturgy.org/ns/jlptei/2" mode="add">
+      <desc>
+        Marks the end of the scope of a set of conditional attribute declarations previously established by a <gi>set</gi> element.
+        The <gi>endDeclare</gi> element must have a required <att>target</att> attribute, which points to the <att>xml:id</att> of the corresponding <gi>declare</gi> element in the same file.
+      </desc>
+      <classes>
+        <memberOf key="att.global"/>
+        <memberOf key="model.global"/>
+      </classes>
+      <attList>
+        <attDef ident="target" usage="req">
+          <desc>
+            Points to the xml:id of the <gi>declare</gi> element whose settings declarations are being ended. The value must be a URI reference (typically a fragment identifier, e.g., "#setting1") that refers to a <gi>declare</gi> element in the same file.
+          </desc>
+          <datatype>
+            <dataRef key="data.pointer"/>
+          </datatype>
+        </attDef>
+      </attList>
+      <content>
+        <empty/>
+      </content>
+      <constraintSpec ident="endDeclare-target-constraints" scheme="schematron">
+        <desc>
+          Schematron rules to ensure that the target attribute of <gi>undeclare</gi> points to a <gi>declare</gi> element in the same file.
+        </desc>
+        <constraint>
+          <sch:rule context="j:declare" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+            <sch:assert test="@xml:id">
+              Every <gi>declare</gi> element must have an xml:id attribute.
+            </sch:assert>
+            <sch:assert test="following::j:endDeclare[substring(@target, 2) = current()/@xml:id]">
+              Every <gi>declare</gi> element must be closed by an <gi>endDeclare</gi> element
+              that follows it and names it in its target attribute. A declaration that is never
+              closed governs the rest of the file, and leaks into whatever transcludes it.
+            </sch:assert>
+            <sch:assert test="every $child in * satisfies $child/self::tei:fs">
+              A <gi>declare</gi> element holds only feature structures (<gi>tei:fs</gi>).
+            </sch:assert>
+            <sch:assert test="not(.//tei:vAlt or .//tei:vNot)">
+              A declaration gives values, not alternatives: <gi>tei:vAlt</gi> and
+              <gi>tei:vNot</gi> belong in conditions.
+            </sch:assert>
+          </sch:rule>
+          <sch:rule context="j:endDeclare" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+            <sch:assert test="@target">
+              The <gi>endDeclare</gi> element must have a target attribute.
+            </sch:assert>
+            <sch:assert test="starts-with(@target, '#')">
+              The target attribute must be a fragment identifier (start with '#').
+            </sch:assert>
+            <sch:assert test="//j:declare[@xml:id = substring(current()/@target, 2)]">
+              The target attribute must point to a <gi>declare</gi> element in the same file.
+            </sch:assert>
+            <sch:assert test="preceding::j:declare[@xml:id = substring(current()/@target, 2)]">
+              The targeted <gi>declare</gi> element must precede the <gi>endDeclare</gi> element in document order.
+            </sch:assert>
+            <sch:let name="opener" value="preceding::j:declare[@xml:id = substring(current()/@target, 2)][1]"/>
+            <sch:assert test="empty(ancestor::*[. &gt;&gt; $opener])">
+              A declaration's scope must fully contain every element that begins inside it. An
+              element that begins after the <gi>declare</gi> and still holds the
+              <gi>endDeclare</gi> may be left out -- by a false condition or a transcluded range
+              -- and the marker that ends the declaration goes with it.
+            </sch:assert>
+            <sch:assert test="parent::* is $opener/parent::*">
+              A <gi>declare</gi> and its <gi>endDeclare</gi> must be siblings. A declaration
+              that begins inside an element and ends outside it is pushed only when that element
+              is processed; when it is left out, the <gi>endDeclare</gi> ends a declaration that
+              was never made.
+            </sch:assert>
+          </sch:rule>
+        </constraint>
+      </constraintSpec>
+    </elementSpec>
+
+    <!-- Feature names carry condition URNs for textual variants (see JLPTEI-3.md),
+         which are not XML names. -->
+    <elementSpec ident="f" module="iso-fs" mode="change">
+      <attList>
+        <attDef ident="name" mode="change">
+          <datatype>
+            <dataRef key="teidata.text"/>
+          </datatype>
+        </attDef>
+      </attList>
+    </elementSpec>
+
+    <elementSpec ident="conditional" module="jlptei" ns="http://jewishliturgy.org/ns/jlptei/2" mode="add">
+      <desc>
+        Declares a conditional scope for settings or features. The <gi>conditional</gi> element may contain a single <gi>tei:note</gi> (for documentation or explanation), followed by one or more feature value structures (members of <classRef key="model.featureVal.complex"/>).
+      </desc>
+      <classes>
+        <memberOf key="att.global"/>
+        <memberOf key="model.global"/>
+      </classes>
+      <attList>
+        <attDef ident="type" usage="opt" mode="add">
+          <desc>How the source sets the passage off when the condition cannot be decided.
+            Without it, an undecided scope is set off by its instruction <gi>tei:note</gi>
+            if it has one, and otherwise not at all: a conditional with neither is a
+            direction to the processor, not to the reader.</desc>
+          <valList type="closed">
+            <valItem ident="marked">
+              <desc>The source itself marks the passage off, with brackets, parentheses or a
+                line, so the standard delimiters are reproduced around it.</desc>
+            </valItem>
+          </valList>
+        </attDef>
+      </attList>
+      <content>
+        <sequence>
+          <elementRef key="note" minOccurs="0"/>
+          <classRef key="model.featureVal.complex" minOccurs="1" maxOccurs="unbounded"/>
+        </sequence>
+      </content>
+      <constraintSpec ident="conditional-id-constraints" scheme="schematron">
+        <desc>
+          Schematron rule to ensure a <gi>conditional</gi> can be closed by an
+          <gi>endConditional</gi>, which references it by <att>xml:id</att>.
+        </desc>
+        <constraint>
+          <sch:rule context="j:conditional" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+            <sch:assert test="@xml:id">
+              Every <gi>conditional</gi> element must have an xml:id attribute.
+            </sch:assert>
+            <sch:assert test="following::j:endConditional[substring(@target, 2) = current()/@xml:id]">
+              Every <gi>conditional</gi> element must be closed by an <gi>endConditional</gi>
+              element that follows it and names it in its target attribute. A conditional
+              that is never closed governs the rest of the file, which is almost never what
+              was meant and is otherwise not reported.
+            </sch:assert>
+            <sch:assert test="every $note in tei:note satisfies $note/@type = 'instruction'">
+              The note of a <gi>conditional</gi> is the rubric saying when its passage is said,
+              an instruction (<att>type</att>="instruction"). A rubric saying what the passage
+              is, a description (<att>type</att>="description"), goes inside the scope.
+            </sch:assert>
+          </sch:rule>
+        </constraint>
+      </constraintSpec>
+      <constraintSpec ident="condition-fs-constraints" scheme="schematron">
+        <desc>
+          A feature structure in a condition or a declaration names its type and holds at least
+          one feature: the type is what the features are features of, and a structure with
+          none says nothing.
+        </desc>
+        <constraint>
+          <sch:rule context="tei:fs[ancestor::j:conditional or ancestor::j:condition or ancestor::j:declare]"
+                    xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+            <sch:assert test="@type">
+              A feature structure in a condition or a declaration must have a type attribute.
+            </sch:assert>
+            <sch:assert test="tei:f">
+              A feature structure in a condition or a declaration must hold at least one feature.
+            </sch:assert>
+          </sch:rule>
+        </constraint>
+      </constraintSpec>
+    </elementSpec>
+
+    <elementSpec ident="condition" module="jlptei" ns="http://jewishliturgy.org/ns/jlptei/2" mode="add">
+      <desc>
+        A condition on whether the standoff <gi>tei:note</gi> that contains it is printed at all.
+        It is evaluated against the settings in scope where the note would be inserted: if it
+        is false, the note (and its reference mark) is omitted; if it is true or undefined, the
+        note is printed. Unlike <gi>conditional</gi>, it opens no scope and has no end marker.
+        Conditioning part of a note's text is done with <gi>conditional</gi> inside the note.
+      </desc>
+      <classes>
+        <memberOf key="att.global"/>
+      </classes>
+      <content>
+        <classRef key="model.featureVal.complex" minOccurs="1" maxOccurs="unbounded"/>
+      </content>
+      <constraintSpec ident="condition-placement" scheme="schematron">
+        <desc>
+          A <gi>condition</gi> is the first child of a standoff note that is not an instruction.
+        </desc>
+        <constraint>
+          <sch:rule context="j:condition" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+            <sch:assert test="parent::tei:note and not(preceding-sibling::*)">
+              A <gi>condition</gi> must be the first child of a <gi>tei:note</gi>.
+            </sch:assert>
+            <sch:assert test="ancestor::tei:standOff[@type='notes']">
+              A <gi>condition</gi> applies to notes in a notes standOff; text is conditioned
+              with <gi>conditional</gi>.
+            </sch:assert>
+            <sch:assert test="not(parent::tei:note[@type = ('instruction', 'description')])">
+              Instructions and descriptions are conditioned with <gi>conditional</gi>, not
+              <gi>condition</gi>.
+            </sch:assert>
+          </sch:rule>
+        </constraint>
+      </constraintSpec>
+    </elementSpec>
+
+    <elementSpec ident="note" module="core" mode="change">
+      <content>
+        <sequence>
+          <elementRef key="condition" minOccurs="0"/>
+          <macroRef key="macro.specialPara"/>
+        </sequence>
+      </content>
+    </elementSpec>
+
+    <elementSpec ident="endConditional" module="jlptei" ns="http://jewishliturgy.org/ns/jlptei/2" mode="add">
+      <desc>
+        Marks the end of the scope of a <gi>conditional</gi> element. The <gi>endConditional</gi> element must have a required <att>target</att> attribute, which points to the <att>xml:id</att> of the corresponding <gi>conditional</gi> element in the same file.
+      </desc>
+      <classes>
+        <memberOf key="att.global"/>
+        <memberOf key="model.global"/>
+      </classes>
+      <attList>
+        <attDef ident="target" usage="req">
+          <desc>
+            Points to the xml:id of the <gi>conditional</gi> element whose scope is being ended. The value must be a URI reference (typically a fragment identifier, e.g., "#cond1") that refers to a <gi>conditional</gi> element in the same file.
+          </desc>
+          <datatype>
+            <dataRef key="data.pointer"/>
+          </datatype>
+        </attDef>
+      </attList>
+      <content>
+        <empty/>
+      </content>
+      <constraintSpec ident="endConditional-target-constraints" scheme="schematron">
+        <desc>
+          Schematron rules to ensure that the target attribute of <gi>endConditional</gi> points to a <gi>conditional</gi> element in the same file and that the referenced element precedes the <gi>endConditional</gi> element.
+        </desc>
+        <constraint>
+          <sch:rule context="j:endConditional" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+            <sch:assert test="@target">
+              The <gi>endConditional</gi> element must have a target attribute.
+            </sch:assert>
+            <sch:assert test="starts-with(@target, '#')">
+              The target attribute must be a fragment identifier (start with '#').
+            </sch:assert>
+            <sch:assert test="//j:conditional[@xml:id = substring(current()/@target, 2)]">
+              The target attribute must point to a <gi>conditional</gi> element in the same file.
+            </sch:assert>
+            <sch:assert test="preceding::j:conditional[@xml:id = substring(current()/@target, 2)]">
+              The referenced <gi>conditional</gi> element must precede the <gi>endConditional</gi> element.
+            </sch:assert>
+            <sch:let name="opener" value="preceding::j:conditional[@xml:id = substring(current()/@target, 2)][1]"/>
+            <sch:assert test="empty(ancestor::*[. &gt;&gt; $opener])">
+              A conditional scope must fully contain every element that begins inside it.
+              An element that begins after the <gi>conditional</gi> and still holds the
+              <gi>endConditional</gi> is only partly governed by the scope -- and when the
+              condition resolves false, that element is discarded along with the marker
+              that ends the scope, so the scope never closes and governs the rest of the
+              file. Put the markers outside the hierarchy they cross.
+            </sch:assert>
+          </sch:rule>
+        </constraint>
+      </constraintSpec>
+    </elementSpec>
+
+
+    <!-- Logical combinators for conditional feature evaluation -->
+    <elementSpec ident="all" module="jlptei" ns="http://jewishliturgy.org/ns/jlptei/2" mode="add">
+      <desc>
+        Evaluates to true only if all contained feature value structures evaluate to true with respect to the currently in scope declared settings.
+      </desc>
+      <classes>
+        <memberOf key="att.global"/>
+        <memberOf key="model.featureVal.complex"/>
+      </classes>
+      <content>
+        <classRef key="model.featureVal.complex" minOccurs="1" maxOccurs="unbounded"/>
+      </content>
+    </elementSpec>
+
+    <elementSpec ident="any" module="jlptei" ns="http://jewishliturgy.org/ns/jlptei/2" mode="add">
+      <desc>
+        Evaluates to true if any one of the contained feature value structures evaluates to true with respect to the currently in scope declared settings.
+      </desc>
+      <classes>
+        <memberOf key="att.global"/>
+        <memberOf key="model.featureVal.complex"/>
+      </classes>
+      <content>
+        <classRef key="model.featureVal.complex" minOccurs="1" maxOccurs="unbounded"/>
+      </content>
+    </elementSpec>
+
+    <elementSpec ident="none" module="jlptei" ns="http://jewishliturgy.org/ns/jlptei/2" mode="add">
+      <desc>
+        Evaluates to true only if none of the contained feature value structures evaluates to true with respect to the currently in scope declared settings.
+      </desc>
+      <classes>
+        <memberOf key="att.global"/>
+        <memberOf key="model.featureVal.complex"/>
+      </classes>
+      <content>
+        <classRef key="model.featureVal.complex" minOccurs="1" maxOccurs="unbounded"/>
+      </content>
+    </elementSpec>
+
+    <elementSpec ident="one" module="jlptei" ns="http://jewishliturgy.org/ns/jlptei/2" mode="add">
+      <desc>
+        Evaluates to true only if exactly one of the contained feature value structures evaluates to true with respect to the currently in scope declared settings.
+      </desc>
+      <classes>
+        <memberOf key="att.global"/>
+        <memberOf key="model.featureVal.complex"/>
+      </classes>
+      <content>
+        <classRef key="model.featureVal.complex" minOccurs="1" maxOccurs="unbounded"/>
+      </content>
+    </elementSpec>
+
+    <!-- Add global attribute validation to TEI element -->
+    <elementSpec ident="TEI" module="textstructure" mode="change">
+        <constraintSpec ident="global-attribute-validation" scheme="schematron">
+          <desc>
+            Global validation rules that apply to all attributes in the document.
+          </desc>
+          <constraint>
+            <sch:rule context="tei:TEI" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+              <sch:assert test="@xml:lang">
+                The TEI element must declare a default language using the xml:lang attribute.
+              </sch:assert>
+            </sch:rule>
+            <sch:rule context="//@*" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+              <sch:assert test="normalize-space(.) != ''">
+                Attribute must not be empty or contain only whitespace.
+              </sch:assert>
+            </sch:rule>
+          </constraint>
+        </constraintSpec>
+        <constraintSpec ident="corresp-uniqueness" scheme="schematron">
+          <desc>
+            A text URN names one stretch of text, so it may appear on at most one element per
+            document. A repeated corresp breaks alignment and resolution silently: the
+            reference database keeps only the first element bearing it, and the parallel
+            compiler drops every segment after the first.
+
+            Only text URNs are identities. A condition URN is a feature *name* and is meant
+            to repeat — one setting selects the ta'am elyon reading everywhere it occurs —
+            so it is deliberately outside this rule.
+          </desc>
+          <constraint>
+            <sch:rule context="//*[starts-with(@corresp, 'urn:x-opensiddur:text:')]"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+              <sch:report test="preceding::*[@corresp = current()/@corresp]">
+                The corresp <sch:value-of select="@corresp"/> is used more than once in this
+                document. Each text URN must identify exactly one element.
+              </sch:report>
+            </sch:rule>
+          </constraint>
+        </constraintSpec>
+        <constraintSpec ident="contributor-ref-constraints" scheme="schematron">
+          <desc>
+            A contributor URN on @ref names a person, and nothing downstream can tell a
+            misspelt identifier from a second contributor: the credit simply appears under a
+            name nobody has. So the shape is checked here, where every validation sees it,
+            rather than only at typeset time.
+
+            Grammar only. Whether the identifier names anyone we know is a roster question,
+            and the registry in specs/urn_registry/ answers it -- Schematron cannot read that
+            file. Keep the namespace list in step with CONTRIBUTOR_NAMESPACES in
+            opensiddur/common/urn_registry.py.
+          </desc>
+          <constraint>
+            <sch:rule context="//*[starts-with(@ref, 'urn:x-opensiddur:')]"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+              <sch:assert test="matches(@ref, '^urn:x-opensiddur:contributor:(en\.wikisource\.org|he\.wikisource\.org|opensiddur\.org)/[^/]+$')">
+                The @ref <sch:value-of select="@ref"/> is not a contributor URN. It must read
+                urn:x-opensiddur:contributor:&lt;namespace&gt;/&lt;identifier&gt;, where the
+                namespace is en.wikisource.org, he.wikisource.org or opensiddur.org.
+              </sch:assert>
+            </sch:rule>
+          </constraint>
+        </constraintSpec>
+    </elementSpec>
+
+    <!-- Verse milestones carry two numberings. unit="verse" is the canonical division and
+         carries the URN that joins projects together; unit="edition-verse" carries the
+         edition's own verse number for display and must never carry a URN, so that the
+         reference database and the parallel compiler ignore it. See JLPTEI-3.md,
+         "Versification".
+
+         A milestone with a unit but no corresp is a terminator: it closes the scope
+         opened by the nearest preceding milestone of that same unit and opens nothing.
+         See JLPTEI-3.md, "Terminating a scope". The unit must match exactly, which is
+         what keeps an edition-verse milestone (which by the rule above never carries a
+         corresp) from closing every verse it follows.
+
+         There is deliberately no Schematron rule for this. RelaxNG already requires
+         @unit, and a rule demanding that every corresp-less milestone follow one of its
+         own unit would misfire on the several hundred that are markers rather than
+         terminators: unit="citation", "acrostic", "parsha.annual" and edition-verse
+         itself. Which corresp-less milestones terminate is decided by
+         refdb.milestone_terminates, and pinned by tests there. -->
+    <elementSpec ident="milestone" module="core" mode="change">
+        <constraintSpec ident="edition-verse-constraints" scheme="schematron">
+          <desc>
+            An edition-verse milestone records an edition's own numbering, not an identity.
+          </desc>
+          <constraint>
+            <sch:rule context="tei:milestone[@unit = 'edition-verse']"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+              <sch:assert test="@n">
+                A milestone with unit="edition-verse" must carry the edition's verse number in @n.
+              </sch:assert>
+              <sch:assert test="not(@corresp)">
+                A milestone with unit="edition-verse" must not carry @corresp: it records an
+                edition's own numbering for display, and only the canonical unit="verse"
+                milestone identifies the text.
+              </sch:assert>
+            </sch:rule>
+          </constraint>
+        </constraintSpec>
+        <constraintSpec ident="subverse-constraints" scheme="schematron">
+          <desc>
+            The two sub-verse units divide a verse and hang their URN one component below it.
+          </desc>
+          <constraint>
+            <sch:rule context="tei:milestone[@unit = 'half-verse']"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+              <sch:assert test="not(@corresp) or @n = 'a' or @n = 'b'">
+                A milestone with unit="half-verse" must carry @n of "a" or "b": a verse has a
+                first half and a second, divided at the etnachta.
+              </sch:assert>
+              <sch:assert test="@corresp or not(@n)">
+                A numbered half-verse must carry @corresp. A bare half-verse milestone
+                with neither @n nor @corresp is a terminator and opens no scope.
+              </sch:assert>
+              <sch:assert test="not(@corresp) or ends-with(@corresp, concat('/', @n))">
+                A half-verse's @corresp must be the verse's URN with "/a" or "/b" after it,
+                matching @n.
+              </sch:assert>
+            </sch:rule>
+            <sch:rule context="tei:milestone[@unit = 'verse-part']"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+              <sch:assert test="@corresp or not(@n)">
+                A named verse-part must carry @corresp. A bare verse-part milestone
+                with neither @n nor @corresp is a terminator and opens no scope.
+              </sch:assert>
+              <sch:assert test="not(@corresp) or not(contains(tokenize(@corresp, '/')[last()], '-'))">
+                A verse part's name may not contain "-": a dash in the last component of a
+                URN is what marks a range. Transliterations use "_".
+              </sch:assert>
+              <sch:assert test="not(@corresp) or (tokenize(@corresp, '/')[last()] != 'a'
+                                                 and tokenize(@corresp, '/')[last()] != 'b')">
+                "a" and "b" are reserved for the accentual halves; a verse part must be named
+                for the word it begins on.
+              </sch:assert>
+            </sch:rule>
+          </constraint>
+        </constraintSpec>
+    </elementSpec>
+
+    </schemaSpec>
+    </body>
+  </text>
+</TEI>

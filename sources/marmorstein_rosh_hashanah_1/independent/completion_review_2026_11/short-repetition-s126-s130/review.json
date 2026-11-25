@@ -1,0 +1,378 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Read current.json, current.xml and guideline-excerpts.md in full. Looked at the native scans s126, s128 and s130, and at the enlarged crops s126-row1, row2, row4–row9, s126-variants, s128-row8, row9, s128-variants, s130-upper and s130-lower. I read the earlier audit s126-133/source-review.json to compare against. I did not open s126-row3, s128-row1–7, s130-row1–9 or the independent-126/128/130 JSONs: those crops cover the AtChil/TaalatZu/EvenChug lines, which are out of scope, and the in-scope lines were legible in the crops I did open. The crops were not enlarged any further, so very small points are given confidence levels."
+  },
+  "witnesses": [
+    {
+      "stem": "naalah_vedin",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": false,
+      "source_findings": [
+        {
+          "word": "בְדִין",
+          "location": "s126 stanza line 1, 2nd word (s126-row5/variants)",
+          "proposed": "בַּדִּין",
+          "evidence": "There is a patah bar under the bet, a dot in the dalet and a hiriq under the dalet, not a sheva. This also affects title.he.",
+          "confidence": "high for the patah and the dagesh in dalet; medium for the dagesh in bet"
+        },
+        {
+          "word": "עָלוֹת",
+          "location": "s126 line 1, 3rd word",
+          "proposed": "עֲלוֹת",
+          "evidence": "The mark under the ayin is a hataf (bar plus two dots), and s128 has the same form.",
+          "confidence": "medium"
+        },
+        {
+          "word": "גֵּא",
+          "location": "s126 line 1, after the period",
+          "proposed": "גֵּיא",
+          "evidence": "A yod is clearly printed between the gimel (tsere) and the alef.",
+          "confidence": "high"
+        },
+        {
+          "word": "(missing role cue)",
+          "location": "s126 line 2, small siglum just before בשופר",
+          "proposed": "ח׳ (חזן)",
+          "evidence": "The letter has two legs and no descender. The ק׳ that opens the stanza has a clear descender, so this is a different letter.",
+          "confidence": "high that a cue is present; medium-high that it is ח׳"
+        },
+        {
+          "word": "בְּשׁוֹפָר",
+          "location": "s126 line 2, weekday branch",
+          "proposed": "בַּשּׁוֹפָר",
+          "evidence": "A patah is printed under the bet.",
+          "confidence": "high for the patah; medium for the dagesh in shin"
+        },
+        {
+          "word": "אֲפַתֶּנּוּ.",
+          "location": "s126 end of line 2",
+          "proposed": "אֲפַתֶּנּוּ (no punctuation)",
+          "evidence": "No period is printed. The next line opens directly with '(נ״א'.",
+          "confidence": "medium-high"
+        },
+        {
+          "word": "כְּרָעָה",
+          "location": "s126 line 3, after וּבְבֶרֶךְ",
+          "proposed": "כְּרִיעָה",
+          "evidence": "Five letters, with hiriq and yod after the resh.",
+          "confidence": "high"
+        },
+        {
+          "word": "בִּמְגִנַּת",
+          "location": "s126 line 3, after the period",
+          "proposed": "בְּמָגִנַּת (as visible)",
+          "evidence": "There is a sheva under the bet, not a hiriq. The mark under the mem looks like a qamats, not a sheva. Under the nun there is a patah with a dagesh.",
+          "confidence": "medium for the bet; low-medium for the mem"
+        },
+        {
+          "word": "אֲתְרוֹעֲעָה",
+          "location": "s126 last word",
+          "proposed": "אֶתְרוֹעֲעָה",
+          "evidence": "The mark under the alef is a three-dot segol. The current hataf-patah followed by a sheva is impossible.",
+          "confidence": "medium-high"
+        },
+        {
+          "word": "variant 'ארצנוּ'",
+          "location": "s126 line 3 opening parenthesis '(נ״א …)'",
+          "proposed": "אֲרַצֶּנּוּ, pointed as printed",
+          "evidence": "The consonants ארצנו are clear. I see a hataf under the alef, a patah under the resh and a segol under the tsadi, with dagesh. The current note is unpointed except for a stray shuruk.",
+          "confidence": "high for the consonants; medium for the vowels. The earlier audit read אַרְצֶנּוּ, so the vowels need a human decision."
+        }
+      ],
+      "unresolved": [
+        {
+          "word": "נַעֲלָה",
+          "location": "s126 line 1, first word",
+          "question": "A possible meteg next to the patah under the nun. It could be print noise. Do not add it unless a human confirms it."
+        },
+        {
+          "word": "בְּמָגִנַּת",
+          "location": "s126 line 3",
+          "question": "Is the vowel under the mem a qamats or a sheva? Is there a hiriq under the gimel? Neither is fully legible."
+        }
+      ],
+      "verified": [
+        "ק׳ cue before the stanza",
+        "בִּתְרוּעָה",
+        "עִם דָּרֶיהָ לְרוֹעֲעָה.",
+        "the rubric 'אם שבת' (small, unpointed) inside the parentheses",
+        "בְּזִכְרוֹן שׁוֹפָר",
+        "the consonants and points of אֲפַתֶּנּוּ",
+        "וּבְבֶרֶךְ",
+        "רֵעִים",
+        "בְּגַנּוֹ",
+        "the final colon",
+        "word order and variant position (after אפתנו, before ובברך)"
+      ],
+      "encoding_issues": [
+        "The ח׳ speaker change is missing. Close part_1 after לְרוֹעֲעָה. Then insert a prayer-part milestone (for example …/naalah_vedin/part_2), followed by <tei:note type=\"description\" corresp=\"urn:x-opensiddur:instruction:role/reader\" xml:lang=\"he\"><tei:choice><tei:abbr>ח׳</tei:abbr><tei:expan>חזן</tei:expan></tei:choice></tei:note>. Both must come before the weekday j:conditional, outside both branches, so they survive on either day. Keep the existing terminator after the last word.",
+        "English needs the matching part_2 milestone before 'But with ', also outside the conditionals. Do not add a role label to the English.",
+        "The ק׳ description sits before the part_1 milestone. The guidelines want a description first inside its passage's scope, so the milestone should come first and the note after it.",
+        "Variant note: keep the printed abbreviation as <tei:choice><tei:abbr>נ״א</tei:abbr><tei:expan>נוסח אחר</tei:expan></tei:choice> and the pointed variant word. Place the anchor after אֲפַתֶּנּוּ, or bound the word with target and targetEnd. The current anchor is a single point before the word.",
+        "Update title.he to the corrected בַּדִּין.",
+        "Cosmetic: there are doubled spaces around the conditionals ('לְרוֹעֲעָה.  ' and 'שׁוֹפָר  ')."
+      ]
+    },
+    {
+      "stem": "melekh_bedin",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": false,
+      "source_findings": [
+        {
+          "word": "בְּדִין",
+          "location": "s128 stanza line 1, 2nd word (s128-variants)",
+          "proposed": "בַּדִּין",
+          "evidence": "Same as s126: a patah under the bet and a dot in the dalet. This also affects title.he.",
+          "confidence": "high for the patah; medium for the dagesh in bet"
+        },
+        {
+          "word": "עָלוֹת",
+          "location": "s128 line 1",
+          "proposed": "עֲלוֹת",
+          "evidence": "A hataf mark under the ayin.",
+          "confidence": "medium"
+        },
+        {
+          "word": "גֵּא",
+          "location": "s128 line 1",
+          "proposed": "גֵּיא",
+          "evidence": "A yod is printed.",
+          "confidence": "high"
+        },
+        {
+          "word": "(missing role cue)",
+          "location": "s128 line 2, small siglum just before בשופר",
+          "proposed": "ח׳ (חזן)",
+          "evidence": "Same small letter shape as on s126. It is unlike the ק׳ before מֶלֶךְ, which has a descender.",
+          "confidence": "high that a cue is present; medium that it is ח׳"
+        },
+        {
+          "word": "בְּשׁוֹפָר",
+          "location": "s128 line 2",
+          "proposed": "בַּשּׁוֹפָר",
+          "evidence": "A patah under the bet.",
+          "confidence": "high for the patah; medium for the dagesh in shin"
+        },
+        {
+          "word": "אֲפַתֶּנּוּ.",
+          "location": "s128 line 3, first word",
+          "proposed": "אֲפַתֶּנּוּ: (colon as printed)",
+          "evidence": "Two diamond dots, stacked vertically, follow the word in the enlarged crop. They look the same as the stanza-final colon. s126 has no mark here. The current period is wrong in either case.",
+          "confidence": "medium. The earlier audit suspected print noise, so a human should decide whether to encode the colon."
+        },
+        {
+          "word": "כְּרָעָה",
+          "location": "s128 line 3",
+          "proposed": "כְּרִיעָה",
+          "evidence": "The yod is clear.",
+          "confidence": "high"
+        },
+        {
+          "word": "אֲתְרוֹעֲעָה",
+          "location": "s128 last word",
+          "proposed": "אֶתְרוֹעֲעָה",
+          "evidence": "A segol under the alef.",
+          "confidence": "medium-high"
+        },
+        {
+          "word": "variant 'ארצנוּ'",
+          "location": "s128 line 3, parenthesis",
+          "proposed": "אֲרַצֶּנּוּ, pointed as printed (same as s126)",
+          "evidence": "The consonants are clear and the vowels are the same as on s126.",
+          "confidence": "high for the consonants; medium for the vowels"
+        }
+      ],
+      "unresolved": [
+        {
+          "word": "תְחִי",
+          "location": "s128 last line, first word",
+          "question": "Under the tav I see a cluster that looks like a segol, or a segol with a lower dot, not a plain sheva. It may be תֶּחִי or similar. Do not settle it from grammar; it needs a human reading."
+        },
+        {
+          "word": "אֲפַתֶּנּוּ:",
+          "location": "s128",
+          "question": "Is the colon intended (printed differently from s126) or noise?"
+        }
+      ],
+      "verified": [
+        "ק׳ cue before the stanza",
+        "מֶלֶךְ",
+        "בִּתְרוּעָה",
+        "עִם דָּרֶיהָ לְרוֹעֲעָה.",
+        "the rubric 'אם שבת'",
+        "בְּזִכְרוֹן שׁוֹפָר",
+        "וּבְבֶרֶךְ",
+        "בְּטַלְלֵי",
+        "בְּגַנּוֹ",
+        "the final colon",
+        "word order and variant position"
+      ],
+      "encoding_issues": [
+        "Same as naalah_vedin: add a part_2 milestone and the ח׳/חזן description before the weekday conditional, outside both branches. Add a matching English part_2 milestone before 'But with ', with no English role label.",
+        "Place the ק׳ description after its milestone.",
+        "Variant note: use abbr/expan for נ״א and the pointed אֲרַצֶּנּוּ, and place the anchor after אֲפַתֶּנּוּ.",
+        "Correct title.he to בַּדִּין.",
+        "Cosmetic: doubled spaces."
+      ]
+    },
+    {
+      "stem": "repetition_zokhrenu_magen",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "source_findings": [
+        {
+          "word": "לְחַיִּים",
+          "location": "s126, first line after the small 'פותחים הארון.', 2nd word (s126-row6)",
+          "proposed": "לַחַיִּים",
+          "evidence": "A horizontal patah bar under the lamed.",
+          "confidence": "high"
+        }
+      ],
+      "unresolved": [],
+      "verified": [
+        "זָכְרֵנוּ",
+        "מֶלֶךְ חָפֵץ בַּחַיִּים.",
+        "וְכָתְבֵנוּ בְּסֵפֶר הַחַיִּים.",
+        "לְמַעַנְךָ אֱלֹהִים חַיִּים.",
+        "מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן.",
+        "בָּרוּךְ אַתָּה יְיָ מָגֵן אַבְרָהָם:",
+        "all periods and the final colon",
+        "the English boundary matches"
+      ]
+    },
+    {
+      "stem": "repetition_attah_gibbor",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "source_findings": [],
+      "unresolved": [
+        {
+          "word": "גִבּוֹר",
+          "location": "s126 row7, 2nd word",
+          "question": "There may be a dot by the gimel that could be a dagesh, but I cannot tell it from the hiriq at this resolution. Keep the current reading (no dagesh) unless a human confirms one."
+        }
+      ],
+      "verified": [
+        "אַתָּה",
+        "לְעוֹלָם",
+        "אֲדֹנָי",
+        "מְחַיֵּה מֵתִים",
+        "אַתָּה רַב לְהוֹשִׁיעַ.",
+        "the final period"
+      ]
+    },
+    {
+      "stem": "repetition_mekhalkel",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "source_findings": [],
+      "unresolved": [
+        {
+          "word": "לָּךְ",
+          "location": "s126 last line, first word",
+          "question": "There is a qamats. The dagesh dot in the lamed is unclear because the lamed's ascender stroke from the line above crowds it. I found no contrary evidence."
+        }
+      ],
+      "verified": [
+        "the whole word sequence, from מְכַלְכֵּל through יְשׁוּעָה:",
+        "the period after עָפָר",
+        "the final colon",
+        "רַבִּים",
+        "וּמְקַיֵּם",
+        "לִישֵׁנֵי",
+        "גְּבוּרוֹת",
+        "דּוֹמֶה",
+        "וּמְחַיֶּה",
+        "וּמַצְמִיחַ"
+      ]
+    },
+    {
+      "stem": "repetition_mi_khamokha",
+      "hebrew_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "source_findings": [
+        {
+          "word": "לְחַיִּים",
+          "location": "s130 line 1, after יְצוּרָיו (s130-upper)",
+          "proposed": "לַחַיִּים",
+          "evidence": "A patah bar under the lamed.",
+          "confidence": "high"
+        }
+      ],
+      "unresolved": [],
+      "verified": [
+        "מִי כָמוֹךָ אַב הָרַחֲמִים.",
+        "זוֹכֵר יְצוּרָיו",
+        "בְּרַחֲמִים.",
+        "וְנֶאֱמָן אַתָּה לְהַחֲיוֹת מֵתִים.",
+        "בָּרוּךְ אַתָּה יְיָ מְחַיֵּה הַמֵּתִים:"
+      ]
+    },
+    {
+      "stem": "repetition_yimlokh",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "source_findings": [],
+      "unresolved": [],
+      "verified": [
+        "יִמְלֹךְ יְיָ לְעוֹלָם אֱלֹהַיִךְ צִיּוֹן לְדֹר וָדֹר הַלְלוּיָהּ: matches s130-lower. The mappiq dot in the final he is visible (medium-high).",
+        "The full verse of Ps 146:10 is printed. The bounded seg@source psalms/146/10 covers exactly that verse. The local chapter and verse milestones are terminated in order (verse, then chapter). No canonical bible URN is duplicated.",
+        "The English carries the same local URNs. The English comma before Halleluyah is already fixed."
+      ]
+    },
+    {
+      "stem": "repetition_veattah_qadosh",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "source_findings": [],
+      "unresolved": [],
+      "verified": [
+        "וְאַתָּה קָדוֹשׁ יוֹשֵׁב תְּהִלּוֹת יִשְׂרָאֵל אֵל נָא: matches s130-lower.",
+        "Ps 22:4 is the whole verse inside the seg. אֵל נָא: is correctly placed outside, after the verse and chapter terminators. The English ', O God.' shares that boundary."
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "key": "repetition_open_130",
+      "source_approved": true,
+      "guidelines_approved": false,
+      "issues": [
+        "The text 'פותחים הארון.' matches the small type at the top right of s130, before מִי כָמוֹךָ. Its classification as a directive (type=\"instruction\") is correct. However, the supplied current.xml contains no encoding of it, so I cannot verify its placement or any instruction corresp."
+      ],
+      "unresolved": [
+        "Confirm it is encoded as an in-text tei:note type=\"instruction\" immediately before the gevurot/ending milestone. Consider adding an ark-open instruction URN."
+      ]
+    },
+    {
+      "key": "repetition_close_130",
+      "source_approved": true,
+      "guidelines_approved": false,
+      "issues": [
+        "The text 'סוגרים הארון.' matches s130, printed after מְחַיֵּה הַמֵּתִים: and before the out-of-scope 'ע״ס א״ת ב״ש.'. Its placement is not present in the supplied XML, so I cannot verify it."
+      ],
+      "unresolved": [
+        "Confirm it is placed after the gevurot/ending terminator and before EvenChug."
+      ]
+    }
+  ],
+  "conditional_and_speaker_findings": [
+    "Both piyyutim print 'ק׳' before the first colon. They also print a second, smaller cue (ח׳) immediately before the weekday word בַּשּׁוֹפָר. The current encoding attributes the whole stanza to ק׳.",
+    "The role-change milestone and the ח׳ description must sit before <j:conditional …segment_1>, not inside either branch, so they render on a weekday, on Shabbat, or when the day is unknown. The words after the branches (אֲפַתֶּנּוּ …) stay in the ח׳ part. No source words need repeating.",
+    "The weekday and Shabbat alternates are printed as 'בַּשּׁוֹפָר (אם שבת בְּזִכְרוֹן שׁוֹפָר)'. The day decides which is said, so the paired conditionals are acceptable. The Shabbat branch is correctly type=\"marked\", with the unpointed small rubric 'אם שבת' as the conditional's own instruction. The weekday word currently has a sheva, but the print has a patah: בַּשּׁוֹפָר.",
+    "The variant (נ״א …) follows אֲפַתֶּנּוּ in both piyyutim and is a standoff commentary note, not a choice. That is acceptable, but the anchor or targetEnd must be moved after the word, and the printed abbreviation and pointing must be preserved.",
+    "Context: s126 also prints 'פותחים הארון.' before זָכְרֵנוּ and 'סוגרים הארון.' after מַצְמִיחַ יְשׁוּעָה:. Those s126 directions are not among the two keys reviewed here. Their encoding is not shown in the supplied files and should be checked separately."
+  ],
+  "limits": [
+    "Only the 8 Hebrew witnesses and the 2 s130 instruction keys were adjudicated. AtChil, TaalatZu and EvenChug words were not reopened. This is not a whole-page acceptance.",
+    "English words were not re-read. Only the shared boundaries were checked, and the proposed part_2 milestone needs an English counterpart before 'But with'.",
+    "The vowels of the variant word (אֲרַצֶּנּוּ vs אַרְצֶנּוּ), the mem in בְּמָגִנַּת, the tav in תְחִי, and the colon after אֲפַתֶּנּוּ on s128 are at the limit of the crops and need human adjudication.",
+    "I did not open the original blind JSONs (independent-126/128/130) or the crops s126-row3, s128-row1–7 and s130-row1–9. My findings agree with the earlier full-page audit except for the vowels of the variant word."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "04406ece-59e9-4f49-8f1f-c6e8cc93ec25"
+  }
+}

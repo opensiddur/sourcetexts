@@ -1,0 +1,73 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "encoding_alignment_order_approved": false,
+  "english_source_reading_approved": true,
+  "other_hebrew_readings_approved_except_human_dependencies": true,
+  "findings": [
+    {
+      "severity": "medium",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/morning_ashrei.xml",
+      "issue": "Scan s80-b2 prints the margin citation 'קטו יח' before וַאֲנַחְנוּ נְבָרֵךְ (Ps 115:18). The standOff has only the קמה note for 145, so this printed source note is missing. The English facing page s81 prints no 115:18 citation, so English is correct as it is. This is the only thing blocking encoding approval.",
+      "fix": "Add <tei:note type=\"citation\" target=\"urn:x-opensiddur:text:siddur:rosh_hashanah/morning_ashrei/24\"><tei:p><tei:ref target=\"urn:x-opensiddur:text:bible:psalms/115/18\">קטו יח</tei:ref></tei:p></tei:note>, with no parentheses. Separately, check whether the earlier p.2 Ashrei prints the same note; that file is outside this batch."
+    },
+    {
+      "severity": "low",
+      "file": "prayerbook_for_the_new_year-marmorstein-1965-en/psalm_92.xml",
+      "issue": "The new canonical English Psalm 92 file has <tei:pb n=\"23\" facs=\"…n76\"/> just before chapter 92. But page 23 (s77-b0) opens with the end of Psalm 33 ('May Thy grace … for Thee.'), and that page break belongs with the documentary Psalm 33. This file is not transcluded by the English index, and the pb sits outside the chapter-92 scope, so nothing compiles wrongly. Still, the English project now has a second marker for page 23 in the wrong place. Likewise, canonical en/ashrei.xml repeats morning_ashrei.xml's pb n=25.",
+      "fix": "Remove the pb from en/psalm_92.xml. Optionally keep the en/ashrei.xml pb only if it's intended to show where the page breaks inside the expanded transclusion, and record that this is deliberate."
+    },
+    {
+      "severity": "low",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/morning_ashrei.xml",
+      "issue": "The hataf-patah ruling for lamed (הַלֲלוּ…) was checked on s80–s86 only. On s78, יְהַלְלוּךָ (84:5) and וַאֲהַלְלָה (145:2) still have a plain sheva. At this band resolution I could not tell whether the same hataf cluster is printed there.",
+      "fix": "Look at the enlarged s78-b2/b3 clusters. Apply the same ruling if the shape matches; otherwise leave as is. This is not a new linguistic question."
+    },
+    {
+      "severity": "info",
+      "file": "all morning_*/yehi_khevod/barukh_adonai files (he, en)",
+      "issue": "Openers such as <tei:milestone unit=\"chapter\" n=\"84\"/> carry @n but no @corresp. Under scope rule 3 that makes them terminators, not openers. This follows the convention the repository already uses, and it changes no resolved range.",
+      "fix": "None needed for this batch."
+    }
+  ],
+  "pending_human": [
+    "s78 yehi_khevod/14 אִוָּה(ּ): mappiq present or absent",
+    "s78 yehi_khevod/16 יַעֲזֹב vs יַעֲזוֹב: letter count",
+    "s78 ashrei 144:15 לּוֹ vs לוֹ: dagesh",
+    "s80 146:6 וְאֶת־כָּל: tick before the alef",
+    "s82 147:6 עֲדֵי(־) אָ(ֽ)רֶץ: line-end maqaf and meteg",
+    "s82 147:9 יִקְרָ(ֽ)אוּ: meteg",
+    "s82 147:15 אָ(ֽ)רֶץ: meteg",
+    "s84 148:1 ב(ּ)ַמְּרוֹמִים: dagesh",
+    "s84 149:7 ב(ּ)ַגּוֹיִם: dagesh",
+    "s86 72:19 אֶת־כ?ל(־): holam or qamats, and line-end maqaf",
+    "s82 147:2 and 147:12 Jerusalem: lamed patah vs qamats (CGJ+hiriq encoding kept)"
+  ],
+  "checks": [
+    "Every Hebrew and English verse in 76–87 is present exactly once, in printed order, against blocks.json + source_patches.json. No omitted or duplicated words. All settled patches are applied: 92:9 לְעֹלָם, Exod 15:18 לְעֹלָם, 145:5 נִפְלְאֹתֶיךָ, 147:2 defective בֹּנֵה, 149:7 בַגּוֹיִם/בַּלְאֻמִּים, every הַלֲלוּ-form with hataf-patah and no meteg (115:18, 146–150, 135:21), 150:6 unpointed כל without sic/corr, Jerusalem with CGJ before the hiriq (lamed patah in 147:2/12, qamats in 135:21).",
+    "English: 92:12 'adversaries, when'; 78:38 <choice><sic>nur</sic><corr>nor</corr></choice>, confirmed on s79-b2; the s83 148:1 line and 148:2 'Praise Him, all His angels,' are present; the 145:5 split matches s79/s81. Spot-checked s77, s79, s81 and s87 images.",
+    "Verses that cross a page each keep one milestone with the pb inside: HE 146:7 (pb 26), 148:1 (pb 27), 150:4 (pb 28); EN 145:5 (pb 25), 146:7, 148:2, 150:4. HE 145:5 is entirely on p.24 and pb 25 falls before 145:6, as printed.",
+    "facs = Archive leaf (PDF page − 1) throughout: HE s76→n75 through s86→n85; EN s77→n76 through s87→n86. Printed page numbers 23–28 are correct for each pb, and biblScope ranges match.",
+    "Every Bible chapter and verse sequence ends in bare verse+chapter terminators. Units do not mix, and the prayer-part adonai_melekh ends with its own bare prayer-part milestone.",
+    "No canonical Bible URN appears twice in a project. Already-printed text uses context URNs plus seg/@source: 33:9–11, 135:4/13/21, Chron 16:31, 78:38, 20:10, 113:2–4. The original HE 92/93/Ashrei (p.11, p.2) are unchanged in content and remain the canonical Hebrew. The morning variant (e.g. 92:4 עֲלֵי עָשׂוֹר without maqaf, יְהֹוָה forms) sits under morning_* context URNs.",
+    "Ashrei: the Hebrew has one verse per <l>, with the תְּהִלָּה לְדָוִד. line separate inside 145:1. In English, 'Hymn by David' is its own paragraph. Neither heading is marked as supplied editorial text.",
+    "Citations are notes with the parentheses removed: צב, צג, קמה, קמו, קמז, קמח, קמט, קנ / 'Psalm N.'. The English cue words אשרי and ברוך are not inserted into the English recitation.",
+    "Documentary indexes: the HE index has psalm_150_repeat (an inline transclusion of the printed 150:6). The EN index has no repeat and no invented translation. Scope stops after 72:19; the standing rubric 'The following until after ברכו…' and Vayvarekh David are left for the next section, and no ritual instruction inside the range is lost.",
+    "Expanded index: the morning sequence 33→92→93→Yehi Khevod→Ashrei→146–150→150/6→Barukh uses only existing project-less canonical roots, with 150:6 repeated in both languages from the canonical verse.",
+    "יְהֹוָה is kept in the repository's holam-on-heh convention; I raised no new question about it."
+  ],
+  "limitations": [
+    "I read 4-band JPEG crops, not full-resolution leaves. I could not settle fine pointing (dagesh, meteg, hataf vs sheva).",
+    "I did not open psalm_33.xml, so I did not confirm that the documentary pb n=23 is in that file.",
+    "I could not diff the 'unchanged' original HE psalm_92/psalm_93/ashrei against their earlier commits. I only compared them against what this batch requires.",
+    "I did not check whether Exodus 15:18 and Pss 104:31/103:19/10:16/94:14/132:13 and Prov 19:21 (direct canonical in Yehi Khevod) will clash with later full printings, e.g. Az Yashir; that is outside this batch.",
+    "I spot-checked only part of the image set (s76, s77, s78, s79, s80, s81, s82, s84, s86, s87 bands), not every band."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "d5f2b452-54a4-4110-b838-900283b613f7"
+  }
+}

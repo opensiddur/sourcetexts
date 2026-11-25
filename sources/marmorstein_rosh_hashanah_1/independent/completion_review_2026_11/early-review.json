@@ -1,0 +1,25 @@
+{
+  "reviewer_model": "claude-opus-5-5 (Opus 5.5)",
+  "actual_effort": "low-moderate: I read each enlarged crop once and looked at the full s57 page for context. The full page is no sharper than the crop. I did not open the full s90 page, did not do pixel-level analysis, and did not consult the prior transcriptions.",
+  "readings": [
+    {
+      "image": "s57-question.png",
+      "reading": "אַם שבת ווירד פֿאָלגענדע[?] איינגעשאַלטעט:  — the final glyph of the word after ווירד is drawn as a narrow upright stroke with a flag at the top, like a zayin (ז). It is not the round ס-like glyph or the box-like glyph used elsewhere in this line.",
+      "certainty": "medium for the overall instruction; low for whether the final glyph should be read as ס or ז",
+      "reason": "Font key, taken only from glyphs in this line: in the last word, ח-shape = א, the round ס-shape = ש, the ם-shape = ט, and the ו-shape with a top stroke = ל. That decodes the word as איינגעשאַלטעט ('eingeschaltet'), with 12 glyphs to 12 letters. With the same key, the word after ווירד reads פֿ-אָ-ל-ג-ע-נ-ד-ע plus a final glyph. That final glyph is not the ש-glyph or the ט-glyph. Its outline looks like a zayin with a flag. But no samekh or zayin appears anywhere else in the German text on this page, so I can't confirm from this source whether this shape is the typeface's samekh (giving folgendes) or a zayin. I'm describing the shape only, not filling in the expected spelling.",
+      "requires_human": true
+    },
+    {
+      "image": "s90-question.png",
+      "reading": "הָלְכוּ — qamatz under the he and no meteg",
+      "certainty": "medium-high",
+      "reason": "Under the ה there is one mark: a horizontal bar with a short thick stem hanging from its centre, which is the T shape of a qamatz, made heavier by ink spread. There is no separate vertical stroke to the left of the vowel (the usual meteg position) or to its right, and no gap between the stem and the bar that would mean two marks. The vertical shape lower down is the sheva and dagesh area under the lamed/kaf, not something attached to the he. The scan is low resolution and the mark is blurred, so a meteg merged into the qamatz stem can't be ruled out completely.",
+      "requires_human": true
+    }
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "af7614a9-8dab-4dd8-9a0f-34ad81b19cd8"
+  }
+}

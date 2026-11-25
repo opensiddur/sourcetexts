@@ -1,0 +1,17 @@
+Independent follow-up closure review of low findings in reuse-code-round3/review.json (read that verdict and frozen round3 code for comparison). All 6 low items are now addressed: frozen old-qedushah fixture; pure-library direct/range controls; compact correction ranges; mandatory baseline integration; reject inline_scope plus subverse; preserve canonical @n in inline quotes and document actual typography.markers.verse_numbers settings. New narrowly-scoped deferred_page_boundary emits a page beginning within an optional clause at the first unconditional continuation after that clause, retaining exact source fragment scan. Reject conditioned continuation, duplicate PB, wrong page. Test139/121subtests passed; verify code/tests instead of trusting counts. This is only code approval, not batch acceptance. Return JSON {implementation_approved:boolean,inline_quote_encoding_approved:boolean,deferred_page_boundary_approved:boolean,previous_findings_closed:[],findings:[{file,location,severity,problem,required_fix}],integration_checks:[],notes:[]}. Inputs:
+/tmp/mahzor-s238/reuse-code-round3/review.json
+/tmp/mahzor-s238/reuse-code-round4/verify.py
+/tmp/mahzor-s238/reuse-code-round4/build.py
+/tmp/mahzor-s238/reuse-code-round4/__init__.py
+/tmp/mahzor-s238/reuse-code-round4/baseline.py
+/tmp/mahzor-s238/reuse-code-round4/realizations.py
+/tmp/mahzor-s238/reuse-code-round4/canonical_corrections.py
+/tmp/mahzor-s238/reuse-code-round4/download.py
+/tmp/mahzor-s238/reuse-code-round4/test_marmorstein_rosh_hashanah_1.py
+/tmp/mahzor-s238/reuse-code-round4/test_marmorstein_canonical_corrections.py
+/tmp/mahzor-s238/reuse-code-round4/test_marmorstein_realizations.py
+/tmp/mahzor-s238/reuse-code-round4/test_marmorstein_baseline.py
+/tmp/mahzor-s238/reuse-code-round4/marmorstein_qedushah_before_reuse.json
+/tmp/mahzor-s238/reuse-code-round4/marmorstein_accepted_660.json
+/tmp/mahzor-s238/reuse-code-round4/JLPTEI-3.md
+/tmp/mahzor-s238/reuse-code-round4/MARMORSTEIN_ROSH_HASHANAH_1.md

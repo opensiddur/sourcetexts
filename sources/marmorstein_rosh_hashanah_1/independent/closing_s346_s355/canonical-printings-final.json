@@ -1,0 +1,36 @@
+{
+  "approved": false,
+  "required_changes": [
+    "The guard is not fail-closed for every transclusion that can reach the marker. validate_generated (realizations.py:734-737) raises only when printing['identity'] == target. But the same function treats other targets as reaching the same wording option. groups is keyed by the canonical home's root urn (map_root), by its text_corresp and by the host urn (realizations.py:683-689). A targetEnd range whose segments include the identity also adds that group (lines 721-726). If a generated document transcludes the home root, the text_corresp, or a range covering the identity, and sets the printing feature to true (explicitly, or by default when that option is the first reading), the marked option is compiled outside its caller, and the guard does not fire. The claim that no other caller can select the option holds only for transclusions whose target is exactly the identity. Fix: raise whenever effective_settings.get(printing['feature']) is True at any j:transclude outside the attested caller, whatever its target. Alternatively, cover at least every target that groups maps to the identity, plus range targets whose segments contain it. Add a test with a second unit that transcludes the home root, the text_corresp, or a range, and selects the printing option; it must fail.",
+    "bindings() never checks that the boundary is a page change. It does not require fragments[index-1]['scan'] != fragments[index]['scan'], or that scan numbers increase. Two plain fragments on the same scan would therefore get a sigiled pb that marks the same page again, or an earlier one, in the middle of the text. Require each declared boundary to move to a new scan, strictly increasing."
+  ],
+  "test_gaps": [
+    "No test where another generated caller reaches the marked option by a target other than the exact identity: the home root (map_root), text_corresp, the host urn, or a targetEnd range. This would catch required change 1.",
+    "No test that a canonical printing between two fragments on the same scan is rejected (required change 2).",
+    "test_scan_links_choose_only_the_current_printing still builds its first-page break with the invented ed='1965 <context>'. The book writes bare ed='1965'. Now that other contexts are protected by the guard rather than by scan_links, this test says little about real output. Replace it, or add a test that runs mark_scan_links on the tree from test_real_compiler_preserves_external_boundary_and_words, with the caller's bare first break and the book's real path shape (shared 'rosh_hashanah/' prefix, caller reached through a p:transclude of its siddur URN). It should show the sigiled marker gets p:scan-link='true' in the caller's context.",
+    "No test for a match inside tei:choice, or across an existing pb, in the home. Both should fail closed. By reading, they do: the before phrase cannot be found in one text node, or _selected_prefix's prefix no longer matches. A test would pin that down.",
+    "No test where the caller's wording_selection has a non-opensiddur:variant feature structure. apply() reads features from every type, while bindings() and the guard read only opensiddur:variant (see notes)."
+  ],
+  "notes": [
+    "The previous required changes 1 and 3-6 are addressed. Paginated canonical callers now use type='external' (build.py diff, lines 9-23), and the real-compiler test shows exactly one interior pb (the n346 facs) and exactly the selected words. current_page now takes the scan of the last fragment, so the second bare break is gone, and the three-page test checks biblScope to='22'. apply() requires the match to be unique in the body (notes excluded), to sit in exactly one j:option the caller selected as true, and its prefix through the selected options to equal the attested prefix, inside the milestone scope of the identity. canonical_home is required, and join_next is rejected.",
+    "Previous change 2 (scan links) is answered by a different design: in every other context the marker sits in an option that is false, so it never reaches compiled output, instead of each context getting its own printing token. That is sound once the guard covers every route to the option (required change 1).",
+    "Settings are read two ways. bindings() and the guard read only opensiddur:variant features. apply() and _selected_prefix read every feature structure in wording_selection. This is harmless today but should use one source.",
+    "The review payloads now carry the derived file and context of each binding, and the option feature is covered through the overlays payload. The context-only staleness test covers this.",
+    "In apply(), the prefix comparison normalises whitespace. A home XML that joined the last word before the boundary to the first word after it ('betagamma') would pass the prefix check and get a mid-word pb. bindings() makes this unlikely, because canonical_text must equal the space-joined fragments. Low risk.",
+    "In draft-kohanim-callers.json, both Modim fragments have page_start false. bindings() ignores page_start on fragment[index]. That is acceptable for a boundary between pages, but should be stated in the contract."
+  ],
+  "limitations": [
+    "This was a read-only review. I did not run the tests or a compile; I relied on the provided log (203 passed, 197 subtests).",
+    "I read only the first part of draft-kohanim-callers.json and did not inspect draft-kohanim-project. I did not check whether any current generated unit actually reaches the Modim or Retzeh home through its root, text_corresp or a range with the appendix feature true. Required change 1 is a structural gap, not a failure I observed.",
+    "The guard sees only documents generated in this build. A hand-written book, a structure file in another project, or a settings file that transcludes the canonical home directly with the appendix feature true, or leaves it undecided in a way the exporter renders, could still expose the marker. This is outside the importer's control.",
+    "Source and batch acceptance, and the correctness of the readings data, are out of scope, as you said."
+  ],
+  "invocation": {
+    "model_usage": [
+      "claude-opus-5-5"
+    ],
+    "configured_model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "f8199d0c-555d-44ed-951f-6b5fd5fb8f43"
+  }
+}

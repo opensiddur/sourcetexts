@@ -1,0 +1,158 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "scope": "scan200 tight-crop adjudication",
+  "readings": [
+    {
+      "crop": "leela_a.png",
+      "word": "לעלא (leela_a)",
+      "marks": [
+        {
+          "letter": "ayin",
+          "mark": "tsere",
+          "present": true
+        },
+        {
+          "letter": "ayin",
+          "mark": "meteg",
+          "present": true
+        }
+      ],
+      "confidence": "moderate",
+      "reason": "Under the ayin there are two tsere dots. Just to their right, below the baseline, is a separate short vertical stroke. It is not attached to the ayin's tail and is not the kamats stem under the following lamed. It reads as a meteg, but it sits on the right of the tsere, not the usual left, so where it belongs is not fully certain."
+    },
+    {
+      "crop": "leela_b.png",
+      "word": "ולעלא (leela_b)",
+      "marks": [
+        {
+          "letter": "ayin",
+          "mark": "tsere",
+          "present": true
+        },
+        {
+          "letter": "ayin",
+          "mark": "meteg",
+          "present": false
+        }
+      ],
+      "confidence": "moderate",
+      "reason": "The marks below, from left to right, are: the kamats under the second lamed, the tsere dots under the ayin, and the sheva under the first lamed. There is no separate vertical stroke beside the tsere. The only vertical stem nearby belongs to the kamats. This disagrees with leela_a."
+    },
+    {
+      "crop": "ps25_metegs.png",
+      "word": "רחמיך",
+      "marks": [
+        {
+          "letter": "mem",
+          "mark": "segol",
+          "present": true
+        },
+        {
+          "letter": "mem",
+          "mark": "meteg",
+          "present": true
+        }
+      ],
+      "confidence": "moderate",
+      "reason": "A vertical stroke sits beside the segol under the mem."
+    },
+    {
+      "crop": "ps25_metegs.png",
+      "word": "וחסדיך",
+      "marks": [
+        {
+          "letter": "dalet",
+          "mark": "segol",
+          "present": true
+        },
+        {
+          "letter": "dalet",
+          "mark": "meteg",
+          "present": true
+        }
+      ],
+      "confidence": "moderate",
+      "reason": "A vertical stroke sits beside the segol under the dalet, laid out the same way as in רחמיך."
+    },
+    {
+      "crop": "ps25_metegs.png",
+      "word": "המה",
+      "marks": [
+        {
+          "letter": "he (initial)",
+          "mark": "tsere",
+          "present": true
+        },
+        {
+          "letter": "he (initial)",
+          "mark": "meteg",
+          "present": true
+        }
+      ],
+      "confidence": "moderate",
+      "reason": "A vertical stroke sits beside the tsere under the first he. This crop is less enlarged than the single-word crops, which keeps confidence at moderate."
+    },
+    {
+      "crop": "melekh_ozer.png",
+      "word": "מלך (before עוזר)",
+      "marks": [
+        {
+          "letter": "mem",
+          "mark": "segol",
+          "present": true
+        },
+        {
+          "letter": "mem",
+          "mark": "meteg",
+          "present": true
+        }
+      ],
+      "confidence": "moderate",
+      "reason": "Under the mem a vertical stroke sits among the segol dots, separate from the segol under the lamed and the sheva in the final kaf."
+    },
+    {
+      "crop": "melekh_memit.png",
+      "word": "מלך (before ממית)",
+      "marks": [
+        {
+          "letter": "mem",
+          "mark": "segol",
+          "present": true
+        },
+        {
+          "letter": "mem",
+          "mark": "meteg",
+          "present": true
+        }
+      ],
+      "confidence": "moderate",
+      "reason": "Under the mem there is a vertical stroke with the segol dots, laid out the same way as in melekh_ozer."
+    },
+    {
+      "crop": "domeh.png",
+      "word": "דומה",
+      "marks": [
+        {
+          "letter": "dalet",
+          "mark": "dagesh",
+          "present": true
+        }
+      ],
+      "confidence": "high",
+      "reason": "There is a clear dot inside the body of the dalet, well apart from the vav. The holam on the vav cannot be clearly made out in this crop, so it cannot be compared with the dagesh. The marks above the crop belong to the line above."
+    }
+  ],
+  "questions": [
+    "leela_a vs leela_b: the crops show a meteg-like stroke beside the ayin's tsere in leela_a but none in leela_b. Is the leela_a stroke really a meteg placed to the right of the tsere, or a stray mark or ink spot? A sharper or higher-resolution crop of the ayin in leela_a would settle it.",
+    "domeh: the dalet dagesh is confirmed, but the vav holam is not visible in this crop. If the holam needs confirming, it needs a crop that includes the area above the vav."
+  ],
+  "approved": false,
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "bd465e24-63c5-4f1f-a1cf-f37230c43ace"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "readings": [
+    {
+      "reference": "Deut 11:15, second וְנָתַתִּי (crop: maariv-check-venatati_15.png)",
+      "text": "וְנָֽתַ… (cut off at the crop edge after the tav with pataḥ; the rest of the word is not visible)",
+      "evidence": "The word comes right after the sof-pasuq diamond that follows וְיִצְהָרֶךָ. Under the nun there is a qamats, and next to it, on the side away from the vav, is a short separate vertical stroke. Its spacing matches a meteg, not part of the qamats. The vav has a two-dot shva and the first tav has a pataḥ bar. The second tav and the yod are outside the crop.",
+      "confidence": "medium"
+    },
+    {
+      "reference": "Ahavat Olam, וָלַיְלָה (crop: maariv-check-valaylah.png)",
+      "text": "…לָֽיְלָה. (the first letter, the vav, is outside the crop)",
+      "evidence": "The word is cut at the crop edge, so the visible part starts at the first lamed and the word-initial vav does not appear. Under the first lamed there is a qamats with a separate vertical stroke beside it, which reads as a meteg. The yod has a vocal shva, the second lamed has a qamats, and a period follows. Before וְאַהֲבָתְךָ the print reads 'לילה.'. The vav and its vowel cannot be checked here.",
+      "confidence": "medium (meteg on the first lamed); vav not visible"
+    },
+    {
+      "reference": "Deut 6:7, בְּבֵיתֶךָ (crop: maariv-final-points-s20-150-l.png)",
+      "text": "בְּבֵיתֶ֙ךָ֙",
+      "evidence": "There are two separate slanted pashta strokes above the word. One sits over the stressed syllable (the tav), and the other is at the outer end of the word over the final kaf. The word before it, בְּשִׁבְתְּךָ, has a '<'-shaped mark beneath it.",
+      "confidence": "high"
+    },
+    {
+      "reference": "Deut 11:19, בְּבֵיתֶךָ (crop: maariv-check-pashta_19.png)",
+      "text": "בְּבֵיתֶ֙ךָ (one pashta stroke)",
+      "evidence": "There is only one slanted stroke above the word. It sits inside the word over the yod/tav area, not at the final kaf. No second stroke is visible at the end of the word, and that area is clean. The '<' mark is under the word before it, as in 6:7.",
+      "confidence": "medium-high (one stroke); medium (exact letter it sits on)"
+    },
+    {
+      "reference": "Deut 11:17, הַשָּׁמַיִם (crop: maariv-check-pashta_17.png)",
+      "text": "אֶת־הַשָּׁמַ֙יִם (one pashta stroke)",
+      "evidence": "There is one slanted stroke over the mem with pataḥ (the stressed syllable). Nothing is above the final mem at the end of the word. The stroke is clearly separate from the shin's dot.",
+      "confidence": "medium-high (one stroke); medium (exact letter it sits on)"
+    },
+    {
+      "reference": "1 Chr 16:9, זַמְּרוּ־לוֹ (crop: maariv-zammeru-word.png)",
+      "text": "לוֹ זַמְּרוּ־לוֹ שִׂיחוּ",
+      "evidence": "The word starts with a zayin, which has a head stroke, and the zayin carries a pataḥ. No vav comes before it inside the word: there is a word space between the zayin and the previous word לוֹ, and no extra vertical letter in that space. The mem has a dagesh and a shva, followed by a shuruk vav and a maqaf joining it to לוֹ. The sin/shin dot on שׂיחו is not part of this question, so I did not adjudicate it.",
+      "confidence": "high (no vav before the zayin)"
+    },
+    {
+      "reference": "Source 52, page header (crop: maariv-s52-header.png)",
+      "text": "8 | תְּפִלַּת שַׁחֲרִית | 8",
+      "evidence": "The printed page number '8' appears at both the left and right corners of the header, with the running title תְּפִלַּת שַׁחֲרִית in the center. Both numerals are clean and closed. Recorded as printed, not worked out from page order.",
+      "confidence": "high"
+    }
+  ],
+  "pending_human": [
+    {
+      "reference": "Ahavat Olam, וָלַיְלָה",
+      "issue": "The word-initial vav and any vowel or meteg on it are outside the crop and need a crop that includes the vav. What the crop does show is a meteg on the first lamed."
+    }
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "666e3bb9-4db3-4e6d-ab9b-5f6e6a90b937"
+  }
+}

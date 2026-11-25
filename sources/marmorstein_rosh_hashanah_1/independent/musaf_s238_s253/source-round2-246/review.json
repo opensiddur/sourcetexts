@@ -1,0 +1,133 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "source_approved": false,
+  "pages_read": [
+    "s246",
+    "s247",
+    "s248",
+    "s249"
+  ],
+  "findings": [
+    {
+      "scan": "s248",
+      "key": "od_yizkor_lanu",
+      "old": "כִּי קָדוֹשׁ היום לַאֲדֹנֵינוּ:",
+      "new": "כִּי קָדוֹשׁ הַיּוֹם לַאֲדֹנֵינוּ:",
+      "reason": "The earlier fix to remove pointing from the variant was also applied to the main-text word. In the print, the main-text הַיּוֹם after קָדוֹשׁ is fully pointed: pataḥ under ה, dagesh in י, ḥolam on ו. Only the small variant inside the parentheses is unpointed.",
+      "evidence_image": "/tmp/mahzor-s238/s248-band1.png"
+    },
+    {
+      "scan": "s248",
+      "key": "od_yizkor_lanu",
+      "old": "(כ״א היום)",
+      "new": "(נ״א היום)",
+      "reason": "This marker uses the same small Rashi glyph pair as the three markers on s246, which the candidate already reads as נ״א. Rashi נ looks like square כ, and Rashi א looks like ח. It is not a different abbreviation, and nothing here suggests a source typo. Read it consistently as נ״א. The variant word stays unpointed, as printed.",
+      "evidence_image": "/tmp/mahzor-s238/s248-band1.png"
+    },
+    {
+      "scan": "s246",
+      "key": "ledor_vador_nagid",
+      "old": "ח׳ לְדוֹר וָדוֹר נַגִּיד",
+      "new": "ח׳ לְדֹר וָדֹר נַגִּיד",
+      "reason": "On s246 both words are printed defective, with ḥolam and no vav: ל־ד־ר and ו־ד־ר. Their width and shape match the לְדֹר וָדֹר in the יִמְלֹךְ line just above, which the candidate already has as defective. The plene spelling seems to come from the cue word לדור beside the English on s247, which is linkage only and must not drive the Hebrew.",
+      "evidence_image": "/tmp/mahzor-s238/s246-band3.png"
+    }
+  ],
+  "uncertainties": [
+    {
+      "scan": "s246",
+      "key": "lehitvada_ulehigalot",
+      "word": "בְּחוּנָיו-לְפָאֲרוֹ",
+      "question": "There is a short mid-height dash between בחוניו and לפארו. In this font the maqaf in כָּל־חַי (line 2 of the page) also sits low rather than at the top. So is this a printed maqaf (בְּחוּנָיו־לְפָאֲרוֹ) or a stray mark? The candidate drops it. Note that the previous audit's crop [770,1195,830,1245] was off target: the mark is at about x=653, y=1184 in the full image.",
+      "crop_box": [
+        615,
+        1150,
+        700,
+        1220
+      ]
+    },
+    {
+      "scan": "s246",
+      "key": "tehillot_kevodecha",
+      "word": "שְׁמָעֲךָ",
+      "question": "What vowel is under the מ (qamats, or pataḥ with meteg), and is the mark under the ש a sheva? The candidate flags this but does not resolve it.",
+      "crop_box": [
+        1010,
+        555,
+        1095,
+        630
+      ]
+    },
+    {
+      "scan": "s246",
+      "key": "echad_hu_eloheinu",
+      "word": "לֵאלהִים",
+      "question": "Is a ḥolam printed on the ל/א of לֵאלֹהִים, or is it absent as the candidate has it?",
+      "crop_box": [
+        190,
+        245,
+        285,
+        300
+      ]
+    },
+    {
+      "scan": "s246",
+      "key": "tehillot_kevodecha",
+      "word": "סוּרוּ מִנִּי",
+      "question": "This small variant appears to carry shuruk dots and ḥiriq. Is סוּרוּ actually pointed, which would match the candidate text, or unpointed, as the candidate's uncertainty suggests?",
+      "crop_box": [
+        180,
+        845,
+        300,
+        895
+      ]
+    },
+    {
+      "scan": "s248",
+      "key": "hasovel",
+      "word": "מִסּוֹרְרִים",
+      "question": "The mark under the first ר looks like it may be ḥataf-pataḥ (מִסּוֹרֲרִים) rather than sheva. Which is printed?",
+      "crop_box": [
+        660,
+        1790,
+        750,
+        1855
+      ]
+    },
+    {
+      "scan": "s248",
+      "key": "hakol_yochal",
+      "word": "וְכֹלְלָם",
+      "question": "What vowels are under the first and second ל? The candidate's own uncertainty is still open.",
+      "crop_box": [
+        820,
+        1470,
+        910,
+        1530
+      ]
+    }
+  ],
+  "untranslated_extent_notes": [
+    "The s246 rubric 'בפֿפֿד״מ אין אומרים כאן אדיר אדירנו.' is settled by human item 330, and the candidate matches it. It has no English counterpart on s247. בפפד״מ is בפרנקפורט דמיין ('in Frankfurt am Main').",
+    "The s248 rubric 'פותחים הארון. חזן. ע״ס א״ב כפול. קהל.' has no English counterpart on s249. 'חזן.' sits over the right-hand column and 'קהל.' over the left-hand response column, so both are role labels that will become descriptions. The Rashi letter after ע״ is ס, giving ע״ס (על סדר, 'in the order of'). The candidate matches the print.",
+    "The role marks ח׳, ק׳ and קו״ח (קהל וחזן) on s246 have no English equivalents and become descriptions.",
+    "The Hebrew cue words printed beside the English on s247 and s249 are linkage only. They are correctly left out of the English text."
+  ],
+  "notes": [
+    "I compared every word of the s247 and s249 English blocks with the print and found no differences.",
+    "The candidate correctly applies the earlier findings: human item 330 (בפֿפֿד״מ), human item 331 (יֻרְשׁוּ), human item 332 (וּמַעֲלִים), and the hehagui cue וְמַ״.",
+    "Several stale candidate uncertainty notes contradict the text and should be cleared or updated. The rubric note still says בספר״ם. The lehitvada note still says יִרְשׁוּ. The tehillot note still offers כ״א as a possible reading. The od_yizkor note says the pointing on הַיּוֹם was added and gives the marker as כ״א, and it lists מַגִּיד while the text has מָגִּיד. The hehagui note still says it looks like וּמַ״. The hasovel note still says וּמַעְלִים.",
+    "מָגִּיד (with qamats-like mark) as given in the candidate text matches the print's T-shaped mark under the מ.",
+    "I confirmed these against the scan: זְעוֹם (ז), סֹלּוּ, הַוַּדַּי (no alef), (וְהֹוֶה), אֲדוֹנֵינוּ (plene) next to לַאֲדֹנֵינוּ (defective), דָּבָר, חק, כָּל־חָי on s248, יוֹצִיא, and קו״ח in all three places.",
+    "Human items 324, 325 and 326 are on s250, which is outside my assigned scans, so I did not check them against the image. Item 326 is still pending and item 324 keeps the human's stated uncertainty. Item 325 should be checked against the image in its own audit, including whether the verb is סאַלטעט or schaltet (שאַלטעט). Because these are unresolved, the source is not approved.",
+    "I did not record minor accent or meteg marks that the candidate already flags: יַשְׁמִיעֵנוּ, גָּעֲשׁוּ, טַעַם, אֲדָמָה, the mark between לֹא and יָמוּשׁ, the mark under עוֹנֶה, and הַלְלוּיָהּ. Whether to record them is a policy decision."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "e4c6cd1b-03d6-49ea-915b-5a455b9ff340"
+  }
+}

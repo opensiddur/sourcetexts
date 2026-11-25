@@ -1,0 +1,105 @@
+{
+  "source_scan": "s342",
+  "approved_source_reading": true,
+  "all_lines_verified": true,
+  "human_application_verified": true,
+  "remaining_reading_disputes": [],
+  "corrections_required": [],
+  "stale_notes_to_remove": [
+    {
+      "file": "source-342-working-snapshot.json",
+      "field": "completeness_notes[0]",
+      "text": "All 26 poem lines, the heading, and the 2 Shabbat lines were read. The page is blank below them.",
+      "reason": "Miscounted. The page has 24 Friday lines, the heading ליום השבת., and 2 Shabbat lines: 26 poem lines in total, not 26 plus 2. Replace with: '24 Friday lines, the heading, and 2 Shabbat lines (26 poem lines) were read; the page is blank below them.'"
+    },
+    {
+      "file": "source-342-working-snapshot.json",
+      "field": "completeness_notes[2]",
+      "text": "The running head is only partly visible at the top crop of band1. The page number 16 is at the edge.",
+      "reason": "Wrong. full-342.png shows the whole running head שיר היחוד ליום השבת and the page number 16."
+    },
+    {
+      "file": "source-342-working-snapshot.json",
+      "field": "blocks[0].uncertainties[0]",
+      "text": "Line 7: מִטּוּל/מִמּוּל; שַׂלְמָה/שַׁלְמָה",
+      "reason": "Settled. The letter is ט with dagesh (prior closure), and the final שַׂלְמָה has a SIN dot (human ruling 795a)."
+    },
+    {
+      "file": "source-342-working-snapshot.json",
+      "field": "blocks[0].uncertainties[1]",
+      "text": "Line 9: vowels under ב in לוּבָשׁ and לָבָשׁ",
+      "reason": "Settled. The tsere forms לוּבֵשׁ and לָבֵשׁ are already applied. Two independent reviews agreed on them (fine-342 and closure-342), and the image confirms them."
+    },
+    {
+      "file": "source-342-working-snapshot.json",
+      "field": "blocks[0].uncertainties[2..4]",
+      "text": "Line 10 כַּיְרִיעָה; Line 13 הַשָּׁמָֽיִם; Line 14 לָבְשָׁה",
+      "reason": "Settled in source-342-closure.json. The snapshot readings stand."
+    },
+    {
+      "file": "source-342-working-snapshot.json",
+      "field": "blocks[0].uncertainties[5]",
+      "text": "Line 16: dagesh in the first לּוֹ.",
+      "reason": "Settled by human ruling 799a: the dagesh is present."
+    },
+    {
+      "file": "source-342-working-snapshot.json",
+      "field": "blocks[0].uncertainties[6]",
+      "text": "Line 19: כְּתוֹנֶת spelling; וּלְתִפְאָרֶת vowel",
+      "reason": "Settled. Plene כְּתוֹנֶת was confirmed in the prior closure, and human ruling 802 gives the exact form וּלְתִפְאָֽרֶת."
+    },
+    {
+      "file": "source-342-working-snapshot.json",
+      "field": "blocks[0].uncertainties[7]",
+      "text": "Line 22: whether וְגָדְלוּ has a meteg under ג.",
+      "reason": "Settled by human ruling 803a: no meteg."
+    },
+    {
+      "file": "source-342-working-snapshot.json",
+      "field": "blocks[0].uncertainties[8]",
+      "text": "Metegs in the small-type lines are only partly verified.",
+      "reason": "Settled. Prior closure confirmed the visible metegs, and human rulings 791–805 settled every disputed one."
+    },
+    {
+      "file": "source-342-working-snapshot.json",
+      "field": "blocks[2].uncertainties[0]",
+      "text": "Meteg under ב in יְבָֽרְכוּכָה looks present but is not certain.",
+      "reason": "Settled. The prior closure confirmed the qamats plus a separate stroke under ב, and detail4-left agrees."
+    },
+    {
+      "file": "human-791-805-resolution.json",
+      "field": "status",
+      "text": "final independent source342closurepending",
+      "reason": "This scan is that independent closure, so the 'pending' wording is out of date."
+    },
+    {
+      "file": "source-342-provisional-application.json",
+      "field": "status",
+      "text": "final source approval still pending",
+      "reason": "Out of date now that this final source closure is done."
+    },
+    {
+      "file": "source-342-closure.json",
+      "field": "approved_source_reading=false, all_lines_verified=false, remaining_reading_disputes[24 items]",
+      "reason": "Replaced by this scan. All 24 disputes were settled by human rulings 791–805 and the 800 follow-up. Its two corrections_required entries (line 9) are already applied."
+    }
+  ],
+  "limitations": [
+    "I worked only from the rendered images and the JSON as text. I had no shell, so I could not recompute sha256 to confirm the snapshot on disk is the output_working_sha256 cc1c28fd…3cb7 recorded in the resolution file. I also could not dump codepoints to check mark order (for example meteg before or after the shin dot in שַֽׁתָּה) or to detect hidden or duplicate combining marks.",
+    "For the shin dot in 800 (שַֽׁתָּה), I checked that the snapshot string shows a SHIN dot (U+05C1, the same glyph as in אֲשֶׁר) and not a SIN dot. Visually it matches the human follow-up ruling. I did not reassess it from the image and did not reopen it.",
+    "In small type at this resolution, meteg strokes often merge with the vowel signs. For every disputed meteg I relied on the human rulings, as instructed, and did not re-adjudicate.",
+    "This checks the source reading only. It does not approve any XML, export, leaf or batch."
+  ],
+  "notes": [
+    "Each human ruling checked against the snapshot. 791: אַחֲרִית has no meteg; וּבְיֽוֹשֶׁר has the meteg on yod, not bet. 792: בְּמַעֲשֵׂי and וַחֲסָדֶֽיךָ have no mem or vav meteg, and the dalet meteg is kept. 793: תִּתֵּן has dagesh in the first tav. 794: לָאַחֲרוֹנִים has no lamed meteg. 795: final שַׂלְמָה has a SIN dot; אֶֽדֶר has an alef meteg; עָטִֽיתָ has a tet meteg. 796: מָֽיִם (line 13) has a mem meteg. 797: מַאֲכָל has no mem meteg. 798: שֶׁמֶן has no shin meteg. 799: the first לּוֹ has a lamed dagesh; יֶחְסַר has no yod meteg. 800: וְתַֽחַת has a meteg on the first tav; שַֽׁתָּה has a shin meteg and the right-hand SHIN dot. 801: לְהַעֲלוֹת, מִזְבַּחֲךָ and יַעֲלוּ have no metegs. 802: exactly וּלְתִפְאָֽרֶת. 803: וְגָדְלוּ (line 22) has no gimel meteg; exactly יְהַלֲלוּ, with no meteg and no dagesh in the first lamed. 804: וְגָדְלוּ (line 23) has no gimel meteg; יוֹדֽוּךָ has a dalet meteg. 805: כֹּל has a kaf dagesh and holam. All are present in source-342-working-snapshot.json.",
+    "Every change is limited to its own line: each 'after' context matches its snapshot line exactly. No ruling was copied to other occurrences. כַּשַּׂלְמָה (lines 7a and 10a), the other עָשִֽׂיתָ/מַעֲשֶֽׂיךָ/וַחֲסָדֶֽיךָ forms, and the other לוֹ/לּוֹ forms keep their own independently confirmed readings.",
+    "Line 9 has the agreed corrections לוּבֵשׁ and לָבֵשׁ. They match detail1-right/left and detail2-right/left, where tsere (two dots side by side) sits under the ב.",
+    "All 24 Friday lines, the heading ליום השבת. and both Shabbat lines were checked word by word against full-342.png and the detail crops, covering consonants, word order, the parenthesised (פְּנֵי רְקִיעַ), the period at each caesura and the sof-pasuq colon at each line end. I found no differences. Line order matches the page. The text ends after line 2 of the Shabbat poem, and the page is blank below.",
+    "Spellings confirmed again: מְאוֹד with vav (line 8, twice) and מְאֹד without vav (lines 22–23); כְּתוֹנֶת and קוֹדֶשׁ written plene (line 19); מִטּוּל with tet."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "1cc835df-2915-4589-ab2b-544f35893a35"
+  }
+}

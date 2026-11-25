@@ -1,0 +1,31 @@
+{
+  "approved": true,
+  "musaf_order_approved": true,
+  "afternoon_order_approval_retained": true,
+  "encoding_approved": true,
+  "alignment_approved": true,
+  "old_realization_rebinding_approved": true,
+  "approved_control_hashes": {
+    "source_order_sha256": "97ea0dbd047a5eb74c858cfcbe1601b92112267a9bc2dafb719c690728862929",
+    "expanded_order_sha256": "649c67aa0824b8bef02dd393245655862f913c603349ce35f8569c487ca92d59",
+    "documentary_instructions_sha256": "b111d753eca9627aa55157d70273edb9a93052431e9a7fdad045886a4f321343",
+    "navigation_sha256": "7df8974825d17361e6cea302721835fa8e9f45f7de36972136b271c16974fc49"
+  },
+  "blocking_findings": [],
+  "limitations": [
+    "The Musaf blocker is closed, checked against both the XML and the order. (1) Instruction batch312_dream_rubric_312 ('כשהכהנים מנגנים וישמרך אומרים זה.') now appears exactly once in expanded_musaf_tail. It is in section_musaf_dream_2, after the three-word verse 1 sequence (1_1 to 1_3) that ends in וישמרך. The XML note is type=instruction xml:lang=he, and its text matches the instruction dictionary entry exactly. (2) section_musaf_dream_7 sits after the verse 2 sequence (2_1 to 2_5) that ends in ויחנך. It no longer uses any documentary instruction ID. It has its own section rubrics: Hebrew 'כשהכהנים מנגנים ויחנך אומרים שוב רבונו של עולם.' and English 'While the priests chant Vichuneka, repeat the prayer for dreams.' Both are type=description with resp=codex, so they are clearly marked as editorial. They name the right word, and the XML notes match the order rubrics exactly. Both placements still carry the congregation role and the same musaf_kohanim_dreams unit. (3) The documentary order (documentary_musaf_tail) prints the dream rubric and the dream unit once, after response 1_3 and before 2_1, and has no second copy. That is faithful to the source.",
+    "Every other part of expanded_musaf_tail and expanded_musaf_closing is the same as the XML and order approved in bounded-order-musaf-review.json (session a62b4b69). That review's full scope is retained: the opposite birkat-kohanim branches, the reader/priests/congregation sequence of 3+5+7, the יהי רצון substitution at שלום, Addir Bamarom, Ribbono and the shoes instruction, the reader alone saying Numbers 6:24–26 when there are no priests, Sim Shalom / Besefer / proofs, Hayom with the ark opened and closed, Kehayom, a single chatimah, and the closing sequence through the thirty blasts. Its non-blocking notes still apply: the Judeo-German instruction is tagged xml:lang=he, and no priestly blessing appears if birkat-kohanim is unset.",
+    "Afternoon and Tashlikh approval (bounded-order-afternoon-review.json, session 8ffd6173) is retained unchanged. The change touched only the Musaf dream_7 section.",
+    "Role label: final-source-322-review.json reports, from reading the s325 image, that the text has חזן with final nun and that this matches the image. The only open item there was stale notes. final-source-closure-322.json then approved with no blocking findings. The condition left in bounded-bindings-xml-review.json is therefore met by an actual source reading. It did not need the human decisions 473–489.",
+    "Documentary controls checked for internal consistency. Every instruction ID in documentary_musaf_tail, documentary_afternoon and documentary_tashlikh, including the headings, resolves to an entry in new_instructions. The single navigation reference (rh_minchah_returns) resolves to new_navigation. Its clauses join back to the raw English text. Its three page links point to the Shacharit silent Amidah opening (used twice, for 'page 44') and to Avinu Malkenu (page 67), which agree with the raw wording. The documentary Musaf sequence matches the expanded Musaf in the order of its units and instructions. It differs only in the source-printed labels (החזן מקרא / הקהל אומר / Priests: / Congregation:), the 322 rubrics (קדיש יתום, Psalm 81 / Shir ha-Yihud, the final shofar instruction), and the omission of the unprinted mourner's Kaddish and the second dream placement. All of these are proper differences between the documentary and the expanded text.",
+    "Non-blocking metadata note: batch312_half_kaddish_rubric_325, batch312_tashlikh_rubric_326 and the rh_minchah_returns navigation are English-language text recorded with witness 'he', because they are printed on Hebrew-side scans s325 and s326. This agrees with the page audit, which places scans 320–326 on the Hebrew side.",
+    "Hash binding: I could not recompute any SHA-256 in this session (read-only tools). The four approved values come from final-control-hashes.json, the same file that holds the new documentary order, instructions and navigation I reviewed. Each hash covers the whole control, including morning and day-1 parts I did not see in full here, and none was recomputed from the material reviewed. Before receipts are finalized, a deterministic recompute must confirm that these four values equal the hashes of the controls as reviewed. If any value differs, this approval and the rebinding of the 224 receipts are void for that control.",
+    "Old-receipt rebinding is approved on the basis of the proof in final-control-hashes.json. It shows 837 witnesses and 465 units unchanged, with old_literal_units_sha256 equal to same_new_prefix_sha256 (60bbab18…3049). The only field group that changed is the four control hashes, across 224 receipts. I did not inspect the raw receipts.",
+    "This is not a full-batch or export acceptance. Export review is still pending. I did not reopen any textual question already settled by the source closures for 312, 317 and 322."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "88f1b399-5c4d-4f20-a3f3-02e3c32305b9"
+  }
+}

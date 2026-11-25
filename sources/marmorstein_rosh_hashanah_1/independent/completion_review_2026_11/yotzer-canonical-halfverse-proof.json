@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "checks": [
+    {
+      "canonical_half_verse": "urn:x-opensiddur:text:bible:psalms/92/2/a",
+      "exact_resolution_without_coarsening": [
+        {
+          "project": "tanakh-miqra_al_pi_hamasorah-he",
+          "file": "psalms.xml"
+        },
+        {
+          "project": "tanakh-wlc-he",
+          "file": "psalms.xml"
+        }
+      ]
+    },
+    {
+      "canonical_half_verse": "urn:x-opensiddur:text:bible:ezekiel/3/12/b",
+      "exact_resolution_without_coarsening": [
+        {
+          "project": "tanakh-miqra_al_pi_hamasorah-he",
+          "file": "ezekiel.xml"
+        },
+        {
+          "project": "tanakh-wlc-he",
+          "file": "ezekiel.xml"
+        }
+      ]
+    }
+  ],
+  "method": "UrnResolver.resolve_range directly on exactcanonicalURI, not compilerfallback/coarsen. Both resolve inMiQra/WLC."
+}

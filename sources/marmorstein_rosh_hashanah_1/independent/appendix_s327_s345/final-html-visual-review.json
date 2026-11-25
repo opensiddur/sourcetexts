@@ -1,0 +1,35 @@
+{
+  "approved_final_html": true,
+  "required_changes": [],
+  "visual_images_reviewed": [
+    "/tmp/mahzor-s327/full-export-qa/documentary-hebrew-html-appendix.png",
+    "/tmp/mahzor-s327/full-export-qa/documentary-html-appendix.png",
+    "/tmp/mahzor-s327/full-export-qa/expanded-html-appendix.png"
+  ],
+  "limitations": [
+    "Each screenshot is one 1280x1000 viewport. It shows only the heading and about the first 37 lines of the Wednesday Shir ha-Yiḥud (ליום רביעי), from ארומם through כתפוח בעצי היער. The rest of scans 327–345 was not looked at. For that material the approval rests on the automated browser and toggle reports.",
+    "Bracket direction was checked at screenshot resolution. Each pair visibly surrounds its words and nothing looks reversed or orphaned. On the lines that open with a bracket (for example [ואשר חרב, [יפה דודי, [כנשר, [כדוב, [כארז, [כתפוח) I could not reliably tell the closing glyph at the line end from the colon. Their exact pairing was not confirmed visually.",
+    "The slash-like mark at the start of the lines beginning ארומם and ישר יי renders as a real glyph, not a missing-font box. I did not check whether it is the intended source marker, because the brief excluded comparison with the scans.",
+    "Pointing (niqqud) was not checked against the source scans, as the brief instructed. I only checked that it is legible and placed correctly in the browser.",
+    "The screenshots used QA-only eager painting (content-visibility forced visible on the inspected rows). They show what renders, not lazy-render timing in a normal reader session.",
+    "This approval covers scans 327–345 only. Scans 346–355 are incomplete and are not covered."
+  ],
+  "notes": [
+    "Hebrew layout: all three exports set the text right to left and right-aligned, one line per stich, each line ending with sof pasuq. Words are readable, pointing does not collide with neighbouring lines, and line spacing is even.",
+    "Headings: documentary-hebrew centres 'ליום רביעי.' above the column. Documentary right-aligns it over the Hebrew column, which is narrower and set in from the edge. Expanded has the bilingual editorial heading 'שיר היחוד ליום רביעי' / 'Hymn of Divine Unity — Wednesday', as intended. No heading is clipped or overlaps the text.",
+    "The documentary Hebrew column sits further from the right edge (about x≈1150) than in the Hebrew-only build (about x≈1215), leaving space on the left. This matches the intentionally missing English translation and is not counted as a defect.",
+    "Overflow: no horizontal overflow is visible in any screenshot. final-full-html-browser-check.json reports document_horizontal_overflow false for all three exports.",
+    "Browser report: passed is true. Duplicate ids and missing local link targets are empty for all three exports. Commentary links for leaf 339 and leaf 340 resolve, one each. The default goyim line reads 'גוים [ואיים]:' and the omission view reads 'גוים:'.",
+    "Toggle report: passed is true. The reader setting unset gives 'גוים [ואיים]:', false gives 'גוים:', true gives 'גוים ואיים:' with the brackets removed, and returning to unset restores 'גוים [ואיים]:'. Every result matches its expected value.",
+    "The 'Set the place' control at the top left of the expanded build is part of the reader interface, not content.",
+    "No English prayer translation was invented or asked for."
+  ],
+  "invocation": {
+    "model_usage": [
+      "claude-opus-5-5"
+    ],
+    "configured_model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "15c1ac89-0fb2-4665-89e6-d452c00313cb"
+  }
+}

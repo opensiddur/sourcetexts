@@ -1,0 +1,34 @@
+{
+  "approved_editorial_encoding": false,
+  "approved_corrections": [
+    {
+      "id": "s338_editorial_5",
+      "sic": "עַד",
+      "corr": "עֵד",
+      "assessment": "Approved as a typographical correction, not modernization. In 'אֱלֹהֵינוּ עַל יִחוּדֶךָ. אַתָּה עֵד אֱמֶת וַאֲנַחְנוּ עֲבָדֶיךָ' the word means 'witness'. The previous line 'אַתָּה תָעִיד בְּיִחוּדֶךָ' requires that sense, and the usual text of this poem reads עֵד. The noun עֵד has tsere in both absolute and construct, so patah cannot be a valid variant pointing of 'witness'. Reading עַד as 'until' or 'forever' makes no sense here. The generated XML puts the user-confirmed printed form exactly in tei:sic. tei:corr differs only by patah (U+05B7) becoming tsere (U+05B5). The match context 'אַתָּה ' + sic + ' אֱמֶת' occurs once in the file. The choice sits inside the second tei:l of stanza 3 (after the milestone .../fifth_day_paytan/3), and no stanza milestone or tei:pb was moved or split."
+    }
+  ],
+  "required_changes": [
+    "Remove the tei:choice for s338_editorial_10 and keep the printed שָׁאַתָּה as plain text, or deal with it some other way than tei:sic (for example an editorial note). Qamatz on the relative particle before a guttural is a real Masoretic form: Judges 6:17 reads 'אוֹת שָׁאַתָּה מְדַבֵּר עִמִּי', and Gesenius' grammar (§36) cites it. Heidenheim was a careful grammarian, so this may be a deliberate biblical pointing rather than a misprint. Changing it to שֶׁאַתָּה would be normalization, which fails the user's own rule that sic/corr is only for obvious typos. Please check this against the Judges 6:17 form; this is my reasoning, not a verified collation.",
+    "After that, the builder's `assert len(root.findall('.//{TEI}sic'))==2` (build-draft-appendix-modules.py:115) and the proposals list must be changed to match a single correction. Rerun the builder, the printed-text check and schema validation, and regenerate draft-s338-editorial-check.json and the snippets."
+  ],
+  "limitations": [
+    "I could not find a separate source338 snapshot file under /tmp/mahzor-s327 (tried source-338-snapshot.json, source338-snapshot.json and s338-snapshot.json) and did not open working-pages.json. Line and page alignment was therefore checked against the generated XML only. The tei:pb for n337.jpg (printed 12) is at XML line 49, which makes s338 line 5 = 'אֱלֹהֵינוּ עַל יִחוּדֶךָ. אַתָּה …' and line 10 = 'שָׁאַתָּה אֵל כֹּל …', matching the proposals. This assumes archive.org n = scan − 1, which the s340/printed 14/n339 header note supports.",
+    "Codepoints were checked from the rendered text only, with no byte-level dump. Both the builder and the corrections NFC-normalize sic and corr, and _locate would have raised an error on any mismatch, so the sic strings do equal the generated document text. That is all that confirms it.",
+    "The Judges 6:17 / Gesenius point comes from my own knowledge and was not checked against a text in this session. I also did not see other occurrences of the relative particle elsewhere in this 1965 Heidenheim-based printing, which would show whether שָׁ before aleph is its regular practice.",
+    "Schema validity of the fifth-day module comes from draft-schema-report.json. I did not rerun validation.",
+    "This review covers only these two editorial encodings. It is not approval of the source reading, the batch, the export or the module."
+  ],
+  "notes": [
+    "How it is applied: apply_corrections → _locate in authoring.py requires before+sic+after to match exactly once in the document. It skips text already inside an earlier sic/corr and inserts tei:choice/tei:sic+tei:corr in place, keeping the surrounding text as text/tail. printed_text leaves out tei:corr. The builder checks that printed_text(root) is unchanged after the corrections, so source branches are preserved by code, not just by the proof JSON.",
+    "s338_editorial_10 works correctly as encoding: the choice is the first child of the tei:l (that line has no milestone), sic is exactly the printed שָׁאַתָּה, and corr changes only qamatz (U+05B8) to segol (U+05B6) with the shin dot kept. It is rejected on editorial grounds only.",
+    "Fragility: the builder hard-codes before/after by proposal line number (line 5 gets 'אַתָּה '/' אֱמֶת', every other line gets ''/' אֵל כֹּל'). Any later proposal would get the wrong context, though it would fail loudly rather than silently. Recommended: store before/after (or an xpath to the specific tei:l) in source-338-editorial-proposals.json.",
+    "Recommended, not blocking: add a check that the corrected projection differs from the printed projection only at the stated vowel codepoints. Also consider @resp/@cert or an editorialDecl/encoding note recording that sic/corr is used only for user-confirmed obvious misprints.",
+    "No files were edited."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "397cb1ed-6971-4f4c-9784-dfadcd91e8f9"
+  }
+}

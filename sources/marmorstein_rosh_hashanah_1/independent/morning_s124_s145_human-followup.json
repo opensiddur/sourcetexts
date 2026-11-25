@@ -1,0 +1,95 @@
+{
+  "reviewer": {
+    "configured_role": "Independent source/guideline adjudicator, configured as Claude Opus5.5 medium",
+    "actual_self_report": "Model claude-opus-5-5 (Opus 5.5). I can't check the reasoning-effort setting from inside the session. This pass used a fairly small reasoning budget. I looked only at the four supplied PNG crops with Read. I did no external research and opened no other pages.",
+    "basis": "Pixel reading of /tmp/mahzor-s124/question1.png, question2.png, question4.png and ofir-opening.png, checked against the human's readings."
+  },
+  "readings": [
+    {
+      "snippet": "question1.png, German direction",
+      "text": "אַין פֿפֿד״מ ווירד דיעזעז ניכט געזאַגט, מאַן בעגיננט גלייך מיט תָּעִיר וְתָרִיעַ.",
+      "confidence": "high for the wording; medium for the diacritics on single letters",
+      "uncertain": [
+        "גזייך vs גלייך: the second letter of this word has a short ascender with a flag on top. It does not look like the zayin in דיעזעז on the same line, and it matches a compact lamed in this small Vaybertsh-style typeface. The pixels support ל, and גזייך is not a German word, so גזייך is most likely a transcription error for גלייך ('gleich'). Confidence: medium-high from the pixels, high from the language.",
+        "In this typeface alef often looks like ח (אַין, געזאַגט, מאַן). I read these as alef with patah, which agrees with the human.",
+        "פֿפֿד״מ: I can see a rafe bar over both pe letters. I accept it.",
+        "ניכט: the human wrote ניכֿט with a rafe on the kaf. At this resolution I can't confirm or rule out a rafe there. Only include it if a sharper scan shows it.",
+        "Final punctuation: the clause ends with a period. The comma after געזאַגט is visible.",
+        "I have not checked the vowel points in the Hebrew words תָּעִיר וְתָרִיעַ inside the direction (for example whether the tav has a dagesh)."
+      ],
+      "translation": "In Frankfurt am Main this is not said; one begins straight away with Ta'ir ve-tari'a.",
+      "proposed_transcription_note": "Use the source's own Hebrew-letter German spelling. Mark rafe only where the pixels show it: clearly on both pe letters of פֿפֿד״מ, and not yet confirmed on ניכט. Gloss in modern German: 'In Ffd״m wird dieses nicht gesagt, man beginnt gleich mit …'."
+    },
+    {
+      "snippet": "question2.png, German direction",
+      "text": "אַם שַׁבָּת ווירד דאַ: אונטענסטעהענדע שְׁמוֹ מְפָאֲרִים געבעטעט.",
+      "confidence": "high for the consonants of the German words; medium for the reading of דאַ:",
+      "uncertain": [
+        "דאַ: vs דאס: after the dalet comes the alef-with-patah glyph, then two separate stacked dots (a colon). Nothing there looks like a damaged final samekh: no closed loop and no stroke remnant. The pixels do not support דאס, so I don't recommend changing it to 'das'. Read it as printed, דאַ followed by a colon. As German, 'da:' introducing what follows is unusual but understandable. A colon printed by mistake is possible, but that is a guess.",
+        "אונטענסטעהענדע: the first letter has the alef glyph that looks like ח. The rest is clear and reads 'untenstehende'.",
+        "געבעטעט: clear, with a period at the end.",
+        "The pointing of שמו מפארים in the direction is small and unclear. I can't confirm the human's מְפָֽאַרִים with a meteg against what I see (possibly מְפָאֲרִים). I'm not ruling on it; check it against the full-size page.",
+        "On the line above, אַם may carry a patah. I can see it on the alef glyph, but the dot is close to the limit of resolution."
+      ],
+      "translation": "On the Sabbath, the following Shemo me-fa'arim is prayed here (literally: 'there is prayed here: the following …').",
+      "proposed_transcription_note": "Gloss in modern German: 'Am Schabbat wird da: untenstehende Schemo mefoarim gebetet.' Keep the colon. Don't print 'das' in the transcription; at most mention it as an editorial conjecture in a note."
+    },
+    {
+      "snippet": "question2.png, Metz rubric",
+      "text": "בק״ק מיץ אין אומרים חרוז תריע.",
+      "confidence": "high for בק״ק מיץ אין אומרים and תריע; low-medium for the spelling of חרוז",
+      "uncertain": [
+        "The word before תריע has three or four narrow letters. It may be חרוז or a defective spelling such as חרז, and the vav and zayin may have run together. The sense ('the stanza') is clear, but I can't settle the exact spelling from these pixels.",
+        "The gershayim in בק״ק are visible."
+      ],
+      "translation": "In the holy community of Metz the stanza 'Tari'a' is not said."
+    },
+    {
+      "snippet": "question4.png, Metz parenthetical",
+      "text": "(בק״ק מיץ אין אומרים כָּל יוֹשְׁבֵי תֵבֵל וְשׁוֹכְנֵי אָרֶץ. יֹאמְרוּ תָמִיד הִגְדִּיל יְיָ לַעֲשׂוֹת בָּאָרֶץ. וְהָיָה יְיָ לְמֶלֶךְ עַל כָּל הָאָרֶץ. קָדוֹשׁ:)",
+      "confidence": "high for the consonants and the scope of the parentheses; I did not verify the pointing in detail",
+      "uncertain": [
+        "The opening parenthesis comes before בק״ק and the closing parenthesis comes after קָדוֹשׁ:. The image therefore shows that the rubric and the Kol Yoshvei stanza sit inside the same parentheses, so the omission clearly covers this passage.",
+        "This crop does not show the second parenthetical repetition, so any claim about its scope is an inference."
+      ],
+      "translation": "(In the holy community of Metz they do not say: 'All inhabitants of the world and dwellers on earth shall always say: the Lord has done great things on the earth; and the Lord shall be King over all the earth. Holy.')"
+    },
+    {
+      "snippet": "ofir-opening.png, incipit",
+      "text": "Pixels: אַאְפִּיד נֶזֶר אָיוֹם. — Human-adopted pointing: אַאֽפִּיר נֶֽזֶר אָיוֹם",
+      "confidence": "high that the last letter of the first word is ד, not ר",
+      "uncertain": [
+        "Consonant conflict: the last letter of the first word has the small right-hand projection of a dalet. That fits the known incipit אאפיד נזר ('I will bind a crown'). The human's אאפיר appears to have a ר/ד mix-up. This is a consonant reading, not a pointing question, so the instruction to adopt the pointing as given doesn't cover it.",
+        "Pointing: under the second alef I see what looks like a sheva, not a meteg, and there seems to be a dagesh in the pe. As instructed, I'm deferring to the human's pointing and only recording that the pixels differ.",
+        "The crop doesn't clearly show a meteg in נֶזֶר. I'm deferring to the human here too."
+      ],
+      "translation": "I will bind a crown, O awesome One."
+    }
+  ],
+  "attribution": {
+    "text": "חתום בראשי חרוזים אלעזר בירבי קליר.",
+    "confidence": "medium-high",
+    "uncertain": [
+      "בראשי: the alef has the ח-like glyph, and I can't tell whether there is an abbreviation mark (בר״אשי). I don't see clear gershayim.",
+      "חרוזים: the vav/zayin cluster is compressed, the same problem as in the Metz rubric.",
+      "The small marker in the margin to the right of תָּעִיר on the main line (it looks like חו״ק or חזן) can't be read reliably and isn't part of the attribution."
+    ],
+    "translation": "Signed in the initial letters of the stanzas: Elazar birabi Kalir."
+  },
+  "conditional_advice": {
+    "frankfurt": "Setting frankfurt_am_main=false for Attah Hu only is appropriate if 'dieses' refers to the Attah Hu passage directly before the direction. The direction says this piece is omitted and that one starts 'gleich mit' Ta'ir ve-tari'a, so the omission ends where Ta'ir begins. The cropped line above doesn't let me confirm from the image that the passage is Attah Hu. That identification rests on the human's reading of the full page.",
+    "metz": "Setting metz=false for Tair is supported by the question2 rubric. The crop shows one Tair occurrence. Applying the flag to both occurrences is appropriate if the second one is the same stanza that the rubric's 'חרוז תריע' refers to. That part rests on the full page. Setting metz=false for the first Kol Yoshvei parenthetical is supported directly by the parentheses. For the second parenthetical repetition, set metz=false only if it is marked the same way (parentheses or a matching rubric). Record its scope as inferred from parallel structure, not as stated in the source, which matches the human's uncertainty.",
+    "transcription": "Correct גזייך to גלייך. Keep דאַ: as printed, without 'das'. Change אאפיר to אאפיד unless the human rereads the full-size page and finds ר. Mark the spelling of חרוז and the rafe on ניכט as unconfirmed."
+  },
+  "limitations": [
+    "This adjudicates only the points listed. It does not certify the full transcription and it does not accept the source.",
+    "Judgements on the smallest marks (rafe, meteg, dagesh, gershayim) are limited by crop resolution and print quality.",
+    "I did no external research. The incipit אאפיד נזר is supported by the pixels, and familiar knowledge of the text only backs that up.",
+    "The rite-scope conclusions depend on page context outside these crops, which I couldn't see."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "f623baf4-a4a6-47b0-9c2c-7ef2857d3cf7"
+  }
+}

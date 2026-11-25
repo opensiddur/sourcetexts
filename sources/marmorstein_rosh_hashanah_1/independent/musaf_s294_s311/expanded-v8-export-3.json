@@ -1,0 +1,23 @@
+{
+  "scope": "expanded-v8-export-3",
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/expanded-export-manifest-v8.json",
+    "/tmp/mahzor-s294/full-pdf-images-v8/expanded-269.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "Image 269 has printed page number 267. The 2-page gap is consistent with front matter and agrees with the manifest's 270 pages.",
+    "This bibliography/metadata page has the running head 'חזרת התפלה', the last liturgical section's title, instead of a bibliography or sources head. This is cosmetic.",
+    "Monospace identifiers and URLs break at arbitrary points: 'rosh / -hashanah' and 'detail / s/mahzor...'. They stay readable and inside the margins, and the link boxes are drawn correctly over each wrapped part.",
+    "The raw field label 'internet_archive:' (with an underscore) is printed. Compare the small-caps 'URL:' label next to it. This is cosmetic only.",
+    "Entry [2] is a continuation of the bibliography started on an earlier page. Entry [1] and the start of the bibliography fall outside this range and were not judged."
+  ],
+  "verdict": "Approved for the assigned range (image 269 only). This page is the final bibliography entry [2]. It is fully readable English with no clipping or overlap. The text block, hanging label '[2]' and right margin are aligned. It credits the source edition (Heidenheim/Marmorstein, Basle 1965), the Internet Archive identifier and URL with visit date, imaging/preparation by Aharon N. Varady, the HUC-JIR Klau Library copy, and the independent reader (Claude Opus 5.5, medium reasoning). It also says no translations have been supplied for passages absent from the English edition. The page has no Hebrew body text, stanzas, notes or liturgical ending, so stanza alignment, note placement and the missing-source ending label don't apply to it. The manifest shows encoding approved, no pending pointing questions, and zero HTML errors or broken links at both viewports (1280 and 390).",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "1226c35e-17a2-442e-acd5-2e2ecc491c63"
+  }
+}

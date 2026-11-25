@@ -1,0 +1,1059 @@
+{
+  "status": "DRAFT complete documentary/expanded order, independent order review and exports pending",
+  "documentary_sequence": [
+    {
+      "unit": "musaf_repetition_sabbath_offerings"
+    },
+    {
+      "unit": "musaf_repetition_festival_offering"
+    },
+    {
+      "unit": "musaf_repetition_offering_formula"
+    },
+    {
+      "unit": "musaf_repetition_useir_lekhapper"
+    },
+    {
+      "unit": "musaf_repetition_yismechu"
+    },
+    {
+      "instruction": "musaf_aleinu_ark_he"
+    },
+    {
+      "instruction": "musaf_aleinu_ark_en"
+    },
+    {
+      "unit": "musaf_repetition_aleinu"
+    },
+    {
+      "instruction": "musaf_attah_horeta_quiet_direction"
+    },
+    {
+      "unit": "musaf_attah_horeta_quiet"
+    },
+    {
+      "instruction": "musaf_close_ark_after_aleinu_he"
+    },
+    {
+      "instruction": "musaf_close_ark_after_aleinu_en"
+    },
+    {
+      "instruction": "musaf_repeat_hu_aloud"
+    },
+    {
+      "instruction": "musaf_pifiyyot_tune"
+    },
+    {
+      "unit": "musaf_heyeh_im_pifiyot"
+    },
+    {
+      "section": "musaf_lo_yevoshu_custom",
+      "heading": null,
+      "order": [
+        {
+          "unit": "musaf_lo_yevoshu"
+        }
+      ],
+      "conditions": [
+        {
+          "type": "opensiddur:rite",
+          "features": {
+            "frankfurt_am_main": false,
+            "metz": false
+          }
+        },
+        {
+          "type": "opensiddur:variant",
+          "features": {
+            "urn:x-opensiddur:condition:prayer:heyeh_im_pifiyot/12/include_other_communities": true
+          }
+        }
+      ],
+      "condition_instruction": {
+        "he": "musaf_lo_yevoshu_custom"
+      }
+    },
+    {
+      "instruction": "musaf_open_ark_ochilah"
+    },
+    {
+      "unit": "musaf_ochilah"
+    },
+    {
+      "instruction": "musaf_close_ark_ochilah"
+    },
+    {
+      "unit": "musaf_repetition_al_ken"
+    },
+    {
+      "section": "musaf_weekday_malkhuyot_piyyut",
+      "heading": null,
+      "order": [
+        {
+          "unit": "musaf_ansikhah_malki"
+        },
+        {
+          "unit": "musaf_repetition_malkhuyot_verses"
+        }
+      ],
+      "conditions": [
+        {
+          "type": "opensiddur:holiday-aggregate",
+          "features": {
+            "shabbat": false
+          }
+        }
+      ],
+      "condition_instruction": {
+        "he": "musaf_piyyut_substitution_he",
+        "en": "musaf_piyyut_substitution_en"
+      }
+    },
+    {
+      "section": "musaf_shabbat_malkhuyot_piyyut",
+      "heading": null,
+      "order": [
+        {
+          "unit": "musaf_ahallelah_elohai"
+        }
+      ],
+      "conditions": [
+        {
+          "type": "opensiddur:holiday-aggregate",
+          "features": {
+            "shabbat": true
+          }
+        }
+      ],
+      "condition_instruction": {
+        "he": "musaf_shabbat_piyyut_he",
+        "en": "musaf_shabbat_piyyut_en"
+      }
+    },
+    {
+      "unit": "musaf_repetition_malkhuyot_close"
+    },
+    {
+      "instruction": "musaf_shofar_direction_he"
+    },
+    {
+      "instruction": "musaf_shofar_direction_en"
+    },
+    {
+      "section": "musaf_malkhuyot_shofar_calls",
+      "heading": null,
+      "order": [
+        {
+          "unit": "musaf_repetition_shofar_calls"
+        }
+      ],
+      "conditions": [
+        {
+          "type": "opensiddur:holiday-aggregate",
+          "features": {
+            "shabbat": false
+          }
+        }
+      ]
+    },
+    {
+      "instruction": "musaf_hayom_shabbat_custom"
+    },
+    {
+      "section": "musaf_hayom_inclusion",
+      "heading": null,
+      "order": [
+        {
+          "instruction": "musaf_hayom_role"
+        },
+        {
+          "unit": "musaf_hayom_harat_olam"
+        }
+      ],
+      "conditions": [
+        {
+          "operator": "any",
+          "conditions": [
+            {
+              "type": "opensiddur:holiday-aggregate",
+              "features": {
+                "shabbat": false
+              }
+            },
+            {
+              "type": "opensiddur:rite",
+              "features": {
+                "frankfurt_am_main": true
+              }
+            },
+            {
+              "type": "opensiddur:rite",
+              "features": {
+                "musaf_shabbat_responses": "hayom_only"
+              }
+            },
+            {
+              "type": "opensiddur:rite",
+              "features": {
+                "musaf_shabbat_responses": "both_no_cantor_repeat"
+              }
+            },
+            {
+              "type": "opensiddur:rite",
+              "features": {
+                "musaf_shabbat_responses": "both_cantor_hayom"
+              }
+            },
+            {
+              "type": "opensiddur:rite",
+              "features": {
+                "musaf_shabbat_responses": "both_cantor_repeat"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "instruction": "musaf_areshet_custom"
+    },
+    {
+      "section": "musaf_areshet_inclusion",
+      "heading": null,
+      "order": [
+        {
+          "instruction": "musaf_areshet_role"
+        },
+        {
+          "unit": "musaf_areshet_sefatenu"
+        }
+      ],
+      "conditions": [
+        {
+          "operator": "any",
+          "conditions": [
+            {
+              "type": "opensiddur:holiday-aggregate",
+              "features": {
+                "shabbat": false
+              }
+            },
+            {
+              "type": "opensiddur:rite",
+              "features": {
+                "frankfurt_am_main": true
+              }
+            },
+            {
+              "type": "opensiddur:rite",
+              "features": {
+                "musaf_shabbat_responses": "both_no_cantor_repeat"
+              }
+            },
+            {
+              "type": "opensiddur:rite",
+              "features": {
+                "musaf_shabbat_responses": "both_cantor_hayom"
+              }
+            },
+            {
+              "type": "opensiddur:rite",
+              "features": {
+                "musaf_shabbat_responses": "both_cantor_repeat"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "expanded_sequence": [
+    {
+      "section": "musaf_repetition_sabbath_offerings_canonical",
+      "heading": null,
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/sabbath_offerings"
+          }
+        }
+      ],
+      "declarations": [
+        {
+          "type": "opensiddur:variant",
+          "features": {
+            "urn:x-opensiddur:condition:bible:numbers/28/9/he/prior_printing": false,
+            "urn:x-opensiddur:condition:bible:numbers/28/9/he/repetition_printing": true,
+            "urn:x-opensiddur:condition:bible:numbers/28/10/he/prior_printing": false,
+            "urn:x-opensiddur:condition:bible:numbers/28/10/he/repetition_printing": true
+          }
+        }
+      ]
+    },
+    {
+      "section": "musaf_repetition_festival_offering_canonical",
+      "heading": null,
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/festival_offering"
+          }
+        }
+      ],
+      "declarations": [
+        {
+          "type": "opensiddur:variant",
+          "features": {
+            "urn:x-opensiddur:condition:bible:numbers/29/1/he/prior_printing": false,
+            "urn:x-opensiddur:condition:bible:numbers/29/1/he/repetition_printing": true,
+            "urn:x-opensiddur:condition:bible:numbers/29/2/he/prior_printing": false,
+            "urn:x-opensiddur:condition:bible:numbers/29/2/he/repetition_printing": true,
+            "urn:x-opensiddur:condition:bible:numbers/29/1/en/prior_printing": false,
+            "urn:x-opensiddur:condition:bible:numbers/29/1/en/repetition_printing": true
+          }
+        }
+      ]
+    },
+    {
+      "section": "musaf_repetition_offering_formula_canonical",
+      "heading": null,
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/offering_formula"
+          }
+        }
+      ],
+      "declarations": [
+        {
+          "type": "opensiddur:variant",
+          "features": {
+            "urn:x-opensiddur:condition:siddur:rosh_hashanah/musaf/offering_formula/text/he/quiet_printing": false,
+            "urn:x-opensiddur:condition:siddur:rosh_hashanah/musaf/offering_formula/text/he/repetition_printing": true
+          }
+        }
+      ]
+    },
+    {
+      "section": "musaf_repetition_useir_lekhapper_canonical",
+      "heading": null,
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/useir_lekhapper"
+          }
+        }
+      ],
+      "declarations": []
+    },
+    {
+      "section": "musaf_repetition_yismechu_canonical",
+      "heading": null,
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/yismechu"
+          }
+        }
+      ],
+      "declarations": []
+    },
+    {
+      "instruction": [
+        "musaf_aleinu_ark_he",
+        "musaf_aleinu_ark_en"
+      ]
+    },
+    {
+      "reference": {
+        "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/aleinu/text/opening"
+      }
+    },
+    {
+      "reference": {
+        "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/aleinu/text/hu_eloheinu"
+      }
+    },
+    {
+      "instruction": [
+        "musaf_attah_horeta_quiet_direction",
+        "expanded_musaf_attah_horeta_quiet_en"
+      ]
+    },
+    {
+      "section": "musaf_cantor_quiet_verses",
+      "heading": null,
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/musaf_attah_horeta_quiet"
+          }
+        }
+      ],
+      "role": "reader"
+    },
+    {
+      "reference": {
+        "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/aleinu/text/kakkatuv_betorato"
+      }
+    },
+    {
+      "reference": {
+        "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/aleinu/quotes/deuteronomy_4_39/deuteronomy_4/39"
+      }
+    },
+    {
+      "instruction": [
+        "musaf_close_ark_after_aleinu_he",
+        "musaf_close_ark_after_aleinu_en"
+      ]
+    },
+    {
+      "section": "musaf_cantor_hu_aloud",
+      "heading": null,
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/aleinu/text/hu_eloheinu"
+          }
+        },
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/aleinu/text/kakkatuv_betorato"
+          }
+        },
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/aleinu/quotes/deuteronomy_4_39/deuteronomy_4/39"
+          }
+        }
+      ],
+      "role": "reader",
+      "rubrics": {
+        "he": {
+          "text": "בקול רם.",
+          "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+        },
+        "en": {
+          "text": "Aloud.",
+          "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+        }
+      }
+    },
+    {
+      "instruction": "musaf_pifiyyot_tune"
+    },
+    {
+      "reference": {
+        "target": "urn:x-opensiddur:text:prayer:heyeh_im_pifiyot/1",
+        "targetEnd": "urn:x-opensiddur:text:prayer:heyeh_im_pifiyot/11"
+      }
+    },
+    {
+      "section": "musaf_lo_yevoshu_custom",
+      "heading": null,
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:prayer:heyeh_im_pifiyot/12"
+          }
+        }
+      ],
+      "conditions": [
+        {
+          "type": "opensiddur:rite",
+          "features": {
+            "frankfurt_am_main": false,
+            "metz": false
+          }
+        },
+        {
+          "type": "opensiddur:variant",
+          "features": {
+            "urn:x-opensiddur:condition:prayer:heyeh_im_pifiyot/12/include_other_communities": true
+          }
+        }
+      ],
+      "condition_rubrics": {
+        "he": {
+          "text": "בפפד״מ, מעץ ורוב קהלות אין אומרים."
+        },
+        "en": {
+          "text": "Omitted in Frankfurt, Metz and most communities; retained where this custom is followed.",
+          "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+        }
+      }
+    },
+    {
+      "instruction": [
+        "musaf_open_ark_ochilah",
+        "expanded_ochilah_open_en"
+      ]
+    },
+    {
+      "reference": {
+        "target": "urn:x-opensiddur:text:prayer:heyeh_im_pifiyot/13",
+        "targetEnd": "urn:x-opensiddur:text:prayer:heyeh_im_pifiyot/16"
+      }
+    },
+    {
+      "instruction": [
+        "musaf_close_ark_ochilah",
+        "expanded_ochilah_close_en"
+      ]
+    },
+    {
+      "section": "musaf_repetition_al_ken_canonical",
+      "heading": null,
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/al_ken"
+          }
+        }
+      ],
+      "declarations": [
+        {
+          "type": "opensiddur:variant",
+          "features": {
+            "urn:x-opensiddur:condition:siddur:rosh_hashanah/musaf/al_ken/text/he/quiet_printing": false,
+            "urn:x-opensiddur:condition:siddur:rosh_hashanah/musaf/al_ken/text/he/repetition_printing": true,
+            "urn:x-opensiddur:condition:siddur:rosh_hashanah/musaf/al_ken/text/en/quiet_printing": false,
+            "urn:x-opensiddur:condition:siddur:rosh_hashanah/musaf/al_ken/text/en/repetition_printing": true
+          }
+        }
+      ]
+    },
+    {
+      "section": "musaf_weekday_malkhuyot_piyyut",
+      "heading": null,
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:poem:ansikhah_malki"
+          }
+        },
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/malkhuyot_verses"
+          }
+        }
+      ],
+      "conditions": [
+        {
+          "type": "opensiddur:holiday-aggregate",
+          "features": {
+            "shabbat": false
+          }
+        }
+      ],
+      "condition_rubrics": {
+        "he": {
+          "text": "בחול.",
+          "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+        },
+        "en": {
+          "text": "On a weekday.",
+          "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+        }
+      }
+    },
+    {
+      "section": "musaf_shabbat_malkhuyot_piyyut",
+      "heading": null,
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:poem:ahallelah_elohai"
+          }
+        }
+      ],
+      "conditions": [
+        {
+          "type": "opensiddur:holiday-aggregate",
+          "features": {
+            "shabbat": true
+          }
+        }
+      ],
+      "condition_rubrics": {
+        "he": {
+          "text": "אַם שַׁבָּת."
+        },
+        "en": {
+          "text": "On the Sabbath."
+        }
+      }
+    },
+    {
+      "reference": {
+        "target": "urn:x-opensiddur:text:prayer:amidah/melokh_al_kol_haolam/opening"
+      }
+    },
+    {
+      "section": "musaf_melokh_retzeh",
+      "heading": null,
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:prayer:amidah/melokh_al_kol_haolam/retzeh_vimnuchatenu"
+          }
+        }
+      ],
+      "conditions": [
+        {
+          "type": "opensiddur:holiday-aggregate",
+          "features": {
+            "shabbat": true
+          }
+        }
+      ],
+      "condition_rubrics": {
+        "he": {
+          "text": "אַם שַׁבָּת."
+        },
+        "en": {
+          "text": "On the Sabbath.",
+          "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+        }
+      }
+    },
+    {
+      "reference": {
+        "target": "urn:x-opensiddur:text:prayer:amidah/melokh_al_kol_haolam/qaddeshenu"
+      }
+    },
+    {
+      "section": "musaf_melokh_vehanchilenu",
+      "heading": null,
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:prayer:amidah/melokh_al_kol_haolam/vehanchilenu"
+          }
+        }
+      ],
+      "conditions": [
+        {
+          "type": "opensiddur:holiday-aggregate",
+          "features": {
+            "shabbat": true
+          }
+        }
+      ],
+      "condition_rubrics": {
+        "he": {
+          "text": "אַם שַׁבָּת."
+        },
+        "en": {
+          "text": "On the Sabbath.",
+          "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+        }
+      }
+    },
+    {
+      "reference": {
+        "target": "urn:x-opensiddur:text:prayer:amidah/melokh_al_kol_haolam/conclusion"
+      }
+    },
+    {
+      "section": "musaf_malkhuyot_shofar_calls",
+      "heading": null,
+      "order": [
+        {
+          "reference": {
+            "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/shofar_calls"
+          }
+        }
+      ],
+      "conditions": [
+        {
+          "type": "opensiddur:holiday-aggregate",
+          "features": {
+            "shabbat": false
+          }
+        }
+      ],
+      "role": "blower",
+      "rubrics": {
+        "he": {
+          "text": "תקיעה, שברים, תרועה, תקיעה.",
+          "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+        },
+        "en": {
+          "text": "Tekiah, Shevarim, Teruah, Tekiah.",
+          "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+        }
+      }
+    },
+    {
+      "section": "musaf_hayom_inclusion",
+      "heading": null,
+      "order": [
+        {
+          "section": "musaf_hayom_first",
+          "heading": null,
+          "order": [
+            {
+              "reference": {
+                "target": "urn:x-opensiddur:text:prayer:hayom_harat_olam"
+              }
+            }
+          ],
+          "role": "reader_and_congregation"
+        },
+        {
+          "section": "musaf_hayom_cantor_repeat",
+          "heading": null,
+          "order": [
+            {
+              "reference": {
+                "target": "urn:x-opensiddur:text:prayer:hayom_harat_olam"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "operator": "any",
+              "conditions": [
+                {
+                  "type": "opensiddur:holiday-aggregate",
+                  "features": {
+                    "shabbat": false
+                  }
+                },
+                {
+                  "type": "opensiddur:rite",
+                  "features": {
+                    "frankfurt_am_main": true
+                  }
+                },
+                {
+                  "type": "opensiddur:rite",
+                  "features": {
+                    "musaf_shabbat_responses": "hayom_only"
+                  }
+                },
+                {
+                  "type": "opensiddur:rite",
+                  "features": {
+                    "musaf_shabbat_responses": "both_cantor_hayom"
+                  }
+                },
+                {
+                  "type": "opensiddur:rite",
+                  "features": {
+                    "musaf_shabbat_responses": "both_cantor_repeat"
+                  }
+                }
+              ]
+            }
+          ],
+          "role": "reader",
+          "condition_rubrics": {
+            "he": {
+              "text": "במנהג שהש״ץ חוזר.",
+              "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+            },
+            "en": {
+              "text": "Where the cantor repeats it.",
+              "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+            }
+          }
+        }
+      ],
+      "conditions": [
+        {
+          "operator": "any",
+          "conditions": [
+            {
+              "type": "opensiddur:holiday-aggregate",
+              "features": {
+                "shabbat": false
+              }
+            },
+            {
+              "type": "opensiddur:rite",
+              "features": {
+                "frankfurt_am_main": true
+              }
+            },
+            {
+              "type": "opensiddur:rite",
+              "features": {
+                "musaf_shabbat_responses": "hayom_only"
+              }
+            },
+            {
+              "type": "opensiddur:rite",
+              "features": {
+                "musaf_shabbat_responses": "both_no_cantor_repeat"
+              }
+            },
+            {
+              "type": "opensiddur:rite",
+              "features": {
+                "musaf_shabbat_responses": "both_cantor_hayom"
+              }
+            },
+            {
+              "type": "opensiddur:rite",
+              "features": {
+                "musaf_shabbat_responses": "both_cantor_repeat"
+              }
+            }
+          ]
+        }
+      ],
+      "condition_rubrics": {
+        "he": {
+          "text": "בשבת לפי מנהג הקהל.",
+          "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+        },
+        "en": {
+          "text": "On the Sabbath, according to the community’s custom.",
+          "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+        }
+      }
+    },
+    {
+      "section": "musaf_areshet_inclusion",
+      "heading": null,
+      "order": [
+        {
+          "section": "musaf_areshet_first",
+          "heading": null,
+          "order": [
+            {
+              "reference": {
+                "target": "urn:x-opensiddur:text:prayer:areshet_sefatenu"
+              }
+            }
+          ],
+          "role": "reader_and_congregation"
+        },
+        {
+          "section": "musaf_areshet_cantor_repeat",
+          "heading": null,
+          "order": [
+            {
+              "reference": {
+                "target": "urn:x-opensiddur:text:prayer:areshet_sefatenu"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "operator": "any",
+              "conditions": [
+                {
+                  "type": "opensiddur:holiday-aggregate",
+                  "features": {
+                    "shabbat": false
+                  }
+                },
+                {
+                  "type": "opensiddur:rite",
+                  "features": {
+                    "frankfurt_am_main": true
+                  }
+                },
+                {
+                  "type": "opensiddur:rite",
+                  "features": {
+                    "musaf_shabbat_responses": "both_cantor_repeat"
+                  }
+                }
+              ]
+            }
+          ],
+          "role": "reader",
+          "condition_rubrics": {
+            "he": {
+              "text": "במנהג שהש״ץ חוזר.",
+              "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+            },
+            "en": {
+              "text": "Where the cantor repeats it.",
+              "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+            }
+          }
+        }
+      ],
+      "conditions": [
+        {
+          "operator": "any",
+          "conditions": [
+            {
+              "type": "opensiddur:holiday-aggregate",
+              "features": {
+                "shabbat": false
+              }
+            },
+            {
+              "type": "opensiddur:rite",
+              "features": {
+                "frankfurt_am_main": true
+              }
+            },
+            {
+              "type": "opensiddur:rite",
+              "features": {
+                "musaf_shabbat_responses": "both_no_cantor_repeat"
+              }
+            },
+            {
+              "type": "opensiddur:rite",
+              "features": {
+                "musaf_shabbat_responses": "both_cantor_hayom"
+              }
+            },
+            {
+              "type": "opensiddur:rite",
+              "features": {
+                "musaf_shabbat_responses": "both_cantor_repeat"
+              }
+            }
+          ]
+        }
+      ],
+      "condition_rubrics": {
+        "he": {
+          "text": "בשבת לפי מנהג הקהל.",
+          "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+        },
+        "en": {
+          "text": "On the Sabbath, according to the community’s custom.",
+          "resp": "urn:x-opensiddur:contributor:opensiddur.org/codex"
+        }
+      }
+    }
+  ],
+  "running_source_labels": [
+    {
+      "scan": "s262",
+      "key": "ahallelah_rubric",
+      "language": "he",
+      "text": "אַם שַׁבָּת.",
+      "classification": "repeated printed continuation label; represented by the one occurrence-level Shabbat selection"
+    },
+    {
+      "scan": "s263",
+      "key": "ahallelah_rubric",
+      "language": "en",
+      "text": "On Sabbath.",
+      "classification": "repeated printed continuation label; represented by the one occurrence-level Shabbat selection"
+    },
+    {
+      "scan": "s264",
+      "key": "ahallelah_rubric",
+      "language": "he",
+      "text": "אַם שַׁבָּת.",
+      "classification": "repeated printed continuation label; represented by the one occurrence-level Shabbat selection"
+    },
+    {
+      "scan": "s265",
+      "key": "ahallelah_rubric",
+      "language": "en",
+      "text": "On Sabbath.",
+      "classification": "repeated printed continuation label; represented by the one occurrence-level Shabbat selection"
+    },
+    {
+      "scan": "s266",
+      "key": "ahallelah_rubric",
+      "language": "he",
+      "text": "אַם שַׁבָּת.",
+      "classification": "repeated printed continuation label; represented by the one occurrence-level Shabbat selection"
+    },
+    {
+      "scan": "s268",
+      "key": "ahallelah_rubric",
+      "language": "he",
+      "text": "אַם שַׁבָּת.",
+      "classification": "repeated printed continuation label; represented by the one occurrence-level Shabbat selection"
+    },
+    {
+      "scan": "s267",
+      "key": "ahallelah_rubric",
+      "language": "en",
+      "text": "On the Sabbath.",
+      "classification": "repeated printed continuation label; represented by the one occurrence-level Shabbat selection"
+    },
+    {
+      "scan": "s269",
+      "key": "ahallelah_rubric",
+      "language": "en",
+      "text": "On Sabbath.",
+      "classification": "repeated printed continuation label; represented by the one occurrence-level Shabbat selection"
+    },
+    {
+      "scan": "s270",
+      "key": "ahallelah_rubric_he",
+      "language": "he",
+      "text": "אַם שַׁבָּת.",
+      "classification": "repeated printed continuation label; represented by the one occurrence-level Shabbat selection"
+    },
+    {
+      "scan": "s271",
+      "key": "ahallelah_rubric",
+      "language": "en",
+      "text": "On Sabbath.",
+      "classification": "repeated printed continuation label; represented by the one occurrence-level Shabbat selection"
+    },
+    {
+      "scan": "s272",
+      "key": "ahallelah_rubric_he",
+      "language": "he",
+      "text": "אַם שַׁבָּת.",
+      "classification": "repeated printed continuation label; represented by the one occurrence-level Shabbat selection"
+    },
+    {
+      "scan": "s273",
+      "key": "ahallelah_rubric",
+      "language": "en",
+      "text": "On Sabbath.",
+      "classification": "repeated printed continuation label; represented by the one occurrence-level Shabbat selection"
+    }
+  ],
+  "human413": "Repeat through the printed paragraph end including Veyadata",
+  "shabbat_response_modes": [
+    "omit_both",
+    "hayom_only",
+    "both_no_cantor_repeat",
+    "both_cantor_hayom",
+    "both_cantor_repeat"
+  ],
+  "mode_interpretation": {
+    "omit_both": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "hayom_only": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "both_no_cantor_repeat": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "both_cantor_hayom": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "both_cantor_repeat": [
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "old720_literal_baseline_unchanged": true
+}

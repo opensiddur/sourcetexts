@@ -1,0 +1,97 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "low"
+  },
+  "scan": "s322",
+  "images_read": [
+    "/tmp/mahzor-s312/audit-s322-strip1.png",
+    "/tmp/mahzor-s312/audit-s322-strip2.png",
+    "/tmp/mahzor-s312/audit-s322-strip3.png",
+    "/tmp/mahzor-s312/audit-s322-strip4.png",
+    "/tmp/mahzor-s312/audit-s322-strip5.png",
+    "/tmp/mahzor-s312/audit-s322-strip6.png",
+    "/tmp/mahzor-s312/audit-s322-strip7.png",
+    "/tmp/mahzor-s312/audit-s322-strip8.png",
+    "/tmp/mahzor-s312/audit-s322-strip9.png",
+    "/tmp/mahzor-s312/audit-s322-strip10.png"
+  ],
+  "decisions": [
+    {
+      "id": 78,
+      "choice": "B",
+      "literal": "נְקַוֶּה לְּךָ",
+      "reason": "Strip1, line 1: the print has a plain space between נקוה and לך. No maqaf is printed there, even though maqafim do appear in the same line (עַל־כֵּן). A's maqaf is not in the source.",
+      "uncertainty": "low for the space vs. maqaf question. Medium for the dagesh in the lamed of לך: A and B both have it, and I can't clearly confirm or rule it out at this resolution."
+    },
+    {
+      "id": 79,
+      "choice": "B",
+      "literal": "וְיִפּוֹלוּ.",
+      "reason": "Strip2 line 4 and strip3 line 1: the word is printed with a full holam-vav (ויפולו), followed by a period. The source does not have A's defective holam with meteg (יִפֹּֽלוּ), and I see no meteg on the word.",
+      "uncertainty": "low for the vav and the period. Medium for the dagesh in the pe, which is faint."
+    },
+    {
+      "id": 80,
+      "choice": "B",
+      "literal": "בְּתוֹרָתֶךָ,",
+      "reason": "Strip3 last line and strip4 line 1: the print reads כַּכָּתוּב בְּתוֹרָתֶךָ, with a comma after the word, not a period. I can't see a meteg under the tav.",
+      "uncertainty": "low for the comma. Low to medium for the absent meteg."
+    },
+    {
+      "id": 81,
+      "choice": "B",
+      "literal": "לְעֹלָם",
+      "reason": "Strip3/strip4: in the verse יְהוָֹה יִמְלֹךְ לְעֹלָם וָעֶד, the word is clearly printed defectively, with no vav. Two lines above, in the prayer text, it is printed לְעוֹלָם with a vav. This repeated word really is spelled differently in the two places. The defective form is the printed Biblical spelling, not a typo.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 82,
+      "choice": "B",
+      "literal": "וְנֶאֱמַר,",
+      "reason": "Strip3 last line and strip4 line 1: a comma is printed right after וְנֶאֱמַר, before וְהָיָה.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 83,
+      "choice": "B",
+      "literal": "לאמר",
+      "reason": "Strips 4–5: the rubric is set in unpointed Rashi script and reads שיר היחוד, ואחר שיר של יום נוהגים לאמר מזמור פ״א והוא זה. The second letter of the word has the same Rashi alef shape as in ואחר. There is no vav, so the word is לאמר, not לומר. It is unpointed, so I added no vowels.",
+      "uncertainty": "medium-low. The Rashi glyphs are small, but the alef shape matches the other alefs in the same line."
+    },
+    {
+      "id": 84,
+      "choice": "B",
+      "literal": "ומיהו",
+      "reason": "Strips 8–9: the whole printed rubric reads ותוקעים שלשים קולות כדי לערבב את השטן ומיהו אין מעכבות שאם לא יעשו כן אין עכוב בדבר שהרי כבר יצאו ידי חובתם. ואח״כ נפטרים לבתיהם לשלום. A's wording (שלא יקטרג אחר התפלה ... לומר אכן) is not printed anywhere on this page. The rubric ends with a closing ornament (strip9) and nothing else follows, so this is not a structural split: A's text is wording that is not in the source.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 85,
+      "choice": "B",
+      "literal": "מעכבות שאם לא יעשו כן",
+      "reason": "Strip8, end of line 1 of the rubric: after ומיהו אין the print reads מעכבות שאם לא יעשו כן. A's wording (יראים מאימת הדין ... ליבלע. ואז) is not in the source. The shared word אין sits between the pieces of 84 and 85 and should be kept.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 86,
+      "choice": "B",
+      "literal": "עכוב בדבר שהרי כבר יצאו ידי חובתם. ואח״כ נפטרים לבתיהם לשלום.",
+      "reason": "Strips 8–9, line 2 of the rubric: כן אין עכוב בדבר שהרי כבר יצאו ידי חובתם. ואח״כ נפטרים לבתיהם לשלום. The page ends here with an ornament. A's wording (ממתינין עליו שיתפלל ... ילכו שמחים לאכול.) is not printed. The shared word אין before עכוב should be kept. This rubric is an instruction, not prayer text.",
+      "uncertainty": "low"
+    }
+  ],
+  "additional_source_errors": [
+    "Ids 84–86, primary A: the whole shofar_final_rubric text in A (the passage about the Satan who cannot accuse because it might be the great shofar, waiting for whoever has not finished praying, and going to eat joyfully) is not in source s322. The correct rubric text, assembled from the source, is: ותוקעים שלשים קולות כדי לערבב את השטן ומיהו אין מעכבות שאם לא יעשו כן אין עכוב בדבר שהרי כבר יצאו ידי חובתם. ואח״כ נפטרים לבתיהם לשלום. Please check whether the beginning of A's rubric, before id 84, also has wording that is not printed."
+  ],
+  "unresolved": [
+    "Id 78: whether the lamed of לְּךָ has a dagesh. A and B agree, but I couldn't confirm it at this resolution.",
+    "Id 79: whether the pe of וְיִפּוֹלוּ has a dagesh. It is faint."
+  ],
+  "scope": "Only these differences; not whole-page acceptance",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "81838b79-62d6-4660-94a1-b3e90571693f"
+  }
+}

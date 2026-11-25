@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-09",
+  "status": "human-corrected speaker readings and role semantics",
+  "human_correction": "the instruction transcriptions in the kedushah are wrong. the don’t just say ק׳, they say קו״ח or קו׳ which are short for קהל וחזן",
+  "source": {
+    "scan": "s9",
+    "archive_leaf": 8,
+    "printed_page": "3",
+    "facs": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n8.jpg",
+    "crop_boxes": [
+      [
+        130,
+        1150,
+        930,
+        1695
+      ],
+      [
+        130,
+        1260,
+        930,
+        1465
+      ]
+    ]
+  },
+  "accepted_responses": [
+    "urn:x-opensiddur:text:prayer:amidah/qedushah/qadosh",
+    "urn:x-opensiddur:text:prayer:amidah/qedushah/barukh_kevod",
+    "urn:x-opensiddur:text:prayer:amidah/qedushah/yimlokh"
+  ],
+  "abbr": "קו״ח",
+  "expansion": "קהל וחזן",
+  "instruction_identity": "urn:x-opensiddur:instruction:role/reader_and_congregation",
+  "independent_reading": "independent/qedushah_speaker_labels.json",
+  "adjudication": "The blind secondary rereading still misread the tiny labels and explicitly expressed letter/punctuation uncertainty. Preserve that report as a failed reading, not confirmation. Human correction supplies the combined role; primary inspection of enlarged crops selects קו״ח at each response. Four reader-only labels are retained.",
+  "review_guard": "Both speaker abbr and expansion are now included in the unit review hash, preventing either from changing without invalidating acceptance.",
+  "superseded": "primary/qedushah_speaker_superseded.json",
+  "markup_review": "independent/qedushah_speaker_markup.json",
+  "review_gap_resolutions": {
+    "unknown_expansion": "Explicit ValueError and a draft-mode regression test; no congregation fallback.",
+    "expanded_role": "Shared explicit role map also renders editorial reader_and_congregation sections as קהל וחזן; regression test covers it.",
+    "abbr_expansion_agreement": "Source-specific abbreviation meanings are adjudicated by the human/image review and protected together in the review hash, rather than inferred through a generic abbreviation table."
+  },
+  "validation": {
+    "schema": "49 generated files pass RelaxNG and Schematron",
+    "tests": "77 tests and 44 subtests pass",
+    "scope": "XML comparison confirms only the three role labels changed; all prayer words, correspondences and recitation conditions unchanged",
+    "exports": "Documentary and expanded PDF/HTML refreshed; corrected abbreviation and expansion visually inspected"
+  },
+  "source_error_apparatus": "This corrects transcription errors, not errors in the printed book; no sic/corr is introduced."
+}

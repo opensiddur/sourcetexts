@@ -1,0 +1,165 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "role": "independent follow-up reviewer (read-only; no code/settings access)"
+  },
+  "findings": [
+    {
+      "severity": "info",
+      "location": "evidence headers: german_weekday and german_shabbat both 035fe6e7…6de52d; other_ashkenaz, other_sepharad and other_shabbat all a1f5a8a0…387ddc",
+      "issue": "The full-source hashes are byte-identical within each group. Choosing Shabbat, or Sepharad over Ashkenaz, changes nothing in the compiled output. That is what the index predicts: no morning content is gated on Shabbat, every Shabbat-gated section sits behind a Maariv gate, and no condition uses a broad rite. So the identical hashes confirm that Sepharad/Ashkenaz is independent of the German choice. They also mean the two Shabbat cases add no evidence about Shabbat content in the morning, because there is none to test.",
+      "recommendation": "No change. Recorded so nobody reads the Shabbat cases as testing more than they do."
+    },
+    {
+      "severity": "info",
+      "location": "/tmp/german-order-evidence-minha.xml; index.xml:101-129",
+      "issue": "The Minchah compile contains only the entering-synagogue verses (shaharit=false gate) and the ungated Psalm 24 appendix. It has no Ashrei and no Amidah, because the weekday Minchah section is gated on 29 Elul, not Shabbat, not yom tov. This proves that no morning unit leaks into Minchah. It does not show the Minchah section itself compiling.",
+      "recommendation": "Outside this change. If wanted, add a Minchah case dated 29 Elul so the section is actually active."
+    },
+    {
+      "severity": "info",
+      "location": "/tmp/german-order-html-verification.json",
+      "issue": "The HTML proof is a summary of three rite cases (german, other, unknown), not eight. It has no separate field for CSS hiding of condition labels when the condition is true. I could check its stated results (copies per unit 1/1/2, Neshamah before or after the block, four bilingual labels) against the compiled XML, and they match. I could not inspect the DOM or CSS myself.",
+      "recommendation": "No change needed for approval. If the CSS-hiding claim should be on record, add an explicit field to the report."
+    },
+    {
+      "severity": "info",
+      "location": "index.xml:36",
+      "issue": "The coverage note is present on project_source_bibl, sits in metadata rather than as a prayer rubric, and says the intervening material is not yet fully transcribed. The prior finding is resolved. It is an untyped tei:note, and it says the incompleteness only implicitly rather than stating that whole-volume acceptance is not claimed.",
+      "recommendation": "Optional: add type=\"editorial\" or type=\"encoding\". Not required."
+    },
+    {
+      "severity": "info (outside this change)",
+      "location": "Barukh Sheamar English, every morning excerpt (e.g. german_weekday:354)",
+      "issue": "<tei:choice><tei:corr>paeans</tei:corr></tei:choice> is a choice holding only a corr, with no sic or orig. This was there before and is not part of the German-order change.",
+      "recommendation": "Check separately against the source-correction rules. It does not affect this verdict."
+    }
+  ],
+  "remaining_ambiguities": [
+    "No source or reading ambiguities remain. The human authority answers the order question (German: Asher Yatzar → Neshamah, with the whole block later; every other rite: the block between Asher Yatzar and Neshamah), and the encoding follows it exactly.",
+    "Reviewer limits only: I took the hashes as supplied and did not recompute them. I did not inspect the HTML DOM or CSS directly; I relied on the summary report. I read the eight supplied excerpts, not the whole /tmp/next-case-german_order_*.xml files. I did not reopen readings.json."
+  ],
+  "order_findings": [
+    "Source index.xml:1232-1234: one shared spine of Adon Olam → Al Netilat Yadayim → Asher Yatzar, with no condition.",
+    "index.xml:1235-1250: German=true Neshamah. 1251-1270: German=false five-unit block. 1271-1286: German=false Neshamah, all inside section_morning_opening_blessings. 1289-1308: German=true five-unit block as a later sibling, directly before Barukh Sheamar at 1309. Every gate tests only opensiddur:rite/german. None uses ashkenaz, frankfurt or variant.",
+    "german_weekday and german_shabbat excerpts: Adon Olam → Al Netilat → Asher Yatzar (ends רוֹפֵא כָל־בָּשָׂר וּמַפְלִיא לַעֲשׂוֹת) → Elohai Neshamah → Laasoq → Vehaarev → Asher Bachar → Numbers 6:24-26 → Ellu Devarim → Barukh Sheamar. Each unit once, no labels, no conditional markup.",
+    "other_ashkenaz, other_sepharad and other_shabbat excerpts: Asher Yatzar → Laasoq → Vehaarev → Asher Bachar → Numbers 6:24-26 → Ellu Devarim → Elohai Neshamah → Barukh Sheamar. Each unit once, no labels.",
+    "unknown excerpt, read in full (lines 1-593): Asher Yatzar → [conditional german=true + label] Neshamah [end] (193-229) → [conditional german=false + label] five units [end] (231-378) → [conditional german=false + label] Neshamah [end] (380-415) → [conditional german=true + label] five units (417-556) → endConditional (557) → Barukh Sheamar (558). All four conditional/endConditional pairs carry matching suffixed IDs (_1aad52e0). Each block is the complete five units in order. The block is never split.",
+    "Gates for the other services, from the source index: section_morning requires shaharit=true AND rosh-hashana=1 (1141-1154), and its declare sets minha/maariv/musaf/neila/slihot=false. Maariv requires rosh-hashana=1 AND maariv=true (723-736). The home appendix carries the same gate (1047-1060). Minchah requires minha=true plus the 29 Elul conditions (102-129). Entering-synagogue requires shaharit=false (66-74). Only section_supplementary_psalms (1319-1325) is ungated.",
+    "Maariv compile (75 transclusions) and Minchah compile (20) contain none of these morning-only targets: adon_olam, al_netilat_yadayim, asher_yatzar, elohai_neshamah, birkhot_hatorah/*, numbers/6/24, ellu_devarim, barukh_sheamar, tallith/*, shachar_avaqeshkha_gabirol, chronicles_1/16, romemu, vehu_rachum (pesuqei dezimrah), hoshiah, psalms/19. Yigdal appears once in Maariv, from the Maariv section, which is correct. The extra Maariv entries (hashkivenu/hapores_sukkat_shalom, Kaddish components) are nested inside units the index already names.",
+    "No page reference, navigation note or p8 navigation transclusion appears in the source morning section or in any excerpt."
+  ],
+  "alignment_findings": [
+    "Adon Olam has all 10 stanza milestones (adon_olam, leet_naasah, veacharei, vehu_hayah, vehu_echad, beli_reshit, vehu_eli, vehu_nissi, beyado, veim_ruchi) plus a closing terminator, in both Hebrew and English, in all six morning excerpts.",
+    "Numbers 6:24-26 has a chapter milestone and verse milestones 24, 25 and 26 with matching @corresp in both languages, in all six morning excerpts. In unknown it appears twice, once in each alternative, both complete.",
+    "Ellu Devarim is complete in both languages in every copy. Hebrew ends וְתַלְמוּד תּוֹרָה כְּנֶגֶד כֻּלָּם, English ends 'with the study of Torah outweighing all of them.' The human-confirmed וְהָרַאְיוֹן is kept exactly as written in every copy.",
+    "Every unit resolves to paired items, he = prayerbook_for_the_new_year-heidenheim-1965-he and en = prayerbook_for_the_new_year-marmorstein-1965-en. The facs and pb references are unchanged (n43/n44, n45/n46, pb n=5 in Vehaarev; Barukh Sheamar n59/n60).",
+    "All four labels are bilingual, with tei:foreign xml:lang='he' followed by xml:lang='en', in the same pattern as the minyan, Shabbat and festival labels (index.xml:1237, 1253, 1273, 1291; unknown:194, 232, 381, 418). They are the conditionals' own instructions, not tei:head, and none appears in any definite-rite output.",
+    "In definite rites each unit's @corresp appears once. In unknown the Neshamah and the five units each appear twice, which the alternatives require. Only the first copy of each can be reached by URN."
+  ],
+  "reviewed_files": [
+    "/tmp/german-order-audit.json (prior review)",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/machzor_expanded-opensiddur-he/index.xml (all 1330 lines)",
+    "/tmp/german-order-final-reviewed-xml-sha256.json (index 90b4c73a…88627d, taken as supplied)",
+    "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/human_blessings_s44_s47_confirmation.json",
+    "/tmp/german-order-evidence-german_weekday.xml (all 364 lines)",
+    "/tmp/german-order-evidence-other_ashkenaz.xml (all 364 lines)",
+    "/tmp/german-order-evidence-other_sepharad.xml (all 364 lines)",
+    "/tmp/german-order-evidence-german_shabbat.xml (all 364 lines)",
+    "/tmp/german-order-evidence-other_shabbat.xml (all 364 lines)",
+    "/tmp/german-order-evidence-unknown.xml (all 593 lines)",
+    "/tmp/german-order-evidence-maariv.xml (all 79 lines)",
+    "/tmp/german-order-evidence-minha.xml (all 24 lines)",
+    "/tmp/german-order-runtime-verification.json",
+    "/tmp/german-order-html-verification.json",
+    "JLPTEI-3.md not re-read this round. The prior review read it all, and its rule references (Kinds of rubric, variant divs) carry over unchanged."
+  ],
+  "verdict": "approve",
+  "checks": [
+    {
+      "check": "Prior minor finding 1: bilingual labels",
+      "result": "resolved",
+      "evidence": "index.xml:1237/1253/1273/1291; unknown:194/232/381/418"
+    },
+    {
+      "check": "Prior minor finding 2: coverage limit recorded in the edition",
+      "result": "resolved",
+      "evidence": "index.xml:36, metadata note on project_source_bibl, not a rubric"
+    },
+    {
+      "check": "Gate is opensiddur:rite/german only; broad rite independent",
+      "result": "pass",
+      "evidence": "index.xml:1238-1298; other_sepharad hash = other_ashkenaz hash"
+    },
+    {
+      "check": "German: Asher Yatzar → Neshamah → whole block → Barukh Sheamar",
+      "result": "pass",
+      "evidence": "german_weekday and german_shabbat excerpts 171-362"
+    },
+    {
+      "check": "Non-German: Asher Yatzar → whole block → Neshamah → Barukh Sheamar",
+      "result": "pass",
+      "evidence": "other_ashkenaz, other_sepharad, other_shabbat excerpts 171-362"
+    },
+    {
+      "check": "One Neshamah and one block per definite rite",
+      "result": "pass",
+      "evidence": "five definite excerpts read in full"
+    },
+    {
+      "check": "Undefined rite: all four labeled alternatives, in correct milestone scope",
+      "result": "pass",
+      "evidence": "unknown:193-557, read in full; previously partial-pass"
+    },
+    {
+      "check": "Conditional milestone boundaries enclose the right content",
+      "result": "pass",
+      "evidence": "matching start/end IDs; the final endConditional sits between Ellu Devarim and Barukh Sheamar (unknown:557)"
+    },
+    {
+      "check": "Renderer and DOM behaviour",
+      "result": "pass (report-based)",
+      "evidence": "the html-verification summary matches the compiled XML; DOM/CSS not inspected directly"
+    },
+    {
+      "check": "Adon Olam 10 stanzas, both languages, all morning cases",
+      "result": "pass",
+      "evidence": "all six morning excerpts, lines 3-154"
+    },
+    {
+      "check": "Numbers 6:24-26 three verses, both languages, all morning cases",
+      "result": "pass",
+      "evidence": "all six morning excerpts; unknown in both copies"
+    },
+    {
+      "check": "Ellu Devarim complete ending, both languages",
+      "result": "pass",
+      "evidence": "every copy in all six excerpts"
+    },
+    {
+      "check": "Shabbat cases",
+      "result": "pass",
+      "evidence": "compiled XML supplied; identical to the weekday cases, as the index predicts"
+    },
+    {
+      "check": "Maariv/Minchah: source gates and no morning leakage",
+      "result": "pass",
+      "evidence": "index.xml:102-129, 723-736, 1141-1184; maariv/minha transclusion lists"
+    },
+    {
+      "check": "No navigation, no new prayer identities, no source words changed",
+      "result": "pass",
+      "evidence": "index morning section; canonical URNs; texts match the prior review and the human confirmation"
+    },
+    {
+      "check": "Snapshot hashes",
+      "result": "not recomputed",
+      "evidence": "taken as supplied, per instruction"
+    }
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "4c170d23-7dee-4106-9492-53c97fb500b2"
+  }
+}

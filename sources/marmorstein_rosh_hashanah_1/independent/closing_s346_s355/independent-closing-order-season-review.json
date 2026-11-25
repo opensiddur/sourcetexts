@@ -1,0 +1,130 @@
+{
+  "approved": true,
+  "approval_layer": "RECITATION ORDER / SEASONAL SCOPE ONLY",
+  "reviewer": {
+    "identity": "Codex, based on GPT-6",
+    "setting": "Exact deployed model variant and reasoning setting are not exposed.",
+    "independence": "Read current assembly and inspected actual generated full integration spine; remedy summary was checked against both."
+  },
+  "assembled_file": "/tmp/mahzor-s346/assembled-complete-draft-readings.json",
+  "assembled_sha256": "b4fd4c4b8c2497675fdc268d5a411af516b06813d3b248d71b6c3575b8c63e3f",
+  "generated_spine": {
+    "path": "/tmp/mahzor-s346/integration/project/machzor_expanded-opensiddur-he/index.xml",
+    "sha256": "be1457cbfdd6b23427233e5936ee93016d6ed2252dc443829d533e5497d94bcc",
+    "build_evidence": "/tmp/mahzor-s346/latest-build.log",
+    "note": "Actual generated full index inspected after log reported complete isolated build, not the stale fast sequence-review spine."
+  },
+  "remedies_file": {
+    "path": "/tmp/mahzor-s346/kaddish-season-scope-remedies.json",
+    "sha256": "fa800911621e152781662f286f38901088f83f22f4131c0dbb151e66f0b65982"
+  },
+  "checks": [
+    {
+      "check": "Qabbalat common gate",
+      "result": "pass",
+      "evidence": "Both sibling forms remain inside common minyan=true and mourners-present=true gate; common declarations force neither seasonal value."
+    },
+    {
+      "check": "Complementary seasonal forms",
+      "result": "pass",
+      "evidence": "New source355 preface plus five Marmorstein parts require AYT=true. Original explicitly project-qualified Birnbaum whole form requires AYT=false and has no seasonal declaration. For a defined boolean AYT these conditions are disjoint and exhaustive."
+    },
+    {
+      "check": "Season declaration containment",
+      "result": "pass",
+      "evidence": "AYT=true declaration is inside the true branch, after its condition; matching endDeclare/endConditional close before the false branch. It does not force the ordinary-Shabbat branch into the Ten Days."
+    },
+    {
+      "check": "Visible branch labels",
+      "result": "pass",
+      "evidence": "Actual full spine includes separate editorial Hebrew/English descriptions for during and outside Ten Days."
+    },
+    {
+      "check": "After-study supplement scope",
+      "result": "pass",
+      "evidence": "Outer supplement requires AYT=true and its bilingual title names Ten Days. Inner complete form requires minyan=true and retains preface, three common parts, AlYisrael insertion, Yehe shelama and Oseh. Fixed printed seasonal form is not offered as an ordinary-date recitation."
+    },
+    {
+      "check": "Other RH Mourner occurrences",
+      "result": "pass",
+      "evidence": "Occurrences2–4 retain their six-item preface-plus-five-part sequence, minyan gate and local AYT=true declaration in RH contexts."
+    },
+    {
+      "check": "Prior order fixes retained",
+      "result": "pass",
+      "evidence": "No musaf_daily_psalm_kaddish node reintroduced; after-study preface remains; prior source and full order reports left unchanged."
+    }
+  ],
+  "logical_coverage": [
+    {
+      "minyan": false,
+      "mourners_present": false,
+      "AYT": false,
+      "qabbalat_selected": "none"
+    },
+    {
+      "minyan": false,
+      "mourners_present": false,
+      "AYT": true,
+      "qabbalat_selected": "none"
+    },
+    {
+      "minyan": false,
+      "mourners_present": true,
+      "AYT": false,
+      "qabbalat_selected": "none"
+    },
+    {
+      "minyan": false,
+      "mourners_present": true,
+      "AYT": true,
+      "qabbalat_selected": "none"
+    },
+    {
+      "minyan": true,
+      "mourners_present": false,
+      "AYT": false,
+      "qabbalat_selected": "none"
+    },
+    {
+      "minyan": true,
+      "mourners_present": false,
+      "AYT": true,
+      "qabbalat_selected": "none"
+    },
+    {
+      "minyan": true,
+      "mourners_present": true,
+      "AYT": false,
+      "qabbalat_selected": "original Birnbaum form"
+    },
+    {
+      "minyan": true,
+      "mourners_present": true,
+      "AYT": true,
+      "qabbalat_selected": "Marmorstein seasonal form"
+    }
+  ],
+  "scope_limit": "Logical review of explicit recitation conditions and order, not execution of the calendar or condition evaluator. AYT is assumed to be supplied as a defined boolean by runtime; runtime verification is separate.",
+  "blockers": [],
+  "remaining_order_questions": [],
+  "prior_approvals_preserved": [
+    {
+      "path": "/tmp/mahzor-s346/final-source-human-closure.json",
+      "sha256": "e6b7d44df08c3f5acc5bd55cd60de3cd080c7eba402df3e7c34f60a319dd540a"
+    },
+    {
+      "path": "/tmp/mahzor-s346/independent-closing-order-review.json",
+      "sha256": "b7d58854a0727454e9f60c5e1089849880b1c24b4b2241119b0402c5be655662"
+    }
+  ],
+  "explicit_exclusions": [
+    "Calendar-date computation or condition evaluator runtime",
+    "TEI/schema correctness",
+    "Canonical target resolution and transclusion execution",
+    "Text/source pointing re-review",
+    "Hebrew/English alignment",
+    "PDF/electronic exports or final output acceptance"
+  ],
+  "no_source_or_repository_changes": true
+}

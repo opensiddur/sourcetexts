@@ -1,0 +1,81 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "role": "independent follow-up review (round 2)",
+    "prior_review": "/tmp/blessings-audit1.json"
+  },
+  "scope": "DOCUMENTARY s44–s47 morning blessings, full 22-file snapshot identified by /tmp/blessings-audit2-hashes.json. Re-read fully: HE and EN ellu_devarim.xml (the only source XML files changed since round 1), compared with s46 band1, s47 band1 and band2, the micro-harayon crop, human_blessings_s44_s47_confirmation.json and readings.json unit ellu_devarim. Also checked the supplied paired-output verification. The custom-order clarification is out of scope and still pending with the user.",
+  "findings": [],
+  "remaining_source_ambiguities": [],
+  "alignment_findings": [
+    {
+      "unit": "prayer:ellu_devarim",
+      "status": "ok",
+      "detail": "Both sides use the same div corresp (urn:x-opensiddur:text:prayer:ellu_devarim), so alignment is whole-prayer. HE has 1 tei:p and EN has 2. The counts were not forced to match. No milestone or new correspondence was added. The verification JSON reports this 'whole' row with exact source words on both sides."
+    },
+    {
+      "unit": "all 17 paired rows",
+      "status": "ok (as reported)",
+      "detail": "/tmp/blessings-doc-alignment-verification.json lists 10 adon_olam stanza keys, numbers/6/24, 6/25 and 6/26, and 4 whole units (al_netilat_yadayim, asher_yatzar, ellu_devarim, elohai_neshamah). All are true. The service headings share one row, there are no duplicate-key warnings and no parallel compile failures. The keys match the milestone and corresp identities approved in round 1. I relied on this report and did not reopen the compiled XML."
+    }
+  ],
+  "reviewed_files": [
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/ellu_devarim.xml (full)",
+    "/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/ellu_devarim.xml (full)",
+    "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/human_blessings_s44_s47_confirmation.json",
+    "/home/efeins/.codex/worktrees/marmorstein-sources/master/sources/marmorstein_rosh_hashanah_1/readings.json:11338-11384 (ellu_devarim unit)",
+    "/tmp/blessings-audit1.json",
+    "/tmp/blessings-audit2-hashes.json",
+    "/tmp/blessings-doc-alignment-verification.json",
+    "Images: /tmp/blessings-s46-band1.png, /tmp/blessings-s47-band1.png, /tmp/blessings-s47-band2.png, /tmp/blessings-micro-harayon.png",
+    "The other 20 snapshot files were approved in round 1. They did not change and were not re-read."
+  ],
+  "verdict": "approved. F1 is resolved. The pointing of והראיון matches the human answer and keeps the source literally. F2 remains an optional metadata style item and does not block. No source reading dispute remains. The custom-order question stays pending with the user and is outside this review.",
+  "checks": [
+    {
+      "check": "HE והראיון pointing vs human answer",
+      "result": "pass",
+      "note": "HE ellu_devarim.xml:34 and readings.json:11353 both read וְהָרַאְיוֹן: patah under resh, sheva under alef, then yod and holam-vav. This matches the confirmed_reading. The tsere placeholder is gone. There is no sic/corr, choice or note, so it has not been corrected toward normal grammar. The micro crop agrees: a horizontal stroke under the resh, next to the heh's qamatz, and a vertical two-dot mark under the alef."
+    },
+    {
+      "check": "HE paragraphing and remaining text",
+      "result": "pass",
+      "note": "Still one tei:p, matching the single indented block on s46. Apart from the pointing fix, the text is the same as in round 1, including the source reading וְהַלְוָיַת. biblScope is p5–5 and facs is n45, both unchanged."
+    },
+    {
+      "check": "F1: EN paragraph split vs s47 indent",
+      "result": "pass",
+      "note": "On s47, 'אלו The following matters have no legal measure:' ends at about x=1435, well before the justified margin (about x=1665). 'The corner of the field' starts at about x=207. That is the same as the paragraph indents of 'יברכך' and 'אלהי' (about 200–210), and to the right of wrapped lines (about 155–165). EN ellu_devarim.xml:34-35 now has two tei:p elements, and readings.json en paragraphs 1 and 2 match. There is no literal newline inside a p any more."
+    },
+    {
+      "check": "F1: EN wording preserved",
+      "result": "pass",
+      "note": "Compared word for word with s47 band1 and band2. Kept as printed: 'study of the Torah' in the first sentence and 'study of Torah' in the last, no comma after 'mother', no comma after 'fellow man', and 'peace making' as two words. The line-end hyphens in hon-ouring, atten-dance and hospital-ity are joined correctly. The Hebrew catchword אלו is correctly left out of the English text. biblScope is p5–5 and facs is n46, both unchanged."
+    },
+    {
+      "check": "F2: service-level biblScope",
+      "result": "accepted, non-blocking",
+      "note": "This is still left out of the structural morning_blessings files. That is consistent with the other structural service files. Each reusable unit has its own exact page extent and its own facsimile, as checked in round 1. It is a metadata style choice, not missing source text."
+    },
+    {
+      "check": "Final-kaf in וִיחֻנֶּךָּ",
+      "result": "settled",
+      "note": "The tight crop separates the mid-height dagesh from the low qamatz, and the XML matches. Round 1 recorded it as the least certain of the settled marks. That was a note on confidence, not an open dispute, and I have removed it from remaining_source_ambiguities."
+    },
+    {
+      "check": "Other source disputes",
+      "result": "none",
+      "note": "With the human pointing decision applied, every open reading from round 1 is closed. The earlier primary and blind-reader differences, and the readings they superseded, remain in the raw evidence and do not need further action."
+    },
+    {
+      "check": "Snapshot identity",
+      "result": "noted",
+      "note": "The supplied hashes identify the 22 files. I did not recompute them, as agreed."
+    }
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "a0683668-7498-4ae7-bc58-58cb9d62d0d3"
+  }
+}

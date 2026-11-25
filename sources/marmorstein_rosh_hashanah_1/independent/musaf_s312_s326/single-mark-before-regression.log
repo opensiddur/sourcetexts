@@ -1,0 +1,16 @@
+test_chapter_marks_preserve_every_word_and_its_line_geometry (opensiddur.tests.exporter.test_single_stream_mark_geometry.TestSingleStreamMarkGeometry.test_chapter_marks_preserve_every_word_and_its_line_geometry) ... FAIL
+test_collected_marks_still_reach_the_running_head (opensiddur.tests.exporter.test_single_stream_mark_geometry.TestSingleStreamMarkGeometry.test_collected_marks_still_reach_the_running_head) ... ok
+
+======================================================================
+FAIL: test_chapter_marks_preserve_every_word_and_its_line_geometry (opensiddur.tests.exporter.test_single_stream_mark_geometry.TestSingleStreamMarkGeometry.test_chapter_marks_preserve_every_word_and_its_line_geometry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/efeins/.codex/worktrees/fix-chapter-mark-spacing/master/opensiddur/tests/exporter/test_single_stream_mark_geometry.py", line 73, in test_chapter_marks_preserve_every_word_and_its_line_geometry
+    self.assertAlmostEqual(expected, actual, delta=0.05,
+AssertionError: 126.334274 != 120.541274 within 0.05 delta (5.792999999999992 difference) : word25 moved after adding chapter marks
+
+----------------------------------------------------------------------
+Ran 2 tests in 14.151s
+
+FAILED (failures=1)
+Confirmed regression: old exporter fails vertical geometry; new exporter passes and retains running-head mark.

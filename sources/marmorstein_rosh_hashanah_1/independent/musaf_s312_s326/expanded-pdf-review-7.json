@@ -1,0 +1,25 @@
+{
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s312/v5-export-review/expanded-final-export-manifest.json",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-337.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "Page 337 is the final page (the manifest says pages: 337). It holds only two English bullet items about sacred-text printing and genizah disposal. Both sit in the lower part of the page with a large empty area above. This looks like a deliberate bottom-aligned (\\vfill) back-matter notice, not a layout fault.",
+    "There's no running header, footer or page number on this page. That's normal for a final back-matter or colophon page, but the PDF could not confirm it is deliberate.",
+    "The text is clean: no clipping or overlap, nothing past the margins, consistent bullet indentation and hanging indent, the italic 'genizah' renders correctly, and line spacing is even.",
+    "There's no Hebrew, footnote, column or interlinear content on this page, so those checks don't apply here. None of the removed 'coverage stops at 311' editorial notes appear on this page."
+  ],
+  "limitations": [
+    "I reviewed only one page image (337). I could not check the transition from page 336, including whether these bullets continue a list or heading that starts on the previous page.",
+    "The bottom alignment and missing page number look intentional, but I could not confirm that against the template, because I was asked not to read the source.",
+    "The manifest values (hashes, link counts, HTML checks) were read as reported and were not checked independently against the PDF."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "cc3d1fd1-c1c3-4785-9955-9e4513ccfb76"
+  }
+}

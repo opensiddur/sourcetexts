@@ -1,0 +1,213 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "source_approved": false,
+  "pages_read": [
+    "s238",
+    "s239",
+    "s240",
+    "s241"
+  ],
+  "findings": [
+    {
+      "scan": "s238",
+      "key": "vechayot_asher",
+      "old": "פָּנִים כְּפָנִים לַכִּסֵּא",
+      "new": "פָּנִים בְּפָנִים לַכִּסֵּא",
+      "reason": "This fix from an earlier round still isn't applied. The second word begins with a bet that has a dagesh and a sheva. Its base stroke runs out to the right, the same as בְּסוֹכְכָם earlier on the line, so it is not a rounded kaf.",
+      "evidence_image": "/tmp/mahzor-s238/s238-band3.png"
+    },
+    {
+      "scan": "s240",
+      "key": "veamkha_teluim",
+      "old": "לְךָ כְּאֶחָד לְאֶחָד",
+      "new": "לְךָ כְּאַחַד לְאֶחָד",
+      "reason": "This fix from an earlier round still isn't applied. The first word has a patach under the aleph and a patach under the chet (כְּאַחַד). Only the second word has segol and qamats (לְאֶחָד).",
+      "evidence_image": "/tmp/mahzor-s238/s240-band4.png"
+    },
+    {
+      "scan": "s240",
+      "key": "variant_ka",
+      "old": "This is a source variant (כ״א = כתב אחר/כתבי יד אחרים).",
+      "new": "This is a source variant (נ״א = נוסח אחר).",
+      "reason": "The candidate's text says נ״א, but its own note says כ״א, so the note is out of date. Earlier readings of this siglum as כ״א came from the shape of the small typeface letter. The same siglum is printed on s238 (נ״א מַרְעִישׁוֹת) and in the earlier אין stanza (נ״א קֵץ). See the uncertainty entry for a correct crop.",
+      "evidence_image": "/tmp/mahzor-s238/s240-band3.png"
+    },
+    {
+      "scan": "s240",
+      "key": "rubric_tashraq",
+      "old": "The rubric font is small and unpointed. The print reads ונסוף and סס, probably meaning ובסוף and שם. I transcribed what is printed.",
+      "new": "The rubric is printed in small unpointed Rashi type. In Rashi script ב looks like כ/נ, ש and final ם look like ס, and final ם in חתום looks like ס. The text ובסוף … שם is what the glyphs actually read.",
+      "reason": "The note is out of date and contradicts the candidate text. That text (ובסוף, חתום, שם) is right, and so is the parallel s238 rubric. The earlier finding to print וכסוף/ונסוף and סס is rejected: it read Rashi letter shapes as source typos.",
+      "evidence_image": "/tmp/mahzor-s238/s240-band3.png"
+    },
+    {
+      "scan": "s238",
+      "key": "rubric_alef_bet_elazar",
+      "old": "ובסוף could also be read וכסוף, since ב and כ are hard to tell apart at this size; ובסוף is the more likely reading.",
+      "new": "The rubric is in Rashi type. ובסוף, חתום and שם are the correct readings of the Rashi glyphs. Only the first token (ע״ס or ע״פ) is still open.",
+      "reason": "This keeps the candidate text and removes the false וכסוף option. The earlier finding that asked for וכסוף/סס is withdrawn.",
+      "evidence_image": "/tmp/mahzor-s238/s238-band3.png"
+    },
+    {
+      "scan": "s238",
+      "key": "vechayot_asher",
+      "old": "The vowel under the mem of מֵהִיל looks like tsere.",
+      "new": "Human 327: the print reads מֵחִיל (ח, not ה). The hiriq under the chet is visible on the scan.",
+      "reason": "The note is out of date. The text already has מֵחִיל and לֵאוֹת as the human answer requires. I can see the hiriq dot under the ח in the band image, so the candidate's pointing is accepted.",
+      "evidence_image": "/tmp/mahzor-s238/s238-band3.png"
+    },
+    {
+      "scan": "s240",
+      "key": "kaf_regel",
+      "old": "תֵּרָשֶׁינָה: the vowel under the first tav is unclear (tsere or segol), and the dagesh is uncertain.",
+      "new": "תֵרָשֶׁינה is printed as the human settled it (answer 328).",
+      "reason": "The note is out of date. The text already has the human-settled תֵרָשֶׁינה, which must not be re-pointed. The note about יָפֵן is also out of date; see the uncertainty entry.",
+      "evidence_image": "/tmp/mahzor-s238/s240-band1.png"
+    }
+  ],
+  "uncertainties": [
+    {
+      "scan": "s238",
+      "key": "rubric_alef_bet_elazar",
+      "word": "ע״ס",
+      "question": "Is the first Rashi token ע״ס (על סדר) or ע״פ (על פי)? At this size the Rashi ס and פ glyphs can't be told apart. The rest of the rubric is settled. The same question applies to ע״ס תשר״ק on s240, at about [470,1650,920,1690].",
+      "crop_box": [
+        470,
+        1385,
+        905,
+        1420
+      ]
+    },
+    {
+      "scan": "s238",
+      "key": "chashot_beratzo",
+      "word": "(נ״א",
+      "question": "Confirm that the small siglum before מַרְעִישׁוֹת is נ״א and not כ״א. The candidate's נ״א is kept. The previous crop box was wrong: it pointed near the foot of the page.",
+      "crop_box": [
+        945,
+        1675,
+        1015,
+        1725
+      ]
+    },
+    {
+      "scan": "s240",
+      "key": "variant_ka",
+      "word": "(נ״א",
+      "question": "Confirm that the siglum at the start of the parenthesis before לְעֻמַּת כִּסֵּא is נ״א.",
+      "crop_box": [
+        1135,
+        1245,
+        1200,
+        1295
+      ]
+    },
+    {
+      "scan": "s240",
+      "key": "kaf_regel",
+      "word": "יֶפֶן",
+      "question": "In תַּבְנִית תָּם יֶפֶן, the mark under the yod looks like a qamats (T-shaped) rather than a segol, and the pe may have a dagesh. What exactly is printed? The previous crop box pointed at the חֲקוּקָה line; this one is corrected.",
+      "crop_box": [
+        1120,
+        700,
+        1195,
+        760
+      ]
+    },
+    {
+      "scan": "s240",
+      "key": "mimekomo",
+      "word": "יִפֶן",
+      "question": "In מִמְּקוֹמוֹ הוּא יִפֶן, is the vowel under the yod a hiriq or a qamats? Compare it with the יפן in kaf_regel. The previous crop box mostly covered הוּא.",
+      "crop_box": [
+        850,
+        1490,
+        935,
+        1545
+      ]
+    },
+    {
+      "scan": "s240",
+      "key": "rahem_metsukim",
+      "word": "וְיִתְרַעֵשׁ",
+      "question": "The candidate prints a tsere under the ayin. The scan shows a horizontal bar, which looks like a patach (וְיִתְרַעַשׁ). Confirm.",
+      "crop_box": [
+        1060,
+        1060,
+        1190,
+        1130
+      ]
+    },
+    {
+      "scan": "s240",
+      "key": "rahem_metsukim",
+      "word": "יִתְרַעַם",
+      "question": "At this resolution I can see only one patach-like bar under the resh and ayin. Confirm that both letters carry a patach.",
+      "crop_box": [
+        700,
+        1060,
+        820,
+        1130
+      ]
+    },
+    {
+      "scan": "s240",
+      "key": "kaf_regel",
+      "word": "כִסֵּא (מְאַחֵז פְּנֵי כִסֵּא)",
+      "question": "Does this kaf have a dagesh? The candidate omits it.",
+      "crop_box": [
+        900,
+        625,
+        990,
+        680
+      ]
+    },
+    {
+      "scan": "s238",
+      "key": "kesod_siach",
+      "word": "דָּרֵי (×2)",
+      "question": "Is there a meteg under either דָּרֵי? The candidate's own note leaves this open.",
+      "crop_box": [
+        630,
+        955,
+        1060,
+        1020
+      ]
+    },
+    {
+      "scan": "s238",
+      "key": "kadosh_kadosh",
+      "word": "הָאָרֶץ",
+      "question": "Is there a meteg or accent under the aleph or resh? The candidate's own note leaves this open.",
+      "crop_box": [
+        320,
+        1160,
+        400,
+        1215
+      ]
+    }
+  ],
+  "untranslated_extent_notes": [
+    "s238: the rubric ע״ס א״ב … and the alphabetic piyyut from ק׳ וְחַיּוֹת אֲשֶׁר הֵנָּה through יוֹדְעוֹת כִּי כָל מָקוֹם לֹא יָכִיל מְקוֹם כִּסֵּא: have no English on s239.",
+    "s240: the piyyut continuation from כַּף רֶגֶל through אַרְבַּע חַיּוֹת … עִם כִּסֵּא:, the ח׳ stanza לְבִלְתִּי … בַּכִּסֵּא:, and the rubric ע״ס תשר״ק … have no English on s241.",
+    "s241: the English for רחם does not translate the variant (נ״א וּכְרוּב לִכְרוּב וְחַיָּה לְחַיָּה).",
+    "s241: the English for ועמך runs past the Hebrew printed on s240, from 'let the voice of the bent Shofar…' to 'From the destiny of days that were created,'. That part belongs to the next spread."
+  ],
+  "notes": [
+    "Already applied and checked against the scan: וְחַיּוֹת, מָקוֹם, שַׂמְתָּ, the consonants of יִתְרַעַם, לְאוֹפַן, רַחֵץ, 'once' (a source typo kept as printed), and 'proclaim'. The human answers 327 (מֵחִיל, לֵאוֹת) and 328 (תֵרָשֶׁינה) are also already in the candidate.",
+    "Withdrawn from earlier rounds: (a) the s238 and s240 rubric readings וכסוף/ונסוף/סס. These were Rashi glyphs misread as typos, and the candidate's ובסוף … שם is right. (b) כ״א for the variant sigla. The candidate's נ״א is kept, pending confirmation in the uncertainties above.",
+    "The speaker cues קו״ח (קהל וחזן), ח׳, ק׳ and חזן match the print. The קו״ח/קר״ח uncertainty note on spk_kadosh can be dropped.",
+    "Checked word by word with no other differences: kesod_siach, kakatuv, kadosh_kadosh (maqaf present in כָל־הָאָרֶץ), kevodo_male on s238 and s240, barukh_kevod, levilti_lenabel (including לְמַעֲנוֹ as printed and זְכוֹר), and the rest of kaf_regel and mimekomo (וְיָחֹן is printed defective, without a vav). The English text on s239 and s241 matches the print exactly.",
+    "Structure: in the print, the נ״א parenthesis sits inline between לִכְרוּב and לְעֻמַּת כִּסֵּא:, but the candidate gives it a separate block. Its position needs to be kept. The key kevodo_male is used on both s238 and s240.",
+    "Human items 324, 325 and 326 are on pages not assigned to me (s244–s252). I did not read those images, so I could not check the 325 consonants (including סאַלטעט) or the open 324 and 326 readings. Both 324 and 326 are still unresolved and material, so approval is withheld on that ground as well as for the findings and uncertainties above.",
+    "Some crop boxes from the previous audit pointed at the wrong word: the s238 נ״א box, the box for יפן on line 9 of s240, and the box for mimekomo יפן. All crop boxes above were recomputed against the full-page original pixel coordinates (1368×2264)."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "bd3cc0b0-480f-4850-bb60-13fd7f09cbfc"
+  }
+}

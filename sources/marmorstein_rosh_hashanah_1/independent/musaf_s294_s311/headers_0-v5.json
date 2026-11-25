@@ -1,0 +1,91 @@
+{
+  "scope": "headers_0",
+  "approved": false,
+  "all_assigned_files_read": true,
+  "all_assigned_checks_completed": true,
+  "files_read": [
+    "/tmp/mahzor-s294/bounded-review-v5/header-proof-group0.json",
+    "/tmp/mahzor-s294/bounded-review-v5/header-variables-group0.json",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-0.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-4.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-8.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-12.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-16.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-20.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-24.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-28.xml",
+    "/tmp/mahzor-s294/bounded-review-v5/header-template-32.xml"
+  ],
+  "blocking_findings": [
+    {
+      "id": "B1",
+      "templates": [
+        "header-template-4.xml",
+        "header-template-8.xml"
+      ],
+      "files": [
+        "prayerbook_for_the_new_year-heidenheim-1965-he/amidah_avodah_parts.xml",
+        "prayerbook_for_the_new_year-heidenheim-1965-he/amidah_hodaah_parts.xml",
+        "prayerbook_for_the_new_year-heidenheim-1965-he/hayom_harat_olam_words.xml",
+        "prayerbook_for_the_new_year-heidenheim-1965-he/musaf_offering_formula_word_parts.xml",
+        "prayerbook_for_the_new_year-heidenheim-1965-he/musaf_repetition_areshet_zikhron_words.xml",
+        "prayerbook_for_the_new_year-heidenheim-1965-he/musaf_repetition_ken_tagen_words.xml",
+        "prayerbook_for_the_new_year-heidenheim-1965-he/musaf_useir_lekhapper_word_parts.xml",
+        "prayerbook_for_the_new_year-heidenheim-1965-he/musaf_yismechu_word_parts.xml",
+        "prayerbook_for_the_new_year-heidenheim-1965-he/gevurot_parts.xml",
+        "prayerbook_for_the_new_year-heidenheim-1965-he/musaf_areshet_word_parts.xml"
+      ],
+      "finding": "These 10 Heidenheim Hebrew headers have no publicationStmt/idno[@type='urn'], so the edition-qualified publication URN check cannot pass for them. It is also inconsistent: the matching English _parts/_words files (e.g. addir_adiraynu_parts, musaf_numbers_28_words, qedushah_ani_words) and the Heidenheim musaf_repetition_circumcision.xml (template 12) all carry @prayerbook_for_the_new_year-...-edition URNs. Fix: add an edition-qualified URN (…@prayerbook_for_the_new_year-heidenheim-1965-he) to each. If project policy really does exempt Hebrew word-source fragments from URNs, cite that policy and this can be downgraded."
+    }
+  ],
+  "nonblocking_findings": [
+    {
+      "id": "N1",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/musaf_useir_lekhapper_word_parts.xml",
+      "finding": "The title 'נוסח פרנקפורט' ('Frankfurt rite') names a rite or variant label, not the passage (ושעיר לכפר / useir lekhapper, p.93). Every other title in this group is the passage's actual name or opening words. Confirm this is the printed heading for the file's content; otherwise retitle it with the passage name."
+    },
+    {
+      "id": "N2",
+      "file": "prayerbook_for_the_new_year-marmorstein-1965-en/repetition_veattah_qadosh.xml",
+      "template": "header-template-32.xml",
+      "finding": "This is the only English-edition header with a Hebrew main title ('ואתה קדוש', xml:lang='he'). Every other -en title is English (compare musaf_repetition_veattah_qadosh: 'Thou art holy'). Consider using the edition's English title."
+    },
+    {
+      "id": "N3",
+      "template": "header-template-0.xml",
+      "finding": "Besides the expected DRAFT/unaccepted-candidate wording, the index source notes have more batch-progress wording that should also go before final export: 'This installment additionally prints a direction for Hamotzi…', 'The newly printed maḥzor Half Kaddish…', 'The newly transcribed maḥzor Yigdal now supplies…', and the encoding note 'reaches the priestly-blessing introduction … PDF311 … remain outside this batch'. No title uses pilot or installment wording."
+    },
+    {
+      "id": "N4",
+      "template": "header-template-0.xml",
+      "finding": "Credits: the source arranger (Wolf Heidenheim, editor@role='arranger') and translator (Jenny Marmorstein, editor@role='translator') are correctly kept apart from the digitization credits (Codex respStmts trc/mrk in titleStmt; Aharon N. Varady imaging/preparation and the Claude Opus 5.5 independent reader in a bibl note). Optional: put Varady and the independent reader in respStmt as well, so the credits are machine-readable."
+    },
+    {
+      "id": "N5",
+      "template": "header-template-20.xml",
+      "file": "prayerbook_for_the_new_year-marmorstein-1965-en/amidah_vetimlokh_attah_hashem_parts.xml",
+      "finding": "The biblScope entries are not in page order (17, 103, 116, 113). Each from/to pair is valid. Consider sorting them."
+    },
+    {
+      "id": "N6",
+      "finding": "The URN path style is mixed: 'rosh_hashanah/musaf/repetition_X' (repetition_gevurot_close, repetition_gevurot_open, repetition_veattah_qadosh, repetition_yimlokh, repetition_uvekhen_lekha_taaleh_qedushah) versus 'rosh_hashanah/musaf/repetition/X' everywhere else. All are edition-qualified and none are duplicated. Harmonize them only if these are not already established canonical URNs."
+    },
+    {
+      "id": "N7",
+      "finding": "Title prefixes are inconsistent among the evening-Amidah files: rh_vetimlokh is 'Thou shalt reign', while its siblings use 'Evening Prayer for the New Year — …'. rh_avodah's '… — Service' is a valid rendering of Avodah but vague. Cosmetic only."
+    }
+  ],
+  "scope_limitations": [
+    "Page ranges were checked for internal validity (from ≤ to) and for agreement between each Hebrew file and its English counterpart (18; 18–19; 16/102/103; 127; 127/136/144; 93; 136; 143). Every pair agrees. I did not check pages against the scan images. musaf_repetition_areshet_zikhron_words (p.144) could not be confirmed from headers alone.",
+    "Licensing: CC0 appears consistently in every template. The header gives no rights basis for the 1965 Basle Marmorstein translation. I relied on the cited Open Siddur source record (?p=69112) and did not verify it.",
+    "The project_source_bibl targets referenced by ptr (/prayerbook_for_the_new_year-heidenheim-1965-he/index and /prayerbook_for_the_new_year-marmorstein-1965-en/index) are not in this group, so their credits and bibliography were not reviewed here. Only the machzor_expanded index's project_source_bibl was reviewed.",
+    "Titles were judged as plausible actual passage names from header content only. I did not compare them with body text or the printed headings.",
+    "I relied on the proof file's grouping and masking claim (only title, publication URN and biblScope from/to masked) and did not independently re-derive the C14N hashes."
+  ],
+  "verdict": "NOT APPROVED. One blocking finding: 10 Heidenheim Hebrew _parts/_words headers (templates 4 and 8) have no edition-qualified publication URN. Their English counterparts and the other Heidenheim file all have one. Everything else checks out: credits keep the source arranger/translator separate from digitization, CC0 and bibliography are consistent, all page ranges are valid and the Hebrew/English pairs agree, every URN present is edition-qualified (@…-he / @…-en), and no title uses pilot or installment wording. The DRAFT status is accepted as expected. Before final export, check one questionable Hebrew title (N1), clean up the leftover batch-progress wording in the index notes (N3), and consider the cosmetic items.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "156bb06e-b096-4a67-af01-e3dc00a63618"
+  }
+}

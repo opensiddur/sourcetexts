@@ -1,0 +1,146 @@
+{
+  "status": "pass",
+  "scope": "All currently encoded material; full volume remains incomplete.",
+  "renderer_commit": "ebaf6c5",
+  "renderer_pr": "https://github.com/opensiddur/opensiddur-processor/pull/310",
+  "renderer_dependency_unmerged": true,
+  "temporary_preview_patches": false,
+  "tests": "453 exporter tests and 163 subtests passed",
+  "checks": {
+    "pdf-link-verification.json": [
+      {
+        "mode": "documentary-hebrew",
+        "pages": 72,
+        "internal_links_checked": 21,
+        "named_destinations": 245,
+        "latex_passes": 2,
+        "all_destinations_resolve": true,
+        "no_missing_glyphs": true,
+        "no_unresolved_printed_references": true,
+        "pdf_sha256": "31cff2c9da4c934825fff4e102a19e77c71aae08de8bcebf93a5fed60b7271b4"
+      },
+      {
+        "mode": "documentary",
+        "pages": 175,
+        "internal_links_checked": 30,
+        "named_destinations": 418,
+        "latex_passes": 2,
+        "all_destinations_resolve": true,
+        "no_missing_glyphs": true,
+        "no_unresolved_printed_references": true,
+        "pdf_sha256": "cbbf319c39261be41562e6cb44c77d5e03d24968f95738b81a70f8c83d2a87e8"
+      },
+      {
+        "mode": "expanded",
+        "pages": 194,
+        "internal_links_checked": 0,
+        "named_destinations": 486,
+        "latex_passes": 2,
+        "all_destinations_resolve": true,
+        "no_missing_glyphs": true,
+        "no_unresolved_printed_references": true,
+        "pdf_sha256": "130e8e8e53bd8bbd46b9faca1e2d82ff664a6b0d9238562af4327fdc4b96784c"
+      }
+    ],
+    "html-browser-verification.json": {
+      "status": "pass",
+      "checks": [
+        {
+          "mode": "documentary-hebrew",
+          "ids": 2148,
+          "uniqueIds": 2148,
+          "broken": [],
+          "missingPop": [],
+          "overflow": false,
+          "javascriptErrors": []
+        },
+        {
+          "mode": "documentary",
+          "ids": 2190,
+          "uniqueIds": 2190,
+          "broken": [],
+          "missingPop": [],
+          "overflow": false,
+          "javascriptErrors": []
+        },
+        {
+          "mode": "expanded",
+          "ids": 2130,
+          "uniqueIds": 2130,
+          "broken": [],
+          "missingPop": [],
+          "overflow": false,
+          "javascriptErrors": []
+        }
+      ],
+      "limits": "Actual headless Chrome loading, internal targets and screenshots; visual judgments recorded separately."
+    },
+    "page-marker-verification.json": {
+      "status": "pass",
+      "checks": [
+        {
+          "mode": "documentary-hebrew",
+          "page_markers": 187,
+          "unique_edition_leaves": 129,
+          "formerly_omitted_204HE": true,
+          "formerly_omitted_205EN": false,
+          "formerly_omitted_223EN": false
+        },
+        {
+          "mode": "documentary",
+          "page_markers": 336,
+          "unique_edition_leaves": 222,
+          "formerly_omitted_204HE": true,
+          "formerly_omitted_205EN": true,
+          "formerly_omitted_223EN": true
+        },
+        {
+          "mode": "expanded",
+          "page_markers": 356,
+          "unique_edition_leaves": 192,
+          "formerly_omitted_204HE": true,
+          "formerly_omitted_205EN": true,
+          "formerly_omitted_223EN": true
+        }
+      ],
+      "limits": "Formerly omitted leading facsimiles verified in actual compiled books; blank/front-matter accounting is maintained separately."
+    },
+    "final-coverage.json": {
+      "scan_leaves": 355,
+      "verified_page_labels": 224,
+      "leaves_with_transcribed_excerpts": 224,
+      "leaves_independently_read": 224,
+      "leaves_fully_transcribed_and_reviewed": 224,
+      "pending_unit_reviews": [],
+      "complete": false,
+      "note": "OCR availability and excerpt coverage never imply complete page transcription."
+    }
+  },
+  "visual_inspection": {
+    "documentary_pdf_pages": [
+      122,
+      125
+    ],
+    "expanded_pdf_pages": [
+      122,
+      123,
+      125,
+      126
+    ],
+    "hebrew_pdf_pages": [
+      3
+    ],
+    "result": "Inspected rendered pages: bilingual columns and source headings remain legible; the Ark-closing rubric fits within the page; adjacent apparatus marks are readable as a combined list with separate apparatus entries. This is representative layout QA, not a visual inspection of every exported page."
+  },
+  "source_reading_acceptance": {
+    "accepted_encoded_leaves": 224,
+    "accepted_unit_witnesses": 634,
+    "unencoded_leaves": 131,
+    "pending_unit_reviews": []
+  },
+  "pdf_sha256": {
+    "documentary-hebrew": "31cff2c9da4c934825fff4e102a19e77c71aae08de8bcebf93a5fed60b7271b4",
+    "documentary": "cbbf319c39261be41562e6cb44c77d5e03d24968f95738b81a70f8c83d2a87e8",
+    "expanded": "130e8e8e53bd8bbd46b9faca1e2d82ff664a6b0d9238562af4327fdc4b96784c"
+  }
+}

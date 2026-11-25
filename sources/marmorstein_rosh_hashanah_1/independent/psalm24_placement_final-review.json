@@ -1,0 +1,54 @@
+{
+  "reviewer": "Claude (independent JLPTEI follow-up review, Psalm24 placement)",
+  "model": "claude-opus-5-5",
+  "effort": "low",
+  "approved": true,
+  "checks": [
+    {
+      "check": "Prior finding 1: expanded coverage note is typed as encoding",
+      "result": "pass",
+      "evidence": "final-review-excerpts.txt line 2 is <tei:note ... type=\"encoding\">. The note explains the Psalm24 deferral and the scan108/109 and scan351 provenance. It no longer reads as an untyped citation note that would print with the bibliography."
+    },
+    {
+      "check": "Prior finding 2: Sunday rubric is typed as description",
+      "result": "pass",
+      "evidence": "Excerpt line 377: <tei:note type=\"description\" xml:lang=\"he\" ...>היום ראשון בשבת שבו הלויים היו אומרים במקדש</tei:note>. It was type=\"instruction\" before. The text is unchanged."
+    },
+    {
+      "check": "Added pb before the source appendix heading: exact facs, no invented printed n",
+      "result": "pass",
+      "evidence": "Excerpt line 375: <tei:pb ed=\"1965\" facs=\"https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n350.jpg\"/>. The facs is exactly n350.jpg, which matches the prior review's check (0-based archive page = physical scan 351). The pb has no @n attribute, so it claims no printed page number. It is the first child of the documentary div, before <tei:head>שיר של יום.</tei:head> (line 376). The rubric note's own @facs (line 377) is the same n350.jpg URL."
+    },
+    {
+      "check": "Documentary appendix div: no conditional or transclusion scope problem",
+      "result": "pass",
+      "evidence": "Lines 374-379 have no j:conditional, j:declare, or open milestone. The div holds only pb, head, the description note, and one source-qualified transclusion of psalms/24@prayerbook_for_the_new_year-heidenheim-1965-he, then closes. Adding the pb and changing the note type does not change what the transclusion covers. The pb is an empty milestone and opens no scope."
+    },
+    {
+      "check": "Expanded service: the follow-up edits leave the gating and scope unchanged",
+      "result": "pass",
+      "evidence": "The encoding note (line 2) sits outside section_morning and carries no conditional or declare. Inside section_morning, j:conditional section_morning_condition (line 5) closes at endConditional (line 369), and j:declare section_morning_settings (line 22) closes at endDeclare (line 367), properly nested. Every nested conditional has a matching sibling endConditional in the same parent div: neshamah_german 100/113, torah_other_rites 116/133, neshamah_other_rites 136/149, hashachar_men 159/172, hashachar_women 175/188, torah_german_later 218/235, qorbanot_shabbat 257/278, yotzer_weekday 338/352. The qorbanot_shabbat declare closes at 268/276. No psalms/24 transclusion appears anywhere in the excerpted section_morning, so no Psalm24 content sits outside the morning gate or bypasses it."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "info",
+      "blocking": false,
+      "location": "final-review-excerpts.txt line 315 (expanded section_morning; unrelated to this change)",
+      "issue": "Not part of this review and not certified. This transclude target looks malformed: 'urn:x-opensiddur:text:siddur:chol/shacharit/pesuqei_dezimrah/az_yashir/quoted_exodus_15_1-/shacharit/pesuqei_dezimrah/az_yashir/quoted_exodus_15_18'. It looks like a range was collapsed into a single @target string where target/targetEnd was meant. I noticed it in passing.",
+      "recommendation": "Check it separately with the URN reference validator. It does not affect approval of the Psalm24 follow-ups."
+    }
+  ],
+  "limitations": [
+    "I reviewed only the two follow-up edits named in the prior review, plus the added pb. I did not certify any full page, the transcription of Psalm 24 or other text, or the completeness of the expanded service.",
+    "I worked only from generated XML extracts. I did not open the source index.xml files, so I could not confirm that the encoding note's parent is still project_source_bibl, where the extract sits in each file, or what comes before the new pb (for example, whether an earlier pb already covers n350 or whether the preceding page's content ends properly).",
+    "Excerpt line 372 says the full body has zero psalms/24 transclusions in both print and electronic output. That is a generator assertion, not XML. I confirmed it only for the excerpted section_morning.",
+    "I did not view the scan image again in this pass. The n350.jpg ↔ scan351 match relies on the prior review's image check.",
+    "I could not run a build, schema validation, or URN resolution. Only Read was used."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "69771885-60ff-4db5-aa0c-c134812a3e5f"
+  }
+}

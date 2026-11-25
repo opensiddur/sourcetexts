@@ -1,0 +1,97 @@
+{
+  "approved_draft_structure": true,
+  "scope": "draft modules only",
+  "resolved_findings": [
+    {
+      "was": "medium: page 18 got two page breaks in the composite Shabbat root",
+      "evidence": "build-draft-appendix-modules.py:20,27 now keeps one seen_root_pages set per day, shared by the poetry and scripture halves. In _poetry.xml the only pb n=18 is on line 69, and its pb n=17 is on line 41. _scripture.xml has no pb at all and keeps facs n343 on its div (line 37). draft-range-check reports composite_has_one_page18_and_no_duplicate_page_markers as passed. Page 16 correctly has no pb because the Shabbat poem is not the first prayer block on that page, so it appears only as div/@facs n341, as the ownership rule requires.",
+      "status": "resolved"
+    },
+    {
+      "was": "medium: Ps 24 chapter opened four times, with an inverted verse/chapter path and untyped segs",
+      "evidence": "shir_hakavod_opening_psalm.xml:40 has one chapter milestone, n=24, corresp …/opening_psalm/quotation/psalms/24, with no verse component before the chapter. Lines 41/46/51/56 have verse milestones n=7–10 under …/quotation/psalms/24/{7..10}. Each verse is closed by a bare verse terminator. A single chapter terminator follows verse 10 (line 59). All four segs have type=\"quotation\" and canonical @source. draft-range-check one_contextual_chapter_with_four_quoted_verses passes.",
+      "status": "resolved"
+    },
+    {
+      "was": "medium: builder not tied to the boundary-approved snapshot",
+      "evidence": "build-draft-appendix-modules.py:11-17 asserts, before anything is written, that every day has the same work count, the same canonical_part / source_couplet_index / source_reference / bible_source, and the same (scan, physical_line) fragment positions as working-encoding-atlas-boundary-approved.json. Lines 18-19 and 107 record boundary_snapshot_sha256 (4685ff1b…7a7b) and boundary_fields_checked at the end of draft-appendix-units.json (lines 6887-6893). Text still comes from the working atlas. That is acceptable because source-word adjudication is outside this approval.",
+      "status": "resolved"
+    },
+    {
+      "was": "low: English encoding notes marked xml:lang=he",
+      "evidence": "fifth_day_paytan.xml:31 and barukh_attah_yachid_umeyuchad.xml:30 now have xml:lang=\"en\". The Hebrew standOff commentary keeps xml:lang=\"he\" (fifth_day line 37).",
+      "status": "resolved"
+    },
+    {
+      "was": "low: Thursday scope stopped at 14 although the commentary continues on printed 15",
+      "evidence": "fifth_day_paytan.xml:30 biblScope now runs from 11 to 15. The note is still attached only to the local anchor at /17 (line 116, standOff line 37), and nothing is put into the Friday text flow.",
+      "status": "resolved"
+    },
+    {
+      "was": "low: targetEnd on j:transclude; composite root had no biblScope",
+      "evidence": "You report that both the schema and the actual compiler support targetEnd. The schema report shows the composite valid, and draft-range-check compiles /1–/14 exactly once with 7/7 checks passed. The composite header now has biblScope 16–18 (hymn_of_divine_unity_for_the_day_of_shabbat_paytan.xml:30).",
+      "status": "resolved (support for targetEnd accepted on your statement and the range-check output)"
+    },
+    {
+      "was": "low: bare seg@source for Wednesday /50 had no stated meaning",
+      "evidence": "You report that the atlas documents this as the source-only variant form. In the markup, fourth_day_paytan.xml:88 has the seg with no corresp, placed after the /49 terminator (line 87), and it does not claim a new stanza identity. This is consistent with B4/B6.",
+      "status": "resolved (atlas documentation accepted on your statement; not re-read)"
+    }
+  ],
+  "remaining_findings": [
+    {
+      "severity": "low",
+      "file": "build-draft-appendix-modules.py:65,74",
+      "issue": "The 31 Anim Zemirot identities are still assigned by position with zip(anim, ids). I checked all 31 incipits by hand earlier, but the builder has no automatic incipit or mapping guard.",
+      "required_change": "Before writing, assert each stanza's incipit against its URN or against an explicit mapping table, and fail if any does not match."
+    },
+    {
+      "severity": "low",
+      "file": "build-draft-appendix-modules.py:13-17",
+      "issue": "The boundary guard covers only atlas['works']. It does not compare other_source_blocks with the approved snapshot: the Anim Zemirot lines, the four ark-opening Ps 24 lines, the Sunday closing line, and the two footnotes. It also checks approved['works'] only for the keys present in the working atlas, so a day added to or missing from either file would not be caught.",
+      "required_change": "Add an equality check on the day keys. Extend the check to cover kind, work, work_role, scan and line count for the other_source_blocks the builder uses."
+    },
+    {
+      "severity": "low",
+      "file": "build-draft-appendix-modules.py:85-88",
+      "issue": "Two of the fixes are applied after generation and rely on brittle matches. xml:lang=en is set only when a note's text starts with one of two English prefixes, and Thursday's scope is changed by finding biblScope[@to='14']. If the wording or the generated scope changes, the fix silently does nothing.",
+      "required_change": "Pass the note language and the scope explicitly in the unit data, or assert that each post-fix matched exactly one node."
+    },
+    {
+      "severity": "low",
+      "file": "hymn_of_divine_unity_for_the_day_of_shabbat_paytan.xml:30 vs all other modules",
+      "issue": "The composite root uses biblScope unit=\"page\". Every other module uses unit=\"pages\".",
+      "required_change": "Use the same unit value as the rest of the project."
+    },
+    {
+      "severity": "low",
+      "file": "shir_hakavod_opening_psalm.xml vs …_shabbat_paytan_scripture.xml",
+      "issue": "The two modules place quote-context milestones differently. In Ps 24 the chapter and verse milestones sit outside the quotation segs, because one chapter spans four p elements. In Shabbat /10–/14 the milestones sit inside each seg. Both forms are well-formed and the difference has a structural reason, but neither form is documented.",
+      "required_change": "Document in the README or atlas when to use each form: bounded milestones inside the seg for a single-verse quotation, and milestones outside the segs for a chapter spanning several paragraphs."
+    }
+  ],
+  "pending_integration": [
+    "Register the quote-context identities as quote-context, not as new poem parts: …day_of_shabbat_paytan/{10..14}/quotation/<book>/<ch>[/<v>] and …siddur:rosh_hashanah/hosafot/shir_hakavod/opening_psalm/quotation/psalms/24[/7..10].",
+    "Register new registry contexts for the publication context …/hosafot/shir_hakavod/opening_psalm and for the range-form publication idnos …/1-/9@ and …/10-/14@.",
+    "Decide whether Ps 24:7–10 and the five Shabbat verses get canonical bible corresp. This depends on whether they are already mapped elsewhere in the project.",
+    "Build the documentary and expanded spines: headings (שיר היחוד ליום …, שיר הכבוד), the ark-opening instruction, running order, day-of-week conditionals, and the weekly-cycle container.",
+    "Encode optional and variant material, which is still inline plain text: (…) lines, נ״א/כ״א readings, the unmatched ')' at Wednesday /48, the inline (יְיָ) in /50, and the * mark in כָּל* at Thursday /17.",
+    "Research the independent identity of the Sunday closing line ברוך אתה יחיד ומיוחד.",
+    "README items: the B4 Tuesday /28 divergence, the B4/B6 rule, line locators qualified by work or block (B16), and the wording of the Wednesday L24 registry-presence proof (B15).",
+    "Run urn_registry --check and validate_urn_references, and resolve through refdb the terminator scopes, the Thursday anchor, the quote-context ranges, and ranges across /49–/51 and /50–/54 (B7).",
+    "Source-word adjudication is still in progress and is not part of this approval."
+  ],
+  "limitations": [
+    "This is a structural and JLPTEI-guideline review of the draft modules only. It does not approve source transcription, vowels, metegs, readings, exports or any batch.",
+    "I had only a file-read tool, so I could not run the schema, the compiler, refdb, urn_registry or a diff. Schema validity and the 7 compiler checks are taken from draft-schema-report.json and draft-range-check.json and compared against the XML by hand.",
+    "I took the targetEnd compiler support and the atlas documentation of the source-only seg variant from your statements. I did not read the compiler source or the atlas text.",
+    "I did not compare working-encoding-atlas.json with the approved snapshot or recompute the SHA-256. I read the assertion logic in the builder and saw the recorded hash.",
+    "I re-read these files in full: the opening psalm, Shabbat poetry, Shabbat scripture, the Shabbat composite root, Thursday, and the Sunday closing line. I checked the Wednesday module only around lines 84–91. I did not re-read the other day modules, anim_zemirot.xml, or the 541 symlinked accepted files for this pass.",
+    "No files were edited."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "87469358-4e30-43bd-9b78-3ac2891c59e1"
+  }
+}

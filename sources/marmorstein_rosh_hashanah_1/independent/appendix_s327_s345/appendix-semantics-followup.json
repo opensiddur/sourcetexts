@@ -1,0 +1,39 @@
+{
+  "canonical_mapping_reconciled": true,
+  "remaining_required_changes": [
+    "Withdraw RC6 and USQ3. The binding Wednesday mapping is atlas B5/B6: /6 unrealized; s335 L1–5=/28–32; L6 null (uncatalogued); L7–23=/33–49; L24 null, @source /50 (earlier non-indexing variant); L25–27=/51–53; L28 is the sole /50 corresp; s336 L1=/54. The /53→/50→/54 order is intentional (B7). RC6's count reconciles to the same totals, so the arithmetic cannot decide placement; the wording rule in B6 does.",
+    "Condition URNs for L6 and L24: append an ASCII descriptive name to the whole-poem root, e.g. urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_fourth_day_paytan/<descriptive_name> (JLPTEI-3 §URNs). The name must not be numeric, must not be registered as a text identity, and must not have a project suffix. L24's condition must be distinct from the L28 (/50) condition so that 835 stays open.",
+    "RC7 conflicts with the importer. build.py:422 emits the segment j:conditional before the canonical milestone at :532, so the milestone falls inside the marked scope. The plan needs an importer option that emits the prayer-part milestone before the segment conditional, or RC7 must be explicitly re-decided. As written it cannot be implemented.",
+    "Terminators before null entries: segment end_reference closes references at :733, before the j:endConditional at :735. A terminator carried by a marked L5 (needed before null L6) would therefore sit inside L5's conditional and vanish when L5 is false. The importer needs a terminator that is emitted outside or before the conditional scope. L23→L24 is unaffected while L23 stays base text.",
+    "s330 L26 scope (routine, supersedes USQ4): alternatives.printed is the contiguous span from וְאֽוֹרֶךְ through '(נ״א ועומק)', and it must occur exactly once in the fragment (:650). readings = [the printed main word verbatim, 'ועומק' unpointed]. ורוחב stays outside the choice.",
+    "s337 L17 colon (routine, supersedes USQ5): the colon moves outside the choice as a documentary punctuation normalization, not sic/corr. The apparatus keeps the printed '(נ״א רֵעִים:)'. The importer has no field for this. A printed span ending at ')' consumes the colon, and the remaining text is empty. The plan needs an explicit, reviewable normalization field (shown in unit_review_text) or an importer change. Never silently edit the reviewed fragment text.",
+    "Amend RC4 to match the importer. Standoff notes from 'citations' strip the outer parentheses (:302) and cannot emit a tei:label. Either (a) accept a target on choice@xml:id (:655) in place of a separate anchor, record the printed parentheses in the note another way, and drop the label requirement, or (b) add importer support. Keep RC5: this note is the only apparatus source."
+  ],
+  "necessary_human_questions": [
+    "834: s335 L22 has a closing ')' but no opener. Is an opener missing, or is the closer stray? (Undecided.)",
+    "835: Are unsigned parentheses independent additions, or replacement alternatives for neighbouring couplets (L6 vs L7/8, L20/L22 vs L23, L24 vs L28)? (Undecided.)"
+  ],
+  "implementation_constraints": [
+    "optional_spans (:629–642) uses partition, so it matches the first occurrence with no uniqueness check. Each 'printed' must be unique in its fragment or deliberately the first occurrence.",
+    "optional_spans always emits type='marked' with opensiddur:variant {condition: true} and no declaration. This matches RC3/GF3.",
+    "Per fragment, optional_spans and alternatives are mutually exclusive (elif at :643), and alternatives also excludes abbreviations, uncertain_characters, qere_ketiv, expansion and enlarged_letters. A line that needs more than one of these must be split into fragments.",
+    "A segment-level marked condition requires the fragment text to start with '(' and end with ')' (:432). Whole-line printings must be transcribed with the parenthesis as the final character. 834 option A (no opener) cannot use this path without an importer change. Noted only; 834 is not decided here.",
+    "Conditional segments cannot carry fragment 'line' (:446), and a marked scope must end in its own segment (:416). Each whole-line conditional therefore sits inside its own tei:l, which settles the earlier lg-child concern and enforces RC8.",
+    "L24 nesting: a marked segment conditional plus optional_spans '(יְיָ)' gives correctly nested sibling scopes inside the tei:l. The inner condition URN is independent, and words() keeps j:divineName inside the inner scope.",
+    "j:option @corresp comes from a reading dict (:660), and dict readings need a 'text' key (rendered by rubric_words). Unpointed options stay as printed; words() adds only j:divineName."
+  ],
+  "limitations": [
+    "Read build.py lines 1–1030 only. Lines 1031–1392 (review/realization gating) were not read.",
+    "Read only JLPTEI-3 lines 1–150, which include the condition-URN rule. Not checked: what the guideline says about j:option @corresp, or whether an exporter accepts choice@xml:id as a standoff target.",
+    "No scans were viewed. Line content is taken from the prior JSON files."
+  ],
+  "notes": [
+    "The rest of RC1–RC5 and RC8 stands, except where amended above. USQ6 is folded into 835.",
+    "Planning review only. No edits made, and no encoding or acceptance given."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "4fdbd0f0-99fd-4df2-9af7-fa75b6f77b61"
+  }
+}

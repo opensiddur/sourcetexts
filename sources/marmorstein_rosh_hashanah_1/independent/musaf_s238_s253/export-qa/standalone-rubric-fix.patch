@@ -1,0 +1,38 @@
+diff --git a/opensiddur/exporter/tex/reledmac.xslt b/opensiddur/exporter/tex/reledmac.xslt
+index 6491072..dcdfb18 100644
+--- a/opensiddur/exporter/tex/reledmac.xslt
++++ b/opensiddur/exporter/tex/reledmac.xslt
+@@ -3902,8 +3902,16 @@ end
+         <xsl:variable name="crosses"
+                       select="f:is-rtl-lang($note-lang) ne f:is-rtl-lang($text-lang)"/>
+         <xsl:variable name="within" select="exists(ancestor::tei:p | ancestor::tei:l)"/>
+-        <xsl:text>\</xsl:text>
+-        <xsl:value-of select="if (@f:parallel-block = 'true'
++        <!-- A role-only division can sit between two parallel blocks. Its rubric
++             still runs in (a preceding apparatus anchor must stay on its line), but
++             the line must be classified as a rubric so pagination keeps it with the
++             next block. Do not tag a run-in cue whose division also contains words. -->
++        <xsl:variable name="container" select="ancestor::tei:div[1]"/>
++        <xsl:variable name="standalone" as="xs:boolean"
++                      select="not($within) and not(ancestor::tei:head) and exists($container)
++                              and empty($container//text()[normalize-space(.)]
++                                  [not(ancestor::tei:note or ancestor::tei:fs)])"/>
++        <xsl:variable name="command" select="if (@f:parallel-block = 'true'
+                                  or parent::j:conditional[not(f:is-inline-conditional(.))]
+                                  or (not($within) and descendant::tei:foreign
+                                      [f:is-rtl-lang(string(@xml:lang)) ne f:is-rtl-lang($text-lang)]))
+@@ -3911,9 +3919,14 @@ end
+                               else if (not($crosses)) then 'instructionnote'
+                               else if ($within) then 'OSInstructionLine'
+                               else 'OSInstructionBlock'"/>
++        <xsl:if test="$standalone and $command = 'instructionnote'">
++            <xsl:text>{\OSKeepAttr=3\relax </xsl:text>
++        </xsl:if>
++        <xsl:text>\</xsl:text><xsl:value-of select="$command"/>
+         <xsl:text>{</xsl:text>
+         <xsl:call-template name="note-content"/>
+         <xsl:text>}</xsl:text>
++        <xsl:if test="$standalone and $command = 'instructionnote'"><xsl:text>}</xsl:text></xsl:if>
+         </xsl:if>
+     </xsl:template>
+ 

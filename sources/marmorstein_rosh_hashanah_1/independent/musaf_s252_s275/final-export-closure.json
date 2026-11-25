@@ -1,0 +1,73 @@
+{
+  "export_qa_approved": true,
+  "pdf_approved": true,
+  "html_approved": true,
+  "blocking_findings": [],
+  "resolved_findings": [
+    "MAJOR (previous review): note 94 attached to the heading ahead of 74–93. Resolved. On he-final-63 (printed p.55) the heading 'חזרת התפלה לשליח צבור' has no note mark. Notes 74 and 75 are the only notes on that page. Read page by page across he-final-62 to he-final-74, the notes run in order: 73 (p.54), 74–75 (p.55), 76–78 (p.56), 79–80 (p.57), 81–88 (p.58), 89–92 (p.60), 93 (p.64), 94–95 (p.66). On he-final-74 (p.66), the mark for note 94 sits on the 'אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ מְלוֹךְ' paragraph, where it belongs. Note 95 comes after Areshet. This agrees with single_stream_note_numbers_consecutive=true.",
+    "MINOR (previous review): English page references in RTL note 94 / documentary note 128 rendered out of order. Resolved. The footnote now uses Hebrew-only labels ('עמוד 262 בסריקה (עמוד 121 בדפוס): אם שבת; …'). All six scan/printed pairs are present and read in order: 262/121, 264/122, 266/123, 268/124, 270/125, 272/126. This is true for he p.66 note 94 and documentary p.198 note 128. The English counterpart, note 129 on documentary p.198, reads correctly left to right.",
+    "Documentary heading note: on documentary-final-206 (p.198), note 128 is in sequence after 127 (p.190), followed by 129, then 130 and 131 (p.200)."
+  ],
+  "images_read": [
+    "/tmp/mahzor-s254/full-pdf-images/he-final-63.png",
+    "/tmp/mahzor-s254/full-pdf-images/he-final-74.png",
+    "/tmp/mahzor-s254/full-pdf-images/he-final-70.png",
+    "/tmp/mahzor-s254/full-pdf-images/documentary-final-contact-1.png",
+    "/tmp/mahzor-s254/full-pdf-images/documentary-final-contact-2.png",
+    "/tmp/mahzor-s254/full-pdf-images/documentary-final-contact-3.png",
+    "/tmp/mahzor-s254/full-pdf-images/documentary-final-contact-4.png",
+    "/tmp/mahzor-s254/full-pdf-images/documentary-final-contact-5.png",
+    "/tmp/mahzor-s254/full-pdf-images/expanded-final-contact-1.png",
+    "/tmp/mahzor-s254/full-pdf-images/expanded-final-contact-2.png",
+    "/tmp/mahzor-s254/full-pdf-images/expanded-final-contact-3.png",
+    "/tmp/mahzor-s254/full-pdf-images/expanded-final-contact-4.png",
+    "/tmp/mahzor-s254/full-pdf-images/expanded-final-contact-5.png",
+    "/tmp/mahzor-s254/full-pdf-images/documentary-hebrew-final-contact-1.png",
+    "/tmp/mahzor-s254/full-pdf-images/documentary-hebrew-final-contact-2.png",
+    "/tmp/mahzor-s254/full-pdf-images/documentary-hebrew-final-contact-3.png",
+    "/tmp/mahzor-s254/pdf-images/documentary-hebrew-mobile-sources-final.png",
+    "/tmp/mahzor-s254/pdf-images/documentary-mobile-sources-final.png",
+    "/tmp/mahzor-s254/pdf-images/expanded-mobile-sources-final.png",
+    "/tmp/mahzor-s254/pdf-images/documentary-mobile-areshet-final.png",
+    "/tmp/mahzor-s254/pdf-images/documentary-mobile-areshet-final.png is listed once; also read /tmp/mahzor-s254/pdf-images/expanded-mobile-areshet-final.png"
+  ],
+  "remaining_nonblocking_findings": [
+    {
+      "severity": "minor",
+      "artifact": "documentary PDF p.200 (documentary-final-208) and documentary HTML at 390px (documentary-mobile-areshet-final)",
+      "detail": "The end-of-scope notes sit after the Areshet text, not on it. The Hebrew mark (130) is on its own line after the closing rule; in the PDF it is pushed to the top of p.200, above the 'שיר של יום' title. The English mark (131) falls on the first line of the Shir shel Yom block ('היום ראשון…' / 'לְדָוִד מִזְמוֹר'). Both are in numeric sequence. The note itself names its scope ('Malkhuyot through Areshet Sefatenu'), so a reader will not be misled, but the mark looks as if it belongs to Shir shel Yom. Likely cause: the English column is empty at the end of the section. Fix later by putting the anchor on the Areshet paragraph."
+    },
+    {
+      "severity": "cosmetic",
+      "artifact": "documentary-hebrew PDF p.66 (he-final-74)",
+      "detail": "The mark for note 95 stands alone on an otherwise empty line below the last separator rule, not on the Areshet text. It is in sequence and its footnote is on the same page."
+    },
+    {
+      "severity": "cosmetic",
+      "artifact": "he p.66 note 95; documentary p.200 note 130",
+      "detail": "In the mixed-direction Hebrew note, the reference '(עמ' 275–PDF274; 127)' still reads in a slightly scrambled visual order. It is legible. This is separate from the source-credit labels, which are fixed."
+    },
+    {
+      "severity": "cosmetic",
+      "artifact": "all three PDFs and expanded HTML at 390px",
+      "detail": "Stacked short separator rules where a conditional block ends (for example he p.62, documentary p.182, expanded p.231–232, and the double rule in expanded-mobile-areshet-final). Unchanged from the previous review. No text is lost."
+    },
+    {
+      "severity": "info",
+      "artifact": "all three PDFs",
+      "detail": "The overfull vbox warnings remain (documentary-hebrew 14, documentary 20, expanded 45). None caused visible clipping in the pages I inspected. The reports show outside_page, missing_glyph, overfull_hbox and undefined_reference all empty."
+    }
+  ],
+  "scope_limitations": [
+    "At contact-sheet and page-image resolution I could not count the six metegs individually in the new 'אַתָּה בְחַרְתָּנוּ' opening on he-final-70 (p.62), documentary p.180, or expanded p.211. The text is present and readable, and missing_glyph is empty, so meteg presence rests on the separate Human414 source approval. Note also that /tmp/mahzor-s254/human414-closure.json still lists one required change: rewrite the prior_printing condition-registry note. I did not check that it was applied. It is metadata only, and you said it was approved separately.",
+    "I inspected only the PDF pages listed: he 62–77, documentary 185–210, expanded 210–236. Other pages rest on the bounds and log reports and on earlier reviews.",
+    "The HTML was checked by eye only in the five 390px screenshots. Source credits wrap inside the viewport with no overflow; URLs and archive identifiers break correctly; the expanded book keeps both the Birnbaum and Heidenheim–Marmorstein credits. The Areshet ending and the colophon render. Everything else in the HTML approval rests on full-html-browser-summary.json: all 6 runs report 0 errors, 0 duplicate IDs, 0 broken internal links, and scrollWidth equal to the viewport width.",
+    "The anchor fix was reviewed in code (anchor-code-review.json, approved) and is not re-verified here beyond its rendered effect. The normal-export-proof TeX identity reports were not re-read in this pass.",
+    "I did not re-verify text content, encoding, alignment, identity or order; those were approved separately. No files were edited."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "2178faf9-7b2f-48ee-b702-b9a3ef7fda6e"
+  }
+}

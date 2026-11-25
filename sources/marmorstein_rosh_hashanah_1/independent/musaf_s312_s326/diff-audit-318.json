@@ -1,0 +1,74 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "low"
+  },
+  "scan": "s318",
+  "images_read": [
+    "/tmp/mahzor-s312/audit-s318-strip1.png",
+    "/tmp/mahzor-s312/audit-s318-strip2.png",
+    "/tmp/mahzor-s312/audit-s318-strip3.png",
+    "/tmp/mahzor-s312/audit-s318-strip4.png",
+    "/tmp/mahzor-s312/audit-s318-strip5.png",
+    "/tmp/mahzor-s312/audit-s318-strip6.png",
+    "/tmp/mahzor-s312/audit-s318-strip7.png",
+    "/tmp/mahzor-s312/audit-s318-strip8.png",
+    "/tmp/mahzor-s312/audit-s318-strip9.png",
+    "/tmp/mahzor-s312/audit-s318-strip10.png"
+  ],
+  "decisions": [
+    {
+      "id": 40,
+      "choice": "B",
+      "literal": "תִּהְיֶה לָּֽנוּ",
+      "reason": "In strips 1–2 (line 'וְנֶאֱמַר וּצְדָקָה תִּהְיֶה לָנוּ כִּי נִשְׁמֹר'), there is a visible word space between תִּהְיֶה and לָנוּ, and no maqaf. The only difference here is maqaf versus space, and the source shows a space.",
+      "uncertainty": "low for the space vs. maqaf question. I could not confirm the dagesh in the lamed or the meteg at this print size. A and B have the same pointing on that word, so I did not decide it."
+    },
+    {
+      "id": 41,
+      "choice": "B",
+      "literal": "אָמֵן.",
+      "reason": "In strips 4–5, the opening Kaddish paragraph ends 'קָרִיב, וְאִמְרוּ אָמֵן' followed by one dot, not a colon. Later paragraphs (strips 6–9) clearly end with 'אָמֵן:', so this print uses both marks and this one is a single dot.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 42,
+      "choice": "B",
+      "literal": "וְיִתְרֹמַם",
+      "reason": "In strips 5–6 the word is printed defectively, as ר with a holam dot and no vav ('וְיִתְרֹמַם'). Plene וְיִתְרוֹמַם is not printed.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 43,
+      "choice": "B",
+      "literal": "מִן־כָּל־בִּרְכָתָא",
+      "reason": "Strip 6, line 3 opens with 'מִן־כָּל־בִּרְכָתָא': a separate מִן joined by maqaf to כָּל, then a second maqaf. A's contracted מִכָּל is not what is printed.",
+      "uncertainty": "low"
+    },
+    {
+      "id": 44,
+      "choice": "B",
+      "literal": "אֶת־תְּפִלָּתֵֽנוּ:",
+      "reason": "In the small-type congregational response in strips 6–7 ('קַבֵּל בְּרַחֲמִים וּבְרָצוֹן אֶת־תְּפִלָּתֵנוּ:'), a maqaf joins אֶת to תְּפִלָּתֵנוּ.",
+      "uncertainty": "low for the maqaf. The meteg under ת in the small type is not clearly visible. A and B agree on it, so I did not decide it."
+    },
+    {
+      "id": 45,
+      "choice": "B",
+      "literal": "עֹשֶׂה",
+      "reason": "In strips 8–9, the last Kaddish paragraph opens 'עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו', with ע carrying a holam dot and no vav. The same page also prints עוֹשֵׂה with a vav (in 'עוֹשֵׂה הַשָּׁלוֹם', strip 3), so spelling varies between occurrences and this one is defective.",
+      "uncertainty": "low"
+    }
+  ],
+  "additional_source_errors": [],
+  "unresolved": [
+    "id 40: dagesh in the lamed and meteg in לָּֽנוּ not checked at this resolution (A and B agree)",
+    "id 44: meteg in תְּפִלָּתֵֽנוּ (small type) not checked at this resolution (A and B agree)"
+  ],
+  "scope": "Onlythese differences; notwholepageacceptance",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "7c8faae4-8496-473d-bae2-b210cd3e6ab5"
+  }
+}

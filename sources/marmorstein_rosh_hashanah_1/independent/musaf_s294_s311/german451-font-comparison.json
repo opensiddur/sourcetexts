@@ -1,0 +1,32 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "configured_effort": "not specified to reviewer"
+  },
+  "images_read": [
+    "/tmp/mahzor-s108/rubric112-full.png",
+    "/tmp/mahzor-s294/german310-full.png",
+    "/tmp/mahzor-s294/s310.jpg"
+  ],
+  "comparison_evidence": [
+    "Known lamed (first letter of לצרף, rubric112): it has a tall ascender that rises clearly above the x-height, then bends into a body that hooks down to the lower left. The lamed in לאמת and in אלהיכם on the same line has the same tall ascender, so this is the regular Rashi lamed of this type.",
+    "Known tsadi (second letter of לצרף, rubric112): its body looks like a nun and stays at x-height. The only extra part is a small flag at the top right that barely goes above the x-height. The glyph reads almost like נ (the word looks like 'לנרף'). It has no real ascender.",
+    "Disputed glyph (first letter of צום/לום, german310-full.png): it has a clear ascender standing well above the x-height of the letters around it (ו, ם, and the letters of דוכן). Its height compared with its neighbours, and its hooked lower-left body, match the known lamed. It does not have the low, nun-like body with a small flag that the known tsadi has.",
+    "Tsadi topology is ruled out: a tsadi in this type would barely reach above x-height, but the disputed glyph's stroke rises about as far as a full lamed's ascender.",
+    "s310.jpg (the full page) is downscaled to about 1368px wide, so the rubric line has little detail there. It is consistent with the crop: the first letter looks taller than its neighbours. It adds no evidence for tsadi.",
+    "Limit on the evidence: the two images come from different pages and scans, and the resolution is moderate. The difference that decides the question, a full ascender versus a small flag at x-height, is large enough to see clearly in both."
+  ],
+  "printed_word": "לום",
+  "certainty": "medium-high that the printed glyph is lamed (based on the glyph shape only, not on German grammar)",
+  "needs_sic_corr": true,
+  "sic": "לום",
+  "corr": "צום",
+  "remaining_human_question": "Optional check: can someone confirm the ascender height on a higher-resolution scan or the physical copy of p.145 (s310)? If that shows only a short flag at x-height, change the encoding to צום without sic/corr. Otherwise no human decision is needed.",
+  "approved_documentary_resolution": true,
+  "verdict": "The first letter of the disputed word is a printed lamed. It matches the lamed of לצרף, with a full ascender well above x-height and a hooked lower-left body. It does not match the tsadi of לצרף, which has a nun-like body at x-height and only a small flag. Keep the printed reading and mark the obvious German typo: <choice><sic>לום</sic><corr>צום</corr></choice> (zum Dukhan). This replaces my earlier advice to encode it as <c cert=\"low\">צ</c>ום. וואֶהרענד stays as already established. This approval covers only this word, not the whole batch.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "824c0d48-4dcd-44b9-a7ad-1bbe13efde06"
+  }
+}

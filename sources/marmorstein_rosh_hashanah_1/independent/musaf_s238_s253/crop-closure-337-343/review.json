@@ -1,0 +1,75 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "findings": [
+    {
+      "number": 337,
+      "exact_reading": "יֶפֶן (tentative). There is a clear three-dot segol under the pe. Under the yod I can see one dot that may be part of a segol, but I can't be sure it isn't a hiriq. I see no qamats T under the yod; the nearby T belongs to תָּם. I can't confirm or rule out a dot inside the pe at this resolution.",
+      "agree": true,
+      "confidence": "medium-low",
+      "reason": "The segol under the pe is clear, and nothing qamats-shaped sits under the yod. What I can't settle is whether the yod has a full segol or a single dot (hiriq), and whether the pe has a dagesh.",
+      "human_question": "In תָּם יֶפֶן on s240: does the yod carry a three-dot segol or a single hiriq dot, and is there a dagesh dot inside the pe?"
+    },
+    {
+      "number": 338,
+      "exact_reading": "יִפֶן, with a hiriq dot under the yod and a segol under the pe. There is also a small vertical tick near the yod's vowel, possibly a meteg (יִֽפֶן). I see no dagesh in the pe.",
+      "agree": true,
+      "confidence": "medium",
+      "reason": "The vowels match the proposed resolution: hiriq, not qamats, under the yod, and a segol under the pe. The proposal doesn't account for the small vertical stroke beside the yod's vowel.",
+      "human_question": "In מִמְּקוֹמוֹ הוּא יִפֶן on s240: is the small vertical stroke next to the hiriq under the yod a meteg (יִֽפֶן), or just a printing speck?"
+    },
+    {
+      "number": 339,
+      "exact_reading": "וְיִתְרַעַשׁ: sheva under the vav, hiriq under the yod, sheva under the tav, patah under the resh, and a horizontal bar (patah) under the ayin. It is not a tsere.",
+      "agree": true,
+      "confidence": "high",
+      "reason": "The mark under the ayin is a single horizontal bar. A tsere would be two side-by-side dots, and there aren't any.",
+      "human_question": null
+    },
+    {
+      "number": 340,
+      "exact_reading": "יִתְרַעַם (proposed). I can clearly see a hiriq under the yod, a sheva under the tav, and one patah bar under the resh/ayin area. I can't confirm a second, separate bar.",
+      "agree": false,
+      "confidence": "low",
+      "reason": "The enlarged crop shows only one clear patah-like bar. It might be two bars run together, or there may be just one patah, on either the resh or the ayin. I can't confirm the proposed patah under both letters.",
+      "human_question": "In וְאָז יִתְרַעַם on s240: are there two separate patah bars (under the resh and the ayin), or just one? If one, which letter is it under?"
+    },
+    {
+      "number": 341,
+      "exact_reading": "כִסֵּא / כִּסֵּא (unresolved). The samekh has a dagesh and a tsere, and the kaf has a hiriq below. I can't clearly see a dot inside the kaf.",
+      "agree": false,
+      "confidence": "low",
+      "reason": "The dagesh in the samekh is clear. I can't confidently see a dot inside the kaf, so I can't confirm the proposed kaf dagesh.",
+      "human_question": "In מְאַחֵז פְּנֵי כִסֵּא on s240: is there a dagesh dot inside the kaf of כסא?"
+    },
+    {
+      "number": 342,
+      "exact_reading": "Both occurrences read דָּרֵי, with a dagesh in the dalet, a qamats under the dalet and a tsere under the resh. I see no separate meteg stroke under either one.",
+      "agree": true,
+      "confidence": "medium",
+      "reason": "I checked both דרי on the line (דָּרֵי מַעְלָה and עִם דָּרֵי מַטָּה). Neither has a vertical tick apart from the qamats and tsere.",
+      "human_question": null
+    },
+    {
+      "number": 343,
+      "exact_reading": "הָאָֽרֶץ: qamats under the he and under the alef. A small vertical meteg stroke sits just left of the alef's qamats, next to the resh's segol. I see no accent under the resh beyond the segol.",
+      "agree": true,
+      "confidence": "medium",
+      "reason": "The cluster near the resh has the three segol dots plus a separate short vertical stroke. That stroke is where a meteg on the alef usually goes (left of its qamats), and it isn't part of the segol or the letter shape.",
+      "human_question": null
+    }
+  ],
+  "all_resolved": false,
+  "notes": [
+    "Confirmed with high or medium confidence: 339, 342, 343. 338 has an extra possible meteg that the proposal doesn't mention.",
+    "Need human review: 340 (one patah bar or two), 341 (kaf dagesh), 337 (yod vowel and pe dagesh). In each case the key marks are too small or merged at this resolution to tell apart reliably.",
+    "Readings are from the crops only; I did not use standard liturgy to fill gaps."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "6e1e48c3-8d00-48a6-a46e-38b837ec50c7"
+  }
+}

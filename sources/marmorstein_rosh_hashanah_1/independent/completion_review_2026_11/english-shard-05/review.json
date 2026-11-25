@@ -1,0 +1,141 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "I read all of current.json, current-xml.xml (both pages, lines 1-249), page-audits.json, english-rest-resolutions.json and guideline-excerpts.md. I compared each of the 8 English witnesses' payload and Hebrew/English XML against the existing full-page audits, the correction ledger and the guideline sections. I opened four original page images at full-page resolution: s149 (English p.60), s162 (Hebrew p.70), and s151 and s153 (Hebrew pp.62 and 64), which I opened while looking for where an English note continues. I could not make enlarged crops because the directory listing failed and I had no crop tool. I did not open s147, s157, s159, s161 or s163, so for those pages I rely on the existing audits plus the ledger. I did not check Hebrew fine marks. I did not run any tests or renderer."
+  },
+  "scope": [
+    "uvekhen_lekha_taaleh_qedushah",
+    "melekh_bemishpat_yaamid_aretz",
+    "avinu_malkenu",
+    "morning_full_kaddish",
+    "morning_full_kaddish_preface",
+    "torah_ein_kamokha",
+    "torah_av_harachamim",
+    "torah_vayehi_binsoa"
+  ],
+  "witnesses": [
+    {
+      "stem": "uvekhen_lekha_taaleh_qedushah",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        {
+          "severity": "info",
+          "location": "current.json title.en",
+          "problem": "title.en holds the Hebrew incipit, not an English title. This is metadata only, not printed English source, and the XML has no English head.",
+          "fix": "Optional: give title.en an English or transliterated title, as the other witnesses have. This does not block approval."
+        }
+      ],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "melekh_bemishpat_yaamid_aretz",
+      "english_source_approved": false,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        {
+          "severity": "medium",
+          "location": "s149 (English p.60), 'merit' prayer-part, 3rd line from the paragraph's start 'It has been made a statute…' (about line 19 of the page body, roughly y≈980 on the original 1368x2264 image)",
+          "problem": "In the full-page image the print reads 'the sleepers of Hebron, that in their shadow the lily of Sharon may shelter'. The current text is 'the sleepers of Hebron that in their shadow' with no comma. The existing s149 audit said 'The English matches', so this was missed there. It is not covered by the ledger or by original_source_typo_corrections.",
+          "fix": "Change 'Hebron that in their shadow' to 'Hebron, that in their shadow' in both the payload and the English XML. First confirm it on an enlarged crop of s149 at that line, because I saw it only at full-page resolution."
+        },
+        {
+          "severity": "info",
+          "location": "English standOff note targeting …/merit",
+          "problem": "The note text 'Remaining verses of this poem which are of a mystical character, are' matches s149 exactly, including the trailing 'are'. The print continues it on a later page. That continuation is neither in the shard nor in the page audits, and I did not find it: s151 and s153 are Hebrew pages. The targeting is acceptable, because the English deliberately has no mystical prayer-part and its merit scope runs to the terminator.",
+          "fix": "Find the continuation on the next English leaf and either append it or show that it is deliberately left out. No markup change is needed if the text is complete as printed."
+        }
+      ],
+      "remaining_source_questions": [
+        "Confirm the comma after 'Hebron' on an enlarged crop of s149.",
+        "Where does the italic note that ends in 'are' continue, and is that continuation captured?"
+      ]
+    },
+    {
+      "stem": "avinu_malkenu",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        {
+          "severity": "info",
+          "location": "documentary_instructions morning_tail_shabbat_omission_157 / morning_tail_open_157 / morning_tail_close_159",
+          "problem": "The s157 audit confirms these rubrics match the print. Under 'Kinds of rubric', 'On Sabbath … is not recited' is a condition and the Ark open/close lines are directives. None of them is in this shard's witness XML, so I could not check where they are placed in the running order or documentary index.",
+          "fix": "None required for this witness. Check placement in the running-order review."
+        }
+      ],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "morning_full_kaddish",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "morning_full_kaddish_preface",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "torah_ein_kamokha",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        {
+          "severity": "info",
+          "location": "Opening Psalms 86:8 in both projects",
+          "problem": "The first verse sits outside any prayer-part milestone, while malkhut, melekh and oz each have one. Both sides are encoded the same way, and the verse's local chapter and verse correspondences give it a shared alignment boundary, so alignment is not affected.",
+          "fix": "Optional: add a prayer-part such as …/ein_kamokha/ein_kamokha on both sides, for consistency."
+        }
+      ],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "torah_av_harachamim",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "remaining_source_questions": []
+    },
+    {
+      "stem": "torah_vayehi_binsoa",
+      "english_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        {
+          "severity": "low",
+          "location": "Both projects: <tei:milestone unit=\"chapter\" n=\"10\"/> before the Numbers 10:35 verse milestone",
+          "problem": "The chapter milestone has a unit but no corresp. Under URN-scope rule 3 that makes it a terminator, so it opens no chapter-10 context; n only labels it. The verse milestone itself uses the canonical Bible URN as corresp, with no seg/@source. Every other quotation in this shard uses a local occurrence-context corresp plus seg/@source. Alignment still works because both sides carry the same verse URN, and this is legal under the once-per-project rule as long as Numbers 10:35 appears only here.",
+          "fix": "Either give the chapter milestone a local corresp (…/vayehi_binsoa/quotations/numbers_10) and use the local-verse-plus-seg/@source convention on both sides, or record that the canonical-corresp form is deliberate for this once-only verse. This does not block approval."
+        }
+      ],
+      "remaining_source_questions": []
+    }
+  ],
+  "verified": [
+    "All three ledger corrections in scope are applied to both the payload and the English XML: kaddish 'spoken in the world and say, Amen.', Ein Kamokha 'among the mighty ones', and vayehi_binsoa 'Arise, O Lord,'. The upheld audit findings for these pages are all covered by them.",
+    "The lael_orekh_din, ribbono and other ledger items lie outside this scope and were not judged.",
+    "s162: the italic English direction 'The Holy Ark is opened and, while the reader takes out two Torah scrolls, the congregation says:' is printed on the Hebrew leaf under the Hebrew heading. So it is correctly present in both the Hebrew and English projects, encoded as tei:note type=instruction.",
+    "s149: apart from the Hebron comma, the English of the judgment and merit passages in the payload agrees with the full-page image at the level I could read. This includes the parenthetical (Abraham), (Isaac) and (Jacob), the split 'judg-ment' joined, and the closing quotation mark.",
+    "Hebrew and English share every prayer-part, petition, chapter, verse and half-verse corresp in each of the 8 witnesses. Petition and prayer-part sequences are each closed by an explicit same-unit terminator before unrelated text.",
+    "Half-verse milestones carry n plus a corresp one path component below the verse, and are closed by bare half-verse terminators before the bare verse and chapter terminators, as the Sub-verse scope section requires.",
+    "Repeated Psalms 8:10b in Melekh Bemishpat uses distinct occurrence-context correspondences (psalms_8_first and psalms_8_second) with the canonical source on seg/@source, following the established convention. No duplicate canonical corresp is needed.",
+    "No j:conditional or conditional notes appear in these witnesses. The editorial standOff notes on uvekhen and avinu_malkenu are commentary carrying resp, which matches the Annotations section."
+  ],
+  "limits": [
+    "I did not open the original images for s147, s157, s159, s161 or s163. Source approval for those pages rests on the existing full-page audits, all run with claude-opus-5-5 at the supplied resolution and no zoom, plus the adjudicated ledger.",
+    "The Hebron comma is a new finding seen only at full-page resolution. Make an enlarged crop before applying it.",
+    "I did not find the continuation of the s149 italic note.",
+    "The placement of the documentary instructions in the running order and navigation is outside what this shard's XML shows, and I did not check it.",
+    "This review does not accept any Hebrew source or fine marks. Hebrew text was used only to check boundaries and correspondence.",
+    "This is a source and markup audit. I did not run the exporter, the validators or test_repeated_scripture_has_addressable_chapter_and_verse_context."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "2a6fdcd1-b358-4378-adcf-9f0781b90b50"
+  }
+}

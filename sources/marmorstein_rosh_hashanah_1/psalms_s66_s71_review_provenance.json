@@ -1,0 +1,90 @@
+{
+  "reviews": [
+    {
+      "file": "independent/psalms_s66_s71.json",
+      "sha256": "c2e67b9a7121b67cb20598a4ff6e7c2ad42b2461372b10eb6a46719d95cbaca6",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "8f36f4eb-4368-4881-a051-6d0c78828055"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "effort": "low reasoning budget; one visual pass over full scans s66–s71, plus enlarged bands s66-b0..b3, s68-b0..b3, s70-b0..b1 and s71-b0. I did not open the English bands for s67 and s69 (the full scans were clear) or s70-b2/b3 (Psalm 135, out of scope)."
+      },
+      "response_model_identifiers": [
+        "claude-opus-5-5"
+      ],
+      "raw_response_sha256": "99d87843f59721f0172a48922648d9148fbdfbae29330fcebabef8ead828cc5f"
+    },
+    {
+      "file": "independent/psalms_s66_s71_enlarged.json",
+      "sha256": "3be0b0645770beb19fed573f56b187b6207c2864c1708652ea1e8c74991f0476",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "9d6fd11d-c930-4196-b73c-54e53f0dcf7d"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "effort": "low"
+      },
+      "response_model_identifiers": [
+        "claude-opus-5-5"
+      ],
+      "raw_response_sha256": "4eedbc0ea3971d3edd820692801a38b99a67e0d49517421528e470a848240e33"
+    },
+    {
+      "file": "independent/psalms_s66_s71_isolated.json",
+      "sha256": "09895fc6f16e7de996e154bacd1098c2e82f7e54f0ca6390173305a921df7789",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "3f86df32-07c2-4032-953a-ffaa0b5eae6a"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "effort": "low"
+      },
+      "response_model_identifiers": [
+        "claude-opus-5-5"
+      ],
+      "raw_response_sha256": "2b7c31ae16cb376796d885dd88938400a8dade29a3d004f60efa6b56563266cb"
+    },
+    {
+      "file": "independent/psalms_s66_s71_guideline_audit.json",
+      "sha256": "b89fea945ad7d6bd5d3871f6a8ddbad43d85dad3f2504032f7c4408f7973d7df",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "9010fbd9-41be-4f95-97d1-f84958d287eb"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "effort": "low (as configured for this session); full read of the generated XML, JLPTEI-3.md, the resolutions, primary, independent and isolated JSON, plus visual checks of scans s66 and s70"
+      },
+      "response_model_identifiers": [
+        "claude-opus-5-5"
+      ],
+      "raw_response_sha256": "00d3a283d905f6893bb7904543d0ec9cc44f32a67b3a8dc8c6f538613f173aa6"
+    },
+    {
+      "file": "independent/psalms_s66_s71_human_final.json",
+      "sha256": "0e5cd8bbffabb8af703030602a7ef4c484208e12ffe9612cc84f5c2bb890982f",
+      "invocation": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "session_id": "020cd6ef-1507-42d2-a650-6781cd8b9a5a"
+      },
+      "self_report": {
+        "model": "claude-opus-5-5",
+        "effort": "low as configured for this session. I fully read the human confirmation, the resolutions, the machine codepoint proof, the earlier audit, the HE and EN psalm_34/90/91 files, HE psalm_91_repeat.xml, the end of the HE index, the end of the EN index and the end of the expanded index's morning section. Read-only: no diff tool and no codepoint dump."
+      },
+      "response_model_identifiers": [
+        "claude-opus-5-5"
+      ],
+      "raw_response_sha256": "9fa0224b1c2597c50b36049d8a4c16640395fe44f297c8e7622eeba27359af7e"
+    }
+  ],
+  "note": "Configured effort and self-reported effort recorded separately; no claim of observed hidden reasoning."
+}

@@ -1,0 +1,70 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "low effort: one visual pass of every enlarged row, compared word by word with current.json and current.xml. No codepoint dump: the only tool available was file reading, with no shell."
+  },
+  "witnesses": [
+    {
+      "stem": "yotzer_titbarakh",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        "Cosmetic only: there is a double trailing space before </tei:p> in the he XML (the JSON fragment has one trailing space). This doesn't block acceptance."
+      ],
+      "unresolved": []
+    },
+    {
+      "stem": "yotzer_qadosh",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        "Not blocking: the verse ends with an ASCII ':' rather than U+05C3 sof pasuq. This matches the printed colon and the house style of the other modules. The excerpts don't settle it."
+      ],
+      "unresolved": []
+    },
+    {
+      "stem": "yotzer_vehaofannim",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    },
+    {
+      "stem": "yotzer_lael_barukh",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [
+        "Not blocking: the Ps 136:7 tei:seg has @source but no type=\"quotation\", while the qadosh seg has it. The excerpts don't require the type. It is worth making the two consistent."
+      ],
+      "unresolved": []
+    },
+    {
+      "stem": "yotzer_or_chadash",
+      "hebrew_source_approved": true,
+      "encoding_guidelines_approved": true,
+      "issues": [],
+      "unresolved": []
+    }
+  ],
+  "verified": [
+    "titbarakh, s106 rows 1–3: consonants and vowels match the print word for word, from תִּתְבָּרַךְ through וּמַמְלִיכִים. This includes the corrected plene-holam וְגֹאֲלֵנוּ (holam on gimel, hataf-patah under alef), וּבְטָהֳרָה with hataf-qamatz, עֹשִׂים with holam, and אֶת־פִּיהֶם with maqaf. The printed alef-lamed ligature in אֱלֹהִים is correctly encoded as separate letters.",
+    "titbarakh boundaries: it starts at the head of page 39 and ends before אֶת־שֵׁם הָאֵל. The English fragment covers the same span, ending at 'sanctify and crown'.",
+    "qadosh, s106 rows 4–5: the encoding shows each human-confirmed mark in the right place. Darga on the first dalet, then paseq ׀. Tevir on the second dalet. No accent on the third קָדוֹשׁ. Merkha on the second yod of יְיָ֥. Etnahta on the alef of צְבָא֑וֹת. Merkha on the lamed of מְלֹ֥א. Tipcha on the second alef of הָאָ֖רֶץ. Silluq/meteg on the dalet of כְּבוֹדֽוֹ. All vowels match, including כָל without dagesh after מְלֹא. Each mark appears to be the correct, distinct accent character (visual check), and mark order inside each cluster looks canonical (vowel before accent).",
+    "qadosh scope: the seg covers exactly קָד֧וֹשׁ … כְּבוֹדֽוֹ: and leaves out the preceding prose (…וְאוֹמְרִים בְּיִרְאָה.) and the following אופן heading. The source is isaiah/6/3/qadosh, a verse-part starting at קדוש, which fits the quotation not including וְקָרָא זֶה אֶל־זֶה וְאָמַר. The verse milestone with corresp opens before the seg, and bare verse and chapter terminators follow it. The he and en milestones and @source are identical.",
+    "vehaofannim, s108 rows 5–6: matches the print (מִתְנַשְּׂאִים, לְעֻמַּת, לְעֻמָּתָם, final colon). It ends before בָּרוּךְ כְּבוֹד־יְיָ מִמְּקוֹמוֹ.",
+    "lael_barukh, s108 rows 6–7: matches the print from לָאֵל בָּרוּךְ to כָּאָמוּר, including יֹאמֵרוּ, תְהִלּוֹת and בְּכָל־יוֹם, plus the two printed periods and the colon after בְרֵאשִׁית. Ps 136:7 (לְעֹשֵׂה אוֹרִים גְּדֹלִים כִּי לְעוֹלָם חַסְדּוֹ:) is the whole verse, so a verse-level source is correct. It has a milestone with corresp before the seg and terminators after it, and he and en align.",
+    "or_chadash, s108 rows 7–8: matches the print from אוֹר חָדָשׁ עַל־צִיּוֹן to הַמְּאוֹרוֹת:, including כֻלָּנוּ without dagesh and the period after לְאוֹרוֹ. j:divineName wraps יְיָ. It ends before אַהֲבָה רַבָּה.",
+    "English for all five stems covers the same text span as the Hebrew. The English wording was not re-reviewed, as instructed."
+  ],
+  "limits": [
+    "Not independently confirmed at this image resolution, so I'm not certifying them: the dagesh inside the first tav of תִּתְבָּרַךְ, and the dagesh in the yod of חַיִּים. The encoded forms are grammatically expected, but I couldn't read the dot clearly in the scan.",
+    "Codepoints were identified visually. No hex or Unicode-normalization dump was done, so the exact codepoints of the qadosh accents (U+05A7 darga, U+059B tevir, U+05A5 merkha, U+0591 etnahta, U+0596 tipcha, U+05BD meteg, U+05C0 paseq), and whether stray spacing characters are absent, still need a byte-level check.",
+    "I didn't check whether the verse-part isaiah/6/3/qadosh is declared in opensiddur/common/subverse.py. The guidelines require it, and it's outside the files provided.",
+    "Only these five modules were reviewed. Surrounding piyyutim, khevodo_ihel and the rest of the page are not accepted by this review."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "12b32054-dbdf-47e9-af23-aca0c5096bac"
+  }
+}

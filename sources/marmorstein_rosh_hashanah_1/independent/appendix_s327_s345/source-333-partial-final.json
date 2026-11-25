@@ -1,0 +1,55 @@
+{
+  "source_scan": "s333",
+  "approved_source_reading": false,
+  "human_application_verified": true,
+  "remaining_reading_disputes": [
+    {
+      "number": 648,
+      "status": "OPEN: no human answer yet",
+      "points": [
+        {
+          "word": "עֶזְרָה",
+          "question": "Is the mark at the lower right of the ayin a meteg (עֶֽזְרָה)?",
+          "exact_context": "line 11: וּמִבַּלְעֲדֵי עֻזְּךָ אֵין עֶזְרָה",
+          "current_snapshot": "עֶזְרָה (no meteg)",
+          "image": "s333-detail2-left.png"
+        },
+        {
+          "word": "מִבַּלְעֲדֵי (first occurrence)",
+          "question": "Is the mark under the lamed only a sheva, or a sheva plus a meteg or something else?",
+          "exact_context": "line 11: מִבַּלְעֲדֵי כוֹחֲךָ אֵין גְּבוּרָה",
+          "current_snapshot": "מִבַּלְעֲדֵי (plain sheva)",
+          "image": "s333-detail2-right.png"
+        },
+        {
+          "word": "וּמִבַּלְעֲדֵי (second occurrence)",
+          "question": "Is the mark under the lamed only a sheva, or a sheva plus a meteg or something else? This is decided separately from the first occurrence.",
+          "exact_context": "line 11: וּמִבַּלְעֲדֵי עֻזְּךָ אֵין עֶזְרָה",
+          "current_snapshot": "וּמִבַּלְעֲדֵי (plain sheva)",
+          "image": "s333-detail2-left.png"
+        }
+      ]
+    }
+  ],
+  "corrections_required": [],
+  "limitations": [
+    "I had no shell in this session. So I could not recompute input_working_sha256 or output_working_sha256, and I could not dump code points to check the order of the marks inside each letter cluster. I checked the rendered snapshot text against each human answer, word by word and mark by mark. The mark order in the underlying text is still unchecked.",
+    "I looked at the images only to confirm the location and line of each human-settled word. I did not re-read the marks themselves, as instructed. My image check does not override any human decision.",
+    "For the 648 points, I looked at the images only to locate them. I made no independent reading. They stay open until a person answers.",
+    "This covers the source reading only. It is not approval of the source, XML, export, batch or leaf. No files were edited."
+  ],
+  "notes": [
+    "Every one of the 33 numbered sub-changes in human-642-662-resolution.json appears in the snapshot. Each is in the right line and the right word. No form left over from before a change remains.",
+    "Matched against the stated answers: 642 בַּתָּֽוֶךְ (dagesh and meteg). 643 and 644: נִבְדַּל, נֶחְדַּל, נֶאֱצַל, וְנִבְדַּל, וְנֶחְדַּל, רַק, all with patah. 645: line 1 is exactly 'אֵין מָרְאֶה וְגַב לְאִחוּדֶֽךָ', and לְעוֹצֶם has sheva under the lamed. 646: כְּמִדָּתֶֽךָ, כִּגְדֻלָּתְךָ, and תְּבוּנָתֶֽךָ with the initial tav dagesh. 647: חָלַֽקְתָּ (lamed meteg), חֲכָמִים (no kaf meteg), תְּמַלְּאֵם (lamed dagesh). 649: לִגְדֻלָּתֶֽךָ (qubuts and lamed dagesh). 650: תּוּכָל and בִּלְתֶּֽךָ. 651: מִלֵּאתָ (no meteg). 652: מִעֲטֽוּךָ, לְחֲצוּךָ, יְצוּרֶֽיךָ. 653: הַשָּׁמָֽיִם. 654: קֵרְבוּךָ, כִּי כָל, יְחַלְּקוּךָ. 655: זֶֽרֶם and מַֽיִם. 656: לַהֲוַיוֹתְךָ. 657: וְעוֹדֶף. 658: הָיִֽיתָ (line 25) and אָֽתָּה. 659: נוֹדַֽעְתָּ. 660: וְיָעִֽידוּ (meteg on the ayin), יַסְהִֽידוּ (meteg on the he), בְּתֽוֹקֶף (meteg on the tav, none on the qof), and both יְקָרְךָ unchanged. 661: line 22 ends with a colon. 662: עֵת with tsere.",
+    "The changes are bounded. The only differences between the earlier and current text are the human-answered words. The 28 earlier provisional meteg and vowel changes are unaffected. The consonants are unchanged throughout, including the extra vav in לַהֲוַיוֹתְךָ and the defective spelling of כִּגְדֻלָּתְךָ and לִגְדֻלָּתֶֽךָ.",
+    "All 648 targets are still in their unanswered state in the snapshot. Line 11 reads 'מִבַּלְעֲדֵי כוֹחֲךָ אֵין גְּבוּרָה. וּמִבַּלְעֲדֵי עֻזְּךָ אֵין עֶזְרָה:' with no meteg or other change applied early.",
+    "Every dispute from the earlier review now maps to a human number. All are settled except the three 648 points.",
+    "The two notes stored in the snapshot are still out of date. The prayer block note still says 'Metegs are not marked', but metegs have been applied. The running-head note about the top being cut off applies only to band1; the head is fully legible in full-333.png. These are metadata, not reading corrections, so they are not listed under corrections_required.",
+    "Source approval is withheld only because 648 is open."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "d6fdb959-5338-456b-87ea-a903c5a603ac"
+  }
+}

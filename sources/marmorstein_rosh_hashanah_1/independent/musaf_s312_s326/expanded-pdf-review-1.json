@@ -1,0 +1,35 @@
+{
+  "approved": true,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s312/v5-export-review/expanded-final-export-manifest.json",
+    "/tmp/mahzor-s312/v5-export-review/layout-context-proof.json",
+    "/tmp/mahzor-s312/v5-export-review/expanded-pdf-initial-group1.json",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-307.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-308.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-309.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-310.png",
+    "/tmp/mahzor-s312/v5-export-review/final-pdf-images/expanded-311.png"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "CLOSED, formerly blocking (expanded-309.png, printed p.307, unexplained rule near the top of the page): the evidence closes this. On expanded-308.png (printed p.306) the page ends with the announced optional addition: the bold rubric 'ויש מוסיפים:' and then 'היום תתמכנו בימין צדקך: אמן:'. There is no rule before it, which matches the proof's statement that the rubric announces the opening. The TeX fragment in layout-context-proof.json shows \\OSCondEndBlock{} in the same \\pstart as the 'סוגרים הארון.' instruction note, right after the היום תתמכנו paragraph. The XML context shows the matching j:conditional and j:endConditional around exactly that paragraph. On 309 the rule sits directly above 'סוגרים הארון.', in the position that fragment predicts. It is a deliberate conditional-scope end marker, not a footnote rule or a stray orphan. Footnote 138 on 311 uses a separate rule at the bottom of the page, so the two can't be mixed up.",
+    "NEW, cosmetic (308→309): the optional addition's content is on p.306 but its closing scope rule lands at the top of p.307, after the page break. The opening has no matching rule, so a reader who meets the lone rule at the top of 307 has to turn back a page to see what it closes. Keeping the end marker on the same page as the conditional content (for example with a no-break penalty before \\OSCondEndBlock) would make this clearer. This is not a defect in content, order or clipping.",
+    "RETAINED (expanded-308.png): the optional addition 'היום תתמכנו בימין צדקך: אמן:' is printed unpointed and without an English counterpart. The XML context shows this matches the source, so it is consistent with the deliberate Hebrew-only handling. Noted only because it sits next to the fully pointed היום rows.",
+    "RETAINED (expanded-309.png, printed p.307): there is a space before the closing single quote in the English column: 'all peoples ’.', 'as on this day ’.', 'He commanded us ’.'. Opening quotes are left at the end of rows on their own ('prophet: ‘', 'And it was said: ‘' twice). Readable, but typographically untidy.",
+    "RETAINED (expanded-311.png, printed p.309): Hebrew footnote 138 ('משנה סוף מס' תמיד, וסופרים פי\"ח.') and its footnote rule sit at the left / left of centre, which looks like a left-to-right paragraph direction for a Hebrew note. Readable, correctly numbered and no overlap. Worth checking against how Hebrew footnotes are set on pages already approved.",
+    "RETAINED (expanded-311.png): the raised footnote mark '138' sits on its own short line at the right margin, between the פטום הקטורת paragraph and 'הַשִּׁיר שֶׁהַלְוִיִּם'. No overlap. It is the only footnote in this range, so mark-to-entry order is correct.",
+    "RETAINED (expanded-311.png): the last line of the עָלֵינוּ paragraph ('זוּלָתוֹ. כַּכָּתוּב...') may start slightly inside the right margin. This is minor and uncertain at this resolution."
+  ],
+  "limitations": [
+    "I have no memory of the first review session. My knowledge of the original findings comes only from the recorded expanded-pdf-initial-group1.json, which I read in this session.",
+    "I judged the conditional closing rule only from the provided proof JSON (TeX fragment and XML excerpt) and from the rendered pages 308–309. I did not independently read any other source, build or model output.",
+    "I reopened and visually inspected all five assigned images in this session. The checks are visual at PNG resolution, so I could not measure exact spacing or check sub-point mark placement, and I did not test the hyperlinks.",
+    "Across 307–311 I saw no clipping or overlap between columns. Rows are aligned. Speaker labels (חזן/קהל) stay with their rows. The priestly blessing rows and the Kaddish rows are paired correctly. The English-only peace blessing does not appear twice in this range. The interlinear ↗ marks are visible and do not collide with the text. No obsolete 'coverage stops at 311' note appears in this range. The thirty-blast instruction falls outside this range, so I could not check it here."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "c9dcaff3-1c18-4d2b-ad27-8652e8e52145"
+  }
+}

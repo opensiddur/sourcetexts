@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "copied_project_and_preview_hashes_match_reviewed_artifacts": true,
+  "accepted_baseline_valid": true,
+  "coverage": {
+    "scan_leaves": 355,
+    "verified_page_labels": 331,
+    "leaves_with_transcribed_excerpts": 346,
+    "leaves_independently_read": 346,
+    "leaves_fully_transcribed_and_reviewed": 345,
+    "pending_unit_reviews": [],
+    "complete": false,
+    "note": "OCR availability and excerpt coverage never imply complete page transcription."
+  },
+  "checks": [
+    {
+      "check": "refdb",
+      "exit_code": 0,
+      "log": "promoted-refdb-check.log"
+    },
+    {
+      "check": "registry",
+      "exit_code": 0,
+      "log": "promoted-registry-check.log"
+    },
+    {
+      "check": "naming",
+      "exit_code": 0,
+      "log": "promoted-naming-check.log"
+    },
+    {
+      "check": "feature",
+      "exit_code": 0,
+      "log": "promoted-feature-check.log"
+    },
+    {
+      "check": "reference",
+      "exit_code": 0,
+      "log": "promoted-reference-check.log"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "approved": false,
+  "required_changes": [
+    "Provide a complete test log. /tmp/mahzor-navigation/exporter-remedy-tests.log has four lines of dots and stops partway through the run. Its progress markers are 28%, 43% and 66%, then 25 more dots with no closing percentage. There is no summary line ('N passed'), no failure section and no record of which tests were selected. About 297 tests show; the percentages imply about 410 in total, so roughly a quarter of the run is missing. The new TestPageChanges cases, including the electronic compile integration test, may be in the missing part. Re-run (at least `uv run pytest opensiddur/tests/exporter`, ideally the whole suite) and supply the log with its final summary line. With that, and if it is green, item 2 can be approved: I found no remaining logic defect in the code itself."
+  ],
+  "files_read": [
+    "/tmp/mahzor-navigation/implementation-review.json",
+    "/tmp/mahzor-navigation/exporter-remedy.diff",
+    "/tmp/mahzor-navigation/exporter-remedy-tests.log",
+    "/home/efeins/.codex/worktrees/scan-page-change-links/master/opensiddur/exporter/scan_links.py (whole file)",
+    "/home/efeins/.codex/worktrees/scan-page-change-links/master/opensiddur/exporter/cli_common.py (whole file)",
+    "/home/efeins/.codex/worktrees/scan-page-change-links/master/opensiddur/exporter/conditional_markers.py (whole file)",
+    "/home/efeins/.codex/worktrees/scan-page-change-links/master/opensiddur/exporter/compiler.py (lines 1-120 only)"
+  ],
+  "limitations": [
+    "I could only read files. I did not run the tests, the compiler or an electronic export.",
+    "I did not read the CLI path for `--destination electronic` in compiler.py. So I have not confirmed that `LinearData(defer_reader_settings=True, project_priority=[...])` plus a direct `ExternalCompilerProcessor` call is exactly what that destination sets up, or that the constructor signatures and `xml_cache.base_path` used in the test match the current code. Since the test log is incomplete, I also cannot confirm that this test runs and passes.",
+    "The integration test calls mark_scan_links on the raw compiler output, not through prepare_compiled_tree. relocate_colophons runs first there and can move a colophon conditional pair to tei:back. That cannot break the pairing (it moves both markers together), but it is not exercised.",
+    "compiler.py imports `is_day_gate` (day_gates.py), which I did not read. If the electronic reader can hide content by some mechanism other than j:conditional/j:endConditional markers or rubric notes, _suppress_repeated_pages does not treat it as optional. I found no evidence that such a mechanism exists, but I did not rule it out.",
+    "No PDF or HTML output was inspected, as instructed."
+  ],
+  "notes": [
+    "Rubrics (earlier required change 1): every tei:note of type instruction or description gets an optional scope: the state is saved on 'start' and merged on 'end'. This covers notes with and without j:condition, and suppression by priority or `instructions.from`. Merging is a union in which keys missing on either side become None, so a page seen only inside the rubric never counts as definite afterwards. The test covers both variants. Correct.",
+    "Implicit end (earlier required change 2): every opener records its parent and is closed (merged) when that parent ends, with or without an xml:id. A closer whose target is unknown, unopened or already closed clears all state. This is conservative: it can only add links. Inner frames are merged before outer ones (close_from walks reversed), and scopes close before the rubric's own merge on the same 'end' event, which is the right order.",
+    "Crossing scopes, which conditional_markers.py explicitly allows: A opens, B opens, A closes, B closes. A's close also closes B early, B's real closer is then unknown and clears all state, and the stretch of B between the two closers is treated as unconditional. I checked this: a break there is suppressed only when every path, including the one that skips B from its start, already ends on that page. So no required link can be lost; the only cost is extra links after B's closer. The same applies to a scope that opens in one row's primary column and closes in a later row (allowed: same stream), because the parallelItem's end closes it early. The clear wipes every lane, not just that column. That is safe but somewhat coarse. Acceptable, but worth knowing if duplicate links show up in parallel books.",
+    "Lane key (earlier required change 3): the key is (project, role, edition), where project is the column's p:project or else the nearest p:transclude's. Columns without p:project inside a shared primary wrapper now differ by role, so they stay independent. The test covers both the actual-p:project and missing-p:project variants. A break outside any column (role None) and one inside the primary column of the same project are in different lanes, which can produce an extra link but never a lost one.",
+    "Duplicate ids from one text transcluded twice: the stack is searched from the top for the target, so sequential duplicate ids still pair with the right opener. Even unrewritten ids would not cause a wrong suppression.",
+    "lxml identity: the `rubrics` dict and `parent is node` rely on lxml handing back the same proxy object for an element. That holds because the dict and the scope tuples keep references to the proxies.",
+    "Tests requested in the previous round are all present: optional note with and without j:condition; implicit named and anonymous conditionals; unknown end; nested conditionals; two editions; project columns and shared wrapper; a duplicate moved by _attach that stays in the tree unmarked; and the compiler integration with id/@target pairing checked before marking.",
+    "Not required, for the print path: in a print compile, undecided scopes and the remaining rubrics are always printed, yet are still treated as optional here. So a rubric break and the required break after it on the same scan both get a link in the PDF: duplicated symbols, never missing ones. If that looks wrong in the visual review, the optional-scope handling could be made destination-dependent.",
+    "Not required, carried over from the earlier review: state still carries across top-level divisions and service files, so a section reached from the table of contents may open without a scan link until the page changes."
+  ]
+}

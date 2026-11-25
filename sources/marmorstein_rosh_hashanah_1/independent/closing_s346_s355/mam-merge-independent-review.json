@@ -1,0 +1,184 @@
+{
+  "approved_merge_resolution": true,
+  "required_changes": [],
+  "reviewer": {
+    "identity": "Codex, based on GPT-6",
+    "setting": "Exact deployed variant/reasoning setting not exposed."
+  },
+  "files": [
+    {
+      "book": "exodus",
+      "candidate": "/tmp/mahzor-s346/mam-merge-candidates/exodus.xml",
+      "sha256": "2a7ca3d9bc05cbeb2ea31160f55b6738b7880169a70a7fadb3999411ee9bf80a",
+      "added_parts": {
+        "urn:x-opensiddur:text:bible:exodus/19/19/meod": {
+          "branch_position": [
+            "urn:x-opensiddur:text:bible:exodus/19/19",
+            40
+          ],
+          "candidate_position": [
+            "urn:x-opensiddur:text:bible:exodus/19/19",
+            40
+          ],
+          "preserved": true
+        },
+        "urn:x-opensiddur:text:bible:exodus/19/19/vayehi_qol": {
+          "branch_position": [
+            "urn:x-opensiddur:text:bible:exodus/19/19",
+            0
+          ],
+          "candidate_position": [
+            "urn:x-opensiddur:text:bible:exodus/19/19",
+            0
+          ],
+          "preserved": true
+        },
+        "urn:x-opensiddur:text:bible:exodus/34/7/notzer_chesed": {
+          "branch_position": [
+            "urn:x-opensiddur:text:bible:exodus/34/7",
+            0
+          ],
+          "candidate_position": [
+            "urn:x-opensiddur:text:bible:exodus/34/7",
+            0
+          ],
+          "preserved": true
+        }
+      },
+      "candidate_minus_added_c14n_exact_stage3": true,
+      "body_character_stream_exact_stage3": true,
+      "branch_minus_added_c14n_exact_base": true
+    },
+    {
+      "book": "numbers",
+      "candidate": "/tmp/mahzor-s346/mam-merge-candidates/numbers.xml",
+      "sha256": "f1dacd7589f2c29e21d1eefd8a67458a66278026fbca2c08930dcdb4c9a73d10",
+      "added_parts": {
+        "urn:x-opensiddur:text:bible:numbers/9/23/al_pi": {
+          "branch_position": [
+            "urn:x-opensiddur:text:bible:numbers/9/23",
+            85
+          ],
+          "candidate_position": [
+            "urn:x-opensiddur:text:bible:numbers/9/23",
+            85
+          ],
+          "preserved": true
+        }
+      },
+      "candidate_minus_added_c14n_exact_stage3": true,
+      "body_character_stream_exact_stage3": true,
+      "branch_minus_added_c14n_exact_base": true
+    },
+    {
+      "book": "psalms",
+      "candidate": "/tmp/mahzor-s346/mam-merge-candidates/psalms.xml",
+      "sha256": "0cfa20072cdb495fd54d8cf2b3a438167655532d2683db7469d83e9c8b3b0740",
+      "added_parts": {
+        "urn:x-opensiddur:text:bible:psalms/39/13/ki_ger": {
+          "branch_position": [
+            "urn:x-opensiddur:text:bible:psalms/39/13",
+            89
+          ],
+          "candidate_position": [
+            "urn:x-opensiddur:text:bible:psalms/39/13",
+            89
+          ],
+          "preserved": true
+        },
+        "urn:x-opensiddur:text:bible:psalms/39/13/shimah": {
+          "branch_position": [
+            "urn:x-opensiddur:text:bible:psalms/39/13",
+            0
+          ],
+          "candidate_position": [
+            "urn:x-opensiddur:text:bible:psalms/39/13",
+            0
+          ],
+          "preserved": true
+        },
+        "urn:x-opensiddur:text:bible:psalms/55/15/b": {
+          "branch_position": [
+            "urn:x-opensiddur:text:bible:psalms/55/15",
+            31
+          ],
+          "candidate_position": [
+            "urn:x-opensiddur:text:bible:psalms/55/15",
+            31
+          ],
+          "preserved": true
+        }
+      },
+      "candidate_minus_added_c14n_exact_stage3": true,
+      "body_character_stream_exact_stage3": true,
+      "branch_minus_added_c14n_exact_base": true
+    },
+    {
+      "book": "zechariah",
+      "candidate": "/tmp/mahzor-s346/mam-merge-candidates/zechariah.xml",
+      "sha256": "57ae146ce6e0c9c2cf0668c0c10face836232678be0769655b9ef1f7322a9e92",
+      "added_parts": {
+        "urn:x-opensiddur:text:bible:zechariah/9/15/adonai_tzevaot_yagen": {
+          "branch_position": [
+            "urn:x-opensiddur:text:bible:zechariah/9/15",
+            0
+          ],
+          "candidate_position": [
+            "urn:x-opensiddur:text:bible:zechariah/9/15",
+            0
+          ],
+          "preserved": true
+        },
+        "urn:x-opensiddur:text:bible:zechariah/9/15/veakhelu": {
+          "branch_position": [
+            "urn:x-opensiddur:text:bible:zechariah/9/15",
+            32
+          ],
+          "candidate_position": [
+            "urn:x-opensiddur:text:bible:zechariah/9/15",
+            32
+          ],
+          "preserved": true
+        }
+      },
+      "candidate_minus_added_c14n_exact_stage3": true,
+      "body_character_stream_exact_stage3": true,
+      "branch_minus_added_c14n_exact_base": true
+    }
+  ],
+  "scope": "Actual four conflict-stage candidates only, preserving eight named verse-part additions and the intentional Psalm55:15/b existing half-verse boundary correction. Independent Git stage1/2/3 and canonical XML checks; no source edits.",
+  "checks": {
+    "all_nine_branch_boundary_positions_preserved": true,
+    "upstream_body_character_stream_byte_exact": true,
+    "all_remaining_stage3_markup_preserved": "After removing exactly the nine affected markers from both candidate and upstream, canonical XML is exactly equal in every file.",
+    "all_branch_changes_accounted": "After removing exactly the nine affected markers from branch and base, canonical XML is exactly equal in every file; no other old branch structural delta is lost.",
+    "schema_proof": {
+      "passed": true,
+      "validated_files": [
+        {
+          "path": "/tmp/mahzor-s346/mam-merge-candidates/zechariah.xml",
+          "sha256": "57ae146ce6e0c9c2cf0668c0c10face836232678be0769655b9ef1f7322a9e92"
+        },
+        {
+          "path": "/tmp/mahzor-s346/mam-merge-candidates/psalms.xml",
+          "sha256": "0cfa20072cdb495fd54d8cf2b3a438167655532d2683db7469d83e9c8b3b0740"
+        },
+        {
+          "path": "/tmp/mahzor-s346/mam-merge-candidates/numbers.xml",
+          "sha256": "f1dacd7589f2c29e21d1eefd8a67458a66278026fbca2c08930dcdb4c9a73d10"
+        },
+        {
+          "path": "/tmp/mahzor-s346/mam-merge-candidates/exodus.xml",
+          "sha256": "2a7ca3d9bc05cbeb2ea31160f55b6738b7880169a70a7fadb3999411ee9bf80a"
+        }
+      ]
+    }
+  },
+  "algorithm_assessment": "Revised script inventories changed offsets of both verse-part and half-verse markers, asserts entire affected verse equality under NFD/no-whitespace normalization, removes an existing marker with tail preservation, then inserts at the branch offset with unchanged attributes. Independent exact-body and canonical-XML checks strengthen its normalized text assertions.",
+  "resolved_initial_blocker": "Original candidate dropped Psalm55:15/b move to before בְּבֵ֥ית. Revised candidate preserves it. Initial blocked review retained separately.",
+  "limits": [
+    "Does not validate upstream textual editorial decisions, re-read source glyphs, or approve full exports.",
+    "Schema report was read, not rerun independently.",
+    "Only the four conflicted MAM files and their branch deltas were audited; Marmorstein/Birnbaum compiled-provider dependencies are outside this check."
+  ]
+}

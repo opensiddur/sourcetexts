@@ -1,0 +1,81 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "encoding_alignment_order_approved": true,
+  "english_source_reading_approved": true,
+  "other_hebrew_readings_approved_except_human_dependencies": false,
+  "cluster_readings": [
+    {
+      "word": "יְהַלֲלוּךָ (Ps 84:5, s78, morning_ashrei/1)",
+      "reading": "hataf-patah under the first lamed",
+      "reason": "In the enlarged ashrei84-cluster.png, the mark under the first lamed is a patah bar with a two-dot colon beside it, the same shape as the hataf-patah elsewhere on the line. It is not the bare two dots (sheva) under the yod of the same word. The p.2 printing of the same verse on s8 shows the same shape. Heidenheim regularly puts hataf on the first of two identical consonants, so this matches his practice. This was read from the actual cluster, not carried over from the Halleluyah ruling.",
+      "confidence": "medium-high"
+    },
+    {
+      "word": "וַאֲהַלֲלָה (Ps 145:2, s78, morning_ashrei/4)",
+      "reading": "hataf-patah under the first lamed",
+      "reason": "In ashrei145-cluster.png, the first lamed has the same patah-plus-colon shape as the hataf-patah under the alef of the same word and under the alef of אֲבָרְכֶךָּ. It is not the bare sheva seen under the final כ of שִׁמְךָ. On s8, line 2 has the same form.",
+      "confidence": "medium-high"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "medium",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/morning_ashrei.xml",
+      "issue": "Lines 47 and 51 still encode plain sheva: יְהַלְלוּךָ (84:5) and וַאֲהַלְלָה (145:2). The enlarged s78 clusters show hataf-patah on the first lamed in both. This is the only thing blocking Hebrew-reading approval.",
+      "fix": "Change them to יְהַלֲלוּךָ and וַאֲהַלֲלָה, i.e. U+05B0 → U+05B2 on the first lamed only. Change nothing else."
+    },
+    {
+      "severity": "info",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/ashrei.xml (p.2, s8)",
+      "issue": "The older p.2 printing also encodes יְהַלְלוּךָ and וַאֲהַלְלָה with plain sheva. At full-page resolution, s8 also seems to show the hataf form. This batch was asked to change only the 144:15 mapping in this file, so this is an existing reading question, not a defect of the batch.",
+      "fix": "Optionally check enlarged s8 crops in a separate pass. This batch needs no change here."
+    },
+    {
+      "severity": "info",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/index.xml (documentary)",
+      "issue": "Line 295 transcludes bible:psalms/24 right after barukh_adonai. It has no English counterpart, and the s76–s87 scope (through Barukh, then Vayvarekh David) does not explain it. It is not in the list of changed files, and I could not tell which batch added it.",
+      "fix": "Confirm that psalms/24 belongs to an already audited later section and is placed correctly. If not, remove it or move it."
+    }
+  ],
+  "pending_human": [
+    "s78 yehi_khevod/14 אִוָּה(ּ): mappiq present or absent",
+    "s78 yehi_khevod/16 יַעֲזֹב vs יַעֲזוֹב: letter count",
+    "s78 ashrei 144:15 לּוֹ vs לוֹ: dagesh",
+    "s80 146:6 וְאֶת־כָּל: tick before the alef",
+    "s82 147:6 עֲדֵי(־) אָ(ֽ)רֶץ: line-end maqaf and meteg",
+    "s82 147:9 יִקְרָ(ֽ)אוּ: meteg",
+    "s82 147:15 אָ(ֽ)רֶץ: meteg",
+    "s84 148:1 ב(ּ)ַמְּרוֹמִים: dagesh",
+    "s84 149:7 ב(ּ)ַגּוֹיִם: dagesh",
+    "s86 72:19 אֶת־כ?ל(־): holam or qamats, and line-end maqaf",
+    "s82 147:2 and 147:12 Jerusalem: lamed patah vs qamats"
+  ],
+  "checks": [
+    "115:18 citation: the HE morning_ashrei standOff now has note type=citation target=…rosh_hashanah/morning_ashrei/24 with ref target=…bible:psalms/115/18 and text 'קטו יח', without parentheses. /24 is the corresp of the verse milestone n=18 that opens וַאֲנַחְנוּ נְבָרֵךְ inside chapter 115, so the note is attached to the right place.",
+    "s8 (p.2 Minchah Ashrei): the only margin label is 'קמה', beside תְּהִלָּה לְדָוִד. There is no 115:18 label. ashrei.xml correctly has only the קמה note, and nothing was added to the old printing.",
+    "EN psalm_92.xml: the false opening pb is gone. The div facs n76 and biblScope 23–23 remain. Chapter 92 now runs from its opener through 92:16 to the bare verse and chapter terminators, with no page marker.",
+    "EN ashrei.xml: pb n=25 (facs n80) is still inside 145:5, between 'and' and 'words about Thy wonders'. This matches the s79/s81 split and is a deliberate marker of where the canonical witness came from. biblScope is 24–25.",
+    "The EN documentary index never transcludes prayer:ashrei or bible:psalms/92. There is no English at the Hebrew-only Minchah p.2 Ashrei or the Kabbalat Shabbat 92/93 places. Its morning sequence runs 33 → morning_psalm_92 → morning_psalm_93 → yehi_khevod → morning_ashrei → 146–150 → barukh_adonai, with no 150 repeat. The HE index has the same sequence plus psalm_150_repeat.",
+    "144:15: both HE ashrei.xml and EN ashrei.xml use the verse corresp prayer:ashrei/quoted_144_15 and a seg with source=bible:psalms/144/15, so the two languages align. The HE file's other milestones (84:5, 145 chapter and 1–21, 115:18) are still canonical. Its Hebrew text is identical to the earlier reading; only the 144:15 corresp and seg wrapper changed. HE morning_ashrei still uses morning_ashrei/2 for 144:15.",
+    "146:10: in both HE and EN psalm_146.xml, the chapter opener (corresp bible:psalms/146) is followed by canonical verses 1–9. Verse 10 has corresp rosh_hashanah/morning_psalm_146/10 and a seg with source bible:psalms/146/10, then the bare verse and chapter terminators. The chapter scope therefore includes all of verse 10 and nothing after it. The HE pb 26 and EN pb 26 inside 146:7 are unchanged.",
+    "Exodus 15:18 in Yehi Khevod: in both HE and EN, the adonai_melekh prayer part closes with a bare prayer-part milestone before chapter 15 opens. Then comes verse corresp yehi_khevod/quoted_exodus_15_18 and a seg with source bible:exodus/15/18 (HE לְעֹלָם is as patched), then the bare terminators. The range takes in exactly the printed half-verse ('the Lord will reign for ever and ever.') and none of the 10:16 that follows.",
+    "The new structural contexts (quoted_144_15, morning_psalm_146/10, quoted_exodus_15_18) are milestone correspondences under existing roots. Neither file declares them as a new div-level prayer identity.",
+    "In the eight files I re-read, every verse-level canonical Bible corresp appears only once across the batch. The three collisions found earlier (144:15 vs Hoshiah, 146:10 vs rh_vetimlokh, Ex 15:18 vs Emet veEmunah) are now resolved with context URNs plus seg/@source. I make no claim about the whole project: the duplicates that predate this batch are outside it.",
+    "HE yehi_khevod, morning_ashrei and psalm_146 have the same Hebrew text as at the last audit apart from the citation and mapping changes. The English text in all four EN files is unchanged apart from the removed pb, including 78:38 nur/nor sic/corr and the 145:5 split."
+  ],
+  "limitations": [
+    "I could not open expandedindex.xml. The path I was given does not exist, and I found no alternative name using only Read. The expanded-index routing to canonical Ashrei, 92 and 146 was approved in the earlier audit and was not re-checked against the current file.",
+    "The documentary indexes are at index.xml in each project; documentaryindex.xml does not exist.",
+    "The two cluster readings come from the supplied enlarged PNGs and one full-page s8 image, not raw leaves at full resolution. Confidence is medium-high, not certain.",
+    "With no code or shell access, I could not re-check whether the three resolved URNs are unique across the whole project. That rests on the stated automated audit plus my reading of the eight files.",
+    "I did not re-read the unchanged newbatch files (morning_psalm_92/93, 147–150, barukh_adonai, psalm_150_repeat, EN morning_ashrei). I relied on the earlier audit for those."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "e6061394-8011-4b3b-9fe0-acbf77841fb2"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "poem_alignment_metadata_verdict": {
+    "shabbat_ahallelah_elohai_v4": "APPROVED for alignment and metadata only. The Hebrew and English words and batch inclusion are not approved; that waits on human readings 395–405. Every change requested in shabbat-review.json has been applied. Paragraphs: P1–P19 match the requested division in both he and en, and P19 holds the Zech 14:9 intro, the verse, the Deut 6:4 intro and the verse. page_start is true only for the first Shabbat fragment on each scan: he s262 11b, s264 21b, s266 intro, s268 35, s270 39, s272 44; en s263, s265, s267, s269, s271, s273. Roles use the printed form plus role, with the period kept in 'קהל.'. The 'rows' verse rows contain only the verse, with introductions in a separate field. Every verse has a real chapter/verse source and source_reference plus a contextual source_reference_corresp and chapter_corresp. The sic/corr for שְׂעוּ is bound by identity and context.",
+    "weekday_ansikhah_malki_v2": "APPROVED for alignment and metadata only, with one small required metadata fix (reader role on the tomekh speaker). The words, the batch and root registration are not approved. Paragraph 2 for tomekh and the page_start corrections are applied. The variant is encoded as a choice (printed פְּלִיאִיּוֹת, alternative פְּלִילִיּוֹת) with a linked נ״א note. Root registration for ansikhah_malki is not approved until the identity search is redone with the printed spelling (see findings)."
+  },
+  "pifiyyot_alignment_verdict": "All 16 part pairings (he↔en, against existing heyeh_im_pifiyot/1–16) are APPROVED, but the metadata is NOT APPROVED yet. Three page_start flags are wrong. The /11 scope is narrower than the existing /11 and that is not recorded. boundary-and-identity-decisions.json contradicts the units file. Pointing Ochilah at heyeh_im_pifiyot/13–16 is correct and matches the existing scopes exactly. Keeping the regional /12 omission out of the word targets is correct.",
+  "findings": [
+    {
+      "area": "weekday variant note (s270)",
+      "status": "source adjudication recorded; no human reading needed",
+      "detail": "The crop lines/s270-line07.png shows '(נ״א פְּלִילִיּוֹת)' in small Rashi type at the right, line-start end of the line that continues 'שִׁיר מִתְלוּלִיּוֹת'. The line before it ends with פְּלִיאִיּוֹת, so anchoring the note to פְּלִיאִיּוֹת is correct. The first glyph has the Rashi nun form. That fits the other נ״א notes in this source and the primary reading, so record נ״א as a source adjudication. Two encoding gaps remain. The citation text is the bare 'נ״א': the printed parentheses and the printed note form '(נ״א פְּלִילִיּוֹת)' are not recorded anywhere. Neither file records which printed line the note is on. The crop is labelled line07 but the earlier review said line 6, so record the line number under one stated counting rule."
+    },
+    {
+      "area": "weekday speaker",
+      "status": "error, small",
+      "detail": "The tomekh speaker is {abbr:'ח׳', expan:'חזן'} with no role:'reader'. The Shabbat file adds role:'reader' to every ח׳, so the two units are inconsistent. Both readers independently agree on the ח׳ reading, so no human reading is needed."
+    },
+    {
+      "area": "weekday diagnostics/status",
+      "status": "minor, does not block approval",
+      "detail": "en_regex_chunks are still in 'rows'. havel shows [10,11] with no note saying it is a regex artifact, and every chunk number after it is offset by one. The status string still says the fixes are 'pending follow-up approval'. variant_integration still says it 'requires final secondary approval'. The English-page Hebrew cues אנסיכה (s261) and תומך (s271) are not recorded as linkage evidence."
+    },
+    {
+      "area": "weekday/shabbat rubrics",
+      "status": "deferred correctly, but no record yet",
+      "detail": "Neither work file links the s260 Shabbat instruction line, the s261 'On the Sabbath the prayer below the line is said:' or the 'אם שבת.' / 'On (the) Sabbath.' rubrics on each page. They belong in the service spine as conditions, not in the work's words, but there is no spine record yet. The first fragment of each work on s260/s261 has page_start false, so the spine must emit the pb for s260/s261, and for s256/s257 in the pifiyyot unit."
+    },
+    {
+      "area": "shabbat roles and scope",
+      "status": "correct",
+      "detail": "role_resolution records that both readers independently agree each small inline role is ח׳, that each role note is local to its occurrence and does not persist, and that no unprinted קהל labels were added. That is a valid source adjudication and needs no human reading."
+    },
+    {
+      "area": "shabbat source correction",
+      "status": "correct binding; build step not done",
+      "detail": "musaf_shabbat_seu_ayin binds to identity …/quotes/psalms/24/9 with before '' and after ' שְׁעָרִים'. That context is unique in the work, and the literal text keeps the ayin. The build still has to apply it through corrections.json, and that is not done."
+    },
+    {
+      "area": "shabbat redundancy and status",
+      "status": "minor",
+      "detail": "Every verse carries both 'source' and 'source_reference' with identical values. Keep one, or state which one the build reads. The top-level status still says 'independent review pending'. The Hebrew introductions are punctuated inconsistently: there is a final period after בְּדִבְרֵי קָדְשֶׁךָ and עַל יַד נְבִיאֶךָ on s266 but not on s270 or s272. Leave that for the human text pass; it does not affect alignment."
+    },
+    {
+      "area": "identity search",
+      "status": "not enough to register the ansikhah root",
+      "detail": "identity-search.json searched 15,720 files, but the 'anassekha' term is 'אנסכה מלכי' with no yod, while the source prints אנסיכה. Normalization removes only combining marks, so the printed spelling was never searched, and the zero hits mean nothing. boundary-and-identity-decisions.json itself asks for a 'broader spelling/alias search', and that has not been done. 'ahallelah' was searched exactly, and its only hit is an unrelated Sukkot hakafot text, so the evidence for ahallelah_elohai is adequate, though it would be stronger with a non-incipit line. elohenu_pifiyyot lists the same term twice. Registry hits come only from specs/urn_registry/prayer.jsonl. Confirm that any poem registry file was in scope, since both new roots are text:poem URNs. The search ran over the marmorstein-projects worktree, while the existing pifiyyot XML given for this review is under marmorstein-processor/master/opensiddur-projects. Confirm the two trees match."
+    },
+    {
+      "area": "pifiyyot part scopes vs existing XML",
+      "status": "/1–/10 and /12–/16 match; /11 is narrower",
+      "detail": "The part boundaries match the existing heyeh_im_pifiyot.xml. /3 ends at יְבָרְכוּן and /4 starts at וּמִבִּרְכוֹת. /8 ends at שְׁאוֹנָם and /9 starts at וְאַל יֹאמַר. /12 is וְנֶאֱמַר plus Ps 69:7. /13 is the seven-line Ochilah core. /14 is Prov 16:1, /15 Ps 51:17 and /16 Ps 19:15. The English splits at the same places, so /3→/4 and /7→/8 continue mid-sentence in lowercase, as printed. Small wording differences (כְּמוֹ/כְּמָה, אֶת/אֵת, מְסַבְּבִים/מַסְבִּיבִים, חֵימָה/חֵמָה) are text variants within the same part. The exception is /11. The existing /11 contains the whole of Exod 33:19 (וַיֹּאמֶר … לְפָנֶיךָ וְחַנֹּתִי … אֲרַחֵם). s258 prints only 'כַּכָּתוּב בְּתוֹרָתֶךָ וְחַנֹּתִי אֶת אֲשֶׁר אָחֹן. וְרִחַמְתִּי אֶת אֲשֶׁר אֲרַחֵם:'. Using corresp /11 is still the right identity, but the unit must record that this witness leaves out 33:19a. identity_evidence should not claim the scopes match exactly."
+    },
+    {
+      "area": "pifiyyot Ex 33:19 half-verse",
+      "status": "correct extent; encoding inconsistent",
+      "detail": "The atnah of Exod 33:19 falls on לְפָנֶיךָ, so the printed וְחַנֹּתִי…אֲרַחֵם is exactly half-verse b, and the s259 English quotes only that half. Unlike every other quotation in the file, the /11 quotation has no contextual chapter_corresp or source_reference_corresp. Its URN 'urn:x-opensiddur:text:bible:exodus/33/19/b' is not shown to exist in the Bible URN scheme or registry."
+    },
+    {
+      "area": "pifiyyot page_start (checked against s258/s259)",
+      "status": "3 errors",
+      "detail": "he /12 (s258) is page_start true, but s258 begins with וְחֵימָה, the second fragment of /6; /12 is the small centred block after the regional rubric, mid-page. he Ochilah /13 (s258) is page_start true, but it is mid-page after the Ark-opening note. The same rule applied in weekday makes the first fragment false when the page started earlier. en /6 second fragment (s259) is page_start false, but s259 begins 'Holy Ark in awe…', so it must be true. This is the same bug fixed in weekday and Shabbat, where page_start was used to mean paragraph start."
+    },
+    {
+      "area": "pifiyyot paragraphs, cues and instructions",
+      "status": "correct",
+      "detail": "On s258, /6–/11 run on as one paragraph and /12 is set apart in smaller centred type, so he paragraph 2 is right. The English /12 is a separate small-type paragraph with the cue ונאמר, and Ochilah has the cue אוחילה; both cues are correctly left out of the English text. 'בפפד״מ, מעץ ורוב קהלות אין אומרים.', 'פותחים הארון.' and 'סוגרים הארון.' are correctly kept in service_instructions and not in the word targets."
+    },
+    {
+      "area": "boundary-and-identity-decisions.json",
+      "status": "stale; contradicts the units file",
+      "detail": "reuse.ochilah_traditional_core is still goldman/6, but the units file correctly uses heyeh_im_pifiyot/13–16, and the existing /13–16 cover the printed Ochilah exactly. identity_scope_evidence still says 'Reuse /12 with local rite condition', which breaks the rule that no condition goes inside word targets; the units file correctly sends it to the service spine. The status still says decisions are pending."
+    }
+  ],
+  "required_changes": [
+    "Weekday: add role:'reader' to the tomekh speaker {abbr:'ח׳', expan:'חזן'}.",
+    "Weekday: record the s270 note as source-adjudicated נ״א, agreed by both readers, with no human reading needed. Store its printed form '(נ״א פְּלִילִיּוֹת)' with the parentheses, and record the line number under one stated counting rule. Remove 'requires final secondary approval' and update the status string.",
+    "Weekday (does not block approval): mark en_regex_chunks as diagnostic, or drop the field. Record the אנסיכה (s261) and תומך (s271) cues as linkage evidence.",
+    "Identity: before registering urn:x-opensiddur:text:poem:ansikhah_malki, search the printed spelling 'אנסיכה מלכי' plus at least one non-incipit line, such as 'יאזור עז וימלוך'. Confirm the poem registry and the opensiddur-projects tree were in scope. Remove the duplicate elohenu_pifiyyot term.",
+    "Shabbat (does not block approval): keep one of 'source' / 'source_reference', or document which one the build reads. Update the status string.",
+    "Pifiyyot: set page_start false on he /12 (s258) and on he Ochilah /13 (s258). Set page_start true on the en /6 fragment that begins s259 'Holy Ark…'.",
+    "Pifiyyot: record on /11 that this witness prints only Exod 33:19b and leaves out 33:19a, which the existing /11 includes. Change identity_evidence from 'covers this complete sequence' so it does not claim the /11 scope matches exactly.",
+    "Pifiyyot: give the /11 quotation a contextual chapter_corresp and source_reference_corresp, for example …heyeh_im_pifiyot/11/quotes/exodus/33 and …/33/19, as the other quotations have. Check that the half-verse URN form …exodus/33/19/b exists, or encode the part only as source_reference_part.",
+    "boundary-and-identity-decisions.json: replace ochilah goldman/6 with heyeh_im_pifiyot/13–16. Replace 'Reuse /12 with local rite condition' with the service-spine placement. Update the status."
+  ],
+  "remaining_batch_gates": [
+    "Human readings 395–405 are pending. No final words and no batch approval for any unit.",
+    "Re-run the text coverage check against the candidate after 395–405 are applied. This pass did not re-check the words against candidate-round5.json, and the stale 'changes' notes flagged in the earlier reviews were not re-verified.",
+    "Service spine: nothing is wired. Still to wire: the weekday/Shabbat condition rubrics (s260 instruction, s261 English rubric, the 'אם שבת.' / 'On (the) Sabbath.' rubrics), the regional omission before pifiyyot /12, the Ark open/close notes, the s256 cantor instructions, and the leading pb for s256/s257 and s260/s261. I am not claiming any wiring is done.",
+    "The build must apply corrections.json entry musaf_shabbat_seu_ayin (sic שְׂעוּ / corr שְׂאוּ); it is not yet applied.",
+    "Register the ansikhah_malki root only after the corrected spelling/alias search and an identity review. For ahallelah_elohai, confirm the search covered the poem registry before registering.",
+    "Re-review the pifiyyot/ochilah units after the page_start, /11 scope and quotation-corresp fixes."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "e8ba0283-3e04-488c-b2a7-aca3c6a99505"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "I read every listed file: current.json, current.xml, both human decision files, guideline-excerpts.md, the two blind transcriptions (independent-124 and independent-126), and both full-page source reviews (s118-125 and s126-133). I viewed all 18 enlarged rows; s124-row9 is blank, and s126-rows 5-6 show the Naalah stanza and Zokhrenu, which are outside this poem. I also viewed s126-simah.png. For each fragment I compared the source word by word for consonants, spacing and punctuation, and checked the vowel points as far as the enlarged rows allow. I had no further zoom or enhancement."
+  },
+  "stem": "et_chil_yom_pequddah",
+  "hebrew_source_approved": false,
+  "hebrew_guidelines_approved": true,
+  "english_alignment_guidelines_approved": true,
+  "issues": [],
+  "unresolved": [
+    {
+      "location": "s124, printed p.48, first line of the poem, first word after the small ק׳ (s124-row6 last line, row7 first line)",
+      "current": "אֶת",
+      "question": "On the enlarged row, the mark under the alef looks to me more like a qamats (T-shape), i.e. אָת, than a three-dot segol. The earlier full-page review also wrote אֶת but did not discuss the mark. I cannot certify either reading. A human needs to check the enlarged alef."
+    },
+    {
+      "location": "s124, printed p.48, last poem line on the page, final word before the page break (s124-row8, leftmost word)",
+      "current": "כְּתָוֶךְ",
+      "question": "The mark under the kaf looks like a horizontal stroke (patah), possibly with a dot in the tav, i.e. כַּתָּוֶךְ, rather than a sheva. This is not legible enough to certify or to reject the current reading. A human needs to check."
+    },
+    {
+      "location": "s126, printed p.49, body line 4 (s126-row2/row3: 'פִּלְצוּ פְרָחֶיהָ כְּזֶה (נ״א בְּחֹק) יוֹם')",
+      "current": "פְרָחֶיהָ (no dagesh in the pe)",
+      "question": "The blind transcription (independent-126) reads פְּרָחֶיהָ with a dagesh. The current text has no dagesh. I cannot tell from the enlarged row whether there is a dot inside the pe. The two witnesses conflict and the question is still open."
+    },
+    {
+      "location": "s126, printed p.49, body line 6, last word of the line ending with ':' (s126-row3: 'רוֹגְשִׁים לְהָרִיעַ לִמְצוֹא פִדְיוֹם:')",
+      "current": "פִדְיוֹם (no dagesh)",
+      "question": "The blind transcription reads פִּדְיוֹם with a dagesh. The current text has none. I cannot tell from the enlarged row. The two witnesses conflict and the question is still open."
+    },
+    {
+      "location": "s126, printed p.49, body line 7 (s126-row3/row4: 'שְׁעוּנִים עָלֶיהָ בָּהּ')",
+      "current": "עָלֶיהָ",
+      "question": "The blind transcription notes a possible extra mark under the ayin (עֲלֶיהָ). On the enlarged row it looks like a qamats, but I cannot rule out a hataf. This is a low-level question that I could not certify."
+    }
+  ],
+  "verified": [
+    "The human readings are applied exactly as decided and were not reopened: לְחֻם, לִקּוֹדָה, דֵּעָם, זֵכֶר, מִפְעַל (decisions 8–12); כֹחַ דֻּשָּׁנָה (13); the note text נ״א בְּחֹק (14).",
+    "סִיְמָה אוֹת: the primary crop s126-simah.png shows a hiriq under the samekh, a vertical two-dot sheva under the yod, a qamats under the mem, and plene אוֹת with a holam on the vav. הֱיוֹת has a hataf-segol. The current text matches.",
+    "The s124 corrected first paragraph (part_1, 'אֶת חִיל … כְּתָוֶךְ') matches the print in consonants, word division and punctuation (the ':' after מוֹקְדָה, בַּמִּשְׁפָּט and הַמַּחֲצָב; the periods elsewhere). The vowels match apart from the questions listed under unresolved. The lines run from the line after 'ע״ס א״ב.' to the last line of the page, and nothing is omitted or added.",
+    "The s126 continuation 'נֶחֱצַב … נִפְקָדָה:' matches the print in consonants and word division. The earlier substantive misreadings are all corrected in the current text: לְיָהֵב עָלָיו, מְנָתוֹ, שָׁנָה, דִּכּוּכָם יַרְחִישׁוּ, כְּהַיּוֹם, שׁוֹאֲגִים בְּלַהַק, נִפְקָדָה. The hataf vowels in נֶחֱצַב and הַמַּחֲצָב are present. The text ends at 'נִפְקָדָה:' before the Naalah stanza.",
+    "The small cue before Temukhim is ק׳. It is printed on s126, printed p.49, body line 8, immediately after 'דְּלָתוֹת לְשָׁקְדָה.' and before 'תְּמוּכִים' (s126-row3 last line and row4 line 2). It has a descender and the same shape as the ק׳ before נַעֲלָה in row5. It does not match the two-legged ח׳ before בְּשׁוֹפָר in row5. The blind reader's ח׳/ק׳ uncertainty is therefore resolved to ק׳, and the encoding ק׳=קהל (role/congregation) agrees with the print.",
+    "The ק׳ before אֶת (s124-row6, last line) is printed and encoded as a description note with abbr/expan before the part_1 milestone.",
+    "The note: the print has '(נ״א בְּחֹק)' after כְּזֶה and before יוֹם. It is encoded as a standOff commentary note with the target #et_chil_variant, and the anchor is placed before כְּזֶה, the word the variant replaces. Under JLPTEI-3 Annotations an anchor marks where a note applies and targetEnd is optional, so this is allowed. The parentheses are printed delimiters and are correctly not part of the note text.",
+    "Hebrew structure: one tei:p across the page break, with the pb at n=48 and n=49 at the correct word boundary (כְּתָוֶךְ | נֶחֱצַב). The milestones are part_1 (after the speaker), part_2 at the page break, then a bare prayer-part terminator, the ק׳ speaker, part_3, and a final terminator. This follows JLPTEI-3 rule 3 and the instruction to terminate the sequence before speaker rubrics. Each canonical URN appears once, on the existing poem div. The JSON's three paragraph:1 fragments agree with the XML.",
+    "The English text is unchanged. Part_1 matches the approved s125 review. Part_2 and part_3 match the s127 text word for word, including punctuation and '(Sarah)', as in the blind independent-126 transcription.",
+    "English alignment: part_1 ends 'Central between past and future', which matches כְּאָחוֹר וָקֶדֶם כְּתָוֶךְ. Part_2 starts 'was he hewn', which matches נֶחֱצַב, and ends 'knock at the gates,', which matches דְּלָתוֹת לְשָׁקְדָה. Part_3 'depend on the ashes … she had been considered.' matches תְּמוּכִים … נִפְקָדָה:. Both languages carry identical part_1, part_2 and part_3 URNs and end with a terminator, so the shared boundaries join exactly. The English has no speaker rubric, consistent with s127 printing none. The English is one continuous paragraph across the page break, as printed."
+  ],
+  "limits": [
+    "The Hebrew source is withheld only because of the fine vowel and dagesh questions listed under unresolved. No consonantal, word-level, punctuation or speaker error remains in this poem. These points do not affect the English approval, whose source text is unchanged and already approved.",
+    "The enlarged rows are still too coarse to certify every dagesh and every small vowel. Points not listed under unresolved agreed with the current text at the resolution available, but I am not certifying them as pixel-checked.",
+    "The centred 'ע״ס א״ב.' heading above the poem (s124-row6) is not in this file. The s118-125 source review says it is encoded as repetition_et_acrostic in the surrounding encoding. I did not inspect that file, and it is outside this poem's scope.",
+    "The ק׳ before part_3 sits in the poem div but outside the part_3 milestone scope, as the project chose. If part_3 is ever transcluded on its own, the speaker rubric will not travel with it. I accept this as the project's consistent speaker_before_reference convention, not as a defect.",
+    "The earlier s126 review asked for the note mark to follow the lemma, as printed. The current anchor comes before the lemma. Both placements are allowed. If the maintainers want the printed position or a targetEnd around כְּזֶה, that is an optional refinement and does not block approval.",
+    "There is a double space before the anchor (after פְרָחֶיהָ) in the XML. I assume exporter whitespace normalization handles it, but I did not check that.",
+    "This review covers only et_chil_yom_pequddah. It says nothing about whether s124 or s126 as whole pages are complete, or about Misod, Naalah or any other unit."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "b3ac1d9d-a728-4fea-8452-54e8ef2132ee"
+  }
+}

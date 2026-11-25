@@ -1,0 +1,201 @@
+<actual-generated-xml-review-excerpts><tei:div xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:j="http://jewishliturgy.org/ns/jlptei/2" xml:id="section_cantor_four_verses_before_hamelekh">
+              <j:conditional xml:id="section_cantor_four_verses_before_hamelekh_condition">
+                <j:all>
+                  <tei:fs type="opensiddur:quorum">
+                    <tei:f name="minyan">
+                      <tei:binary value="true"/>
+                    </tei:f>
+                  </tei:fs>
+                </j:all>
+              </j:conditional>
+              <tei:div>
+                <tei:note type="description" corresp="urn:x-opensiddur:instruction:role/reader" xml:lang="he">חזן</tei:note>
+                <tei:note type="description" xml:lang="he">קודם המלך</tei:note>
+                <tei:note type="description" xml:lang="en">Before Hamelekh</tei:note>
+                <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/cantor_four_verses"/>
+              </tei:div>
+              <j:endConditional target="#section_cantor_four_verses_before_hamelekh_condition"/>
+            </tei:div>
+            <tei:div xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:j="http://jewishliturgy.org/ns/jlptei/2" xml:id="section_shofar_service">
+              <j:conditional xml:id="section_shofar_service_condition">
+                <tei:note type="instruction"><tei:foreign xml:lang="he">בחול</tei:foreign> <tei:foreign xml:lang="en">On a weekday</tei:foreign> </tei:note>
+                <j:all>
+                  <tei:fs type="opensiddur:holiday-aggregate">
+                    <tei:f name="shabbat">
+                      <tei:binary value="false"/>
+                    </tei:f>
+                  </tei:fs>
+                </j:all>
+              </j:conditional>
+              <tei:div>
+                <tei:head xml:lang="he">סדר התקיעות</tei:head>
+                <tei:head xml:lang="en">Shofar service</tei:head>
+                <tei:note type="description" corresp="urn:x-opensiddur:instruction:role/blower" xml:lang="he">תוקע</tei:note>
+                <j:transclude type="external" target="urn:x-opensiddur:text:prayer:ribbon_haolamim_banekha"/>
+                <j:transclude type="external" target="urn:x-opensiddur:text:prayer:yehi_ratzon_elohei_hamishpat"/>
+                <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/shofar/qera_satan"/>
+                <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/shofar/alah_elohim"/>
+                <j:transclude type="external" target="urn:x-opensiddur:text:bible:psalms/47"/>
+                <j:transclude type="external" target="urn:x-opensiddur:text:prayer:harei_ani_mukhan_litqoa"/>
+                <j:transclude type="external" target="urn:x-opensiddur:text:prayer:lishmoa_qol_shofar"/>
+                <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/shofar/shehecheyanu"/>
+                <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/shofar/tashrat"/>
+                <tei:note type="instruction" xml:lang="he">שֵׁב.</tei:note>
+                <j:transclude type="external" target="urn:x-opensiddur:text:prayer:shofar_yehi_ratzon_qashraq"/>
+                <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/shofar/tashat"/>
+                <tei:note type="instruction" xml:lang="he">שֵׁב.</tei:note>
+                <j:transclude type="external" target="urn:x-opensiddur:text:prayer:shofar_yehi_ratzon_tashat"/>
+                <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/shofar/tarat"/>
+                <tei:div xml:id="section_shofar_congregation_after_sounds">
+                  <tei:div>
+                    <tei:note type="description" corresp="urn:x-opensiddur:instruction:role/congregation" xml:lang="he">קהל</tei:note>
+                    <tei:note type="description" xml:lang="he">בזמן שהתוקע אומר בלחש את תפילתו; מובא הפסוק הנדפס, והיקף ההמשך עוד טעון בירור.</tei:note>
+                    <tei:note type="description" xml:lang="en">While the blower says the quiet prayer; the printed verse is given here, with the extent of the continuation still under review.</tei:note>
+                    <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/shofar/ashrei_haam"/>
+                  </tei:div>
+                </tei:div>
+                <tei:div xml:id="section_shofar_blower_quiet">
+                  <tei:div>
+                    <tei:note type="description" corresp="urn:x-opensiddur:instruction:role/blower" xml:lang="he">תוקע</tei:note>
+                    <tei:note type="description" xml:lang="he">התוקע בלחש</tei:note>
+                    <tei:note type="description" xml:lang="en">The blower, quietly</tei:note>
+                    <j:transclude type="external" target="urn:x-opensiddur:text:prayer:shofar_uvkhen_yehi_ratzon"/>
+                  </tei:div>
+                </tei:div>
+                <tei:div xml:id="section_shofar_blower_psalm_149">
+                  <tei:div>
+                    <tei:note type="description" corresp="urn:x-opensiddur:instruction:role/blower" xml:lang="he">תוקע</tei:note>
+                    <tei:note type="description" xml:lang="he">התוקע</tei:note>
+                    <tei:note type="description" xml:lang="en">The Shofar blower</tei:note>
+                    <j:transclude type="external" target="urn:x-opensiddur:text:bible:psalms/149"/>
+                  </tei:div>
+                </tei:div>
+                <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/shofar/ashrei_haam"/>
+              </tei:div>
+              <j:endConditional target="#section_shofar_service_condition"/>
+            </tei:div>
+            <tei:div xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:j="http://jewishliturgy.org/ns/jlptei/2" xml:id="section_shabbat_community_prayers">
+              <j:conditional xml:id="section_shabbat_community_prayers_condition">
+                <tei:note type="instruction"><tei:foreign xml:lang="he">בשבת</tei:foreign> <tei:foreign xml:lang="en">On Shabbat</tei:foreign> </tei:note>
+                <j:all>
+                  <tei:fs type="opensiddur:holiday-aggregate">
+                    <tei:f name="shabbat">
+                      <tei:binary value="true"/>
+                    </tei:f>
+                  </tei:fs>
+                  <tei:fs type="opensiddur:quorum">
+                    <tei:f name="minyan">
+                      <tei:binary value="true"/>
+                    </tei:f>
+                  </tei:fs>
+                </j:all>
+              </j:conditional>
+              <tei:div>
+                <tei:head xml:lang="he">תפילות לקהל</tei:head>
+                <tei:head xml:lang="en">Prayers for the community</tei:head>
+                <j:transclude type="external" target="urn:x-opensiddur:text:prayer:yequm_purqan/scholars"/>
+                <j:transclude type="external" target="urn:x-opensiddur:text:prayer:yequm_purqan/congregation"/>
+                <j:transclude type="external" target="urn:x-opensiddur:text:prayer:mi_sheberakh/kol_haqahal"/>
+                <j:transclude type="external" target="urn:x-opensiddur:text:prayer:hanoten_teshuah"/>
+              </tei:div>
+              <j:endConditional target="#section_shabbat_community_prayers_condition"/>
+            </tei:div>
+            <tei:div xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:j="http://jewishliturgy.org/ns/jlptei/2" xml:id="section_torah_return_service">
+              <j:conditional xml:id="section_torah_return_service_condition">
+                <j:all>
+                  <tei:fs type="opensiddur:quorum">
+                    <tei:f name="minyan">
+                      <tei:binary value="true"/>
+                    </tei:f>
+                  </tei:fs>
+                </j:all>
+              </j:conditional>
+              <tei:div>
+                <tei:head xml:lang="he">סדר הכנסת ספר התורה</tei:head>
+                <tei:head xml:lang="en">Returning the Torah</tei:head>
+                <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/torah/yehallelu"/>
+                <tei:div xml:id="section_torah_return_shabbat_psalm">
+                  <j:conditional xml:id="section_torah_return_shabbat_psalm_condition">
+                    <tei:note type="instruction"><tei:foreign xml:lang="he">בשבת</tei:foreign> <tei:foreign xml:lang="en">On Shabbat</tei:foreign> </tei:note>
+                    <j:all>
+                      <tei:fs type="opensiddur:holiday-aggregate">
+                        <tei:f name="shabbat">
+                          <tei:binary value="true"/>
+                        </tei:f>
+                      </tei:fs>
+                    </j:all>
+                  </j:conditional>
+                  <tei:div>
+                    <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/torah/return/psalm_29"/>
+                  </tei:div>
+                  <j:endConditional target="#section_torah_return_shabbat_psalm_condition"/>
+                </tei:div>
+                <tei:div xml:id="section_torah_return_weekday_psalm">
+                  <j:conditional xml:id="section_torah_return_weekday_psalm_condition">
+                    <tei:note type="instruction"><tei:foreign xml:lang="he">בחול</tei:foreign> <tei:foreign xml:lang="en">On weekdays</tei:foreign> </tei:note>
+                    <j:all>
+                      <tei:fs type="opensiddur:holiday-aggregate">
+                        <tei:f name="shabbat">
+                          <tei:binary value="false"/>
+                        </tei:f>
+                      </tei:fs>
+                    </j:all>
+                  </j:conditional>
+                  <tei:div>
+                    <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/torah/return/psalm_24"/>
+                  </tei:div>
+                  <j:endConditional target="#section_torah_return_weekday_psalm_condition"/>
+                </tei:div>
+                <j:transclude type="external" target="urn:x-opensiddur:text:siddur:chol/shacharit/torah/uvenuchoh"/>
+              </tei:div>
+              <j:endConditional target="#section_torah_return_service_condition"/>
+            </tei:div>
+            <tei:div xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:j="http://jewishliturgy.org/ns/jlptei/2" xml:id="section_musaf_cantor_prelude">
+              <j:conditional xml:id="section_musaf_cantor_prelude_condition">
+                <j:all>
+                  <tei:fs type="opensiddur:quorum">
+                    <tei:f name="minyan">
+                      <tei:binary value="true"/>
+                    </tei:f>
+                  </tei:fs>
+                </j:all>
+              </j:conditional>
+              <tei:div>
+                <tei:head xml:lang="he">תפלה לשליח צבור</tei:head>
+                <tei:head xml:lang="en">Prayers for the Reader</tei:head>
+                <tei:note type="description" corresp="urn:x-opensiddur:instruction:role/reader" xml:lang="he">חזן</tei:note>
+                <j:declare xml:id="section_musaf_cantor_prelude_settings">
+                  <tei:fs type="opensiddur:service-time">
+                    <tei:f name="shaharit">
+                      <tei:binary value="false"/>
+                    </tei:f>
+                    <tei:f name="musaf">
+                      <tei:binary value="true"/>
+                    </tei:f>
+                    <tei:f name="minha">
+                      <tei:binary value="false"/>
+                    </tei:f>
+                    <tei:f name="maariv">
+                      <tei:binary value="false"/>
+                    </tei:f>
+                    <tei:f name="neila">
+                      <tei:binary value="false"/>
+                    </tei:f>
+                    <tei:f name="slihot">
+                      <tei:binary value="false"/>
+                    </tei:f>
+                  </tei:fs>
+                </j:declare>
+                <j:transclude type="external" target="urn:x-opensiddur:text:prayer:el_melekh_neeman_shaddai"/>
+                <j:transclude type="external" target="urn:x-opensiddur:text:prayer:hineni_the_prayer_of_the_shaliach_tsibur"/>
+                <j:transclude type="external" target="urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/cantor_four_verses"/>
+                <j:endDeclare target="#section_musaf_cantor_prelude_settings"/>
+              </tei:div>
+              <j:endConditional target="#section_musaf_cantor_prelude_condition"/>
+            </tei:div>
+            <alternatives language="he" source="/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/cantor_el_melekh_neeman.xml"><tei:standOff xmlns:tei="http://www.tei-c.org/ns/1.0" type="notes">
+    <tei:note type="commentary" target="urn:x-opensiddur:text:prayer:el_melekh_neeman_shaddai/text">
+      <tei:p><tei:choice><tei:abbr>נ״א</tei:abbr><tei:expan>נוסח אחר</tei:expan></tei:choice> מְנַשֶּׁה</tei:p>
+    </tei:note>
+  </tei:standOff>
+  <tei:choice xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:j="http://jewishliturgy.org/ns/jlptei/2"><j:option>מֹשֶׁה</j:option><j:option>מְנַשֶּׁה</j:option></tei:choice>. וְאַל יֵבוֹשׁוּ בִי שׁוֹלְחַי וְלֹא אֲנִי בָהֶם:  </alternatives><alternatives language="en" source="/home/efeins/.codex/worktrees/marmorstein-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/cantor_el_melekh_neeman.xml"><tei:choice xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:j="http://jewishliturgy.org/ns/jlptei/2"><j:option>Moses</j:option><j:option>Menasseh</j:option></tei:choice>, so that those who sent me may not be put to shame through me, nor I through them.  </alternatives><sic-corr source="shofar_yehi_ratzon"><tei:choice xmlns:tei="http://www.tei-c.org/ns/1.0"><tei:sic>by</tei:sic><tei:corr>be</tei:corr></tei:choice> Thy will, O Lord my God, God of judgment, that this may be a time of favour before Thee. Tear down in Thy many mercies and great kindnesses all partitions that separate Thee from Thy people Israel on this day. Remove from before Thee all opponents and accusers of Thy people Israel. Close Satan’s mouth that he may not oppose us, for towards Thee are our eyes suspended. I shall exalt Thee, my God, O King, God of judgment, who listens this day to the sound of prayers and Teruoth of Thy people Israel in compassion. Amen. </sic-corr><sic-corr source="torah_ashrei"><tei:choice xmlns:tei="http://www.tei-c.org/ns/1.0"><tei:sic>Wis</tei:sic><tei:corr>His</tei:corr></tei:choice> compassion is upon all His creatures.</sic-corr></actual-generated-xml-review-excerpts>

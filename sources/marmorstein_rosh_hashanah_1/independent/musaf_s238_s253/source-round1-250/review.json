@@ -1,0 +1,237 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "source_approved": false,
+  "pages_read": [
+    "s250",
+    "s251",
+    "s252",
+    "s253"
+  ],
+  "findings": [
+    {
+      "scan": "s250",
+      "key": "in_frankfurt_tisgav_rubric",
+      "old": "אַם מאַין, אונד פֿיעלען",
+      "new": "אַם מאַין, מעץ אונד פֿיעלען",
+      "reason": "There is a printed word between 'מאַין,' and 'אונד' that the candidate leaves out. It has the same shape as 'מעץ' (Metz) in the Fürth rubric lower on this page ('מאַין, מעץ אונד דען'), where a final tsadi follows mem-ayin. The English rubric on s251 leaves Metz out at this point, but the Hebrew-script German includes it.",
+      "evidence_image": "/tmp/mahzor-s238/s250-band2.png"
+    },
+    {
+      "scan": "s251",
+      "key": "frankfurt",
+      "old": "congregations תשוב is not said.",
+      "new": "congregations תשגב is not said.",
+      "reason": "The Hebrew cue printed in the English rubric is תשגב with a gimel, not תשוב. The cue at the start of the next English paragraph is also תשגב.",
+      "evidence_image": "/tmp/mahzor-s238/s251-band2.png"
+    },
+    {
+      "scan": "s251",
+      "key": "veyetayu",
+      "old": "praise Thy glorious Name. They will proclaim",
+      "new": "praise Thy glorious Name, They will proclaim",
+      "reason": "The source prints a comma after 'Name' and then a capital 'They'.",
+      "evidence_image": "/tmp/mahzor-s238/s251-band4.png"
+    },
+    {
+      "scan": "s251",
+      "key": "veyetayu",
+      "old": "Thy righteousness. Peoples",
+      "new": "Thy righteousness: Peoples",
+      "reason": "The source prints a colon after 'righteousness'.",
+      "evidence_image": "/tmp/mahzor-s238/s251-band4.png"
+    },
+    {
+      "scan": "s253",
+      "key": "veyetayu",
+      "old": "might and praise Thee exalted",
+      "new": "might and raise Thee exalted",
+      "reason": "The source clearly prints 'raise', not 'praise'.",
+      "evidence_image": "/tmp/mahzor-s238/s253-band1.png"
+    },
+    {
+      "scan": "s253",
+      "key": "vetimlokh",
+      "old": "to generation, Halleluyah!",
+      "new": "to generation. Halleluyah!",
+      "reason": "The source prints a full stop after 'generation', not a comma.",
+      "evidence_image": "/tmp/mahzor-s238/s253-band2.png"
+    }
+  ],
+  "uncertainties": [
+    {
+      "scan": "s250",
+      "key": "hakatsar_bezaam",
+      "word": "הַקָּצַר",
+      "question": "The mark under the qof looks like two vertical dots (shva, which would give הַקְּצַר), not qamats. Which is printed? The vowel under the zayin of בְּזַעַם (patach or qamats, plus a possible meteg) also needs checking.",
+      "crop_box": [
+        180,
+        350,
+        520,
+        400
+      ]
+    },
+    {
+      "scan": "s250",
+      "key": "hakatsar_bezaam",
+      "word": "וְ״מ",
+      "question": "At enlargement, the mem in this refrain abbreviation seems to have a patach, like the other lines (וְ״מַ). Confirm whether the patach is printed or missing.",
+      "crop_box": [
+        690,
+        350,
+        770,
+        400
+      ]
+    },
+    {
+      "scan": "s250",
+      "key": "hatsofeh_larasha",
+      "word": "בְּהִצָּדְקוֹ",
+      "question": "Is the mark under the tsadi a qamats or a patach (בְּהִצַּדְקוֹ)? At this resolution it looks like a patach.",
+      "crop_box": [
+        630,
+        270,
+        740,
+        312
+      ]
+    },
+    {
+      "scan": "s250",
+      "key": "harachum_umakdim",
+      "word": "שֶׁהוּא",
+      "question": "In this line the letter shows a closed chet shape (שֶׁחוּא), unlike the he in the other refrain lines. Is this a printed misprint to be kept as שֶׁחוּא, or broken type for he?",
+      "crop_box": [
+        790,
+        400,
+        880,
+        450
+      ]
+    },
+    {
+      "scan": "s250",
+      "key": "hatam_umitamem",
+      "word": "קר״ס",
+      "question": "What are the exact letters of the small margin cue before הַתָּם? The candidate's קר״ס is not confirmed. The first letter could be qof or samekh.",
+      "crop_box": [
+        180,
+        540,
+        228,
+        575
+      ]
+    },
+    {
+      "scan": "s250",
+      "key": "sogrim_haaron",
+      "word": "סוגרים",
+      "question": "Read literally, the glyphs look like קונריס. Is this the Hebrew 'סוגרים' (close the Ark) in a small face where samekh and gimel look like qof and nun, or a different word? It is still pending human confirmation.",
+      "crop_box": [
+        180,
+        635,
+        360,
+        668
+      ]
+    },
+    {
+      "scan": "s250",
+      "key": "tisgav_levadekha",
+      "word": "ח״",
+      "question": "What is the small cue before תִּשְׂגַּב? It could be ח״ or a double-yod mark.",
+      "crop_box": [
+        195,
+        733,
+        232,
+        767
+      ]
+    },
+    {
+      "scan": "s250",
+      "key": "in_fuerth_veetayu_rubric",
+      "word": "שטימט",
+      "question": "The glyphs look like סמַוטעט or סחָוטעט. Confirm the exact Hebrew-script spelling of German 'stimmt', with its vowel points.",
+      "crop_box": [
+        470,
+        1712,
+        600,
+        1745
+      ]
+    },
+    {
+      "scan": "s250",
+      "key": "in_fuerth_veetayu_rubric",
+      "word": "אַן",
+      "question": "The word after the cue ויאתיו looks like four glyphs (חיין, which would be 'איין' = ein) rather than אַן. Which is printed? The pointing of the cue word ויאתיו is also unclear.",
+      "crop_box": [
+        880,
+        1745,
+        1060,
+        1775
+      ]
+    },
+    {
+      "scan": "s250",
+      "key": "in_fuerth_veetayu_rubric",
+      "word": "עס",
+      "question": "Is the word before אָבער spelled עס, עז, or עש? The last glyph is ambiguous.",
+      "crop_box": [
+        690,
+        1770,
+        760,
+        1800
+      ]
+    },
+    {
+      "scan": "s250",
+      "key": "veyeetayu_kol",
+      "word": "כֹּל",
+      "question": "At enlargement כל looks unpointed. Are a dagesh and holam actually printed?",
+      "crop_box": [
+        1060,
+        1805,
+        1120,
+        1848
+      ]
+    },
+    {
+      "scan": "s252",
+      "key": "lekha_et_zivheihem_continuation",
+      "word": "עֹל",
+      "question": "In וִיקַבְּלוּ עֹל מַלְכוּתְךָ, no holam is visible on על. Is it pointed or bare?",
+      "crop_box": [
+        660,
+        515,
+        705,
+        550
+      ]
+    },
+    {
+      "scan": "s252",
+      "key": "lekha_et_zivheihem_continuation",
+      "word": "פָנֶיךָ",
+      "question": "Does the pe after מְבַקְשֵׁי have a dagesh? The two first-reading notes disagree.",
+      "crop_box": [
+        685,
+        415,
+        745,
+        452
+      ]
+    }
+  ],
+  "untranslated_extent_notes": [
+    "s250: The two Hebrew-script German directions (in_frankfurt_tisgav_rubric and in_fuerth_veetayu_rubric) correspond to the English italic rubrics on s251, but the English is a paraphrase. In the first rubric the English leaves out Metz, which the German names. Both German directions are still pending human review.",
+    "s250: The margin cues before הַתָּם and תִּשְׂגַּב and the small rubric 'סוגרים הארון' have no English counterpart on s251.",
+    "s252/s253: Scope ends after בָּרוּךְ אַתָּה יְיָ הַמֶּלֶךְ הַקָּדוֹשׁ / 'the Holy King.' אַתָּה בְחַרְתָּנוּ and what follows were read but are out of scope."
+  ],
+  "notes": [
+    "In the s251 English cues (תשגב, ובכן, ויאתיו), I treated the Hebrew as linkage only and did not add it to the prayer text.",
+    "Print artifacts that I did not treat as text changes: s251 '3nd' is broken type for 'and'. On s253, 'abar don' is a broken 'abandon', there is a stray tick in 'is'the Lord', 'O. Lord' has a stray dot (read 'O Lord'), and 'Jeru-salem' is a line-break hyphen.",
+    "Apart from the findings and uncertainties above, I checked the Hebrew of these blocks against the scan with no discrepancies: uvekhen_ten_pachdekha, uvekhen_ten_kavod, uvekhen_tsadikim, veyeetayu_kol, the s252 continuation, vetimlokh, yimlokh_verse, kadosh_atah, vayigbah_verse and barukh_hamelekh_hakadosh. That includes וְיוֹמְרוּ as printed, the opening parenthesis before וְיִזְבְּחוּ, the closing parenthesis after זִבְחֵיהֶם., and the colons inside the paragraph after פְּסִילֵיהֶם and בְּמָלְכֶךָ.",
+    "I can't approve yet: there are 6 findings to apply, and 13 readings remain unresolved, including the pending German directions."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "ed9da4b8-6e56-470d-8ec0-0cef56a9d1a6"
+  }
+}

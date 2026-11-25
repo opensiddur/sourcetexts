@@ -1,0 +1,48 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+  },
+  "human_adjudications_1_to_9_applied_correctly": true,
+  "prior_jerusalem_decisions_preserved": true,
+  "encoding_alignment_order_unchanged": true,
+  "findings": [
+    {
+      "severity": "info",
+      "file": "human_psalms_s76_s87_snippets_1_to_10.json / psalms_s76_s87_resolutions.json",
+      "issue": "In both records, snippet 10 (s86, 72:19) is still listed as pending clarification. The only answer recorded is the first one: 'qamatz; yes meteg'. Nothing in either file shows the user saying whether 'yes meteg' means a meteg on the kaf, the line-end maqaf after כל, or both. The records also say no extra mark was added and the existing line-end maqaf is still provisional.",
+      "fix": "None for this batch. Do not certify 72:19 until a further user answer is recorded."
+    },
+    {
+      "severity": "info",
+      "file": "psalm_147.xml 147:6",
+      "issue": "The prior audit's question was 'line-end maqaf and meteg'. The XML has עֲדֵי־אָֽרֶץ: the maqaf was already in the 'before' string, and the only change is the qamatz-meteg on the alef. This matches the user's 'yes maqaf; yes meteg'. It is not a defect.",
+      "fix": "None."
+    }
+  ],
+  "remaining_pending": [
+    "s86 72:19 (snippet 10, barukh_adonai): qamatz is confirmed and already encoded. Still open: does 'yes meteg' mean a meteg on the kaf, the line-end maqaf after כל, or both? No further user answer is recorded. The existing line-end maqaf remains provisional. Not certified.",
+    "Old item 57 / the separately queued p.2 initial/canonical Ashrei 84:5 and 145:2 lamed-pointing review: still pending, carried forward from earlier audits. This round did not review it. These files do not say what 'old57' covers, so I make no claim about its content."
+  ],
+  "checks": [
+    "Records: the human file's raw_answer gives answers 1–9 and the incomplete answer 10. settled_snippets is [1..9]. The before/after pairs in the human file and in resolutions.human_resolutions are identical. pending_human contains only snippet 10.",
+    "1 yehi_khevod.xml, Psalm 132:13: אִוָּהּ has a mappiq in the final he. The rest of the verse (כִּי־בָחַר יְיָ בְּצִיּוֹן … לְמוֹשָׁב לוֹ:) matches the 'before' string, and the bible milestone is unchanged.",
+    "2 yehi_khevod.xml, Psalm 94:14: יַעֲזוֹב now has vav-holam after the zayin (plene). כִּי לֹא־יִטֹּשׁ יְיָ עַמּוֹ וְנַחֲלָתוֹ לֹא is unchanged.",
+    "3 morning_ashrei.xml line 48, 144:15: לּוֹ keeps its lamed dagesh, as confirmed. The verse is identical to the 'before' string. The quoted morning_ashrei/2 milestone and the seg/@source to bible 144/15 are unchanged.",
+    "4 psalm_146.xml, 146:6: וְאֶת־כָּל־אֲשֶׁר־בָּם has a sheva on the vav, as confirmed. The verse is identical to the 'before' string.",
+    "5 psalm_147.xml, 147:6: עֲדֵי־אָֽרֶץ has the maqaf and a qamatz-meteg on the alef. No other change in the verse.",
+    "6 psalm_147.xml, 147:9: יִקְרָֽאוּ has a qamatz-meteg on the resh. No other change.",
+    "7 psalm_147.xml, 147:15: אָֽרֶץ has a qamatz-meteg on the alef. No other change.",
+    "8 psalm_148.xml, 148:1: בַּמְּרוֹמִים has a dagesh in the bet. The pb n=27 (n83) still comes just before the word, so the physical page boundary is unchanged.",
+    "9 psalm_149.xml, 149:7: בַגּוֹיִם has no dagesh in the bet and keeps the gimel dagesh. The verse is identical to the 'before' string.",
+    "Jerusalem: psalm_147.xml 147:2 בֹּנֵה יְרוּשָׁלַֽ͏ִם and 147:12 שַׁבְּחִי יְרוּשָׁלַֽ͏ִם both still read lamed, patah, meteg, CGJ, hiriq, final mem. The defective בֹּנֵה and the hataf in הַלֲלִי are intact.",
+    "Carried-forward audit items are intact: morning_ashrei.xml still has יְהַלֲלוּךָ (84:5) and וַאֲהַלֲלָה (145:2) with hataf-patah on the first lamed, the קטו יח citation note targeting morning_ashrei/24, and the pb n=25 before 145:6. psalm_146.xml keeps the morning_psalm_146/10 context milestone with seg/@source to bible 146/10, and the pb n=26 inside 146:7. yehi_khevod.xml keeps the quoted_exodus_15_18 context.",
+    "Structure: in all six files, the milestone, seg, pb, divineName and citation-note structure matches what the earlier approved audits describe. I found no word, verse-boundary or ordering change other than the five marks added for snippets 1, 2 and 5–8 and the three confirmations for 3, 4 and 9.",
+    "Scope and limitations: I used only the Read tool. Unicode order (for example qamatz before meteg, and the CGJ position) was checked from the rendered combining sequence, not from a codepoint dump. I did not open barukh_adonai.xml or the compiled outputs, because 72:19 is explicitly uncertified. No source images were opened: the human answers are the authority for 1–9. Apart from the pending 10 and old57 items, the earlier audit's broader approval (encoding, alignment, order, English, inherited contexts and routing) is preserved and was not re-reviewed."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "f79f6672-d98f-4305-95f6-ae8d1b6fd1af"
+  }
+}

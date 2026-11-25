@@ -1,0 +1,22 @@
+{
+  "approved": true,
+  "files_read": [
+    "/tmp/mahzor-s312/settings-line-spacing-review.txt",
+    "/tmp/mahzor-s312/normal-projects/settings/prayerbook_for_the_new_year-heidenheim-1965-he/documentary.yaml",
+    "/tmp/mahzor-s312/normal-projects/settings/prayerbook_for_the_new_year-heidenheim-1965-he/with_translation.yaml",
+    "/tmp/mahzor-s312/normal-projects/settings/machzor_expanded-opensiddur-he/undated.yaml"
+  ],
+  "blocking_findings": [],
+  "limitations": [
+    "Same default in all 3 files: confirmed. The importer code (review excerpt line 1361) puts typography.paragraphs.line_spacing: 1.15 in the settings dict that all three files share. The value appears as 1.15 at documentary.yaml:22, with_translation.yaml:23 and undated.yaml:29. It sits in the same place in each, next to the existing typography keys instructions.from and line_numbers.enabled.",
+    "User override: not verified. The importer rewrites each settings YAML from a fixed dict on every run (excerpt lines 1353-1375, write_if_changed with yaml.safe_dump). Any hand edit to line_spacing in these generated files will be overwritten the next time the importer runs. This was already true before the change. Whether users can override through a processor CLI option, a separate user settings layer or a settings-merge step depends on processor code I didn't read. The settings schema, which would show whether paragraphs.line_spacing is a recognized key and accepts a float, wasn't provided either.",
+    "No other settings or source text changed: not verified. I had no diff or previous version of the YAML files or the importer, only the current state. The rest of each file looks consistent with the generator logic. I didn't read any source XML/JLPTEI files, so I can't confirm the source text is untouched. The change is confined to the settings-writing block, though, and doesn't touch the document-writing path (write_documents at excerpt line 1347).",
+    "Not caused by this change: undated.yaml:14-15 and :20-21 list hasiddur_hashalem-birnbaum-1949-he twice in both priority lists. It looks like readings['dependencies'] has two entries for the same project, and the loop at excerpt lines 1368-1372 inserts each one without de-duplicating. The duplicate is probably harmless for priority order. It comes from the dependency loop, not the line_spacing line.",
+    "I didn't check rendering or PDF output; that's left to the separate final visual review, as you said."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "d70a42c3-cdd8-4844-8710-43e01eae8dbd"
+  }
+}

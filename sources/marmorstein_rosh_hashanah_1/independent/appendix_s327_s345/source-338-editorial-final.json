@@ -1,0 +1,36 @@
+{
+  "approved_editorial_encoding": true,
+  "approved_corrections": [
+    {
+      "id": "s338_editorial_5",
+      "scan": "s338",
+      "line": 5,
+      "sic": "עַד",
+      "corr": "עֵד",
+      "before": "אַתָּה ",
+      "after": " אֱמֶת",
+      "assessment": "Approved as a typographical correction. Line 5 of the snapshot (source-338-working-snapshot.json, block 0) reads 'אֱלֹהֵֽינוּ עַל יִחוּדֶֽךָ. אַתָּה עַד אֱמֶת וַאֲנַֽחְנוּ עֲבָדֶֽיךָ:'. The generated XML has the same line (hymn_of_divine_unity_for_the_fifth_day_paytan.xml:53), with the printed עַד kept exactly in tei:sic and with the stored before/after context around it. In rendered Hebrew, tei:corr changes only the patah (U+05B7) under ayin to a tsere (U+05B5). Consonants and all other marks are the same. The tei:choice is inline in the second tei:l of stanza 3, after the milestone .../fifth_day_paytan/3 at :52. No milestone or tei:pb was moved or split. The pb n=12 for n337.jpg stays at :49. The reason for the correction ('witness', following 'אַתָּה תָעִיד בְּיִחוּדֶֽךָ') is unchanged from the previous review."
+    }
+  ],
+  "required_changes": [],
+  "limitations": [
+    "I checked codepoints from the rendered text only. I had no byte or hex dump and ran nothing. That the vowel is the only change comes from my reading plus the builder's NFC normalization and the exact-match behaviour of _locate. The builder does not check it automatically.",
+    "I did not open the local WLC file /home/efeins/.codex/worktrees/marmorstein-projects/master/project/tanakh-wlc-he/judges.xml and did not recompute its sha256 (9727b750…). I took the Judges 6:17 excerpt in source-338-editorial-adjudication.json as quoted. It shows 'א֔וֹת שָׁאַתָּ֖ה מְדַבֵּ֥ר עִמִּֽי', which matches the Masoretic form I expected. So the qamatz form is confirmed only as far as that recorded excerpt goes.",
+    "I did not rerun the builder or the schema validation. Schema validity (12/12) comes from draft-schema-report.json. The 'passed' / 'source_printed_projection_unchanged' result comes from draft-s338-editorial-check.json and the asserts in build-draft-appendix-modules.py:114-115. I could not check file timestamps to confirm that the XML I read is the output of the latest run. Its contents (one tei:choice, plain שָׁאַתָּה) do match the revised proposals and the snippets.",
+    "I compared the snapshot with the XML only for s338 lines 4–10 and the n337 page break. I did not collate the full scan image again. The snapshot itself is an unaccepted working source reading.",
+    "This approval covers only the source-preserving draft editorial encoding of s338 (the single tei:choice for עַד→עֵד, with שָׁאַתָּה kept as plain text). It does not approve the source reading, the batch, the module, any other module, or any export."
+  ],
+  "notes": [
+    "Required change 1 is done. s338_editorial_10 is gone from source-338-editorial-proposals.json, the check JSON and the snippets. Snapshot line 10 'שָׁאַתָּה אֵל כֹּל יָצַֽרְתָּ…' is plain text, with no tei:choice, at XML :58 (first tei:l after milestone /5 at :57). The snippets record valid_biblical_qamatz_form_retained_plain=true. source-338-editorial-adjudication.json records why it was removed and cites the local WLC primary source.",
+    "Required change 2 is done. The builder now asserts exactly one tei:sic (build-draft-appendix-modules.py:115) and builds corrections from the proposals file only. draft-s338-editorial-check.json lists just s338_editorial_5. The schema report shows 12/12 schema_valid with no errors, including hymn_of_divine_unity_for_the_fifth_day_paytan.",
+    "The earlier fragility note is fixed. before/after are now stored explicitly in the proposals (lines 9-10) and passed straight through at build:112. The line-number-based context logic is gone.",
+    "Source preservation is still guaranteed by code. The builder asserts printed_text(root)==original_printed after apply_corrections (:114), and printed_text leaves out tei:corr. Only the Thursday/fifth-day unit gets corrections (:106).",
+    "Recommended, not blocking (carried over): (1) add an automated check that the corrected projection differs from the printed projection only at the stated vowel codepoint(s), and record it in draft-s338-editorial-check.json; (2) consider @resp/@cert on tei:choice, or an encoding note saying sic/corr is used only for obvious misprints the user has confirmed; (3) review_status in draft-s338-editorial-check.json still says 'Pending independent editorial review', so update it when this review is recorded.",
+    "No files were edited."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "fe8f5d72-4d3f-4743-808b-0c84a306413d"
+  }
+}

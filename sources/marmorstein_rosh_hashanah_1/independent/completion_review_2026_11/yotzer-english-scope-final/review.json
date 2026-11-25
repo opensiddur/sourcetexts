@@ -1,0 +1,100 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5",
+    "actual_effort": "Low effort setting, but every named input was read in full: current.json, current.review.xml (including both index excerpts), english-preservation-proof.json, guideline-excerpts.md, the prior yotzer-structure-closure/review.json, the native page images s103.jpg and s105.jpg, completion_review_2026_11_yotzer_english_page_boundaries.json (before and after), yotzer-canonical-halfverse-proof.json, registry-context-proof.json, and refdb.py lines 90–124. All comparisons were done by reading. I ran no diff, schema, compiler, refdb, UrnResolver, validate_urn_references or importer tool. The half-verse resolution result comes from the supplied proof file; I did not reproduce it."
+  },
+  "witnesses": [
+    {
+      "stem": "yotzer_hameir",
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "english_source_words_unchanged": true,
+      "issues": [],
+      "unresolved_structural_questions": [],
+      "verified": [
+        "Image s103 (printed EN p. 37): the page opens with the italic directive 'On the Sabbath הכל יודוך which is printed below, is said here.' The 'המאיר He who lights the earth…' paragraph follows it, so Hameir does not start the page.",
+        "The actual EN index excerpt has <tei:pb n=\"37\" facs=\"…/n102.jpg\"/>, then the directive note, then the hameir transclusion. The current EN hameir div has no opening pb and keeps div@facs n102. The weekday path therefore gets exactly one EN pb 37, and it sits at the true page top. Closed: the prior question about the EN opening pb 37.",
+        "Completion record before/after: the only change is EN fragment 1 page_start, from true to false. The EN and HE text, corresp, source, conditions and paragraphs are the same in both.",
+        "Image s105 (printed EN p. 38) opens with 'Lord of our might, Rock of our fortress…'. The EN continuation <tei:pb n=\"38\" facs=\"…/n104.jpg\"/> sits before 'Lord of our might' and is kept. The HE pb 38 (n103) between אֲדוֹן and עֻזֵּנוּ is kept.",
+        "Closed: the prior question about pb 38 appearing in both hameir and el_adon when the day is undecided. The native page 38 really does carry both continuations: Hameir/El Barukh at the top, then a rule, then the Shabbat El Adon continuation. Each module records its own continuation. No excerpted rule forbids this.",
+        "EN text matches the s103/s105 print word for word as I read it. english-preservation-proof.json reports the same (pass).",
+        "Ps 104:24: the canonical verse milestone comes before the bounded seg@source, followed by bare verse and chapter terminators. HE and EN are identical, so the alignment URN set is {psalms/104/24} on both sides.",
+        "The guard is holiday-aggregate shabbat=false with no note, which matches the unrubricated weekday text on the page."
+      ]
+    },
+    {
+      "stem": "yotzer_hakol_yodukha",
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "english_source_words_unchanged": true,
+      "issues": [],
+      "unresolved_structural_questions": [],
+      "verified": [
+        "Image s103: Hakol Yodukha starts in the lower part of page 37, below the horizontal rule and its centred 'On the Sabbath.' heading. It does not start the page.",
+        "The current EN div has no opening pb and keeps div@facs n102. The only EN pb 37 is the index one, before the opening directive. The completion record shows the only change is EN page_start, from true to false. Closed: the prior question about two EN modules both claiming the top of page 37.",
+        "The condition rubric 'On the Sabbath.' (en) and אַם שַׁבָּת. (de-Hebr) is each the j:conditional's own tei:note type=\"instruction\", with shabbat=true. This follows the Kinds of rubric 'A condition' rule. The heading keeps its printed position, at the head of Hakol.",
+        "EN text matches s103 as I read it, and the proof reports it unchanged. Neither language has a corresp milestone, so the alignment is unchanged (empty on both sides)."
+      ]
+    },
+    {
+      "stem": "el_adon",
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "english_source_words_unchanged": true,
+      "issues": [],
+      "unresolved_structural_questions": [],
+      "verified": [
+        "Image s103 ends El Adon with 'splendid in glory above the Merkabah, merit and equity are'. Image s105 has a rule, then the centred 'On Sabbath.', then 'before His throne, grace and compassion before His glory. Good are the lights…' through '…Ophanim and holy Hayoth.'. The EN j:conditional el_adon_segment_2 opens after 'merit and equity are' and before 'before His throne', which is the source position. Closed: it does not need to move before the Hebrew זְכוּת couplet.",
+        "Both rubric occurrences are inside the existing stanza /2 scope: HE before זְכוּת, EN before 'before His throne'. endConditional comes after the end of stanza 6 text in both languages, before the bare stanza terminator. condition_end_corresp is el_adon/6 in both.",
+        "Stanza milestones /1 to /6 are identical in HE and EN, and one bare stanza terminator closes them. Conditional boundaries are not corresp boundaries, so the alignment rows are unchanged.",
+        "Closed: the prior question about delimiters when the condition is undecided. The outer el_adon guard and the following lael guard each select their own whole unit under shabbat=true. The excerpted guidelines contain no rule that the El Adon rubric must reach across into the next file, or that every submodule must carry its own visible delimiter. The 'Neither' case in 'How an undecided scope is set off' is a permitted mode, not a violation. The source's Shabbat headings stay at their printed positions.",
+        "Observation, not a violation: in both HE and EN the nested conditional (with its rubric note) comes before the pb 38. The EN print has the rubric partway down page 38. No excerpted rule governs the order of a pb and a conditional, and the HE order was already approved.",
+        "EN text matches s103/s105 as I read it, and the proof reports it unchanged."
+      ]
+    },
+    {
+      "stem": "lael_asher_shavat",
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "english_source_words_unchanged": true,
+      "issues": [],
+      "unresolved_structural_questions": [],
+      "verified": [
+        "Image s105: the 'לאל To the God who rested…' paragraph follows El Adon on page 38 with no heading of its own. The unit carries its own whole-unit guard, shabbat=true.",
+        "Canonical half-verse: according to yotzer-canonical-halfverse-proof.json (status pass), UrnResolver.resolve_range resolves psalms/92/2/a exactly in tanakh-miqra_al_pi_hamasorah-he and tanakh-wlc-he, with no coarsening. So it is an existing accentual half and not one made up here. This closes the prior limit about the Psalms ole-we-yored exception.",
+        "refdb.py lines 104–107: UNIT_CONTAINED_BY has 'half-verse': {verse, chapter} and 'verse': {chapter}. So the half-verse context ends at its bare half-verse terminator or at the verse or chapter. prayer-part is not listed, so it falls back to the component-count rule. The deeper /chapter, /verse/2 and /verse/2/a contexts have more components and do not end it. The bare prayer-part terminator before לְפִיכָךְ / 'Therefore' closes it.",
+        "Closed: the prior question about English occurrence-context half-verse milestones. 'A translation has no accents and can place no half-verses' explains how a Tanakh project derives halves and how a missing division falls back. It is not a prohibition. The EN milestone carries an occurrence context (registry status=context, referencing canonical psalms/92/2/a). It does not divide a whole unaccented English verse or create a canonical half. The EN extent 'it is good to thank the Lord.' matches the HE extent טוֹב לְהוֹדוֹת לַייָ: exactly, inside a bounded seg@source psalms/92/2/a.",
+        "The HE and EN corresp sets are identical: quoted_psalms_92_1, quoted_psalms_92_2, …/chapter, …/verse/2 and …/verse/2/a. Every one has status context in registry-context-proof.json, and no new canonical identity is registered. The whole-verse Ps 92:1 occurrence is unchanged.",
+        "Closed (cosmetic): the context registry gives …/verse/2 the parent …/chapter. Scope follows unit containment, not URN nesting, so this has no effect.",
+        "Closed (harmless): the 92:1 opening <tei:milestone unit=\"chapter\" n=\"92\"/> has no corresp. Under rule 3 it is a terminator with no preceding chapter in the div, so it opens nothing.",
+        "EN text matches s105 as I read it. The printed 'Thy Name. O Lord' period is kept as tei:sic, with tei:corr 'Name,'. The proof reports it unchanged."
+      ]
+    },
+    {
+      "stem": "yotzer_barukh_kevod",
+      "encoding_guidelines_approved": true,
+      "english_alignment_unchanged": true,
+      "english_source_words_unchanged": true,
+      "issues": [],
+      "unresolved_structural_questions": [],
+      "verified": [
+        "Canonical half-verse: according to the half-verse proof (status pass), ezekiel/3/12/b resolves exactly in MiQra and WLC. It stays only on the bounded seg@source.",
+        "In both languages, in this order: prayer-part, chapter n=3, verse n=12, half-verse n=b (all corresp contexts with status context), then the seg, then bare half-verse, verse and chapter terminators, then a bare prayer-part terminator. Containment matches refdb.py UNIT_CONTAINED_BY.",
+        "Closed, for the same reasons as lael_asher_shavat: the EN occurrence-context half-verse milestone is not a guideline violation. The EN extent 'Blessed be the glory of the Lord from His place.' matches the HE בָּרוּךְ כְּבוֹד־יְיָ מִמְּקוֹמוֹ: exactly.",
+        "The HE and EN corresp sets are identical. The text has no condition, which is correct because it is said on both days. The proof reports the EN words unchanged."
+      ]
+    }
+  ],
+  "limits": [
+    "This is a structural, alignment and marker review only. It does not approve any Hebrew pointing or Hebrew source reading. The Hebrew reading questions from yotzer102-108-final/review.json are still pending.",
+    "Native images were checked only for s103 and s105 (EN pp. 37–38). I did not open the EN page images for barukh_kevod (s109) or any Hebrew page image. For barukh_kevod, 'EN words unchanged' rests on english-preservation-proof.json and the earlier accepted input.",
+    "I did not run UrnResolver, the compiler, the schema, validate_urn_references or the importer tests. Half-verse existence is taken from the supplied proof file. Scope reasoning comes from reading refdb.py lines 90–124 and the guideline excerpts.",
+    "I did not verify known-day (shabbat true/false) compiled output. Per the brief, that was verified separately.",
+    "No remaining rule violations were found in any of the 5 units, and every question from the prior review is closed above."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "96a78cc2-f71c-4667-a582-6dff191767eb"
+  }
+}

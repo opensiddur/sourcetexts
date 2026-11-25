@@ -1,0 +1,31 @@
+{
+  "scope": "documentary_html_tail",
+  "approved": false,
+  "all_assigned_images_read": true,
+  "files_read": [
+    "/tmp/mahzor-s294/html-tail-v7/manifest.json",
+    "/tmp/mahzor-s294/full-html-browser-summary-v7.json",
+    "/tmp/mahzor-s294/html-tail-v7/documentary-1280-n293.png",
+    "/tmp/mahzor-s294/html-tail-v7/documentary-1280-n309.png",
+    "/tmp/mahzor-s294/html-tail-v7/documentary-390-n293.png",
+    "/tmp/mahzor-s294/html-tail-v7/documentary-390-n309.png"
+  ],
+  "blocking_findings": [
+    "Instruction-word spacing (documentary-1280-n309.png and documentary-390-n309.png): there is no space between the instruction 'השליח ציבור מסיים' and the prayer text that follows, so it shows as 'מסייםברוך' ('…מסייםברוך אתה יי שאותך לבדך ביראה נעבוד'). The two words run together as if they were one.",
+    "Instruction-word spacing (documentary-1280-n309.png, priestly-blessing introduction): there is no space between the instruction 'השליח ציבור בקול' and the next word, so it shows as 'בקולכהנים' ('אהרן ובניו השליח ציבור בקולכהנים עם קדושך כאמור'). This is the same bug as above: whitespace is lost at the boundary between the instruction span and the text."
+  ],
+  "nonblocking_findings": [
+    "Column alignment is good at 1280. In n293, every English Shofarot stanza starts on the same line as its Hebrew stanza. In n309, the start of each row lines up ('Blessed art Thou'/השליח ציבור, 'We thank Thee'/מודים, 'Congregation:'/מודים דרבנן, 'For all of them'/ועל כלם, 'Our God and God of our fathers'/אלהינו ואלהי אבותינו). Where the English is longer, the Hebrew column has blank space, which is expected.",
+    "Responsive flow is good at 390. Each Hebrew block sits above its English, with rules between rows. Hebrew is right-aligned and English justified. Nothing is clipped, nothing is cut off sideways and nothing overlaps the Contents/Settings bar. This agrees with the browser summary (scrollWidth equals viewport width in every state).",
+    "Source links are present. Each new page starts with a ↗ link, including links in mid-sentence ('↗creature', '↗the', '↗מראשונה', '↗דרור'). The manifest resolves the n293 and n309 hrefs to the archive.org page images. The page numbers 132 (English) and 131 (Hebrew) appear at the right places.",
+    "Cosmetic: at 390, documentary-390-n309.png shows empty cells between rules after 'in awe.' and after 'ever have we trusted in Thee.' These are spacer rows with nothing in them. They are readable but take up visual space.",
+    "At the end of the n309 screenshot at 1280, the Hebrew 'שיר של יום' (Psalm 24, page 131) appears with nothing in the English column beside it. That fits a cutoff partway through a page spread, but these screenshots can't confirm it was intended. Source order and scope are not reopened here.",
+    "The label saying the encoded scope ends before source312 isn't visible in either closing screenshot. The footer reads only 'Prayerbook for the New Year — first day / An electronic edition from the Open Siddur Project…'. The label may be on the title page, which wasn't assigned, so this is noted rather than failed."
+  ],
+  "verdict": "Not approved. Layout, column alignment at 1280, stacking at 390, source links and absence of clipping are all fine. Two blocking problems remain at the boundary where an instruction meets the text: 'מסייםברוך' and 'בקולכהנים' each lack a space, and the first shows in both the 1280 and 390 closing screenshots. Fix the whitespace at the instruction-span boundary and re-capture the n309 screenshots.",
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "62d7ad04-825a-4f0e-be47-84c51dd921e4"
+  }
+}

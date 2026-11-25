@@ -1,0 +1,21 @@
+{
+  "files_read": [
+    "/tmp/mahzor-s312/markup-supplement-review.json",
+    "/tmp/mahzor-s312/scan325-host-context.json",
+    "/tmp/mahzor-s312/archive-cache/marmorstein_rosh_hashanah_1/pages/s325.jpg"
+  ],
+  "scan325_items_accounted_for": true,
+  "documentary_order_verified": true,
+  "remaining_findings": [],
+  "limitations": [
+    "Host location: both English instructions are tei:note type=instruction xml:lang=en with facs n324. They are direct children of the Minchah div in /tmp/mahzor-s312/integration-projects-v2/project/prayerbook_for_the_new_year-heidenheim-1965-he/index.xml. The two kaddish_preface verses (Num 14:17 and Ps 25:6) are in rh_minchah_kaddish_preface.xml, as the earlier review found. That file is pulled in by the external transclusion urn:x-opensiddur:text:siddur:rosh_hashanah/minchah/kaddish_preface@prayerbook_for_the_new_year-heidenheim-1965-he. With that, all of the scan 325 items in question have a location.",
+    "Order compared with the scan: the host sequence is ashrei transclusion → uva_letziyyon transclusion → note 'The Reader says half Kaddish.' → kaddish_preface transclusion → half_kaddish transclusion → vaani_tefillati transclusion → the long rubric note beginning 'Then the congregation says the תפלה …' → haazinu transclusion. On printed page 155 the order is the Uva ending (…יגדיל תורה ויאדיר), then the italic 'The Reader says half Kaddish.', then ועתה יגדל־נא and זכר רחמיך, then the half Kaddish, then '(On Sabbath)' with ואני תפלתי, then the long English rubric. The host order matches the print. That includes the instruction coming before the kaddish_preface verses rather than after them, and the rubric coming after Vaani. This also settles the earlier open question about where kaddish_preface sits: it comes after Uva and before half_kaddish.",
+    "Based on the context file only: I relied on the supplied surrounding_xml as an accurate excerpt of index.xml. I did not open index.xml myself. I also did not check how the kaddish_preface, half_kaddish and vaani_tefillati transclusion targets resolve. No registry or mapping row was supplied for any of them. I did not check whether the vaani_tefillati target contains the printed '(On Sabbath)' label. That label is outside the three items in scope.",
+    "Not reviewed, because it is outside this ordering question: the page-ref targets and printed page numbers in the rubric (the scan reads 'page 44' twice and 'page 67'), the text:prayer: namespace on the avinu_malkenu ref, any source reading or pointing, and pb/facs placement beyond the notes' n324 facs. None of this is certified. This is not source-pointing or overall/batch acceptance, and Questions 473-489 stay open."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "23e14ea7-6ad3-4db1-be79-8d5f0663465e"
+  }
+}
