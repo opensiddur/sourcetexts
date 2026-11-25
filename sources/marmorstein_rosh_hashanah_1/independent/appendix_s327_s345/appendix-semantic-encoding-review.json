@@ -1,0 +1,37 @@
+{
+  "approved_draft_semantic_encoding": false,
+  "required_changes": [
+    "The descriptive condition URN for s335 L6 is misspelled. appendix_semantics.py:17 uses 'kedov_shakkul_ukhename_shachal', but וּכְנָמֵר romanizes to 'ukhenamer'. Under the JLPTEI-3 transliteration rules the name should be 'kedov_shakkul_ukhenamer_shachal'. A condition URN is a permanent selector shared across editions, so fix it before approval. Then regenerate hymn_of_divine_unity_for_the_fourth_day_paytan.xml (the conditional at XML line 104 and the header encoding note at line 35) and draft-appendix-semantic-rules.json. Nothing else blocks approval: the rest of the structure checked below is correct."
+  ],
+  "remaining_disputes": [],
+  "runtime_checks_recommended": [
+    "Check that the exporter resolves standoff note targets on tei:choice/@xml:id (appendix_s330_line_26, s332_line_27, s337_line_17, s338_line_19, s341_line_3, s341_line_12) and on j:conditional/@xml:id (the s335 L22 note targets …_optional_47_0_0). The guideline describes tei:anchor targets. It does not explicitly cover these elements.",
+    "Check that when a scope is false, the s335 L22 sic/corr note and its reference mark are dropped cleanly rather than left pointing at a removed target.",
+    "Render each optional scope as true, false and undefined. Check for: a stray space before the colon when the condition is false (s334 L7 'גּוֹיִם :'); double spaces (s336 L7 'הוֹשַׁע  כִּי', s336 L20, s341 L4, s342 L13, s340 L8, and s335 L24 with the outer scope true and the inner false); and an empty tei:l showing up as a blank poetry line when a whole-line scope is false.",
+    "s335 L24: check all four outer/inner combinations. When both are undefined the output should be nested delimiters inside one line. When outer is true and inner is false, לְבַדּוֹ … הוּא should appear without the Divine Name. The L28 /50/optional selector must evaluate independently of both L24 conditions.",
+    "Check URN resolution: /22, /30, /32, /33, /35–/48, /50 (the L28 milestone), /60, /73 (the last two are scopes on a word inside the line) and Sunday /10, /11 should resolve to milestone scopes holding only the conditional content. The terminators before null L6 (XML line 103) and null L24 (line 122) should close /32 and /49 so neither scope swallows the null line. L6 and L24 must not resolve under any canonical URN.",
+    "Check the inline transclusion fallback: each choice should pick the first (main_reading) j:option when no variant is decided, and the alternate when its corresp URN is set to true.",
+    "Byte-check NFKD normalization and the per-character match of all 36 printed spans against the raw inventory, by program rather than by eye. Readings were compared visually here."
+  ],
+  "limitations": [
+    "Read the Sunday, Monday, Wednesday, Thursday and Friday modules (the Thursday module only through XML line 120), plus all of JLPTEI-3.md. The Tuesday module (s332 L27, a choice on סוֹבֵב) was not opened, although its rule record was reviewed.",
+    "Did not read build.py, the optional-variant inventory, the atlas, or features.yaml. I did not run the schema, the exporter or any scripts, and viewed no scans.",
+    "No tool was available to verify NFKD or exact codepoints. The word and point preservation check was a visual comparison of the rules JSON against the XML."
+  ],
+  "notes": [
+    "Ruling 835 is met. All 29 unsigned parenthesized spans are independent type='marked' conditionals on opensiddur:variant, each with its own URN, in their printed positions. No couplet stands in for another. L6 and L7 stay separate, as do L20/L22 vs L23 and L24 vs L28. L24's descriptive URN is distinct from L28's /50/optional.",
+    "Ruling 834 is met. s335 L22 is an optional whole line. Its content drops the printed ')' because the conditional's delimiters stand in for both parentheses. The missing opener is recorded as <choice><sic/><corr>(</corr></choice> inside an English commentary note targeted at that conditional, not in the prayer text, so no delimiter is doubled.",
+    "Canonical boundaries are intact. Every canonical stanza milestone sits before and outside its j:conditional, inside the same tei:l. The null additions L6 and L24 have no milestone and come after bare terminators that sit outside the previous line's scope. L24's tei:seg/@source=/50 encloses both conditional pairs. The /53→/50→/54 order and the single /50 corresp on L28 are as approved and were not reopened.",
+    "The nesting is correct. In L24 the outer pair (…_optional_49_0_0) and the inner Divine Name pair (…_49_0_0_divine_name) are both children of the tei:seg. The inner pair lies inside the outer range, and its j:divineName sits within the inner scope. The parentheses around יְיָ were removed from the neighbouring text without losing any other characters.",
+    "All seven נ״א alternates are tei:choice elements with two j:option children. Main readings are verbatim and pointed; alternates are as printed, with points only where the source has them. Each choice's corresp carries a /main_reading or /alternate_reading condition URN. s330 L26 leaves וְרוֹחַב outside the choice. s337 L17's colon follows the choice, and the header encoding note documents this.",
+    "Each annotation appears once in rendered material: one Hebrew commentary note per choice, targeted at it, keeping the printed parentheses (and the colon for s337). The same strings also appear in English-tagged tei:note[@type='encoding'] elements in the header. Under the guideline those notes stay in the XML and are not printed, so this is not rendered duplication. Optional cleanup: reword the header notes to refer to the xml:id instead of repeating the Hebrew, or mark the Hebrew with xml:lang. They also read as build instructions ('preserve … once') rather than descriptions of the encoding.",
+    "Wording: the guideline says marked scopes get the exporter's standard delimiters (brackets or a rule), not necessarily parentheses. The L22 note's 'Supplied delimiter: (' and the header's 'generated conditional delimiters supply its display' are accurate about the source error, but may not match what is actually rendered. Optional rewording only.",
+    "L24's name 'levaddo_hu_veniflaot_gedolot' romanizes correctly. Its words also match L28's apart from the optional Divine Name, but it is still a distinct, non-numeric condition URN without a project suffix, which is all that is required.",
+    "Raw source text is not modified: changes are confined to fragment fields and post-processing of the generated tree. No English project is produced. All 12 modules appear in draft-schema-report.json as schema-valid. This review covers the draft semantics only, not source, assembly, export or batch acceptance. No edits were made."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "150afbd2-3404-41b3-91bd-0cf3d3730426"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "approved_importer_integration": true,
+  "required_changes": [],
+  "remaining_risks": [
+    "The review_encoding flag is live: realizations.py:424 uses it to put a unit into review_payloads. But a unit that has source_encoding and lacks review_encoding: true is skipped there unless something else triggers it, such as overlays, wording_selection or canonical fields. unit_review_text still serializes the config, so the literal reading review hash should still cover it. Even so, the payload binding is fail-open for future units. Recommend treating unit.get('source_encoding') as a trigger at :424, or raising when source_encoding is present without review_encoding.",
+    "The rule fields day, scan, physical_line, canonical_part and text are informational and are never checked against the generated tree. For missing_opener, rule['text'] is only checked for its own shape (no leading '(', trailing ')'). It is never compared to the printed line it describes. A reviewer reading the payload could trust metadata that does not match the source.",
+    "Duplicate interpretations are not rejected up front. A second optional rule on the same inner_condition fails, because the preceding node then has no '(' tail. A duplicate alternate rule with colon_after_choice=false would quietly add a second commentary note to the same choice. Recommend checking that xml_id is unique across rules.",
+    "Some values are not type-checked: condition, inner_condition, printed_annotation, printed_page, n, corresp, and paragraphs (True == 1 passes). Bad types still fail, but with AttributeError or TypeError from lxml rather than a clear ValueError. scan values are parsed with int(scan[1:]) and are not validated.",
+    "inner_condition only looks at divineName elements that are direct children of the outer scope's parent. One nested deeper (for example inside a seg) causes a fail-closed error if it is the only one. If a direct child is also present, the deeper one is silently ignored. That is acceptable for the current data but fragile.",
+    "The `index <= 0` guard can never trigger, because start < index already ensures index >= 1. It is harmless but cannot be tested on its own. The guarantee comes from the slice over (start, stop).",
+    "Documentary declaration xml:ids are 'documentary_<section>_<lang>_settings'. If the same section name occurs twice in one documentary spine, the ids collide. They are unique for the current spines, but nothing guards against this beyond schema ID checking, if the schema enforces it.",
+    "The inner Divine Name conditional's xml:id is still derived from the outer id, so it depends on position. Do not point annotations at it.",
+    "The review hash covers the serialized config, not the code in source_encoding.py. Changing what a directive does will not invalidate approvals already granted under it.",
+    "There is still no single before/after word check across all directives. The colon, delimiter, footnote and quotation edits are each gated by narrow per-directive checks rather than a printed_text diff limited to the approved changes. The current gates are adequate for the approved semantics."
+  ],
+  "export_checks_still_required": [
+    "Rendered whitespace at s334 L7, s336 L7/L20, s340 L8, s341 L4 and s342 L13.",
+    "No blank tei:l is rendered when a whole-line optional scope is false.",
+    "/50 resolves only to L28 and not to the L24 seg. L6 and L24 resolve under no URN.",
+    "The commentary_pages tei:pb inside standOff notes (plain ed='1965', not context-qualified like the body pb rewrite) must not be counted as duplicate page events, or change pagination, in rendered output.",
+    "The supplied-opener choice (sic/corr) and the alternate commentary notes appear or drop correctly in the exported annotation layers, for both settings of each condition, across the real integrated units and not only the synthetic test.",
+    "Continuous quotation chapter milestones (opener with n/corresp, bare closer) give exactly one chapter span in export for each unit that uses them.",
+    "Local documentary j:declare / j:endDeclare scoping is honored by the compiler for the assembled spines."
+  ],
+  "limitations": [
+    "I read the prior review, source_encoding.py, the source-encoding test file, the build.py diff, the code check, the legacy preservation and integrated module check JSONs, and realizations.py:405-444. I did not read the rest of build.py, the integrated-appendix-units.json source_encoding blocks, or test_marmorstein_rosh_hashanah_1.py.",
+    "I ran nothing: no tests, schema validation, hash checks, builds or exporter. The figures of 113 tests and 38 subtests passing, 902 payloads and 935 XMLs byte-identical, both spines byte-identical, 11 bodies exactly matching, 12 modules passing schema, and 961 validated files are taken from your report and JSON evidence. I did not recompute the sha256 values in source-encoding-code-check.json against the files I read.",
+    "The diff covers build.py only. I am assuming the code I read in source_encoding.py and the test file is the version those hashes and test runs refer to.",
+    "The test file covers inner_condition (positive, outside scope, two names), malformed rules (stem, kind, misspelled key), unknown directive, the footnote word change, missing_opener keep/drop, alternate+colon, and continuous quotation negatives. Positive paths for commentary_pages, bibliography_page_range, remove_prayer_footnote_marker and continuous_quotation_chapter, plus the empty-standOff creation path for commentary, are evidenced only indirectly by the 11 bodies exactly matching their reviewed drafts. I did not confirm which units exercise which directive.",
+    "I viewed no scans. Human rulings and the approved draft semantics are treated as authoritative."
+  ],
+  "notes": [
+    "All four prior required changes are done. Bare asserts are replaced by explicit ValueErrors. _rule enforces kind in {alternate, optional}, a matching stem, per-kind key allow-lists with required keys, boolean flags, and choice keys. The other directives validate the keys of each item and fragment. build.py:1261 now passes source_encoding to urn_strings for registry validation.",
+    "inner_condition is now scoped correctly. It searches only the siblings strictly between the outer j:conditional and that condition's own j:endConditional (the one targeting '#'+its id, enforced by _one). It requires exactly one divineName there, requires the outer scope to open before it closes, and requires both a '(' tail on the preceding sibling and a ')' tail on the name before removing either. The preceding sibling is always inside the scope or is the outer conditional itself.",
+    "Colon normalization now refuses three cases: a printed_annotation that does not end in ':)', any choice text that already ends in ':', and a choice tail that already starts with ':'. Choice option tags, corresp values and texts must exactly match the reviewed choices.",
+    "Footnote removal accepts only printed values with exactly one '*', which must be the final character, and text must equal printed[:-1]. The printed string must occur exactly once in exactly one text or tail slot of the body.",
+    "Continuous quotation now refuses foreign chapter corresp values, chapter milestones carrying text or tail words, existing seg types other than none or 'quotation', a paragraph count mismatch, and a non-blank paragraphs[0].text.",
+    "Empty sections containing only declare/endDeclare (plus conditional/endConditional) are now removed, which closes the prior material risk.",
+    "The legacy evidence shows no regression for units without source_encoding, which matches the two guards in build.py, both `unit.get('source_encoding', {}).get(lang)`.",
+    "This approval covers importer code only. It does not cover assembly, export or batch acceptance. I made no edits."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "b380b629-1be1-4cfc-ac9d-e06f8c35fe2c"
+  }
+}

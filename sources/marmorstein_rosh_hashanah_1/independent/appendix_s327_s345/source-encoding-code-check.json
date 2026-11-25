@@ -1,0 +1,13 @@
+{
+  "status": "Importer integration checks, not fullbatchacceptance",
+  "regression_command": "uv run pytest -q opensiddur/tests/importer/test_marmorstein_source_encoding.py opensiddur/tests/importer/test_marmorstein_rosh_hashanah_1.py",
+  "tests_passed": 113,
+  "subtests_passed": 38,
+  "source_files_sha256": {
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/opensiddur/importer/marmorstein_rosh_hashanah_1/build.py": "214687b8132f2a03bd630094cb0cf012590095a0da016ab7c34f7cacdd5d0eaa",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/opensiddur/importer/marmorstein_rosh_hashanah_1/source_encoding.py": "dac78bb7c3691036d37a4b14f1d2665e27b47d279098cbdb46e2ff5e66645f3c",
+    "/home/efeins/.codex/worktrees/marmorstein-processor/master/opensiddur/tests/importer/test_marmorstein_source_encoding.py": "a19b23086160c5ff762a5d876d60fdcd2177a1b53923ff48f01746f0b9c4d3cf"
+  },
+  "legacy_preservation": "legacy-importer-output-preservation.json",
+  "review_encoding_gate": "realizations.py:424 includes review_encoding in review_payloads; not deadconfiguration"
+}
