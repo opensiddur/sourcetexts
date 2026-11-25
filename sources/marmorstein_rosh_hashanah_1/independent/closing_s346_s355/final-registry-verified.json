@@ -1,0 +1,32 @@
+{
+  "approved_registry": false,
+  "records_reviewed": 139,
+  "required_changes": [
+    "The two Isaiah context records still have no 'references' field. This contradicts registry-remedy-generated-proof.json, which says \"references_added_both_isaiah_records\": true. In candidate-registry-records.json, lines 917–930 (…/yehi_ratzon_shekol_tippah/quotation/isaiah/63 and …/63/9) have only urn, status, kind, label_en and note. In candidate-registry/closing_s346_s355.jsonl, lines 111–112 have the same five fields. Every other quotation record for yehi_ratzon_shekol_tippah and ribbono_shel_olam_asinu (jsonl lines 106–107, 109–110, 113–116) has 'references': 'urn:x-opensiddur:text:bible:<book>/<ch>/<v>'. Fix: add \"references\": \"urn:x-opensiddur:text:bible:isaiah/63/9\" to both records in both files. While editing those lines, change label_en to \"Bounded scriptural quotation in yehi_ratzon_shekol_tippah\" and the note to \"Quotation scope only; not a substitute provider for the whole biblical chapter/verse.\" so they match the sibling records. Then fix whatever generated the proof: it reported true for something that is not in either file."
+  ],
+  "files_read": [
+    "/tmp/mahzor-s346/registry-remedy-generated-proof.json",
+    "/tmp/mahzor-s346/final-registry-remedies.json",
+    "/tmp/mahzor-s346/final-registry-closure.json",
+    "/tmp/mahzor-s346/candidate-registry-records.json (all 1063 lines)",
+    "/tmp/mahzor-s346/candidate-registry/closing_s346_s355.jsonl (lines 105–116)",
+    "/tmp/mahzor-s346/integration/project/prayerbook_for_the_new_year-heidenheim-1965-he/yehi_ratzon_shekol_tippah.xml",
+    "/tmp/mahzor-s346/integration/project/prayerbook_for_the_new_year-heidenheim-1965-he/musaf_kohanim_response_2_5.xml",
+    "/tmp/mahzor-s346/integration/project/prayerbook_for_the_new_year-heidenheim-1965-he/kohanim_appendix_responses_2.xml"
+  ],
+  "notes": [
+    "Closed: blocker 1 (the identical Vichunneka choice). In musaf_kohanim_response_2_5.xml line 38, the Numbers 6:25 seg now holds the single reading וִיחֻנֶּֽךָּ with no tei:choice. In kohanim_appendix_responses_2.xml, the kohanim_appendix_responses_2_wording declaration (lines 38–53) declares only the kohanim_response_2_2 and 2_3 response features. All four are registered (candidate lines 768–793). Neither file mentions kohanim_response_2_5/priest/heidenheim_1965_printing.",
+    "Closed: blocker 2 (the Isaiah encoding). yehi_ratzon_shekol_tippah.xml line 38 now has <tei:seg source='urn:x-opensiddur:text:bible:isaiah/63/9' type='quotation'>. Inside it are a chapter milestone n='63' with corresp …/quotation/isaiah/63 and a verse milestone n='9' with corresp …/quotation/isaiah/63/9. Both close inside the seg. This is the same pattern as the Deuteronomy 30:3, 30:4 and Job 20:15 quotations in the file. There is no half-verse milestone, and bible:isaiah/63/9/b does not appear in any of the three files.",
+    "Closed: additional_new_prayer_roots now lists only urn:x-opensiddur:text:prayer:yehi_ratzon_shekol_tippah. before_call and after_call stay correctly as prayer-part records under amirah_leshatz_lifnay_birkat_kohanim.",
+    "Cosmetic labels: 'Psalm 24:5', 'Psalm 25:6' and 'Main-service printing context of the 22-letter Name supplication' are fixed. Not blocking: line 495 (…/kohanim/yehi_ratzon/printing/main) still has the bare label 'Main-service'. Its sibling at line 502 reads 'Priestly appendix printing of the same supplication', so 'Main-service printing of the same supplication' would match.",
+    "Worth checking: kohanim_appendix_responses_2.xml line 63 now transcludes urn:x-opensiddur:text:bible:psalms/123/2@prayerbook_for_the_new_year-heidenheim-1965-he, not kohanim_response_2_5/response. That plausibly keeps the main service's dream_repeat navigation note (musaf_kohanim_response_2_5.xml line 39) out of the appendix, which matches 'context belongs to the place'. But musaf_kohanim_response_2_5.xml marks Psalm 123:2 only with the context URN …/response/quotation/psalms/123/2, not bible:psalms/123/2. Confirm that some other file in the project provides bible:psalms/123/2, or this transclusion will not resolve.",
+    "My earlier review of the other 137 records still stands, as you asked. The only open item is the missing 'references' on the two Isaiah records."
+  ],
+  "limitations": [
+    "I could only read files: I had no search or shell. I did not run validate_features, validate_names, jing/Schematron, refdb or a compile.",
+    "I did not compare code points or NFD forms of the וִיחֻנֶּֽךָּ reading against the previously accepted provider. The claim that the combining order was canonicalized comes from final-registry-remedies.json, not from my own check. I also did not verify the SHA-256 hashes in the proof file.",
+    "I read only the three XML files named in the proof. I did not search the rest of the -he or -en project for leftover references to kohanim_response_2_5/priest/heidenheim_1965_printing or isaiah/63/9/b, or for a provider of bible:psalms/123/2.",
+    "In the jsonl I read only lines 105–116. My conclusion that the Isaiah records there lack 'references' rests on lines 111–112 alone.",
+    "This covers registry identities and metadata only. It says nothing about OCR accuracy, export, or PDF or electronic output."
+  ]
+}

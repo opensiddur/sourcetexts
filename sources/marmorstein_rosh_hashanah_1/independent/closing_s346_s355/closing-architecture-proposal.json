@@ -1,0 +1,36 @@
+{
+  "status": "UNACCEPTED architecture proposal; source glyph questions partly pending",
+  "existing_raw_units": 518,
+  "existing_language_witnesses": 913,
+  "old_source_words_must_remain_unchanged": true,
+  "new_source_sections": [
+    "346–350 detailed priestly blessing appendix",
+    "351–354 daily psalms; Psalm24 passage and Hebrew Sunday rubric already accepted, German label and chapter citation newly accounted",
+    "355 Kaddish plus after-study insertion and return cue"
+  ],
+  "intended_URN_reuse": {
+    "preparation": "legacy identity evidence proves prayer:amidah/yehi_ratzon_shel_haqahal covers the shared blessing-preparation formula; priest/congregation wording branches are alternatives within it, not new prayer identities",
+    "temple_yehi_ratzon": "legacy prayer:amidah/yehi_ratzon_milefaneykha is the Temple-building request, NOT the preparation formula",
+    "intro": "legacy prayer:amidah/amirah_leshatz_lifnay_birkat_kohanim is Elohenu barakhenu intro",
+    "Bible": "all Psalm and blessing verses reuse existing Bible URNs; avoid indexing partial chapters as whole chapters",
+    "Kaddish": "kaddish/yatom and its closings and kaddish/derabbanan/al_yisrael already registered, not yet emitted in this source project",
+    "new_kri": "corpus search found no text matching שכל טפה וטפה קרי; possible genuinely new shared-prayer identity needs review"
+  },
+  "architecture_issues": [
+    "New documentary printings of already accepted prayers have different pointing/wording. Current source has strict raw baseline; use existing canonical identities, variant overlays and caller-scoped controls. Do not create new prayer identities for placement/edition differences.",
+    "SIDDUR_URN_SCHEME says siddur spines contain headings/pagination/transclusions, not prayer words. Existing legacy source has several siddur word holders. Avoid perpetuating this in new source/expanded spines.",
+    "Existing full prayer musaf_kohanim_yehi_ratzon has a no-corresp first segment with optional_spans, and a second Amen segment with an instruction. New appendix printing differs and mother-only parentheses vs earlier both-parents parentheses. Need preserve controls without unsafe new duplicate provider.",
+    "Shared preparation opening/closing are printed once around two side-by-side branches; documentary output must not duplicate the common words, expanded role-specific prayers must be complete.",
+    "Modim right column on347 continues on348, while Modim derabbanan left column ends on347. Source order must retain347 before348; full reusable Modim must stay coherent. A caller-owned explicit348 pb can avoid a leading pb leaking into the earlier transclusion range.",
+    "Psalm24 is already accepted; keep its words/points. Add the newly accounted bare כד citation as a linked note without duplicating a canonical provider or blanket resetting baseline. A new structural wrapper containing an external transclusion of existing Psalm24 is possible, with its citation standoff targeting existing chapter or unique occurrence.",
+    "Expanded Yatom can transclude the known canonical whole. Derabbanan must insert al_yisrael after yitbarakh and return to printed yehe_shelama and oseh_shalom, with no navigation left.",
+    "Untranslated new passages remain absent in English. Existing matching translation from the same edition can be reused canonically; no fallback to Salaman or substitute translation.",
+    "All source page markers use exact IA leaf URLs. Rashi instructional continuation346→347 uses independently approved new source_pages support. Unnumbered instruction pages omit n. Counted explicit H-geresh Names supported; numeric H-geresh in instructions must not be globally tagged."
+  ],
+  "questions": [
+    "Give concrete existing canonical identities and module boundaries for each section. Identify genuinely new identities only after registry/alias/current-project and legacy-history evidence.",
+    "Recommend the minimum safe implementation using current build.py/realizations.py APIs. If extensions are necessary, state them precisely with risk/tests. Do not suggest disabling validators or weakening baseline globally.",
+    "Distinguish documentary physical ordering from expanded complete recitation and locally scoped optional/role/calendar conditions.",
+    "Identify any interpretation that actually requires human input beyond the already-resolved836–845; do not reopen those glyph decisions."
+  ]
+}

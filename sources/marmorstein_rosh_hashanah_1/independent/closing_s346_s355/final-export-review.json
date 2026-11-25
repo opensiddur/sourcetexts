@@ -1,0 +1,49 @@
+{
+  "may_accept_scans_346_to_355": true,
+  "may_accept_complete_first_day_volume": true,
+  "approved_final_html": true,
+  "required_changes": [],
+  "visual_images_reviewed": [
+    "/tmp/mahzor-s346/rubric-fixed-export-qa/documentary-hebrew-restored-scan-link.png",
+    "/tmp/mahzor-s346/rubric-fixed-export-qa/documentary-restored-scan-link.png",
+    "/tmp/mahzor-s346/rubric-fixed-export-qa/documentary-hebrew-closing-opening.png",
+    "/tmp/mahzor-s346/rubric-fixed-export-qa/documentary-hebrew-closing-response.png",
+    "/tmp/mahzor-s346/rubric-fixed-export-qa/documentary-hebrew-closing-daily.png",
+    "/tmp/mahzor-s346/rubric-fixed-export-qa/documentary-hebrew-closing-kaddish.png",
+    "/tmp/mahzor-s346/rubric-fixed-export-qa/documentary-closing-opening.png",
+    "/tmp/mahzor-s346/rubric-fixed-export-qa/documentary-closing-response.png",
+    "/tmp/mahzor-s346/rubric-fixed-export-qa/documentary-closing-daily.png",
+    "/tmp/mahzor-s346/rubric-fixed-export-qa/documentary-closing-kaddish.png",
+    "/tmp/mahzor-s346/rubric-fixed-export-qa/expanded-closing-preparation.png",
+    "/tmp/mahzor-s346/rubric-fixed-export-qa/expanded-closing-priestly.png",
+    "/tmp/mahzor-s346/rubric-fixed-export-qa/expanded-closing-daily.png",
+    "/tmp/mahzor-s346/rubric-fixed-export-qa/expanded-closing-after-study.png"
+  ],
+  "html_artifacts": [
+    "documentary-hebrew: /tmp/mahzor-s346/rubric-fixed-export-qa/documentary-hebrew.html sha256 2c4fbc5b286ad60c9cc7044cf7b9494cfd6e0ae9d664c393b25dfe06c71dbc0e",
+    "documentary: /tmp/mahzor-s346/rubric-fixed-export-qa/documentary.html sha256 3d6a88b9361a57fa21695674f0075d136def83b1b944b903761020b14135703c",
+    "expanded: /tmp/mahzor-s346/rubric-fixed-export-qa/expanded.html sha256 51be6b5ef93f85625bc64cad3b8c6faa84e1bd2cfe1d1c01ac625957659a1c3c"
+  ],
+  "evidence_reviewed": [
+    "final-export-review-before-html-closure.json (prior conclusions retained: 18 PDF tail pages, the source, encoding, order, registry and runtime layers, and the PDF counts 113/301/359)",
+    "restored-scan-link-html-evidence.json",
+    "final-fixed-closing-html-images.json",
+    "final-html-closure-artifacts.json",
+    "final-html-byte-diff.json"
+  ],
+  "limitations": [
+    "I had only a file-reading tool, so I did not recompute the three SHA-256 hashes. I also cannot independently confirm that the 14 screenshots were rendered from exactly those files. Both bindings rest on final-html-closure-artifacts.json and the capture records. The rendered content is consistent with the byte diff: the arrow appears exactly where the diff puts the new anchor.",
+    "This approval covers the 12 refreshed closing viewports and the 2 restored-link viewports only. It supersedes the old HTML-hash visual approval and does not claim that the earlier 492d/85ce/e5b5 files were byte-equivalent to anything. I make no visual claim about other parts of the HTML. Those rest on final-full-html-browser-check.json (IDs, links, overflow, optional-omit) and rubric-fixed-html-equivalence.json (book words unchanged), which I took as reported and did not re-read in this pass.",
+    "final-html-byte-diff.json compares the current non-draft pre-fix build with the post-fix build. It is not a comparison with the older reviewed builds. The fresh screenshots are what close that gap.",
+    "All limitations listed in final-export-review-before-html-closure.json still apply: the PDF pages I did not view, the 359-page expanded PDF accepted by hash binding, registry points accepted on reliance, the provenance of the test logs, schema equivalence for 1,004 of the 1,005 XML files, and the four-file scope of the MAM merge review."
+  ],
+  "notes": [
+    "Blocker 1 is closed. Both restored-link screenshots now show the Nesi'at Kappayim law paragraph (rust bold rubric) under the 'סדר נשיאת כפים.' section. The ↗ link sits inline in 'שהאל ית״ש ישפיע↗ חכמה על ישראל' at about y=520, matching the recorded anchor (y≈518.6, height 13). The parallel documentary viewport no longer shows the ליום שני Hymn of Unity. Its English column is empty beside this rubric, which is expected: no translations were supplied for passages absent from the English edition.",
+    "Blocker 2 is closed by fresh review, not by carry-over. All 12 viewports show the expected content and order with no clipping, overlap or stray markup. Documentary Hebrew and parallel: law paragraphs → retzeh → ve-te'erav (note 107 Hebrew, 142 parallel) → Modim derabbanan → Modim → בר״ה ויו״כ → responses, Adir, departure, Sim shalom → divider → 'שיר של יום.' with the Sunday–Shabbat psalms → Kaddish → the source's English insertion rubric → Al Yisrael → 'יהא שלמא רבא וכו׳.' → colophon. Expanded: the Umippenei chataenu supplication with its bilingual rubric, the Shabbat musaf parallels and the Aleinu ark rubric; the priestly chazan/kohanim/kahal call-and-response rows; the weekday psalms with their headings; the Kaddish with the Al Yisrael insertion; then the colophon with both sources and both licences.",
+    "The byte diff confirms the fix is minimal. In each documentary HTML exactly one line changes: the hidden `<span class=\"pb\" data-n=\"21\">` becomes an `<a class=\"pb scan-link scan-link-inline\">` linking to page/n346.jpg, with text unchanged. The expanded HTML is byte-identical between pre-fix and post-fix (51be6b…).",
+    "Observations that do not block acceptance and are not regressions. In the expanded HTML the Monday–Thursday psalms and the Al Yisrael paragraph are Hebrew/Aramaic only and run full width, while Friday and Shabbat (Psalm 93 onward) are parallel and spell the divine name יְהוָה instead of יְיָ. That reflects which project provides each text, which you have approved in the source and registry layers, and the colophon discloses the untranslated passages. Both documentary colophons credit 'Codex' as markup editor and transcriptionist. That is unchanged by this fix and only worth a look if it was not intended.",
+    "The existing קהל pagination polish and the 113-page Hebrew documentary's isolated resume cue remain optional polish, as recorded before.",
+    "With no unresolved readings and volume verification complete through scan 355, nothing in the evidence blocks accepting scans 346–355 or the complete first-day volume. The proposed README status paragraph and the 'Complete-volume acceptance' spec wording may now be written as drafted, within the scopes recorded here and in the prior review."
+  ],
+  "previous_pdf_and_semantic_review": "final-export-review-before-html-closure.json"
+}

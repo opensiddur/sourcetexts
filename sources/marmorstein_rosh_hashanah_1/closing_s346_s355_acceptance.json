@@ -1,0 +1,58 @@
+{
+  "status": "accepted",
+  "scan_range": [
+    346,
+    355
+  ],
+  "new_complete_scan_leaves": 10,
+  "accepted_scan_ranges": [
+    [
+      1,
+      355
+    ]
+  ],
+  "accepted_complete_leaves": 355,
+  "total_scan_leaves": 355,
+  "remaining_incomplete_leaves": 0,
+  "next_primary_scan": null,
+  "partial_scan_pages": [],
+  "book_complete": true,
+  "coverage": "1965 first-day volume only",
+  "literal_units": 556,
+  "literal_witnesses": 954,
+  "canonical_realizations": 355,
+  "generated_xml_files": 1005,
+  "human_questions_open": [],
+  "source_approval": "independent/closing_s346_s355/final-source-human-closure.json",
+  "encoding_approval": "independent/closing_s346_s355/closing-remedy-review.json",
+  "order_approval": "independent/closing_s346_s355/independent-closing-order-season-review.json",
+  "registry_approval": "independent/closing_s346_s355/final-registry-actual-reference.json",
+  "review_binding_approval": "independent/closing_s346_s355/review-ledger-audit.json",
+  "final_export_approval": "independent/closing_s346_s355/final-export-review.json",
+  "processor_export_dependency": "https://github.com/opensiddur/opensiddur-processor/pull/327",
+  "pdf_pages": {
+    "documentary-hebrew": 113,
+    "documentary": 301,
+    "expanded": 359
+  },
+  "limitations": [
+    "I had only a file-reading tool, so I did not recompute the three SHA-256 hashes. I also cannot independently confirm that the 14 screenshots were rendered from exactly those files. Both bindings rest on final-html-closure-artifacts.json and the capture records. The rendered content is consistent with the byte diff: the arrow appears exactly where the diff puts the new anchor.",
+    "This approval covers the 12 refreshed closing viewports and the 2 restored-link viewports only. It supersedes the old HTML-hash visual approval and does not claim that the earlier 492d/85ce/e5b5 files were byte-equivalent to anything. I make no visual claim about other parts of the HTML. Those rest on final-full-html-browser-check.json (IDs, links, overflow, optional-omit) and rubric-fixed-html-equivalence.json (book words unchanged), which I took as reported and did not re-read in this pass.",
+    "final-html-byte-diff.json compares the current non-draft pre-fix build with the post-fix build. It is not a comparison with the older reviewed builds. The fresh screenshots are what close that gap.",
+    "All limitations listed in final-export-review-before-html-closure.json still apply: the PDF pages I did not view, the 359-page expanded PDF accepted by hash binding, registry points accepted on reliance, the provenance of the test logs, schema equivalence for 1,004 of the 1,005 XML files, and the four-file scope of the MAM merge review."
+  ],
+  "independent_reviewers": [
+    {
+      "model": "claude-opus-5-5",
+      "configured_effort": "medium",
+      "scope": "Blind scans, guideline/canonical/encoding and code reviews; final documentary/export closure",
+      "invocation_record": "independent/closing_s346_s355/review-invocations.json"
+    },
+    {
+      "model": "Codex, based on GPT-6",
+      "setting": "Exact deployed variant and reasoning setting not exposed",
+      "scope": "Additional independent glyph, order, ledger, merge and visual audits"
+    }
+  ],
+  "postpromotion_verification": "independent/closing_s346_s355/promoted-acceptance-verification.json"
+}

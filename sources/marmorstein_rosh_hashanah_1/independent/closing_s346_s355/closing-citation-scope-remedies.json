@@ -1,0 +1,63 @@
+{
+  "status": "Data remedy, output verification and independent review pending",
+  "changes": [
+    {
+      "stem": "psalm_48",
+      "before_target": "urn:x-opensiddur:text:bible:psalms/48/1",
+      "after_target": "urn:x-opensiddur:text:bible:psalms/48",
+      "reason": "A printed chapter label annotates the whole chapter/printing, not every reuse of its first verse."
+    },
+    {
+      "stem": "psalm_82",
+      "before_target": "urn:x-opensiddur:text:bible:psalms/82/1",
+      "after_target": "urn:x-opensiddur:text:bible:psalms/82",
+      "reason": "A printed chapter label annotates the whole chapter/printing, not every reuse of its first verse."
+    },
+    {
+      "stem": "psalm_94",
+      "before_target": "urn:x-opensiddur:text:bible:psalms/94/1",
+      "after_target": "urn:x-opensiddur:text:bible:psalms/94",
+      "reason": "A printed chapter label annotates the whole chapter/printing, not every reuse of its first verse."
+    },
+    {
+      "stem": "psalm_81",
+      "before_target": "urn:x-opensiddur:text:bible:psalms/81/1",
+      "after_target": "urn:x-opensiddur:text:bible:psalms/81",
+      "reason": "A printed chapter label annotates the whole chapter/printing, not every reuse of its first verse."
+    },
+    {
+      "stem": "daily_psalm_24",
+      "before_target": "urn:x-opensiddur:text:bible:psalms/24/1",
+      "after_target": "urn:x-opensiddur:text:siddur:rosh_hashanah/hosafot/daily_psalms/sunday",
+      "reason": "A printed chapter label annotates the whole chapter/printing, not every reuse of its first verse."
+    },
+    {
+      "stem": "daily_psalm_92",
+      "reused_source_citation": {
+        "scan": "s354",
+        "printed_page": null,
+        "text": "צב",
+        "provider_unit": "psalm_92",
+        "provider_target": "urn:x-opensiddur:text:bible:psalms/92/1",
+        "reference": "urn:x-opensiddur:text:bible:psalms/92",
+        "reason": "The identical existing citation already accompanies the transcluded first verse. Reuse it rather than manufacture a duplicate footnote."
+      }
+    },
+    {
+      "stem": "daily_psalm_93",
+      "reused_source_citation": {
+        "scan": "s354",
+        "printed_page": null,
+        "text": "צג",
+        "provider_unit": "psalm_93",
+        "provider_target": "urn:x-opensiddur:text:bible:psalms/93/1",
+        "reference": "urn:x-opensiddur:text:bible:psalms/93",
+        "reason": "The identical existing citation already accompanies the transcluded first verse. Reuse it rather than manufacture a duplicate footnote."
+      }
+    }
+  ],
+  "old_note_leak": "Extra צד in earlier VehuRachum, duplicateצב/צג at repeated appendix printings",
+  "expected_added_source_notes": 8,
+  "existing_unit_notes_and_raw_literals_unchanged": true,
+  "strict_baseline_pass": true
+}

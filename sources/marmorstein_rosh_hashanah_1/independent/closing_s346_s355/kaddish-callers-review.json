@@ -1,0 +1,55 @@
+{
+  "approved": false,
+  "required_changes": [
+    {
+      "file": "draft-kohanim-project/prayerbook_for_the_new_year-heidenheim-1965-he/rh_hodaah.xml and amidah_modim_derabbanan.xml (targets of kohanim_appendix_modim, _veal_kullam, _ukhetov, _vekhol_hachayyim, _modim_derabbanan)",
+      "issue": "Draft word hosts never received the provider changes the callers rely on. The five callers transclude urn:…prayer:amidah/hodaah/{modim,veal_kullam,ukhetov}, urn:…siddur:rosh_hashanah/text/vekhol_hachayyim and urn:…prayer:amidah/hodaah/modim_derabbanan @prayerbook_for_the_new_year-heidenheim-1965-he. Each caller also declares that its …/heidenheim_1965_printing_N/kohanim_appendix wording should be chosen. In the supplied hosts, though, these texts are still plain literal tei:seg/@source with no prayer-part milestone/@corresp, no tei:choice/j:option and no j:declare. draft-kohanim-callers.json says these variants are hosted in rh_hodaah and amidah_modim_derabbanan, and the XML does not match that.",
+      "evidence": "rh_hodaah.xml:39-42 has only <tei:seg source=…> for modim/veal_kullam/ukhetov/vekhol_hachayyim and no options. amidah_modim_derabbanan.xml:40 has only seg/@source and the earlier reading (לְחַצְרֹת, רְצֹנֶךָ). Compare musaf_kohanim_berakhah.xml:38, musaf_kohanim_addir_bamarom.xml:38, shacharit_amidah_sim_shalom.xml:38 and musaf_repetition_sim_shalom.xml:39, which do carry milestone corresp plus j:option earlier/kohanim_appendix. rh_avodah.xml:39-51 was turned into a caller that declares earlier=true.",
+      "remedy": "Give these two hosts the same provider form as the berakhah, addir and sim_shalom hosts: same-unit milestone/@corresp with an exact extent, tei:choice/j:option earlier and kohanim_appendix for each fragment, and the Modim/Modim-derabbanan page break kept inside the earlier option. Alternatively, supply the separate provider file and convert these hosts to callers that declare earlier=true/kohanim_appendix=false, as rh_avodah does. Keep the old raw text byte-identical. Then re-run resolution of the five caller targets."
+    },
+    {
+      "file": "draft-kaddish-project/prayerbook_for_the_new_year-heidenheim-1965-he/kaddish_yatom.xml",
+      "issue": "The aseret-ymei-tshuva conditional is too wide. It wraps the whole Kaddish, including the canonical shared parts kaddish/yatom/yehe_shelama and kaddish/yatom/oseh_shalom. The source prints no rubric. The only Ten-Days feature in the printing is the doubled לְעֵֽלָּא וּלְעֵֽלָּא. As written, any transclusion of the canonical closing parts from this file is guarded by AYT, while the English counterparts in kaddish_yatom_closings.xml are not, so Hebrew and English go out of step whenever AYT is false or undecided.",
+      "evidence": "kaddish_yatom.xml:37-45 opens j:conditional before paragraph 1, and :51 closes it after the oseh_shalom terminating milestone. working-pages.json s355 kaddish_1…oseh_shalom shows no condition rubric. The only AYT wording is 'לְעֵֽלָּא וּלְעֵֽלָּא' in kaddish_3.",
+      "remedy": "Either limit the conditional to the Ten-Days wording only (the second וּלְעֵֽלָּא) inside the yitbarakh paragraph, or print the text unconditionally as the source does and let the place declare the season. In either case, the yehe_shelama and oseh_shalom milestone extents must not fall inside an AYT scope."
+    },
+    {
+      "file": "draft-kohanim-project/prayerbook_for_the_new_year-heidenheim-1965-he/kohanim_appendix_modim_derabbanan.xml",
+      "issue": "The title is generator debris. It names the weekday Minchah host and leaks the file stem, and is wrong for the Rosh Hashanah priestly-blessing appendix caller.",
+      "evidence": "line 5: <tei:title type=\"main\">תפלת מנחה — modim_derabbanan</tei:title>. draft-kohanim-callers.json gives the en title 'Weekday Minchah — modim_derabbanan'.",
+      "remedy": "Use a source-appropriate title, e.g. 'מודים דרבנן' (the label the host prints) or the appendix heading, and fix the en metadata to match. The other callers' JSON en titles ('Evening Prayer for the New Year — …') are also wrong for this appendix and should be corrected the same way."
+    },
+    {
+      "file": "draft-kohanim-project/.../musaf_kohanim_berakhah.xml, musaf_kohanim_addir_bamarom.xml, shacharit_amidah_sim_shalom.xml, musaf_repetition_sim_shalom.xml (original contexts)",
+      "issue": "These hosts now hold two-option readings, but their original contexts declare no selection. Only the new appendix callers declare (earlier=false, kohanim_appendix=true). The earlier printing in the original context depends on an unstated default. The same batch does declare explicitly elsewhere: rh_avodah.xml:39-48 and the vehu_rachum 'after' wording_selection both set earlier=true.",
+      "evidence": "musaf_kohanim_berakhah.xml:37-39 and musaf_kohanim_addir_bamarom.xml:37-39 have no j:declare. The old_mapping_changes 'after' for musaf_kohanim_berakhah and addir_bamarom add corresp only, with no wording_selection.",
+      "remedy": "Add an explicit earlier=true/kohanim_appendix=false declaration in each original context (host or its caller), as rh_avodah and vehu_rachum do. Alternatively, record in the condition registry entries a default that selects 'earlier', and show it compiles to a single reading. Raw fragments stay unchanged."
+    }
+  ],
+  "notes": [
+    "Ukhetov and besefer guards are correct. In kohanim_appendix_ukhetov.xml:48-59 and kohanim_appendix_besefer.xml:48-59, a single j:conditional (holiday-aggregate high-holidays=true) holds both the instruction note and the p carrying the inline transclusion, so the rubric and the words are governed together. high-holidays matches the literal בר״ה ויו״כ / וי״כ.",
+    "Closing preface: closing_kaddish_preface.xml:47 uses only canonical inline pointers (numbers/14/17 and psalms/25/6). It adds no new Psalm 25:6 literal provider, and its declare (earlier=false, closing_appendix=true) is scoped around both pointers. The vehu_rachum mapping change keeps every Hebrew and English fragment byte-identical (s62/s63 'Remember Thy compassion, O Lord, and Thine acts of kindness…'), replacing only corresp with canonical, and both attested English wordings are kept as marmorstein_translation readings.",
+    "Kaddish Yatom paragraphs 1–3 carry only tei:seg/@source to the generic kaddish parts, with no milestone/@corresp, so no generic identity is claimed. Paragraphs 4–5 use canonical prayer-part milestones with a terminating milestone. Oseh shalom correctly inherits he rather than arc.",
+    "English closings (kaddish_yatom_closings.xml) have no publication idno and no div corresp, and carry an explicit encoding note with biblScope p.69. No new translation is invented, and Al Yisrael has no English, as intended. This file is still a literal copy that carries the canonical yehe_shelama/oseh_shalom milestones a second time in the en project, beside the p.69 file. Check that URN resolution of kaddish/yatom/yehe_shelama@…-en is unambiguous. A pointer to the p.69 provider would fit the 'callers hold pointers' rule better.",
+    "Al Yisrael: the two optional additions are encoded as separate j:conditional type=\"marked\" spans with no substitution of adjacent words, which is correct. The printed parentheses are expected to be restored by the 'marked' rendering. Check this at export. The small unpointed (ולכון) is kept unpointed, which is correct.",
+    "Callers carry role labels in the place (הש״ץ. before Retzeh, הקהל. before Modim derabbanan), not in the transcluded texts, which follows the AGENTS.md place rule. The Kaddish role marker (חזן vs יתו, s355) and the English rubric 'The following is inserted in the קדיש דרבנן…' are absent from these modules and must be encoded in the assembling caller.",
+    "kaddish_yatom.xml replaces the printed asterisk before יְהֵא שְׁלָמָא with anchor kaddish_yatom_resume. That is acceptable as a structural encoding, but the printed mark itself is not kept.",
+    "Canonical reuse: asher_qiddeshanu_biqdushato and addir_bamarom_shokhen are used as proper identities, and the latter is attested in proper-identity-body-evidence.json. besefer points to the legacy siddur:rosh_hashanah/musaf/repetition/shalom/besefer, whose extent (no chatimah) matches the appendix. That is better than prayer:amidah/shalom/besefer_chayyim as used in shacharit_amidah_sim_shalom.xml:38, whose milestone extent includes the עוֹשֵׂה הַשָּׁלוֹם chatimah, a pre-existing extent question outside this scope. vekhol_hachayyim also uses a legacy siddur ID. Per instructions, these are not flagged for migration.",
+    "Pending source readings, not defects: Q855 (לְחַצְרוֹת / רְצוֹנֶֽךָ in the Modim derabbanan appendix reading), Q858 (בר״ה וי״כ vs ויו״כ on s350; the besefer instruction currently reads וי״כ). The s348 ukhetov rubric ויו״כ was also flagged in the initial comparison as possibly וי״כ, so confirm it was settled by the human adjudication. Q854/856/857/859 fall outside these 14 modules.",
+    "Full batch stays UNACCEPTED. This review covers only the 14 modules and their word-provider changes."
+  ],
+  "limitations": [
+    "Directories could not be listed, so files were reached by guessed name. The retzeh provider transcluded by rh_avodah.xml and kohanim_appendix_retzeh.xml, the numbers/14/17 and psalms/25/6 providers, the vehu_rachum XML and the p.69 English Kaddish file were not found or read. Their resolution, extents and option text are unverified.",
+    "No compile, refdb, schema or feature-registry run was possible (read-only, no commands). Schema validity, the strict literal baseline, the registration of aseret-ymei-tshuva and high-holidays, and the pending condition URNs are taken from the draft JSON's own claims.",
+    "No scan images were examined. Source fidelity was checked only against working-pages.json.",
+    "The Modim external transclusion and page marker were not re-verified; the earlier approved review is relied on, as instructed."
+  ],
+  "invocation": {
+    "model_usage": [
+      "claude-opus-5-5"
+    ],
+    "configured_model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "34fb200d-2219-4962-8554-683c61b35977"
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "approved": false,
+  "coverage": {
+    "bundles_read": [
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_001.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_002.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_003.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_004.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_005.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_006.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_007.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_008.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_009.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_010.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_011.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_012.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_013.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_014.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_015.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_016.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_017.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_018.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_019.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_020.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_021.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_022.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_023.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_024.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_025.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_026.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_027.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_028.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_029.txt",
+      "/tmp/mahzor-s346/encoding-review-bundles/bundle_030.txt"
+    ],
+    "new_units_reviewed": [
+      "psalm_48",
+      "psalm_82",
+      "psalm_94",
+      "psalm_81",
+      "daily_psalm_92",
+      "daily_psalm_93",
+      "daily_psalm_24",
+      "yehi_ratzon_shekol_tippah",
+      "kohanim_preparation",
+      "kohanim_veteerav",
+      "kohanim_sheotekha",
+      "kohanim_dream_prayer",
+      "kohanim_departure_prayer",
+      "kohanim_appendix_yehi_ratzon",
+      "kohanim_appendix_amen",
+      "kohanim_appendix_retzeh",
+      "kohanim_appendix_modim",
+      "kohanim_appendix_modim_derabbanan",
+      "kohanim_appendix_veal_kullam",
+      "kohanim_appendix_ukhetov",
+      "kohanim_appendix_vekhol_hachayyim",
+      "kohanim_appendix_sim_shalom",
+      "kohanim_appendix_besefer",
+      "kohanim_appendix_berakhah",
+      "kohanim_appendix_addir_bamarom",
+      "kaddish_yatom",
+      "kaddish_yatom_closings",
+      "kaddish_derabbanan_al_yisrael",
+      "closing_kaddish_preface",
+      "kohanim_proverbs_3_4_words",
+      "kohanim_psalms_24_5_translation",
+      "kohanim_proverbs_3_4_translation",
+      "kohanim_psalms_123_2_words",
+      "kohanim_psalms_123_2_translation",
+      "kohanim_appendix_responses_1",
+      "kohanim_appendix_responses_2",
+      "kohanim_appendix_responses_3",
+      "kohanim_appendix_invitation (+ kohanim_invitation_words he/en)"
+    ],
+    "unread_files_or_limits": [
+      "I read the full tei:text/standOff of all 96 changed documents, but only from the bundles. I did not open the originals, so I have not reviewed the omitted publication/credit/licence header boilerplate.",
+      "Files outside the bundles that the changed modules transclude or depend on were not read: the main-service musaf invitation context, kohanim_response_1_1/2_1/2_4/3_1/3_5/3_6, the EN regalim/musaf/text/veteerav and sheotekha providers, the numbers/14/17 provider, morning_full_kaddish.",
+      "Not read: existing-identity-corpus-search.json, legacy-identity-evidence.json, draft-kohanim-callers.json, the sequence-review spines, features.yaml and the refdb/compiler code. For note lookup and pre-range declare behaviour I relied on specs/COMPILER_SPECIFICATION.md.",
+      "Read-only review. I ran no validation, validate_names, validate_features or compile."
+    ]
+  },
+  "required_changes": [
+    {
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/daily_psalm_92.xml, daily_psalm_93.xml (with psalm_92.xml, psalm_93.xml)",
+      "issue": "BLOCKER. The same citation note appears twice. psalm_92.xml has a standOff citation note with target bible:psalms/92/1 and text 'צב', and daily_psalm_92.xml has an identical one. The same is true for 93/1 ('צג') in psalm_93.xml and daily_psalm_93.xml.",
+      "evidence": "COMPILER_SPECIFICATION.md 'Annotation Processing' says standoff notes are looked up by target URN across the annotation project. 'Print-once annotations' says citation notes are set at every occurrence. JLPTEI-3.md:960 says a note 'is set wherever its target's text is'. So both notes resolve wherever 92:1 or 93:1 is compiled, which gives a doubled citation at least at the p.11 opening. The daily caller's note cannot be confined to the daily context, because its target text is not in that file.",
+      "remedy": "Keep one note per target, in the provider, and delete the standOff from daily_psalm_92 and daily_psalm_93. If the p.11 printing has no citation, add a j:condition to that single note keyed to the daily-appendix wording feature that daily_psalm_* already declares, so it is set only there. Then check one citation per occurrence in compiled output. If compiled output already shows a single citation, downgrade this item."
+    },
+    {
+      "file": "kohanim_appendix_retzeh.xml (הש״ץ.), kohanim_appendix_modim_derabbanan.xml (הקהל.), kohanim_appendix_responses_1.xml (הש״ץ מקרא. / הקהל אומר.), kohanim_appendix_invitation.xml HE (הש״ץ בקול)",
+      "issue": "Guideline conformance; rendered output does not change. These speaker and manner rubrics are encoded as tei:note type=\"instruction\". The guideline classifies a rubric that says who says the passage, or how, as a description.",
+      "evidence": "JLPTEI-3.md:2003-2008: 'A description says what the passage printed after it is, who says it, or how: … \"Reader:\"… It is a tei:note type=\"description\" placed first inside the passage's scope.' Placing them in the context files is correct. Only the type is wrong. The prior review accepted 'instruction' without citing this section.",
+      "remedy": "Change these to type=\"description\" and keep them in the context files. Keep type=\"instruction\" for the directive in musaf_kohanim_yehi_ratzon.xml ('ויכוין לסיים…') and for the conditional rubrics (לכהנים/להעם, בר״ה ויו״כ, בר״ה וי״כ)."
+    },
+    {
+      "file": "candidate-registry-records.json (bible:psalms/24/5/heidenheim_1965_printing/earlier); used in psalm_24.xml, daily_psalm_24.xml, kohanim_appendix_responses_3.xml",
+      "issue": "This blocks registry promotion, not the module encoding. The 'earlier' reading of Psalm 24:5 is hosted in psalm_24.xml, which is the Sunday daily-psalm printing at n350 (scan 351). That page comes after the priestly appendix (scans 346–350). Yet the registry labels it 'Priestly blessing response — earlier printing'.",
+      "evidence": "psalm_24.xml div@facs and pb are page/n350. daily_psalm_24 declares earlier=true for its own printing. label_en at candidate records lines 810-814.",
+      "remedy": "Before promotion, relabel it as the daily-psalm appendix printing. If printing_guards/validate_generated do not key on the literal 'earlier', rename the reading to daily_appendix, as for 92/93/94/81. The same pass should fix the 'Closing-volume structural context' label on siddur:rosh_hashanah/musaf/repetition/kohanim/yehi_ratzon_printing (it is the main-service context) and drop the unused candidate .../birkat_kohanim/invitation/word_parts."
+    }
+  ],
+  "notes": [
+    "Canonical reuse holds up overall. Retzeh, Modim (both fragments), Modim de-rabbanan, ve-al kullam, u-khetov, ve-khol ha-chayyim, Sim shalom, be-sefer, asher qiddeshanu and Addir ba-marom each have one provider per language, with a tei:choice of earlier and kohanim_appendix printings. Each appendix caller declares every printing_N feature of its group. The literal contexts (rh_hodaah, amidah_modim_derabbanan) keep seg/@source copies without corresp, so they do not compete as providers. The s348 page break and the 857 sic/corr sit only inside the appendix options.",
+    "The split of response 3_1 is justified. The appendix makes Proverbs 3:4 optional (parenthesised), so the compound legacy part cannot be reused as it stands. Using bible:psalms/24/5 (an option in the Psalm 24 provider) plus an optional, type=\"marked\" bible:proverbs/3/4 avoids a second Hebrew copy of 24:5. The main service keeps its compound legacy part unchanged. The English split files are exact substrings of the p.146 text. 24:5 is left without final punctuation, which is correct for a copy and is not a defect.",
+    "Response 2_5 / Psalm 123:2 is valid as encoded but is the weakest reuse decision. The stated reason, keeping out the source-only repeat cue, is already met: the prayer-part terminator before the navigation milestone in musaf_kohanim_response_2_5.xml closes the response scope. Responses 2_2, 2_3, 3_2, 3_3 and 3_4 use a kohanim_appendix option inside the legacy response part. Doing the same for 2_5 would remove kohanim_psalms_123_2_words/translation, and with them the second identical English copy. This is optional.",
+    "Preparation: the person.kohen true/false branches share a common opening and ending, and their לכהנים/להעם rubrics are j:conditional instruction notes, as JLPTEI-3.md:1989 requires. The wife/children and parents clauses are independent, type=\"marked\", in both printings. Umetza is optional only in the appendix. The Kaddish al Yisrael additions are independent and marked. Kaddish yatom has no Ten Days guard. The u-khetov and be-sefer high-holidays guards each hold both the rubric and the transclusion.",
+    "Biblical quotations: the full chapters use canonical chapter and verse corresps, and the six shared verses (81/4, 81/5, 81/11, 94/1, 94/2, 94/14) are transcluded, not duplicated. The partial Job 20:15 quotation uses quote-context URNs inside seg type=\"quotation\", following JLPTEI-3.md:217-227. Optional: yehi_ratzon_shekol_tippah gives Isaiah 63:9b a canonical half-verse corresp but uses quote-context for the full Deuteronomy 30:3–4 verses. Make these consistent, set seg/@source to isaiah/63/9/b, and fold the two Deuteronomy 30 segs together (dropping the 'second' path segment).",
+    "Optional: the j:declare in psalm_94.xml and psalm_81.xml comes before the chapter milestone. It still takes effect, because the external processor RECURSEs through what precedes a range to evaluate declares (COMPILER_SPECIFICATION.md:83-87). But the place rule and the daily_psalm_92/93/24 pattern suggest moving it into daily_psalm_94/81 caller wrappers.",
+    "Optional: musaf_kohanim_response_2_5.xml HE still has the dream_repeat navigation milestone and the רבש״ע ref inside a div whose corresp is the shared regalim/musaf/text identity. The reusable priest and response parts are clean, but a caller of the whole div gets the RH cue. Consider moving the cue to the musaf repetition context.",
+    "Optional: the two choice options of response_2_5/priest (וִיחֻנֶּֽךָּ) appear identical. Check the bytes, and if they match, drop the vacuous choice together with its declared features.",
+    "Optional naming and title fixes: the EN files kohanim_veteerav and kohanim_sheotekha carry Hebrew main titles. 'psalms 24 5' and 'proverbs 3 4' should be 'Psalm 24:5' and 'Proverbs 3:4' (AGENTS.md colon rule). amidah_modim_derabbanan still has the debris title. The file stem kohanim_veteerav and the URN vetearev_lefanekha_atiratenu spell the word differently, so run validate_names. The condition names use five schemes (_earlier, _opening, _printing/earlier, _printing_1/earlier, printing/main); normalise them before promotion.",
+    "Optional: several declares set features of the other language (HE vehu_rachum sets marmorstein_translation; EN vehu_rachum and EN rh_avodah set heidenheim printings; closing_kaddish_preface likewise). Harmless now, but noise for strict feature-use checks.",
+    "Verify with the spines (out of scope here): the modules have no tei:pb for scans 346, 347, 351, 354 and 355. psalm_24.xml's pb for n350 comes before its chapter milestone, so daily_psalm_24's external bible:psalms/24 transclusion will not emit it. Check that the documentary spine supplies these page markers exactly once.",
+    "Accepted as designed: daily_psalm_92/93 transclude inline verse by verse, presumably to avoid copying the p.11 provider's div@facs. This drops verse milestones in the daily context. That is fine for a Hebrew-only documentary appendix, but the expanded-recitation reader should check how it aligns with the English Psalm 92/93."
+  ],
+  "limitations": [
+    "Approval is withheld only because of the two module-level required changes (duplicate citation notes; description vs instruction). The third required change concerns registry promotion. Once the first two are fixed, I see no further blocker in the reviewed module encoding.",
+    "I accepted the source readings, the reported schema pass, the one-home check, the printing-scope checks and the compile proofs as reported. Registry validity of the new opensiddur:variant features and opensiddur:person/kohen has not been shown (the earlier proofs used unchecked_registry()).",
+    "This decision does not cover the full spines, global order, registry promotion, the HE/EN parallel exports or PDF/electronic output. Recitation order is with a separate reader.",
+    "I did not inspect the scan images. Statements about what the source prints rest on final-source-human-closure.json and human-854-859-resolution.json."
+  ],
+  "invocation": {
+    "model_usage": [
+      "claude-opus-5-5"
+    ],
+    "configured_model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "db8cd4d3-98a3-46b6-968e-663307451a20"
+  }
+}

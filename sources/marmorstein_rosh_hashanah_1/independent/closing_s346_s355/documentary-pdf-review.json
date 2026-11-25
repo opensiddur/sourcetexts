@@ -1,0 +1,57 @@
+{
+  "approved_documentary_pdfs": true,
+  "required_changes": [],
+  "images_reviewed": [
+    "documentary-hebrew/page-103.png",
+    "documentary-hebrew/page-104.png",
+    "documentary-hebrew/page-105.png",
+    "documentary-hebrew/page-106.png",
+    "documentary-hebrew/page-107.png",
+    "documentary-hebrew/page-108.png",
+    "documentary-hebrew/page-109.png",
+    "documentary-hebrew/page-110.png",
+    "documentary-hebrew/page-111.png",
+    "documentary-hebrew/page-112.png",
+    "documentary/page-286.png",
+    "documentary/page-287.png",
+    "documentary/page-288.png",
+    "documentary/page-289.png",
+    "documentary/page-290.png",
+    "documentary/page-291.png",
+    "documentary/page-292.png",
+    "documentary/page-293.png",
+    "documentary/page-294.png",
+    "documentary/page-295.png",
+    "documentary/page-296.png",
+    "documentary/page-297.png",
+    "documentary/page-298.png",
+    "documentary/page-299.png",
+    "documentary/page-300.png",
+    "documentary/page-301.png"
+  ],
+  "coverage": [
+    "All 26 full-page PNGs listed in pdf-review-images.json were opened one at a time and read at full-page resolution. The contact sheets were not used as evidence.",
+    "documentary-hebrew PDF pages 103-112 (printed 95-103 plus an unnumbered final page): end of Yom Revi'i/Chamishi, Leyom haShabbat, Shir haKavod, Seder Nesi'at Kappayim, Shir shel Yom (all seven days), Kaddish with the Kaddish deRabbanan insertion, the colophon and the genizah notice.",
+    "documentary (parallel) PDF pages 286-301 (printed 278-292 plus an unnumbered final page): the same closing material, beginning in the earlier Yom Revi'i/Chamishi pages (notes 137-141), then the colophon and the genizah notice.",
+    "Reports read: final-pdf-mechanical-check.json (both PDFs passed: 0 unresolved internal links, 0 words outside the page, 0 fatal/missing-glyph/undefined-reference/duplicate-destination, 0 hbox warnings; 107 and 144 overfull vbox warnings, each 6.8pt or less; every closing IA leaf 347-354 is linked, and 345 is linked too), compiled-citation-page-marker-proof.json (106 notes became 114, the earlier ones unchanged; one pb for each IA leaf 345-354), documentary-english-preservation.json (50930 = 50930 words, no differences), final-html-visual-review.json (HTML only, not taken as PDF evidence) and full-runtime-check.json (daily psalm selection for weekdays 1-7, Ten Days Kaddish branches true/false/unset, scope stack clean)."
+  ],
+  "limitations": [
+    "This approval covers only these 26 pages of the two PDFs with sha256 320de97d… (documentary-hebrew, 112 pp) and ab07f84d… (documentary, 301 pp). I did not look at documentary-hebrew pages 1-102 or documentary pages 1-285. For those pages I rely only on the mechanical check, which tests bounds, links and glyphs but cannot catch problems that only show visually. This is not a blanket visual approval of the unseen pages.",
+    "It does not cover the expanded PDF, which is unfinished, or approval of the overall batch.",
+    "The final non-draft build is still running. This approval binds to the hashes above. The final outputs need the planned exact TeX comparison (header/coverage metadata only) before it carries over to them.",
+    "I didn't do fresh OCR or source adjudication. I took readings, note texts and anchor positions as already approved.",
+    "Rasterised PNGs cannot show whether link borders appear in print or how the PDF behaves in a viewer. The cyan hyperlink boxes I saw are presumably viewer-only hyperref borders."
+  ],
+  "notes": [
+    "Clipping/overlap: I found no clipped glyphs, collisions or text outside the margins on any of the 26 pages. Long bold halakhic paragraphs (Nesi'at Kappayim) and dense Shir shel Yom paragraphs justify within the measure.",
+    "Side alignment: the closing section has no English witness, so the parallel PDF sets it as a single right-aligned Hebrew text block, with no empty or misaligned English column and no invented English. The only English in the body is the source's own rubric 'The following is inserted in the קדיש דרבנן (after study of the Torah):'. It renders legibly with correct bidi in both PDFs, and the English-preservation report confirms the English word count is unchanged.",
+    "Note numbering/order: documentary-hebrew runs 107 (p106) and 108-114 (pp109-110). Parallel runs 137-141 (old pages) and 142 (p294), then 143-149 (pp297-298), all sequential. Each footnote apparatus is on the same page as its calls. The new note texts match the proof (ותערב עליך…; כד, מח, פב, צד, פא, צג, צב). The note 107 text equals the note 142 text.",
+    "Note-call placement: the calls are raised numerals that sit between lines, often roughly centred. Because old pages 286-290 (notes 137-141) are set the same way, this is the existing style, not a new regression. Within Shir shel Yom, though, some psalm-number calls sit at a psalm's start (כד in both PDFs; also צג and צב in the parallel PDF) and others at its end (מח, פב, צד, פא). Not a visual defect; just confirm that this follows the source's placement and isn't an anchoring inconsistency.",
+    "Special marks: the ↗ source-image link marks, kri/bracketed additions ([יי], [מים], [פני רקיע], [וְאַרְעָא], [ולכון]), maqaf, vowel points and the Yiddish-orthography day labels (אם זאנגטאג etc.) all render. I saw no tofu or missing glyphs, matching the mechanical glyph check.",
+    "Instructions vs. text: rubrics (כשהחזן אומר…, הש\"ץ, הקהל, הכהנים מברכין, חזן, the day headings) are bold, and the long halakhic directives are bold blocks. They are clearly distinct from the regular-weight prayer text in both PDFs.",
+    "Centred short rules: these appear after each בר\"ה ויו\"כ insertion block (documentary-hebrew p106 and p109 top; parallel p294 and p297 top) and are set apart from the footnote rule. They look like intentional encoded separators rather than stray footnote rules. On parallel p294 the rule falls after a slightly larger vertical gap and is followed by one body line before the footnote rule. That is acceptable but is the least polished spot. I'm not requesting a change, since the encoding is outside this review.",
+    "Page breaks/headings: section headings (ליום השבת, שיר הכבוד, סדר נשיאת כפים, שיר של יום, ליום חמישי) are never orphaned at a page foot. Running heads and page numbers are consistent and alternate correctly between verso and recto.",
+    "Colophon: Metadata/Legal/Contributor credits/Sources render cleanly, with wrapped monospace URLs. The genizah notice is on the final unnumbered page in both PDFs. Cosmetic issue, not blocking: the colophon pages carry the last section's running head 'שיר של יום.' (documentary-hebrew p111; parallel pp291-292). This looks like existing template behaviour.",
+    "Reviewer: Claude Opus 5.5 (claude-opus-5-5), medium reasoning setting as stated by the user."
+  ]
+}

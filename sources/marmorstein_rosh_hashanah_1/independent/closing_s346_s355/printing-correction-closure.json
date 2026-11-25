@@ -1,0 +1,27 @@
+{
+  "approved": true,
+  "required_changes": [],
+  "notes": [
+    "Required change 1 is resolved. touches() at canonical_corrections.py:175-178 now counts five targets as hits: canonical_home.urn (falling back to owner.urn), owner.urn, owner.text_corresp, canonical_home.text_corresp and the corrected part's identity. So a reuse value, transclude or repeat that names the owner's whole-text alias is rejected at lines 186-193. A spine reference that names the alias must also name a source witness from the attesters plus unaffected_witnesses (line 198). For a literal provider, unaffected_witnesses is not set, so the witness must be the owner or an attested caller. canonical_whole callers that point at the alias were already in the attester set through _range_segments at lines 146-151, so they still need exact attestations. Matching the target as `None in (...)` cannot give a false hit, because the target is always a string after partition() and split_range().",
+    "test_explicit_provider_whole_text_alias_still_requires_witness_and_rejects_raw_transclusion (test file:110-118) tests three things in one fixture: an un-witnessed spine reference to the alias is rejected, the same reference succeeds once the right witness is added, and a raw transclude to the alias is rejected with the 'attested canonical pointers' message. This covers the blocker as stated.",
+    "Required change 2 is resolved. literal_paths is filled completely in the first pass (lines 90-104) before the main loop runs. So the check at lines 107-109, which requires literal_provider to be True on every item for a literal-provider file, gives the same result whatever order the items come in. An item with literal_provider set to False or any other non-True value already raises at line 94. An item that tries to make a dedicated canonical_home file a literal provider also raises there, because the file is in homes but not in literal_paths. Two flagged items for the same file are allowed, and each one has its own part checked. test_every_correction_in_a_literal_provider_file_requires_its_own_explicit_flag runs both orders and expects the 'explicit source file' error.",
+    "A flagged item that also carries `wording` still fails closed in _bind_printing_correction: printing bindings need a canonical_home host, so the owners set is empty and `not expected` raises.",
+    "Side effect of fix 1, and it makes the checks stricter, not looser: owner['urn'] is now a hit for dedicated canonical homes too, where before only canonical_home.urn counted. Any existing reuse, transclude, repeat or spine reference to a home unit's own URN will now be rejected, or will need a source witness. You report that the generated-857 and both-printing proofs are unchanged, which suggests no current data trips this. Also, a canonical_home without a urn key no longer raises KeyError here; that is harmless, because owner.urn is checked anyway.",
+    "Hardening I would like but am not requiring: the new test exercises the alias only through a spine reference and a transclude, and only on a literal-provider owner. Fixed-up variants would cover the rest: reuse to the alias, repeat to the alias, and a dedicated home whose canonical_home.text_corresp is referenced. All of them go through the same touches() call, which is why I am not requiring them.",
+    "Points from earlier reviews that are still open, still optional and still out of this fix's scope: touches() does not walk repeat_cue or citations. Files that no unit points to are still not guarded. The other_texts exclusion in _bind_printing_correction excludes by `wording` URN across every overlay, but it fails closed later in apply_bound_corrections."
+  ],
+  "limitations": [
+    "This was a read-only review. I ran nothing. The test result (257 passed, 341 subtests passed) comes from the log you supplied. The log has no timestamp, so I cannot confirm it was produced from the code I read, though 255 plus the 2 new tests gives 257.",
+    "I accepted the generated-857 and both-printing compiler proofs as you described them, without re-reading them.",
+    "I did not read authoring.apply_corrections, the realizations._range_segments internals beyond what earlier reviews established, or the migrated correction and reading data in /tmp/mahzor-s346. In particular, I have not checked whether any migrated literal-provider owner has a text_corresp that some existing reference now hits.",
+    "The scope was canonical_corrections.py and the printing-correction tests only. The batch run, the spines, the registry and the exports are not reviewed or approved."
+  ],
+  "invocation": {
+    "model_usage": [
+      "claude-opus-5-5"
+    ],
+    "configured_model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "738036ca-3b80-42a0-ada0-c17b3f38da97"
+  }
+}

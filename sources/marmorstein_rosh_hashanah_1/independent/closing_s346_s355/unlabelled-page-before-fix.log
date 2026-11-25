@@ -1,0 +1,48 @@
+.                                                                      [100%]
+=================================== FAILURES ===================================
+_ EditionWiringTest.test_instruction_page_boundary_without_printed_number (label=None) _
+
+self = <opensiddur.tests.importer.test_marmorstein_rosh_hashanah_1.EditionWiringTest testMethod=test_instruction_page_boundary_without_printed_number>
+
+    def test_instruction_page_boundary_without_printed_number(self):
+        for label in (None, 'printed-a'):
+            with self.subTest(label=label):
+                self.readings['documentary_instructions'] = {'notice': {
+                    'scan': 's12', 'printed_page': label, 'page_start': True,
+                    'language': 'he', 'witnesses': ['he'],
+                    'text': 'Example instruction'}}
+                self.readings['source_order'] = [{'instruction': 'notice'}, {'unit': 'first'}]
+                self.save('readings', self.readings)
+>               self.generate(draft=True)
+
+opensiddur/tests/importer/test_marmorstein_rosh_hashanah_1.py:97: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+opensiddur/tests/importer/test_marmorstein_rosh_hashanah_1.py:86: in generate
+    return build(self.source, self.projects, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+opensiddur/importer/marmorstein_rosh_hashanah_1/build.py:1296: in build
+    documentary_order(div, readings.get('source_order', [{'unit': unit['stem']} for unit in readings['units'] if not unit.get('canonical_parts')]),
+opensiddur/importer/marmorstein_rosh_hashanah_1/build.py:1140: in documentary_order
+    element(div, 'pb', ed='1965', n=instruction['printed_page'], facs=facs)
+opensiddur/importer/scan/authoring.py:16: in element
+    node=etree.SubElement(parent,tag,attributes)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/lxml/etree.pyx:3323: in lxml.etree.SubElement
+    ???
+src/lxml/apihelpers.pxi:206: in lxml.etree._makeSubElement
+    ???
+src/lxml/apihelpers.pxi:201: in lxml.etree._makeSubElement
+    ???
+src/lxml/apihelpers.pxi:338: in lxml.etree._initNodeAttributes
+    ???
+src/lxml/apihelpers.pxi:349: in lxml.etree._addAttributeToNode
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+>   ???
+E   TypeError: Argument must be bytes or unicode, got 'NoneType'
+
+src/lxml/apihelpers.pxi:1554: TypeError
+=========================== short test summary info ============================
+SUBFAILED(label=None) opensiddur/tests/importer/test_marmorstein_rosh_hashanah_1.py::EditionWiringTest::test_instruction_page_boundary_without_printed_number
+1 failed, 1 passed, 1 subtests passed in 0.74s

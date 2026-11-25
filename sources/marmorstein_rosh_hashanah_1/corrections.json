@@ -1,5 +1,5 @@
 {
-  "policy": "Printed readings and independent-review hashes remain unchanged. Editorial corrections are a separate sic/corr layer; archaic usage and translation choices are not automatically corrected.",
+  "status": "UNACCEPTED correction bindings, review pending",
   "corrections": [
     {
       "id": "chronicles_16_15_covenant",
@@ -35,7 +35,15 @@
       "after": " Thy compassion",
       "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n62.jpg",
       "reason": "Obvious English typographic error; retain the image-verified printed reading in sic and provide its standard spelling in corr.",
-      "authority": "User instruction, 2026-11-08: use sic/corr for obvious source mistakes and typos."
+      "authority": "User instruction, 2026-11-08: use sic/corr for obvious source mistakes and typos.",
+      "literal_provider": true,
+      "identity": "urn:x-opensiddur:text:bible:psalms/40/12",
+      "attestations": [
+        {
+          "unit": "vehu_rachum",
+          "scan": "s63"
+        }
+      ]
     },
     {
       "id": "psalms_144_15_whom",
@@ -47,7 +55,15 @@
       "after": " the like",
       "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n64.jpg",
       "reason": "Obvious English typographic error; retain the image-verified printed reading in sic and provide its standard spelling in corr.",
-      "authority": "User instruction, 2026-11-08: use sic/corr for obvious source mistakes and typos."
+      "authority": "User instruction, 2026-11-08: use sic/corr for obvious source mistakes and typos.",
+      "literal_provider": true,
+      "identity": "urn:x-opensiddur:text:bible:psalms/144/15",
+      "attestations": [
+        {
+          "unit": "hoshiah_et_ammekha",
+          "scan": "s65"
+        }
+      ]
     },
     {
       "id": "barukh_sheamar_paeans",
@@ -182,7 +198,15 @@
       "after": " does He arouse",
       "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n78.jpg",
       "reason": "Enlarged independent source adjudication confirms printed nur; obvious English typo for nor.",
-      "authority": "User instruction: use sic/corr for obvious original mistakes."
+      "authority": "User instruction: use sic/corr for obvious original mistakes.",
+      "literal_provider": true,
+      "identity": "urn:x-opensiddur:text:siddur:chol/shacharit/pesuqei_dezimrah/yehi_khevod/quoted_78_38",
+      "attestations": [
+        {
+          "unit": "yehi_khevod",
+          "scan": "s79"
+        }
+      ]
     },
     {
       "id": "nishmat_closing_quote",
@@ -579,7 +603,15 @@
       "file": "prayerbook_for_the_new_year-marmorstein-1965-en/musaf_repetition_sim_shalom.xml",
       "sic": "‘.",
       "corr": "’.",
-      "reason": "Scan317 prints an opening curly quotation mark at the close of the Proverbs9:11 quotation. Preserve it in sic; correct its direction in corr."
+      "reason": "Scan317 prints an opening curly quotation mark at the close of the Proverbs9:11 quotation. Preserve it in sic; correct its direction in corr.",
+      "literal_provider": true,
+      "identity": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/shalom/proofs",
+      "attestations": [
+        {
+          "unit": "musaf_repetition_sim_shalom",
+          "scan": "s317"
+        }
+      ]
     },
     {
       "id": "musaf_sim_shalom_proofs_missing_closing_quote",
@@ -587,7 +619,15 @@
       "sic": ".",
       "corr": "’.",
       "reason": "Scan317 opens the Deuteronomy4:4 quotation but omits its closing mark. Preserve the original punctuation in sic.",
-      "follows": "this day"
+      "follows": "this day",
+      "literal_provider": true,
+      "identity": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/shalom/proofs",
+      "attestations": [
+        {
+          "unit": "musaf_repetition_sim_shalom",
+          "scan": "s317"
+        }
+      ]
     },
     {
       "id": "s338_editorial_5",
@@ -596,6 +636,79 @@
       "corr": "עֵד",
       "before": "אַתָּה ",
       "after": " אֱמֶת"
+    },
+    {
+      "id": "closing_parnassah_lilbosh",
+      "file": "prayerbook_for_the_new_year-heidenheim-1965-he/kohanim_yehi_ratzon_words.xml",
+      "identity": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/kohanim/yehi_ratzon/prayer",
+      "wording": "urn:x-opensiddur:condition:siddur:rosh_hashanah/musaf/repetition/kohanim/yehi_ratzon/printing/appendix",
+      "xpath": "//j:option[@corresp=\"urn:x-opensiddur:condition:siddur:rosh_hashanah/musaf/repetition/kohanim/yehi_ratzon/printing/appendix\"]",
+      "scan": "s350",
+      "sic": "ללִבּוֹשׁ",
+      "corr": "לִלְבּוֹשׁ",
+      "before": "וּבֶֽגֶד ",
+      "after": " לְיַעֲקֹב",
+      "attestations": [
+        {
+          "unit": "kohanim_appendix_yehi_ratzon",
+          "scan": "s350"
+        }
+      ],
+      "evidence": "https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n349.jpg",
+      "reason": "User-confirmed shifted hiriq and printed vav; preserve printed typo, correct only this appendix wording.",
+      "authority": "User adjudication857,2026-11-25"
+    }
+  ],
+  "migrated_existing_bindings": [
+    {
+      "id": "psalms_40_12_withhold",
+      "identity": "urn:x-opensiddur:text:bible:psalms/40/12",
+      "attestations": [
+        {
+          "unit": "vehu_rachum",
+          "scan": "s63"
+        }
+      ]
+    },
+    {
+      "id": "psalms_144_15_whom",
+      "identity": "urn:x-opensiddur:text:bible:psalms/144/15",
+      "attestations": [
+        {
+          "unit": "hoshiah_et_ammekha",
+          "scan": "s65"
+        }
+      ]
+    },
+    {
+      "id": "yehi_khevod_nor",
+      "identity": "urn:x-opensiddur:text:siddur:chol/shacharit/pesuqei_dezimrah/yehi_khevod/quoted_78_38",
+      "attestations": [
+        {
+          "unit": "yehi_khevod",
+          "scan": "s79"
+        }
+      ]
+    },
+    {
+      "id": "musaf_sim_shalom_proofs_wrong_closing_quote",
+      "identity": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/shalom/proofs",
+      "attestations": [
+        {
+          "unit": "musaf_repetition_sim_shalom",
+          "scan": "s317"
+        }
+      ]
+    },
+    {
+      "id": "musaf_sim_shalom_proofs_missing_closing_quote",
+      "identity": "urn:x-opensiddur:text:siddur:rosh_hashanah/musaf/repetition/shalom/proofs",
+      "attestations": [
+        {
+          "unit": "musaf_repetition_sim_shalom",
+          "scan": "s317"
+        }
+      ]
     }
   ]
 }

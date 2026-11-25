@@ -1,0 +1,34 @@
+{
+  "approved_paginated_rubric": false,
+  "required_changes": [
+    "Limit source_pages to documentary instructions. rubric_words is shared: it is also called for unit instructions (build.py:307), segment instructions (build.py:507), fragment instructions (build.py:511) and citations (build.py:336). In those paths the new branch runs without any check. Those rubrics usually have no top-level scan, so the opening-scan check `rubric.get('scan') and ...` is skipped. The internal pb is not counted in unit_document's current_page tracking, so the next fragment on the second scan adds a second pb for the same page. verify.report also never records those notes against the second page. Fix: raise ValueError when source_pages appears outside documentary_order, for example with a keyword flag that only documentary_order passes, or by checking in documentary_order and rejecting it elsewhere.",
+    "When source_pages is present, require the instruction's top-level scan, and require it to equal source_pages[0].scan. Today the equality check only runs if a scan happens to be there. Without this, verify.report records only pages[1:] as members (an editorial instruction with witnesses == [] and source_pages would get second-page membership and none for the first page), and the build-time check can be skipped.",
+    "Tie source_pages[0].printed_page to the instruction's printed_page (both missing/None, or equal). The first marker comes from instruction['printed_page'] in documentary_order, and pages[0].printed_page is never used in the output. It only reaches the review text. A disagreement between the two passes silently and the review hash covers a value nothing renders.",
+    "Require the source_pages scans to be strictly increasing and distinct, ideally consecutive (scan n+1 after scan n). That is what 'uninterrupted across the page turn' means. Today [s347, s346], [s346, s346] or [s346, s350] all pass and produce a reordered, duplicated or gapped pb sequence inside one note, and verify records membership for pages the instruction may not touch.",
+    "Add a regression test for the verify.report change. The new test checks build output and the review text, but nothing shows that the second page's reading_keys now include 'instruction/<name>', or that the page stays incomplete until that key is reviewed. That membership is one of the four things this follow-up changes."
+  ],
+  "notes": [
+    "Word order and joining: the text check `' '.join(page texts) == text` passes exactly when there is one source text and the page fragments add up to it, with a single space at each page turn. The output is words(page 1), pb, the ' ' tail, then words(page 2), so itertext() gives back the reviewed string. No words are lost or reordered between the two pages.",
+    "Overlapping interpretations: language_spans, abbreviations and uncertain_characters are rejected before any output, and the branch returns before those code paths, so the literal fragments are never reinterpreted. For safety, consider rejecting 'quotations' as well. rubric_words ignores it, but instruction_review_text hashes it, so a quotation on a paginated instruction would be reviewed but never rendered.",
+    "Divine Names: words() runs on each page fragment separately, so the automatic י־ה־ו־ה/יי regex still applies within each page. A Name split across the turn cannot be represented, which is correct for this source.",
+    "Marker ownership: the first pb (with facs, and n only when printed_page is set) stays in documentary_order, before the note. Later pbs carry ed=1965 and facs computed from the scan, matching the existing pb convention, and n only when printed_page is a string. tei:pb is in model.global, so a pb inside a tei:note is allowed. The schema-check log confirms this for the real source (RelaxNG and Schematron passed, one instruction, 2 page markers).",
+    "Review binding: instruction_review_text appends the sorted JSON of the whole source_pages array, so any change to a page's scan, printed_page or text makes the stored review stale. The test shows this for a scan change.",
+    "The fragment-key validation is sound: only scan, printed_page and text are allowed; scan and text are required; scan must match s[1-9][0-9]*; text must be a nonempty string; printed_page must be a string or null.",
+    "The documentary_order change that leaves out n when printed_page is null was approved earlier and is consistent with this branch.",
+    "Recommended, not required: reject page text with leading or trailing whitespace. A fragment such as 'X ' still passes if the top-level text repeats the double space, but it leaves a doubled space around the pb."
+  ],
+  "limitations": [
+    "I read the diff, the current build.py and verify.py, the test log (178 passed, 153 subtests) and the schema-check summary. I did not run any tests, did not open the synthetic XML, and did not look at the real readings entry for source346–347 or its scans. Whether the real fragments, scans and printed pages are right is not covered here.",
+    "Nothing checks across items that the documentary item after a paginated instruction does not add another pb for the second scan, for example a page_break occurrence or a transcluded unit with opening_page. Avoiding a duplicate page boundary after source347 depends on how the readings are configured, and I did not check that.",
+    "The design always puts a page turn between words (joined with one space). A word hyphenated or split across the turn is not supported. That is acceptable for the stated source, but it is a limit of the feature.",
+    "The internal pb is added in every witness-language project that renders the note, whatever per-language page_start dict is set. I did not check whether any instruction has more than one witness."
+  ],
+  "invocation": {
+    "model_usage": [
+      "claude-opus-5-5"
+    ],
+    "configured_model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "b20fe21f-ba9d-446e-973a-20f77c7b0c6b"
+  }
+}

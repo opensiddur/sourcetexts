@@ -1,0 +1,32 @@
+{
+  "approved_registry": false,
+  "records_reviewed": 139,
+  "required_changes": [
+    "Blocker 1 (the two identical Vichunneka conditions) is still open in the XML. The registry side is done: neither closing_s346_s355.jsonl (139 lines) nor candidate-registry-records.json contains .../kohanim_response_2_5/priest/heidenheim_1965_printing/earlier or .../kohanim_appendix any more. But musaf_kohanim_response_2_5.xml line 38 still has <tei:choice><j:option corresp='…/priest/heidenheim_1965_printing/earlier'>וִיחֻנֶּֽךָּ</j:option><j:option corresp='…/priest/heidenheim_1965_printing/kohanim_appendix'>וִיחֻנֶּֽךָּ</j:option></tei:choice> inside the Numbers 6:25 seg. And kohanim_appendix_responses_2.xml lines 52–57 still declare both features (earlier=false, kohanim_appendix=true) in the kohanim_appendix_responses_2_wording declaration. Both now name conditions that are no longer registered, which the registry check treats as an error. Fix: replace the choice with the single reading וִיחֻנֶּֽךָּ directly in the seg, and remove the two <tei:f> entries from the responses_2 declaration. Then regenerate the files.",
+    "Blocker 2 (the Isaiah 63:9 quotation) is still open in the XML. yehi_ratzon_shekol_tippah.xml line 38 still has <tei:milestone unit='half-verse' n='b' corresp='urn:x-opensiddur:text:bible:isaiah/63/9/b'/>. Its chapter and verse milestones (n='63', n='9') have no corresp. The quotation sits outside the seg, which still has no type='quotation'. So the file still makes the prayer a provider of bible:isaiah/63/9/b, and the two new context records (…/yehi_ratzon_shekol_tippah/quotation/isaiah/63 and …/63/9) are never used. Fix: follow the Deuteronomy 30 and Job 20 pattern in the same file. Write <tei:seg source='urn:x-opensiddur:text:bible:isaiah/63/9' type='quotation'>. Inside it, put a chapter milestone n='63' with corresp to …/quotation/isaiah/63 and a verse milestone n='9' with corresp to …/quotation/isaiah/63/9. Close both milestones inside the seg. Remove the half-verse milestone and its bible corresp.",
+    "Both new Isaiah context records (closing_s346_s355.jsonl lines 111–112, candidate-registry-records.json lines 917–930) have no 'references' field. All six other yehi_ratzon quotation records, and the two ribbono_shel_olam_asinu ones, carry 'references': 'urn:x-opensiddur:text:bible:<book>/<ch>/<v>'. final-registry-remedies.json says the source reference is bible:isaiah/63/9, but the records don't record it. Add 'references': 'urn:x-opensiddur:text:bible:isaiah/63/9' to both."
+  ],
+  "files_read": [
+    "/tmp/mahzor-s346/final-registry-review.json",
+    "/tmp/mahzor-s346/final-registry-remedies.json",
+    "/tmp/mahzor-s346/candidate-registry-records.json (all 1065 lines)",
+    "/tmp/mahzor-s346/candidate-registry/closing_s346_s355.jsonl (all 139 records)",
+    "/tmp/mahzor-s346/integration/project/prayerbook_for_the_new_year-heidenheim-1965-he/yehi_ratzon_shekol_tippah.xml",
+    "/tmp/mahzor-s346/integration/project/prayerbook_for_the_new_year-heidenheim-1965-he/musaf_kohanim_response_2_5.xml",
+    "/tmp/mahzor-s346/integration/project/prayerbook_for_the_new_year-heidenheim-1965-he/kohanim_appendix_responses_2.xml"
+  ],
+  "notes": [
+    "Count checks out: both closing_s346_s355.jsonl and candidate-registry-records.json hold 139 records, and new_record_count is 139. The 2 kohanim_response_2_5/priest conditions are gone and the 2 yehi_ratzon …/quotation/isaiah/63 and /63/9 context records are added, as stated.",
+    "The registry and the generated XML don't match. The XML looks like it was never regenerated after the remedy, or it was regenerated from the old encoding. Either way, the remedy's claim that the conditions were removed 'everywhere' is not true for these files.",
+    "The shared provider that a regalim caller would use is musaf_kohanim_response_2_5.xml in this project. Its idno is siddur:regalim/musaf/text/kohanim_response_2_5@prayerbook_for_the_new_year-heidenheim-1965-he, and kohanim_appendix_responses_2.xml line 68 transcludes it. Both readings in it display as the same string in the Read output. Once the choice is removed, the single existing provider is what you described.",
+    "Non-blocking, still not fixed: the Isaiah labels 'Bounded source quotation — 63' and '— 9' don't say much. The other quotation records say 'Bounded scriptural quotation in yehi_ratzon_shekol_tippah'; use that. additional_new_prayer_roots still lists before_call and after_call, which are prayer parts, not roots. The cosmetic label issues from the earlier review are still there: 'Main-service', 'Psalm24:5', 'Psalm25:6', 'the22-letterName'.",
+    "Apart from the points above, the earlier review of all 139 records stands, as you asked."
+  ],
+  "limitations": [
+    "I could only read files. I did not run validate_features, validate_names, jing/Schematron, refdb or a compile. The claim that the leftover condition URNs are unregistered errors comes from the registry rule in AGENTS.md, not from running the validator.",
+    "I did not check code points or NFKD forms in the two וִיחֻנֶּֽךָּ readings, so 'identical' is only true as far as the Read output shows.",
+    "I read only the three XML files named. Other files in the project or in the -en project may still refer to the removed conditions or to bible:isaiah/63/9/b, and I didn't search for them. After the fix, search the project directories for 'kohanim_response_2_5/priest/heidenheim_1965_printing' and 'isaiah/63/9/b'.",
+    "I did not read the base files prayer.jsonl, siddur.jsonl and poem.jsonl, because neither change affects a parent record.",
+    "This covers registry identities and metadata only. It makes no claim about the source OCR, the batch, export, or PDF or electronic output."
+  ]
+}

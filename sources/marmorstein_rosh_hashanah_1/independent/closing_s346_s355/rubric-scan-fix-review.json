@@ -1,0 +1,27 @@
+{
+  "approved": false,
+  "required_changes": [
+    "Page-order inversion: a marked break outside a rubric can now be moved past a marked break inside a rubric. Example: `<tei:p>…</tei:p><pb N/><tei:note type=\"instruction\">words <pb N+1/> more</tei:note><tei:p>prayer</tei:p>`. pb N still skips the rubric's non-running words (`_next_words` → `_first_words` → `_running`, which excludes every tei:note) and is moved into the prayer paragraph. pb N+1 is now a candidate and stays inside the rubric (`_rubric_words_follow`). The output then sets link N+1 before link N. Before the fix this couldn't happen, because pb N+1 was never a candidate. `_unmark_if_empty_page` doesn't catch it because the two breaks aren't siblings. Prevent it: when the search for words would cross a marked candidate break, keep the moving break before that rubric (or leave it in place). Add a scan_links unit test for this case. Since a page that begins with a rubric is the situation this fix targets, this case is likely, not a corner case.",
+    "Add a test showing that a rubric break only now counted as a candidate does not change which breaks are chosen elsewhere. A rubric break with printing tokens in `@ed` now adds to `editions[edition]` (the set `_choose` checks units against). It can also become the `earlier` break `_context` returns for a later enclosing or child group. Either can change which printing a later group links. Test a rubric `<pb ed=\"<edition> <path>\">` before a transclusion whose group has several printings and no unit context, so the outcome is pinned. If the intended behaviour is that rubric breaks never act as `earlier` context, encode that rule."
+  ],
+  "files_read": [
+    "/tmp/mahzor-s346/rubric-scan-fix.diff",
+    "/tmp/mahzor-s346/rubric-scan-fix-tests.log",
+    "/home/efeins/.codex/worktrees/fix-rubric-scan-links/master/opensiddur/exporter/scan_links.py"
+  ],
+  "limitations": [
+    "I didn't run any tests or code. All findings come from reading the code. The test results are from the provided log: 554 passed, 294 subtests passed, 1 unrelated SyntaxWarning at test_reledmac_xslt.py:3014. The log doesn't show the command or which files were collected, so I can't tell whether it covered the full suite or only the three changed test files.",
+    "I didn't read the full test files. I saw only the hunks in the diff, so I didn't check how the helpers `_tree`, `_marked`, `_linked`, `_render`, `transform` and `self._document` behave beyond how they're used there.",
+    "I didn't read reledmac.xslt, html.xslt or the compiler. So I haven't confirmed that note type=\"description\" is rendered visibly and inline in both outputs (the HTML and PDF tests cover only \"instruction\"). I also haven't confirmed whether compiled standoff instruction notes reach the linear tree as inline tei:note[@type=instruction] outside any tei:standOff. If they do, their breaks become candidates too, and whether the leaf-346 instruction is one of these decides whether the PDF puts the link in running text or in an apparatus/footnote.",
+    "I didn't check the corpus. I can't confirm that IA leaf 346 is the only break that becomes a candidate, or that the links on leaves 339/340 are unchanged."
+  ],
+  "notes": [
+    "Candidate selection is correct as written. A break is skipped if any ancestor is a non-rubric tei:note, a tei:standOff or a tei:teiHeader, so a rubric nested inside commentary or standOff stays excluded, and the new test covers both cases. A rubric nested inside a rubric is allowed.",
+    "Text/tail handling in `_rubric_words_follow` is sound. For text it walks up from the element, for a tail from its parent, stops at the nearest rubric ancestor, and gives up when it reaches head, label or a non-rubric note first. So commentary words inside a rubric don't keep the break, and the test covers that. One edge case: a break inside a tei:head or tei:label within a rubric stays in place if rubric words come later, even though it sits in the head. That's acceptable but untested.",
+    "The break at the end of a rubric still goes through `_next_words`, and the walk climbs out of the note to the next running words, as tested. Breaks outside a rubric behave as before, apart from the inversion described in required_changes.",
+    "Columns and parallel text: a rubric break that stays in place never consults `_Columns`, so it stays in its own column. No test puts a rubric break inside p:parallelItem, or a rubric break at the end of a column whose words are in the column's next block. Consider one parallel-text test for each case.",
+    "Cross-language: there's no test where the Hebrew and English columns each have a break inside a rubric at different positions. Breaks inside rubrics that stay in place aren't aligned to milestones, which is consistent with the existing rule that only the break's own column is searched.",
+    "The PDF and HTML tests check the exact output position: `before \\OSScanLink{…}after`, and in HTML a link whose tail is 'after'. That's good end-to-end coverage for the instruction case.",
+    "Minor: the module docstring (\"A marked break is then moved forward to just before the next words…\") doesn't mention the rubric exception. Add a sentence so it stays the single description of the rule."
+  ]
+}

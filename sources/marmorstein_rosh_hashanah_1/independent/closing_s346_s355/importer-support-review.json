@@ -1,0 +1,30 @@
+{
+  "approved_importer_support": true,
+  "required_changes": [],
+  "notes": [
+    "build.py:1140-1143: for an instruction marked page_start, @facs and @ed are now always written and @n only when printed_page is not None. The order is unchanged: the pb still comes immediately before the instruction note, and both carry the same @facs. unlabelled-page-before-fix.log shows the label=None subtest failing with the old code (lxml TypeError on n=None) and the label='printed-a' subtest passing, so the new regression test does exercise the bug.",
+    "Divine Name directive parsing: a bare string still means exactly one occurrence (expected=1). A dict must have exactly the keys {text,count}, enforced by _keys with allowed and required both set. The count check (type(expected) is int, expected >= 1) correctly rejects True, '2', 0 and negative numbers. Any other directive type is rejected.",
+    "Backward compatibility for bare strings: the old code required one matching slot, and that slot to contain the name exactly once. The new check is that the name occurs once in total across all slots that are not inside a divineName. These accept and reject the same inputs. Only the error text for zero or several matching slots changed, from '... requires exactly one matching element' to 'Configured Divine Name is ambiguous: expected 1 ... found N'. The existing test that a second ה׳ makes a bare string 'ambiguous' still passes.",
+    "The occurrence count and the substitution agree: str.count and str.split both scan non-overlapping matches left to right, so the number of j:divineName elements created always equals the count that was validated. Validation happens before anything is changed, so a wrong count leaves the tree untouched.",
+    "Order and nesting in a text slot: node.text becomes parts[0], and the k-th new j:divineName goes in at child index k with tail parts[k+1]. Existing children shift right after them, so document order matches the source. In a tail slot, the new elements are chained with addnext from the node and then from each new element. lxml's addnext keeps the inserted element's own tail and leaves node.tail (now parts[0]) where it was, so the order is right here too.",
+    "The matches list is built before any change, and only from slots outside existing j:divineName elements; text inside a divineName and its descendants is skipped, but its tail is scanned. Elements this directive creates are never rescanned by the same directive, and existing divineName children are never split or nested inside another. A later directive does recompute matches, and skips names already marked.",
+    "Literal text is preserved: joining the pieces back with the name between them rebuilds every changed slot exactly, and no other slot is touched.",
+    "Nothing marks ה׳ globally. Marking applies only to directives configured on a unit and language, and only inside that unit's tei:body; standOff notes are outside the scan.",
+    "importer-batch346-checks.log: 177 passed, 153 subtests passed. I read the log but did not re-run the tests."
+  ],
+  "limitations": [
+    "Review only, nothing executed: I read the diff, the current source_encoding.py, build.py around documentary_order, and the beginning of test_marmorstein_source_encoding.py. I did not run the tests or open the generated output.",
+    "A counted directive marks every unmarked occurrence of its text in that unit's body. If one unit body contains both a Divine Name ה׳ and a numeral ה׳ (for example inside an instruction note in the same body), the directive cannot mark one and leave the other. The configured count will then not match and the build fails with an error, so nothing is misclassified silently. This is by design but limits what the directive can express.",
+    "printed_page is now read with .get(), so an instruction that leaves out the key gets an @n-free pb just as an explicit null does. It used to raise KeyError. An empty string still produces n=\"\". I did not check whether a separate readings validator requires the key to be present.",
+    "The test's words() helper collapses whitespace, so it does not prove byte-for-byte preservation, although the split/join code does preserve it. I did not confirm that 'ויי' in the second subtest actually produces an existing j:divineName child, so I cannot say the test really covers a tail after an existing divineName. A stronger, optional test would compare the exact serialized text and tail values and the child order where a divineName already exists.",
+    "If the body ever contained an XML comment or processing instruction whose text matched, node.insert in the text-slot branch would fail. Generated unit bodies normally contain neither."
+  ],
+  "invocation": {
+    "model_usage": [
+      "claude-opus-5-5"
+    ],
+    "configured_model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "89293ab8-27ca-4df7-90be-edae7f6d8f40"
+  }
+}

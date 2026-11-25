@@ -1,0 +1,21 @@
+{
+  "approved_registry": true,
+  "records_reviewed": 139,
+  "required_changes": [],
+  "files_read": [
+    "/tmp/mahzor-s346/registry-remedy-generated-proof.json",
+    "/tmp/mahzor-s346/candidate-registry/closing_s346_s355.jsonl (lines 105–116)",
+    "/tmp/mahzor-s346/candidate-registry-records.json (lines 905–944)"
+  ],
+  "limitations": [
+    "This check covered only the last missing field: `references` on the two yehi_ratzon_shekol_tippah Isaiah quotation records. For the other 137 records and for the two XML blockers being closed, I relied on the earlier full review as you described it. That review isn't in this session's context, so I couldn't check it again here.",
+    "I didn't recompute the file SHA-256s or `registry_manifest_sha256` listed in the proof file, so I haven't confirmed that the three XML files are unchanged. That rests on your statement that no XML or source word changed.",
+    "I didn't run the registry validator or `validate_names` on the candidate registry."
+  ],
+  "notes": [
+    "closing_s346_s355.jsonl line 111 (`.../quotation/isaiah/63`) and line 112 (`.../quotation/isaiah/63/9`) both have `references`: `urn:x-opensiddur:text:bible:isaiah/63/9`.",
+    "candidate-registry-records.json lines 917–932 have the same two records with the same `references` value. The two files agree with each other and with `verified_isaiah_records` in the proof file.",
+    "The fix uses the correct `prayer:yehi_ratzon_shekol_tippah` prefix, so the predicate error you described is fixed for these records.",
+    "Optional, not blocking: these two records don't match their sibling quotation records on lines 109–116. They add `kind: quotation`, use the generic 'Source-verified first-day volume completion…' note instead of 'Quotation scope only; not a substitute provider…', and the label reads 'Isaiah63:9' with no space. You could make them consistent, but the registry doesn't require it."
+  ]
+}

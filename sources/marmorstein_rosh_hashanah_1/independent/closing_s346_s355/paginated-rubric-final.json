@@ -1,0 +1,32 @@
+{
+  "approved_paginated_rubric": true,
+  "required_changes": [],
+  "notes": [
+    "I checked all five fixes against the actual diff and against the current build.py and verify.py. The working tree matches the diff in every hunk.",
+    "Fix 1 (only documentary instructions): rubric_words now takes a keyword-only documentary_pages flag that defaults to False, and raises 'supported only for documentary-order instructions' when source_pages appears without it. documentary_order (build.py:1188) is the only caller that passes True. The other callers (unit, segment and fragment rubrics, and citations) get the default, so they reject source_pages before anything is written. expanded_order (build.py:975-977) first validates with rubric_source_pages, then removes source_pages and renders the full text with no pb. This is deliberate and correct, because expanded order has no documentary pagination.",
+    "Fix 2 (top scan required): rubric_source_pages uses rubric.get('scan') != pages[0]['scan'] with no truthiness guard, so a missing top-level scan is now rejected. In verify.report, an editorial instruction with witnesses == [], no scan and source_pages now raises from rubric_source_pages instead of getting membership on pages[1:] only.",
+    "Fix 3 (printed page tied to the opening page): rubric.get('printed_page') != pages[0].get('printed_page') requires them to be equal, and treats missing and None as the same. The review hash therefore no longer covers an opening label that nothing renders.",
+    "Fix 4 (consecutive scans): each scan must be exactly the previous one plus 1. That rules out reversed, duplicate and gapped sequences in one check, and since the step is exactly 1 the scans are also unique.",
+    "Fix 5 (verify regression): test_continuing_instruction_requires_review_on_both_source_pages sets reading_keys ['instruction/notice'] on both s12 and s13. Before the review is recorded, 0 pages are complete. With a current review, 2 are complete. After changing source_pages[1].printed_page, 0 are complete again. verify.py:87 requires reading_keys to equal sorted(set(fragments[scan])), so the second page can only reach 2 if s13 now has instruction/notice as a member. Under the old code s13 had no such member and the test would fail.",
+    "One function, rubric_source_pages, does the checking for rendering (rubric_words), review hashing (instruction_review_text, which validates before appending the sorted JSON) and verify membership (verify.py:50). Expanded order runs it too.",
+    "The rejection tests cover the unsupported caller context, a missing opening scan, a wrong opening label, and duplicate, reversed and gapped scans. The generation test covers mismatched text ('exactly preserve'). Malformed fragments and fewer than two pages are rejected by the validation code. I read that code, but I found no test that targets those two cases.",
+    "The synthetic XML has the expected shape: the opening pb (n='a', facs n11) comes before the note, and the note's facs matches it. Inside that one note, a pb with no n (printed_page null) and facs n12 comes before the ' the page' tail, so itertext() gives back exactly 'Example crosses the page'.",
+    "The schema check passed: schema_valid true, no errors, one instruction, 2 source-page markers. The test log shows 180 passed and 158 subtests passed.",
+    "Two earlier suggestions are still optional and not done: rejecting 'quotations' on a paginated instruction (they are hashed for review but never rendered), and rejecting leading or trailing whitespace in page text."
+  ],
+  "limitations": [
+    "I did not run any tests or the schema check. I relied on the log and JSON you supplied.",
+    "The tool I had could not list /tmp/mahzor-s346. I found the synthetic XML by guessing the filename paginated-rubric-synthetic.xml, so any other artifacts in that directory went unread.",
+    "I did not check the real readings entry for source346–347, its scans or printed pages. You asked for no source or batch acceptance.",
+    "Nothing yet checks across items that the documentary item after a paginated instruction does not add a second pb for the continuation scan, for example a page_break occurrence or a unit's opening page. That still depends on how the readings are configured.",
+    "Splitting a word or hyphenating across the page turn is still unsupported. Fragments are always joined with a single space."
+  ],
+  "invocation": {
+    "model_usage": [
+      "claude-opus-5-5"
+    ],
+    "configured_model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "99fbd694-51bb-4016-b687-8721327aebdb"
+  }
+}

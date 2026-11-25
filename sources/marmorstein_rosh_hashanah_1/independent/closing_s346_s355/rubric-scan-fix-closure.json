@@ -1,0 +1,27 @@
+{
+  "approved": true,
+  "required_changes": [],
+  "files_read": [
+    "/home/efeins/.codex/worktrees/fix-rubric-scan-links/master/opensiddur/exporter/scan_links.py",
+    "/tmp/mahzor-s346/rubric-scan-fix-closure.diff",
+    "/tmp/mahzor-s346/rubric-scan-fix-closure-tests.log",
+    "/tmp/mahzor-s346/rubric-scan-fix-final-review.json",
+    "/home/efeins/.codex/worktrees/fix-rubric-scan-links/master/opensiddur/tests/exporter/test_scan_links.py (lines 1-56, helpers only)"
+  ],
+  "limitations": [
+    "I reviewed by reading only and ran no code or tests. Every behaviour described here comes from tracing the code by hand.",
+    "The log shows 561 passed and 294 subtests passed, which is 559 plus the 2 new tests. It doesn't show the command, so I'm taking the stated command, the three changed test files only, on trust. I can't confirm the whole repository suite passes.",
+    "I didn't check the full-volume PDF/HTML output or the real-book generation, which are out of scope as stated. The real HTML render on the codigitization branch after the cherry-pick isn't verified here.",
+    "I read only the helpers of test_scan_links.py, not the full test files."
+  ],
+  "notes": [
+    "The required change from the last review is fixed. In the rubric pass, `_mark_choices(rubric, ordinary, position, candidates)` builds `choice_groups` from every candidate, keyed by (transclusion element, edition). So for each rubric group, `selection` holds the ordinary and rubric breaks of that transclusion and edition together, in document order (scan_links.py:243-245, 258-263). `context` and `editions` are still built only from `ordinary` (scan_links.py:253-255, 265-267), and only the rubric breaks in `groups` get the mark (scan_links.py:269-271).",
+    "I traced the reported counterexample through the current code, and it now gives the right result. In the rubric group for urn:prayer, `selection` is [r, s, m], so `printings` is [chol/shacharit/b, chol/minchah/a]. `first` is r's position. The only ordinary break before r is e, whose group urn:book encloses urn:prayer, so `earlier` is {chol/minchah/a}. No siddur: units are present. `_best` returns chol/minchah/a, so r is not marked. The ordinary pass is unchanged: e is linked through rule 4, and in [s, m] m is linked and s is not. That gives ['e', 'm'], which is what test_rubric_uses_all_its_groups_printings_when_an_earlier_page_selects_one asserts.",
+    "A rubric break now gets the same choice it would get as an ordinary break of its group. `first` moves earlier only when a rubric break opens the group. Any ordinary break between it and the group's first ordinary break would sit inside the same transclusion or deeper, so it could never be an enclosing-group hint. So the `earlier` hint is the same either way. The one deliberate difference is that a printing named only by rubric breaks doesn't count in `editions` when a unit decides. That's what the last review asked for, and when no unit decides, the shared-prefix fallback still reaches it.",
+    "A group made only of rubric breaks (no ordinary break in that transclusion and edition) is judged exactly as the same breaks would be as ordinary breaks, so the earlier inversion concern doesn't return.",
+    "The object-lifetime fix is sound. `choice_groups` keys hold the actual ancestor elements, which keeps those proxies alive, so `_group()` returns the same proxy in the second loop. lxml elements hash by identity, so the lookup on scan_links.py:258 always hits, and every rubric break is in `candidates`. I checked the other id()-keyed maps too. In `groups` and `group_elements`, `group_elements` keeps the proxies alive. `position` and `rubric_ids` key on break elements that `_Break` objects in `candidates` hold. `_Columns.index` keys on items held in `self.items`. In `_context`, the `enclosing` set holds its proxies. None of them depends on a proxy that has already been collected.",
+    "Optional (not required): the 40-transclusion test uses breaks with no printing token, so `sets` is empty and everything is marked whatever the grouping. It would catch a KeyError from an id being reused, but not two groups merged by mistake. Giving the breaks different printings per transclusion, so that a wrong grouping changes the result, would make it a stronger regression guard.",
+    "In the ordinary pass, `choice_groups` and `groups` now hold the same breaks, so the ordinary results are identical to the previous closure. The earlier fixes for inversion, context isolation and the barrier are unaffected by this change.",
+    "The low-priority notes from the last review still apply and are not required: a comment that `_crosses_rubric_break` depends on walking the same path as `_next_words`, and the presentation trade-off of a break held back by the barrier."
+  ]
+}

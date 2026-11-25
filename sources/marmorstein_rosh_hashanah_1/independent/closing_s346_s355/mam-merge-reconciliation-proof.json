@@ -1,0 +1,101 @@
+{
+  "passed": true,
+  "method": "Take approved regenerated upstream text and restore existing branch verse-part milestones and the accepted Psalm55:15 half-verse boundary move at exactly matching verse text offsets. Full affected verses equal under NFD/whitespace normalization; no text changes.",
+  "files": [
+    {
+      "book": "exodus",
+      "upstream_text_exactly_preserved": true,
+      "branch_vs_base_only_milestones": true,
+      "parts": [
+        {
+          "change": "new_named_part",
+          "urn": "urn:x-opensiddur:text:bible:exodus/19/19/meod",
+          "verse": "urn:x-opensiddur:text:bible:exodus/19/19",
+          "normalized_character_offset": 40,
+          "following_words": "מְאֹ֑ד "
+        },
+        {
+          "change": "new_named_part",
+          "urn": "urn:x-opensiddur:text:bible:exodus/19/19/vayehi_qol",
+          "verse": "urn:x-opensiddur:text:bible:exodus/19/19",
+          "normalized_character_offset": 0,
+          "following_words": "וַֽיְהִי֙ ק֣וֹל "
+        },
+        {
+          "change": "new_named_part",
+          "urn": "urn:x-opensiddur:text:bible:exodus/34/7/notzer_chesed",
+          "verse": "urn:x-opensiddur:text:bible:exodus/34/7",
+          "normalized_character_offset": 0,
+          "following_words": "נֹ"
+        }
+      ],
+      "candidate": "/tmp/mahzor-s346/mam-merge-candidates/exodus.xml"
+    },
+    {
+      "book": "numbers",
+      "upstream_text_exactly_preserved": true,
+      "branch_vs_base_only_milestones": true,
+      "parts": [
+        {
+          "change": "new_named_part",
+          "urn": "urn:x-opensiddur:text:bible:numbers/9/23/al_pi",
+          "verse": "urn:x-opensiddur:text:bible:numbers/9/23",
+          "normalized_character_offset": 85,
+          "following_words": "עַל־פִּ֥י יְהֹוָ֖ה בְּיַד־מֹשֶֽׁה׃"
+        }
+      ],
+      "candidate": "/tmp/mahzor-s346/mam-merge-candidates/numbers.xml"
+    },
+    {
+      "book": "psalms",
+      "upstream_text_exactly_preserved": true,
+      "branch_vs_base_only_milestones": true,
+      "parts": [
+        {
+          "change": "new_named_part",
+          "urn": "urn:x-opensiddur:text:bible:psalms/39/13/ki_ger",
+          "verse": "urn:x-opensiddur:text:bible:psalms/39/13",
+          "normalized_character_offset": 89,
+          "following_words": "כִּ֤י גֵ֣ר אָנֹכִ֣י עִמָּ֑ךְ"
+        },
+        {
+          "change": "new_named_part",
+          "urn": "urn:x-opensiddur:text:bible:psalms/39/13/shimah",
+          "verse": "urn:x-opensiddur:text:bible:psalms/39/13",
+          "normalized_character_offset": 0,
+          "following_words": "שִׁ֥מְﬞעָֽה־תְפִלָּתִ֨י׀ יְהֹוָ֡ה וְשַׁוְעָתִ֨י׀ הַאֲזִינָה֮"
+        },
+        {
+          "change": "existing_boundary_move",
+          "urn": "urn:x-opensiddur:text:bible:psalms/55/15/b",
+          "verse": "urn:x-opensiddur:text:bible:psalms/55/15",
+          "normalized_character_offset": 31,
+          "following_words": "בְּבֵ֥ית אֱ֝לֹהִ֗ים נְהַלֵּ֥ךְ בְּרָֽגֶשׁ׃"
+        }
+      ],
+      "candidate": "/tmp/mahzor-s346/mam-merge-candidates/psalms.xml"
+    },
+    {
+      "book": "zechariah",
+      "upstream_text_exactly_preserved": true,
+      "branch_vs_base_only_milestones": true,
+      "parts": [
+        {
+          "change": "new_named_part",
+          "urn": "urn:x-opensiddur:text:bible:zechariah/9/15/veakhelu",
+          "verse": "urn:x-opensiddur:text:bible:zechariah/9/15",
+          "normalized_character_offset": 32,
+          "following_words": "וְאָכְל֗וּ וְכָֽבְשׁוּ֙ אַבְנֵי־קֶ֔לַע וְשָׁת֥וּ הָמ֖וּ כְּמוֹ־יָ֑יִן "
+        },
+        {
+          "change": "new_named_part",
+          "urn": "urn:x-opensiddur:text:bible:zechariah/9/15/adonai_tzevaot_yagen",
+          "verse": "urn:x-opensiddur:text:bible:zechariah/9/15",
+          "normalized_character_offset": 0,
+          "following_words": "יְהֹוָ֣ה צְבָאוֹת֮ יָגֵ֣ן עֲלֵיהֶם֒ "
+        }
+      ],
+      "candidate": "/tmp/mahzor-s346/mam-merge-candidates/zechariah.xml"
+    }
+  ]
+}

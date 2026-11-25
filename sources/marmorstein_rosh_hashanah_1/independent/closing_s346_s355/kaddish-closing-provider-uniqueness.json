@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "project": "prayerbook_for_the_new_year-heidenheim-1965-he",
+      "identity": "urn:x-opensiddur:text:prayer:kaddish/yatom/yehe_shelama",
+      "provider_count": 1,
+      "provider": {
+        "file": "kaddish_yatom.xml",
+        "path": "/tei:TEI/tei:text/tei:body/tei:div/tei:p[4]/tei:milestone"
+      }
+    },
+    {
+      "project": "prayerbook_for_the_new_year-heidenheim-1965-he",
+      "identity": "urn:x-opensiddur:text:prayer:kaddish/yatom/oseh_shalom",
+      "provider_count": 1,
+      "provider": {
+        "file": "kaddish_yatom.xml",
+        "path": "/tei:TEI/tei:text/tei:body/tei:div/tei:p[5]/tei:milestone[1]"
+      }
+    },
+    {
+      "project": "prayerbook_for_the_new_year-marmorstein-1965-en",
+      "identity": "urn:x-opensiddur:text:prayer:kaddish/yatom/yehe_shelama",
+      "provider_count": 1,
+      "provider": {
+        "file": "kaddish_yatom_closings.xml",
+        "path": "/tei:TEI/tei:text/tei:body/tei:div/tei:p[1]/tei:milestone"
+      }
+    },
+    {
+      "project": "prayerbook_for_the_new_year-marmorstein-1965-en",
+      "identity": "urn:x-opensiddur:text:prayer:kaddish/yatom/oseh_shalom",
+      "provider_count": 1,
+      "provider": {
+        "file": "kaddish_yatom_closings.xml",
+        "path": "/tei:TEI/tei:text/tei:body/tei:div/tei:p[2]/tei:milestone[1]"
+      }
+    }
+  ],
+  "scope": "Generated candidate XML, per-project exact proper identity count; legacy part aliases retain their existing different IDs."
+}

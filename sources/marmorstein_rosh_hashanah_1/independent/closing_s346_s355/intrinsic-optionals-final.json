@@ -1,0 +1,28 @@
+{
+  "approved": true,
+  "required_changes": [],
+  "notes": [
+    "Required 1 is closed. In realizations.py:225-226, prepare_unit raises 'Printing optionals require intrinsic source optional spans' when any reading carries an optional_spans key and the raw host fragment has none. It checks for the key, not a truthy value, so an empty optional_spans list is also rejected. When the host does have spans, the existing gate at :227-241 still applies: preserve_intrinsic_optionals must be literally True, the overlay must print the whole fragment, choices[0] spans must equal the fragment's, every reading must have the same condition sequence, and each span must have exactly the keys {printed,text,condition}, printed must equal '('+text+')', and the printed span must occur exactly once. A reading with no optional_spans key while the host has spans fails the condition-sequence check. test_overlay_cannot_invent_intrinsic_optional_controls covers the bypass case that was missing.",
+    "Required 2 is closed. With strict=False, build.optional_words (build.py:91-107) matches the old inline loop exactly: a sequential partition, 'not found' as the only failure, and ids <stem>_optional_<seg>_<idx>_<n>. strict=True is passed only in the j:option printing branch. test_legacy_identical_optional_occurrences_keep_sequential_semantics builds '(x) and (x)' with two identical printed spans and asserts both marked conditionals and the exact legacy xml:ids.",
+    "The current repository code in realizations.py and build.py matches the remedies diff hunks.",
+    "The explicit home flag check in prepare_documents rejects non-flat or malformed spans whether or not a wording overlay exists. test_intrinsic_home_without_overlay_still_preserves_flat_optionals covers this, including rejection of printed='family)'. test_nonboolean_home_interpretation_flags_are_rejected covers False, 'true' and 1 for both flags.",
+    "compile-parnassah-both-printings-proof.py compiles the actual old-host context_urn (main) and the actual caller (appendix) under all four wife_children × parents declarations. The checks are: the words equal the reading text with each span resolved, the original instruction note and Amen are present in main, and the n349 page marker appears only in appendix. The expected strings come from the draft JSON readings, so this proves the compile matches the draft. It does not prove the draft matches the scan; that is the pending human review.",
+    "compile-kohen-branch-proof.py first runs check_fs_element on the module's two fs, then compiles the priest, congregation and unknown profiles without unchecked_registry. In each, the shared opening and ending segments appear once and the selected branch is exact. Unknown yields both branches, which is the expected behaviour for an undecided condition. This settles the earlier finding that kohen had no consumer."
+  ],
+  "limitations": [
+    "Non-blocking: in prepare_unit, reading spans other than choices[0] are not checked for empty text or for parentheses inside text. The flat check only covers choices[0], through its equality with the home fragment spans. Empty text fails closed in build because strict=True requires nonempty text. A nested span such as printed='((x))' would pass both prepare_unit and the strict build. Consider adding the flat check (no '(' or ')' in text, text nonempty) to the reading loop for symmetry with prepare_documents.",
+    "Non-blocking: the first-round mutation gaps are still untested. These are extra span keys, span conditions in a different order, choices[0].text differing from printed, and an external caller carrying instructions without canonical_home. The code paths for them raise.",
+    "Non-blocking: compile-parnassah-both-printings-proof.py runs under unchecked_registry, so registry validation of the opensiddur:variant condition URNs is not part of that proof.",
+    "This was a read-only review. I did not run the tests, the proofs or a full regeneration. The test log reports only totals (246 tests, 329 subtests passing), not which suites ran. No full-project byte-identical regeneration diff was supplied. The strict=False path makes one less necessary, but a diff would still confirm that nothing outside the reprint changed.",
+    "I did not check the kohen feature's name or semantics against a Birnbaum precedent, and did not run validate_names on the new 'prayer' URN component.",
+    "Approval covers code only. All source units remain UNACCEPTED until human review of pages 854–859 and of whole alignment, order and export."
+  ],
+  "invocation": {
+    "model_usage": [
+      "claude-opus-5-5"
+    ],
+    "configured_model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "94daaab6-ed25-4f85-8108-871c66261241"
+  }
+}
