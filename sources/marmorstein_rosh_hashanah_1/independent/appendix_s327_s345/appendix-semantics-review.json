@@ -1,0 +1,301 @@
+{
+  "approved_semantic_plan": false,
+  "required_changes": [
+    "RC1 (s335 L22): The proposal lists L22 as 'marked-optional', which assumes the opening parenthesis is missing. The scan shows a large-type line with a closing ')' and no opening '('. The closing mark could equally be a stray. Make L22's disposition 'pending-human' (see USQ1) and encode nothing for it until a human chooses. Option A: an opening parenthesis is missing, so the line is optional. Encode it as j:conditional[@type='marked'] with no literal parentheses in the text. Record the printed form (only ')' present) in a standoff editorial note, because the generated delimiters cannot reproduce it. Do not also put sic/corr on the parenthesis, or the brackets will be doubled. Option B: the ')' is a stray and the line is base text. Encode it as <tei:choice><tei:sic>)</tei:sic><tei:corr/></tei:choice> with no conditional. JLPTEI-3 names 'an unmatched quotation mark' as a misprint example, so this is in scope, and readings.errors=printed keeps the printed form.",
+    "RC2 (s335 L24, nested): Use two separate j:conditional[@type='marked'] scopes, each with its own xml:id and its own opensiddur:variant condition URN. The outer scope covers the whole couplet. The inner scope sits strictly inside it and covers only <j:divineName>יְיָ</j:divineName>. Each j:conditional and its j:endConditional must be siblings, and the inner pair must sit inside the outer pair with no overlap. Remove all four printed parentheses from the character data; type='marked' generates them. Do not let the inner condition depend on the outer one. When the outer scope is false the inner one simply doesn't matter.",
+    "RC3 (all 29 marked-optional occurrences): Take the printed parentheses out of the text content and express them only through j:conditional[@type='marked']. Keeping them as text as well would double the brackets in output. The conditions use opensiddur:variant features whose names are urn:x-opensiddur:condition:… URNs mirroring the text URN plus a name. Leave them undeclared, so they stay undefined and are kept and marked. Do not use opensiddur:rite and do not add an instruction note: the source prints no rubric, and adding one would invent a rite or occasion.",
+    "RC4 (alternate-wording, 7 occurrences): Encode each as tei:choice containing two or more j:option elements, each with its own condition URN in @corresp. Put the printed main reading first so the inline fallback reproduces the base text. Copy the printed option exactly, including whether it is pointed: ועומק, סובל, מלאכתך and כלי are unpointed; רֵעִים and אַף are pointed. Do not add pointing, articles or vav prefixes. Keep the siglum 'נ״א', its parentheses and the printed punctuation verbatim in a standoff note (tei:standOff[@type='notes']) whose target is an anchor at the choice and which carries a tei:label. Never keep the siglum in the running text as well as in the note.",
+    "RC5 (s330 working-pages): The 'variant_note' block '(נ״א ועומק)' is flagged nonprinting_metadata and duplicates the inline variant. The importer must not output it as a second apparatus entry or as text. Build the apparatus from one source only.",
+    "RC6 (canonical_part integrity): Counting from s336 L7=/60 and L20=/73, s335 L1–L23 map to /28–/49 with L6 null, so L25–L27 should be /50–/52 and L28 /53. The proposal gives s335 L28 as /50, which is out of order or reflects an unstated decision that L28 is the canonical form of the L24 stanza. L6 and L24 are null. Correct or justify these values before implementation. A condition URN for L6 and L24 can't mirror a text URN that doesn't exist (see USQ3).",
+    "RC7 (milestone placement): Put each canonical-part tei:milestone before (outside) its j:conditional. A false condition then leaves an empty but resolvable scope instead of deleting the URN.",
+    "RC8 (consecutive couplets, s335 L9–L21 and others): Give each separately parenthesized line its own conditional and its own condition URN. The source opens and closes the parentheses on every line, so merging a run into one scope, or pairing lines as j:option alternates, is not supported by the printing (see USQ2)."
+  ],
+  "occurrence_dispositions": [
+    {
+      "scan": "s327",
+      "line": 10,
+      "disposition": "marked-optional",
+      "encoding": "whole-line j:conditional[@type='marked'], own condition URN, parentheses removed from text",
+      "notes": "none"
+    },
+    {
+      "scan": "s327",
+      "line": 11,
+      "disposition": "marked-optional",
+      "encoding": "as L10, separate scope",
+      "notes": "Do not merge with L10 (RC8)."
+    },
+    {
+      "scan": "s330",
+      "line": 26,
+      "disposition": "alternate-wording, scope pending-human",
+      "encoding": "choice/j:option + standoff 'נ״א' note",
+      "notes": "It is unclear which word(s) ועומק replaces: ואֽורך only, ורוחב ואֽורך together, or whether it is really an addition that a siglum marks as a variant. See USQ4. Do not encode until a human sets the scope."
+    },
+    {
+      "scan": "s330",
+      "line": 27,
+      "disposition": "marked-optional",
+      "encoding": "whole-line conditional",
+      "notes": "none"
+    },
+    {
+      "scan": "s332",
+      "line": 27,
+      "disposition": "alternate-wording",
+      "encoding": "<choice><j:option>סוֹבֵב</j:option><j:option>סובל</j:option></choice>, apparatus '(נ״א סובל)'",
+      "notes": "Single-word swap. The option stays unpointed as printed."
+    },
+    {
+      "scan": "s334",
+      "line": 7,
+      "disposition": "marked-optional",
+      "encoding": "inline conditional around וְאִיִּים; the colon stays outside the scope",
+      "notes": "none"
+    },
+    {
+      "scan": "s334",
+      "line": 21,
+      "disposition": "marked-optional",
+      "encoding": "whole-line conditional",
+      "notes": "none"
+    },
+    {
+      "scan": "s335",
+      "line": 3,
+      "disposition": "marked-optional",
+      "encoding": "whole-line conditional",
+      "notes": "none"
+    },
+    {
+      "scan": "s335",
+      "line": 5,
+      "disposition": "marked-optional",
+      "encoding": "whole-line conditional",
+      "notes": "Echoes L26 ('על כנפי נשרים'); no alternate relationship is asserted."
+    },
+    {
+      "scan": "s335",
+      "line": 6,
+      "disposition": "marked-optional",
+      "encoding": "whole-line conditional",
+      "notes": "canonical_part is null (RC6/USQ3). Its rhyme (שחל/נחל) matches base L8, and its opening matches L7, so it may be a variant stanza. That needs a human call (USQ2)."
+    },
+    {
+      "scan": "s335",
+      "line": 7,
+      "disposition": "marked-optional",
+      "encoding": "whole-line conditional",
+      "notes": "none"
+    },
+    {
+      "scan": "s335",
+      "line": 9,
+      "disposition": "marked-optional",
+      "encoding": "whole-line conditional",
+      "notes": "none"
+    },
+    {
+      "scan": "s335",
+      "line": 10,
+      "disposition": "marked-optional",
+      "encoding": "whole-line conditional",
+      "notes": "none"
+    },
+    {
+      "scan": "s335",
+      "line": 11,
+      "disposition": "marked-optional",
+      "encoding": "whole-line conditional",
+      "notes": "none"
+    },
+    {
+      "scan": "s335",
+      "line": 12,
+      "disposition": "marked-optional",
+      "encoding": "whole-line conditional",
+      "notes": "none"
+    },
+    {
+      "scan": "s335",
+      "line": 13,
+      "disposition": "marked-optional",
+      "encoding": "whole-line conditional",
+      "notes": "none"
+    },
+    {
+      "scan": "s335",
+      "line": 14,
+      "disposition": "marked-optional",
+      "encoding": "whole-line conditional; j:divineName יְיָ inside the scope",
+      "notes": "none"
+    },
+    {
+      "scan": "s335",
+      "line": 15,
+      "disposition": "marked-optional",
+      "encoding": "whole-line conditional",
+      "notes": "none"
+    },
+    {
+      "scan": "s335",
+      "line": 16,
+      "disposition": "marked-optional",
+      "encoding": "whole-line conditional",
+      "notes": "none"
+    },
+    {
+      "scan": "s335",
+      "line": 17,
+      "disposition": "marked-optional",
+      "encoding": "whole-line conditional",
+      "notes": "none"
+    },
+    {
+      "scan": "s335",
+      "line": 18,
+      "disposition": "marked-optional",
+      "encoding": "whole-line conditional",
+      "notes": "none"
+    },
+    {
+      "scan": "s335",
+      "line": 19,
+      "disposition": "marked-optional",
+      "encoding": "whole-line conditional",
+      "notes": "none"
+    },
+    {
+      "scan": "s335",
+      "line": 20,
+      "disposition": "marked-optional",
+      "encoding": "whole-line conditional",
+      "notes": "Shares כצפרים…לעירו יגן with base L23; no alternate relationship is asserted."
+    },
+    {
+      "scan": "s335",
+      "line": 21,
+      "disposition": "marked-optional",
+      "encoding": "whole-line conditional",
+      "notes": "Its ')' closes its own '('. It does not also close L22."
+    },
+    {
+      "scan": "s335",
+      "line": 22,
+      "disposition": "pending-human (RC1 option A or B)",
+      "encoding": "A: marked conditional + editorial note on the printed form; B: base text + <choice><sic>)</sic><corr/></choice>",
+      "notes": "Large type, no '(' and a final ')'. It shares 'ובצל כנפיו' with base L23, which weakly suggests a variant stanza (A), but that is inference, not fact."
+    },
+    {
+      "scan": "s335",
+      "line": 24,
+      "disposition": "marked-optional with nested marked-optional j:divineName",
+      "encoding": "RC2",
+      "notes": "canonical_part is null. It is a near-duplicate of L28 (USQ3)."
+    },
+    {
+      "scan": "s335",
+      "line": 28,
+      "disposition": "marked-optional",
+      "encoding": "whole-line conditional",
+      "notes": "The canonical_part /50 is out of sequence (RC6)."
+    },
+    {
+      "scan": "s336",
+      "line": 7,
+      "disposition": "marked-optional",
+      "encoding": "inline conditional[@type='marked'] wrapping <j:divineName>יְיָ</j:divineName>",
+      "notes": "none"
+    },
+    {
+      "scan": "s336",
+      "line": 20,
+      "disposition": "marked-optional",
+      "encoding": "inline conditional wrapping j:divineName יְיָ",
+      "notes": "none"
+    },
+    {
+      "scan": "s337",
+      "line": 17,
+      "disposition": "alternate-wording",
+      "encoding": "<choice><j:option>הָרוֹעִים</j:option><j:option>רֵעִים</j:option></choice> followed by ':'; apparatus records '(נ״א רֵעִים:)' verbatim",
+      "notes": "The source sets the verse-final colon inside the parenthesis. Moving it after the choice is a normalization, not a misprint correction (USQ5). The option text is רֵעִים with no article added."
+    },
+    {
+      "scan": "s338",
+      "line": 19,
+      "disposition": "alternate-wording",
+      "encoding": "<choice><j:option>בְּרִיאָתֶֽךָ</j:option><j:option>מלאכתך</j:option></choice>, apparatus '(נ״א מלאכתך)'",
+      "notes": "The option is unpointed as printed."
+    },
+    {
+      "scan": "s340",
+      "line": 8,
+      "disposition": "marked-optional",
+      "encoding": "inline conditional around וְקַיָּם",
+      "notes": "none"
+    },
+    {
+      "scan": "s341",
+      "line": 3,
+      "disposition": "alternate-wording",
+      "encoding": "<choice><j:option>אָז</j:option><j:option>אַף</j:option></choice>, apparatus '(נ״א אַף)'",
+      "notes": "The option is pointed as printed."
+    },
+    {
+      "scan": "s341",
+      "line": 4,
+      "disposition": "marked-optional",
+      "encoding": "inline conditional around מַֽיִם",
+      "notes": "none"
+    },
+    {
+      "scan": "s341",
+      "line": 12,
+      "disposition": "alternate-wording",
+      "encoding": "<choice><j:option>כֹל</j:option><j:option>כלי</j:option></choice>, apparatus '(נ״א כלי)'",
+      "notes": "The option is unpointed as printed."
+    },
+    {
+      "scan": "s342",
+      "line": 13,
+      "disposition": "marked-optional",
+      "encoding": "inline conditional around 'פְּנֵי רְקִיעַ' (one scope for both words)",
+      "notes": "none"
+    }
+  ],
+  "guideline_findings": [
+    "GF1: JLPTEI-3 separates conditional text (said or omitted, j:conditional) from alternate wordings (exactly one is read, choice/j:option). Mapping unsigned parentheses to j:conditional and 'נ״א' to j:option follows that rule. Either mapping is still an editorial reading of the book's conventions, and the plan should say so.",
+    "GF2: 'How an undecided scope is set off' says the exporter reproduces standard delimiters for type='marked', described as 'brackets within running text'. The printed glyph, '(' versus '[', is therefore a rendering choice, and that is why literal parentheses must not stay in the text.",
+    "GF3: opensiddur:variant feature names are condition URNs that mirror the text URN with no project suffix, and they stay undefined unless a setting chooses. That is the right way to get local undecided selection without asserting a rite. No j:declare should be added.",
+    "GF4: sic/corr is for clear misprints, and the guideline's examples include unmatched quotation marks. It doesn't cover questions of wording, so it must not be used to pick between variant readings or to settle the meaning of parentheses.",
+    "GF5: A j:conditional and its j:endConditional must be siblings, and nested scopes must nest properly. This holds both for L24 and for a whole-line scope wrapping a tei:l.",
+    "GF6: Small and large type alternate line by line on every page, including in the parenthesized lines. Type size carries no meaning for optional versus base, and nothing should be encoded from it.",
+    "GF7: j:divineName stays inside whatever conditional or option holds it. It is never placed around a conditional boundary."
+  ],
+  "unresolved_semantic_questions": [
+    "USQ1 (human): s335 L22. Is the opening parenthesis missing, making the line optional, or is the closing ')' a stray, making it base text?",
+    "USQ2 (human): Are any parenthesized s335 couplets variant forms of neighbouring couplets, to be read instead of them, rather than independent additions? Candidates: L6 vs L7/L8, L20/L22 vs L23, L24 vs L28. If so, they need choice/j:option or linked conditions, not independent conditionals. The plan should not assume either answer.",
+    "USQ3 (human/editorial): What canonical URNs do L6 and L24 get, given they are null now? Is L28 /50, out of order, or /53? The condition URNs for L6 and L24 depend on the answer.",
+    "USQ4 (human): s330 L26. Which printed word or words does '(נ״א ועומק)' replace?",
+    "USQ5 (human): s337 L17. Keep the colon outside the choice and record its printed position in the apparatus, or treat it some other way?",
+    "USQ6 (editorial policy): Are the unsigned parentheses really 'some say / some omit' additions, rather than variants whose siglum was left out or metrical fillers such as (יְיָ)? The book gives no key. 'Undecided optional' is the least assertive encoding, but it is still an assumption."
+  ],
+  "limitations": [
+    "I could not find importer build.py: guessed paths under the worktree did not exist, and I have no directory listing. I did not check optional_spans or alternatives against what the importer can actually do.",
+    "Of the images I looked at only full-335.png. The other occurrences were assessed from working-pages.json text and the proposal's transcriptions.",
+    "I did not confirm that the schema allows j:conditional or j:endConditional as children of tei:lg. That matters for whole-line scopes placed outside tei:l.",
+    "I did not confirm how the exporter renders a standoff note anchored at a choice whose option is undecided, or whether it shows the options together.",
+    "I did not open the per-page source-*-final.json reviews. I accepted the approved readings and changed none of them."
+  ],
+  "notes": [
+    "I count 36 occurrences: 29 marked-optional (counting L22 as the proposal does) and 7 alternate-wording.",
+    "The scan confirms L24 prints '(לְבַדּוֹ (יְיָ) הוּא …)' with properly nested parentheses, and that L22 has only the final ')'.",
+    "I changed no files and produced no source, XML, export or batch acceptance."
+  ],
+  "invocation": {
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "8d9629dc-9ba1-4826-9462-cbfa294b3c24"
+  }
+}
