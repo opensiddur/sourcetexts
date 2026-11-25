@@ -6,7 +6,7 @@
     "titles": {
       "he": "שיר היחוד ושיר הכבוד"
     },
-    "corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/hosafot/hymns_appendix",
+    "corresp": "urn:x-opensiddur:text:siddur:hosafot/hymns_appendix",
     "file": "hymns_appendix",
     "witnesses": [
       "he"
@@ -42,8 +42,8 @@
           {
             "type": "opensiddur:variant",
             "features": {
-              "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_second_day_paytan/44/main_reading": true,
-              "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_second_day_paytan/44/alternate_reading": false
+              "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_second_day_paytan/44/veorekh": true,
+              "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_second_day_paytan/44/veomeq": false
             }
           }
         ]
@@ -63,8 +63,8 @@
           {
             "type": "opensiddur:variant",
             "features": {
-              "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_third_day_paytan/49/main_reading": true,
-              "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_third_day_paytan/49/alternate_reading": false
+              "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_third_day_paytan/49/sovev": true,
+              "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_third_day_paytan/49/sovel": false
             }
           }
         ]
@@ -84,8 +84,8 @@
           {
             "type": "opensiddur:variant",
             "features": {
-              "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_fourth_day_paytan/98/main_reading": true,
-              "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_fourth_day_paytan/98/alternate_reading": false
+              "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_fourth_day_paytan/98/haroim": true,
+              "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_fourth_day_paytan/98/reim": false
             }
           }
         ]
@@ -105,8 +105,8 @@
           {
             "type": "opensiddur:variant",
             "features": {
-              "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_fifth_day_paytan/7/main_reading": true,
-              "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_fifth_day_paytan/7/alternate_reading": false
+              "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_fifth_day_paytan/7/beriatekha": true,
+              "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_fifth_day_paytan/7/melakhtekha": false
             }
           }
         ]
@@ -126,10 +126,10 @@
           {
             "type": "opensiddur:variant",
             "features": {
-              "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_sixth_day_paytan/3/main_reading": true,
-              "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_sixth_day_paytan/3/alternate_reading": false,
-              "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_sixth_day_paytan/12/main_reading": true,
-              "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_sixth_day_paytan/12/alternate_reading": false
+              "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_sixth_day_paytan/3/az": true,
+              "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_sixth_day_paytan/3/af": false,
+              "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_sixth_day_paytan/12/khol": true,
+              "urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_sixth_day_paytan/12/kheli": false
             }
           }
         ]
@@ -368,12 +368,15 @@
           "en": "Hymn of Glory"
         },
         "rubrics": {
-          "he": "כשפותחין ארון הקדש לאנעים זמירות יש לאמר ד׳ פסוקים אלו."
+          "he": {
+            "text": "כשפותחין ארון הקדש לאנעים זמירות יש לאמר ד׳ פסוקים אלו.",
+            "type": "instruction"
+          }
         },
         "order": [
           {
             "reference": {
-              "target": "urn:x-opensiddur:text:siddur:rosh_hashanah/hosafot/shir_hakavod/opening_psalm"
+              "target": "urn:x-opensiddur:text:siddur:hosafot/shir_hakavod/opening_psalm"
             }
           },
           {
@@ -394,5 +397,11 @@
   ],
   "new_selector_records": 43,
   "new_structural_contexts": 1,
-  "shabbat_printed_heading_outside_canonical_root": true
+  "shabbat_printed_heading_outside_canonical_root": true,
+  "review_fixes": [
+    "hosafot occasion contexts",
+    "wording-derived immutable selector slugs",
+    "instruction rubric",
+    "configured abbreviated Divine Name"
+  ]
 }

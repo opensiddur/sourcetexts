@@ -1,0 +1,68 @@
+{
+  "approved_new_encoding_targets": true,
+  "approved_target_keys": [
+    "hymn_of_divine_unity_for_the_first_day_paytan/he",
+    "hymn_of_divine_unity_for_the_second_day_paytan/he",
+    "hymn_of_divine_unity_for_the_third_day_paytan/he",
+    "hymn_of_divine_unity_for_the_fourth_day_paytan/he",
+    "hymn_of_divine_unity_for_the_fifth_day_paytan/he",
+    "citation/hymn_of_divine_unity_for_the_fifth_day_paytan/he/0",
+    "hymn_of_divine_unity_for_the_sixth_day_paytan/he",
+    "hymn_of_divine_unity_for_the_day_of_shabbat_paytan_poetry/he",
+    "hymn_of_divine_unity_for_the_day_of_shabbat_paytan_scripture/he",
+    "anim_zemirot/he",
+    "shir_hakavod_opening_psalm/he",
+    "barukh_attah_yachid_umeyuchad/he",
+    "instruction/appendix_sunday_heading",
+    "instruction/appendix_monday_heading",
+    "instruction/appendix_tuesday_heading",
+    "instruction/appendix_wednesday_heading",
+    "instruction/appendix_thursday_heading",
+    "instruction/appendix_shabbat_heading",
+    "instruction/appendix_shir_hakavod_heading",
+    "instruction/appendix_shir_hakavod_instruction",
+    "realization/hymn_of_divine_unity_for_the_first_day_paytan/he",
+    "realization/hymn_of_divine_unity_for_the_second_day_paytan/he",
+    "realization/hymn_of_divine_unity_for_the_third_day_paytan/he",
+    "realization/hymn_of_divine_unity_for_the_fourth_day_paytan/he",
+    "realization/hymn_of_divine_unity_for_the_fifth_day_paytan/he",
+    "realization/hymn_of_divine_unity_for_the_sixth_day_paytan/he",
+    "realization/hymn_of_divine_unity_for_the_day_of_shabbat_paytan_poetry/he",
+    "realization/hymn_of_divine_unity_for_the_day_of_shabbat_paytan_scripture/he",
+    "realization/anim_zemirot/he",
+    "realization/shir_hakavod_opening_psalm/he",
+    "realization/barukh_attah_yachid_umeyuchad/he"
+  ],
+  "approved_control_only_rebindings": true,
+  "approved_divine_name_directive": true,
+  "required_changes": [],
+  "limitations": [
+    "Read-only. I ran no scripts, tests, hash checks, validators or the exporter. Each final_sha256 is taken as written in new-review-targets.json, not recomputed. The 114 tests and 38 subtests passing are taken from importer-divine-name-tests.log.",
+    "I read in full the 11 literal payloads, the citation, the 8 instruction payloads, and the realization payloads for the first, second, third and Anim Zemirot units, the opening psalm and the Sunday closing. For the fourth, fifth, sixth and both Shabbat realizations I checked only that the keys exist and how they are ordered. prepare-review-payloads.py builds those realizations from the same unit dict, in the same integrated-source/readings.json, as the literal payloads I did read.",
+    "I did not open source-approved-pages.json, working-encoding-atlas.json, appendix-units-assembled.json or integrated-source/readings.json directly. Payload content is judged from the payloads themselves and from the earlier approval files.",
+    "The rebinding proof (prepare-review-payloads.py:13-17) does three things. It asserts that each old review is current against its original payload. It strips only the four control hashes. It asserts that every remaining JSON field is equal, and the dict comparison also catches any added or dropped key. It does NOT check your claim that the old source order gains exactly one appendix frame before scan351 and that the old expanded order is an exact prefix. The control hashes are opaque here. That order delta needs the pending full-book assembly review.",
+    "The claim that the 902 old literal payloads are unchanged is implied, not proven directly. The script asserts the old units are byte-equal (old_units_byte_equal), and the source_encoding.py change does not touch unit_review_text. The script never compares the literal payloads themselves.",
+    "The instruction payloads hash the text only. The fix that types the ark-opening rubric as an instruction (integrated-assembly-review RC2) is in the expanded spine. These hashes don't cover it, and it stays under the pending assembly review.",
+    "Not approved here: the full-book assembly, the RC1 runtime check, rendering and export, and every export check still open from appendix-semantic-encoding-final.json and source-encoding-code-final.json."
+  ],
+  "notes": [
+    "Counts: 11 literal_and_source_encoding, 1 citation (the Thursday commentary), 8 instructions (7 headings and the ark-opening rubric) and 11 canonical_realization make 31. The brief's '9 headings/instructions' counts the citation among them. No Friday heading target exists, which matches integrated-assembly-review: 'n340 opens Friday (no printed heading)'.",
+    "Every target matches the final configuration. All wording selectors use the renamed slugs: veorekh/veomeq, sovev/sovel, haroim/reim, beriatekha/melakhtekha, az/af and khol/kheli. None says main_reading or alternate_reading. The slugs follow the transliteration table. The opening-psalm contexts are rerooted to siddur:hosafot/shir_hakavod/opening_psalm. The Wednesday L24 rule has the outer condition …/levaddo_hu_veniflaot_gedolot/optional and the inner one …/divine_name, with canonical_part null. The Sunday closing payloads (literal and realization) both carry divine_names [\"ה׳\"], so none of the 31 is stale.",
+    "Divine-name directive (source_encoding.py:154-176): it accepts only a list of nonempty strings. It searches only the text and tail slots of tei:body, excluding text already inside j:divineName (on a tail, only ancestors are checked, which is correct). It needs exactly one slot to match and exactly one occurrence in that slot. It splits the text into before + name + after, so the characters don't change and nothing is expanded. Matches are collected before anything is changed, and a name marked by an earlier list entry is excluded from later searches. This meets RC5's markup-only requirement.",
+    "Directive caveats, not blocking: (a) matching is by substring with no word boundary, so the only protection is the exactly-one rule plus the reviewed payload; (b) the tests cover the positive case, two occurrences in one slot ('ambiguous') and an empty string, but not zero matches, two occurrences in different nodes (that error says 'requires exactly one matching element', not 'ambiguous'), a non-list value, or exclusion of an already-marked name; (c) RC5's second clause, about tei:abbr/tei:expan when abbreviations are expanded, is left out on purpose, so expanded builds will show ה׳ abbreviated; (d) the review hash covers the serialized config, not the directive's code, as source-encoding-code-final.json already notes.",
+    "Encoding guidelines checked:",
+    "- Correspondences: the Sunday closing has a paragraph with no milestone and a unit URN under the Thursday hymn's /6. The opening psalm has only @source and source_reference_corresp on verses 7-10. Its unit URN is bible:psalms/24 with start and end, and its note records the s344 metheg differences, which justifies not re-indexing the verses. The Shabbat scripture quotations have chapter and verse correspondences under the poem's /10-/14 quotation contexts.",
+    "- Uncatalogued lines: Monday L23 and Tuesday L54 are closed by end_reference, matching the settled mapping, which I did not reopen.",
+    "- Language, conditions and scope: there are no English targets, so no missing English was filled in. The local wording and optional conditions sit at the poem's root and the variant URNs belong to the text. Each milestone is scoped to a stanza and independent of page breaks (page_start marks scans 328, 330, 331, 332, 333 and 345).",
+    "Recommended cleanup, not required. The fifth-day source note (in both hymn_of_divine_unity_for_the_fifth_day_paytan/he and realization/hymn_of_divine_unity_for_the_fifth_day_paytan/he) says 'the full appendix encoding remains under review'. That is accurate now, but it is a time-bound status statement in a published header note. If you mean to reword it, do so before binding these two hashes, because a later change invalidates both approvals.",
+    "The approved rebindings cover only the 289 keys listed in review-payload-control-rebinding.json, with only_global_control_hashes_changed true. No new transcription approval is inferred for old material."
+  ],
+  "invocation": {
+    "model_usage": [
+      "claude-opus-5-5"
+    ],
+    "configured_model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "22dd3cda-4fe4-4637-937e-450aca4b3e8f"
+  }
+}

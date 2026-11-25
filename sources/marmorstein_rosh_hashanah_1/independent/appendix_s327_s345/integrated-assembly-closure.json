@@ -1,0 +1,27 @@
+{
+  "approved_integrated_assembly": true,
+  "required_changes": [],
+  "limitations": [
+    "This review covers RC6 only: the registry parent and labels. It is not acceptance of the final PDF or export. RC1–RC5, the editorial note cleanup and the HTML separator bookkeeping are taken as closed by integrated-assembly-final.json, and I did not re-review them. new-review-targets.json was not needed and I did not read it.",
+    "registry-parent-check.json does not show the checks working. fix-appendix-registry-parent.py writes every flag in it as a fixed literal. The evidence that matters is the script's assertions, which ran before that file was written: each new record raises if it already exists in the registry copied from the actual main; each context record's parent must equal the expected value; and load_registry must report no errors both before and after the append. The flag 'old_rosh_hashanah_parent_and_labels_removed' is not checked by any code. I checked it by reading the records.",
+    "I cannot tell from the logs which registry directory final-registry-check.log ran against. It reports 37843 records and 0 errors. final-project-validation.json is present, with exit_code 0 for registry, naming, feature and reference. I did not open the naming, feature or reference logs. The full test suite was still running and its result was not available to me.",
+    "Records were rebuilt only for the *.jsonl files present in the actual specs/urn_registry. Any extra jsonl file left in candidate-registry/ from an earlier run would survive. I did not list that directory."
+  ],
+  "notes": [
+    "Root parent: the record urn:x-opensiddur:text:siddur:hosafot has parent urn:x-opensiddur:text:siddur:siddur and label_en 'Supplementary texts'. It appears identically in final-new-registry-records.json and candidate-context-records.json. This matches the chol precedent in occasion-parent-precedent.json, where chol has parent siddur:siddur and siddur:siddur and rosh_hashanah are both top-level with no parent.",
+    "Descendant parents: every hosafot descendant has as its parent its own URN with the last path component removed. That holds for hymns_appendix, shir_hakavod, opening_psalm, quotation, psalms, psalms/24 and 24/7 through 24/10. The poem quotation context chains (shabbat stanzas 10–14) follow the same rule. The script also asserts this for every record with status context.",
+    "Labels: no label_en in either file still has a 'rosh hashanah' prefix. The descendant labels read 'hosafot — shir hakavod — …' while the root reads 'Supplementary texts'. That mismatch is cosmetic and does not block approval.",
+    "Count: final-new-registry-records.json holds 75 records. 31 are context records: 30 quotation or structure records plus hosafot/hymns_appendix. 1 is the canonical name for the fifth-day /6 closing couplet. 43 are wording condition records. candidate-context-records.json holds the 30-record subset without hymns_appendix, which is consistent.",
+    "Optional-addition notes: every */optional wording note now reads 'Independently selects this printed optional addition in its source position; undefined retains its marked position.' Only /fourth_day_paytan/48/optional adds the sentence about the missing opening parenthesis.",
+    "Optional wording cleanup, not required: the canonical fifth_day_paytan/6/barukh_attah_yachid_umeyuchad note still says 'Draft encoding and final batch acceptance remain pending.' The levaddo_hu_veniflaot_gedolot/divine_name note has missing spaces ('scan335,line24', 'stanza50'). Both are outside the RC6 scope and do not affect how the registry resolves, but that process wording should not be committed to the registry.",
+    "Runtime and test claims (full-integrated-assembly-runtime-check.json with 9/9 cases, and empty-poetry-final-focused.log with 52 tests and 62 subtests) were accepted as reported. I did not re-read them in this pass."
+  ],
+  "invocation": {
+    "model_usage": [
+      "claude-opus-5-5"
+    ],
+    "configured_model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "56a84793-e3e1-457f-9904-030064e63c8d"
+  }
+}

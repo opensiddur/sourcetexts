@@ -1,0 +1,25 @@
+{
+  "approved_completion_key_reconciliation": true,
+  "required_changes": [],
+  "notes": [
+    "In verify.report(), a page counts as complete only when its page_completion reading_keys exactly equal sorted(set(fragments[scan])) (verify.py:85). Fragment keys come from four places: unit segment fragments (stem/lang), citations (citation/<stem>/<lang>/<i>, keyed by citation['scan'], verify.py:34-36), documentary instructions that have a scan (instruction/<name>, verify.py:44-47), and front pages and review_payloads. Navigation keys are only added to `pending`. They never go into `fragments` (verify.py:39-43).",
+    "s320, s323 and s326: the only difference between recorded and current is one added citation key on each page: citation/musaf_shir_shel_yom/he/0, citation/rh_minchah_ashrei/he/0 and citation/rh_minchah_haazinu_levi/he/0. These match verify.py:34-36. Each has an existing review record with complete=true, source_review_complete=true, no unresolved items, and source_scans that include that page. The proposal therefore adds no new source acceptance. It brings three citations that were already reviewed into the page ledger.",
+    "s325: the only difference is that navigation/rh_minchah_returns/he is removed. The verifier never puts navigation keys in fragments, so the recorded list can never match, and removing the key is correct. Navigation review still counts. Its review_is_current check feeds `pending`, and `complete` requires `not pending` (verify.py:93). An existing complete review record for that key also lists s325 among its source_scans.",
+    "All four current lists are already sorted and have no duplicates, so they meet the sorted(set(...)) comparison.",
+    "No unit, segment or instruction key is added or dropped on any page apart from the citation and navigation changes above. This is consistent with source_words_changed=false and an empty pending_review_payloads."
+  ],
+  "limitations": [
+    "I read only the packet and verify.py. I did not run verify.py or open readings.json, reviews.json, page_completion.json or the review_payloads/realizations code. So I could not check that the packet's 'current' lists are the real verifier output, and I could not recompute review_is_current hashes. The packet's statement that no reviews are pending is taken on trust.",
+    "I did not check that each page's other completion fields (status='complete', evidence, independent_model) stay as they are, or that each scan is in independently_read. The proposal says only reading_keys change.",
+    "The review record for citation/musaf_shir_shel_yom/he/0 lists source_scans s320 and s321. The verifier files the citation under a single citation['scan']. The packet suggests that is s320, but I did not check whether s321's ledger is affected.",
+    "The existing review records name claude-opus-5-5 as the independent model, which is the same model doing this review. This review covers only the metadata reconciliation. It is not an independent re-review of those acceptances."
+  ],
+  "invocation": {
+    "model_usage": [
+      "claude-opus-5-5"
+    ],
+    "configured_model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "1162ec7a-1dca-4bd3-983f-b1b678702dfe"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "approved_final_exports": true,
+  "may_accept_scans_327_to_345": true,
+  "profiles_approved": [
+    "documentary-hebrew (full PDF, 107 pages)",
+    "documentary / source-parallel (full PDF, 295 pages)",
+    "expanded (full PDF, 352 pages)"
+  ],
+  "required_changes": [],
+  "visual_images_reviewed": [
+    "full-export-qa/screens/documentary-hebrew-sheet-3.png (PDF 89–96)",
+    "full-export-qa/screens/documentary-hebrew-sheet-4.png (PDF 97–104)",
+    "full-export-qa/screens/documentary-hebrew-sheet-5.png (PDF 105–107)",
+    "full-export-qa/screens/documentary-hebrew/page-090.png (enlarged)",
+    "full-export-qa/screens/documentary-hebrew/page-097.png (enlarged)",
+    "full-export-qa/screens/documentary-hebrew/page-101.png (enlarged)",
+    "full-export-qa/screens/documentary-sheet-3.png (PDF 277–284)",
+    "full-export-qa/screens/documentary-sheet-4.png (PDF 285–292)",
+    "full-export-qa/screens/documentary/page-278.png (enlarged)",
+    "full-export-qa/screens/documentary/page-285.png (enlarged)",
+    "full-export-qa/screens/documentary/page-289.png (enlarged)",
+    "full-export-qa/screens/documentary/page-290.png (enlarged)",
+    "full-export-qa/screens/expanded-sheet-3.png (PDF 334–341)",
+    "full-export-qa/screens/expanded-sheet-4.png (PDF 342–349)",
+    "full-export-qa/screens/expanded-sheet-5.png (PDF 350–352)",
+    "full-export-qa/screens/expanded/page-334.png (enlarged)",
+    "full-export-qa/screens/expanded/page-345.png (enlarged)",
+    "full-export-qa/screens/expanded/page-346.png (enlarged)",
+    "full-export-qa/screens/nested-matrix/page-3.png (enlarged)",
+    "export-qa/screens/final/documentary-optional-false-sheet-2.png (mini p9–16)",
+    "export-qa/screens/final/expanded-wednesday-sheet-1.png (mini p1–8)"
+  ],
+  "limitations": [
+    "I read only the images listed above. I did not open nested-matrix-sheet-1.png, the sheet-1/sheet-2 contact sheets of the full books, the other full-page PNGs in the 35-page ranges, or the other mini-variant sheets (documentary-hebrew, documentary-parallel, expanded-undated, documentary-optional-true, and the other sheets of optional-false and expanded-wednesday). The 35-page ranges outside the required sheets were not checked visually.",
+    "The only JSON report I read was final-pdf-mechanical-check.json. For the claims about HTML/browser behaviour, the reader toggle, baseline preservation, profile projection, English context, semantics runtime, integrated assembly, metadata, build, validation and ledgers, I relied on the summaries in the request. I did not read those files or run their scripts.",
+    "I did not inspect the HTML exports visually.",
+    "I did not open the PDFs themselves. I judged them only from the PNG renders.",
+    "This approval covers only scans 327–345 rendered in these exports. It is not a statement about the full 355-page volume. Leaves 346–355 are still incomplete, apart from the Sunday Psalm 24 excerpt on 351 that was already accepted.",
+    "As instructed, I did not re-check wording or pointing against the scans."
+  ],
+  "notes": [
+    "Nested matrix (nested-matrix/page-3.png): all 9 combinations behave correctly. The three outer-false rows have a heading only, with no prayer words and no brackets. Outer-true rows have no brackets; inner-false removes only יְיָ; inner-none shows [יְיָ]. Outer-none rows wrap the whole line in one pair of brackets, with the inner mark kept correctly as [יְיָ] in the none/none row. There are no unmatched or doubled brackets. The running head 'Outer None / Divine Name None' is harmless in a comparison preview.",
+    "Missing-opener footnote: it is present exactly once in each profile with its target line [כנשר ירחף על גוזליו…]: documentary-hebrew PDF 97 (note 101), documentary PDF 285 (note 136), expanded PDF 342 (note 147) and mini expanded-wednesday p4 (note 1). Each sits on the same page as its marker.",
+    "Thursday commentary: in documentary-hebrew PDF 101 (note 104) and documentary PDF 289 (note 139) it is set whole on the page of its target line, with the נ״א note (105 / 140) after it. In expanded it splits across PDF 345→346 and continues before notes 151 and 152, which is normal footnote continuation. Nothing is clipped, overlapping or lost, and the small bold type is readable at enlargement.",
+    "Headings: סדר תשליך, שיר היחוד ליום ראשון…השבת and שיר הכבוד all start cleanly. No heading is stranded at the bottom of a page (e.g. ליום חמישי at the top of PDF 99 / 287, ליום השבת mid-page on PDF 103 / 291). The new appendix follows the previous service ending (half Kaddish, Tashlikh) without overlap, on PDF 89–90 / 277–278 / 334.",
+    "Mini documentary-optional-false p9–16: Wednesday and Thursday flow with no large blank gaps and no empty bracketed rows. Mini expanded-wednesday shows only the Wednesday hymn plus שיר הכבוד, then metadata.",
+    "The overfull \\vbox warnings did not show up as visible clipping, overlap or overflow on any page I inspected.",
+    "Footnote markers in the poetry are set as small numbers between lines at the right edge (e.g. 101, 136, 141). Pre-existing note 98 on PDF 90 is set the same way, so this is house style, not a defect.",
+    "Expanded profile only: the appendix carries English editorial headings ('Supplementary hymns', 'Hymn of Divine Unity — Sunday…Shabbat', 'Hymn of Glory'). These are structural labels, not translations of the poems, so I don't count them as added translation. Confirm they are intended if that matters for the English-context policy.",
+    "The missing-opener note reads 'Supplied delimiter: (' while the rendered line shows the exporter's [ ] optional brackets. This is accurate about the source, but a reader may briefly wonder why the note says '(' and the line shows '['. It is optional wording polish, not a required change.",
+    "Metadata pages (documentary-hebrew PDF 105–107, expanded PDF 350–352) render cleanly: licences, credits, sources (Heidenheim–Marmorstein, plus Birnbaum in expanded) and the genizah notice."
+  ],
+  "invocation": {
+    "model_usage": [
+      "claude-opus-5-5"
+    ],
+    "configured_model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "07e00901-65cb-4168-9dc6-bda0d8ea1555"
+  }
+}

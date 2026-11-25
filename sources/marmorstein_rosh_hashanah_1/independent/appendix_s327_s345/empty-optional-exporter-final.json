@@ -1,0 +1,37 @@
+{
+  "approved_exporter_fix": true,
+  "required_changes": [],
+  "additional_checks": [
+    "Browser check of a reader changing the setting. In the browser check, only documentary-hebrew and expanded-wednesday (both shown with brackets as 'גוים [ואיים]:') clearly have an undecided scope. The documentary-optional-false and -true books were most likely decided at compile time, so the HTML separator scope (markers._conditional_separators) is probably not involved in them. Load the undecided book, set the reader setting to false on the device and assert the text reads 'גוים:'. Then set it to true and assert 'גוים ואיים:'. That is the path the separator scope exists for. The unit test only shows that the seg gets a label and that both scopes share one condition.",
+    "The rubric case in test_rubric_and_marked_scope_lines_keep_their_breaks is weak. It only asserts that 'Rubric' comes before the first \\leavevmode, and it never counts the breaks. So it does not show that a tei:l holding only a rubric keeps its own break. Assert the exact sequence of leaves or the break count, as the marker cases do (==2). Alternatively, show that the TeX for this input is the same as on main.",
+    "Run the full suite (uv run pytest or unittest discover) with $OPENSIDDUR_NODE set. The log gives a pass count (705 passed, 806 subtests) and no test names, so I can't tell whether it covered the HTML book tests or the condition/calendar agreement tests.",
+    "Ranges in ExternalCompilerProcessor: a transcluded range whose end element, or include_tail_after_end tail, falls on the closer of a false scope. The new test only covers whole-file compiles for the External processor. I did not trace the external_compiler range loops to confirm they reach _carry_dropped_tail or _prefix_before_tail.",
+    "Two optional inserts side by side in HTML: 'word <A/>a<endA/> <B/>b<endB/>:' with both undecided. The separator scope takes B's condition and only the whitespace just before B. If both are false on the device, the space before A is still there, giving 'word :'. Print handles this correctly, because the stripping in _carry_dropped_tail runs on everything gathered so far. Check whether the Mahzor has such pairs.",
+    "Whitespace left before an omission that sits in front of an output element, for example 'word\\n<milestone/>\\n<c false/>x<end/>:'. Only the milestone's tail is trimmed, and the newline before the milestone still prints as a space. This is a coverage gap, not a regression.",
+    "Each separator scope adds one to Feature.cids and Feature.scopes (markers.py:182-186). Characters are not inflated, because the seg holds only whitespace. Confirm the settings panel or ranking doesn't show the inflated scope counts.",
+    "Carried over and still unverified: whether suppressing an empty tei:l's lb in one parallel column affects reledpar pstart pairing or f:trim-trailing-breaks; and a blank row from a p:part='last' fragment left holding only markers."
+  ],
+  "limitations": [
+    "Read-only review: I ran no tests, transforms or browser checks, and could not search the code. I read compiler.py:170-215, 845-900, 1126-1185, 1252-1318 and 1443-1497; all of inline_compiler.py, whitespace.py, html/markers.py and the new test file; reledmac.xslt:3381-3411; the test log; the browser-check JSON and its script.",
+    "I did not read the body of f:sets-text, the html.xslt or condition.js handling of an untyped tei:seg, or external_compiler.py.",
+    "This approves code only. It does not accept any scans, final PDFs or visual layout. Those are being reviewed separately."
+  ],
+  "notes": [
+    "The earlier required change is resolved. close_up_whitespace (compiler.py:1475-1496) is back to collapsing only [ \\t]{2,} runs and trailing spaces before a newline. The new test shows 'Lord ; and . . . then', French 'mot : suite' and an NBSP before ':' all come through unchanged.",
+    "The cleanup now happens only where a removed false scope is joined to the text before it. _handle_conditional_element resets _omitted_conditional_end each time it is called (compiler.py:1131). It records the closer only when the scope it pops was FALSE when the opener was evaluated (1178-1180), and never evaluates the condition again at the closer. _prefix_before_tail acts only when child is that same element (an lxml proxy, kept alive by the reference held), and clears it once used. The attribute is set to None in __init__ (207), so a dropped settings element or comment can't raise AttributeError. If state is left over, for example a false closer with no tail, nothing goes wrong, because the identity check can only match that closer. No cached source XML is changed: only output text and tails are rewritten.",
+    "Inside nested false scopes, the inner closer is recorded, but _carry_dropped_tail and the inline tail branch both return early while the outer scope is still on the stack. The outer closer's own call to _handle_conditional_element then resets and sets the state again. This is correct.",
+    "whitespace.prefix_after_omission removes trailing [ \\t\\r\\n] only when the closer's tail begins with closing punctuation for the language (French: only , . ׃). It never fires if the tail begins with whitespace (a space the source prints before the punctuation is kept), with '. .' or '..' (ellipses), or after NBSP or U+202F, which the regex does not match. Language comes from the closer's parent in the source, which is correct. The punctuation list is conservative: ')', ']', '…' and closing quotes are not included, so the source spacing before them stays. That is the safe choice.",
+    "The inline compiler uses the same helper at the same point, and the test covers all three processors × false/true/undefined × six spacing cases, including the newline-and-indent wrap.",
+    "markers._conditional_separators now treats newlines as separators and uses the same closes_omitted_insert test, so spaced ellipses and French spacing get no separator scope (as the test shows). The seg is inserted before the marked opener, so the brackets and the text they enclose are unchanged. It runs before _number_scopes, so the copy keeps p:pinned and gets the same expression index.",
+    "In the XSLT, the cheap exists(...) test now runs before f:sets-text. Marked openers and all closers keep the lb, so a ']' on a line of its own does not run into the next verse. Explicit layout elements and p:part='last' keep it too. A line holding only a silent marker gets no empty row, which is what was intended.",
+    "No source readings or canonical identities are touched by this code."
+  ],
+  "invocation": {
+    "model_usage": [
+      "claude-opus-5-5"
+    ],
+    "configured_model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "755fb011-c422-49ea-9b09-1a807dbb8ad8"
+  }
+}

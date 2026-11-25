@@ -1,0 +1,65 @@
+{
+  "approved_integrated_assembly": false,
+  "required_changes": [
+    {
+      "id": "RC1",
+      "location": "/tmp/mahzor-s327/check-integrated-assembly.py:9,14,32,39,43; integrated-assembly-runtime-check.json",
+      "defect": "The 'integrated' runtime check does not exercise the integrated artifacts. It uses directory=qa-projects/project, compiles 'qa_hymns_appendix.xml' (line 43) instead of machzor_expanded-opensiddur-he/index.xml#section_hymns_appendix, takes its base settings from export-qa/expanded-undated.yaml (book.file_name qa_hymns_appendix.xml) instead of full-integrated-projects/settings, and takes its documentary facsimile and choice assertions from export-qa/documentary-hebrew.print.xml, which was built from qa-projects (appendix-export-qa-manifest.json:3). Line 39 also forces parallel.projects=[], so the real expanded settings (parallel: prayerbook_for_the_new_year-marmorstein-1965-en) were never tested for 'no English fallback'. The 'no_declaration_leak' assertion (line 50) runs only on the isolated QA file, so it cannot show that the documentary j:declare scopes stop before the following scan-351 daily-psalms division (heidenheim index.xml:1370-1376).",
+      "remedy": "Re-run every assertion against full-integrated-projects: the documentary compile of prayerbook_for_the_new_year-heidenheim-1965-he/index.xml with settings/prayerbook_for_the_new_year-heidenheim-1965-he/documentary.yaml, and the expanded compile of index.xml with settings/machzor_expanded-opensiddur-he/undated.yaml, parallel left as configured, for hebrew-day undefined and 1–7. Assert: (a) the 19 body page breaks n326..n344 appear in order inside the appendix; (b) no opensiddur:variant declaration from the appendix is in scope at the scan-351 division; (c) no Marmorstein English is paired with, or substituted for, any appendix unit; (d) the integrated index's enclosing state leaves hebrew-day unforced at the appendix."
+    },
+    {
+      "id": "RC2",
+      "location": "full-integrated-projects/project/machzor_expanded-opensiddur-he/index.xml:5467",
+      "defect": "The printed rubric 'כשפותחין ארון הקדש לאנעים זמירות יש לאמר ד׳ פסוקים אלו.' is typed tei:note type=\"description\". It tells the reader to say the four verses when the ark is opened, so it is an instruction (JLPTEI-3 §Instructions / Kinds of rubric: a rubric saying when or what to say is an instruction; one saying who says it is a description). The documentary frame types the same text correctly: hymns_appendix.xml:130 type=\"instruction\".",
+      "remedy": "Emit it as tei:note type=\"instruction\" xml:lang=\"he\" in the expanded spine (the generator's 'rubrics' field in integrated-assembly-plan.json expanded.order[7]), matching the documentary encoding."
+    },
+    {
+      "id": "RC3",
+      "location": "appendix-selector-registry-records.json:349-354 (siddur:rosh_hashanah/hosafot/hymns_appendix); candidate-context-records.json:110-122 (siddur:rosh_hashanah/hosafot, …/hosafot/shir_hakavod, …/opening_psalm and its quotation children); hymns_appendix.xml:22,36; shir_hakavod_opening_psalm.xml:22,37-56; machzor_expanded index.xml:5468; heidenheim index.xml:1370",
+      "defect": "These records mint `hosafot` as a new second path component under `rosh_hashanah`. SIDDUR_URN_SCHEME.md:72-82,107-113 makes `hosafot` a closed-list occasion: units said on every occasion in addition to what the occasion calls for. It is not a service, and the occasion and service lists are closed precisely so that two siddurim produce the same `siddur:` URN. `rosh_hashanah/hosafot/...` puts an occasion token in the service/unit slot, so it cannot align with another book's `siddur:hosafot/...` additions. The daily Unity hymns and Anim Zemirot are exactly the additions that occasion describes. Context records for `rosh_hashanah/hosafot` are new in this candidate, so this is not inherited precedent.",
+      "remedy": "Re-root the structural contexts under the closed-list occasion, e.g. `siddur:hosafot/hymns_appendix` and `siddur:hosafot/shir_hakavod/opening_psalm` (with its quotation children). Alternatively, if the book is held to confine them to Rosh Hashanah, drop the token (`siddur:rosh_hashanah/hymns_appendix`). Then regenerate the idnos, div corresps, quotation milestones, expanded transclusion and documentary index transclusion. Pre-1.0, replace the URNs outright with no alias."
+    },
+    {
+      "id": "RC4",
+      "location": "appendix-selector-registry-records.json:228-235 (urn:x-opensiddur:condition:poem:hymn_of_divine_unity_for_the_fourth_day_paytan/levaddo_hu_veniflaot_gedolot/divine_name)",
+      "defect": "The nested Divine Name selector's record copies the outer L24 optional record. Its label_he is the whole couplet incipit 'לְבַדּוֹ יְיָ הוּא וְנִפְלָאוֹת גְּדוֹלוֹת. עוֹשֶׂה אֵל', identical to the …/optional record at line 225. Its note is the generic 'Independent printed optional addition … Human834/835 govern missing opener…', which describes neither what this selector selects (the parenthesised (יְיָ) inside L24) nor how it relates to the outer scope. A reader of the registry cannot tell the two selectors apart.",
+      "remedy": "Set label_he to the inner printed span (יְיָ, with its printed parentheses if that is the house style). Set the note to say that it independently selects the Divine Name inside the uncatalogued earlier L24 couplet; that it is evaluated only where the outer …/levaddo_hu_veniflaot_gedolot/optional scope is kept; and that undefined retains the printed position. Remove the 834 reference, which concerns only s335 L22 (/48)."
+    },
+    {
+      "id": "RC5",
+      "location": "full-integrated-projects/project/prayerbook_for_the_new_year-heidenheim-1965-he/barukh_attah_yachid_umeyuchad.xml:39",
+      "defect": "The abbreviated Tetragrammaton ה׳ in 'ברוך אתה יחיד ומיוחד ה׳ אחד ושמו אחד:' is plain text. JLPTEI-3 §Special inline tags requires j:divineName on a name of God, Tetragrammaton included. Every other appendix unit marks יְיָ (e.g. shir_hakavod_opening_psalm.xml:47,57; anim_zemirot.xml:61), so divine-name handling downstream misses only this occurrence. This is markup only and does not change the settled source wording.",
+      "remedy": "Encode as <j:divineName>ה׳</j:divineName>. If the project expands abbreviations (expanded settings use readings.abbreviations: expanded), wrap it as tei:choice/tei:abbr+tei:expan inside or around the divineName, following whatever convention the baseline uses for ה׳. Then re-run the byte and word-fidelity check for this unit."
+    }
+  ],
+  "additional_checks": [
+    "Run, against full-integrated-projects with the 43 candidate selector records, the structural context and the 32 quotation context records merged into a scratch registry: `opensiddur.common.urn_registry --check`, `opensiddur.exporter.validate_features` (every opensiddur:variant feature name in hymns_appendix.xml and the poem files must be registered), `opensiddur.common.validate_names` and `opensiddur.exporter.validate_urn_references` for both projects. The only validation evidence seen is schema validity for two files (shabbat-assembly-heading-check.json).",
+    "Wording selectors: the labels and notes correctly fix each selector to its exact printed word, but the URN slugs (`/44/main_reading`, `/44/alternate_reading`, etc.) name an edition-relative role, not the wording. JLPTEI-3 says a variant URN belongs to the text, not to an edition, so another edition printing ועומק as its main text would naturally mint `/44/main_reading` with the opposite meaning. Confirm that the accepted registry already uses main_reading/alternate_reading as a corpus convention. If it does not, rename them to wording-derived ASCII slugs before the records are registered.",
+    "Compare the s344 Psalm 24:7–10 (shir_hakavod_opening_psalm.xml) with the project's existing canonical bible:psalms/24 realisation used at heidenheim index.xml:1375. SIDDUR_URN_SCHEME.md:255-258 says a second context transcludes the same URN when the words are identical, and that a `siddur:` URN holds no words of its own (:39-42). If pointing and punctuation agree, the opening-psalm context should transclude bible:psalms/24/7-10 instead of re-realising the verses. If they differ, record the difference in the file's encoding note to justify the @source-only occurrence.",
+    "Page breaks inside the Thursday standoff commentary (hymn_of_divine_unity_for_the_fifth_day_paytan.xml:40, pb n=14 and n=15) repeat pages that also break in the body. The facsimile assertion excludes them (not(ancestor::t:note)), but the PDF and HTML stages may emit duplicate page markers or scan links for pages 14–15. Check the rendered output.",
+    "The expanded section_hymns_appendix (index.xml:5339-5473) has no service-time gate, unlike its neighbouring sections, so it is emitted in every service-specific expanded build. The documentary book places Shir haYichud after Musaf (heidenheim index.xml:1347). Confirm that an ungated reference appendix is intended for every variant in settings/machzor_expanded-opensiddur-he/.",
+    "The export checks still outstanding from appendix-semantic-encoding-final.json remain open: rendered whitespace at the listed lines, an empty tei:l when a whole-line scope is false, the remaining L24 undefined combinations as rendered, and /50 resolving only to the L28 scope at export."
+  ],
+  "limitations": [
+    "Read-only review. No scripts, validators, compiler or exporter were run, no scans or PDFs were viewed, and every runtime result is taken from the reported JSON.",
+    "The generated Monday–Thursday and Wednesday poem bodies, the first Shabbat words module, and most of appendix-units-assembled.json (I read only the Shabbat /10–/14, Anim Zemirot, opening-psalm and Sunday-closing entries plus the first unit's head) were not read in full. build.py and source-encoding-code-final.json were not read. Settings files were read only for machzor_expanded-opensiddur-he/undated.yaml and prayerbook_for_the_new_year-heidenheim-1965-he/documentary.yaml, because the Read tool cannot list directories.",
+    "I could not search the accepted registry (specs/urn_registry/*.jsonl), so precedent for `hosafot` or for main_reading/alternate_reading slugs is unconfirmed. RC3 rests on these contexts being listed as new candidate records.",
+    "I did not compare candidate integrated-source/readings.json with the baseline readings.json, so the claim that all 507 old units and 902 witness payloads are preserved is taken from integrated-assembly-plan.json."
+  ],
+  "notes": [
+    "Confirmed as sound: the documentary MAIN-wording j:declare/j:endDeclare pairs sit inside each day's tei:div around a single transclusion (hymns_appendix.xml:45-122), so they cannot leak in the XML structure. The expanded spine carries no declarations. Day gates use registered opensiddur:day-of-week/hebrew-day 1–7, consistent with JLPTEI-3 (1 = Sunday) and the existing tashlikh gate (index.xml:5322-5326). Headings stay in the frames and outside every reusable root, and the Shabbat root file has no tei:head. Anim Zemirot and the opening psalm sit outside the day gates. The Sunday closing is transcluded once and only under the Sunday gate. CC0 licence and Codex respStmt credits are present on every new file, and the expanded index keeps the Heidenheim source bibl and the coverage note that names the seven Unity hymns and the Hymn of Glory.",
+    "Selector counts match the brief: 30 …/optional records, 6 main/alternate pairs (12 records) and 1 nested …/divine_name make 43, plus 1 structural context. The 32 quotation and structural context records are all status=context and mint no new prayer or poem identity.",
+    "Page order is consistent in the files read. pb n326 and n333 move to the printed headings (hymns_appendix.xml:38,74); n340 opens Friday (no printed heading); n343 falls in the Shabbat words module before the Hymn of Glory heading and instruction (facs n343); n344 falls inside Anim Zemirot. Pages 1–19 match the biblScope values.",
+    "Not reopened, as instructed: the Sunday unpointed closing as the named child of Thursday /6, the Wednesday L24 (@source=/50, non-indexing) versus L28 (/50) mapping and the /53→/50→/54 order, the 834 missing opener and the 835 independent parentheses.",
+    "Non-blocking cleanups: hymns_appendix.xml and hymn_of_divine_unity_for_the_day_of_shabbat_paytan.xml lack the tei:biblScope that the other new files carry (pages 1–19 and 16–18). The expanded Hebrew heading 'שיר הכבוד.' (index.xml:5465) keeps the print's full stop, unlike its sibling headings. The quotation context records for chronicles_1, daniel and nehemiah lack the `references` field that the psalms records carry. The documentary Musaf direction at heidenheim index.xml:1347 could take an optional-page-reference to the appendix, like the instruction at :1362.",
+    "This is not approval of a final PDF or export."
+  ],
+  "invocation": {
+    "model_usage": [
+      "claude-opus-5-5"
+    ],
+    "configured_model": "claude-opus-5-5",
+    "effort": "medium",
+    "session_id": "71757f6a-b9ca-4826-a6bf-b998002f0a68"
+  }
+}
