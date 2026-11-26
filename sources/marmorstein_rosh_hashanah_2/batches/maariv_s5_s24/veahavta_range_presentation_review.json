@@ -1,0 +1,41 @@
+{
+  "status": "approved_sampled_excerpt_presentation",
+  "scope": "Deuteronomy6:5–9 Hebrew and parallel excerpt PDF physical page3, plus corresponding recorded browser HTML QA. Not complete scans, batch, service/conditions or full-book export acceptance.",
+  "exporter_dependency": {
+    "pr": "https://github.com/opensiddur/opensiddur-processor/pull/341",
+    "commit": "1b9fdbd",
+    "merge_status": "unmerged_at_review"
+  },
+  "actual_model": "claude-opus-5-5",
+  "requested_effort": "medium",
+  "review_sha256": "f6ae2c89e70253fe358765a3b3e00fb3c3fd1f78379d287c2dc45a06f60e51e7",
+  "raw_review_sha256": "ae291c6d5a175b578b3a7bc2d801c5a9e04bd16397db53ba48d2137549990ce8",
+  "output_qa_sha256": "1acf56984f1de45e2b41f190fbb53eeb5d636f951f31771ac5b5f567440f9b61",
+  "test_result": "238 passed,159 subtests passed",
+  "artifact_sha256": {
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/veahavta_range_reviewed/hebrew.electronic.xml": "faafd4d751dc0f6b44f85d0e39f16fe553bbfa182002567d9ce3759930170f31",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/veahavta_range_reviewed/hebrew.html": "10a22ed0f9495fff5c1eb648ec3f148664da3bc59a6d73087038fa32125c4926",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/veahavta_range_reviewed/hebrew.tex": "f8842b94e7aa3247d0741ad85aa9c6c5f8a9cfa0955d78e4ea8f43862c4b684b",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/veahavta_range_reviewed/parallel.print.xml": "f2393f240b529e294aedcdd32bd2b5b3063691c9585fc2be2898eef8f18de360",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/veahavta_range_reviewed/parallel-page-3.png": "ab10bff54a8f9c55c9c0e51cc885ac7b692ce130624600b634795f04a98b3ddf",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/veahavta_range_reviewed/parallel.html": "52a3e46eead9425bc5adfda80be4eec8ccbca6cc1522061b9e915e3f9855e05c",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/veahavta_range_reviewed/hebrew-browser.jpg": "35fe33593c1c4afed77543653a3aca7f03d5c1fe80339b5dc22ad545cd0ffc5f",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/veahavta_range_reviewed/hebrew.yaml": "41d77f200b269a379f1e31f0bc0fc8768f9827090e5e9ffe8883e141b15201ce",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/veahavta_range_reviewed/hebrew.print.xml": "7a059e2c37bea5369a72d820833af4bf1c84327cd8f82c1228f6b8ad4a9436f6",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/veahavta_range_reviewed/hebrew-page-3.png": "c289daedd75fc7a64ce466877886901040eaf993ed58db9a7d01e911b7c04ca7",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/veahavta_range_reviewed/hebrew.pdf": "fd357f5e7df61093fded0e363738c4257885a87c079589ec51cf020b44098bd2",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/veahavta_range_reviewed/parallel.tex": "d1675523882602779b6c12286c1cd684a124ddfbc04e937abceed9688c0d049f",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/veahavta_range_reviewed/parallel-browser.jpg": "0a925530ddc9003d40e550877056c73471c355affcf7666974f43a2d93cf2d0f",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/veahavta_range_reviewed/parallel.yaml": "dc1a7202d385a76f81b2b3ce78cabfa96cd11fa2f9901f838cb5147a2f0a3c23",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/veahavta_range_reviewed/parallel.electronic.xml": "70c7b9976810a2075432e95c0c795be380113c3ccd6deb976997b4dc5d5008a6",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/veahavta_range_reviewed/parallel.pdf": "8bde66038187941d479632aa4fb6a1ae0f54bd9b7953f8053a42634f99ba2e1a",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/veahavta_range_reviewed/parallel-mobile.jpg": "1694a0c493c2cf6dabf400395ab8504ce5425fa1349ca08b71a502c923408bac"
+  },
+  "accepted_nonblocking_limitations": [
+    "Same-line arrows fan outward from text; order may oppose text reading direction.",
+    "Multiple HTML markers on a final column line may add gutter height.",
+    "Insufficient PDF margin space fails with an actionable message.",
+    "No all-book render or full binding/pagination/parallel synthetic matrix claimed."
+  ],
+  "whole_scan_acceptance": false
+}
