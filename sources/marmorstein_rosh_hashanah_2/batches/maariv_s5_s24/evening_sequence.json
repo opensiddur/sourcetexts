@@ -640,7 +640,8 @@
           },
           "targets": [
             "urn:x-opensiddur:text:poem:yigdal"
-          ]
+          ],
+          "separate_heading": true
         }
       ]
     }
@@ -666,5 +667,15 @@
     "No first-day Shabbat additions are imported into second-day text; real calendar values, not fictitious dates, control selection.",
     "The expanded second-night entry is selected by its own profile within machzor_expanded. The existing first-day index/profile remain byte-identical; a single undated combined index cannot choose both editions with one global source priority. Each per-day profile uses one shared bilingual canonical recitation spine."
   ],
-  "titqabbal_source_sha256": "1c1041f5d35bed39080ed6a2d82f08c888f45ec004308d9f68c120defbb2fc41"
+  "titqabbal_source_sha256": "1c1041f5d35bed39080ed6a2d82f08c888f45ec004308d9f68c120defbb2fc41",
+  "dependency_provenance_sha256": {
+    "kaddish_yatom.xml": [
+      "0c591b30a24894bc314c8c93838fac5c7f4489b5299abd7b05bd9d62b257b7fb",
+      "eacbf348bd17c3a1172d2b1a094d0a7babeb73be8fb4275a5c1a603a219e8cd3"
+    ],
+    "yigdal.xml": [
+      "fa23eff521c1da47436122bc8e2262bf42b47e44ea6e78f542d9f0e1ca70b4a0",
+      "d43b06440033dd723a07a9cf9aaaf300767497a10de9225864dda00283373e2e"
+    ]
+  }
 }

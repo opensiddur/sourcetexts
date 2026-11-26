@@ -22,8 +22,8 @@
     23,
     24
   ],
-  "status": "in_progress",
-  "accepted": false,
+  "status": "accepted",
+  "accepted": true,
   "gates": {
     "scope_images": {
       "status": "passed",
@@ -58,7 +58,7 @@
       "evidence": [
         "primary/"
       ],
-      "note": "All20 primary image drafts recorded before consulting their independent page readings. Fine marks remain pending adjudication, so this is not source acceptance."
+      "note": "All 20 primary image drafts recorded before independent readings; adjudication now complete."
     },
     "blind_second_reading": {
       "status": "passed",
@@ -66,7 +66,7 @@
         "../../independent/maariv_s5_s24/review_status.json",
         "../../independent/maariv_enlarged/manifest.json"
       ],
-      "note": "Full20-scan blind reading supplemented by fresh Hebrew sessions that each report reading the full page and all3 enlarged bands. Fine-mark disputes remain in adjudication, not accepted."
+      "note": "Full 20-scan blind reading supplemented by enlarged-band readings; disagreements adjudicated and source approval recorded."
     },
     "adjudication": {
       "status": "passed",
@@ -164,65 +164,102 @@
       "note": "All20 source pages5–24 independently read/adjudicated and application-verified; no remaining reading disputes. Not complete batch acceptance."
     },
     "encoding": {
-      "status": "pending",
+      "status": "passed",
       "evidence": [
-        "draft_units.json",
-        "shema_excerpt_encoding_review.json",
-        "shema_excerpt_qa.json",
-        "emet_veemunah_encoding_review.json",
-        "s12_scripture_encoding_review.json",
-        "hashkivenu_kaddish_encoding_review.json"
+        "../../independent/final_encoding_closure/response.json",
+        "current_encoding_qa.json",
+        "acceptance.json",
+        "acceptance_run.json",
+        "../../independent/evening_presentation/final_closure/response.json",
+        "../../independent/evening_presentation/code_closure_v4/response.json"
       ],
-      "note": "Complete Shema Yisrael verse encoded in Hebrew and printed English; its encoding/pairing and sampled PDF row independently approved. Remaining batch material not yet encoded/approved. All whole-page and batch acceptance gates stay pending."
+      "note": "Complete batch approved at frozen input/output hashes; see acceptance.json and independent closure records."
     },
     "alignment": {
-      "status": "pending",
+      "status": "passed",
       "evidence": [
-        "alignment_candidates.json",
-        "shema_excerpt_encoding_review.json",
-        "deuteronomy_6_5_to_9_alignment.json",
-        "veahavta_range_encoding_review.json",
-        "veahavta_range_qa.json",
-        "shema_remaining_encoding_review.json",
-        "emet_veemunah_encoding_review.json",
-        "s12_scripture_encoding_review.json",
-        "hashkivenu_kaddish_encoding_review.json"
+        "../../independent/final_encoding_closure/response.json",
+        "current_encoding_qa.json",
+        "../../independent/evening_spine_encoding/frozen_closure_response.json",
+        "acceptance.json",
+        "acceptance_run.json",
+        "../../independent/evening_presentation/final_closure/response.json",
+        "../../independent/evening_presentation/code_closure_v4/response.json"
       ],
-      "note": "All complete Shema scripture ranges (Deut6:4/5–9,11:13–21;Numbers15:37–41) independently approved for source text/encoding/alignment and configured excerpt presentation. Source10 and English9/11 readings approved. Whole-service/whole-scan gates remain pending."
+      "note": "Complete batch approved at frozen input/output hashes; see acceptance.json and independent closure records."
     },
     "recitation_conditions": {
-      "status": "pending",
-      "evidence": []
+      "status": "passed",
+      "evidence": [
+        "../../independent/evening_spine_encoding/frozen_closure_response.json",
+        "acceptance.json",
+        "acceptance_run.json",
+        "../../independent/evening_presentation/final_closure/response.json",
+        "../../independent/evening_presentation/code_closure_v4/response.json"
+      ],
+      "note": "Complete batch approved at frozen input/output hashes; see acceptance.json and independent closure records."
     },
     "independent_encoding_order_audit": {
-      "status": "pending",
-      "evidence": []
+      "status": "passed",
+      "evidence": [
+        "../../independent/final_encoding_closure/response.json",
+        "current_encoding_qa.json",
+        "../../independent/evening_spine_encoding/frozen_closure_response.json",
+        "acceptance.json",
+        "acceptance_run.json",
+        "../../independent/evening_presentation/final_closure/response.json",
+        "../../independent/evening_presentation/code_closure_v4/response.json"
+      ],
+      "note": "Complete batch approved at frozen input/output hashes; see acceptance.json and independent closure records."
     },
     "mechanical_checks": {
-      "status": "pending",
-      "evidence": []
+      "status": "passed",
+      "evidence": [
+        "acceptance_checks.json",
+        "acceptance_matrix.json",
+        "compiled_words_qa.json",
+        "acceptance.json",
+        "acceptance_run.json",
+        "../../independent/evening_presentation/final_closure/response.json",
+        "../../independent/evening_presentation/code_closure_v4/response.json"
+      ],
+      "note": "Complete batch approved at frozen input/output hashes; see acceptance.json and independent closure records."
     },
     "exports": {
-      "status": "pending",
+      "status": "passed",
       "evidence": [
         "veahavta_range_presentation_review.json",
         "shema_remaining_presentation_review.json",
-        "emet_veemunah_presentation_review.json"
+        "emet_veemunah_presentation_review.json",
+        "acceptance.json",
+        "acceptance_run.json",
+        "../../independent/evening_presentation/final_closure/response.json",
+        "../../independent/evening_presentation/code_closure_v4/response.json"
       ],
-      "note": "Veahavta and remaining Shema scripture excerpts independently approved as configured PDF/HTML outputs using separate exporter PR341. Remaining excerpts use typography.notes.anchor=superscript to attach note markers in RTL output. Whole-batch exports/presentation pending; no additional complete scan accepted. Emet veEmunah Hebrew/parallel excerpt presentation independently approved using merged PR341."
+      "note": "Complete batch approved at frozen input/output hashes; see acceptance.json and independent closure records."
     },
     "independent_presentation_review": {
-      "status": "pending",
+      "status": "passed",
       "evidence": [
         "veahavta_range_presentation_review.json",
         "shema_remaining_presentation_review.json",
-        "emet_veemunah_presentation_review.json"
+        "emet_veemunah_presentation_review.json",
+        "acceptance.json",
+        "acceptance_run.json",
+        "../../independent/evening_presentation/final_closure/response.json",
+        "../../independent/evening_presentation/code_closure_v4/response.json"
       ],
-      "note": "Veahavta and remaining Shema scripture excerpts independently approved as configured PDF/HTML outputs using separate exporter PR341. Remaining excerpts use typography.notes.anchor=superscript to attach note markers in RTL output. Whole-batch exports/presentation pending; no additional complete scan accepted. Emet veEmunah Hebrew/parallel excerpt presentation independently approved using merged PR341."
+      "note": "Complete batch approved at frozen input/output hashes; see acceptance.json and independent closure records."
     },
     "acceptance": {
-      "status": "pending",
-      "evidence": []
+      "status": "passed",
+      "evidence": [
+        "acceptance.json",
+        "acceptance_run.json",
+        "../../independent/evening_presentation/final_closure/response.json",
+        "../../independent/evening_presentation/code_closure_v4/response.json"
+      ],
+      "note": "Complete batch approved at frozen input/output hashes; see acceptance.json and independent closure records."
     }
   },
   "scope_note": "Complete opening prayer and second-night evening service through the end of Aleinu; source instructions name Mourner Kaddish and Yigdal. Morning begins on scan25.",
