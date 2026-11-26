@@ -1,0 +1,70 @@
+{
+  "status": "adjudicated_excerpt_draft_not_batch_acceptance",
+  "input_sha256": {
+    "batches/maariv_s5_s24/working/s6.json": "a8a39aa4f3a52a96b0bf3d299a34c1c1df3d1f3e9fd035ff3951e906ab22b003",
+    "batches/maariv_s5_s24/working/s7.json": "e4094e2b64822e9ceedda66314a84a671d5d757a5725678b345fb5d7cc5b98c0",
+    "batches/maariv_s5_s24/questions.json": "b38d16664eaeef3039147db4c5f8685fd0c9c9884f7b69888a7c0c050e446765",
+    "batches/maariv_s5_s24/accent_adjudications.json": "ad8c48ca6cfaf00bb1c83dc977aa4428c2e93f74d285757bc2db7dbb5d8b86a0",
+    "batches/maariv_s5_s24/shema_punctuation_adjudication.json": "37138c0bfd65249fede1f7d8b312fa0025200e43537554a545edf3559bf152ae"
+  },
+  "review_scope": "Only complete Shema Yisrael verse; no whole source page accepted and no service index rewritten.",
+  "normalizations": [
+    {
+      "kind": "divine_name_holam",
+      "reason": "User instruction723: project convention adds holam even where unprinted; the raw working reading is unchanged.",
+      "source": "יְהוָ֥ה",
+      "encoded": "יְהֹוָ֥ה",
+      "occurrences": 2
+    }
+  ],
+  "chapter_scope_note": "Bibliographic chapter milestone n6 is uncorresponded because this excerpt is not a full-chapter witness. The exact Deut6:4 verse has the existing canonical correspondence, terminated before unrelated content.",
+  "units": [
+    {
+      "file": "shema_yisrael",
+      "urn": "urn:x-opensiddur:text:prayer:shema/shema_yisrael",
+      "verse_urn": "urn:x-opensiddur:text:bible:deuteronomy/6/4",
+      "chapter": "6",
+      "verse": "4",
+      "titles": {
+        "he": "שמע ישראל",
+        "en": "Hear, O Israel"
+      },
+      "he": {
+        "scan_page": 6,
+        "printed_page": "2",
+        "citation": "דברים ו:ד",
+        "content": [
+          "שְׁמַ֖",
+          {
+            "large_letter": "ע"
+          },
+          " יִשְׂרָאֵ֑ל ",
+          {
+            "divine_name": "יְהֹוָ֥ה"
+          },
+          " אֱלֹהֵ֖ינוּ ",
+          {
+            "divine_name": "יְהֹוָ֥ה"
+          },
+          " ׀ אֶחָֽ",
+          {
+            "large_letter": "ד"
+          },
+          ":"
+        ]
+      },
+      "en": {
+        "scan_page": 7,
+        "printed_page": "2",
+        "citation": "Deuteronomy 6:4",
+        "content": [
+          "Hear, O Israel, the Lord is our God, the Lord is One."
+        ]
+      },
+      "adjudications": [
+        862
+      ],
+      "pending": "Independent encoding/alignment/export checks as part of scans5–24."
+    }
+  ]
+}

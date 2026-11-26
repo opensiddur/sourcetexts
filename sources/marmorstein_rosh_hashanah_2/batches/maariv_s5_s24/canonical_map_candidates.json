@@ -30,7 +30,12 @@
         7
       ],
       "status": "identity_candidates_verified_in_registry_pending_independent_extent_review",
-      "occurrence_note": "Place German/English speaker labels and quorum condition at the service occurrence. Yitbarakh sidebar belongs to its evidenced recitation moment; verify order independently."
+      "occurrence_note": "Place German/English speaker labels and quorum condition at the service occurrence. Yitbarakh sidebar belongs to its evidenced recitation moment; verify order independently.",
+      "quorum_feature": {
+        "type": "opensiddur:quorum",
+        "feature": "minyan",
+        "value": true
+      }
     },
     {
       "key": "maariv_aravim",
@@ -216,7 +221,12 @@
         13
       ],
       "status": "identity_candidates_verified_in_registry_pending_independent_extent_review",
-      "condition": "Quorum; caller and congregation directions remain in structure."
+      "condition": "Quorum; caller and congregation directions remain in structure.",
+      "quorum_feature": {
+        "type": "opensiddur:quorum",
+        "feature": "minyan",
+        "value": true
+      }
     },
     {
       "key": "adonai_sefatai",
@@ -298,7 +308,13 @@
         17
       ],
       "status": "identity_candidates_verified_in_registry_pending_independent_extent_review",
-      "condition": "Motzaei Shabbat only; explicit end before Vattitten Lanu."
+      "condition": "Motzaei Shabbat only; explicit end before Vattitten Lanu.",
+      "conditional_feature": {
+        "type": "opensiddur:holiday-aggregate",
+        "feature": "motzaei-shabbat",
+        "value": true
+      },
+      "reference_pattern": "hasiddur_hashalem-birnbaum-1949-he/rh_qedushat_hayom.xml or rh_kiddush.xml; use only the encoding pattern, preserving this edition’s actual words and boundaries."
     },
     {
       "key": "vattitten_lanu",
@@ -341,7 +357,12 @@
         19
       ],
       "status": "identity_candidates_verified_in_registry_pending_independent_extent_review",
-      "occurrence_note": "Parenthetical Malkenu is optional text, not an invented replacement; determine source function before encoding."
+      "occurrence_note": "Parenthetical Malkenu is optional text, not an invented replacement; determine source function before encoding.",
+      "optional_feature": {
+        "type": "opensiddur:variant",
+        "feature": "urn:x-opensiddur:condition:prayer:amidah/melokh_al_kol_haolam/malkenu",
+        "value": true
+      }
     },
     {
       "key": "avodah",
@@ -424,7 +445,12 @@
       ],
       "status": "identity_candidates_verified_in_registry_pending_independent_extent_review",
       "printed_words": false,
-      "expanded_dependency": "Direction only. Seek this volume’s later full witness first; otherwise record compatible Hebrew dependency. Do not supply an unprinted English translation."
+      "expanded_dependency": "Direction only. Seek this volume’s later full witness first; otherwise record compatible Hebrew dependency. Do not supply an unprinted English translation.",
+      "quorum_feature": {
+        "type": "opensiddur:quorum",
+        "feature": "minyan",
+        "value": true
+      }
     },
     {
       "key": "kiddush_savri",
@@ -476,7 +502,13 @@
         23
       ],
       "status": "identity_candidates_verified_in_registry_pending_independent_extent_review",
-      "condition": "Motzaei Shabbat only."
+      "condition": "Motzaei Shabbat only.",
+      "conditional_feature": {
+        "type": "opensiddur:holiday-aggregate",
+        "feature": "motzaei-shabbat",
+        "value": true
+      },
+      "reference_pattern": "hasiddur_hashalem-birnbaum-1949-he/rh_qedushat_hayom.xml or rh_kiddush.xml; use only the encoding pattern, preserving this edition’s actual words and boundaries."
     },
     {
       "key": "havdalah",
@@ -490,7 +522,13 @@
         23
       ],
       "status": "identity_candidates_verified_in_registry_pending_independent_extent_review",
-      "condition": "Motzaei Shabbat only; close before Shehecheyanu."
+      "condition": "Motzaei Shabbat only; close before Shehecheyanu.",
+      "conditional_feature": {
+        "type": "opensiddur:holiday-aggregate",
+        "feature": "motzaei-shabbat",
+        "value": true
+      },
+      "reference_pattern": "hasiddur_hashalem-birnbaum-1949-he/rh_qedushat_hayom.xml or rh_kiddush.xml; use only the encoding pattern, preserving this edition’s actual words and boundaries."
     },
     {
       "key": "shehecheyanu",
@@ -530,7 +568,12 @@
       "status": "identity_candidates_verified_in_registry_pending_independent_extent_review",
       "printed_words": false,
       "condition": "Applicable quorum/recitation settings; source only names this prayer.",
-      "expanded_dependency": "Seek this volume’s later witness first; any compatible Hebrew fallback must be explicit and reviewed."
+      "expanded_dependency": "Seek this volume’s later witness first; any compatible Hebrew fallback must be explicit and reviewed.",
+      "quorum_feature": {
+        "type": "opensiddur:quorum",
+        "feature": "minyan",
+        "value": true
+      }
     },
     {
       "key": "yigdal_direction",

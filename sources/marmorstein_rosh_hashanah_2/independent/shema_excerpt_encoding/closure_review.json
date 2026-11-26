@@ -1,0 +1,56 @@
+{
+  "status": "approved",
+  "actual_model": "claude-opus-5-5 (Opus 5.5)",
+  "requested_effort": "medium",
+  "findings": [
+    {
+      "id": "F1",
+      "prior_severity": "blocking",
+      "resolution": "closed",
+      "observation": "source-english-punctuation.png is a tight crop at good resolution. It plainly shows 'Hear, O Israel, the Lord is our God, the Lord is One.' with commas after 'Israel' and 'God' and no upper dot of a semicolon. The original blind reading recorded in shema_punctuation_adjudication.json agrees. The commas appear in five places: the English module (shema_yisrael.xml:49), the draft_units.json recipe (line 61), working/s7.json (line 58, with adjudication_note), both qa.json copies, and the parallel row in parallel-page-3.png. working/s7.json keeps primary_sha256 94af64ec…, which matches preserved_primary_sha256 in the adjudication record, so the primary reading is evidently unchanged. The first-day English module has the same comma text, which supports the reading. This is a clear image reading, so no user question is needed. It doesn't touch the Hebrew accent adjudications."
+    },
+    {
+      "id": "F2",
+      "resolution": "re-verified, unchanged",
+      "observation": "The Hebrew XML seg matches the recipe exactly and agrees with accent_adjudications.json Q862: tipcha on שמע, etnahta on ישראל, merkha on both Divine Names, tipcha on אלהינו, silluq on אחד, and the paseq after the second Divine Name. The holam normalization (user723) is recorded in both the recipe and qa.json. The large ע and ד are tei:c rend='large', and both Divine Names are j:divineName."
+    },
+    {
+      "id": "F3/F4/F5",
+      "resolution": "re-verified, unchanged",
+      "observation": "Both modules have the same div corresp and verse-milestone corresp, and the chapter milestone has no corresp. Bare terminators close the excerpt. The pb elements have n='2' and ed='1965', with facs n5 for Hebrew and n6 for English. In parallel-page-3.png the Hebrew is on the right and the English on the left in a single row, each column with its own scan backlink. The citation notes are numbered 1 (דברים ו:ד) and 2 (Deuteronomy 6:4), and neither citation appears in the prayer text. The generator still checks all input hashes before building or writing anything, and its stem, duplicate and obsolete-path logic hasn't changed."
+    },
+    {
+      "id": "F6",
+      "resolution": "closed",
+      "observation": "draft_units.json input_sha256 now binds accent_adjudications.json and shema_punctuation_adjudication.json, alongside working/s6.json, working/s7.json and questions.json. draft_prayers.py:73-74 raises 'Draft excerpts must bind at least one source input' when input_sha256 is empty, and it does so before the hash loop."
+    },
+    {
+      "id": "F7",
+      "resolution": "closed",
+      "observation": "The conventions are now recorded in shema_punctuation_adjudication.json convention_decisions. (a) English 'the Lord' is left unwrapped. That matches first-day prayerbook_for_the_new_year-marmorstein-1965-en/shema_yisrael.xml:45, which also has no j:divineName, and qa.json reports divine_names 0.0 for English. (b) The ASCII colon follows the recorded project convention. (c) Italics are recorded as evidence and not encoded, which matches the first-day module's plain semantic seg. (d) The milestone point stays as previously accepted."
+    },
+    {
+      "id": "F8",
+      "resolution": "closed",
+      "observation": "There are two new tests. test_paired_witnesses_share_scope_with_independent_words_and_scan_links generates both languages and checks that both documents have the same div corresp and verse corresp. It also checks the English facs (/page/n23, from scan 24), the independent English seg text and the English citation ref. test_empty_provenance_cannot_bypass_guard checks the rejection message. tests.log is verbose and lists all six excerpt tests by name as PASSED, with a total of 32 passed and 14 subtests passed."
+    },
+    {
+      "id": "N1",
+      "severity": "info (non-blocking)",
+      "observation": "shema_punctuation_adjudication.json still has status 'image_adjudicated_pending_independent_closure'. If this approval is recorded, change the status to closed. Changing that file also changes its sha256, so the recipe's input_sha256 entry and the qa hashes would need refreshing at the same time. Otherwise the builder will reject the recipe as stale."
+    },
+    {
+      "id": "N2",
+      "severity": "info (non-blocking, outside F1–F8)",
+      "observation": "The citation link text differs between volumes. The first-day English note uses the printed form 'Deut. VI. 4', while the second-day note uses the normalized 'Deuteronomy 6:4'. The prior review accepted the normalized form, and both forms resolve to the same URN. If cross-volume consistency matters, decide on one form when the batch is accepted."
+    }
+  ],
+  "scope_limitations": [
+    "Read-only tools. I couldn't recompute sha256 values, so I didn't check the stated hashes against the files on disk: the recipe input_sha256 values, the qa artifact_sha256 values, the crop hash be9415a6… and the processor hashes. I did confirm they are internally consistent: the crop hash in the adjudication record matches qa.json, and the preserved primary hash in the adjudication record matches working/s7.json.",
+    "I didn't read the QA script that asserts compiled quotation text equals each recipe. I relied on the text_preserved_in_compiled_quotes strings in qa.json, which match the module segs, and on the rendered row in parallel-page-3.png.",
+    "I didn't open primary/s7.json itself. Its preservation rests on the primary_sha256 recorded in working/s7.json and the adjudication record.",
+    "I didn't check NFC/NFKD byte order of the combining marks. Text identity was compared visually and against the recipe.",
+    "I didn't independently inspect the opening_comparison_candidates.json scan7 blind reading. I used the text quoted from it in the adjudication record, and the crop on its own settles the punctuation.",
+    "Out of scope as instructed: full-page and batch acceptance, HTML browser acceptance, the expanded service spine. All prior user Hebrew accent adjudications were treated as authoritative."
+  ]
+}
