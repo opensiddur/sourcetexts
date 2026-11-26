@@ -1,0 +1,74 @@
+{
+  "status": "approved_source_encoding_alignment_and_single_verse_code_delta",
+  "scope": {
+    "modules": [
+      "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/psalm_81_4_to_5.xml",
+      "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/psalm_81_4_to_5.xml",
+      "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/numbers_14_17.xml",
+      "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/numbers_14_17.xml",
+      "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/psalm_25_6.xml",
+      "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/psalm_25_6.xml"
+    ],
+    "shema_regeneration_checked_for_provenance_only": [
+      "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/shema_yisrael.xml vs independent/s12_scripture_encoding/prior_shema_he.xml",
+      "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/shema_yisrael.xml vs independent/s12_scripture_encoding/prior_shema_en.xml"
+    ],
+    "code_delta_read": [
+      "opensiddur/importer/marmorstein_rosh_hashanah_2/draft_prayers.py",
+      "opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py"
+    ],
+    "evidence_read": [
+      "batches/maariv_s5_s24/s12_scripture_units.json",
+      "batches/maariv_s5_s24/s12_scripture_text_qa.json",
+      "batches/maariv_s5_s24/working/s12.json",
+      "batches/maariv_s5_s24/primary/s13.json",
+      "batches/maariv_s5_s24/s12_s13_source_reading_approval.json",
+      "independent/s12_scripture_encoding/review.json (first review, F1-F4)"
+    ],
+    "guidelines": "This round I did not read SCAN_DIGITIZATION_INSTRUCTIONS.md or JLPTEI-3.md again. I used the rules quoted in the first review for F1 (duplicate @corresp: the first one wins) and F2 (each verse span keeps its own facs).",
+    "not_requested_and_not_given": "No approval of any whole page, service, quorum, condition, batch, expanded spine or export. Nothing new is approved about how the Shema is presented."
+  },
+  "actual_model": "Claude Opus5.5 (claude-opus-5-5)",
+  "requested_effort": "medium",
+  "review_sha256": "186899ca97c422bc40bb5b5dcee7f16eaad884dad83be34793713e8d89a3ff60",
+  "raw_review_sha256": "6a22d1f45844953e5ecf9f5a26be7af6e1709aad20651a78234ebea665207b36",
+  "recipe_sha256": "f131407e8524bba8d18ee1e20ef9631f59619e06680c7c34c2fe6659cbb0c243",
+  "qa_sha256": "57f5df1a71fc22c481c42d755fb814d67682c0e0b837ce07445bfa9b6e614a0b",
+  "module_sha256": {
+    "psalm_81_4_to_5/he": "d1b4eb367479ab1172354fde5593ee2cf39f8651d8897c88aa1a7b6021fbc2c0",
+    "psalm_81_4_to_5/en": "6031a94c7f89e353db2fd51b345f48faf4b327441c8864a59d4bfe555d1caf58",
+    "numbers_14_17/he": "515053dce80af827eff4b2b077648004ab98b7ce6e9b2e0e582066a2de4dd205",
+    "numbers_14_17/en": "91d91b6b44e4134e235cfcaf76ed25197c85e83a20920d4cee1165e1bde3ce15",
+    "psalm_25_6/he": "02ed40320605f967870570107a83015549e929a553b06e57f3e3bd28e43aabad",
+    "psalm_25_6/en": "07a38bcf7c1b0856304fe424dfd227af27f399043a3703df5a449d5a43e56a86"
+  },
+  "mechanical_checks": {
+    "refdb": {
+      "status": "passed",
+      "log_sha256": "c158a7a234462cc9f1cb270052e271ae56135ed2dce48e5c7be15332cacbe7db"
+    },
+    "names": {
+      "status": "passed",
+      "log_sha256": "9f39b95a41e9a24388d8b4c20a0031163bf04e2588723d72e818d234ce50fa0f"
+    },
+    "features": {
+      "status": "passed",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "registry": {
+      "status": "passed",
+      "log_sha256": "cdf1c5fe15e2ce3fc2260f4487c172fdaa1596c43cb8eb78f1cbaae81305af5e"
+    },
+    "references": {
+      "status": "passed",
+      "log_sha256": "876bf6fb7d27f4f8e97d59f0a5aa61e45adb3bc25d521ddbd85401b59443ffb1"
+    }
+  },
+  "tests": "42 passed,19 subtests passed",
+  "lint": "uv run ruff check . passed",
+  "presentation_status": "pending",
+  "open_advisories": [
+    "Verify serialized single-verse whitespace in compiled/exported artifacts."
+  ],
+  "whole_scan_acceptance": false
+}

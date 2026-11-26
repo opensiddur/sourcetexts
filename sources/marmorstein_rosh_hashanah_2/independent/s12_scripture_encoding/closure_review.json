@@ -1,0 +1,101 @@
+{
+  "status": "approved",
+  "reviewer": {
+    "model": "claude-opus-5-5 (Claude Opus 5.5)",
+    "effort": "medium",
+    "independence": "I could only read files. I had no shell and no write access. I did not view any images, and I changed nothing."
+  },
+  "scope": {
+    "modules": [
+      "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/psalm_81_4_to_5.xml",
+      "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/psalm_81_4_to_5.xml",
+      "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/numbers_14_17.xml",
+      "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/numbers_14_17.xml",
+      "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/psalm_25_6.xml",
+      "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/psalm_25_6.xml"
+    ],
+    "shema_regeneration_checked_for_provenance_only": [
+      "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/shema_yisrael.xml vs independent/s12_scripture_encoding/prior_shema_he.xml",
+      "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/shema_yisrael.xml vs independent/s12_scripture_encoding/prior_shema_en.xml"
+    ],
+    "code_delta_read": [
+      "opensiddur/importer/marmorstein_rosh_hashanah_2/draft_prayers.py",
+      "opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py"
+    ],
+    "evidence_read": [
+      "batches/maariv_s5_s24/s12_scripture_units.json",
+      "batches/maariv_s5_s24/s12_scripture_text_qa.json",
+      "batches/maariv_s5_s24/working/s12.json",
+      "batches/maariv_s5_s24/primary/s13.json",
+      "batches/maariv_s5_s24/s12_s13_source_reading_approval.json",
+      "independent/s12_scripture_encoding/review.json (first review, F1-F4)"
+    ],
+    "guidelines": "This round I did not read SCAN_DIGITIZATION_INSTRUCTIONS.md or JLPTEI-3.md again. I used the rules quoted in the first review for F1 (duplicate @corresp: the first one wins) and F2 (each verse span keeps its own facs).",
+    "not_requested_and_not_given": "No approval of any whole page, service, quorum, condition, batch, expanded spine or export. Nothing new is approved about how the Shema is presented."
+  },
+  "prior_findings_disposition": {
+    "F1": {
+      "original_severity": "blocking",
+      "status": "closed",
+      "evidence": "draft_prayers.py:146 leaves out @corresp on the div when the excerpt is a range or when unit.urn equals the first verse URN. In numbers_14_17 and psalm_25_6 (both languages), line 37 is now a bare <tei:div>. Each canonical verse URN now appears as @corresp only once, on its verse milestone. Psalm 81 was already correct and is unchanged."
+    },
+    "F2": {
+      "original_severity": "blocking",
+      "status": "closed",
+      "evidence": "draft_prayers.py:164-176 always sets seg/@facs, starting from the verse's first page, including for a single verse. All four affected segs now have facs: n11_medium.jpg on the Hebrew and n12_medium.jpg on the English. These match the pb and scans 12 and 13. append_prayer_content (lines 81-82) does the same for quotations inside prayers."
+    },
+    "F3": {
+      "original_severity": "advisory",
+      "status": "deferred_by_maintainer",
+      "note": "The single-verse files are still pretty-printed and Psalm 81 is still on one line. You said whitespace will be checked at export, with no change to wording. I accept that. It stays open until the export check."
+    },
+    "F4": {
+      "original_severity": "advisory",
+      "status": "closed_by_explicit_maintainer_decision",
+      "note": "This follows the current edition and the day-one numbers_14_17 convention: the literal word אֲדֹנָי is not marked. No printed Tetragrammaton is claimed at this point. I accept the decision. No new policy for the book."
+    }
+  },
+  "verified": {
+    "code_delta": "The two changes are small and do what was described. The div keeps @corresp only when the unit URN differs from the verse URN. This covers the Shema case, where the prayer URN shaken stays on the div. The seg facs comes from the verse's own first page. Nothing else changed in how text is written out.",
+    "test": "test_single_verse_keeps_one_canonical_identity_and_own_provenance (test file lines 107-116) sets unit.urn to verse_urn. It checks that exactly one element has that @corresp, that the div has no @corresp, and that seg/@facs points to n22. The fixture's citation note uses @target, not @corresp, so the count still tests the right thing. I did not run the tests or ruff myself. The '42 tests, 19 subtests, ruff clean' result is what you reported.",
+    "text_fidelity": "I compared the rendered characters by eye. Every word, vowel point, meteg, maqaf, sof-pasuq colon, comma and full stop in all six segs matches s12.json block 3 and block 5 (Hebrew), s13.json block 5 and block 7 (English), and the recipe strings. Nothing has been added or left out.",
+    "psalm_81_split": "Hebrew verse 5 starts at כִּי חֹק. English verse 5 starts at 'for it is'. The printed comma after 'festival' stays at the end of the English verse 4 seg, as transcribed. The single space between the verses is outside the segs.",
+    "numbers_14_17_extent": "The Hebrew is the whole verse, from וְעַתָּה to לֵאמֹר:. The English is exactly 'And now let the power of the Lord appear great, as Thou hast said.'",
+    "psalm_25_6_extent": "The Hebrew is the whole verse, from זְכֹר to הֵמָּה:. The English starts at 'Remember' and ends at 'since eternity.'",
+    "english_cues": "The Hebrew cue words תקעו and ועתה from s13 do not appear in any English module.",
+    "citations": "Neither s12 nor s13 prints a Bible citation. None of the six modules has a standOff or a note.",
+    "urns": "psalms/81/4, psalms/81/5, numbers/14/17 and psalms/25/6 are real verses with correct chapter and verse numbers. Each idno carries the right edition after the @. The Psalm 81 idno uses a valid absolute range.",
+    "milestones": "Chapter milestones have only @n. Verse milestones have @n and the canonical @corresp. Every verse scope ends with bare verse and chapter terminators.",
+    "page_breaks": "Every module has pb ed=1965 n=5. Hebrew facs is n11 and English facs is n12, on both the pb and every seg.",
+    "divine_names": "The only generated j:divineName is the whole word יְיָ in Psalm 25:6 Hebrew. It stands between spaces, with no prefix and no partial match, and it stands for the Tetragrammaton in that verse. אֲדֹנָי in Numbers 14:17 is left unmarked, per F4. The English 'Lord' is not marked anywhere, which matches the Shema English witness.",
+    "shema_provenance_only_equivalence": "I compared prior and current line by line in both languages. The only difference is a new facs attribute on the seg at line 49: n5_medium.jpg for Hebrew and n6_medium.jpg for English. These equal each file's own pb/@facs. The header, idno, standOff citation note, div @corresp (urn:x-opensiddur:text:prayer:shema/shema_yisrael, which is still different from the verse URN), milestones, seg @source, text, cantillation, large letters (tei:c) and divineName elements are all unchanged."
+  },
+  "findings": [
+    {
+      "id": "A1",
+      "severity": "advisory",
+      "files": [
+        "opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py"
+      ],
+      "issue": "No test checks that the div keeps @corresp when unit.urn differs from the verse URN. The Shema depends on this case. test_paired_witnesses compares the two languages but would still pass if both lost the attribute.",
+      "suggested_change": "Optional: in test_exact_scope_semantics_and_absent_translation_cleanup, assert that //t:body/t:div/@corresp equals ['urn:x-opensiddur:text:prayer:invented']."
+    },
+    {
+      "id": "A2",
+      "severity": "advisory / informational, not a request to change anything",
+      "files": [
+        "heidenheim-1965-he/psalm_81_4_to_5.xml:39",
+        "heidenheim-1965-he/psalm_25_6.xml:42",
+        "heidenheim-1965-he/numbers_14_17.xml:42"
+      ],
+      "issue": "Three places in the approved readings differ from the standard Masoretic text: בַּכֶּֽסֶה (Masoretic has tsere, בַּכֵּסֶה), זְכֹר רַחֲמֶֽיךָ (no maqaf), and no enlarged yod in יִגְדַּל. The modules correctly follow the approved readings, and those readings were adjudicated. I could not check the images, so this is only a pointer in case anyone re-checks the source. It does not block anything."
+    }
+  ],
+  "limitations": [
+    "I did not recompute SHA-256 values. The module hashes in s12_scripture_text_qa.json were made before regeneration and may be out of date. Confirm that the QA file is refreshed with the new hashes.",
+    "I compared rendered characters, not codepoints. I did not check bytes such as U+05BD, U+05BE or CGJ/ZWJ.",
+    "I did not run RelaxNG, Schematron, reference-database validation, the tests or ruff.",
+    "I could not write review.json. This JSON is the closure record. The original review.json should be kept unchanged, and this record stored next to it."
+  ],
+  "approval_conditions": "This approves only the encoding of these six modules as draft excerpts, plus the provenance-only regeneration of the two Shema witnesses. It assumes the QA hashes are refreshed to match the files on disk."
+}

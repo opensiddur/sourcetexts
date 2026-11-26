@@ -1,0 +1,20 @@
+{
+  "status": "approved_source_encoding_alignment_code_only",
+  "scope": "Read-only re-review of the two day-two Emet veEmunah modules (prayerbook_for_the_new_year_second_day-heidenheim-1965-he/emet_veemunah.xml and prayerbook_for_the_new_year_second_day-marmorstein-1965-en/emet_veemunah.xml). Checked them against emet_veemunah_units.json, emet_veemunah_text_qa.json, approved working/s10.json, primary/s11.json, s10_source_reading_approval.json and s9_s11_source_reading_approval.json. Also re-reviewed draft_prayers.py and test_marmorstein_day_two_excerpts.py, and checked that all three findings in the earlier changes_required review (independent/emet_veemunah_encoding/response.json) are fixed. I left that file untouched; I only had read access. Not done: I did not look at images or rerun tests or schema validation. I did not search siddur.jsonl, because it is 1 MB and I had no search tool. I relied on the earlier review's check that the six part URNs match the accepted day-one modules. I did not reread SCAN_DIGITIZATION_INSTRUCTIONS.md or JLPTEI-3.md beyond what the earlier review covered. I could not find the whole-word DivineName QA regex in the files I was pointed to, so I checked every j:divineName in both modules by hand instead. No full-scan, whole-batch, service-condition, expanded-spine or export acceptance.",
+  "actual_model": "Claude Opus5.5 (claude-opus-5-5)",
+  "requested_effort": "medium",
+  "review_sha256": "31294a6dd71644a464be8e2e0eec384772834113e3a81bad6eca011e50dc35fa",
+  "raw_review_sha256": "a5f682446598d429ebb77d1caddacfb76625736ef729411bf2496a80d18ee9c7",
+  "recipe_sha256": "7bcb0102394b6f110becc1b844fdf0e29ae8d4d2b20a56e267f90563f5e03c67",
+  "qa_sha256": "f464139a6b4efb4e522e9ef9dac43f83704b710ccfa9caa30341a94dea24c305",
+  "module_sha256": {
+    "he": "98ea188df700fbedc1ddd1c8f634b577fa43f7b59f0f3c8f92e03b1adfc9618b",
+    "en": "2417ed9cec8dcf24d6777a7fa406bc43e25b50535f3af465d8db1d1f5e7bf4ea"
+  },
+  "code_sha256": "dad93a915078d78fee09cd6c4ab485c1fb51b514cd2623876e40395e22361246",
+  "tests": "41 passed,19 subtests passed",
+  "lint": "uv run ruff check . passed after merging main",
+  "presentation_status": "approved_configured_excerpt_presentation",
+  "whole_scan_acceptance": false,
+  "presentation_evidence": "emet_veemunah_presentation_review.json"
+}

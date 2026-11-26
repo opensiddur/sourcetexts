@@ -1,0 +1,56 @@
+<tei:TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:j="http://jewishliturgy.org/ns/jlptei/2" xml:lang="he">
+  <tei:teiHeader>
+    <tei:fileDesc>
+      <tei:titleStmt>
+        <tei:title type="main">שמע ישראל</tei:title>
+        <tei:respStmt>
+          <tei:resp key="trc">AI-assisted image transcription</tei:resp>
+          <tei:name ref="urn:x-opensiddur:contributor:opensiddur.org/codex">Codex</tei:name>
+        </tei:respStmt>
+        <tei:respStmt>
+          <tei:resp key="mrk">JLPTEI markup</tei:resp>
+          <tei:name ref="urn:x-opensiddur:contributor:opensiddur.org/codex">Codex</tei:name>
+        </tei:respStmt>
+      </tei:titleStmt>
+      <tei:editionStmt>
+        <tei:edition>DRAFT excerpt: batch transcription, encoding and presentation acceptance pending. Evidence: sources/marmorstein_rosh_hashanah_2/batches/.</tei:edition>
+      </tei:editionStmt>
+      <tei:publicationStmt>
+        <tei:distributor>
+          <tei:ref target="https://opensiddur.org">Open Siddur Project</tei:ref>
+        </tei:distributor>
+        <tei:idno type="urn">urn:x-opensiddur:text:prayer:shema/shema_yisrael@prayerbook_for_the_new_year_second_day-heidenheim-1965-he</tei:idno>
+        <tei:availability status="free">
+          <tei:licence target="http://www.creativecommons.org/publicdomain/zero/1.0">Creative Commons Zero (Public Domain Dedication)</tei:licence>
+        </tei:availability>
+      </tei:publicationStmt>
+      <tei:sourceDesc>
+        <tei:bibl>
+          <tei:ptr target="/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/index#day_two_source_bibl"/>
+          <tei:biblScope unit="pages" from="2" to="2"/>
+        </tei:bibl>
+      </tei:sourceDesc>
+    </tei:fileDesc>
+  </tei:teiHeader>
+  <tei:standOff type="notes">
+    <tei:note type="citation" target="urn:x-opensiddur:text:bible:deuteronomy/6/4">
+      <tei:p>
+        <tei:ref target="urn:x-opensiddur:text:bible:deuteronomy/6/4">דברים ו:ד</tei:ref>
+      </tei:p>
+    </tei:note>
+  </tei:standOff>
+  <tei:text>
+    <tei:body>
+      <tei:div corresp="urn:x-opensiddur:text:prayer:shema/shema_yisrael">
+        <tei:pb ed="1965" n="2" facs="https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n5_medium.jpg"/>
+        <tei:p>
+          <tei:milestone unit="chapter" n="6"/>
+          <tei:milestone unit="verse" n="4" corresp="urn:x-opensiddur:text:bible:deuteronomy/6/4"/>
+          <tei:seg source="urn:x-opensiddur:text:bible:deuteronomy/6/4">שְׁמַ֖<tei:c rend="large">ע</tei:c> יִשְׂרָאֵ֑ל <j:divineName>יְהֹוָ֥ה</j:divineName> אֱלֹהֵ֖ינוּ <j:divineName>יְהֹוָ֥ה</j:divineName> ׀ אֶחָֽ<tei:c rend="large">ד</tei:c>:</tei:seg>
+          <tei:milestone unit="verse"/>
+          <tei:milestone unit="chapter"/>
+        </tei:p>
+      </tei:div>
+    </tei:body>
+  </tei:text>
+</tei:TEI>
