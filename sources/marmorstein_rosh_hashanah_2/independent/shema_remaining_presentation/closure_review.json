@@ -1,0 +1,60 @@
+{
+  "status": "approved",
+  "review_type": "closure of independent presentation review",
+  "initial_review": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/independent/shema_remaining_presentation/review.json (status changes_required; not modified)",
+  "actual_model": "Claude Opus 5.5 (claude-opus-5-5)",
+  "requested_effort": "medium",
+  "scope": "Presentation of the four configured scripture-range excerpts: Deut 11:13-21 and Num 15:37-41, each as a Hebrew-only and a parallel PDF/HTML, in /home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/shema_remaining_review. They were rebuilt with the existing book-output setting typography.notes.anchor: superscript. Exporter head is 460bed38bbc7ea9af658b97c6679bbde8ef099b2. I looked at these images myself: hebrew-page-3.png and parallel-page-3.png for both units, Deut parallel-page-4.png, and all seven browser JPGs at the root. For comparison I also looked at shema_remaining_interlinear_history/deuteronomy_11_13_to_21/hebrew-page-3.png. Files read: qa.json, artifact_manifest.json, browser-qa.json, browser-checks.json and the four YAML files.",
+  "exclusions": [
+    "Acceptance of full scans, the service, the batch, the expanded edition or the book",
+    "Source reading, encoding and the compiled words of the four module XML/prayer files. These are unchanged and were approved by earlier independent review; they were not reviewed again here.",
+    "The exporter code (PR341). The claim that typography_tex.py and scan_links.py are byte-identical to 1b9fdbd is recorded in qa.json.exporter.unchanged_since_first_review. I accept it as recorded but did not check it with Git myself.",
+    "Recomputing any hash. I had no shell. The qa.json and artifact_manifest.json hashes agree with each other.",
+    "Visual acceptance of the metadata, distribution and colophon pages beyond confirming they insert no text into the prayer body",
+    "Whether citation links work. Unqualified canonical BibleURN citations are still plain text in the HTML notes, and this review does NOT claim they are links. The PDF citation URN href is still unopenable in typical viewers.",
+    "Rectangles of metadata or URL links. browser-qa.json and qa.json record only the source-arrow (archive.org page/nN_medium.jpg) rectangles."
+  ],
+  "initial_blocker_closure": {
+    "initial_finding": "deuteronomy_11_13_to_21/hebrew.pdf page 3: the note 1 marker drifted about 400 px from its anchor 'וּבְכָל־נַפְשְׁכֶֽם:' (the zero-width RTL interlinear marker)",
+    "change": "All four YAML files now contain typography.notes.anchor: superscript. qa.json records notes_anchor: superscript. This is a book-output setting change, not an exporter code fix.",
+    "history_confirmed": "In the history image the '1' still sits between lines 1 and 2 at about x≈325, away from its anchor. That is the drift the initial review reported.",
+    "new_render": "In the new Deut hebrew-page-3.png the raised '1' comes right after 'וּבְכָל־נַפְשְׁכֶם:' at the end of v13, at the start of line 2 at the right, and before the '14' verse number. It no longer sits between lines, and the line spacing is even.",
+    "status": "closed"
+  },
+  "visual_verification": {
+    "deut_hebrew_pdf_p3": "Verses 13-21 are in order on 7 lines, full width, with nothing clipped. There is one source arrow (n7) at line 1. Note 1 sits at its exact anchor. The footnote 'דברים י״א:י״ג' is correct.",
+    "deut_parallel_pdf_p3": "Hebrew is in the left-hand column and English in the right, and rows 13-21 are paired and aligned. The Hebrew '1' is directly after 'בְּכָל־נַפְשְׁכֶם:' at the end of v13, on the left of line 3. The English '2' sits tight against 'soul,' and the earlier gap is gone. There are 2 notes: 1 'דברים י״א:י״ג' and 2 'Deut. XI:13'. The n7 and n8 arrows are in the outer margins. No column runs into the other and nothing is clipped. English v21 breaks at 'to give'.",
+    "deut_parallel_pdf_p4": "English v21 continues with 'to them, as the days of the heavens above the earth.' It is in the English column of the mirrored even page, with no repeated arrow. Metadata follows and is separate from the body.",
+    "num_hebrew_pdf_p3": "Verses 37-41 are in order on 4 lines with nothing clipped. Note 1 is directly after 'לֵאמֹר:' and before '38'. The arrows are n7 on line 1 and n9 on line 2. The footnote 'במדבר ט״ו:ל״ז' is correct.",
+    "num_parallel_pdf_p3": "Rows 37-41 are paired and aligned. The Hebrew '1' is right after 'לֵאמֹר:' and the English '2' is tight against 'Moses:'. The n9 arrow is next to Hebrew v39 line 2 and the n10 arrow next to English v39 line 3, which matches the separate page breaks inside v39. The footnotes 'במדבר ט״ו:ל״ז' and 'Numbers XV:37' are correct. Nothing is clipped.",
+    "browser_jpgs": "Deut Hebrew and Num Hebrew are right-to-left. The tiny raised marker sits after 'נַפְשְׁכֶם:' and 'לֵאמֹר:' respectively, and the arrows are in the right margin. In Deut parallel and Num parallel at 1280 px, English is on the left and Hebrew on the right, rows are aligned, markers attach to their anchors and arrows are in the outer margins. The Deut parallel bottom shot shows v21 complete in both languages, then metadata. On Num mobile at 390 px the columns stack Hebrew then English per verse, the arrows are inline, and nothing overflows. The Num note-open shot shows a popup with 'במדבר ט״ו:ל״ז' as plain text."
+  },
+  "mechanical_verification": {
+    "qa_json": "For each output, expected_words_exact is true and missing_glyphs is false. compile_warnings are []. The *-compile-*.log files are empty (e3b0c442… hash). body_citation_notes is 1 for Hebrew and 2 for parallel. Scan links are unique and non-overlapping, each 10.371 x 9.385 pt, and inside the letter page. tests: 37 passed.",
+    "browser": "Source-arrow rectangles are recorded for all four 1280 px pages and the 390 px mobile page. scrollWidth is 1265 at a 1280 px viewport and 375 at a 390 px viewport, so nothing overflows. note_expansion.opened is true, with canonical_reference_is_plain_text true. browser-checks.json has status passed."
+  },
+  "findings": [
+    {
+      "severity": "resolved",
+      "detail": "The initial blocking finding (Deut Hebrew PDF note 1 drift) is closed; see initial_blocker_closure."
+    },
+    {
+      "severity": "resolved",
+      "detail": "Initial nonblocking finding: English markers were offset from their anchors and raised markers added extra line spacing in parallel v13. With superscript anchoring, '2' sits tight against 'soul,' and 'Moses:' and the v13 line spacing is even."
+    },
+    {
+      "severity": "nonblocking",
+      "detail": "HTML note markers are still very small and low-contrast at 1280 px. They are present, attached to their anchors, and they open the note. This is existing exporter styling and unchanged from the initial review."
+    },
+    {
+      "severity": "nonblocking",
+      "area": "known_behavior",
+      "detail": "Unqualified canonical BibleURN citations are plain text in the expanded HTML notes, and the PDF citation href is a URN. This was accepted as nonblocking in the initial review and is unchanged. Source arrows are active links. This review makes no claim that citation links work."
+    },
+    {
+      "severity": "nonblocking",
+      "area": "evidence",
+      "detail": "In qa.json each unit's artifact_sha256 map lists that unit's Hebrew and parallel artifacts twice, under both the /hebrew and /parallel keys. The values match artifact_manifest.json. qa.json.exporter.status still says 'separate_unmerged_dependency'. The byte-identity of typography_tex.py and scan_links.py is recorded there; I did not check it with Git myself."
+    }
+  ]
+}
