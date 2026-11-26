@@ -1,0 +1,120 @@
+{
+  "status": "approved",
+  "actual_model": "Claude Opus 5.5 (claude-opus-5-5)",
+  "requested_effort": "medium",
+  "reviewed_scope": "Only whether the final user answers 900–915 were applied mechanically to scan 10 in working/s10.json, compared against independent/adjudications_900_915/previous_working_s10.json, with user_adjudications_900_915.json and questions_900_915.json as the authority. This review does not accept the full source, page, batch or encoding. The remaining source questions are still open. The human answers were not reopened, and no images were consulted.",
+  "findings": [
+    {
+      "q": 900,
+      "block": 0,
+      "result": "ok",
+      "detail": "'מעריב ליל שני של ראש השנה' → 'מעריב לֵיל שֵׁנִי שֶׁל רֹאשׁ השנה'. Matches the user's exact string, which overrides the earlier tentative reading of ראש as unpointed. מעריב and השנה stay unpointed and unchanged."
+    },
+    {
+      "q": 901,
+      "block": 1,
+      "result": "ok",
+      "detail": "Second ואחרי only: וְאַֽחֲרֵי, with meteg U+05BD on the alef. The first אַחֲרֵי (before לְבַבְכֶם) and אַחֲרֵיהֶם are unchanged."
+    },
+    {
+      "q": 902,
+      "block": 1,
+      "result": "ok",
+      "detail": "עֵֽינֵיכֶם: meteg on the ayin, after the tsere."
+    },
+    {
+      "q": 903,
+      "block": 1,
+      "result": "ok",
+      "detail": "אַתֶּ֥ם: merkha U+05A5 on the tav. The maqaf in אֲשֶׁר־ is kept."
+    },
+    {
+      "q": 904,
+      "block": 1,
+      "result": "ok",
+      "detail": "זֹנִ֖ים: tipcha U+0596 on the nun."
+    },
+    {
+      "q": 905,
+      "block": 1,
+      "result": "ok",
+      "detail": "וַֽעֲשִׂיתֶ֖ם: meteg on the vav and tipcha on the tav."
+    },
+    {
+      "q": 906,
+      "block": 1,
+      "result": "ok",
+      "detail": "וִֽהְיִיתֶ֥ם: meteg on the vav and merkha on the tav. The user's typo 'tac' was correctly read as tav."
+    },
+    {
+      "q": 907,
+      "block": 1,
+      "result": "ok",
+      "detail": "קְדֹשִׁ֖ים: tipcha on the shin."
+    },
+    {
+      "q": 908,
+      "block": 1,
+      "result": "ok",
+      "detail": "הוֹצֵ֤אתִי: mahpakh U+05A4 on the tsadi."
+    },
+    {
+      "q": 909,
+      "block": 1,
+      "result": "ok",
+      "detail": "לִהְי֥וֹת: merkha on the yod, not on the vav."
+    },
+    {
+      "q": 910,
+      "block": 1,
+      "result": "ok",
+      "detail": "לָכֶ֖ם: tipcha on the kaf."
+    },
+    {
+      "q": 911,
+      "block": 1,
+      "result": "ok",
+      "detail": "The meteg went on the initial lamed of לֵֽאלֹהִים. The earlier לֵאלֹהֵיכֶם is correctly left unchanged."
+    },
+    {
+      "q": 912,
+      "block": 1,
+      "result": "ok",
+      "detail": "Only the second אני changed: אֲנִ֖י, with tipcha on the nun. The first אֲנִי (before יְהוָה אֱלֹהֵיכֶם אֲשֶׁר) is unchanged."
+    },
+    {
+      "q": 913,
+      "block": 3,
+      "result": "ok",
+      "detail": "וְקַיָּם is unchanged, with no meteg on the qof, as the user answered."
+    },
+    {
+      "q": 914,
+      "block": 3,
+      "result": "ok",
+      "detail": "Only the לנו after הַנִּפְרָע changed: לָֽנוּ. The later הָעֹשֶׂה־לָּנוּ (with dagesh) is unchanged."
+    },
+    {
+      "q": 915,
+      "block": 3,
+      "result": "ok",
+      "detail": "מִצָּרֵֽינוּ: meteg on the resh, after the tsere."
+    },
+    {
+      "result": "ok",
+      "detail": "No other changes: consonants, spaces, maqafs, sof-pasuq and periods are the same in both files. Blocks 2, 4, 5, 6 and 7 match the previous file exactly, as do the scan_page, printed_page, reader, method, uncertainties and image_sha256 fields. Only the listed marks were added; no whole independent reading was substituted in."
+    },
+    {
+      "result": "ok",
+      "detail": "Earlier fixes are kept. Final pe has no dagesh in מִכַּף and סוּף (898/899). Everything else is identical to the previous file, so the four existing spelling fixes carried over unchanged."
+    },
+    {
+      "result": "note_non_blocking",
+      "detail": "I compared the files by reading the text closely. I had no shell, so I could not dump the files byte by byte or recompute the two SHA-256 values recorded in the adjudication file. Each mark's identity is clear from its distinct glyph: meteg ֽ, merkha ֥, tipcha ֖, mahpakh ֤. A codepoint/NFC dump would confirm this at byte level, if you need that."
+    },
+    {
+      "result": "note_non_blocking_out_of_scope",
+      "detail": "The uncertainties line 'No cantillation seen in this evening Shema/Mi Khamokha printing' is now out of date, because block 1 has accents. Leaving it unchanged was correct for this review; consider updating it in a later pass."
+    }
+  ]
+}
