@@ -20,3 +20,5 @@ Preserve the day-one evidence separately. Both volumes belong to the existing
 Hebrew/English edition projects. Day-two entry points must not overwrite the
 accepted day-one indexes or witnesses. Follow processor
 `specs/MARMORSTEIN_ROSH_HASHANAH_2.md` and `specs/SCAN_DIGITIZATION_INSTRUCTIONS.md`.
+
+Current acceptance: **4/385 complete scans**, front matter1–4. All12 batch gates are closed or independently marked not applicable; see `batches/front_matter_s1_s4/acceptance.json`. The next batch starts at scan5. Original readings and preliminary-review limitations remain preserved as historical evidence.

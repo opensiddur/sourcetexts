@@ -1,0 +1,112 @@
+{
+  "batch": "front_matter_s1_s4",
+  "scan_pages": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "status": "accepted",
+  "accepted": true,
+  "gates": {
+    "scope_images": {
+      "status": "passed",
+      "evidence": [
+        "../../opening_evidence_manifest.json",
+        "../../pages.json"
+      ]
+    },
+    "primary_reading": {
+      "status": "passed",
+      "evidence": [
+        "../../primary_opening_s1_s4.json",
+        "../../front_resolved.json"
+      ]
+    },
+    "blind_second_reading": {
+      "status": "passed",
+      "evidence": [
+        "../../independent/opening_s1_s12/response.json",
+        "../../independent/front_matter_enlarged/response.json",
+        "../../front_resolved.json"
+      ],
+      "note": "Front matter only: blind full-page and enlarged readings, plus user resolution of unreadable inscriptions. Shema review limitations affect the next batch, not these four pages."
+    },
+    "adjudication": {
+      "status": "passed",
+      "evidence": [
+        "../../front_resolved.json"
+      ],
+      "outstanding_questions": [],
+      "resolved_sha256": "dfd72f2755a9607f05677f896b3e89e1a4d12ec9d96f722c8b07bfe2c66b94f3"
+    },
+    "encoding": {
+      "status": "passed",
+      "evidence": [
+        "../../front_resolved.json"
+      ],
+      "note": "Both physical-language title pages and all four scans retained in each documentary root, with language tags. Independent audit remains a separate gate."
+    },
+    "alignment": {
+      "status": "not_applicable",
+      "evidence": [
+        "../../independent/front_matter_encoding/closure_review.json"
+      ],
+      "reason": "No translation pairs. The Hebrew and English title leaves are separate documentary pages, and both roots carry the complete multilingual paratext with no front-matter corresp to pair. No counterpart is missing or invented, and there are no biblical citations."
+    },
+    "recitation_conditions": {
+      "status": "not_applicable",
+      "evidence": [
+        "../../independent/front_matter_encoding/closure_review.json"
+      ],
+      "reason": "No recited text, transclusions, turns, repetitions, page directions, ritual conditions or day/rite variants. The paratext gates are documentary-presentation conditions handled under encoding and mechanical checks."
+    },
+    "independent_encoding_order_audit": {
+      "status": "passed",
+      "evidence": [
+        "../../independent/front_matter_encoding/closure_review.json"
+      ]
+    },
+    "mechanical_checks": {
+      "status": "passed",
+      "evidence": [
+        "final-mechanical.json"
+      ]
+    },
+    "exports": {
+      "status": "passed",
+      "evidence": [
+        "export-qa.json"
+      ]
+    },
+    "independent_presentation_review": {
+      "status": "passed",
+      "evidence": [
+        "../../independent/front_matter_presentation/closure_review.json"
+      ]
+    },
+    "acceptance": {
+      "status": "passed",
+      "evidence": [
+        "acceptance.json"
+      ]
+    }
+  },
+  "next_batch": "Begins at scan5; coherent service endpoint to be surveyed after current batch acceptance.",
+  "payload_hashes": {
+    "front_resolved.json": "dfd72f2755a9607f05677f896b3e89e1a4d12ec9d96f722c8b07bfe2c66b94f3",
+    "primary_opening_s1_s4.json": "e1ef1ebe8a6090d07bda1167ee4d1e8567c0c7891b0c5cb528b664e36840f6cf",
+    "independent/opening_s1_s12/response.json": "60c08d69532dc2b8412b584deae43b970121932ac9fd96f22afa0cad384288e7",
+    "independent/front_matter_enlarged/response.json": "2651dd8537e9e65829c8a7a3cb87c8802df8b20bae4085e1cbb43ac75f661484"
+  },
+  "generated_xml_sha256": {
+    "he": "69f8a6bfb76c418d6403579ed757b7a3cb44789ef7ee1075bc4be53412391e42",
+    "en": "79e7232ef9eb49ef6ce29524ac7ae7f9d8da7e32f12624410af23d4841e7487b"
+  },
+  "accepted_scan_pages": [
+    1,
+    2,
+    3,
+    4
+  ]
+}

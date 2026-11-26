@@ -1,0 +1,28 @@
+{
+  "approved": true,
+  "approval_scope": "Presentation of the second-day front matter, physical scans 1–4 only (Archive leaves n0–n3), as frozen in review-manifest.json. This covers the hebrew.pdf, parallel.pdf, hebrew.html and parallel.html exports and their print/electronic XML. No approval is given for scans 5–385, any prayer page, or renewed day-one transcription. The checklist still has its own acceptance gate.",
+  "required_changes": [],
+  "bibliography_impact_approved": true,
+  "bibliography_impact_basis": "bibliography-impact.json matches day-one-preservation.json and the rendered colophons. Both edition indexes gain only the volume-two bibl. The day-one canonical XML hashes are recorded and removing that bibl restores them. Existing day-one artifacts are kept, and future first-day and second-day colophons list both physical volumes, each identified by its own [First Day] or [Second Day] title. The closure review (Notes, item 1) warned that day-one colophons could change. That change is now disclosed and approved here as metadata only. The restore proof and hashes are supplied evidence, not my own run.",
+  "caveats_closed": {
+    "missing_records": "Closed. I read closure_review.json, review-manifest.json, bibliography-impact.json and source-link-check.json.",
+    "encoding_closure": "Closed. closure_review.json approves the encoding and independent order-audit gates for scans 1–4 with no required changes, and it explicitly approves no presentation. Its line orders (s1 4 lines with the Hebrew legend in tei:foreign; s2 0–1|2|3–4|5–6|7–8; s3 0–1|2–3|4–5|6–7; s4 7 lines) match what I saw in the PDF and HTML renders. That closes my earlier question about the line_languages index.",
+    "hash_binding": "Closed as recorded evidence only. review-manifest.json gives sha256 values for both PDFs, both HTML files, all four export XMLs, the YAML configs, both full-page browser PNGs, export-qa.json, html-browser-qa.json, tests.log, day-one-preservation.json and bibliography-impact.json. I could not recompute any of them, so this rests on the manifest plus your statement that nothing generated has changed. Not covered by the manifest: the per-page PNG renders I inspected (hebrew-page-01–11, parallel-page-01/03/05/07/09/10/11), the two PDF build logs, source-link-check.json and closure_review.json. My page-by-page PDF review is therefore tied to the frozen PDF hashes only through your statement. For the acceptance record, consider adding those PNG and log hashes. The closure review also suggests adding hashes for front_layout.json and the modified index.xml files.",
+    "source_links": "Closed as supplied evidence. source-link-check.json reports HTTP 200 and a valid image for all 4 URLs (n0–n3). These are the same URLs as in export-qa.json and html-browser-qa.json. I did not fetch them myself.",
+    "source_note_not_rendered": "Closed. It is QA provenance only, not source words or a bibliographic quote, so it need not be rendered.",
+    "day_one_bibl_notes_in_day_two_colophon": "Closed. Each record is scoped by its own First Day or Second Day title, so the day-one-specific notes clearly belong to source [1].",
+    "stale_front_resolved_status": "Nonblocking, still open. front_resolved.json still says 'encoding and export review pending'. This is a cosmetic status field and does not affect the frozen artifacts."
+  },
+  "accepted_nonblocking_limitations": [
+    "In the HTML cover (both hebrew and parallel), the source-link arrow is drawn slightly over the 'P' of 'Prayerbook for Festivals'. I accept this explicitly: the title stays readable and the link works.",
+    "Both PDFs give warnings about duplicate destinations 'page.i'/'page.ii' from front-matter page numbering. This batch needs no internal page references, so nothing is affected. Recheck before any prayer or page-reference batch. This review does not show that future references will work.",
+    "Some closure_review.json notes are still open and are outside presentation scope: possible drift between the bibl in day_two.xml and in index.xml; the day-two cover is a tei:div while day one uses tei:titlePage; no test yet covers build.py:78's layout-coverage error; and a mechanical rerun is still required before acceptance. export-qa.json reports NFKD true and tests.log shows 26 passed, but both are supplied evidence. The acceptance gate still has to record that rerun."
+  ],
+  "files_read_this_round": [
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/independent/front_matter_encoding/closure_review.json",
+    "/tmp/marmorstein-day-two-review/front-previews/review-manifest.json",
+    "/tmp/marmorstein-day-two-review/front-previews/bibliography-impact.json",
+    "/tmp/marmorstein-day-two-review/front-previews/source-link-check.json"
+  ],
+  "reviewer": "Claude Opus 5.5 (claude-opus-5-5), CLI effort medium; read-only, no edits or commands; all hashes, tests and HTTP checks are supplied evidence"
+}
