@@ -1,0 +1,129 @@
+{
+  "records": [
+    {
+      "id": 1005,
+      "agent": "/root/read_1005",
+      "model": "Inherited collaboration model; exact identifier not exposed",
+      "neutral_prompt": true,
+      "preflighted": true,
+      "image": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/questions/q1005.png",
+      "image_sha256": "a7fd596caf28e6e4562b95d3152a9fa23f4952ab8fd265425655ced08064a775",
+      "answer": "No dagesh in bet of בשר; visibly blank interior, qamatz below.",
+      "confidence": "high",
+      "status": "resolved"
+    },
+    {
+      "id": 1006,
+      "agent": "/root/read_1006",
+      "model": "Inherited collaboration model; exact identifier not exposed",
+      "neutral_prompt": true,
+      "preflighted": true,
+      "image": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/questions/q1006.png",
+      "image_sha256": "48bca54bfaf1f97b9031672ab0df05ba875e67243976886002e7beac3528d18d",
+      "answer": "Meteg beside shin qamatz of קדשנו; detached vertical distinct from vowel stem.",
+      "confidence": "high",
+      "status": "resolved"
+    },
+    {
+      "id": 1007,
+      "agent": "/root/read_1007",
+      "model": "Inherited collaboration model; exact identifier not exposed",
+      "neutral_prompt": true,
+      "preflighted": true,
+      "image": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/questions/q1007.png",
+      "image_sha256": "8005c5ce032a213c5b3e87023f52a9e455cc54150d02ff9cb38996bdbc8fd8f4",
+      "answer": "German rubric: opening alef vowel and final letter of following-word uncertain; שבת bet dot moderately confident.",
+      "confidence": "unresolved",
+      "status": "pending_human",
+      "full_response": {
+        "question_id": 1007,
+        "source_snippet": "/tmp/s43-top.png",
+        "image_sha256": "8005c5ce032a213c5b3e87023f52a9e455cc54150d02ff9cb38996bdbc8fd8f4",
+        "method": "Read only supplied current-source image and enlarged subcrops; no OCR, other editions or other reader conclusions consulted.",
+        "transcription_tentative": "אם שַׁבָּת ווירד פֿאָלגענדעז איינגעסאַלטעט:",
+        "confidence": "mixed: consonants mostly high; first-word vowel and final letter of פֿאָלגענדעז unresolved",
+        "resolved_details": [
+          {
+            "text": "ווירד",
+            "confidence": "high",
+            "evidence": "Two vavs, yod, resh, dalet distinctly visible."
+          },
+          {
+            "text": "פֿאָ",
+            "confidence": "high",
+            "evidence": "Separate rafe above pe and qamatz beneath following alef."
+          },
+          {
+            "text": "איינגעסאַלטעט:",
+            "confidence": "moderately_high",
+            "evidence": "The closed samekh before the pointed alef is distinct; patah under that alef is separate from its glyph. Colon printed after final tet."
+          },
+          {
+            "text": "שַׁבָּת",
+            "confidence": "moderately_high",
+            "evidence": "Shin dot and lower points visible, but type is soft enough that bet interior dot is not entirely secure."
+          }
+        ],
+        "unresolved": [
+          {
+            "target": "אם",
+            "question": "Is a separate patah printed under alef, or is apparent horizontal stroke its detached Rashi-script lower limb?",
+            "confidence": "low",
+            "evidence": "The apparent short stroke meets the same baseline as the lower glyph components; cannot confidently distinguish it as a separate vowel."
+          },
+          {
+            "target": "final letter of פֿאָלגענדע־",
+            "question": "Exact final printed letter",
+            "tentative": "ז",
+            "confidence": "moderate",
+            "evidence": "Leftmost glyph is narrow and curved, unlike the nearby samekh; blur prevents confidence between its exact letterform and a neighboring letter limb."
+          }
+        ],
+        "additional_preflighted_crops": [
+          "/tmp/read1007-left.png",
+          "/tmp/read1007-mid.png",
+          "/tmp/read1007-right.png",
+          "/tmp/read1007-verbmiddle.png"
+        ],
+        "status": "not fully resolved; do not silently promote tentative text to certain"
+      }
+    },
+    {
+      "id": 1008,
+      "agent": "/root/read_1008",
+      "model": "Inherited collaboration model; exact identifier not exposed",
+      "neutral_prompt": true,
+      "preflighted": true,
+      "image": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/questions/q1008.png",
+      "image_sha256": "c6cbf573b79e5161ce427d700e3c1e4253f5c33b952308f44a587bdd39a427d1",
+      "answer": "Lamed dagesh unresolved; faint interior patch indistinguishable from blur.",
+      "confidence": "low",
+      "status": "pending_human",
+      "full_response": {
+        "question_id": 1008,
+        "source_image": "/tmp/s45_header.png",
+        "target": "LAMED in תפלת, running header",
+        "answer": "Unresolved; possible faint dagesh, cannot confidently distinguish it from blur or a printing blemish.",
+        "confidence": "low",
+        "visible_evidence": "A faint gray patch appears within the lower bend of the lamed, above its patah. It is much paler and less sharply defined than the neighboring pe dagesh and tav dots, so the displayed crop does not establish a separately printed dot confidently.",
+        "other_readers_or_ocr_consulted": false
+      }
+    }
+  ],
+  "patches": [
+    {
+      "unit": "asher_yatzar",
+      "from": "כָל־בָּשָׂר",
+      "to": "כָל־בָשָׂר",
+      "scan_page": 30
+    },
+    {
+      "unit": "birkhot_hatorah_laasoq",
+      "from": "קִדְּשָׁנוּ",
+      "to": "קִדְּשָֽׁנוּ",
+      "scan_page": 30
+    }
+  ],
+  "before_sha256": "c85b239a2c2ad4887d78613a5c45d778192fb42a526dcf33b56a40d14400bcaf",
+  "after_sha256": "73be95886e070110b93e819c9defe5cd0505f3ee50ebb200a19dfa22b2e94e42"
+}

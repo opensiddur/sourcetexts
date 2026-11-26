@@ -1,0 +1,98 @@
+{
+  "scan_page": 32,
+  "completeness": {
+    "prayer_wording": "All seven proposed fragments compared against the full current-volume image and enlarged bands. No missing or extra prayer words, consonant corrections, or vowel replacements identified.",
+    "pointing": "26 separately printed metegs are missing from the proposed text.",
+    "paratext": "Running heading and two printed page labels omitted from paratext_candidates.",
+    "method": "Viewed full page and all three bands before reading proposed JSON; inspected additional enlarged original-image crops. No other readers consulted."
+  },
+  "corrections": [
+    {
+      "unit": "birkhot_hatorah_vehaarev",
+      "confidence": "high",
+      "evidence": "Separate upright strokes beside the specified vowel dots or bars; qamatz stalks remain visibly distinct.",
+      "replacements": [
+        ["אֱלֹהֵינוּ", "אֱלֹהֵֽינוּ", "meteg on ה"],
+        ["בְּפִינוּ", "בְּפִֽינוּ", "meteg on פ"],
+        ["אֲנַחְנוּ", "אֲנַֽחְנוּ", "meteg on נ"],
+        ["וְצֶאֱצָאֵינוּ", "וְצֶאֱצָאֵֽינוּ", "meteg on second א"],
+        ["כֻּלָּנוּ", "כֻּלָּֽנוּ", "meteg on ל"],
+        ["שְׁמֶךָ", "שְׁמֶֽךָ", "meteg on מ"],
+        ["תוֹרָתֶךָ", "תוֹרָתֶֽךָ", "meteg on second ת; occurrence immediately before parenthetical לשמה"]
+      ],
+      "additional_crop_evidence": ["/tmp/s32detail0.png", "/tmp/s32_first_end.png", "/tmp/s32_kullanu.png"]
+    },
+    {
+      "unit": "birkhot_hatorah_asher_bachar",
+      "confidence": "high",
+      "evidence": "Independent vertical strokes visibly accompany tsere, segol, qamatz, or patah; these are not the downward component of qamatz.",
+      "replacements": [
+        ["אֱלֹהֵינוּ", "אֱלֹהֵֽינוּ", "meteg on ה"],
+        ["מֶלֶךְ", "מֶֽלֶךְ", "meteg on מ"],
+        ["בָּחַר־בָּנוּ", "בָּֽחַר־בָּֽנוּ", "one meteg on each ב"],
+        ["וְנָתַן", "וְנָֽתַן", "meteg on נ"],
+        ["לָנוּ", "לָֽנוּ", "meteg on ל"]
+      ],
+      "additional_crop_evidence": ["/tmp/s32detail1.png"]
+    },
+    {
+      "unit": "numbers_6_24_to_26",
+      "confidence": "high",
+      "evidence": "Each listed segol has a separately printed upright stroke alongside its three dots.",
+      "replacements": [
+        ["וְיִשְׁמְרֶךָ", "וְיִשְׁמְרֶֽךָ", "paragraph 0; meteg on ר"],
+        ["אֵלֶיךָ", "אֵלֶֽיךָ", "paragraph 1; meteg on ל"],
+        ["וִיחֻנֶּךָּ", "וִיחֻנֶּֽךָּ", "paragraph 1; meteg on נ"],
+        ["אֵלֶיךָ", "אֵלֶֽיךָ", "paragraph 2; meteg on ל"]
+      ],
+      "additional_crop_evidence": ["/tmp/s32detail2.png"]
+    },
+    {
+      "unit": "ellu_devarim",
+      "confidence": "high",
+      "evidence": "All three אלו occurrences have an upright stroke beside alef's tsere. Separate strokes also stand beside the specified segols in הקרן, קיימת, and כנגד.",
+      "replacements": [
+        ["אֵלּוּ", "אֵֽלּוּ", "opening occurrence"],
+        ["אֵלּוּ", "אֵֽלּוּ", "occurrence after תורה:"],
+        ["וְהַקֶּרֶן", "וְהַקֶּֽרֶן", "meteg on ק"],
+        ["קַיֶּמֶת", "קַיֶּֽמֶת", "meteg on י"],
+        ["וְאֵלּוּ", "וְאֵֽלּוּ", "occurrence after הבא:"],
+        ["כְּנֶגֶד", "כְּנֶֽגֶד", "meteg on נ"]
+      ],
+      "additional_crop_evidence": ["/tmp/s32detail3.png", "/tmp/s32_ellu.png", "/tmp/s32_ellu_low.png", "/tmp/s32_kneged.png"]
+    },
+    {
+      "unit": "elohai_neshamah",
+      "confidence": "high",
+      "evidence": "שנתת has a separate upright stroke adjoining the first tav's patah; ממני and לפניך have separate strokes beside the indicated segols.",
+      "replacements": [
+        ["שֶׁנָּתַתָּ", "שֶׁנָּתַֽתָּ", "meteg on first ת"],
+        ["מִמֶּנִּי", "מִמֶּֽנִּי", "meteg on second מ"],
+        ["לְפָנֶיךָ", "לְפָנֶֽיךָ", "meteg on נ"]
+      ],
+      "additional_crop_evidence": ["/tmp/s32detail5.png", "/tmp/s32detail6.png", "/tmp/s32_dageshes.png"]
+    }
+  ],
+  "paratext": [
+    {
+      "type": "running_heading",
+      "text": "תְּפִלַּת שַׁחֲרִית",
+      "position": "top centre",
+      "confidence": "high",
+      "evidence": "/tmp/s32_header.png"
+    },
+    {
+      "type": "printed_page_label",
+      "text": "5",
+      "position": "upper left and upper right",
+      "confidence": "high"
+    }
+  ],
+  "unresolved_individual_questions": [],
+  "notes": [
+    "Dageshes in אלו, כלנו, and לטלה were inspected in individual enlarged crops and support the proposed dots; no removals recommended.",
+    "The proposed pointing of והראיון is supported by the enlarged occurrence.",
+    "The existing parenthetical לשמה and היא are visible source text and already represented.",
+    "No cantillation additions inferred from familiar wording."
+  ]
+}

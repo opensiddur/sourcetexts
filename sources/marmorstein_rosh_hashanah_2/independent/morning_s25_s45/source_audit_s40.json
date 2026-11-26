@@ -1,0 +1,97 @@
+{
+  "scan_page": 40,
+  "printed_page": "9",
+  "review_basis": "Viewed full scan and all three bands before reading provisional JSON; then inspected enlarged crops of individual words. No other reader response consulted.",
+  "completeness": {
+    "prayer_fragments": "All printed prayer words are present, including the final partial Tamid verse אֶת־הַכֶּבֶשׂ אֶחָד.",
+    "paratext": "Incomplete: paratext_candidates is empty despite running heading תפלת שחרית, printed page numbers 9, upper citation שמות ל׳. ויקרא ו׳., and lower citation במדבר כ״ח."
+  },
+  "typographic_regions": [
+    {
+      "region": "Kiyyor and Leviticus, above במדבר כ״ח.",
+      "finding": "Vocalized without printed biblical cantillation; several clear metegs are absent from the provisional text."
+    },
+    {
+      "region": "Tamid, below במדבר כ״ח.",
+      "finding": "Actual biblical cantillation is printed. The provisional Tamid accents and their hosts agree with the inspected image; no image-supported correction identified there."
+    }
+  ],
+  "corrections": [
+    {
+      "unit": "qorbanot_kiyyor",
+      "paragraph_index": 1,
+      "from": "נְחֹשֶׁת",
+      "to": "נְחֹֽשֶׁת",
+      "occurrences": "Both occurrences: כִּיּוֹר נְחֹשֶׁת and וְכַנּוֹ נְחֹשֶׁת.",
+      "confidence": "high",
+      "evidence": "Separate vertical meteg below ח is visible in each occurrence; /tmp/s40_upper.png."
+    },
+    {
+      "unit": "qorbanot_kiyyor",
+      "paragraph_indices": [1, 3],
+      "from": "אֹהֶל",
+      "to": "אֹֽהֶל",
+      "occurrences": "בֵּין־אֹהֶל and אֶל־אֹהֶל.",
+      "confidence": "high",
+      "evidence": "Distinct vertical meteg below א in each occurrence; /tmp/s40_upper.png and /tmp/s40_middle.png."
+    },
+    {
+      "units": ["qorbanot_kiyyor", "leviticus_6_3_to_4"],
+      "from": "הַמִּזְבֵּחַ",
+      "to": "הַמִּזְבֵּֽחַ",
+      "occurrences": "All four occurrences: Kiyyor paragraphs 1 and 3; both occurrences in Leviticus paragraph 0.",
+      "confidence": "high",
+      "evidence": "Each occurrence has a separate vertical meteg immediately left of the tsere below ב. Individually visible in /tmp/s40_upper.png, /tmp/s40_middle.png, and /tmp/s40_etzel.png."
+    },
+    {
+      "unit": "qorbanot_kiyyor",
+      "paragraph_index": 1,
+      "from": "שָׁמָּה",
+      "to": "שָֽׁמָּה",
+      "confidence": "high",
+      "evidence": "Separate meteg beside the qamatz below ש; /tmp/s40_upper.png."
+    },
+    {
+      "unit": "qorbanot_kiyyor",
+      "paragraph_index": 2,
+      "from": "מִמֶּנּוּ",
+      "to": "מִמֶּֽנּוּ",
+      "confidence": "high",
+      "evidence": "Clear vertical meteg beside the segol below the second מ; /tmp/s40_mem.png."
+    },
+    {
+      "unit": "qorbanot_kiyyor",
+      "paragraph_indices": [3, 4],
+      "from": "יָמֻתוּ",
+      "to": "יָמֻֽתוּ",
+      "occurrences": "Both וְלֹא יָמֻתוּ occurrences.",
+      "confidence": "high",
+      "evidence": "Separate vertical meteg beside the qubuts below מ in both occurrences; /tmp/s40_mid.png and /tmp/s40_kiyyor_ending.png."
+    },
+    {
+      "unit": "leviticus_6_3_to_4",
+      "paragraph_indices": [0, 1],
+      "from": "הַדֶּשֶׁן",
+      "to": "הַדֶּֽשֶׁן",
+      "occurrences": "Both occurrences.",
+      "confidence": "high",
+      "evidence": "Separate vertical meteg beside the segol below ד, visible in each occurrence; /tmp/s40_deshen.png and /tmp/s40_middle.png."
+    },
+    {
+      "unit": "leviticus_6_3_to_4",
+      "paragraph_index": 0,
+      "from": "אֵצֶל",
+      "to": "אֵֽצֶל",
+      "confidence": "high",
+      "evidence": "Clear separate vertical meteg beside the tsere below א; /tmp/s40_etzel.png."
+    }
+  ],
+  "retained_after_close_inspection": [
+    "כִּיּוֹר: the yod dagesh is printed.",
+    "בְגִשְׁתָּם: no bet dagesh is printed.",
+    "Tamid נִֽיחֹחִ֔י: printed meteg and zaqef retained.",
+    "Tamid בְּנֵֽי־שָׁנָ֧ה, תְמִימִ֛ם, שְׁנַ֥יִם, and אֶת־הַכֶּ֥בֶשׂ אֶחָ֖ד: printed accent forms and hosts retained."
+  ],
+  "unresolved_individual_questions": [],
+  "repository_files_edited": false
+}

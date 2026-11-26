@@ -1,0 +1,998 @@
+{
+  "status": "provisional architectural survey; requires encoding/identity audit, not approval",
+  "accepted_night_inputs": {
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/evening_review/second_day_evening/print.xml": "c8e34aeb6a18abc3353f6104b96180a84f1e43083019c32cfe913477b1a5dd04",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/evening_review/second_day_evening/electronic.xml": "41428ba9177413ece85720f5cd74e975131084f518ebe3709f636b3a3ef429a2"
+  },
+  "reserved_night_identities": [
+    "urn:x-opensiddur:text:bible:deuteronomy/11/13",
+    "urn:x-opensiddur:text:bible:deuteronomy/11/14",
+    "urn:x-opensiddur:text:bible:deuteronomy/11/15",
+    "urn:x-opensiddur:text:bible:deuteronomy/11/16",
+    "urn:x-opensiddur:text:bible:deuteronomy/11/17",
+    "urn:x-opensiddur:text:bible:deuteronomy/11/18",
+    "urn:x-opensiddur:text:bible:deuteronomy/11/19",
+    "urn:x-opensiddur:text:bible:deuteronomy/11/20",
+    "urn:x-opensiddur:text:bible:deuteronomy/11/21",
+    "urn:x-opensiddur:text:bible:deuteronomy/4/39",
+    "urn:x-opensiddur:text:bible:deuteronomy/6/4",
+    "urn:x-opensiddur:text:bible:deuteronomy/6/5",
+    "urn:x-opensiddur:text:bible:deuteronomy/6/6",
+    "urn:x-opensiddur:text:bible:deuteronomy/6/7",
+    "urn:x-opensiddur:text:bible:deuteronomy/6/8",
+    "urn:x-opensiddur:text:bible:deuteronomy/6/9",
+    "urn:x-opensiddur:text:bible:exodus/15/11",
+    "urn:x-opensiddur:text:bible:exodus/15/18",
+    "urn:x-opensiddur:text:bible:isaiah/5/16",
+    "urn:x-opensiddur:text:bible:jeremiah/31/11",
+    "urn:x-opensiddur:text:bible:malachi/3/4",
+    "urn:x-opensiddur:text:bible:numbers/14/17",
+    "urn:x-opensiddur:text:bible:numbers/15/37",
+    "urn:x-opensiddur:text:bible:numbers/15/38",
+    "urn:x-opensiddur:text:bible:numbers/15/39",
+    "urn:x-opensiddur:text:bible:numbers/15/40",
+    "urn:x-opensiddur:text:bible:numbers/15/41",
+    "urn:x-opensiddur:text:bible:numbers/24/5",
+    "urn:x-opensiddur:text:bible:psalms/113/2",
+    "urn:x-opensiddur:text:bible:psalms/119/162",
+    "urn:x-opensiddur:text:bible:psalms/122/1",
+    "urn:x-opensiddur:text:bible:psalms/146/10",
+    "urn:x-opensiddur:text:bible:psalms/17/15",
+    "urn:x-opensiddur:text:bible:psalms/17/6",
+    "urn:x-opensiddur:text:bible:psalms/19/15",
+    "urn:x-opensiddur:text:bible:psalms/25/6",
+    "urn:x-opensiddur:text:bible:psalms/26/12",
+    "urn:x-opensiddur:text:bible:psalms/26/8",
+    "urn:x-opensiddur:text:bible:psalms/28/2",
+    "urn:x-opensiddur:text:bible:psalms/30/11",
+    "urn:x-opensiddur:text:bible:psalms/30/3",
+    "urn:x-opensiddur:text:bible:psalms/30/9",
+    "urn:x-opensiddur:text:bible:psalms/31/15",
+    "urn:x-opensiddur:text:bible:psalms/31/17",
+    "urn:x-opensiddur:text:bible:psalms/38/16",
+    "urn:x-opensiddur:text:bible:psalms/39/13/shimah",
+    "urn:x-opensiddur:text:bible:psalms/5/3",
+    "urn:x-opensiddur:text:bible:psalms/5/4",
+    "urn:x-opensiddur:text:bible:psalms/5/8",
+    "urn:x-opensiddur:text:bible:psalms/51/17",
+    "urn:x-opensiddur:text:bible:psalms/55/15/b",
+    "urn:x-opensiddur:text:bible:psalms/60/7",
+    "urn:x-opensiddur:text:bible:psalms/69/14",
+    "urn:x-opensiddur:text:bible:psalms/81/4",
+    "urn:x-opensiddur:text:bible:psalms/81/5",
+    "urn:x-opensiddur:text:bible:zechariah/14/9",
+    "urn:x-opensiddur:text:poem:yigdal",
+    "urn:x-opensiddur:text:poem:yigdal_daniel/1",
+    "urn:x-opensiddur:text:poem:yigdal_daniel/10",
+    "urn:x-opensiddur:text:poem:yigdal_daniel/11",
+    "urn:x-opensiddur:text:poem:yigdal_daniel/12",
+    "urn:x-opensiddur:text:poem:yigdal_daniel/13",
+    "urn:x-opensiddur:text:poem:yigdal_daniel/2",
+    "urn:x-opensiddur:text:poem:yigdal_daniel/3",
+    "urn:x-opensiddur:text:poem:yigdal_daniel/4",
+    "urn:x-opensiddur:text:poem:yigdal_daniel/5",
+    "urn:x-opensiddur:text:poem:yigdal_daniel/6",
+    "urn:x-opensiddur:text:poem:yigdal_daniel/7",
+    "urn:x-opensiddur:text:poem:yigdal_daniel/8",
+    "urn:x-opensiddur:text:poem:yigdal_daniel/9",
+    "urn:x-opensiddur:text:prayer:ahavat_olam_arvit",
+    "urn:x-opensiddur:text:prayer:ahavat_olam_arvit/opening",
+    "urn:x-opensiddur:text:prayer:ahavat_olam_arvit/seal",
+    "urn:x-opensiddur:text:prayer:amidah/adonai_sefatai",
+    "urn:x-opensiddur:text:prayer:amidah/attah_vechartanu_mikol",
+    "urn:x-opensiddur:text:prayer:amidah/avodah",
+    "urn:x-opensiddur:text:prayer:amidah/avodah/retzeh",
+    "urn:x-opensiddur:text:prayer:amidah/avodah/vetechezeinah",
+    "urn:x-opensiddur:text:prayer:amidah/avot",
+    "urn:x-opensiddur:text:prayer:amidah/avot/barukh_attah",
+    "urn:x-opensiddur:text:prayer:amidah/avot/magen_avraham",
+    "urn:x-opensiddur:text:prayer:amidah/avot/zokhrenu",
+    "urn:x-opensiddur:text:prayer:amidah/elohai_netzor/text",
+    "urn:x-opensiddur:text:prayer:amidah/gevurot",
+    "urn:x-opensiddur:text:prayer:amidah/gevurot/attah_gibbor",
+    "urn:x-opensiddur:text:prayer:amidah/gevurot/mechayyeh_hametim",
+    "urn:x-opensiddur:text:prayer:amidah/gevurot/mekhalkel_chayyim",
+    "urn:x-opensiddur:text:prayer:amidah/gevurot/mi_khamokha",
+    "urn:x-opensiddur:text:prayer:amidah/hodaah",
+    "urn:x-opensiddur:text:prayer:amidah/hodaah/hatov_shimkha",
+    "urn:x-opensiddur:text:prayer:amidah/hodaah/modim",
+    "urn:x-opensiddur:text:prayer:amidah/hodaah/ukhetov",
+    "urn:x-opensiddur:text:prayer:amidah/hodaah/veal_kullam",
+    "urn:x-opensiddur:text:prayer:amidah/melokh_al_kol_haolam",
+    "urn:x-opensiddur:text:prayer:amidah/qadosh_attah_venora",
+    "urn:x-opensiddur:text:prayer:amidah/qedushat_hashem/attah_qadosh",
+    "urn:x-opensiddur:text:prayer:amidah/shalom",
+    "urn:x-opensiddur:text:prayer:amidah/uvekhen_ten_kavod",
+    "urn:x-opensiddur:text:prayer:amidah/uvekhen_ten_pachdekha",
+    "urn:x-opensiddur:text:prayer:amidah/uvekhen_tzaddiqim",
+    "urn:x-opensiddur:text:prayer:amidah/vattitten_lanu_hashem",
+    "urn:x-opensiddur:text:prayer:amidah/vattodienu",
+    "urn:x-opensiddur:text:prayer:amidah/vetimlokh_attah_hashem",
+    "urn:x-opensiddur:text:prayer:amidah/yehi_ratzon",
+    "urn:x-opensiddur:text:prayer:barekhu/call",
+    "urn:x-opensiddur:text:prayer:barekhu/response",
+    "urn:x-opensiddur:text:prayer:barekhu/yitbarakh",
+    "urn:x-opensiddur:text:prayer:borei_meorei_haesh",
+    "urn:x-opensiddur:text:prayer:borei_peri_hagafen",
+    "urn:x-opensiddur:text:prayer:emet_veemunah",
+    "urn:x-opensiddur:text:prayer:emet_veemunah/malkhutekha",
+    "urn:x-opensiddur:text:prayer:emet_veemunah/mi_khamokhah",
+    "urn:x-opensiddur:text:prayer:emet_veemunah/mosheh",
+    "urn:x-opensiddur:text:prayer:emet_veemunah/opening",
+    "urn:x-opensiddur:text:prayer:emet_veemunah/seal",
+    "urn:x-opensiddur:text:prayer:emet_veemunah/yimlokh",
+    "urn:x-opensiddur:text:prayer:hamavdil_bein_qodesh_leqodesh",
+    "urn:x-opensiddur:text:prayer:hashkivenu",
+    "urn:x-opensiddur:text:prayer:hashkivenu/hapores_sukkat_shalom",
+    "urn:x-opensiddur:text:prayer:hashkivenu/opening",
+    "urn:x-opensiddur:text:prayer:kaddish/chatzi",
+    "urn:x-opensiddur:text:prayer:kaddish/titqabbal/text",
+    "urn:x-opensiddur:text:prayer:kaddish/yatom",
+    "urn:x-opensiddur:text:prayer:kaddish/yatom/oseh_shalom",
+    "urn:x-opensiddur:text:prayer:kaddish/yatom/yehe_shelama",
+    "urn:x-opensiddur:text:prayer:kaddish/yehe_shemeh",
+    "urn:x-opensiddur:text:prayer:kaddish/yitbarakh",
+    "urn:x-opensiddur:text:prayer:kaddish/yitgaddal",
+    "urn:x-opensiddur:text:prayer:kiddush/savri",
+    "urn:x-opensiddur:text:prayer:kiddush_rosh_hashanah",
+    "urn:x-opensiddur:text:prayer:maariv_aravim",
+    "urn:x-opensiddur:text:prayer:maariv_aravim/opening",
+    "urn:x-opensiddur:text:prayer:maariv_aravim/seal",
+    "urn:x-opensiddur:text:prayer:mah_tovu",
+    "urn:x-opensiddur:text:prayer:mah_tovu/mah_tovu",
+    "urn:x-opensiddur:text:prayer:mah_tovu/varani",
+    "urn:x-opensiddur:text:prayer:shehecheyanu",
+    "urn:x-opensiddur:text:prayer:shema/barukh_shem",
+    "urn:x-opensiddur:text:prayer:shema/el_melekh_neeman",
+    "urn:x-opensiddur:text:prayer:shema/shema_yisrael",
+    "urn:x-opensiddur:text:prayer:yaaleh_veyavo",
+    "urn:x-opensiddur:text:siddur:chol/shacharit/conclusion/aleinu",
+    "urn:x-opensiddur:text:siddur:machzor_expanded/rosh_hashanah/day_two/maariv",
+    "urn:x-opensiddur:text:siddur:rosh_hashanah/day_two/before_prayer",
+    "urn:x-opensiddur:text:siddur:rosh_hashanah/day_two/entrance"
+  ],
+  "current_project_identities": [
+    "urn:x-opensiddur:text:bible:deuteronomy/11/13",
+    "urn:x-opensiddur:text:bible:deuteronomy/11/14",
+    "urn:x-opensiddur:text:bible:deuteronomy/11/15",
+    "urn:x-opensiddur:text:bible:deuteronomy/11/16",
+    "urn:x-opensiddur:text:bible:deuteronomy/11/17",
+    "urn:x-opensiddur:text:bible:deuteronomy/11/18",
+    "urn:x-opensiddur:text:bible:deuteronomy/11/19",
+    "urn:x-opensiddur:text:bible:deuteronomy/11/20",
+    "urn:x-opensiddur:text:bible:deuteronomy/11/21",
+    "urn:x-opensiddur:text:bible:deuteronomy/4/39",
+    "urn:x-opensiddur:text:bible:deuteronomy/6/4",
+    "urn:x-opensiddur:text:bible:deuteronomy/6/5",
+    "urn:x-opensiddur:text:bible:deuteronomy/6/6",
+    "urn:x-opensiddur:text:bible:deuteronomy/6/7",
+    "urn:x-opensiddur:text:bible:deuteronomy/6/8",
+    "urn:x-opensiddur:text:bible:deuteronomy/6/9",
+    "urn:x-opensiddur:text:bible:exodus/15/11",
+    "urn:x-opensiddur:text:bible:exodus/15/18",
+    "urn:x-opensiddur:text:bible:isaiah/5/16",
+    "urn:x-opensiddur:text:bible:jeremiah/31/11",
+    "urn:x-opensiddur:text:bible:malachi/3/4",
+    "urn:x-opensiddur:text:bible:numbers/14/17",
+    "urn:x-opensiddur:text:bible:numbers/15/37",
+    "urn:x-opensiddur:text:bible:numbers/15/38",
+    "urn:x-opensiddur:text:bible:numbers/15/39",
+    "urn:x-opensiddur:text:bible:numbers/15/40",
+    "urn:x-opensiddur:text:bible:numbers/15/41",
+    "urn:x-opensiddur:text:bible:numbers/24/5",
+    "urn:x-opensiddur:text:bible:psalms/113/2",
+    "urn:x-opensiddur:text:bible:psalms/119/162",
+    "urn:x-opensiddur:text:bible:psalms/122/1",
+    "urn:x-opensiddur:text:bible:psalms/146/10",
+    "urn:x-opensiddur:text:bible:psalms/17/15",
+    "urn:x-opensiddur:text:bible:psalms/17/6",
+    "urn:x-opensiddur:text:bible:psalms/19/15",
+    "urn:x-opensiddur:text:bible:psalms/25/6",
+    "urn:x-opensiddur:text:bible:psalms/26/12",
+    "urn:x-opensiddur:text:bible:psalms/26/8",
+    "urn:x-opensiddur:text:bible:psalms/28/2",
+    "urn:x-opensiddur:text:bible:psalms/30/11",
+    "urn:x-opensiddur:text:bible:psalms/30/3",
+    "urn:x-opensiddur:text:bible:psalms/30/9",
+    "urn:x-opensiddur:text:bible:psalms/31/15",
+    "urn:x-opensiddur:text:bible:psalms/31/17",
+    "urn:x-opensiddur:text:bible:psalms/38/16",
+    "urn:x-opensiddur:text:bible:psalms/39/13/shimah",
+    "urn:x-opensiddur:text:bible:psalms/5/3",
+    "urn:x-opensiddur:text:bible:psalms/5/4",
+    "urn:x-opensiddur:text:bible:psalms/5/8",
+    "urn:x-opensiddur:text:bible:psalms/51/17",
+    "urn:x-opensiddur:text:bible:psalms/55/15/b",
+    "urn:x-opensiddur:text:bible:psalms/60/7",
+    "urn:x-opensiddur:text:bible:psalms/69/14",
+    "urn:x-opensiddur:text:bible:psalms/81/4",
+    "urn:x-opensiddur:text:bible:psalms/81/5",
+    "urn:x-opensiddur:text:bible:zechariah/14/9",
+    "urn:x-opensiddur:text:prayer:ahavat_olam_arvit",
+    "urn:x-opensiddur:text:prayer:ahavat_olam_arvit/opening",
+    "urn:x-opensiddur:text:prayer:ahavat_olam_arvit/seal",
+    "urn:x-opensiddur:text:prayer:amidah/adonai_sefatai",
+    "urn:x-opensiddur:text:prayer:amidah/attah_vechartanu_mikol",
+    "urn:x-opensiddur:text:prayer:amidah/avodah",
+    "urn:x-opensiddur:text:prayer:amidah/avodah/retzeh",
+    "urn:x-opensiddur:text:prayer:amidah/avodah/vetechezeinah",
+    "urn:x-opensiddur:text:prayer:amidah/avot",
+    "urn:x-opensiddur:text:prayer:amidah/avot/barukh_attah",
+    "urn:x-opensiddur:text:prayer:amidah/avot/magen_avraham",
+    "urn:x-opensiddur:text:prayer:amidah/avot/zokhrenu",
+    "urn:x-opensiddur:text:prayer:amidah/elohai_netzor/text",
+    "urn:x-opensiddur:text:prayer:amidah/gevurot",
+    "urn:x-opensiddur:text:prayer:amidah/gevurot/attah_gibbor",
+    "urn:x-opensiddur:text:prayer:amidah/gevurot/mechayyeh_hametim",
+    "urn:x-opensiddur:text:prayer:amidah/gevurot/mekhalkel_chayyim",
+    "urn:x-opensiddur:text:prayer:amidah/gevurot/mi_khamokha",
+    "urn:x-opensiddur:text:prayer:amidah/hodaah",
+    "urn:x-opensiddur:text:prayer:amidah/hodaah/hatov_shimkha",
+    "urn:x-opensiddur:text:prayer:amidah/hodaah/modim",
+    "urn:x-opensiddur:text:prayer:amidah/hodaah/ukhetov",
+    "urn:x-opensiddur:text:prayer:amidah/hodaah/veal_kullam",
+    "urn:x-opensiddur:text:prayer:amidah/melokh_al_kol_haolam",
+    "urn:x-opensiddur:text:prayer:amidah/qadosh_attah_venora",
+    "urn:x-opensiddur:text:prayer:amidah/qedushat_hashem/attah_qadosh",
+    "urn:x-opensiddur:text:prayer:amidah/shalom",
+    "urn:x-opensiddur:text:prayer:amidah/uvekhen_ten_kavod",
+    "urn:x-opensiddur:text:prayer:amidah/uvekhen_ten_pachdekha",
+    "urn:x-opensiddur:text:prayer:amidah/uvekhen_tzaddiqim",
+    "urn:x-opensiddur:text:prayer:amidah/vattitten_lanu_hashem",
+    "urn:x-opensiddur:text:prayer:amidah/vattodienu",
+    "urn:x-opensiddur:text:prayer:amidah/vetimlokh_attah_hashem",
+    "urn:x-opensiddur:text:prayer:amidah/yehi_ratzon",
+    "urn:x-opensiddur:text:prayer:barekhu/call",
+    "urn:x-opensiddur:text:prayer:barekhu/response",
+    "urn:x-opensiddur:text:prayer:barekhu/yitbarakh",
+    "urn:x-opensiddur:text:prayer:borei_meorei_haesh",
+    "urn:x-opensiddur:text:prayer:borei_peri_hagafen",
+    "urn:x-opensiddur:text:prayer:emet_veemunah",
+    "urn:x-opensiddur:text:prayer:emet_veemunah/malkhutekha",
+    "urn:x-opensiddur:text:prayer:emet_veemunah/mi_khamokhah",
+    "urn:x-opensiddur:text:prayer:emet_veemunah/mosheh",
+    "urn:x-opensiddur:text:prayer:emet_veemunah/opening",
+    "urn:x-opensiddur:text:prayer:emet_veemunah/seal",
+    "urn:x-opensiddur:text:prayer:emet_veemunah/yimlokh",
+    "urn:x-opensiddur:text:prayer:hamavdil_bein_qodesh_leqodesh",
+    "urn:x-opensiddur:text:prayer:hashkivenu",
+    "urn:x-opensiddur:text:prayer:hashkivenu/hapores_sukkat_shalom",
+    "urn:x-opensiddur:text:prayer:hashkivenu/opening",
+    "urn:x-opensiddur:text:prayer:kaddish/chatzi",
+    "urn:x-opensiddur:text:prayer:kaddish/yehe_shemeh",
+    "urn:x-opensiddur:text:prayer:kaddish/yitbarakh",
+    "urn:x-opensiddur:text:prayer:kaddish/yitgaddal",
+    "urn:x-opensiddur:text:prayer:kiddush/savri",
+    "urn:x-opensiddur:text:prayer:kiddush_rosh_hashanah",
+    "urn:x-opensiddur:text:prayer:maariv_aravim",
+    "urn:x-opensiddur:text:prayer:maariv_aravim/opening",
+    "urn:x-opensiddur:text:prayer:maariv_aravim/seal",
+    "urn:x-opensiddur:text:prayer:mah_tovu",
+    "urn:x-opensiddur:text:prayer:mah_tovu/mah_tovu",
+    "urn:x-opensiddur:text:prayer:mah_tovu/varani",
+    "urn:x-opensiddur:text:prayer:shehecheyanu",
+    "urn:x-opensiddur:text:prayer:shema/barukh_shem",
+    "urn:x-opensiddur:text:prayer:shema/el_melekh_neeman",
+    "urn:x-opensiddur:text:prayer:shema/shema_yisrael",
+    "urn:x-opensiddur:text:prayer:yaaleh_veyavo",
+    "urn:x-opensiddur:text:siddur:chol/shacharit/conclusion/aleinu",
+    "urn:x-opensiddur:text:siddur:rosh_hashanah/day_two",
+    "urn:x-opensiddur:text:siddur:rosh_hashanah/day_two/before_prayer",
+    "urn:x-opensiddur:text:siddur:rosh_hashanah/day_two/entrance",
+    "urn:x-opensiddur:text:siddur:rosh_hashanah/day_two/maariv",
+    "urn:x-opensiddur:text:siddur:rosh_hashanah/day_two/maariv/service"
+  ],
+  "units": [
+    {
+      "file": "birkhot_hatorah_laasoq",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:birkhot_hatorah/laasoq",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "birkhot_hatorah_vehaarev",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:birkhot_hatorah/vehaarev",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "birkhot_hatorah_asher_bachar",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:birkhot_hatorah/asher_bachar",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "tallith_hineni_mitattef",
+      "languages": [
+        "he"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:tallith/hineni_mitattef",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "tallith_lehitattef",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:tallith/lehitattef",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "tallith_mah_yaqar",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:tallith/mah_yaqar",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "tallith_yehi_ratzon",
+      "languages": [
+        "he"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:tallith/yehi_ratzon",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "morning_entrance_verses",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:siddur:rosh_hashanah/morning_preliminaries/entrance",
+      "kind": "occurrence",
+      "conflicting_identities": [
+        "urn:x-opensiddur:text:bible:psalms/5/8",
+        "urn:x-opensiddur:text:bible:psalms/55/15/b"
+      ],
+      "reason": "Protect accepted night providers/counterparts and exact morning printing."
+    },
+    {
+      "file": "morning_mah_tovu",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:mah_tovu",
+      "kind": "occurrence",
+      "conflicting_identities": [
+        "urn:x-opensiddur:text:prayer:mah_tovu",
+        "urn:x-opensiddur:text:prayer:mah_tovu/mah_tovu",
+        "urn:x-opensiddur:text:prayer:mah_tovu/varani"
+      ],
+      "reason": "Protect accepted night providers/counterparts and exact morning printing."
+    },
+    {
+      "file": "shachar_avaqeshkha_gabirol",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:poem:shachar_avaqeshkha_gabirol",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "morning_before_prayer",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:siddur:rosh_hashanah/morning_preliminaries/before_prayer",
+      "kind": "occurrence",
+      "conflicting_identities": [
+        "urn:x-opensiddur:text:bible:psalms/119/162",
+        "urn:x-opensiddur:text:bible:psalms/122/1",
+        "urn:x-opensiddur:text:bible:psalms/17/15",
+        "urn:x-opensiddur:text:bible:psalms/17/6",
+        "urn:x-opensiddur:text:bible:psalms/26/12",
+        "urn:x-opensiddur:text:bible:psalms/28/2",
+        "urn:x-opensiddur:text:bible:psalms/30/11",
+        "urn:x-opensiddur:text:bible:psalms/30/3",
+        "urn:x-opensiddur:text:bible:psalms/30/9",
+        "urn:x-opensiddur:text:bible:psalms/31/15",
+        "urn:x-opensiddur:text:bible:psalms/31/17",
+        "urn:x-opensiddur:text:bible:psalms/38/16",
+        "urn:x-opensiddur:text:bible:psalms/39/13/shimah",
+        "urn:x-opensiddur:text:bible:psalms/5/3",
+        "urn:x-opensiddur:text:bible:psalms/5/4"
+      ],
+      "reason": "Protect accepted night providers/counterparts and exact morning printing."
+    },
+    {
+      "file": "yigdal",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:poem:yigdal",
+      "kind": "occurrence",
+      "conflicting_identities": [
+        "urn:x-opensiddur:text:poem:yigdal",
+        "urn:x-opensiddur:text:poem:yigdal_daniel/1",
+        "urn:x-opensiddur:text:poem:yigdal_daniel/10",
+        "urn:x-opensiddur:text:poem:yigdal_daniel/11",
+        "urn:x-opensiddur:text:poem:yigdal_daniel/12",
+        "urn:x-opensiddur:text:poem:yigdal_daniel/13",
+        "urn:x-opensiddur:text:poem:yigdal_daniel/2",
+        "urn:x-opensiddur:text:poem:yigdal_daniel/3",
+        "urn:x-opensiddur:text:poem:yigdal_daniel/4",
+        "urn:x-opensiddur:text:poem:yigdal_daniel/5",
+        "urn:x-opensiddur:text:poem:yigdal_daniel/6",
+        "urn:x-opensiddur:text:poem:yigdal_daniel/7",
+        "urn:x-opensiddur:text:poem:yigdal_daniel/8",
+        "urn:x-opensiddur:text:poem:yigdal_daniel/9"
+      ],
+      "reason": "Protect accepted night providers/counterparts and exact morning printing."
+    },
+    {
+      "file": "adon_olam",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:poem:adon_olam",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "al_netilat_yadayim",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:al_netilat_yadayim",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "asher_yatzar",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:asher_yatzar",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "numbers_6_24_to_26",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:bible:numbers/6",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "ellu_devarim",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:ellu_devarim",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "elohai_neshamah",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:elohai_neshamah",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "birkhot_hashachar_lasekhvi",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:birkhot_hashachar/lasekhvi",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "birkhot_hashachar_shelo_asani_goy",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:birkhot_hashachar/shelo_asani_goy",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "birkhot_hashachar_shelo_asani_aved",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:birkhot_hashachar/shelo_asani_aved",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "birkhot_hashachar_shelo_asani_ishah",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:birkhot_hashachar/shelo_asani_ishah",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "birkhot_hashachar_sheasani_kirtzono",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:birkhot_hashachar/sheasani_kirtzono",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "birkhot_hashachar_poqeach_ivrim",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:birkhot_hashachar/poqeach_ivrim",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "birkhot_hashachar_malbish_arummim",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:birkhot_hashachar/malbish_arummim",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "birkhot_hashachar_mattir_asurim",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:birkhot_hashachar/mattir_asurim",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "birkhot_hashachar_zoqef_kefufim",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:birkhot_hashachar/zoqef_kefufim",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "birkhot_hashachar_roqa_haaretz",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:birkhot_hashachar/roqa_haaretz",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "birkhot_hashachar_sheasah_li",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:birkhot_hashachar/sheasah_li",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "birkhot_hashachar_hamekhin",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:birkhot_hashachar/hamekhin",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "birkhot_hashachar_ozer_yisrael",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:birkhot_hashachar/ozer_yisrael",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "birkhot_hashachar_oter_yisrael",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:birkhot_hashachar/oter_yisrael",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "birkhot_hashachar_hanoten_layaef",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:birkhot_hashachar/hanoten_layaef",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "birkhot_hashachar_hamaavir_shenah",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:birkhot_hashachar/hamaavir_shenah",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "birkhot_hashachar_shetargilenu",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:birkhot_hashachar/shetargilenu",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "birkhot_hashachar_shetatzileni",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:birkhot_hashachar/shetatzileni",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "ribbon_kol_haolamim",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:ribbon_kol_haolamim",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "aval_anachnu",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:aval_anachnu",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "lefikhakh",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:lefikhakh",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "morning_shema_yisrael",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:bible:deuteronomy/6",
+      "kind": "occurrence",
+      "conflicting_identities": [
+        "urn:x-opensiddur:text:bible:deuteronomy/6/4"
+      ],
+      "reason": "Protect accepted night providers/counterparts and exact morning printing."
+    },
+    {
+      "file": "morning_barukh_shem",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:shema/barukh_shem",
+      "kind": "occurrence",
+      "conflicting_identities": [
+        "urn:x-opensiddur:text:prayer:shema/barukh_shem"
+      ],
+      "reason": "Protect accepted night providers/counterparts and exact morning printing."
+    },
+    {
+      "file": "attah_hu_ad_shelo",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:attah_hu/ad_shelo",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "attah_hu_bashamayim",
+      "languages": [
+        "he",
+        "en"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:attah_hu/bashamayim",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "qorbanot_kiyyor",
+      "languages": [
+        "he"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:qorbanot/kiyyor",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "leviticus_6_3_to_4",
+      "languages": [
+        "he"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:bible:leviticus/6",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "qorbanot_tamid",
+      "languages": [
+        "he"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:qorbanot/tamid",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "qorbanot_veshachat",
+      "languages": [
+        "he"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:qorbanot/veshachat",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "qorbanot_attah_hu",
+      "languages": [
+        "he"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:qorbanot/attah_hu",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "qorbanot_qetoret",
+      "languages": [
+        "he"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:qorbanot/qetoret",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "qorbanot_pittum",
+      "languages": [
+        "he"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:qorbanot/pittum_haqetoret",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "qorbanot_rashbag",
+      "languages": [
+        "he"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:qorbanot/pittum_haqetoret/rashbag",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "qorbanot_rabbi_natan",
+      "languages": [
+        "he"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:qorbanot/pittum_haqetoret/rabbi_natan",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "qorbanot_bar_kappara",
+      "languages": [
+        "he"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:qorbanot/pittum_haqetoret/bar_kappara",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "qorbanot_pesuqim",
+      "languages": [
+        "he"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:qorbanot/pesuqim",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "qorbanot_attah_seter",
+      "languages": [
+        "he"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:qorbanot/attah_seter",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "qorbanot_vearvah",
+      "languages": [
+        "he"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:qorbanot/vearvah",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "anna_bekhoach",
+      "languages": [
+        "he"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:poem:anna_bekhoach",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "qorbanot_barukh_shem",
+      "languages": [
+        "he"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:shema/barukh_shem",
+      "kind": "occurrence",
+      "conflicting_identities": [
+        "urn:x-opensiddur:text:prayer:shema/barukh_shem"
+      ],
+      "reason": "Protect accepted night providers/counterparts and exact morning printing."
+    },
+    {
+      "file": "qorbanot_musaf_shabbat",
+      "languages": [
+        "he"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:qorbanot/musaf/shabbat",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "eizehu_meqoman",
+      "languages": [
+        "he"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:eizehu_meqoman",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "middot",
+      "languages": [
+        "he"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:middot",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    },
+    {
+      "file": "middot_yehi_ratzon",
+      "languages": [
+        "he"
+      ],
+      "existing_canonical_identity": "urn:x-opensiddur:text:prayer:middot/yehi_ratzon",
+      "kind": "canonical_home",
+      "conflicting_identities": [],
+      "reason": "No current project/night binding conflict; retain existing canonical identity."
+    }
+  ],
+  "constraints": [
+    "No first-volume text, pointing or approval may be inherited without current-image adjudication.",
+    "No added English morning witness may fill a documented night translation gap.",
+    "Repeated texts must preserve both actual wordings; no new canonical prayer identities for placement or pointing.",
+    "Chapter/verse quotation correspondences must preserve exact scope; occurrence classification does not authorize dropping required milestone encoding."
+  ]
+}

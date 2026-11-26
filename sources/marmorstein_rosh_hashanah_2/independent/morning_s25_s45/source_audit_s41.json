@@ -1,0 +1,156 @@
+{
+  "scan_page": 41,
+  "method": "Viewed full page and all three bands before reading primary JSON; then compared enlarged crops. No repository edits.",
+  "completeness": {
+    "prayer_text": "All printed prayer words and their order are represented.",
+    "paratext": "Incomplete: empty paratext_candidates omits running heading תפלת שחרית, both printed page labels 10, citation ויקרא א׳ י״א. before ושחט, and שמות ל׳. before ויאמר.",
+    "acceptance": "Requires corrections below; fine paratext punctuation/heading pointing not fully adjudicated."
+  },
+  "typographic_regions": [
+    {
+      "region": "Tamid and ושחט",
+      "finding": "Actual cantillation is printed. Retain the existing cantillation except where another explicitly evidenced correction is listed."
+    },
+    {
+      "region": "אתה הוא and Qetoret",
+      "finding": "Vowels and numerous metegs are printed, without biblical cantillation. Do not introduce canonical cantillation."
+    }
+  ],
+  "corrections": [
+    {
+      "context": "qorbanot_tamid paragraph 3",
+      "replacements": [
+        ["תַּעֲשֶׂ֣ה", "תַּֽעֲשֶׂ֣ה"],
+        ["תַּעֲשֶׂ֖ה", "תַּֽעֲשֶׂ֖ה"],
+        ["הָעַרְבָּֽיִם", "הָֽעַרְבָּֽיִם"]
+      ],
+      "confidence": "high",
+      "evidence": "/tmp/s41_top.png: separate vertical strokes beside initial vowels."
+    },
+    {
+      "context": "qorbanot_tamid paragraph 4",
+      "replacements": [
+        ["וַעֲשִׂירִ֧ית", "וַֽעֲשִׂירִ֧ית"],
+        ["הָאֵיפָ֛ה", "הָֽאֵיפָ֛ה"]
+      ],
+      "confidence": "high",
+      "evidence": "/tmp/s41_top.png: initial-vowel metegs clearly printed."
+    },
+    {
+      "context": "qorbanot_tamid paragraph 5",
+      "replacements": [
+        ["הָעֲשֻׂיָה֙", "הָֽעֲשֻׂיָה֙"],
+        ["לַיהֹוָֽה", "לַֽיהוָֽה"]
+      ],
+      "confidence": "high",
+      "evidence": "/tmp/s41_top.png: meteg beside initial he qamatz; Divine Name has lamed meteg and final silluq, with no printed holam."
+    },
+    {
+      "context": "qorbanot_tamid paragraph 6",
+      "replacements": [
+        ["הָאֶחָ֑ד", "הָֽאֶחָ֑ד"],
+        ["לַיהֹוָֽה", "לַֽיהוָֽה"]
+      ],
+      "confidence": "high",
+      "evidence": "/tmp/s41_top.png."
+    },
+    {
+      "context": "qorbanot_tamid paragraph 7",
+      "replacements": [
+        ["תַּעֲשֶׂ֖ה", "תַּֽעֲשֶׂ֖ה"],
+        ["הָעַרְבָּ֑יִם", "הָֽעַרְבָּ֑יִם"],
+        ["לַיהֹוָֽה", "לַֽיהוָֽה"]
+      ],
+      "confidence": "high",
+      "evidence": "/tmp/s41_top.png."
+    },
+    {
+      "context": "qorbanot_veshachat paragraph 0",
+      "replacements": [
+        ["יְהֹוָ֑ה", "יְהוָ֑ה"],
+        ["וְזָרְק֡וּ", "וְזָֽרְק֡וּ"],
+        ["אַהֲרֹ֨ן", "אַֽהֲרֹ֨ן"],
+        ["הַכֹּהֲנִ֧ים", "הַכֹּֽהֲנִ֧ים"],
+        ["אֶת־דָּמ֛וֹ", "אֶת דָּמ֛וֹ"],
+        ["עַל־הַמִּזְבֵּ֖חַ", "עַל הַמִּזְבֵּ֖חַ"]
+      ],
+      "confidence": "high",
+      "evidence": "/tmp/s41_veshachat.png: no holam in Name; separate meteg strokes; no maqaf at end of את line or between על and המזבח."
+    },
+    {
+      "context": "qorbanot_attah_hu paragraph 0",
+      "replacements": [
+        ["אֱלֹהֵינוּ", "אֱלֹהֵֽינוּ"],
+        ["שֶׁהִקְטִירוּ", "שֶׁהִקְטִֽירוּ"],
+        ["אֲבוֹתֵינוּ", "אֲבוֹתֵֽינוּ"],
+        ["לְפָנֶיךָ", "לְפָנֶֽיךָ"],
+        ["קְטֹרֶת", "קְטֹֽרֶת"],
+        ["צִוִּיתָ", "צִוִּֽיתָ"],
+        ["נְבִיאֶךָ", "נְבִיאֶֽךָ"],
+        ["בְּתוֹרָתֶךָ", "בְּתוֹרָתֶֽךָ"]
+      ],
+      "confidence": "high",
+      "evidence": "/tmp/s41_attahfine.png: distinct lower vertical metegs adjacent to the specified vowels."
+    },
+    {
+      "context": "qorbanot_qetoret paragraph 0",
+      "replacements": [
+        ["וַיֹּאמֶר", "וַיֹּֽאמֶר"],
+        ["יְהֹוָה", "יְהוָה"],
+        ["וּשְׁחֵלֶת", "וּשְׁחֵֽלֶת"]
+      ],
+      "confidence": "high",
+      "evidence": "/tmp/s41_q0.png: metegs under yod and chet; Name lacks printed holam."
+    },
+    {
+      "context": "qorbanot_qetoret paragraph 1",
+      "replacements": [
+        ["וְעָשִׂיתָ", "וְעָשִֽׂיתָ"],
+        ["קְטֹרֶת", "קְטֹֽרֶת"],
+        ["רֹקַח", "רֹֽקַח"],
+        ["קֹדֶשׁ", "קֹֽדֶשׁ"]
+      ],
+      "confidence": "high",
+      "evidence": "/tmp/s41_q0.png and /tmp/s41_q1.png."
+    },
+    {
+      "context": "qorbanot_qetoret paragraph 2",
+      "replacements": [
+        ["וְשָׁחַקְתָּ", "וְשָׁחַֽקְתָּ"],
+        ["בְּאֹהֶל", "בְּאֹֽהֶל"],
+        ["קֹדֶשׁ", "קֹֽדֶשׁ"]
+      ],
+      "confidence": "high",
+      "evidence": "/tmp/s41_q1.png and /tmp/s41_qetoret.png: ושחקת meteg belongs beside chet patah."
+    },
+    {
+      "context": "qorbanot_qetoret paragraph 4",
+      "replacements": [
+        ["קְטֹרֶת", "קְטֹֽרֶת"],
+        ["בַּבֹּקֶר בַּבֹּקֶר", "בַּבֹּֽקֶר בַּבֹּֽקֶר"],
+        ["יַקְטִירֶנָּה", "יַקְטִירֶֽנָּה"]
+      ],
+      "confidence": "high",
+      "evidence": "/tmp/s41_q4.png."
+    },
+    {
+      "context": "qorbanot_qetoret paragraph 5",
+      "replacements": [
+        ["הָעַרְבַּיִם", "הָעַרְבַּֽיִם"],
+        ["יַקְטִירֶנָּה", "יַקְטִירֶֽנָּה"],
+        ["קְטֹרֶת", "קְטֹֽרֶת"],
+        ["יְהֹוָה", "יְהוָה"]
+      ],
+      "confidence": "high",
+      "evidence": "/tmp/s41_last.png and /tmp/s41_q4.png."
+    }
+  ],
+  "unresolved": [
+    {
+      "scope": "Running heading and tiny biblical citations",
+      "issue": "Words and locations are clear; exact heading pointing and citation apostrophe/quotation-mark shapes require a dedicated enlarged paratext check before claiming complete diplomatic acceptance.",
+      "question_for_user": false
+    }
+  ],
+  "notes": "No additional consonantal corrections found. The short Divine Name יְיָ in אתה הוא remains as printed. Existing colons and sentence stops agree with the page."
+}
