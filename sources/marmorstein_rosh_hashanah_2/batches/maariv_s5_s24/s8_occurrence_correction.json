@@ -1,0 +1,36 @@
+{
+  "status": "corrected_occurrence_mapping_pending_independent_recheck",
+  "reason": "Image showed את־השמים in Deut11:17. The earlier exact-word key השמים incorrectly selected Deut11:21 because the first occurrence is maqaf-linked with את. This is an application error, not a change to the image-confirmed reading.",
+  "correct_scope": {
+    "block": 3,
+    "word_index": 44,
+    "text": "את־השמים",
+    "verse": "Deuteronomy11:17",
+    "hosts": "medial mem and final mem"
+  },
+  "unrelated_later_occurrence": {
+    "block": 3,
+    "word_index": 102,
+    "verse": "Deuteronomy11:21",
+    "decision": "Remove wrongly applied pashtas; retain the candidate tipcha under medial mem, pending source-image review. Do not infer the preceding כימי accent from the erroneous pashtas."
+  },
+  "changes": [
+    {
+      "path": "working/s8.json",
+      "word44_before": "אֶת־הַשָּׁמַיִם",
+      "word44_after": "אֶת־הַשָּׁמַ֙יִם֙",
+      "word102_before": "הַשָּׁמַ֙יִם֙",
+      "word102_after": "הַשָּׁמַיִם",
+      "sha256": "4cf522d99466f1a19fe7780981ed516ec7a1de58c45be5b3e2df337581cea0e5"
+    },
+    {
+      "path": "candidates/s8_pointed.json",
+      "word44_before": "אֶת־הַשָּׁמַ֙יִם֙",
+      "word44_after": "אֶת־הַשָּׁמַ֙יִם֙",
+      "word102_before": "הַשָּׁמַ֖֙יִם֙",
+      "word102_after": "הַשָּׁמַ֖יִם",
+      "sha256": "b9867985aff4ebd819b18ae997d870e6cadc2fb38ec2cf3421385f9dd39f815f"
+    }
+  ],
+  "supersedes_application_only": "s8_image_adjudications.json changes for the two השמים pashtas. The approved source-image reading itself stands. Historical wrong applied snapshot remains preserved."
+}

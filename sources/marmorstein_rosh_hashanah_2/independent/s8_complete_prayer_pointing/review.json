@@ -1,0 +1,231 @@
+{
+  "status": "changes_required",
+  "scope": "Prayer blocks 1, 3 and 5 of scan 8 only. This is not approval of the whole scan, the batch, the heading or citation lines, the encoding, or any export.",
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "error_unsupported_mark",
+      "block": 3,
+      "word_index": 102,
+      "occurrence": "only occurrence of הַשָּׁמַיִם in 'כִּימֵי הַשָּׁמַיִם עַל־הָאָרֶץ' (Deut 11:21; block 3 has an earlier, separate אֶת־הַשָּׁמַ֙יִם֙ at word 44)",
+      "token_candidate": "הַשָּׁמַ֖֙יִם֙",
+      "issue": "The candidate adds U+0596 tipcha on מ (host_index 2) on top of the pashta pair on מ and ם already settled in s8_image_adjudications.json. A tipcha and a pashta can't both stand in one word. The provenance file reports conflicts: [], so its check missed this.",
+      "proposed_correction": "Remove U+0596 and keep the settled form הַשָּׁמַ֙יִם֙. The settled pashta marks are not reopened.",
+      "image_region": "s8-band3.png, about y 95–165, x 330–620 (the 'כִּימֵי הַשָּׁמַיִם' line); the same line is near the bottom of s8-band2.png"
+    },
+    {
+      "id": "F2",
+      "severity": "uncertain_dependent_mark",
+      "block": 3,
+      "word_index": 101,
+      "token_candidate": "כִּימֵ֥י",
+      "issue": "The added U+05A5 merkha on מ is the conjunctive that normally comes before a tipcha. With the settled pashta on the next word, a different conjunctive would normally come first. I can't see the glyph under the מ clearly enough to decide.",
+      "proposed_correction": "Treat as tentative and don't approve it. Check it in a tight crop.",
+      "image_region": "s8-band3.png, about y 95–165, x 560–680"
+    },
+    {
+      "id": "F3",
+      "severity": "unresolved_below_line_marks",
+      "issue": "These added marks sit below the letters. In the bands I can see that something is printed in most of these places, but I can't identify the glyph (munach, merkha, tipcha, darga, tevir, etnachta, mahpakh or meteg), and some metegs may be missing from the print entirely. Mechanically, each one is on the letter the provenance names. None of them is image-confirmed, and none should be approved to complete the set.",
+      "tokens": {
+        "block3": [
+          "4 אֲשֶׁ֧ר",
+          "5 אָנֹכִ֛י",
+          "6 מְצַוֶּ֥ה",
+          "7 אֶתְכֶ֖ם",
+          "8 הַיּ֑וֹם",
+          "10 אֶת־יְהֹוָ֤ה",
+          "13 בְּכָל־לְבַבְכֶ֖ם",
+          "14 וּבְכָל־נַפְשְׁכֶֽם",
+          "15 וְנָתַתִּ֧י",
+          "17 בְּעִתּ֖וֹ",
+          "18 יוֹרֶ֣ה",
+          "19 וּמַלְק֑וֹשׁ",
+          "20 וְאָסַפְתָּ֣",
+          "22 וְתִירֹשְׁךָ֖",
+          "23 וְיִצְהָרֶֽךָ",
+          "24 וְנָתַתִּ֛י",
+          "25 עֵ֥שֶׂב",
+          "26 בְּשָׂדְךָ֖",
+          "27 לִבְהֶמְתֶּ֑ךָ",
+          "28 וְאָכַלְתָּ֖",
+          "29 וְשָׂבָֽעְתָּ",
+          "32 פֶּ֥ן־יִפְתֶּ֖ה (both marks)",
+          "33 לְבַבְכֶ֑ם",
+          "36 אֱלֹהִ֣ים",
+          "38 וְהִשְׁתַּחֲוִיתֶ֖ם",
+          "39 לָהֶֽם",
+          "43 וְעָצַ֤ר",
+          "45 וְלֹא־יִהְיֶ֣ה",
+          "47 וְהָ֣אֲדָמָ֔ה (munach)",
+          "48 לֹ֥א",
+          "49 תִתֵּ֖ן",
+          "50 אֶת־יְבוּלָ֑הּ",
+          "51 וַֽאֲבַדְתֶּ֣ם (munach)",
+          "54 הָאָ֣רֶץ",
+          "56 אֲשֶׁ֥ר",
+          "57 יְהֹוָ֖ה",
+          "58 נֹתֵ֥ן",
+          "59 לָכֶֽם",
+          "61 אֶת־דְּבָרַ֣י",
+          "63 עַל־לְבַבְכֶ֖ם",
+          "64 וְעַל־נַפְשְׁכֶ֑ם",
+          "66 אֹתָ֤ם",
+          "69 וְהָי֥וּ",
+          "70 לְטוֹטָפֹ֖ת",
+          "71 בֵּ֥ין",
+          "72 עֵינֵיכֶֽם",
+          "73 וְלִמַּדְתֶּ֥ם",
+          "74 אֹתָ֛ם",
+          "75 אֶת־בְּנֵיכֶ֖ם",
+          "76 לְדַבֵּ֣ר",
+          "77 בָּ֑ם",
+          "78 בְּשִׁבְתְּךָ֤",
+          "80 וּבְלֶכְתְּךָ֣",
+          "82 וּֽבְשָׁכְבְּךָ֖ (meteg and tipcha)",
+          "83 וּבְקוּמֶֽךָ",
+          "84 וּכְתַבְתָּ֛ם",
+          "85 עַל־מְזוּז֥וֹת",
+          "86 בֵּיתֶ֖ךָ",
+          "87 וּבִשְׁעָרֶֽיךָ",
+          "89 יִרְבּ֤וּ",
+          "91 וִימֵ֣י",
+          "94 הָֽאֲדָמָ֔ה (meteg)",
+          "96 נִשְׁבַּ֧ע",
+          "97 יְהֹוָ֛ה",
+          "98 לַאֲבֹתֵיכֶ֖ם",
+          "99 לָתֵ֣ת",
+          "100 לָהֶ֑ם",
+          "103 עַל־הָאָֽרֶץ"
+        ],
+        "block5": [
+          "1 יְהֹוָ֖ה",
+          "2 אֶל־מֹשֶׁ֥ה",
+          "3 לֵּאמֹֽר",
+          "5 אֶל־בְּנֵ֤י",
+          "7 וְאָמַרְתָּ֣",
+          "10 לָהֶ֥ם",
+          "11 צִיצִ֛ת",
+          "12 עַל־כַּנְפֵ֥י",
+          "13 בִגְדֵיהֶ֖ם",
+          "14 לְדֹרֹתָ֑ם",
+          "15 וְנָתְנ֛וּ",
+          "16 עַל־צִיצִ֥ת",
+          "17 הַכָּנָ֖ף",
+          "18 פְּתִ֥יל",
+          "19 תְּכֵֽלֶת",
+          "23 וּרְאִיתֶ֣ם",
+          "28 וַעֲשִׂיתֶ֖ם",
+          "29 אֹתָ֑ם"
+        ]
+      },
+      "image_region": "Crop each line of text separately, under the baseline, at 3–4× the page scan: block 3 lines 1–5 are in s8-band1.png at about y 510–870; lines 4–16 are in s8-band2.png at about y 30–890; block 5 is in s8-band3.png at about y 180–450."
+    },
+    {
+      "id": "F4",
+      "severity": "unresolved_above_line_dot_marks",
+      "issue": "These added zaqef qatan, revia and geresh marks sit above the line. I can see a mark above the letter in these places, but I can't tell single dots (revia) from double dots (zaqef), and I can't separate them from nearby holam dots.",
+      "tokens": {
+        "block3": [
+          "12 וּלְעָבְד֔וֹ",
+          "21 דְגָנֶ֔ךָ",
+          "31 לָכֶ֔ם",
+          "34 וְסַרְתֶּ֗ם",
+          "37 אֲחֵרִ֔ים",
+          "41 אַף־יְהֹוָ֜ה (geresh, next to the holam)",
+          "42 בָּכֶ֗ם",
+          "46 מָטָ֔ר",
+          "47 וְהָ֣אֲדָמָ֔ה (zaqef)",
+          "55 הַטֹּבָ֔ה",
+          "62 אֵ֔לֶּה",
+          "68 עַל־יֶדְכֶ֔ם",
+          "81 בַדֶּ֔רֶךְ",
+          "94 הָֽאֲדָמָ֔ה (zaqef)"
+        ],
+        "block5": [
+          "8 אֲלֵהֶ֔ם",
+          "24 אֹת֗וֹ (revia, next to the holam male)",
+          "27 יְהֹוָ֔ה"
+        ]
+      },
+      "proposed_correction": "Treat as tentative until a tight crop shows how many dots there are."
+    },
+    {
+      "id": "F5",
+      "severity": "image_supported_at_band_resolution",
+      "issue": "For these added marks, a mark of the matching kind is visible in the right place. This covers only these marks, not whole words.",
+      "tokens": [
+        "b3 9 לְאַהֲבָ֞ה (gershayim)",
+        "b3 35 וַעֲבַדְתֶּם֙",
+        "b3 40 וְחָרָ֨ה",
+        "b3 44 אֶת־הַשָּׁמַ֙יִם֙ (both)",
+        "b3 52 מְהֵרָ֗ה",
+        "b3 53 מֵעַל֙",
+        "b3 60 וְשַׂמְתֶּם֙",
+        "b3 65 וּקְשַׁרְתֶּ֨ם",
+        "b3 67 לְאוֹת֙",
+        "b3 79 בְּבֵיתֶ֙ךָ֙ (both)",
+        "b3 88 לְמַ֨עַן",
+        "b3 90 יְמֵיכֶם֙",
+        "b3 95 אֲשֶׁ֨ר",
+        "b5 4 דַּבֵּ֞ר (gershayim)",
+        "b5 6 יִשְׂרָאֵל֙",
+        "b5 9 וְעָשׂ֨וּ",
+        "b5 25 וּזְכַרְתֶּם֙"
+      ]
+    },
+    {
+      "id": "F6",
+      "severity": "possible_omission_uncertain",
+      "block": 3,
+      "word_index": 35,
+      "token_candidate": "וַעֲבַדְתֶּם֙",
+      "issue": "There may be a small vertical stroke under the first ו, which would be a meteg like the one in word 51 וַֽאֲבַדְתֶּ֣ם. I can't confirm it.",
+      "proposed_correction": "None for now. If a crop shows a meteg, the form would be וַֽעֲבַדְתֶּם֙.",
+      "image_region": "s8-band2.png, about y 115–175, x 330–480"
+    },
+    {
+      "id": "F7",
+      "severity": "uncertain_existing_mark_block1",
+      "block": 1,
+      "word_index": 2,
+      "token_candidate": "וְדִבַּרְתָּ֖",
+      "issue": "The block 1 text is identical in the baseline and the candidate. In s8-band1 the mark below this word looks like it sits under ב/ר rather than under the last letter ת, and its shape is unclear. If questions 870–877 settled this word, ignore this item.",
+      "proposed_correction": "None proposed. Check it in a crop.",
+      "image_region": "s8-band1.png, about y 205–265, x 420–570"
+    },
+    {
+      "id": "F8",
+      "severity": "encoding_note_not_image_fidelity",
+      "tokens": [
+        "b3 3 אֶל־מִצְוֹתַ֔י",
+        "b5 26 אֶת־כָּל־מִצְוֹ֣ת"
+      ],
+      "issue": "The image shows one printed dot over the consonantal vav in both occurrences. Whether it is encoded as U+05B9 (primary, kept) or U+05BA (secondary) can't be read from the image. The two codepoints don't stand for different printed dots, so the choice doesn't affect how faithfully the printed mark is reproduced. Unicode recommends U+05BA for a consonantal vav with holam, so this is a pending encoding or rendering decision, outside this review."
+    },
+    {
+      "id": "F9",
+      "severity": "mechanical_check",
+      "issue": "I counted all 127 provenance entries by hand (101 in block 3, 26 in block 5), treating maqaf-joined words as one word and counting only consonants for host_index. Every entry lands on the stated host letter and codepoint in the candidate text, so no host is misplaced by count. I did not run a script diff of consonants and vowels between baseline and candidate. Spot checks agreed, including מְזֻזוֹת and לְטֹטָפֹת in block 1 and מְזוּזוֹת and לְטוֹטָפֹת in block 3."
+    }
+  ],
+  "settled_not_reopened": [
+    "s8_image_adjudications.json: b3 11 אֱלֹֽהֵיכֶם֙ (meteg and pashta), b3 16 מְטַֽר־אַרְצְכֶ֛ם (meteg and tevir), b3 102 pashta on מ and ם, b3 92 בְנֵיכֶ֔ם, b3 93 עַ֚ל, no dagesh in the initial bet of בניכם and בגדיהם",
+    "Questions 870–877 at their exact occurrences, where the baseline already includes them"
+  ],
+  "image_paths_read": [
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s8.jpg",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/maariv_s5_s24_bands/s8-band1.png",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/maariv_s5_s24_bands/s8-band2.png",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/maariv_s5_s24_bands/s8-band3.png"
+  ],
+  "actual_model": "claude-opus-5-5",
+  "requested_effort": "medium",
+  "scope_limitations": [
+    "I couldn't find the question 870–877 records. These paths don't exist: batches/maariv_s5_s24/{user_adjudications.json, user_adjudications.jsonl, s8_user_adjudications.json, user_adjudications/s8.json} and the source root's user_adjudications.json and user_adjudications.jsonl. The s8_image_adjudications.json I found (batches/maariv_s5_s24/) mentions only questions 870–875, so 876–877 weren't checked against records.",
+    "I had no way to crop or zoom. The bands are only about 1.2× the page scan, which is too small to identify glyphs below the line or count dots above it. That is why F3 and F4 are unresolved rather than approved.",
+    "The heading 'מעריב ליל שני של ראש השנה' and the citations 'דברים יא יג' and 'במדבר טו לז' are out of scope and still pending.",
+    "No encoding, normalization or export check was done (see F8).",
+    "The display of s8.jpg was scaled down by 1.13. The regions above use the band images' own pixel coordinates."
+  ]
+}

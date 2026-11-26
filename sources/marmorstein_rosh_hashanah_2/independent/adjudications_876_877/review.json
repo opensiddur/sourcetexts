@@ -1,0 +1,39 @@
+{
+  "status": "approved",
+  "findings": [
+    {
+      "id": "876",
+      "result": "pass",
+      "detail": "Block 5, word 0 (Num 15:37) went from 'וַיֹּאמֶר' to 'וַיֹּ֥אמֶר'. The only addition is merkha (U+05A5), and it sits on yod (letter index 1), which matches user_adjudications_876_877.json. The word has no meteg (U+05BD): the vav carries only patah, and nothing else in the word changed."
+    },
+    {
+      "id": "877",
+      "result": "pass",
+      "detail": "Block 3, word 51 counting from 0 (word 52 counting from 1) went from 'וַאֲבַדְתֶּם' to 'וַֽאֲבַדְתֶּם'. Meteg (U+05BD) was added on the initial vav (letter index 0), next to its patah. I counted the words by hand (maqaf-joined words count as one) and index 51 is the Deut 11:17 occurrence after 'אֶת־יְבוּלָהּ'. The similar-looking 'וַעֲבַדְתֶּם' at index 35 (11:16) has no meteg, so the right word was changed."
+    },
+    {
+      "id": "only-two-new-marks",
+      "result": "pass",
+      "detail": "I compared all five blocks of the previous and current s8.json by eye. These two insertions are the only differences. The heading, both citation blocks, block 1, all other words in blocks 3 and 5, the uncertainties, continuation and image_sha256 are unchanged."
+    },
+    {
+      "id": "prior-marks-preserved",
+      "result": "pass",
+      "detail": "The marks already present in the previous file are still there unchanged. Metegs: לְבָבֶֽךָ, וּֽבְשָׁכְבְּךָ֖, וּבְקוּמֶֽךָ, עֵינֶֽיךָ, וּבִשְׁעָרֶֽיךָ, אֱלֹֽהֵיכֶם֙, מְטַֽר־, הִשָּֽׁמְר֣וּ. Accents include the ones in block 1, the opening of Deut 11:13, אַרְצְכֶ֛ם, בְנֵיכֶ֔ם, עַ֚ל, הַשָּׁמַ֙יִם֙ and וְהָיָ֣ה לָכֶם֮ לְצִיצִת֒. Nothing was removed or moved."
+    },
+    {
+      "id": "877-munach-observation",
+      "result": "non_blocking_note",
+      "detail": "The question for 877 says a munach is printed under the tav of ואבדתם, but neither the previous nor the current working text has one. Its absence was already there before this change and is outside the scope of applying these answers. Flag it for the later full-page pointing review."
+    }
+  ],
+  "actual_model": "claude-opus-5-5 (Opus 5.5)",
+  "requested_effort": "medium",
+  "scope_limitations": [
+    "This checks only that the 876 and 877 answers were applied correctly in working/s8.json against previous_working_s8.json. It does not accept the full page, its encoding, or the batch.",
+    "I only had a file-read tool and could not run a shell. I could not recompute previous_working_sha256 or current_working_sha256, run a byte-level diff, or dump the codepoints in hex. The codepoint identities (U+05A5, U+05BD), the host letters and the 'no other change' result come from reading the text closely.",
+    "I did not check the order of the combining marks on the yod (dagesh, holam, merkha) or whether the text follows any normalization standard.",
+    "I did not look at the source scan or the snippets 876.png and 877.png. I took the user's answers as authoritative and did not check them against the image.",
+    "I could not identify which marks came specifically from 870–875 or from image adjudication, because no list of them was provided. 'Preserved' here means every mark in the previous file is unchanged in the current one."
+  ]
+}
