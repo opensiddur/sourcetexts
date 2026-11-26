@@ -297,7 +297,7 @@
                 "content": [
                   "וְיָדַעְתָּ הַיּוֹם וַהֲשֵׁבֹתָ אֶל־לְבָבֶךָ כִּי ",
                   {
-                    "divine_name": "יְהֹוָה"
+                    "divine_name": "יְהוָה"
                   },
                   " הוּא הָאֱלֹהִים בַּשָּׁמַיִם מִמַּעַל וְעַל־הָאָרֶץ מִתָּחַת אֵין עוֹד:"
                 ]
@@ -320,7 +320,7 @@
                 "urn": "urn:x-opensiddur:text:bible:exodus/15/18",
                 "content": [
                   {
-                    "divine_name": "יְהֹוָה"
+                    "divine_name": "יְהוָה"
                   },
                   " יִמְלֹךְ לְעֹלָם וָעֶד:"
                 ]
@@ -370,13 +370,6 @@
     "Review F2/F3: optional Malkenu includes its trailing separator; importer bibliography page tracking now descends recursively through variants, quotes and source spans.",
     "Final range decision: expose the established whole Aleinu root only, with its two documentary paragraphs. This batch never transcludes individual Aleinu child parts. Omit those optional child mappings rather than claiming compatibility with the historical path-depth-truncated first-day ranges; no new canonical identity is introduced. Full Bible verses retain their own exact keys, and repeated Ex15:18 keeps source-only attribution. All words remain unchanged."
   ],
-  "normalizations": [
-    {
-      "file": "aleinu",
-      "occurrences": 2,
-      "source": "יְהוָה",
-      "encoded": "יְהֹוָה",
-      "reason": "Apply existing user723 edition convention for Tetragrammaton holam, as already recorded in shema_remaining_ranges.json. Approved source reading retains the absent printed holam; no new claim about visible dots."
-    }
-  ]
+  "normalizations": [],
+  "normalization_restoration": "../../independent/morning_s25_s45/convention_authority/restoration.json: restore eight approved source forms; earlier user723 generalization withdrawn."
 }

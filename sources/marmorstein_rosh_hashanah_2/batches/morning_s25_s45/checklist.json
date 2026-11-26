@@ -23,7 +23,7 @@
     44,
     45
   ],
-  "status": "source_reading",
+  "status": "encoding",
   "accepted": false,
   "gates": {
     "scope_images": {
@@ -33,23 +33,25 @@
       ]
     },
     "primary_reading": {
-      "status": "pending",
+      "status": "passed",
       "evidence": [
         "primary/manifest.json",
         "primary_reading_order.json",
-        "reference_candidates.json"
+        "reference_candidates.json",
+        "source_approval.json"
       ],
-      "note": "Full-page primary survey recorded before consulting new independent reader output; reference-derived word candidates explicitly provisional. Complete paratext/fine-mark verification remains pending."
+      "note": "Full-page primary reading and later paratext/fine-mark verification completed; see hash-bound source_approval.json. Historical preliminary limitations are superseded by that approval."
     },
     "blind_second_reading": {
-      "status": "pending",
+      "status": "passed",
       "evidence": [
-        "independent_reading_status.json"
+        "independent_reading_status.json",
+        "source_approval.json"
       ],
-      "note": "All21 pages have blind preliminary readings; explicit fine-pointing omissions require supplemental per-page reviews and adjudication, so this gate remains pending."
+      "note": "All21 pages have blind readings and supplemental image/fine-mark audits, with source disputes adjudicated and the composed source review approved. This is source approval, not encoding/export acceptance."
     },
     "adjudication": {
-      "status": "pending",
+      "status": "passed",
       "evidence": [
         "dedicated_readers_982_989.json",
         "working/readings.json",
@@ -62,12 +64,21 @@
         "source_audit_application_26_28_30_42_45.json",
         "source_audit_application_38.json",
         "dedicated_readers_1005_1008.json",
-        "user_adjudications_1007_1008.json"
+        "user_adjudications_1007_1008.json",
+        "source_metadata_corrections.json",
+        "dedicated_readers_1009_1019.json",
+        "dedicated_readers_1020_1021.json",
+        "user_adjudication_1022.json",
+        "user_adjudication_1003.json",
+        "user_adjudications_1010_1019.json",
+        "source_record_addendum.json",
+        "source_approval.json"
       ]
     },
     "encoding": {
       "status": "pending",
-      "evidence": []
+      "evidence": [],
+      "note": "Literal draft:55 modules/90 witnesses generated; seven shared canonical units and documentary/expanded morning spines remain pending. Independent guideline review in progress."
     },
     "alignment": {
       "status": "pending",
@@ -83,7 +94,10 @@
     },
     "mechanical_checks": {
       "status": "pending",
-      "evidence": []
+      "evidence": [
+        "canonical_draft_verification.json"
+      ],
+      "note": "Partial draft check:90 generated witnesses match approved printed words;93 previously accepted files unchanged. Whole-batch checks remain pending."
     },
     "exports": {
       "status": "pending",
@@ -99,6 +113,6 @@
     }
   },
   "pending_user_questions": [],
-  "next_question_number": 1009,
+  "next_question_number": 1023,
   "pending_source_questions": []
 }

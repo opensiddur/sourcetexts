@@ -1,0 +1,33 @@
+{
+  "reviewer": "/root/review_explicit_edition",
+  "actual_model": "Inherited collaboration model; exact identifier and effort not exposed",
+  "scope": [
+    "opensiddur/importer/marmorstein_rosh_hashanah_1/build.py",
+    "opensiddur/importer/marmorstein_rosh_hashanah_1/source_encoding.py",
+    "opensiddur/tests/importer/test_explicit_scan_edition.py"
+  ],
+  "input_sha256": {
+    "opensiddur/importer/marmorstein_rosh_hashanah_1/build.py": "7b4f562c3f33aebe942ea558b9db60bbb570c12af87d73805c6ac539666c9e5b",
+    "opensiddur/importer/marmorstein_rosh_hashanah_1/source_encoding.py": "87184c1816af4f05dd937b622c82d564f11ac625903a800e8fd1c50270149d19",
+    "opensiddur/tests/importer/test_explicit_scan_edition.py": "373f34ca68f34ad74f35b9a779ae1bd719e358ea4c1687ce89a534d410063f7f"
+  },
+  "verdict": "approved for explicit-edition renderer scope",
+  "finding_closure": [
+    {
+      "id": "R1",
+      "status": "closed",
+      "evidence": "unit_document now passes identifier to apply_source_encoding. Commentary pagination uses the provided identifier; direct legacy callers with no identifier retain b.IDENTIFIER. The new synthetic test reproduces the prior failing commentary case and now verifies correct source URLs and unchanged words."
+    }
+  ],
+  "remaining_findings": [],
+  "validation": {
+    "command": ".venv/bin/pytest -q opensiddur/tests/importer/test_explicit_scan_edition.py opensiddur/tests/importer/test_marmorstein_source_encoding.py opensiddur/tests/importer/test_marmorstein_rosh_hashanah_1.py",
+    "result": "129 passed, 54 subtests passed",
+    "warning": "Nonblocking pytest cache write warning from read-only filesystem; tests completed.",
+    "lint": "ruff check on all three reviewed files passed"
+  },
+  "limitations": [
+    "Approval covers reusable edition injection and source-commentary provenance only.",
+    "No morning source, identity, alignment, generated encoding, settings or presentation approval; no complete-batch acceptance."
+  ]
+}

@@ -1,0 +1,2004 @@
+{
+  "status": "recommended_order_and_condition_plan_not_implemented_approval",
+  "reviewer": "/root/review_morning_identities",
+  "actual_model": "Inherited collaboration model; exact identifier and reasoning setting not exposed",
+  "source_order_basis": "Approved working/readings plus explicit primary_reading_order addendum, visually checking actualvolume2s30/s34/s38/s43; storage order is not recitation order. No source words borrowed from day1.",
+  "inputs": [
+    {
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/morning_s25_s45/working/readings.json",
+      "sha256": "c964475cbf07e5d4e7a0fce56a85d2168bafda38a092a7c9b37ced04f79abda9"
+    },
+    {
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/morning_s25_s45/primary_reading_order.json",
+      "sha256": "ef8dd18ac7e43dc8072b66082594802a73666ef4ee005f717ea8747bcbd69a83"
+    },
+    {
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/morning_s25_s45/morning_units.json",
+      "sha256": "3730c2f7e1ab2159f0ed87105a1d2f6e0dcc13ee0f6eb408b10f80933c3b2103"
+    },
+    {
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/morning_s25_s45/source_approval.json",
+      "sha256": "2ab68eabdc8aeda75b88fab39223a4df43ab9fc1207d3c995a1036687b51fef9"
+    }
+  ],
+  "comparative_inputs": [
+    {
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/specs/MARMORSTEIN_ROSH_HASHANAH_1.md",
+      "sha256": "07f314dc3c17971fafdd8e95ed8c971d0303adc6f6581041353230a7b8bf1d6a"
+    },
+    {
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/opensiddur/exporter/features.yaml",
+      "sha256": "82efd17514967d6fb97070da0f216890815c7805bed4dd27537a28beb6a5883f"
+    }
+  ],
+  "images_inspected_for_order_not_new_pointing_acceptance": [
+    {
+      "scan": 25,
+      "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s25.jpg",
+      "sha256": "eed57a25ba26933af25281b61f9ecfb209d5b149d14ac7253896cd877cfe03f0"
+    },
+    {
+      "scan": 30,
+      "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s30.jpg",
+      "sha256": "5f143886444b8424ae9a640d9339871d98c9b0b0d0c41c31cb8dfcaaed30fd3c"
+    },
+    {
+      "scan": 34,
+      "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s34.jpg",
+      "sha256": "62992cba1103027078a3c7af4623cd38ee5979c594dcae801b3f1b2d54df9e4d"
+    },
+    {
+      "scan": 38,
+      "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s38.jpg",
+      "sha256": "ccd1c4dbc146e9f5d5067fa79b170dd22e4b9026424686e0317a1f4d02c70eac"
+    },
+    {
+      "scan": 43,
+      "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s43.jpg",
+      "sha256": "fcfca7dd26864e1997a9e33809ef61f59b95b8d6c90a1220cb183ddbdd977cc1"
+    }
+  ],
+  "condition_registry": {
+    "german": {
+      "fs": "opensiddur:rite",
+      "feature": "german",
+      "value": true,
+      "kind": "binary"
+    },
+    "not_german": {
+      "operator": "none",
+      "operands": [
+        "german"
+      ]
+    },
+    "male": {
+      "fs": "opensiddur:person",
+      "feature": "gender",
+      "value": "male",
+      "kind": "symbol"
+    },
+    "female": {
+      "fs": "opensiddur:person",
+      "feature": "gender",
+      "value": "female",
+      "kind": "symbol"
+    },
+    "shabbat": {
+      "fs": "opensiddur:holiday-aggregate",
+      "feature": "shabbat",
+      "value": true,
+      "kind": "binary"
+    },
+    "ten_days": {
+      "fs": "opensiddur:holiday-aggregate",
+      "feature": "aseret-ymei-tshuva",
+      "value": true,
+      "kind": "binary",
+      "use": "True source-volume context; no25–45printed insertion is newly gated by it."
+    }
+  },
+  "documentary_order": [
+    {
+      "source_order": 1,
+      "key": "tallith_hineni_mitattef",
+      "canonical_target": "urn:x-opensiddur:text:prayer:tallith/hineni_mitattef",
+      "source_scans": {
+        "he": [
+          25
+        ]
+      },
+      "source_languages": [
+        "he"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 2,
+      "key": "tallith_lehitattef",
+      "canonical_target": "urn:x-opensiddur:text:prayer:tallith/lehitattef",
+      "source_scans": {
+        "he": [
+          25
+        ],
+        "en": [
+          25
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 3,
+      "key": "tallith_mah_yaqar",
+      "canonical_target": "urn:x-opensiddur:text:prayer:tallith/mah_yaqar",
+      "source_scans": {
+        "he": [
+          25
+        ],
+        "en": [
+          25
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 4,
+      "key": "tallith_yehi_ratzon",
+      "canonical_target": "urn:x-opensiddur:text:prayer:tallith/yehi_ratzon",
+      "source_scans": {
+        "he": [
+          25
+        ]
+      },
+      "source_languages": [
+        "he"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 5,
+      "key": "morning_entrance_verses",
+      "source_scans": {
+        "he": [
+          26
+        ],
+        "en": [
+          27
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": true,
+      "canonical_targets": [
+        "urn:x-opensiddur:text:bible:psalms/5/8",
+        "urn:x-opensiddur:text:bible:psalms/55/15/b"
+      ],
+      "structural_composite_only": true
+    },
+    {
+      "source_order": 6,
+      "key": "morning_mah_tovu",
+      "canonical_target": "urn:x-opensiddur:text:prayer:mah_tovu",
+      "source_scans": {
+        "he": [
+          26
+        ],
+        "en": [
+          27
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": true
+    },
+    {
+      "source_order": 7,
+      "key": "shachar_avaqeshkha_gabirol",
+      "canonical_target": "urn:x-opensiddur:text:poem:shachar_avaqeshkha_gabirol",
+      "source_scans": {
+        "he": [
+          26
+        ],
+        "en": [
+          27
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 8,
+      "key": "morning_before_prayer",
+      "source_scans": {
+        "he": [
+          26,
+          28
+        ],
+        "en": [
+          27,
+          29
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": true,
+      "canonical_targets": [
+        "urn:x-opensiddur:text:bible:psalms/17/6",
+        "urn:x-opensiddur:text:bible:psalms/17/15",
+        "urn:x-opensiddur:text:bible:psalms/31/15",
+        "urn:x-opensiddur:text:bible:psalms/28/2",
+        "urn:x-opensiddur:text:bible:psalms/30/3",
+        "urn:x-opensiddur:text:bible:psalms/30/9",
+        "urn:x-opensiddur:text:bible:psalms/31/17",
+        "urn:x-opensiddur:text:bible:psalms/38/16",
+        "urn:x-opensiddur:text:bible:psalms/39/13/shimah",
+        "urn:x-opensiddur:text:bible:psalms/30/11",
+        "urn:x-opensiddur:text:bible:psalms/122/1",
+        "urn:x-opensiddur:text:bible:psalms/119/162",
+        "urn:x-opensiddur:text:bible:psalms/5/3",
+        "urn:x-opensiddur:text:bible:psalms/5/4",
+        "urn:x-opensiddur:text:bible:psalms/17/6",
+        "urn:x-opensiddur:text:bible:psalms/26/12"
+      ],
+      "structural_composite_only": true,
+      "repeated_occurrence": "Psalm17:6 remains twice, at positions1 and15, with separately selected EN source printing; HE words identical but provenance differs acrosss26/s28."
+    },
+    {
+      "source_order": 9,
+      "key": "yigdal",
+      "canonical_target": "urn:x-opensiddur:text:poem:yigdal",
+      "source_scans": {
+        "he": [
+          28
+        ],
+        "en": [
+          29
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": true,
+      "translation_availability": {
+        "he": true,
+        "en": true
+      },
+      "canonical_printing_selection": "Morning literal HE/EN, including the approved morning13stanzas; night output/gaps stay unchanged through local printing/ENavailability settings."
+    },
+    {
+      "source_order": 10,
+      "key": "adon_olam",
+      "canonical_target": "urn:x-opensiddur:text:poem:adon_olam",
+      "source_scans": {
+        "he": [
+          30
+        ],
+        "en": [
+          31
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 11,
+      "key": "al_netilat_yadayim",
+      "canonical_target": "urn:x-opensiddur:text:prayer:al_netilat_yadayim",
+      "source_scans": {
+        "he": [
+          30
+        ],
+        "en": [
+          31
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 12,
+      "key": "asher_yatzar",
+      "canonical_target": "urn:x-opensiddur:text:prayer:asher_yatzar",
+      "source_scans": {
+        "he": [
+          30
+        ],
+        "en": [
+          31
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 13,
+      "key": "birkhot_hatorah_laasoq",
+      "canonical_target": "urn:x-opensiddur:text:prayer:birkhot_hatorah/laasoq",
+      "source_scans": {
+        "he": [
+          30
+        ],
+        "en": [
+          31
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 14,
+      "key": "birkhot_hatorah_vehaarev",
+      "canonical_target": "urn:x-opensiddur:text:prayer:birkhot_hatorah/vehaarev",
+      "source_scans": {
+        "he": [
+          32
+        ],
+        "en": [
+          33
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 15,
+      "key": "birkhot_hatorah_asher_bachar",
+      "canonical_target": "urn:x-opensiddur:text:prayer:birkhot_hatorah/asher_bachar",
+      "source_scans": {
+        "he": [
+          32
+        ],
+        "en": [
+          33
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 16,
+      "key": "numbers_6_24_to_26",
+      "canonical_target": "urn:x-opensiddur:text:bible:numbers/6/24-/6/26",
+      "source_scans": {
+        "he": [
+          32
+        ],
+        "en": [
+          33
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 17,
+      "key": "ellu_devarim",
+      "canonical_target": "urn:x-opensiddur:text:prayer:ellu_devarim",
+      "source_scans": {
+        "he": [
+          32
+        ],
+        "en": [
+          33
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 18,
+      "key": "elohai_neshamah",
+      "canonical_target": "urn:x-opensiddur:text:prayer:elohai_neshamah",
+      "source_scans": {
+        "he": [
+          32
+        ],
+        "en": [
+          33
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 19,
+      "key": "birkhot_hashachar_lasekhvi",
+      "canonical_target": "urn:x-opensiddur:text:prayer:birkhot_hashachar/lasekhvi",
+      "source_scans": {
+        "he": [
+          34
+        ],
+        "en": [
+          35
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 20,
+      "key": "birkhot_hashachar_shelo_asani_goy",
+      "canonical_target": "urn:x-opensiddur:text:prayer:birkhot_hashachar/shelo_asani_goy",
+      "source_scans": {
+        "he": [
+          34
+        ],
+        "en": [
+          35
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 21,
+      "key": "birkhot_hashachar_shelo_asani_aved",
+      "canonical_target": "urn:x-opensiddur:text:prayer:birkhot_hashachar/shelo_asani_aved",
+      "source_scans": {
+        "he": [
+          34
+        ],
+        "en": [
+          35
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 22,
+      "key": "birkhot_hashachar_shelo_asani_ishah",
+      "canonical_target": "urn:x-opensiddur:text:prayer:birkhot_hashachar/shelo_asani_ishah",
+      "source_scans": {
+        "he": [
+          34
+        ],
+        "en": [
+          35
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false,
+      "condition": "male"
+    },
+    {
+      "source_order": 23,
+      "key": "birkhot_hashachar_sheasani_kirtzono",
+      "canonical_target": "urn:x-opensiddur:text:prayer:birkhot_hashachar/sheasani_kirtzono",
+      "source_scans": {
+        "he": [
+          34
+        ],
+        "en": [
+          35
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false,
+      "condition": "female",
+      "documentary_target": "urn:x-opensiddur:text:siddur:rosh_hashanah/day_two/morning_blessings/womens_blessing",
+      "source_only_duplicate": "Second EN paragraph preserved documentary-only sic/corr; canonical blessing once regardless error setting."
+    },
+    {
+      "source_order": 24,
+      "key": "birkhot_hashachar_poqeach_ivrim",
+      "canonical_target": "urn:x-opensiddur:text:prayer:birkhot_hashachar/poqeach_ivrim",
+      "source_scans": {
+        "he": [
+          34
+        ],
+        "en": [
+          35
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 25,
+      "key": "birkhot_hashachar_malbish_arummim",
+      "canonical_target": "urn:x-opensiddur:text:prayer:birkhot_hashachar/malbish_arummim",
+      "source_scans": {
+        "he": [
+          34
+        ],
+        "en": [
+          35
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 26,
+      "key": "birkhot_hashachar_mattir_asurim",
+      "canonical_target": "urn:x-opensiddur:text:prayer:birkhot_hashachar/mattir_asurim",
+      "source_scans": {
+        "he": [
+          34
+        ],
+        "en": [
+          35
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 27,
+      "key": "birkhot_hashachar_zoqef_kefufim",
+      "canonical_target": "urn:x-opensiddur:text:prayer:birkhot_hashachar/zoqef_kefufim",
+      "source_scans": {
+        "he": [
+          34
+        ],
+        "en": [
+          35
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 28,
+      "key": "birkhot_hashachar_roqa_haaretz",
+      "canonical_target": "urn:x-opensiddur:text:prayer:birkhot_hashachar/roqa_haaretz",
+      "source_scans": {
+        "he": [
+          34
+        ],
+        "en": [
+          35
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 29,
+      "key": "birkhot_hashachar_sheasah_li",
+      "canonical_target": "urn:x-opensiddur:text:prayer:birkhot_hashachar/sheasah_li",
+      "source_scans": {
+        "he": [
+          34
+        ],
+        "en": [
+          35
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 30,
+      "key": "birkhot_hashachar_hamekhin",
+      "canonical_target": "urn:x-opensiddur:text:prayer:birkhot_hashachar/hamekhin",
+      "source_scans": {
+        "he": [
+          34
+        ],
+        "en": [
+          35
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 31,
+      "key": "birkhot_hashachar_ozer_yisrael",
+      "canonical_target": "urn:x-opensiddur:text:prayer:birkhot_hashachar/ozer_yisrael",
+      "source_scans": {
+        "he": [
+          34
+        ],
+        "en": [
+          35
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 32,
+      "key": "birkhot_hashachar_oter_yisrael",
+      "canonical_target": "urn:x-opensiddur:text:prayer:birkhot_hashachar/oter_yisrael",
+      "source_scans": {
+        "he": [
+          34
+        ],
+        "en": [
+          35
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 33,
+      "key": "birkhot_hashachar_hanoten_layaef",
+      "canonical_target": "urn:x-opensiddur:text:prayer:birkhot_hashachar/hanoten_layaef",
+      "source_scans": {
+        "he": [
+          34
+        ],
+        "en": [
+          35
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 34,
+      "key": "birkhot_hashachar_hamaavir_shenah",
+      "canonical_target": "urn:x-opensiddur:text:prayer:birkhot_hashachar/hamaavir_shenah",
+      "source_scans": {
+        "he": [
+          34
+        ],
+        "en": [
+          35
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 35,
+      "key": "birkhot_hashachar_shetargilenu",
+      "canonical_target": "urn:x-opensiddur:text:prayer:birkhot_hashachar/shetargilenu-/gomel_chasadim",
+      "source_scans": {
+        "he": [
+          34,
+          36
+        ],
+        "en": [
+          35,
+          37
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 36,
+      "key": "birkhot_hashachar_shetatzileni",
+      "canonical_target": "urn:x-opensiddur:text:prayer:birkhot_hashachar/shetatzileni",
+      "source_scans": {
+        "he": [
+          36
+        ],
+        "en": [
+          37
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 37,
+      "key": "ribbon_kol_haolamim",
+      "canonical_target": "urn:x-opensiddur:text:prayer:ribbon_kol_haolamim",
+      "source_scans": {
+        "he": [
+          36
+        ],
+        "en": [
+          37
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 38,
+      "key": "aval_anachnu",
+      "canonical_target": "urn:x-opensiddur:text:prayer:aval_anachnu",
+      "source_scans": {
+        "he": [
+          36
+        ],
+        "en": [
+          37
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 39,
+      "key": "lefikhakh",
+      "canonical_target": "urn:x-opensiddur:text:prayer:lefikhakh",
+      "source_scans": {
+        "he": [
+          38
+        ],
+        "en": [
+          39
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 40,
+      "key": "morning_shema_yisrael",
+      "canonical_target": "urn:x-opensiddur:text:bible:deuteronomy/6/4",
+      "source_scans": {
+        "he": [
+          38
+        ],
+        "en": [
+          39
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": true
+    },
+    {
+      "source_order": 41,
+      "key": "morning_barukh_shem",
+      "canonical_target": "urn:x-opensiddur:text:prayer:shema/barukh_shem",
+      "source_scans": {
+        "he": [
+          38
+        ],
+        "en": [
+          39
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": true,
+      "translation_availability": {
+        "he": true,
+        "en": true
+      },
+      "avoid_inherited_place_rubrics": "No accepted night whisper/rubric leaks into these calls."
+    },
+    {
+      "source_order": 42,
+      "key": "attah_hu_ad_shelo",
+      "canonical_target": "urn:x-opensiddur:text:prayer:attah_hu/ad_shelo-/uvishuatekha",
+      "source_scans": {
+        "he": [
+          38
+        ],
+        "en": [
+          39
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 43,
+      "key": "attah_hu_bashamayim",
+      "canonical_target": "urn:x-opensiddur:text:prayer:attah_hu/bashamayim",
+      "source_scans": {
+        "he": [
+          38
+        ],
+        "en": [
+          39
+        ]
+      },
+      "source_languages": [
+        "he",
+        "en"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 44,
+      "key": "qorbanot_kiyyor",
+      "canonical_target": "urn:x-opensiddur:text:prayer:qorbanot/kiyyor",
+      "source_scans": {
+        "he": [
+          40
+        ]
+      },
+      "source_languages": [
+        "he"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 45,
+      "key": "leviticus_6_3_to_4",
+      "canonical_target": "urn:x-opensiddur:text:bible:leviticus/6/3-/6/4",
+      "source_scans": {
+        "he": [
+          40
+        ]
+      },
+      "source_languages": [
+        "he"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 46,
+      "key": "qorbanot_tamid",
+      "canonical_target": "urn:x-opensiddur:text:prayer:qorbanot/tamid",
+      "source_scans": {
+        "he": [
+          40,
+          41
+        ]
+      },
+      "source_languages": [
+        "he"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 47,
+      "key": "qorbanot_veshachat",
+      "canonical_target": "urn:x-opensiddur:text:prayer:qorbanot/veshachat",
+      "source_scans": {
+        "he": [
+          41
+        ]
+      },
+      "source_languages": [
+        "he"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 48,
+      "key": "qorbanot_attah_hu",
+      "canonical_target": "urn:x-opensiddur:text:prayer:qorbanot/attah_hu",
+      "source_scans": {
+        "he": [
+          41
+        ]
+      },
+      "source_languages": [
+        "he"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 49,
+      "key": "qorbanot_qetoret",
+      "canonical_target": "urn:x-opensiddur:text:prayer:qorbanot/qetoret",
+      "source_scans": {
+        "he": [
+          41
+        ]
+      },
+      "source_languages": [
+        "he"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 50,
+      "key": "qorbanot_pittum",
+      "canonical_target": "urn:x-opensiddur:text:prayer:qorbanot/pittum_haqetoret",
+      "source_scans": {
+        "he": [
+          42
+        ]
+      },
+      "source_languages": [
+        "he"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 51,
+      "key": "qorbanot_rashbag",
+      "canonical_target": "urn:x-opensiddur:text:prayer:qorbanot/pittum_haqetoret/rashbag",
+      "source_scans": {
+        "he": [
+          42
+        ]
+      },
+      "source_languages": [
+        "he"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 52,
+      "key": "qorbanot_rabbi_natan",
+      "canonical_target": "urn:x-opensiddur:text:prayer:qorbanot/pittum_haqetoret/rabbi_natan",
+      "source_scans": {
+        "he": [
+          42
+        ]
+      },
+      "source_languages": [
+        "he"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 53,
+      "key": "qorbanot_bar_kappara",
+      "canonical_target": "urn:x-opensiddur:text:prayer:qorbanot/pittum_haqetoret/bar_kappara",
+      "source_scans": {
+        "he": [
+          42
+        ]
+      },
+      "source_languages": [
+        "he"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 54,
+      "key": "qorbanot_pesuqim",
+      "canonical_target": "urn:x-opensiddur:text:prayer:qorbanot/pesuqim",
+      "source_scans": {
+        "he": [
+          42
+        ]
+      },
+      "source_languages": [
+        "he"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 55,
+      "key": "qorbanot_attah_seter",
+      "canonical_target": "urn:x-opensiddur:text:prayer:qorbanot/attah_seter",
+      "source_scans": {
+        "he": [
+          42
+        ]
+      },
+      "source_languages": [
+        "he"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 56,
+      "key": "qorbanot_vearvah",
+      "canonical_target": "urn:x-opensiddur:text:prayer:qorbanot/vearvah",
+      "source_scans": {
+        "he": [
+          42
+        ]
+      },
+      "source_languages": [
+        "he"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 57,
+      "key": "anna_bekhoach",
+      "canonical_target": "urn:x-opensiddur:text:poem:anna_bekhoach",
+      "source_scans": {
+        "he": [
+          42
+        ]
+      },
+      "source_languages": [
+        "he"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 58,
+      "key": "qorbanot_barukh_shem",
+      "canonical_target": "urn:x-opensiddur:text:prayer:shema/barukh_shem",
+      "source_scans": {
+        "he": [
+          42
+        ]
+      },
+      "source_languages": [
+        "he"
+      ],
+      "shared_library_deferred": true,
+      "translation_availability": {
+        "he": true,
+        "en": false
+      },
+      "avoid_inherited_place_rubrics": "No accepted night whisper/rubric leaks into these calls."
+    },
+    {
+      "source_order": 59,
+      "key": "qorbanot_musaf_shabbat",
+      "canonical_target": "urn:x-opensiddur:text:prayer:qorbanot/musaf/shabbat",
+      "source_scans": {
+        "he": [
+          43
+        ]
+      },
+      "source_languages": [
+        "he"
+      ],
+      "shared_library_deferred": false,
+      "condition": "shabbat",
+      "condition_ends_before": "eizehu_meqoman",
+      "rubric": "qorbanot_shabbat_yiddish"
+    },
+    {
+      "source_order": 60,
+      "key": "eizehu_meqoman",
+      "canonical_target": "urn:x-opensiddur:text:prayer:eizehu_meqoman/1-/8",
+      "source_scans": {
+        "he": [
+          43,
+          44
+        ]
+      },
+      "source_languages": [
+        "he"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 61,
+      "key": "middot",
+      "canonical_target": "urn:x-opensiddur:text:prayer:middot/lead-/13",
+      "source_scans": {
+        "he": [
+          45
+        ]
+      },
+      "source_languages": [
+        "he"
+      ],
+      "shared_library_deferred": false
+    },
+    {
+      "source_order": 62,
+      "key": "middot_yehi_ratzon",
+      "canonical_target": "urn:x-opensiddur:text:prayer:middot/yehi_ratzon",
+      "source_scans": {
+        "he": [
+          45
+        ]
+      },
+      "source_languages": [
+        "he"
+      ],
+      "shared_library_deferred": false
+    }
+  ],
+  "expanded_order": [
+    {
+      "key": "tallith_hineni_mitattef",
+      "condition": null
+    },
+    {
+      "key": "tallith_lehitattef",
+      "condition": null
+    },
+    {
+      "key": "tallith_mah_yaqar",
+      "condition": null
+    },
+    {
+      "key": "tallith_yehi_ratzon",
+      "condition": null
+    },
+    {
+      "key": "morning_entrance_verses",
+      "condition": null
+    },
+    {
+      "key": "morning_mah_tovu",
+      "condition": null
+    },
+    {
+      "key": "shachar_avaqeshkha_gabirol",
+      "condition": null
+    },
+    {
+      "key": "morning_before_prayer",
+      "condition": null
+    },
+    {
+      "key": "yigdal",
+      "condition": null
+    },
+    {
+      "key": "adon_olam",
+      "condition": null
+    },
+    {
+      "key": "al_netilat_yadayim",
+      "condition": null
+    },
+    {
+      "key": "asher_yatzar",
+      "condition": null
+    },
+    {
+      "group": "torah_study_early",
+      "condition": "not_german",
+      "keys": [
+        "birkhot_hatorah_laasoq",
+        "birkhot_hatorah_vehaarev",
+        "birkhot_hatorah_asher_bachar",
+        "numbers_6_24_to_26",
+        "ellu_devarim"
+      ],
+      "label_required_when_unknown": true
+    },
+    {
+      "key": "elohai_neshamah",
+      "condition": null
+    },
+    {
+      "key": "birkhot_hashachar_lasekhvi",
+      "condition": null
+    },
+    {
+      "key": "birkhot_hashachar_shelo_asani_goy",
+      "condition": null
+    },
+    {
+      "key": "birkhot_hashachar_shelo_asani_aved",
+      "condition": null
+    },
+    {
+      "key": "birkhot_hashachar_shelo_asani_ishah",
+      "condition": "male"
+    },
+    {
+      "key": "birkhot_hashachar_sheasani_kirtzono",
+      "condition": "female"
+    },
+    {
+      "key": "birkhot_hashachar_poqeach_ivrim",
+      "condition": null
+    },
+    {
+      "key": "birkhot_hashachar_malbish_arummim",
+      "condition": null
+    },
+    {
+      "key": "birkhot_hashachar_mattir_asurim",
+      "condition": null
+    },
+    {
+      "key": "birkhot_hashachar_zoqef_kefufim",
+      "condition": null
+    },
+    {
+      "key": "birkhot_hashachar_roqa_haaretz",
+      "condition": null
+    },
+    {
+      "key": "birkhot_hashachar_sheasah_li",
+      "condition": null
+    },
+    {
+      "key": "birkhot_hashachar_hamekhin",
+      "condition": null
+    },
+    {
+      "key": "birkhot_hashachar_ozer_yisrael",
+      "condition": null
+    },
+    {
+      "key": "birkhot_hashachar_oter_yisrael",
+      "condition": null
+    },
+    {
+      "key": "birkhot_hashachar_hanoten_layaef",
+      "condition": null
+    },
+    {
+      "key": "birkhot_hashachar_hamaavir_shenah",
+      "condition": null
+    },
+    {
+      "key": "birkhot_hashachar_shetargilenu",
+      "condition": null
+    },
+    {
+      "key": "birkhot_hashachar_shetatzileni",
+      "condition": null
+    },
+    {
+      "key": "ribbon_kol_haolamim",
+      "condition": null
+    },
+    {
+      "key": "aval_anachnu",
+      "condition": null
+    },
+    {
+      "key": "lefikhakh",
+      "condition": null
+    },
+    {
+      "key": "morning_shema_yisrael",
+      "condition": null
+    },
+    {
+      "key": "morning_barukh_shem",
+      "condition": null
+    },
+    {
+      "key": "attah_hu_ad_shelo",
+      "condition": null
+    },
+    {
+      "key": "attah_hu_bashamayim",
+      "condition": null
+    },
+    {
+      "group": "torah_study_late",
+      "condition": "german",
+      "keys": [
+        "birkhot_hatorah_laasoq",
+        "birkhot_hatorah_vehaarev",
+        "birkhot_hatorah_asher_bachar",
+        "numbers_6_24_to_26",
+        "ellu_devarim"
+      ],
+      "label_required_when_unknown": true
+    },
+    {
+      "key": "qorbanot_kiyyor",
+      "condition": null
+    },
+    {
+      "key": "leviticus_6_3_to_4",
+      "condition": null
+    },
+    {
+      "key": "qorbanot_tamid",
+      "condition": null
+    },
+    {
+      "key": "qorbanot_veshachat",
+      "condition": null
+    },
+    {
+      "key": "qorbanot_attah_hu",
+      "condition": null
+    },
+    {
+      "key": "qorbanot_qetoret",
+      "condition": null
+    },
+    {
+      "key": "qorbanot_pittum",
+      "condition": null
+    },
+    {
+      "key": "qorbanot_rashbag",
+      "condition": null
+    },
+    {
+      "key": "qorbanot_rabbi_natan",
+      "condition": null
+    },
+    {
+      "key": "qorbanot_bar_kappara",
+      "condition": null
+    },
+    {
+      "key": "qorbanot_pesuqim",
+      "condition": null
+    },
+    {
+      "key": "qorbanot_attah_seter",
+      "condition": null
+    },
+    {
+      "key": "qorbanot_vearvah",
+      "condition": null
+    },
+    {
+      "key": "anna_bekhoach",
+      "condition": null
+    },
+    {
+      "key": "qorbanot_barukh_shem",
+      "condition": null
+    },
+    {
+      "key": "qorbanot_musaf_shabbat",
+      "condition": "shabbat"
+    },
+    {
+      "key": "eizehu_meqoman",
+      "condition": null
+    },
+    {
+      "key": "middot",
+      "condition": null
+    },
+    {
+      "key": "middot_yehi_ratzon",
+      "condition": null
+    }
+  ],
+  "local_instructions": [
+    {
+      "key": "morning_tallit_heading",
+      "source": {
+        "scan": "s25",
+        "printed_page": "1",
+        "text": "סֵֽדֶר עֲטִיפַת הַטַּלִּית.",
+        "language": "he",
+        "witnesses": [
+          "he"
+        ],
+        "page_start": true,
+        "type": "heading"
+      },
+      "placement": {
+        "relation": "heading_for",
+        "unit_or_group": [
+          "tallith_hineni_mitattef",
+          "tallith_lehitattef",
+          "tallith_mah_yaqar",
+          "tallith_yehi_ratzon"
+        ]
+      },
+      "keep_out_of_reusable_word_files": true,
+      "no_rend": true
+    },
+    {
+      "key": "morning_tallit_before",
+      "source": {
+        "scan": "s25",
+        "printed_page": "1",
+        "text": "Before draping oneself in the טלית the following is said:",
+        "language": "en",
+        "witnesses": [
+          "he"
+        ],
+        "page_start": false,
+        "type": "description"
+      },
+      "placement": {
+        "relation": "before",
+        "unit_or_group": "tallith_hineni_mitattef"
+      },
+      "keep_out_of_reusable_word_files": true,
+      "no_rend": true
+    },
+    {
+      "key": "morning_tallit_standing",
+      "source": {
+        "scan": "s25",
+        "printed_page": "1",
+        "text": "Then this ברכה is recited while standing:",
+        "language": "en",
+        "witnesses": [
+          "he"
+        ],
+        "page_start": false,
+        "type": "description"
+      },
+      "placement": {
+        "relation": "before",
+        "unit_or_group": "tallith_lehitattef"
+      },
+      "keep_out_of_reusable_word_files": true,
+      "no_rend": true
+    },
+    {
+      "key": "morning_tallit_draping",
+      "source": {
+        "scan": "s25",
+        "printed_page": "1",
+        "text": "One then drapes oneself in the טלית and says:",
+        "language": "en",
+        "witnesses": [
+          "he"
+        ],
+        "page_start": false
+      },
+      "placement": {
+        "relation": "before",
+        "unit_or_group": "tallith_mah_yaqar"
+      },
+      "keep_out_of_reusable_word_files": true,
+      "no_rend": true
+    },
+    {
+      "key": "morning_tallit_after",
+      "source": {
+        "scan": "s25",
+        "printed_page": "1",
+        "text": "One then removes the טלית from the face and drapes oneself in such a way that there should be one ציצת in front and one behind on each side.",
+        "language": "en",
+        "witnesses": [
+          "he"
+        ],
+        "page_start": false
+      },
+      "placement": {
+        "relation": "after",
+        "unit_or_group": "tallith_yehi_ratzon"
+      },
+      "keep_out_of_reusable_word_files": true,
+      "no_rend": true
+    },
+    {
+      "key": "morning_prayers_heading_he",
+      "source": {
+        "scan": "s26",
+        "printed_page": "2",
+        "text": "תְּפִלּוֹת.",
+        "language": "he",
+        "witnesses": [
+          "he"
+        ],
+        "page_start": true,
+        "type": "heading"
+      },
+      "placement": {
+        "relation": "heading_for",
+        "unit_or_group": "morning_preliminaries"
+      },
+      "keep_out_of_reusable_word_files": true,
+      "no_rend": true
+    },
+    {
+      "key": "morning_prayers_heading_en",
+      "source": {
+        "scan": "s27",
+        "printed_page": "2",
+        "text": "Prayers",
+        "language": "en",
+        "witnesses": [
+          "en"
+        ],
+        "page_start": true,
+        "type": "heading"
+      },
+      "placement": {
+        "relation": "heading_for",
+        "unit_or_group": "morning_preliminaries"
+      },
+      "keep_out_of_reusable_word_files": true,
+      "no_rend": true
+    },
+    {
+      "key": "morning_entering_he",
+      "source": {
+        "scan": "s26",
+        "printed_page": "2",
+        "text": "On entering the Synagogue:",
+        "language": "en",
+        "witnesses": [
+          "he"
+        ],
+        "page_start": false,
+        "type": "description"
+      },
+      "placement": {
+        "relation": "before",
+        "unit_or_group": "morning_entrance_verses"
+      },
+      "keep_out_of_reusable_word_files": true,
+      "no_rend": true
+    },
+    {
+      "key": "morning_entering_en",
+      "source": {
+        "scan": "s27",
+        "printed_page": "2",
+        "text": "On entering the Synagogue:",
+        "language": "en",
+        "witnesses": [
+          "en"
+        ],
+        "page_start": false,
+        "type": "description"
+      },
+      "placement": {
+        "relation": "before",
+        "unit_or_group": "morning_entrance_verses"
+      },
+      "keep_out_of_reusable_word_files": true,
+      "no_rend": true
+    },
+    {
+      "key": "morning_before_he",
+      "source": {
+        "scan": "s26",
+        "printed_page": "2",
+        "text": "Before the morning prayer:",
+        "language": "en",
+        "witnesses": [
+          "he"
+        ],
+        "page_start": false,
+        "type": "description"
+      },
+      "placement": {
+        "relation": "before",
+        "unit_or_group": "morning_before_prayer"
+      },
+      "keep_out_of_reusable_word_files": true,
+      "no_rend": true
+    },
+    {
+      "key": "morning_before_en",
+      "source": {
+        "scan": "s27",
+        "printed_page": "2",
+        "text": "Before the morning prayer:",
+        "language": "en",
+        "witnesses": [
+          "en"
+        ],
+        "page_start": false,
+        "type": "description"
+      },
+      "placement": {
+        "relation": "before",
+        "unit_or_group": "morning_before_prayer"
+      },
+      "keep_out_of_reusable_word_files": true,
+      "no_rend": true
+    },
+    {
+      "key": "blessings_heading_he",
+      "source": {
+        "scan": "s30",
+        "printed_page": "4",
+        "text": "תְּפִלַּת שַׁחֲרִית.",
+        "language": "he",
+        "witnesses": [
+          "he"
+        ],
+        "type": "heading",
+        "page_start": true
+      },
+      "placement": {
+        "relation": "heading_for",
+        "unit_or_group": "morning_blessings"
+      },
+      "keep_out_of_reusable_word_files": true,
+      "no_rend": true
+    },
+    {
+      "key": "blessings_heading_en",
+      "source": {
+        "scan": "s31",
+        "printed_page": "4",
+        "text": "Morning Prayer",
+        "language": "en",
+        "witnesses": [
+          "en"
+        ],
+        "type": "heading",
+        "page_start": true
+      },
+      "placement": {
+        "relation": "heading_for",
+        "unit_or_group": "morning_blessings"
+      },
+      "keep_out_of_reusable_word_files": true,
+      "no_rend": true
+    },
+    {
+      "key": "hashachar_women_he",
+      "source": {
+        "scan": "s34",
+        "printed_page": "6",
+        "text": "In place of the preceding benediction women say:",
+        "language": "en",
+        "witnesses": [
+          "he"
+        ],
+        "page_start": false
+      },
+      "placement": {
+        "relation": "conditional_note",
+        "unit_or_group": "birkhot_hashachar_sheasani_kirtzono"
+      },
+      "keep_out_of_reusable_word_files": true,
+      "no_rend": true,
+      "condition": "female"
+    },
+    {
+      "key": "hashachar_women_en",
+      "source": {
+        "scan": "s35",
+        "printed_page": "6",
+        "text": "In place of the preceding benediction women say:",
+        "language": "en",
+        "witnesses": [
+          "en"
+        ],
+        "page_start": false
+      },
+      "placement": {
+        "relation": "conditional_note",
+        "unit_or_group": "birkhot_hashachar_sheasani_kirtzono"
+      },
+      "keep_out_of_reusable_word_files": true,
+      "no_rend": true,
+      "condition": "female"
+    },
+    {
+      "key": "hashachar_leolam_he",
+      "source": {
+        "scan": "s36",
+        "printed_page": "7",
+        "text": "לְעוֹלָם יְהֵא אָדָם יְרֵא שָׁמַֽיִם בְּסֵֽתֶר וּמוֹדֶה עַל־הָאֱמֶת וְדוֹבֵר אֱמֶת בִּלְבָבוֹ וְיַשְׁכֵּם וְיֹאמַר:",
+        "language": "he",
+        "witnesses": [
+          "he"
+        ],
+        "page_start": false
+      },
+      "placement": {
+        "relation": "before",
+        "unit_or_group": "ribbon_kol_haolamim"
+      },
+      "keep_out_of_reusable_word_files": true,
+      "no_rend": true
+    },
+    {
+      "key": "hashachar_leolam_en",
+      "source": {
+        "scan": "s37",
+        "printed_page": "7",
+        "text": "Let man always fear God in private, acknowledge the truth, speak truth in his heart and rise early in the morning and say:",
+        "language": "en",
+        "witnesses": [
+          "en"
+        ],
+        "page_start": false
+      },
+      "placement": {
+        "relation": "before",
+        "unit_or_group": "ribbon_kol_haolamim"
+      },
+      "keep_out_of_reusable_word_files": true,
+      "no_rend": true
+    },
+    {
+      "key": "qorbanot_shabbat_yiddish",
+      "source": {
+        "text": "אַם שַׁבָּת ווירד פֿאָלגענדעז איינגעסאַלטעט:",
+        "language": "de-Hebr",
+        "witnesses": [
+          "he"
+        ],
+        "scan": "s43",
+        "printed_page": "12",
+        "page_start": false,
+        "language_spans": [
+          {
+            "text": "שַׁבָּת",
+            "language": "he"
+          }
+        ]
+      },
+      "placement": {
+        "relation": "conditional_note",
+        "unit_or_group": "qorbanot_musaf_shabbat"
+      },
+      "keep_out_of_reusable_word_files": true,
+      "no_rend": true,
+      "condition": "shabbat",
+      "meaning": "On Shabbat the following is inserted; controls onlyNumbers28:9–10 before a separate Zevachim citation and Mishnah text."
+    },
+    {
+      "key": "german_rite_elohai_neshamah_he",
+      "source": {
+        "scan": "s30",
+        "printed_page": "4",
+        "text": "In most communities of the German rite אלהי נשמה (P. 5.) follows here.",
+        "language": "en",
+        "witnesses": [
+          "he"
+        ],
+        "page_start": false,
+        "navigation": {
+          "destination": "elohai_neshamah",
+          "printed_label": "5",
+          "scope": "The Torah-blessings through Ellu Devarim block moves only in the German rite; Elohai Neshamah follows Asher Yatzar directly there."
+        }
+      },
+      "placement": {
+        "relation": "after",
+        "unit_or_group": "asher_yatzar"
+      },
+      "keep_out_of_reusable_word_files": true,
+      "no_rend": true,
+      "documentary_navigation": {
+        "target_by_language": {
+          "he": "urn:x-opensiddur:text:prayer:elohai_neshamah@prayerbook_for_the_new_year_second_day-heidenheim-1965-he",
+          "en": "urn:x-opensiddur:text:prayer:elohai_neshamah@prayerbook_for_the_new_year_second_day-marmorstein-1965-en"
+        },
+        "encode": "Empty tei:ref type=page inside independently removable optional-page-reference clause; printed number remains evidence. Preserve other words and Hebrew title.",
+        "expanded": "Remove obsolete navigation/insertion direction, preserve labeled German/non-German branch semantics."
+      }
+    },
+    {
+      "key": "german_rite_elohai_neshamah_en",
+      "source": {
+        "scan": "s31",
+        "printed_page": "4",
+        "text": "In most communities of the German rite אלהי נשמה (P. 5.) follows here.",
+        "language": "en",
+        "witnesses": [
+          "en"
+        ],
+        "page_start": false,
+        "navigation": {
+          "destination": "elohai_neshamah",
+          "printed_label": "5",
+          "scope": "The Torah-blessings through Ellu Devarim block moves only in the German rite; Elohai Neshamah follows Asher Yatzar directly there."
+        }
+      },
+      "placement": {
+        "relation": "after",
+        "unit_or_group": "asher_yatzar"
+      },
+      "keep_out_of_reusable_word_files": true,
+      "no_rend": true,
+      "documentary_navigation": {
+        "target_by_language": {
+          "he": "urn:x-opensiddur:text:prayer:elohai_neshamah@prayerbook_for_the_new_year_second_day-heidenheim-1965-he",
+          "en": "urn:x-opensiddur:text:prayer:elohai_neshamah@prayerbook_for_the_new_year_second_day-marmorstein-1965-en"
+        },
+        "encode": "Empty tei:ref type=page inside independently removable optional-page-reference clause; printed number remains evidence. Preserve other words and Hebrew title.",
+        "expanded": "Remove obsolete navigation/insertion direction, preserve labeled German/non-German branch semantics."
+      }
+    },
+    {
+      "key": "german_rite_torah_blessings_he",
+      "source": {
+        "scan": "s38",
+        "printed_page": "8",
+        "text": "In most communities of the German rite the benedictions of the Torah (page 4) are inserted here.",
+        "language": "en",
+        "witnesses": [
+          "he"
+        ],
+        "page_start": false,
+        "navigation": {
+          "destination": "birkhot_hatorah_laasoq",
+          "printed_label": "4",
+          "scope": "The Torah-blessings through Ellu Devarim block moves only in the German rite; Elohai Neshamah follows Asher Yatzar directly there."
+        }
+      },
+      "placement": {
+        "relation": "after",
+        "unit_or_group": "attah_hu_bashamayim"
+      },
+      "keep_out_of_reusable_word_files": true,
+      "no_rend": true,
+      "documentary_navigation": {
+        "target_by_language": {
+          "he": "urn:x-opensiddur:text:prayer:birkhot_hatorah/laasoq@prayerbook_for_the_new_year_second_day-heidenheim-1965-he",
+          "en": "urn:x-opensiddur:text:prayer:birkhot_hatorah/laasoq@prayerbook_for_the_new_year_second_day-marmorstein-1965-en"
+        },
+        "encode": "Empty tei:ref type=page inside independently removable optional-page-reference clause; printed number remains evidence. Preserve other words and Hebrew title.",
+        "expanded": "Remove obsolete navigation/insertion direction, preserve labeled German/non-German branch semantics."
+      }
+    },
+    {
+      "key": "german_rite_torah_blessings_en",
+      "source": {
+        "scan": "s39",
+        "printed_page": "8",
+        "text": "In most communities of the German rite the benedictions of the Torah (page 4) are inserted here.",
+        "language": "en",
+        "witnesses": [
+          "en"
+        ],
+        "page_start": false,
+        "navigation": {
+          "destination": "birkhot_hatorah_laasoq",
+          "printed_label": "4",
+          "scope": "The Torah-blessings through Ellu Devarim block moves only in the German rite; Elohai Neshamah follows Asher Yatzar directly there."
+        }
+      },
+      "placement": {
+        "relation": "after",
+        "unit_or_group": "attah_hu_bashamayim"
+      },
+      "keep_out_of_reusable_word_files": true,
+      "no_rend": true,
+      "documentary_navigation": {
+        "target_by_language": {
+          "he": "urn:x-opensiddur:text:prayer:birkhot_hatorah/laasoq@prayerbook_for_the_new_year_second_day-heidenheim-1965-he",
+          "en": "urn:x-opensiddur:text:prayer:birkhot_hatorah/laasoq@prayerbook_for_the_new_year_second_day-marmorstein-1965-en"
+        },
+        "encode": "Empty tei:ref type=page inside independently removable optional-page-reference clause; printed number remains evidence. Preserve other words and Hebrew title.",
+        "expanded": "Remove obsolete navigation/insertion direction, preserve labeled German/non-German branch semantics."
+      }
+    }
+  ],
+  "global_context": {
+    "source_morning_profile_declarations": {
+      "opensiddur:holiday": {
+        "rosh-hashana": 2
+      },
+      "opensiddur:service-time": {
+        "shaharit": true,
+        "maariv": false,
+        "minha": false,
+        "musaf": false,
+        "neila": false,
+        "slihot": false
+      },
+      "opensiddur:holiday-aggregate": {
+        "aseret-ymei-tshuva": true
+      }
+    },
+    "do_not_force": [
+      "german",
+      "gender",
+      "shabbat",
+      "a fictitious calendar date"
+    ],
+    "rationale": "Regional/sex/day choices remain local and independently selectable. Source book supports TenDays context; use trueholiday context rather than borrowing a false date to select text."
+  },
+  "handling_rules": [
+    "Documentary source sequence retains printed early Torah-study block and both German navigation directions; expanded sequence relocates the whole5-unit block by german true/false only.",
+    "Expanded calls are canonical edition-independent URNs, with day2HE priority and selected morning printings; documentary calls are exact target@day2project. Never use file paths as transclusion targets.",
+    "Unresolved German setting retains both separately labeled early/late branches; knownGerman or knownnonGerman yields exactlyoneblock plus exactlyoneElohaiNeshamah.",
+    "Gender applies solely to the alternative shelo_asani_ishah/sheasani_kirtzono pair. Unknown retains labeled alternatives; known selects one and suppresses its resolved condition label. Other preceding blessings are unaltered.",
+    "Do not accidentally transclude whole Bible chapters for the Numbers6 or Leviticus6 excerpts; exact ranges are supplied. Do not repeat the Lefikhakh ashreinu part after transcluding parent root.",
+    "RepeatedPsalm17:6 appears twice in original order. Reuse the canonicalBibleURI at both calls with unique structural occurrence IDs; select the distinct original ENwording and correct sourcepage for each call. Do not duplicate canonical corresp mappings.",
+    "Preserve propersource extent of Psalm39:13/shimah acrosss26/s28HE ands29EN; no new prayer identity and no accidentally truncated firstword.",
+    "All20Hebrew-only literals and korbanotBarukhShem remain without EN counterparts; later canonical English additions must not fill these gaps or earlier accepted night gaps.",
+    "Local conditions wrap reusable words, never make source words globally Shabbat/German/female. Same-language facingrubrics may be deduplicated in sharedexpanded sequence with evidence; differinglanguages retained.",
+    "SourceHebrew-scriptGerman on43 belongs in the Shabbatconditionalnote; do not normalize its settledsource wording to modernGerman. End condition beforeEizehuMeqoman.",
+    "Unknown/true/false conditions require compiled and PDF/HTMLproof: knowntrue insertion unbracketed, false absent, unknown marked/labeled. Validate otherconstant headings share contentgates."
+  ],
+  "open_human_interpretation_questions": [],
+  "remaining_implementation_questions": [
+    {
+      "id": "O1",
+      "kind": "library/caller wiring",
+      "issue": "Seven shared units need canonical library, source printing, contextualquote and ENavailability implementation before either spine can be accepted. Prior identityreview provides architecture; this plan supplies source order only."
+    },
+    {
+      "id": "O2",
+      "kind": "intrinsic parenthetical reading",
+      "issue": "ElohaiNeshamah prints (הִיא) inHE with differentENtext extent. Preserve source; independently encode/evaluate anyoptional-reading interpretation before expandedrecitation approval. Do not classify everyparenthesis asShabbat orTenDays. No newhumanpointing question is raised here."
+    }
+  ],
+  "ten_days_scope_note": "No explicit25–45source rubric instructs a TenDays omission/insertion. The present plan therefore introduces no such textgate. Future Kaddish/Amidah changes must reuse existing aseret-ymei-tshuva feature when their actualsourcebatch is encoded.",
+  "acceptance_proof_required": [
+    "Resolve all exact targetURIs against actualnewproviders and inspect eachselectedrange/provenance.",
+    "Generate Germantrue/false/undefined x male/female/undefined x Shabbattrue/false/undefined outputs and assert sourceorder and occurrencecounts.",
+    "Confirm the twoPsalm17:6Englishstrings remain distinct and bothHebrewoccurrences survive.",
+    "Prove acceptednight XML/output/ENgaps stay unchanged after adding sharedmorning library.",
+    "Independently review implementedspines, bilingualalignment, guidelines and PDF/HTML; this recommendation does not approve implementation or fullbatch."
+  ],
+  "no_full_acceptance_claim": true,
+  "documentary_english_order_note": "Scan25 prints two English translations at the foot of the same physical page after the tallit instructions. In documentary evidence keep their source placement; paired presentation aligns each translation with its actual Hebrew module without duplicating recitation. Later English pages follow the same unit sequence and preserve omissions.",
+  "implementation_notes": [
+    "Unmarked ElohaiNeshamah (הִיא) remains a documented parenthetical source variant pending the separate interpretive handling noted inO2; do not silently normalize it or invent a day condition.",
+    "The preparatory order is one source-volume segment through middot_yehi_ratzon only. Do not append a familiar Kaddish or next prayer absent from accepted25–45scope."
+  ],
+  "readings_sha256": "c964475cbf07e5d4e7a0fce56a85d2168bafda38a092a7c9b37ced04f79abda9",
+  "source_approval_sha256": "2ab68eabdc8aeda75b88fab39223a4df43ab9fc1207d3c995a1036687b51fef9"
+}

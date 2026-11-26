@@ -1,0 +1,462 @@
+{
+  "status": "approved_actual_expanded_matrix_scope_only",
+  "reviewer": "/root/review_morning_identities",
+  "actual_model": "Inherited collaboration model; exact model identifier/effort not exposed",
+  "scope": "Read-only independent audit of all27 actual compiled expanded morning XML files and their settings against independently reviewed source order, approved actual-source readings and bounded reference scopes. No recompilation, export approval or fullbatch acceptance.",
+  "summary": {
+    "cases": 27,
+    "distinct_setting_combinations": 27,
+    "source_word_comparisons": 3690,
+    "exact_selected_source_leaf_set_comparisons": 3690,
+    "canonical_biblical_milestone_extent_probes": 2385,
+    "unexamined_transclusion_calls": 0,
+    "findings": 0
+  },
+  "independent_method": [
+    "Read the runner assertions and parent report, then parsed everycompiledXML; verified stored artifact hashes before auditing. Used a separate independent inspection script rather than executing/trusting the runner checks.",
+    "Compared full emitted transclusion sequence to the independently reviewed62unit source-order plan, expanding composite calls and selecting known/unknownGerman/gender/Shabbat branches.",
+    "Checked exact contiguous5unit Torah-study blocks and immediateplacement afterAsherYatzar/nonGerman or afterAttahHuBashamayim/German; ElohaiNeshamah appears exactlyonce, immediatelyafterAsherYatzar forGerman.",
+    "Required retained wrappers to have nonemptyHebrew and expected printedEnglish, compared all actual recited sourcewords (excluding notes, headings, ordinal labels) against approved readings. Only canonical Unicode ordering, whitespace and two evidenced corrected forms were accommodated: Yigdal wiil→will; Thou has→hast. Ordinary source sin spelling לַעֲשׂוֹק is retained.",
+    "Compared everyselected sourceleaf set against exactsourcefragments, specifically firstPsalm17:6HE/ENn25/n26 and repeatn27/n28. BothEnglishreadings match exact sourcewording; repeatedHebrewwords match, provenance differs correctly.",
+    "Probed eachcanonicalBible milestone using purefind_end_of_mapping onactualcompiledXML, with annotations excludedfromprayertext; compared exact extent to approvedverse/subversesource. No SQLdatabaseopened.",
+    "Checked labels overtheentirebody, catching siblinginstruction leaks the parentrunner labels-onlytest wouldmiss. Knownconditions have no obsoleteGerman/gender/Shabbatlabels; undefinedconditions retain bothlabels/alternatives and expectedunresolvedscope count.",
+    "Confirmed morningBarukhShem retainsEnglish and qorbanotBarukhShem has none; allremainingHebrew-onlysourceunits remain without fabricatedEnglish. Noexpandedpage-reference or obsoleteinsertion/page-turn instruction appears."
+  ],
+  "parent_runner_blindspots_closed_here": [
+    "Parentrunner checks Torah-block counts and roughrelativepositions; independentreview verifies fullcallsequence,5contiguouscalls,exactinsertionanchors and actualwords.",
+    "Parentrunner only looks for obsolete labels within surviving j:conditional children; independentwholebodylabelsearch also catches leaked siblinginstructions.",
+    "Parentrunner verifies Psalm17:6Englishstrings differ, but not that either is exactlyright or linkedtocorrectscan; independentreview checks exactstrings and allfacsleafsets.",
+    "Parentrunner counts transclusionwrappers, whichcouldbeemptyorcontainwrongwords; independentreview requires nonemptyexpectedcolumns and allsourcewordcomparisons.",
+    "Parentrunner checks rootcalls but not exactverseendpoints; independentreview resolved2385compiledcanonicalBible milestones."
+  ],
+  "remaining_blindspots_or_separate_gates": [
+    "No PDF/HTML rendering was inspected here. Actualvisualcolumngeometry, emptyprocessingparallelrow suppression, noteanchor attachment/order, label-language separation, brackets, bibliography/bookmarks and marginlink usability stillrequire currentfrozenexports.",
+    "The matrixcompiles expandedprofile only with default corrected-sourceerror selection. It doesnot alone certify documentaryprofilevariants, electronicdeferredreaderconditions or printed-error-mode sourcewrapper behavior; existingindependentlibrary/scopeproofs remain separate evidence.",
+    "Acceptednight/fallbackoutput and itsEnglishgap preservation aftersharedlibrarychanges needtheir ownregression/equivalence evidence; thesemorningcases cannot certify that.",
+    "Aggregate sourceleaf-set equality proves selectedbranchprovenance but isnot a visualproof of backlinkposition/clicktarget. RenderingQA mustcheckthem.",
+    "No newindependent image transcription orhumanpointingdecision wasperformed. Sourceapproval remains boundto its ownrecords."
+  ],
+  "inputs": [
+    {
+      "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/matrix/report.json",
+      "sha256": "b6d84a9179bf591af64443c8a6d8697e36b6142dcc05cd9bc7d7529219a3ac8d"
+    },
+    {
+      "path": "/tmp/day2_morning_matrix.py",
+      "sha256": "6d192c867cc16b07193bb7c5f187cf9511bd03be706919fd02a34b6b9f722c98"
+    },
+    {
+      "path": "/tmp/independent_morning_matrix.py",
+      "sha256": "d4e83b30c0eb6be11c571fd4e6dc63c4095164aa1c6da853cda2ba00b73b8bf2"
+    },
+    {
+      "path": "/tmp/day2-morning-order-plan-review.json",
+      "sha256": "2b037b1b7ce03b327acaa3f9afbbf47615d4b301c65e66a4b11231ec7a02c3a1"
+    },
+    {
+      "path": "/tmp/day2-morning-spine-final-review.json",
+      "sha256": "e475e15791fccf013487c5fb6adc110a8ba0a38eeca4341e1603d89e95e4ee64"
+    },
+    {
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/settings/machzor_expanded-opensiddur-he/second_day_morning.yaml",
+      "sha256": "24bb9b55573174990d3f5b3ec13a023051233d5ac0b50b68491461bcdd088f7b"
+    },
+    {
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/morning_s25_s45/working/readings.json",
+      "sha256": "c964475cbf07e5d4e7a0fce56a85d2168bafda38a092a7c9b37ced04f79abda9"
+    },
+    {
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/morning_s25_s45/source_approval.json",
+      "sha256": "2ab68eabdc8aeda75b88fab39223a4df43ab9fc1207d3c995a1036687b51fef9"
+    },
+    {
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/morning_s25_s45/morning_order.json",
+      "sha256": "dcc69affea31e47f46ddd7b0764d17e88cfce98cf1c7f8be03dc9bd6815a788a"
+    }
+  ],
+  "spine_input_hashes_unchanged_since_static_review": [
+    {
+      "role": "he",
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/morning.xml",
+      "sha256": "a9ef95771484cd61b09a5aaaabd31282576e22edcbcf1be906b7bb82b52185f2",
+      "prior_sha256": "a9ef95771484cd61b09a5aaaabd31282576e22edcbcf1be906b7bb82b52185f2"
+    },
+    {
+      "role": "en",
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/morning.xml",
+      "sha256": "89cf35dbba29468c01e475a755a08a397f0adb5227d225f150a66f56eb2a5fc3",
+      "prior_sha256": "89cf35dbba29468c01e475a755a08a397f0adb5227d225f150a66f56eb2a5fc3"
+    },
+    {
+      "role": "expanded",
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/machzor_expanded-opensiddur-he/second_day_morning.xml",
+      "sha256": "de0729a58601fba002d8a0ac56401177cc9b5bc30dcb27f40110c3eda79deeeb",
+      "prior_sha256": "de0729a58601fba002d8a0ac56401177cc9b5bc30dcb27f40110c3eda79deeeb"
+    }
+  ],
+  "cases": [
+    {
+      "case": "german_False_gender_male_shabbat_False",
+      "xml_sha256": "ee676deaacb198a459f6996b60a38da8fc1f103ca5c4e6091f74734f7ed89d6b",
+      "settings_sha256": "65e57945a335c665f6829fe1e80ec2531075ab77c4bf907f9eb7d0386169fdfe",
+      "biblical_scope_probes": 85,
+      "source_word_comparisons": 132,
+      "selected_facs_comparisons": 132,
+      "uncompared_calls": [],
+      "conditions_retained": [],
+      "findings": []
+    },
+    {
+      "case": "german_False_gender_male_shabbat_True",
+      "xml_sha256": "6e18d70c03c5c80a6fe83eba569edc27ac2eb90765bb1aee02a653cc63fe9334",
+      "settings_sha256": "7ac71c25d65ba603e022bcf2b80ec957cfd0e746d937542d5a85f1fde4b7e753",
+      "biblical_scope_probes": 87,
+      "source_word_comparisons": 133,
+      "selected_facs_comparisons": 133,
+      "uncompared_calls": [],
+      "conditions_retained": [],
+      "findings": []
+    },
+    {
+      "case": "german_False_gender_male_shabbat_None",
+      "xml_sha256": "660015fef057d22f8ae2f920534e406fde9dee4990f760fe55696d1481664536",
+      "settings_sha256": "8e49d0eb6bd790a27a352dee4573f85bcf7d928a155d0fef2fc65430814e1a7f",
+      "biblical_scope_probes": 87,
+      "source_word_comparisons": 133,
+      "selected_facs_comparisons": 133,
+      "uncompared_calls": [],
+      "conditions_retained": [
+        "morning_qorbanot_musaf_shabbat_condition_d924a237"
+      ],
+      "findings": []
+    },
+    {
+      "case": "german_False_gender_female_shabbat_False",
+      "xml_sha256": "cfbcec26243d497957f9e46348fadfc46e7077fbb2ec8b77d501ac020d4e0f11",
+      "settings_sha256": "5e00be34bed86662424c7a76df0b0c7ae7c7e5cca60c081f6406ee49c56d95ab",
+      "biblical_scope_probes": 85,
+      "source_word_comparisons": 132,
+      "selected_facs_comparisons": 132,
+      "uncompared_calls": [],
+      "conditions_retained": [],
+      "findings": []
+    },
+    {
+      "case": "german_False_gender_female_shabbat_True",
+      "xml_sha256": "6b67242f2af7f02b6058e915e52dfb711043ab01bfe0a10f893dea801c7ab3d9",
+      "settings_sha256": "23cdb1b24568b24c2222550db2b49e03c224a1eb6f17501c81bf3c6faf34a135",
+      "biblical_scope_probes": 87,
+      "source_word_comparisons": 133,
+      "selected_facs_comparisons": 133,
+      "uncompared_calls": [],
+      "conditions_retained": [],
+      "findings": []
+    },
+    {
+      "case": "german_False_gender_female_shabbat_None",
+      "xml_sha256": "41518f46a17858a7add54a0b1fcc77d6cc7ee3755ef6839fa7038b9a81c66ade",
+      "settings_sha256": "cc0ef23fa87f08ab9344a1130265558844e10f61d8f66865e9cd00fb4390edd1",
+      "biblical_scope_probes": 87,
+      "source_word_comparisons": 133,
+      "selected_facs_comparisons": 133,
+      "uncompared_calls": [],
+      "conditions_retained": [
+        "morning_qorbanot_musaf_shabbat_condition_d924a237"
+      ],
+      "findings": []
+    },
+    {
+      "case": "german_False_gender_None_shabbat_False",
+      "xml_sha256": "e7bd2c3acc7c9f4f5e0f49f8d13297ed9d887643b68ee21b4334b3b281b47210",
+      "settings_sha256": "f93c7695cb4b004f7082c93e6f6828d5527345ab46cf4e50da26d5d5e0276c32",
+      "biblical_scope_probes": 85,
+      "source_word_comparisons": 134,
+      "selected_facs_comparisons": 134,
+      "uncompared_calls": [],
+      "conditions_retained": [
+        "morning_birkhot_hashachar_shelo_asani_ishah_condition_d924a237",
+        "morning_birkhot_hashachar_sheasani_kirtzono_condition_d924a237"
+      ],
+      "findings": []
+    },
+    {
+      "case": "german_False_gender_None_shabbat_True",
+      "xml_sha256": "e9785b97885dc6599deaeef1c5b0c129ce2c42b5089b6ac9ceb57e709911972b",
+      "settings_sha256": "350167bfa42136097255dcd9b01aedf182be1b543aed5f181097a2b164f9a734",
+      "biblical_scope_probes": 87,
+      "source_word_comparisons": 135,
+      "selected_facs_comparisons": 135,
+      "uncompared_calls": [],
+      "conditions_retained": [
+        "morning_birkhot_hashachar_shelo_asani_ishah_condition_d924a237",
+        "morning_birkhot_hashachar_sheasani_kirtzono_condition_d924a237"
+      ],
+      "findings": []
+    },
+    {
+      "case": "german_False_gender_None_shabbat_None",
+      "xml_sha256": "63b7fdb887bcd1f14cdc61d6ba115599d93bfd3cdcddb1f85f1d63b9ee71374f",
+      "settings_sha256": "f8b717e696574c6e3dc1447b66514f315bd466753bc820fbf4c68dc1199dc317",
+      "biblical_scope_probes": 87,
+      "source_word_comparisons": 135,
+      "selected_facs_comparisons": 135,
+      "uncompared_calls": [],
+      "conditions_retained": [
+        "morning_birkhot_hashachar_shelo_asani_ishah_condition_d924a237",
+        "morning_birkhot_hashachar_sheasani_kirtzono_condition_d924a237",
+        "morning_qorbanot_musaf_shabbat_condition_d924a237"
+      ],
+      "findings": []
+    },
+    {
+      "case": "german_True_gender_male_shabbat_False",
+      "xml_sha256": "7cdc076f46cc0574f1ac4318855f953604b6cd8d7ee38cbc4709b6df190e8de9",
+      "settings_sha256": "56941c0dc7c76c9889f5a996f4f4b4c859e37f2420376e99bec948efe17be0e7",
+      "biblical_scope_probes": 85,
+      "source_word_comparisons": 132,
+      "selected_facs_comparisons": 132,
+      "uncompared_calls": [],
+      "conditions_retained": [],
+      "findings": []
+    },
+    {
+      "case": "german_True_gender_male_shabbat_True",
+      "xml_sha256": "ee0454ae06a35fe91a1e5af4664349aa6490d83b7527a86a91827f7a44f9fd2d",
+      "settings_sha256": "27d38a07974a6863d46b22e55eda2d1862a3ee81b2a622d4975a52f215312c36",
+      "biblical_scope_probes": 87,
+      "source_word_comparisons": 133,
+      "selected_facs_comparisons": 133,
+      "uncompared_calls": [],
+      "conditions_retained": [],
+      "findings": []
+    },
+    {
+      "case": "german_True_gender_male_shabbat_None",
+      "xml_sha256": "4e30172b556e96d7a0594bf6ad0bcc40be4b5fd089ee31353929886488e331d0",
+      "settings_sha256": "056bb940f3dc6266cfcb5afa466c876e2927c664a9d60b3154828cc33f950615",
+      "biblical_scope_probes": 87,
+      "source_word_comparisons": 133,
+      "selected_facs_comparisons": 133,
+      "uncompared_calls": [],
+      "conditions_retained": [
+        "morning_qorbanot_musaf_shabbat_condition_d924a237"
+      ],
+      "findings": []
+    },
+    {
+      "case": "german_True_gender_female_shabbat_False",
+      "xml_sha256": "bdff9bc7daa52d514c22511e02af9fcb4fdd35c2409c39dc516dcc866ecbe465",
+      "settings_sha256": "d547b1aad2b84edeb69a2978047fbff84763278b579fae9153681184e672d38c",
+      "biblical_scope_probes": 85,
+      "source_word_comparisons": 132,
+      "selected_facs_comparisons": 132,
+      "uncompared_calls": [],
+      "conditions_retained": [],
+      "findings": []
+    },
+    {
+      "case": "german_True_gender_female_shabbat_True",
+      "xml_sha256": "88afd40eac7bbea199251f7fccbb062fb0ba53133840e41486bdd56c6c4439da",
+      "settings_sha256": "f7e0660830a0505f93701940b5b240d0fbdfe63ae4f753cc9ccabfd0f518e8f2",
+      "biblical_scope_probes": 87,
+      "source_word_comparisons": 133,
+      "selected_facs_comparisons": 133,
+      "uncompared_calls": [],
+      "conditions_retained": [],
+      "findings": []
+    },
+    {
+      "case": "german_True_gender_female_shabbat_None",
+      "xml_sha256": "06ffa72f437dc04391bbc995c44ac6bbd5bbc072b32a06d6d86784b46ddffbf6",
+      "settings_sha256": "9d47a3c54e3b4d4cd255ced2e486669f81ef861474093a46ea4a600b35f8fd74",
+      "biblical_scope_probes": 87,
+      "source_word_comparisons": 133,
+      "selected_facs_comparisons": 133,
+      "uncompared_calls": [],
+      "conditions_retained": [
+        "morning_qorbanot_musaf_shabbat_condition_d924a237"
+      ],
+      "findings": []
+    },
+    {
+      "case": "german_True_gender_None_shabbat_False",
+      "xml_sha256": "9a5cfb74bc4cfbb74ea83fd6e2c15c631f86172f83d143520c500870eb613be3",
+      "settings_sha256": "0328f580a82acbe940f4c1475addee367a8c48f3087747b24e249321f53217d0",
+      "biblical_scope_probes": 85,
+      "source_word_comparisons": 134,
+      "selected_facs_comparisons": 134,
+      "uncompared_calls": [],
+      "conditions_retained": [
+        "morning_birkhot_hashachar_shelo_asani_ishah_condition_d924a237",
+        "morning_birkhot_hashachar_sheasani_kirtzono_condition_d924a237"
+      ],
+      "findings": []
+    },
+    {
+      "case": "german_True_gender_None_shabbat_True",
+      "xml_sha256": "acc9b7eea7412530b6cf21a7be3eb548b537e3904a80d5e27561b56f048bab52",
+      "settings_sha256": "e74a017f8534be01be84b33ad1995ba9058bc7e58338c0e041507deea7f23aa0",
+      "biblical_scope_probes": 87,
+      "source_word_comparisons": 135,
+      "selected_facs_comparisons": 135,
+      "uncompared_calls": [],
+      "conditions_retained": [
+        "morning_birkhot_hashachar_shelo_asani_ishah_condition_d924a237",
+        "morning_birkhot_hashachar_sheasani_kirtzono_condition_d924a237"
+      ],
+      "findings": []
+    },
+    {
+      "case": "german_True_gender_None_shabbat_None",
+      "xml_sha256": "93d9503ba2f504be9dbf2c10babd63c6574d7eae8d3e39b36f533fc83cf64d70",
+      "settings_sha256": "226fb09e7cebbffb64e9efb3158067405af5fb932f3d696b2183a8e72cb5625a",
+      "biblical_scope_probes": 87,
+      "source_word_comparisons": 135,
+      "selected_facs_comparisons": 135,
+      "uncompared_calls": [],
+      "conditions_retained": [
+        "morning_birkhot_hashachar_shelo_asani_ishah_condition_d924a237",
+        "morning_birkhot_hashachar_sheasani_kirtzono_condition_d924a237",
+        "morning_qorbanot_musaf_shabbat_condition_d924a237"
+      ],
+      "findings": []
+    },
+    {
+      "case": "german_None_gender_male_shabbat_False",
+      "xml_sha256": "a2c32653b479ec72f34fcdc62e3257ef9422b011b14d1df0e28fcbf91757281b",
+      "settings_sha256": "400227a8121b4c4364555b75d3d7f5c4f56a792bf75a3d8e63bcfa0ff5b09e2e",
+      "biblical_scope_probes": 91,
+      "source_word_comparisons": 142,
+      "selected_facs_comparisons": 142,
+      "uncompared_calls": [],
+      "conditions_retained": [
+        "torah_study_early_d924a237",
+        "torah_study_late_d924a237"
+      ],
+      "findings": []
+    },
+    {
+      "case": "german_None_gender_male_shabbat_True",
+      "xml_sha256": "5cea0b5783140de64d17d71f03670c405411b9429c428d7d6820334d5d735fdd",
+      "settings_sha256": "e4dc82514b3c4f9ebd0decd6a6a6a2ba9a5d67e4a09a8d68ef170b9f916df953",
+      "biblical_scope_probes": 93,
+      "source_word_comparisons": 143,
+      "selected_facs_comparisons": 143,
+      "uncompared_calls": [],
+      "conditions_retained": [
+        "torah_study_early_d924a237",
+        "torah_study_late_d924a237"
+      ],
+      "findings": []
+    },
+    {
+      "case": "german_None_gender_male_shabbat_None",
+      "xml_sha256": "b62ed796d79e2e6aaffd5238db642ea73388f6286e7a65cda9afef58e74906f8",
+      "settings_sha256": "1738109636d8566301dcfa8792480f38945c63d043a556b9e423b6d4d599e48c",
+      "biblical_scope_probes": 93,
+      "source_word_comparisons": 143,
+      "selected_facs_comparisons": 143,
+      "uncompared_calls": [],
+      "conditions_retained": [
+        "torah_study_early_d924a237",
+        "torah_study_late_d924a237",
+        "morning_qorbanot_musaf_shabbat_condition_d924a237"
+      ],
+      "findings": []
+    },
+    {
+      "case": "german_None_gender_female_shabbat_False",
+      "xml_sha256": "46f816a7edd958a894cf56aca5ab95a5fcf70518739e7fc04d2c4f18f2873be0",
+      "settings_sha256": "181e4b19b6e9521973636ce91fd05f5d39bd9ef67f2ac51ffdb8a12d2ab26e86",
+      "biblical_scope_probes": 91,
+      "source_word_comparisons": 142,
+      "selected_facs_comparisons": 142,
+      "uncompared_calls": [],
+      "conditions_retained": [
+        "torah_study_early_d924a237",
+        "torah_study_late_d924a237"
+      ],
+      "findings": []
+    },
+    {
+      "case": "german_None_gender_female_shabbat_True",
+      "xml_sha256": "c1de0b69ebc3d5eb75763aeea176df62208083572dd0380c22c5ddb77c2e636a",
+      "settings_sha256": "913171e78065a1a314e44d7944cea1239953062269f6a7eb03ea0daa991355e8",
+      "biblical_scope_probes": 93,
+      "source_word_comparisons": 143,
+      "selected_facs_comparisons": 143,
+      "uncompared_calls": [],
+      "conditions_retained": [
+        "torah_study_early_d924a237",
+        "torah_study_late_d924a237"
+      ],
+      "findings": []
+    },
+    {
+      "case": "german_None_gender_female_shabbat_None",
+      "xml_sha256": "eb3030cbf599df5e651109767436aff8eb59ca6891c7ab416dd5f52a04fa27bf",
+      "settings_sha256": "7f891bc7ea1ab76f61f2af00030edc92615f470d806047c7ed8940f4e0b62b8c",
+      "biblical_scope_probes": 93,
+      "source_word_comparisons": 143,
+      "selected_facs_comparisons": 143,
+      "uncompared_calls": [],
+      "conditions_retained": [
+        "torah_study_early_d924a237",
+        "torah_study_late_d924a237",
+        "morning_qorbanot_musaf_shabbat_condition_d924a237"
+      ],
+      "findings": []
+    },
+    {
+      "case": "german_None_gender_None_shabbat_False",
+      "xml_sha256": "680ff1e9d79fda56caca29cddcff3da4cd7bf4b211bdea022ce9663c66142276",
+      "settings_sha256": "96f9f104c3e286cd630f2892a1dc2b3ab75f9b7c9c91ff515c382edae415f854",
+      "biblical_scope_probes": 91,
+      "source_word_comparisons": 144,
+      "selected_facs_comparisons": 144,
+      "uncompared_calls": [],
+      "conditions_retained": [
+        "torah_study_early_d924a237",
+        "morning_birkhot_hashachar_shelo_asani_ishah_condition_d924a237",
+        "morning_birkhot_hashachar_sheasani_kirtzono_condition_d924a237",
+        "torah_study_late_d924a237"
+      ],
+      "findings": []
+    },
+    {
+      "case": "german_None_gender_None_shabbat_True",
+      "xml_sha256": "7604470dbc9ad728ae621023aaec966b0f1846d4457619d2d3afd528662bd745",
+      "settings_sha256": "80daf707a628500c8275a9eeda2a302590f5d0a944c7d0fa82dda1cc7a1823c6",
+      "biblical_scope_probes": 93,
+      "source_word_comparisons": 145,
+      "selected_facs_comparisons": 145,
+      "uncompared_calls": [],
+      "conditions_retained": [
+        "torah_study_early_d924a237",
+        "morning_birkhot_hashachar_shelo_asani_ishah_condition_d924a237",
+        "morning_birkhot_hashachar_sheasani_kirtzono_condition_d924a237",
+        "torah_study_late_d924a237"
+      ],
+      "findings": []
+    },
+    {
+      "case": "german_None_gender_None_shabbat_None",
+      "xml_sha256": "73aba97746f74947c2c4b33538c14658d1f826b502f6351f68ae6ec33a33c414",
+      "settings_sha256": "1541804109600ba65e64b2dd5e413ced893a634afb4d9370808fcec8ca5dc83e",
+      "biblical_scope_probes": 93,
+      "source_word_comparisons": 145,
+      "selected_facs_comparisons": 145,
+      "uncompared_calls": [],
+      "conditions_retained": [
+        "torah_study_early_d924a237",
+        "morning_birkhot_hashachar_shelo_asani_ishah_condition_d924a237",
+        "morning_birkhot_hashachar_sheasani_kirtzono_condition_d924a237",
+        "torah_study_late_d924a237",
+        "morning_qorbanot_musaf_shabbat_condition_d924a237"
+      ],
+      "findings": []
+    }
+  ],
+  "findings": [],
+  "no_full_acceptance_claim": true
+}

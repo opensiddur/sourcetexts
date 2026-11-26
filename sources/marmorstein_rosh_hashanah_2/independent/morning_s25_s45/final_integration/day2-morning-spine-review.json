@@ -1,0 +1,153 @@
+{
+  "status": "changes_requested",
+  "scope": "Concrete generated documentary HE/EN morning spines and expanded shared morning spine; source literal55 gate retained. Static sequence/guideline review only, not compiled/export/batch acceptance.",
+  "reviewer": "/root/review_morning_identities",
+  "actual_model": "Inherited collaboration model; exact model identifier/effort unavailable",
+  "files": [
+    {
+      "role": "he",
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/morning.xml",
+      "sha256": "a9ef95771484cd61b09a5aaaabd31282576e22edcbcf1be906b7bb82b52185f2"
+    },
+    {
+      "role": "en",
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/morning.xml",
+      "sha256": "89cf35dbba29468c01e475a755a08a397f0adb5227d225f150a66f56eb2a5fc3"
+    },
+    {
+      "role": "expanded",
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/machzor_expanded-opensiddur-he/second_day_morning.xml",
+      "sha256": "de0729a58601fba002d8a0ac56401177cc9b5bc30dcb27f40110c3eda79deeeb"
+    }
+  ],
+  "code": {
+    "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/opensiddur/importer/marmorstein_rosh_hashanah_2/morning.py",
+    "sha256": "b76d59749ac16ff2c9047833a344b6e908d313e3224a700b92dcdade70c95a1d"
+  },
+  "source_plan": {
+    "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/morning_s25_s45/morning_order.json",
+    "sha256": "dcc69affea31e47f46ddd7b0764d17e88cfce98cf1c7f8be03dc9bd6815a788a"
+  },
+  "findings": [
+    {
+      "id": "S1",
+      "priority": "required",
+      "file": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/morning.xml",
+      "issue": "Adon Olam sits inside preliminaries rather than the Morning Prayer section whose source heading begins before it.",
+      "evidence": {
+        "adon_parent_xpath": "/tei:TEI/tei:text/tei:body/tei:div/tei:div[3]",
+        "headings_in_parent": [
+          "תְּפִלַּת שַׁחֲרִית."
+        ]
+      },
+      "fix": "Classify preliminaries as explicit entrance/mah-tovu/Shachar/before-prayer/Yigdal keys only; Adon Olam starts blessings (the current [4:10] slice includes it accidentally)."
+    },
+    {
+      "id": "S1",
+      "priority": "required",
+      "file": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/morning.xml",
+      "issue": "Adon Olam sits inside preliminaries rather than the Morning Prayer section whose source heading begins before it.",
+      "evidence": {
+        "adon_parent_xpath": "/tei:TEI/tei:text/tei:body/tei:div/tei:div[3]",
+        "headings_in_parent": [
+          "Morning Prayer"
+        ]
+      },
+      "fix": "Classify preliminaries as explicit entrance/mah-tovu/Shachar/before-prayer/Yigdal keys only; Adon Olam starts blessings (the current [4:10] slice includes it accidentally)."
+    },
+    {
+      "id": "S1",
+      "priority": "required",
+      "file": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/machzor_expanded-opensiddur-he/second_day_morning.xml",
+      "issue": "Adon Olam sits inside preliminaries rather than the Morning Prayer section whose source heading begins before it.",
+      "evidence": {
+        "adon_parent_xpath": "/tei:TEI/tei:text/tei:body/tei:div/tei:div[3]",
+        "headings_in_parent": [
+          "תְּפִלַּת שַׁחֲרִית.",
+          "Morning Prayer"
+        ]
+      },
+      "fix": "Classify preliminaries as explicit entrance/mah-tovu/Shachar/before-prayer/Yigdal keys only; Adon Olam starts blessings (the current [4:10] slice includes it accidentally)."
+    }
+  ],
+  "positive_static_checks": [
+    {
+      "scope": "torah_study_early",
+      "exact_direct_transclusions": [
+        "urn:x-opensiddur:text:prayer:birkhot_hatorah/laasoq",
+        "urn:x-opensiddur:text:prayer:birkhot_hatorah/vehaarev",
+        "urn:x-opensiddur:text:prayer:birkhot_hatorah/asher_bachar",
+        "urn:x-opensiddur:text:bible:numbers/6/24-/6/26",
+        "urn:x-opensiddur:text:prayer:ellu_devarim"
+      ],
+      "passes": true
+    },
+    {
+      "scope": "torah_study_late",
+      "exact_direct_transclusions": [
+        "urn:x-opensiddur:text:prayer:birkhot_hatorah/laasoq",
+        "urn:x-opensiddur:text:prayer:birkhot_hatorah/vehaarev",
+        "urn:x-opensiddur:text:prayer:birkhot_hatorah/asher_bachar",
+        "urn:x-opensiddur:text:bible:numbers/6/24-/6/26",
+        "urn:x-opensiddur:text:prayer:ellu_devarim"
+      ],
+      "passes": true
+    },
+    {
+      "scope": "morning_qorbanot_musaf_shabbat_condition",
+      "exact_direct_transclusions": [
+        "urn:x-opensiddur:text:prayer:qorbanot/musaf/shabbat"
+      ],
+      "passes": true
+    },
+    {
+      "repeated_psalm_17_6_calls": 2,
+      "repeat_local_printing_values": {
+        "urn:x-opensiddur:condition:bible:psalms/17/6/second_day_morning_printing": "false",
+        "urn:x-opensiddur:condition:bible:psalms/17/6/second_day_night_printing": "false",
+        "urn:x-opensiddur:condition:bible:psalms/17/6/second_day_repeat_printing": "true"
+      },
+      "declaration_closed_immediately": true
+    },
+    {
+      "qorbanot_barukh_shem_values": {
+        "urn:x-opensiddur:condition:prayer:shema/barukh_shem/second_day_morning_printing": "false",
+        "urn:x-opensiddur:condition:prayer:shema/barukh_shem/second_day_night_printing": "false",
+        "urn:x-opensiddur:condition:prayer:shema/barukh_shem/second_day_printed_translation": "false",
+        "urn:x-opensiddur:condition:prayer:shema/barukh_shem/second_day_qorbanot_printing": "true"
+      },
+      "declaration_closed_immediately": true
+    },
+    {
+      "documentary_language": "he",
+      "edition_qualified_empty_page_refs": 2,
+      "source_prayer_order_relocation": false
+    },
+    {
+      "documentary_language": "en",
+      "edition_qualified_empty_page_refs": 2,
+      "source_prayer_order_relocation": false
+    },
+    {
+      "project": "prayerbook_for_the_new_year_second_day-heidenheim-1965-he",
+      "morning_index_entry_last": true
+    },
+    {
+      "project": "prayerbook_for_the_new_year_second_day-marmorstein-1965-en",
+      "morning_index_entry_last": true
+    }
+  ],
+  "remaining_gates": [
+    "Fix findings and regenerate; verify exact changed input hashes.",
+    "Independent actual compile matrix must verify German true/false/unknown, male/female/unknown and Shabbat true/false/unknown text/label behavior.",
+    "Actual parallel compilation must prove absent translations and partial alignment remain absent, including Hebrew-only20modules andqorbanotBarukhShem. Static calls alone do not establish this.",
+    "Inspect final PDF/HTML paragraph/language placement, headings, links, citations, scan provenance, conditional labels, source credits and translations.",
+    "Recheck exact compiled chapter/verse extents via underlying literal/shared-provider review; this spine audit checks correct range target shapes but is not the library audit."
+  ],
+  "other_notes": [
+    "O2 remains settled: preserve source(הִיא), no new condition.",
+    "German branch Hebrewlabels use historicalמנהגאשכנז while actual featuregerman is explicit; no broadAshkenazfeature controls it.",
+    "Bilingual foreign children in editorial conditionalnotes currently have no intervening whitespace; inspect emitted labels for concatenation and add separator if needed."
+  ],
+  "no_full_acceptance_claim": true
+}

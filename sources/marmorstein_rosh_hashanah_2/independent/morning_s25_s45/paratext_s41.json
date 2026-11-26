@@ -1,0 +1,107 @@
+{
+  "scan_page": 41,
+  "scope": "Running header, both printed page labels and both small biblical citations only; no full prayer or batch acceptance.",
+  "reviewer": "/root/audit_paratext_s41",
+  "actual_model": "Inherited collaboration model; exact model identifier and effort not exposed",
+  "method": "Inspected original current-volume s41.jpg, then all three enlarged bands before any transcriptions/OCR/other editions. Made fresh crops directly from the fully decoded original image. The final lamed crop uses nearest-neighbour scaling to verify pixel separation, not generative enhancement. No other reader transcription consulted.",
+  "source_image": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s41.jpg",
+  "source_image_sha256": "23dda03d254820013f8793f8c453225ae292ea7cbcf0bf9a065247cf184639f4",
+  "images_inspected": [
+    {
+      "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s41.jpg",
+      "sha256": "23dda03d254820013f8793f8c453225ae292ea7cbcf0bf9a065247cf184639f4"
+    },
+    {
+      "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/s41_band0.png",
+      "sha256": "de097f991df84fc86ca946a0ec26fdc3e3744e89f865346e14c6aa55b4838e6f"
+    },
+    {
+      "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/s41_band1.png",
+      "sha256": "0bf11f298e3db9524592c5dbaa1f7b0dcfc55b3515f21bdb0057231a7365f91e"
+    },
+    {
+      "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/s41_band2.png",
+      "sha256": "d988e69eef0ca7dda699d83182977c4060847cad5a157ccc1eca56f119d3a210"
+    },
+    {
+      "path": "/tmp/day2-paratext-s41-exodus.png",
+      "sha256": "d2395e0d7c8014c1bae435c87dd4faabc9a734ad4d24bc5871306a85a0c68a6a"
+    },
+    {
+      "path": "/tmp/day2-paratext-s41-header.png",
+      "sha256": "510557e952edd024dd2e00086438bcc255eb1fc952593235fd291a7efbd1284b"
+    },
+    {
+      "path": "/tmp/day2-paratext-s41-lamed-nearest.png",
+      "sha256": "4ca49eb7daa8745409417cb183c3d2d662ce016595274eedca67ce5493f6c607"
+    },
+    {
+      "path": "/tmp/day2-paratext-s41-left_label.png",
+      "sha256": "f9ac05b2ab0c7a00fe7d86d7db6065099b2c8874715b86e69b21f4627bf25962"
+    },
+    {
+      "path": "/tmp/day2-paratext-s41-leviticus.png",
+      "sha256": "08c7192478b88393992e2ccb46ceaf68bbb0ba078678d8542780130ce833441c"
+    },
+    {
+      "path": "/tmp/day2-paratext-s41-right_label.png",
+      "sha256": "0cc61ce7088b16566098c78f344634a1c30c9491cb82e61cb632c5cc8d07afe1"
+    }
+  ],
+  "paratext": [
+    {
+      "kind": "running_heading",
+      "position": "top centre",
+      "text": "תְּפִלַּת שַׁחֲרִית",
+      "terminal_punctuation": null,
+      "confidence": "high",
+      "mark_details": {
+        "initial_tav": "sheva and detached interior dagesh",
+        "pe": "hiriq, no dagesh",
+        "lamed": "patah plus faint detached interior dagesh",
+        "shin": "right shin dot and patah",
+        "chet": "hataf patah",
+        "resh": "hiriq"
+      },
+      "evidence": [
+        "/tmp/day2-paratext-s41-header.png",
+        "/tmp/day2-paratext-s41-lamed-nearest.png"
+      ],
+      "evidence_note": "Fresh nearest-neighbour enlargement shows a compact grey dot separated from the curved lamed stroke above the patah; it is not connected to the letter roof or its descending limb."
+    },
+    {
+      "kind": "printed_page_label",
+      "position": "top left",
+      "text": "10",
+      "confidence": "high",
+      "evidence": "/tmp/day2-paratext-s41-left_label.png"
+    },
+    {
+      "kind": "printed_page_label",
+      "position": "top right",
+      "text": "10",
+      "confidence": "high",
+      "evidence": "/tmp/day2-paratext-s41-right_label.png"
+    },
+    {
+      "kind": "biblical_citation",
+      "position": "right aligned immediately above ושחט",
+      "text": "ויקרא א׳ י״א.",
+      "confidence": "high",
+      "pointing": "unpointed",
+      "punctuation": "One raised geresh follows chapter א; gershayim between י and א in verse י״א; terminal baseline period.",
+      "evidence": "/tmp/day2-paratext-s41-leviticus.png"
+    },
+    {
+      "kind": "biblical_citation",
+      "position": "right aligned immediately above ויאמר in the incense passage",
+      "text": "שמות ל׳.",
+      "confidence": "high",
+      "pointing": "unpointed",
+      "punctuation": "Raised geresh after ל and terminal baseline period.",
+      "evidence": "/tmp/day2-paratext-s41-exodus.png"
+    }
+  ],
+  "unresolved_cases": [],
+  "status": "Paratext source readings resolved within stated scope; no encoding or complete-batch acceptance."
+}

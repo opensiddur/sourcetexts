@@ -1,0 +1,125 @@
+{
+  "status": "approved_concrete_spine_static_order_and_guidelines_only",
+  "reviewer": "/root/review_morning_identities",
+  "actual_model": "Inherited collaboration model; exact model identifier/effort unavailable",
+  "supersedes": {
+    "path": "/tmp/day2-morning-spine-review.json",
+    "sha256": "0d6086f2a533afec7dc00c73466cdebdbfd2891ab16e3301e0e15ac61d9307ba",
+    "closed_findings": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+    ]
+  },
+  "scope": "Regenerated documentary HE/EN and expanded morning source-order, condition-markup and metadata fixes, with source literal90 hashes unchanged. This closes static spine findings only; actual compiler matrix and final PDF/HTML are separate gates.",
+  "files": [
+    {
+      "role": "he",
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/morning.xml",
+      "sha256": "a9ef95771484cd61b09a5aaaabd31282576e22edcbcf1be906b7bb82b52185f2",
+      "prior_sha256": "a9ef95771484cd61b09a5aaaabd31282576e22edcbcf1be906b7bb82b52185f2"
+    },
+    {
+      "role": "en",
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/morning.xml",
+      "sha256": "89cf35dbba29468c01e475a755a08a397f0adb5227d225f150a66f56eb2a5fc3",
+      "prior_sha256": "89cf35dbba29468c01e475a755a08a397f0adb5227d225f150a66f56eb2a5fc3"
+    },
+    {
+      "role": "expanded",
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/machzor_expanded-opensiddur-he/second_day_morning.xml",
+      "sha256": "de0729a58601fba002d8a0ac56401177cc9b5bc30dcb27f40110c3eda79deeeb",
+      "prior_sha256": "de0729a58601fba002d8a0ac56401177cc9b5bc30dcb27f40110c3eda79deeeb"
+    }
+  ],
+  "code": {
+    "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/opensiddur/importer/marmorstein_rosh_hashanah_2/morning.py",
+    "sha256": "b76d59749ac16ff2c9047833a344b6e908d313e3224a700b92dcdade70c95a1d"
+  },
+  "checks": [
+    {
+      "role": "he",
+      "S1_adon_under_correct_morning_heading": true,
+      "S2_gender_scopes": [
+        {
+          "gender": "male",
+          "call": "urn:x-opensiddur:text:prayer:birkhot_hashachar/shelo_asani_ishah@prayerbook_for_the_new_year_second_day-heidenheim-1965-he",
+          "condition_own_note": false
+        },
+        {
+          "gender": "female",
+          "call": "urn:x-opensiddur:text:siddur:rosh_hashanah/day_two/morning_blessings/womens_blessing@prayerbook_for_the_new_year_second_day-heidenheim-1965-he",
+          "condition_own_note": true
+        }
+      ],
+      "S3_condition_labels_own_child_notes": true,
+      "S4_metadata_evidence_correct": "not applicable",
+      "current_segment_terminal": "middot/yehi_ratzon"
+    },
+    {
+      "role": "en",
+      "S1_adon_under_correct_morning_heading": true,
+      "S2_gender_scopes": [
+        {
+          "gender": "male",
+          "call": "urn:x-opensiddur:text:prayer:birkhot_hashachar/shelo_asani_ishah@prayerbook_for_the_new_year_second_day-marmorstein-1965-en",
+          "condition_own_note": false
+        },
+        {
+          "gender": "female",
+          "call": "urn:x-opensiddur:text:siddur:rosh_hashanah/day_two/morning_blessings/womens_blessing@prayerbook_for_the_new_year_second_day-marmorstein-1965-en",
+          "condition_own_note": true
+        }
+      ],
+      "S3_condition_labels_own_child_notes": true,
+      "S4_metadata_evidence_correct": "not applicable",
+      "current_segment_terminal": "attah_hu/bashamayim; laterHebrew-onlyunitsabsent"
+    },
+    {
+      "role": "expanded",
+      "S1_adon_under_correct_morning_heading": true,
+      "S2_gender_scopes": [
+        {
+          "gender": "male",
+          "call": "urn:x-opensiddur:text:prayer:birkhot_hashachar/shelo_asani_ishah",
+          "condition_own_note": true
+        },
+        {
+          "gender": "female",
+          "call": "urn:x-opensiddur:text:prayer:birkhot_hashachar/sheasani_kirtzono",
+          "condition_own_note": true
+        }
+      ],
+      "S3_condition_labels_own_child_notes": true,
+      "S4_metadata_evidence_correct": true,
+      "current_segment_terminal": "middot/yehi_ratzon"
+    }
+  ],
+  "continued_positive_checks": [
+    "German early/late blocks still each contain exactly the5intended canonical targets; actualknown/unknown branch counts require matrix.",
+    "Psalm17:6 still called twice, repeatprinting local and immediately closed.",
+    "QorbanotBarukhShem translation false remains locally declared and immediately closed.",
+    "Documentary optional empty page references remain; expanded calls unqualified and no obsolete page direction reappears.",
+    "All90 previously approved literal witnesses remain byte-identical; this review edits no source or project.",
+    "O2 source-parenthesizedhi is unchanged and remains a retained intrinsic source form."
+  ],
+  "findings": [],
+  "presentation_checks_still_needed": [
+    "Actual compiler condition matrix must verify knowntrue labels disappear, false content is absent and unknown alternatives remain legible.",
+    "Bilingual foreign phrases in conditional notes have adjacent textnodes without explicitseparator; actualPDF/HTML must show readable language separation. This is a presentation check, not a remaining static sequence blocker.",
+    "AbsentEnglish/counterpart discovery, bilingualalignment, note attachment/order, marginal scanlinks and sourcecredits require current exports."
+  ],
+  "lookahead_only": {
+    "image": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s46.jpg",
+    "sha256": "ed0ec9a7c82b0f3cf3627801b62ec307aa73f4929419fe309de5d2f4dec09fd0",
+    "observed_next_scan_page": 46,
+    "printed_page": "15",
+    "next_prayer_existing_target": "urn:x-opensiddur:text:prayer:pesuqei_dezimrah/barukh_sheamar",
+    "next_prayer_scope": "BarukhSheamar opens scan46 and concludes beforeHodu; retain its two existing parts/barukh and/yachid if the reviewedsource supports sameboundaries.",
+    "following_bible_target_start": "urn:x-opensiddur:text:bible:chronicles_1/16/8",
+    "following_scope": "Hodu begins on scan46 afterBarukhSheamar. The lastvisible line is insideChronicles16:16 (ושבועתו); continuationmust be read onthe nextHebrewpage before claiming thatverse complete. Do not truncate verse16 or duplicateitsmilestone acrosspagebreak.",
+    "batch_boundary": "Current25–45spines correctly stop aftermiddot/yehi_ratzon. Lookahead46has not been independentlytranscribed/accepted bythisreview and must not be addedautomatically."
+  },
+  "no_full_acceptance_claim": true
+}

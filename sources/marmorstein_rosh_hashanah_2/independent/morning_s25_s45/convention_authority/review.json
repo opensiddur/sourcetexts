@@ -1,0 +1,51 @@
+{
+  "reviewer": {
+    "model": "claude-opus-5-5 (Opus 5.5)",
+    "effort": "Not visible to me. The requested 'medium' could not be confirmed.",
+    "tools": "Read only. No changes made."
+  },
+  "verdict": "Keep the six source Tetragrammaton forms that have no holam exactly as printed. Remove the claim at specs/MARMORSTEIN_ROSH_HASHANAH_2.md:71-73 that there is a 'user723 holam-supply convention for the literal Tetragrammaton'. None of the records I read supports a Tetragrammaton normalization.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "source": "human-723-734-resolution.json:18-49 (changes 723a/b/c)",
+      "finding": "Decision 723 covers three words, all on s337 block 0 line 3: שָׁלֹשׁ, קְדֻשּׁוֹת and מְשַׁלְּשׁוֹת, in 'כִּתּוֹת שָׁלֹשׁ קָדוֹשׁ מְשַׁלְּשׁוֹת'. Each records 'Explicit user enlarged-source adjudication'. No Tetragrammaton is involved."
+    },
+    {
+      "source": "human-723-734-resolution.json:196-198 (conventions.723)",
+      "finding": "The recorded convention reads: 'Source lacks separately printed holam; encode logical holam U+05B9 and shin dot separately per user and specs/BIRNBAUM_FROM_SCAN.md combined-dot rule lines331–342'. Its stated basis is the combined shin-dot/holam rule and nothing broader."
+    },
+    {
+      "source": "User 723 chat, as quoted in the brief",
+      "finding": "'holam is not printed, but the project conventions say it should be added; yes to both dageshes'. The words 'project conventions' point back to a rule that already existed, the combined-dot rule. The user did not create a new rule. 'Both dageshes' matches 723b/723c. Nothing in the quote mentions the Divine Name."
+    },
+    {
+      "source": "specs/BIRNBAUM_FROM_SCAN.md:331-357",
+      "finding": "The rule covers only a holam 'on the letter before a shin, or on the shin itself', where one dot does the work of both marks. It calls itself 'the one place the reading deliberately departs from what the page shows'. Its test (line 352) is whether leaving the mark out changes what the word is. A Tetragrammaton printed without holam has no shin and no merged dot, so the rule's condition is never met. Printing the Name without holam is also a recognised convention in its own right, and leaving the mark out does not turn it into a different word."
+    },
+    {
+      "source": "specs/SCAN_DIGITIZATION_INSTRUCTIONS.md:24-25, 49-57",
+      "finding": "Line 24-25: 'Do not generalize a confirmed mark from one occurrence to other occurrences of the same word.' Generalizing it to a different word class is a further step that this rule rules out a fortiori. Lines 49-54: legitimate alternatives stay as ordinary source text, not sic/corr. Lines 55-57: an editorial normalization needs an explicit authorization and record. None exists for the Tetragrammaton."
+    },
+    {
+      "source": "specs/MARMORSTEIN_ROSH_HASHANAH_2.md:70-73",
+      "finding": "The claim says 'The existing user723 holam-supply convention for the literal Tetragrammaton applies here too'. No record cites a source for it, and it contradicts both the 723 record and the scope of the combined-dot rule. It is an inference written by an assistant, not user authority. Any later AI review that accepted this premise is not new approval either."
+    }
+  ],
+  "bounded_action": [
+    "Preserve the six literal Tetragrammaton forms without holam (Lev 1:11, Ex 30:34, Ex 30:8, Num 28:6-8) as approved. Add no sic/corr and no supplied-mark record for them.",
+    "Change MARMORSTEIN_ROSH_HASHANAH_2.md:70-73. Delete the 'user723 holam-supply convention for the literal Tetragrammaton' sentence and the instruction to 'record supplied marks separately'. Keep 'leave the two-yod abbreviation as printed', which stands on its own. If useful, add that 723 applies only to the combined shin-dot/holam case under BIRNBAUM_FROM_SCAN.md:331-357.",
+    "If any day-two code, records or reviews were built on that premise (for example, supplied holam on second-night Maariv Tetragrammata), find them and treat them as unauthorized until checked against the scan. I did not inspect them."
+  ],
+  "limits": [
+    "I read only the files named in the brief. I did not read schema/JLPTEI-3.md, because the question did not need it. I also did not read other chat history, other source records or the processor/project XML, so a separate user authorization recorded elsewhere cannot be ruled out. The 723 record does not cite one, and it would have to be found and cited explicitly.",
+    "I did not check the six XML forms against the scan images. I relied on the brief's statement that they are approved faithful readings with no dispute over faint marks.",
+    "This is not batch, encoding or export acceptance. 723 is not re-adjudicated and no new pointing question is raised."
+  ],
+  "runner_model_usage": [
+    "claude-opus-5-5"
+  ],
+  "requested_effort": "medium",
+  "actual_effort": "not exposed",
+  "working_readings_unchanged": true
+}

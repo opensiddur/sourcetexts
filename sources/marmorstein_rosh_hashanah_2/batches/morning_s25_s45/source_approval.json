@@ -1,0 +1,110 @@
+{
+  "status": "approved_source_only",
+  "scans": [
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45
+  ],
+  "scan_pages": 21,
+  "working_readings_sha256": "c964475cbf07e5d4e7a0fce56a85d2168bafda38a092a7c9b37ced04f79abda9",
+  "scope": [
+    "All printed prayer words and fine marks in the21 scans, actual omissions/English gaps, source order and paragraph groupings.",
+    "Instructions, source citations, attributions and paratext, with historical wrong-crop and disputed-reader evidence retained."
+  ],
+  "basis": [
+    "Blind current-image readings by Claude Opus5.5, complete detailed page-image audits, dedicated enlarged-image readers, explicit human adjudications through1022.",
+    "Final source application reviews compose that evidence and close every substantive source finding. They do not claim fresh all-mark rereading at final closure."
+  ],
+  "reviews": [
+    {
+      "path": "independent/morning_s25_s45/source_closure/final_group1/response.json",
+      "sha256": "087e84d0b91e85def5c4424668bc27bf93828d35da9b65add76c2a6455bf4639",
+      "verdict": "APPROVED for the prior scoped source application.",
+      "model_usage": [
+        "claude-opus-5-5"
+      ],
+      "requested_effort": "medium",
+      "reported_effort": "Low reasoning-effort setting. Read-only Read tool only: no shell, no new crops, no images re-read, no hashes computed. The frozen hash and group2 equivalence are the runner's results, not mine.",
+      "limitations": [
+        "I did not re-examine any image. Closure rests on recorded human answers and the supplied independent audits, composed with the earlier complete source audits and blind readings. That is the follow-up composition you asked for.",
+        "I read readings.json only through adon_olam paragraph 10 (line 1608). The s42 Anna attribution was checked against the final_resolutions entry and adjudication 1019, whose after_readings_sha256 c964475c... matches final_resolutions working_readings_sha256. I did not find the row in readings.json myself or compute that hash; the runner checks it.",
+        "The s41 citations are closed only within paratext_s41.json's stated scope. I did not check whether they are stored in a readings.json unit.",
+        "Earlier failed or questioned readings (1003 low-confidence, dedicated 1010 no-maqaf, dedicated 1019) remain historical evidence and were not re-litigated."
+      ]
+    },
+    {
+      "path": "independent/morning_s25_s45/source_closure/closure_group2/response.json",
+      "sha256": "6ea9f3f340382add2269f8326972ab87cb1ce2117e3e4311938de976d7b60873",
+      "verdict": "approved source application",
+      "model_usage": [
+        "claude-opus-5-5"
+      ],
+      "requested_effort": "medium",
+      "reported_effort": "low (reasoning_effort 10)",
+      "limitations": [
+        "Read-only review. No hashes computed; the runner must verify the bundle and image hashes before and after.",
+        "No new crops could be made. For metegs not individually disputed, this relies on the complete audits and existing bands/snippets, which the instructions permit. I found no contradiction in anything I inspected.",
+        "The English pages have no dedicated audit. Their basis is two complete readings of the full page (group2 and this review), not a band-level audit, but English punctuation at full-page scale is legible and the one disputed mark has a dedicated snippet (1002).",
+        "The running-head/page-label application is outside this bundle's view (see paratext_coverage).",
+        "No source text from another edition was consulted or used."
+      ]
+    },
+    {
+      "path": "independent/morning_s25_s45/source_closure/final_group3/response.json",
+      "sha256": "458e46f343855374bccbe8c5d86f4a6662a69f4f02f50019701772a61cebe8d5",
+      "verdict": "APPROVED within the prior scoped review: source words, fine marks, paragraphs and page headers/labels/citations (paratext) for scans 40-45, together with the group 1 items above. Every finding in the scope is supported by complete page audits, dedicated paratext audits or explicit human adjudications. No HUMAN source case remains unresolved.",
+      "model_usage": [
+        "claude-opus-5-5"
+      ],
+      "requested_effort": "medium",
+      "reported_effort": "The effort setting is not visible to me. I used only the Read tool (no shell, no hashing, no file writes). I composed this from the existing audits, adjudications and the final scoped review, and did not re-read any page.",
+      "limitations": [
+        "I computed no hashes. The frozen readings hash (c964475c…) and the group 2 fragment-row equivalence come from the runner and final_resolutions, not from me.",
+        "I composed this from the existing complete audits and human adjudications and did not re-read any page image. Human-confirmed marks (1003, 1007, 1008, 1010, 1019, 1022) were accepted as authoritative.",
+        "I read readings.json in selected line ranges covering the affected units, not every line.",
+        "Non-blocking: the new final_resolutions.source_paratext list has no scan 40 running-heading entry and no page-label entries for scans 40, 41, 43 and 45. The s40 heading and labels are recorded in source_audit_s40 (accepted in the prior review), the s41 and s43 labels are in paratext_s41 and paratext_s43, and the s45 labels are in source_audit_s45. Adding the missing entries would be completeness tidying in the metadata, not a source-reading gap.",
+        "paratext_s43.json still lists the lamed dagesh as unresolved; user_adjudication_1022 supersedes it. Earlier failed or questioned readings remain only as history."
+      ]
+    }
+  ],
+  "equivalence": {
+    "status": "passed",
+    "working_readings_sha256": "c964475cbf07e5d4e7a0fce56a85d2168bafda38a092a7c9b37ced04f79abda9",
+    "group2_word_equivalence": {
+      "status": "passed",
+      "old_bundle": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/independent/morning_s25_s45/source_closure/closure_group2/bundle.json",
+      "old_bundle_sha256": "9a7e8a8e3e03d5c8ac396f041c05e321dbf41e878c1a5ee85fb46975447dbc36",
+      "exact_fragment_rows_unchanged": 76,
+      "scope": "Approved32–39 source words/marks/storage order, not complete-scan encoding acceptance."
+    }
+  },
+  "pending_reading_disputes": [],
+  "does_not_approve": [
+    "JLPTEI encoding",
+    "canonical/provider mapping",
+    "translation alignment",
+    "rite/recitation/expanded sequence",
+    "PDF/HTML output",
+    "complete-scan batch acceptance"
+  ],
+  "accepted_complete_scan_pages_unchanged": 24,
+  "source_reading_approved_scan_pages_in_volume": 45
+}

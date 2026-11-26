@@ -1,0 +1,44 @@
+{
+  "reviewer": "/root/review_morning_renderer",
+  "actual_model": "Inherited collaboration model; exact identifier and effort not exposed",
+  "scope": [
+    "opensiddur/importer/marmorstein_rosh_hashanah_2/morning_witnesses.py",
+    "opensiddur/tests/importer/test_marmorstein_day_two_morning_witnesses.py"
+  ],
+  "input_sha256": {
+    "opensiddur/importer/marmorstein_rosh_hashanah_2/morning_witnesses.py": "87d2269d722bc29fb44c31ddf6363fd88f6b73895fd7ad2e41434be56b75f54b",
+    "opensiddur/tests/importer/test_marmorstein_day_two_morning_witnesses.py": "c882fa2ed23e18b1aad63d06498566b52982408b9f49ef7bffa3db9c7ed7d35e"
+  },
+  "verdict": "approved for literal volume-two witness rendering and milestone-range provenance scope",
+  "finding_closure": [
+    {
+      "id": "R1",
+      "status": "closed",
+      "evidence": "Visitor follows supported quotation lists inside fragments and alternatives, carrying the nearest fragment source. Direct and option-contained quotation regressions verify the second-page source inside selected quotation ranges."
+    },
+    {
+      "id": "R2",
+      "status": "closed including nested partial-quotation subcase",
+      "evidence": "Binding now distinguishes top-level segments from nested quotation emission. The source_reference fallback is indexed only for top-level segments where the underlying renderer emits it, and only without an explicit contextual override. Nested half-verse quotations bind their actual half-verse correspondence and do not reserve an un-emitted whole-verse identity. Both context-first/full-verse-later and half-verse-first/full-verse-later regressions confirm the later canonical verse retains its actual second-page source."
+    }
+  ],
+  "remaining_findings": [],
+  "positive_checks": [
+    "Volume-two header and bibliography use the correct language project and source index.",
+    "First-day module globals are not mutated.",
+    "Text tails and word order are preserved when injecting provenance; insertion is idempotent in the synthetic case.",
+    "Distinct physical scans remain distinct despite repeated printed labels.",
+    "Literal witnesses reject silent replacement through reuse/canonical/transclude/repeat directives."
+  ],
+  "validation": {
+    "pytest_command": ".venv/bin/pytest -q opensiddur/tests/importer/test_marmorstein_day_two_morning_witnesses.py",
+    "pytest_result": "6 passed, 6 subtests passed",
+    "lint": "ruff check on both exact reviewed files passed",
+    "warning": "Nonblocking pytest cache warning due to read-only review filesystem; tests completed."
+  },
+  "limitations": [
+    "Code approval only: actual source readings, identity recipes, generated projects, settings, recitation order and exports have not been approved by this review.",
+    "No complete-batch acceptance inferred.",
+    "No repository files edited by reviewer."
+  ]
+}

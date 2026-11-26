@@ -1,0 +1,222 @@
+{
+  "reviewer": "/root/review_morning_identities",
+  "actual_model": "Inherited collaboration model; exact model identifier and reasoning setting are not exposed",
+  "status": "Independent architecture advisory; NOT source, code, generated-encoding or batch approval",
+  "input_sha256_at_report": {
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/AGENTS.md": "412beece13d5370bd12c2bfc87f88dca6e489e832ec1065f18169b2339a23ca8",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/specs/SCAN_DIGITIZATION_INSTRUCTIONS.md": "bfec87df8310e423ee803c2d4165c313c7898a3262b22231e88d77af63ea058b",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/specs/MARMORSTEIN_ROSH_HASHANAH_1.md": "07f314dc3c17971fafdd8e95ed8c971d0303adc6f6581041353230a7b8bf1d6a",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/schema/JLPTEI-3.md": "855d1cdfa4da3b804132f7216102279fd4eff3819ff0b2d5004eb9b2bb1160a5",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/schema/jlptei.odd.xml": "688bac1dd3d6a7eb8a1f43c057a1d5249a610659de45a27d0496d22b4874e016",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/opensiddur/importer/marmorstein_rosh_hashanah_1/realizations.py": "7bab17815c24e3916e52220e3128481b9599f45e3a24d774ff6c0cf3b1163c77",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/opensiddur/importer/marmorstein_rosh_hashanah_1/canonical_printings.py": "70c91f1c29f657f4df434390a20e7b43e56c9328608acaf3a34f8bc667cd6652",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/opensiddur/exporter/external_compiler.py": "62fd4d6458ba48288832e13f073e0b574022cfba8329906cece146aeb55d6f86",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/opensiddur/exporter/compiler.py": "e811add86c9268fd15652913e7e63cf3149d4f64384ada2db5cb361d5e113904",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/opensiddur/exporter/features.yaml": "82efd17514967d6fb97070da0f216890815c7805bed4dd27537a28beb6a5883f",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/specs/urn_registry/condition.jsonl": "3d4227ce451debf5167410f25c68471d48bad9bc3ac5d70949bc7a6ccf0bbcc2",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/morning_s25_s45/identity_survey.json": "5524fb8e05317c15664f208d2047ae3ba2e5b2506b55d0c9177ef29f0bbb8a24",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/morning_s25_s45/working/readings.json": "c964475cbf07e5d4e7a0fce56a85d2168bafda38a092a7c9b37ced04f79abda9",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/independent/morning_s25_s45/architecture/response.json": "a2a548b35a8dafdeeb32b22e5f4387d4f7e3f94a6adce09ed1414c2df2f7bb2d",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/settings/machzor_expanded-opensiddur-he/second_day_evening.yaml": "cdb7c8d93ef3001daf81b936a0f0614bc008d6e25d4841bd516fc9167113d81c"
+  },
+  "verdict": "Do not approve the blanket collision-to-source-only-occurrence plan. Use structural wrappers for actual occurrences while retaining existing canonical homes and canonical transclusion targets; implement locally selected source printings and explicit counterpart availability where needed. A special quote-context-only resolution is sufficient for the new Malachi3:4 collision.",
+  "findings": [
+    {
+      "id": "I1",
+      "severity": "high",
+      "finding": "The earlier advisory claims pointing/maqaf/punctuation differences cannot be j:option alternates. This is false for this repository and this book.",
+      "evidence": [
+        "specs/MARMORSTEIN_ROSH_HASHANAH_1.md:1658 Printing selectors and Shofarot boundary explicitly permits source-attested orthography, pointing and punctuation selections, distinct from new canonical identities and community rites.",
+        "specs/urn_registry/condition.jsonl:64–65 identifies prior/repetition Attah Vechartanu printing differing by six metegs.",
+        "realizations.py prepare_unit overlays exact printed strings with j:option alternatives; selection creates occurrence-local opensiddur:variant declarations."
+      ],
+      "resolution": "Reuse the existing opensiddur:variant mechanism, registering only evidenced condition URNs, never new prayer identities for those differences."
+    },
+    {
+      "id": "I2",
+      "severity": "high",
+      "finding": "A structural URN is valid for a documentary arrangement or repeated occurrence. It is not a sufficient blanket replacement for a whole prayer canonical corresp merely to avoid provider collisions.",
+      "evidence": [
+        "JLPTEI-3.md:42 locates a text identity in corresp; source is quotation attribution, not indexed provider identity.",
+        "JLPTEI-3.md:315 requires one canonical verse correspondence per project; repeated literals may be documentary contextual copies, but only first canonical copy is addressable.",
+        "User explicitly requires reuse of existing canonical URNs in corresp and expanded canonical URN transclusions."
+      ],
+      "resolution": "Retain canonical homes exactly once per language/project, use structural wrappers around their transclusions or reviewed literal documentary contexts, and select actual printed wordings locally. Contextual chapter/verse markers remain appropriate for bounded/adapted/repeated quotations."
+    },
+    {
+      "id": "I3",
+      "severity": "high",
+      "finding": "Adding morning canonical English Yigdal/Mah Tovu/Bible witnesses can fill earlier documented night gaps. Qualifying the primary target with @first-day-he does not prevent that.",
+      "evidence": [
+        "external_compiler.py:415 _build_parallel_urn replaces the existing suffix with the requested parallel project.",
+        "second_day_evening.yaml parallel.projects contains day-two English; priority.transclusion prefers day-two Hebrew before first-day Hebrew.",
+        "Expanded second_night.xml currently calls edition-independent poem:yigdal, prayer:mah_tovu and shared Bible/structural targets."
+      ],
+      "resolution": "Explicit occurrence-local printed-translation availability controls are required if canonical English mappings are added. Use existing opensiddur:variant with registered condition URNs and j:conditional in English source ranges, never an empty j:option or invented translation. Night caller false and morning caller true where English is absent/present. All pbs and relevant English notes must be governed by the same availability. This is a controlled equivalence change to the night generation recipe/spine; it requires re-review, not a fresh user permission assumption."
+    },
+    {
+      "id": "I4",
+      "severity": "high",
+      "finding": "Availability must account for every occurrence, not just newly translated works.",
+      "evidence": [
+        "Direct comparison: current night and morning Barukh Shem Hebrew and English words are identical.",
+        "The korbanot_barukh_shem occurrence is Hebrew-only, while the same canonical text has a printed English translation at night and in the morning Shema."
+      ],
+      "resolution": "For Barukh Shem, availability must be true at night/morning and false at korbanot. Do not apply a blanket new-English gate to all English prayer homes or overwrite night-present translations."
+    },
+    {
+      "id": "I5",
+      "severity": "high",
+      "finding": "The initial identity survey is incomplete: it examined segment.corresp/start but not every generated mapping. Parent reported actual qorbanot_vearvah source_reference maps Malachi3:4, colliding with accepted night amidah_avodah.",
+      "resolution": "Compare the complete generated corresp graph in both languages to all accepted canonical declarations: root divs, milestones, source_reference fallbacks, contextual source_reference_corresp/chapter_corresp, source_reference_part, nested quotation/option mappings, canonical_home and canonical_whole outputs. source attributes alone are not mapping claims."
+    },
+    {
+      "id": "I6",
+      "severity": "high",
+      "finding": "Provenance must be selected with the printing; an unconditional page marker outside a multi-printing choice will leak the other occurrence scan.",
+      "evidence": [
+        "canonical_printings.py apply requires the relevant source boundary to lie in exactly one positively selected option; guards bind the caller selection.",
+        "The new morning_witnesses literal renderer inserts unconditional in-range markers and is not itself an alternate-printing library renderer."
+      ],
+      "resolution": "Keep alternative-printing pbs inside the selected option or properly conditioned printing source marker, preserve source credit and licence, and test interior ranges. Exact identical words may share a single literal home with selected provenance rather than inventing another canonical identity."
+    },
+    {
+      "id": "I7",
+      "severity": "medium",
+      "finding": "An availability-false English range still resolves and can compile to a non-None empty counterpart. Current _compile_parallel_transclusion assigns apparatus once compilation succeeds, so empty-counterpart handling must be proved.",
+      "resolution": "Regression-test that empty conditioned English neither creates spurious rows/links nor filters out Hebrew fallback notes. Gate English standoff notes with j:condition too. If the pilot exposes a real failure, isolate the smallest empty-counterpart exporter fix in its own PR; do not assume visible-word suppression proves correct apparatus."
+    },
+    {
+      "id": "I8",
+      "severity": "medium",
+      "finding": "The old advisory suggested omitting chapter/verse milestones for repeated occurrences and avoiding sic/corr for the duplicated English women blessing. Both are unsuitable blanket rules for this task.",
+      "resolution": "Retain bounded quote-context chapter/verse milestones for repeated/adapted quotations. Preserve the source duplicate with sic/corr as requested; place its source-only duplicate outside the reusable canonical recited range so expanded recitation never doubles it, including in printed-error mode."
+    }
+  ],
+  "recommended_architecture": {
+    "canonical_homes": "One existing canonical identity per project/language. Upgrade shared homes with exact attested printing choices where actual words/marks differ. New unique morning prayers keep their existing registry identities unchanged.",
+    "documentary_contexts": "Registered structural occurrences may preserve exact edition order, local rubrics, page references and printed paragraphs. They do not invent prayer identities. Where a literal context is needed for difficult pagination, follow the existing canonical_home context=literal model, but keep a canonical provider and exact realization proof.",
+    "expanded": "Use existing canonical prayer/Bible URNs for recitation, with caller-local printing and counterpart-availability declarations. Repeat transclusions at required positions; structural wrappers name occurrences only.",
+    "night_preservation": "Preserve exact default night selected words, donor/source provenance, English gaps, apparatus and displayed hierarchy. Source/library/spine files may need reviewed changes; freeze and independently review semantic and configured PDF/HTML equivalence rather than requiring unchanged source bytes at all costs.",
+    "selector_types": "Existing opensiddur:variant supports condition-URN feature names. No new feature-structure type, schema element or calendar fiction is needed. New source-attested condition URNs must be registered and caller settings verified.",
+    "code_reuse_limits": "realizations.prepare_documents cannot simply be called on all raw morning units: it rejects poetry and occurrence controls in canonical_home configs. prepare_unit and unit_document support explicit alternatives, and canonical_printings demonstrates selected provenance. Adapt/generate reviewed day-two recipes preserving actual poetry/paragraphs and controls rather than copying first-day documents or mutating module globals.",
+    "malachi_special_case": "Keep existing prayer:qorbanot/vearvah corresp on its new prayer home, but use bounded quote-context chapter and verse correspondences for Malachi3:4 (source=bible:malachi/3/4), searching registry/projects for existing quote-context IDs first. Expanded transcludes existing canonical prayer:qorbanot/vearvah. The accepted night retains the sole canonical Bible-verse claim, so no shared verse library rewrite is necessary for this case."
+  },
+  "schematic_xml": {
+    "limitations": "Illustrations contain placeholders and one-part excerpts only; not actual transcription or deployable full-prayer files. Expand all13 Yigdal stanzas with their existing identities, source paragraph/line structure and true scope before generating a whole-poem provider. All new condition/context URNs shown are proposals requiring registry search/registration.",
+    "yigdal_he_canonical_library_one_stanza": "<tei:div xmlns:tei=\"http://www.tei-c.org/ns/1.0\" xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\" corresp=\"urn:x-opensiddur:text:poem:yigdal\">\n  <tei:lg><tei:l>\n    <tei:milestone unit=\"stanza\" n=\"1\" corresp=\"urn:x-opensiddur:text:poem:yigdal_daniel/1\"/>\n    <tei:choice>\n      <j:option corresp=\"urn:x-opensiddur:condition:poem:yigdal/he/night_printing\">\n        <tei:pb n=\"3\" facs=\"https://archive.org/download/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965/page/n41.jpg\"/>\n        <j:transclude type=\"inline\" target=\"urn:x-opensiddur:text:poem:yigdal_daniel/1@prayerbook_for_the_new_year-heidenheim-1965-he\"/>\n      </j:option>\n      <j:option corresp=\"urn:x-opensiddur:condition:poem:yigdal/he/morning_printing\">\n        <tei:pb n=\"3\" facs=\"https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n27.jpg\"/>\n        [EXACT REVIEWED DAY-TWO STANZA 1, INCLUDING SEMANTIC MARKUP]\n      </j:option>\n    </tei:choice>\n    <tei:milestone unit=\"stanza\"/>\n  </tei:l></tei:lg>\n</tei:div>",
+    "yigdal_en_real_translation_with_availability_guard_one_stanza": "<tei:div xmlns:tei=\"http://www.tei-c.org/ns/1.0\" xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\" corresp=\"urn:x-opensiddur:text:poem:yigdal\">\n  <j:conditional xml:id=\"printed_translation_available\">\n    <j:all><tei:fs type=\"opensiddur:variant\"><tei:f name=\"urn:x-opensiddur:condition:poem:yigdal/en/printed_translation\"><tei:binary value=\"true\"/></tei:f></tei:fs></j:all>\n  </j:conditional>\n  <tei:p><tei:milestone unit=\"stanza\" n=\"1\" corresp=\"urn:x-opensiddur:text:poem:yigdal_daniel/1\"/>\n    <tei:pb n=\"3\" facs=\"https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n28.jpg\"/>\n    [EXACT REVIEWED DAY-TWO ENGLISH STANZA 1]\n    <tei:milestone unit=\"stanza\"/>\n  </tei:p>\n  <j:endConditional target=\"#printed_translation_available\"/>\n</tei:div>",
+    "night_yigdal_call": "<j:declare xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\" xmlns:tei=\"http://www.tei-c.org/ns/1.0\" xml:id=\"night_yigdal_printing\">\n  <tei:fs type=\"opensiddur:variant\">\n    <tei:f name=\"urn:x-opensiddur:condition:poem:yigdal/he/night_printing\"><tei:binary value=\"true\"/></tei:f>\n    <tei:f name=\"urn:x-opensiddur:condition:poem:yigdal/he/morning_printing\"><tei:binary value=\"false\"/></tei:f>\n    <tei:f name=\"urn:x-opensiddur:condition:poem:yigdal/en/printed_translation\"><tei:binary value=\"false\"/></tei:f>\n  </tei:fs>\n</j:declare>\n<j:transclude xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\" type=\"external\" target=\"urn:x-opensiddur:text:poem:yigdal\"/>\n<j:endDeclare xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\" target=\"#night_yigdal_printing\"/>",
+    "morning_yigdal_call": "Same canonical target as night. Declare he/night_printing=false, he/morning_printing=true and en/printed_translation=true locally; terminate declaration after the occurrence.",
+    "psalm17_6_canonical_home": "<tei:div xmlns:tei=\"http://www.tei-c.org/ns/1.0\" xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\">\n <tei:p>\n  <tei:milestone unit=\"chapter\" n=\"17\"/>\n  <tei:milestone unit=\"verse\" n=\"6\" corresp=\"urn:x-opensiddur:text:bible:psalms/17/6\"/>\n  <tei:choice>\n   <j:option corresp=\"urn:x-opensiddur:condition:bible:psalms/17/6/he/night_printing\"><tei:pb n=\"1\" facs=\"https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n4.jpg\"/>[EXACT ACCEPTED NIGHT WORDS]</j:option>\n   <j:option corresp=\"urn:x-opensiddur:condition:bible:psalms/17/6/he/morning_printing\"><tei:pb n=\"2\" facs=\"https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n25.jpg\"/>[EXACT REVIEWED MORNING WORDS]</j:option>\n  </tei:choice>\n  <tei:milestone unit=\"verse\"/><tei:milestone unit=\"chapter\"/>\n </tei:p>\n</tei:div>",
+    "psalm17_6_repeated_documentary_context": "<tei:div xmlns:tei=\"http://www.tei-c.org/ns/1.0\" xmlns:j=\"http://jewishliturgy.org/ns/jlptei/2\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/day_two/morning_preliminaries/psalm_17_6_repeat\">\n <j:declare xml:id=\"repeat_printing\"><tei:fs type=\"opensiddur:variant\">[EXPLICIT HEBREW MORNING AND ENGLISH REPEAT-TRANSLATION SELECTORS]</tei:fs></j:declare>\n <tei:p>\n  <tei:milestone unit=\"chapter\" n=\"17\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/day_two/morning_preliminaries/psalm_17_6_repeat/quote/psalms/17\"/>\n  <tei:milestone unit=\"verse\" n=\"6\" corresp=\"urn:x-opensiddur:text:siddur:rosh_hashanah/day_two/morning_preliminaries/psalm_17_6_repeat/quote/psalms/17/6\"/>\n  <tei:pb n=\"3\" facs=\"https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n27.jpg\"/>\n  <tei:seg source=\"urn:x-opensiddur:text:bible:psalms/17/6\"><j:transclude type=\"inline\" target=\"urn:x-opensiddur:text:bible:psalms/17/6@prayerbook_for_the_new_year_second_day-heidenheim-1965-he\"/></tei:seg>\n  <tei:milestone unit=\"verse\"/><tei:milestone unit=\"chapter\"/>\n </tei:p>\n <j:endDeclare target=\"#repeat_printing\"/>\n</tei:div>",
+    "chapter_scope_note": "Do not map a single-verse library to the canonical whole Psalm17 chapter. A bare chapter n=17 retains bibliographic context. Documentary repeated bounded quotation can have contextual chapter/verse correspondences as illustrated.",
+    "english_repeated_psalm_note": "Keep the actual distinct first and second English Psalm17:6 translations as attested printing options under the same canonical verse identity; the second occurrence selects its own wording. Do not repeat the first translation merely because its canonical URN matches.",
+    "identical_wording_note": "Night and morning Barukh Shem words are identical in both languages. Share words once; select their source page provenance at the occurrence. Availability at Hebrew-only korbanot still needs explicit suppression of the otherwise discoverable canonical English counterpart.",
+    "donor_note": "Yigdal night source is first-day compatible Hebrew, not a second-day night printing. The schematic inline donor transclusion must retain recorded first-day source, credits and licence; verify semantic markup under inline compilation. Materializing an accepted donor option is possible only with explicit evidence/credit and exact equivalence proof, not pretending it was printed at the new location."
+  },
+  "required_regressions": [
+    {
+      "case": "One canonical home",
+      "proof": "Enumerate every generated corresp across both projects; existing prayer/poem/Bible identities have one legitimate canonical provider each, with known contextual quotations distinguished. Include source_reference-derived and nested option/subverse claims; explicit Malachi3:4 collision is absent."
+    },
+    {
+      "case": "Canonical source reuse",
+      "proof": "Both morning and night Yigdal calls use poem:yigdal; both see selected existing stanza identities. No new text:prayer or text:poem identity was invented for placement/pointing. Each realization equals its own reviewed literal source words under printed error mode; corrected mode changes only approved sic/corr."
+    },
+    {
+      "case": "Night frozen closure",
+      "proof": "Compile the actual shipped second_day_evening profile before/after; compare exact selected HE/EN words, English absent sets, notes/numbering, all source facs, credited sources/licences, headings/order and user settings. Rebuild and independently review configured PDF/HTML when the carrier/layout changes."
+    },
+    {
+      "case": "English availability matrix",
+      "proof": "Yigdal/MahTovu and HE-only entrance/Bible new counterparts remain absent at night, present at printed morning positions. BarukhShem English remains present at night/morning but absent at korbanot. No source page markers or English citation notes leak from a false availability branch."
+    },
+    {
+      "case": "Empty counterpart and apparatus",
+      "proof": "A resolvable English canonical range whose guard is false behaves like a missing counterpart: no dummy row/empty apparatus-only column, no English backlinks, Hebrew fallback notes retained, correct note order. Test source root, interior stanza and interior verse targets."
+    },
+    {
+      "case": "Printing controls",
+      "proof": "Exactly one positive known wording option at every caller; none/two selected fails; declarations terminate and do not affect next source occurrence. Unknown variants retain prescribed behavior. No fixed fake date/rite is introduced to choose a printing."
+    },
+    {
+      "case": "Provenance by selected option",
+      "proof": "Night Yigdal points to first-day n41; morning to day-two n27 HE/n28 EN. Verse and stanza subrange selections retain their selected first source page. Repeated printed label3 is distinguished by unique facs. No opposite-printing page marker precedes the selected source."
+    },
+    {
+      "case": "Repeated Psalm17:6",
+      "proof": "Both morning occurrences use the same canonical Bible verse, preserve each printed English wording and paragraph position, and recite twice. Each wrapper has unique structural occurrence identity and bounded contextual chapter/verse scopes. No duplicate canonical verse declaration or scope bleed to adjacent rubrics."
+    },
+    {
+      "case": "German rite and paragraph fidelity",
+      "proof": "Torah blessings through EiluDevarim move exactly once under German rite while ElohaiNeshamah directly follows AsherYatzar there; ordinary rite retains intervening block. Paragraphs remain as printed independently of verse/stanza boundaries."
+    },
+    {
+      "case": "Source-only duplicate",
+      "proof": "Women blessing duplicate survives documentary printed-error mode with sic/corr evidence, is absent from expanded canonical recitation even under printed-error mode, and never shifts adjacent Hebrew/English alignment."
+    }
+  ],
+  "approval_limits": [
+    "No newly generated morning text, source reading, identity plan, code, conditions or presentation is approved by this advisory.",
+    "The canonical-library/availability pattern uses existing JLPTEI interfaces but still needs actual synthetic compiler proof and independently reviewed concrete generated files.",
+    "No repository files were edited; this report was saved only under /tmp."
+  ],
+  "concrete_vearvah_identity_review": {
+    "verdict": "approved for this concrete unit identity/quote-scope interpretation only",
+    "scope": [
+      "Existing canonical prayer:qorbanot/vearvah reused on its own home",
+      "Bounded contextual Malachi chapter/verse correspondences, without claiming another canonical Bible verse",
+      "Registry context parentage/reference relationships and actual generated scope endpoints"
+    ],
+    "xml_path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/qorbanot_vearvah.xml",
+    "xml_sha256": "fdb015ec6cc9810cac5bd239f641845f6e2fa74341f3f9b4f12db5a099328178",
+    "recipe_path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/morning_s25_s45/morning_units.json",
+    "recipe_unit_sha256": "a9be4bf1f948a137e5c6e32feb9047e6785f97daa2c525d52cfcfe300b19d906",
+    "registry_records": [
+      {
+        "urn": "urn:x-opensiddur:text:prayer:qorbanot/vearvah",
+        "status": "canonical",
+        "parent": "urn:x-opensiddur:text:prayer:qorbanot",
+        "label_he": "וְעָרְבָה לַייָ",
+        "label_en": "The offering of Judah and Jerusalem"
+      },
+      {
+        "urn": "urn:x-opensiddur:text:prayer:qorbanot/vearvah/quotes/malachi_3",
+        "status": "context",
+        "parent": "urn:x-opensiddur:text:prayer:qorbanot/vearvah",
+        "label_en": "Malachi chapter context within the offering prayer Vearvah",
+        "references": [
+          "urn:x-opensiddur:text:bible:malachi/3/4"
+        ],
+        "note": "Bounded quotation context for the printed verse only; not a whole canonical Biblical chapter or a new prayer identity."
+      },
+      {
+        "urn": "urn:x-opensiddur:text:prayer:qorbanot/vearvah/quotes/malachi_3/4",
+        "status": "context",
+        "parent": "urn:x-opensiddur:text:prayer:qorbanot/vearvah/quotes/malachi_3",
+        "label_en": "Malachi3:4 quoted in the offering prayer Vearvah",
+        "references": [
+          "urn:x-opensiddur:text:bible:malachi/3/4"
+        ],
+        "note": "Exact bounded source quotation, independently aligned within the existing canonical offering prayer; does not claim another canonical Bible witness."
+      }
+    ],
+    "registry_records_sha256": "82b97c439cf97577c4de8c40ed9c43b0db888f3efd48b35ee600e7a5d77cfd9a",
+    "checks_performed": {
+      "canonical_prayer_corresp_count": 1,
+      "canonical_bible_malachi_3_4_corresp_count": 0,
+      "contextual_chapter_corresp_count": 1,
+      "contextual_verse_corresp_count": 1,
+      "find_end_of_mapping_verse": "Quoted tei:seg with source=bible:malachi/3/4, include_tail=True, before the bare verse terminator",
+      "find_end_of_mapping_chapter": "Bare verse terminator, include_tail=True, before bare chapter terminator",
+      "registry_search": "Existing canonical prayer:qorbanot/vearvah at prayer.jsonl402. Earlier quote contexts under silent-Amidah/Musaf yehi_ratzon_temple refer to distinct prayer occurrences, so are not substitutes for this offering-prayer quote context. No pre-existing same-prayer quote context found before the new two records."
+    },
+    "accepted_night_provider_correction": "The sole existing day-two Hebrew canonical bible:malachi/3/4 claim is in amidah_yehi_ratzon.xml, scan20/n19. It is not in amidah_avodah.xml as initially described.",
+    "limitations": [
+      "Not an approval of source transcription, pointing, Divine Name interpretation, language alignment, rendering, full registry/schema checks or batch acceptance.",
+      "No source/image re-reading was done for this focused identity-only approval.",
+      "No SQL reference database was opened; exact scope endpoints were checked with the pure find_end_of_mapping function."
+    ]
+  }
+}

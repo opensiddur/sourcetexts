@@ -1,0 +1,37 @@
+{
+  "reviewer": "/root/review_explicit_edition",
+  "actual_model": "Inherited collaboration model; exact model identifier and effort not exposed",
+  "scope": [
+    "opensiddur/importer/marmorstein_rosh_hashanah_1/build.py",
+    "opensiddur/tests/importer/test_explicit_scan_edition.py"
+  ],
+  "input_sha256": {
+    "opensiddur/importer/marmorstein_rosh_hashanah_1/build.py": "5498d1eea12c08db00f125b8319b3097c8f21f274f65043c7580057d14df14c6",
+    "opensiddur/tests/importer/test_explicit_scan_edition.py": "50abba3ba0ea70f19fcb93f92394742155eb776309de6ca4bfb33dba9608e580"
+  },
+  "verdict": "changes_requested",
+  "findings": [
+    {
+      "id": "R1",
+      "priority": 2,
+      "file": "opensiddur/importer/marmorstein_rosh_hashanah_1/build.py",
+      "line": 852,
+      "title": "Pass the injected Archive identifier through source interpretation",
+      "description": "The new identifier controls all direct unit_document URLs, but the final apply_source_encoding call does not receive it. The commentary_pages branch in source_encoding.py:245 builds each note-page facs using b.IDENTIFIER, silently retaining the first-day scan. This affects witnesses with paginated source commentary and violates volume-specific provenance.",
+      "reproduction": "Synthetic ExplicitScanEditionTests.unit with citations.en=[{scan:s7,text:ab,note_type:commentary}] and source_encoding.en.commentary_pages=[{target:unit.urn,fragments:[{scan:s7,printed_page:1,text:a},{scan:s8,printed_page:2,text:b}]}], rendered with identifier=another-archive-item and custom header/projects. Note markers point to first-day item; body markers correctly point to another-archive-item.",
+      "fix": "Pass identifier through apply_source_encoding and use it for commentary page URLs, retaining the existing default; add this synthetic case to the new tests."
+    }
+  ],
+  "checks": [
+    "Inspected complete unit_document and invoked helper paths for globals/project leakage.",
+    "All seven direct source-URL branches use injected identifier.",
+    "reuse, canonical, transclude, repeat and page-direction targets use selected project.",
+    "Default factory/project selection is preserved without mutation.",
+    "Existing synthetic suite:113 tests and39 subtests passed (parent and independent rerun); lint passed.",
+    "Independent minimal commentary-pagination reproducer demonstrates R1."
+  ],
+  "limitations": [
+    "No morning recipe/encoding or full-batch acceptance reviewed.",
+    "No source transcription or PDF presentation reviewed."
+  ]
+}

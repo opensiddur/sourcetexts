@@ -1,0 +1,369 @@
+{
+  "status": "All eleven cases resolved; human1011/1015 blemish adjudications, corrected1009 image has a vav",
+  "records": [
+    {
+      "id": 1009,
+      "agent": "/root/read_1009_corrected",
+      "raw_response": {
+        "question_id": 1009,
+        "agent": "/root/read_1009_corrected",
+        "model": "Inherited collaboration model; exact identifier not exposed",
+        "method": "Inspected only corrected preflighted source image and a tighter crop derived from it; no OCR, editions, previous wrong crop, or other reader conclusions consulted.",
+        "source_image": "/tmp/day2-q1009-corrected.png",
+        "source_image_sha256": "3fd7a0f261d5879a7485191af1720998a5b019bf7a955e7c70e0cea54a73d173",
+        "answer": "נַעֲרוֹךְ",
+        "vav_between_resh_and_final_kaf": true,
+        "confidence": "high",
+        "visible_evidence": "A separate vav with its own compact head and short vertical stem stands between the resh and the final kaf. Its holam is above the vav. The resh and final kaf each have separate broad roofs; the final kaf descends well below the baseline and carries sheva. Nun has patah; ayin has hataf patah.",
+        "detail_image": "/tmp/day2-read1009-target.png",
+        "detail_image_sha256": "92cdba8a9e2cb83e9b606fd1bedc8c5ec60b73678ec4b36f071af7a17aca88a6",
+        "status": "resolved from corrected image; earlier wrong-crop evidence is not applicable"
+      },
+      "model": "Inherited collaboration model; exact identifier not exposed",
+      "neutral_prompt": true,
+      "snippet": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/questions/q1009.png",
+      "snippet_sha256": "3fd7a0f261d5879a7485191af1720998a5b019bf7a955e7c70e0cea54a73d173",
+      "preflighted_correct_occurrence": true,
+      "status": "resolved",
+      "rejected_wrong_line_crop_response": {
+        "id": 1009,
+        "image": "/tmp/s28_y4.png",
+        "image_sha256": "b745eaf235ea0590cdb8fd6377ef1402293d12b25e124aba6d830fee91f9cc5e",
+        "method": "Inspected supplied preflighted snippet and a further enlargement of its left portion only; no OCR, other readers or editions consulted.",
+        "answer": "Unresolved. Tentative reading נַעֲרֹךְ, but I cannot confidently settle whether a separate vav is printed between resh and final kaf.",
+        "confidence": "low",
+        "visible_evidence": "The upper holam is visible, but the narrow adjacent vertical strokes merge with nearby letterheads sufficiently that I cannot assign a separate vav confidently from this crop.",
+        "additional_crop": "/tmp/read1009-left.png",
+        "status": "requires human or wider-font-context adjudication"
+      },
+      "rejected_response_must_not_support_target_reading": true,
+      "application": "Supersedes earlier page-audit proposal on tighter image evidence; prior evidence retained."
+    },
+    {
+      "id": 1010,
+      "agent": "/root/read_1010",
+      "raw_response": {
+        "question_id": 1010,
+        "source_snippet": "/tmp/s28_yigdal.png",
+        "image_sha256": "396fc33ff16b542a65cba669b6d6193f4620cf1d577f0b55ed5604c2a27c0d05",
+        "additional_crop": "/tmp/read1010-last.png",
+        "question": "In the final line, is a maqaf printed between עדי and עד?",
+        "answer": "No maqaf is printed between עדי and עד.",
+        "reading": "עֲדֵי עַד",
+        "confidence": "high",
+        "visible_evidence": "The interword gap between the final yod of עדי and the ayin of עד is blank at maqaf height. The short raised black strokes nearby belong to the tops of the printed letters; no detached horizontal linking stroke is visible.",
+        "method": "Inspected only the supplied current-source image and a bottom-line crop made from that image; no OCR, other editions, or reader conclusions consulted.",
+        "model": "Inherited collaboration model; exact model identifier not exposed"
+      },
+      "model": "Inherited collaboration model; exact identifier not exposed",
+      "neutral_prompt": true,
+      "snippet": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/questions/q1010.png",
+      "snippet_sha256": "396fc33ff16b542a65cba669b6d6193f4620cf1d577f0b55ed5604c2a27c0d05",
+      "preflighted_correct_occurrence": true,
+      "status": "resolved"
+    },
+    {
+      "id": 1011,
+      "agent": "/root/read_1011",
+      "raw_response": {
+        "question_id": 1011,
+        "source_snippet": "/tmp/day2-q1011-corrected.png",
+        "image_sha256": "37df1eea3327bd4aa597a2d9be4c072d80d5a0390e1ee3dee0673f963efca52c",
+        "supersedes_scope_only": "/tmp/day2-read-1011.json examined the wrong line; that failed-crop record is preserved.",
+        "answer": "A small detached comma-like stroke is visible immediately after the final he of אתה, below the letter baseline. Tentatively a comma, not a geresh; I cannot confidently rule out an ink blemish.",
+        "confidence": "high that a separate stroke is visible; moderate that it is intentional comma punctuation",
+        "visible_evidence": "The short dark stroke is immediately to the left of the final he, below its left stem and below the baseline. It is separated from the he and from the following tav of תענה. Its low position is compatible with a comma, whereas geresh would be raised. The small blurred shape does not securely establish intentional punctuation.",
+        "status": "unresolved_punctuation_vs_blemish",
+        "other_sources_consulted": false
+      },
+      "model": "Inherited collaboration model; exact identifier not exposed",
+      "neutral_prompt": true,
+      "snippet": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/questions/q1011.png",
+      "snippet_sha256": "37df1eea3327bd4aa597a2d9be4c072d80d5a0390e1ee3dee0673f963efca52c",
+      "preflighted_correct_occurrence": true,
+      "status": "resolved",
+      "rejected_wrong_line_crop_response": {
+        "question_id": 1011,
+        "source_snippet": "/tmp/s26_bottom4.png",
+        "image_sha256": "591befe4046f72b4e8971c2e9dad5dc781419722d783894f2bc851afca18833e",
+        "answer": "Unresolved: the requested כי לך ... הוחלתי אתה תענה line is not visible in the supplied crop.",
+        "confidence": "high that the crop does not contain the requested occurrence; no punctuation reading possible",
+        "visible_evidence": "The complete visible lines read עליך נשלכתי מרחם ... שמע קול תחנוני and נפשי אליך נשאתי ... אלהי אחד. Adjacent lines are clipped. I cannot locate הוחלתי אתה תענה or its target אתה in this image.",
+        "status": "requires_correct_snippet",
+        "additional_crop": "/tmp/read1011-target.png",
+        "other_sources_consulted": false
+      },
+      "rejected_response_must_not_support_target_reading": true,
+      "human_adjudication": "Printing blemish; do not encode as punctuation/maqaf."
+    },
+    {
+      "id": 1012,
+      "agent": "/root/read_1012",
+      "raw_response": {
+        "question_id": 1012,
+        "source_snippet": "/tmp/day2-q1012.png",
+        "image_sha256": "560a28a84dfbfd3c1c87b60fa4b84e76642c9ef2ea2e57d67045b5ce45b26d93",
+        "method": "Inspected only the supplied enlarged source image; no OCR, other editions or reader conclusions consulted.",
+        "reading": "O God, in the",
+        "punctuation_after_God": "comma",
+        "confidence": "high",
+        "visible_evidence": "Rounded comma head is at the word baseline, with a short descending curved tail below it. There is no separate raised dot at x-height as a semicolon would have. The slight break between head and tail appears to be print/scan softness, not a second punctuation component.",
+        "status": "resolved"
+      },
+      "model": "Inherited collaboration model; exact identifier not exposed",
+      "neutral_prompt": true,
+      "snippet": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/questions/q1012.png",
+      "snippet_sha256": "560a28a84dfbfd3c1c87b60fa4b84e76642c9ef2ea2e57d67045b5ce45b26d93",
+      "preflighted_correct_occurrence": true,
+      "status": "resolved"
+    },
+    {
+      "id": 1013,
+      "agent": "/root/read_1013",
+      "raw_response": {
+        "question_id": 1013,
+        "agent": "/root/read_1013",
+        "model": "Inherited collaboration model; exact identifier not exposed",
+        "method": "Inspected only supplied current scan30 enlargement; made two tighter crops from the same image, no OCR/other editions/readers consulted.",
+        "source_image": "/tmp/s30-audit-4.png",
+        "source_image_sha256": "a7fd596caf28e6e4562b95d3152a9fa23f4952ab8fd265425655ced08064a775",
+        "answer": "יִפָּתֵֽחַ",
+        "confidence": "high",
+        "visible_evidence": {
+          "yod": "Single hiriq dot below yod.",
+          "pe": "Dagesh in pe and clear qamatz beneath; no separate meteg at pe.",
+          "tav": "Two discrete side-by-side tsere dots below tav; separate long vertical meteg immediately left of those dots.",
+          "chet": "Horizontal furtive patah beneath chet."
+        },
+        "enlarged_evidence": "/tmp/read1013-word-full.png",
+        "enlarged_evidence_sha256": "7d9d49d8a3c83ae0ca6114761f2a60ac17c854deac68e18766a45e52aa8b26c9",
+        "status": "resolved"
+      },
+      "model": "Inherited collaboration model; exact identifier not exposed",
+      "neutral_prompt": true,
+      "snippet": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/questions/q1013.png",
+      "snippet_sha256": "7d9d49d8a3c83ae0ca6114761f2a60ac17c854deac68e18766a45e52aa8b26c9",
+      "preflighted_correct_occurrence": true,
+      "status": "resolved",
+      "application": "Supersedes earlier page-audit proposal on tighter image evidence; prior evidence retained."
+    },
+    {
+      "id": 1014,
+      "agent": "/root/read_1014",
+      "raw_response": {
+        "question_id": 1014,
+        "source_snippet": "/tmp/s38-hashamayim-lower.png",
+        "image_sha256": "9a21187be17dcfa6a75b3dd611bc22616faef2b0b44d30517b4f20f63393477a",
+        "method": "Inspected only the supplied preflighted enlarged current-source snippet; no OCR, other editions or reader conclusions consulted.",
+        "answer": "No detached maqaf is printed after the line-final ואת.",
+        "confidence": "high",
+        "visible_evidence": "The apparent horizontal stroke at the left end is the continuous roof of the final tav, joined directly to its downward body. The small blank margin to its left contains no detached horizontal mark at maqaf height.",
+        "reading": "וְאֶת הָאָרֶץ",
+        "status": "resolved"
+      },
+      "model": "Inherited collaboration model; exact identifier not exposed",
+      "neutral_prompt": true,
+      "snippet": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/questions/q1014.png",
+      "snippet_sha256": "9a21187be17dcfa6a75b3dd611bc22616faef2b0b44d30517b4f20f63393477a",
+      "preflighted_correct_occurrence": true,
+      "status": "resolved"
+    },
+    {
+      "id": 1015,
+      "agent": "/root/read_1015",
+      "raw_response": {
+        "question_id": 1015,
+        "source_snippet": "/tmp/s34-lasekhvi.png",
+        "image_sha256": "850349e7dfa73211d22d9874132cbb07abc4d33dc729a3d6fc4790cbe2d82e1c",
+        "method": "Inspected only the supplied preflighted enlargement; no OCR, other editions or readers consulted.",
+        "answer": "Unresolved. The detached stroke is real in the image, but I cannot confidently classify it as a maqaf rather than stray ink.",
+        "confidence": "low for classification; high for presence of the detached horizontal stroke",
+        "visible_evidence": "A short, dark, almost horizontal stroke is visible to the right of the lower half of the initial lamed, below the tops of the ordinary letter bodies and above the vowel row. It is detached from the lamed and is not a vertical meteg. Its unusually low placement does not look like an ordinary high-set maqaf, but the single-word crop does not establish whether this printing carries a line-break dash at that height.",
+        "status": "unresolved; do not add a maqaf on this crop alone"
+      },
+      "model": "Inherited collaboration model; exact identifier not exposed",
+      "neutral_prompt": true,
+      "snippet": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/questions/q1015.png",
+      "snippet_sha256": "850349e7dfa73211d22d9874132cbb07abc4d33dc729a3d6fc4790cbe2d82e1c",
+      "preflighted_correct_occurrence": true,
+      "status": "resolved",
+      "human_adjudication": "Printing blemish; do not encode as punctuation/maqaf."
+    },
+    {
+      "id": 1016,
+      "agent": "/root/read_1016",
+      "raw_response": {
+        "question_id": 1016,
+        "source_snippet": "/tmp/s41_veshachat.png",
+        "image_sha256": "d8485a04a4ffcef97daa0e9f5a8bbd038ccf895a700e08a8c1eb8ad162eea2a4",
+        "method": "Read only the supplied current-source crop and two enlarged subcrops; no OCR, other editions or other reader responses consulted.",
+        "readings": [
+          {
+            "join": "את [line break] דמו",
+            "reading": "אֶת־דָּמוֹ",
+            "maqaf": true,
+            "confidence": "high",
+            "evidence": "A detached short horizontal rectangle lies to the left of the tav roof, with a visible white gap separating it from the tav. It is not part of the roof.",
+            "enlargement": "/tmp/read1016-et.png"
+          },
+          {
+            "join": "על המזבח",
+            "reading": "עַל־הַמִּזְבֵּחַ",
+            "maqaf": true,
+            "confidence": "high",
+            "evidence": "A detached short horizontal rectangle stands between the lamed and the he, with clear gaps on both sides. Its rectangular height and placement match the detached line-end mark after את.",
+            "enlargement": "/tmp/read1016-al.png"
+          }
+        ],
+        "status": "resolved"
+      },
+      "model": "Inherited collaboration model; exact identifier not exposed",
+      "neutral_prompt": true,
+      "snippet": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/questions/q1016.png",
+      "snippet_sha256": "d8485a04a4ffcef97daa0e9f5a8bbd038ccf895a700e08a8c1eb8ad162eea2a4",
+      "preflighted_correct_occurrence": true,
+      "status": "resolved",
+      "application": "Supersedes earlier page-audit proposal on tighter image evidence; prior evidence retained."
+    },
+    {
+      "id": 1017,
+      "agent": "/root/read_1017",
+      "raw_response": {
+        "question_id": 1017,
+        "source_snippet": "/tmp/s43-mishnah3.png",
+        "image_sha256": "6c4465ea404b8a1b9f5c9443cb19f1a80a18ea1bd5f06998fdc59d274bbab316",
+        "method": "Inspected only supplied current-source enlargement; made focused subcrop from that image. No OCR, editions or other-reader conclusions consulted.",
+        "answer": "Yes, a maqaf is printed after line-final ובא, joining the following line’s לו.",
+        "reading": "וּבָא־לוֹ",
+        "confidence": "high",
+        "visible_evidence": "A thick detached horizontal dash is visible to the left of final alef, at the upper-letter/maqaf height. Blank space separates it from the alef; it is not the alef’s roof or vowel.",
+        "additional_crop": "/tmp/day2-read1017-focus.png",
+        "additional_crop_sha256": "d9f464c961761417835f4e644da6bb31c59b1e68fe0bb44ad9468b845170832c",
+        "status": "resolved"
+      },
+      "model": "Inherited collaboration model; exact identifier not exposed",
+      "neutral_prompt": true,
+      "snippet": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/questions/q1017.png",
+      "snippet_sha256": "6c4465ea404b8a1b9f5c9443cb19f1a80a18ea1bd5f06998fdc59d274bbab316",
+      "preflighted_correct_occurrence": true,
+      "status": "resolved",
+      "application": "Supersedes earlier page-audit proposal on tighter image evidence; prior evidence retained."
+    },
+    {
+      "id": 1018,
+      "agent": "/root/read_1018",
+      "raw_response": {
+        "question_id": 1018,
+        "agent": "/root/read_1018",
+        "model": "Inherited collaboration model; exact identifier not exposed",
+        "source_image": "/tmp/s44-top.png",
+        "image_sha256": "3143a4ca64b8c9f531c4af7442c6feaa24a748b028b469b8528f912a086b6b65",
+        "method": "Read supplied enlarged current-source crop only; no OCR, other editions or readers consulted.",
+        "answer": "הֶפְשֵׁט",
+        "initial_he_vowel": "segol",
+        "confidence": "high",
+        "visible_evidence": "Three separate dots in the triangular segol arrangement are visible directly beneath the initial he. Pe has sheva; shin has right-hand dot and tsere.",
+        "status": "resolved"
+      },
+      "model": "Inherited collaboration model; exact identifier not exposed",
+      "neutral_prompt": true,
+      "snippet": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/questions/q1018.png",
+      "snippet_sha256": "3143a4ca64b8c9f531c4af7442c6feaa24a748b028b469b8528f912a086b6b65",
+      "preflighted_correct_occurrence": true,
+      "status": "resolved"
+    },
+    {
+      "id": 1019,
+      "agent": "/root/read_1019",
+      "raw_response": {
+        "question_id": 1019,
+        "agent": "/root/read_1019",
+        "actual_model": "Inherited collaboration model; exact identifier not exposed",
+        "method": "Read only preflighted source snippet and enlarged subcrops; no OCR, other editions or other reader conclusions consulted.",
+        "source_image": "/tmp/s42-attribution.png",
+        "source_image_sha256": "241b76527994e0eb50244997ed28dd18e9a36a40441e9976fd6a787b89ed86cb",
+        "transcription": "תפלה רבי נחוניה בן הקנה.",
+        "confidence": "high",
+        "disputed_letters": [
+          {
+            "word": "תפלה",
+            "final_letter": "ה",
+            "confidence": "high",
+            "visible_evidence": "Final glyph has a roof/right stem and a clearly detached lower-left short stroke. It differs from the joined left leg of the initial tav and matches the he form at the ends of the name and הקנה."
+          },
+          {
+            "word": "נחוניה",
+            "final_letter": "ה",
+            "confidence": "high",
+            "visible_evidence": "The leftmost glyph after yod has a distinct detached lower-left stroke beneath the roof, supporting he rather than alef. No crossing diagonal limbs of alef are visible."
+          }
+        ],
+        "other_details": "Unpointed attribution; final period is printed.",
+        "unresolved": [],
+        "additional_crops": [
+          "/tmp/read1019-first.png",
+          "/tmp/read1019-name.png"
+        ],
+        "status": "resolved"
+      },
+      "model": "Inherited collaboration model; exact identifier not exposed",
+      "neutral_prompt": true,
+      "snippet": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/questions/q1019.png",
+      "snippet_sha256": "241b76527994e0eb50244997ed28dd18e9a36a40441e9976fd6a787b89ed86cb",
+      "preflighted_correct_occurrence": true,
+      "status": "resolved",
+      "application": "Supersedes earlier page-audit proposal on tighter image evidence; prior evidence retained."
+    }
+  ],
+  "patches": [
+    {
+      "unit": "yigdal",
+      "paragraph_index": 2,
+      "fragment_index": 0,
+      "scan": "s28",
+      "from": "נַעֲרֹךְ",
+      "to": "נַעֲרוֹךְ"
+    },
+    {
+      "unit": "asher_yatzar",
+      "paragraph_index": 0,
+      "fragment_index": 0,
+      "scan": "s30",
+      "from": "יִפָּֽתַח",
+      "to": "יִפָּתֵֽחַ"
+    },
+    {
+      "unit": "qorbanot_veshachat",
+      "paragraph_index": 0,
+      "fragment_index": 0,
+      "scan": "s41",
+      "from": "אֶת דָּמ֛וֹ",
+      "to": "אֶת־דָּמ֛וֹ"
+    },
+    {
+      "unit": "qorbanot_veshachat",
+      "paragraph_index": 0,
+      "fragment_index": 0,
+      "scan": "s41",
+      "from": "עַל הַמִּזְבֵּ֖חַ",
+      "to": "עַל־הַמִּזְבֵּ֖חַ"
+    },
+    {
+      "unit": "eizehu_meqoman",
+      "paragraph_index": 2,
+      "fragment_index": 0,
+      "scan": "s43",
+      "from": "וּבָא לוֹ",
+      "to": "וּבָא־לוֹ"
+    },
+    {
+      "unit": "anna_bekhoach",
+      "field": "citations.he[0].text",
+      "from": "תפלת רבי נחוניה בן הקנה.",
+      "to": "תפלה רבי נחוניה בן הקנה."
+    }
+  ],
+  "before_sha256": "de13ce34accb99d68032521c11eb763e82213442d32846791b157bdb4ac2ff70",
+  "after_sha256": "4814bfeaccdcf860cbed6ff0eead032ec6dc401d0c73c788591b31d73d9304ac",
+  "note": "No source gate or complete-batch acceptance inferred. Closure review must inspect exact evidence paths."
+}

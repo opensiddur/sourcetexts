@@ -1,0 +1,93 @@
+{
+  "scan_page": 43,
+  "reviewer": "/root/audit_paratext_s43",
+  "actual_model": "Inherited collaboration model; exact identifier and effort not exposed",
+  "method": "Read current full source image and enlarged band before any other transcription. Made and inspected an exact 5x header crop and wider 5x labels/header crop. No OCR, other editions or other reader text consulted.",
+  "heading": {
+    "text_candidate": "תְּפִלַּת שַׁחֲרִית",
+    "consonants": "תפלת שחרית",
+    "confidence": "high except lamed dagesh",
+    "marks": [
+      {
+        "letter": "initial tav of תפלת",
+        "marks": "dagesh and sheva",
+        "confidence": "high",
+        "evidence": "Distinct dark interior dot and two vertically separated dots beneath."
+      },
+      {
+        "letter": "pe",
+        "marks": "hiriq; no independent dagesh visible",
+        "confidence": "high",
+        "evidence": "One separate dot below pe; dark inner projection joins its letter stroke."
+      },
+      {
+        "letter": "lamed",
+        "marks": "patah; possible dagesh",
+        "confidence": "high for patah; low for dagesh",
+        "evidence": "Clear horizontal bar below; faint gray interior spot above it could be a small printed dot or blur."
+      },
+      {
+        "letter": "shin of שחרית",
+        "marks": "right shin dot and patah",
+        "confidence": "high",
+        "evidence": "Detached upper-right dot and horizontal lower bar."
+      },
+      {
+        "letter": "chet",
+        "marks": "hataf patah",
+        "confidence": "high",
+        "evidence": "Horizontal stroke and adjacent vertically separated dots."
+      },
+      {
+        "letter": "resh",
+        "marks": "hiriq",
+        "confidence": "high",
+        "evidence": "One separate dot below resh."
+      }
+    ],
+    "terminal_punctuation": "none visible"
+  },
+  "page_labels": [
+    {
+      "position": "upper left",
+      "text": "12",
+      "confidence": "high",
+      "punctuation": "none"
+    },
+    {
+      "position": "upper right",
+      "text": "12",
+      "confidence": "high",
+      "punctuation": "none"
+    }
+  ],
+  "unresolved": [
+    {
+      "scope": "heading תפלת, lamed",
+      "issue": "Presence of dagesh cannot be certified from faint gray interior patch. Do not infer from other headings or expected grammar.",
+      "candidate": "lamed dagesh",
+      "crop": "/tmp/day2-s43-header.png"
+    }
+  ],
+  "image_sha256": {
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s43.jpg": "fcfca7dd26864e1997a9e33809ef61f59b95b8d6c90a1220cb183ddbdd977cc1",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/s43_band0.png": "6f99fec3e6de0ea405ac9fe2faa006121ee63923aac98e51eaab2c158cbdb534",
+    "/tmp/day2-s43-header.png": "93bb8f25e7b71a1dbae58977915b80e3992f6faefe77d5d03a4ec62558f39847",
+    "/tmp/day2-s43-labels.png": "d739b96e413132eccd2321e365b0f5eaa6aa00782282828ca92422a8f24dfba4"
+  },
+  "crop_boxes_original_pixels": {
+    "header": [
+      560,
+      110,
+      810,
+      190
+    ],
+    "labels": [
+      150,
+      100,
+      1200,
+      185
+    ]
+  },
+  "status": "Header/label audit complete with one explicitly unresolved mark; no prayer or batch acceptance."
+}

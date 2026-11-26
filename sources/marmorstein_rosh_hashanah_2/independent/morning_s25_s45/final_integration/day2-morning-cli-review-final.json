@@ -1,0 +1,81 @@
+{
+  "reviewer": "/root/review_morning_renderer",
+  "actual_model": "Inherited collaboration model; exact identifier and effort not exposed",
+  "scope": "New recipe-driven --draft generation entry point and unchanged renderer integration; diff against74b3df0",
+  "input_sha256": {
+    "opensiddur/importer/marmorstein_rosh_hashanah_2/morning_witnesses.py": "83d70e56f1ea6cf0bf71a66943821a9e5ca5e3cf112d80d192ed8ab912058095",
+    "opensiddur/tests/importer/test_marmorstein_day_two_morning_witnesses.py": "4e0f16418f9de96a0a4c23b68236f5e5cc94a3f2181bf139b2c328b19641ad03"
+  },
+  "verdict": "approved for morning witness CLI scope",
+  "finding_closure": [
+    {
+      "id": "CLI-R1",
+      "status": "closed",
+      "evidence": "Required-set check ensures both recipe.readings and recipe.source_approval are keys in input_sha256 before the hash loop. The existing loop rejects null expected hashes because the actual SHA256 is a non-null string. Source approval must then have approved_source_only status and match the verified readings hash. Regression subtests omit either required binding and confirm write_documents is never called. Independent synthetic reproduction now raises bind-both ValueError and writes no output."
+    }
+  ],
+  "remaining_findings": [],
+  "validation": {
+    "pytest_command": ".venv/bin/pytest -q opensiddur/tests/importer/test_marmorstein_day_two_morning_witnesses.py",
+    "pytest_result": "7 passed, 8 subtests passed",
+    "lint_command": ".venv/bin/ruff check --no-cache opensiddur/importer/marmorstein_rosh_hashanah_2/morning_witnesses.py opensiddur/tests/importer/test_marmorstein_day_two_morning_witnesses.py",
+    "lint_result": "passed",
+    "independent_synthetic_checks": [
+      {
+        "case": "stale",
+        "result": null,
+        "error": "ValueError: Stale morning source input: readings.json",
+        "destination_exists": false,
+        "destination_unchanged_if_protected": null,
+        "sic_corr_present": null
+      },
+      {
+        "case": "protected",
+        "result": null,
+        "error": "ValueError: Morning recipe would overwrite an accepted file: prayerbook_for_the_new_year_second_day-marmorstein-1965-en/alpha.xml",
+        "destination_exists": true,
+        "destination_unchanged_if_protected": true,
+        "sic_corr_present": null
+      },
+      {
+        "case": "schema_before_write",
+        "result": null,
+        "error": "ValueError: /tmp/tmpp2tdclfz/projects/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/beta.xml: synthetic invalid second document",
+        "destination_exists": false,
+        "destination_unchanged_if_protected": null,
+        "sic_corr_present": null
+      },
+      {
+        "case": "correction",
+        "result": 0,
+        "error": null,
+        "destination_exists": true,
+        "destination_unchanged_if_protected": null,
+        "sic_corr_present": true
+      },
+      {
+        "case": "missing_readings_binding",
+        "result": null,
+        "error": "ValueError: Morning recipe must bind both readings and source approval",
+        "destination_exists": false,
+        "destination_unchanged_if_protected": null,
+        "sic_corr_present": null
+      }
+    ],
+    "synthetic_results": "/tmp/day2-cli-review-check-results-final.json",
+    "warning": "Nonblocking read-only pytest-cache warning; tests completed."
+  },
+  "positive_checks": [
+    "Stale source rejected before writing.",
+    "Accepted protected file unchanged after rejection.",
+    "All documents are schema-validated by write_documents before any output write; a synthetic invalid second document prevented first-document output.",
+    "sic/corr is applied before schema validation/output.",
+    "Unsafe/index/duplicate stems are rejected before writes; output projects are fixed language mappings.",
+    "No unmodified renderer behavior or accepted night source files were changed by this review."
+  ],
+  "limitations": [
+    "Approval covers loader/generation mechanics and renderer integration only.",
+    "Actual recipe content fidelity, identity registry decisions, source/encoding acceptance, full-night equivalence and final exports require their own evidence.",
+    "No complete-batch acceptance inferred; reviewer edited no repository files."
+  ]
+}

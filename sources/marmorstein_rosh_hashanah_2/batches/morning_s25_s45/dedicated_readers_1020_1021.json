@@ -1,0 +1,68 @@
+{
+  "records": [
+    {
+      "id": 1020,
+      "agent": "/root/read_1020",
+      "model": "Inherited collaboration model; exact identifier not exposed",
+      "raw_response": {
+        "question_id": 1020,
+        "agent": "/root/read_1020",
+        "actual_model": "Inherited collaboration model; exact identifier and effort not exposed",
+        "method": "Read only supplied scan36 enlargement, then inspected two tighter crops from it; no OCR, other editions or other readers consulted.",
+        "source_image": "/tmp/s36_second.png",
+        "source_image_sha256": "f1bc5991741daec35451cb4564d4f03b5f7f2d5e3b53c2bbb24047dd7f076832",
+        "answer": {
+          "first_ben": "בֶן, no bet dagesh",
+          "second_ben": "בֶן, no bet dagesh"
+        },
+        "confidence": "high for both occurrences",
+        "visible_evidence": {
+          "first": "The bet in שהוא בן־ברית has a clear blank interior. The dot in the neighboring ברית bet is visibly distinct, rather than belonging to בן.",
+          "second": "The bet in שאינו בן־ברית likewise has a clear blank interior; its segol is below the baseline. Neighboring ברית has its own distinct interior dot."
+        },
+        "enlarged_evidence": [
+          {
+            "path": "/tmp/read1020-first.png",
+            "sha256": "367d8157a8df5d58be91f4db352613933242d65ad9210be371e4b92b3e991991"
+          },
+          {
+            "path": "/tmp/read1020-second.png",
+            "sha256": "d56f31daa6df7554f6856148ee5340ff9c3cae05b71750eb4c55052887ddf049"
+          }
+        ],
+        "status": "resolved"
+      },
+      "neutral_prompt": true,
+      "preflighted": true,
+      "snippet": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/questions/q1020.png",
+      "snippet_sha256": "f1bc5991741daec35451cb4564d4f03b5f7f2d5e3b53c2bbb24047dd7f076832",
+      "status": "resolved; source candidate retained"
+    },
+    {
+      "id": 1021,
+      "agent": "/root/read_1021",
+      "model": "Inherited collaboration model; exact identifier not exposed",
+      "raw_response": {
+        "question_id": 1021,
+        "agent": "/root/read_1021",
+        "model": "Inherited collaboration model; exact identifier and effort not exposed",
+        "method": "Inspected only supplied preflighted current scan36 enlargement and a tighter crop made from it; no OCR, other editions or reader conclusions consulted.",
+        "source_image": "/tmp/s36_second.png",
+        "source_image_sha256": "f1bc5991741daec35451cb4564d4f03b5f7f2d5e3b53c2bbb24047dd7f076832",
+        "answer": "No dagesh in pe of the first פנים after מעזי.",
+        "pointed_word": "פָנִים",
+        "confidence": "high",
+        "visible_evidence": "The pe interior is blank. The dark inward projection is visibly connected to the left vertical stroke of the letter, rather than a detached dot; qamatz is below.",
+        "enlarged_evidence": "/tmp/read1021-pe.png",
+        "enlarged_evidence_sha256": "ebc567f95bf61c6b461c0544f7d38f22daf07027c310b82cc1d0113ef6727728",
+        "status": "resolved"
+      },
+      "neutral_prompt": true,
+      "preflighted": true,
+      "snippet": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/questions/q1021.png",
+      "snippet_sha256": "f1bc5991741daec35451cb4564d4f03b5f7f2d5e3b53c2bbb24047dd7f076832",
+      "status": "resolved; source candidate retained"
+    }
+  ],
+  "application": "No source text changes. Both בן bets and first פנים pe retain no dagesh."
+}
