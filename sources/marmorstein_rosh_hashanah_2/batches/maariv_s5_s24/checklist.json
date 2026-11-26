@@ -32,7 +32,7 @@
       ]
     },
     "primary_reading": {
-      "status": "pending",
+      "status": "passed",
       "draft_scans": [
         5,
         6,
@@ -41,9 +41,7 @@
         9,
         10,
         11,
-        12
-      ],
-      "remaining_scans": [
+        12,
         13,
         14,
         15,
@@ -57,17 +55,24 @@
         23,
         24
       ],
-      "note": "Direct image primary drafts; fine marks and discrepancies not yet resolved."
+      "evidence": [
+        "primary/"
+      ],
+      "note": "All20 primary image drafts recorded before consulting their independent page readings. Fine marks remain pending adjudication, so this is not source acceptance."
     },
     "blind_second_reading": {
       "status": "pending",
       "reading_completed": true,
       "evidence": "../../independent/maariv_s5_s24/review_status.json",
-      "note": "Full20-scan response saved; remaining primary pages must be recorded before consulting their independent readings. Full pointing comparison pending."
+      "note": "Complete blind response and comparison candidates saved for all20 scans. Reader explicitly left several bands unread; targeted enlargement/comparison is required before adjudication closes."
     },
     "adjudication": {
       "status": "pending",
-      "evidence": []
+      "evidence": [
+        "opening_comparison_candidates.json",
+        "closing_comparison_candidates.json",
+        "questions.json"
+      ]
     },
     "encoding": {
       "status": "pending",
@@ -103,5 +108,5 @@
     }
   },
   "scope_note": "Complete opening prayer and second-night evening service through the end of Aleinu; source instructions name Mourner Kaddish and Yigdal. Morning begins on scan25.",
-  "next_question_number": 862
+  "next_question_number": 864
 }
