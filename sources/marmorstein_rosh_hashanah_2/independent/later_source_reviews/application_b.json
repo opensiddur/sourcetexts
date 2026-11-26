@@ -1,0 +1,73 @@
+{
+  "reviewer": {
+    "agent": "/root/source_s18_s19_review",
+    "model": "Codex inherited parent model; exact API identifier not exposed",
+    "effort": "inherited parent effort; exact setting not exposed"
+  },
+  "status": "source_only_approved",
+  "scope": "Exact current working blocks for scans18/19/22/23 compared with complete image-reviewed proposals and unchanged source-image hashes. Key correction crops redisplayed for application verification. Full-scan encoding, canonical identity, structural/recitation order, alignment semantics, and export excluded.",
+  "pages": [
+    {
+      "scan_page": 18,
+      "working_path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/maariv_s5_s24/working/s18.json",
+      "working_sha256": "42d0337e3cbd14ee1f41509547986bb0e481bdee0947a2339bcee12e78fd24d3",
+      "image_path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s18.jpg",
+      "image_sha256": "4fe77f0342cebddaccffcf9abce4a533a68e5116baf638c2d4618c9f9409aa67",
+      "proposed_blocks_exact_match": true,
+      "status": "source_only_approved"
+    },
+    {
+      "scan_page": 19,
+      "working_path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/maariv_s5_s24/working/s19.json",
+      "working_sha256": "da46a6c98d26132f4da8950bf2c1f48f791c7e0f126974ef64be4a13dc30c9cd",
+      "image_path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s19.jpg",
+      "image_sha256": "127bd46d8625c4e0e0dcbbdcbd09057e2df5bfd436caf5fcc3f30d2afb5b3734",
+      "proposed_blocks_exact_match": true,
+      "status": "source_only_approved"
+    },
+    {
+      "scan_page": 22,
+      "working_path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/maariv_s5_s24/working/s22.json",
+      "working_sha256": "f36557fb0f2eef7564a3f6e94bd971ea9440ff72bf176ee0dfc66cf3fe6fba7c",
+      "image_path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s22.jpg",
+      "image_sha256": "48cf6f3f4e0fceaaa8808eaef35263444cbaa11057cfbf9df80a2c0b2bdc76b2",
+      "proposed_blocks_exact_match": true,
+      "status": "source_only_approved"
+    },
+    {
+      "scan_page": 23,
+      "working_path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/maariv_s5_s24/working/s23.json",
+      "working_sha256": "ff7fbcddc663e5fcd1e7d67e4b123e1f881c50d3058966d1f7b9656ef9dea8b0",
+      "image_path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s23.jpg",
+      "image_sha256": "3047222d8e52de0b3dd37b69ec7e1f6c1e76a861c1a72ab3f62f88afd7672e8d",
+      "proposed_blocks_exact_match": true,
+      "status": "source_only_approved"
+    }
+  ],
+  "post_blind_adjudication": {
+    "question_id": "s22-rubric-if-mark",
+    "context": "First word אם of Rashi-script conditional rubric before fire blessing",
+    "reader": "Dedicated neutral reader981, as reported by root",
+    "resolution": "Detached lower stroke belongs to the Rashi alef glyph limb, not to a vowel; first word remains unpointed אם. Occurrence-specific resolution only. Other rubric pointing remains מוֹצָאֵי שַׁבָּת.",
+    "evidence_image": "/tmp/s22-rubric.png",
+    "tight_evidence_image": "/tmp/s22-rubricfirst.png",
+    "bbox": [
+      560,
+      1180,
+      820,
+      1237
+    ],
+    "recording_order": "Recorded after immutable blind reading and source comparison.",
+    "status": "resolved"
+  },
+  "unresolved_questions": [],
+  "changes_required": [],
+  "proposal_sha256": {
+    "/tmp/day2-s18-s19-final.json": "0dcc471d984dd8751c840ee7255fafca064d847eb487cab7fac82ea55256fbc5",
+    "/tmp/day2-s22-s23-final.json": "a322ab0458e086267791c2210ea75c8976554e12626f2295ff9e6f3e4261c114"
+  },
+  "blind_sha256": {
+    "/tmp/day2-s18-s19-blind.json": "968accdea8e4ccb1dc9c967fad3483dbb17cda4ba7c1632c84515d410a26c229",
+    "/tmp/day2-s22-s23-blind.json": "d36bd6911905e796f3af652c0163154777eb70a5b3301b710ac52e24846917e4"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "status": "approved_source_readings",
+  "reviewer": {
+    "model": "inherited parent model (exact ID not exposed)",
+    "effort": "inherited parent effort (exact ID not exposed)"
+  },
+  "scope": "Exact application verification for source readings of working scans5/6/7 against immutable blind evidence, complete image-reviewed proposals and protected human adjudications. Code/module/encoding/order/export gates excluded; not full-scan or full-batch acceptance.",
+  "working_candidates": [
+    {
+      "scan_page": 5,
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/maariv_s5_s24/working/s5.json",
+      "sha256": "f3b58089ab6f03c3130543cd029dfaabc26c1eb93c3d3f9116f233fa863fcb1e",
+      "blocks_exactly_match_image_reviewed_proposal": true
+    },
+    {
+      "scan_page": 6,
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/maariv_s5_s24/working/s6.json",
+      "sha256": "6d6614fece51934c3bada0ecb9aa9eb4394935ce29f78fd3d1ebd964253eb629",
+      "blocks_exactly_match_image_reviewed_proposal": true
+    },
+    {
+      "scan_page": 7,
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/maariv_s5_s24/working/s7.json",
+      "sha256": "bb74952c4c089b261f1a7aa06e9923d8abc607a5b448199c2dfd1b442042b52b",
+      "blocks_exactly_match_image_reviewed_proposal": true
+    }
+  ],
+  "protected_human_checks": [
+    {
+      "check": "864 bet dagesh plus tsadi meteg in betzedeq",
+      "passed": true
+    },
+    {
+      "check": "865 meteg on he of ahavti",
+      "passed": true
+    },
+    {
+      "check": "866 Yaakov and Israel retain no meteg",
+      "passed": true
+    },
+    {
+      "check": "867 bet dagesh retained in bemishor",
+      "passed": true
+    },
+    {
+      "check": "868 speaker text and expansion and role retained",
+      "passed": true
+    },
+    {
+      "check": "869 exact German labels retain human patah and rafe",
+      "passed": true
+    },
+    {
+      "check": "862 exact human Shema marks and hosts plus paseq retained",
+      "passed": true
+    },
+    {
+      "check": "863 exact human Veahavta marks and hosts retained",
+      "passed": true
+    },
+    {
+      "check": "Human Shema English comma adjudication retained",
+      "passed": true
+    },
+    {
+      "check": "Earlier image adjudicated defective abo retained at both exact occurrences",
+      "passed": true
+    }
+  ],
+  "evidence": {
+    "full_source_review": "/tmp/day2-s5-s7-complete-final.json",
+    "full_source_review_sha256": "ce3a67d3ffff50fedfb29b127722831de8daa1411c5dfc2e6a828f869cbc6568",
+    "preserved_blind": "/tmp/day2-s5-s7-complete-blind.json",
+    "preserved_blind_sha256": "5416135ab33d521f1b9bb55bf64f18d2158caca7544a878982b577163765176e"
+  },
+  "issues": [],
+  "unresolved_questions": [],
+  "acceptance_note": "All current working blocks exactly match the complete image-reviewed proposals, including every protected human adjudication. Approval applies only to these exact source-reading hashes."
+}
