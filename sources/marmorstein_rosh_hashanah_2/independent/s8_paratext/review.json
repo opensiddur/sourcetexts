@@ -1,0 +1,56 @@
+{
+  "status": "changes_required",
+  "findings": [
+    {
+      "block": 2,
+      "severity": "change",
+      "finding": "The Deuteronomy citation has gershayim in both the chapter and the verse numbers. The candidate 'דברים יא יג' leaves them out. The second line clearly reads yod, double stroke, alef and then yod, double stroke, gimel. The alef is in the small semi-cursive citation face. There is no colon or other end punctuation."
+    },
+    {
+      "block": 4,
+      "severity": "change",
+      "finding": "The Numbers citation also has gershayim in both numbers: tet, double stroke, vav and then lamed, double stroke, zayin. The candidate 'במדבר טו לז' leaves them out. The double stroke in ל״ז is very clear. The one in ט״ו is a bit less crisp but is plainly there as a double stroke between ט and ו. There is no colon or other end punctuation."
+    },
+    {
+      "block": 0,
+      "severity": "resolved_uncertainty",
+      "finding": "מַעֲרִיב: there is no meteg under the mem. Under the מ is a patach, and centred below it is a separate small round dot. A meteg would be a vertical stroke, and this is not one. A dot under a patach is not a valid pointing, so I read it as an ink speck, not a glyph. The ע has hataf patach, the ר has hiriq, then י and ב."
+    },
+    {
+      "block": 0,
+      "severity": "resolved_uncertainty",
+      "finding": "הַשָּׁנָה: there is a small mark above the final ה, at its top left. At this enlargement it is a small rounded blob sitting on the letter's top stroke. It is not a mappiq, which would be inside the letter. It does not look like a rafe bar or an accent either. I read it as a blemish, not a glyph. The other pointing matches the candidate: patach under ה, qamatz under ש, qamatz under נ."
+    },
+    {
+      "block": 0,
+      "severity": "limitation",
+      "finding": "A few small header marks can't be confirmed at this crop's resolution. I have not added or removed them, so the candidate's pointing stands for these. They are: the holam and shin dot in רֹאשׁ, where I see no clearly separate dot over ר/א or on the shin's right head; the dagesh in the ש of הַשָּׁנָה; and whether the shin dots in שֵׁנִי and שֶׁל sit on the right head. The vowels I can read (tsere in לֵיל and שֵׁנִי, hiriq under נ, segol in שֶׁל) match the candidate."
+    }
+  ],
+  "exact_readings": {
+    "0": {
+      "kind": "heading",
+      "text": "מַעֲרִיב לֵיל שֵׁנִי שֶׁל רֹאשׁ הַשָּׁנָה",
+      "notes": "This is the same as the candidate. There is no meteg on the מ: the dot under its patach is a speck. The mark above the final ה is a blemish. Holam/shin dots on ראש, the dagesh in ש of השנה, and the side of the shin dots in שני/של are not independently confirmed (see findings)."
+    },
+    "2": {
+      "kind": "source_citation",
+      "text": "דברים י״א י״ג",
+      "plain_label_correction": "The candidate 'דברים יא יג' leaves out the printed gershayim."
+    },
+    "4": {
+      "kind": "source_citation",
+      "text": "במדבר ט״ו ל״ז",
+      "plain_label_correction": "The candidate 'במדבר טו לז' leaves out the printed gershayim."
+    },
+    "page_numbers": "Not re-reviewed. As instructed, I accepted the earlier independent reading and inventory: both upper corners print 3."
+  },
+  "images_read": [
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/maariv_s5_s24_adjudication_crops/s8-header.png",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/maariv_s5_s24_adjudication_crops/s8-deut-citation.png",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/maariv_s5_s24_adjudication_crops/s8-numbers-citation.png"
+  ],
+  "actual_model": "claude-opus-5-5",
+  "requested_effort": "medium",
+  "limitations": "I did not verify the image SHA-256 hashes. I only read the three crop images. The gershayim are printed as two small vertical strokes. I write them as U+05F4 (״), but the print can't tell that apart from two gereshes (׳׳). The holam/shin dots on רֹאשׁ, the dagesh in הַשָּׁנָה, and the side of the shin dots in שֵׁנִי/שֶׁל were too small to confirm. Those are reported as unreadable, not as differences. I did not review prayer blocks, page numbers or citation formatting."
+}

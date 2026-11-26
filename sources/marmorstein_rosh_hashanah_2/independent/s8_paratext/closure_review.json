@@ -1,0 +1,65 @@
+{
+  "status": "changes_required",
+  "findings": [
+    {
+      "block": 0,
+      "word": "רֹאשׁ",
+      "severity": "confirmed",
+      "finding": "Holam confirmed in the tight detail (s8-header-rosh-detail.png). It is a distinct round dot above the top left of ר, in the gap between ר and א where a holam on ר is usually placed. It is clearly apart from both letters."
+    },
+    {
+      "block": 0,
+      "word": "רֹאשׁ",
+      "severity": "unresolved_needs_adjudication",
+      "finding": "The right-hand shin dot is still not confirmed independently. In the tight detail, the right head of ש looks like a thickened, rounded blob that rises a little above the other two heads. That fits a shin dot fused into the head stroke, but I can't see a separate dot with white space between it and the head. I am not reporting this as a difference, and there is no sign of a left (sin) dot. I can't tell from this image alone whether the dot is printed or whether I would just be assuming the standard spelling. The candidate's שׁ is unchanged, but this one mark needs a human ruling or a sharper scan before I can approve it."
+    },
+    {
+      "block": 0,
+      "word": "הַשָּׁנָה",
+      "severity": "confirmed",
+      "finding": "The shin dot is confirmed on the right side: a distinct dot above the right head of ש, separated from the letter and not over its left head. The dagesh is confirmed: a dark dot in the middle of the ש, between the arms and above the base. The other pointing confirmed again at this enlargement: patach under ה, qamatz under ש, qamatz under נ."
+    },
+    {
+      "block": 0,
+      "word": "הַשָּׁנָה",
+      "severity": "carried_and_consistent",
+      "finding": "The small mark on the top left of the final ה is still there in the tight detail. It sits on the top stroke, not inside the letter, so it is not a mappiq. It is not a rafe bar or an accent either. It stays a printing blemish with no glyph value. This agrees with the first report."
+    },
+    {
+      "block": 0,
+      "word": "שֵׁנִי / שֶׁל",
+      "severity": "confirmed",
+      "finding": "Both shin dots are confirmed on the right side (s8-header-sheni-shel-detail.png). Each ש has a distinct dot above its right head, with no left dot. Vowels confirmed again at this enlargement: tsere under ש of שֵׁנִי, hiriq under נ, segol under ש of שֶׁל. The ל of the preceding לֵיל can also be seen at the right edge of the crop."
+    },
+    {
+      "block": 0,
+      "word": "מַעֲרִיב",
+      "severity": "carried_and_consistent",
+      "finding": "Carried from the first report and not seen again in the new details: there is no meteg under מ, and the dot under the patach is an ink speck. In the first report: patach on מ, hataf patach on ע, hiriq on ר. The tsere in לֵיל was also read in the first report."
+    },
+    {
+      "block": 2,
+      "severity": "carried_and_consistent",
+      "finding": "Citation carried from the first report and not seen again: דברים י״א י״ג, with gershayim printed in both numbers and no end punctuation."
+    },
+    {
+      "block": 4,
+      "severity": "carried_and_consistent",
+      "finding": "Citation carried from the first report and not seen again: במדבר ט״ו ל״ז, with gershayim printed in both numbers and no end punctuation."
+    }
+  ],
+  "exact_heading": "מַעֲרִיב לֵיל שֵׁנִי שֶׁל רֹאשׁ הַשָּׁנָה",
+  "exact_heading_notes": "The text matches the candidate. Every mark is now confirmed from the source except the right-hand shin dot on ש of רֹאשׁ, which looks fused into the head stroke and can't be confirmed as a separate dot. No meteg on מ. The mark over the final ה is a blemish.",
+  "exact_citations": {
+    "2": "דברים י״א י״ג",
+    "4": "במדבר ט״ו ל״ז"
+  },
+  "images_read": [
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/maariv_s5_s24_adjudication_crops/s8-header-rosh-detail.png",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/maariv_s5_s24_adjudication_crops/s8-header-hashanah-detail.png",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/maariv_s5_s24_adjudication_crops/s8-header-sheni-shel-detail.png"
+  ],
+  "actual_model": "claude-opus-5-5",
+  "requested_effort": "medium",
+  "scope_limitations": "This covers only the source paratext reading: the s8 heading and the two corrected citations. It does not cover prayer blocks, JLPTEI encoding, alignment or order, export, or page numbers. I read the three new tight detail images directly. I did not check their SHA-256 hashes against header_detail_images.json. The marks on מַעֲרִיב and לֵיל, and the citation gershayim, come from the first report's crops, with the scope stated there. I did not look at them again here. As before, the printed gershayim can't be told apart from two gereshes (׳׳), and I write them as U+05F4. No new human ruling was supplied. The only open item is the shin dot on רֹאשׁ, and status is changes_required only because of it. If that dot is confirmed, this review can be approved with no change to the text."
+}
