@@ -1,0 +1,181 @@
+{
+  "status": "mechanical_pass_draft_not_batch_acceptance",
+  "scope": "Complete Deuteronomy6:5–9 paired excerpt only; not whole source pages/batch, service order or expanded acceptance.",
+  "projects": {
+    "he": {
+      "file": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/deuteronomy_6_5_to_9.xml",
+      "sha256": "7158c417c5271bd7704088fc71ffa7050218d20f0b699ecd76a75e39da298911",
+      "exact_recipe_words": true,
+      "verse_start_facs": [
+        "https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n5_medium.jpg",
+        "https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n5_medium.jpg",
+        "https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n7_medium.jpg",
+        "https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n7_medium.jpg",
+        "https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n7_medium.jpg"
+      ],
+      "existing_shema_unchanged": true
+    },
+    "en": {
+      "file": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/deuteronomy_6_5_to_9.xml",
+      "sha256": "6e78d17635a7653eccd52411b3b60a1904e326597349324d6942779d4ceaf61f",
+      "exact_recipe_words": true,
+      "verse_start_facs": [
+        "https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n6_medium.jpg",
+        "https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n6_medium.jpg",
+        "https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n6_medium.jpg",
+        "https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n8_medium.jpg",
+        "https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n8_medium.jpg"
+      ],
+      "existing_shema_unchanged": true
+    }
+  },
+  "exports": {
+    "hebrew": {
+      "quote_count": 5,
+      "pdf_pages": 4,
+      "scan_links": [
+        "https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n5_medium.jpg",
+        "https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n7_medium.jpg"
+      ],
+      "exact_compiled_words": true,
+      "compile_warnings": []
+    },
+    "parallel": {
+      "quote_count": 10,
+      "pdf_pages": 5,
+      "scan_links": [
+        "https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n5_medium.jpg",
+        "https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n6_medium.jpg",
+        "https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n7_medium.jpg",
+        "https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n8_medium.jpg"
+      ],
+      "exact_compiled_words": true,
+      "compile_warnings": []
+    }
+  },
+  "probes": {
+    "hebrew/range": {
+      "source_leaves": [
+        "n5",
+        "n7"
+      ],
+      "quote_count": 5,
+      "correct": true,
+      "expected_structural_fallback": null
+    },
+    "hebrew/single7": {
+      "source_leaves": [
+        "n7"
+      ],
+      "quote_count": 1,
+      "correct": true,
+      "expected_structural_fallback": null
+    },
+    "parallel/range": {
+      "source_leaves": [
+        "n5",
+        "n6",
+        "n7",
+        "n8"
+      ],
+      "quote_count": 10,
+      "correct": true,
+      "expected_structural_fallback": "parallel: urn:x-opensiddur:text:siddur:machzor_expanded (machzor_expanded-opensiddur-he//home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/veahavta_range_draft/range-probe.xml) has no counterpart in any configured parallel project (prayerbook_for_the_new_year_second_day-marmorstein-1965-en); falling back to per-transclusion parallels"
+    },
+    "parallel/single7": {
+      "source_leaves": [
+        "n6",
+        "n7",
+        "n8"
+      ],
+      "quote_count": 2,
+      "correct": true,
+      "expected_structural_fallback": "parallel: urn:x-opensiddur:text:siddur:machzor_expanded (machzor_expanded-opensiddur-he//home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/veahavta_range_draft/single7-probe.xml) has no counterpart in any configured parallel project (prayerbook_for_the_new_year_second_day-marmorstein-1965-en); falling back to per-transclusion parallels"
+    }
+  },
+  "processor_sha256": {
+    "opensiddur/importer/marmorstein_rosh_hashanah_2/draft_prayers.py": "604b0dceafacb2e67edb0923c8d0673a7d8db5c86e5bf0dc244e6834ddea0ddf",
+    "opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py": "f51cb12d760b2613d7eec3582b86d250e0da6eb3ac8c38dacf3e7cc10ceb7fab"
+  },
+  "recipe_sha256": "82a7ff275aafd170a61ff16ca0c80784dc63b3371788a1e46de07d1eb22f84ed",
+  "test_result": "36 passed,17 subtests passed",
+  "limitations": [
+    "Whole-batch source/encoding/order/export review still pending.",
+    "Original Hebrew-only PDF AND HTML have overlapping source-link arrows. Both presentation approvals remain pending; separate fix/scan-link-collisions exporter branch under independent review. Parallel sample text/alignment are sound; URI counts alone do not prove click-target visibility."
+  ],
+  "artifact_sha256": {
+    "hebrew.electronic.xml": "faafd4d751dc0f6b44f85d0e39f16fe553bbfa182002567d9ce3759930170f31",
+    "hebrew.html": "e8468dff409fbcbad4a5af7bb72b959cbff5045bc26efc3183d8062637f8390d",
+    "hebrew.tex": "979b99a62078a276e7d4d9f4bac12f796b31ecd92ee87392f6a34817db1f9505",
+    "single7-probe.xml": "447eacaa8c190ec94ace182653073620e206115fa5d9462b44cb4a4f0ee4efa8",
+    "parallel-range-probe.log": "6a5d1261e060271ccfc91db558a267d3bfbfe792070fa10c6adf5260ec800f9b",
+    "parallel-single7-probe.print.xml": "a9aa502e87a90b0fa5a3a985c9dd2aa52f081439e7854a6cc485779f996089bb",
+    "hebrew-range-probe.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "hebrew-compile-electronic.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "parallel.print.xml": "f2393f240b529e294aedcdd32bd2b5b3063691c9585fc2be2898eef8f18de360",
+    "parallel-page-3.png": "af792861c970cb668cdd4b2d8275d19b2d471936292d8662775410e4a207230a",
+    "parallel-pdf.log": "7529b21e77c326428074393b56556316ec8b3f3a666f552ff9ca327600a3de62",
+    "parallel-single7-probe.log": "31adb9907b89b9c792ab72c9e9277f401fc8e5a2cf36f722b69419324534c831",
+    "parallel.html": "d250b28cb56ba83657cfa4efd55d9a74df2e0c6efe8e57215e8d179c6c89a06e",
+    "hebrew-browser.jpg": "dd13d63a7f6f9b8eb26cea828fc8c2180506e8c4675f7752ced7206309971635",
+    "registry.log": "cdf1c5fe15e2ce3fc2260f4487c172fdaa1596c43cb8eb78f1cbaae81305af5e",
+    "hebrew-probe.yaml": "9511ef0aabfe248285ffa22c1f41a85c06c41ef5be694fb243671f205298e940",
+    "hebrew-compile-print.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "names.log": "9f39b95a41e9a24388d8b4c20a0031163bf04e2588723d72e818d234ce50fa0f",
+    "source-s8.png": "c1e5430cc91caeb6e98b8f10c50213c5cfa9c5a2a14ec124b82031e801c02b0b",
+    "parallel-page-5.png": "b3dc201f81ec7ef2ddf91884c1b53eb9f6db51b41baec67d8bf19fa06d2299b3",
+    "parallel-compile-print.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "hebrew.yaml": "41d77f200b269a379f1e31f0bc0fc8768f9827090e5e9ffe8883e141b15201ce",
+    "hebrew.print.xml": "7a059e2c37bea5369a72d820833af4bf1c84327cd8f82c1228f6b8ad4a9436f6",
+    "hebrew-page-3.png": "4cd7696f547f7c8b2e29ca1adeda80e1c452633277d33262bed160c1e915417a",
+    "range-probe.xml": "9996e4c02a276a1bd9cf83954caacaf4c2082f8ffce110ac6d1a9a57bb3bfda5",
+    "features.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "parallel-page-2.png": "684b67a6415a29606d5983e1b3b74960e7459cba35f9582a59c9413a47b2d77f",
+    "hebrew-html.log": "d80cb039c4130c6b86080b5dce9397d7063bc9c55c17fe4bbf495b9a3f30b00a",
+    "hebrew-page-1.png": "298978a5e63156aa4a07b9b0fac7f5f4d249fef11508e3701299fa8cc7e09bc8",
+    "source-images.json": "cdbd8f4e27e20b37a3f7b0659bda71777845edfc5ec5090bdc74e3d4d47fce13",
+    "hebrew.pdf": "3c99a8893d4d2ebc87745f3caa6e3368edc22a11b943182d896536033157a998",
+    "hebrew-range-probe.print.xml": "fad96af34cd3971fc411dc46f5fcf03b10bd32f6b087e902cf104f2b6926d70f",
+    "references.log": "876bf6fb7d27f4f8e97d59f0a5aa61e45adb3bc25d521ddbd85401b59443ffb1",
+    "source-s6.png": "30b43573592909323530db0a697715bf5e39485cf857aa7d06867bbdcc8e6b02",
+    "parallel.tex": "cad1f89b759106fd300d63a2471ef5bf84bb0f7bf93983ef3458355f7b693344",
+    "hebrew-page-2.png": "684b67a6415a29606d5983e1b3b74960e7459cba35f9582a59c9413a47b2d77f",
+    "refdb.log": "f0b9d26248003479fc19a68a1ae26e6209e84f0c2a699a0b7a0958f589a397a2",
+    "tests.log": "c833cfca49400ac48037ea30c750428713ea215e6f8ad04a8ab2ca6ae2a1998f",
+    "parallel-browser.jpg": "0a925530ddc9003d40e550877056c73471c355affcf7666974f43a2d93cf2d0f",
+    "source-s9.png": "0e8c303a240cf1fdd83a46c699208da17f3bb78d8d7a652dae81ac5f5e4cf7cb",
+    "hebrew-single7-probe.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "hebrew-pdf.log": "62bc792885a2fcd4db177660162830349d5e95ec8c9619da84552cec1c5283a0",
+    "parallel-page-1.png": "298978a5e63156aa4a07b9b0fac7f5f4d249fef11508e3701299fa8cc7e09bc8",
+    "parallel-probe.yaml": "1290165b4f86c2a3c85558d1725b122cf10c99d52d7ef897b76981f1c28fab4c",
+    "source-s7.png": "a5ba1e68c72d14b16170b27e40ee1a2bf177ff78259824105b98e349d4a59965",
+    "hebrew-page-4.png": "7d9fa4f9a8a02e3403f788f97efcb037227f14a4fff4dfa3550d7604e08c035d",
+    "parallel-range-probe.print.xml": "e49b0725bf4ca68cb9a664ac9122fec89f2cfb124206b4e8f0027f1e35dc6972",
+    "parallel.yaml": "dc1a7202d385a76f81b2b3ce78cabfa96cd11fa2f9901f838cb5147a2f0a3c23",
+    "parallel.electronic.xml": "70c7b9976810a2075432e95c0c795be380113c3ccd6deb976997b4dc5d5008a6",
+    "parallel.pdf": "3ac69008565aa46bcf645a9f4fe9bd4e062f10a04c06a647bdcd70cb9a4c132c",
+    "parallel-compile-electronic.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "parallel-html.log": "9dee8d722411edcce975acc240708b046fb24a7496c2046a29bbca7a7affdca2",
+    "hebrew-single7-probe.print.xml": "b6d17dceddc5b7deb45eaa381e7ca9088456cf4f5b2f56740789f9e601072218",
+    "parallel-page-4.png": "749547891e8a927cef4608a5bf97cd574c294611f90238dbba6e0e5e4d4eb5bb",
+    "browser-qa.json": "b97eca99e3773e33a40cf66149c79baf10caa608ba35b78bdfd4b0d8957407a1"
+  },
+  "browser_qa_sha256": "b97eca99e3773e33a40cf66149c79baf10caa608ba35b78bdfd4b0d8957407a1",
+  "presentation_findings": [
+    {
+      "status": "open_not_accepted",
+      "description": "Original Hebrew-only PDF AND HTML have overlapping source links. All export/presentation approval remains pending a separate exporter fix. Source XML and canonical probes preserve both physical source leaves; preservation alone does not demonstrate visible click targets.",
+      "coordinates": [
+        [
+          1211.015625,
+          317.5703125
+        ],
+        [
+          1211.015625,
+          317.5703125
+        ]
+      ]
+    }
+  ],
+  "presentation_status": "pending_separate_exporter_fix"
+}
