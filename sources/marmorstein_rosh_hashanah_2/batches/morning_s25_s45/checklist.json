@@ -1,0 +1,96 @@
+{
+  "batch": "morning_s25_s45",
+  "scan_pages": [
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45
+  ],
+  "status": "source_reading",
+  "accepted": false,
+  "gates": {
+    "scope_images": {
+      "status": "passed",
+      "evidence": [
+        "scope.json"
+      ]
+    },
+    "primary_reading": {
+      "status": "pending",
+      "evidence": [
+        "primary/manifest.json",
+        "primary_reading_order.json",
+        "reference_candidates.json"
+      ],
+      "note": "Full-page primary survey recorded before consulting new independent reader output; reference-derived word candidates explicitly provisional. Complete paratext/fine-mark verification remains pending."
+    },
+    "blind_second_reading": {
+      "status": "pending",
+      "evidence": [
+        "independent_reading_status.json"
+      ],
+      "note": "All21 pages have blind preliminary readings; explicit fine-pointing omissions require supplemental per-page reviews and adjudication, so this gate remains pending."
+    },
+    "adjudication": {
+      "status": "pending",
+      "evidence": [
+        "dedicated_readers_982_989.json",
+        "working/readings.json",
+        "dedicated_readers_982_990.json"
+      ]
+    },
+    "encoding": {
+      "status": "pending",
+      "evidence": []
+    },
+    "alignment": {
+      "status": "pending",
+      "evidence": []
+    },
+    "recitation_conditions": {
+      "status": "pending",
+      "evidence": []
+    },
+    "independent_encoding_order_audit": {
+      "status": "pending",
+      "evidence": []
+    },
+    "mechanical_checks": {
+      "status": "pending",
+      "evidence": []
+    },
+    "exports": {
+      "status": "pending",
+      "evidence": []
+    },
+    "independent_presentation_review": {
+      "status": "pending",
+      "evidence": []
+    },
+    "acceptance": {
+      "status": "pending",
+      "evidence": []
+    }
+  },
+  "pending_user_questions": [
+    988
+  ],
+  "next_question_number": 991
+}

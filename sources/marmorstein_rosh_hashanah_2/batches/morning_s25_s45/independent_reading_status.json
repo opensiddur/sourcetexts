@@ -1,0 +1,487 @@
+{
+  "requested_model": "claude-opus-5-5",
+  "requested_effort": "medium",
+  "note": "Preserve actual reported effort/model below. Blind sessions cover all21 scans but explicitly limited fine pointing; supplemental per-Hebrew-page responses require image-based comparison, not automatic acceptance.",
+  "reviews": {
+    "independent/morning_s25_s45/architecture/response.json": {
+      "sha256": "a2a548b35a8dafdeeb32b22e5f4387d4f7e3f94a6adce09ed1414c2df2f7bb2d",
+      "actual_model_usage": {
+        "claude-opus-5-5": {
+          "inputTokens": 26,
+          "outputTokens": 36776,
+          "cacheReadInputTokens": 1562364,
+          "cacheCreationInputTokens": 179116,
+          "webSearchRequests": 0,
+          "costUSD": 2.4810248,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 23788,
+          "cacheCreationEphemeral5mInputTokens": 0,
+          "cacheCreationEphemeral1hInputTokens": 179116,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "reported_model": null,
+      "reported_effort": null,
+      "reported_completeness": null,
+      "status": "evidence_pending_adjudication; not approval"
+    },
+    "independent/morning_s25_s45/blind_25_31/response.json": {
+      "sha256": "8f5ed839baec11ff51998226cd1264d1e9f5581a66ee9e36054d4f8774336f36",
+      "actual_model_usage": {
+        "claude-opus-5-5": {
+          "inputTokens": 18,
+          "outputTokens": 26862,
+          "cacheReadInputTokens": 144719,
+          "cacheCreationInputTokens": 72387,
+          "webSearchRequests": 0,
+          "costUSD": 1.1453518,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 10218,
+          "cacheCreationEphemeral5mInputTokens": 0,
+          "cacheCreationEphemeral1hInputTokens": 72387,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "reported_model": "claude-opus-5-5",
+      "reported_effort": "The harness didn't tell me my effort setting, so I can't report it. This was a single pass over each image, not an exhaustive glyph-by-glyph check.",
+      "reported_completeness": {
+        "regions": "All printed regions on all seven scans are transcribed in reading order: headings, instructions, attribution note, Hebrew prayer text, English translations with Hebrew cues, running heads and page numbers. No region was skipped.",
+        "letters_and_words": "High confidence for consonantal text and English wording. The few unclear words are listed under uncertainties.",
+        "pointing": "PARTIAL. Vowels and dagesh are transcribed as I read them, but fine marks were not checked glyph by glyph. Metegs and occasional accent marks are only partly encoded, and a possible rafe is flagged rather than encoded. These pages are mostly unaccented liturgical text; I found no systematic cantillation. Do not treat the pointing as a final verified diplomatic reading.",
+        "batch_edges": "Scan 26 ends at שְׁמָעָה and scan 28 opens with תְּפִלָּתִי (an internal continuation, both in this batch). Scan 30 ends at the end of the Torah-study blessing (… תוֹרָה:). Nothing was completed from memory."
+      },
+      "status": "evidence_pending_adjudication; not approval"
+    },
+    "independent/morning_s25_s45/blind_32_39/response.json": {
+      "sha256": "12cfecdd4d27c507ce0dc93c760724f9abb9983df35e3448de4f65852abf74b4",
+      "actual_model_usage": {
+        "claude-opus-5-5": {
+          "inputTokens": 18,
+          "outputTokens": 32288,
+          "cacheReadInputTokens": 145783,
+          "cacheCreationInputTokens": 75984,
+          "webSearchRequests": 0,
+          "costUSD": 1.2828606,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 11692,
+          "cacheCreationEphemeral5mInputTokens": 0,
+          "cacheCreationEphemeral1hInputTokens": 75984,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "reported_model": "claude-opus-5-5",
+      "reported_effort": "low (session reasoning-effort setting); one read of each full page plus each listed band",
+      "reported_completeness": {
+        "text_level": "complete. Every printed region on scans 32–39 is transcribed: running heads, page numbers, Hebrew prayer text, small-type passages, English translation, English rubrics, Hebrew cue words and the 'page 4' cross-reference.",
+        "diacritic_level": "provisional, not complete. Vowels and dagesh are transcribed as I read them, but there was one pass per band at low effort. Meteg can't be separated from the T-shaped qamats glyph, and several dagesh/mappiq calls are listed as low or medium confidence. Do not treat the pointing as verified.",
+        "batch_edges": "Scan 34 ends mid-paragraph at 'וְכֹף אֶת יִצְרֵנוּ', and scan 36 opens with 'לְהִשְׁתַּעְבֶּד־לָךְ'. Scan 35 ends at 'Let us adhere to', and scan 37 opens with 'the good inclination'. Scan 32 opens mid-sequence with 'וְהַעֲרֶב־נָא', a continuation from a page before this batch; I did not supply the earlier text."
+      },
+      "status": "evidence_pending_adjudication; not approval"
+    },
+    "independent/morning_s25_s45/blind_40_45/response.json": {
+      "sha256": "e68db44919775880f31f657f8a0f0e147f44d831841f3aab5e1096096010ab98",
+      "actual_model_usage": {
+        "claude-opus-5-5": {
+          "inputTokens": 26,
+          "outputTokens": 34662,
+          "cacheReadInputTokens": 280938,
+          "cacheCreationInputTokens": 89850,
+          "webSearchRequests": 0,
+          "costUSD": 1.4683316,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 15802,
+          "cacheCreationEphemeral5mInputTokens": 0,
+          "cacheCreationEphemeral1hInputTokens": 89850,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "reported_model": "claude-opus-5-5",
+      "reported_effort": "low-moderate reasoning; single blind pass over all 6 full pages and 18 listed enlargements",
+      "reported_completeness": {
+        "status": "partial",
+        "covered": "Every printed text region on scans 40–45 (headings, citations, the German instruction, unpointed Talmud, pointed liturgy, Mishnah, the Ana Bekoach margin acrostics, page furniture) is recorded with consonants, word division, maqaf (where visible), punctuation and paragraph/numbering.",
+        "not_complete": [
+          "Cantillation is not encoded in any of the Torah passages (scan 40 entire; scan 41 Num 28:3–8, Lev 1:11, Exod 30:34–36 & 7–8; scan 43 Num 28:9–10).",
+          "Vowel pointing, meteg, dagesh/mappiq and rafe were transcribed as perceived but not checked mark by mark against the enlargements. Treat the vowels on all pointed text as a first pass, especially metegs (largely not recorded) and rafe (none recorded; I could not resolve any at this resolution).",
+          "Paragraph numerals on scans 43–44 are partly inferred from their sequence (flagged)."
+        ],
+        "no_english": "No English translation or English instructions appear on scans 40–45, so none was supplied."
+      },
+      "status": "evidence_pending_adjudication; not approval"
+    },
+    "independent/morning_s25_s45/pointing_s25/response.json": {
+      "sha256": "2d6e34f56c69903e16e0ce40e1de46b138506b1cbe69d77effada69dcea87da4",
+      "actual_model_usage": {
+        "claude-opus-5-5": {
+          "inputTokens": 8,
+          "outputTokens": 13870,
+          "cacheReadInputTokens": 16825,
+          "cacheCreationInputTokens": 19202,
+          "webSearchRequests": 0,
+          "costUSD": 0.43441300000000005,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 7929,
+          "cacheCreationEphemeral5mInputTokens": 0,
+          "cacheCreationEphemeral1hInputTokens": 19202,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "reported_model": "claude-opus-5-5",
+      "reported_effort": "low (single pass over full image plus 3 enlarged bands; no further crops available)",
+      "reported_completeness": "Full page covered: page numbers, the heading, all four English instructions, all Hebrew blocks (the intention paragraph, the blessing, Psalm 36:8–11 and the יהי רצון), the horizontal rule, and both English translation paragraphs. Every Hebrew word has a pointed reading. No cantillation was observed anywhere. No marginal text other than the page numbers.",
+      "status": "evidence_pending_adjudication; not approval"
+    },
+    "independent/morning_s25_s45/pointing_s26/response.json": {
+      "sha256": "ea78a0e15d8fe68b2902c5a726f8bf69ce4f6df81db2825689ebc9542138aec7",
+      "actual_model_usage": {
+        "claude-opus-5-5": {
+          "inputTokens": 8,
+          "outputTokens": 12881,
+          "cacheReadInputTokens": 16825,
+          "cacheCreationInputTokens": 19202,
+          "webSearchRequests": 0,
+          "costUSD": 0.41463300000000003,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 6654,
+          "cacheCreationEphemeral5mInputTokens": 0,
+          "cacheCreationEphemeral1hInputTokens": 19202,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "reported_model": "claude-opus-5-5",
+      "reported_effort": "standard; I looked at each word in the full image and in the three enlarged bands",
+      "reported_completeness": "Every visible text line on the page is transcribed in reading order: page numbers, title, both English instructions, the large-type verse, the Mah Tovu block, the tiny attribution and meter line, the Gabirol piyyut, the rule, and the morning-prayer verses down to the last word, שִׁמְעָה, which runs on to the next page. There is no English translation on this page. Faint mirror-image text at the right and top is show-through from the other side of the leaf and was not transcribed. I saw no certain cantillation. Possible accents and metegs are listed in the uncertainties.",
+      "status": "evidence_pending_adjudication; not approval"
+    },
+    "independent/morning_s25_s45/pointing_s28/response.json": {
+      "sha256": "3f59cc844d9cbe7817f0f18c06389b70c8c9b14a8a374990b9c26f5d89a1cf41",
+      "actual_model_usage": {
+        "claude-opus-5-5": {
+          "inputTokens": 8,
+          "outputTokens": 9893,
+          "cacheReadInputTokens": 16827,
+          "cacheCreationInputTokens": 19204,
+          "webSearchRequests": 0,
+          "costUSD": 0.3548894,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 4988,
+          "cacheCreationEphemeral5mInputTokens": 0,
+          "cacheCreationEphemeral1hInputTokens": 19204,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "reported_model": "claude-opus-5-5",
+      "reported_effort": "not exposed to the model; reasoning effort setting unknown (operating at a low-effort budget)",
+      "reported_completeness": "Every line on the page is transcribed: the running header, 9 lines of psalm verses, the rule, the unpointed heading, the 13 Yigdal lines and the closing rule. I saw no English, no translation, no marginal notes and no citations on this page. Vowels and dageshim are given for every word. Cantillation and meteg in the psalm verses are not transcribed; they are listed in uncertainties.",
+      "status": "evidence_pending_adjudication; not approval"
+    },
+    "independent/morning_s25_s45/pointing_s30/response.json": {
+      "sha256": "4a07ed9a88224e6dcb3b4785d328db25d8d3952bab60116f91748e0573dce83c",
+      "actual_model_usage": {
+        "claude-opus-5-5": {
+          "inputTokens": 8,
+          "outputTokens": 8679,
+          "cacheReadInputTokens": 16829,
+          "cacheCreationInputTokens": 19206,
+          "webSearchRequests": 0,
+          "costUSD": 0.3306258,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 4359,
+          "cacheCreationEphemeral5mInputTokens": 0,
+          "cacheCreationEphemeral1hInputTokens": 19206,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "reported_model": "claude-opus-5-5",
+      "reported_effort": "low (single pass over the full image and all 3 bands, no OCR or other sources used)",
+      "reported_completeness": "All visible text on the page is transcribed in reading order: both page numbers, the running heading, 10 lines of Adon Olam, the netilat yadayim blessing, Asher Yatzar, the English instruction, and the Torah blessing (which ends the page). There is no marginal text and no English translation of the Hebrew blocks on this page.",
+      "status": "evidence_pending_adjudication; not approval"
+    },
+    "independent/morning_s25_s45/pointing_s32/response.json": {
+      "sha256": "61bf98ba9ceda43abb2dca37dd3e9ab251288ba7575752cecfc414ea02f3689d",
+      "actual_model_usage": {
+        "claude-opus-5-5": {
+          "inputTokens": 8,
+          "outputTokens": 14711,
+          "cacheReadInputTokens": 16822,
+          "cacheCreationInputTokens": 19199,
+          "webSearchRequests": 0,
+          "costUSD": 0.4512084,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 8871,
+          "cacheCreationEphemeral5mInputTokens": 0,
+          "cacheCreationEphemeral1hInputTokens": 19199,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "reported_model": "claude-opus-5-5",
+      "reported_effort": "not exposed to the model; single-pass visual reading of full page plus 3 enlarged bands",
+      "reported_completeness": "All text on the page is transcribed in reading order: the running header with page numbers 5/5, the end of the Torah blessings, Birkat Kohanim, Elu devarim and Elohai neshama, ending at מֵתִים: with blank space below. The only small inline parentheticals are (לִשְׁמָהּ) and (הִיא), and both are included. There are no English instructions, translations, citations or marginal notes on this page. No cantillation (te'amim) is visible. Maqafs are recorded in וְהַעֲרֶב־נָא, בָּחַר־בָּנוּ, מִכָּל־הָעַמִּים, כָּל־זְמַן, כָּל־הַמַּעֲשִׂים and כָּל־הַנְּשָׁמוֹת.",
+      "status": "evidence_pending_adjudication; not approval"
+    },
+    "independent/morning_s25_s45/pointing_s34/response.json": {
+      "sha256": "7fc0f8f49cc6b943a70f3ac75429d3716e29b407cf7cc3421d228d49c159a492",
+      "actual_model_usage": {
+        "claude-opus-5-5": {
+          "inputTokens": 8,
+          "outputTokens": 12168,
+          "cacheReadInputTokens": 16825,
+          "cacheCreationInputTokens": 19202,
+          "webSearchRequests": 0,
+          "costUSD": 0.40037300000000003,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 6307,
+          "cacheCreationEphemeral5mInputTokens": 0,
+          "cacheCreationEphemeral1hInputTokens": 19202,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "reported_model": "claude-opus-5-5",
+      "reported_effort": "low (one visual pass of the full page plus all 3 enlarged bands; no pixel-level zoom beyond the supplied bands)",
+      "reported_completeness": "Every text line on the page is transcribed in reading order: page number, running header, 15 blessings, the English instruction plus the women's alternative blessing, and the 5-line וִיהִי רָצוֹן paragraph, which continues onto the next page. There is no marginal text, citation or cantillation on this page. No English translation appears inside the Hebrew blocks.",
+      "status": "evidence_pending_adjudication; not approval"
+    },
+    "independent/morning_s25_s45/pointing_s36/response.json": {
+      "sha256": "a5006a0a299a8236ba89685da060c83d1d3f70295c416f1508f1e0e831d0c236",
+      "actual_model_usage": {
+        "claude-opus-5-5": {
+          "inputTokens": 8,
+          "outputTokens": 10743,
+          "cacheReadInputTokens": 16823,
+          "cacheCreationInputTokens": 19200,
+          "webSearchRequests": 0,
+          "costUSD": 0.3718566,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 5373,
+          "cacheCreationEphemeral5mInputTokens": 0,
+          "cacheCreationEphemeral1hInputTokens": 19200,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "reported_model": "claude-opus-5-5",
+      "reported_effort": "low (single pass over full image plus 3 bands; no further magnification available)",
+      "reported_completeness": "All text on the page is transcribed in reading order: the running header with page number 7 on both sides, the end of the preceding blessing paragraph, the יהי רצון paragraph, the indented smaller-type לעולם יהא אדם passage, the רבון כל העולמים paragraph and the אבל אנחנו paragraph. The page has no English text, translations, instructions, citations, marginal notes or cantillation. Every word has a best reading, and unresolved marks are listed separately.",
+      "status": "evidence_pending_adjudication; not approval"
+    },
+    "independent/morning_s25_s45/pointing_s38/response.json": {
+      "sha256": "2ed8ef7e239007643487072fc8be6afd581c615982579646c90e14b41abd7c47",
+      "actual_model_usage": {
+        "claude-opus-5-5": {
+          "inputTokens": 8,
+          "outputTokens": 11493,
+          "cacheReadInputTokens": 16829,
+          "cacheCreationInputTokens": 19206,
+          "webSearchRequests": 0,
+          "costUSD": 0.3869058,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 6185,
+          "cacheCreationEphemeral5mInputTokens": 0,
+          "cacheCreationEphemeral1hInputTokens": 19206,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "reported_model": "claude-opus-5-5",
+      "reported_effort": "low (single careful pass over the full page and all 3 bands; no pixel-level zoom beyond the supplied bands)",
+      "reported_completeness": "Every text line on the page is transcribed in reading order: the running header with page numbers 8/8, the Lefikhakh paragraph, the Shema verse, Barukh shem, the Atah hu ad shelo nivra paragraph ending with its berakhah, the Atah hu YY Eloheinu paragraph, and the English instruction at the bottom. No marginal text, citations, cantillation or English translation appear on this page. The divine name is printed as יְיָ throughout.",
+      "status": "evidence_pending_adjudication; not approval"
+    },
+    "independent/morning_s25_s45/pointing_s40/response.json": {
+      "sha256": "4fe8b82e1d83fefb22ee82dd53fa7da1528305c5d8a1927a421e2259f1a5bf51",
+      "actual_model_usage": {
+        "claude-opus-5-5": {
+          "inputTokens": 8,
+          "outputTokens": 17865,
+          "cacheReadInputTokens": 16820,
+          "cacheCreationInputTokens": 19197,
+          "webSearchRequests": 0,
+          "costUSD": 0.5142720000000001,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 11410,
+          "cacheCreationEphemeral5mInputTokens": 0,
+          "cacheCreationEphemeral1hInputTokens": 19197,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "reported_model": "claude-opus-5-5",
+      "reported_effort": "standard single-pass visual reading of full page + 3 enlarged bands (no further zoom available)",
+      "reported_completeness": "Every line on the page is transcribed in reading order: the header, both page numbers, both citations, the Exodus 30 / Leviticus 6 block (14 lines), and the Numbers 28 block (6 lines). The page breaks off mid-verse after «אֶחָ֖ד». There is no English text, no translation and no marginal text other than the citations.",
+      "status": "evidence_pending_adjudication; not approval"
+    },
+    "independent/morning_s25_s45/pointing_s41/response.json": {
+      "sha256": "137475f26e1b0e5dca62bd52344626c1d900d9ffd930f13d91d46bf6e3295251",
+      "actual_model_usage": {
+        "claude-opus-5-5": {
+          "inputTokens": 8,
+          "outputTokens": 14392,
+          "cacheReadInputTokens": 16823,
+          "cacheCreationInputTokens": 19200,
+          "webSearchRequests": 0,
+          "costUSD": 0.4448366,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 8382,
+          "cacheCreationEphemeral5mInputTokens": 0,
+          "cacheCreationEphemeral1hInputTokens": 19200,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "reported_model": "claude-opus-5-5",
+      "reported_effort": "low",
+      "reported_completeness": "Every word on the page is transcribed in reading order, with consonants and vowels for each one: running header, Num 28:4b–8, citation, Lev 1:11, the paragraph אַתָּה הוּא, citation, Exod 30:34–36, and וְנֶאֱמַר with Exod 30:7–8. The page has no English text or translation. I saw no marginal text beyond the two small citations and the page numbers.",
+      "status": "evidence_pending_adjudication; not approval"
+    },
+    "independent/morning_s25_s45/pointing_s42/response.json": {
+      "sha256": "78e6c371a8747bcad3898092e2797bcfa3610e5cb802c15c8832996e86069d4f",
+      "actual_model_usage": {
+        "claude-opus-5-5": {
+          "inputTokens": 8,
+          "outputTokens": 9955,
+          "cacheReadInputTokens": 16827,
+          "cacheCreationInputTokens": 19204,
+          "webSearchRequests": 0,
+          "costUSD": 0.35612940000000004,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 4484,
+          "cacheCreationEphemeral5mInputTokens": 0,
+          "cacheCreationEphemeral1hInputTokens": 19204,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "reported_model": "claude-opus-5-5",
+      "reported_effort": "low-medium (single pass over full image plus 3 enlarged bands; no OCR or other transcription consulted)",
+      "reported_completeness": "All text on the page is transcribed in reading order: the running header and both page numbers, the four unpointed paragraphs, the five pointed verses, the small heading, the seven Ana Bekhoaḥ lines with their marginal acrostics, and the Barukh Shem line. The lower part of the page is blank. There is no English text and no translation on this page.",
+      "status": "evidence_pending_adjudication; not approval"
+    },
+    "independent/morning_s25_s45/pointing_s43/response.json": {
+      "sha256": "da637d8f0b85d904f4d87a01520bb7d3db83dea3bec830554826d068d433d327",
+      "actual_model_usage": {
+        "claude-opus-5-5": {
+          "inputTokens": 8,
+          "outputTokens": 11397,
+          "cacheReadInputTokens": 16829,
+          "cacheCreationInputTokens": 19206,
+          "webSearchRequests": 0,
+          "costUSD": 0.3849858,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 5707,
+          "cacheCreationEphemeral5mInputTokens": 0,
+          "cacheCreationEphemeral1hInputTokens": 19206,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "reported_model": "claude-opus-5-5",
+      "reported_effort": "low (single careful pass over full image plus 3 enlarged bands; no further crops or zoom were available to me)",
+      "reported_completeness": "Every line of the page is transcribed: page numbers, running header, instruction, both citations, the full Num 28:9–10 block with cantillation, Mishnah Zevachim 5:1–3, and the start of 5:4 ('ד הָעוֹלָה'), which runs on to the next page. No marginal text, footnotes, English text or English translation appears on this page.",
+      "status": "evidence_pending_adjudication; not approval"
+    },
+    "independent/morning_s25_s45/pointing_s44/response.json": {
+      "sha256": "242d4174d276382d28300119ec21333412d7ced28f3fc15847e4751fbc934bde",
+      "actual_model_usage": {
+        "claude-opus-5-5": {
+          "inputTokens": 8,
+          "outputTokens": 9594,
+          "cacheReadInputTokens": 16825,
+          "cacheCreationInputTokens": 19202,
+          "webSearchRequests": 0,
+          "costUSD": 0.348893,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 4789,
+          "cacheCreationEphemeral5mInputTokens": 0,
+          "cacheCreationEphemeral1hInputTokens": 19202,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "reported_model": "claude-opus-5-5",
+      "reported_effort": "low",
+      "reported_completeness": "All 24 text lines, plus the running header and the page numbers on both sides, are transcribed in reading order. The page has no English instructions, no translation, no citations and no marginal notes other than the section numerals ה/ו/ז/ח. I saw no cantillation; the only accent-like marks are the possible metegs flagged above. The text starts mid-paragraph, continuing from the previous page.",
+      "status": "evidence_pending_adjudication; not approval"
+    },
+    "independent/morning_s25_s45/pointing_s45/response.json": {
+      "sha256": "452e3e56d50d095dd69afc6e70a7eca8a297812ac316d677a889f9ccffd4d753",
+      "actual_model_usage": {
+        "claude-opus-5-5": {
+          "inputTokens": 8,
+          "outputTokens": 9237,
+          "cacheReadInputTokens": 16829,
+          "cacheCreationInputTokens": 19206,
+          "webSearchRequests": 0,
+          "costUSD": 0.3417858,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 5093,
+          "cacheCreationEphemeral5mInputTokens": 0,
+          "cacheCreationEphemeral1hInputTokens": 19206,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "reported_model": "claude-opus-5-5",
+      "reported_effort": "low (session reasoning-effort setting 10); every line in all three bands was examined word by word",
+      "reported_completeness": "Complete. I transcribed every printed line: the header with page numbers, 15 lines of the Rabbi Yishmael paragraph, and 3 lines of the יהי רצון paragraph. Below these there is only show-through from the other side and a printed rule. The page has no English instructions or translation, no citations and no marginal notes.",
+      "status": "evidence_pending_adjudication; not approval"
+    }
+  },
+  "unresolved_findings": [
+    {
+      "scan_page": 40,
+      "finding": "Pointing reader supplied systematic cantillation in the upper Exodus/Leviticus block that the current image does not print. Reject these candidate additions; dedicated question990 confirms no cantillation in the preflighted excerpt. Do not use familiar biblical accents as source evidence.",
+      "evidence": "dedicated_readers_982_990.json"
+    },
+    {
+      "scan_page": 26,
+      "finding": "Attribution numeral question988 pending user; no first-volume answer inherited."
+    }
+  ],
+  "accepted": false
+}
