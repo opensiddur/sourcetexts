@@ -23,8 +23,8 @@
     44,
     45
   ],
-  "status": "awaiting_processor_ci",
-  "accepted": false,
+  "status": "accepted",
+  "accepted": true,
   "gates": {
     "scope_images": {
       "status": "passed",
@@ -78,54 +78,58 @@
     "encoding": {
       "status": "passed",
       "evidence": [
-        "../../independent/morning_s25_s45/final_integration/day2-final-code-restoration-review.json",
-        "../../independent/morning_s25_s45/final_integration/day2-morning-boundary-review.json"
+        "acceptance.json"
       ],
-      "note": "103 documentary witnesses; source text unchanged by the reviewed structural boundary fix."
+      "note": "See acceptance.json for the exact composed independent reviews and frozen current artifacts."
     },
     "alignment": {
       "status": "passed",
       "evidence": [
-        "../../independent/morning_s25_s45/final_integration/day2-morning-documentary-night-review.json",
-        "../../independent/morning_s25_s45/final_integration/day2-morning-boundary-review.json"
-      ]
+        "acceptance.json"
+      ],
+      "note": "See acceptance.json for the exact composed independent reviews and frozen current artifacts."
     },
     "recitation_conditions": {
       "status": "passed",
       "evidence": [
-        "../../independent/morning_s25_s45/final_integration/day2-morning-matrix-independent-review.json"
-      ]
+        "acceptance.json"
+      ],
+      "note": "See acceptance.json for the exact composed independent reviews and frozen current artifacts."
     },
     "independent_encoding_order_audit": {
       "status": "passed",
       "evidence": [
-        "../../independent/morning_s25_s45/final_integration/day2-morning-spine-final-review.json",
-        "../../independent/morning_s25_s45/final_integration/day2-morning-boundary-review.json"
-      ]
+        "acceptance.json"
+      ],
+      "note": "See acceptance.json for the exact composed independent reviews and frozen current artifacts."
     },
     "mechanical_checks": {
       "status": "passed",
       "evidence": [
-        "../../independent/morning_s25_s45/final_integration/qa/day2-final-schema.json"
+        "acceptance.json"
       ],
-      "note": "207 XML validate;57 importer tests17subtests and514 affected exporter tests294subtests pass; names/features/registry/profiles pass. Full remote CI remains a final delivery gate."
+      "note": "See acceptance.json for the exact composed independent reviews and frozen current artifacts."
     },
     "exports": {
       "status": "passed",
       "evidence": [
-        "../../independent/morning_s25_s45/final_integration/presentation/frozen_manifest.json"
-      ]
+        "acceptance.json"
+      ],
+      "note": "See acceptance.json for the exact composed independent reviews and frozen current artifacts."
     },
     "independent_presentation_review": {
       "status": "passed",
       "evidence": [
-        "../../independent/morning_s25_s45/final_integration/presentation/day2-final-presentation-review.json"
+        "acceptance.json"
       ],
-      "note": "All F1–F5 closed. UTF8-only followup preserves all211 XML/settings bytes; independent amendment approved."
+      "note": "See acceptance.json for the exact composed independent reviews and frozen current artifacts."
     },
     "acceptance": {
-      "status": "pending",
-      "evidence": []
+      "status": "passed",
+      "evidence": [
+        "acceptance.json"
+      ],
+      "note": "See acceptance.json for the exact composed independent reviews and frozen current artifacts."
     }
   },
   "pending_user_questions": [],

@@ -3,7 +3,7 @@
   "scan_pages_total": 385,
   "inventoried_scan_pages": 385,
   "encoded_scan_pages": 45,
-  "accepted_scan_pages": 24,
+  "accepted_scan_pages": 45,
   "opening_survey": [
     1,
     12
@@ -55,10 +55,10 @@
     44,
     45
   ],
-  "independent_review": "Scans 1–24 accepted: source, encoding, alignment, order/conditions, mechanical and PDF/HTML independent presentation reviews approved.",
-  "next_work": "Wait for final processorCI, record acceptance for25–45, then start46.",
+  "independent_review": "Scans1–45 accepted with source, encoding, guideline, alignment/order/conditions, mechanical and independent PDF/HTML review. Exact frozen artifacts and bounded Night amendment are recorded in the latest acceptance.",
+  "next_work": "Start the next batch at scan46 and complete every acceptance gate before advancing.",
   "partially_encoded_scan_pages": [],
-  "encoded_scope": "Front matter 1–4 and complete second-night evening service 5–24 accepted. First-day entry/profile unchanged; two donor modules have reviewed provenance/paragraph corrections.",
+  "encoded_scope": "Front matter1–4, complete second-night service5–24, and opening morning service/study passages25–45 accepted. Missing translations remain absent; first-day entry/profile unchanged.",
   "active_batch": "batches/morning_s25_s45/checklist.json",
   "accepted_scans": [
     1,
@@ -84,21 +84,42 @@
     21,
     22,
     23,
-    24
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45
   ],
-  "independently_reviewed_scan_pages": 24,
-  "blind_preliminary_scan_pages": 24,
-  "not_yet_encoded_scan_pages": 361,
+  "independently_reviewed_scan_pages": 45,
+  "blind_preliminary_scan_pages": 45,
+  "not_yet_encoded_scan_pages": 340,
   "last_question_number": 1022,
   "project_separation": {
     "status": "accepted",
     "user_decision": "Separate volume-two projects",
     "evidence": "batches/front_matter_s1_s4/project_separation/approval.json",
-    "note": "Historical front-matter checkpoint: project separation approved with 4/385 accepted then. Current complete acceptance is recorded above and in batches/maariv_s5_s24/acceptance.json."
+    "note": "Historical separation checkpoint; current complete coverage is the top-level count and latest_accepted_batch."
   },
   "partial_encoded_scans": [],
   "partial_encoding_note": "No partially accepted scans in current coverage.",
-  "not_yet_fully_encoded_scan_pages": 361,
+  "not_yet_fully_encoded_scan_pages": 340,
   "pending_user_questions": [],
   "source_reading_approved_scans": [
     1,
@@ -147,7 +168,17 @@
     44,
     45
   ],
-  "draft_encoded_scans": [
+  "draft_encoded_scans": [],
+  "draft_prayer_modules": 0,
+  "draft_prayer_witnesses": 0,
+  "encoded_prayer_modules": 109,
+  "encoded_prayer_witnesses": 190,
+  "next_scan_page": 46,
+  "latest_accepted_batch": "batches/morning_s25_s45/acceptance.json",
+  "last_closed_dependency": "exporter_pr347_closeout.json",
+  "morning_review_note": "Scans25–45 accepted;103 documentary witnesses,27-case matrix and final frozen PDF/HTML approved. No pending reading disputes.",
+  "source_approved_scan_pages": 45,
+  "primary_morning_source_scans": [
     25,
     26,
     27,
@@ -170,14 +201,7 @@
     44,
     45
   ],
-  "draft_prayer_modules": 62,
-  "draft_prayer_witnesses": 103,
-  "encoded_prayer_modules": 47,
-  "encoded_prayer_witnesses": 87,
-  "next_scan_page": 25,
-  "latest_accepted_batch": "batches/maariv_s5_s24/acceptance.json",
-  "last_closed_dependency": "exporter_pr344_closeout.json",
-  "primary_morning_draft_scans": [
+  "morning_blind_reviewed_scans": [
     25,
     26,
     27,
@@ -200,29 +224,5 @@
     44,
     45
   ],
-  "morning_blind_preliminary_scans": [
-    25,
-    26,
-    27,
-    28,
-    29,
-    30,
-    31,
-    32,
-    33,
-    34,
-    35,
-    36,
-    37,
-    38,
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45
-  ],
-  "morning_review_note": "All source, encoding/order, mechanical and final PDF/HTML reviews approved; UTF8-only fix independently approved with211 files byte-identical. Full processor CI rerun pending; complete accepted count remains24 until that final gate.",
-  "source_approved_scan_pages": 45
+  "module_count_scope": "Documentary source units47+62, including distinct contextual printings; reusable provider XML files are not additional source units."
 }
