@@ -1,0 +1,36 @@
+{
+  "verdict": "Use יְהֹוָה: holam logically on the first he; qamatz on vav.",
+  "encoding": "יְהֹוָה",
+  "codepoints": [
+    "U+05D9",
+    "U+05B0",
+    "U+05D4",
+    "U+05B9",
+    "U+05D5",
+    "U+05B8",
+    "U+05D4"
+  ],
+  "reject_for_this_review": "יְהוָֹה",
+  "images_inspected": [
+    "/tmp/day2-reconciled76_81-evidence/s76-full-name-1.png",
+    "/tmp/reconcile-name74-1.png"
+  ],
+  "source_observation": "Both inspected crops show conventional Name typography: sheva under yod, qamatz under vav, holam physically above/near the vav head. Other marks above are separate accents. Holam presence was already confirmed.",
+  "reason": "Physical horizontal placement does not determine the logical base letter. Conventional Name typography can shift the first-he holam above the following consonantal vav even though that vav carries its own qamatz. The dot therefore does not establish two logical vowels on vav. The combined-dot rule concerns a different typographic phenomenon but supports the same separation between logical characters and physical glyph positions.",
+  "actual_source_deviation": null,
+  "print_error_claim": false,
+  "scope": "Correct logical host only. Preserve separately established cantillation, prefixes, and occurrence-specific presence/absence of holam. Do not add marks to other occurrences by analogy.",
+  "qualification": "The vav-host string is legal Unicode. This verdict concerns appropriate logical transcription, not a claim that Unicode forbids all alternative historical encodings.",
+  "evidence": [
+    {
+      "source": "/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/specs/BIRNBAUM_FROM_SCAN.md",
+      "lines": "331–351",
+      "point": "Encode logical marks on their proper letters despite merged/shifted physical glyphs."
+    },
+    {
+      "source": "https://www.unicode.org/L2/L2004/04193-kirk-holam.pdf",
+      "location": "Figure 4, printed pages 2 and 6",
+      "point": "Primary Unicode proposal documents holam shifted above consonantal vav in the Name even when vav carries another vowel. Used here as typographic evidence, not as a normative mandate for the proposal’s alternative encodings."
+    }
+  ]
+}
