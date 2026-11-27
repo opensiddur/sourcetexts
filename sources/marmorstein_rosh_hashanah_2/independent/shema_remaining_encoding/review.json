@@ -1,0 +1,54 @@
+{
+  "status": "approved",
+  "reviewer": {
+    "model": "Claude Opus 5.5 (claude-opus-5-5)",
+    "effort": "medium"
+  },
+  "scope": "Four draft JLPTEI modules (deuteronomy_11_13_to_21 and numbers_15_37_to_41, he and en): exact text, verse alignment, identities, guideline adherence and citation notes. Also the draft_prayers.py citation/validation change and its new synthetic test. NOT covered: full-page, whole-batch, service, conditional, expanded or export acceptance; source image re-reading (source readings are taken as approved per s8/s10/s9_s11 approvals).",
+  "inputs_read": [
+    "batches/maariv_s5_s24/shema_remaining_ranges.json",
+    "batches/maariv_s5_s24/shema_remaining_text_qa.json",
+    "batches/maariv_s5_s24/working/s8.json",
+    "working/s10.json",
+    "primary/s9.json",
+    "primary/s11.json",
+    "s8_source_reading_approval.json",
+    "s10_source_reading_approval.json",
+    "s9_s11_source_reading_approval.json",
+    "4 project XML modules",
+    "specs/SCAN_DIGITIZATION_INSTRUCTIONS.md",
+    "schema/JLPTEI-3.md (lines 1-1080: URNs, URN scope/terminators, milestones, versification, ranges, divineName, standoff notes)",
+    "opensiddur/importer/marmorstein_rosh_hashanah_2/draft_prayers.py",
+    "opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py"
+  ],
+  "verification": {
+    "verse_identity": "Correct. Deut 11:13 והיה אם שמע / 14 ונתתי מטר / 15 ונתתי עשב / 16 השמרו / 17 וחרה / 18 ושמתם / 19 ולמדתם / 20 וכתבתם / 21 למען ירבו. Num 15:37 ויאמר / 38 דבר / 39 והיה לכם לציצת…אחריהם / 40 למען תזכרו / 41 אני. Each Hebrew verse ends at its sof pasuq. The English extents match the Hebrew meaning, e.g. EN 39 includes 'And do not follow…go astray' (ולא תתורו).",
+    "text_exactness": "28 segs (9+9+5+5). Joining each language's segs with the single inter-verse word space gives back the raw blocks: s8 block 3 (Deut HE), s8 block 5 + s10 block 1 up to the end of 15:41 (Num HE), s9 block 3 (Deut EN), s9 block 5 + s11 block 1 up to 'I am the Lord your God.' (Num EN). I found no difference in letters, vowels, accents, maqafs or punctuation beyond the two declared normalizations. Source features are kept as printed, e.g. מְזוּז֥וֹת in Deut 11:20, וַעֲשִׂיתֶ֖ם without meteg in Num 15:39 vs וַֽעֲשִׂיתֶ֖ם in v40, and 'skyblue', 'fulfil'.",
+    "normalizations": "Exactly two, both in s10 Num 15:41: יְהוָ֣ה→יְהֹוָ֣ה and יְהוָ֥ה→יְהֹוָ֥ה. The other six Divine Names already print holam in s8 and are unchanged. The ranges/QA evidence records them as the user723 convention and states that the source reading keeps the absent mark. The XML makes no claim of a printed holam.",
+    "divine_names": "8/8 Hebrew occurrences use j:divineName: Deut 11:13 (after את־ maqaf), 11:17 ×2 (one after אף־ maqaf), 11:21; Num 15:37, 15:39, 15:41 ×2. The maqaf stays outside the element with no space added. אֱלֹהִ֣ים (11:16, other gods) is correctly unmarked. The English modules add no divineName markup and no Hebrew cues; the s11 cues (אמת etc.) are outside the range.",
+    "page_breaks": "HE 39: …אֹתָ֑ם<pb n=4 facs=n9/> וְלֹא… (s8→s10). EN 39: …all the<pb n=4 facs=n10/> commandments… (s9→s11). Both have a single word space after the pb and stay inside the verse 39 seg. The v39 seg facs is the opening page (n7/n8). Verses 40/41 seg facs are the later pages (n9/n10). Leaf mapping sN→n(N-1) is correct. biblScope is 3–3 for Deut and 3–4 for Num.",
+    "english_clause_splits": "Deut 13 ends 'soul,'; 14 starts 'that I will grant'; 20 ends 'gates,'; 21 starts 'so that your days'. Only milestones are inserted; the wording is unchanged and all verses stay in one tei:p.",
+    "milestones_scope": "The chapter milestone has n and no corresp (opens nothing; the excerpt doesn't present itself as a full chapter). Each verse milestone carries the canonical verse URN with no project suffix. After the last seg comes a bare verse terminator, then a bare chapter terminator, all inside the paragraph, so no scope runs into unrelated text. This matches JLPTEI-3 URN scope rules 2–3 and the excerpt guidance in SCAN_DIGITIZATION.",
+    "identities": "The idno uses the absolute-form range URN (deuteronomy/11/13-/11/21, numbers/15/37-/15/41) with the edition qualifiers @prayerbook_for_the_new_year_second_day-heidenheim-1965-he / -marmorstein-1965-en. The div has no corresp. No new prayer identities are created.",
+    "citations": "Each module has one standOff[@type=notes] note[@type=citation] whose @target and ref/@target are the first printed verse (deuteronomy/11/13, numbers/15/37). Display text: 'דברים י״א:י״ג', 'Deut. XI:13', 'במדבר ט״ו:ל״ז', 'Numbers XV:37'. No parentheses, chapter:verse separator. The raw forms stay in the reading evidence. No citation text appears in the body.",
+    "code": "Moving the empty-verse check ahead of opening_document is correct and harmless. In single-verse mode verses[0]['verse_urn'] is unit['verse_urn'], so old behaviour is unchanged. For ranges, the note now targets the first listed verse instead of raising a KeyError on unit['verse_urn']. The new test drops unit verse/verse_urn, so it would have failed before the change. It asserts the note and ref targets, the display text and the joined body text. Existing tests cover the single-verse note, empty/duplicate/bad-page failures and per-verse facs."
+  },
+  "findings": [
+    {
+      "severity": "nonblocking",
+      "area": "code",
+      "detail": "Range mode doesn't check that the verses are in ascending order, are inside unit['urn'], or match unit['chapter']. The citation trusts verses[0] to be the first printed verse. The current recipe is correct. A cheap guard or test would stop a reordered recipe from silently retargeting the note."
+    },
+    {
+      "severity": "nonblocking",
+      "area": "documentation",
+      "detail": "The holam normalization is recorded only in the recipe/QA evidence (user723), not inside the XML. SCAN_DIGITIZATION only says 'record explicitly', and versioned evidence meets that. If the first-day volume keeps an encoding note (e.g. bibl/note[@type='encoding'] in index.xml) for this convention, make sure the day-two index carries the same note when it is accepted."
+    }
+  ],
+  "limitations": [
+    "I could not recompute SHA-256 for any input, module or processor file, so the hash bindings in the ranges/QA files are taken as given.",
+    "I compared text by rendered glyphs and characters, not codepoint by codepoint. Differences in combining-mark order or normalization form (JLPTEI-3 asks for NFKD) would not show up. The mechanical exact_recipe_words check is the codepoint-level evidence.",
+    "I did not run the tests; '37 passed, 17 subtests passed' is reported, not re-observed.",
+    "I did not compare against source images; source readings rely on the cited approvals."
+  ]
+}

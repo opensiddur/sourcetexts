@@ -1,0 +1,52 @@
+{
+  "reviewer": "/root/review_morning_renderer",
+  "actual_model": "Inherited collaboration model; exact identifier and effort not exposed",
+  "scope": [
+    "opensiddur/importer/marmorstein_rosh_hashanah_2/morning_witnesses.py",
+    "opensiddur/tests/importer/test_marmorstein_day_two_morning_witnesses.py"
+  ],
+  "input_sha256": {
+    "opensiddur/importer/marmorstein_rosh_hashanah_2/morning_witnesses.py": "fa7269a8224f95a351224ca2427f8b923c420c3063efb75346ad313665fd022e",
+    "opensiddur/tests/importer/test_marmorstein_day_two_morning_witnesses.py": "cd1951fdf23b7f3b0ec76a0a4bc0917bb2488c0f49c27e2435bddd4f668c88e7"
+  },
+  "verdict": "changes requested for two source-provenance defects",
+  "findings": [
+    {
+      "id": "R1",
+      "priority": "P2",
+      "file": "opensiddur/importer/marmorstein_rosh_hashanah_2/morning_witnesses.py",
+      "line": 39,
+      "title": "Index the identities emitted inside fragment quotation spans",
+      "problem": "range_source_pages visits segment fields only, but unit_document also supports fragment quotations and quotation spans in alternatives. Their emitted chapter/verse/half-verse milestones are absent from the page map. retain_range_provenance silently skips them, so selecting an interior quote loses its source page.",
+      "reproduction": "Synthetic prayer with opening words on s8 and a fragment on s9 containing quotations=[{text:Quoted words,source_reference:urn:x-opensiddur:text:bible:psalms/33/1,chapter_corresp:urn:x-opensiddur:text:prayer:example/quote/psalms/33,source_reference_corresp:urn:x-opensiddur:text:prayer:example/quote/psalms/33/1}]. The generated verse marker is followed directly by seg/@source with no facs and no in-range pb; only the outside paragraph has the s9 page marker.",
+      "requested_change": "Visit every supported emitted nested quotation/alternative identity at its containing fragment page, or reject unsupported nested interpretations explicitly. Add a regression selecting/checking an interior quote after a page break."
+    },
+    {
+      "id": "R2",
+      "priority": "P2",
+      "file": "opensiddur/importer/marmorstein_rosh_hashanah_2/morning_witnesses.py",
+      "line": 41,
+      "title": "Do not bind overridden source identities to a quotation occurrence page",
+      "problem": "source_reference is indexed unconditionally even when source_reference_corresp supplies the emitted context identity. This can steal a later canonical verse identity because setdefault retains the earlier quoted occurrence page.",
+      "reproduction": "Synthetic segment1 on s8 has source_reference=Psalm33:1 and source_reference_corresp=example/quotation/psalms/33/1; segment2 on s9 has corresp=canonical Psalm33:1. Canonical verse marker receives injected page/n7.jpg (s8), although its words are on s9 and need page/n8.jpg.",
+      "requested_change": "Index source_reference only as fallback when no source_reference_corresp is emitted. Add a context-quote-then-canonical-verse regression across different pages."
+    }
+  ],
+  "positive_checks": [
+    "Volume-two header and bibliography point to the requested language project and day_two_source_bibl.",
+    "Default first-day globals are not mutated.",
+    "Plain top-level per-verse provenance carries distinct facsimiles despite repeated labels.",
+    "Text tails remain unchanged and insertion is idempotent in the existing synthetic case.",
+    "Literal witnesses reject reuse/canonical/transclude/repeat directives."
+  ],
+  "validation": {
+    "pytest": ".venv/bin/pytest -q opensiddur/tests/importer/test_marmorstein_day_two_morning_witnesses.py",
+    "result": "3 passed, 4 subtests passed",
+    "lint": "ruff check on both files passed",
+    "warning": "Nonblocking pytest cache warning: review filesystem is read-only."
+  },
+  "limitations": [
+    "No actual morning source files, registry decisions, project generation, condition/sequence logic, output artifacts or complete-batch acceptance reviewed.",
+    "Both defects reproduced solely with synthetic data; no repository edits made."
+  ]
+}

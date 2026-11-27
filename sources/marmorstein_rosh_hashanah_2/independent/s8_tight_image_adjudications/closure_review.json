@@ -1,0 +1,83 @@
+{
+  "status": "approved",
+  "findings": [
+    {
+      "token": "מְטַר־אַרְצְכֶם",
+      "image": "s8-metar-artzekhem-full.png",
+      "image_sha256_recorded": "be6505abbb3d7d4be7c2b4faac184287f2dc947ffc3e0c33376e793652ad6265",
+      "hash_note": "This crop is new (the first review used 877.png, hash 079bc886...), so I re-checked every mark in it rather than carrying anything over.",
+      "checks": [
+        {
+          "mark": "meteg under tet",
+          "result": "confirmed",
+          "evidence": "In the new crop, a patah stroke with a short vertical stroke at its left end sits under the tet. Both are inside the tet's span, to the left of the mem's shva and to the right of the resh and maqaf."
+        },
+        {
+          "mark": "tevir under medial kaf (כ), not word-final khaf",
+          "result": "confirmed",
+          "evidence": "The word ends in final mem ם. There is no final khaf, so the corrected label is right. Under the כ there is a segol dot cluster, and an angled descending stroke sits right after it, to its left. That shape fits tevir. The stroke lines up with the lower-left tip of the kaf's base, which is still within the kaf's horizontal span. It is not under the closed body of the final mem, which starts just to its left. The gap is small but visible at this scale, so I read the host as כ from position in the image, not from expected pointing."
+        }
+      ]
+    },
+    {
+      "token": "בְנֵיכֶם עַל",
+      "image": "s8-veneikhem-al-full.png",
+      "image_sha256_recorded": "b6b59f604316b45d3149c9277b74642830a97d08fc9bb894710e762e01ea15e0",
+      "hash_note": "This crop is new (the first review used 880.png, hash 6941fc3c...), so I re-checked every mark in it rather than carrying anything over.",
+      "checks": [
+        {
+          "mark": "no dagesh in initial bet of בניכם",
+          "result": "confirmed",
+          "evidence": "The inside of the bet is clear. Its only mark is the shva below it."
+        },
+        {
+          "mark": "zaqef qatan at kaf (כ) in בניכם, correcting the primary proposal's nun assignment",
+          "result": "confirmed",
+          "evidence": "In the wider crop, the two stacked zaqef dots sit directly above the כ. They line up vertically with the segol under the kaf and are clearly left of the yod. The nun is further right, above its tsere, and has no mark over it. The nun host in the primary proposal was wrong, and kaf is the correct host based on position in the image."
+        },
+        {
+          "mark": "yetiv at ayin in על",
+          "result": "confirmed",
+          "evidence": "A '<'-shaped prepositive mark sits under the right side of the ayin, just right of the patah stroke. It is not a meteg or munach position."
+        }
+      ]
+    },
+    {
+      "token": "אֱלֹהֵיכֶם",
+      "image": "s8-image-adjudication-876.png",
+      "result": "carried_from_first_review",
+      "marks": [
+        "meteg under lamed",
+        "pashta after final mem"
+      ],
+      "hash_check": "The recorded hash d52f1e29... is identical in initial_proposals.json and s8_image_proposals.json, so the first review's confirmations carry over."
+    },
+    {
+      "token": "הַשָּׁמַיִם",
+      "image": "s8-image-adjudication-878.png",
+      "result": "carried_from_first_review",
+      "marks": [
+        "two pashta marks, on medial mem and final mem"
+      ],
+      "hash_check": "The recorded hash a8ac4d25... is identical in both files, so the confirmation carries over."
+    },
+    {
+      "token": "בִגְדֵיהֶם",
+      "image": "s8-image-adjudication-881.png",
+      "result": "carried_from_first_review",
+      "marks": [
+        "no dagesh in initial bet"
+      ],
+      "hash_check": "The recorded hash d9d83427... is identical in both files, so the confirmation carries over."
+    }
+  ],
+  "actual_model": "claude-opus-5-5",
+  "requested_effort": "medium",
+  "limitations": [
+    "This approves only the listed image readings, for later application. It does not accept whole words, pages, or the maariv_s5_s24 batch, and it does not apply anything to the working text.",
+    "I could not recompute SHA-256 hashes from the files on disk because I had no shell access. 'Unchanged' means the recorded image_sha256 values match between initial_proposals.json and s8_image_proposals.json. Recompute the on-disk hashes before applying.",
+    "I judged hosts by eye from horizontal position in the supplied crops, without further zoom. The tevir/kaf call has the smallest margin: the stroke is at the kaf's lower-left edge, close to where the final mem starts.",
+    "I identified the tevir from its shape: an angled stroke right after, to the left of, the segol dots. At this resolution I could not separate the tevir's own dot from the segol dots.",
+    "I did not use standard Bible pointing or other witnesses to settle any mark."
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "reviewer": "/root/review_morning_renderer",
+  "actual_model": "Inherited collaboration model; exact identifier and effort not exposed",
+  "scope": [
+    "opensiddur/importer/marmorstein_rosh_hashanah_2/morning_witnesses.py",
+    "opensiddur/tests/importer/test_marmorstein_day_two_morning_witnesses.py"
+  ],
+  "input_sha256": {
+    "opensiddur/importer/marmorstein_rosh_hashanah_2/morning_witnesses.py": "9f8a3ddd0d00a915ebcb3ec1bdecbc4d3906f4b2ace261198472e3fcb347b6db",
+    "opensiddur/tests/importer/test_marmorstein_day_two_morning_witnesses.py": "a50606e860d66a412ea5f801031050db2f1012134813b8f39d8778acb9bcdf7d"
+  },
+  "verdict": "changes requested; R2 remains for nested partial quotations",
+  "finding_closure": [
+    {
+      "id": "R1",
+      "status": "closed for direct/nested-option quotation milestones",
+      "evidence": "Recursive visitor now binds both tested quotation paths to the containing second-page fragment; regressions pass."
+    },
+    {
+      "id": "R2",
+      "status": "partially closed; nested half-verse subcase remains",
+      "evidence": "Contextual override case is fixed. But nested quotation_words with source_reference_part emits no full-verse correspondence, while recursive visitor still indexes its source_reference as full verse. That false alias steals a later full canonical verse source.",
+      "reproduction": {
+        "root": "urn:x-opensiddur:text:prayer:example",
+        "segment1_scan": "s8",
+        "fragment1_text": "Half quote.",
+        "fragment1_quotations": [
+          {
+            "text": "Half",
+            "source_reference": "urn:x-opensiddur:text:bible:psalms/33/1",
+            "source_reference_part": {
+              "unit": "half-verse",
+              "n": "a",
+              "corresp": "urn:x-opensiddur:text:bible:psalms/33/1/a"
+            }
+          }
+        ],
+        "segment2_scan": "s9",
+        "segment2_corresp": "urn:x-opensiddur:text:bible:psalms/33/1",
+        "actual_segment2_injected_source": "page/n7.jpg",
+        "expected_segment2_source": "page/n8.jpg"
+      },
+      "requested_change": "Index only correspondence identities actually emitted by each supported interpretation. For a nested partial quotation, bind its half-verse and do not invent the full-verse alias. Add a half-quote-then-full-verse regression."
+    }
+  ],
+  "validation": {
+    "pytest": "5 passed, 6 subtests passed",
+    "lint": "Both reviewed files pass ruff",
+    "warning": "Nonblocking read-only pytest-cache warning."
+  },
+  "limitations": [
+    "No actual source/encoding/order/presentation/batch approval.",
+    "No repository edits performed."
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "status": "approved",
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "resolved",
+      "question": 875,
+      "location": "working/s8.json block 5, word_index 21 (לכם)",
+      "detail": "The postpositive zarqa after the final mem now renders as U+05AE (named ZINOR): לָכֶם֮. It is no longer U+0598. The adjudication record agrees: its codepoint field is U+05AE and its after string is לָכֶם֮. Its encoding_correction block records the old value, the new value, the reason and the authority (Unicode TN27 appendix A). The new lesson in SCAN_DIGITIZATION_INSTRUCTIONS.md (lines 147–150) says the same: postpositive zarqa uses U+05AE and U+0598 is for tsinnorit above a letter. The fix follows the documented project rule."
+    },
+    {
+      "id": "F2",
+      "severity": "pass",
+      "question": 873,
+      "detail": "Block 3, words 0–3 match the earlier review and are unchanged: וְהָיָ֗ה has revia on the yod, אִם־שָׁמֹ֤עַ has mahpakh on the mem, תִּשְׁמְעוּ֙ has pashta after the shuruq vav, and אֶל־מִצְוֹתַ֔י has zaqef qatan on the tav."
+    },
+    {
+      "id": "F3",
+      "severity": "pass",
+      "question": 874,
+      "detail": "Block 3, word 30 is unchanged: הִשָּֽׁמְר֣וּ has meteg in the shin cluster and munach on the resh. The earlier review noted that the meteg sits between the dagesh and the shin dot. That remains non-blocking because the combining-mark order is equivalent under canonical ordering."
+    },
+    {
+      "id": "F4",
+      "severity": "pass",
+      "question": 875,
+      "detail": "Block 5, words 20 and 22 are unchanged: וְהָיָ֣ה has munach on the yod, and לְצִיצִת֒ has segol after the final tav."
+    },
+    {
+      "id": "F5",
+      "severity": "pass",
+      "detail": "I compared the current working/s8.json with previous_working_s8.json. Blocks 3 and 5 differ only at the 9 listed marks: 4 for question 873, 2 for 874 and 3 for 875. These keys are identical: scan_page, printed_page, reader, method, heading block 0, block 1, citation blocks 2 and 4, uncertainties, continuation and image_sha256. Block 1 holds the pointing from the earlier answers 870–872. I found no other change to consonants, vowels, maqaf or punctuation in blocks 3 or 5."
+    },
+    {
+      "id": "F6",
+      "severity": "pass",
+      "detail": "All three entries in questions_873_875.json have status resolved_by_user. Their answers match the answers map in the adjudication record word for word, and resolution_evidence points to the adjudication record and working/s8.json. The record's scope keeps 870–872 unchanged and does not accept the whole page or batch. It contains an updated current_working_sha256 value (8d53f1b2…683e)."
+    }
+  ],
+  "actual_model": "claude-opus-5-5 (Claude Opus 5.5)",
+  "requested_effort": "medium",
+  "scope_limitations": [
+    "This approval covers only the exact application of the user's answers to 873–875 in scan 8. It does not cover whether the images were read correctly, and it does not accept scan 8 or the maariv_s5_s24 batch.",
+    "Two files were not at the paths given in the request. user_adjudications_873_875.json and questions_873_875.json are in batches/maariv_s5_s24/, not working/ or independent/adjudications_873_875/. I reviewed them at batches/maariv_s5_s24/.",
+    "I had only a file-reading tool, with no shell. I identified codepoints by reading the rendered combining glyphs against the record's codepoint fields. I did not hex-dump the bytes, recompute previous_working_sha256 or current_working_sha256, or run a mechanical character-level diff. I compared the two files side by side, token by token.",
+    "I did not open the first-day Numbers 15:39 encoding to confirm the record's claim that it also uses U+05AE. The approval of F1 relies on the documented rule in SCAN_DIGITIZATION_INSTRUCTIONS.md and the cited Unicode note.",
+    "I did not view the source-image snippets 873.png, 874.png and 875.png. The user's readings were treated as authoritative."
+  ]
+}

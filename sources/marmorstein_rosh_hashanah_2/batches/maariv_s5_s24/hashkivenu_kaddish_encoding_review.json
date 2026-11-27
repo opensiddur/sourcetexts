@@ -1,0 +1,61 @@
+{
+  "status": "approved_source_encoding_alignment_and_local_language_code",
+  "scope": {
+    "covered": [
+      "Source encoding of the four witnesses: hashkivenu.xml and kaddish_chatzi.xml in prayerbook_for_the_new_year_second_day-heidenheim-1965-he and -marmorstein-1965-en",
+      "Every word, mark, punctuation sign and paragraph break, checked against approved working/s12.json and primary/s13.json (the hashes listed in s12_s13_source_reading_approval.json)",
+      "Hebrew/English translation alignment and the absence of Hebrew cue words from the English",
+      "Canonical identity scope and matching: hashkivenu, hashkivenu/opening, hashkivenu/hapores_sukkat_shalom, kaddish/chatzi, kaddish/yitgaddal, kaddish/yehe_shemeh, kaddish/yitbarakh",
+      "Paragraph-level xml:lang='arc' inside the xml:lang='he' publication",
+      "The draft_prayers.py text_language extension and test_aramaic_prayer_language_is_local_to_its_paragraphs"
+    ],
+    "excluded": [
+      "Re-reading the images or re-adjudicating source readings, including whole-scan acceptance of s12/s13",
+      "Service spine, ordering, role and rubric placement, and service or seasonal conditions",
+      "The rest of batch maariv_s5_s24",
+      "Expanded-project and export review",
+      "The future seasonal/contextual selection audit (explicitly not approved here)"
+    ]
+  },
+  "actual_model": "Claude Opus5.5 (claude-opus-5-5)",
+  "requested_effort": "medium",
+  "review_sha256": "b189fc7b78bff49753f3d9b12c7759c00aa9ef70a9777012a38172216a5d9b53",
+  "raw_review_sha256": "843715ba33a0ff9b819935b66e9630794f657efd8754a01fafe80c83f581a8d4",
+  "recipe_sha256": "57c796fd47e1193c0d7a8db5f106e7cea27c7c25e95bfc1a641045bef6c32ce0",
+  "qa_sha256": "b3ede71794f7c873ec4ac5fd533d8759dcc10ea06b4dc039b2f714abd038cd5d",
+  "module_sha256": {
+    "hashkivenu/he": "f4a44a60f77218ceb1170c9bb64e00fcf1f2e8957da16139c1c075dac5805de4",
+    "hashkivenu/en": "5e5bc8434f466799843fed32e62c786425441965e3b51f50d5da0176df3eaf64",
+    "kaddish_chatzi/he": "e7ceed71d110573c9ed8d914734154007c9fc2885b3d397993422d107046b0f4",
+    "kaddish_chatzi/en": "0acf73a8dbae0fc6745e6f7acadb8a6d0cdc0d25a410ad33580be04846d27a4e"
+  },
+  "tests": "43 passed,19 subtests passed",
+  "presentation_status": "pending",
+  "context_selection_status": "pending_service_spine_and_seasonal_audit",
+  "spine_requirement": "Use whole hashkivenu or canonical ending root hashkivenu/hapores_sukkat_shalom, not absent /text subidentity.",
+  "whole_scan_acceptance": false,
+  "mechanical_checks": {
+    "refdb": {
+      "status": "passed",
+      "log_sha256": "fa7d1a2d65a23711a3e09928ffda5bdb9e29130c4117f1fea375baddc5d2b935"
+    },
+    "names": {
+      "status": "passed",
+      "log_sha256": "9f39b95a41e9a24388d8b4c20a0031163bf04e2588723d72e818d234ce50fa0f"
+    },
+    "features": {
+      "status": "passed",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "registry": {
+      "status": "passed",
+      "log_sha256": "cdf1c5fe15e2ce3fc2260f4487c172fdaa1596c43cb8eb78f1cbaae81305af5e"
+    },
+    "references": {
+      "status": "passed",
+      "log_sha256": "876bf6fb7d27f4f8e97d59f0a5aa61e45adb3bc25d521ddbd85401b59443ffb1"
+    }
+  },
+  "mechanical_qa_path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/hashkivenu_kaddish_checks/qa.json",
+  "mechanical_qa_sha256": "66a4140b1c06e06754152029a2f047fa8d2f5e590d382f2c264eab5764b3bc6e"
+}

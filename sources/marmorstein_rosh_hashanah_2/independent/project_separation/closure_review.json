@@ -1,0 +1,77 @@
+{
+  "status": "approved",
+  "actual_model": "claude-opus-5-5",
+  "requested_effort": "medium",
+  "findings": [
+    {
+      "id": "F1",
+      "status": "resolved",
+      "summary": "The parallel book is set side by side again. The fallback warning is gone.",
+      "evidence": [
+        "parallel-compile-print.log and parallel-compile-electronic.log are both empty. The earlier 'no counterpart … falling back to per-transclusion parallels' warning no longer appears.",
+        "Current parallel.tex loads reledmac and reledpar (lines 7-8). It also has \\linenummarginColumns/\\linenummarginColumnsR, the \\Columns LTR wrapper and the reledmac print@line/new@line patches (lines 91-107). \\OSPstartSkip is 0.5\\parskip (line 111), which is the parallel-mode value. The output is no longer the single-stream Hebrew build.",
+        "rebinding.json and export-equivalence-qa.json give parallel-page-01.png as e7fc0b…. That is the accepted parallel page-1 hash cited in the first review. Hebrew page 1 is 717f91…, also the accepted value. So the earlier difference in cover paragraph spacing is gone. export-equivalence-qa.json marks pages 1-8 pixel-identical in both variants, and the presentation_changes text now matches what I saw.",
+        "refdb.log reports synchronization against the processor worktree reference.db and the projects worktree: 2 files added, 2 updated, 2 removed, 0 errors. That matches the rename. The cause I guessed at in the first review (refdb not synchronized) is confirmed by the fix."
+      ]
+    },
+    {
+      "id": "F2",
+      "status": "resolved",
+      "summary": "The full mechanical and browser evidence has been regenerated and frozen.",
+      "evidence": [
+        "tests.log: 26 passed, 14 subtests passed. mechanical.json shows exit code 0 for tests, refdb, naming, features, registry and references.",
+        "registry.log: 37984 records, 0 errors and 0 warnings. Its one note is about an unrelated tanakh-jps-1917-en contributor. references.log: URN reference validation over 2 projects finished cleanly. features.log is empty (e3b0c4…).",
+        "schema.json: both second_day index.xml files are valid with no errors.",
+        "html-browser-qa.json: in both variants, all four scan links (n0-n3_medium.jpg on the volume-two Archive identifier) have the expected href and visible=true, and there is no horizontal overflow. The title is 'Prayerbook for the New Year — second day'.",
+        "parallel-browser.png and hebrew-browser.png are real rendered pages. Each shows the cover legend, the Hebrew title leaf (s2), the English title leaf (s3), the copyright leaf (s4) with scan arrows, and then the colophon. The colophon credits Codex as markup editor and transcriptionist, lists CC0, and has a single Sources entry: the Second Day volume, with the Varady imaging credit. The first-day bibliography is gone."
+      ]
+    },
+    {
+      "id": "F3",
+      "status": "resolved",
+      "summary": "rebinding.json is the requested additive record.",
+      "evidence": [
+        "It records processor_revision 47f1aff… and sha256 values for build.py, __init__.py and the test module. It also has sha256 values for six guideline files (AGENTS.md, JLPTEI-3.md, jlptei.odd.xml, SIDDUR_URN_SCHEME.md, NAMING_SCHEME.md, SCAN_DIGITIZATION_INSTRUCTIONS.md) and project_file_sha256 under the second_day paths. The project hashes match equivalence.json's new_sha256 values.",
+        "It points to ../acceptance.json as the historical record. It says only the old shared-project bindings are superseded and does not touch the historical readings or artifacts. It also points to the first review.",
+        "The artifact hashes match export-equivalence-qa.json files_sha256. rebinding.json also adds hashes for html-browser-qa.json, the browser PNGs, schema.json, mechanical.json and equivalence-qa.json."
+      ]
+    },
+    {
+      "id": "F9",
+      "status": "accepted_as_documented",
+      "summary": "The bibl id day_two_source_bibl is kept on purpose. It is valid and unique within each new project, and the decision is recorded in rebinding.json. Future source modules must point to their own project's index#day_two_source_bibl."
+    },
+    {
+      "id": "F10",
+      "status": "accepted_as_documented",
+      "summary": "No exporter algorithm changed, so I accept proof from the actual run instead of a new test that would mirror the implementation. That proof is the empty compile logs plus reledpar in parallel.tex. The existing synthetic parallel/refdb regressions still apply."
+    },
+    {
+      "id": "colophon",
+      "status": "pass",
+      "summary": "parallel-page-09.png has one Sources entry, [1], for the Second Day volume (archive.org details URL, Varady credit), plus the CC0 licence and the Codex credits. parallel-page-10.png has the two disposal bullets alone on an even page. The book is 10 pages."
+    },
+    {
+      "id": "N1",
+      "status": "accepted_nonblocking_unchanged",
+      "summary": "On the HTML cover, the scan arrow still overlaps the 'P' of 'Prayerbook for Festivals' in both browser screenshots. This was already there and accepted, and nothing in the migration changed it."
+    },
+    {
+      "id": "N2",
+      "status": "accepted_nonblocking_unchanged",
+      "summary": "The duplicate page.i/page.ii PDF destination warnings are the historical exporter warnings. This non-recited front-matter scope has no internal page references, and PR332 handles the issue separately. They do not block this review."
+    },
+    {
+      "id": "O1",
+      "status": "observation_nonblocking",
+      "summary": "The disposal advice is worded differently in HTML ('against printing sacred texts') and PDF ('against making unnecessary printed copies'). This comes from exporter templates that the migration did not change. It is not part of this project's source and is outside this scope."
+    }
+  ],
+  "scope_limitations": [
+    "I did a read-only review with no shell, so I computed no sha256 values. All hash-identity statements, including pages 1-8 being pixel-identical and parallel-page-01 being e7fc0b…, rely on the recorded hashes in rebinding.json and export-equivalence-qa.json and on the first review's record of the accepted hashes.",
+    "refdb.log is 1.2 MB. I read only its header and summary, not the per-project lines for the two second_day projects. I accepted counterpart discovery based on the empty compile logs and the reledpar output.",
+    "The only images I looked at were parallel-browser.png, hebrew-browser.png, parallel-page-09.png and parallel-page-10.png. Pages 1-8 are judged on hash identity alone.",
+    "I did not re-read processor source, guidelines or project XML for this closure. I did not refetch any remote scan images. The source-link approval carries over because the targets are identical, and browser href/visibility were verified.",
+    "This review covers only the s1-s4 front-matter project separation. It does not approve scans 5-385 and does not change the historical acceptance.json."
+  ]
+}

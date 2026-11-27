@@ -1,0 +1,96 @@
+{
+  "status": "changes_required",
+  "reviewer": {
+    "model": "claude-opus-5-5 (Claude Opus 5.5)",
+    "effort": "medium",
+    "independence": "Read only the files named below. Did not see or change the importer branch. Did not read any images."
+  },
+  "scope": {
+    "modules": [
+      "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/psalm_81_4_to_5.xml",
+      "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/psalm_81_4_to_5.xml",
+      "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/numbers_14_17.xml",
+      "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/numbers_14_17.xml",
+      "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/psalm_25_6.xml",
+      "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/psalm_25_6.xml"
+    ],
+    "evidence_read": [
+      "batches/maariv_s5_s24/s12_scripture_units.json",
+      "batches/maariv_s5_s24/s12_scripture_text_qa.json",
+      "batches/maariv_s5_s24/working/s12.json",
+      "batches/maariv_s5_s24/primary/s13.json",
+      "batches/maariv_s5_s24/s12_s13_source_reading_approval.json"
+    ],
+    "guidelines_read": [
+      "specs/SCAN_DIGITIZATION_INSTRUCTIONS.md",
+      "schema/JLPTEI-3.md lines 1-1080 (URN scope, terminators, milestones, versification, sub-verse, divineName)",
+      "specs/MARMORSTEIN_ROSH_HASHANAH_1.md lines 1-886"
+    ],
+    "precedent_compared": [
+      "prayerbook_for_the_new_year-heidenheim-1965-he/{psalm_81_4_to_5,numbers_14_17,psalm_25_6}.xml",
+      "prayerbook_for_the_new_year-marmorstein-1965-en/psalm_25_6.xml"
+    ],
+    "not_requested_and_not_given": "No approval of any whole page, service, quorum, condition, batch, expanded spine or export."
+  },
+  "verified": {
+    "text_fidelity": "In all six modules every word, vowel point, meteg, maqaf, sof-pasuq colon, comma and full stop matches the approved readings in working/s12.json (Hebrew) and primary/s13.json (English), and matches the recipe in s12_scripture_units.json. Nothing has been added or left out. The Hebrew titles are unpointed titles from the recipe. They are not prayer text.",
+    "psalm_81_split": "Hebrew verse 5 starts at כִּי חֹק. English verse 5 starts at 'for it is'. The printed comma after 'festival' stays at the end of the English verse 4 segment as transcribed. Verse 4 text matches the source, including בַּכֶּֽסֶה and חַגֵּֽנוּ with meteg as read on s12.",
+    "numbers_14_17_extent": "Hebrew: וְעַתָּה … לֵאמֹר: is the whole canonical verse. English runs exactly through 'as Thou hast said.'",
+    "psalm_25_6_extent": "Hebrew: זְכֹר … הֵמָּה: is the whole verse. English starts with 'Remember' and ends 'since eternity.'",
+    "english_cues": "The Hebrew cue words printed on s13 (תקעו, ועתה) appear only in the reading evidence. They are not in any English module.",
+    "citations": "Neither s12 nor s13 prints a Bible citation. No citation notes were added, which is correct.",
+    "urns": "psalms/81/4, psalms/81/5, numbers/14/17 and psalms/25/6 are real canonical verses with correct chapter and verse numbers. The publication idno range urn:…:psalms/81/4-/81/5 is valid in the absolute form. Edition qualifiers match each project.",
+    "milestones": "Chapter milestones carry only @n, so no excerpt claims a whole chapter. Verse milestones carry the canonical @corresp and @n. Each verse scope is closed by bare verse and chapter terminators. No subverse units are needed or used.",
+    "page_breaks": "Every module has tei:pb ed=1965 n=5. Facs points to n11 for Hebrew and n12 for English, which matches scans 12 and 13 (leaf N-1).",
+    "divine_names": "The only generated j:divineName is יְיָ in Psalm 25:6 Hebrew. It is a whole word standing alone, with no prefix and no partial match. It replaces the Tetragrammaton correctly in context."
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "blocking",
+      "files": [
+        "heidenheim-1965-he/numbers_14_17.xml:37",
+        "marmorstein-1965-en/numbers_14_17.xml:37",
+        "heidenheim-1965-he/psalm_25_6.xml:37",
+        "marmorstein-1965-en/psalm_25_6.xml:37"
+      ],
+      "issue": "tei:div/@corresp repeats the same canonical verse URN that the verse milestone inside it already carries (numbers/14/17 and psalms/25/6). This puts the same @corresp on two elements in one project. JLPTEI-3 'Versification › Rules' says the reference database and parallel compiler keep only the first and warn. Here the first is the div, so the verse URN would resolve to the div, page break included, and not to the milestone scope. JLPTEI-3 also prefers milestones over correspondence-bearing containers for verses. The Psalm 81 modules and the first-day precedent do not have this.",
+      "required_change": "Remove @corresp from tei:div in these four files."
+    },
+    {
+      "id": "F2",
+      "severity": "blocking",
+      "files": [
+        "heidenheim-1965-he/numbers_14_17.xml:42",
+        "marmorstein-1965-en/numbers_14_17.xml:42",
+        "heidenheim-1965-he/psalm_25_6.xml:42",
+        "marmorstein-1965-en/psalm_25_6.xml:42"
+      ],
+      "issue": "Each verse's tei:seg has no @facs. The only facs is on tei:pb, which comes before the verse milestone and falls outside its scope. SCAN_DIGITIZATION_INSTRUCTIONS ('Export checks') says an ancestor's facs can be lost during extraction, so the opening source must be kept on each reusable verse span. The Psalm 81 modules do this correctly, with n11 on Hebrew segs and n12 on English segs.",
+      "required_change": "Add facs=…/page/n11_medium.jpg to the Hebrew seg and facs=…/page/n12_medium.jpg to the English seg, matching psalm_81_4_to_5."
+    },
+    {
+      "id": "F3",
+      "severity": "advisory",
+      "files": [
+        "numbers_14_17 / psalm_25_6 vs psalm_81_4_to_5 (both languages)"
+      ],
+      "issue": "Serialization is inconsistent. The Psalm 81 files are inline, with only the meaningful space between verses. Numbers 14:17 and Psalm 25:6 are pretty-printed, so a newline and indentation sit inside tei:p around the milestones and seg. This is probably harmless, but please confirm the exporter's whitespace handling gives no extra leading or trailing space. The simplest fix is to generate all six modules the same way."
+    },
+    {
+      "id": "F4",
+      "severity": "advisory / maintainer decision, not counted as blocking",
+      "files": [
+        "heidenheim-1965-he/numbers_14_17.xml:42"
+      ],
+      "issue": "אֲדֹנָי in Numbers 14:17 is not marked j:divineName. JLPTEI-3 defines divineName to include epithets as well as the Tetragrammaton. The recipe has no divine_name entry here, and the accepted first-day numbers_14_17 also leaves it unmarked, so this follows existing precedent. Raising it so someone decides explicitly. No generated divine name is wrong."
+    }
+  ],
+  "limitations": [
+    "I had read-only file access and no shell. I did not recompute SHA-256 values, so I cannot confirm that the module hashes in s12_scripture_text_qa.json or the input hashes in s12_scripture_units.json match the files on disk.",
+    "I compared text from the rendered characters only. I could not check codepoints byte by byte, such as U+05BD meteg, U+05BE maqaf against a hyphen, NFKD normalization, or hidden characters like CGJ or ZWJ. Run a mechanical codepoint diff of each seg against the recipe strings.",
+    "I did not run RelaxNG, Schematron or reference-database validation.",
+    "I did not inspect source images. Text fidelity relies on the approved readings in s12_s13_source_reading_approval.json."
+  ],
+  "approval_conditions": "Fix F1 and F2, then re-review the regenerated files with new hashes. The Psalm 81 modules (both languages) had no blocking findings, but this verdict covers all six modules together and does not approve any of them on its own."
+}

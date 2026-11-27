@@ -1,0 +1,101 @@
+Tested file SHA256 before: {"/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/opensiddur/importer/marmorstein_rosh_hashanah_2/pesuqei.py": "2650fa18dc53aa451b9bfa594dd32913ff74b2157b1b94ce4a58bb2d9105a02d", "/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py": "a981fc67234305185a79446e9a5b8e14cc37d798003a9d71b98339f17e33f582"}
+Command: ['/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/.venv/bin/pytest', '-vv', '--junitxml=/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/independent/pesuqei_s46_s63/code_v5/junit.xml', '/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/opensiddur/tests/importer/test_marmorstein_day_two_evening.py', '/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py', '/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/opensiddur/tests/importer/test_marmorstein_day_two_morning.py', '/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/opensiddur/tests/importer/test_marmorstein_day_two_morning_shared.py', '/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/opensiddur/tests/importer/test_marmorstein_day_two_morning_witnesses.py', '/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py', '/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/opensiddur/tests/common/test_text_encoding.py']
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-9.0.3, pluggy-1.6.0 -- /home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/efeins/.codex/worktrees/marmorstein-day-two-processor/master
+configfile: pyproject.toml
+collecting ... collected 76 items
+
+opensiddur/tests/importer/test_marmorstein_day_two_evening.py::EveningSequenceTests::test_condition_label_is_inside_scope_and_empty_counterpart_is_absent PASSED [  1%]
+opensiddur/tests/importer/test_marmorstein_day_two_evening.py::EveningSequenceTests::test_dependency_marker_precedes_range_words_and_is_idempotent PASSED [  2%]
+opensiddur/tests/importer/test_marmorstein_day_two_evening.py::EveningSequenceTests::test_documentary_direction_expands_only_at_its_occurrence PASSED [  3%]
+opensiddur/tests/importer/test_marmorstein_day_two_evening.py::EveningSequenceTests::test_evening_heading_cannot_be_paired_with_untranslated_entrance PASSED [  5%]
+opensiddur/tests/importer/test_marmorstein_day_two_evening.py::EveningSequenceTests::test_expanded_bilingual_roles_share_one_rubric_with_language_and_role PASSED [  6%]
+opensiddur/tests/importer/test_marmorstein_day_two_evening.py::EveningSequenceTests::test_expanded_heading_direction_is_a_structural_heading PASSED [  7%]
+opensiddur/tests/importer/test_marmorstein_day_two_evening.py::EveningSequenceTests::test_holiday_day_is_numeric_while_service_selection_is_boolean PASSED [  9%]
+opensiddur/tests/importer/test_marmorstein_day_two_evening.py::EveningSequenceTests::test_identical_facing_english_rubric_is_expanded_once PASSED [ 10%]
+opensiddur/tests/importer/test_marmorstein_day_two_evening.py::EveningSequenceTests::test_joint_role_keeps_its_abbreviation_and_expansion PASSED [ 11%]
+opensiddur/tests/importer/test_marmorstein_day_two_evening.py::EveningSequenceTests::test_missing_documentary_translation_has_no_placeholder_but_expansion_shares_order PASSED [ 13%]
+opensiddur/tests/importer/test_marmorstein_day_two_evening.py::EveningSequenceTests::test_motzaei_scope_stops_before_following_blessing PASSED [ 14%]
+opensiddur/tests/importer/test_marmorstein_day_two_evening.py::EveningSequenceTests::test_scripture_range_transclusion_uses_exact_end PASSED [ 15%]
+opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py::ExcerptTests::test_aramaic_prayer_language_is_local_to_its_paragraphs PASSED [ 17%]
+opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py::ExcerptTests::test_empty_provenance_cannot_bypass_guard PASSED [ 18%]
+opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py::ExcerptTests::test_exact_scope_semantics_and_absent_translation_cleanup PASSED [ 19%]
+opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py::ExcerptTests::test_forbid_index_overwrite_and_duplicate_files PASSED [ 21%]
+opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py::ExcerptTests::test_invalid_ranges_cannot_remove_or_replace_any_witness 
+opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py::ExcerptTests::test_invalid_ranges_cannot_remove_or_replace_any_witness PASSED [ 22%]
+opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py::ExcerptTests::test_optional_word_has_registered_variant_condition_not_literal_brackets PASSED [ 23%]
+opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py::ExcerptTests::test_page_inside_optional_span_updates_the_bibliography PASSED [ 25%]
+opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py::ExcerptTests::test_paired_witnesses_share_scope_with_independent_words_and_scan_links PASSED [ 26%]
+opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py::ExcerptTests::test_paragraph_continuation_keeps_the_existing_prayer_part_scope PASSED [ 27%]
+opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py::ExcerptTests::test_partial_range_translation_does_not_invent_a_missing_verse PASSED [ 28%]
+opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py::ExcerptTests::test_prayer_parts_derive_and_check_bibliographic_end_page PASSED [ 30%]
+opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py::ExcerptTests::test_prayer_parts_follow_paragraphs_and_terminate_quotation_scope PASSED [ 31%]
+opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py::ExcerptTests::test_prayer_quotation_source_tracks_a_preceding_page_break PASSED [ 32%]
+opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py::ExcerptTests::test_prayer_rejects_empty_and_duplicate_parts_before_writes 
+opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py::ExcerptTests::test_prayer_rejects_empty_and_duplicate_parts_before_writes PASSED [ 34%]
+opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py::ExcerptTests::test_range_citation_targets_its_first_printed_verse PASSED [ 35%]
+opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py::ExcerptTests::test_range_keeps_language_page_boundaries_inside_their_own_verses PASSED [ 36%]
+opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py::ExcerptTests::test_recorded_misprint_preserves_source_and_fails_if_locator_is_stale PASSED [ 38%]
+opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py::ExcerptTests::test_repeated_quotation_keeps_source_attribution_without_a_second_verse_identity PASSED [ 39%]
+opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py::ExcerptTests::test_schema_failure_does_not_remove_missing_counterpart PASSED [ 40%]
+opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py::ExcerptTests::test_single_verse_keeps_one_canonical_identity_and_own_provenance PASSED [ 42%]
+opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py::ExcerptTests::test_stale_reading_cannot_write_or_remove_any_witness PASSED [ 43%]
+opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py::ExcerptTests::test_subverse_has_its_own_number_and_matching_scope_terminator PASSED [ 44%]
+opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py::ExcerptTests::test_verse_beginning_after_page_break_retains_new_source PASSED [ 46%]
+opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py::ExcerptTests::test_whole_prayer_needs_no_invented_part_and_keeps_page_continuations PASSED [ 47%]
+opensiddur/tests/importer/test_marmorstein_day_two_morning.py::TestMorningServiceHelpers::test_bilingual_condition_label_is_one_note_before_expression PASSED [ 48%]
+opensiddur/tests/importer/test_marmorstein_day_two_morning.py::TestMorningServiceHelpers::test_edition_qualified_range_stays_one_target PASSED [ 50%]
+opensiddur/tests/importer/test_marmorstein_day_two_morning.py::TestMorningServiceHelpers::test_printed_page_number_is_not_retained_as_navigation_text PASSED [ 51%]
+opensiddur/tests/importer/test_marmorstein_day_two_morning.py::TestMorningServiceHelpers::test_unpaired_tallit_ending_precedes_shared_prayer_boundary PASSED [ 52%]
+opensiddur/tests/importer/test_marmorstein_day_two_morning_shared.py::TestMorningShared::test_absent_night_translation_is_guarded_not_an_empty_option PASSED [ 53%]
+opensiddur/tests/importer/test_marmorstein_day_two_morning_shared.py::TestMorningShared::test_accepted_template_hash_is_checked_before_rendering PASSED [ 55%]
+opensiddur/tests/importer/test_marmorstein_day_two_morning_shared.py::TestMorningShared::test_canonical_boundary_is_outside_alternates_and_selected_page_precedes_words PASSED [ 56%]
+opensiddur/tests/importer/test_marmorstein_day_two_morning_shared.py::TestMorningShared::test_literal_repeat_has_its_own_bounded_bible_quote_context PASSED [ 57%]
+opensiddur/tests/importer/test_marmorstein_day_two_morning_shared.py::TestApprovedMorningInputs::test_missing_stale_or_unapproved_bindings_fail_closed 
+opensiddur/tests/importer/test_marmorstein_day_two_morning_shared.py::TestApprovedMorningInputs::test_missing_stale_or_unapproved_bindings_fail_closed PASSED [ 59%]
+opensiddur/tests/importer/test_marmorstein_day_two_morning_shared.py::TestApprovedMorningInputs::test_shared_output_paths_cannot_escape_or_overwrite_each_other PASSED [ 60%]
+opensiddur/tests/importer/test_marmorstein_day_two_morning_witnesses.py::MorningWitnessTests::test_context_quote_does_not_steal_a_later_canonical_verse_source PASSED [ 61%]
+opensiddur/tests/importer/test_marmorstein_day_two_morning_witnesses.py::MorningWitnessTests::test_each_verse_carries_its_actual_scan_despite_repeated_labels PASSED [ 63%]
+opensiddur/tests/importer/test_marmorstein_day_two_morning_witnesses.py::MorningWitnessTests::test_literal_source_cannot_silently_reuse_other_printed_words 
+opensiddur/tests/importer/test_marmorstein_day_two_morning_witnesses.py::MorningWitnessTests::test_literal_source_cannot_silently_reuse_other_printed_words PASSED [ 64%]
+opensiddur/tests/importer/test_marmorstein_day_two_morning_witnesses.py::MorningWitnessTests::test_nested_half_verse_does_not_bind_an_unmapped_parent_verse PASSED [ 65%]
+opensiddur/tests/importer/test_marmorstein_day_two_morning_witnesses.py::MorningWitnessTests::test_nested_quotation_and_option_ranges_keep_the_fragment_page 
+opensiddur/tests/importer/test_marmorstein_day_two_morning_witnesses.py::MorningWitnessTests::test_nested_quotation_and_option_ranges_keep_the_fragment_page PASSED [ 67%]
+opensiddur/tests/importer/test_marmorstein_day_two_morning_witnesses.py::MorningWitnessTests::test_provenance_keeps_the_marker_tail_and_is_idempotent PASSED [ 68%]
+opensiddur/tests/importer/test_marmorstein_day_two_morning_witnesses.py::MorningWitnessTests::test_recipe_must_hash_readings_and_the_approval_record 
+opensiddur/tests/importer/test_marmorstein_day_two_morning_witnesses.py::MorningWitnessTests::test_recipe_must_hash_readings_and_the_approval_record PASSED [ 69%]
+opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py::TestPesuqeiContinuation::test_documentary_extension_stays_below_shacharit PASSED [ 71%]
+opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py::TestPesuqeiContinuation::test_expanded_repeat_is_canonical_with_local_translation_suppression PASSED [ 72%]
+opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py::TestPesuqeiContinuation::test_missing_translation_has_no_documentary_call PASSED [ 73%]
+opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py::TestPesuqeiContinuation::test_translation_guard_preserves_words_source_and_exact_endpoint PASSED [ 75%]
+opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py::TestPesuqeiContinuation::test_unbounded_or_duplicate_reference_fails 
+opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py::TestPesuqeiContinuation::test_unbounded_or_duplicate_reference_fails PASSED [ 76%]
+opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py::TestPesuqeiWriteGuards::test_bare_chapter_is_not_a_verse_endpoint PASSED [ 77%]
+opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py::TestPesuqeiWriteGuards::test_existing_targets_must_be_unchanged_baselines_or_identical_outputs PASSED [ 78%]
+opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py::TestPesuqeiWriteGuards::test_guard_uses_a_dedicated_condition_derived_from_its_verse PASSED [ 80%]
+opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py::TestPesuqeiWriteGuards::test_only_reviewed_edition_parallel_profiles_can_supply_english PASSED [ 81%]
+opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py::TestPesuqeiWriteGuards::test_project_qualified_targets_and_escaped_paths_are_rejected 
+opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py::TestPesuqeiWriteGuards::test_project_qualified_targets_and_escaped_paths_are_rejected PASSED [ 82%]
+opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py::TestPesuqeiWriteGuards::test_shared_repeat_cannot_invent_a_documentary_english_repeat PASSED [ 84%]
+opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py::TestRepeatedVerseCompilation::test_first_translation_survives_while_repeat_stays_hebrew_only 
+opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py::TestRepeatedVerseCompilation::test_first_translation_survives_while_repeat_stays_hebrew_only PASSED [ 85%]
+opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py::TestPesuqeiRecipeAssembly::test_an_older_unguarded_provider_is_rejected PASSED [ 86%]
+opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py::TestPesuqeiRecipeAssembly::test_containing_scope_and_wrong_language_template_fail_closed PASSED [ 88%]
+opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py::TestPesuqeiRecipeAssembly::test_duplicate_order_stale_templates_and_protected_targets_are_rejected 
+opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py::TestPesuqeiRecipeAssembly::test_duplicate_order_stale_templates_and_protected_targets_are_rejected PASSED [ 89%]
+opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py::TestPesuqeiRecipeAssembly::test_full_assembly_keeps_literal_repeat_and_guards_one_english_provider PASSED [ 90%]
+opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py::TestPesuqeiRecipeAssembly::test_generated_documentary_and_expanded_nested_scopes_compile 
+opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py::TestPesuqeiRecipeAssembly::test_generated_documentary_and_expanded_nested_scopes_compile PASSED [ 92%]
+opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py::TestPesuqeiRecipeAssembly::test_range_availability_must_match_actual_witness_boundaries 
+opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py::TestPesuqeiRecipeAssembly::test_range_availability_must_match_actual_witness_boundaries PASSED [ 93%]
+opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py::TestPesuqeiRecipeAssembly::test_repeat_without_an_english_canonical_boundary_fails_closed PASSED [ 94%]
+opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py::TestPesuqeiRecipeAssembly::test_unreviewed_structure_cannot_reach_project_writes PASSED [ 96%]
+opensiddur/tests/common/test_text_encoding.py::TestUnspecifiedEncodings::test_finds_each_kind_of_call PASSED [ 97%]
+opensiddur/tests/common/test_text_encoding.py::TestUnspecifiedEncodings::test_passes_binary_modes_named_encodings_and_other_modules PASSED [ 98%]
+opensiddur/tests/common/test_text_encoding.py::TestUnspecifiedEncodings::test_the_package_names_every_text_encoding PASSED [100%]
+
+- generated xml file: /home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/independent/pesuqei_s46_s63/code_v5/junit.xml -
+==================== 76 passed, 31 subtests passed in 2.45s ====================
+Tested file SHA256 after: {"/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/opensiddur/importer/marmorstein_rosh_hashanah_2/pesuqei.py": "2650fa18dc53aa451b9bfa594dd32913ff74b2157b1b94ce4a58bb2d9105a02d", "/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/opensiddur/tests/importer/test_marmorstein_day_two_pesuqei.py": "a981fc67234305185a79446e9a5b8e14cc37d798003a9d71b98339f17e33f582"}

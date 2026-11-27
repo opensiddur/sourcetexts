@@ -1,0 +1,108 @@
+{
+  "status": "draft_excerpt_mechanical_pass_not_batch_acceptance",
+  "scope": "Complete Shema Yisrael verse only, not complete scans6/7.",
+  "projects": {
+    "he": {
+      "file": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/shema_yisrael.xml",
+      "sha256": "96248f375f8ba18f617d54dc48aecc84f039e401e2f3bc9b8f57f9fbe11bf47a",
+      "valid_schema": true,
+      "exact_recipe_words": true,
+      "scan_facs": [
+        "https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n5_medium.jpg"
+      ],
+      "divine_names": 2.0,
+      "large_letters": [
+        "ע",
+        "ד"
+      ]
+    },
+    "en": {
+      "file": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/shema_yisrael.xml",
+      "sha256": "ada713736fd0e88197bbd27032aa3e3ee8b0dc8429fa4f18eeff0ace3e2994d2",
+      "valid_schema": true,
+      "exact_recipe_words": true,
+      "scan_facs": [
+        "https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n6_medium.jpg"
+      ],
+      "divine_names": 0.0,
+      "large_letters": []
+    }
+  },
+  "exports": {
+    "hebrew": {
+      "quote_count": 1,
+      "pdf_pages": 4,
+      "text_preserved_in_compiled_quotes": [
+        "שְׁמַ֖ע יִשְׂרָאֵ֑ל יְהֹוָ֥ה אֱלֹהֵ֖ינוּ יְהֹוָ֥ה ׀ אֶחָֽד:"
+      ],
+      "resolved_citation_notes": 1,
+      "compile_warnings": []
+    },
+    "parallel": {
+      "quote_count": 2,
+      "pdf_pages": 4,
+      "text_preserved_in_compiled_quotes": [
+        "שְׁמַ֖ע יִשְׂרָאֵ֑ל יְהֹוָ֥ה אֱלֹהֵ֖ינוּ יְהֹוָ֥ה ׀ אֶחָֽד:",
+        "Hear, O Israel, the Lord is our God, the Lord is One."
+      ],
+      "resolved_citation_notes": 2,
+      "compile_warnings": []
+    }
+  },
+  "normalization": [
+    {
+      "kind": "divine_name_holam",
+      "reason": "User instruction723: project convention adds holam even where unprinted; the raw working reading is unchanged.",
+      "source": "יְהוָ֥ה",
+      "encoded": "יְהֹוָ֥ה",
+      "occurrences": 2
+    }
+  ],
+  "limitations": [
+    "No full-service or expanded sequence is claimed by this isolated excerpt.",
+    "Preview includes exporter-generated distributor/credits/disposal pages; source text occupies one row."
+  ],
+  "processor_revision": "5ad25a74c659e6d41fc48e1af51898830a05cfe7",
+  "processor_sha256": {
+    "opensiddur/importer/marmorstein_rosh_hashanah_2/draft_prayers.py": "84cf62a317eac2c5410c450879b4e526a2c4ad1759b1043c87694bc428e70459",
+    "opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py": "d0e617bd2c4e557b36e43f0e5cd20c0afad6d01c36ec12c84bdfdf46ebc8d47d"
+  },
+  "input_recipe_sha256": "0e7dab3a92523ff6c06ec4e5fed52315f9b3165429ef1b1404f5d334350ccf97",
+  "artifact_sha256": {
+    "hebrew.electronic.xml": "c6aa0ce4a2e01bc4b69cafb2fda7706747a2469b59dcde430aace791c8a1ac83",
+    "hebrew.html": "1fbab5543f2b95d3f3d0835251064254b6f734e76d12a7467d0fe6f94a9a3661",
+    "hebrew.tex": "699bf495475dc3c3406994b7796d4361ddc7cc8e683ec4c343d476d79ca28ac0",
+    "hebrew-compile-electronic.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "parallel.print.xml": "76a4afd2c47ff15779d790a422cdc081ac770e99648201ce7f888fef7a2e8af3",
+    "parallel-page-3.png": "b689748f337f375e0c735d727b47af5fee33183d1f5f5478fa7f5800ab549338",
+    "parallel-pdf.log": "07d1d78df4083ec86d7cea24dfef0e4eb0822d5ffe091a7c88aa79630e3e908d",
+    "parallel.html": "e237410a743fca07c94c3f7c19c60564dd79d4e41d141a38ad2eaf8deb6684db",
+    "registry.log": "cdf1c5fe15e2ce3fc2260f4487c172fdaa1596c43cb8eb78f1cbaae81305af5e",
+    "hebrew-compile-print.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "names.log": "9f39b95a41e9a24388d8b4c20a0031163bf04e2588723d72e818d234ce50fa0f",
+    "parallel-compile-print.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "hebrew.yaml": "018e64675c05b578187a66de57985dc7672cb476e056b71ece97ebd09b707516",
+    "hebrew.print.xml": "6b35fd097f2f1d16dc692004dc2504fe9d869574447da0b6de5f908dc3015220",
+    "hebrew-page-3.png": "6207c6443edb638eb814f488588c5e5b4de86c73b62c11b2a586a8dd5f15756a",
+    "features.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "parallel-page-2.png": "684b67a6415a29606d5983e1b3b74960e7459cba35f9582a59c9413a47b2d77f",
+    "hebrew-html.log": "da3b1baa7c57c8179027a04f37a662ac590967f98dbb3c8b9b97895722f1533e",
+    "hebrew-page-1.png": "298978a5e63156aa4a07b9b0fac7f5f4d249fef11508e3701299fa8cc7e09bc8",
+    "hebrew.pdf": "4f10dddfb879a0156e716778b179e8e79defb4da7c3a204f79d7e69a0d01f651",
+    "references.log": "876bf6fb7d27f4f8e97d59f0a5aa61e45adb3bc25d521ddbd85401b59443ffb1",
+    "parallel.tex": "45b2ffa06b73353f7a3ed71e9516f487cfadc4459ff42baf749e4fb55cff7ace",
+    "hebrew-page-2.png": "684b67a6415a29606d5983e1b3b74960e7459cba35f9582a59c9413a47b2d77f",
+    "refdb.log": "0d3671949eee2345a4bf96d0ff957c773317e17a2a73cf5647cc7a7006d966db",
+    "tests.log": "9406b0a80822165bce44c1b88c6c8d60c0861ad841521d50347effb6507d347c",
+    "hebrew-pdf.log": "9d7c3f19ecb77cc799e09d4e977e11149f37aa2d68653f369f9ac77b3244328e",
+    "parallel-page-1.png": "298978a5e63156aa4a07b9b0fac7f5f4d249fef11508e3701299fa8cc7e09bc8",
+    "hebrew-page-4.png": "7d9fa4f9a8a02e3403f788f97efcb037227f14a4fff4dfa3550d7604e08c035d",
+    "source-english-punctuation.png": "be9415a6c102280e8dc902c87a70172fa57e15e2cc3294d9195d4cf91b7ae9ec",
+    "parallel.yaml": "93f50574fac33aac7541377336af4b2a29170057776eeb6a6ae57cc9b887ffea",
+    "parallel.electronic.xml": "77df0b944d5edc7e1c632b1fb4bcb60e1ea1fc42fb282b360e9252dc22d448cd",
+    "parallel.pdf": "65ba7b2ed827f17307e0dd41a87478a7c0fccbb913ee8fcb9fdb0fb92476fa28",
+    "parallel-compile-electronic.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "parallel-html.log": "ebaad21211a4b4e35ad626c0fb9d549599abcc7271f7697240f5a8a8bd3a0acc",
+    "parallel-page-4.png": "7d9fa4f9a8a02e3403f788f97efcb037227f14a4fff4dfa3550d7604e08c035d"
+  }
+}

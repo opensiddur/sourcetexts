@@ -1,0 +1,26 @@
+{
+  "status": "approved_source_encoding_alignment_code_only",
+  "scope": "Complete Deuteronomy6:5–9 bilingual reusable text modules and range authoring code only. No complete scan, service structure or export/presentation acceptance.",
+  "actual_model": "claude-opus-5-5",
+  "requested_effort": "medium",
+  "recipe_sha256": "82a7ff275aafd170a61ff16ca0c80784dc63b3371788a1e46de07d1eb22f84ed",
+  "module_sha256": {
+    "he": "7158c417c5271bd7704088fc71ffa7050218d20f0b699ecd76a75e39da298911",
+    "en": "6e78d17635a7653eccd52411b3b60a1904e326597349324d6942779d4ceaf61f"
+  },
+  "processor_sha256": {
+    "opensiddur/importer/marmorstein_rosh_hashanah_2/draft_prayers.py": "604b0dceafacb2e67edb0923c8d0673a7d8db5c86e5bf0dc244e6834ddea0ddf",
+    "opensiddur/tests/importer/test_marmorstein_day_two_excerpts.py": "f51cb12d760b2613d7eec3582b86d250e0da6eb3ac8c38dacf3e7cc10ceb7fab"
+  },
+  "review_sha256": "6d05edc5013060d01cccb695e15de52943f1d982d33f9450837fe4a1e2015e98",
+  "raw_review_sha256": "b1a9b0c49f40f5ccba2290ed68d508d1c3e29c9f6c442d99c02a2783e130b04e",
+  "initial_findings_sha256": "b1ed5fa5caa9203332b09bae2a206eeec9c0a6b22e8d633ed9de67f5da244106",
+  "qa_sha256": "6733d530ad5122b6034d1abe634ca317707bc8e625d4fd5ce05574434953648f",
+  "tests": "36 passed,17 subtests passed",
+  "presentation": "pending_separate_exporter_fix",
+  "source_reading": {
+    "s8": "f65e141bec0ecffeedcd049ddf603a24c8e69058bb40d732218cfc97d0609630"
+  },
+  "reusable_source_boundary_lesson": "Each verse retains its own starting facs, including a verse opening immediately after one or more physical page markers.",
+  "nonblocking_advisories": "Invalid noninteger leading scan_page raises before any write; no current recipe affected. No monotonic printed-label constraint because labels can repeat/reset."
+}

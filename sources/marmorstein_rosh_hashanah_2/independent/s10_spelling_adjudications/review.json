@@ -1,0 +1,47 @@
+{
+  "status": "approved",
+  "candidates": [
+    {
+      "block": 1,
+      "before": "תָתֻרוּ",
+      "proposed_after": "תָתוּרוּ",
+      "verdict": "confirmed",
+      "notes": "The crop shows tav with qamats, then a second tav with no vowel under it, then a vav with a dot in its middle (shuruq), then resh, then vav with shuruq. No qubuts is printed under the second tav. The mark above the second tav is an accent; it's out of scope and left as is."
+    },
+    {
+      "block": 3,
+      "before": "הַגֹּאֲלֵנוּ",
+      "proposed_after": "הַגּוֹאֲלֵנוּ",
+      "verdict": "confirmed",
+      "notes": "A full vav with a dot above it stands between gimel and alef: he with patah, gimel, vav with holam, alef with hataf patah, lamed with tsere, nun, vav with shuruq. The proposal moves the holam from gimel to the new vav and keeps the gimel dagesh."
+    },
+    {
+      "block": 3,
+      "before": "הָעוֹשֶׂה־לָּנוּ",
+      "proposed_after": "הָעֹשֶׂה־לָּנוּ",
+      "verdict": "confirmed",
+      "notes": "Ayin is followed directly by shin, with no vav. The holam is above the ayin and the sin dot above the shin. The tall vertical stroke after the shin is the right leg of the final he, before the maqaf. The proposal keeps the sin/segol and the lamed dagesh/qamats from the source, as the instructions require."
+    },
+    {
+      "block": 7,
+      "before": "וּגְאָלֹו",
+      "proposed_after": "וּגְאָלוֹ",
+      "verdict": "confirmed",
+      "notes": "The holam dot is on the head of the final vav (the leftmost letter), not above the lamed. The rest of the word matches the crop: vav with shuruq, gimel with sheva, alef with qamats, lamed."
+    }
+  ],
+  "images_read": [
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/maariv_s5_s24_adjudication_crops/s10-taturu-full.png",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/maariv_s5_s24_adjudication_crops/s10-hagoalenu-full.png",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/maariv_s5_s24_adjudication_crops/s10-haoseh-full.png",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/maariv_s5_s24_adjudication_crops/s10-gaalo-full.png"
+  ],
+  "actual_model": "claude-opus-5-5",
+  "requested_effort": "medium",
+  "limitations": [
+    "I judged each candidate from its crop before opening the blind reading. The blind reading (independent/maariv_enlarged/s10/reading.json) agrees with all four proposed letters and vowel positions. On תתרו it had flagged a possible holam on the tav but read a vav; the crop clearly shows a shuruq in the vav.",
+    "Image hashes were not recomputed. I read the files at the listed paths.",
+    "Only the scoped letters and positions were judged. Accents, metegs, the lamed dagesh in לָּנוּ and other nearby marks are left as they are and were not checked.",
+    "This is not an approval of the whole page, the batch, the encoding or the export."
+  ]
+}

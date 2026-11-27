@@ -1,0 +1,61 @@
+{
+  "status": "approved_implementation_with_bounded_integration_scope",
+  "reviewer": "Independent Codex agent /root/review_morning_renderer; exact model/effort not exposed",
+  "timestamp_utc": "2026-11-26T23:00:20.641275+00:00",
+  "hashes": {
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/opensiddur/importer/marmorstein_rosh_hashanah_2/morning_shared.py": "f0dd0e39c46e1163053b8df9d5772cf47b22dc3175430fbbb4ee17d6dc1a2b55",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/opensiddur/tests/importer/test_marmorstein_day_two_morning_shared.py": "8cdd062b9d09fc70a207bb9dbe2329abb633e093406e00aededccda5974a0239",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/morning_s25_s45/shared_printings.json": "29d441829edadcbb97e46fa6b05f3385fe702da42a59c2aea893181fabe94057",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/morning_s25_s45/working/readings.json": "c964475cbf07e5d4e7a0fce56a85d2168bafda38a092a7c9b37ced04f79abda9",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/morning_s25_s45/source_approval.json": "2ab68eabdc8aeda75b88fab39223a4df43ab9fc1207d3c995a1036687b51fef9"
+  },
+  "scope": [
+    "Shared canonical library selection and literal contexts; immutable accepted templates; source approval hash gate; per-printing provenance; English availability; Yigdal donor attribution",
+    "No source image transcription or batch acceptance conferred"
+  ],
+  "findings": [
+    {
+      "id": "S1",
+      "severity": "P1",
+      "status": "resolved",
+      "finding": "Literal Mah Tovu Bible spans lacked contextual chapter/verse scopes; library lacked two quotation scopes.",
+      "resolution": "All five literal source spans now have bounded contextual chapter/verse scopes; library preserves three existing canonical mappings and adds bounded contextual mappings for remaining two."
+    },
+    {
+      "id": "S2",
+      "severity": "P2",
+      "status": "resolved",
+      "finding": "New English Yigdal inherited Hebrew caption from donor.",
+      "resolution": "English source caption emitted in English; Hebrew donor caption retained with printing-selected provenance."
+    },
+    {
+      "id": "S3",
+      "severity": "P1",
+      "status": "resolved",
+      "finding": "Standalone shared generator needed same current source approval gate as witness CLI.",
+      "resolution": "Readings and approval hashes checked; approval status and working hash bound; unsafe stems/caller paths and duplicate output paths rejected."
+    }
+  ],
+  "validation": {
+    "synthetic_unit_tests": "4 passed",
+    "lint": "passed",
+    "actual_compiler_word_and_subrange_cases": "160 of 160 matched source/baseline printed readings, including repeated Psalm17:6 distinct third printing and absent night English / qorbanot English",
+    "schema": "28 of 28 generated documents pass RelaxNG and Schematron",
+    "generated_output_equivalence": "28 of 28 materialized files equal normalized current generator output",
+    "unique_canonical_providers": "No duplicate text URN providers across distinct files in either day-two project; no canonical text URNs inside j:option",
+    "night_template_provenance": "All accepted templates contain one source-page marker, correctly carried into each selected subrange",
+    "metadata": "Yigdal retains both day-two bibliography and first-day Hebrew donor bibliography plus explicit per-printing note and contributor roles"
+  },
+  "evidence_files": [
+    "/tmp/day2-shared-subrange-results.json",
+    "/tmp/day2-shared-selected-results.json",
+    "/tmp/day2-shared-schema-results.json",
+    "/tmp/day2-shared-generated-equivalence.json",
+    "/tmp/day2-shared-provider-duplicates.json"
+  ],
+  "limitations": [
+    "Whole-night before/after compilation, full parallel counterpart selection, final service-order review, and PDF/HTML presentation acceptance remain parent-owned checks.",
+    "Actual source-image transcription and full encoding acceptance are separate gates.",
+    "Raw-word comparison excludes captions and notes; Yigdal captions and night-only citation guard were inspected separately in XML."
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "status": "approved_prayer_source_reading_only",
+  "scan_page": 8,
+  "blocks": [
+    1,
+    3,
+    5
+  ],
+  "actual_model": [
+    "claude-opus-5-5"
+  ],
+  "requested_effort": "medium",
+  "approved_snapshot": "../../independent/adjudications_878_896/approved_working_s8.json",
+  "approved_snapshot_sha256": "b6110898f9e16ba94da8322af980d12253fc01067fb13eef086cc454648dd710",
+  "approved_text_field_sha256": {
+    "/blocks/1/text": "e1c90e424f5151e4565a3a9b139ceb845c02f928d9f7dd4490625635f8c34880",
+    "/blocks/3/text": "de752041acf456d36122f34f15a32c354eb40b7550f72b2166fd58f2e4359bd5",
+    "/blocks/5/text": "915efa3d473f1f33dec96582cdea3a8112e9d44671bedab8553c634115acbe2f"
+  },
+  "adjudications_sha256": "94f89ba00c82b1079d46850daace402c014a0574dd5ad1ff8512c1c15413f847",
+  "review_sha256": "5530a10c0a7f074f21254b07f022c6a9f8781a18035374205b8014774542e2a3",
+  "raw_review_sha256": "2804b1f7afc3c8edc38348c79a9cab922a681aaa20bbfbe4009a35963dab84d8",
+  "mechanical_verification": "Exact replay of13 U+05BD additions reproduces the final candidate with no other changed text/points. Reference MAM word compared in NFD; no meteg and no neighboring MAM text imported.",
+  "reconstruction": {
+    "question": 880,
+    "word": "וַעֲשִׂיתֶ֖ם",
+    "reference_urn": "urn:x-opensiddur:text:bible:numbers/15/39@tanakh-miqra_al_pi_hamasorah-he",
+    "reference_project_file": "tanakh-miqra_al_pi_hamasorah-he/numbers.xml",
+    "reference_file_sha256": "f1dacd7589f2c29e21d1eefd8a67458a66278026fbca2c08930dcdb4c9a73d10",
+    "reference_line": 135,
+    "authorization": "no - check out the miqra al pi hamasorah for the correct pointing of the word - it is smudged",
+    "decision": "Retain the exact MAM pointing וַעֲשִׂיתֶ֖ם without meteg. Candidate already matches; this is an explicitly sourced reconstruction of smudged pointing, not a claim all points are clear in the mahzor and not a source typo. Encoding review must preserve its reconstruction evidence."
+  },
+  "superseded_draft_metadata": {
+    "method": "The copied primary-draft method statement is historical for these3 blocks. This approval is their current source-reading status; it does not approve the rest of the page.",
+    "uncertainties": "Old primary uncertainty strings are retained as history. All prayer-source disputes in the3 v2 reports are closed by recorded human adjudications878–896 and earlier870–877. The smudge remains explicitly a documented reconstruction."
+  },
+  "nonblocking_review_notes": [
+    "Merkha in פן confirmed present with no reported conflict; the reviewer did not require another human question.",
+    "Q878 documentary meteg follows the user; do not replace it with the different MAM merkha."
+  ],
+  "exclusions": "Not complete scan/page/batch acceptance: heading and citations, JLPTEI, alignment/order, normalization and exports still pending."
+}

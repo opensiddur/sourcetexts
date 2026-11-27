@@ -1,0 +1,117 @@
+{
+  "status": "997 and 999 resolved by user; 1003 remains unresolved",
+  "human_answers": [
+    {
+      "id": 997,
+      "answer": "patah+meteg",
+      "applied": "שֶׁעָשַֽׂנִי"
+    },
+    {
+      "id": 999,
+      "answer": "ותרי״ג",
+      "application": "Existing candidate matches; independently confirmed, no text change."
+    }
+  ],
+  "dedicated_readers": [
+    {
+      "id": 1000,
+      "agent": "/root/read_1000",
+      "model": "Inherited collaboration model; exact identifier not exposed",
+      "question_prompt": "Neutral occurrence-specific question; no other reader conclusions supplied",
+      "preflighted": true,
+      "snippet": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/questions/q1000.png",
+      "snippet_sha256": "cfd0baf229c3c34f9fca5e101e912a718cf910779019b53aae9ada56a7873d8d",
+      "answer": "Listen",
+      "confidence": "high",
+      "status": "resolved"
+    },
+    {
+      "id": 1001,
+      "agent": "/root/read_1001",
+      "model": "Inherited collaboration model; exact identifier not exposed",
+      "question_prompt": "Neutral occurrence-specific question; no other reader conclusions supplied",
+      "preflighted": true,
+      "snippet": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/questions/q1001.png",
+      "snippet_sha256": "8aef51cd4f4196880f68c837111d8cc912e504f81572aad586ba9e76f2dfc246",
+      "answer": "wiil: two separately dotted i letters, then undotted l",
+      "confidence": "high",
+      "status": "resolved"
+    },
+    {
+      "id": 1002,
+      "agent": "/root/read_1002",
+      "model": "Inherited collaboration model; exact identifier not exposed",
+      "question_prompt": "Neutral occurrence-specific question; no other reader conclusions supplied",
+      "preflighted": true,
+      "snippet": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/questions/q1002.png",
+      "snippet_sha256": "b56c78ff6df6ee1e053d9e70e32d7676e69e03a675bfe94f88061da69c4d8ae0",
+      "answer": "Comma after Thou",
+      "confidence": "high",
+      "status": "resolved"
+    },
+    {
+      "id": 1003,
+      "agent": "/root/read_1003",
+      "model": "Inherited collaboration model; exact identifier not exposed",
+      "question_prompt": "Neutral occurrence-specific question; no other reader conclusions supplied",
+      "preflighted": true,
+      "snippet": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/questions/q1003.png",
+      "snippet_sha256": "b6ee2c84fd2a83750e43b9fa03f2f24d1beeb07cc730845cca51d142c2213455",
+      "answer": "Tentative hataf patah; upper possible dot merges with alef stroke, cannot confidently settle",
+      "confidence": "low",
+      "status": "unresolved"
+    },
+    {
+      "id": 1004,
+      "agent": "/root/read_1004",
+      "model": "Inherited collaboration model; exact identifier not exposed",
+      "question_prompt": "Neutral occurrence-specific question; no other reader conclusions supplied",
+      "preflighted": true,
+      "snippet": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/questions/q1004.png",
+      "snippet_sha256": "314c8e4c56b4520f8adadd0185c76c8f282052d958b3211f07112cf0fadb2eab",
+      "answer": "לְהִתְקַיַּם: qof patah, yod patah and dagesh",
+      "confidence": "high",
+      "status": "resolved"
+    }
+  ],
+  "patches": [
+    {
+      "unit": "birkhot_hashachar_sheasani_kirtzono",
+      "language": "he",
+      "scan": "s34",
+      "from": "שֶׁעָשַׂנִי",
+      "to": "שֶׁעָשַֽׂנִי"
+    },
+    {
+      "unit": "morning_before_prayer",
+      "language": "en",
+      "scan": "s29",
+      "from": "Lister to",
+      "to": "Listen to"
+    },
+    {
+      "unit": "yigdal",
+      "language": "en",
+      "scan": "s29",
+      "from": "God will revive",
+      "to": "God wiil revive"
+    },
+    {
+      "unit": "asher_yatzar",
+      "language": "he",
+      "scan": "s30",
+      "from": "לְהִתְקַיֵּם",
+      "to": "לְהִתְקַיַּם"
+    }
+  ],
+  "before_sha256": "441340b5fb6ccfa3d539b5fee3304c48bd453716bfdb0cdfd336dc5e3c09fcbd",
+  "after_sha256": "bd820660e5a717ceb85fc11b19067937346992b855ae0c2c56411b3382ace769",
+  "encoding_requirements": [
+    {
+      "id": 1001,
+      "source": "wiil",
+      "correction": "will",
+      "encoding": "tei:choice/tei:sic and tei:corr; obvious printed typo, retain source spelling."
+    }
+  ]
+}

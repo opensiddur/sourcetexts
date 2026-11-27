@@ -1,0 +1,68 @@
+{
+  "status": "approved",
+  "findings": [
+    {
+      "id": 1,
+      "severity": "none",
+      "topic": "Answers 870–872 applied to working/s8.json block 2",
+      "detail": "All 23 user-confirmed accents are in the right place in the working reading. 870: silluq on the second bet of לְבָבֶֽךָ; munach on tav (וְשִׁנַּנְתָּ֣ם); zaqef qatan on nun (לְבָנֶ֔יךָ); tipcha on tav (וְדִבַּרְתָּ֖); etnahta on bet (בָּ֑ם); mahpakh on final khaf (בְּשִׁבְתְּךָ֤); two pashtas in בְּבֵיתֶ֙ךָ֙, one on tav and one on final khaf. 871: munach on final khaf (וּבְלֶכְתְּךָ֣); zaqef qatan on dalet (בַדֶּ֔רֶךְ); tipcha on final khaf (וּֽבְשָׁכְבְּךָ֖); silluq on mem (וּבְקוּמֶֽךָ); merkha on tav (וּקְשַׁרְתָּ֥ם); tipcha on alef (לְא֖וֹת); etnahta on dalet (עַל־יָדֶ֑ךָ); merkha on yod (וְהָי֥וּ); tipcha on pe (לְטֹטָפֹ֖ת); merkha on bet (בֵּ֥ין); silluq on nun (עֵינֶֽיךָ). 872: tevir on the second tav (וּכְתַבְתָּ֛ם); merkha on the second zayin (עַל־מְזֻז֥וֹת); tipcha on tav (בֵּיתֶ֖ךָ); silluq on resh (וּבִשְׁעָרֶֽיךָ). Each sign comes after its host's vowel, as expected."
+    },
+    {
+      "id": 2,
+      "severity": "none",
+      "topic": "Meteg on the initial shuruq of ובשכבך (871)",
+      "detail": "Present: the word reads וּֽבְשָׁכְבְּךָ֖, with vav, then shuruq dagesh, then meteg."
+    },
+    {
+      "id": 3,
+      "severity": "none",
+      "topic": "Spelling of מזזות (872)",
+      "detail": "Reads עַל־מְזֻז֥וֹת: qubuts under the first zayin and a single vav (holam male) after the second zayin, as the user confirmed. Nothing was imported from another edition."
+    },
+    {
+      "id": 4,
+      "severity": "none",
+      "topic": "Scope kept to these occurrences",
+      "detail": "Comparing working with primary/s8.json, only block 2 differs. The heading, citations and later prayer blocks are identical. The later Deut 11 repetitions (בְּבֵיתֶךָ, וּבְשָׁכְבְּךָ, מְזוּזוֹת) were left alone, as the spec requires (line 24–25: do not generalize a confirmed mark from one occurrence to others). The vowels already in primary are unchanged, and I did not assess them. primary/s8.json, the immutable reading, still holds the unaccented draft."
+    },
+    {
+      "id": 5,
+      "severity": "minor_nonblocking",
+      "topic": "Provenance detail in user_adjudications_870_872.json",
+      "detail": "In the `changes` entry for word_index 9, the `after` value (וּבְשָׁכְבְּךָ֖) does not include the meteg. The meteg is recorded only under `additional_marks`. The working text is correct, but the `changes` chain does not reproduce the final word on its own. Consider adding a meteg change entry, or noting that `additional_marks` are applied after `changes`. This does not block approval."
+    },
+    {
+      "id": 6,
+      "severity": "none",
+      "topic": "questions.json",
+      "detail": "Questions 870–872 are recorded as resolved_by_user. Their answers match user_adjudications_870_872.json word for word (including the user's spelling 'tipehca'), and their resolution evidence points to user_adjudications_870_872.json and working/s8.json. Entries 862–869 do not appear to have changed."
+    },
+    {
+      "id": 7,
+      "severity": "none",
+      "topic": "Recipe equivalence (draft_units.json vs previous_draft_units.json)",
+      "detail": "The only difference is input_sha256 for batches/maariv_s5_s24/questions.json: b38d1666…6765 changed to 6b20349c…7a11. Those values match previous_question_log_sha256 and current_question_log_sha256 in equivalence.json. The hashes for working s6/s7, accent_adjudications and shema_punctuation_adjudication are unchanged, and so are the normalizations, units, Hebrew/English content and the adjudication list [862]. The Shema recipe does not use scan 8."
+    },
+    {
+      "id": 8,
+      "severity": "none",
+      "topic": "Module hashes and XML",
+      "detail": "The he (96248f37…f47a) and en (ada71373…94d2) module hashes in equivalence.json are identical to those in shema_excerpt_encoding_review.json. The current Hebrew and English shema_yisrael.xml files contain only the Deut 6:4 excerpt, with the previously approved encoding (large ע/ד, divine names, paseq, verse milestones, citation notes). None of the scan-8 changes reach them. I'm relying on your stated byte-for-byte rebuild for actual hash equality."
+    },
+    {
+      "id": 9,
+      "severity": "none",
+      "topic": "Spec compliance for carrying the approval forward (SCAN_DIGITIZATION_INSTRUCTIONS.md lines 140–142 and 147–150)",
+      "detail": "The answers are stored against their question IDs and exact occurrences. The prior excerpt-only approval can carry over: only an unrelated input hash changed, the module payloads are shown unchanged, and equivalence.json is an explicit record of what changed and what stayed the same. This review supplies the independent check of that record."
+    }
+  ],
+  "actual_model": "claude-opus-5-5",
+  "requested_effort": "medium",
+  "scope_limitations": [
+    "I checked codepoints by reading the text visually through the Read tool. I could not see raw codepoint dumps, so I'm assuming the usual encodings: U+05BD for silluq/meteg, U+0599 for pashta, U+059B for tevir, U+05A5 for merkha, U+05A3 for munach, U+05A4 for mahpakh, U+0594 for zaqef qatan, U+0596 for tipcha and U+0591 for etnahta. I also could not rule out invisible characters.",
+    "I did not compute any hashes. Recipe, module, question-log and primary_sha256 values were compared as recorded strings, and module equality relies on your byte-for-byte rebuild assertion.",
+    "I did not view the source images or the snippets for 870–872. I checked how the user's answers were applied, not whether those answers are correct.",
+    "The existing unadjudicated vowels, the rest of scan 8 and the Deut 11 / Num 15 blocks were not reviewed.",
+    "This is not a new full-page, batch, alignment, presentation, export or expanded-recitation acceptance. The carried-forward approval stays limited to the Hebrew/English Shema Yisrael excerpt, as in shema_excerpt_encoding_review.json."
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "status": "approved",
+  "scope": "Only the occurrence-mapping correction for the two pashtas confirmed in the image on השמים in scan 8, block 3. This does not approve the full prayer-image review, which stays changes_required until tighter crops are available. It approves no tentative image mark and no encoding or export check.",
+  "findings": [
+    {
+      "id": "M1",
+      "severity": "verified",
+      "subject": "Which word and verse the confirmed reading belongs to",
+      "detail": "Crop s8-image-adjudication-878.png shows the maqaf-linked word אֶת־הַשָּׁמַ֙יִם֙, with a pashta over the medial mem and another after the final mem. Part of a vav shows at its left (following) edge, which fits the next word וְלֹא־יִהְיֶה. Block 3 has only one maqaf-linked את־השמים. Counting maqaf-joined words as one word, it is word 44: word 43 is וְעָצַ֤ר, word 45 is וְלֹא־יִהְיֶ֣ה, and the verse is Deut 11:17. Word 102 is the bare הַשָּׁמַיִם in 'כִּימֵי … עַל־הָאָרֶץ' (Deut 11:21), and the crop cannot show that word. So the earlier application to word 102 was wrong, and the correction record's scope (block 3, word 44, Deut 11:17) is right."
+    },
+    {
+      "id": "M2",
+      "severity": "verified",
+      "subject": "Host letters",
+      "detail": "The convention is that maqaf-joined words count as one word and only consonants count toward host_index. That is the same convention behind the settled word-16 tevir at host_index 6. Under it, in word 44 the medial mem is host_index 4 and the final mem is host_index 6, both U+0599 pashta. The old word-102 entries (host_index 2 medial mem and 4 final mem) are the ones superseded."
+    },
+    {
+      "id": "M3",
+      "severity": "verified",
+      "subject": "working/s8.json compared with pre_occurrence_fix_working_s8.json",
+      "detail": "Word 44 goes from אֶת־הַשָּׁמַיִם to אֶת־הַשָּׁמַ֙יִם֙, and word 102 goes from הַשָּׁמַ֙יִם֙ to הַשָּׁמַיִם, which has no accent. Both match the before and after values in s8_occurrence_correction.json. I compared all of blocks 1, 3 and 5 and the rest of the file by eye and found no other difference. The user-settled marks are still present: 870–872 in block 1, including the meteg in וּֽבְשָׁכְבְּךָ֖; 873–874 in block 3; 875 and 876 (וַיֹּ֥אמֶר) in block 5; 877 (וַֽאֲבַדְתֶּם) in block 3; and the other settled image marks at words 11, 16, 92 and 93."
+    },
+    {
+      "id": "M4",
+      "severity": "verified",
+      "subject": "candidates/s8_pointed.json compared with reviewed_candidate_s8.json",
+      "detail": "Word 44 was already אֶת־הַשָּׁמַ֙יִם֙ and has not changed. Word 102 goes from הַשָּׁמַ֖֙יִם֙ to הַשָּׁמַ֖יִם: both pashtas are removed and U+0596 tipcha stays on the medial mem. I saw no other difference. The candidate now has the confirmed pashta pair only at word 44, as stated."
+    },
+    {
+      "id": "M5",
+      "severity": "supersedes_prior_finding",
+      "supersedes": "review.json F1",
+      "detail": "F1 claimed a tipcha and a pashta stood in the same word. That was true only because the pashtas had been applied to the wrong word, so F1 is withdrawn, and so is its proposal to remove the tipcha. The tipcha on word 102 is still a candidate mark that the image does not confirm. Treat it like the below-line marks in F3 and leave it for tight-crop review. This approval does not confirm it."
+    },
+    {
+      "id": "M6",
+      "severity": "supersedes_prior_finding",
+      "supersedes": "review.json F2",
+      "detail": "F2's syntactic concern assumed word 102 had a pashta, and that pashta has now been removed. The candidate's merkha–tipcha–silluq sequence (כִּימֵ֥י הַשָּׁמַ֖יִם עַל־הָאָֽרֶץ) raises no conflict between neighbouring accents. The merkha on word 101 and the tipcha on word 102 are both still tentative until crops can show them. The correction record is right not to infer anything about word 101 from the wrong pashtas."
+    },
+    {
+      "id": "M7",
+      "severity": "resolved_not_reopened",
+      "supersedes": "review.json F7",
+      "detail": "user_adjudications_870_872.json, question 870, settles tav-tipcha (host_index 4) on block 1 word 3 וְדִבַּרְתָּ֖. The working text matches. F7 is closed. The marks settled by questions 871–877 at their exact occurrences are also not reopened."
+    },
+    {
+      "id": "M8",
+      "severity": "nonblocking_record_note",
+      "detail": "For word 44, s8_occurrence_correction.json gives the hosts only in words ('medial mem and final mem'). Spell them out as replacement entries {block 3, word_index 44, host_index 4, ם/מ, U+0599} and {block 3, word_index 44, host_index 6, ם, U+0599}. Also put a back-reference next to, or a superseding note for, the word-102 entries in s8_image_adjudications.json. Then someone reading only that file won't see stale mappings. The history stays intact either way. This follows the spec's rule that an occurrence must be tied to its verse or surrounding words and not only to its word index (SCAN_DIGITIZATION_INSTRUCTIONS.md:143-146)."
+    }
+  ],
+  "actual_model": "claude-opus-5-5",
+  "requested_effort": "medium",
+  "limitations": [
+    "I only had file-reading tools, with no shell. I did not recompute the sha256 values (4cf522d9… for working, b9867985… for candidate, or the chain from 15f51459…). My comparison of each whole file with its pre-fix snapshot was by eye, not a script diff.",
+    "I could not inspect codepoint order inside the mem clusters, for example whether the patah or the pashta comes first. I checked the marks as they rendered, not the raw bytes.",
+    "This approval covers only how the reading was applied: which word and which host letters. The full prayer-image review (review.json F3–F6, F8 and the tipcha on word 102 and merkha on word 101) is still changes_required until tighter crops are available.",
+    "I took the image reading of the word-44 pashta pair as already confirmed, and only checked that the crop shows that word. I did not re-adjudicate the marks themselves."
+  ]
+}

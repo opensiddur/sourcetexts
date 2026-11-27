@@ -1,0 +1,91 @@
+{
+  "scan_page": 38,
+  "unit": "attah_hu_bashamayim",
+  "paragraph_index": 0,
+  "fragment_index": 0,
+  "prior_audit_preserved": true,
+  "method": "New separate enlarged crops made from current s38.jpg; inspected each actual occurrence separately. Match-count audit compared every correction against its indicated original unit and paragraph.",
+  "hashamayim_occurrences": [
+    {
+      "occurrence": 1,
+      "context_before": "וּבִשְׁמֵי",
+      "from": "הַשָּׁמַיִם",
+      "to": "הַשָּׁמַֽיִם",
+      "context_after": "הָעֶלְיוֹנִים",
+      "meteg": true,
+      "confidence": "high",
+      "evidence_image": "/tmp/s38-hashamayim-upper.png",
+      "evidence": "Vertical meteg immediately left of mem patah, individually visible at left of crop."
+    },
+    {
+      "occurrence": 2,
+      "context_before": "אַתָּה עָשִׂיתָ אֶת־",
+      "from": "הַשָּׁמַיִם",
+      "to": "הַשָּׁמַֽיִם",
+      "context_after": "וְאֶת הָאָרֶץ",
+      "meteg": true,
+      "confidence": "high",
+      "evidence_image": "/tmp/s38-hashamayim-lower.png",
+      "evidence": "Separate occurrence after אֶת־ independently shows vertical meteg immediately left of mem patah."
+    }
+  ],
+  "other_multiple_matches": [
+    {
+      "from": "אֱלֹהֵינוּ",
+      "raw_substring_count": 2,
+      "application": "Both occurrences confirmed separately in /tmp/day2-audit-s38-elohenu-clarification.json."
+    },
+    {
+      "from": "בַּשָּׁמַיִם",
+      "raw_substring_count": 2,
+      "exact_word_count": 1,
+      "application": "Apply only to opening exact word בַּשָּׁמַיִם. Second substring is inside שֶׁבַּשָּׁמַיִם, which already has its own separate correction. Do not apply both replacements recursively to that word.",
+      "occurrences": [
+        {
+          "context": "אֱלֹהֵינוּ בַּשָּׁמַיִם וּבָאָרֶץ",
+          "to": "בַּשָּׁמַֽיִם",
+          "evidence_image": "/tmp/s38-hashamayim-upper.png"
+        },
+        {
+          "context": "אָבִינוּ שֶׁבַּשָּׁמַיִם עֲשֵׂה",
+          "to": "שֶׁבַּשָּׁמַֽיִם",
+          "evidence_image": "/tmp/s38-shebashamayim.png"
+        }
+      ]
+    },
+    {
+      "from": "הָאָרֶץ",
+      "raw_substring_count": 3,
+      "to": "הָאָֽרֶץ",
+      "application": "All three individually inspected occurrences carry their own meteg under aleph qamatz.",
+      "occurrences": [
+        {
+          "occurrence": 1,
+          "context_before": "מֵאַרְבַּע כַּנְפוֹת",
+          "context_after": "יַכִּירוּ",
+          "meteg": true,
+          "confidence": "high",
+          "evidence_image": "/tmp/s38-haaretz1.png"
+        },
+        {
+          "occurrence": 2,
+          "context_before": "לְכֹל מַמְלְכוֹת",
+          "context_after": "אַתָּה עָשִׂיתָ",
+          "meteg": true,
+          "confidence": "high",
+          "evidence_image": "/tmp/s38-haaretz2.png"
+        },
+        {
+          "occurrence": 3,
+          "context_before": "וְאֶת [line break]",
+          "context_after": "אֶת־הַיָּם",
+          "meteg": true,
+          "confidence": "high",
+          "evidence_image": "/tmp/s38-haaretz3.png"
+        }
+      ]
+    }
+  ],
+  "application_order_note": "The independent correction וְאֶת־הָאָרֶץ → וְאֶת הָאָרֶץ overlaps occurrence 3 of הָאָרֶץ. Apply maqaf removal first, then meteg; resulting phrase וְאֶת הָאָֽרֶץ. Avoid using original-source string matches after earlier modifications without adjusting them.",
+  "other_corrections": "No other correction has more than one raw substring match in its original indicated unit/paragraph."
+}

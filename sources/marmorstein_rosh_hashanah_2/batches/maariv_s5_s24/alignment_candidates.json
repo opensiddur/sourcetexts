@@ -1,0 +1,126 @@
+{
+  "status": "alignment_candidates_pending_independent_full_batch_audit",
+  "rules": [
+    "Shared canonical verse/part milestones determine alignment independently of source paragraphs and physical page pairing.",
+    "Keep Hebrew cues only in reading evidence, not English prayer text.",
+    "Do not manufacture an English counterpart to preserve a rectangular layout."
+  ],
+  "cross_page_boundaries": [
+    {
+      "text": "Deuteronomy6:6",
+      "he": {
+        "before_scan": 6,
+        "before_ending": "עַל־",
+        "after_scan": 8,
+        "after_opening": "לְבָבֶךָ:",
+        "join": "No added space after the maqaf; pb remains inside the verse scope."
+      },
+      "en": {
+        "scan": 7,
+        "ending": "shall be upon your heart.",
+        "note": "The English physical boundary occurs later, within verse7."
+      }
+    },
+    {
+      "text": "Deuteronomy6:7",
+      "he": {
+        "scan": 8,
+        "opening": "וְשִׁנַּנְתָּם"
+      },
+      "en": {
+        "before_scan": 7,
+        "before_ending": "your children and",
+        "after_scan": 9,
+        "after_opening": "speak of them",
+        "join": "One ordinary word boundary; retain one verse scope."
+      }
+    },
+    {
+      "text": "Numbers15:39",
+      "he": {
+        "before_scan": 8,
+        "before_ending": "וַעֲשִׂיתֶם אֹתָם",
+        "after_scan": 10,
+        "after_opening": "וְלֹא תָתֻרוּ"
+      },
+      "en": {
+        "before_scan": 9,
+        "before_ending": "remember all the",
+        "after_scan": 11,
+        "after_opening": "commandments of the Lord and fulfil them.",
+        "note": "Page breaks represent different subverse extents; neither creates an alignment boundary."
+      }
+    },
+    {
+      "text": "Yaaleh Veyavo",
+      "he": {
+        "before_scan": 16,
+        "after_scan": 18
+      },
+      "en": {
+        "before_scan": 17,
+        "before_ending": "Jerusalem the Holy",
+        "after_scan": 19,
+        "after_opening": "City, and the memory",
+        "note": "The page boundary must not split a Hebrew/English part simply by leaf pairing."
+      }
+    },
+    {
+      "text": "Modim",
+      "he": {
+        "before_scan": 18,
+        "after_scan": 20
+      },
+      "en": {
+        "before_scan": 19,
+        "after_scan": 21
+      }
+    }
+  ],
+  "documentary_gaps": [
+    {
+      "scan": 5,
+      "missing": "English prayer words; only English entrance instruction printed."
+    },
+    {
+      "he_scan": 6,
+      "missing": "English El Melekh Neeman and Yehi Shem line in Barekhu sidebar."
+    },
+    {
+      "he_scan": 22,
+      "missing": "English Savri introduction."
+    },
+    {
+      "scan": 24,
+      "missing": "English Aleinu and closing directions; scan25 starts morning, not a facing translation."
+    }
+  ],
+  "source_role_difference": {
+    "he_scan": 6,
+    "he_label": "קו״ח",
+    "he_expansion": "קהל וחזן",
+    "user_question": 868,
+    "en_scan": 7,
+    "en_label": "Congregation:",
+    "decision": "Preserve each documentary source label. Review the shared expanded role separately rather than silently changing the English transcription."
+  },
+  "english_editorial_candidates": [
+    {
+      "scan": 15,
+      "printed": "Thou has created",
+      "correction": "Thou hast created",
+      "encoding": "tei:choice/tei:sic and tei:corr, pending final image/encoding audit."
+    },
+    {
+      "scan": 15,
+      "reading": "is holy",
+      "note": "Faded initial h recognized by both independent and primary readings; preserve evidence of damage rather than invent a different word."
+    },
+    {
+      "scan": 19,
+      "reading": "our",
+      "context": "grant our portion",
+      "note": "Faded type; both readings agree on reconstruction, which is not an added translation."
+    }
+  ]
+}

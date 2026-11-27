@@ -1,0 +1,123 @@
+{
+  "status": "candidate_alignment_pending_independent_encoding_order_review",
+  "scope": "Complete Deuteronomy6:5–9, not a whole chapter, complete source page or accepted module.",
+  "source_field_sha256": {
+    "working/s6.json#/blocks/15/text": "590f62836cccc233f1d5af96c5ea9957c7b91c584634b4194402e40777c520cc",
+    "working/s8.json#/blocks/1/text": "e1c90e424f5151e4565a3a9b139ceb845c02f928d9f7dd4490625635f8c34880",
+    "working/s7.json#/blocks/15/text": "1d0246209732d73f75821950faae4ebb15d01e0c49679a0dabd2ea4ae484944f",
+    "primary/s9.json#/blocks/1/text": "35373957581c1be6e7b325e809bc23426447769e4aa984a60b4183d9bef9c9f6"
+  },
+  "verses": [
+    {
+      "verse": 5,
+      "corresp": "urn:x-opensiddur:text:bible:deuteronomy/6/5",
+      "he": [
+        {
+          "scan_page": 6,
+          "printed_page": "2",
+          "text": "וְאָ֣הַבְתָּ֔ אֵ֖ת יְהוָ֣ה אֱלֹהֶ֑יךָ בְּכָל־לְבָבְךָ֥ וּבְכָל־נַפְשְׁךָ֖ וּבְכָל־מְאֹדֶֽךָ:"
+        }
+      ],
+      "en": [
+        {
+          "scan_page": 7,
+          "printed_page": "2",
+          "text": "You shall love the Lord your God with all your heart and with all your soul and with all your possession."
+        }
+      ]
+    },
+    {
+      "verse": 6,
+      "corresp": "urn:x-opensiddur:text:bible:deuteronomy/6/6",
+      "he": [
+        {
+          "scan_page": 6,
+          "printed_page": "2",
+          "text": "וְהָי֞וּ הַדְּבָרִ֣ים הָאֵ֗לֶּה אֲשֶׁ֨ר אָנֹכִ֧י מְצַוְּךָ֛ הַיּוֹ֖ם עַל־"
+        },
+        {
+          "scan_page": 8,
+          "printed_page": "3",
+          "text": "לְבָבֶֽךָ:",
+          "join": "no_space_after_maqaf"
+        }
+      ],
+      "en": [
+        {
+          "scan_page": 7,
+          "printed_page": "2",
+          "text": "These words which I command you this day, shall be upon your heart."
+        }
+      ]
+    },
+    {
+      "verse": 7,
+      "corresp": "urn:x-opensiddur:text:bible:deuteronomy/6/7",
+      "he": [
+        {
+          "scan_page": 8,
+          "printed_page": "3",
+          "text": "וְשִׁנַּנְתָּ֣ם לְבָנֶ֔יךָ וְדִבַּרְתָּ֖ בָּ֑ם בְּשִׁבְתְּךָ֤ בְּבֵיתֶ֙ךָ֙ וּבְלֶכְתְּךָ֣ בַדֶּ֔רֶךְ וּֽבְשָׁכְבְּךָ֖ וּבְקוּמֶֽךָ:"
+        }
+      ],
+      "en": [
+        {
+          "scan_page": 7,
+          "printed_page": "2",
+          "text": "You shall inculcate them in your children and"
+        },
+        {
+          "scan_page": 9,
+          "printed_page": "3",
+          "text": "speak of them when you sit in your house and when you walk on the way, when you lie down and when you rise up.",
+          "join": "space_between_words"
+        }
+      ]
+    },
+    {
+      "verse": 8,
+      "corresp": "urn:x-opensiddur:text:bible:deuteronomy/6/8",
+      "he": [
+        {
+          "scan_page": 8,
+          "printed_page": "3",
+          "text": "וּקְשַׁרְתָּ֥ם לְא֖וֹת עַל־יָדֶ֑ךָ וְהָי֥וּ לְטֹטָפֹ֖ת בֵּ֥ין עֵינֶֽיךָ:"
+        }
+      ],
+      "en": [
+        {
+          "scan_page": 9,
+          "printed_page": "3",
+          "text": "You shall bind them for a sign upon your arm and they shall be frontlets between your eyes."
+        }
+      ]
+    },
+    {
+      "verse": 9,
+      "corresp": "urn:x-opensiddur:text:bible:deuteronomy/6/9",
+      "he": [
+        {
+          "scan_page": 8,
+          "printed_page": "3",
+          "text": "וּכְתַבְתָּ֛ם עַל־מְזֻז֥וֹת בֵּיתֶ֖ךָ וּבִשְׁעָרֶֽיךָ:"
+        }
+      ],
+      "en": [
+        {
+          "scan_page": 9,
+          "printed_page": "3",
+          "text": "You shall write them upon the doorposts of your house and upon your gates."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "The Hebrew page break is inside verse6, after maqaf; no inserted space.",
+    "The English page break is inside verse7, between and and speak; preserve a word space.",
+    "Keep both page boundaries independently of the shared verse milestones.",
+    "Do not turn the Hebrew ואהבת linkage cue in English scan7 into prayer words.",
+    "No new canonical identity is needed; reuse Deut6 verse URNs.",
+    "Close the verse and chapter scope after verse9 before the Deut11 citation/passage."
+  ],
+  "mechanical_checks": "All five Hebrew/English verse fragments concatenate exactly to their four source block strings, with only the declared cross-page joins."
+}

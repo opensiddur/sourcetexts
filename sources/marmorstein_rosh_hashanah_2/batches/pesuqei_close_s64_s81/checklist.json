@@ -1,0 +1,109 @@
+{
+  "batch": "pesuqei_close_s64_s81",
+  "scan_pages": [
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81
+  ],
+  "status": "prospective_encoding_and_review; two source decisions pending",
+  "accepted": false,
+  "gates": {
+    "scope_images": {
+      "status": "passed",
+      "evidence": [
+        "scope.json",
+        "image_manifest.json"
+      ]
+    },
+    "primary_reading": {
+      "status": "complete",
+      "evidence": [
+        "primary/manifest.json"
+      ]
+    },
+    "blind_second_reading": {
+      "status": "complete_user_selected_fallback",
+      "evidence": [
+        "../../independent/pesuqei_close_s64_s81/sol_64_69/reading.json",
+        "../../independent/pesuqei_close_s64_s81/sol_70_75/reading.json",
+        "../../independent/pesuqei_close_s64_s81/sol_76_81/reading.json"
+      ]
+    },
+    "adjudication": {
+      "status": "independently_source_approved_except_two_user_marks",
+      "evidence": [
+        "source_review_amendment.json",
+        "human_questions.json"
+      ]
+    },
+    "encoding": {
+      "status": "prospective_43_documents; not_production",
+      "evidence": [
+        "working/readings.json",
+        "pesuqei_units.json",
+        "qa/prospective_v2_documents.json"
+      ]
+    },
+    "alignment": {
+      "status": "independently_approved_prospective; sourcegatesremain",
+      "evidence": [
+        "qa/final_review_binding.json",
+        "segmentation_proof.json"
+      ]
+    },
+    "recitation_conditions": {
+      "status": "prospective_27_case_matrix_passed",
+      "evidence": [
+        "qa/prospective_matrix_report.json"
+      ]
+    },
+    "independent_encoding_order_audit": {
+      "status": "independently_approved_current_prospective_code_encoding_order_guidelines",
+      "evidence": [
+        "qa/final_review_binding.json",
+        "qa/review_record_clarifications.json"
+      ]
+    },
+    "mechanical_checks": {
+      "status": "prospective_schema_names_features_registry_passed;37tests16subtests",
+      "evidence": [
+        "qa/prospective_v2_documents.json",
+        "qa/checkpoint.json"
+      ]
+    },
+    "exports": {
+      "status": "six_preliminary_PDFs_four_HTML; stale_after_source_amendments",
+      "evidence": [
+        "qa/provisional_exports_v1.json"
+      ]
+    },
+    "independent_presentation_review": {
+      "status": "pending",
+      "evidence": []
+    },
+    "acceptance": {
+      "status": "pending",
+      "evidence": []
+    }
+  },
+  "pending_user_questions": [
+    1024,
+    1025
+  ],
+  "next_question_number": 1026
+}

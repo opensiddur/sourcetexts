@@ -1,0 +1,161 @@
+{
+  "status": "approved_equivalence",
+  "reviewer": {
+    "model": "inherited parent model (exact ID not exposed)",
+    "effort": "inherited parent effort (exact ID not exposed)"
+  },
+  "scope": "Independent source-provenance rebinding equivalence verification only; no new presentation, encoding, full-scan or export acceptance claim.",
+  "previous_recipe": {
+    "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/independent/opening_complete_source/previous_draft_units.json",
+    "sha256": "bc291b456e36121bbf6e320f3fad61cc6be0271fd868d6933c01cdc2838ac5fb"
+  },
+  "current_recipe": {
+    "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/maariv_s5_s24/draft_units.json",
+    "sha256": "054692ed9a11883ca2981208067e7100b985286fec64b373cc99c541fa3df387"
+  },
+  "proof": {
+    "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/independent/opening_complete_source/shema_source_rebinding_equivalence.json",
+    "sha256": "7ad2438dbb9511a8e5178248c41d9731c48773a3d67797ed6439c9c223304f93"
+  },
+  "source_approval": {
+    "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/maariv_s5_s24/opening_source_reading_approval.json",
+    "sha256": "cddded6349fc2bc3548f31fec740209ce4c7d166d9c5af66824c107ff1bdf11a"
+  },
+  "checks": [
+    {
+      "check": "Recipe content unchanged except input_sha256",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "check": "Previous recipe hash matches proof",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "check": "Current recipe hash matches proof",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "check": "Only expected source input hashes changed or were added",
+      "passed": true,
+      "evidence": [
+        "batches/maariv_s5_s24/opening_source_reading_approval.json",
+        "batches/maariv_s5_s24/working/s6.json",
+        "batches/maariv_s5_s24/working/s7.json"
+      ]
+    },
+    {
+      "check": "Recipe input hash matches actual batches/maariv_s5_s24/working/s6.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "check": "Recipe input hash matches actual batches/maariv_s5_s24/working/s7.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "check": "Recipe input hash matches actual batches/maariv_s5_s24/questions.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "check": "Recipe input hash matches actual batches/maariv_s5_s24/accent_adjudications.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "check": "Recipe input hash matches actual batches/maariv_s5_s24/shema_punctuation_adjudication.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "check": "Recipe input hash matches actual batches/maariv_s5_s24/opening_source_reading_approval.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "check": "Opening source approval binds current scan5 hash",
+      "passed": true,
+      "evidence": "a5f49b3e4514a029cb6d8dc3773cfff4b36ae91e4089022dec798af4b717367e"
+    },
+    {
+      "check": "Promotion preserved reviewed scan5 source blocks",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "check": "Opening source approval binds current scan6 hash",
+      "passed": true,
+      "evidence": "f89f2f04cf04ecec143f7772cd0e115e5b378077313772525982f85c44b1a893"
+    },
+    {
+      "check": "Promotion preserved reviewed scan6 source blocks",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "check": "Opening source approval binds current scan7 hash",
+      "passed": true,
+      "evidence": "eee328489bbcbb4cd694d2ae6e003f55111be239bd7b9f72ebf53b10ec61c904"
+    },
+    {
+      "check": "Promotion preserved reviewed scan7 source blocks",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "check": "Source approval binds exact independent application evidence",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "check": "Source approval binds exact full source review",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "check": "Source approval binds exact blind reading",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "check": "Module hash equals both before and after proof hashes /home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/shema_yisrael.xml",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "check": "Module hash equals both before and after proof hashes /home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/shema_yisrael.xml",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "check": "Exactly Hebrew and English Shema modules checked",
+      "passed": true,
+      "evidence": null
+    }
+  ],
+  "modules": [
+    {
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/shema_yisrael.xml",
+      "before_sha256": "f73a408f22779d7f06beb474d3eb1647883b7e421ca80583646e911086e88a29",
+      "proof_after_sha256": "f73a408f22779d7f06beb474d3eb1647883b7e421ca80583646e911086e88a29",
+      "current_sha256": "f73a408f22779d7f06beb474d3eb1647883b7e421ca80583646e911086e88a29",
+      "byte_identity_hash_match": true
+    },
+    {
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/shema_yisrael.xml",
+      "before_sha256": "80b2a2b1016a2e3b22333e7f111e5b0264f0f13420596fa720995e43ec4f5197",
+      "proof_after_sha256": "80b2a2b1016a2e3b22333e7f111e5b0264f0f13420596fa720995e43ec4f5197",
+      "current_sha256": "80b2a2b1016a2e3b22333e7f111e5b0264f0f13420596fa720995e43ec4f5197",
+      "byte_identity_hash_match": true
+    }
+  ],
+  "issues": [],
+  "notes": [
+    "Recipe has actual source dependencies s6/s7; s5 is correctly bound by the opening_source_reading_approval.json record rather than added as a direct Shema recipe input.",
+    "Module current byte hashes match the recorded before/after hashes; prior presentation claims are neither refreshed nor enlarged."
+  ]
+}

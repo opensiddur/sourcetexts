@@ -1,0 +1,49 @@
+{
+  "reviewer": "Codex, inherited parent model; exact model ID not exposed; not Claude",
+  "scope": "source application verification only",
+  "excluded": [
+    "TEI encoding",
+    "structural order",
+    "realization",
+    "export",
+    "full acceptance"
+  ],
+  "hashes": {
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/maariv_s5_s24/working/s16.json": "7cb9ff003da40e78365681ad6e55868288b7dfb126bf4d13e3cc21fbc14081a1",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/maariv_s5_s24/working/s17.json": "35b84ade60eb23b34d0d4490123d69c44ded67ece998ab9a54d3cdc7e984658a",
+    "/tmp/day2-s16-s17-final.json": "9138cb90796d95e1631373c7f5e6b854b6e62ecb75ad224044b516b7c8d04828",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s16.jpg": "18eb78894d37f4384db925b0859e7f51fb792a0c9cef02593ecf2d33bbf213ae",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s17.jpg": "ad7d5def8b4be289100b1ff53931bf93ab43bf4892140ed95e6ee88bf89fa1ed",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/maariv_s5_s24_bands/s16-band1.png": "8351174963dd4993d1d58f33b5f64ab599846614ca2716253fbb2987d701a43d",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/maariv_s5_s24_bands/s16-band2.png": "b2b28e4cfe246ffa00bc9c85cbe086d4a474b982b9eaae35d9aad937f954238e",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/maariv_s5_s24_bands/s16-band3.png": "5b54e4a317a2574aad40fe9a67e4b77cfacb78572fb75302f14d05773a639b1e"
+  },
+  "application_verification": {
+    "all_blocks_exactly_match_proposals_plus_adjudicated_changes": true,
+    "authorized_differences": [
+      {
+        "page": 16,
+        "block_index": 5,
+        "change": "מוֹצָאֵי שַׁבָּת points added as confirmed by dedicated reader977; initial אם left unchanged pending977"
+      },
+      {
+        "page": 16,
+        "block_index": 6,
+        "change": "he meteg added in each of three אֱלֹהֵֽינוּ occurrences as confirmed by readers978–980"
+      }
+    ],
+    "boundaries": "Heading, paragraphs, rubric, Hebrew linkage cues and final partial-paragraph extent preserved. No added continuation text."
+  },
+  "approvals": {
+    "s17": {
+      "source_approved": true,
+      "conditions": []
+    },
+    "s16": {
+      "source_approved": false,
+      "approved_except": "Question977: whether/which vowel is printed under alef of initial אם in the small rubric. All other current working source blocks/marks and boundaries approved.",
+      "pending_question": 977
+    }
+  },
+  "pending_question_977": "Explicitly unresolved; no full source16 approval is given before it is settled."
+}

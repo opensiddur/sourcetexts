@@ -1,0 +1,267 @@
+{
+  "reviewer": "/root/review_morning_renderer",
+  "actual_model": "Inherited collaboration model; exact identifier and effort not exposed",
+  "worktree": "/home/efeins/.codex/worktrees/fix-scan-margin-page/master",
+  "branch": "fix/conditional-empty-counterpart",
+  "baseline_commit": "1688e04c0be525878e15b450c779e4282c21b273",
+  "scope": [
+    "opensiddur/exporter/external_compiler.py",
+    "opensiddur/tests/exporter/test_conditional_counterpart.py",
+    "opensiddur/tests/exporter/test_external_compiler.py"
+  ],
+  "input_sha256": {
+    "opensiddur/exporter/external_compiler.py": "8db76a273d8cda66b9c809206633d2d6290c13e97583fd683f8810f87e610336",
+    "opensiddur/tests/exporter/test_conditional_counterpart.py": "ceae2c8445132ae2b2f933e5db638d6794eccaa80de55c63ff1ed045475bae31",
+    "opensiddur/tests/exporter/test_external_compiler.py": "14011d20aed0c08a668c8fb3f204939bb4a368cbbed9d1107429ae3f3686cf9d"
+  },
+  "verdict": "approved for isolated condition-empty counterpart detection, rollback and configured-project fallback",
+  "findings": [
+    {
+      "id": "R1",
+      "priority": "P2",
+      "status": "closed",
+      "title": "Try later configured whole-file counterparts when first compiled body is empty",
+      "original_reproduction": "run(root,False,independent,whole_file=True,fallback=True) omitted FALLBACK-WORDS while missing=True selected it.",
+      "closure": "Root compilation now tracks tried projects, reselects excluding them and continues until nonempty success or exhaustion. The durable whole-file fallback test and independent missing-equivalence case pass."
+    },
+    {
+      "id": "R2",
+      "priority": "P2",
+      "status": "closed",
+      "title": "Only body content can qualify a whole-file counterpart",
+      "original_reproduction": "English front-only text with a condition-false body created two empty/note-only parallel blocks instead of primary fallback, although the root assembler does not copy English front matter.",
+      "closure": "TEI-root content detection now examines text/body only. Durable front-only test and independent front/print-once/credit cases pass."
+    }
+  ],
+  "remaining_blocking_findings": [],
+  "positive_checks": [
+    "Transclusion and whole-file root paths treat condition-empty counterparts as missing and preserve primary fallback.",
+    "A discarded candidate raises inside the existing rollback context, restoring both printed-annotation claims and contributor credits.",
+    "A later configured project may supply the real counterpart after an empty candidate.",
+    "Independent English apparatus falls back exactly once when configured print-once; unused English body credits do not leak.",
+    "Source-only instruction rubrics remain real counterpart content in both entry paths.",
+    "Direct classifier checks preserve empty page-reference/nontext leaves and exclude metadata, apparatus-only and page-marker-only streams.",
+    "Existing successful counterpart behavior retains words, source page markers and apparatus."
+  ],
+  "validation": {
+    "focused_command": ".venv/bin/pytest -q opensiddur/tests/exporter/test_conditional_counterpart.py opensiddur/tests/exporter/test_external_compiler.py",
+    "focused_result": "55 passed, 29 subtests passed",
+    "lint": "ruff check --no-cache on all3 changed/new files passed",
+    "diff_check": "git diff --check passed",
+    "independent_synthetic_cases": [
+      {
+        "whole_file": false,
+        "notes": "none",
+        "fallback": false,
+        "matches_missing_text": true,
+        "matches_missing_parallel_blocks": true,
+        "parallel_blocks": 0,
+        "english_independent_note_count": 0,
+        "credits": [
+          "urn:x-opensiddur:contributor:example/he"
+        ],
+        "missing_credits": [
+          "urn:x-opensiddur:contributor:example/he"
+        ],
+        "printed_annotation_count": 0
+      },
+      {
+        "whole_file": false,
+        "notes": "none",
+        "fallback": true,
+        "matches_missing_text": true,
+        "matches_missing_parallel_blocks": true,
+        "parallel_blocks": 2,
+        "english_independent_note_count": 0,
+        "credits": [
+          "urn:x-opensiddur:contributor:example/he",
+          "urn:x-opensiddur:contributor:example/other"
+        ],
+        "missing_credits": [
+          "urn:x-opensiddur:contributor:example/he",
+          "urn:x-opensiddur:contributor:example/other"
+        ],
+        "printed_annotation_count": 0
+      },
+      {
+        "whole_file": false,
+        "notes": "independent",
+        "fallback": false,
+        "matches_missing_text": true,
+        "matches_missing_parallel_blocks": true,
+        "parallel_blocks": 0,
+        "english_independent_note_count": 1,
+        "credits": [
+          "urn:x-opensiddur:contributor:example/he",
+          "urn:x-opensiddur:contributor:example/en"
+        ],
+        "missing_credits": [
+          "urn:x-opensiddur:contributor:example/he",
+          "urn:x-opensiddur:contributor:example/en"
+        ],
+        "printed_annotation_count": 2
+      },
+      {
+        "whole_file": false,
+        "notes": "independent",
+        "fallback": true,
+        "matches_missing_text": true,
+        "matches_missing_parallel_blocks": true,
+        "parallel_blocks": 2,
+        "english_independent_note_count": 1,
+        "credits": [
+          "urn:x-opensiddur:contributor:example/he",
+          "urn:x-opensiddur:contributor:example/other",
+          "urn:x-opensiddur:contributor:example/en"
+        ],
+        "missing_credits": [
+          "urn:x-opensiddur:contributor:example/he",
+          "urn:x-opensiddur:contributor:example/other",
+          "urn:x-opensiddur:contributor:example/en"
+        ],
+        "printed_annotation_count": 2
+      },
+      {
+        "whole_file": true,
+        "notes": "none",
+        "fallback": false,
+        "matches_missing_text": true,
+        "matches_missing_parallel_blocks": true,
+        "parallel_blocks": 0,
+        "english_independent_note_count": 0,
+        "credits": [
+          "urn:x-opensiddur:contributor:example/he"
+        ],
+        "missing_credits": [
+          "urn:x-opensiddur:contributor:example/he"
+        ],
+        "printed_annotation_count": 0
+      },
+      {
+        "whole_file": true,
+        "notes": "none",
+        "fallback": true,
+        "matches_missing_text": true,
+        "matches_missing_parallel_blocks": true,
+        "parallel_blocks": 2,
+        "english_independent_note_count": 0,
+        "credits": [
+          "urn:x-opensiddur:contributor:example/he",
+          "urn:x-opensiddur:contributor:example/other"
+        ],
+        "missing_credits": [
+          "urn:x-opensiddur:contributor:example/he",
+          "urn:x-opensiddur:contributor:example/other"
+        ],
+        "printed_annotation_count": 0
+      },
+      {
+        "whole_file": true,
+        "notes": "independent",
+        "fallback": false,
+        "matches_missing_text": true,
+        "matches_missing_parallel_blocks": true,
+        "parallel_blocks": 0,
+        "english_independent_note_count": 1,
+        "credits": [
+          "urn:x-opensiddur:contributor:example/he",
+          "urn:x-opensiddur:contributor:example/en"
+        ],
+        "missing_credits": [
+          "urn:x-opensiddur:contributor:example/he",
+          "urn:x-opensiddur:contributor:example/en"
+        ],
+        "printed_annotation_count": 2
+      },
+      {
+        "whole_file": true,
+        "notes": "independent",
+        "fallback": true,
+        "matches_missing_text": true,
+        "matches_missing_parallel_blocks": true,
+        "parallel_blocks": 2,
+        "english_independent_note_count": 1,
+        "credits": [
+          "urn:x-opensiddur:contributor:example/he",
+          "urn:x-opensiddur:contributor:example/other",
+          "urn:x-opensiddur:contributor:example/en"
+        ],
+        "missing_credits": [
+          "urn:x-opensiddur:contributor:example/he",
+          "urn:x-opensiddur:contributor:example/other",
+          "urn:x-opensiddur:contributor:example/en"
+        ],
+        "printed_annotation_count": 2
+      }
+    ],
+    "independent_results_path": "/tmp/conditional-empty-counterpart-independent-results.json",
+    "source_only_comparison": [
+      {
+        "version": "current",
+        "kind": "rubric",
+        "whole_file": false,
+        "parallel_blocks": 2,
+        "content_retained": true
+      },
+      {
+        "version": "current",
+        "kind": "rubric",
+        "whole_file": true,
+        "parallel_blocks": 2,
+        "content_retained": true
+      },
+      {
+        "version": "current",
+        "kind": "page_reference",
+        "whole_file": false,
+        "parallel_blocks": 2,
+        "content_retained": false
+      },
+      {
+        "version": "current",
+        "kind": "page_reference",
+        "whole_file": true,
+        "parallel_blocks": 2,
+        "content_retained": false
+      },
+      {
+        "version": "baseline_HEAD",
+        "kind": "rubric",
+        "whole_file": false,
+        "parallel_blocks": 2,
+        "content_retained": true
+      },
+      {
+        "version": "baseline_HEAD",
+        "kind": "rubric",
+        "whole_file": true,
+        "parallel_blocks": 2,
+        "content_retained": true
+      },
+      {
+        "version": "baseline_HEAD",
+        "kind": "page_reference",
+        "whole_file": false,
+        "parallel_blocks": 2,
+        "content_retained": false
+      },
+      {
+        "version": "baseline_HEAD",
+        "kind": "page_reference",
+        "whole_file": true,
+        "parallel_blocks": 2,
+        "content_retained": false
+      }
+    ],
+    "source_only_results_path": "/tmp/conditional-empty-counterpart-content-results.json"
+  },
+  "limitations": [
+    {
+      "scope": "Pre-existing downstream empty page-reference assembly",
+      "description": "A counterpart containing only an empty tei:ref type=page is accepted by the classifier but the reference disappears later in parallel assembly. The independent baseline comparison reproduces identical loss at HEAD, so this is not introduced or fixed by the current patch. Source-only instruction text is retained."
+    },
+    "Review covers compilation semantics and bounded synthetic tests, not PDF/HTML geometry, source transcription, maḥzor acceptance or client-side re-evaluation of deferred conditions.",
+    "The root reports a wider exporter test run with unrelated rendering-environment failures; this reviewer only certifies the listed completed focused tests and independent cases.",
+    "No production or repository files edited by reviewer."
+  ]
+}

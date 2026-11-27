@@ -1,0 +1,4344 @@
+{
+  "status": "approved_semantic_documentary_and_night_integration_scope_only",
+  "reviewer": "/root/review_morning_identities",
+  "actual_model": "Inherited collaboration model; exact identifier/effort unavailable",
+  "scope": "Independent audit of 103 documentary source witnesses, current documentary morning payloads, prior-night compiled semantics, and actual printed-error duplicate behavior. Final PDF/HTML approval remains separate.",
+  "summary": {
+    "raw_documentary_witnesses": 103,
+    "literal_witnesses_previously_approved": 90,
+    "new_shared_literal_context_witnesses": 13,
+    "raw_source_text_paragraph_line_scan_findings": 0,
+    "priornight_profile_destination_comparisons": 6,
+    "expanded_night_calls_per_destination": 53,
+    "compiled_documentary_morning_comparisons": 330,
+    "actual_printed_error_cases": 2,
+    "findings": 0
+  },
+  "independent_compilation": {
+    "database_policy": "Used isolated /tmp/day2-semantic-integration/baseline-references.sqlite and current-references.sqlite only. Did not sync or open the default/shared reference DB. All repository/source/project/settings files were read-only.",
+    "frozen_baseline_expanded_print_reproduced_byte_for_byte": true,
+    "frozen_original_sha256": "c8e34aeb6a18abc3353f6104b96180a84f1e43083019c32cfe913477b1a5dd04",
+    "independent_recompile_sha256": "c8e34aeb6a18abc3353f6104b96180a84f1e43083019c32cfe913477b1a5dd04",
+    "manifest": "/tmp/day2-semantic-integration/compile-manifest.json",
+    "manifest_sha256": "4a579a8244b4d3097eae31709004312efa7e4117f17622ce159d6adf6b1f4e96"
+  },
+  "priornight_equivalence": {
+    "comparisons": [
+      {
+        "profile": "night_expanded",
+        "destination": "print",
+        "before": "/tmp/day2-semantic-integration/baseline-night_expanded-print.xml",
+        "after": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/exports/night_expanded/print.xml",
+        "calls_compared": 53,
+        "colophon": {
+          "before": {
+            "licenses": [
+              {
+                "url": "http://www.creativecommons.org/publicdomain/zero/1.0",
+                "name": "Creative Commons Zero (Public Domain Dedication)"
+              }
+            ],
+            "credits": [
+              {
+                "role": "mrk",
+                "heading": "Markup editor",
+                "namespaces": [
+                  {
+                    "namespace": "opensiddur.org",
+                    "credits": [
+                      {
+                        "role": "mrk",
+                        "resp_text": "JLPTEI markup",
+                        "ref": "urn:x-opensiddur:contributor:opensiddur.org/codex",
+                        "name_text": "Codex",
+                        "namespace": "opensiddur.org",
+                        "contributor": "codex"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "role": "trc",
+                "heading": "Transcriptionist",
+                "namespaces": [
+                  {
+                    "namespace": "opensiddur.org",
+                    "credits": [
+                      {
+                        "role": "trc",
+                        "resp_text": "AI-assisted scan transcription",
+                        "ref": "urn:x-opensiddur:contributor:opensiddur.org/codex",
+                        "name_text": "Codex",
+                        "namespace": "opensiddur.org",
+                        "contributor": "codex"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "sources": [
+              {
+                "key": "wolf1965",
+                "entry_type": "book",
+                "title": "Prayerbook for the New Year [First Day]",
+                "subtitle": "",
+                "authors": [],
+                "editors": [
+                  "Wolf Heidenheim",
+                  "Jenny Marmorstein"
+                ],
+                "edition": "",
+                "publisher": "Victor Goldschmidt Publishers",
+                "distributor": "",
+                "address": [
+                  "Basle"
+                ],
+                "date": "1965",
+                "url": "https://archive.org/details/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965",
+                "urldate": "2026-11-08",
+                "identifiers": [
+                  [
+                    "internet_archive",
+                    "mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965"
+                  ]
+                ],
+                "notes": [
+                  "Digital imaging and document preparation: Aharon N. Varady; copy held by the HUC-JIR Klau Library, Cincinnati. The scan is the source. Independent reader: Claude Opus 5.5; CLI configured for medium reasoning. No translations have been supplied for passages absent from the English edition."
+                ]
+              },
+              {
+                "key": "wolf1965-2",
+                "entry_type": "book",
+                "title": "Prayerbook for the New Year [Second Day]",
+                "subtitle": "",
+                "authors": [],
+                "editors": [
+                  "Wolf Heidenheim",
+                  "Jenny Marmorstein"
+                ],
+                "edition": "",
+                "publisher": "Victor Goldschmidt Publishers",
+                "distributor": "",
+                "address": [
+                  "Basle"
+                ],
+                "date": "1965",
+                "url": "https://archive.org/details/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965",
+                "urldate": "2026-11-25",
+                "identifiers": [
+                  [
+                    "internet_archive",
+                    "mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965"
+                  ]
+                ],
+                "notes": [
+                  "Digital imaging and document preparation: Aharon N. Varady."
+                ]
+              }
+            ]
+          },
+          "after": {
+            "licenses": [
+              {
+                "url": "http://www.creativecommons.org/publicdomain/zero/1.0",
+                "name": "Creative Commons Zero (Public Domain Dedication)"
+              }
+            ],
+            "credits": [
+              {
+                "role": "mrk",
+                "heading": "Markup editor",
+                "namespaces": [
+                  {
+                    "namespace": "opensiddur.org",
+                    "credits": [
+                      {
+                        "role": "mrk",
+                        "resp_text": "JLPTEI markup",
+                        "ref": "urn:x-opensiddur:contributor:opensiddur.org/codex",
+                        "name_text": "Codex",
+                        "namespace": "opensiddur.org",
+                        "contributor": "codex"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "role": "trc",
+                "heading": "Transcriptionist",
+                "namespaces": [
+                  {
+                    "namespace": "opensiddur.org",
+                    "credits": [
+                      {
+                        "role": "trc",
+                        "resp_text": "AI-assisted scan transcription",
+                        "ref": "urn:x-opensiddur:contributor:opensiddur.org/codex",
+                        "name_text": "Codex",
+                        "namespace": "opensiddur.org",
+                        "contributor": "codex"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "sources": [
+              {
+                "key": "wolf1965",
+                "entry_type": "book",
+                "title": "Prayerbook for the New Year [First Day]",
+                "subtitle": "",
+                "authors": [],
+                "editors": [
+                  "Wolf Heidenheim",
+                  "Jenny Marmorstein"
+                ],
+                "edition": "",
+                "publisher": "Victor Goldschmidt Publishers",
+                "distributor": "",
+                "address": [
+                  "Basle"
+                ],
+                "date": "1965",
+                "url": "https://archive.org/details/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965",
+                "urldate": "2026-11-08",
+                "identifiers": [
+                  [
+                    "internet_archive",
+                    "mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965"
+                  ]
+                ],
+                "notes": [
+                  "Digital imaging and document preparation: Aharon N. Varady; copy held by the HUC-JIR Klau Library, Cincinnati. The scan is the source. Independent reader: Claude Opus 5.5; CLI configured for medium reasoning. No translations have been supplied for passages absent from the English edition."
+                ]
+              },
+              {
+                "key": "wolf1965-2",
+                "entry_type": "book",
+                "title": "Prayerbook for the New Year [Second Day]",
+                "subtitle": "",
+                "authors": [],
+                "editors": [
+                  "Wolf Heidenheim",
+                  "Jenny Marmorstein"
+                ],
+                "edition": "",
+                "publisher": "Victor Goldschmidt Publishers",
+                "distributor": "",
+                "address": [
+                  "Basle"
+                ],
+                "date": "1965",
+                "url": "https://archive.org/details/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965",
+                "urldate": "2026-11-25",
+                "identifiers": [
+                  [
+                    "internet_archive",
+                    "mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965"
+                  ]
+                ],
+                "notes": [
+                  "Digital imaging and document preparation: Aharon N. Varady."
+                ]
+              }
+            ]
+          },
+          "equal": true
+        }
+      },
+      {
+        "profile": "night_expanded",
+        "destination": "electronic",
+        "before": "/tmp/day2-semantic-integration/baseline-night_expanded-electronic.xml",
+        "after": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/exports/night_expanded/electronic.xml",
+        "calls_compared": 53,
+        "colophon": {
+          "before": {
+            "licenses": [
+              {
+                "url": "http://www.creativecommons.org/publicdomain/zero/1.0",
+                "name": "Creative Commons Zero (Public Domain Dedication)"
+              }
+            ],
+            "credits": [
+              {
+                "role": "mrk",
+                "heading": "Markup editor",
+                "namespaces": [
+                  {
+                    "namespace": "opensiddur.org",
+                    "credits": [
+                      {
+                        "role": "mrk",
+                        "resp_text": "JLPTEI markup",
+                        "ref": "urn:x-opensiddur:contributor:opensiddur.org/codex",
+                        "name_text": "Codex",
+                        "namespace": "opensiddur.org",
+                        "contributor": "codex"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "role": "trc",
+                "heading": "Transcriptionist",
+                "namespaces": [
+                  {
+                    "namespace": "opensiddur.org",
+                    "credits": [
+                      {
+                        "role": "trc",
+                        "resp_text": "AI-assisted scan transcription",
+                        "ref": "urn:x-opensiddur:contributor:opensiddur.org/codex",
+                        "name_text": "Codex",
+                        "namespace": "opensiddur.org",
+                        "contributor": "codex"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "sources": [
+              {
+                "key": "wolf1965",
+                "entry_type": "book",
+                "title": "Prayerbook for the New Year [First Day]",
+                "subtitle": "",
+                "authors": [],
+                "editors": [
+                  "Wolf Heidenheim",
+                  "Jenny Marmorstein"
+                ],
+                "edition": "",
+                "publisher": "Victor Goldschmidt Publishers",
+                "distributor": "",
+                "address": [
+                  "Basle"
+                ],
+                "date": "1965",
+                "url": "https://archive.org/details/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965",
+                "urldate": "2026-11-08",
+                "identifiers": [
+                  [
+                    "internet_archive",
+                    "mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965"
+                  ]
+                ],
+                "notes": [
+                  "Digital imaging and document preparation: Aharon N. Varady; copy held by the HUC-JIR Klau Library, Cincinnati. The scan is the source. Independent reader: Claude Opus 5.5; CLI configured for medium reasoning. No translations have been supplied for passages absent from the English edition."
+                ]
+              },
+              {
+                "key": "wolf1965-2",
+                "entry_type": "book",
+                "title": "Prayerbook for the New Year [Second Day]",
+                "subtitle": "",
+                "authors": [],
+                "editors": [
+                  "Wolf Heidenheim",
+                  "Jenny Marmorstein"
+                ],
+                "edition": "",
+                "publisher": "Victor Goldschmidt Publishers",
+                "distributor": "",
+                "address": [
+                  "Basle"
+                ],
+                "date": "1965",
+                "url": "https://archive.org/details/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965",
+                "urldate": "2026-11-25",
+                "identifiers": [
+                  [
+                    "internet_archive",
+                    "mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965"
+                  ]
+                ],
+                "notes": [
+                  "Digital imaging and document preparation: Aharon N. Varady."
+                ]
+              }
+            ]
+          },
+          "after": {
+            "licenses": [
+              {
+                "url": "http://www.creativecommons.org/publicdomain/zero/1.0",
+                "name": "Creative Commons Zero (Public Domain Dedication)"
+              }
+            ],
+            "credits": [
+              {
+                "role": "mrk",
+                "heading": "Markup editor",
+                "namespaces": [
+                  {
+                    "namespace": "opensiddur.org",
+                    "credits": [
+                      {
+                        "role": "mrk",
+                        "resp_text": "JLPTEI markup",
+                        "ref": "urn:x-opensiddur:contributor:opensiddur.org/codex",
+                        "name_text": "Codex",
+                        "namespace": "opensiddur.org",
+                        "contributor": "codex"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "role": "trc",
+                "heading": "Transcriptionist",
+                "namespaces": [
+                  {
+                    "namespace": "opensiddur.org",
+                    "credits": [
+                      {
+                        "role": "trc",
+                        "resp_text": "AI-assisted scan transcription",
+                        "ref": "urn:x-opensiddur:contributor:opensiddur.org/codex",
+                        "name_text": "Codex",
+                        "namespace": "opensiddur.org",
+                        "contributor": "codex"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "sources": [
+              {
+                "key": "wolf1965",
+                "entry_type": "book",
+                "title": "Prayerbook for the New Year [First Day]",
+                "subtitle": "",
+                "authors": [],
+                "editors": [
+                  "Wolf Heidenheim",
+                  "Jenny Marmorstein"
+                ],
+                "edition": "",
+                "publisher": "Victor Goldschmidt Publishers",
+                "distributor": "",
+                "address": [
+                  "Basle"
+                ],
+                "date": "1965",
+                "url": "https://archive.org/details/mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965",
+                "urldate": "2026-11-08",
+                "identifiers": [
+                  [
+                    "internet_archive",
+                    "mahzor-lyom-rishon-shel-rosh-hashanah-day-one-jenny-marmorstein-1965"
+                  ]
+                ],
+                "notes": [
+                  "Digital imaging and document preparation: Aharon N. Varady; copy held by the HUC-JIR Klau Library, Cincinnati. The scan is the source. Independent reader: Claude Opus 5.5; CLI configured for medium reasoning. No translations have been supplied for passages absent from the English edition."
+                ]
+              },
+              {
+                "key": "wolf1965-2",
+                "entry_type": "book",
+                "title": "Prayerbook for the New Year [Second Day]",
+                "subtitle": "",
+                "authors": [],
+                "editors": [
+                  "Wolf Heidenheim",
+                  "Jenny Marmorstein"
+                ],
+                "edition": "",
+                "publisher": "Victor Goldschmidt Publishers",
+                "distributor": "",
+                "address": [
+                  "Basle"
+                ],
+                "date": "1965",
+                "url": "https://archive.org/details/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965",
+                "urldate": "2026-11-25",
+                "identifiers": [
+                  [
+                    "internet_archive",
+                    "mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965"
+                  ]
+                ],
+                "notes": [
+                  "Digital imaging and document preparation: Aharon N. Varady."
+                ]
+              }
+            ]
+          },
+          "equal": true
+        }
+      },
+      {
+        "profile": "documentary_hebrew",
+        "destination": "print",
+        "before": "/tmp/day2-semantic-integration/baseline-documentary_hebrew-print.xml",
+        "after": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/exports/documentary_hebrew/print.xml",
+        "calls_compared": 1,
+        "colophon": null
+      },
+      {
+        "profile": "documentary_hebrew",
+        "destination": "electronic",
+        "before": "/tmp/day2-semantic-integration/baseline-documentary_hebrew-electronic.xml",
+        "after": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/exports/documentary_hebrew/electronic.xml",
+        "calls_compared": 1,
+        "colophon": null
+      },
+      {
+        "profile": "documentary_parallel",
+        "destination": "print",
+        "before": "/tmp/day2-semantic-integration/baseline-documentary_parallel-print.xml",
+        "after": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/exports/documentary_parallel/print.xml",
+        "calls_compared": 1,
+        "colophon": null
+      },
+      {
+        "profile": "documentary_parallel",
+        "destination": "electronic",
+        "before": "/tmp/day2-semantic-integration/baseline-documentary_parallel-electronic.xml",
+        "after": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/exports/documentary_parallel/electronic.xml",
+        "calls_compared": 1,
+        "colophon": null
+      }
+    ],
+    "checked": [
+      "Exact Hebrew and English words in emitted call order, normalized for NFC and formatting whitespace; paragraph and line boundaries carry explicit separators to prevent adjacent words from merging.",
+      "Exact note text, kind and language; headings and order.",
+      "English presence and gaps remain unchanged, including the shared entrance, before-prayer, Yigdal and Barukh Shem providers.",
+      "Consecutive facsimiles are compressed per column and compared by physical Archive leaf. Medium/full JPG resolution variants identify the same page; different items and leaves stay distinct.",
+      "Expanded-night credits, licences and source bibliography are identical. Documentary whole-book colophons also remain identical after the morning addition.",
+      "Documentary comparison uses the prior Maariv subtree instead of requiring equality of the entire index after morning is appended."
+    ],
+    "findings": [],
+    "documentary_colophons": [
+      {
+        "profile": "documentary_hebrew",
+        "destination": "print",
+        "before": {
+          "licenses": [
+            {
+              "url": "http://www.creativecommons.org/publicdomain/zero/1.0",
+              "name": "Creative Commons Zero (Public Domain Dedication)"
+            }
+          ],
+          "credits": [
+            {
+              "role": "mrk",
+              "heading": "Markup editor",
+              "namespaces": [
+                {
+                  "namespace": "opensiddur.org",
+                  "credits": [
+                    {
+                      "role": "mrk",
+                      "resp_text": "JLPTEI markup",
+                      "ref": "urn:x-opensiddur:contributor:opensiddur.org/codex",
+                      "name_text": "Codex",
+                      "namespace": "opensiddur.org",
+                      "contributor": "codex"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "role": "trc",
+              "heading": "Transcriptionist",
+              "namespaces": [
+                {
+                  "namespace": "opensiddur.org",
+                  "credits": [
+                    {
+                      "role": "trc",
+                      "resp_text": "AI-assisted image transcription",
+                      "ref": "urn:x-opensiddur:contributor:opensiddur.org/codex",
+                      "name_text": "Codex",
+                      "namespace": "opensiddur.org",
+                      "contributor": "codex"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "key": "wolf1965",
+              "entry_type": "book",
+              "title": "Prayerbook for the New Year [Second Day]",
+              "subtitle": "",
+              "authors": [],
+              "editors": [
+                "Wolf Heidenheim",
+                "Jenny Marmorstein"
+              ],
+              "edition": "",
+              "publisher": "Victor Goldschmidt Publishers",
+              "distributor": "",
+              "address": [
+                "Basle"
+              ],
+              "date": "1965",
+              "url": "https://archive.org/details/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965",
+              "urldate": "2026-11-25",
+              "identifiers": [
+                [
+                  "internet_archive",
+                  "mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965"
+                ]
+              ],
+              "notes": [
+                "Digital imaging and document preparation: Aharon N. Varady."
+              ]
+            }
+          ]
+        },
+        "after": {
+          "licenses": [
+            {
+              "url": "http://www.creativecommons.org/publicdomain/zero/1.0",
+              "name": "Creative Commons Zero (Public Domain Dedication)"
+            }
+          ],
+          "credits": [
+            {
+              "role": "mrk",
+              "heading": "Markup editor",
+              "namespaces": [
+                {
+                  "namespace": "opensiddur.org",
+                  "credits": [
+                    {
+                      "role": "mrk",
+                      "resp_text": "JLPTEI markup",
+                      "ref": "urn:x-opensiddur:contributor:opensiddur.org/codex",
+                      "name_text": "Codex",
+                      "namespace": "opensiddur.org",
+                      "contributor": "codex"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "role": "trc",
+              "heading": "Transcriptionist",
+              "namespaces": [
+                {
+                  "namespace": "opensiddur.org",
+                  "credits": [
+                    {
+                      "role": "trc",
+                      "resp_text": "AI-assisted image transcription",
+                      "ref": "urn:x-opensiddur:contributor:opensiddur.org/codex",
+                      "name_text": "Codex",
+                      "namespace": "opensiddur.org",
+                      "contributor": "codex"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "key": "wolf1965",
+              "entry_type": "book",
+              "title": "Prayerbook for the New Year [Second Day]",
+              "subtitle": "",
+              "authors": [],
+              "editors": [
+                "Wolf Heidenheim",
+                "Jenny Marmorstein"
+              ],
+              "edition": "",
+              "publisher": "Victor Goldschmidt Publishers",
+              "distributor": "",
+              "address": [
+                "Basle"
+              ],
+              "date": "1965",
+              "url": "https://archive.org/details/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965",
+              "urldate": "2026-11-25",
+              "identifiers": [
+                [
+                  "internet_archive",
+                  "mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965"
+                ]
+              ],
+              "notes": [
+                "Digital imaging and document preparation: Aharon N. Varady."
+              ]
+            }
+          ]
+        },
+        "equal": true
+      },
+      {
+        "profile": "documentary_hebrew",
+        "destination": "electronic",
+        "before": {
+          "licenses": [
+            {
+              "url": "http://www.creativecommons.org/publicdomain/zero/1.0",
+              "name": "Creative Commons Zero (Public Domain Dedication)"
+            }
+          ],
+          "credits": [
+            {
+              "role": "mrk",
+              "heading": "Markup editor",
+              "namespaces": [
+                {
+                  "namespace": "opensiddur.org",
+                  "credits": [
+                    {
+                      "role": "mrk",
+                      "resp_text": "JLPTEI markup",
+                      "ref": "urn:x-opensiddur:contributor:opensiddur.org/codex",
+                      "name_text": "Codex",
+                      "namespace": "opensiddur.org",
+                      "contributor": "codex"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "role": "trc",
+              "heading": "Transcriptionist",
+              "namespaces": [
+                {
+                  "namespace": "opensiddur.org",
+                  "credits": [
+                    {
+                      "role": "trc",
+                      "resp_text": "AI-assisted image transcription",
+                      "ref": "urn:x-opensiddur:contributor:opensiddur.org/codex",
+                      "name_text": "Codex",
+                      "namespace": "opensiddur.org",
+                      "contributor": "codex"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "key": "wolf1965",
+              "entry_type": "book",
+              "title": "Prayerbook for the New Year [Second Day]",
+              "subtitle": "",
+              "authors": [],
+              "editors": [
+                "Wolf Heidenheim",
+                "Jenny Marmorstein"
+              ],
+              "edition": "",
+              "publisher": "Victor Goldschmidt Publishers",
+              "distributor": "",
+              "address": [
+                "Basle"
+              ],
+              "date": "1965",
+              "url": "https://archive.org/details/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965",
+              "urldate": "2026-11-25",
+              "identifiers": [
+                [
+                  "internet_archive",
+                  "mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965"
+                ]
+              ],
+              "notes": [
+                "Digital imaging and document preparation: Aharon N. Varady."
+              ]
+            }
+          ]
+        },
+        "after": {
+          "licenses": [
+            {
+              "url": "http://www.creativecommons.org/publicdomain/zero/1.0",
+              "name": "Creative Commons Zero (Public Domain Dedication)"
+            }
+          ],
+          "credits": [
+            {
+              "role": "mrk",
+              "heading": "Markup editor",
+              "namespaces": [
+                {
+                  "namespace": "opensiddur.org",
+                  "credits": [
+                    {
+                      "role": "mrk",
+                      "resp_text": "JLPTEI markup",
+                      "ref": "urn:x-opensiddur:contributor:opensiddur.org/codex",
+                      "name_text": "Codex",
+                      "namespace": "opensiddur.org",
+                      "contributor": "codex"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "role": "trc",
+              "heading": "Transcriptionist",
+              "namespaces": [
+                {
+                  "namespace": "opensiddur.org",
+                  "credits": [
+                    {
+                      "role": "trc",
+                      "resp_text": "AI-assisted image transcription",
+                      "ref": "urn:x-opensiddur:contributor:opensiddur.org/codex",
+                      "name_text": "Codex",
+                      "namespace": "opensiddur.org",
+                      "contributor": "codex"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "key": "wolf1965",
+              "entry_type": "book",
+              "title": "Prayerbook for the New Year [Second Day]",
+              "subtitle": "",
+              "authors": [],
+              "editors": [
+                "Wolf Heidenheim",
+                "Jenny Marmorstein"
+              ],
+              "edition": "",
+              "publisher": "Victor Goldschmidt Publishers",
+              "distributor": "",
+              "address": [
+                "Basle"
+              ],
+              "date": "1965",
+              "url": "https://archive.org/details/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965",
+              "urldate": "2026-11-25",
+              "identifiers": [
+                [
+                  "internet_archive",
+                  "mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965"
+                ]
+              ],
+              "notes": [
+                "Digital imaging and document preparation: Aharon N. Varady."
+              ]
+            }
+          ]
+        },
+        "equal": true
+      },
+      {
+        "profile": "documentary_parallel",
+        "destination": "print",
+        "before": {
+          "licenses": [
+            {
+              "url": "http://www.creativecommons.org/publicdomain/zero/1.0",
+              "name": "Creative Commons Zero (Public Domain Dedication)"
+            }
+          ],
+          "credits": [
+            {
+              "role": "mrk",
+              "heading": "Markup editor",
+              "namespaces": [
+                {
+                  "namespace": "opensiddur.org",
+                  "credits": [
+                    {
+                      "role": "mrk",
+                      "resp_text": "JLPTEI markup",
+                      "ref": "urn:x-opensiddur:contributor:opensiddur.org/codex",
+                      "name_text": "Codex",
+                      "namespace": "opensiddur.org",
+                      "contributor": "codex"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "role": "trc",
+              "heading": "Transcriptionist",
+              "namespaces": [
+                {
+                  "namespace": "opensiddur.org",
+                  "credits": [
+                    {
+                      "role": "trc",
+                      "resp_text": "AI-assisted image transcription",
+                      "ref": "urn:x-opensiddur:contributor:opensiddur.org/codex",
+                      "name_text": "Codex",
+                      "namespace": "opensiddur.org",
+                      "contributor": "codex"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "key": "wolf1965",
+              "entry_type": "book",
+              "title": "Prayerbook for the New Year [Second Day]",
+              "subtitle": "",
+              "authors": [],
+              "editors": [
+                "Wolf Heidenheim",
+                "Jenny Marmorstein"
+              ],
+              "edition": "",
+              "publisher": "Victor Goldschmidt Publishers",
+              "distributor": "",
+              "address": [
+                "Basle"
+              ],
+              "date": "1965",
+              "url": "https://archive.org/details/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965",
+              "urldate": "2026-11-25",
+              "identifiers": [
+                [
+                  "internet_archive",
+                  "mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965"
+                ]
+              ],
+              "notes": [
+                "Digital imaging and document preparation: Aharon N. Varady."
+              ]
+            }
+          ]
+        },
+        "after": {
+          "licenses": [
+            {
+              "url": "http://www.creativecommons.org/publicdomain/zero/1.0",
+              "name": "Creative Commons Zero (Public Domain Dedication)"
+            }
+          ],
+          "credits": [
+            {
+              "role": "mrk",
+              "heading": "Markup editor",
+              "namespaces": [
+                {
+                  "namespace": "opensiddur.org",
+                  "credits": [
+                    {
+                      "role": "mrk",
+                      "resp_text": "JLPTEI markup",
+                      "ref": "urn:x-opensiddur:contributor:opensiddur.org/codex",
+                      "name_text": "Codex",
+                      "namespace": "opensiddur.org",
+                      "contributor": "codex"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "role": "trc",
+              "heading": "Transcriptionist",
+              "namespaces": [
+                {
+                  "namespace": "opensiddur.org",
+                  "credits": [
+                    {
+                      "role": "trc",
+                      "resp_text": "AI-assisted image transcription",
+                      "ref": "urn:x-opensiddur:contributor:opensiddur.org/codex",
+                      "name_text": "Codex",
+                      "namespace": "opensiddur.org",
+                      "contributor": "codex"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "key": "wolf1965",
+              "entry_type": "book",
+              "title": "Prayerbook for the New Year [Second Day]",
+              "subtitle": "",
+              "authors": [],
+              "editors": [
+                "Wolf Heidenheim",
+                "Jenny Marmorstein"
+              ],
+              "edition": "",
+              "publisher": "Victor Goldschmidt Publishers",
+              "distributor": "",
+              "address": [
+                "Basle"
+              ],
+              "date": "1965",
+              "url": "https://archive.org/details/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965",
+              "urldate": "2026-11-25",
+              "identifiers": [
+                [
+                  "internet_archive",
+                  "mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965"
+                ]
+              ],
+              "notes": [
+                "Digital imaging and document preparation: Aharon N. Varady."
+              ]
+            }
+          ]
+        },
+        "equal": true
+      },
+      {
+        "profile": "documentary_parallel",
+        "destination": "electronic",
+        "before": {
+          "licenses": [
+            {
+              "url": "http://www.creativecommons.org/publicdomain/zero/1.0",
+              "name": "Creative Commons Zero (Public Domain Dedication)"
+            }
+          ],
+          "credits": [
+            {
+              "role": "mrk",
+              "heading": "Markup editor",
+              "namespaces": [
+                {
+                  "namespace": "opensiddur.org",
+                  "credits": [
+                    {
+                      "role": "mrk",
+                      "resp_text": "JLPTEI markup",
+                      "ref": "urn:x-opensiddur:contributor:opensiddur.org/codex",
+                      "name_text": "Codex",
+                      "namespace": "opensiddur.org",
+                      "contributor": "codex"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "role": "trc",
+              "heading": "Transcriptionist",
+              "namespaces": [
+                {
+                  "namespace": "opensiddur.org",
+                  "credits": [
+                    {
+                      "role": "trc",
+                      "resp_text": "AI-assisted image transcription",
+                      "ref": "urn:x-opensiddur:contributor:opensiddur.org/codex",
+                      "name_text": "Codex",
+                      "namespace": "opensiddur.org",
+                      "contributor": "codex"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "key": "wolf1965",
+              "entry_type": "book",
+              "title": "Prayerbook for the New Year [Second Day]",
+              "subtitle": "",
+              "authors": [],
+              "editors": [
+                "Wolf Heidenheim",
+                "Jenny Marmorstein"
+              ],
+              "edition": "",
+              "publisher": "Victor Goldschmidt Publishers",
+              "distributor": "",
+              "address": [
+                "Basle"
+              ],
+              "date": "1965",
+              "url": "https://archive.org/details/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965",
+              "urldate": "2026-11-25",
+              "identifiers": [
+                [
+                  "internet_archive",
+                  "mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965"
+                ]
+              ],
+              "notes": [
+                "Digital imaging and document preparation: Aharon N. Varady."
+              ]
+            }
+          ]
+        },
+        "after": {
+          "licenses": [
+            {
+              "url": "http://www.creativecommons.org/publicdomain/zero/1.0",
+              "name": "Creative Commons Zero (Public Domain Dedication)"
+            }
+          ],
+          "credits": [
+            {
+              "role": "mrk",
+              "heading": "Markup editor",
+              "namespaces": [
+                {
+                  "namespace": "opensiddur.org",
+                  "credits": [
+                    {
+                      "role": "mrk",
+                      "resp_text": "JLPTEI markup",
+                      "ref": "urn:x-opensiddur:contributor:opensiddur.org/codex",
+                      "name_text": "Codex",
+                      "namespace": "opensiddur.org",
+                      "contributor": "codex"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "role": "trc",
+              "heading": "Transcriptionist",
+              "namespaces": [
+                {
+                  "namespace": "opensiddur.org",
+                  "credits": [
+                    {
+                      "role": "trc",
+                      "resp_text": "AI-assisted image transcription",
+                      "ref": "urn:x-opensiddur:contributor:opensiddur.org/codex",
+                      "name_text": "Codex",
+                      "namespace": "opensiddur.org",
+                      "contributor": "codex"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "key": "wolf1965",
+              "entry_type": "book",
+              "title": "Prayerbook for the New Year [Second Day]",
+              "subtitle": "",
+              "authors": [],
+              "editors": [
+                "Wolf Heidenheim",
+                "Jenny Marmorstein"
+              ],
+              "edition": "",
+              "publisher": "Victor Goldschmidt Publishers",
+              "distributor": "",
+              "address": [
+                "Basle"
+              ],
+              "date": "1965",
+              "url": "https://archive.org/details/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965",
+              "urldate": "2026-11-25",
+              "identifiers": [
+                [
+                  "internet_archive",
+                  "mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965"
+                ]
+              ],
+              "notes": [
+                "Digital imaging and document preparation: Aharon N. Varady."
+              ]
+            }
+          ]
+        },
+        "equal": true
+      }
+    ]
+  },
+  "raw_documentary103_review": {
+    "method": "Compared all 103 actual XML bodies with approved source fragments, choosing sic/abbr for printed readings and normalizing only NFC and formatting whitespace. Notes and ordinal labels stay outside prayer-word comparison. Source paragraph/poetic-line groups and all page labels and Archive leaves match.",
+    "files": [
+      {
+        "unit": "birkhot_hatorah_laasoq",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/birkhot_hatorah_laasoq.xml",
+        "sha256": "90cf94ad388b39d019d7d2e0570053cfb012ff26349be52221776a50faa4439b",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          29
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hatorah_laasoq",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/birkhot_hatorah_laasoq.xml",
+        "sha256": "8ede17fb9c60ec842b6ce9cb6e3dddb0c16e4d6ae163100082adacb5c18f7e7c",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          30
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hatorah_vehaarev",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/birkhot_hatorah_vehaarev.xml",
+        "sha256": "be82ae8c0b317f44a4c7757aec690f074838972df46b3ed079a717af5d9fcca7",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          31
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hatorah_vehaarev",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/birkhot_hatorah_vehaarev.xml",
+        "sha256": "fda39d7a1cc6516e2cb9d33ffc39f1c5832e824e3603bf7e98909b234c361dcc",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          32
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hatorah_asher_bachar",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/birkhot_hatorah_asher_bachar.xml",
+        "sha256": "173f6db98c7b68866cd30a95717ece87635b5a4862f9334b268737d74df900a4",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          31
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hatorah_asher_bachar",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/birkhot_hatorah_asher_bachar.xml",
+        "sha256": "d3f840bbc0accd8496c96173705bd19820169531a408f453e43391f9aa73716e",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          32
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "tallith_hineni_mitattef",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/tallith_hineni_mitattef.xml",
+        "sha256": "abc41a32efb74d16ce1228331dedcfe171f641dd8a01c6d91c9c891dec5ca023",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          24
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "tallith_lehitattef",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/tallith_lehitattef.xml",
+        "sha256": "e2e035653cd7bb433638a151ddabd2c84be08f214f52cba15c0f65a98c37bcb4",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          24
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "tallith_lehitattef",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/tallith_lehitattef.xml",
+        "sha256": "58013108463088a0d8c51e8e6dfe27ca4e04c2ad5844f325d68565138ff4b0da",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          24
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "tallith_mah_yaqar",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/tallith_mah_yaqar.xml",
+        "sha256": "e84d89b0e3d5a90a0b4dec24376537f0384624f87f2679e257352c050c2cc948",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 4,
+        "scan_leaves": [
+          24
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "tallith_mah_yaqar",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/tallith_mah_yaqar.xml",
+        "sha256": "3ee7f0cbfc5d7ab4805e4b6bd855486c661f7598003945b9fe85d84d55ae3beb",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          24
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "tallith_yehi_ratzon",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/tallith_yehi_ratzon.xml",
+        "sha256": "fde5c27d11399898a2c6e02287f6ec18bb616416bca35b8624df262f3f35ded8",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          24
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "morning_entrance_verses",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/morning_entrance_verses.xml",
+        "sha256": "5502bd86ee26c2b5c3ffd215f4a28ecdfae97f7b8596a4ae337cc3af9d0efa42",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 2,
+        "scan_leaves": [
+          25
+        ],
+        "shared_context": true
+      },
+      {
+        "unit": "morning_entrance_verses",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/morning_entrance_verses.xml",
+        "sha256": "5e9ff005caf7dfc53258d8958217729a9133f1e80e843f9860e802cc882c137c",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 2,
+        "scan_leaves": [
+          26
+        ],
+        "shared_context": true
+      },
+      {
+        "unit": "morning_mah_tovu",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/morning_mah_tovu.xml",
+        "sha256": "d39d5a3eefe2fbe49e2b36cb8b6629d80b12eeabf0e560de5201737d7be75d56",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          25
+        ],
+        "shared_context": true
+      },
+      {
+        "unit": "morning_mah_tovu",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/morning_mah_tovu.xml",
+        "sha256": "9bc384ddcabe60ef2a3c96310a499ee2212b4ffc21c646b7fa044b843ea1ddd4",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          26
+        ],
+        "shared_context": true
+      },
+      {
+        "unit": "shachar_avaqeshkha_gabirol",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/shachar_avaqeshkha_gabirol.xml",
+        "sha256": "cf8450040c543e5f4ba2dd93ec7ace076474b06e58585a516ca54c8835e89948",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 4,
+        "scan_leaves": [
+          25
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "shachar_avaqeshkha_gabirol",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/shachar_avaqeshkha_gabirol.xml",
+        "sha256": "3c7bfe2346f4a22caa9bfec42456e46696c73efdc45af68fcf089f608508596d",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          26
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "morning_before_prayer",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/morning_before_prayer.xml",
+        "sha256": "57ad9559345e3f2f887cb1b242ea5c31fa158bc7c4cd31bca732466853b7582f",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 2,
+        "scan_leaves": [
+          25,
+          27
+        ],
+        "shared_context": true
+      },
+      {
+        "unit": "morning_before_prayer",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/morning_before_prayer.xml",
+        "sha256": "db74c1671e086bd66c3e3bf3cf6bd4826f086e3f5cab8e6c50839acdf30a7a3d",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 2,
+        "scan_leaves": [
+          26,
+          28
+        ],
+        "shared_context": true
+      },
+      {
+        "unit": "yigdal",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/morning_yigdal.xml",
+        "sha256": "0fae5bcf87ae04775126d9511ce4d04e2c284e866ea2bdf9ca3076654ccd4d32",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 13,
+        "scan_leaves": [
+          27
+        ],
+        "shared_context": true
+      },
+      {
+        "unit": "yigdal",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/morning_yigdal.xml",
+        "sha256": "570f59f2aa9a09aa243ed9f9fced66ec461dadbccf437933fbc723cb4332b41b",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 13,
+        "scan_leaves": [
+          28
+        ],
+        "shared_context": true
+      },
+      {
+        "unit": "adon_olam",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/adon_olam.xml",
+        "sha256": "8708f8fad7c99004b1edcfbee9b80080d489d03f4d000e21a786d4cfd22b2451",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 10,
+        "scan_leaves": [
+          29
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "adon_olam",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/adon_olam.xml",
+        "sha256": "0735aaa258b188d9a509a939152c7a2fddccc283e47b3c2344cc1ba330d6544e",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 12,
+        "scan_leaves": [
+          30
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "al_netilat_yadayim",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/al_netilat_yadayim.xml",
+        "sha256": "50927526de9bdc1d5499cc741bdd5edd869567e2d51ea7b61327b1c35c954d84",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          29
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "al_netilat_yadayim",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/al_netilat_yadayim.xml",
+        "sha256": "cdc06c06360b6954acfc015dfd0efe69d671b4b880fbdc68c226c835770c2c95",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          30
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "asher_yatzar",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/asher_yatzar.xml",
+        "sha256": "441ff91c92dbde95306f2ed1ff00c46649f29a3e0b3fa83494e7e6896199be0a",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          29
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "asher_yatzar",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/asher_yatzar.xml",
+        "sha256": "bd5023abb7be0d004120f8ec52cf28e1f59e4fa240738140d95dce977eabf00e",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          30
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "numbers_6_24_to_26",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/numbers_6_24_to_26.xml",
+        "sha256": "d86b2f2e5536d95c6185da4beb0d8cee90de2def8c25ff9d08210883c2a3c829",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 2,
+        "scan_leaves": [
+          31
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "numbers_6_24_to_26",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/numbers_6_24_to_26.xml",
+        "sha256": "3e22f7d875f1b823071087e05fd503e6a98cb0582df006a59151de2e60ed72cf",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          32
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "ellu_devarim",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/ellu_devarim.xml",
+        "sha256": "a1b5400b8199efa7ab8442376b29bb8cffbdb8e2fbf94fe3372c30084d512f30",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          31
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "ellu_devarim",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/ellu_devarim.xml",
+        "sha256": "480c3c4bf28256f413bf7d7fccda9a4f70a3bd6b7bfcb2f57ec318e3eb746345",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 2,
+        "scan_leaves": [
+          32
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "elohai_neshamah",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/elohai_neshamah.xml",
+        "sha256": "172e75ae24ada11ff1b684e7d267c7e21b69df1072014967dcc5f1c0071658f9",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          31
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "elohai_neshamah",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/elohai_neshamah.xml",
+        "sha256": "2738e9ca9d393b99faff791f155f4af403486e0335d071b0ede75fa87762e43f",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          32
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_lasekhvi",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/birkhot_hashachar_lasekhvi.xml",
+        "sha256": "507556cb8e8eca46b9a641d16136949f13463c9ed8137f8ab75702664b5c04e6",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          33
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_lasekhvi",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/birkhot_hashachar_lasekhvi.xml",
+        "sha256": "33c08f1550eacae82c343af50ee19dabc81f21dfa76ae31ec3d8f359c7ee2ab4",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          34
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_shelo_asani_goy",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/birkhot_hashachar_shelo_asani_goy.xml",
+        "sha256": "4f6e731fb4f6d755890d45828f362d9fcef6180f9238266f38627220b05c3ffa",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          33
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_shelo_asani_goy",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/birkhot_hashachar_shelo_asani_goy.xml",
+        "sha256": "3de01aaea6032fee10add721bbc9151ae7f196ff62df50c416afbc93b4ce2f6e",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          34
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_shelo_asani_aved",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/birkhot_hashachar_shelo_asani_aved.xml",
+        "sha256": "15ee723d7c16df3d49d994a2edeaf54e46ff916e3d91f9fd6a49b6561e6352b6",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          33
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_shelo_asani_aved",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/birkhot_hashachar_shelo_asani_aved.xml",
+        "sha256": "916c727965f43a3f1de3c16fedac8dec9982d6c5c3e7bf3794689ca78646699b",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          34
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_shelo_asani_ishah",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/birkhot_hashachar_shelo_asani_ishah.xml",
+        "sha256": "f1fc1082e9c32dcb400b91080488f97f71364c718b8e2206199f5324e7512812",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          33
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_shelo_asani_ishah",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/birkhot_hashachar_shelo_asani_ishah.xml",
+        "sha256": "02d3005a14f0ddc23a91a86f720f2f9b882d1711da0b7346784bdb552b9d5197",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          34
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_sheasani_kirtzono",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/birkhot_hashachar_sheasani_kirtzono.xml",
+        "sha256": "bfdd1e24f81cbd3053fe82caf3d89e771ba87705b8d33e6245c6c7310d91d525",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          33
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_sheasani_kirtzono",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/birkhot_hashachar_sheasani_kirtzono.xml",
+        "sha256": "256bed3d683bae58f1a0fbafaa0f5e914ded7fb7d4844ec7866e7a129208717a",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 2,
+        "scan_leaves": [
+          34
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_poqeach_ivrim",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/birkhot_hashachar_poqeach_ivrim.xml",
+        "sha256": "ac7ab19f6302d35ac16fd090bd3b4388f17246915b02b0e1d663f8f34a3b70ef",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          33
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_poqeach_ivrim",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/birkhot_hashachar_poqeach_ivrim.xml",
+        "sha256": "641b0e5018383af577c62f4e09fce1eb9f40ac627fdea8e99c2331b74e6aead0",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          34
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_malbish_arummim",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/birkhot_hashachar_malbish_arummim.xml",
+        "sha256": "0a63436dac6bf343dd68d8843e1fa64f5f9da576be61a94e48f43a4a1dea7df8",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          33
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_malbish_arummim",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/birkhot_hashachar_malbish_arummim.xml",
+        "sha256": "3039fc2271ca323d84491348c174c4679aefe85e1bec620df4da9452bfac786b",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          34
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_mattir_asurim",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/birkhot_hashachar_mattir_asurim.xml",
+        "sha256": "66af3c744accd138bfc8c5f98e93af78fd29a8f53913bf5ab0bc62783eebe932",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          33
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_mattir_asurim",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/birkhot_hashachar_mattir_asurim.xml",
+        "sha256": "8e78488b3169499fcff25342e56843a8599007b341dd28dbc257060dbeb1acf0",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          34
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_zoqef_kefufim",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/birkhot_hashachar_zoqef_kefufim.xml",
+        "sha256": "aa9b3ba8a67eea19d95a06a787e0f2df0538983ec2cfa6053c0d30167f03f3b2",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          33
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_zoqef_kefufim",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/birkhot_hashachar_zoqef_kefufim.xml",
+        "sha256": "7d3312c03d05912ca15428e4188f61e8d7dff9f3a50789a5050cfdd40cb1b01b",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          34
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_roqa_haaretz",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/birkhot_hashachar_roqa_haaretz.xml",
+        "sha256": "2a3e7118922a8de59e9cc521858a11ac3c87ef56e2492d4d96ef4a94d20045fd",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          33
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_roqa_haaretz",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/birkhot_hashachar_roqa_haaretz.xml",
+        "sha256": "83f1bacf9d79fcfab3edbf1f9f94aebb2f49a39b857f5999c95403bc5c6c5155",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          34
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_sheasah_li",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/birkhot_hashachar_sheasah_li.xml",
+        "sha256": "140c91398142cbbd47283c0edf296ae247ad30ae34f02ef4284f34af6b143df8",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          33
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_sheasah_li",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/birkhot_hashachar_sheasah_li.xml",
+        "sha256": "be30c9623ce05e08369f0317f1120429573c7643ac95d5f8521faa5ad6069ce9",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          34
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_hamekhin",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/birkhot_hashachar_hamekhin.xml",
+        "sha256": "cbbfc3332cc02480a36bb40dc2212647dc85aa27d08af02db09a923f6b3b2907",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          33
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_hamekhin",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/birkhot_hashachar_hamekhin.xml",
+        "sha256": "da9c7f22dcb02b8810ce3c8aae3dfdec19763de61718b2ea2fbcdb086e69f028",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          34
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_ozer_yisrael",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/birkhot_hashachar_ozer_yisrael.xml",
+        "sha256": "0f6700b31201f0ec1267f757b878e7630e1e3910a01bf0c6dc73035eba559165",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          33
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_ozer_yisrael",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/birkhot_hashachar_ozer_yisrael.xml",
+        "sha256": "c2eeb06ac878246aeea60aba0819dabf4178e244323f2bcea37a1313bf143a22",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          34
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_oter_yisrael",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/birkhot_hashachar_oter_yisrael.xml",
+        "sha256": "5eafec008591c125df2aaa7f25b6dd0df909359bcc5172c0aeff75a3651ab06a",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          33
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_oter_yisrael",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/birkhot_hashachar_oter_yisrael.xml",
+        "sha256": "25637e6e59a51137867e846ec82155bf7c329685d783c75ae02aa6158c89aa9b",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          34
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_hanoten_layaef",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/birkhot_hashachar_hanoten_layaef.xml",
+        "sha256": "72614aef37b8cef92e035e80345bc627c6a2751743145b02c9826236814c34e7",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          33
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_hanoten_layaef",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/birkhot_hashachar_hanoten_layaef.xml",
+        "sha256": "413d0f4137ae80b652e05699c58a75191aa46fe4bcd63d03deb5280694f06002",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          34
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_hamaavir_shenah",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/birkhot_hashachar_hamaavir_shenah.xml",
+        "sha256": "3efc3c2f03a18c8bd3c4f2655b93f706c53100de30b0607f93d9362da5c62283",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          33
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_hamaavir_shenah",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/birkhot_hashachar_hamaavir_shenah.xml",
+        "sha256": "4d537dc0d241de7e1feda193714ac6b6ce61f8dfeadafce1d9f4b6adb13d77b5",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          34
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_shetargilenu",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/birkhot_hashachar_shetargilenu.xml",
+        "sha256": "aea07a336d0b91c771e1658ed86a04e4924c6f785d307d8f322c3f0cdd10ff48",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          33,
+          35
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_shetargilenu",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/birkhot_hashachar_shetargilenu.xml",
+        "sha256": "93a2c4dffab2901fffa9f37901796a8d65e96a149479c1626859c289dd071b6e",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          34,
+          36
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_shetatzileni",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/birkhot_hashachar_shetatzileni.xml",
+        "sha256": "9ee881f25016f400ee18b69c1de2af3bb5747f4d732b1dad50cf25141f6778c9",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          35
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "birkhot_hashachar_shetatzileni",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/birkhot_hashachar_shetatzileni.xml",
+        "sha256": "d3826962d07552ea9394d2f042f43f655e8bc3e723c17b182109a8389d610ea7",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          36
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "ribbon_kol_haolamim",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/ribbon_kol_haolamim.xml",
+        "sha256": "39ccdcf632972dcf5bc129f46a6a337af16ce0085406899ab7b9019774ff5bcc",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          35
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "ribbon_kol_haolamim",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/ribbon_kol_haolamim.xml",
+        "sha256": "3720aa5e6f7f2eb932e0df4cc75799b78b120f2655e9f34b95d0dc15326bad65",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          36
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "aval_anachnu",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/aval_anachnu.xml",
+        "sha256": "d7b0ac4162c76c9f93a71748e49f903a6bfaa56b7b1bf031fcd9f9479c07d1d5",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          35
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "aval_anachnu",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/aval_anachnu.xml",
+        "sha256": "ae7b791e094f180d3d8f7e18f25e457d44bcf76e8701180a41a4a4a49d6f3668",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          36
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "lefikhakh",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/lefikhakh.xml",
+        "sha256": "7fb5f914c8b0350465df5f67413adb8dbaf1a91cae1693da0b3290057daa9148",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          37
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "lefikhakh",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/lefikhakh.xml",
+        "sha256": "43c16278e9baee40bf954cae2c7018495aea4fb4974ab9ecb599fcda65e31d25",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          38
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "morning_shema_yisrael",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/morning_shema_yisrael.xml",
+        "sha256": "0e1ffaf28462f4e14a8dec0a9d238c78ef3964853df627a77eedd30964ba61a9",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          37
+        ],
+        "shared_context": true
+      },
+      {
+        "unit": "morning_shema_yisrael",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/morning_shema_yisrael.xml",
+        "sha256": "9d1f1af180066d9d9235f0f82c7580b813c71d4462ce51372ec96f6abf4411cb",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          38
+        ],
+        "shared_context": true
+      },
+      {
+        "unit": "morning_barukh_shem",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/morning_barukh_shem.xml",
+        "sha256": "273a5796b66d9fb40020ab8a523d60764c8a8c4086138487701fb6a3fb66a0ee",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          37
+        ],
+        "shared_context": true
+      },
+      {
+        "unit": "morning_barukh_shem",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/morning_barukh_shem.xml",
+        "sha256": "93ea4f3f95c10aadf657552c109eec921754b8788c2329968cfc1d9f8524742e",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          38
+        ],
+        "shared_context": true
+      },
+      {
+        "unit": "attah_hu_ad_shelo",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/attah_hu_ad_shelo.xml",
+        "sha256": "a054efc11035efcd78f877906fa58d0d11fa8fe85b4456e93000543bc273c724",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          37
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "attah_hu_ad_shelo",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/attah_hu_ad_shelo.xml",
+        "sha256": "8680eae51222ce4826398ab9d5cda448b62d30f378b4edc44e6c4943ca643b3d",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          38
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "attah_hu_bashamayim",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/attah_hu_bashamayim.xml",
+        "sha256": "c731b076162dacb25574527d13fd700ec2f4962b33eb8c938691a3e67a538925",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          37
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "attah_hu_bashamayim",
+        "language": "en",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/attah_hu_bashamayim.xml",
+        "sha256": "6d47019f97eca27430896b3a1d75e708fa5e84968bb3ee8fc8772bd7e89bd2ac",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          38
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "qorbanot_kiyyor",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/qorbanot_kiyyor.xml",
+        "sha256": "00f655525a6b60b8741375584a00645b44099e3ec3b6cc1fc87f14ba69bd757b",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          39
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "leviticus_6_3_to_4",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/leviticus_6_3_to_4.xml",
+        "sha256": "b898c8863517f9e23438fb1e690c9f6507f1136f7a2a8d3317fddae8944ad636",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          39
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "qorbanot_tamid",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/qorbanot_tamid.xml",
+        "sha256": "78c21fdc12b1e0e542a0e31be4876706a9845fc6dbbaaca1ba6f9f36fc0f3dbd",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          39,
+          40
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "qorbanot_veshachat",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/qorbanot_veshachat.xml",
+        "sha256": "a23089802b4bce4fa1fa2c4b93bd57ae0535718a760cb2649e1897eca144af03",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          40
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "qorbanot_attah_hu",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/qorbanot_attah_hu.xml",
+        "sha256": "827f1d0b7b4e3678d051e6ae258b4e8b95a8559037ec3a21786cc384e4683d98",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          40
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "qorbanot_qetoret",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/qorbanot_qetoret.xml",
+        "sha256": "082c163c709f26261cd262bc23b79aba44d551c1d2b6d143c8865d9d846b2bf6",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          40
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "qorbanot_pittum",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/qorbanot_pittum.xml",
+        "sha256": "caae69cd2dc5070855a85a7f9bb6589fa07aee0a1d3dbe51272bacd4e59db17a",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          41
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "qorbanot_rashbag",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/qorbanot_rashbag.xml",
+        "sha256": "1fdb5557e98bb4a2bc8ded3962b1ba79e1c8e1f7a8e531478bc725c15696768a",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          41
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "qorbanot_rabbi_natan",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/qorbanot_rabbi_natan.xml",
+        "sha256": "cddb594d005a3bcb8e247e1fe5d9bb75032e0cbba271956d905ba9270279ad01",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          41
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "qorbanot_bar_kappara",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/qorbanot_bar_kappara.xml",
+        "sha256": "933bf505771b1d29b2edf1dd1e80b0180303238b120152781f7a86f7bfc3c3fd",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          41
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "qorbanot_pesuqim",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/qorbanot_pesuqim.xml",
+        "sha256": "55e0376de9f512b5600b2c14a98afd58241bf75f3ecd5bf7b9b7e68e6abe39a1",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          41
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "qorbanot_attah_seter",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/qorbanot_attah_seter.xml",
+        "sha256": "a20fcd8190695b75a864f368dd10c48b376ae44ecb501e727cfca8d06eb00495",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          41
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "qorbanot_vearvah",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/qorbanot_vearvah.xml",
+        "sha256": "fdb015ec6cc9810cac5bd239f641845f6e2fa74341f3f9b4f12db5a099328178",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          41
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "anna_bekhoach",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/anna_bekhoach.xml",
+        "sha256": "3e72cd81113922527f919cabd2417a08c1ec1168ea10e5bcc06ea19b81b9bb01",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 7,
+        "scan_leaves": [
+          41
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "qorbanot_barukh_shem",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/qorbanot_barukh_shem.xml",
+        "sha256": "a2a452a86d401d7da9fd211f43806e7e6aaf8bff3df7d223fedb0b0b72ee7c02",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          41
+        ],
+        "shared_context": true
+      },
+      {
+        "unit": "qorbanot_musaf_shabbat",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/qorbanot_musaf_shabbat.xml",
+        "sha256": "7e41585453a57308840946abf724a4ca12205a5c0ee3692746c2d54dbeb5cca6",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          42
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "eizehu_meqoman",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/eizehu_meqoman.xml",
+        "sha256": "d28d724e9050729b5c6d69e0c93d56f6b84f46d982c81707d7a7f11cd9de57a1",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          42,
+          43
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "middot",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/middot.xml",
+        "sha256": "5fd8d0c3874492bf59e6dd75e05457e440dc58c9bc107c67a690406d7af3d5c2",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          44
+        ],
+        "shared_context": false
+      },
+      {
+        "unit": "middot_yehi_ratzon",
+        "language": "he",
+        "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/middot_yehi_ratzon.xml",
+        "sha256": "dd1964524cc3c7f1aa2af59926ab9438d02a219fa667c0a7fa2828a9dec105ef",
+        "source_text_exact": true,
+        "source_paragraph_or_line_groups_exact": true,
+        "groups": 1,
+        "scan_leaves": [
+          44
+        ],
+        "shared_context": false
+      }
+    ],
+    "findings": []
+  },
+  "current_documentary_compilation": {
+    "method": "Checked all 62 ordered source calls in each documentary Hebrew/parallel print/electronic artifact. Actual Hebrew, expected English, absent translations and source leaves match. Only the evidenced will/hast corrections and corrected removal of the source-only duplicate affect the default corrected reading.",
+    "checks": [
+      {
+        "profile": "documentary_hebrew",
+        "destination": "print",
+        "sequence_exact_62_units": true,
+        "source_comparisons": [
+          {
+            "unit": "tallith_hineni_mitattef",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "tallith_lehitattef",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "tallith_mah_yaqar",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "tallith_yehi_ratzon",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_entrance_verses",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_mah_tovu",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "shachar_avaqeshkha_gabirol",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_before_prayer",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "yigdal",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "adon_olam",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "al_netilat_yadayim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "asher_yatzar",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hatorah_laasoq",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hatorah_vehaarev",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hatorah_asher_bachar",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "numbers_6_24_to_26",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "ellu_devarim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "elohai_neshamah",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_lasekhvi",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shelo_asani_goy",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shelo_asani_aved",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shelo_asani_ishah",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_sheasani_kirtzono",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_poqeach_ivrim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_malbish_arummim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_mattir_asurim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_zoqef_kefufim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_roqa_haaretz",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_sheasah_li",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_hamekhin",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_ozer_yisrael",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_oter_yisrael",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_hanoten_layaef",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_hamaavir_shenah",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shetargilenu",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shetatzileni",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "ribbon_kol_haolamim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "aval_anachnu",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "lefikhakh",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_shema_yisrael",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_barukh_shem",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "attah_hu_ad_shelo",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "attah_hu_bashamayim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_kiyyor",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "leviticus_6_3_to_4",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_tamid",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_veshachat",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_attah_hu",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_qetoret",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_pittum",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_rashbag",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_rabbi_natan",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_bar_kappara",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_pesuqim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_attah_seter",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_vearvah",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "anna_bekhoach",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_barukh_shem",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_musaf_shabbat",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "eizehu_meqoman",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "middot",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "middot_yehi_ratzon",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          }
+        ]
+      },
+      {
+        "profile": "documentary_hebrew",
+        "destination": "electronic",
+        "sequence_exact_62_units": true,
+        "source_comparisons": [
+          {
+            "unit": "tallith_hineni_mitattef",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "tallith_lehitattef",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "tallith_mah_yaqar",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "tallith_yehi_ratzon",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_entrance_verses",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_mah_tovu",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "shachar_avaqeshkha_gabirol",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_before_prayer",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "yigdal",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "adon_olam",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "al_netilat_yadayim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "asher_yatzar",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hatorah_laasoq",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hatorah_vehaarev",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hatorah_asher_bachar",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "numbers_6_24_to_26",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "ellu_devarim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "elohai_neshamah",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_lasekhvi",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shelo_asani_goy",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shelo_asani_aved",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shelo_asani_ishah",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_sheasani_kirtzono",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_poqeach_ivrim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_malbish_arummim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_mattir_asurim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_zoqef_kefufim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_roqa_haaretz",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_sheasah_li",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_hamekhin",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_ozer_yisrael",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_oter_yisrael",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_hanoten_layaef",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_hamaavir_shenah",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shetargilenu",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shetatzileni",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "ribbon_kol_haolamim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "aval_anachnu",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "lefikhakh",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_shema_yisrael",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_barukh_shem",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "attah_hu_ad_shelo",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "attah_hu_bashamayim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_kiyyor",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "leviticus_6_3_to_4",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_tamid",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_veshachat",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_attah_hu",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_qetoret",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_pittum",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_rashbag",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_rabbi_natan",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_bar_kappara",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_pesuqim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_attah_seter",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_vearvah",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "anna_bekhoach",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_barukh_shem",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_musaf_shabbat",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "eizehu_meqoman",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "middot",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "middot_yehi_ratzon",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          }
+        ]
+      },
+      {
+        "profile": "documentary_parallel",
+        "destination": "print",
+        "sequence_exact_62_units": true,
+        "source_comparisons": [
+          {
+            "unit": "tallith_hineni_mitattef",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "tallith_lehitattef",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "tallith_lehitattef",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "tallith_mah_yaqar",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "tallith_mah_yaqar",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "tallith_yehi_ratzon",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_entrance_verses",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_entrance_verses",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_mah_tovu",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_mah_tovu",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "shachar_avaqeshkha_gabirol",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "shachar_avaqeshkha_gabirol",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_before_prayer",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_before_prayer",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "yigdal",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "yigdal",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "adon_olam",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "adon_olam",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "al_netilat_yadayim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "al_netilat_yadayim",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "asher_yatzar",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "asher_yatzar",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hatorah_laasoq",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hatorah_laasoq",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hatorah_vehaarev",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hatorah_vehaarev",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hatorah_asher_bachar",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hatorah_asher_bachar",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "numbers_6_24_to_26",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "numbers_6_24_to_26",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "ellu_devarim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "ellu_devarim",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "elohai_neshamah",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "elohai_neshamah",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_lasekhvi",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_lasekhvi",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shelo_asani_goy",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shelo_asani_goy",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shelo_asani_aved",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shelo_asani_aved",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shelo_asani_ishah",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shelo_asani_ishah",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_sheasani_kirtzono",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_sheasani_kirtzono",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_poqeach_ivrim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_poqeach_ivrim",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_malbish_arummim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_malbish_arummim",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_mattir_asurim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_mattir_asurim",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_zoqef_kefufim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_zoqef_kefufim",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_roqa_haaretz",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_roqa_haaretz",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_sheasah_li",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_sheasah_li",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_hamekhin",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_hamekhin",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_ozer_yisrael",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_ozer_yisrael",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_oter_yisrael",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_oter_yisrael",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_hanoten_layaef",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_hanoten_layaef",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_hamaavir_shenah",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_hamaavir_shenah",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shetargilenu",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shetargilenu",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shetatzileni",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shetatzileni",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "ribbon_kol_haolamim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "ribbon_kol_haolamim",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "aval_anachnu",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "aval_anachnu",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "lefikhakh",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "lefikhakh",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_shema_yisrael",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_shema_yisrael",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_barukh_shem",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_barukh_shem",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "attah_hu_ad_shelo",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "attah_hu_ad_shelo",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "attah_hu_bashamayim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "attah_hu_bashamayim",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_kiyyor",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "leviticus_6_3_to_4",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_tamid",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_veshachat",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_attah_hu",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_qetoret",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_pittum",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_rashbag",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_rabbi_natan",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_bar_kappara",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_pesuqim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_attah_seter",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_vearvah",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "anna_bekhoach",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_barukh_shem",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_musaf_shabbat",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "eizehu_meqoman",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "middot",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "middot_yehi_ratzon",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          }
+        ]
+      },
+      {
+        "profile": "documentary_parallel",
+        "destination": "electronic",
+        "sequence_exact_62_units": true,
+        "source_comparisons": [
+          {
+            "unit": "tallith_hineni_mitattef",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "tallith_lehitattef",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "tallith_lehitattef",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "tallith_mah_yaqar",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "tallith_mah_yaqar",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "tallith_yehi_ratzon",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_entrance_verses",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_entrance_verses",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_mah_tovu",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_mah_tovu",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "shachar_avaqeshkha_gabirol",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "shachar_avaqeshkha_gabirol",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_before_prayer",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_before_prayer",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "yigdal",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "yigdal",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "adon_olam",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "adon_olam",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "al_netilat_yadayim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "al_netilat_yadayim",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "asher_yatzar",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "asher_yatzar",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hatorah_laasoq",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hatorah_laasoq",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hatorah_vehaarev",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hatorah_vehaarev",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hatorah_asher_bachar",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hatorah_asher_bachar",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "numbers_6_24_to_26",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "numbers_6_24_to_26",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "ellu_devarim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "ellu_devarim",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "elohai_neshamah",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "elohai_neshamah",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_lasekhvi",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_lasekhvi",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shelo_asani_goy",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shelo_asani_goy",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shelo_asani_aved",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shelo_asani_aved",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shelo_asani_ishah",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shelo_asani_ishah",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_sheasani_kirtzono",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_sheasani_kirtzono",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_poqeach_ivrim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_poqeach_ivrim",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_malbish_arummim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_malbish_arummim",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_mattir_asurim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_mattir_asurim",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_zoqef_kefufim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_zoqef_kefufim",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_roqa_haaretz",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_roqa_haaretz",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_sheasah_li",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_sheasah_li",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_hamekhin",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_hamekhin",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_ozer_yisrael",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_ozer_yisrael",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_oter_yisrael",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_oter_yisrael",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_hanoten_layaef",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_hanoten_layaef",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_hamaavir_shenah",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_hamaavir_shenah",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shetargilenu",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shetargilenu",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shetatzileni",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "birkhot_hashachar_shetatzileni",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "ribbon_kol_haolamim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "ribbon_kol_haolamim",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "aval_anachnu",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "aval_anachnu",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "lefikhakh",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "lefikhakh",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_shema_yisrael",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_shema_yisrael",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_barukh_shem",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "morning_barukh_shem",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "attah_hu_ad_shelo",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "attah_hu_ad_shelo",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "attah_hu_bashamayim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "attah_hu_bashamayim",
+            "language": "en",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_kiyyor",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "leviticus_6_3_to_4",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_tamid",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_veshachat",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_attah_hu",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_qetoret",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_pittum",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_rashbag",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_rabbi_natan",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_bar_kappara",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_pesuqim",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_attah_seter",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_vearvah",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "anna_bekhoach",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_barukh_shem",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "qorbanot_musaf_shabbat",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "eizehu_meqoman",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "middot",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          },
+          {
+            "unit": "middot_yehi_ratzon",
+            "language": "he",
+            "words_and_selected_source_leaves_exact": true
+          }
+        ]
+      }
+    ],
+    "findings": []
+  },
+  "actual_printed_error_behavior": [
+    {
+      "profile": "documentary_parallel_printed",
+      "xml": "/tmp/day2-semantic-integration/current-documentary_parallel_printed-print.xml",
+      "sha256": "3ddca7b529df591eb3dd30c796aa532b672c162a9f163e4abfb5bb52c5f21d0e",
+      "settings": "/tmp/day2-semantic-integration/documentary_parallel_printed.yaml",
+      "settings_sha256": "5d9ad66908a8281ed506d9cd0ab76b44aecbc683f599c8d348de4454a3d075a4",
+      "female_blessing_english_sentence_occurrences": 2,
+      "actual_error_setting": "printed",
+      "actual_gender": "female"
+    },
+    {
+      "profile": "expanded_printed",
+      "xml": "/tmp/day2-semantic-integration/current-expanded_printed-print.xml",
+      "sha256": "ea0eb80ff69697668ff9c3e9aaa36baf32c4e4545c2a996974c1bf1d588983e7",
+      "settings": "/tmp/day2-semantic-integration/expanded_printed.yaml",
+      "settings_sha256": "1b2afa2e09dbd7b249f78650b1503b0a7b4bc084c7dbe367fd301ebfa959e5b3",
+      "female_blessing_english_sentence_occurrences": 1,
+      "actual_error_setting": "printed",
+      "actual_gender": "female"
+    }
+  ],
+  "findings": [],
+  "inputs": [
+    {
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/morning_s25_s45/working/readings.json",
+      "sha256": "c964475cbf07e5d4e7a0fce56a85d2168bafda38a092a7c9b37ced04f79abda9"
+    },
+    {
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/morning_s25_s45/source_approval.json",
+      "sha256": "2ab68eabdc8aeda75b88fab39223a4df43ab9fc1207d3c995a1036687b51fef9"
+    },
+    {
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/morning_s25_s45/morning_units.json",
+      "sha256": "3730c2f7e1ab2159f0ed87105a1d2f6e0dcc13ee0f6eb408b10f80933c3b2103"
+    },
+    {
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/morning_s25_s45/shared_printings.json",
+      "sha256": "29d441829edadcbb97e46fa6b05f3385fe702da42a59c2aea893181fabe94057"
+    },
+    {
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/morning_s25_s45/morning_order.json",
+      "sha256": "dcc69affea31e47f46ddd7b0764d17e88cfce98cf1c7f8be03dc9bd6815a788a"
+    },
+    {
+      "path": "/tmp/compile_day2_semantic_audit.py",
+      "sha256": "c00b24cf4c2cd7af4af98f84f2b30a5dc9f601d2604f91434b65597aaa9d7ddc"
+    },
+    {
+      "path": "/tmp/compare_day2_night_semantic.py",
+      "sha256": "c09e3f6e2ba5c4b3c47755a94b5c72a5ff3f19037d8ab8a72aca830a6018bfb5"
+    },
+    {
+      "path": "/tmp/audit_day2_documentary_raw.py",
+      "sha256": "62258d3e28b7aab8fe01e65730a307cab1eb306bc7645ef825a80f92b90eb04c"
+    },
+    {
+      "path": "/tmp/audit_day2_documentary_compiled.py",
+      "sha256": "2b504ba0f3380f01592d3e211afdf1cd9b8cb7d5201d7285e49499b4aa0a908f"
+    }
+  ],
+  "compiled_artifact_hashes": [
+    {
+      "path": "/tmp/day2-semantic-integration/baseline-night_expanded-print.xml",
+      "sha256": "c8e34aeb6a18abc3353f6104b96180a84f1e43083019c32cfe913477b1a5dd04"
+    },
+    {
+      "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/exports/night_expanded/print.xml",
+      "sha256": "61b89620c00f73579bbed1cf3b1d1088d2228160cf3a121bbf2f0153c58557ba"
+    },
+    {
+      "path": "/tmp/day2-semantic-integration/baseline-night_expanded-electronic.xml",
+      "sha256": "41428ba9177413ece85720f5cd74e975131084f518ebe3709f636b3a3ef429a2"
+    },
+    {
+      "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/exports/night_expanded/electronic.xml",
+      "sha256": "17a937b120bd0ae958b6d9a54dff2d1ae0ea4821a9bad555bcf8fc289b9268b8"
+    },
+    {
+      "path": "/tmp/day2-semantic-integration/baseline-documentary_hebrew-print.xml",
+      "sha256": "85b1e1cccaeca5b2fedea8a41c277a8d377b6a7d2085fb36caa0b260c320380d"
+    },
+    {
+      "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/exports/documentary_hebrew/print.xml",
+      "sha256": "05a7af1c9355c41269ee9daa11e861df5edc0890619be8744e622419b22129a1"
+    },
+    {
+      "path": "/tmp/day2-semantic-integration/baseline-documentary_hebrew-electronic.xml",
+      "sha256": "d38ca4d1d24eee696a9e4e6662e63f269e3040c75eb71a3d0ef2dbc7a748e772"
+    },
+    {
+      "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/exports/documentary_hebrew/electronic.xml",
+      "sha256": "eb883dd2e67e9917ceaa7c080d5f4c67db8e0f9c9ae6262c7eedde6a0c5f11d3"
+    },
+    {
+      "path": "/tmp/day2-semantic-integration/baseline-documentary_parallel-print.xml",
+      "sha256": "0ec015873143e430729d3660c2843ddbd96017aa5121a5a1d4ea038fe2326926"
+    },
+    {
+      "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/exports/documentary_parallel/print.xml",
+      "sha256": "08d758f498b4be89ac1dd2d9ae0866814dfe84390581feac45d343ed8241a3c6"
+    },
+    {
+      "path": "/tmp/day2-semantic-integration/baseline-documentary_parallel-electronic.xml",
+      "sha256": "6f14e40e0731fce1ced3b889c1d3f157f4145645e7caf9c249f80e4777bc506d"
+    },
+    {
+      "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/exports/documentary_parallel/electronic.xml",
+      "sha256": "358ada8dd23846d1c28df6c83d247754003461a8ccc6a25d376b94f35ed6bb03"
+    },
+    {
+      "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/exports/documentary_hebrew/print.xml",
+      "sha256": "05a7af1c9355c41269ee9daa11e861df5edc0890619be8744e622419b22129a1"
+    },
+    {
+      "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/exports/documentary_hebrew/electronic.xml",
+      "sha256": "eb883dd2e67e9917ceaa7c080d5f4c67db8e0f9c9ae6262c7eedde6a0c5f11d3"
+    },
+    {
+      "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/exports/documentary_parallel/print.xml",
+      "sha256": "08d758f498b4be89ac1dd2d9ae0866814dfe84390581feac45d343ed8241a3c6"
+    },
+    {
+      "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/exports/documentary_parallel/electronic.xml",
+      "sha256": "358ada8dd23846d1c28df6c83d247754003461a8ccc6a25d376b94f35ed6bb03"
+    }
+  ],
+  "remaining_separate_gates": [
+    "Current PDF/HTML presentation: column geometry, notes, backlinks, bookmarks, readable conditional labels and click targets require the final export review.",
+    "Browser interaction for deferred electronic conditions and visual paragraphs belongs to final export QA. Electronic XML words and retained conditions were checked here.",
+    "Scan 46 is lookahead outside the present scan 25–45 acceptance scope."
+  ],
+  "no_full_acceptance_claim": true
+}

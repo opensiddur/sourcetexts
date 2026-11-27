@@ -1,0 +1,187 @@
+{
+  "status": "changes_required",
+  "reviewer": {
+    "model": "inherited parent model (exact ID not exposed)",
+    "effort": "inherited parent effort (exact ID not exposed)"
+  },
+  "scope": "Independent full-page source reading only, scans20 Hebrew/21 English plus all three Hebrew bands; encoding, order and exports excluded.",
+  "blind_reading": "/tmp/day2-s20-s21-blind.json",
+  "blind_sha256": "ac3d2d7e5d017e7741b53dd1bc8c98732b26736d0be20f3bb6ff6ee76ed91889",
+  "source_hashes": {
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s20.jpg": "7a0128d7c53f0b74354a51c4eb5b3277a2a13b2d8c1586a3ecf560237f8a0b4b",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s21.jpg": "a03d010cb090ae21020586b1f567d736b4743968db97b287cff37c2f29bb759d",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/maariv_s5_s24_bands/s20-band1.png": "06ddb9dc7b4c0a67dd11c304b90a2890c7dea49d9d8dd7ac87ae28f47a644284",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/maariv_s5_s24_bands/s20-band2.png": "21eb855652d60f9f17b761d79f8456bdf22269f26ede681dac650a0749ad04d1",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/maariv_s5_s24_bands/s20-band3.png": "6b4af0f9b730ef21947db6df353e7d986ce12fdbd133ebfb528c4a25fd0faa7a"
+  },
+  "candidate_hashes": {
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/maariv_s5_s24/primary/s20.json": "2633342d7355b70bd9de2704895dcceb1337d90a04f693f52eefd6f490c6e173",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/maariv_s5_s24/primary/s21.json": "867c5deedf26ca1378ff13bf97f640b092facdca6f66176b4532ae2d39e95eeb"
+  },
+  "instructions_sha256": "8e3648b5ca076ece2c8a8149a10c5a2247713056c3463175cb9c144ca043e37d",
+  "issues": [
+    {
+      "id": "s20-heading",
+      "block_index": 0,
+      "reason": "Printed heading has vowels, shin dots and dagesh, all stripped in primary.",
+      "source_box": [
+        430,
+        115,
+        950,
+        180
+      ],
+      "proposed_full_block": {
+        "kind": "heading",
+        "text": "מַעֲרִיב לֵיל שֵׁנִי שֶׁל רֹאשׁ הַשָּׁנָה"
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "s20-elohai",
+      "block_index": 6,
+      "reason": "Source has paired low comma strokes after מרמה and רעה; no maqaf in וכל החושבים or יהיו לרצון; no periods after first three עשה clauses; final עשה is defective (no vav) and has segol under shin.",
+      "source_boxes": [
+        [
+          170,
+          1110,
+          615,
+          1185
+        ],
+        [
+          170,
+          1270,
+          1210,
+          1535
+        ],
+        [
+          180,
+          1535,
+          620,
+          1625
+        ]
+      ],
+      "crops": [
+        "/tmp/day2-s20-commas-full.png",
+        "/tmp/day2-s20-aseh.png",
+        "/tmp/day2-s20-oseh-tight.png"
+      ],
+      "punctuation_note": "Two low comma strokes are represented diplomatically as two commas in proposed text; typographic codepoint choice is downstream of this source-only review.",
+      "proposed_full_block": {
+        "kind": "prayer",
+        "text": "אֱלֹהַי. נְצוֹר לְשׁוֹנִי מֵרָע וּשְׂפָתַי מִדַּבֵּר מִרְמָה,, וְלִמְקַלְלַי נַפְשִׁי תִדּוֹם וְנַפְשִׁי כֶּעָפָר לַכֹּל תִּהְיֶה: פְּתַח לִבִּי בְּתוֹרָתֶךָ וּבְמִצְוֹתֶיךָ תִּרְדּוֹף נַפְשִׁי. וְכָל הַחוֹשְׁבִים עָלַי רָעָה,, מְהֵרָה הָפֵר עֲצָתָם וְקַלְקֵל מַחֲשַׁבְתָּם. עֲשֵׂה לְמַעַן שְׁמֶךָ עֲשֵׂה לְמַעַן יְמִינֶךָ עֲשֵׂה לְמַעַן קְדֻשָּׁתֶךָ עֲשֵׂה לְמַעַן תּוֹרָתֶךָ. לְמַעַן יֵחָלְצוּן יְדִידֶיךָ הוֹשִׁיעָה יְמִינְךָ וַעֲנֵנִי: יִהְיוּ לְרָצוֹן אִמְרֵי־פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ יְיָ צוּרִי וְגֹאֲלִי: עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן:"
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "s20-yehi",
+      "block_index": 7,
+      "reason": "Source prints וְשָׁם, with vav. Defective Jerusalem has qamatz, meteg and hiriq under lamed, no hiriq-bearing yod; encode qamatz + U+05BD + U+034F + U+05B4.",
+      "source_boxes": [
+        [
+          170,
+          1760,
+          1210,
+          1825
+        ],
+        [
+          530,
+          1810,
+          840,
+          1895
+        ]
+      ],
+      "crops": [
+        "/tmp/day2-s20-yehi.png",
+        "/tmp/day2-s20-jerusalem-full.png"
+      ],
+      "jerusalem_lamed_sequence": [
+        "U+05DC",
+        "U+05B8",
+        "U+05BD",
+        "U+034F",
+        "U+05B4"
+      ],
+      "proposed_full_block": {
+        "kind": "prayer",
+        "text": "יְהִי רָצוֹן לְפָנֶיךָ יְיָ אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ שֶׁיִּבָּנֶה בֵּית הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵינוּ וְתֵן חֶלְקֵנוּ בְּתוֹרָתֶךָ: וְשָׁם נַעֲבָדְךָ בְּיִרְאָה כִּימֵי עוֹלָם וּכְשָׁנִים קַדְמֹנִיּוֹת: וְעָרְבָה לַייָ מִנְחַת יְהוּדָה וִירוּשָׁלָֽ͏ִם כִּימֵי עוֹלָם וּכְשָׁנִים קַדְמֹנִיּוֹת:"
+      },
+      "confidence": "high"
+    }
+  ],
+  "proposed_s20_blocks": [
+    {
+      "kind": "heading",
+      "text": "מַעֲרִיב לֵיל שֵׁנִי שֶׁל רֹאשׁ הַשָּׁנָה"
+    },
+    {
+      "kind": "prayer",
+      "text": "וְטוֹבוֹתֶיךָ שֶׁבְּכָל־עֵת עֶרֶב וָבֹקֶר וְצָהֳרָיִם. הַטּוֹב כִּי לֹא־כָלוּ רַחֲמֶיךָ וְהַמְרַחֵם כִּי לֹא־תַמּוּ חֲסָדֶיךָ מֵעוֹלָם קִוִּינוּ לָךְ: וְעַל כֻּלָּם יִתְבָּרַךְ וְיִתְרוֹמַם שִׁמְךָ מַלְכֵּנוּ תָּמִיד לְעוֹלָם וָעֶד:"
+    },
+    {
+      "kind": "prayer",
+      "text": "וּכְתוֹב לְחַיִּים טוֹבִים כָּל־בְּנֵי בְרִיתֶךָ:"
+    },
+    {
+      "kind": "prayer",
+      "text": "וְכֹל הַחַיִּים יוֹדוּךָ סֶּלָה וִיהַלְלוּ אֶת־שִׁמְךָ בֶּאֱמֶת הָאֵל יְשׁוּעָתֵנוּ וְעֶזְרָתֵנוּ סֶלָה. בָּרוּךְ אַתָּה יְיָ הַטּוֹב שִׁמְךָ וּלְךָ נָאֶה לְהוֹדוֹת:"
+    },
+    {
+      "kind": "prayer",
+      "text": "שָׁלוֹם רָב עַל־יִשְׂרָאֵל עַמְּךָ תָּשִׂים לְעוֹלָם כִּי אַתָּה הוּא מֶלֶךְ אָדוֹן לְכָל־הַשָּׁלוֹם. וְטוֹב בְּעֵינֶיךָ לְבָרֵךְ אֶת־עַמְּךָ יִשְׂרָאֵל בְּכָל־עֵת וּבְכָל־שָׁעָה בִּשְׁלוֹמֶךָ."
+    },
+    {
+      "kind": "prayer",
+      "text": "בְּסֵפֶר חַיִּים בְּרָכָה וְשָׁלוֹם וּפַרְנָסָה טוֹבָה נִזָּכֵר וְנִכָּתֵב לְפָנֶיךָ אֲנַחְנוּ וְכָל עַמְּךָ בֵּית יִשְׂרָאֵל לְחַיִּים טוֹבִים וּלְשָׁלוֹם. בָּרוּךְ אַתָּה יְיָ עוֹשֵׂה הַשָּׁלוֹם:"
+    },
+    {
+      "kind": "prayer",
+      "text": "אֱלֹהַי. נְצוֹר לְשׁוֹנִי מֵרָע וּשְׂפָתַי מִדַּבֵּר מִרְמָה,, וְלִמְקַלְלַי נַפְשִׁי תִדּוֹם וְנַפְשִׁי כֶּעָפָר לַכֹּל תִּהְיֶה: פְּתַח לִבִּי בְּתוֹרָתֶךָ וּבְמִצְוֹתֶיךָ תִּרְדּוֹף נַפְשִׁי. וְכָל הַחוֹשְׁבִים עָלַי רָעָה,, מְהֵרָה הָפֵר עֲצָתָם וְקַלְקֵל מַחֲשַׁבְתָּם. עֲשֵׂה לְמַעַן שְׁמֶךָ עֲשֵׂה לְמַעַן יְמִינֶךָ עֲשֵׂה לְמַעַן קְדֻשָּׁתֶךָ עֲשֵׂה לְמַעַן תּוֹרָתֶךָ. לְמַעַן יֵחָלְצוּן יְדִידֶיךָ הוֹשִׁיעָה יְמִינְךָ וַעֲנֵנִי: יִהְיוּ לְרָצוֹן אִמְרֵי־פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ יְיָ צוּרִי וְגֹאֲלִי: עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן:"
+    },
+    {
+      "kind": "prayer",
+      "text": "יְהִי רָצוֹן לְפָנֶיךָ יְיָ אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ שֶׁיִּבָּנֶה בֵּית הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵינוּ וְתֵן חֶלְקֵנוּ בְּתוֹרָתֶךָ: וְשָׁם נַעֲבָדְךָ בְּיִרְאָה כִּימֵי עוֹלָם וּכְשָׁנִים קַדְמֹנִיּוֹת: וְעָרְבָה לַייָ מִנְחַת יְהוּדָה וִירוּשָׁלָֽ͏ִם כִּימֵי עוֹלָם וּכְשָׁנִים קַדְמֹנִיּוֹת:"
+    },
+    {
+      "kind": "instruction",
+      "text": "קדיש תתקבל."
+    }
+  ],
+  "s21_status": "approved_source_reading",
+  "unresolved_questions": [],
+  "resolved_primary_uncertainties": [
+    "Both selah occurrences individually inspected: first סֶּלָה with dagesh, second סֶלָה without; primary correct.",
+    "Vearvah Divine Name abbreviation לַייָ visibly supports primary.",
+    "Jerusalem qamatz confirmed from this occurrence itself.",
+    "Small-print קדמניות supports defective קַדְמֹנִיּוֹת with primary pointing.",
+    "Fine marks elsewhere support primary except listed corrections."
+  ],
+  "post_comparison_corrections_to_blind": [
+    "Blind עֹשֵׂה had tsere; tight crop confirms segol, so final עֹשֶׂה.",
+    "Blind קדמוניות inserted vav after mem; tight crop supports primary defective spelling קדמניות.",
+    "Blind וְשָׁם correct; primary lacks vav.",
+    "Blind single comma abbreviates paired low comma strokes at מרמה and רעה; final records both strokes."
+  ],
+  "documentary_evidence": {
+    "printed_labels": {
+      "s20": "9",
+      "s21": "9"
+    },
+    "s20_extent": "Continued וטובותיך through קדיש תתקבל. inclusive",
+    "s21_extent": "Continued “us and for Thy wonders” through “The Reader says the whole Kaddish.” inclusive",
+    "english_hebrew_cues": [
+      "ועל",
+      "וכתוב",
+      "וכל",
+      "שלום",
+      "בספר",
+      "אלהי",
+      "יהי"
+    ],
+    "rubrics": {
+      "he": "קדיש תתקבל.",
+      "en": "The Reader says the whole Kaddish."
+    },
+    "paragraph_note": "English ועל appears as separate cue/paragraph. Hebrew continues ועל on next justified line after the opening continuation; primary grouping does not omit or reorder it. Yehi Ratzon is distinct smaller type; preserve that reading unit."
+  },
+  "acceptance_note": "Only exact proposed s20 corrected blocks are approved source readings; unchanged s20 blocks and all s21 text/cues/instruction are approved. No downstream acceptance asserted."
+}

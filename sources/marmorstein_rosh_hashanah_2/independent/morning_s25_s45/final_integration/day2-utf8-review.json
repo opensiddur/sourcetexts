@@ -1,0 +1,45 @@
+{
+  "status": "approved_utf8_only_change_output_approvals_carried_forward",
+  "reviewer": "Independent Codex agent /root/review_morning_renderer; model/effort unexposed",
+  "timestamp_utc": "2026-11-27T00:28:57.130622+00:00",
+  "commit": "89d987af6eb10c8a7fc4d7b142d3f6999209d3da",
+  "findings": [],
+  "diff_checks": [
+    {
+      "file": "opensiddur/importer/marmorstein_rosh_hashanah_2/morning.py",
+      "only_explicit_utf8_keywords": true,
+      "added_encoding_arguments": 8
+    },
+    {
+      "file": "opensiddur/importer/marmorstein_rosh_hashanah_2/morning_shared.py",
+      "only_explicit_utf8_keywords": true,
+      "added_encoding_arguments": 1
+    }
+  ],
+  "hashes": {
+    "opensiddur/importer/marmorstein_rosh_hashanah_2/morning.py": "25026aa8d6f429351289cd7318aae63c9a5b30ccaf31c1a78a662ee40388e1ab",
+    "opensiddur/importer/marmorstein_rosh_hashanah_2/morning_shared.py": "1aa29133fcbf22c015fdacd80b3c3393f37559370c6a158fed2d487c42f81046",
+    "specs/SCAN_DIGITIZATION_INSTRUCTIONS.md": "581f912d83efd06a6e2a4f51d2cd2407d79a37d49357e2509dc4d57a588718a2"
+  },
+  "instruction_bullet": "Read and approved explicit UTF8 for importer JSON/YAML I/O and global text-encoding guard requirement.",
+  "regeneration_equivalence": {
+    "report": "/tmp/day2-encoding-byte-equivalence.json",
+    "sha256": "d6f01c3ca780fb19c6fafcf85a42788deffea62626a48797d9d8ea0dd9379ae2",
+    "status": "passed",
+    "changed": [],
+    "independently_verified_current_hashes": 211,
+    "total": 211,
+    "xml": 207,
+    "profiles": 4
+  },
+  "validation": {
+    "test_log": "/tmp/day2-encoding-fix-tests.log",
+    "test_log_sha256": "b79ed8b837a6b04a29eda017f1f54010c9cbdfe76b45f6d270dc63907feac490",
+    "result": "60 tests17subtests passed, including global encoding guard and relevant importer tests."
+  },
+  "approval_composition": "Nine calls add only explicit UTF8 keywords. Removing those keywords exactly reproduces pre-fix source. All207XML and4profiles match recorded unchanged hashes; prior source, semantic and independent visual approvals carry forward.",
+  "limitations": [
+    "Before/after regeneration proof read from parent report; independently checked all211 current hashes and exact code delta.",
+    "No repository edits by reviewer; CI completion remains parent-owned."
+  ]
+}

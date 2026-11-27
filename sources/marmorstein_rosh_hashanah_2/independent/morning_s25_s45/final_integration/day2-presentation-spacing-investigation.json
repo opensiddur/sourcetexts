@@ -1,0 +1,93 @@
+{
+  "status": "investigation_complete_changes_recommended_nonblocking",
+  "reviewer": "Independent Codex agent /root/review_morning_renderer; model/effort unexposed",
+  "timestamp_utc": "2026-11-26T23:53:43.832021+00:00",
+  "hashes": {
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/opensiddur/exporter/tex/reledmac.xslt": "be41f55fe10a83335a283e97c78342a227ebd94f84bce5003f27438107a7efed",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/opensiddur/exporter/html/html.xslt": "5718d39e99bf90adda0aa25d06201928dd74488c0e19760d05b1000809401408",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/opensiddur/exporter/html/assets/reader.css": "dd487e8a7373ece60546e91029fdcb86dbe63844b71423d22e70b37897c53b9c",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/exports/expanded/electronic.xml": "19685e9ba4979abb31e6d0aa1cfc5e0b6960dd81ec6f368f8437e4c6ed9339d4",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/exports/expanded/print.xml": "73aba97746f74947c2c4b33538c14658d1f826b502f6351f68ae6ec33a33c414",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/exports/expanded/book.tex": "48983aa1b5b7e5ea97d74949a737385a95e620173b77b0250efe66f17b3d97e9",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/exports/expanded/book.html": "f061f9d568d3deae4180326c27da6f81961f9bf9225e700a2e982b81dd622f70",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/exports/documentary_parallel/electronic.xml": "7e9846f885bd242387003e4b9e7b68615331a0659d4685832ee77460d5982367",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/exports/documentary_parallel/print.xml": "4ef5bded8e6914175ff2837ae066a0fba4403c17f822f17ce9aac587fa7c2675",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/exports/documentary_parallel/book.tex": "cd94fab350606ce517448957cc2904dd28824b40263cb55dbd94934d0aca9798",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/morning_s25_s45/exports/documentary_parallel/book.html": "be33a8315142ebd1a89ed8cb5a0383974085c8e26f73085b99d9be484f0765e4"
+  },
+  "findings": [
+    {
+      "id": "F3",
+      "cause": "Extra paragraph separator caused by marker-only paragraph continuation in documentary parallel row, not missing text.",
+      "locations": [
+        "documentary_parallel/print.xml: morning_entrance_verses Psalm5:8 row includes full verse p followed by p(part=first) containing bare verse/chapter terminators and chapter55 marker only.",
+        "documentary_parallel/book.tex:1370–1379 contains full English verse continuously, followed by \\par\\skipnumbering\\OSKeepSep\\par and empty vno/chapter marks.",
+        "reledmac.xslt:3410–3417 emits f:para-break after completed p; numbered-stream2591–2639 turns it into an explicit blank separator while single-pstart is active."
+      ],
+      "classification": "Visible gap is not an intentional source paragraph with prayer words. Full English verse text remains continuous in generated TeX; the reported intraverse visual location is not a literal split before “before Thy holy place”. Marker-only trailing paragraph causes gratuitous blank-line geometry.",
+      "recommendation": "Suppress paragraph-separation glue when the following paragraph contribution in this alignment fragment has only nonvisual milestone/bookkeeping leaves. Preserve those markers and their order, and preserve real paragraph separators between actual text/rubrics. Do not delete source scope terminators or wrap each verse differently to work around exporter spacing.",
+      "tests": [
+        "Synthetic parallel row: text paragraph followed by marker-only next-paragraph prefix must retain marker commands but no OSKeepSep.",
+        "Control with two actual prose paragraphs must retain separator and line-count alignment.",
+        "Control with page-only carrier must retain facs navigation/anchor and not become a blank numbered paragraph."
+      ]
+    },
+    {
+      "id": "F4",
+      "cause": "Completely empty compiled parallel rows are serialized into styled HTML grids; mobile col-parallel border/padding makes visible divider lines.",
+      "locations": [
+        "electronic.xml in expanded/documentary_parallel: p:parallel with two self-closing p:parallelItem, no descendant markers/IDs/page links/conditions.",
+        "html.xslt:664–688 emits par and both col-empty divs even for literally empty row.",
+        "reader.css:133–156 grids plus row-gap and secondary padding-bottom/border-bottom."
+      ],
+      "inventory": [
+        {
+          "profile": "expanded",
+          "parallel_rows": 193,
+          "literally_empty_rows": 64,
+          "empty_rows_have_ids": false
+        },
+        {
+          "profile": "documentary_parallel",
+          "parallel_rows": 438,
+          "literally_empty_rows": 174,
+          "empty_rows_have_ids": false
+        },
+        {
+          "profile": "night_expanded",
+          "parallel_rows": 140,
+          "literally_empty_rows": 45,
+          "empty_rows_have_ids": false
+        }
+      ],
+      "recommendation": "Smallest robust output fix: suppress strictly empty parallel rows at HTML transform (both items contain no nodes except whitespace and no target-bearing attributes anywhere), or omit empty carriers during final compiler cleanup. For a general zero-word carrier retain anchors/page/conditional/graphic semantics and remove only layout chrome. Never discard based solely on normalize-space(.) or .col-empty: those also mark semantically necessary anchor/page/image-only carriers.",
+      "tests": [
+        "Two truly empty cells emit no styled par row.",
+        "Marker-only xml:id/corresp target survives as zero-height anchor.",
+        "Page-only carrier retains unique source link.",
+        "Textless graphic, note/rubric, and undecided conditional cases survive.",
+        "Known condition false in both languages may collapse chrome while preserving target nodes."
+      ]
+    },
+    {
+      "id": "F5",
+      "cause": "Adjacent foreign spans lack separators and bidi isolation; existing source colons combine across RTL/LTR spans.",
+      "locations": [
+        "expanded/book.html unresolved Shabbat rubric: foreign(he)בשבת immediately adjacent to foreign(en)On Shabbat.",
+        "reader.css has rubric color but no bilingual label separator/isolation rule."
+      ],
+      "recommendation": "Prefer shared semantic bilingual-label rendering with explicit separator and each language isolated (bdi or unicode-bidi:isolate). Preserve documentary punctuation inside language spans; insert a space or stable separator between spans rather than deleting source colons. Do not apply globally to all adjacent foreign spans since some intentionally join inline words.",
+      "tests": [
+        "RTL label plus LTR label appears separated on desktop/mobile.",
+        "Colon-bearing source label retains its own punctuation without visually doubled boundary colons.",
+        "Ordinary inline foreign text remains unchanged."
+      ]
+    }
+  ],
+  "limitations": [
+    "Read-only investigation; no repository or export artifacts modified.",
+    "No default reference database or concurrent compiler executed.",
+    "Final F2 order correction is parent-owned and excluded.",
+    "This report identifies structure/code cause; final PDF geometry should be verified after a bounded fix/re-render."
+  ]
+}

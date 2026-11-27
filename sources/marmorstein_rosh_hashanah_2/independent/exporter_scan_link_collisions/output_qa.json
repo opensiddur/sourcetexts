@@ -1,0 +1,116 @@
+{
+  "scope": "Two Veahavta excerpt PDF rebuilds only, not whole batch/book",
+  "variants": {
+    "hebrew": {
+      "file": "/tmp/veahavta-hebrew-fixed.pdf",
+      "sha256": "fd357f5e7df61093fded0e363738c4257885a87c079589ec51cf020b44098bd2",
+      "pages": 4,
+      "text_unchanged": true,
+      "link_rectangles_nonoverlap_and_within_page": true,
+      "links": [
+        {
+          "physical_output_page": 3,
+          "source": "https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n5_medium.jpg",
+          "rectangle": [
+            89.877,
+            680.899,
+            100.248,
+            690.284
+          ]
+        },
+        {
+          "physical_output_page": 3,
+          "source": "https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n7_medium.jpg",
+          "rectangle": [
+            77.514,
+            680.899,
+            87.885,
+            690.284
+          ]
+        }
+      ]
+    },
+    "parallel": {
+      "file": "/tmp/veahavta-parallel-fixed.pdf",
+      "sha256": "8bde66038187941d479632aa4fb6a1ae0f54bd9b7953f8053a42634f99ba2e1a",
+      "pages": 5,
+      "text_unchanged": true,
+      "link_rectangles_nonoverlap_and_within_page": true,
+      "links": [
+        {
+          "physical_output_page": 3,
+          "source": "https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n5_medium.jpg",
+          "rectangle": [
+            89.877,
+            680.899,
+            100.248,
+            690.284
+          ]
+        },
+        {
+          "physical_output_page": 3,
+          "source": "https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n6_medium.jpg",
+          "rectangle": [
+            548.472,
+            680.899,
+            558.843,
+            690.284
+          ]
+        },
+        {
+          "physical_output_page": 3,
+          "source": "https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n7_medium.jpg",
+          "rectangle": [
+            89.877,
+            621.248,
+            100.248,
+            630.633
+          ]
+        },
+        {
+          "physical_output_page": 3,
+          "source": "https://archive.org/download/mahzor-lyom-sheni-shel-rosh-hashanah-day-two-jenny-marmorstein-1965/page/n8_medium.jpg",
+          "rectangle": [
+            548.472,
+            588.695,
+            558.843,
+            598.08
+          ]
+        }
+      ]
+    }
+  },
+  "tests": "238 passed,159 subtests passed",
+  "browser": {
+    "wide_hebrew": {
+      "links": 2,
+      "positions": [
+        [
+          1209.078125,
+          317.5703125
+        ],
+        [
+          1209.078125,
+          342.7421875
+        ]
+      ],
+      "nonoverlap": true
+    },
+    "wide_parallel": {
+      "links": 4,
+      "nonoverlap": true
+    },
+    "mobile_parallel": {
+      "viewport_width": 390,
+      "document_width": 375,
+      "links": 4,
+      "float": "none",
+      "no_horizontal_overflow": true
+    }
+  },
+  "exporter_sha256": {
+    "opensiddur/exporter/tex/scan_links.py": "db360cbf3957f1cebeb8ae10d7869977d478f4c9af40d8fc2219497421f81ed1",
+    "opensiddur/exporter/tex/typography_tex.py": "8bb23c66d2cef489486f0dac4761bd7a8385d342148754a03cb0f6bf69fe1cf8",
+    "opensiddur/exporter/html/css.py": "2fb788070957e25d54972f5ae6dc19bbbe73f5deca979b7b9afa86a4f8b34b28"
+  }
+}

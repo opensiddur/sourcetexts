@@ -1,0 +1,73 @@
+{
+  "status": "approved_source_readings",
+  "reviewer": {
+    "model": "inherited parent model (exact ID not exposed)",
+    "effort": "inherited parent effort (exact ID not exposed)"
+  },
+  "scope": "Source-only exact application verification against independent image-reviewed final reports and preserved blind readings. Full-scan encoding, structure/order and export acceptance excluded.",
+  "working_candidates": [
+    {
+      "scan_page": 14,
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/maariv_s5_s24/working/s14.json",
+      "sha256": "ff90c098ccaf00892b725ad20e2553b9631ac81af6502b53d6d9991f8f782157",
+      "blocks_exactly_match_image_reviewed_proposal": true,
+      "block_count": 9
+    },
+    {
+      "scan_page": 15,
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/maariv_s5_s24/working/s15.json",
+      "sha256": "5b7a1a5600bd620a7b476a7597d5b1b2549c935ce38236311a2890101d5b9f6a",
+      "blocks_exactly_match_image_reviewed_proposal": true,
+      "block_count": 20
+    },
+    {
+      "scan_page": 20,
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/maariv_s5_s24/working/s20.json",
+      "sha256": "4993a00d59394c9fcd922be9d1caca5340e5dd2558986a9d074612ff53e44792",
+      "blocks_exactly_match_image_reviewed_proposal": true,
+      "block_count": 9
+    },
+    {
+      "scan_page": 21,
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/maariv_s5_s24/working/s21.json",
+      "sha256": "3b8faa0972b64cfe3c8e9366e49594274a8ca0755a7a9c7995ad85b3116a1ede",
+      "blocks_exactly_match_image_reviewed_proposal": true,
+      "block_count": 17
+    },
+    {
+      "scan_page": 24,
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/maariv_s5_s24/working/s24.json",
+      "sha256": "d87b4554298e53cc9ee9855e26e5f02f78b9ae848a55109ba6b7afc75e8d9aeb",
+      "blocks_exactly_match_image_reviewed_proposal": true,
+      "block_count": 4
+    }
+  ],
+  "review_evidence": [
+    {
+      "path": "/tmp/day2-s14-s15-final.json",
+      "sha256": "43fefe27623208606b24797b4572de9d810dfa36b20bc746a3bf66637fe7bb09",
+      "blind": "/tmp/day2-s14-s15-blind.json",
+      "blind_sha256": "92526b6cda845a6d00025651c7c36bce8d6c3877e5dd0ccf5d27d78443e3ab1d"
+    },
+    {
+      "path": "/tmp/day2-s20-s21-final.json",
+      "sha256": "9d6185c08806e24eaac480092014143c21c9b3df63578615aa3bc61e94d7c93d",
+      "blind": "/tmp/day2-s20-s21-blind.json",
+      "blind_sha256": "ac3d2d7e5d017e7741b53dd1bc8c98732b26736d0be20f3bb6ff6ee76ed91889"
+    },
+    {
+      "path": "/tmp/day2-s24-final.json",
+      "sha256": "d873886a8ab97d568a236c6cd333a41dfc3890605b4aaf17b4704ab9a0b9c499",
+      "blind": "/tmp/day2-s24-blind.json",
+      "blind_sha256": "2148e173fe01120a1ccc96d5e0767749d511014eef613cdad425b589ce75c285"
+    }
+  ],
+  "specific_checks": [
+    "All current working blocks exactly equal the image-reviewed proposed full blocks (s14/s20/s24) or the approved unchanged English primary blocks (s15/s21).",
+    "s15 retains printed literal “Thou has created.”",
+    "s24 remains Hebrew source only, without substituted English Aleinu.",
+    "Source20 paired low comma strokes remain diplomatically recorded as ,, in the exact reviewed proposal; codepoint typography remains outside this source-only gate."
+  ],
+  "issues": [],
+  "unresolved_questions": []
+}

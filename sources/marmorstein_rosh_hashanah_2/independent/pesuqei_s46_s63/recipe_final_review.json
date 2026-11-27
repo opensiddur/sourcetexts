@@ -1,0 +1,247 @@
+{
+  "status": "approved_structure_except_source_gate",
+  "batch": "pesuqei_s46_s63",
+  "reviewer": "Independent Codex review, delegated as pesuqei_recipe_review",
+  "requested_reviewer_model": "Sol",
+  "requested_reviewer_reasoning_effort": "medium",
+  "model_provenance": "Requested setting supplied in delegated task. No independent runner metadata was exposed inside this reviewer context.",
+  "scope": "Structural, alignment, source coverage and encoding review only. Verified against adjudicated page evidence and sampled original scans for structure and particular evidence, not a substitute for scoped image-reading approval or final PDF/HTML acceptance. Wrote no managed project files.",
+  "commits": {
+    "processor_base": "9d26395c72290d31e06617ebd53cd8e9e5e0a7e9",
+    "source_base": "0055f0fbad296e7ecc774aab50fba3777698c780",
+    "project_baseline": "09f1582866162d8cc6fed45cf3ccc27f076739db"
+  },
+  "recipe_sha256": "a718b6155ebed95b75dd3d15a991037ba40b752cbe05d2f18468bb163a8a9f7f",
+  "working_readings_sha256": "cbbeb9d8d178d2cbe88d1c1348a5581c678f62f18fd1504adaead64a0d5769a1",
+  "working_adjudicated_pages_sha256": "6beaafb58ed869916969e8298ef92d46685e2072fb55faa5be150af248f6c929",
+  "source_inputs_sha256": {
+    "pesuqei_units.json": "a718b6155ebed95b75dd3d15a991037ba40b752cbe05d2f18468bb163a8a9f7f",
+    "working/readings.json": "cbbeb9d8d178d2cbe88d1c1348a5581c678f62f18fd1504adaead64a0d5769a1",
+    "working/adjudicated_pages.json": "6beaafb58ed869916969e8298ef92d46685e2072fb55faa5be150af248f6c929",
+    "segmentation_proof.json": "1c7a12a777dc7cd4ad532e773951a5668479d12c090b78a438887770ddc2a838",
+    "registry_decisions.json": "f307da686145aa7933589fc2743e6299ed2b3c1200dd7d6939b0f5037a6d3a8e",
+    "correction_candidates.json": "0e3ff81ae848e127bb3d7f7026e9645fc30c282e12da53513a6c1241b5c4d564",
+    "image_manifest.json": "76de444885958376ec19355138c22a335f0059bbd08a0668a4c4e097c294d6f2",
+    "questions_1023.json": "2639807caa9180275e93017864bdc4166be39ecf22a6725d432713e5e9c977d9",
+    "scope.json": "267edcf4adc85ec3231f81258a0b29b92e45bfae19fc286f762704231d076429",
+    "reconciliation/source_composition_v4.json": "caf98e7a263eb765ff287c4e5a02bf5e274c6e684b0dad8d0156a5d874242ed0"
+  },
+  "processor_inputs_sha256": {
+    "AGENTS.md": "412beece13d5370bd12c2bfc87f88dca6e489e832ec1065f18169b2339a23ca8",
+    "specs/SCAN_DIGITIZATION_INSTRUCTIONS.md": "5cecd97f502dce2dae988bece31a491a32f8f22901f94b017dcaab28c8d263d1",
+    "specs/MARMORSTEIN_ROSH_HASHANAH_1.md": "07f314dc3c17971fafdd8e95ed8c971d0303adc6f6581041353230a7b8bf1d6a",
+    "specs/MARMORSTEIN_ROSH_HASHANAH_2.md": "432d0d48c30a99373b076d88859cc333a321c8e89b2043ddf561ec69a39cef0d",
+    "specs/SIDDUR_URN_SCHEME.md": "4415bf31bacb86e33fcd491819939db3822cd2278f364fccf890d3a835c60303",
+    "schema/JLPTEI-3.md": "855d1cdfa4da3b804132f7216102279fd4eff3819ff0b2d5004eb9b2bb1160a5",
+    "schema/jlptei.odd.xml": "688bac1dd3d6a7eb8a1f43c057a1d5249a610659de45a27d0496d22b4874e016",
+    "opensiddur/importer/marmorstein_rosh_hashanah_2/pesuqei.py": "c694409ca12aba862fe1fc65b5b8d95f9c39cb54f17d134a2e9a2a62723987e2",
+    "opensiddur/importer/marmorstein_rosh_hashanah_2/morning_witnesses.py": "83d70e56f1ea6cf0bf71a66943821a9e5ca5e3cf112d80d192ed8ab912058095",
+    "opensiddur/importer/marmorstein_rosh_hashanah_2/morning_shared.py": "1aa29133fcbf22c015fdacd80b3c3393f37559370c6a158fed2d487c42f81046",
+    "opensiddur/importer/marmorstein_rosh_hashanah_1/build.py": "7b4f562c3f33aebe942ea558b9db60bbb570c12af87d73805c6ac539666c9e5b",
+    "opensiddur/importer/scan/authoring.py": "97f50941cfc73956d1e0a08228068585a47fdb7ae049dec327821da560e884b7"
+  },
+  "settings_sha256": {
+    "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/documentary_parallel.yaml": "dd9f87a8ce7a288a644237a77668a76b5671db3c025f1dc649dc431b507e4c78",
+    "machzor_expanded-opensiddur-he/second_day_morning.yaml": "316a1efe03e632859c309f352741e7f5a4432d7a361306b1ee2179ac66a4df4f"
+  },
+  "bound_spine_dependencies": [
+    {
+      "path": "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/morning_prayers_service.xml",
+      "baseline_commit": "09f1582866162d8cc6fed45cf3ccc27f076739db",
+      "sha256": "c48bd8227c59afa8a78cb4e70e485b73bfd2ee3c98f9d930c1e42928eb5d6d0b"
+    },
+    {
+      "path": "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/morning_prayers_service.xml",
+      "baseline_commit": "09f1582866162d8cc6fed45cf3ccc27f076739db",
+      "sha256": "fc4ffb9324ea56d2c5a4bda261f7e8b10af13d5aacd911fbf991ca662cf2b5d3"
+    },
+    {
+      "path": "machzor_expanded-opensiddur-he/second_day_morning.xml",
+      "baseline_commit": "09f1582866162d8cc6fed45cf3ccc27f076739db",
+      "sha256": "de0729a58601fba002d8a0ac56401177cc9b5bc30dcb27f40110c3eda79deeeb"
+    }
+  ],
+  "compiled_outputs_sha256": {
+    "doc.xml": "6c776f6720e38ccc1c389358a28056772a558c7e093739b774a254a7495ce2c8",
+    "exp.xml": "3872e01d684c173cefe6e15a5b31176f053af1c58734ee843079631d8c73b4b5"
+  },
+  "independent_checks": [
+    {
+      "check": "Literal source coverage",
+      "result": "Pass with pending source gate",
+      "evidence": "Independently flattened each of 18 adjudicated scan records and compared ordered tokens to exact language/scan fragments. All 1,529 Hebrew and 3,399 English source prayer tokens accounted for. Only seven join operations removed spaces intervening after visually line-broken maqafs. No words were omitted or inserted. Citations separate (19), both Hebrew cue words on scan47 retained as evidence only, and running header/labels remain page metadata. The source comma in Chron. I. 16, 8. remains in the adjudicated source, while the recipe uses the mandated chapter:verse citation format."
+    },
+    {
+      "check": "Rendered literal text from adjudicated fragments",
+      "result": "Pass",
+      "evidence": "Compared all 29 new rendered word witnesses before compilation against fragment order, excluding only the corr branch of four choices. Exact whitespace-token equivalence except canonical Unicode reordering of the two marks on initial pe of the last Hebrew Psalm 34 verse, which retains both marks."
+    },
+    {
+      "check": "Physical page identities and notes",
+      "result": "Pass",
+      "evidence": "All 18 Archive scan links map scans 46–63 to leaves n45–n62 and encode printed labels 15–23 correctly in each language. Direct range-opening provenance survives compilation. Annotation-enabled documentary and expanded scratch compilations emit 19 anchored citation notes with linked targets and no parentheses inside linked content."
+    },
+    {
+      "check": "Corrections",
+      "result": "Pass with evidence ledger completion recommended",
+      "evidence": "Recipe preserves two separately printed convenant spellings on original scan47-band3 and scan49-band1, withold on scan49 and whem on scan51 as sic/corr. Withdrawn bought->brought is absent from recipe; printed brought retained. Record both convenant cases and image references alongside existing correction_candidates.json entries for durable completeness.",
+      "separate_convenant_evidence": [
+        {
+          "scan": 47,
+          "printed_page": 15,
+          "verse_urn": "urn:x-opensiddur:text:bible:chronicles_1/16/15",
+          "printed_context": "Remember for ever His convenant, the word",
+          "sic": "convenant",
+          "corr": "covenant",
+          "location": "Verse 15, lower text block, seventh line of the band. The extraneous n is plainly visible between o and v.",
+          "image": {
+            "scan": 47,
+            "band": 3,
+            "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s47-band3.png",
+            "source_sha256": "69c156897aa3c9a26dd1368d20f1b4db4ff38e7528357503bb10763097a888d3",
+            "source_dimensions": [
+              1380,
+              2269
+            ],
+            "box": [
+              0,
+              1452,
+              1380,
+              2269
+            ],
+            "sha256": "16a1f439161195ae4d2882f8e34056442588d35877bc045172b03772f0d9976f"
+          }
+        },
+        {
+          "scan": 49,
+          "printed_page": 16,
+          "verse_urn": "urn:x-opensiddur:text:bible:chronicles_1/16/17",
+          "printed_context": "for Israel as an eternal convenant, saying",
+          "sic": "convenant",
+          "corr": "covenant",
+          "location": "Verse 17, first prose paragraph, second line immediately below the running header. The extraneous n is plainly visible between o and v.",
+          "image": {
+            "scan": 49,
+            "band": 1,
+            "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s49-band1.png",
+            "source_sha256": "cbaee7f7389934b430e46e348a14c97057086bd5f38057be37ac78d20da951e8",
+            "source_dimensions": [
+              1380,
+              2269
+            ],
+            "box": [
+              0,
+              0,
+              1380,
+              907
+            ],
+            "sha256": "f85b6d4be4cac7dbef4b2af837fe6212f9acfe7f54937babb12d63d6b86d7f00"
+          }
+        }
+      ]
+    },
+    {
+      "check": "Recitation order and chapters",
+      "result": "Pass",
+      "evidence": "Order checked against both languages’ page flow. Fifteen documentary units read from Barukh She-amar through Psalm93. I Chronicles 16 has numbered bare chapter context and canonical verse milestones for 8–36 with no canonical whole-chapter provider. Both compiled versions select exactly those 29 verses. Whole Psalms and one-verse boundaries follow chapter/verse identities independently of paragraph/poetry layout, with Psalm19:15 contextualized to avoid conflicting with existing Elohai Netzor correspondence. Psalm 34 Hebrew and Psalm 136 line groupings proved against layout. Scripture source attribution remains on contextual quotations. The final amended Psalm 136 service calls preserve verses 1–24, 25, and 26 as three bounded spans in source order without pretending the English witness has verse 25."
+    },
+    {
+      "check": "Psalm 91 literal and expanded closing repetitions",
+      "result": "Pass",
+      "evidence": "Distinct Hebrew-only documentary unit with chapter/verse occurrence identities and canonical verse source. Main bilingual verse 91:16 translated once. Expanded sequence calls 91:16 twice overall, using the same canonical provider via chapter then standalone verse, explicit unique structural wrapper, local translation false, restored scope, and no English page link or words at repeat. Both project profiles select only Marmorstein English."
+    },
+    {
+      "check": "Existing graph, provenance and validation",
+      "result": "Pass for reviewed scope",
+      "evidence": "All 786 protected XML hashes match, three embedded spines match current disk and exact recorded git baseline and retain their morning material. Each new sequence nests within actual Shacharit, distinct expanded root with bilingual credit-bearing heading. No inter-file correspondence provider collisions involving new documents within either volume-two project. All 34 scratch documents pass compiled RelaxNG and Schematron. Witnesses point to the protected volume-two index bibliography with Heidenheim, Marmorstein, facsimilist, Archive identity, CC0 and transcription/digitization/XML credits."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "blocking",
+      "id": "R1",
+      "title": "Psalm 136:25 has no English but shares Psalm 136:24’s English alignment row",
+      "evidence": "In both actual scratch compiler outputs, the p:parallel row containing Hebrew verse milestones 136/24 and 136/25 has English verse milestone 136/24 with “And He rescued us from our enemies” and its refrain. The next separate row is v.26. The whole-psalm recipe call therefore does not keep the absent translation structurally isolated, despite no extra English words being invented. Source scan61-band1 has neither the giving-food line nor its refrain. First-day spec lines 760–765 explicitly solved this same verified omission with three bounded calls.",
+      "required_change": "Keep the literal chapter witnesses and the Hebrew canonical v.25, but call the bilingual 1–24 range, Hebrew-only v.25, and bilingual v.26 separately in documentary and expanded recitation order. Ensure v.25 gets no English donor, placeholder, inherited alignment or provenance, and prevent automatic range override against the end. Recompile both modes and assert independent rows and intact 26 HE / 25 EN refrains.",
+      "resolution": {
+        "status": "verified_fixed",
+        "evidence": "Final compact range ends /136/24, with canonical v.25 and v.26 as separate calls. Ran actual prospective data through the documentary and expanded section compilers in a scratch refdb. Indexed the other-volume Marmorstein and JPS Psalm 136 providers as real unselected competitors. Both outputs have exact verses 1–24 and 26 paired by verse, exactly one Hebrew line at v.25, and 26 Hebrew / 25 English semantic refrains. The documentary empty English structural wrapper has neither words nor page links and is not an encoded English witness. Expanded output has no English item at v.25. Both preserve 19 citation notes."
+      }
+    },
+    {
+      "severity": "minor",
+      "id": "R2",
+      "title": "English Psalm 136 source-layout description misses verse 8",
+      "evidence": "Scan59-band2 shows The sun to rule by day and the refrain on one baseline. Actual literal fragment data already correctly combine this verse as one line. edition_layout names only 2, 3, 17 and 18.",
+      "recommended_change": "List 2, 3, 8, 17, 18 as the same-line verses.",
+      "resolution": {
+        "status": "verified_fixed",
+        "evidence": "Amended source-layout description lists same-line verses 2/3/8/17/18, matching fragment data and images."
+      }
+    }
+  ],
+  "blocked_source_gate": {
+    "question_id": 1023,
+    "scan": 62,
+    "scope": "Psalm 92:8 source maqaf at line-end",
+    "status": "pending_user_answer",
+    "linkage": "Do not publish or count complete source approval from this review."
+  },
+  "later_gates": [
+    "Apply and independently verify source question #1023 in the exact reading occurrence, then rebind change and authorizations before project output.",
+    "Run named-profile compilation and final PDF/HTML display and scan-link QA separately. This is not an import, review of Hebrew pointing, export, publication or source acceptance."
+  ],
+  "prior_review_sha256": "fcc61984ab7578baf1c2a296dc73555cb35d15548e5e7231210fa1768f6615c9",
+  "validation_artifacts_sha256": {
+    "day2_recipe_independent_checks_v2.py": "7ffb0e7c4c1724ac0fc315b1d73e9bf1533afeee2fe0d6fd3d245a94c2915043",
+    "day2_recipe_verify_psalm136.py": "c30922c61db81b306495cdeeb1d9b03a65631ddfd54a22234ad141730407f5d9",
+    "day2-recipe-compile-v2-final.log": "91768b6c3b8a591fb0a2038411247ed8384d5ac966f94596a331cddf7e80290a",
+    "day2-recipe-psalm136-verification.log": "80ce7adb8c576a395f90afff2d422e7d4de80bece908285c4d31e0ae7b646835",
+    "day2-recipe-validate-v2-final.log": "ebdf69a0b10a380e1be6aedbfbd55cddff54f5070278eade0324c87a7d76485c"
+  },
+  "unresolved_structure_findings": [],
+  "prior_structure_review_sha256": "c2f1bef0fed5a95b66a5cdcfba01406583f60d0fc3daaa0023b143452dc27fdc",
+  "provider_check_amendment": {
+    "old_code_sha256": "e51d504194ea314c4050e562351fd733ac2260fe9789d019052e399d322e772d",
+    "new_code_sha256": "c694409ca12aba862fe1fc65b5b8d95f9c39cb54f17d134a2e9a2a62723987e2",
+    "review_script_sha256": "6dac16decdb360985627cc3815e5cd76aae6e4fe40dbcae8a0ee74bb4173fa8d",
+    "controlled_change": "In-batch repeated-English-provider search scans all @corresp nodes and requires exactly one matching verse milestone. Existing alternate-English-provider detection scans all elements, including root divisions, and covers Hebrew-only range targets. Independently exercised the new gate with a root-level English alternative at both Psalm91:16 and Psalm136:25. The actual recipe passes the gate. Fresh generation matches the prior structure-reviewed XML byte for byte across all 34 artifacts, so the previous schema and parallel outcome verification still applies. No managed project XML was written.",
+    "generated_output_sha256": {
+      "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/barukh_sheamar.xml": "6e96ada86cd82beef92ce52aa8ab3dc92ee47c6d8633647a7a03060b50eec405",
+      "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/barukh_sheamar.xml": "177d55e3287cf80f296a5da993b51e2dc204d3f82b20a46195b7a12916ef4648",
+      "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/chronicles_1_16_8_to_36.xml": "936bdfa1980154621a1757b332f331c65143206130cbd8d7c1223f9f74a8253e",
+      "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/chronicles_1_16_8_to_36.xml": "9863327acbac39f4ff87217e3690babf9716132269dfd9ca60b3a6f4ac7999c3",
+      "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/romemu.xml": "b9968d99f281f4f3bbede3cbaba153008ff8dbeda7b68f978344b4739e40b1dc",
+      "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/romemu.xml": "1af666fbbf3d246e19f74845d6ee4cde7ca880ee5201ce1da9a25a25a9ff83c5",
+      "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/vehu_rachum.xml": "3bbc1804c33793152ccffab572380a99cebb29c207ab421cf7c75cacbe632d73",
+      "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/vehu_rachum.xml": "75b070db100ca21820257c98a1889a4316d503708beeb8991da23e58c6315625",
+      "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/hoshiah_et_ammekha.xml": "d71d3750d0d7db6fdcb5818b2b19d76d23db952f8064fa9a593aae0b00c64a54",
+      "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/hoshiah_et_ammekha.xml": "0dcf3329942ae4741cadabedf4fafa7933094c784a886c6d24d2f6a5f8327f91",
+      "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/psalm_19.xml": "6e4135fc9df357e01086bc899846b7d44c51b0dfdb4033fdb746e17b999e5dd1",
+      "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/psalm_19.xml": "673253ea0a7050e4bfe4ddbfaeb345c912c545a23ebb5f455b263263ab0a5d80",
+      "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/psalm_34.xml": "495bc967cadf57a9420bd5e5d2e3f1fbe126da22eca0a29729522c8eee131764",
+      "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/psalm_34.xml": "95955a6aff7f49b6a7c25a5174643c244acef975259fabe7f38321aa155c64f3",
+      "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/psalm_90.xml": "0cac855382ca2800aa012a7236fb7506d754d9dacc9cfc90b25ad691206f61ab",
+      "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/psalm_90.xml": "3e1d44d667558844b77d63b9d85666ad39a1f5ceec8618e6c0b5782501d9bcae",
+      "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/psalm_91.xml": "c2a0fc87fb1b84a76a24b032fed3d2e9a90c076bfe6bd4bf3be12db4b443785f",
+      "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/psalm_91.xml": "bcdda570b51bdaf47764059792b0b5872936b184fb980f17ff54152403b9aa3c",
+      "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/psalm_91_repeat.xml": "af2a0784de6f371bcb4b2662e0214f8e9b7b87decf2ee3ac67d48488b89afb33",
+      "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/psalm_135.xml": "538d4e0becdd0647a3ebff1365c497d518fae3b734ec56894a95d1952278de93",
+      "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/psalm_135.xml": "721fd9d2a7c94247cf3affd85c81342c09091e99b79d970ed6e2b6e56b2c3499",
+      "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/psalm_136.xml": "2537a72060187f9ccaaff88b07b42cbef98533765b615730606206476867d4f3",
+      "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/psalm_136.xml": "e572952133ef8cad8d0746b68244a72cf879df9d1169b0224a17dd997443a0d0",
+      "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/psalm_33.xml": "e2ba6fb5b56ee67e21fd9f631afc9f8e3246eb18e71fe8f114b8e40e79422f48",
+      "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/psalm_33.xml": "143fa9dece1b5cb575ca6c2ae8db322a9d47b6e9bf08a673df238c428b112eab",
+      "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/psalm_92.xml": "db22c3f6943e87bc3c5f65d63db562f551b033711fccd4bf193adb8ab1b76d64",
+      "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/psalm_92.xml": "ac55db9d6bd5efad357ef2176f543cf63c310cc720b429dd9fb2760b51545ea9",
+      "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/psalm_93.xml": "9422acf8c0241d482224bc4bf351b0987a3c2b8298533e2d5412e8aa403b2a24",
+      "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/psalm_93.xml": "17b19a1a2909fbafaa22cbb66649383305cf2d69623f852bd99dd79b6f15403b",
+      "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/pesuqei_service.xml": "65befcd79647da6422a0ac4332ac3faee9a533406853f9fb6cd79aaad5b80219",
+      "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/pesuqei_service.xml": "6fd315d7a832ce340a980f56558adeaae7e74a67b92cf091dcba7dd41cfbf68c",
+      "prayerbook_for_the_new_year_second_day-heidenheim-1965-he/morning_prayers_service.xml": "f39e4797c325527f91943461d13d05f13d0fb29805389e447ffa10f713d92bd7",
+      "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/morning_prayers_service.xml": "0284b8e2287d66ff6ef60aeb2be77ccf6a0cb80a796567ef3ae0a2680103f5e1",
+      "machzor_expanded-opensiddur-he/second_day_morning.xml": "36cbf20ba0ae0c0c7654d107f8c849378ba789d9bfee4a91b1dbab536131fd2c"
+    },
+    "changed_source_evidence_files": []
+  }
+}

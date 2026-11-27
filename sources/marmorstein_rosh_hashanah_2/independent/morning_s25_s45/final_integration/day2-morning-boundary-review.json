@@ -1,0 +1,1863 @@
+{
+  "status": "approved_documentary_boundary_semantics_and_code_scope",
+  "reviewer": "/root/review_morning_identities",
+  "actual_model": "Inherited collaboration model; exact identifier/effort unavailable",
+  "findings": [],
+  "scope": "Code, source structure, schema and actual compiled semantic proof for the F2 documentary section-boundary fix. This is not a replacement for the required PDF/HTML visual re-review.",
+  "F2_resolution": {
+    "root_cause": "The previous parallel compile could carry the next English heading into the pending unpaired Hebrew Tallit ending. A paired external service boundary now finishes Tallit before entering the Prayers section.",
+    "implementation": "documentary_documents moves the complete preliminaries and blessings divisions into a paired morning_prayers_service file and leaves Tallit plus the enclosing morning printing declaration in the caller. Existing text and source order stay intact.",
+    "compiled_proof": [
+      {
+        "profile": "documentary_hebrew",
+        "destination": "print",
+        "entire_tallit_yehi_end_position": 45,
+        "tallit_removal_rubric_position": 46,
+        "prayers_headings": [
+          {
+            "language": "he",
+            "position": 52,
+            "text": "תְּפִלּוֹת."
+          }
+        ],
+        "paired_service_contains_headings_and_excludes_tallit_ending": true,
+        "prior_night_subtree_c14n_equal": true,
+        "colophon_equal": true
+      },
+      {
+        "profile": "documentary_hebrew",
+        "destination": "electronic",
+        "entire_tallit_yehi_end_position": 45,
+        "tallit_removal_rubric_position": 46,
+        "prayers_headings": [
+          {
+            "language": "he",
+            "position": 52,
+            "text": "תְּפִלּוֹת."
+          }
+        ],
+        "paired_service_contains_headings_and_excludes_tallit_ending": true,
+        "prior_night_subtree_c14n_equal": true,
+        "colophon_equal": true
+      },
+      {
+        "profile": "documentary_parallel",
+        "destination": "print",
+        "entire_tallit_yehi_end_position": 125,
+        "tallit_removal_rubric_position": 130,
+        "prayers_headings": [
+          {
+            "language": "he",
+            "position": 139,
+            "text": "תְּפִלּוֹת."
+          },
+          {
+            "language": "en",
+            "position": 144,
+            "text": "Prayers"
+          }
+        ],
+        "paired_service_contains_headings_and_excludes_tallit_ending": true,
+        "prior_night_subtree_c14n_equal": true,
+        "colophon_equal": true
+      },
+      {
+        "profile": "documentary_parallel",
+        "destination": "electronic",
+        "entire_tallit_yehi_end_position": 125,
+        "tallit_removal_rubric_position": 130,
+        "prayers_headings": [
+          {
+            "language": "he",
+            "position": 139,
+            "text": "תְּפִלּוֹת."
+          },
+          {
+            "language": "en",
+            "position": 144,
+            "text": "Prayers"
+          }
+        ],
+        "paired_service_contains_headings_and_excludes_tallit_ending": true,
+        "prior_night_subtree_c14n_equal": true,
+        "colophon_equal": true
+      }
+    ],
+    "conclusion": "F2 is closed at the actual compiled sequence/preamble boundary level in print and electronic destinations; final visual confirmation remains required."
+  },
+  "code_review": {
+    "helper": "opensiddur.importer.marmorstein_rosh_hashanah_2.morning.documentary_documents",
+    "changed_code_path": "/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/opensiddur/importer/marmorstein_rosh_hashanah_2/morning.py",
+    "changed_code_sha256": "b5d4661210b8edebdcd8979127ba843d863e8cb20c176f905f9d22f62a904c30",
+    "properties": [
+      "Requires exactly the two expected source groups; preserves their internal elements and order while moving them together.",
+      "Places an edition-qualified structural transclusion at the original group start, after the completed Tallit section and before the matching endDeclare.",
+      "Builds matching Hebrew/English structural context roots, allowing parallel discovery at the new boundary.",
+      "Adds one contextual siddur registry identity, with no new canonical prayer identities or source words.",
+      "Expanded construction does not call the new helper; its source XML remains byte-identical."
+    ],
+    "synthetic_regression": {
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/opensiddur/tests/importer/test_marmorstein_day_two_morning.py",
+      "sha256": "d7f42aa2ee5f1446fbe85546782bc30c2e6fc60c460dc5279aa9fda839cfa1b0",
+      "test": "test_unpaired_tallit_ending_precedes_shared_prayer_boundary",
+      "assessment": "Tests the actual helper with invented sections and checks Tallit/call/endDeclare ordering plus the moved paired groups. Independent real compilation here closes the pipeline-level coverage gap."
+    }
+  },
+  "schema": {
+    "new_service_he": "Independently passed RelaxNG and Schematron.",
+    "new_service_en": "Independently passed RelaxNG and Schematron."
+  },
+  "registry": {
+    "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/specs/urn_registry/siddur.jsonl",
+    "record": {
+      "urn": "urn:x-opensiddur:text:siddur:rosh_hashanah/day_two/shacharit/prayers",
+      "status": "context",
+      "parent": "urn:x-opensiddur:text:siddur:rosh_hashanah/day_two/shacharit",
+      "label_en": "Second-day morning prayers after the tallit section",
+      "note": "Paired structural service boundary; flushes the untranslated tallit ending before the next heading."
+    },
+    "record_sha256": "dfd5ec2e67561b2b44ea316ec2883db2b12ac0db498c60d2e9d8b25a361b676f"
+  },
+  "source_fidelity": {
+    "all103_approved_raw_hashes_unchanged": true,
+    "literal_or_shared_word_edit_count": 0,
+    "actual_compiled_check": {
+      "checks": [
+        {
+          "profile": "documentary_hebrew",
+          "destination": "print",
+          "sequence_exact_62_units": true,
+          "source_comparisons": [
+            {
+              "unit": "tallith_hineni_mitattef",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "tallith_lehitattef",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "tallith_mah_yaqar",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "tallith_yehi_ratzon",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_entrance_verses",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_mah_tovu",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "shachar_avaqeshkha_gabirol",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_before_prayer",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "yigdal",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "adon_olam",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "al_netilat_yadayim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "asher_yatzar",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hatorah_laasoq",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hatorah_vehaarev",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hatorah_asher_bachar",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "numbers_6_24_to_26",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "ellu_devarim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "elohai_neshamah",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_lasekhvi",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shelo_asani_goy",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shelo_asani_aved",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shelo_asani_ishah",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_sheasani_kirtzono",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_poqeach_ivrim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_malbish_arummim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_mattir_asurim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_zoqef_kefufim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_roqa_haaretz",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_sheasah_li",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_hamekhin",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_ozer_yisrael",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_oter_yisrael",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_hanoten_layaef",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_hamaavir_shenah",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shetargilenu",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shetatzileni",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "ribbon_kol_haolamim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "aval_anachnu",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "lefikhakh",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_shema_yisrael",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_barukh_shem",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "attah_hu_ad_shelo",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "attah_hu_bashamayim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_kiyyor",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "leviticus_6_3_to_4",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_tamid",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_veshachat",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_attah_hu",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_qetoret",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_pittum",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_rashbag",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_rabbi_natan",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_bar_kappara",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_pesuqim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_attah_seter",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_vearvah",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "anna_bekhoach",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_barukh_shem",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_musaf_shabbat",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "eizehu_meqoman",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "middot",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "middot_yehi_ratzon",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            }
+          ]
+        },
+        {
+          "profile": "documentary_hebrew",
+          "destination": "electronic",
+          "sequence_exact_62_units": true,
+          "source_comparisons": [
+            {
+              "unit": "tallith_hineni_mitattef",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "tallith_lehitattef",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "tallith_mah_yaqar",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "tallith_yehi_ratzon",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_entrance_verses",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_mah_tovu",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "shachar_avaqeshkha_gabirol",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_before_prayer",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "yigdal",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "adon_olam",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "al_netilat_yadayim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "asher_yatzar",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hatorah_laasoq",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hatorah_vehaarev",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hatorah_asher_bachar",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "numbers_6_24_to_26",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "ellu_devarim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "elohai_neshamah",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_lasekhvi",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shelo_asani_goy",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shelo_asani_aved",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shelo_asani_ishah",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_sheasani_kirtzono",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_poqeach_ivrim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_malbish_arummim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_mattir_asurim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_zoqef_kefufim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_roqa_haaretz",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_sheasah_li",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_hamekhin",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_ozer_yisrael",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_oter_yisrael",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_hanoten_layaef",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_hamaavir_shenah",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shetargilenu",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shetatzileni",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "ribbon_kol_haolamim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "aval_anachnu",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "lefikhakh",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_shema_yisrael",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_barukh_shem",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "attah_hu_ad_shelo",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "attah_hu_bashamayim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_kiyyor",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "leviticus_6_3_to_4",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_tamid",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_veshachat",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_attah_hu",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_qetoret",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_pittum",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_rashbag",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_rabbi_natan",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_bar_kappara",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_pesuqim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_attah_seter",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_vearvah",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "anna_bekhoach",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_barukh_shem",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_musaf_shabbat",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "eizehu_meqoman",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "middot",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "middot_yehi_ratzon",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            }
+          ]
+        },
+        {
+          "profile": "documentary_parallel",
+          "destination": "print",
+          "sequence_exact_62_units": true,
+          "source_comparisons": [
+            {
+              "unit": "tallith_hineni_mitattef",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "tallith_lehitattef",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "tallith_lehitattef",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "tallith_mah_yaqar",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "tallith_mah_yaqar",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "tallith_yehi_ratzon",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_entrance_verses",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_entrance_verses",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_mah_tovu",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_mah_tovu",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "shachar_avaqeshkha_gabirol",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "shachar_avaqeshkha_gabirol",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_before_prayer",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_before_prayer",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "yigdal",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "yigdal",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "adon_olam",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "adon_olam",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "al_netilat_yadayim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "al_netilat_yadayim",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "asher_yatzar",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "asher_yatzar",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hatorah_laasoq",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hatorah_laasoq",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hatorah_vehaarev",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hatorah_vehaarev",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hatorah_asher_bachar",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hatorah_asher_bachar",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "numbers_6_24_to_26",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "numbers_6_24_to_26",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "ellu_devarim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "ellu_devarim",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "elohai_neshamah",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "elohai_neshamah",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_lasekhvi",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_lasekhvi",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shelo_asani_goy",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shelo_asani_goy",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shelo_asani_aved",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shelo_asani_aved",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shelo_asani_ishah",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shelo_asani_ishah",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_sheasani_kirtzono",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_sheasani_kirtzono",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_poqeach_ivrim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_poqeach_ivrim",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_malbish_arummim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_malbish_arummim",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_mattir_asurim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_mattir_asurim",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_zoqef_kefufim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_zoqef_kefufim",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_roqa_haaretz",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_roqa_haaretz",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_sheasah_li",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_sheasah_li",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_hamekhin",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_hamekhin",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_ozer_yisrael",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_ozer_yisrael",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_oter_yisrael",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_oter_yisrael",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_hanoten_layaef",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_hanoten_layaef",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_hamaavir_shenah",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_hamaavir_shenah",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shetargilenu",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shetargilenu",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shetatzileni",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shetatzileni",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "ribbon_kol_haolamim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "ribbon_kol_haolamim",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "aval_anachnu",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "aval_anachnu",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "lefikhakh",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "lefikhakh",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_shema_yisrael",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_shema_yisrael",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_barukh_shem",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_barukh_shem",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "attah_hu_ad_shelo",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "attah_hu_ad_shelo",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "attah_hu_bashamayim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "attah_hu_bashamayim",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_kiyyor",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "leviticus_6_3_to_4",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_tamid",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_veshachat",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_attah_hu",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_qetoret",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_pittum",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_rashbag",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_rabbi_natan",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_bar_kappara",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_pesuqim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_attah_seter",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_vearvah",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "anna_bekhoach",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_barukh_shem",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_musaf_shabbat",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "eizehu_meqoman",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "middot",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "middot_yehi_ratzon",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            }
+          ]
+        },
+        {
+          "profile": "documentary_parallel",
+          "destination": "electronic",
+          "sequence_exact_62_units": true,
+          "source_comparisons": [
+            {
+              "unit": "tallith_hineni_mitattef",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "tallith_lehitattef",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "tallith_lehitattef",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "tallith_mah_yaqar",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "tallith_mah_yaqar",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "tallith_yehi_ratzon",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_entrance_verses",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_entrance_verses",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_mah_tovu",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_mah_tovu",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "shachar_avaqeshkha_gabirol",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "shachar_avaqeshkha_gabirol",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_before_prayer",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_before_prayer",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "yigdal",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "yigdal",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "adon_olam",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "adon_olam",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "al_netilat_yadayim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "al_netilat_yadayim",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "asher_yatzar",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "asher_yatzar",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hatorah_laasoq",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hatorah_laasoq",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hatorah_vehaarev",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hatorah_vehaarev",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hatorah_asher_bachar",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hatorah_asher_bachar",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "numbers_6_24_to_26",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "numbers_6_24_to_26",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "ellu_devarim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "ellu_devarim",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "elohai_neshamah",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "elohai_neshamah",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_lasekhvi",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_lasekhvi",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shelo_asani_goy",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shelo_asani_goy",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shelo_asani_aved",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shelo_asani_aved",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shelo_asani_ishah",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shelo_asani_ishah",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_sheasani_kirtzono",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_sheasani_kirtzono",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_poqeach_ivrim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_poqeach_ivrim",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_malbish_arummim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_malbish_arummim",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_mattir_asurim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_mattir_asurim",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_zoqef_kefufim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_zoqef_kefufim",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_roqa_haaretz",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_roqa_haaretz",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_sheasah_li",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_sheasah_li",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_hamekhin",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_hamekhin",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_ozer_yisrael",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_ozer_yisrael",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_oter_yisrael",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_oter_yisrael",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_hanoten_layaef",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_hanoten_layaef",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_hamaavir_shenah",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_hamaavir_shenah",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shetargilenu",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shetargilenu",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shetatzileni",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "birkhot_hashachar_shetatzileni",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "ribbon_kol_haolamim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "ribbon_kol_haolamim",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "aval_anachnu",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "aval_anachnu",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "lefikhakh",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "lefikhakh",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_shema_yisrael",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_shema_yisrael",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_barukh_shem",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "morning_barukh_shem",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "attah_hu_ad_shelo",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "attah_hu_ad_shelo",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "attah_hu_bashamayim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "attah_hu_bashamayim",
+              "language": "en",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_kiyyor",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "leviticus_6_3_to_4",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_tamid",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_veshachat",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_attah_hu",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_qetoret",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_pittum",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_rashbag",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_rabbi_natan",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_bar_kappara",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_pesuqim",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_attah_seter",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_vearvah",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "anna_bekhoach",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_barukh_shem",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "qorbanot_musaf_shabbat",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "eizehu_meqoman",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "middot",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            },
+            {
+              "unit": "middot_yehi_ratzon",
+              "language": "he",
+              "words_and_selected_source_leaves_exact": true
+            }
+          ]
+        }
+      ],
+      "findings": []
+    },
+    "meaning": "All 62 source-unit calls remain in the approved order in all four documentary compilations. Hebrew/English prayer words, omissions and physical source leaves match approved readings; the new structural call is not counted as another source unit."
+  },
+  "expanded_unchanged": {
+    "role": "expanded",
+    "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/machzor_expanded-opensiddur-he/second_day_morning.xml",
+    "sha256": "de0729a58601fba002d8a0ac56401177cc9b5bc30dcb27f40110c3eda79deeeb",
+    "prior_sha256": "de0729a58601fba002d8a0ac56401177cc9b5bc30dcb27f40110c3eda79deeeb"
+  },
+  "generated_source_files": [
+    {
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/morning.xml",
+      "sha256": "6860697c5254113276a270305b46c842cc944e7678419751253fcde5c734255c"
+    },
+    {
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/morning_prayers_service.xml",
+      "sha256": "c48bd8227c59afa8a78cb4e70e485b73bfd2ee3c98f9d930c1e42928eb5d6d0b"
+    },
+    {
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/morning.xml",
+      "sha256": "90de43fbfa6f1205813c7664a7bc6aaeca2d38a656e5d46fd19e9ed3d477869a"
+    },
+    {
+      "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/morning_prayers_service.xml",
+      "sha256": "fc4ffb9324ea56d2c5a4bda261f7e8b10af13d5aacd911fbf991ca662cf2b5d3"
+    }
+  ],
+  "actual_compiled_artifacts": [
+    {
+      "path": "/tmp/day2-boundary-integration/current-documentary_hebrew-print.xml",
+      "sha256": "ba0ef1fa679a4ce4f5327cccd0f92d15be75f514e03496ccc0593c636402c748"
+    },
+    {
+      "path": "/tmp/day2-boundary-integration/current-documentary_hebrew-electronic.xml",
+      "sha256": "778c310477c70c93a52aa1951eed3c3a4ef5d4a3157e87dd641bb317b01e4af0"
+    },
+    {
+      "path": "/tmp/day2-boundary-integration/current-documentary_parallel-print.xml",
+      "sha256": "4ef5bded8e6914175ff2837ae066a0fba4403c17f822f17ce9aac587fa7c2675"
+    },
+    {
+      "path": "/tmp/day2-boundary-integration/current-documentary_parallel-electronic.xml",
+      "sha256": "7e9846f885bd242387003e4b9e7b68615331a0659d4685832ee77460d5982367"
+    }
+  ],
+  "compile_evidence": {
+    "manifest": "/tmp/day2-boundary-integration/compile-manifest.json",
+    "manifest_sha256": "062817fc14523bb8bfb802f071a57f41bc5efa9900a7d27bb5ef5ae978e89281",
+    "isolated_database_only": "/tmp/day2-boundary-integration/current-references.sqlite",
+    "default_or_shared_refdb_opened": false
+  },
+  "remaining_gates": [
+    "Re-render documentary parallel PDF/HTML and have the independent presentation reviewer verify F2 visually against the new artifact hashes.",
+    "F3–F5 presentation findings from the previous Claude report are outside this boundary-only approval; their fixes and final export evidence require separate review.",
+    "No complete batch or whole-volume acceptance is conferred."
+  ],
+  "no_full_acceptance_claim": true
+}

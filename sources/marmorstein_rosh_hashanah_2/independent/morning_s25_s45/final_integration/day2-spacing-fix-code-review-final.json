@@ -1,0 +1,121 @@
+{
+  "status": "approved_code_and_independent_visual_closure",
+  "reviewer": "Independent Codex agent /root/review_morning_renderer; model/effort unexposed",
+  "timestamp_utc": "2026-11-27T00:15:34.199938+00:00",
+  "hashes": {
+    "opensiddur/exporter/tex/reledmac.xslt": "b7e3757ab14103c00b6ba11151282589f7693099b513317eb2b265c1505b731f",
+    "opensiddur/exporter/html/html.xslt": "1c44988fd852861c1ecc177b55d8ab5963e4cc08109f7d89b37ba73fec2bf8ca",
+    "opensiddur/exporter/html/assets/reader.css": "f6ddc1833325a7e2575dea27391b27e784486dbea8921f785779b2c2cbe6169d",
+    "opensiddur/tests/exporter/test_html_book.py": "1b16221ead43aae9614fcdf9c290b9973012657120b25e34c3480364c667f1b6",
+    "opensiddur/tests/exporter/test_reledmac_xslt.py": "fec013f4de01339d3ae8ab138c121de1c165d65357a63e9cba0135f9f19ca6cd"
+  },
+  "findings": [],
+  "closed_findings": [
+    {
+      "id": "R1",
+      "issue": "Empty-row predicate initially omitted p:project/p:file_name metadata stamps, so actual carriers not removed.",
+      "resolution": "Known provenance stamps now allowed; independent exact stamped carrier regression passes."
+    },
+    {
+      "id": "R2",
+      "issue": "Initial xml:id test expected existing renderer to turn xml:id into HTML id; renderer maps corresp instead.",
+      "resolution": "Regression now uses real corresp target and verifies row retention for xml:id separately."
+    }
+  ],
+  "safety": [
+    "TeX lookahead changes separator only; all structural marker leaves still processed in order. Real numbered verse, text, page link, rubric and graphic leaves remain outside silent-tail allowance.",
+    "HTML removal restricted to empty carriers with known layout/provenance attrs; actual descendants and unknown attrs preserve row. Source pages, anchors, scope attrs, graphics and notes are not discarded.",
+    "CSS inline-block bidi isolation and symmetric margin-inline:0.3em apply only to direct foreign rubric children; ordinary foreign inline text remains outside scope."
+  ],
+  "validation": {
+    "independent_cases": [
+      {
+        "case": "stamped_empty",
+        "pass": true
+      },
+      {
+        "case": "target",
+        "pass": true
+      },
+      {
+        "case": "page",
+        "pass": true
+      },
+      {
+        "case": "graphic",
+        "pass": true
+      },
+      {
+        "case": "rubric",
+        "pass": true
+      },
+      {
+        "case": "unknown_attr",
+        "pass": true
+      },
+      {
+        "case": "tail_chapter",
+        "pass": true
+      },
+      {
+        "case": "tail_real_verse",
+        "pass": true
+      },
+      {
+        "case": "tail_words",
+        "pass": true
+      }
+    ],
+    "focused_tests": "23 tests and 6 subtests passed",
+    "lint": "Ruff on both changed test files passed",
+    "git_diff_check": "passed",
+    "broader_run": "513 tests294subtests passed before latest bounded-row followup; full two-file rerun for followup parent-owned/pending at review time.",
+    "css_static_safety": "Inspected exact279b65b CSS diff; no content-hiding declarations, selectors limited to both-empty-column rows."
+  },
+  "limitations": [
+    "CI completion and PR integration remain parent-owned.",
+    "No repository files edited by reviewer."
+  ],
+  "supersedes": "/tmp/day2-spacing-fix-code-review.json",
+  "css_refinement": {
+    "commit": "279b65bac3e3f6f42007457eece249a6100ffc84",
+    "scope": "Only rows whose direct columns are all col-empty lose grid row-gap, column bottom padding/border, and descendant paragraph/ab/div block margins.",
+    "assessment": "Safe: no display:none, visibility:hidden, content removal, pointer-events or target changes. Row remains laid out with content-visibility:visible; anchors, scan controls, condition scope carriers and nontext children remain present and interactive.",
+    "limitations": "col-empty denotes absence of string-value and may include textless graphics; CSS preserves their intrinsic size and all anchors/controls. Final independent visual closure approved current frozen output."
+  },
+  "bounded_row_followup": {
+    "status": "approved_with_final_visual_closure",
+    "change": "TeX silent-tail lookahead now ends at first f:block-break rather than considering later parallel rows.",
+    "safety": "Only examines current row and suppresses artificial paragraph separator; all marker leaves and block-break processing retained. Empty following sequence yields empty bound safely. Actual words, numbered verse labels, notes, pages and other meaningful leaves still block suppression.",
+    "validation": "10 TestParallelParagraphSpacing tests pass; independent9/9 checks pass again; actual candidate TeX Psalm5:8 full English verse now ends directly with vno/chapter marker macros and pend, no OSKeepSep.",
+    "candidate_tex": "/tmp/day2-spacing-current-candidate.tex",
+    "candidate_sha256": "6bbb9770442255397fe184944779679000af5ada03c91ec2ef9ca4e19ea6d34c"
+  },
+  "final_bilingual_css": {
+    "commit": "6d24b2a53992a4100ef901fc34401bbc8f35666e",
+    "assessment": "Approved. Inline-block makes each direct foreign rubric label an atomic directional run; unicode-bidi:isolate prevents neighboring label punctuation from changing its run; symmetric margin-inline0.3em avoids direction-dependent wrong-side spacing. Source text/punctuation untouched.",
+    "screenshot_review": {
+      "expanded/browser-note-wide.png": {
+        "sha256": "ce245bad201e46c5246dca42618c001cf659b086639283ceeb6d09b147a20539",
+        "result": "Labels separated, internally coherent directional text; no visible clipping or overlap."
+      },
+      "night_expanded/browser-wide.png": {
+        "sha256": "44c159fe600d8f0629532d5256795d305356a26b5ff4020aee646f3c02dcae97",
+        "result": "Labels separated, internally coherent directional text; no visible clipping or overlap."
+      },
+      "night_expanded/browser-mobile.png": {
+        "sha256": "02a0abaed27c91c7a9b6ad8547e735b198586732603f557be6d844265dec6243",
+        "result": "Labels separated, internally coherent directional text; no visible clipping or overlap."
+      }
+    },
+    "limitations": "Three viewports inspected directly by this reviewer; completed independent final presentation review composes full frozen export/browser QA and reports no findings.",
+    "safety": "Changes only direct foreign children of rubric; does not hide text/targets. Long labels retain ordinary internal line wrapping within max available inline-block width; no fixed width imposed."
+  },
+  "independent_visual_closure": {
+    "status": "approved",
+    "report": "/tmp/day2-final-presentation-review.json",
+    "sha256": "53c033192b85ed60499b70b15df70fb1a22d2c4cf60ed4f237c4a1abafbcc85c",
+    "findings": [],
+    "composition": "Final independent presentation review closes F2–F5 against frozen PDF/HTML artifacts and current CSS hash f6ddc1833325a7e2575dea27391b27e784486dbea8921f785779b2c2cbe6169d. Code and visual approval gates complete; CI remains parent-owned."
+  }
+}

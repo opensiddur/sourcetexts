@@ -1,0 +1,74 @@
+{
+  "approved": true,
+  "approval_covers": "Front-matter encoding gate and the independent encoding/guideline/order audit gate only, for physical scans 1–4 (Archive leaves n0–n3).",
+  "exact_scope": {
+    "scans": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "payload_reviewed": [
+      "prayerbook_for_the_new_year-heidenheim-1965-he/day_two.xml (current content, as read)",
+      "prayerbook_for_the_new_year-marmorstein-1965-en/day_two.xml (current content, as read)",
+      "the <tei:bibl xml:id='day_two_source_bibl'> added to both edition index.xml sourceDesc sections",
+      "build.py and test_marmorstein_rosh_hashanah_2.py (current content, as read)",
+      "front_layout.json (current content, as read)",
+      "front_resolved.json (sha256 dfd72f27…b94f3, as recorded in checklist.json and enforced by build.py:124)"
+    ],
+    "not_approved": [
+      "exports, PDF/HTML presentation, and how the colophon renders",
+      "scans 5–385, any prayer page, the expanded order, or the full volume",
+      "acceptance of the batch: checklist gates exports, independent_presentation_review and acceptance stay pending",
+      "how the inscriptions look in the images: they rest on human adjudications 860/861, not on model reading"
+    ],
+    "hash_binding_caveat": "I read the files but could not compute hashes. The checklist's generated_xml_sha256 (he 67679136…, en 47358 9d4…) and day-one-preservation.json's canonical hashes (he e79a417d…, en 92191 4e1…) are recorded evidence I did not check. This approval applies to the content quoted above. Bind it to hashes recomputed mechanically from these same files."
+  },
+  "closed_findings": {
+    "R1": "Closed. In both files, every leaf now runs pb → j:conditional (opensiddur:paratext / title-page = true) → content → j:endConditional. The gate IDs are day_two_front_s1…s4 and each endConditional targets its own gate. All four tei:pb sit outside their gates, as JLPTEI-3 §opensiddur:paratext requires. The xml:ids (day_two_front_sN, day_two_sN, day_two_source_bibl) are unique within each file.",
+    "R2": "Closed. In s2, titlePart main is 'מחזור ליום שני<lb/>של ראש השנה' and titlePart sub is 'עם תרגום אנגלי', with two joined bylines and docImprint. In s3, titlePart main is 'Prayerbook<lb/>for the New Year', with two joined bylines and docImprint. The layout comes from front_layout.json, and build.py:78 raises an error unless the groups cover every printed line exactly once and in order. s4 now has xml:id day_two_s4.",
+    "R3": "Closed. The synthetic tests check: the foreign cover line (language and text); the copyright verso docImprint; the pb/gate/content/end sequence and feature for all four leaves; unique IDs; the lb counts in titlePart main and bylines; that default builds leave the index and witnesses untouched; that a stale adjudication hash raises an error and writes no day_two.xml; and that --update-bibliography leaves an index canonically identical to the original once the single added bibl is removed."
+  },
+  "source_words_and_order": "Confirmed against the current front_resolved.json. In both files, s1 has 4 lines in order, with line index 2 in tei:foreign xml:lang='he'. s2 has 9 lines in order 0–1 | 2 | 3–4 | 5–6 | 7–8. s3 has 8 lines in order 0–1 | 2–3 | 4–5 | 6–7. s4 has 7 lines in order, joined by 6 lb. Nothing is omitted, added or reordered. The legend and the s2 signature are the human-adjudicated volume-one reading 'וואלף ב\"ר שמשון ז\"ל איש היידנהיים'. That is legitimate adjudication (860/861), not a claim of model certainty.",
+  "metadata_findings": "Both files have resp key='trc' and key='mrk', each with a registered contributor URN. The licence label is now 'Creative Commons Zero (Public Domain Dedication)', matching JLPTEI-3 and day one. The bibl adds idno type='internet_archive' and date type='accessed' 2026-11-25. Varady's imaging credit is a source note, kept separate from the digitization respStmt. The encoding note is typed 'encoding'. The ptr targets /<project>/index#day_two_source_bibl, and both index.xml files now hold a bibl with that xml:id, so the pointer resolves. Edition status stays 'DRAFT volume', which is correct.",
+  "gates": {
+    "approved_passed_by_this_review": [
+      "encoding (front matter, scans 1–4)",
+      "independent_encoding_order_audit (front matter, scans 1–4)"
+    ],
+    "approved_not_applicable_retained": {
+      "alignment": "No translation pairs. The Hebrew and English title leaves are separate documentary pages, and both roots carry the complete multilingual paratext with no front-matter corresp to pair. No counterpart is missing or invented, and there are no biblical citations.",
+      "recitation_conditions": "No recited text, transclusions, turns, repetitions, page directions, ritual conditions or day/rite variants. The paratext gates are documentary-presentation conditions handled under encoding and mechanical checks."
+    },
+    "still_required_before_acceptance": [
+      "mechanical_checks rerun against the current files: schema, naming, feature registry for opensiddur:paratext/title-page, URN registry, refdb, and the test suite. The checklist note itself says the earlier pass was initial-draft only.",
+      "exports",
+      "independent_presentation_review",
+      "acceptance"
+    ]
+  },
+  "required_changes": [],
+  "notes": [
+    "Day-one index change: both index.xml files now carry a second source bibl, which is a disclosed, bounded change to day-one files. Prayer text and settings are reported unchanged. However, metadata.py builds colophon sources from each project's index.xml, so day-one PDF/HTML colophons may now list the Second Day source. Gate 9 says to prove day-one outputs are unchanged or to review any change separately, so check the day-one colophon output explicitly in the export and presentation phase.",
+    "Bibliography drift: the full bibl is written both in day_two.xml and in each index.xml, but only --update-bibliography refreshes the index copy. A later edit followed by a default build would leave the two copies different. Consider a check that they are equal, or recording both copies' hashes in the acceptance record.",
+    "Hash coverage: build.py checks only front_resolved.json against the checklist. front_layout.json and the modified index.xml files are not in the checklist's payload_hashes. Add their hashes when this batch's acceptance is recorded.",
+    "The cover remains a tei:div of tei:p gated on title-page, while day one encodes its cover as a tei:titlePage. Both are gated and keep the source order, so this is not blocking. It is a semantic inconsistency between the volumes that is worth harmonizing later.",
+    "The added index bibl is serialized on one unindented line. It is canonically equivalent, so this is cosmetic.",
+    "Test gap: no synthetic test exercises build.py:78's error for incomplete or out-of-order layout coverage. Recommended, not blocking.",
+    "NFKD normalization (for example 'Rödelheim') cannot be checked by reading the files. Confirm it in the mechanical rerun."
+  ],
+  "files_read": [
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/opensiddur/importer/marmorstein_rosh_hashanah_2/build.py",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-processor/master/opensiddur/tests/importer/test_marmorstein_rosh_hashanah_2.py",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/day_two.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/day_two.xml",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year-heidenheim-1965-he/index.xml (lines 1–70: header, sourceDesc and the start of the front matter)",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year-marmorstein-1965-en/index.xml (lines 1–70: header, sourceDesc and the start of the front matter)",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/front_layout.json",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/front_resolved.json",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/front_matter_s1_s4/checklist.json",
+    "/tmp/marmorstein-day-two-review/front-previews/day-one-preservation.json",
+    "Guidelines as read in the original audit: AGENTS.md, SCAN_DIGITIZATION_INSTRUCTIONS.md, JLPTEI-3.md, jlptei.odd.xml (lines 1–250), SIDDUR_URN_SCHEME.md, MARMORSTEIN_ROSH_HASHANAH_2.md and its checklist. Not re-read this round."
+  ],
+  "presentation_approval": "None. Exports and PDF/HTML review are not approved."
+}

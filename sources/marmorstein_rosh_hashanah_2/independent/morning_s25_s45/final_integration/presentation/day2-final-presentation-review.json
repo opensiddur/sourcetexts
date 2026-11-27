@@ -1,0 +1,64 @@
+{
+  "status": "approved",
+  "scope": "Final presentation acceptance of the second-day Heidenheim–Marmorstein scans 25–45 installment: PDF and HTML outputs for all six profiles. It builds on the source, semantics, order and code reviews already approved; no source was re-read.",
+  "reviewer": {
+    "model": "claude-opus-5-5 (exposed in environment)",
+    "effort": "not exposed; requested medium"
+  },
+  "findings": [],
+  "closures": {
+    "F1": "Closed: exact screenshot paths were supplied and all 13 screenshots were read (follow-up round, again in the F2–F5 re-review).",
+    "F2": "Closed: on documentary_parallel PDF p26 and in its HTML wide and mobile views, the Tallit ending now comes before 'תְּפִלּוֹת.' / 'Prayers'. Approved structurally in /tmp/day2-morning-boundary-review.json.",
+    "F3": "Closed: on p26 the English Psalm 5:8 runs on without a blank line.",
+    "F4": "Closed: the mobile views of expanded and documentary_parallel show one divider between pairs and no empty rows. I re-checked this in the current expanded/browser-mobile.png and documentary_parallel/browser-mobile.png.",
+    "F5": "Closed in this round. See the label results below."
+  },
+  "f5_verification": {
+    "expanded/browser-note-wide.png (ce245bad…0539)": "Reads 'בשבת On Shabbat' with a visible gap, Hebrew on the right and English on the left. The label is not clipped. The popover and arrows are unaffected.",
+    "night_expanded/browser-wide.png (44c159fe…ae97)": "Reads 'Reader: :פאַרבעטער', 'Congregation: קו״ח' and 'Congregation: :געמיינדע' with visible gaps. Each colon stays with its own word, as in the source, and no characters were added or lost. Labels sit at the right edge without clipping.",
+    "night_expanded/browser-mobile.png (02a0abae…6243)": "Same labels and gaps at narrow width, with no clipping or overflow.",
+    "browser_qa.json": "The measured label gaps (bilingualLabelGaps) are 4.390625px each: 4 pairs in expanded plus the night pairs shown. Documentary profiles have none, which is expected. No errors, no overflow.",
+    "regression_check": "The four other screenshots whose bytes changed were also re-read: documentary_hebrew/browser-mobile (ac0bd25e…), documentary_parallel/browser-wide (97d49b4d…), documentary_parallel/browser-mobile (a3965866…) and expanded/browser-mobile (9473bc6e…). F2 order and F4 spacing are intact, with no new clipping or overflow."
+  },
+  "observations_non_blocking": {
+    "O1–O3": "Unchanged from earlier rounds: arrows repeat after conditional blocks as the guide requires, 'Israel .' comes from the source, and identical rubrics appear in both documentary columns.",
+    "O4": "In documentary_parallel HTML, the Hebrew word ציצת inside the English rubric 'One then removes the טלית…' now has slightly wider space around it ('one  ציצת  in front'). This looks like the new label margin also applying to a Hebrew word inside a rubric. It is readable and correctly ordered, and only cosmetic."
+  },
+  "coverage": {
+    "this_round": "Six screenshots read: the three F5 screenshots plus the four changed regression screenshots, less one overlap. Also the frozen manifest, the screenshot manifest, browser_qa.json and the spacing code review.",
+    "carried_forward": "/tmp/day2-presentation-spacing-findings-review.json and earlier rounds, with the reports in /tmp/day2-final-presentation-initial-review.json: all six contact sheets (seen twice), the 19 enlarged pages from the first round, documentary_parallel p25–27 and expanded p04/p18 after the fixes, and all 13 screenshots. The unchanged screenshots were not re-read this round.",
+    "pdf_unchanged": "All six PDF hashes, all page PNG and contact sheet hashes, and pdf_qa.json (f2109f85…, passed) are identical to the previous freeze. The PDF visual review carries forward as it stood."
+  },
+  "final_frozen_hashes": {
+    "frozen_manifest": "exports/frozen_manifest.json, created 2026-11-27T00:12:28Z",
+    "pdf": {
+      "documentary_hebrew": "d35632c959c84dcab8322353c3d6b5627572803be727e9468280a601c337bcc1",
+      "documentary_parallel": "8e6cf34aad61f7a1a59fdde23643d6740accf7d6c1ecb9ccb0d12794e52381ea",
+      "expanded": "d5d32cc9fe89edaa62655d44f39d0e210dbd6441f415bf9b745bedd95cc799d2",
+      "night_expanded": "2386aa599ec38153dd982cfb33c901a9383fd922878f2ed86e8bcdfa9553afb6",
+      "expanded_weekday": "0727c402f9335d1c480e79450b3c8f1cb37d77c061229f664419372b9ece2834",
+      "expanded_shabbat": "3ec99df38174656d0d061ec94518f9da285ed998c923426f25ab9bc7fda97442"
+    },
+    "html": {
+      "documentary_hebrew": "61047a3d8dfe223075d7a6ea01bd4d6c2072555f0b00d4b3c8f0f3f85fa73f16",
+      "documentary_parallel": "c446dc721e62199e9e50fadf9d4f5c44278a01c53187fb69cb9a51215a9478f2",
+      "expanded": "74854227209d8c4329fe20d6c78c6ca49f7818acd79d68253ffbeeb19f334ecc",
+      "night_expanded": "609dc7c1239d92ce3a98d4bb6891d2296bc69507e24fcb3cbfdafada0965cfa8"
+    },
+    "reports": {
+      "pdf_qa.json": "f2109f85fb5fa111532adde3016a9a98985b883c9f10871c11cc0978d5edc2af",
+      "browser_qa.json": "1eae85c7cfdc7407583d8e92c48d6063fcd2d51c6f32ef9ed8d3d226e797255a"
+    },
+    "reader_css_per_code_review": "f6ddc1833325a7e2575dea27391b27e784486dbea8921f785779b2c2cbe6169d",
+    "method": "All hashes are copied from the manifests. I could not compute any myself (Read-only access). The 13 screenshot hashes and 4 HTML hashes in /tmp/day2-final-html-screenshot-manifest.json match the frozen manifest."
+  },
+  "limits": [
+    "Each screenshot shows one viewport. Completeness elsewhere in the HTML relies on browser_qa.json (27 settings combinations, no errors, no overflow).",
+    "documentary_parallel pages 28–41, re-rendered in the F2/F3 fix, were seen only on the contact sheet.",
+    "The PDF link hitboxes and all-page checks are mechanical (pdf_qa); I checked them visually only on the pages I inspected.",
+    "The code review file still reads 'pending_visual_confirmation' and still says 'inline-start margin'. The visual confirmation it waits on is given here, for the current reader.css hash."
+  ],
+  "actual_model_usage": [
+    "claude-opus-5-5"
+  ]
+}

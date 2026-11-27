@@ -1,0 +1,100 @@
+{
+  "reviewer": "/root/review_morning_identities",
+  "actual_model": "Inherited collaboration model; exact model identifier and reasoning setting not exposed",
+  "verdict": "approved for the concrete canonical identity / source-only duplicate scope interpretation",
+  "scope": [
+    "Existing canonical women’s blessing URI used exactly once in each language",
+    "Shared structural documentary wrapper preserves actual source paragraphs",
+    "English duplicate sits outside the explicitly terminated canonical prayer-part range",
+    "User-required sic/corr preserves printed source duplicate with empty correction",
+    "Pure scope endpoint proof excludes duplicate independently of printed/corrected error reading"
+  ],
+  "files": [
+    {
+      "language": "he",
+      "xml_path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-heidenheim-1965-he/birkhot_hashachar_sheasani_kirtzono.xml",
+      "xml_sha256": "bfdd1e24f81cbd3053fe82caf3d89e771ba87705b8d33e6245c6c7310d91d525",
+      "canonical_corresp_count": 1,
+      "canonical_start_path": "/tei:TEI/tei:text/tei:body/tei:div/tei:div/tei:p/tei:milestone[1]",
+      "canonical_end_path": "/tei:TEI/tei:text/tei:body/tei:div/tei:div/tei:p/j:divineName",
+      "canonical_end_tag": "{http://jewishliturgy.org/ns/jlptei/2}divineName",
+      "canonical_end_include_tail": true,
+      "canonical_end_within_first_paragraph": true,
+      "canonical_range_contains_choice": false,
+      "canonical_range_readings": {
+        "printed": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם שֶׁעָשַֽׂנִי כִּרְצוֹנוֹ:",
+        "corrected": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם שֶׁעָשַֽׂנִי כִּרְצוֹנוֹ:"
+      },
+      "wrapper_corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/day_two/morning_blessings/womens_blessing",
+      "wrapper_paragraph_count": 1
+    },
+    {
+      "language": "en",
+      "xml_path": "/home/efeins/.codex/worktrees/marmorstein-day-two-projects/master/project/prayerbook_for_the_new_year_second_day-marmorstein-1965-en/birkhot_hashachar_sheasani_kirtzono.xml",
+      "xml_sha256": "256bed3d683bae58f1a0fbafaa0f5e914ded7fb7d4844ec7866e7a129208717a",
+      "canonical_corresp_count": 1,
+      "canonical_start_path": "/tei:TEI/tei:text/tei:body/tei:div/tei:div/tei:p[1]/tei:milestone[1]",
+      "canonical_end_path": "/tei:TEI/tei:text/tei:body/tei:div/tei:div/tei:p[1]/tei:pb",
+      "canonical_end_tag": "{http://www.tei-c.org/ns/1.0}pb",
+      "canonical_end_include_tail": true,
+      "canonical_end_within_first_paragraph": true,
+      "canonical_range_contains_choice": false,
+      "canonical_range_readings": {
+        "printed": "Blessed art Thou, O Lord our God, King of the World, who made me according to His will.",
+        "corrected": "Blessed art Thou, O Lord our God, King of the World, who made me according to His will."
+      },
+      "wrapper_corresp": "urn:x-opensiddur:text:siddur:rosh_hashanah/day_two/morning_blessings/womens_blessing",
+      "wrapper_paragraph_count": 2,
+      "second_paragraph_outside_canonical_scope": true,
+      "source_duplicate_encoding": "tei:choice/tei:sic followed by empty tei:corr",
+      "wrapper_selected_readings": {
+        "printed": "Blessed art Thou, O Lord our God, King of the World, who made me according to His will. Blessed art Thou, O Lord our God, King of the World, who made me according to His will.",
+        "corrected": "Blessed art Thou, O Lord our God, King of the World, who made me according to His will."
+      },
+      "printed_wrapper_blessing_count": 2,
+      "corrected_wrapper_blessing_count": 1,
+      "canonical_blessing_count_in_each_error_mode": 1
+    }
+  ],
+  "recipe_path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/morning_s25_s45/morning_units.json",
+  "recipe_unit_sha256": "ea1db4dbb6c3ce22cce57920448e35edf5dfed11a54b1fb7a5089740d255d649",
+  "recipe_corrections": [
+    {
+      "id": "morning_english_duplicate_womens_blessing",
+      "file": "prayerbook_for_the_new_year_second_day-marmorstein-1965-en/birkhot_hashachar_sheasani_kirtzono.xml",
+      "xpath": "//tei:body//tei:div/tei:p[2]",
+      "sic": "Blessed art Thou, O Lord our God, King of the World, who made me according to His will.",
+      "corr": ""
+    }
+  ],
+  "recipe_corrections_sha256": "2f1d501bfa53e1955903794b0a60a06e8e5bd314f9e32c8626d58e3928938aa2",
+  "registry_records": [
+    {
+      "urn": "urn:x-opensiddur:text:siddur:rosh_hashanah/day_two/morning_blessings",
+      "status": "context",
+      "parent": "urn:x-opensiddur:text:siddur:rosh_hashanah/day_two",
+      "label_en": "Second-day morning blessings: documentary arrangement",
+      "note": "Physical source arrangement of existing canonical prayers; not a new prayer identity."
+    },
+    {
+      "urn": "urn:x-opensiddur:text:siddur:rosh_hashanah/day_two/morning_blessings/womens_blessing",
+      "status": "context",
+      "parent": "urn:x-opensiddur:text:siddur:rosh_hashanah/day_two/morning_blessings",
+      "label_en": "Women’s blessing with its source-only printed repetition",
+      "references": [
+        "urn:x-opensiddur:text:prayer:birkhot_hashachar/sheasani_kirtzono"
+      ],
+      "note": "Documentary wrapper preserves the printed English duplicate through sic/corr. Only the first blessing supplies the existing canonical prayer range, so expanded recitation never repeats the source error."
+    }
+  ],
+  "registry_records_sha256": "03ae15e8c396d94f02ecff157cbe95b5a1b828fab963fd60580e37828581c8a6",
+  "checks_method": "Parsed actual generated XML and called pure find_end_of_mapping (no SQL DB opened). Verified actual endpoint stays inside p1, before bare prayer-part terminator; explicitly read simple sic/corr branches in the full wrapper to count one corrected/two printed blessings. This is a pure XML/scope proof, not a full compiler/export test.",
+  "remaining_findings": [],
+  "limitations": [
+    "No new source-image reading or source/pointing acceptance is performed.",
+    "No blanket approval of all morning encoding, gender/rite conditions, expanded spine, translation alignment, other reference mappings or registry corpus.",
+    "Canonical-versus-documentary target selection in actual spines must still be reviewed: documentary uses W; expanded uses C.",
+    "Configured PDF/HTML and full compiler end-to-end tests remain required for batch acceptance.",
+    "Input hashes bind the reviewed files. Regeneration changing these files requires equivalence proof or renewed review."
+  ]
+}

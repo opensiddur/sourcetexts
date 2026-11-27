@@ -1,0 +1,59 @@
+{
+  "status": "approved_source_reading",
+  "scope": "English source readings only for scan pages s9 (printed 3) and s11 (printed 4). Does not cover XML, verse alignment, ordering, export, or the whole batch.",
+  "images_read": [
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s9.jpg",
+    "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s11.jpg"
+  ],
+  "texts_compared": [
+    "batches/maariv_s5_s24/primary/s9.json",
+    "batches/maariv_s5_s24/primary/s11.json",
+    "independent/english_s9_s11/blind_pages.json (it has content, so response.json was not needed)"
+  ],
+  "findings": [
+    {
+      "page": "s9",
+      "result": "exact",
+      "detail": "Checked every printed line against the image. All wording, spelling, capitalization and punctuation match. Line wraps are joined with spaces, and no line on this page ends in a hyphen. The source compounds are kept as printed: 'show-fringes' appears twice and 'skyblue' once, with no substitute translation. The capital 'My' in 'to My commandments' matches the print."
+    },
+    {
+      "page": "s9",
+      "result": "exact",
+      "detail": "The citations are kept as separate source evidence and match the print exactly: '(Deut. XI. 13)' and '(Numbers XV. 37)'. In the print each one opens its paragraph inline. Storing them as separate 'citation' blocks placed before their paragraphs keeps the reading order."
+    },
+    {
+      "page": "s9",
+      "result": "exact",
+      "detail": "Continuation is correct. The page opens mid-sentence at 'speak of them…' (Deut. 6:7) and ends mid-Numbers 15:39 with '…you will remember all the'. There is no final period and nothing has been added."
+    },
+    {
+      "page": "s11",
+      "result": "exact",
+      "detail": "The page starts with 'commandments of the Lord and fulfil them.' and nothing is inserted at the join with s9. The print's British spelling 'fulfil' (twice), lowercase 'my commandments', 'first-born', 'awe-inspiring', 'Thee'/'Thou'/'Thy', and the colons and question marks all match the image. All five paragraphs are present, in order, and none is left out."
+    },
+    {
+      "page": "s11",
+      "result": "exact",
+      "detail": "The Hebrew cues are kept as separate 'cue' blocks, each placed right before its English paragraph: אמת, מי, מלכותך (with final kaf), ונאמר. The letters match the print."
+    },
+    {
+      "page": "both",
+      "result": "exact",
+      "detail": "The running header 'Evening Prayer for the New Year' matches on both pages. The printed page numbers ('3' on s9, '4' on s11, each printed at both left and right of the header) match printed_page. The quote marks are plain ASCII, the same as the blind reading. This is fine because neither page prints any quotation marks."
+    },
+    {
+      "page": "both",
+      "result": "agrees_with_blind",
+      "detail": "The primary text and the blind reading are identical word for word. The only difference is structure: the blind reading puts the citations and Hebrew cues inline at the start of each paragraph, and the primary splits them into separate blocks. Neither one changes the source text."
+    },
+    {
+      "page": "s9",
+      "result": "advisory_only",
+      "severity": "non-blocking",
+      "detail": "The heading is stored as kind 'heading', but in the print it is a running header, not a section heading. Make sure later modules don't treat it as a section title. No change is needed for the source evidence. Separately, the continuation note's claim about 'Hebrew scan8 end' falls outside this audit and was not checked."
+    }
+  ],
+  "corrections": [],
+  "actual_model": "Claude Opus 5.5 (claude-opus-5-5)",
+  "requested_effort": "medium"
+}

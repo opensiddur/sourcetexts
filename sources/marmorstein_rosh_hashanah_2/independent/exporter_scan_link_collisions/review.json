@@ -1,0 +1,93 @@
+{
+  "status": "changes_required",
+  "model": "Claude Opus 5.5",
+  "effort": "medium",
+  "summary": "The core fix works. Placement keyed on absolute page with logical-page parity, a zero-size body (so line breaking cannot change), lanes that move outward, and halting on exhaustion are all sound, and the artifacts show it working for the reported Hebrew collision and for the four-link parallel case. I have two blocking concerns. First, the vertical fallback searches the whole page, not just nearby rows. Second, the new zero-height \\raisebox may shrink the clickable area, and none of the evidence so far rules that out. There are also some HTML edge cases and gaps in the tests.",
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "medium",
+      "blocking": true,
+      "area": "PDF geometry",
+      "location": "opensiddur/exporter/tex/scan_links.py:17-19",
+      "title": "The vertical fallback can move a link anywhere on the page, not to a nearby row",
+      "detail": "rows = ceil(paperheight/step), and the loop tries every row from 0 to rows. Once the lanes on one baseline are used up, a link can be placed tens of lines from its source line. It can also land in the running-head or footer area, since the only limit is 4pt from the paper edge, not the text block. No error is raised. That breaks the stated rule 'nearby rows within page, and no silent misplacement'. A reader would take the arrow as belonging to some other line.",
+      "recommendation": "Limit dy to a few steps, for example ±2 rows, configurable, and keep it between the top and bottom of the text block (\\topmargin+\\headheight+\\headsep .. +\\textheight, as absolute y). Past that, raise the existing 'margin full' error. Add a Lua test that crowds more than lanes×(2k+1) links onto one baseline and checks that it errors rather than drifting."
+    },
+    {
+      "id": "F2",
+      "severity": "medium",
+      "blocking": true,
+      "area": "PDF hit target",
+      "location": "opensiddur/exporter/tex/typography_tex.py:1039-1040",
+      "title": "The link annotation may now be only a few points tall",
+      "detail": "\\href (pdfstartlink with running dimensions) takes the annotation's height and depth from the box that encloses it. That box is now \\raisebox{dy}[0pt][0pt]{\\OSScanLink{..}}. If \\raisebox sets ht and dp to zero on the box that holds the link whatsits, rather than on an outer wrapper, the /Rect becomes symbol width × (0 + 2·\\pdflinkmargin). That would be a regression from the original 9.4pt-tall rect. The PDF test only checks that rects don't overlap and stay on the page, and hidelinks makes the rect invisible in the screenshots, so nothing so far rules this out.",
+      "recommendation": "Send the fixed /Rect values for n5 and n7. Or remove the doubt: \\raisebox{\\OSScanLink@collisionY}[0pt][0pt]{\\hbox{\\OSScanLink{#1}}} (the inner hbox keeps its natural size and encloses the link), or \\smash{\\raise..\\hbox{..}}. Add assertions that rect height ≥ the symbol's height (≈ \\ht+\\dp, more than ~6pt) and that width ≥ the symbol's width. If the rects are already full height, this finding closes once those assertions are in."
+    },
+    {
+      "id": "F3",
+      "severity": "low",
+      "blocking": false,
+      "area": "PDF reading order / RTL",
+      "location": "opensiddur/exporter/tex/scan_links.py:22-25",
+      "title": "In two margin/direction combinations, side-by-side lanes run against reading order",
+      "detail": "Lane 0 sits next to the text and later links move outward. For LTR text in the left margin, the second page's arrow ends up left of the first. For RTL text in the right margin, it ends up right of the first. Either way the reader meets the later page first. The Hebrew artifact uses the left margin, where the order is correct, so it doesn't show this. The arrows look identical, so the reader can't tell which goes to which scan.",
+      "recommendation": "Either order lanes by text direction × margin side, or accept and document it. Consider giving each annotation a page label in /Contents (pdf tooltip) so the two can be told apart."
+    },
+    {
+      "id": "F4",
+      "severity": "low",
+      "blocking": false,
+      "area": "PDF behavior change",
+      "location": "opensiddur/exporter/tex/scan_links.py:27-28,43",
+      "title": "The build now fails where the old code clipped quietly",
+      "detail": "A symbol must now fit between lane 0 (edge − sep, where sep = \\linenumsep+2em when line numbers are on) and a 4pt paper-edge gap. Books with small paper or narrow margins that used to build, with the arrow slightly clipped, will now stop at pass 2 with 'Source-link margin full'. pdf.py uses -halt-on-error, so the build does fail loudly as intended, with no stale \\OSScanLink@collision* values.",
+      "recommendation": "Before merging, build every settings file that has placement: margin (or run books --check plus a PDF build) to find regressions. The error message could also give the page and the room actually available."
+    },
+    {
+      "id": "F5",
+      "severity": "low",
+      "blocking": false,
+      "area": "HTML layout",
+      "location": "opensiddur/exporter/html/css.py:257-259",
+      "title": "A cleared float can make a column or row taller, and can drift off the text lines",
+      "detail": "Each `.col` grid item is a BFC root, and `.os-book` is flow-root. When two boundaries fall on the last line of a column, the second float clears below the first and hangs past the content, so the grid row grows by one float height. That conflicts with 'preserves normal layout'. The float's height also comes from the scan_link style's line-height. If styles.scan_link has a smaller size, stacked arrows sit between text baselines. Your measured 25.17px step happens to match the body line, but only at the default size.",
+      "recommendation": "Accept this as a minor case, or set .scan-link-margin { line-height: var(--line-spacing); font-size matching the body } so the stacking step equals a text line. Add a browser check for two boundaries on a column's last line."
+    },
+    {
+      "id": "F6",
+      "severity": "low",
+      "blocking": false,
+      "area": "HTML compatibility",
+      "location": "opensiddur/exporter/html/css.py:257",
+      "title": "There is no fallback for browsers without logical float values",
+      "detail": "`float: inline-start` and `clear: inline-start` need Chromium 118+ (and older Android WebViews lack them). Without support, the element stays inline. margin-inline-start: -1.6rem then pulls the symbol back over the text before it, which is worse than the old behaviour.",
+      "recommendation": "Wrap the rule in @supports (float: inline-start), or add physical float/clear: left with [dir=rtl] overrides."
+    },
+    {
+      "id": "F7",
+      "severity": "low",
+      "blocking": false,
+      "area": "Tests",
+      "location": "opensiddur/tests/exporter/test_scan_link_placement.py:78-117; test_html_book.py:1261-1268",
+      "title": "The tests don't cover the cases that most need protecting",
+      "detail": "The real-TeX test only checks single-column en/he with line numbers off. Not covered: (a) PAIRS/reledpar left and right column margins, (b) line numbers on, where sep includes \\linenumsep, (c) row fallback and the margin-full error going through lualatex, (d) restarted page counters, i.e. parity from OSScanLinkPage versus abspage keys, (e) right binding, (f) that the body layout doesn't change, for example identical text positions with zero, one or two links on a line, (g) rect size, see F2. The HTML tests only compare CSS strings. The browser coordinates you quote were measured by hand and nothing re-checks them.",
+      "recommendation": "Add at least (a), (b), (c) and (g) as LuaLaTeX subtests. For (f), compare the PDF's text-extraction positions with and without margin links. If a browser runner is available, add a Playwright/Chromium check of the two float y-values and the 390px no-overflow case, skipped when no browser is present."
+    },
+    {
+      "id": "N1",
+      "severity": "info",
+      "blocking": false,
+      "area": "Verified OK",
+      "location": "typography_tex.py:985-1040; scan_links.py",
+      "title": "Checked and found correct",
+      "detail": "The embedded Lua has no %, #, ~, backslash or -- comment, so it survives TeX's end-of-line-to-space conversion. Its braces are balanced. The inline \\directlua uses only expandable primitives and zref extractors. tex.setdimen by name works on \\newdimen registers. Placement state is reset on every run, and first-pass labels (y=0 or abspage=0) reserve nothing. The Lua box exactly matches the TeX placement: llap or rlap from the text-block edge, sep+dx, raise dy, with y measured upward in both. Stale per-pass positions behave as the existing x placement already did, because the body is zero-size and savepos sits before the marker. The parallel artifacts keep the four links in the correct outer margins, and the HTML mobile view stays inline with no overflow."
+    }
+  ],
+  "requested_artifacts": [
+    "/Rect for both n5 and n7 annotations in the fixed Hebrew PDF (closes or confirms F2)",
+    "A PDF build of every settings file with placement: margin, showing no 'margin full' failures (F4)",
+    "Optional: a browser measurement with two boundaries on a parallel column's last line (F5)"
+  ],
+  "out_of_scope": "Where the pb elements sit in the source transcription (for example Hebrew n7 at the end of verse 6 but English at verse 7, and the mobile arrow after the maqaf in עַל־) was not reviewed."
+}

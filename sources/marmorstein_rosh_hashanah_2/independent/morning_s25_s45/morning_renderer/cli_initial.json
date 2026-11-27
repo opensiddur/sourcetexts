@@ -1,0 +1,57 @@
+{
+  "reviewer": "/root/review_morning_renderer",
+  "actual_model": "Inherited collaboration model; exact identifier and effort not exposed",
+  "scope": "New --draft loader/generation CLI plus unchanged renderer integration; diff against HEAD74b3df0",
+  "input_sha256": {
+    "opensiddur/importer/marmorstein_rosh_hashanah_2/morning_witnesses.py": "083d04edbe2a292e8bc5a95d1f71ec2a56e5e301d08b4b21d43852073e3d9c2b",
+    "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/morning_s25_s45/morning_units.json": "2e02864f3aa72617a7c8c2c6df87129a830ab70bba854db2db1b957a6b3a12c4"
+  },
+  "verdict": "changes requested: missing required source-binding validation",
+  "findings": [
+    {
+      "id": "CLI-R1",
+      "priority": "P2",
+      "file": "opensiddur/importer/marmorstein_rosh_hashanah_2/morning_witnesses.py",
+      "location": "source input/approval validation before protected-file check",
+      "title": "Require the readings and approval paths in the bound input map",
+      "problem": "The loader only requires a nonempty input map. If readings is absent from it and source approval working_readings_sha256 is null, .get(readings) and the approval value are both None, so the approval check passes and output is written without hashing the readings. This is a fail-open malformed-input case, not a problem with the current actual recipe.",
+      "reproduction": "Synthetic source approval {status:approved_source_only,working_readings_sha256:null}; recipe.readings points to readings.json but input_sha256 contains only the correct approval.json hash. main(--draft) returns0 and writes alpha.xml.",
+      "requested_change": "Require both recipe.readings and recipe.source_approval to be keys in input_sha256 before hashing. Add a CLI regression proving missing binding/null approval fails before any output write."
+    }
+  ],
+  "positive_checks": [
+    "Both source inputs in the actual morning recipe are present and their hashes match the files.",
+    "Actual recipe contains55 modules/90 language witnesses; no planned output path intersects the93 protected paths.",
+    "Unsafe/index/duplicate stem rejection is checked before writes; language projects are fixed by PROJECTS.",
+    "Synthetic stale input rejected without any output file.",
+    "Synthetic protected file remained byte-identical after rejection.",
+    "Synthetic second-document schema failure prevented all output writes.",
+    "Synthetic sic/corr was applied before output and preserved both branches.",
+    "Existing renderer tests6 passed with6 subtests; no-cache lint on renderer and tests passed."
+  ],
+  "actual_recipe_checks": {
+    "modules": 55,
+    "witnesses": 90,
+    "protected_paths": 93,
+    "input_hash_checks": {
+      "batches/morning_s25_s45/working/readings.json": {
+        "expected": "c964475cbf07e5d4e7a0fce56a85d2168bafda38a092a7c9b37ced04f79abda9",
+        "actual": "c964475cbf07e5d4e7a0fce56a85d2168bafda38a092a7c9b37ced04f79abda9"
+      },
+      "batches/morning_s25_s45/source_approval.json": {
+        "expected": "2ab68eabdc8aeda75b88fab39223a4df43ab9fc1207d3c995a1036687b51fef9",
+        "actual": "2ab68eabdc8aeda75b88fab39223a4df43ab9fc1207d3c995a1036687b51fef9"
+      }
+    },
+    "output_protected_overlap": []
+  },
+  "synthetic_evidence": {
+    "script": "/tmp/day2_cli_review_checks.py",
+    "results": "/tmp/day2-cli-review-check-results.json"
+  },
+  "limitations": [
+    "Actual source/encoding acceptance, project correctness, whole-night equivalence and generated exports are outside this CLI review.",
+    "The93 protected paths and90 actual writes are recipe metadata here; the parent reports separate actual-file preservation/schema checks.",
+    "No repository files edited."
+  ]
+}

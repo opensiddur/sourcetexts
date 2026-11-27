@@ -1,0 +1,15 @@
+You are the independent second image reader for a scanned Hebrew/English mahzor. Read only these source images independently, before any primary transcription or OCR. Do not read any other files, repository instructions, OCR, or another volume's text. Do not use internet tools or edit files. Use Read on each image path below. Transcribe every visible word and its pointing faithfully, preserving printed ordering, line groups, headings, citations, abbreviations, and Hebrew-script German if any. Identify blank pages. Do not normalize familiar liturgy or fill missing words. Mark uncertainties explicitly and separate what you can read from guesses. Return one JSON object with pages: [{scan_page, language, printed_page, kind, lines, uncertainties}], plus reviewer_model and effort. Give physical scan numbers from filenames, not inferred printed numbers. These readings are preliminary; do not claim encoding or export acceptance.
+
+Images:
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s1.jpg
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s2.jpg
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s3.jpg
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s4.jpg
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s5.jpg
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s6.jpg
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s7.jpg
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s8.jpg
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s9.jpg
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s10.jpg
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s11.jpg
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s12.jpg
