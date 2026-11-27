@@ -1,0 +1,78 @@
+{
+  "status": "approved_code_scope_pending_visual_export_confirmation",
+  "reviewer": "Independent Codex agent /root/review_morning_renderer; model/effort unexposed",
+  "timestamp_utc": "2026-11-26T23:56:45.260114+00:00",
+  "hashes": {
+    "opensiddur/exporter/tex/reledmac.xslt": "4e83ec0bfe54337e078a192c3c00930be4e124f026ec42730e11006b66986517",
+    "opensiddur/exporter/html/html.xslt": "1c44988fd852861c1ecc177b55d8ab5963e4cc08109f7d89b37ba73fec2bf8ca",
+    "opensiddur/exporter/html/assets/reader.css": "c4068e72d679ea38af15d53ca9eef88ec219f1af2d63813651fa470222fe2e56",
+    "opensiddur/tests/exporter/test_html_book.py": "1b16221ead43aae9614fcdf9c290b9973012657120b25e34c3480364c667f1b6",
+    "opensiddur/tests/exporter/test_reledmac_xslt.py": "fff4fd2f9f533388355836d19b86c4cd3531add9ca83e11cd8e54d87c895168e"
+  },
+  "findings": [],
+  "closed_findings": [
+    {
+      "id": "R1",
+      "issue": "Empty-row predicate initially omitted p:project/p:file_name metadata stamps, so actual carriers not removed.",
+      "resolution": "Known provenance stamps now allowed; independent exact stamped carrier regression passes."
+    },
+    {
+      "id": "R2",
+      "issue": "Initial xml:id test expected existing renderer to turn xml:id into HTML id; renderer maps corresp instead.",
+      "resolution": "Regression now uses real corresp target and verifies row retention for xml:id separately."
+    }
+  ],
+  "safety": [
+    "TeX lookahead changes separator only; all structural marker leaves still processed in order. Real numbered verse, text, page link, rubric and graphic leaves remain outside silent-tail allowance.",
+    "HTML removal restricted to empty carriers with known layout/provenance attrs; actual descendants and unknown attrs preserve row. Source pages, anchors, scope attrs, graphics and notes are not discarded.",
+    "CSS bidi isolation and inline-start margin apply only direct foreign rubric children; ordinary foreign inline text remains outside scope."
+  ],
+  "validation": {
+    "independent_cases": [
+      {
+        "case": "stamped_empty",
+        "pass": true
+      },
+      {
+        "case": "target",
+        "pass": true
+      },
+      {
+        "case": "page",
+        "pass": true
+      },
+      {
+        "case": "graphic",
+        "pass": true
+      },
+      {
+        "case": "rubric",
+        "pass": true
+      },
+      {
+        "case": "unknown_attr",
+        "pass": true
+      },
+      {
+        "case": "tail_chapter",
+        "pass": true
+      },
+      {
+        "case": "tail_real_verse",
+        "pass": true
+      },
+      {
+        "case": "tail_words",
+        "pass": true
+      }
+    ],
+    "focused_tests": "23 tests and 6 subtests passed",
+    "lint": "Ruff on both changed test files passed",
+    "git_diff_check": "passed",
+    "broader_run": "513 tests and 294 subtests passed after fixes (/tmp/day2-spacing-tests.log)."
+  },
+  "limitations": [
+    "Final actual PDF/HTML output geometry and RTL/LTR visual spacing require refreshed screenshots; code approval does not replace presentation gate.",
+    "No repository files edited by reviewer."
+  ]
+}

@@ -23,7 +23,7 @@
     44,
     45
   ],
-  "status": "encoding",
+  "status": "awaiting_processor_ci",
   "accepted": false,
   "gates": {
     "scope_images": {
@@ -76,36 +76,52 @@
       ]
     },
     "encoding": {
-      "status": "pending",
-      "evidence": [],
-      "note": "Literal draft:55 modules/90 witnesses generated; seven shared canonical units and documentary/expanded morning spines remain pending. Independent guideline review in progress."
+      "status": "passed",
+      "evidence": [
+        "../../independent/morning_s25_s45/final_integration/day2-final-code-restoration-review.json",
+        "../../independent/morning_s25_s45/final_integration/day2-morning-boundary-review.json"
+      ],
+      "note": "103 documentary witnesses; source text unchanged by the reviewed structural boundary fix."
     },
     "alignment": {
-      "status": "pending",
-      "evidence": []
+      "status": "passed",
+      "evidence": [
+        "../../independent/morning_s25_s45/final_integration/day2-morning-documentary-night-review.json",
+        "../../independent/morning_s25_s45/final_integration/day2-morning-boundary-review.json"
+      ]
     },
     "recitation_conditions": {
-      "status": "pending",
-      "evidence": []
+      "status": "passed",
+      "evidence": [
+        "../../independent/morning_s25_s45/final_integration/day2-morning-matrix-independent-review.json"
+      ]
     },
     "independent_encoding_order_audit": {
-      "status": "pending",
-      "evidence": []
+      "status": "passed",
+      "evidence": [
+        "../../independent/morning_s25_s45/final_integration/day2-morning-spine-final-review.json",
+        "../../independent/morning_s25_s45/final_integration/day2-morning-boundary-review.json"
+      ]
     },
     "mechanical_checks": {
-      "status": "pending",
+      "status": "passed",
       "evidence": [
-        "canonical_draft_verification.json"
+        "../../independent/morning_s25_s45/final_integration/qa/day2-final-schema.json"
       ],
-      "note": "Partial draft check:90 generated witnesses match approved printed words;93 previously accepted files unchanged. Whole-batch checks remain pending."
+      "note": "207 XML validate;57 importer tests17subtests and514 affected exporter tests294subtests pass; names/features/registry/profiles pass. Full remote CI remains a final delivery gate."
     },
     "exports": {
-      "status": "pending",
-      "evidence": []
+      "status": "passed",
+      "evidence": [
+        "../../independent/morning_s25_s45/final_integration/presentation/frozen_manifest.json"
+      ]
     },
     "independent_presentation_review": {
-      "status": "pending",
-      "evidence": []
+      "status": "passed",
+      "evidence": [
+        "../../independent/morning_s25_s45/final_integration/presentation/day2-final-presentation-review.json"
+      ],
+      "note": "All F1–F5 closed. UTF8-only followup preserves all211 XML/settings bytes; independent amendment approved."
     },
     "acceptance": {
       "status": "pending",

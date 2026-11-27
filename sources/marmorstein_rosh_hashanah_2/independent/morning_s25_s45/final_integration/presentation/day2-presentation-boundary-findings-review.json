@@ -1,0 +1,149 @@
+{
+  "status": "changes_required",
+  "supersedes": "/tmp/day2-final-presentation-initial-review.json",
+  "status_basis": "F1 is closed: I have now read all 13 listed browser screenshots. They show one blocking presentation defect (F2). It is in documentary_parallel, in both the PDF and the HTML, and the HTML pointed me to the PDF page I had not inspected in full. There are also three lower-severity HTML/PDF findings (F3–F5). This is not a new source review: source, order, semantics and restoration approvals stay as they were.",
+  "reviewer": {
+    "model": "claude-opus-5-5 (exposed in environment)",
+    "effort": "not exposed; requested medium"
+  },
+  "closed": [
+    {
+      "id": "F1",
+      "resolution": "Exact paths came from /tmp/day2-final-html-screenshot-manifest.json. I read all 13 PNGs (listed below). The review-completeness gap is closed."
+    }
+  ],
+  "findings": [
+    {
+      "id": "F2",
+      "severity": "blocking (medium): heading and content placement / reading order",
+      "profile": "documentary_parallel",
+      "artifacts": [
+        "documentary_parallel/page-26.png (printed p.18)",
+        "documentary_parallel/browser-wide.png",
+        "documentary_parallel/browser-mobile.png"
+      ],
+      "detail": "The English section heading 'Prayers' and its rubric 'On entering the Synagogue:' come before the end of the Hebrew Tallit section. The Hebrew-only 'יְהִי רָצוֹן … אָמֵן' and the rubric 'One then removes the טלית from the face …' then appear under 'Prayers'. After them come 'תְּפִלּוֹת.' and a second 'On entering the Synagogue:'. The PDF prints this order as full-width blocks. HTML wide places 'Prayers / On entering the Synagogue:' in the English column level with the Hebrew Tallit ending, and the mobile view gives the same order. Leaving the Hebrew-only passage unpaired is fine and intended. The problem is where it sits: a reader would take the end of the Tallit section as part of 'Prayers'. That breaks the guide's rule that a structural heading must contain the text it titles. For comparison, the expanded profile orders this correctly: expanded/page-04 and browser-wide show 'One then removes…', then 'תְּפִלּוֹת.' with the 'Prayers' subtitle, then the rubric.",
+      "required_action": "Place the unpaired Hebrew remainder of the previous section (and its rubric) before the next section's English heading. Then re-render documentary_parallel PDF and HTML and refresh the frozen manifest."
+    },
+    {
+      "id": "F3",
+      "severity": "low (fix alongside F2)",
+      "profile": "documentary_parallel",
+      "artifacts": [
+        "documentary_parallel/page-26.png"
+      ],
+      "detail": "In the first row after 'תְּפִלּוֹת.', the English verse '8 And I through the abundance of Thy grace enter Thy house and bow down' is followed by an empty line before 'before Thy holy place in awe of Thee.', and there is further empty space before the next row. The same verse renders continuously in documentary_parallel/browser-wide.png and in expanded/page-04.png. This looks like an empty fragment or a marker-only row inside the PDF parallel row. There is no clipping."
+    },
+    {
+      "id": "F4",
+      "severity": "low (cosmetic)",
+      "profiles": [
+        "expanded",
+        "documentary_parallel"
+      ],
+      "artifacts": [
+        "expanded/browser-mobile.png",
+        "documentary_parallel/browser-mobile.png"
+      ],
+      "detail": "On narrow screens, empty parallel rows show up as stacked divider lines with no text: 2–4 rules after '8 And I through…', after 'In the house of God…' and after '5 How becoming…' in expanded, and similar rows around 'One then drapes oneself…' in documentary_parallel. On wide screens they only add extra vertical space. The guide says 'do not manufacture empty parallel rows'. Content is complete and there is no overflow."
+    },
+    {
+      "id": "F5",
+      "severity": "low (cosmetic, HTML only)",
+      "profiles": [
+        "expanded",
+        "night_expanded"
+      ],
+      "artifacts": [
+        "expanded/browser-note-wide.png",
+        "night_expanded/browser-wide.png",
+        "night_expanded/browser-mobile.png"
+      ],
+      "detail": "In the HTML, combined bilingual labels have no separator, so the bidirectional text reorders badly. Expanded shows 'On Shabbatבשבת'. Night shows 'Reader::פאַרבעטער', 'Congregation::קו״ח' and 'Congregation::געמיינדע', with doubled colons. The PDF keeps the two languages apart (expanded/page-18 shows 'בשבת   On Shabbat'). The night labels are regression material and may predate this installment."
+    }
+  ],
+  "carried_observations": {
+    "O1": "Unchanged. Repeated same-leaf arrows follow conditional blocks or a column switch, as the guide permits. In HTML the arrows sit in the outer gutters on wide screens and inline at the start of the line on mobile, with no overlap.",
+    "O2": "Unchanged. 'Israel .' comes from the source.",
+    "O3": "Unchanged. Duplicated English rubrics in the documentary parallel follow the two source pages."
+  },
+  "html_visual_coverage": {
+    "documentary_hebrew": {
+      "browser-wide.png": "Morning opening, 'On entering' and 'Before the morning prayer' rubrics, Yigdal stanzas, Shacharit heading, gutter arrows. OK.",
+      "browser-mobile.png": "Same section at narrow width; inline arrows; no overflow. OK.",
+      "browser-note-wide.png": "Citation popover '21 זבחים פ״ה.' open beside the Eizehu text; unresolved Shabbat label; arrows after the conditional. OK. The Eizehu paragraph letters sit on their own line, which differs in style from the PDF but is acceptable."
+    },
+    "documentary_parallel": {
+      "browser-wide.png": "Tallit verses paired, then F2.",
+      "browser-mobile.png": "Stacked columns; F2 and F4.",
+      "browser-note-wide.png": "Hebrew-only Qorbanot and Ana be-khoach in the Hebrew column; popover '21 זבחים פ״ה.'; Shabbat label; arrows. OK."
+    },
+    "expanded": {
+      "browser-wide.png": "'Prayers' subtitle, rubrics, paired verses, Gabirol, 'Before the morning prayer'. OK apart from extra space from F4.",
+      "browser-mobile.png": "F4.",
+      "browser-note-wide.png": "Popover '15 זבחים פ״ה.'; unresolved 'On Shabbat' label (F5); Eizehu with arrows. OK otherwise.",
+      "browser-known-shabbat-german-female.png": "With German rite set, Elohai neshamah follows Asher yatzar directly. With female set, only 'who made me according to His will' appears, not 'who did not make me a woman'. No condition labels appear. Arrows look right. OK."
+    },
+    "night_expanded": {
+      "browser-wide.png": "Barkhu and the Shema blessings paired, rules, Shema with notes. F5 labels; OK otherwise.",
+      "browser-mobile.png": "Stacked; inline arrows; F5.",
+      "browser-note-wide.png": "Popover '6 Numbers XV:37' anchored by Numbers 15:37; paired verses; arrows. OK."
+    },
+    "limits": "Each screenshot shows one viewport. I did not scroll through the whole HTML book. HTML completeness elsewhere relies on browser_qa.json (27-combination matrix, no JS errors, no overflow, links and popovers tested) and on content-visibility:auto, which hides offscreen text from plain innerText checks. expanded_weekday and expanded_shabbat have no HTML by design."
+  },
+  "pdf_visual_coverage": {
+    "unchanged_from_initial_review": "All six contact sheets, plus the 19 full pages listed in /tmp/day2-final-presentation-initial-review.json.",
+    "added": [
+      "documentary_parallel/page-26.png (F2, F3)",
+      "expanded/page-04.png (comparison: correct order, no gap)"
+    ],
+    "note": "My first review sampled pages and did not inspect documentary_parallel p26 in full; the F2 defect was not visible at contact-sheet size. The other PDF conclusions (no clipping or overlap, overfull warnings harmless, arrows) still stand."
+  },
+  "hash_binding": {
+    "method": "Hashes are taken from the manifests. I did not compute any hash myself (Read-only access).",
+    "frozen_manifest": "exports/frozen_manifest.json, status frozen_for_independent_presentation_review, created 2026-11-26T23:44:14Z",
+    "cross_check": "All 13 screenshot hashes and all 4 HTML hashes in /tmp/day2-final-html-screenshot-manifest.json match the frozen manifest. The six PDF hashes in the frozen manifest match pdf_qa.json. The frozen manifest also lists hashes for every page PNG, contact sheet, settings file, print/electronic XML and report (pdf_qa 7bc5b152…, browser_qa e1f01341…, compile_manifest c5b50deb…, render_manifest 0d16f2fb…).",
+    "pdf": {
+      "documentary_hebrew": "9a669ec711e0bdb3d33fa9fbd91613fd84d0690aff04f5ead029a22450c697f1",
+      "documentary_parallel": "7fa7cb35b633a7e73fc16a84a2e22c6d9a7058a98192a4e7abbfc8683fc72e6a",
+      "expanded": "34fda3b885168f1ccad4d0b213796c65a2e9f3b040dd8b7660e323422a26e9e4",
+      "night_expanded": "40710c04f36b8a6669e31094b9fc36c2fc075cd20462c156cae8a69666f44cbc",
+      "expanded_weekday": "81f9febe3d8858d4a2a966e72c2642868a7725b27174a9790547964a9f0df1cd",
+      "expanded_shabbat": "19445dd7f80ceeefa2934e75856736c824f47ea1a23f5caba7ade0a4c0d1713b"
+    },
+    "html": {
+      "documentary_hebrew": "41c1d22afc7713563f7bce2b25cdf856d82f018346be7a44d32b9ab826044140",
+      "documentary_parallel": "f2c0b4ae72af3ac4b7bb59f1ffc6b1a4d7ec698ce967af07348f56d38c9e0b9e",
+      "expanded": "f061f9d568d3deae4180326c27da6f81961f9bf9225e700a2e982b81dd622f70",
+      "night_expanded": "453386bde46da6627f7beef700a28a551c576db1450ffa8e82e040ae9c279f52"
+    },
+    "screenshots": {
+      "documentary_hebrew": {
+        "browser-wide": "6b8e123e…064f",
+        "browser-mobile": "77d70c46…77a6",
+        "browser-note-wide": "001e9ff4…1a5c"
+      },
+      "documentary_parallel": {
+        "browser-wide": "28edab56…c2d4",
+        "browser-mobile": "d6df9c56…e2ba",
+        "browser-note-wide": "7aa18226…b6ab"
+      },
+      "expanded": {
+        "browser-wide": "db3d7bc0…06b1",
+        "browser-mobile": "9111bf3b…f9b1",
+        "browser-note-wide": "e4fd512b…168b",
+        "browser-known-shabbat-german-female": "6ec2f6ec…7c62"
+      },
+      "night_expanded": {
+        "browser-wide": "a69c79e2…6640",
+        "browser-mobile": "eb9fe7c2…e798",
+        "browser-note-wide": "9c8dd612…9285"
+      }
+    }
+  },
+  "composition_of_prior_gates": "Unchanged: the code-restoration and semantic-freeze reviews are approved with findings []. Source fidelity, לַעֲשׂוֹק, the six Morning Divine Names and order are not reopened.",
+  "path_to_approval": "Fix F2 (and preferably F3) in documentary_parallel, re-render its PDF, PNGs and HTML, then refresh the frozen manifest and documentary_parallel screenshots. A bounded re-review of documentary_parallel p25–27 and its wide/mobile screenshots would then be enough. F4 and F5 are cosmetic and do not block on their own.",
+  "actual_model_usage": [
+    "claude-opus-5-5"
+  ]
+}
