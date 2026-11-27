@@ -1,0 +1,31 @@
+{
+  "status": "passed_prospective_only",
+  "source_gate_pending": 1023,
+  "processor_code_sha256": "2650fa18dc53aa451b9bfa594dd32913ff74b2157b1b94ce4a58bb2d9105a02d",
+  "checks": [
+    {
+      "key": "names",
+      "command": ".venv/bin/python -m opensiddur.common.validate_names --check --project-directory /tmp/day2-pesuqei-prospective/project --settings-directory /tmp/day2-pesuqei-prospective/settings prayerbook_for_the_new_year_second_day-heidenheim-1965-he prayerbook_for_the_new_year_second_day-marmorstein-1965-en machzor_expanded-opensiddur-he",
+      "exit_code": 0,
+      "tool_stdout_summary": "0 naming error(s); see specs/NAMING_SCHEME.md"
+    },
+    {
+      "key": "features",
+      "command": ".venv/bin/python -m opensiddur.exporter.validate_features --project-directory /tmp/day2-pesuqei-prospective/project prayerbook_for_the_new_year_second_day-heidenheim-1965-he prayerbook_for_the_new_year_second_day-marmorstein-1965-en machzor_expanded-opensiddur-he",
+      "exit_code": 0,
+      "tool_stdout_summary": "exit0, no diagnostics"
+    },
+    {
+      "key": "profiles",
+      "command": ".venv/bin/python -m opensiddur.exporter.books --check --project-directory /tmp/day2-pesuqei-prospective/project --settings-directory /tmp/day2-pesuqei-prospective/settings prayerbook_for_the_new_year_second_day-heidenheim-1965-he machzor_expanded-opensiddur-he/second_day_morning machzor_expanded-opensiddur-he/second_day_evening",
+      "exit_code": 0,
+      "tool_stdout_summary": "4 of4 books ok"
+    },
+    {
+      "key": "lint",
+      "command": ".venv/bin/ruff check --no-cache .",
+      "exit_code": 0,
+      "tool_stdout_summary": "All checks passed!"
+    }
+  ]
+}

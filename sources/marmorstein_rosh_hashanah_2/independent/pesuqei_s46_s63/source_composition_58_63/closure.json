@@ -1,0 +1,386 @@
+{
+  "status": "approved_except_question1023",
+  "scope": "Source transcription and printed documentary page coverage only for scans 58–63, printed labels 21–23. Does not approve the pending punctuation, TEI/encoding, service order, alignment, or export.",
+  "subset_sha256": "6714a84aa2bbcd39dbf6cd5f35cdd51eb99f8e8582565efcbb9a713a37aeb6ae",
+  "payload": {
+    "path": "/home/efeins/.codex/worktrees/marmorstein-day-two-sources/master/sources/marmorstein_rosh_hashanah_2/batches/pesuqei_s46_s63/scoped_sources/v2/pages_58_63.json",
+    "sha256": "6714a84aa2bbcd39dbf6cd5f35cdd51eb99f8e8582565efcbb9a713a37aeb6ae"
+  },
+  "related_inputs": [
+    {
+      "path": "/tmp/day2-pesuqei-source-composition-review-58-63.json",
+      "sha256": "95615ac42a49118b49df0ddb74cae08236c3252cf8f3df9f05166b3a9fa23a3d"
+    },
+    {
+      "path": "/tmp/day2-pesuqei-source-corrections-58-63.json",
+      "sha256": "7cdbaf27f7f56cad884a453716cb790bd5be9500b542a1e6ebe42b869b2e6c60"
+    },
+    {
+      "path": "/tmp/pesuqei-q-s62-kmo.json",
+      "sha256": "c7c2f7f60fbb2c7775bcb93259c22852fbe88ee3bf2be51384c566a04e8bd686"
+    }
+  ],
+  "previous_composition_sha256": "93f5ddfdf54a19e0fdb0820fb2bd14ee4922787909c65e9bd4e877fabc02298c",
+  "model": "GPT-6.2 Sol (configured)",
+  "effort": "medium (configured)",
+  "runtime_model_or_effort_exposure": "Not independently introspectable",
+  "verification": {
+    "method": "Verified all six serialized page records against the individually observed and hashed source-evidence review and proposed corrections. Full substantive page-record equality including blocks, line arrays, text, coverage and scan provenance. Only per-page status metadata differs, and the three Hebrew records now duplicate verified first and last lines in top-level metadata.",
+    "verified_changes": [
+      "35 Name holams verified at individually inventoried scan and word occurrences",
+      "Both dalet holams in לַאֲדֹנֵי הָאֲדֹנִים",
+      "Three dalet holams in גְּדֹלוֹת / גְּדֹלִים",
+      "Qof dagesh on קֹּֽדֶשׁ",
+      "Retained both holams and dagesh in מִקֹּלוֹת"
+    ],
+    "unchanged_coverage": "Six complete facing Hebrew/English pages, first/last lines, running headers, label pairs, documentary order, all citations, and source omission of the English for Psalm 136:25. The revised records preserve these previously checked source boundaries.",
+    "image_evidence": "Revalidated all complete-page and reopened strip/band image hashes, all per-occurrence Name image hashes, all material difference crop hashes, and all corroborating crop hashes against the source composition report."
+  },
+  "page_coverage": [
+    {
+      "scan": 58,
+      "printed_labels": [
+        "21",
+        "21"
+      ],
+      "language": "he",
+      "header": "תְּפִלַּת שַׁחֲרִית",
+      "body_lines": 24,
+      "citations": [
+        "קלו"
+      ],
+      "page_image": {
+        "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s58.jpg",
+        "sha256": "1af4facb250f206e9d9a90f4b4eb7817243f0e18220fc288c89c5e8390ecf082"
+      },
+      "review_images": [
+        {
+          "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/fine/s58-strip1.png",
+          "sha256": "2ea77c2de234043f5761ade89b2966342312d779f5252d7947dce73a6dd2300d"
+        },
+        {
+          "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/fine/s58-strip2.png",
+          "sha256": "836c654b59690edaf756d4f10e68bbc2138e95adf263b8d63d817f4eef00ce16"
+        },
+        {
+          "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/fine/s58-strip3.png",
+          "sha256": "3aab1f6c0ebfd505610d6b2cf690392afecf9a5c8d1575d490db91dac9052a0e"
+        },
+        {
+          "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/fine/s58-strip4.png",
+          "sha256": "0e6c5760edf9eff02852c32186f139a96511eb2298bb64af5ce88f10b7feb839"
+        },
+        {
+          "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/fine/s58-strip5.png",
+          "sha256": "4fb85c4c7f85734eb2a7b6d48d4ae8d91edcd17d4816efe8adea9d74ec0732f7"
+        },
+        {
+          "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/fine/s58-strip6.png",
+          "sha256": "6e32cb9a3a2d5aab4fe3a69ff7e628b05bc252f524e8363212f0dcbd2a8abf46"
+        }
+      ],
+      "covers_complete_page": true,
+      "reading_order": "verified documentary sequence, not service structure",
+      "content": {
+        "psalms": [
+          "135 ending",
+          "136:1–16"
+        ],
+        "details": [
+          "Small קלו printed beside the first line of Psalm 136.",
+          "The final Hebrew line is the desert verse and refrain."
+        ]
+      },
+      "first_line": "נַחֲלָה לְיִשְׂרָאֵל עַמּוֹ: יְהֹוָה שִׁמְךָ לְעוֹלָם יְהֹוָה זִכְרְךָ",
+      "last_line": "לְמוֹלִיךְ עַמּוֹ בַּמִּדְבָּר    כִּי לְעוֹלָם חַסְדּוֹ:",
+      "disposition": "verified",
+      "content_blocks_identical_to_proposed_records": true
+    },
+    {
+      "scan": 59,
+      "printed_labels": [
+        "21",
+        "21"
+      ],
+      "language": "en",
+      "header": "Morning Prayer",
+      "body_lines": 41,
+      "citations": [
+        "(Psalm 136.)"
+      ],
+      "page_image": {
+        "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s59.jpg",
+        "sha256": "09a14c9014bfb125275384d4187009d214596ec697d6dcba96c72f9306b09ce7"
+      },
+      "review_images": [
+        {
+          "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s59-band1.png",
+          "sha256": "40b9fc2ee6a486d6dc8b5aef9d72ba5b394bc093607ea0645fbce9fce91fa6e9"
+        },
+        {
+          "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s59-band2.png",
+          "sha256": "81b98e16dddc7a68534e9d396fb7a7ae8410df7fe7ea36a4317e4b4015732916"
+        },
+        {
+          "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s59-band3.png",
+          "sha256": "56996debfee3f33f4fb2ce31f670f68d431a754345cea98d1f0b56a23bbe3f8e"
+        }
+      ],
+      "covers_complete_page": true,
+      "reading_order": "verified documentary sequence, not service structure",
+      "content": {
+        "psalms": [
+          "135 ending",
+          "136:1–16"
+        ],
+        "details": [
+          "(Psalm 136.) is a separate printed line.",
+          "All 16 English refrains end this page at the desert verse."
+        ]
+      },
+      "first_line": "inheritance, an inheritance to His people Israel. O Lord,",
+      "last_line": "for His grace endures for ever",
+      "disposition": "verified",
+      "content_blocks_identical_to_proposed_records": true
+    },
+    {
+      "scan": 60,
+      "printed_labels": [
+        "22",
+        "22"
+      ],
+      "language": "he",
+      "header": "תְּפִלַּת שַׁחֲרִית",
+      "body_lines": 24,
+      "citations": [
+        "לג"
+      ],
+      "page_image": {
+        "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s60.jpg",
+        "sha256": "27d17880dacb99d4421d9d5b0ce33d8d40adaa99bba0c5c1a1026dd47662d8d6"
+      },
+      "review_images": [
+        {
+          "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/fine/s60-strip1.png",
+          "sha256": "cfd5c8f17917dff945f273da5750d62896613ed251d8812b29da379b253a4de9"
+        },
+        {
+          "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/fine/s60-strip2.png",
+          "sha256": "6c486144a7b35923685ed18371e9b06ac5287dbe24cb58333d051d39639d771d"
+        },
+        {
+          "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/fine/s60-strip3.png",
+          "sha256": "ef9a655db730b95057d1046c60a6be66cafe50aa6cf98ced05180b961a06cb87"
+        },
+        {
+          "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/fine/s60-strip4.png",
+          "sha256": "622b8afeb7d4661f36b25bde5edaea1fc701fb42c447a65cfb3e2280d06e12d9"
+        },
+        {
+          "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/fine/s60-strip5.png",
+          "sha256": "302039652ea2ab9b13640662b80a8971493a0aee8700b2ddad97f5057a390833"
+        },
+        {
+          "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/fine/s60-strip6.png",
+          "sha256": "43f2685ad9ace290458848f9733265a097794141e1644d73bf4659bb552d1a1d"
+        }
+      ],
+      "covers_complete_page": true,
+      "reading_order": "verified documentary sequence, not service structure",
+      "content": {
+        "psalms": [
+          "136:17–26",
+          "33 beginning"
+        ],
+        "details": [
+          "Small לג opens Psalm 33 in-line.",
+          "The bread-to-all-flesh verse and refrain are present.",
+          "Page ends mid-verse at וּבְרֹב."
+        ]
+      },
+      "first_line": "לְמַכֵּה מְלָכִים גְּדֹלִים    כִּי לְעוֹלָם חַסְדּוֹ:",
+      "last_line": "גִּבּוֹר לֹא־יִנָּצֵל בְּרָב־כֹּֽחַ: שֶֽׁקֶר הַסּוּס לִתְשׁוּעָה וּבְרֹב",
+      "disposition": "verified",
+      "content_blocks_identical_to_proposed_records": true
+    },
+    {
+      "scan": 61,
+      "printed_labels": [
+        "22",
+        "22"
+      ],
+      "language": "en",
+      "header": "Morning Prayer",
+      "body_lines": 39,
+      "citations": [
+        "(Psalm 33.)"
+      ],
+      "page_image": {
+        "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s61.jpg",
+        "sha256": "2bbaad50ac31f315856137986c4ae5c0a2a3b0e5835b8b2cb4f1a5daed42a0f0"
+      },
+      "review_images": [
+        {
+          "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s61-band1.png",
+          "sha256": "f741148e73a8453d64a311e4510b014e1c1c310584839f26c66a02101b4a479d"
+        },
+        {
+          "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s61-band2.png",
+          "sha256": "780118aa5181862a4b9e5cce709b1ee35e37040ae5a0a8203cd7c4af11bdda1b"
+        },
+        {
+          "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s61-band3.png",
+          "sha256": "a41f5fefc5ffd86345cfb1ca9336aa439ff9f86fc519d2de3bca36deda3cad10"
+        }
+      ],
+      "covers_complete_page": true,
+      "reading_order": "verified documentary sequence, not service structure",
+      "content": {
+        "psalms": [
+          "136:17–24,26",
+          "33 beginning"
+        ],
+        "details": [
+          "(Psalm 33.) is printed inline.",
+          "Psalm 136 transitions directly from deliverance from enemies to “Thank the God of Heaven”; the bread-to-all-flesh verse and its refrain are absent.",
+          "Page ends mid-verse at “its might”."
+        ]
+      },
+      "first_line": "Who smote great kings    for His grace endures for ever",
+      "last_line": "Useless is the horse for victory, by the measure of its might",
+      "disposition": "verified",
+      "content_blocks_identical_to_proposed_records": true
+    },
+    {
+      "scan": 62,
+      "printed_labels": [
+        "23",
+        "23"
+      ],
+      "language": "he",
+      "header": "תְּפִלַּת שַׁחֲרִית",
+      "body_lines": 24,
+      "citations": [
+        "צב",
+        "צג"
+      ],
+      "page_image": {
+        "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s62.jpg",
+        "sha256": "bce58546c3b09fe7e03e9212ed4329f4cf4a9703b50d2af4e554127e448d3f12"
+      },
+      "review_images": [
+        {
+          "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/fine/s62-strip1.png",
+          "sha256": "f66a9ef1eb949df95c32b284c4e645eae7817fbed0f22373cb818f63f29e8d87"
+        },
+        {
+          "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/fine/s62-strip2.png",
+          "sha256": "f9ebbbe24b8c4015959e34401056a37d570c989064ef6dbd211aecfbe044e7f6"
+        },
+        {
+          "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/fine/s62-strip3.png",
+          "sha256": "c400f1b258ee7ccc5c38e93e04ce3e6bdbdf8e9d912e75a51e2656080b04fb70"
+        },
+        {
+          "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/fine/s62-strip4.png",
+          "sha256": "57e6278d8478dbcf19fe5fc14f058020e67ff6b8de05f35ab17d24c6fb4b2e04"
+        },
+        {
+          "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/fine/s62-strip5.png",
+          "sha256": "822649bae59417db4ad5a70e00bfeb7805af86dc100f8a3e5aeee06436561a6a"
+        },
+        {
+          "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/fine/s62-strip6.png",
+          "sha256": "ef5a9bf62a2f081949ad33b29ad85d1749c8bcc2c3a2d160bffedd279da23118"
+        }
+      ],
+      "covers_complete_page": true,
+      "reading_order": "verified documentary sequence, not service structure",
+      "content": {
+        "psalms": [
+          "33 ending",
+          "92 entire",
+          "93 entire"
+        ],
+        "details": [
+          "Small צב and צג open each new psalm in-line.",
+          "Psalm 93 ends with יָמִים and two-dot punctuation."
+        ]
+      },
+      "first_line": "חֵילוֹ לֹא יְמַלֵּט: הִנֵּה עֵין יְהֹוָה אֶל־יְרֵאָיו לַמְיַחֲלִים לְחַסְדּוֹ:",
+      "last_line": "קֹּֽדֶשׁ יְהֹוָה לְאֹֽרֶךְ יָמִים:",
+      "disposition": "verified except the line-end punctuation in question 1023",
+      "content_blocks_identical_to_proposed_records": true
+    },
+    {
+      "scan": 63,
+      "printed_labels": [
+        "23",
+        "23"
+      ],
+      "language": "en",
+      "header": "Morning Prayer",
+      "body_lines": 37,
+      "citations": [
+        "(Psalm 92.)",
+        "(Psalm 93.)"
+      ],
+      "page_image": {
+        "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/pages/s63.jpg",
+        "sha256": "1940649d324471d4ed3b2fec099df596fc9da112d3c85d33f317feefcd953d6e"
+      },
+      "review_images": [
+        {
+          "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s63-band1.png",
+          "sha256": "a279e9fbed7b377966ae1b13092fd7f2c05380a71c4bcd3fed5b1cc1641dc8df"
+        },
+        {
+          "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s63-band2.png",
+          "sha256": "aba2b2cf8be3ec07805b50ca6a997fa901286f36fac943971d13e130e17ad070"
+        },
+        {
+          "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s63-band3.png",
+          "sha256": "fb565246f9ae6627ce8c40c3a5de066e145f78d5ec4bf30c499ae6a777784953"
+        }
+      ],
+      "covers_complete_page": true,
+      "reading_order": "verified documentary sequence, not service structure",
+      "content": {
+        "psalms": [
+          "33 ending",
+          "92 entire",
+          "93 entire"
+        ],
+        "details": [
+          "(Psalm 92.) and (Psalm 93.) are printed inline.",
+          "Last line is “an infinity of days.”",
+          "Body text rejoins med-itation and under-stand, and retains the lexical hyphen in evil-doers."
+        ]
+      },
+      "first_line": "it will not save. Behold, the eye of the Lord is towards those",
+      "last_line": "an infinity of days.",
+      "disposition": "verified",
+      "content_blocks_identical_to_proposed_records": true
+    }
+  ],
+  "pending_question": {
+    "question_number": 1023,
+    "source_review_item": "s62-kmo-line-edge",
+    "scan": 62,
+    "psalm": 92,
+    "block_0based": 2,
+    "block_line_1based": 6,
+    "scope": "One possible maqaf at end of the line after כְּמוֹ.",
+    "provisional_reading": "כְּמוֹ־",
+    "reader_confidence": "moderate (0.68)",
+    "image": {
+      "path": "/tmp/day2-review-kmo-edge.png",
+      "sha256": "9b17b3acf20208b7833a34a8d52ad32cd14828bea4324dde525413b88f09c17f"
+    },
+    "context_image": {
+      "path": "/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/fine/s62-strip3.png",
+      "sha256": "c400f1b258ee7ccc5c38e93e04ce3e6bdbdf8e9d912e75a51e2656080b04fb70"
+    },
+    "status": "pending user adjudication; full scope not approved"
+  }
+}

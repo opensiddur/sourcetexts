@@ -1,0 +1,49 @@
+{
+  "status": "not_accepted",
+  "pending_question": 1023,
+  "source_pages": "working/adjudicated_pages.json",
+  "source_pages_sha256": "6beaafb58ed869916969e8298ef92d46685e2072fb55faa5be150af248f6c929",
+  "literal_recipe": "working/readings.json",
+  "literal_recipe_sha256": "cbbeb9d8d178d2cbe88d1c1348a5581c678f62f18fd1504adaead64a0d5769a1",
+  "sequence_recipe": "pesuqei_units.json",
+  "sequence_recipe_sha256": "a718b6155ebed95b75dd3d15a991037ba40b752cbe05d2f18468bb163a8a9f7f",
+  "earlier_working_files_and_rejected_versions": "Historical evidence only; see latest scoped v4 closure. Source/recipe approval files intentionally not created until the human reading is settled.",
+  "accepted_complete_scans": 45,
+  "prospective_batch_scan_pages": [
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63
+  ],
+  "exporter_dependency": {
+    "pr": "https://github.com/opensiddur/opensiddur-processor/pull/349",
+    "commit": "87c27ce",
+    "merge_before": [
+      "processor331",
+      "projects110"
+    ],
+    "reason": "Full-widthtextcontinuesprimarysourcepagestate"
+  },
+  "presentation_status": "All six PDFs and four HTMLs approved for their exact frozen prospective artifacts.",
+  "presentation_manifest": "qa/frozen_exports.json",
+  "remaining_actions": [
+    "Obtain human answer1023 for scan62 maqaf.",
+    "Apply the answer and verify the bounded source amendment.",
+    "Bind current source and sequence approval hashes; generate production XML through the gated importer.",
+    "Verify generated XML equals reviewed outputs, or review the bounded output change; then record complete-scan acceptance."
+  ]
+}

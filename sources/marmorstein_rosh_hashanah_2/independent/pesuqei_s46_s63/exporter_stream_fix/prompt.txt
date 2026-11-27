@@ -1,0 +1,6 @@
+Independent exporter fix review, read only supplied files. Source arrows must appear only when source page changes. Actual expanded maḥzor emitted duplicate n55/n59 arrows at Hebrew-only Psalm91repeat andPsalm136:25 because unpairedfullwidth nodes used roleNone, while precedingpaired primary used roleprimary in _suppress_repeated_pages state(project,role,edition). Tinyfixnocolumnroledefaultsprimary. Review correctness, preservation ofparallelcolumnproject/edition independence, conditional andrubric state merging, actualpagechanges and returnvisits; ensuredoesnotlosegenuinefirstlink. Three new synthetic tests for same-sourcegap, changedfullwidth/resume, optionalchangedpage+requiredreturn. Existing scanlink+HTML202tests141subtests andTeXlog supplied; do notclaim execution. ReturnJSON statusapproved_code_scope orchanges_required, concretefindings, exactmanifestcodehashes, limitations/finalexportreviewrequirements. Separateactualexposedmodel/effortfromrequestedmedium.
+/tmp/day2-scan-stream-review/input_manifest.json
+/tmp/day2-scan-stream-review/day2-scan-stream-fix-tex-tests.log
+/tmp/day2-scan-stream-review/day2-scan-stream-fix-tests.log
+/tmp/day2-scan-stream-review/test_scan_links.py
+/tmp/day2-scan-stream-review/scan_links.py

@@ -1,0 +1,106 @@
+{
+  "verdict": "changes_required",
+  "scope": "Source transcription of scans 46–51 only: wording, pointing, headers, citations, first/last lines, page extent. Encoding and exports not reviewed.",
+  "hashes": {
+    "full_composed_payload_sha256_as_stated": "93f5ddfdf54a19e0fdb0820fb2bd14ee4922787909c65e9bd4e877fabc02298c",
+    "stated_value_consistency": "pages46_51.json full_composed_payload_sha256 matches composition_manifest adjudicated_pages_sha256",
+    "subset_sha256": "NOT COMPUTED: this session had only a file-read tool, with no shell or hash utility. I have not checked any stated hash against the bytes.",
+    "independent_hash_verification": false
+  },
+  "page_coverage": [
+    {
+      "scan": 46,
+      "label": "15",
+      "header": "תְּפִלַּת שַׁחֲרִית / 15 15 ok",
+      "first_last_ok": true,
+      "extent_ok": true,
+      "wording_ok": true,
+      "pointing": "one open finding (F1); mefoar2 note (F3)"
+    },
+    {
+      "scan": 47,
+      "label": "15",
+      "header": "Morning Prayer / 15 15 ok",
+      "first_last_ok": true,
+      "extent_ok": true,
+      "wording_ok": true,
+      "citation": "(Chron. I. 16, 8.) on its own line ok; cues ברוך/הודו ok; 'convenant' printed, kept for sic/corr"
+    },
+    {
+      "scan": 48,
+      "label": "16",
+      "header": "ok",
+      "first_last_ok": true,
+      "extent_ok": true,
+      "wording_ok": true,
+      "pointing": "no difference found at band resolution; row13 בַּל־תִּמּוֹט had no listed crop, band only"
+    },
+    {
+      "scan": 49,
+      "label": "16",
+      "header": "ok",
+      "first_last_ok": true,
+      "extent_ok": true,
+      "wording_ok": true,
+      "notes": "'convenant', 'withold' printed, kept"
+    },
+    {
+      "scan": 50,
+      "label": "17",
+      "header": "ok",
+      "first_last_ok": true,
+      "extent_ok": true,
+      "wording_ok": true,
+      "pointing": "all 7 dedicated decisions applied to the exact occurrences; nora and torat stay without meteg as the dedicated answers say; יְהוָה without holam in all five occurrences, matching the crops; one open question (F2)"
+    },
+    {
+      "scan": 51,
+      "label": "17",
+      "header": "ok",
+      "first_last_ok": true,
+      "extent_ok": true,
+      "wording_ok": true,
+      "notes": "'whem' printed, kept. '(Psalm 19.)' is printed at the start of the paragraph's first line, not on its own line. Splitting it into a citation block is acceptable, but the physical first line is '(Psalm 19.) For the conductor of the Choir, a Psalm by'"
+    }
+  ],
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "material_unresolved",
+      "scan": 46,
+      "block": 1,
+      "line_in_block": 2,
+      "context": "שִׂיחוּ בְּכָל־נִפְלְאֹתָיו: הִתְהַלְלוּ בְּשֵׁם",
+      "transcribed": "הִתְהַלְלוּ (sheva under first lamed)",
+      "observed": "The enlarged crop shows a dash-plus-colon under the first lamed. That looks like hataf patah (הִתְהַלֲלוּ), not a plain sheva. No reconciliation record or dedicated decision covers this occurrence.",
+      "evidence_image": "/tmp/day2-pesuqei-lines/s46-row17.png; band s46-band3.png line 2",
+      "confidence": "medium",
+      "required_action": "Give this occurrence a dedicated neutral reader with an enlarged crop. Do not settle it from familiar wording."
+    },
+    {
+      "id": "F2",
+      "severity": "material_unresolved",
+      "scan": 50,
+      "block": 0,
+      "line_in_block": 5,
+      "context": "יְיָ צְבָאוֹת עִמָּֽנוּ מִשְׂגָּב־לָנוּ אֱלֹהֵי יַעֲקֹב",
+      "transcribed": "מִשְׂגָּב (qamatz under gimel)",
+      "observed": "At the available enlargement I cannot confirm whether the mark under gimel is a qamatz or a patah. Both readers and the reconciliation left it unexamined.",
+      "evidence_image": "/tmp/day2-pesuqei-lines/s50-row4.png",
+      "confidence": "low-medium",
+      "required_action": "Give this occurrence a dedicated reader."
+    },
+    {
+      "id": "F3",
+      "severity": "process_gap_nonblocking_on_image",
+      "scan": 46,
+      "context": "וּמְפֹאָר עֲדֵי־עַד",
+      "observed": "The manifest lists s46-mefoar2-pe as resolved by a dedicated reader, but no answer file for it was supplied. My own look at the row14 crop and the adjudication_final cache image found no detached dot inside the pe, which matches the transcription וּמְפֹאָר.",
+      "required_action": "Supply or record the dedicated answer for this question."
+    }
+  ],
+  "verified_changes_and_decisions": "Spot-checked against the crops: haaretz and lanetzach metegs (s46), לַייָ with no sheva on the first yod, עֲלִילֹתָיו, זַמְּרוּ without a leading vav, בַּקְּשׁוּ dagesh, נוֹתֵן with vav, סֶלָה with no dagesh, לּוֹ, the s50 meteg decisions, and יְהוָה without holam. The English sic forms (convenant x2, withold, whem) are kept as printed. Nothing was normalized, and no holam was inserted.",
+  "limitations": "Only the listed files were read. I opened 6 of the 34 listed line crops plus one adjudication_final image. The rest of the fine-mark review rests on band resolution.",
+  "actual_model": "claude-opus-5-5 (Opus 5.5)",
+  "effort": "low reasoning-effort setting (10)"
+}

@@ -31,13 +31,13 @@
       ]
     },
     "primary_reading": {
-      "status": "completed_unadjudicated",
+      "status": "completed",
       "evidence": [
         "primary/manifest.json"
       ]
     },
     "blind_second_reading": {
-      "status": "completed_unadjudicated",
+      "status": "completed",
       "evidence": [
         "../../independent/pesuqei_s46_s63/blind/group1/reading.json",
         "../../independent/pesuqei_s46_s63/blind/sol_52_57/reading.json",
@@ -46,48 +46,96 @@
       "note": "All18 pages have full blind readings: Claude46–51 and user-selected GPT-6.2 Sol medium52–63. This does not settle the readers’ localized uncertainties or certify encoding/export."
     },
     "adjudication": {
-      "status": "in_progress",
+      "status": "pending_user_question1023_only",
       "evidence": [
-        "primary_second_comparison.json",
-        "dedicated_readers/manifest.json",
-        "adjudication_applications.json",
-        "working/page_readings.json"
-      ]
+        "working/adjudicated_pages.json",
+        "reconciliation/source_composition_v4.json",
+        "../../independent/pesuqei_s46_s63/source_v4_closure.json",
+        "questions_1023.json"
+      ],
+      "note": "All other word and fine-mark corrections independently verified. Earlier working/page_readings and rejected compositions are retained history, not current text."
     },
     "encoding": {
-      "status": "pending",
-      "evidence": []
+      "status": "prospective_schema_passed_source_gate_pending",
+      "evidence": [
+        "working/readings.json",
+        "pesuqei_units.json",
+        "qa/prospective_schema.json",
+        "../../independent/pesuqei_s46_s63/code_v5/review.json"
+      ],
+      "note": "34 valid prospective XML documents: 15 units, 29 literal witnesses, two service files and three extended spines. Production generation is still behind source approval."
     },
     "alignment": {
-      "status": "pending",
-      "evidence": []
+      "status": "approved_structure_except_source_gate",
+      "evidence": [
+        "segmentation_proof.json",
+        "../../independent/pesuqei_s46_s63/recipe_final_review.json",
+        "qa/final_code_output_equivalence.json"
+      ]
     },
     "recitation_conditions": {
-      "status": "pending",
-      "evidence": []
+      "status": "passed_prospective_only",
+      "evidence": [
+        "qa/pesuqei_condition_matrix.json"
+      ],
+      "note": "All 27 actual rite/gender/Shabbat settings preserve the Psalm 91 ending repeat and Psalm 136:25 as Hebrew only. Neighboring English and provenance remain aligned."
     },
     "independent_encoding_order_audit": {
-      "status": "pending",
-      "evidence": []
+      "status": "approved_structure_except_source_gate",
+      "evidence": [
+        "../../independent/pesuqei_s46_s63/recipe_final_review.json",
+        "qa/final_code_output_equivalence.json"
+      ]
     },
     "mechanical_checks": {
-      "status": "pending",
-      "evidence": []
+      "status": "passed_prospective_only",
+      "evidence": [
+        "qa/prospective_schema.json",
+        "qa/registry_and_regression.json",
+        "qa/day2-pesuqei-reference-final.log",
+        "qa/mechanical_checks.json"
+      ],
+      "note": "Schema, naming, features, registry, references and four profiles pass. All 786 protected files and accepted Night compiled XML are unchanged. English provider counts are one for Psalm 91:16 and zero for Psalm 136:25."
     },
     "exports": {
-      "status": "pending",
-      "evidence": []
+      "status": "passed_prospective_only",
+      "evidence": [
+        "qa/frozen_exports.json",
+        "qa/pdf_qa.json",
+        "qa/browser_qa.json",
+        "qa/bounded_stream_v2_diff.json"
+      ],
+      "note": "Six PDFs cover 222 pages and 286 usable scan links. Four HTML previews and 27 browser settings cases pass. PR349 removes only redundant arrow pixels and annotations. Source question1023 remains open."
     },
     "independent_presentation_review": {
-      "status": "pending",
-      "evidence": []
+      "status": "approved_presentation_scope",
+      "evidence": [
+        "../../independent/pesuqei_s46_s63/final_pdf_review.json",
+        "../../independent/pesuqei_s46_s63/final_html_review.json"
+      ],
+      "note": "All six PDFs and four HTMLs independently reviewed; earlier misframed screenshots are excluded from their claimed scope. Inherited English-only expanded Contents labels are recorded, with working links."
     },
     "acceptance": {
-      "status": "pending",
-      "evidence": []
+      "status": "pending_user_question1023_and_source_gate",
+      "evidence": [
+        "questions_1023.json",
+        "ACTIVE_REVIEW.json"
+      ],
+      "note": "Do not advance accepted coverage or write production XML until the human reading is applied, exact source/recipe approvals are bound, and the resulting final artifacts are checked."
     }
   },
-  "next_question_number": 1023,
-  "pending_user_questions": [],
-  "pending_reviewer_choice": false
+  "next_question_number": 1024,
+  "pending_user_questions": [
+    1023
+  ],
+  "pending_reviewer_choice": false,
+  "required_processor_dependency": {
+    "pr": "https://github.com/opensiddur/opensiddur-processor/pull/349",
+    "commit": "87c27ce",
+    "merge_before": [
+      "processor331",
+      "projects110"
+    ],
+    "reason": "Full-widthtextcontinuesprimarysourcepagestate"
+  }
 }

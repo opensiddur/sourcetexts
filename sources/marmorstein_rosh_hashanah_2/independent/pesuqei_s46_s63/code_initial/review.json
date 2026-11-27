@@ -1,0 +1,134 @@
+{
+  "status": "changes_required",
+  "scope": "Code-only review of the frozen pesuqei.py and test_marmorstein_day_two_pesuqei.py, checked against SCAN_DIGITIZATION_INSTRUCTIONS.md, JLPTEI-3.md (URN scope, terminators, declare/conditional, alignment) and the morning_shared.py/morning_witnesses.py interfaces. Source words, PDF scans and the not-yet-created recipes are not reviewed. Nothing was executed or edited.",
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "high",
+      "file": "pesuqei.py",
+      "line": "69-80",
+      "evidence": "service_document loops over every order item and calls a target for each language the unit has. It never looks at 'hebrew_only_repeat'. The shared order allows the same key twice (the test at test:65-66 relies on this, and build_documents:112-114 only compares sets). So a repeat item whose unit has 'en' makes the English documentary service call that unit a second time. Without documentary_target it re-calls the whole unit. TRANSLATION is undefined in the documentary context, so the guard keeps the English words. The Hebrew documentary service also calls the unit twice, although the literal witness already contains the printed repetition.",
+      "action": "Treat expanded-only repeat items as having no documentary call. At minimum, skip items with hebrew_only_repeat when lang != 'he'. Also require an explicit documentary_target, or skip the item, so the documentary arrangement does not repeat a literal witness. Add a synthetic test with a repeat item in both languages."
+    },
+    {
+      "id": "F2",
+      "severity": "high",
+      "file": "pesuqei.py",
+      "line": "37, 122-124",
+      "evidence": "The English suppression guard is only applied when unit['urn'] exactly equals 'urn:x-opensiddur:text:bible:psalms/91' and lang == 'en', and it uses a hard-coded REPEATED_VERSE. Neither is tied to the order items that set hebrew_only_repeat or to their expanded_target. If the recipe gives the psalm a different unit identity (an excerpt, a combined unit or a range), or flags a different verse, no guard is created and nothing errors. The expanded Hebrew-only repeat would then pick up the printed English verse, filling a translation gap the source leaves.",
+      "action": "Work out the guard from the recipe. For each hebrew_only_repeat item, find exactly one English witness carrying the milestone for expanded_target, guard that milestone, and raise if there are zero or several. Remove the hard-coded psalm/verse constants, or assert they match the recipe. Test that a flagged repeat with no guardable English milestone fails."
+    },
+    {
+      "id": "F3",
+      "severity": "medium",
+      "file": "pesuqei.py",
+      "line": "55-59",
+      "evidence": "The endpoint search accepts any following sibling milestone with unit == marker unit or unit == 'chapter', including a bare chapter terminator. JLPTEI-3 §URN scope rule 3 and the subverse section say a bare milestone closes only its own unit ('bare milestones close only their own unit'). A chapter milestone ends a verse only through containment when it opens a chapter, i.e. when it has @corresp. If only a bare chapter terminator follows, the guard ends there while the verse's resolved range runs on, unguarded, to the next verse or the end of the div. The search is also limited to the marker's own parent, so it cannot check the actual refdb range.",
+      "action": "Accept only (a) a same-unit milestone, with or without corresp, or (b) a containing-unit milestone that has @corresp. Better still, compute the endpoint with the same resolver as opensiddur/exporter/refdb.py (UNIT_CONTAINED_BY), and raise if the resolved range ends outside the parent the guard covers. Add tests for a bare-chapter-only ending and for a next chapter with @corresp."
+    },
+    {
+      "id": "F4",
+      "severity": "medium",
+      "file": "pesuqei.py",
+      "line": "83-107",
+      "evidence": "append_sequence ignores 'units' in expanded mode, so a unit's missing 'en' has no effect on the expanded sequence. Expanded calls go to canonical URNs without a project. The TRANSLATION=false declaration only hides content gated on TRANSLATION. So a Hebrew-only unit, or the repeat if this project's verse is empty after the condition, can be filled by another English provider for the same canonical URN, such as the first-day volume or a Tanakh translation. SCAN_DIGITIZATION_INSTRUCTIONS:90-93 and 375-379 forbid global URN reuse filling documented gaps.",
+      "action": "For every expanded item whose unit lacks 'en', and for every hebrew_only_repeat, add an explicit mechanism that stops other providers supplying English, or show from the exporter's source-priority rules that none can. Add a compiled-output regression test (true / false / undecided) proving no English row appears for these items."
+    },
+    {
+      "id": "F5",
+      "severity": "medium",
+      "file": "pesuqei.py",
+      "line": "61, 102 (with morning_shared.py:33, 289-292, 315-322)",
+      "evidence": "The repeat suppression reuses the shared TRANSLATION feature, which already means 'the new morning English is printed', and second_night.xml declares it false across the whole night service. Any caller that declares TRANSLATION for its own reasons will also show or hide Ps 91:16 English. A spine-level declaration of it in the frozen expanded morning template would also hide the first, legitimate occurrence. The precedent for a single-passage gap is a dedicated feature (BARUKH_TRANSLATION).",
+      "action": "Use a dedicated variant condition for this verse, e.g. under urn:x-opensiddur:condition:bible:psalms/91/16/... . Confirm in the frozen spine templates that nothing enclosing the first occurrence declares it false."
+    },
+    {
+      "id": "F6",
+      "severity": "medium",
+      "file": "pesuqei.py",
+      "line": "129-139, 157-162",
+      "evidence": "Regeneration starts from the template XML embedded in the recipe, which makes it idempotent with respect to its own output. But the template hash only checks the recipe against itself (item['xml'] against item['sha256']). Nothing ties it to the accepted on-disk spine. The spine paths cannot be in protected_files, because line 143 rejects that overlap, so the current on-disk spine is never checked before being overwritten. A later accepted edit or installment in morning_prayers_service.xml or second_day_morning.xml would be silently replaced by template plus Pesuqei. The same applies to any existing project file that shares a witness stem but is missing from the hand-maintained protected_files.",
+      "action": "Before writing, require each existing target file's hash to equal either its frozen template hash, as an accepted-artifact or release-pinned hash, or the hash of this recipe's previous generated output. Refuse to create or overwrite anything else. Record the template's source commit or artifact hash, not only a hash of the embedded copy."
+    },
+    {
+      "id": "F7",
+      "severity": "medium",
+      "file": "pesuqei.py",
+      "line": "145",
+      "evidence": "apply_corrections runs over every document, including the three spines, after the protected-file check. A correction entry could rewrite accepted earlier wording in a spine template. Nothing afterwards checks that the template part is unchanged.",
+      "action": "Limit corrections to newly generated witness and service files. Alternatively, after corrections, check that each spine minus the appended call or section serializes the same as its template."
+    },
+    {
+      "id": "F8",
+      "severity": "medium",
+      "file": "pesuqei.py",
+      "line": "131-139",
+      "evidence": "The set of spine paths is checked, but each item's 'language' and 'expanded' values come from the recipe and are not tied to its path. If the expanded path has expanded=false, the expanded spine gets the documentary SERVICE_URN@<he documentary project> call. The guidelines (lines 132-134) forbid substituting the documentary arrangement into the expanded spine. A swapped language would also call the wrong project.",
+      "action": "Work out language and expanded from the path, or assert expanded == (path == EXPANDED+'/second_day_morning.xml') and that the path starts with PROJECTS[language]."
+    },
+    {
+      "id": "F9",
+      "severity": "medium",
+      "file": "pesuqei.py",
+      "line": "154-156",
+      "evidence": "The source binding (approved_readings) covers readings.json and source_approval.json only. pesuqei_units.json itself is not hashed or approved, yet it holds every interpretation: canonical targets, order, hebrew_only_repeat, documentary targets, spine templates, protected hashes and corrections. SCAN_DIGITIZATION_INSTRUCTIONS:196-199 requires approvals to cover structure and settings. The approval record is also not checked against batch, unit stems or scan range.",
+      "action": "Require a structure/order review record that binds the recipe's sha256 (excluding the self-referential fields), or check the recipe hash against a reviewed record. Check that the approval names this batch and covers exactly the unit stems used."
+    },
+    {
+      "id": "F10",
+      "severity": "low",
+      "file": "pesuqei.py",
+      "line": "156, 115-120",
+      "evidence": "units = {u['stem']: u ...} silently drops readings units with duplicate stems (last one wins). The later duplicate-stem check runs over the deduplicated dict, so it can never fire for that case.",
+      "action": "Check that len(readings['units']) equals the number of distinct stems before building the dict."
+    },
+    {
+      "id": "F11",
+      "severity": "low",
+      "file": "pesuqei.py",
+      "line": "86-97",
+      "evidence": "The insertion point is xml:id='morning_blessings', described as 'the printed Shacharit heading'. If that div is actually the Birkhot ha-Shachar subsection, Pesuqei deZimrah ends up nested under the wrong bookmark or heading (SCAN_DIGITIZATION_INSTRUCTIONS:240-251). The tests use invented templates and cannot settle this.",
+      "action": "Check the frozen templates' head or corresp for that div, and assert it (e.g. that its head or corresp is Shacharit) in code."
+    },
+    {
+      "id": "F12",
+      "severity": "low",
+      "file": "pesuqei.py",
+      "line": "98-106",
+      "evidence": "The repeated occurrence is a bare transclusion inside a j:declare. It has no structural identity of its own, as SCAN_DIGITIZATION_INSTRUCTIONS:139-141 asks ('Repeated occurrences have unique structural identities'). Its declare xml:id is only an index within the order and is not checked against ids already in the template.",
+      "action": "Give the repeat a structural wrapper or identity, and check for xml:id collisions with the template."
+    },
+    {
+      "id": "F13",
+      "severity": "low",
+      "file": "pesuqei.py",
+      "line": "78-79, 157-158",
+      "evidence": "documentary_target is not checked to be unqualified, so a recipe value that already contains '@' gets a second project suffix. The keys of protected_files are joined to project_directory without rejecting absolute paths or '..'. This is read-only hashing, but it can read outside the project tree.",
+      "action": "Validate that targets have no '@' and that protected paths are relative, normalized and inside project_directory."
+    },
+    {
+      "id": "F14",
+      "severity": "medium",
+      "file": "test_marmorstein_day_two_pesuqei.py",
+      "line": "1-86",
+      "evidence": "The tests cover guard_translation, service_document and append_sequence in isolation only. Not covered: build_documents (unit/order mismatch, the allowed spine set, template hash mismatch, protected overlap, duplicate paths, guard triggering, corrections touching spines); main (protected drift, stale or unapproved approval); repeat items in the documentary service (F1); a bare chapter terminator (F3); the declared feature name being TRANSLATION, since only the binary value is asserted (line 75); the guard's fs naming TRANSLATION=true; spine language/expanded binding; and true/false/undecided compiled behaviour or English fallback from other providers (guidelines 147-150, 253-259).",
+      "action": "Add synthetic tests for each of the above, using invented data. Add one end-to-end compile test proving that English is absent at the repeat and present at the first occurrence."
+    }
+  ],
+  "verified_ok": [
+    "guard_translation keeps all text and tails (marker.tail moves to condition.tail), keeps j:conditional and j:endConditional as siblings, leaves the canonical milestone outside the condition, and raises when the marker is missing or duplicated or no endpoint is found among its siblings.",
+    "The expanded repeat closes its j:declare with a sibling j:endDeclare and binds TRANSLATION=false only around the repeated call. The template is deep-copied and not changed.",
+    "Documentary services leave out units that lack a language, rather than adding placeholders.",
+    "Output file names come only from PROJECTS constants and safe_stem. Spine paths are limited to the exact three allowed files. Duplicate output paths and overlap with protected files are rejected. Text I/O names utf-8.",
+    "The code does not touch submodule or release pins. That needs separate git-state verification at commit time."
+  ],
+  "coverage_limits": [
+    "The recipe (pesuqei_units.json), readings.json, source_approval.json and the frozen spine templates do not exist or were not provided. So the following were not verified: the real order, expanded targets, which item is flagged hebrew_only_repeat, that Ps 91:16 is the actual printed repetition, the protected-file inventory, and the template contents (including the morning_blessings div and any TRANSLATION declarations).",
+    "Future recipe validation needed: (1) the first expanded Ps 91 target must not also include the Hebrew witness's literal repetition, or verse 16 would be recited twice before the expanded repeat; (2) the literal Hebrew repetition must not carry a second canonical psalms/91/16 @corresp (only the first copy is indexed), and should use bounded source attribution instead; (3) the English verse 16 milestone and its terminator must be siblings so the guard can apply; (4) any range_source_pages pb inserted after the v16 marker ends up inside the guard, so check backlink continuity after a hidden span in the exporter; (5) day two is never Shabbat, so any Shabbat-only printed material must not be given a false calendar declaration.",
+    "The behaviour of opensiddur.importer.scan.authoring (element, apply_corrections, write_documents), opening_document/unit_document and the exporter's source-priority, counterpart and condition propagation was taken from the call sites and not read. Whether a Hebrew-spine j:declare suppresses the English parallel counterpart, and whether an empty selected provider falls back to another, are exporter questions that need compiled-output proof.",
+    "Schema/ODD and features.yaml were not read. Validity of j:conditional inside tei:p, head/@resp with a contributor URN, and the open variant feature names depends on validate() at write time.",
+    "Nothing was executed, so test pass/fail status is unknown."
+  ],
+  "actual_model": "claude-opus-5-5 (Opus 5.5)",
+  "effort": "Reasoning effort exposed to me as 10 (low). No other effort or temperature setting was exposed."
+}
