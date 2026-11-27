@@ -1,0 +1,21 @@
+Act as the independent BLIND second image reader of the1965 Heidenheim–Marmorstein second-day Rosh ha-Shanah mahzor. Requested Claude Opus5.5 effortmedium; report actualmodel/effort only if exposed. Use Read only on the EXACT image files listed below. Read ALL images BEFORE any transcription comparison. Do not read OCR, other readers, previous volumes, candidate text, or websites. No normalizing from familiar Bible/prayer wording. Three overlapping bands cover each complete page; overlap is not repetition.
+Transcribe complete source faithfully: every Hebrew consonant/vowel/dagesh/mappiq/meteg, any printed cantillation, punctuation/maqaf, DivineName form, headers, citations, English text and typography-derived paragraph/reading order. English pages carry Hebrew linkage cues; record cues separately rather than insert into English prayer words. Join English line-wrap splits, retain real compounds and printed mistakes. Preserve line arrays or clear paragraph blocks. Record each page's exact first and last line and printed page label. For each faint mark, flag only specific unresolved occurrence/context/question/location; do not blanket-defer all metegs. Absence of a printed holam is not an error and must not be silently filled. Jerusalem with both vowels on lamed: actual vowel+meteg+CGJ+hiriq; with printed yod, its hiriq stays on yod. Don't infer one occurrence from another.
+Return JSON {status: blind_source_reading_complete or needs_adjudication, pages:[{scan,printed_page,header,blocks:[{kind,lines,text,citations_or_linkage_cues}],uncertainties:[{word,context,question,location,confidence}]}],images_read,coverage_limits,actual_model,requested_effort}. Include complete texts, not summaries. Source reading only, no encoding/order/export acceptance. Readability uncertainty is allowed but must be localized. Do not ask user directly.
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s52-band1.png
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s52-band2.png
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s52-band3.png
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s53-band1.png
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s53-band2.png
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s53-band3.png
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s54-band1.png
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s54-band2.png
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s54-band3.png
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s55-band1.png
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s55-band2.png
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s55-band3.png
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s56-band1.png
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s56-band2.png
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s56-band3.png
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s57-band1.png
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s57-band2.png
+/home/efeins/src/opensiddur-repos/output/marmorstein_rosh_hashanah_2/psuqei_s46_s63/bands/s57-band3.png
