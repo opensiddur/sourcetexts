@@ -1,0 +1,92 @@
+{
+  "status": "accepted",
+  "accepted_utc": "2026-11-27T16:58:53.748990+00:00",
+  "batch": "pesuqei_s46_s63",
+  "scans": [
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63
+  ],
+  "scan_count": 18,
+  "book_total_scans": 385,
+  "cumulative_accepted_scans": 63,
+  "remaining_scans": 322,
+  "next_scan": 64,
+  "documentary_source_units": 15,
+  "documentary_witnesses": 29,
+  "source_pages_sha256": "6beaafb58ed869916969e8298ef92d46685e2072fb55faa5be150af248f6c929",
+  "raw_source_sha256": "cbbeb9d8d178d2cbe88d1c1348a5581c678f62f18fd1504adaead64a0d5769a1",
+  "source_approval_sha256": "617b48c95efc5e65631e6b82341203d847f71a603083cd2ebd8e56004fee5b3f",
+  "recipe_approval_sha256": "9497e262cc0a4640aff63399ece24441c4f37e8ed6884ca29ec8fdaec0d907b7",
+  "reviews": [
+    {
+      "path": "../../independent/pesuqei_s46_s63/source_v4_closure.json",
+      "sha256": "4348e367cafb4d4895ebb46ffac026f0ab8da9d323b670427c0798f041769e48"
+    },
+    {
+      "path": "../../independent/pesuqei_s46_s63/question1023_closure.json",
+      "sha256": "b275db6517c9272a004c16f432ae5c08b430c89570680b10494d31a958ce6a02"
+    },
+    {
+      "path": "../../independent/pesuqei_s46_s63/recipe_final_review.json",
+      "sha256": "f089936f9dc626de32a4316eb19f7b9478cb78087ce02172b4ca6f63f5c13856"
+    },
+    {
+      "path": "../../independent/pesuqei_s46_s63/code_v5/review.json",
+      "sha256": "e03a58cc94525743ce617adc38278e8d6f46aa736d2b51b046715173daa82a93"
+    },
+    {
+      "path": "../../independent/pesuqei_s46_s63/exporter_stream_fix/review.json",
+      "sha256": "ffaa920ea2e02625a0048263df32850dc265cebd13b93137d618b18e7c7b8469"
+    },
+    {
+      "path": "../../independent/pesuqei_s46_s63/final_pdf_review.json",
+      "sha256": "bb101677d1a831c90b3118eff1cd5ff3396affd52815b925f4cfb7d2ddb50c6b"
+    },
+    {
+      "path": "../../independent/pesuqei_s46_s63/final_html_review.json",
+      "sha256": "aec6864b6bfa5e1048f6bf43eee2a4467fb39dcbec7d80cbe2d6ce0b283675f2"
+    }
+  ],
+  "artifact_manifest": "qa/accepted_artifacts.json",
+  "production_validation": "qa/production_registry.json",
+  "validated_production_documents": 34,
+  "protected_existing_files": 786,
+  "exporter_dependency": {
+    "pr": 349,
+    "commit": "87c27ce",
+    "status": "open_ready_ci_passed",
+    "merge_before": [
+      331,
+      110
+    ]
+  },
+  "pending_user_questions": [],
+  "unresolved_reading_disputes": [],
+  "scope_notes": [
+    "Complete source, guideline, identity, alignment, recitation and presentation gates closed.",
+    "All 34 production XML files byte-identical to independently reviewed prospective files; all reviewed exports unchanged.",
+    "Hebrew-only Psalm91 ending repeat and absent English Psalm136:25 preserved without adjacent translation drift.",
+    "Hodu maps its actual Chronicles16:8–36 extent; no complete-chapter identity invented.",
+    "Canonical prayer and Bible URNs reused; repeated context identities do not replace canonical texts.",
+    "All27 rite/gender/Shabbat configurations checked; Night compilation remains byte-identical.",
+    "Independent PDF scope: six profiles,222 pages,286 scan-link rectangles; four HTML profiles and24 correct independently captured images.",
+    "PR349 is independently approved and CI passed; merge it before dependent processor331 and projects110. Acceptance is of the reviewed source/encoding/artifacts, not a statement of merge completion.",
+    "Other322 scans remain unaccepted."
+  ]
+}
