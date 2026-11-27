@@ -130,7 +130,7 @@
         "qa/browser_qa.json",
         "qa/bounded_stream_v2_diff.json"
       ],
-      "note": "Six independently approved PDFs cover222pages and286usable scan links; four HTML profiles and27browser settings cases pass. Question1023 is resolved; actual production XML and reviewed artifacts are byte-identical. ExporterPR349 is ready with CI passed, awaiting merge before331/110.",
+      "note": "Six independently approved PDFs and four HTML profiles remain byte-identical after integration of merged PR349. All accepted artifact hashes reverified; remaining merge order331 then110.",
       "prior_status": "passed_prospective_only"
     },
     "independent_presentation_review": {
@@ -162,7 +162,11 @@
       "processor331",
       "projects110"
     ],
-    "reason": "Full-widthtextcontinuesprimarysourcepagestate"
+    "reason": "Full-widthtextcontinuesprimarysourcepagestate",
+    "status": "merged_and_integrated",
+    "merge_commit": "37d07c75b13f4103aac8c04877f4a31fd0f930aa",
+    "integration_commit": "e1ec37b79ec50fe2b45c8ede90a64303fc4c5375",
+    "closeout": "../../exporter_pr349_closeout.json"
   },
   "acceptance_record": "acceptance.json"
 }

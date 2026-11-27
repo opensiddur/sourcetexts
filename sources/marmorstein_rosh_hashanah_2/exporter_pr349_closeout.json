@@ -1,0 +1,35 @@
+{
+  "status": "merged_and_integrated",
+  "closed_utc": "2026-11-27T21:19:07.250675+00:00",
+  "pr": "https://github.com/opensiddur/opensiddur-processor/pull/349",
+  "merged_at": "2026-11-27T21:16:00Z",
+  "merge_commit": "37d07c75b13f4103aac8c04877f4a31fd0f930aa",
+  "integration_commit": "e1ec37b79ec50fe2b45c8ede90a64303fc4c5375",
+  "reviewed_fix_commit": "87c27ce",
+  "integration": "Merged origin/main into feat/marmorstein-rosh-hashanah-2. Only the two reviewed scan-link files changed; the complete exporter tree now equals merged main. Reviewed fix87c27ce and squash37d07c7 have identical complete tracked trees.",
+  "validation": {
+    "focused_tests": "94 passed,26 subtests passed",
+    "test_log": "batches/pesuqei_s46_s63/qa/pr349_integration_tests.log",
+    "test_log_sha256": "7b143488c1ac4c663c58d1d03f97dbf197115f27b6cc0ebce1615951cd08d556",
+    "merged_exporter_checks": "All PR349 CI checks passed; previous source record qa/day2-ci-exporter349.json retained.",
+    "code_sha256": {
+      "opensiddur/exporter/scan_links.py": "4064048437f70c86a2c419028b26c87a9dcb410de97187b3cced06c1b2d4e3b9",
+      "opensiddur/tests/exporter/test_scan_links.py": "9f8dad0e49a6225450afa182b1430aedbe0267de9819f2f0611f0df5641179ef"
+    },
+    "accepted_artifact_files_reverified": 254,
+    "source_or_export_changes": false
+  },
+  "cleanup": {
+    "remote_branch": "Already deleted by merge.",
+    "local_branch": "Retired after full tracked-tree equivalence verification.",
+    "primary_checkout": "Clean, detached at merged main37d07c7. Managed archive refused because this is the task primary checkout; retained rather than manually removed.",
+    "archive_tool_result": "The task's primary checkout cannot be removed.",
+    "ignored_files": "No unique ignored artifacts; only reproducible environment/schema/cache/database files. All QA logs and reviewed outputs retained outside the fix checkout.",
+    "submodules": "Clean and unchanged; no release pins advanced."
+  },
+  "acceptance": "Scans46–63 remain accepted; total63/385,322remaining,next64.",
+  "remaining_merge_order": [
+    331,
+    110
+  ]
+}
